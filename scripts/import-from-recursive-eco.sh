@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Import script for bringing in files from recursive-eco repository
 # This script should be run by someone with access to the source repository
 
