@@ -1,0 +1,49 @@
+{
+  "version": "1.0",
+  "description": "Example Tarot card schema - The Fool from the Major Arcana",
+  "tradition": "Rider-Waite-Smith",
+  "cards": [
+    {
+      "id": "major_00_fool",
+      "name": "The Fool",
+      "arcana": "major",
+      "number": 0,
+      "element": "air",
+      "astrology": "Uranus",
+      "keywords": [
+        "new beginnings",
+        "innocence",
+        "spontaneity",
+        "free spirit",
+        "adventure",
+        "leap of faith"
+      ],
+      "interpretation": {
+        "upright": "The Fool represents new beginnings, having faith in the future, being inexperienced, not knowing what to expect, having beginner's luck, improvisation and believing in the universe. The card indicates that anything can happen and the universe is on your side. The Fool is a fresh start, a step into the unknown with optimism and trust.",
+        "reversed": "When reversed, The Fool can indicate recklessness, taking foolish risks, being naive or gullible, living in a fantasy world, or refusing to commit. It may suggest you need to think before you leap, or that you're acting without considering consequences."
+      },
+      "symbolism": {
+        "dog": "Loyalty and protection, animal nature",
+        "cliff": "The leap of faith, the unknown",
+        "white_rose": "Purity and innocence",
+        "mountains": "Challenges ahead",
+        "sun": "Optimism and enlightenment",
+        "knapsack": "Untapped potential and memories"
+      },
+      "questions_to_consider": [
+        "What new journey am I beginning?",
+        "Where do I need more faith and trust?",
+        "What would I do if I weren't afraid?",
+        "How can I embrace beginner's mind?"
+      ],
+      "source": "Traditional Rider-Waite-Smith interpretation",
+      "contributors": ["community"]
+    }
+  ],
+  "metadata": {
+    "created": "2026-01-12",
+    "last_updated": "2026-01-12",
+    "license": "CC-BY-SA-4.0",
+    "note": "This is an example schema showing the recommended format. Replace with actual data from the community."
+  }
+}

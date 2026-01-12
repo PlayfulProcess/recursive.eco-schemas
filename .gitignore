@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Build outputs
+dist/
+build/
+*.pyc
+__pycache__/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Environment files (may contain sensitive data)
+.env
+.env.local
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Personal notes (not for the commons)
+notes.md
+TODO.md
+personal/
