@@ -1,0 +1,99 @@
+{
+  "name": "Rider-Waite-Smith Tarot",
+  "system": "tarot",
+  "version": "1.0.0",
+  "description": "The Rider-Waite-Smith tarot deck, originally published in 1909, is one of the most popular and influential tarot decks in the world. Created by Arthur Edward Waite and illustrated by Pamela Colman Smith.",
+  "cards": [
+    {
+      "id": "the-fool",
+      "name": "The Fool",
+      "number": 0,
+      "arcana": "major",
+      "keywords": ["beginnings", "innocence", "spontaneity", "free spirit"],
+      "meanings": {
+        "upright": "The Fool represents new beginnings, having faith in the future, being inexperienced, not knowing what to expect, having beginner's luck, improvisation and believing in the universe.",
+        "reversed": "When reversed, The Fool can indicate recklessness, taking foolish risks, being naive, being gullible, and living in the moment without regard for consequences."
+      },
+      "element": "Air",
+      "astrology": "Uranus"
+    },
+    {
+      "id": "the-magician",
+      "name": "The Magician",
+      "number": 1,
+      "arcana": "major",
+      "keywords": ["manifestation", "resourcefulness", "power", "inspired action"],
+      "meanings": {
+        "upright": "The Magician represents manifestation, resourcefulness, power, and inspired action. It suggests that you have the spiritual and material tools you need to manifest your desires.",
+        "reversed": "Reversed, The Magician may indicate manipulation, poor planning, untapped talents, or using one's skills for selfish or malicious purposes."
+      },
+      "element": "Air",
+      "astrology": "Mercury"
+    },
+    {
+      "id": "the-high-priestess",
+      "name": "The High Priestess",
+      "number": 2,
+      "arcana": "major",
+      "keywords": ["intuition", "sacred knowledge", "divine feminine", "subconscious"],
+      "meanings": {
+        "upright": "The High Priestess represents intuition, sacred knowledge, divine feminine, and the subconscious mind. She suggests looking inward for answers and trusting your intuition.",
+        "reversed": "When reversed, The High Priestess can indicate secrets, disconnection from intuition, withdrawal and silence, or repressed feelings."
+      },
+      "element": "Water",
+      "astrology": "Moon"
+    },
+    {
+      "id": "ace-of-cups",
+      "name": "Ace of Cups",
+      "number": 1,
+      "arcana": "minor",
+      "suit": "cups",
+      "keywords": ["love", "new relationships", "compassion", "creativity"],
+      "meanings": {
+        "upright": "The Ace of Cups represents new love, emotional awakening, creativity, and spirituality. It suggests an outpouring of emotions, a new relationship, or a deepening of an existing one.",
+        "reversed": "Reversed, the Ace of Cups can indicate emotional loss, blocked creativity, emptiness, or repressed emotions."
+      },
+      "element": "Water"
+    },
+    {
+      "id": "ace-of-pentacles",
+      "name": "Ace of Pentacles",
+      "number": 1,
+      "arcana": "minor",
+      "suit": "pentacles",
+      "keywords": ["opportunity", "prosperity", "new venture", "manifestation"],
+      "meanings": {
+        "upright": "The Ace of Pentacles represents a new financial or career opportunity, manifestation, abundance, and prosperity. It's a positive sign for material and financial matters.",
+        "reversed": "When reversed, the Ace of Pentacles can indicate lost opportunity, lack of planning, poor financial management, or scarcity mindset."
+      },
+      "element": "Earth"
+    },
+    {
+      "id": "ace-of-swords",
+      "name": "Ace of Swords",
+      "number": 1,
+      "arcana": "minor",
+      "suit": "swords",
+      "keywords": ["breakthrough", "clarity", "sharp mind", "truth"],
+      "meanings": {
+        "upright": "The Ace of Swords represents breakthroughs, new ideas, mental clarity, and success. It suggests a moment of clarity or a new way of thinking about a situation.",
+        "reversed": "Reversed, the Ace of Swords can indicate confusion, brutality, chaos, or clouded judgment."
+      },
+      "element": "Air"
+    },
+    {
+      "id": "ace-of-wands",
+      "name": "Ace of Wands",
+      "number": 1,
+      "arcana": "minor",
+      "suit": "wands",
+      "keywords": ["inspiration", "new opportunities", "growth", "potential"],
+      "meanings": {
+        "upright": "The Ace of Wands represents inspiration, new opportunities, growth, and potential. It's an enthusiastic 'yes' to your endeavors and signifies spiritual growth.",
+        "reversed": "When reversed, the Ace of Wands can indicate delays, lack of direction, creative blocks, or missed opportunities."
+      },
+      "element": "Fire"
+    }
+  ]
+}
