@@ -1,0 +1,81 @@
+{
+  "version": "1.0",
+  "description": "Example template for a three-card tarot reading",
+  "name": "Three Card Spread Template",
+  "type": "tarot_reading",
+  "system": "tarot",
+  "parameters": {
+    "required": ["question", "cards"],
+    "optional": ["querent_name", "reading_date", "reader_notes"]
+  },
+  "structure": {
+    "positions": [
+      {
+        "position": 1,
+        "name": "Past",
+        "description": "Influences from the past affecting the current situation",
+        "interpretation_focus": "What has led to this moment? What foundations or challenges were laid?"
+      },
+      {
+        "position": 2,
+        "name": "Present",
+        "description": "The current situation and energies at play",
+        "interpretation_focus": "What is happening right now? What energies are active?"
+      },
+      {
+        "position": 3,
+        "name": "Future",
+        "description": "Potential outcomes and where the situation is heading",
+        "interpretation_focus": "Where is this leading? What possibilities are emerging?"
+      }
+    ],
+    "reading_flow": [
+      "Ground and center yourself",
+      "State the question clearly",
+      "Shuffle cards while focusing on the question",
+      "Draw three cards and place in positions 1, 2, 3",
+      "Interpret each card in context of its position",
+      "Look for connections and story between the cards",
+      "Synthesize overall message"
+    ]
+  },
+  "example_usage": {
+    "question": "What do I need to know about my current creative project?",
+    "cards": [
+      {
+        "position": 1,
+        "card_id": "major_00_fool",
+        "card_name": "The Fool",
+        "orientation": "upright",
+        "interpretation": "Your creative journey began with a leap of faith and willingness to try something new."
+      },
+      {
+        "position": 2,
+        "card_id": "wands_03",
+        "card_name": "Three of Wands",
+        "orientation": "upright",
+        "interpretation": "You're currently in a phase of expansion and planning, looking ahead to possibilities."
+      },
+      {
+        "position": 3,
+        "card_id": "major_01_magician",
+        "card_name": "The Magician",
+        "orientation": "upright",
+        "interpretation": "The future holds manifestation and skill - you have all the tools you need to succeed."
+      }
+    ],
+    "synthesis": "This reading shows a journey from innocent beginnings through strategic planning to masterful manifestation. Trust the process."
+  },
+  "variations": [
+    "Mind-Body-Spirit: Replace Past-Present-Future with these aspects",
+    "Situation-Action-Outcome: Focus on decision-making",
+    "You-Other-Relationship: For relationship readings"
+  ],
+  "metadata": {
+    "created": "2024-01-12",
+    "last_updated": "2024-01-12",
+    "license": "CC-BY-SA-4.0",
+    "contributors": ["community"],
+    "note": "This template can be adapted for various three-position spreads"
+  }
+}

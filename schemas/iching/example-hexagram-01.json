@@ -1,0 +1,66 @@
+{
+  "version": "1.0",
+  "description": "Example I Ching hexagram schema - Hexagram 1, The Creative",
+  "tradition": "Wilhelm/Baynes translation",
+  "hexagrams": [
+    {
+      "id": "hexagram_01",
+      "number": 1,
+      "name_chinese": "乾",
+      "name_pinyin": "Qián",
+      "name_english": "The Creative",
+      "alternate_names": ["Heaven", "Force"],
+      "trigrams": {
+        "upper": "qian_heaven",
+        "lower": "qian_heaven"
+      },
+      "element": "heaven",
+      "attribute": "strong",
+      "judgment": "The Creative works sublime success, furthering through perseverance.",
+      "image": "The movement of heaven is full of power. Thus the superior person makes themselves strong and untiring.",
+      "interpretation": "The Creative represents pure yang energy, the primal force of the universe. It symbolizes creative power, strength, and dynamic action. This hexagram suggests a time of great potential and the ability to manifest your will. Success comes through persistent effort and staying true to your highest principles.",
+      "keywords": [
+        "creativity",
+        "strength",
+        "heaven",
+        "leadership",
+        "persistence",
+        "primal force"
+      ],
+      "lines": {
+        "line_1": {
+          "text": "Hidden dragon. Do not act.",
+          "interpretation": "The creative force is still latent. This is not the time to act, but to gather strength and wait for the right moment."
+        },
+        "line_2": {
+          "text": "Dragon appearing in the field. It furthers one to see the great person.",
+          "interpretation": "The creative force begins to manifest. Seek guidance from those who are wise and experienced."
+        },
+        "line_3": {
+          "text": "All day long the superior person is creatively active. At nightfall thoughts still beset them. Danger. No blame.",
+          "interpretation": "Continued creative effort is necessary, but be aware of the dangers of overexertion. Balance action with reflection."
+        },
+        "line_4": {
+          "text": "Wavering flight over the depths. No blame.",
+          "interpretation": "A time of transition and decision. Either advance or retreat, but do not remain stuck in hesitation."
+        },
+        "line_5": {
+          "text": "Flying dragon in the heavens. It furthers one to see the great person.",
+          "interpretation": "The peak of creative power and influence. This is the optimal time to act and to collaborate with others of vision."
+        },
+        "line_6": {
+          "text": "Arrogant dragon will have cause to repent.",
+          "interpretation": "Overreaching and arrogance lead to downfall. Know when to withdraw and maintain humility."
+        }
+      },
+      "source": "Wilhelm/Baynes translation",
+      "contributors": ["community"]
+    }
+  ],
+  "metadata": {
+    "created": "2024-01-12",
+    "last_updated": "2024-01-12",
+    "license": "CC-BY-SA-4.0",
+    "note": "This is an example schema showing the recommended format. Replace with actual data from the community."
+  }
+}
