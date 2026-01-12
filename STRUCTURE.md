@@ -26,10 +26,11 @@ Contains structured interpretive schemas for various divination systems:
 - **`other/`** - Additional divination systems and interpretive frameworks
 
 ### `/data/`
-Raw data files from flow applications. These files provide:
+Data files that circulate throughout the recursive.eco ecosystem. These files can be exported and imported through the offer tab or flow app:
 - Sample readings
 - Historical data
 - Community-contributed interpretations
+- Ecosystem-shared data files
 
 ### `/templates/`
 Reusable templates for creating offers and flows:

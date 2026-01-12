@@ -8,7 +8,7 @@ The recursive.eco-schemas repository has been fully organized with a comprehensi
 
 ### 1. Directory Structure (10 directories)
 ```
-├── data/                  # For flow application data
+├── data/                  # For ecosystem data (exportable/importable via offer/flow apps)
 ├── docs/                  # Documentation
 ├── schemas/               # Interpretive schemas
 │   ├── astrology/        # Astrological systems

@@ -3,8 +3,9 @@
 ## Files to Import
 
 ### From `apps/flow/public/data`
-These files contain flow application data that should be organized into `/data/`:
+These files contain data that circulates throughout the recursive.eco ecosystem (exportable/importable via offer tab or flow app) and should be organized into `/data/`:
 - Review each file for its content type
+- Understand these files are shared across the ecosystem, not just the flow app
 - Anonymize any personal information
 - Add context documentation explaining the data format
 - Organize by date, reading type, or system used

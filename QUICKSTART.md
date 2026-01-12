@@ -79,7 +79,7 @@ These files contain...
 git add .
 git commit -m "Import files from recursive-eco repository
 
-- Imported flow data from apps/flow/public/data
+- Imported ecosystem data from apps/flow/public/data (circulates via offer/flow apps)
 - Imported offer templates from apps/offer/public/templates
 - Added documentation for imported files"
 
