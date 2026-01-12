@@ -1,0 +1,777 @@
+{
+  "name": "Plutchik's Wheel of Emotions",
+  "description": "Based on Robert Plutchik's psychoevolutionary theory of emotion (1927-2006). Eight primary emotions arranged in opposing pairs, with three intensity levels each. Dyads (compound emotions) emerge from adjacent primary emotions. Plutchik studied emotions across species, revealing their evolutionary basis in survival.",
+  "cover_image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+  "tags": ["emotions", "psychology", "plutchik", "feelings", "evolutionary"],
+  "grammar_type": "custom",
+  "creator_name": "Based on Robert Plutchik (1927-2006)",
+  "creator_link": "https://en.wikipedia.org/wiki/Robert_Plutchik",
+  "attribution": {
+    "source_name": "Plutchik's Wheel of Emotions",
+    "source_url": "https://en.wikipedia.org/wiki/Robert_Plutchik#Plutchik's_wheel_of_emotions",
+    "license": "Public Domain",
+    "license_url": "https://commons.wikimedia.org/wiki/File:Plutchik-wheel.svg"
+  },
+  "items": [
+    {
+      "id": "ecstasy",
+      "name": "Ecstasy",
+      "symbol": "🌟",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "sections": {
+        "Interpretation": "You are experiencing or ready to experience profound joy. This is the height of positive emotion - a state of rapture and bliss. Ecstasy arrives when deep needs are met completely. It cannot be sustained but can be savored.",
+        "Reversed": "Manic energy without grounding. Chasing highs. Fear of ordinary contentment. What would it mean to let simple joy be enough?",
+        "Evolutionary Function": "Signals peak reward. In ancestors, marked finding abundant resources or successful mating. Reinforces life-enhancing behaviors."
+      },
+      "keywords": ["intense", "peak", "rapture", "bliss", "elation"],
+      "questions": ["What brings you to ecstasy?", "Can you allow this intensity without grasping?"],
+      "sort_order": 1,
+      "category": "primary-intense",
+      "subcategory": "joy-sadness",
+      "metadata": {
+        "axis": "joy-sadness",
+        "intensity": "intense",
+        "base_emotion": "joy",
+        "opposite_id": "grief",
+        "milder_id": "joy",
+        "dyad_ids": ["love", "optimism"]
+      }
+    },
+    {
+      "id": "joy",
+      "name": "Joy",
+      "symbol": "😊",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "sections": {
+        "Interpretation": "Joy signals that something life-enhancing is present. Plutchik saw joy as the emotion of incorporation - taking in what nourishes us. This is your birthright as a living being. What is bringing you joy?",
+        "Reversed": "Joy suppressed or denied. Guilt about feeling good. Waiting for permission to be happy. Joy is not earned - it is recognized.",
+        "Evolutionary Function": "Promotes bonding and approach behaviors. Signals safety and resource acquisition. The emotion of incorporation."
+      },
+      "keywords": ["happiness", "contentment", "pleasure", "delight"],
+      "questions": ["What simple thing brings you joy today?", "Can you receive this feeling fully?"],
+      "sort_order": 2,
+      "category": "primary-moderate",
+      "subcategory": "joy-sadness",
+      "metadata": {
+        "axis": "joy-sadness",
+        "intensity": "moderate",
+        "base_emotion": "joy",
+        "opposite_id": "sadness",
+        "intense_id": "ecstasy",
+        "milder_id": "serenity",
+        "dyad_ids": ["love", "optimism"]
+      }
+    },
+    {
+      "id": "serenity",
+      "name": "Serenity",
+      "symbol": "😌",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "sections": {
+        "Interpretation": "Serenity is joy without urgency. A quiet okayness with what is. This gentle state is sustainable where ecstasy is not. Serenity comes when we stop fighting life.",
+        "Reversed": "Complacency mistaken for peace. Avoiding intensity. Serenity is not numbness - check if you're feeling or just coping.",
+        "Evolutionary Function": "Signals sustained safety. Allows rest and recovery. The parasympathetic state of contentment."
+      },
+      "keywords": ["calm", "peaceful", "content", "tranquil"],
+      "questions": ["Where do you find serenity?", "What would you need to release to feel serene?"],
+      "sort_order": 3,
+      "category": "primary-mild",
+      "subcategory": "joy-sadness",
+      "metadata": {
+        "axis": "joy-sadness",
+        "intensity": "mild",
+        "base_emotion": "joy",
+        "opposite_id": "pensiveness",
+        "intense_id": "joy"
+      }
+    },
+    {
+      "id": "admiration",
+      "name": "Admiration",
+      "symbol": "🙏",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "sections": {
+        "Interpretation": "Admiration is trust at its height. You see excellence, goodness, or beauty in someone or something. This emotion opens us to learning and growth. Who or what do you admire?",
+        "Reversed": "Idealization that ignores reality. Putting others on pedestals. Admiration can become projection - are you seeing them or your own unlived qualities?",
+        "Evolutionary Function": "Identifies models for learning. Promotes social hierarchy and skill acquisition through observation."
+      },
+      "keywords": ["reverence", "respect", "awe", "worship"],
+      "questions": ["What quality do you admire?", "Does this admiration inspire or diminish you?"],
+      "sort_order": 4,
+      "category": "primary-intense",
+      "subcategory": "trust-disgust",
+      "metadata": {
+        "axis": "trust-disgust",
+        "intensity": "intense",
+        "base_emotion": "trust",
+        "opposite_id": "loathing",
+        "milder_id": "trust",
+        "dyad_ids": ["love", "submission"]
+      }
+    },
+    {
+      "id": "trust",
+      "name": "Trust",
+      "symbol": "🤝",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "sections": {
+        "Interpretation": "Trust is the foundation of all relationship. Plutchik linked it to cooperation and mutual aid - essential for social species. Trust says 'I can rely on you.' Where is trust present or needed?",
+        "Reversed": "Naive trust without discernment. Or trust withheld from fear of betrayal. Both extremes cost us. Trust is a skill, not just a feeling.",
+        "Evolutionary Function": "Enables cooperation and group living. The basis of social bonds and reciprocal altruism."
+      },
+      "keywords": ["confidence", "reliance", "faith", "belief"],
+      "questions": ["Who do you trust?", "What would help you trust more wisely?"],
+      "sort_order": 5,
+      "category": "primary-moderate",
+      "subcategory": "trust-disgust",
+      "metadata": {
+        "axis": "trust-disgust",
+        "intensity": "moderate",
+        "base_emotion": "trust",
+        "opposite_id": "disgust",
+        "intense_id": "admiration",
+        "milder_id": "acceptance",
+        "dyad_ids": ["love", "submission"]
+      }
+    },
+    {
+      "id": "acceptance",
+      "name": "Acceptance",
+      "symbol": "🫶",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "sections": {
+        "Interpretation": "Acceptance is trust without intensity. A willingness to receive what comes. This isn't resignation but a soft yes to reality. Acceptance creates space for change.",
+        "Reversed": "Passive acceptance of what should be challenged. Not all situations deserve acceptance. Discern between peace and permission.",
+        "Evolutionary Function": "Reduces conflict and conserves energy. Allows integration into groups and adaptation to circumstances."
+      },
+      "keywords": ["openness", "receiving", "allowing", "tolerance"],
+      "questions": ["What are you being asked to accept?", "Is acceptance the right response here?"],
+      "sort_order": 6,
+      "category": "primary-mild",
+      "subcategory": "trust-disgust",
+      "metadata": {
+        "axis": "trust-disgust",
+        "intensity": "mild",
+        "base_emotion": "trust",
+        "opposite_id": "boredom",
+        "intense_id": "trust"
+      }
+    },
+    {
+      "id": "terror",
+      "name": "Terror",
+      "symbol": "😱",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "sections": {
+        "Interpretation": "Terror is fear beyond coping. The threat feels total. This ancient response helped ancestors survive predators. If terror visits you, find safety first - then process. The body remembers.",
+        "Reversed": "Terror that has lost its object but not its grip. Trauma echoes. Chronic terror needs gentle, supported healing.",
+        "Evolutionary Function": "Triggers freeze or flight in life-threatening situations. Maximum alertness for survival."
+      },
+      "keywords": ["panic", "horror", "dread", "fright"],
+      "questions": ["What terrifies you?", "Is the threat current or echoing from the past?"],
+      "sort_order": 7,
+      "category": "primary-intense",
+      "subcategory": "fear-anger",
+      "metadata": {
+        "axis": "fear-anger",
+        "intensity": "intense",
+        "base_emotion": "fear",
+        "opposite_id": "rage",
+        "milder_id": "fear",
+        "dyad_ids": ["awe", "submission"]
+      }
+    },
+    {
+      "id": "fear",
+      "name": "Fear",
+      "symbol": "😨",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "sections": {
+        "Interpretation": "Fear protects. It signals danger and prepares us to respond. Plutchik saw fear across all species - it's ancient wisdom. Fear asks: what needs protection? Honor it, then assess the actual threat.",
+        "Reversed": "Fear running the show. Threat detection without resolution. Fear is information, not a life sentence. What would courage look like here?",
+        "Evolutionary Function": "The primary protection emotion. Triggers fight-flight-freeze. Essential for survival."
+      },
+      "keywords": ["afraid", "scared", "worried", "threatened"],
+      "questions": ["What are you afraid of?", "Is this fear protecting something real?"],
+      "sort_order": 8,
+      "category": "primary-moderate",
+      "subcategory": "fear-anger",
+      "metadata": {
+        "axis": "fear-anger",
+        "intensity": "moderate",
+        "base_emotion": "fear",
+        "opposite_id": "anger",
+        "intense_id": "terror",
+        "milder_id": "apprehension",
+        "dyad_ids": ["awe", "submission"]
+      }
+    },
+    {
+      "id": "apprehension",
+      "name": "Apprehension",
+      "symbol": "😟",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "sections": {
+        "Interpretation": "Apprehension is fear's quiet voice. Something feels slightly off. This subtle signal is easy to override but worth heeding. Apprehension asks for attention, not alarm.",
+        "Reversed": "Chronic low-grade anxiety. Apprehension that never resolves. Sometimes we must act despite unease. Distinguish signal from noise.",
+        "Evolutionary Function": "Early warning system. Promotes caution and risk assessment before full threat activation."
+      },
+      "keywords": ["uneasy", "nervous", "worried", "concerned"],
+      "questions": ["What feels slightly off?", "What would address this unease?"],
+      "sort_order": 9,
+      "category": "primary-mild",
+      "subcategory": "fear-anger",
+      "metadata": {
+        "axis": "fear-anger",
+        "intensity": "mild",
+        "base_emotion": "fear",
+        "opposite_id": "annoyance",
+        "intense_id": "fear"
+      }
+    },
+    {
+      "id": "amazement",
+      "name": "Amazement",
+      "symbol": "🤩",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "sections": {
+        "Interpretation": "Amazement stops time. Reality has exceeded your model of it. This is the emotion of encountering the truly new. Let amazement reorganize you.",
+        "Reversed": "Addicted to novelty. Ordinary life feels flat without amazement. The extraordinary is found within the ordinary, if you look.",
+        "Evolutionary Function": "Signals significant environmental change requiring attention and cognitive update."
+      },
+      "keywords": ["astonished", "stunned", "awestruck", "wonder"],
+      "questions": ["What has amazed you?", "What assumptions did it shatter?"],
+      "sort_order": 10,
+      "category": "primary-intense",
+      "subcategory": "surprise-anticipation",
+      "metadata": {
+        "axis": "surprise-anticipation",
+        "intensity": "intense",
+        "base_emotion": "surprise",
+        "opposite_id": "vigilance",
+        "milder_id": "surprise",
+        "dyad_ids": ["awe", "disapproval"]
+      }
+    },
+    {
+      "id": "surprise",
+      "name": "Surprise",
+      "symbol": "😮",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "sections": {
+        "Interpretation": "Surprise signals that something unexpected has occurred. It's neutral - the content determines if we shift to joy or fear. Surprise is the brain updating its predictions. What surprised you?",
+        "Reversed": "Nothing surprises anymore - either through rigidity or exhaustion. Life has lost its capacity to catch you off guard. Invite the unexpected.",
+        "Evolutionary Function": "Interrupts current processing for urgent reorientation. The reset button for attention."
+      },
+      "keywords": ["startled", "unexpected", "caught off guard"],
+      "questions": ["What surprised you recently?", "Are you open to being surprised?"],
+      "sort_order": 11,
+      "category": "primary-moderate",
+      "subcategory": "surprise-anticipation",
+      "metadata": {
+        "axis": "surprise-anticipation",
+        "intensity": "moderate",
+        "base_emotion": "surprise",
+        "opposite_id": "anticipation",
+        "intense_id": "amazement",
+        "milder_id": "distraction",
+        "dyad_ids": ["awe", "disapproval"]
+      }
+    },
+    {
+      "id": "distraction",
+      "name": "Distraction",
+      "symbol": "🫤",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "sections": {
+        "Interpretation": "Distraction is surprise's whisper. Something catches your attention briefly. This can be noise or signal. Distraction may be pointing toward something worth noticing.",
+        "Reversed": "Chronic distraction without focus. Attention scattered. Not all distractions deserve following. What truly warrants your attention?",
+        "Evolutionary Function": "Low-level alert for peripheral changes. Balances focus with environmental monitoring."
+      },
+      "keywords": ["diverted", "sidetracked", "unfocused"],
+      "questions": ["What's distracting you?", "Is this worth your attention?"],
+      "sort_order": 12,
+      "category": "primary-mild",
+      "subcategory": "surprise-anticipation",
+      "metadata": {
+        "axis": "surprise-anticipation",
+        "intensity": "mild",
+        "base_emotion": "surprise",
+        "opposite_id": "interest",
+        "intense_id": "surprise"
+      }
+    },
+    {
+      "id": "grief",
+      "name": "Grief",
+      "symbol": "😭",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "sections": {
+        "Interpretation": "Grief is love with nowhere to go. It honors what mattered. Plutchik saw sadness as the call for comfort and reconnection. Grief needs witnessing, not fixing.",
+        "Reversed": "Grief stuck or avoided. Unmetabolized loss. Grief that doesn't move becomes depression. What loss needs mourning?",
+        "Evolutionary Function": "Signals significant loss. Elicits caregiving from others. Promotes social bonding through shared sorrow."
+      },
+      "keywords": ["anguish", "sorrow", "heartbreak", "mourning"],
+      "questions": ["What are you grieving?", "Who can witness your grief?"],
+      "sort_order": 13,
+      "category": "primary-intense",
+      "subcategory": "joy-sadness",
+      "metadata": {
+        "axis": "joy-sadness",
+        "intensity": "intense",
+        "base_emotion": "sadness",
+        "opposite_id": "ecstasy",
+        "milder_id": "sadness",
+        "dyad_ids": ["remorse", "disapproval"]
+      }
+    },
+    {
+      "id": "sadness",
+      "name": "Sadness",
+      "symbol": "😢",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "sections": {
+        "Interpretation": "Sadness signals loss or absence. Something needed is missing. This emotion draws others toward us with compassion. Sadness is how we honor what matters. What do you miss?",
+        "Reversed": "Sadness denied or indulged. Neither helps. Sadness asks to be felt and then to move. Are you feeling it or fighting it?",
+        "Evolutionary Function": "The reintegration emotion. Signals need for comfort and triggers helping behavior in others."
+      },
+      "keywords": ["unhappy", "sorrowful", "dejected", "down"],
+      "questions": ["What brings you sadness?", "What comfort would help?"],
+      "sort_order": 14,
+      "category": "primary-moderate",
+      "subcategory": "joy-sadness",
+      "metadata": {
+        "axis": "joy-sadness",
+        "intensity": "moderate",
+        "base_emotion": "sadness",
+        "opposite_id": "joy",
+        "intense_id": "grief",
+        "milder_id": "pensiveness",
+        "dyad_ids": ["remorse", "disapproval"]
+      }
+    },
+    {
+      "id": "pensiveness",
+      "name": "Pensiveness",
+      "symbol": "😔",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "sections": {
+        "Interpretation": "Pensiveness is sadness's soft form. A wistful awareness of impermanence. This gentle melancholy can deepen appreciation for what is. There is beauty in pensiveness.",
+        "Reversed": "Wallowing in low-grade sadness. Romanticizing melancholy. Pensiveness is a visitor, not a residence. What would lift you slightly?",
+        "Evolutionary Function": "Promotes reflection and learning from loss. Conserves energy during low-resource periods."
+      },
+      "keywords": ["wistful", "melancholy", "reflective", "blue"],
+      "questions": ["What brings this gentle sadness?", "What appreciation lives within it?"],
+      "sort_order": 15,
+      "category": "primary-mild",
+      "subcategory": "joy-sadness",
+      "metadata": {
+        "axis": "joy-sadness",
+        "intensity": "mild",
+        "base_emotion": "sadness",
+        "opposite_id": "serenity",
+        "intense_id": "sadness"
+      }
+    },
+    {
+      "id": "loathing",
+      "name": "Loathing",
+      "symbol": "🤢",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "sections": {
+        "Interpretation": "Loathing is total rejection. Something feels fundamentally wrong or contaminating. This intense disgust protects boundaries but can also poison the one who feels it.",
+        "Reversed": "Self-loathing turned inward. Loathing that has become identity. No one deserves to live in loathing - including yourself.",
+        "Evolutionary Function": "Maximum rejection response. Protects against contamination, poison, and moral violations."
+      },
+      "keywords": ["abhorrence", "revulsion", "hatred", "repugnance"],
+      "questions": ["What do you loathe?", "What would it take to release this?"],
+      "sort_order": 16,
+      "category": "primary-intense",
+      "subcategory": "trust-disgust",
+      "metadata": {
+        "axis": "trust-disgust",
+        "intensity": "intense",
+        "base_emotion": "disgust",
+        "opposite_id": "admiration",
+        "milder_id": "disgust",
+        "dyad_ids": ["contempt", "remorse"]
+      }
+    },
+    {
+      "id": "disgust",
+      "name": "Disgust",
+      "symbol": "😖",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "sections": {
+        "Interpretation": "Disgust pushes away what is harmful or contaminating. Plutchik saw it as rejection - the opposite of incorporation. Disgust protects, but examine what you're rejecting and why.",
+        "Reversed": "Disgust turned rigid or arbitrary. Rejecting too much. Disgust can become prejudice if unexamined. Is this protecting you or isolating you?",
+        "Evolutionary Function": "The rejection emotion. Originally for bad food, extended to moral and social violations."
+      },
+      "keywords": ["repulsed", "revolted", "offended", "sickened"],
+      "questions": ["What disgusts you?", "Is this disgust proportionate and protective?"],
+      "sort_order": 17,
+      "category": "primary-moderate",
+      "subcategory": "trust-disgust",
+      "metadata": {
+        "axis": "trust-disgust",
+        "intensity": "moderate",
+        "base_emotion": "disgust",
+        "opposite_id": "trust",
+        "intense_id": "loathing",
+        "milder_id": "boredom",
+        "dyad_ids": ["contempt", "remorse"]
+      }
+    },
+    {
+      "id": "boredom",
+      "name": "Boredom",
+      "symbol": "😑",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "sections": {
+        "Interpretation": "Boredom is quiet rejection. Something fails to engage you. This can signal misalignment - you're in the wrong place. Or it can be an invitation to bring your own meaning.",
+        "Reversed": "Chronic boredom as a way of life. Everything irritates. This may signal deeper unmet needs beneath the surface irritation.",
+        "Evolutionary Function": "Signals low-value environment. Motivates seeking new opportunities and resources."
+      },
+      "keywords": ["uninterested", "indifferent", "weary", "apathetic"],
+      "questions": ["What bores you?", "What does this boredom protect you from?"],
+      "sort_order": 18,
+      "category": "primary-mild",
+      "subcategory": "trust-disgust",
+      "metadata": {
+        "axis": "trust-disgust",
+        "intensity": "mild",
+        "base_emotion": "disgust",
+        "opposite_id": "acceptance",
+        "intense_id": "disgust"
+      }
+    },
+    {
+      "id": "rage",
+      "name": "Rage",
+      "symbol": "🤬",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "sections": {
+        "Interpretation": "Rage is anger beyond containment. Something important has been violated. This raw power needs safe expression - rage turned inward or outward carelessly causes damage.",
+        "Reversed": "Rage that has become chronic or identity. Rage covering vulnerability. What wound lives beneath this rage?",
+        "Evolutionary Function": "Maximum mobilization for threat destruction. Signals serious boundary violation requiring immediate action."
+      },
+      "keywords": ["fury", "wrath", "outrage", "violent anger"],
+      "questions": ["What enrages you?", "How can this energy be channeled safely?"],
+      "sort_order": 19,
+      "category": "primary-intense",
+      "subcategory": "fear-anger",
+      "metadata": {
+        "axis": "fear-anger",
+        "intensity": "intense",
+        "base_emotion": "anger",
+        "opposite_id": "terror",
+        "milder_id": "anger",
+        "dyad_ids": ["contempt", "aggressiveness"]
+      }
+    },
+    {
+      "id": "anger",
+      "name": "Anger",
+      "symbol": "😠",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "sections": {
+        "Interpretation": "Anger signals that a boundary has been crossed or an injustice occurred. Plutchik linked it to destruction of obstacles. Anger is information about what matters. What boundary needs defending?",
+        "Reversed": "Anger suppressed or chronic. Neither serves. Anger needs expression and resolution. What request or boundary would address this?",
+        "Evolutionary Function": "The destruction emotion. Mobilizes energy to remove obstacles and defend resources."
+      },
+      "keywords": ["mad", "irritated", "frustrated", "hostile"],
+      "questions": ["What are you angry about?", "What boundary or value was crossed?"],
+      "sort_order": 20,
+      "category": "primary-moderate",
+      "subcategory": "fear-anger",
+      "metadata": {
+        "axis": "fear-anger",
+        "intensity": "moderate",
+        "base_emotion": "anger",
+        "opposite_id": "fear",
+        "intense_id": "rage",
+        "milder_id": "annoyance",
+        "dyad_ids": ["contempt", "aggressiveness"]
+      }
+    },
+    {
+      "id": "annoyance",
+      "name": "Annoyance",
+      "symbol": "😒",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "sections": {
+        "Interpretation": "Annoyance is anger's whisper. Small frictions accumulate here. Pay attention before annoyance builds. What small adjustment would help?",
+        "Reversed": "Chronic annoyance as a way of life. Everything irritates. This may signal deeper unmet needs beneath the surface irritation.",
+        "Evolutionary Function": "Early-stage anger. Signals minor obstruction requiring attention before escalation."
+      },
+      "keywords": ["irritated", "bothered", "peeved", "vexed"],
+      "questions": ["What annoys you?", "What would actually address this?"],
+      "sort_order": 21,
+      "category": "primary-mild",
+      "subcategory": "fear-anger",
+      "metadata": {
+        "axis": "fear-anger",
+        "intensity": "mild",
+        "base_emotion": "anger",
+        "opposite_id": "apprehension",
+        "intense_id": "anger"
+      }
+    },
+    {
+      "id": "vigilance",
+      "name": "Vigilance",
+      "symbol": "👀",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "sections": {
+        "Interpretation": "Vigilance is anticipation at peak intensity. Every sense strains toward what's coming. Useful in genuine threat, exhausting as a lifestyle. What are you watching for?",
+        "Reversed": "Hypervigilance without rest. The sentinel who never sleeps. This intensity cannot sustain. What would let you rest your guard?",
+        "Evolutionary Function": "Maximum environmental scanning. Essential during danger or opportunity-rich periods."
+      },
+      "keywords": ["watchful", "alert", "attentive", "wary"],
+      "questions": ["What are you vigilant about?", "Is this level of alertness necessary?"],
+      "sort_order": 22,
+      "category": "primary-intense",
+      "subcategory": "surprise-anticipation",
+      "metadata": {
+        "axis": "surprise-anticipation",
+        "intensity": "intense",
+        "base_emotion": "anticipation",
+        "opposite_id": "amazement",
+        "milder_id": "anticipation",
+        "dyad_ids": ["aggressiveness", "optimism"]
+      }
+    },
+    {
+      "id": "anticipation",
+      "name": "Anticipation",
+      "symbol": "🔮",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "sections": {
+        "Interpretation": "Anticipation looks forward. Plutchik linked it to exploration and mapping what's ahead. This emotion prepares us for what's coming. What are you anticipating?",
+        "Reversed": "Living entirely in anticipation, never in presence. The future devours the now. Can you prepare while also being here?",
+        "Evolutionary Function": "The exploration emotion. Motivates planning, preparation, and forward thinking."
+      },
+      "keywords": ["expectant", "eager", "ready", "awaiting"],
+      "questions": ["What are you anticipating?", "Is anticipation serving or stealing from you?"],
+      "sort_order": 23,
+      "category": "primary-moderate",
+      "subcategory": "surprise-anticipation",
+      "metadata": {
+        "axis": "surprise-anticipation",
+        "intensity": "moderate",
+        "base_emotion": "anticipation",
+        "opposite_id": "surprise",
+        "intense_id": "vigilance",
+        "milder_id": "interest",
+        "dyad_ids": ["aggressiveness", "optimism"]
+      }
+    },
+    {
+      "id": "interest",
+      "name": "Interest",
+      "symbol": "🧐",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "sections": {
+        "Interpretation": "Interest is anticipation's gentle form. Something draws your attention forward. Follow genuine interest - it's a compass toward meaning.",
+        "Reversed": "Nothing interests. Flat affect. Interest suppressed or exhausted. What once interested you? Can you rekindle it?",
+        "Evolutionary Function": "Low-energy exploration. Promotes learning and curiosity without high arousal cost."
+      },
+      "keywords": ["curious", "engaged", "intrigued", "attentive"],
+      "questions": ["What interests you?", "Where does your curiosity naturally lead?"],
+      "sort_order": 24,
+      "category": "primary-mild",
+      "subcategory": "surprise-anticipation",
+      "metadata": {
+        "axis": "surprise-anticipation",
+        "intensity": "mild",
+        "base_emotion": "anticipation",
+        "opposite_id": "distraction",
+        "intense_id": "anticipation"
+      }
+    },
+    {
+      "id": "love",
+      "name": "Love",
+      "symbol": "❤️",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "composite_of": ["joy", "trust"],
+      "sections": {
+        "Interpretation": "Love emerges when joy and trust combine. We feel happy with someone AND safe with them. This is Plutchik's formula for love - not just attraction but trust-infused joy.",
+        "Reversed": "Love without trust becomes infatuation. Trust without joy becomes duty. Both are needed for this compound to form.",
+        "Formula": "Joy + Trust = Love. The emotion of deep bonding."
+      },
+      "keywords": ["affection", "devotion", "caring", "attachment"],
+      "questions": ["Where do joy and trust meet in your life?", "What would deepen this love?"],
+      "sort_order": 25,
+      "category": "dyad",
+      "subcategory": "joy-trust",
+      "relationship_type": "emergence",
+      "metadata": {
+        "dyad_type": "primary",
+        "parent_emotions": ["joy", "trust"],
+        "opposite_id": "remorse"
+      }
+    },
+    {
+      "id": "submission",
+      "name": "Submission",
+      "symbol": "🙇",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "composite_of": ["trust", "fear"],
+      "sections": {
+        "Interpretation": "Submission combines trust with fear. We defer to something greater than ourselves. This can be healthy surrender or unhealthy capitulation. Examine what you're submitting to.",
+        "Reversed": "Submission without trust is coercion. Trust without appropriate fear may lack respect. What are you yielding to, and is it worthy?",
+        "Formula": "Trust + Fear = Submission. Yielding to greater power."
+      },
+      "keywords": ["deference", "yielding", "surrender", "compliance"],
+      "questions": ["What do you submit to?", "Is this surrender or defeat?"],
+      "sort_order": 26,
+      "category": "dyad",
+      "subcategory": "trust-fear",
+      "relationship_type": "emergence",
+      "metadata": {
+        "dyad_type": "primary",
+        "parent_emotions": ["trust", "fear"],
+        "opposite_id": "contempt"
+      }
+    },
+    {
+      "id": "awe",
+      "name": "Awe",
+      "symbol": "✨",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "composite_of": ["fear", "surprise"],
+      "sections": {
+        "Interpretation": "Awe blends fear with surprise. Something vast and unexpected stops us in our tracks. This emotion connects us to the sublime. Awe reminds us we are small - and that's okay.",
+        "Reversed": "Awe avoided through cynicism. Or awe that paralyzes rather than inspires. Let awe move through you toward wonder, not terror.",
+        "Formula": "Fear + Surprise = Awe. Overwhelmed by the vast."
+      },
+      "keywords": ["wonder", "reverence", "amazement", "sublime"],
+      "questions": ["What fills you with awe?", "How does awe change your perspective?"],
+      "sort_order": 27,
+      "category": "dyad",
+      "subcategory": "fear-surprise",
+      "relationship_type": "emergence",
+      "metadata": {
+        "dyad_type": "primary",
+        "parent_emotions": ["fear", "surprise"],
+        "opposite_id": "aggressiveness"
+      }
+    },
+    {
+      "id": "disapproval",
+      "name": "Disapproval",
+      "symbol": "👎",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "composite_of": ["surprise", "sadness"],
+      "sections": {
+        "Interpretation": "Disapproval combines surprise with sadness. Someone or something fell below expectations. This emotion judges - sometimes rightly, sometimes harshly. Examine your standards.",
+        "Reversed": "Chronic disapproval poisons relationships. Disapproval of self destroys confidence. Is your disapproval proportionate and useful?",
+        "Formula": "Surprise + Sadness = Disapproval. Disappointed by the unexpected."
+      },
+      "keywords": ["disappointment", "criticism", "rejection", "censure"],
+      "questions": ["What do you disapprove of?", "Are your expectations fair?"],
+      "sort_order": 28,
+      "category": "dyad",
+      "subcategory": "surprise-sadness",
+      "relationship_type": "emergence",
+      "metadata": {
+        "dyad_type": "primary",
+        "parent_emotions": ["surprise", "sadness"],
+        "opposite_id": "optimism"
+      }
+    },
+    {
+      "id": "remorse",
+      "name": "Remorse",
+      "symbol": "💔",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "composite_of": ["sadness", "disgust"],
+      "sections": {
+        "Interpretation": "Remorse blends sadness with self-disgust. You regret something you did. This painful compound motivates change - remorse is the seed of repair.",
+        "Reversed": "Remorse without action is self-punishment. Remorse avoided becomes shame. Let remorse move you toward amends, then release it.",
+        "Formula": "Sadness + Disgust = Remorse. Grieving what you reject in yourself."
+      },
+      "keywords": ["regret", "guilt", "contrition", "self-reproach"],
+      "questions": ["What do you feel remorse about?", "What repair would help?"],
+      "sort_order": 29,
+      "category": "dyad",
+      "subcategory": "sadness-disgust",
+      "relationship_type": "emergence",
+      "metadata": {
+        "dyad_type": "primary",
+        "parent_emotions": ["sadness", "disgust"],
+        "opposite_id": "love"
+      }
+    },
+    {
+      "id": "contempt",
+      "name": "Contempt",
+      "symbol": "😤",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "composite_of": ["disgust", "anger"],
+      "sections": {
+        "Interpretation": "Contempt combines disgust with anger. You reject someone AND feel hostile toward them. This is relationship poison - contempt predicts divorce. Handle with extreme care.",
+        "Reversed": "Contempt corrodes the container who holds it. Contempt masks vulnerability. What hurt or fear lives beneath this contempt?",
+        "Formula": "Disgust + Anger = Contempt. Rejection fused with hostility."
+      },
+      "keywords": ["scorn", "disdain", "derision", "disrespect"],
+      "questions": ["Who or what do you hold in contempt?", "What would it take to release this?"],
+      "sort_order": 30,
+      "category": "dyad",
+      "subcategory": "disgust-anger",
+      "relationship_type": "emergence",
+      "metadata": {
+        "dyad_type": "primary",
+        "parent_emotions": ["disgust", "anger"],
+        "opposite_id": "submission"
+      }
+    },
+    {
+      "id": "aggressiveness",
+      "name": "Aggressiveness",
+      "symbol": "💥",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "composite_of": ["anger", "anticipation"],
+      "sections": {
+        "Interpretation": "Aggressiveness combines anger with anticipation. You're angry AND mobilizing toward action. This energy can fight for justice or cause harm. Channel with consciousness.",
+        "Reversed": "Aggressiveness without direction becomes violence. Aggressiveness suppressed becomes passive-aggression. What constructive action would serve?",
+        "Formula": "Anger + Anticipation = Aggressiveness. Anger pointed at a target."
+      },
+      "keywords": ["assertive", "forceful", "combative", "militant"],
+      "questions": ["What are you aggressive about?", "Is this energy serving life?"],
+      "sort_order": 31,
+      "category": "dyad",
+      "subcategory": "anger-anticipation",
+      "relationship_type": "emergence",
+      "metadata": {
+        "dyad_type": "primary",
+        "parent_emotions": ["anger", "anticipation"],
+        "opposite_id": "awe"
+      }
+    },
+    {
+      "id": "optimism",
+      "name": "Optimism",
+      "symbol": "🌈",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
+      "composite_of": ["anticipation", "joy"],
+      "sections": {
+        "Interpretation": "Optimism blends anticipation with joy. You expect good things. This compound energizes action and attracts support. Optimism is a self-fulfilling prophecy - mostly.",
+        "Reversed": "Toxic optimism denies reality. Optimism without grounding becomes delusion. Can you hold optimism AND see clearly?",
+        "Formula": "Anticipation + Joy = Optimism. Looking forward with happiness."
+      },
+      "keywords": ["hopeful", "positive", "confident", "bright"],
+      "questions": ["What are you optimistic about?", "Is this optimism grounded?"],
+      "sort_order": 32,
+      "category": "dyad",
+      "subcategory": "anticipation-joy",
+      "relationship_type": "emergence",
+      "metadata": {
+        "dyad_type": "primary",
+        "parent_emotions": ["anticipation", "joy"],
+        "opposite_id": "disapproval"
+      }
+    }
+  ]
+}
