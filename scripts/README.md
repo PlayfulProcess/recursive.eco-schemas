@@ -19,7 +19,7 @@ This directory contains utility scripts for managing the repository.
 
 **What it does**:
 1. Verifies the source repository exists
-2. Copies files from `apps/flow/public/data` to `data/`
+2. Copies ecosystem data files from `apps/flow/public/data` to `data/` (these circulate via offer/flow apps)
 3. Copies files from `apps/offer/public/templates` to `templates/`
 4. Creates backups of placeholder files
 5. Provides next-step instructions
