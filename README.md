@@ -1,6 +1,6 @@
 # recursive.eco-schemas
 
-Where community's schemas of interpretation for tarot, I Ching, Astrology and Others live and nurture the recursive public.
+Where community schemas of interpretation for tarot, I Ching, Astrology and Others live and nurture the recursive public.
 
 ## Purpose
 
@@ -74,4 +74,4 @@ This project is part of the recursive.eco ecosystem. Join us in building a colla
 
 ## Support
 
-For questions or discussions, please open an issue or join the recursive.eco community. 
+For questions or discussions, please open an issue or join the recursive.eco community.
