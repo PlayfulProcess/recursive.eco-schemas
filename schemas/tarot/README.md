@@ -4,7 +4,7 @@ This directory contains interpretive schemas for Tarot cards.
 
 ## Organization
 
-Suggested file structure:
+### Card Schemas
 - `major-arcana.json` - The 22 Major Arcana cards (0-21)
 - `minor-arcana-wands.json` - Suit of Wands (Ace through King)
 - `minor-arcana-cups.json` - Suit of Cups
@@ -12,6 +12,9 @@ Suggested file structure:
 - `minor-arcana-pentacles.json` - Suit of Pentacles
 - `spreads.json` - Common spread patterns and their interpretations
 - `court-cards.json` - Detailed interpretations of court cards
+
+### Supplementary Decks
+- `plutchik-wheel-emotions.json` - Plutchik's Wheel of Emotions (psychological oracle deck based on Robert Plutchik's evolutionary theory of emotion)
 
 ## Schema Format
 
