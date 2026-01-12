@@ -43,7 +43,7 @@ The following issues prevent automatic import:
 ### Files to Import
 Once access is available, these files need to be imported:
 
-- **From `apps/flow/public/data`**: Flow application data files
+- **From `apps/flow/public/data`**: Ecosystem data files (these circulate throughout recursive.eco and can be exported/imported via offer tab or flow app)
 - **From `apps/offer/public/templates`**: Offer template files
 
 ### Post-Import Tasks
