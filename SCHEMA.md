@@ -48,10 +48,38 @@ For tarot decks, the `grammar.json` should follow this structure:
       },
       "astrology": "Optional astrological association",
       "element": "Optional elemental association"
+    },
+    {
+      "id": "ace-of-cups",
+      "name": "Ace of Cups",
+      "number": 1,
+      "arcana": "minor",
+      "suit": "cups",
+      "keywords": ["love", "new relationships", "compassion"],
+      "meanings": {
+        "upright": "Description of upright meaning",
+        "reversed": "Description of reversed meaning"
+      },
+      "element": "Optional elemental association"
     }
   ]
 }
 ```
+
+**Required Fields:**
+- `id`: Unique identifier for the card (lowercase, hyphenated)
+- `name`: Display name of the card
+- `number`: Card number (0-21 for Major Arcana, 1-14 for Minor Arcana)
+- `arcana`: Either "major" or "minor"
+- `keywords`: Array of keywords associated with the card
+- `meanings`: Object containing "upright" and "reversed" interpretations
+
+**Additional Fields for Minor Arcana:**
+- `suit`: Required for minor arcana cards - one of "cups", "pentacles", "swords", or "wands"
+
+**Optional Fields:**
+- `astrology`: Astrological association
+- `element`: Elemental association (Fire, Water, Air, Earth)
 
 ### I Ching Grammar Schema
 
