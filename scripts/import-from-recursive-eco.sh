@@ -39,7 +39,11 @@ if [ -d "$FLOW_DATA_SOURCE" ]; then
     
     # Copy files
     echo "  Copying flow data files..."
-    cp -rv "$FLOW_DATA_SOURCE"/* "$TARGET_REPO_PATH/data/" 2>/dev/null || echo "  (no files to copy or already exist)"
+    if [ -n "$(ls -A "$FLOW_DATA_SOURCE" 2>/dev/null)" ]; then
+        cp -rv "$FLOW_DATA_SOURCE"/* "$TARGET_REPO_PATH/data/"
+    else
+        echo "  (no files to copy - source directory is empty)"
+    fi
     
     echo "  ✓ Flow data imported"
 else
@@ -64,7 +68,11 @@ if [ -d "$OFFER_TEMPLATES_SOURCE" ]; then
     
     # Copy files
     echo "  Copying offer template files..."
-    cp -rv "$OFFER_TEMPLATES_SOURCE"/* "$TARGET_REPO_PATH/templates/" 2>/dev/null || echo "  (no files to copy or already exist)"
+    if [ -n "$(ls -A "$OFFER_TEMPLATES_SOURCE" 2>/dev/null)" ]; then
+        cp -rv "$OFFER_TEMPLATES_SOURCE"/* "$TARGET_REPO_PATH/templates/"
+    else
+        echo "  (no files to copy - source directory is empty)"
+    fi
     
     echo "  ✓ Offer templates imported"
 else
