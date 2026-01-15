@@ -1,0 +1,2520 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "url": "",
+        "date": "2026-01-15",
+        "note": "Original creator"
+      }
+    ]
+  },
+  "name": "Sola Busca Tarot (CBT + Jung-Informed Interpretive Edition)",
+  "description": "This deck is designed for reflective interpretation (not prediction). Think of the reader as a warm, curious CBT-oriented coach with Jung’s archetypal language in their back pocket. The cards are used as a structured way to notice patterns, soften distortions, reconnect with values, and practice self-compassion. Instead of asking “What will happen?”, the guiding question becomes: “What is happening inside me right now, and what wiser response is available?”\n\nHow to use (CBT lens):\n1) Name the moment: what’s the situation you’re in?\n2) Name the mind: what thoughts, images, or stories show up automatically?\n3) Name the body: what sensations and urges arise?\n4) Name the distortion (if any): catastrophizing, mind-reading, all-or-nothing, emotional reasoning, “should” statements, fortune-telling, labeling, personalization, discounting positives.\n5) Reframe: write a balanced thought that is both kind and honest.\n6) Choose a micro-action: one small step aligned with your values.\n\nHow to use (Jung lens):\nEach card can be treated as an archetypal “part” of the psyche (a role, a protector, a wounded child, a mentor, an inner critic, a longing). The spread becomes a map of internal relationships: who is loud, who is hidden, and what wants integration. The goal is not to banish parts, but to bring them into a more cooperative internal system.\n\nA gentle contract (important):\n- No deterministic claims. No inevitability. No “you must.”\n- The cards are prompts, not verdicts.\n- We privilege dignity: you are not broken; you are patterned.\n\nCore stance of the interpreter:\n- Curious (not certain)\n- Compassionate (not harsh)\n- Specific (not vague)\n- Actionable (not mystical paralysis)\n\nSuggested micro-scripts you can reuse in your app:\n- “If this card were a thought bubble, what would it be saying?”\n- “What is the most charitable interpretation of what’s happening?”\n- “What would you advise a friend who felt this?”\n- “What would be 10% more balanced than your current belief?”\n- “What value do you want to embody in the next 24 hours?”\n\nPrimary spread (3 zones + integration) — adapted for reframing:\n1) Trigger / Present Stressor: what’s activating you?\n2) Automatic Thought / Story: what meaning are you attaching?\n3) Emotion + Body: what feeling state is here?\n4) Core Need / Vulnerable Truth: what’s the honest tender center?\n5) Helpful Reframe: what is a wiser, truer thought?\n6) Value-Aligned Action: what is one small step?\n7) Support / Resource: what helps you stay regulated?\n8) Integration: what does “wholeness” look like here?\n\nAbout the images:\nThis edition uses public images of the historic Sola Busca tarot hosted on Wikimedia Commons. The Sola Busca is among the earliest fully extant 78-card decks, and its illustrated pips influenced later tarot traditions. In this tool, we use the art as contemplative stimuli—like projective cards—while keeping interpretations grounded in present-moment cognition, emotion regulation, and archetypal meaning-making. (Image licensing can vary by file on Commons; your app should store/cite the file page URL alongside the direct image URL.)\n\nPractical guardrails for a wellbeing tool:\n- If a user expresses self-harm intent or imminent danger, your app should switch from “reflection” to “safety support” mode.\n- Encourage journaling, breath, and social support rather than isolation.\n- Offer multiple possible meanings and let the user choose what resonates.\n\nCreator:\nPlayfulProcess — https://lifeisprocess.substack.com/\nSource for images: Wikimedia Commons (Sola-Busca category).\n\nSource: Public domain / Commons licensing varies by file; consult each file page - Wikimedia Commons",
+  "cover_image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2000.jpg",
+  "tags": [],
+  "grammar_type": "tarot",
+  "items": [
+    {
+      "id": "card-0",
+      "name": "The Fool",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2000.jpg",
+      "sections": {
+        "Interpretation": "CBT reframe: Notice any all-or-nothing story (\"If I start, I’ll fail\"). Try: \"I can begin imperfectly and learn.\" Jung lens: the Innocent/Seeker archetype—life energy moving before it has a map.",
+        "Reversed": "Caution without shame: impulsivity, avoidance of responsibility, or fear disguised as cynicism. Try a smaller step rather than no step."
+      },
+      "keywords": [
+        "beginner mind",
+        "risk",
+        "freedom",
+        "openness"
+      ],
+      "questions": [],
+      "sort_order": 0,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 0,
+        "suit": null,
+        "arcana": "major",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.515Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-1",
+      "name": "The Magician",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2001.jpg",
+      "sections": {
+        "Interpretation": "Shift from helpless thought to workable thought: \"What’s one tool I already have?\" Archetype: the Maker—turning intention into action.",
+        "Reversed": "Scattered focus or performative control. Choose one priority and do it slowly."
+      },
+      "keywords": [
+        "agency",
+        "attention",
+        "skill",
+        "tools"
+      ],
+      "questions": [],
+      "sort_order": 1,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 1,
+        "suit": null,
+        "arcana": "major",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-2",
+      "name": "The High Priestess",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2002.jpg",
+      "sections": {
+        "Interpretation": "Before solving, sense: what does your body already know? Archetype: the Oracle—wisdom beneath words.",
+        "Reversed": "Overriding intuition with anxiety; secrecy. Practice naming one feeling plainly."
+      },
+      "keywords": [
+        "intuition",
+        "pause",
+        "inner knowing",
+        "mystery"
+      ],
+      "questions": [],
+      "sort_order": 2,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 2,
+        "suit": null,
+        "arcana": "major",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-3",
+      "name": "The Empress",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2003.jpg",
+      "sections": {
+        "Interpretation": "Ask: what would be the most nourishing interpretation of this situation? Archetype: the Mother—life that supports life.",
+        "Reversed": "Depletion or neglect. Replace “I should do more” with “What’s sustainable?”"
+      },
+      "keywords": [
+        "nurture",
+        "abundance",
+        "care",
+        "growth"
+      ],
+      "questions": [],
+      "sort_order": 3,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 3,
+        "suit": null,
+        "arcana": "major",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-4",
+      "name": "The Emperor",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2004.jpg",
+      "sections": {
+        "Interpretation": "Reframe from chaos to container: what boundary would make this safer? Archetype: the Builder—protective structure.",
+        "Reversed": "Rigidity or control as fear. Try flexible rules: clear + kind."
+      },
+      "keywords": [
+        "structure",
+        "boundaries",
+        "order",
+        "stability"
+      ],
+      "questions": [],
+      "sort_order": 4,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 4,
+        "suit": null,
+        "arcana": "major",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-5",
+      "name": "The Hierophant",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2005.jpg",
+      "sections": {
+        "Interpretation": "Which principle do you want to live by here? Archetype: the Teacher—shared meaning and ethical grounding.",
+        "Reversed": "Dogma or rebellion-by-reflex. Choose values intentionally, not reactively."
+      },
+      "keywords": [
+        "tradition",
+        "learning",
+        "values",
+        "mentorship"
+      ],
+      "questions": [],
+      "sort_order": 5,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 5,
+        "suit": null,
+        "arcana": "major",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-6",
+      "name": "The Lovers",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2006.jpg",
+      "sections": {
+        "Interpretation": "CBT: name the real choice (not the fear-choice). Jung: union of opposites—bringing inner parts into dialogue.",
+        "Reversed": "Avoidance, people-pleasing, or split loyalties. Practice one honest sentence."
+      },
+      "keywords": [
+        "choice",
+        "bond",
+        "alignment",
+        "truth"
+      ],
+      "questions": [],
+      "sort_order": 6,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 6,
+        "suit": null,
+        "arcana": "major",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-7",
+      "name": "The Chariot",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2007.jpg",
+      "sections": {
+        "Interpretation": "What’s your next right action—small and clear? Archetype: the Driver—holding tension without swerving.",
+        "Reversed": "Forcing, rushing, or scattered effort. Slow down and pick one lane."
+      },
+      "keywords": [
+        "direction",
+        "discipline",
+        "momentum",
+        "will"
+      ],
+      "questions": [],
+      "sort_order": 7,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 7,
+        "suit": null,
+        "arcana": "major",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-8",
+      "name": "Strength",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2008.jpg",
+      "sections": {
+        "Interpretation": "Self-talk matters: speak to the frightened part like you would to a child. Archetype: the Tamer—firm + kind.",
+        "Reversed": "Shame, suppression, or brittle confidence. Practice: “I can handle feelings without obeying them.”"
+      },
+      "keywords": [
+        "courage",
+        "gentleness",
+        "self-trust",
+        "regulation"
+      ],
+      "questions": [],
+      "sort_order": 8,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 8,
+        "suit": null,
+        "arcana": "major",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-9",
+      "name": "The Hermit",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2009.jpg",
+      "sections": {
+        "Interpretation": "What becomes obvious when the noise reduces? Archetype: the Sage—wisdom through quiet attention.",
+        "Reversed": "Isolation or rumination. Add one supportive connection or grounding routine."
+      },
+      "keywords": [
+        "solitude",
+        "insight",
+        "inner guide",
+        "reflection"
+      ],
+      "questions": [],
+      "sort_order": 9,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 9,
+        "suit": null,
+        "arcana": "major",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-10",
+      "name": "Wheel of Fortune",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2010.jpg",
+      "sections": {
+        "Interpretation": "Reframe: “This is a season, not a life sentence.” Archetype: the Turning—life in motion.",
+        "Reversed": "Fighting the cycle. Ask: what is the lesson of this phase?"
+      },
+      "keywords": [
+        "change",
+        "cycles",
+        "timing",
+        "adaptation"
+      ],
+      "questions": [],
+      "sort_order": 10,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 10,
+        "suit": null,
+        "arcana": "major",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-11",
+      "name": "Justice",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2011.jpg",
+      "sections": {
+        "Interpretation": "What are the facts vs. the story? Archetype: the Judge—honest assessment without cruelty.",
+        "Reversed": "Bias or avoidance. Try writing the situation as if you were a neutral reporter."
+      },
+      "keywords": [
+        "truth",
+        "balance",
+        "accountability",
+        "clarity"
+      ],
+      "questions": [],
+      "sort_order": 11,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 11,
+        "suit": null,
+        "arcana": "major",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-12",
+      "name": "The Hanged Man",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2012.jpg",
+      "sections": {
+        "Interpretation": "Classic CBT move: try 3 alternative interpretations. Archetype: the Reversed View—wisdom from yielding.",
+        "Reversed": "Stuckness or martyrdom. Ask: what is one choice you *do* have?"
+      },
+      "keywords": [
+        "perspective",
+        "pause",
+        "acceptance",
+        "reframing"
+      ],
+      "questions": [],
+      "sort_order": 12,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 12,
+        "suit": null,
+        "arcana": "major",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-13",
+      "name": "Death",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2013.jpg",
+      "sections": {
+        "Interpretation": "What belief is expiring because it’s too small for who you are now? Archetype: the Releaser—clearing space.",
+        "Reversed": "Clinging. Try a goodbye ritual: write what you’re releasing and why."
+      },
+      "keywords": [
+        "ending",
+        "renewal",
+        "letting go",
+        "transition"
+      ],
+      "questions": [],
+      "sort_order": 13,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 13,
+        "suit": null,
+        "arcana": "major",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-14",
+      "name": "Temperance",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2014.jpg",
+      "sections": {
+        "Interpretation": "What would “middle path” look like today? Archetype: the Alchemist—blending opposites into wholeness.",
+        "Reversed": "Extremes. Choose a stabilizer: sleep, food, movement, or a boundary."
+      },
+      "keywords": [
+        "balance",
+        "integration",
+        "patience",
+        "moderation"
+      ],
+      "questions": [],
+      "sort_order": 14,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 14,
+        "suit": null,
+        "arcana": "major",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-15",
+      "name": "The Devil",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2015.jpg",
+      "sections": {
+        "Interpretation": "CBT: identify the hook—what short-term relief is costing long-term values? Jung: the Shadow asking to be met, not hated.",
+        "Reversed": "Loosening chains. Choose one small act of freedom and tell the truth about it."
+      },
+      "keywords": [
+        "compulsion",
+        "attachment",
+        "shame",
+        "illusion"
+      ],
+      "questions": [],
+      "sort_order": 15,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 15,
+        "suit": null,
+        "arcana": "major",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-16",
+      "name": "The Tower",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2016.jpg",
+      "sections": {
+        "Interpretation": "If a belief collapsed, what would be more realistic? Archetype: the Lightning—truth clearing false certainty.",
+        "Reversed": "Fear of change. Ask: what structure can you build that’s more honest?"
+      },
+      "keywords": [
+        "disruption",
+        "truth",
+        "breakthrough",
+        "reset"
+      ],
+      "questions": [],
+      "sort_order": 16,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 16,
+        "suit": null,
+        "arcana": "major",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-17",
+      "name": "The Star",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2017.jpg",
+      "sections": {
+        "Interpretation": "Name one believable hope (not a fantasy): a 5% improvement you can support. Archetype: the North Star—quiet confidence.",
+        "Reversed": "Discouragement. Borrow hope: ask who/what has helped you before."
+      },
+      "keywords": [
+        "hope",
+        "healing",
+        "guidance",
+        "renewal"
+      ],
+      "questions": [],
+      "sort_order": 17,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 17,
+        "suit": null,
+        "arcana": "major",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-18",
+      "name": "The Moon",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2018.jpg",
+      "sections": {
+        "Interpretation": "CBT: separate possibilities from probabilities. Jung: the Unconscious—symbols, anxieties, intuitions rising.",
+        "Reversed": "Clarity emerging. Reduce interpretation overload: return to facts + body cues."
+      },
+      "keywords": [
+        "uncertainty",
+        "fear",
+        "dreams",
+        "projection"
+      ],
+      "questions": [],
+      "sort_order": 18,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 18,
+        "suit": null,
+        "arcana": "major",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-19",
+      "name": "The Sun",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2019.jpg",
+      "sections": {
+        "Interpretation": "What is already working? Don’t discount positives. Archetype: the Child-Sun—simple aliveness.",
+        "Reversed": "Muted joy or overexertion. Ask: what would make today 10% lighter?"
+      },
+      "keywords": [
+        "clarity",
+        "joy",
+        "energy",
+        "truth"
+      ],
+      "questions": [],
+      "sort_order": 19,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 19,
+        "suit": null,
+        "arcana": "major",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-20",
+      "name": "Judgement",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2020.jpg",
+      "sections": {
+        "Interpretation": "What are you being invited to own—and release? Archetype: the Awakener—life asking you to step forward.",
+        "Reversed": "Avoiding the call. Write: “If I were brave, I would…” then pick the smallest version."
+      },
+      "keywords": [
+        "calling",
+        "review",
+        "forgiveness",
+        "rebirth"
+      ],
+      "questions": [],
+      "sort_order": 20,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 20,
+        "suit": null,
+        "arcana": "major",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-21",
+      "name": "The World",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2021.jpg",
+      "sections": {
+        "Interpretation": "CBT: evidence of progress—what’s completed? Jung: the Self—parts cooperating in a wider identity.",
+        "Reversed": "Almost-there energy. Ask: what is the final 1% to close the loop?"
+      },
+      "keywords": [
+        "completion",
+        "integration",
+        "wholeness",
+        "arrival"
+      ],
+      "questions": [],
+      "sort_order": 21,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 21,
+        "suit": null,
+        "arcana": "major",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-22",
+      "name": "Ace of Wands",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2022.jpg",
+      "sections": {
+        "Interpretation": "Name the smallest doable start. Energy follows action.",
+        "Reversed": "Hesitation or burnout—reduce scope."
+      },
+      "keywords": [
+        "spark",
+        "initiative",
+        "vitality",
+        "start"
+      ],
+      "questions": [],
+      "sort_order": 22,
+      "category": "minor",
+      "subcategory": "wands",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 1,
+        "suit": "wands",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-23",
+      "name": "Two of Wands",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2023.jpg",
+      "sections": {
+        "Interpretation": "List 2 realistic paths. Choose based on values, not fear.",
+        "Reversed": "Overplanning—take one test step."
+      },
+      "keywords": [
+        "planning",
+        "choice",
+        "horizon",
+        "options"
+      ],
+      "questions": [],
+      "sort_order": 23,
+      "category": "minor",
+      "subcategory": "wands",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 2,
+        "suit": "wands",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-24",
+      "name": "Three of Wands",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2024.jpg",
+      "sections": {
+        "Interpretation": "Look for early evidence your effort is working. Adjust, don’t quit.",
+        "Reversed": "Impatience—progress may be quieter than expected."
+      },
+      "keywords": [
+        "expansion",
+        "progress",
+        "shipping",
+        "confidence"
+      ],
+      "questions": [],
+      "sort_order": 24,
+      "category": "minor",
+      "subcategory": "wands",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 3,
+        "suit": "wands",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-25",
+      "name": "Four of Wands",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2025.jpg",
+      "sections": {
+        "Interpretation": "Regulation through belonging: who is your safe team?",
+        "Reversed": "Loneliness—schedule one supportive touchpoint."
+      },
+      "keywords": [
+        "support",
+        "home",
+        "celebration",
+        "stability"
+      ],
+      "questions": [],
+      "sort_order": 25,
+      "category": "minor",
+      "subcategory": "wands",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 4,
+        "suit": "wands",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-26",
+      "name": "Five of Wands",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2026.jpg",
+      "sections": {
+        "Interpretation": "Conflict can be information. What’s the real need underneath?",
+        "Reversed": "Avoiding conflict—try one clear request."
+      },
+      "keywords": [
+        "friction",
+        "competition",
+        "practice",
+        "noise"
+      ],
+      "questions": [],
+      "sort_order": 26,
+      "category": "minor",
+      "subcategory": "wands",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 5,
+        "suit": "wands",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-27",
+      "name": "Six of Wands",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2027.jpg",
+      "sections": {
+        "Interpretation": "Receive the compliment. Let success update your self-belief.",
+        "Reversed": "Imposter thoughts—collect evidence, not vibes."
+      },
+      "keywords": [
+        "recognition",
+        "confidence",
+        "win",
+        "visibility"
+      ],
+      "questions": [],
+      "sort_order": 27,
+      "category": "minor",
+      "subcategory": "wands",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 6,
+        "suit": "wands",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-28",
+      "name": "Seven of Wands",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2028.jpg",
+      "sections": {
+        "Interpretation": "Protect your yes. Boundaries are self-respect in action.",
+        "Reversed": "Overdefense—check if you’re fighting an old battle."
+      },
+      "keywords": [
+        "boundaries",
+        "defense",
+        "courage",
+        "stance"
+      ],
+      "questions": [],
+      "sort_order": 28,
+      "category": "minor",
+      "subcategory": "wands",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 7,
+        "suit": "wands",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-29",
+      "name": "Eight of Wands",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2029.jpg",
+      "sections": {
+        "Interpretation": "Don’t overthink—respond with clarity and speed.",
+        "Reversed": "Overwhelm—prioritize and slow the channel."
+      },
+      "keywords": [
+        "movement",
+        "messages",
+        "momentum",
+        "flow"
+      ],
+      "questions": [],
+      "sort_order": 29,
+      "category": "minor",
+      "subcategory": "wands",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 8,
+        "suit": "wands",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-30",
+      "name": "Nine of Wands",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2030.jpg",
+      "sections": {
+        "Interpretation": "You’ve survived a lot. Adjust the plan to protect your energy.",
+        "Reversed": "Hypervigilance—practice a safe rest cue."
+      },
+      "keywords": [
+        "resilience",
+        "fatigue",
+        "guard",
+        "persistence"
+      ],
+      "questions": [],
+      "sort_order": 30,
+      "category": "minor",
+      "subcategory": "wands",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 9,
+        "suit": "wands",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-31",
+      "name": "Ten of Wands",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2031.jpg",
+      "sections": {
+        "Interpretation": "What can be delegated, delayed, or dropped? Overfunctioning isn’t virtue.",
+        "Reversed": "Relief arriving—commit to a simpler system."
+      },
+      "keywords": [
+        "burden",
+        "overload",
+        "responsibility",
+        "limits"
+      ],
+      "questions": [],
+      "sort_order": 31,
+      "category": "minor",
+      "subcategory": "wands",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 10,
+        "suit": "wands",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-32",
+      "name": "Page of Wands",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2032.jpg",
+      "sections": {
+        "Interpretation": "Approach as an experiment. Curiosity reduces threat.",
+        "Reversed": "Restlessness—choose one skill to practice."
+      },
+      "keywords": [
+        "curiosity",
+        "learning",
+        "message",
+        "beginner"
+      ],
+      "questions": [],
+      "sort_order": 32,
+      "category": "minor",
+      "subcategory": "wands",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 11,
+        "suit": "wands",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-33",
+      "name": "Knight of Wands",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2033.jpg",
+      "sections": {
+        "Interpretation": "Take aligned action—but check impulsivity. Move with intention.",
+        "Reversed": "Recklessness—add one pause and one plan."
+      },
+      "keywords": [
+        "drive",
+        "courage",
+        "adventure",
+        "action"
+      ],
+      "questions": [],
+      "sort_order": 33,
+      "category": "minor",
+      "subcategory": "wands",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 12,
+        "suit": "wands",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-34",
+      "name": "Queen of Wands",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2034.jpg",
+      "sections": {
+        "Interpretation": "Lead with warmth. Let confidence be embodied, not argued.",
+        "Reversed": "Self-doubt—collect evidence of capability."
+      },
+      "keywords": [
+        "confidence",
+        "warmth",
+        "presence",
+        "leadership"
+      ],
+      "questions": [],
+      "sort_order": 34,
+      "category": "minor",
+      "subcategory": "wands",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 13,
+        "suit": "wands",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-35",
+      "name": "King of Wands",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2035.jpg",
+      "sections": {
+        "Interpretation": "Clarify vision → set a boundary → take one step. Authority can be kind.",
+        "Reversed": "Domination or avoidance—return to values."
+      },
+      "keywords": [
+        "vision",
+        "integrity",
+        "direction",
+        "stewardship"
+      ],
+      "questions": [],
+      "sort_order": 35,
+      "category": "minor",
+      "subcategory": "wands",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 14,
+        "suit": "wands",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-36",
+      "name": "Ace of Cups",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2036.jpg",
+      "sections": {
+        "Interpretation": "Let feeling be information, not command. Name it gently.",
+        "Reversed": "Numbness—try a small act of care."
+      },
+      "keywords": [
+        "tenderness",
+        "opening",
+        "care",
+        "emotion"
+      ],
+      "questions": [],
+      "sort_order": 36,
+      "category": "minor",
+      "subcategory": "cups",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 1,
+        "suit": "cups",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-37",
+      "name": "Two of Cups",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2037.jpg",
+      "sections": {
+        "Interpretation": "Ask: what would repair look like? Make one clear bid for connection.",
+        "Reversed": "Misattunement—practice reflective listening."
+      },
+      "keywords": [
+        "bond",
+        "repair",
+        "mutuality",
+        "meeting"
+      ],
+      "questions": [],
+      "sort_order": 37,
+      "category": "minor",
+      "subcategory": "cups",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 2,
+        "suit": "cups",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-38",
+      "name": "Three of Cups",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2038.jpg",
+      "sections": {
+        "Interpretation": "Co-regulation matters. Share the load with safe people.",
+        "Reversed": "Overextension—choose quality over quantity."
+      },
+      "keywords": [
+        "friendship",
+        "support",
+        "joy",
+        "community"
+      ],
+      "questions": [],
+      "sort_order": 38,
+      "category": "minor",
+      "subcategory": "cups",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 3,
+        "suit": "cups",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-39",
+      "name": "Four of Cups",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2039.jpg",
+      "sections": {
+        "Interpretation": "Check unmet needs before judging your life. Boredom can be a signal.",
+        "Reversed": "Re-engagement—try one novel, gentle input."
+      },
+      "keywords": [
+        "apathy",
+        "pause",
+        "review",
+        "needs"
+      ],
+      "questions": [],
+      "sort_order": 39,
+      "category": "minor",
+      "subcategory": "cups",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 4,
+        "suit": "cups",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-40",
+      "name": "Five of Cups",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2040.jpg",
+      "sections": {
+        "Interpretation": "Validate the loss without erasing what remains. Both can be true.",
+        "Reversed": "Acceptance emerging—practice self-forgiveness."
+      },
+      "keywords": [
+        "grief",
+        "regret",
+        "loss",
+        "meaning"
+      ],
+      "questions": [],
+      "sort_order": 40,
+      "category": "minor",
+      "subcategory": "cups",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 5,
+        "suit": "cups",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-41",
+      "name": "Six of Cups",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2041.jpg",
+      "sections": {
+        "Interpretation": "Reframe nostalgia: what resource from the past can you bring forward?",
+        "Reversed": "Stuck in past—ground in present facts."
+      },
+      "keywords": [
+        "memory",
+        "innocence",
+        "past",
+        "comfort"
+      ],
+      "questions": [],
+      "sort_order": 41,
+      "category": "minor",
+      "subcategory": "cups",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 6,
+        "suit": "cups",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-42",
+      "name": "Seven of Cups",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2042.jpg",
+      "sections": {
+        "Interpretation": "Name one next step. Too many choices can be avoidance.",
+        "Reversed": "Clarity—commit to one path for one week."
+      },
+      "keywords": [
+        "options",
+        "fantasy",
+        "overwhelm",
+        "discernment"
+      ],
+      "questions": [],
+      "sort_order": 42,
+      "category": "minor",
+      "subcategory": "cups",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 7,
+        "suit": "cups",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-43",
+      "name": "Eight of Cups",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2043.jpg",
+      "sections": {
+        "Interpretation": "Walk toward what matters, not just away from discomfort.",
+        "Reversed": "Avoiding necessary goodbye—name what you’re protecting."
+      },
+      "keywords": [
+        "leaving",
+        "values",
+        "maturity",
+        "release"
+      ],
+      "questions": [],
+      "sort_order": 43,
+      "category": "minor",
+      "subcategory": "cups",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 8,
+        "suit": "cups",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-44",
+      "name": "Nine of Cups",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2044.jpg",
+      "sections": {
+        "Interpretation": "Let “enough” be real. Notice what is already okay.",
+        "Reversed": "Chasing relief—try gratitude + one boundary."
+      },
+      "keywords": [
+        "satisfaction",
+        "gratitude",
+        "enough",
+        "pleasure"
+      ],
+      "questions": [],
+      "sort_order": 44,
+      "category": "minor",
+      "subcategory": "cups",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 9,
+        "suit": "cups",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-45",
+      "name": "Ten of Cups",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2045.jpg",
+      "sections": {
+        "Interpretation": "What relationship ritual supports connection this week?",
+        "Reversed": "Mismatch—make a specific request, not a global complaint."
+      },
+      "keywords": [
+        "belonging",
+        "home",
+        "harmony",
+        "shared joy"
+      ],
+      "questions": [],
+      "sort_order": 45,
+      "category": "minor",
+      "subcategory": "cups",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 10,
+        "suit": "cups",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-46",
+      "name": "Page of Cups",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2046.jpg",
+      "sections": {
+        "Interpretation": "Try expressing one feeling simply: “I feel __ because I value __.”",
+        "Reversed": "Emotional confusion—use a feelings list."
+      },
+      "keywords": [
+        "openness",
+        "tender message",
+        "play",
+        "emotion"
+      ],
+      "questions": [],
+      "sort_order": 46,
+      "category": "minor",
+      "subcategory": "cups",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 11,
+        "suit": "cups",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-47",
+      "name": "Knight of Cups",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2047.jpg",
+      "sections": {
+        "Interpretation": "Lead with sincerity. Make the bid for closeness.",
+        "Reversed": "Idealization—anchor in reality and consent."
+      },
+      "keywords": [
+        "romance",
+        "gesture",
+        "heart-led action",
+        "beauty"
+      ],
+      "questions": [],
+      "sort_order": 47,
+      "category": "minor",
+      "subcategory": "cups",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 12,
+        "suit": "cups",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-48",
+      "name": "Queen of Cups",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2048.jpg",
+      "sections": {
+        "Interpretation": "Hold feelings with compassion and boundaries. You can care without collapsing.",
+        "Reversed": "Over-absorbing—practice “not mine to carry.”"
+      },
+      "keywords": [
+        "empathy",
+        "containment",
+        "intuition",
+        "care"
+      ],
+      "questions": [],
+      "sort_order": 48,
+      "category": "minor",
+      "subcategory": "cups",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 13,
+        "suit": "cups",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-49",
+      "name": "King of Cups",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2049.jpg",
+      "sections": {
+        "Interpretation": "Regulate first, then speak. Calm is a strategy.",
+        "Reversed": "Emotional flooding—use a time-out plan."
+      },
+      "keywords": [
+        "emotional leadership",
+        "calm",
+        "maturity",
+        "repair"
+      ],
+      "questions": [],
+      "sort_order": 49,
+      "category": "minor",
+      "subcategory": "cups",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 14,
+        "suit": "cups",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-50",
+      "name": "Ace of Swords",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2050.jpg",
+      "sections": {
+        "Interpretation": "Define the problem in one sentence. Clarity reduces anxiety.",
+        "Reversed": "Confusion—write facts vs. assumptions."
+      },
+      "keywords": [
+        "clarity",
+        "truth",
+        "decision",
+        "focus"
+      ],
+      "questions": [],
+      "sort_order": 50,
+      "category": "minor",
+      "subcategory": "swords",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 1,
+        "suit": "swords",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-51",
+      "name": "Two of Swords",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2051.jpg",
+      "sections": {
+        "Interpretation": "Name what you’re avoiding choosing—and why. Ambivalence deserves compassion.",
+        "Reversed": "Decision opening—choose the least-regret path."
+      },
+      "keywords": [
+        "stalemate",
+        "avoidance",
+        "choice",
+        "ambivalence"
+      ],
+      "questions": [],
+      "sort_order": 51,
+      "category": "minor",
+      "subcategory": "swords",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 2,
+        "suit": "swords",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-52",
+      "name": "Three of Swords",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2052.jpg",
+      "sections": {
+        "Interpretation": "Validate pain without globalizing it. This hurts—and it will change.",
+        "Reversed": "Healing—practice honest grieving + supportive contact."
+      },
+      "keywords": [
+        "heartbreak",
+        "truth",
+        "grief",
+        "processing"
+      ],
+      "questions": [],
+      "sort_order": 52,
+      "category": "minor",
+      "subcategory": "swords",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 3,
+        "suit": "swords",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-53",
+      "name": "Four of Swords",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2053.jpg",
+      "sections": {
+        "Interpretation": "Rest is an intervention. Schedule it like medicine.",
+        "Reversed": "Restlessness—do a short body scan or walk."
+      },
+      "keywords": [
+        "rest",
+        "recovery",
+        "pause",
+        "reset"
+      ],
+      "questions": [],
+      "sort_order": 53,
+      "category": "minor",
+      "subcategory": "swords",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 4,
+        "suit": "swords",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-54",
+      "name": "Five of Swords",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2054.jpg",
+      "sections": {
+        "Interpretation": "Ask: do you want to be right or connected? Choose your value.",
+        "Reversed": "De-escalation—own your part without self-attack."
+      },
+      "keywords": [
+        "conflict",
+        "ego",
+        "winning",
+        "repair"
+      ],
+      "questions": [],
+      "sort_order": 54,
+      "category": "minor",
+      "subcategory": "swords",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 5,
+        "suit": "swords",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-55",
+      "name": "Six of Swords",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2055.jpg",
+      "sections": {
+        "Interpretation": "You’re allowed to seek calmer water. Choose the next stabilizing step.",
+        "Reversed": "Stuck—ask what support would make change possible."
+      },
+      "keywords": [
+        "transition",
+        "relief",
+        "moving on",
+        "support"
+      ],
+      "questions": [],
+      "sort_order": 55,
+      "category": "minor",
+      "subcategory": "swords",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 6,
+        "suit": "swords",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-56",
+      "name": "Seven of Swords",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2056.jpg",
+      "sections": {
+        "Interpretation": "What are you trying to protect? Choose honesty with safety.",
+        "Reversed": "Coming clean—repair with accountability."
+      },
+      "keywords": [
+        "avoidance",
+        "strategy",
+        "secrecy",
+        "fear"
+      ],
+      "questions": [],
+      "sort_order": 56,
+      "category": "minor",
+      "subcategory": "swords",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 7,
+        "suit": "swords",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-57",
+      "name": "Eight of Swords",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2057.jpg",
+      "sections": {
+        "Interpretation": "List 3 options you’re ignoring. Fear narrows the field—widen it gently.",
+        "Reversed": "Freedom—take one small risk with support."
+      },
+      "keywords": [
+        "restriction",
+        "fear",
+        "thought trap",
+        "options"
+      ],
+      "questions": [],
+      "sort_order": 57,
+      "category": "minor",
+      "subcategory": "swords",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 8,
+        "suit": "swords",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-58",
+      "name": "Nine of Swords",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2058.jpg",
+      "sections": {
+        "Interpretation": "Night thoughts are unreliable. Write them down and challenge distortions in daylight.",
+        "Reversed": "Relief—build a bedtime decompression routine."
+      },
+      "keywords": [
+        "anxiety",
+        "night mind",
+        "worry",
+        "rumination"
+      ],
+      "questions": [],
+      "sort_order": 58,
+      "category": "minor",
+      "subcategory": "swords",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 9,
+        "suit": "swords",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-59",
+      "name": "Ten of Swords",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2059.jpg",
+      "sections": {
+        "Interpretation": "Catastrophic thoughts peak like this: “It’s over.” Reframe: “This chapter ends; I begin again.”",
+        "Reversed": "Recovery—choose the next small repair."
+      },
+      "keywords": [
+        "ending",
+        "over",
+        "release",
+        "reset"
+      ],
+      "questions": [],
+      "sort_order": 59,
+      "category": "minor",
+      "subcategory": "swords",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 10,
+        "suit": "swords",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-60",
+      "name": "Page of Swords",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2060.jpg",
+      "sections": {
+        "Interpretation": "Ask better questions. Curiosity interrupts certainty.",
+        "Reversed": "Hypervigilance—ground in present safety cues."
+      },
+      "keywords": [
+        "curiosity",
+        "truth-seeking",
+        "alertness",
+        "learning"
+      ],
+      "questions": [],
+      "sort_order": 60,
+      "category": "minor",
+      "subcategory": "swords",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 11,
+        "suit": "swords",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-61",
+      "name": "Knight of Swords",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2061.jpg",
+      "sections": {
+        "Interpretation": "Be direct, but not sharp. Aim for truth + care.",
+        "Reversed": "Reactivity—pause before sending the message."
+      },
+      "keywords": [
+        "speed",
+        "argument",
+        "drive",
+        "directness"
+      ],
+      "questions": [],
+      "sort_order": 61,
+      "category": "minor",
+      "subcategory": "swords",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 12,
+        "suit": "swords",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-62",
+      "name": "Queen of Swords",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2062.jpg",
+      "sections": {
+        "Interpretation": "Name your boundary cleanly. You can be kind and firm.",
+        "Reversed": "Harshness—soften tone without shrinking truth."
+      },
+      "keywords": [
+        "discernment",
+        "boundaries",
+        "clarity",
+        "honesty"
+      ],
+      "questions": [],
+      "sort_order": 62,
+      "category": "minor",
+      "subcategory": "swords",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 13,
+        "suit": "swords",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-63",
+      "name": "King of Swords",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2063.jpg",
+      "sections": {
+        "Interpretation": "Make the decision you can respect later. Let ethics lead emotion, not erase it.",
+        "Reversed": "Coldness—include the human impact in your reasoning."
+      },
+      "keywords": [
+        "ethics",
+        "logic",
+        "leadership",
+        "judgement"
+      ],
+      "questions": [],
+      "sort_order": 63,
+      "category": "minor",
+      "subcategory": "swords",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 14,
+        "suit": "swords",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-64",
+      "name": "Ace of Pentacles",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2064.jpg",
+      "sections": {
+        "Interpretation": "What concrete resource can you create today? Small stability matters.",
+        "Reversed": "Neglecting basics—sleep/food/money plan."
+      },
+      "keywords": [
+        "resources",
+        "start",
+        "body",
+        "practicality"
+      ],
+      "questions": [],
+      "sort_order": 64,
+      "category": "minor",
+      "subcategory": "pentacles",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 1,
+        "suit": "pentacles",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-65",
+      "name": "Two of Pentacles",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2065.jpg",
+      "sections": {
+        "Interpretation": "Balance is a practice, not a trait. Pick your top 2 priorities.",
+        "Reversed": "Overload—drop one ball on purpose."
+      },
+      "keywords": [
+        "balance",
+        "juggling",
+        "priorities",
+        "adaptation"
+      ],
+      "questions": [],
+      "sort_order": 65,
+      "category": "minor",
+      "subcategory": "pentacles",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 2,
+        "suit": "pentacles",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-66",
+      "name": "Three of Pentacles",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2066.jpg",
+      "sections": {
+        "Interpretation": "Ask for feedback early. Collaboration reduces perfectionism.",
+        "Reversed": "Going solo—invite help."
+      },
+      "keywords": [
+        "teamwork",
+        "skill",
+        "feedback",
+        "craft"
+      ],
+      "questions": [],
+      "sort_order": 66,
+      "category": "minor",
+      "subcategory": "pentacles",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 3,
+        "suit": "pentacles",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-67",
+      "name": "Four of Pentacles",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2067.jpg",
+      "sections": {
+        "Interpretation": "What are you afraid to lose? Create safety without rigidity.",
+        "Reversed": "Loosening—share, invest, or breathe."
+      },
+      "keywords": [
+        "security",
+        "control",
+        "holding",
+        "fear"
+      ],
+      "questions": [],
+      "sort_order": 67,
+      "category": "minor",
+      "subcategory": "pentacles",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 4,
+        "suit": "pentacles",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-68",
+      "name": "Five of Pentacles",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2068.jpg",
+      "sections": {
+        "Interpretation": "Counter shame: asking for help is a skill. Identify one support option.",
+        "Reversed": "Aid arriving—accept it."
+      },
+      "keywords": [
+        "scarcity",
+        "support",
+        "shame",
+        "help"
+      ],
+      "questions": [],
+      "sort_order": 68,
+      "category": "minor",
+      "subcategory": "pentacles",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 5,
+        "suit": "pentacles",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-69",
+      "name": "Six of Pentacles",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2069.jpg",
+      "sections": {
+        "Interpretation": "Practice receiving without apology. Track reciprocity.",
+        "Reversed": "Imbalance—make a boundary or a request."
+      },
+      "keywords": [
+        "giving",
+        "receiving",
+        "fairness",
+        "exchange"
+      ],
+      "questions": [],
+      "sort_order": 69,
+      "category": "minor",
+      "subcategory": "pentacles",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 6,
+        "suit": "pentacles",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-70",
+      "name": "Seven of Pentacles",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2070.jpg",
+      "sections": {
+        "Interpretation": "Evaluate progress realistically. What’s growing, even slowly?",
+        "Reversed": "Impatience—adjust expectations, not worth."
+      },
+      "keywords": [
+        "patience",
+        "growth",
+        "investment",
+        "review"
+      ],
+      "questions": [],
+      "sort_order": 70,
+      "category": "minor",
+      "subcategory": "pentacles",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 7,
+        "suit": "pentacles",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-71",
+      "name": "Eight of Pentacles",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2071.jpg",
+      "sections": {
+        "Interpretation": "Progress is repetition. Do the next rep with attention.",
+        "Reversed": "Perfectionism—aim for 80% done."
+      },
+      "keywords": [
+        "practice",
+        "craft",
+        "skill",
+        "focus"
+      ],
+      "questions": [],
+      "sort_order": 71,
+      "category": "minor",
+      "subcategory": "pentacles",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 8,
+        "suit": "pentacles",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-72",
+      "name": "Nine of Pentacles",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2072.jpg",
+      "sections": {
+        "Interpretation": "Let your work and care support your confidence. Enjoy what you built.",
+        "Reversed": "Loneliness—invite connection into your stability."
+      },
+      "keywords": [
+        "independence",
+        "enjoyment",
+        "self-worth",
+        "stability"
+      ],
+      "questions": [],
+      "sort_order": 72,
+      "category": "minor",
+      "subcategory": "pentacles",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 9,
+        "suit": "pentacles",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-73",
+      "name": "Ten of Pentacles",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2073.jpg",
+      "sections": {
+        "Interpretation": "Think in systems: what structure supports long-term wellbeing?",
+        "Reversed": "Fragile foundation—simplify and stabilize."
+      },
+      "keywords": [
+        "legacy",
+        "family",
+        "systems",
+        "long-term"
+      ],
+      "questions": [],
+      "sort_order": 73,
+      "category": "minor",
+      "subcategory": "pentacles",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 10,
+        "suit": "pentacles",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-74",
+      "name": "Page of Pentacles",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2074.jpg",
+      "sections": {
+        "Interpretation": "Choose one practical learning goal and begin.",
+        "Reversed": "Procrastination—make it tiny."
+      },
+      "keywords": [
+        "learning",
+        "plan",
+        "practical start",
+        "study"
+      ],
+      "questions": [],
+      "sort_order": 74,
+      "category": "minor",
+      "subcategory": "pentacles",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 11,
+        "suit": "pentacles",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-75",
+      "name": "Knight of Pentacles",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2075.jpg",
+      "sections": {
+        "Interpretation": "Boring is beautiful: routines make change inevitable.",
+        "Reversed": "Stagnation—add one healthy risk."
+      },
+      "keywords": [
+        "consistency",
+        "routine",
+        "steadiness",
+        "follow-through"
+      ],
+      "questions": [],
+      "sort_order": 75,
+      "category": "minor",
+      "subcategory": "pentacles",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 12,
+        "suit": "pentacles",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-76",
+      "name": "Queen of Pentacles",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2076.jpg",
+      "sections": {
+        "Interpretation": "Support your nervous system through environment: food, space, touch, time.",
+        "Reversed": "Overgiving—receive care too."
+      },
+      "keywords": [
+        "care",
+        "home",
+        "embodiment",
+        "nourishment"
+      ],
+      "questions": [],
+      "sort_order": 76,
+      "category": "minor",
+      "subcategory": "pentacles",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 13,
+        "suit": "pentacles",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "card-77",
+      "name": "King of Pentacles",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sola%20Busca%20tarot%20card%2077.jpg",
+      "sections": {
+        "Interpretation": "Lead through steady stewardship. Choose what’s sustainable.",
+        "Reversed": "Workaholism—remember the point of security is life."
+      },
+      "keywords": [
+        "stewardship",
+        "provision",
+        "security",
+        "mastery"
+      ],
+      "questions": [],
+      "sort_order": 77,
+      "category": "minor",
+      "subcategory": "pentacles",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 14,
+        "suit": "pentacles",
+        "arcana": "minor",
+        "symbols": []
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-15T04:02:11.516Z"
+      },
+      "level": 1
+    }
+  ],
+  "creator_name": "PlayfulProcess",
+  "creator_link": ""
+}
