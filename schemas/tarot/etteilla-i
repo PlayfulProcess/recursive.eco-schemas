@@ -8,12 +8,43 @@
         "name": "PlayfulProcess",
         "url": "",
         "date": "2026-01-15",
-        "note": "Original creator"
+        "note": "Schema creation and enrichment"
+      },
+      {
+        "name": "Benebell Wen",
+        "url": "https://benebellwen.com/etteilla/",
+        "date": "2022",
+        "note": "Etteilla reconstruction research and images"
+      },
+      {
+        "name": "Jean-Baptiste Alliette (Etteilla)",
+        "url": "",
+        "date": "1783-1791",
+        "note": "Original card meanings and system design"
       }
+    ],
+    "version_notes": {
+      "edition": "Grand Etteilla I",
+      "date": "c. 1788-1791",
+      "engraver": "Pierre-François Basan",
+      "creator": "Jean-Baptiste Alliette (Etteilla)",
+      "distinguishing_features": [
+        "Original Basan engravings",
+        "Egyptian numerals on Batons",
+        "Blank lower panels on Cups/Swords",
+        "Astrological visualizations on Deniers",
+        "No margin titles on cards"
+      ]
+    },
+    "sources": [
+      "Jean-Baptiste Alliette, 'Manière de se récréer avec le jeu de cartes nommées tarots' (1783-1785)",
+      "Benebell Wen, Etteilla Tarot Reconstruction (2022)",
+      "Wikipedia: Etteilla",
+      "Tarot History Forum research"
     ]
   },
   "name": "Etteilla I",
-  "description": "The Grand Etteilla, also known as the Tarot Egyptien, was created by Jean-Baptiste Alliette (1738-1791), who reversed his name to create his pseudonym 'Etteilla'. This was one of the first tarot decks designed specifically for divination rather than card games. Images from https://benebellwen.com/etteilla/downloads/. \n\nThe deck follows a unique ordering based on the story of Creation: Chaos, Light, Plants, Heavens, Man and Animals, Stars, Birds and Fishes, ReThe meanings here are adapted for reflective, non-predictive readings with a focus on self-understanding.",
+  "description": "The Grand Etteilla I (c. 1788-1791), also known as the 'Livre de Thot' or 'Egyptian Tarot,' represents the original vision of Jean-Baptiste Alliette—the first tarot deck created specifically for divination.\n\n═══════════════════════════════════════════════════════════════════════════════\nHISTORICAL SIGNIFICANCE: THE ORIGINAL VISION\n═══════════════════════════════════════════════════════════════════════════════\n\nIn 1788, at age 50, Jean-Baptiste Alliette (1738-1791) commissioned the renowned engraver Pierre-François Basan to create his revolutionary deck. To fund printing, Etteilla campaigned around Paris collecting subscriptions—an early crowdfunding effort. The resulting uncolored engraved sheets became the first edition; watercolor was later applied for colored versions.\n\nThis was the first tarot deck specifically designed for occult purposes—a complete departure from the Tarot de Marseille tradition that had dominated for centuries.\n\n═══════════════════════════════════════════════════════════════════════════════\nWHAT MAKES ETTEILLA I UNIQUE\n═══════════════════════════════════════════════════════════════════════════════\n\n• BASAN'S ORIGINAL ENGRAVINGS: Commissioned from Pierre-François Basan (1723-1797), one of Paris's most respected engravers\n• GENESIS-BASED ORDERING: Trumps follow biblical creation (Chaos, Light, Plants, Heavens, etc.)\n• EGYPTIAN FRAMING: Etteilla claimed to have recovered the wisdom of the Temple of Ptah\n• ASTROLOGICAL INTEGRATION: Minor Arcana include planetary and zodiacal symbolism\n• UPRIGHT/REVERSED MEANINGS: First deck to systematically use card orientation\n• SPREADS AND POSITIONS: Established the foundational methods still used today\n\n═══════════════════════════════════════════════════════════════════════════════\nMINOR ARCANA FEATURES (ORIGINAL)\n═══════════════════════════════════════════════════════════════════════════════\n\n• BATONS: Lower panels feature \"Egyptian\" numerals\n• CUPS: Lower panels left blank\n• SWORDS: Lower panels left blank\n• DENIERS (COINS): Lower panels contain astrological visualizations\n\n═══════════════════════════════════════════════════════════════════════════════\nETTEILLA'S FOUNDATIONAL TEXTS\n═══════════════════════════════════════════════════════════════════════════════\n\n• 1770: 'Etteilla, ou manière de se récréer avec un jeu de cartes' (playing cards)\n• 1783-1785: 'Manière de se récréer avec le jeu de cartes nommées tarots' (tarot)\n• 1788: Founded 'Société des Interprètes du Livre de Thot'\n• 1789: Published the Grand Etteilla deck\n• 1790: Founded 'Nouvelle École de Magie' (New School of Magic)\n\n═══════════════════════════════════════════════════════════════════════════════\nWHAT CHANGED IN LATER VERSIONS\n═══════════════════════════════════════════════════════════════════════════════\n\nEtteilla I represents the master's original vision. After his death in 1791, students and publishers modified the deck:\n\n→ ETTEILLA II (1838): Julia Orsini/Blocquel replaced Basan's engravings, added recycled imagery\n→ ETTEILLA III (1865): Regamey created chromolithograph version with vibrant colors\n\nThis edition preserves what Etteilla himself created and approved.\n\n═══════════════════════════════════════════════════════════════════════════════\nSOURCES AND ATTRIBUTION\n═══════════════════════════════════════════════════════════════════════════════\n\n• Images via Benebell Wen's Etteilla reconstruction project\n• Historical research from tarot scholarship\n• Original meanings from Etteilla's published works (1783-1791)",
   "cover_image_url": "https://drive.google.com/uc?export=view&id=1X9rl_FXvn2JkvtHDTuxu31gObOfp1ubZ",
   "tags": [],
   "grammar_type": "tarot",
@@ -44,12 +75,25 @@
           "chaos",
           "potential",
           "beginning"
-        ]
+        ],
+        "french_name": "Le Chaos",
+        "etymology": {
+          "literal": "Chaos / The Void",
+          "origin": "From Greek 'χάος' (khaos) meaning the primordial void or abyss",
+          "notes": "Represents the male querent (significator). In Hermetic philosophy, this is the Ein Sof or Tao—divine consciousness before manifestation."
+        },
+        "genesis_day": "Before Creation - The Void",
+        "hermetic_correspondence": "Corresponds to the Ein Sof in Kabbalah, the Tao in Eastern philosophy, and the prima materia in alchemy",
+        "etteilla_version": "Etteilla I (Original, 1788-1791)"
       },
       "sections": {
         "Summary": "The primordial void before creation—potential awaiting form.",
         "Reversed": "Confusion without purpose. The void feels empty rather than full of potential. Ground yourself before seeking answers.",
-        "Interpretation": "You stand at the edge of infinite possibility. Before creation comes the fertile void. This card represents you as the questioner—consider what you're truly asking and why. The chaos is not disorder but potential energy seeking direction."
+        "Interpretation": "You stand at the edge of infinite possibility. Before creation comes the fertile void. This card represents you as the questioner—consider what you're truly asking and why. The chaos is not disorder but potential energy seeking direction.",
+        "Etymology": "Chaos / The Void. From Greek 'χάος' (khaos) meaning the primordial void or abyss. Represents the male querent (significator). In Hermetic philosophy, this is the Ein Sof or Tao—divine consciousness before manifestation.",
+        "Historical Context": "In Etteilla's system, Le Chaos represents the first moment of the Genesis creation narrative—the primordial void before 'Let there be light.' This card draws heavily from the Hermetic text 'Poimandres' (Divine Pymander), where creation begins with an infinite darkness containing all potential.\n\nJean-Baptiste Alliette (Etteilla) believed tarot originated with the Egyptian priests of the Temple of Ptah at Memphis, encoding ancient wisdom about cosmic origins. The Chaos card embodies this philosophy: it is not emptiness but pregnant potential, the divine spirit before it takes form.\n\nIn practical cartomancy, this card serves as the male querent's significator—representing the questioner himself when male. Etteilla's 1783 'Manière de se récréer avec le jeu de cartes nommées tarots' established this convention, which persists in Grand Etteilla readings today.",
+        "Hermetic Correspondence": "Corresponds to the Ein Sof in Kabbalah, the Tao in Eastern philosophy, and the prima materia in alchemy",
+        "Genesis Connection": "Before Creation - The Void"
       },
       "image_url": "https://drive.google.com/uc?export=view&id=1tN3bDQnjpbXs46DOM3UVJOmTRnR7FqM-",
       "questions": [
@@ -86,12 +130,25 @@
           "clarity",
           "truth",
           "illumination"
-        ]
+        ],
+        "french_name": "La Lumière",
+        "etymology": {
+          "literal": "The Light / Enlightenment",
+          "origin": "From Latin 'lumen' meaning light, radiance, or understanding",
+          "notes": "Corresponds to Genesis 1:3 'Let there be light' - the first act of creation"
+        },
+        "genesis_day": "Day 1 - Creation of Light",
+        "hermetic_correspondence": "The Divine Nous (Mind) of Hermetic philosophy; the first emanation of the Absolute",
+        "etteilla_version": "Etteilla I (Original, 1788-1791)"
       },
       "sections": {
         "Summary": "The first act of creation—light emerges from darkness.",
         "Reversed": "Denial or willful blindness. The truth is available but you may be avoiding it. What uncomfortable clarity are you resisting?",
-        "Interpretation": "Truth and understanding emerge. What was hidden becomes visible. This is the moment of 'aha'—the insight that changes everything. Allow clarity to guide your next steps."
+        "Interpretation": "Truth and understanding emerge. What was hidden becomes visible. This is the moment of 'aha'—the insight that changes everything. Allow clarity to guide your next steps.",
+        "Etymology": "The Light / Enlightenment. From Latin 'lumen' meaning light, radiance, or understanding. Corresponds to Genesis 1:3 'Let there be light' - the first act of creation",
+        "Historical Context": "La Lumière represents the first divine act in Genesis: 'And God said, Let there be light: and there was light.' In Etteilla's Hermetic interpretation, this is not merely physical illumination but the emergence of consciousness and understanding from the void.\n\nThe card draws from the Corpus Hermeticum, where light represents divine Nous (Mind) becoming aware of itself. Etteilla's system uniquely places this as card 2, immediately following Chaos, establishing a creation sequence that differs markedly from the Tarot de Marseille tradition.\n\nIn the 1843 'Jeu de la princesses' version, this card appears as 'Osiris or the Sun,' connecting to Egyptian solar theology.",
+        "Hermetic Correspondence": "The Divine Nous (Mind) of Hermetic philosophy; the first emanation of the Absolute",
+        "Genesis Connection": "Day 1 - Creation of Light"
       },
       "image_url": "https://drive.google.com/uc?export=view&id=1xJkxGpUJGR3qOh0UDb-tkjkhMNg1l40K",
       "questions": [
@@ -128,12 +185,25 @@
           "growth",
           "fertility",
           "nature"
-        ]
+        ],
+        "french_name": "Les Plantes",
+        "etymology": {
+          "literal": "The Plants / Vegetation",
+          "origin": "From Latin 'planta' meaning plant, sprout, or cutting",
+          "notes": "Corresponds to Genesis 1:11-12, the creation of vegetation on the third day"
+        },
+        "genesis_day": "Day 3 - Creation of Plants",
+        "hermetic_correspondence": "The vegetable soul; the life force animating organic matter",
+        "etteilla_version": "Etteilla I (Original, 1788-1791)"
       },
       "sections": {
         "Summary": "The emergence of life—growth, fertility, and natural development.",
         "Reversed": "Stagnation or forced growth. Either something isn't developing naturally, or you're trying to rush what needs time.",
-        "Interpretation": "Life emerges and grows. This card speaks to natural development—things unfolding in their own time. Nurture what you've planted and trust the process of organic growth."
+        "Interpretation": "Life emerges and grows. This card speaks to natural development—things unfolding in their own time. Nurture what you've planted and trust the process of organic growth.",
+        "Etymology": "The Plants / Vegetation. From Latin 'planta' meaning plant, sprout, or cutting. Corresponds to Genesis 1:11-12, the creation of vegetation on the third day",
+        "Historical Context": "Les Plantes embodies the third day of Genesis creation, when God commanded the earth to bring forth grass, herbs, and fruit-bearing trees. In Etteilla's system, this represents the first manifestation of organic life—the transition from abstract elements to living, growing things.\n\nThe Hermetic interpretation connects this card to the vegetable soul in Neoplatonic philosophy—the animating principle that distinguishes living matter from mere elements. Etteilla saw in vegetation the first evidence of divine life force manifesting in material form.",
+        "Hermetic Correspondence": "The vegetable soul; the life force animating organic matter",
+        "Genesis Connection": "Day 3 - Creation of Plants"
       },
       "image_url": "https://drive.google.com/uc?export=view&id=1WDNMiOd1Cg3PLVB0QhGRLi7LChDo9x7g",
       "questions": [
@@ -170,12 +240,25 @@
           "stars",
           "cosmos",
           "order"
-        ]
+        ],
+        "french_name": "Le Ciel",
+        "etymology": {
+          "literal": "The Heavens / The Sky",
+          "origin": "From Latin 'caelum' meaning sky, heavens, or celestial vault",
+          "notes": "Corresponds to Genesis 1:6-8, the creation of the firmament"
+        },
+        "genesis_day": "Day 2 - Creation of the Firmament",
+        "hermetic_correspondence": "The celestial sphere; the realm of planetary intelligences and fixed stars",
+        "etteilla_version": "Etteilla I (Original, 1788-1791)"
       },
       "sections": {
         "Summary": "The sky and celestial realm—higher perspective and divine order.",
         "Reversed": "Lost in details, missing the bigger picture. Anxiety about things beyond your control. Return to trust.",
-        "Interpretation": "Step back and see the larger pattern. The heavens remind us that there's order in apparent chaos. Trust that things are unfolding as they should from a higher perspective."
+        "Interpretation": "Step back and see the larger pattern. The heavens remind us that there's order in apparent chaos. Trust that things are unfolding as they should from a higher perspective.",
+        "Etymology": "The Heavens / The Sky. From Latin 'caelum' meaning sky, heavens, or celestial vault. Corresponds to Genesis 1:6-8, the creation of the firmament",
+        "Historical Context": "Le Ciel represents the creation of the firmament—the great dome separating the waters above from the waters below. In ancient cosmology, this was understood as the physical structure of heaven itself, the boundary between earthly and divine realms.\n\nIn Hermetic philosophy, the celestial sphere contains the planetary intelligences that govern earthly affairs. Etteilla integrated astrological correspondences throughout his system, seeing the heavens as a living influence rather than mere backdrop.",
+        "Hermetic Correspondence": "The celestial sphere; the realm of planetary intelligences and fixed stars",
+        "Genesis Connection": "Day 2 - Creation of the Firmament"
       },
       "image_url": "https://drive.google.com/uc?export=view&id=1lVItWAwjsEusM-R6YrjGmaRu0J071n-6",
       "questions": [
@@ -214,12 +297,25 @@
           "nature",
           "dominion",
           "instinct"
-        ]
+        ],
+        "french_name": "L'Homme et les Quadrupèdes",
+        "etymology": {
+          "literal": "Man and the Quadrupeds / Humanity and Animals",
+          "origin": "From Latin 'homo' (man) and 'quadrupes' (four-footed animal)",
+          "notes": "Corresponds to Genesis 1:24-27, creation of land animals and humanity"
+        },
+        "genesis_day": "Day 6 - Creation of Animals and Humanity",
+        "hermetic_correspondence": "The microcosm; humanity as reflection of cosmic order",
+        "etteilla_version": "Etteilla I (Original, 1788-1791)"
       },
       "sections": {
         "Summary": "Humanity's dominion over and relationship with the animal kingdom.",
         "Reversed": "Disconnection from nature or instinct. Over-intellectualizing or ignoring body wisdom.",
-        "Interpretation": "Balance between higher consciousness and animal nature. Honor both your rational mind and your instincts. Good stewardship of yourself and your environment. The quadrupeds represent earthly, grounded wisdom."
+        "Interpretation": "Balance between higher consciousness and animal nature. Honor both your rational mind and your instincts. Good stewardship of yourself and your environment. The quadrupeds represent earthly, grounded wisdom.",
+        "Etymology": "Man and the Quadrupeds / Humanity and Animals. From Latin 'homo' (man) and 'quadrupes' (four-footed animal). Corresponds to Genesis 1:24-27, creation of land animals and humanity",
+        "Historical Context": "This card depicts the sixth day of creation, when God made the beasts of the earth and then humanity in His own image. In Etteilla's system, this represents the culmination of material creation—the emergence of conscious beings capable of reflecting the divine.\n\nThe Hermetic tradition sees humanity as the microcosm—containing within itself all the elements and principles of the greater cosmos. Etteilla's card reflects this: the human figure stands as the meeting point of heaven and earth, spirit and matter.",
+        "Hermetic Correspondence": "The microcosm; humanity as reflection of cosmic order",
+        "Genesis Connection": "Day 6 - Creation of Animals and Humanity"
       },
       "image_url": "https://drive.google.com/uc?export=view&id=1DMMZcVIrw2eSVh1bq464ZdjUAqypEUCI",
       "questions": [
@@ -259,12 +355,25 @@
           "celestial bodies",
           "guidance",
           "destiny"
-        ]
+        ],
+        "french_name": "Les Étoiles",
+        "etymology": {
+          "literal": "The Stars",
+          "origin": "From Latin 'stella' meaning star or celestial body",
+          "notes": "Corresponds to Genesis 1:14-19, creation of sun, moon, and stars"
+        },
+        "genesis_day": "Day 4 - Creation of Sun, Moon, and Stars",
+        "hermetic_correspondence": "The stellar intelligences; astrological influences on human affairs",
+        "etteilla_version": "Etteilla I (Original, 1788-1791)"
       },
       "sections": {
         "Summary": "The sun, moon, and stars—celestial guidance and cosmic timing.",
         "Reversed": "Lost or without direction. The stars are there but clouds obscure them. What fundamental values have you lost sight of?",
-        "Interpretation": "The celestial bodies have guided travelers for millennia. This card represents cosmic order and divine timing. Hope exists even in darkness. Follow what truly matters to you and trust the larger cycles of existence."
+        "Interpretation": "The celestial bodies have guided travelers for millennia. This card represents cosmic order and divine timing. Hope exists even in darkness. Follow what truly matters to you and trust the larger cycles of existence.",
+        "Etymology": "The Stars. From Latin 'stella' meaning star or celestial body. Corresponds to Genesis 1:14-19, creation of sun, moon, and stars",
+        "Historical Context": "Les Étoiles depicts the fourth day of Genesis, when God created the sun, moon, and stars to govern day and night and to mark seasons, days, and years. For Etteilla, this was not merely astronomical but deeply astrological—the stars influence human destiny.\n\nEtteilla's 'Société des Interprètes du Livre de Thot' systematically integrated astrology with tarot. The stars card embodies this synthesis: celestial bodies are not distant objects but active powers shaping earthly events.",
+        "Hermetic Correspondence": "The stellar intelligences; astrological influences on human affairs",
+        "Genesis Connection": "Day 4 - Creation of Sun, Moon, and Stars"
       },
       "image_url": "https://drive.google.com/uc?export=view&id=19yglKtyuA0B27C7qXWIV04XJ8dwSe0OO",
       "questions": [
@@ -302,12 +411,25 @@
           "air",
           "water",
           "freedom"
-        ]
+        ],
+        "french_name": "Les Oiseaux et les Poissons",
+        "etymology": {
+          "literal": "The Birds and the Fish",
+          "origin": "From Latin 'avis' (bird) and 'piscis' (fish)",
+          "notes": "Corresponds to Genesis 1:20-23, creation of sea and sky creatures on day five"
+        },
+        "genesis_day": "Day 5 - Creation of Birds and Fish",
+        "hermetic_correspondence": "The elemental realms of Air and Water; mobility between states",
+        "etteilla_version": "Etteilla I (Original, 1788-1791)"
       },
       "sections": {
         "Summary": "Freedom of movement through different elements—air and water.",
         "Reversed": "Feeling out of your element. A fish trying to fly or a bird trying to swim. Find your true medium.",
-        "Interpretation": "Movement through different realms with grace. Like birds in air and fish in water, find the element where you thrive. Adaptability and natural ease in your domain."
+        "Interpretation": "Movement through different realms with grace. Like birds in air and fish in water, find the element where you thrive. Adaptability and natural ease in your domain.",
+        "Etymology": "The Birds and the Fish. From Latin 'avis' (bird) and 'piscis' (fish). Corresponds to Genesis 1:20-23, creation of sea and sky creatures on day five",
+        "Historical Context": "Les Oiseaux et les Poissons represents the fifth day of creation, when God filled the waters with fish and the sky with birds. These are the first animals—creatures that inhabit the fluid realms of water and air rather than solid earth.\n\nIn Etteilla's Hermetic symbolism, birds and fish represent mobility and freedom in their respective elements. Birds ascend toward the divine; fish explore the depths of the unconscious.",
+        "Hermetic Correspondence": "The elemental realms of Air and Water; mobility between states",
+        "Genesis Connection": "Day 5 - Creation of Birds and Fish"
       },
       "image_url": "https://drive.google.com/uc?export=view&id=1gIEC3jUfxwLfkOJfw2hijkTnRyhP852H",
       "questions": [
@@ -344,12 +466,25 @@
           "sabbath",
           "completion",
           "integration"
-        ]
+        ],
+        "french_name": "Le Repos",
+        "etymology": {
+          "literal": "Rest / Repose",
+          "origin": "From Latin 'repausare' meaning to rest, pause, or cease from labor",
+          "notes": "Corresponds to Genesis 2:2-3, the seventh day when God rested and made it holy"
+        },
+        "genesis_day": "Day 7 - The Day of Rest",
+        "hermetic_correspondence": "The Sabbath; sacred rest; return to unity",
+        "etteilla_version": "Etteilla I (Original, 1788-1791)"
       },
       "sections": {
         "Summary": "The seventh day—rest after creation, integration of all that came before.",
         "Reversed": "Inability to rest, or stagnation disguised as rest. Either you're not allowing pause, or you're avoiding next steps through false rest.",
-        "Interpretation": "After creation comes necessary rest. This is not laziness but essential integration. Allow what you've built to settle. Reflect before beginning anew."
+        "Interpretation": "After creation comes necessary rest. This is not laziness but essential integration. Allow what you've built to settle. Reflect before beginning anew.",
+        "Etymology": "Rest / Repose. From Latin 'repausare' meaning to rest, pause, or cease from labor. Corresponds to Genesis 2:2-3, the seventh day when God rested and made it holy",
+        "Historical Context": "Le Repos represents the Sabbath—the seventh day when God rested from creation and sanctified rest itself. In Etteilla's system, this card serves as the female querent's significator, balancing Le Chaos which represents male questioners.\n\nThe 1865 Etteilla III booklet states: 'The true sense of this card is profound peace.' This is not mere inactivity but sacred completion—the rest that comes after work is finished.",
+        "Hermetic Correspondence": "The Sabbath; sacred rest; return to unity",
+        "Genesis Connection": "Day 7 - The Day of Rest"
       },
       "image_url": "https://drive.google.com/uc?export=view&id=1mA3E28ePqqjK7ouKALBbR1_W5cl-irQR",
       "questions": [
@@ -386,12 +521,25 @@
           "sword",
           "balance",
           "law"
-        ]
+        ],
+        "french_name": "La Justice",
+        "etymology": {
+          "literal": "Justice",
+          "origin": "From Latin 'justitia' meaning righteousness, equity, or lawfulness",
+          "notes": "One of the four cardinal virtues from Plato's Republic"
+        },
+        "genesis_day": "Post-Creation: Cardinal Virtue I",
+        "hermetic_correspondence": "Ma'at; cosmic balance; the weighing of souls",
+        "etteilla_version": "Etteilla I (Original, 1788-1791)"
       },
       "sections": {
         "Summary": "Balance, fairness, and karmic law.",
         "Reversed": "Imbalance or injustice. Something is unfair—either you're not receiving what you deserve, or you're not giving it.",
-        "Interpretation": "Actions have consequences. This card asks for honest self-assessment. Are you treating yourself and others fairly? Balance the scales before moving forward."
+        "Interpretation": "Actions have consequences. This card asks for honest self-assessment. Are you treating yourself and others fairly? Balance the scales before moving forward.",
+        "Etymology": "Justice. From Latin 'justitia' meaning righteousness, equity, or lawfulness. One of the four cardinal virtues from Plato's Republic",
+        "Historical Context": "Following the seven days of creation, Etteilla's trumps transition to the four cardinal virtues as described by Plato: Justice, Temperance, Fortitude, and Prudence. La Justice represents the first of these—the principle of righteous judgment and fair dealing.\n\nIn the Hermetic tradition, Justice connects to Ma'at—the Egyptian goddess of truth, balance, and cosmic order.",
+        "Hermetic Correspondence": "Ma'at; cosmic balance; the weighing of souls",
+        "Genesis Connection": "Post-Creation: Cardinal Virtue I"
       },
       "image_url": "https://drive.google.com/uc?export=view&id=1w11PMUpbNenskp7TiVEsay6gUEYtnIhL",
       "questions": [
@@ -428,12 +576,25 @@
           "water",
           "angel",
           "flow"
-        ]
+        ],
+        "french_name": "La Tempérance",
+        "etymology": {
+          "literal": "Temperance / Moderation",
+          "origin": "From Latin 'temperantia' meaning self-control, moderation, or sobriety",
+          "notes": "The second cardinal virtue; the golden mean between excess and deficiency"
+        },
+        "genesis_day": "Post-Creation: Cardinal Virtue II",
+        "hermetic_correspondence": "The alchemical mixing of elements; the art of proportion",
+        "etteilla_version": "Etteilla I (Original, 1788-1791)"
       },
       "sections": {
         "Summary": "Moderation, blending, and the middle path.",
         "Reversed": "Excess or deficiency. Impatience with the blending process. Too much of something, or an unwillingness to find middle ground.",
-        "Interpretation": "The art of mixing and moderation. Find the middle way between extremes. Patient blending of different elements creates something new. Healing through balance."
+        "Interpretation": "The art of mixing and moderation. Find the middle way between extremes. Patient blending of different elements creates something new. Healing through balance.",
+        "Etymology": "Temperance / Moderation. From Latin 'temperantia' meaning self-control, moderation, or sobriety. The second cardinal virtue; the golden mean between excess and deficiency",
+        "Historical Context": "La Tempérance represents the second Platonic virtue—the principle of moderation and self-control that enables harmonious living. The traditional image shows a figure pouring liquid between vessels, representing the careful mixing and balancing of elements.\n\nThis alchemical symbolism was not lost on Etteilla, who saw in temperance the secret of transformation.",
+        "Hermetic Correspondence": "The alchemical mixing of elements; the art of proportion",
+        "Genesis Connection": "Post-Creation: Cardinal Virtue II"
       },
       "image_url": "https://drive.google.com/uc?export=view&id=1D3fPvpl9frUVw1dJI93DTjMu_xHAQ7a3",
       "questions": [
@@ -470,12 +631,25 @@
           "woman",
           "courage",
           "gentleness"
-        ]
+        ],
+        "french_name": "La Force",
+        "etymology": {
+          "literal": "Strength / Fortitude",
+          "origin": "From Latin 'fortitudo' meaning courage, bravery, or strength of character",
+          "notes": "The third cardinal virtue; moral courage rather than mere physical power"
+        },
+        "genesis_day": "Post-Creation: Cardinal Virtue III",
+        "hermetic_correspondence": "Mastery of the animal nature; courage guided by wisdom",
+        "etteilla_version": "Etteilla I (Original, 1788-1791)"
       },
       "sections": {
         "Summary": "Inner strength, courage, and gentle power.",
         "Reversed": "Self-doubt or misuse of power. Either not trusting your strength, or using force when gentleness is needed.",
-        "Interpretation": "True strength is quiet and patient. The ability to face challenges without aggression. Courage paired with compassion. Trust your inner power."
+        "Interpretation": "True strength is quiet and patient. The ability to face challenges without aggression. Courage paired with compassion. Trust your inner power.",
+        "Etymology": "Strength / Fortitude. From Latin 'fortitudo' meaning courage, bravery, or strength of character. The third cardinal virtue; moral courage rather than mere physical power",
+        "Historical Context": "La Force embodies the third Platonic virtue—fortitude or courage. This is not mere physical strength but moral courage: the capacity to face difficulty, danger, or pain without yielding to fear.\n\nThe traditional image often shows a figure with a lion, representing the mastery of animal instincts through gentle strength rather than violent domination.",
+        "Hermetic Correspondence": "Mastery of the animal nature; courage guided by wisdom",
+        "Genesis Connection": "Post-Creation: Cardinal Virtue III"
       },
       "image_url": "https://drive.google.com/uc?export=view&id=1WaoxgqERGJeFdHhOGci31QOTv9HCDRnh",
       "questions": [
@@ -512,12 +686,25 @@
           "snake",
           "wisdom",
           "caution"
-        ]
+        ],
+        "french_name": "La Prudence",
+        "etymology": {
+          "literal": "Prudence / Wisdom",
+          "origin": "From Latin 'prudentia' meaning foresight, wisdom, or practical judgment",
+          "notes": "The fourth cardinal virtue; considered by Aristotle as 'practical wisdom'"
+        },
+        "genesis_day": "Post-Creation: Cardinal Virtue IV",
+        "hermetic_correspondence": "Phronesis; practical wisdom; the inner counselor",
+        "etteilla_version": "Etteilla I (Original, 1788-1791)"
       },
       "sections": {
         "Summary": "Wisdom, caution, and thoughtful action.",
         "Reversed": "Recklessness or excessive caution. Either acting without thinking, or overthinking into paralysis.",
-        "Interpretation": "Think before acting. This card counsels careful consideration and planning. Wisdom comes from learning from the past while preparing for the future."
+        "Interpretation": "Think before acting. This card counsels careful consideration and planning. Wisdom comes from learning from the past while preparing for the future.",
+        "Etymology": "Prudence / Wisdom. From Latin 'prudentia' meaning foresight, wisdom, or practical judgment. The fourth cardinal virtue; considered by Aristotle as 'practical wisdom'",
+        "Historical Context": "La Prudence completes the quartet of cardinal virtues—representing practical wisdom, foresight, and good judgment. Aristotle called this 'phronesis,' the ability to discern the right course of action in particular circumstances.\n\nThe traditional image often shows a figure with a mirror (self-knowledge) and a serpent (wisdom).",
+        "Hermetic Correspondence": "Phronesis; practical wisdom; the inner counselor",
+        "Genesis Connection": "Post-Creation: Cardinal Virtue IV"
       },
       "image_url": "https://drive.google.com/uc?export=view&id=1ujDa0BZAd_1aKID-tjSSX0S72lPJSJg0",
       "questions": [
