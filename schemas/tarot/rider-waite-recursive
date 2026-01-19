@@ -1,3 +1,309 @@
+#imported json to update rider-waite-archetypical
+
+{
+  "name": "The Recursive Tarot: For Meaning-Makers & Gateway-Builders",
+  "description": "A tarot interpretation for those who build systems, make meaning, and open gateways rather than guard them. Through the lens of recursive processes, feedback loops, and the practice of building things that serve life. Hold tradition lightly. Fork freely. Build gateways, not gates.",
+  "creator_name": "Julia Alves / Community Synthesis",
+  "creator_link": "https://recursive.eco",
+  "tags": ["tarot", "rider-waite", "recursive", "meaning-making", "builders", "developers", "gateway-building", "systems-thinking", "contemplative"],
+  "philosophical_notes": {
+    "on_recursion": "Recursion in tarot isn't just repeating—it's returning with new understanding. Each time you draw the same card, you're different. The card is the same; you've spiraled. That's recursion: same input, transformed context, new output.",
+    "on_building": "Every card is both a system you're building and a system you're trapped in. The Empress creates abundance; the Empress gets stuck in over-nurturing. All strengths have shadows. All gifts have costs. Build with eyes open.",
+    "on_gateways": "Traditional tarot has gatekeepers who tell you what cards 'really' mean. Fork that. These interpretations are offerings, not commandments. Take what serves, leave the rest, remix freely. Gateway-building means making tools others can transform.",
+    "on_meaning": "You don't discover meaning in cards—you make it. The cards provide symbolic vocabulary, you provide the syntax. Together you generate meaning that didn't exist before you engaged. That's the recursive process: meaning making meaning."
+  },
+  "cards": [
+    {
+      "number": 0,
+      "name": "The Fool",
+      "arcana": "major",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/RWS_Tarot_00_Fool.jpg",
+      "sections": {
+        "Interpretation": "You're about to start something without knowing how. Good. Expertise comes later; beginning comes from not-knowing. The cliff isn't there to stop you—it's where the interesting terrain begins. Every expert was once a fool who kept walking.",
+        "Keywords": "beginning, unknowing, trust, starting-anyway, innocence-as-asset, first-commit, prototype",
+        "For Builders": "Your first commit is always terrible. Your first deployment has bugs. Your initial architecture gets refactored. Ship the foolish version anyway—it's the only way to learn what you're actually building. The fool ships.",
+        "The Shadow": "Recklessness that ignores real consequences, perpetual beginning without following through, using 'beginner's mind' to avoid developing actual skill, staying naive to avoid responsibility.",
+        "Reflection": "What are you avoiding starting because you don't know enough yet? What if not-knowing is exactly the qualification you need right now?"
+      }
+    },
+    {
+      "number": 1,
+      "name": "The Magician",
+      "arcana": "major",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/RWS_Tarot_01_Magician.jpg",
+      "sections": {
+        "Interpretation": "You have all the tools. The four elements are on your table: cups for emotion, swords for thought, wands for will, pentacles for resources. The question isn't whether you have what you need—it's whether you'll actually use it. As above, so below: what you imagine can manifest, but manifestation requires doing the work.",
+        "Keywords": "skill, manifestation, tools, as-above-so-below, conscious-creation, API, translation-layer",
+        "For Builders": "You know the tech stack. You have the tools. You've read the docs. Now you have to actually build the thing. The Magician is the moment between knowing how and doing it—bridging concept and code, vision and implementation. You're the translation layer.",
+        "The Shadow": "Manipulation and trickery, using skills to deceive, having tools but never building anything real, endless preparation without action, knowing how but never doing.",
+        "Reflection": "You have more tools than you're using. Which ones are you ignoring? What would you build if you stopped waiting for the perfect moment?"
+      }
+    },
+    {
+      "number": 2,
+      "name": "The High Priestess",
+      "arcana": "major",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/88/RWS_Tarot_02_High_Priestess.jpg",
+      "sections": {
+        "Interpretation": "She sits between pillars marked B and J—Boaz and Jachin, severity and mercy, the binary that gates the mystery. But she doesn't guard the gate; she indicates there's a veil you can walk through. Intuition isn't mystical—it's pattern recognition too fast for conscious processing. She knows without knowing how she knows.",
+        "Keywords": "intuition, mystery, hidden-knowledge, pattern-recognition, subconscious-processing, the-veil, liminality",
+        "For Builders": "Sometimes your gut knows the architecture is wrong before you can articulate why. Sometimes you know there's a bug even though tests pass. Trust that. Your unconscious has seen patterns your conscious mind hasn't named yet. The High Priestess says: log that intuition, investigate later.",
+        "The Shadow": "Mystification instead of clarity, gatekeeping mystery, using 'intuition' to avoid evidence, refusing to articulate or make knowledge accessible, spiritual bypassing.",
+        "Reflection": "What do you know without knowing how you know it? What pattern is your intuition detecting that your conscious mind hasn't named?"
+      }
+    },
+    {
+      "number": 3,
+      "name": "The Empress",
+      "arcana": "major",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/RWS_Tarot_03_Empress.jpg",
+      "sections": {
+        "Interpretation": "Abundance, fertility, creation—but not from nothing. She's surrounded by grain because she planted, watered, tended. She's the recursive loop of nurture: what you care for grows, what grows needs more care, what you tend tends you back. Creation and maintenance are the same work.",
+        "Keywords": "abundance, nurturing, creation, fertility, growth, maintenance, tending, care-work, sustainability",
+        "For Builders": "You built something. Now you have to maintain it. The Empress knows that creation doesn't end at launch—every garden needs weeding, every codebase needs refactoring, every community needs tending. Your job isn't just to make things; it's to keep them alive.",
+        "The Shadow": "Over-nurturing that smothers, creating abundance that's unsustainable, caring so much you're depleted, refusing to let things die when they need to, maternal tyranny.",
+        "Reflection": "What have you created that now needs your ongoing care? What needs to die so something else can grow?"
+      }
+    },
+    {
+      "number": 4,
+      "name": "The Emperor",
+      "arcana": "major",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/RWS_Tarot_04_Emperor.jpg",
+      "sections": {
+        "Interpretation": "Structure, authority, the throne. He's the architect who says: here are the constraints, here's the pattern, here's how it holds together. Not oppressive rules—load-bearing walls. Structure enables rather than constrains when it's built for purpose. The Emperor knows that freedom requires foundation.",
+        "Keywords": "structure, authority, architecture, order, foundation, constraints, governance, boundaries, pattern",
+        "For Builders": "You need system architecture. You need API contracts. You need clear ownership and decision rights. The Emperor is the pull request template, the RFC process, the style guide. Not bureaucracy—thoughtful structure that lets everyone build without chaos.",
+        "The Shadow": "Rigidity that prevents adaptation, authoritarianism, rules for rules' sake, structure that serves power rather than purpose, refusing to change architecture when context shifts.",
+        "Reflection": "What structure would enable rather than constrain your work? Where do you need boundaries you're not setting?"
+      }
+    },
+    {
+      "number": 5,
+      "name": "The Hierophant",
+      "arcana": "major",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/RWS_Tarot_05_Hierophant.jpg",
+      "sections": {
+        "Interpretation": "He's the keeper of tradition, the one who passes down the teachings. But look: he's giving the keys away, not hoarding them. The question isn't whether to honor tradition—it's whether you'll be a gateway or a gatekeeper. Learn the tradition deeply enough to fork it responsibly.",
+        "Keywords": "tradition, teaching, transmission, inheritance, orthodoxy, forking, mentorship, documentation",
+        "For Builders": "Read the source code that came before. Study the design patterns. Learn why things are the way they are. Then fork freely—but fork with knowledge. The Hierophant says: honor what you've inherited, transform what needs transforming, document what you discover.",
+        "The Shadow": "Gatekeeping tradition, refusing to let it evolve, orthodoxy over understanding, credentialism, 'we've always done it this way,' blocking access to knowledge.",
+        "Reflection": "What tradition are you inheriting? Are you building gateways into it or guarding its gates? What needs forking?"
+      }
+    },
+    {
+      "number": 6,
+      "name": "The Lovers",
+      "arcana": "major",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/RWS_Tarot_06_Lovers.jpg",
+      "sections": {
+        "Interpretation": "Choice. Not just romantic love—the moment you commit to one path and release another. The angel watches as they choose each other, but every choice means not-choosing something else. Your values are proven by what you choose when you can't have everything.",
+        "Keywords": "choice, commitment, values, relationship, alignment, integration, decision, sacrifice",
+        "For Builders": "You can't build everything. The Lovers is the moment you choose this architecture over that one, this feature over another, this user base over a different one. Every commit is a choice. Every choice reveals your values. Choose consciously.",
+        "The Shadow": "Avoiding choice, trying to have everything, indecision that blocks progress, merging without integration, choosing based on fear rather than values.",
+        "Reflection": "What choice have you been avoiding? What does your current work reveal about what you actually value versus what you say you value?"
+      }
+    },
+    {
+      "number": 7,
+      "name": "The Chariot",
+      "arcana": "major",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/RWS_Tarot_07_Chariot.jpg",
+      "sections": {
+        "Interpretation": "Will and control, but look: he's steering two sphinxes pulling in different directions. The Chariot isn't about forcing singular focus—it's about holding tension between competing forces and still moving forward. You don't resolve all contradictions; you steer through them.",
+        "Keywords": "will, direction, control, tension, movement-through-contradiction, determination, steering, agency",
+        "For Builders": "Your codebase pulls in different directions. Your stakeholders want incompatible things. Your team has competing priorities. The Chariot doesn't wait for perfect alignment—it steers anyway. Hold the tension, keep moving, adjust course as you go.",
+        "The Shadow": "Control that becomes rigidity, forcing direction without attending to feedback, ignoring that the sphinxes want different things, will without wisdom.",
+        "Reflection": "What contradictions are you trying to resolve that you actually need to steer through? Where do you need more will, and where do you need to stop forcing?"
+      }
+    },
+    {
+      "number": 8,
+      "name": "Strength",
+      "arcana": "major",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/RWS_Tarot_08_Strength.jpg",
+      "sections": {
+        "Interpretation": "She closes the lion's mouth with gentleness, not force. Strength isn't domination—it's the capacity to be gentle with power, to meet intensity without becoming intense, to tame without breaking. The infinity symbol above her head suggests this is ongoing work, not a one-time victory.",
+        "Keywords": "gentle-strength, compassion, patience, taming, courage, softness-with-power, sustainability, endurance",
+        "For Builders": "The Strength you need isn't crushing bugs or forcing features—it's staying patient during long refactors, being gentle with team mistakes, having courage to go slow, taming your own urgency. The lion is your own intensity. Close its mouth gently, daily, forever.",
+        "The Shadow": "Suppressing rather than integrating power, passive-aggression disguised as gentleness, exhausting yourself trying to stay calm, enabling bad behavior through infinite patience.",
+        "Reflection": "Where do you mistake force for strength? What would it look like to be gentler with your own intensity?"
+      }
+    },
+    {
+      "number": 9,
+      "name": "The Hermit",
+      "arcana": "major",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/RWS_Tarot_09_Hermit.jpg",
+      "sections": {
+        "Interpretation": "Alone on the mountain with a lamp, but look: the lamp is visible from far away. The Hermit's solitude isn't isolation—it's withdrawal to find clarity that can then be shared. Sometimes you need to step away from the noise to remember what you're actually building and why.",
+        "Keywords": "solitude, introspection, wisdom, withdrawal, deep-work, clarity, reflection, the-lamp, guidance",
+        "For Builders": "You can't always be in meetings and on Slack. The Hermit is deep work time, the solo debugging session, the retreat to think through architecture without interruption. The lamp you find in solitude lights the way for others—but first you have to go up the mountain alone.",
+        "The Shadow": "Isolation that becomes disconnection, withdrawing to avoid rather than to clarify, hoarding wisdom, using 'deep work' to avoid collaboration, perpetual retreat without return.",
+        "Reflection": "When did you last have real solitude for thinking? What clarity are you seeking that requires withdrawal from the noise?"
+      }
+    },
+    {
+      "number": 10,
+      "name": "Wheel of Fortune",
+      "arcana": "major",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/RWS_Tarot_10_Wheel_of_Fortune.jpg",
+      "sections": {
+        "Interpretation": "The wheel turns. What's up comes down. What's down comes up. You're not in control of the wheel, but you're not a passive victim either—you decide how you ride it. Cycles are real. Context shifts. Yesterday's solution is tomorrow's technical debt. This too shall pass.",
+        "Keywords": "cycles, change, fate, timing, luck, recursion, context-shift, impermanence, turning-point",
+        "For Builders": "Your hot new framework becomes legacy. Your brilliant architecture becomes constraints. Your successful product becomes maintenance burden. The wheel turns. Build with the knowledge that context will shift—favor adaptation over optimization for current conditions.",
+        "The Shadow": "Passivity in the face of change, fatalism, blaming 'bad luck,' refusing to adapt when the wheel turns, trying to stop natural cycles.",
+        "Reflection": "What cycle are you in right now? What's turning from up to down, or down to up? How are you adapting?"
+      }
+    },
+    {
+      "number": 11,
+      "name": "Justice",
+      "arcana": "major",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/RWS_Tarot_11_Justice.jpg",
+      "sections": {
+        "Interpretation": "Scales and sword: measure carefully, cut cleanly. Justice isn't about karma—it's about consequences aligning with actions, about systems that are fair by design. The sword cuts through bias. The scales weigh evidence. You can't hide from the consequences of your architectural decisions.",
+        "Keywords": "consequences, fairness, accountability, cause-and-effect, balance, truth, systems-design, equity",
+        "For Builders": "Your code has consequences. Your platform design creates or prevents harm. Your defaults shape what's easy versus hard. Justice asks: who benefits from how you've built this? Who bears the cost? Are you weighing fairly or just optimizing for your use case?",
+        "The Shadow": "Rigid rule-following without context, false equivalence, punitive justice, using 'fairness' to maintain unjust systems, refusing to acknowledge unequal starting positions.",
+        "Reflection": "What are the consequences of how you've built things? Who benefits? Who pays? What would genuine fairness require?"
+      }
+    },
+    {
+      "number": 12,
+      "name": "The Hanged Man",
+      "arcana": "major",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/RWS_Tarot_12_Hanged_Man.jpg",
+      "sections": {
+        "Interpretation": "Suspended, inverted, but look at his face—serene. Sometimes you have to stop struggling and hang there to see differently. The world inverted reveals patterns invisible from the normal angle. Surrender isn't defeat; it's stopping the fight that's not serving you.",
+        "Keywords": "surrender, inversion, perspective-shift, suspension, letting-go, patience, sacrifice, seeing-differently",
+        "For Builders": "You've hit the wall. The approach isn't working. The Hanged Man says: stop pushing, invert your assumptions, look at the problem upside down. Sometimes the bug is actually a feature request. Sometimes the feature is actually scope creep. Stop. Hang. See differently.",
+        "The Shadow": "Martyrdom, masochistic surrender, giving up when you should persist, passive-aggression disguised as sacrifice, staying stuck to avoid change.",
+        "Reflection": "What would you see if you inverted your assumptions? What are you fighting that you need to surrender to?"
+      }
+    },
+    {
+      "number": 13,
+      "name": "Death",
+      "arcana": "major",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/RWS_Tarot_13_Death.jpg",
+      "sections": {
+        "Interpretation": "Not literal death—transformation so complete the old form can't be recognized in the new. The sun rises between the pillars: something ends, something begins. You can't keep the caterpillar and get the butterfly. Let the old version die so the new one can live.",
+        "Keywords": "transformation, ending, release, death-rebirth, metamorphosis, letting-go, clearing, composting",
+        "For Builders": "That code needs to be deleted. That feature needs to be sunset. That approach needs to die. Death isn't failure—it's clearing space. Your legacy codebase is compost for what's next. Kill your darlings. Delete with confidence. Make room for what wants to be born.",
+        "The Shadow": "Destroying before you've learned from it, change for change's sake, avoiding necessary endings, clinging to what needs to die, nihilistic destruction.",
+        "Reflection": "What needs to die in your work? What are you keeping on life support that wants to transform into something else?"
+      }
+    },
+    {
+      "number": 14,
+      "name": "Temperance",
+      "arcana": "major",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/RWS_Tarot_14_Temperance.jpg",
+      "sections": {
+        "Interpretation": "The angel pours water between cups—mixing, balancing, tempering. Not averaging or compromising—alchemical integration. The path behind leads to the crown on the mountain: temperance is how you get there. One foot in water, one on land: you can stand in two worlds at once.",
+        "Keywords": "integration, balance, alchemy, tempering, mixing, patience, middle-path, synthesis, moderation",
+        "For Builders": "You're integrating systems that weren't meant to work together. You're balancing performance and readability, innovation and stability, user needs and technical constraints. Temperance doesn't choose sides—it finds the synthesis that serves the whole. Mix thoughtfully.",
+        "The Shadow": "Forced harmony that papers over real conflict, endless compromise that satisfies no one, refusing to take a position, 'both-sides-ism,' passivity disguised as balance.",
+        "Reflection": "What opposites are you trying to integrate? What would true synthesis look like, beyond compromise?"
+      }
+    },
+    {
+      "number": 15,
+      "name": "The Devil",
+      "arcana": "major",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/RWS_Tarot_15_Devil.jpg",
+      "sections": {
+        "Interpretation": "Look at the chains: loose enough to slip off. The humans are trapped by choice or habit, not by force. The Devil is whatever you're addicted to—the coping mechanism that's now the problem, the pattern that served you once and now imprisons. The key: noticing you can walk away.",
+        "Keywords": "addiction, bondage, shadow, materialism, habit, coping-mechanism, self-imprisonment, choice",
+        "For Builders": "What's your tech stack addiction? Your framework obsession? Your perfectionism trap? The pattern that made you successful and now makes you rigid? The Devil shows you what you're chained to by habit. The chains are loose. You could walk away. Will you?",
+        "The Shadow": "Blaming others for chains you maintain, denying your role in staying trapped, demonizing desires instead of understanding them, refusing to see the pattern.",
+        "Reflection": "What habit or pattern is imprisoning you? What would it feel like to slip those chains off?"
+      }
+    },
+    {
+      "number": 16,
+      "name": "The Tower",
+      "arcana": "major",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/RWS_Tarot_16_Tower.jpg",
+      "sections": {
+        "Interpretation": "Lightning strikes the tower. What was built on false foundation crumbles. This is the catastrophic bug, the total refactor, the complete pivot. Not what you wanted, but maybe what was needed. Sometimes the only way forward is through collapse. The crown falls; the sky opens; what was hidden is revealed.",
+        "Keywords": "collapse, revelation, breakthrough, destruction, false-foundation, upheaval, lightning, truth-revealed",
+        "For Builders": "Your architecture was wrong from the start. Your core assumption was false. The whole thing has to come down. The Tower isn't punishment—it's correction. Better it falls now than later. Build again, wiser. The lightning shows you what you couldn't see before.",
+        "The Shadow": "Unnecessary destruction, tearing down without learning first, shock for shock's sake, not learning from the collapse, rebuilding on the same false foundation.",
+        "Reflection": "What's built on a false foundation in your work? What truth is the Tower trying to reveal?"
+      }
+    },
+    {
+      "number": 17,
+      "name": "The Star",
+      "arcana": "major",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/RWS_Tarot_17_Star.jpg",
+      "sections": {
+        "Interpretation": "After the Tower comes the Star: hope, healing, pouring water back into the earth and pool. One foot on land, one in water. The bird in the tree is the spiritual self returning. The stars shine—guidance is available if you look up. This is the breath after crisis, the vision that sustains you through rebuilding.",
+        "Keywords": "hope, healing, renewal, vision, inspiration, guidance, nourishment, recovery, clarity, star-light",
+        "For Builders": "Post-collapse, post-crisis—you remember why you're building. The Star is your north star, your guiding vision, the hope that sustains you through the hard work of rebuilding. Pour what you have back into the earth. Trust that the stars still shine. Keep going.",
+        "The Shadow": "Naive optimism that ignores reality, spiritual bypassing, waiting for external rescue, inspiration without action, hope that prevents appropriate grief.",
+        "Reflection": "What's your north star right now? What vision sustains you through difficult work?"
+      }
+    },
+    {
+      "number": 18,
+      "name": "The Moon",
+      "arcana": "major",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/RWS_Tarot_18_Moon.jpg",
+      "sections": {
+        "Interpretation": "The path between two towers leads through unknown territory, guarded by wolf and dog—wild and tame aspects of the same creature. The moon reflects light but doesn't generate it; things look different than they are. The crayfish emerges from the unconscious depths. You're in the murky place where things aren't clear yet. Keep walking.",
+        "Keywords": "uncertainty, illusion, unconscious, dreams, instinct, murky-territory, reflection, anxiety, intuition",
+        "For Builders": "Requirements are unclear. The path forward isn't obvious. You're in the fog where everything feels uncertain. The Moon says: this is normal in creative work. Not everything is immediately clear. Trust your instincts. Keep walking. The path reveals itself as you go.",
+        "The Shadow": "Paranoia, getting lost in confusion, projecting fears onto uncertainty, refusing to proceed without perfect clarity, staying stuck in the murky place.",
+        "Reflection": "What's unclear right now? Can you keep walking through the uncertainty, or do you need to pause and wait for more light?"
+      }
+    },
+    {
+      "number": 19,
+      "name": "The Sun",
+      "arcana": "major",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/RWS_Tarot_19_Sun.jpg",
+      "sections": {
+        "Interpretation": "After the Moon's uncertainty comes the Sun's clarity: the child rides naked and joyful, nothing hidden, everything illuminated. The sunflowers turn toward the light. The wall marks a boundary that contains rather than constrains. This is the joy of work when it works, when everything clicks, when you remember why you started.",
+        "Keywords": "clarity, joy, success, illumination, vitality, innocence-regained, breakthrough, celebration, warmth",
+        "For Builders": "It works. The tests pass. The deploy succeeds. The users love it. The Sun is that moment when everything comes together—clear vision, clean execution, joyful reception. Celebrate it. Let yourself feel this before the next challenge begins. The work deserves your joy.",
+        "The Shadow": "Unsustainable brightness, burnout from constant intensity, naively ignoring problems, refusing to acknowledge that night follows day, toxic positivity.",
+        "Reflection": "When did you last feel genuine joy in your work? What would it take to feel that again?"
+      }
+    },
+    {
+      "number": 20,
+      "name": "Judgement",
+      "arcana": "major",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/RWS_Tarot_20_Judgement.jpg",
+      "sections": {
+        "Interpretation": "The angel calls and the dead rise—not scary, more like an awakening. Judgment isn't punishment; it's evaluation, assessment, the moment you look back and understand what everything meant. You're being called to a higher level of consciousness about your work. What looked like failure now reveals its purpose. Rise.",
+        "Keywords": "evaluation, awakening, calling, assessment, rebirth, absolution, understanding, integration, meta-level",
+        "For Builders": "Retrospective time. You're looking back at the sprint, the project, the quarter, the year. Judgment asks: What did you learn? What patterns do you see? What's calling you forward? This isn't about blame—it's about integration. Rise to the meta-level. Understand the arc.",
+        "The Shadow": "Harsh self-judgment, dwelling in past mistakes, waiting for external validation, refusing to learn from experience, judgment without compassion.",
+        "Reflection": "What have you learned from this cycle? What's calling you to level up? What needs integrating?"
+      }
+    },
+    {
+      "number": 21,
+      "name": "The World",
+      "arcana": "major",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/RWS_Tarot_21_World.jpg",
+      "sections": {
+        "Interpretation": "Completion. Integration. The dancer suspended in the laurel wreath, surrounded by the four fixed signs—the four elements in balance. But notice: it's a wreath, not a cage. The World is an ending that enables a new beginning. You've completed the cycle. The Fool can walk again, wiser now. This is what you were building toward.",
+        "Keywords": "completion, integration, wholeness, achievement, mastery, cycle-end, new-beginning, fulfillment, cosmic-dance",
+        "For Builders": "You shipped. It's live. The cycle is complete. The World says: pause and acknowledge this completion before starting the next thing. You've integrated the lessons. You've built what you set out to build. This isn't the end of all work—it's the end of this cycle. Dance. Then begin again.",
+        "The Shadow": "Inability to complete, perfectionistic refusing to ship, resting on past laurels, not recognizing when cycles end, fear of new beginning.",
+        "Reflection": "What cycle have you completed? Can you acknowledge this ending before rushing to the next beginning?"
+      }
+    }
+  ]
+}
+
+
+#Export to the COmmons json after update:
 {
   "_grammar_commons": {
     "schema_version": "1.0",
