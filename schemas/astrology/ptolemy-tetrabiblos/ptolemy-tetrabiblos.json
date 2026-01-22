@@ -1,0 +1,685 @@
+{
+  "name": "Ptolemy's Tetrabiblos",
+  "description": "Classical Western astrology based on Claudius Ptolemy's Tetrabiblos (c. 150 CE), the foundational text that systematized Greek, Egyptian, and Babylonian astrological knowledge. Translated by J.M. Ashmand, 1822.",
+  "grammar_type": "astrology",
+  "attribution": {
+    "source_name": "Tetrabiblos, or Quadripartite",
+    "source_author": "Claudius Ptolemy",
+    "translator": "J.M. Ashmand",
+    "source_year": "c. 150 CE (translation 1822)",
+    "license": "Public Domain",
+    "source_url": "https://www.gutenberg.org/ebooks/70850"
+  },
+  "items": [
+    {
+      "id": "planet-saturn",
+      "name": "Saturn",
+      "greek_name": "Kronos",
+      "level": 1,
+      "type": "planet",
+      "qualities": {
+        "primary": "cold",
+        "secondary": "dry",
+        "nature": "malefic"
+      },
+      "ptolemy_description": "Saturn's star is productive of cold, and is moderately drying; probably deriving its influence from being most remote both from the heating power of the Sun, and from the moistening vapours of the Earth.",
+      "significations": "Old age, fathers, ancestors, agriculture, building, death, inheritance, slaves, poverty, patience, obstruction, delay",
+      "domicile": ["sign-capricorn", "sign-aquarius"],
+      "exaltation": "sign-libra",
+      "detriment": ["sign-cancer", "sign-leo"],
+      "fall": "sign-aries"
+    },
+    {
+      "id": "planet-jupiter",
+      "name": "Jupiter",
+      "greek_name": "Zeus",
+      "level": 1,
+      "type": "planet",
+      "qualities": {
+        "primary": "hot",
+        "secondary": "moist",
+        "nature": "benefic"
+      },
+      "ptolemy_description": "Jupiter's star is temperate, being placed between the cold of Saturn and the heat of Mars; and is therefore productive of heat and moisture together. But, because its heating power is greater, it produces fertilizing winds.",
+      "significations": "Abundance, growth, religion, philosophy, law, judges, wealth, generosity, honor, children, expansion",
+      "domicile": ["sign-sagittarius", "sign-pisces"],
+      "exaltation": "sign-cancer",
+      "detriment": ["sign-gemini", "sign-virgo"],
+      "fall": "sign-capricorn"
+    },
+    {
+      "id": "planet-mars",
+      "name": "Mars",
+      "greek_name": "Ares",
+      "level": 1,
+      "type": "planet",
+      "qualities": {
+        "primary": "hot",
+        "secondary": "dry",
+        "nature": "malefic"
+      },
+      "ptolemy_description": "Mars's star is chiefly productive of dryness, and is also strongly heating, from its fiery nature, which is indicated by its colour, and its proximity to the Sun.",
+      "significations": "War, conflict, courage, violence, fever, wounds, iron, surgery, separation, masculine energy, soldiers",
+      "domicile": ["sign-aries", "sign-scorpio"],
+      "exaltation": "sign-capricorn",
+      "detriment": ["sign-libra", "sign-taurus"],
+      "fall": "sign-cancer"
+    },
+    {
+      "id": "planet-sun",
+      "name": "Sun",
+      "greek_name": "Helios",
+      "level": 1,
+      "type": "luminary",
+      "qualities": {
+        "primary": "hot",
+        "secondary": "dry",
+        "nature": "benefic"
+      },
+      "ptolemy_description": "The Sun's nature is found to be heating and moderately drying. This is more easily perceived in regard to the Sun than to the other heavenly bodies, both by reason of its magnitude and of its evident alterations of the seasons.",
+      "significations": "Life force, vitality, the soul, kings, fathers, authority, honor, gold, the heart, daylight, success",
+      "domicile": ["sign-leo"],
+      "exaltation": "sign-aries",
+      "detriment": ["sign-aquarius"],
+      "fall": "sign-libra"
+    },
+    {
+      "id": "planet-venus",
+      "name": "Venus",
+      "greek_name": "Aphrodite",
+      "level": 1,
+      "type": "planet",
+      "qualities": {
+        "primary": "moist",
+        "secondary": "warm",
+        "nature": "benefic"
+      },
+      "ptolemy_description": "Venus has the same influence as Jupiter, and is also temperate in her effect: but she acts contrariwise, for she is moistening rather than heating, in consequence of her proximity to the moisture derived from the Earth, as well as from the Moon.",
+      "significations": "Love, beauty, pleasure, art, marriage, women, harmony, jewels, ornaments, peace, fertility",
+      "domicile": ["sign-taurus", "sign-libra"],
+      "exaltation": "sign-pisces",
+      "detriment": ["sign-scorpio", "sign-aries"],
+      "fall": "sign-virgo"
+    },
+    {
+      "id": "planet-mercury",
+      "name": "Mercury",
+      "greek_name": "Hermes",
+      "level": 1,
+      "type": "planet",
+      "qualities": {
+        "primary": "variable",
+        "secondary": "variable",
+        "nature": "neutral"
+      },
+      "ptolemy_description": "Mercury, at certain times, produces drying, and at other times moisture; and each effect is equally powerful. His nature is convertible, and is regulated by his position with regard to the Sun; for he is drying when in the oriental quarter, and moistening when in the occidental.",
+      "significations": "Communication, commerce, writing, intellect, speech, messengers, thieves, youth, reason, calculation",
+      "domicile": ["sign-gemini", "sign-virgo"],
+      "exaltation": "sign-virgo",
+      "detriment": ["sign-sagittarius", "sign-pisces"],
+      "fall": "sign-pisces"
+    },
+    {
+      "id": "planet-moon",
+      "name": "Moon",
+      "greek_name": "Selene",
+      "level": 1,
+      "type": "luminary",
+      "qualities": {
+        "primary": "moist",
+        "secondary": "cold",
+        "nature": "neutral"
+      },
+      "ptolemy_description": "The Moon chiefly exercises a moistening influence, evidently because she is near to the Earth and on account of the moisture which she collects from the vapours rising from it. Her heating power is also moderately active, in consequence of the light she receives from the Sun.",
+      "significations": "The body, mothers, women, the public, change, travel, water, emotions, memory, receptivity, fertility",
+      "domicile": ["sign-cancer"],
+      "exaltation": "sign-taurus",
+      "detriment": ["sign-capricorn"],
+      "fall": "sign-scorpio"
+    },
+    {
+      "id": "sign-aries",
+      "name": "Aries",
+      "symbol": "♈",
+      "level": 1,
+      "type": "sign",
+      "element": "fire",
+      "modality": "cardinal",
+      "gender": "masculine",
+      "ruler": "planet-mars",
+      "ptolemy_description": "Aries and Scorpio, being the houses of Mars, have an affinity to the fiery influence, to destruction by burning, and to murder. In Aries especially are indicated, with respect to the body, the head and the face.",
+      "body_part": "head and face",
+      "seasonal_quality": "Spring equinox - beginning of increase in daylight and heat"
+    },
+    {
+      "id": "sign-taurus",
+      "name": "Taurus",
+      "symbol": "♉",
+      "level": 1,
+      "type": "sign",
+      "element": "earth",
+      "modality": "fixed",
+      "gender": "feminine",
+      "ruler": "planet-venus",
+      "ptolemy_description": "Taurus and Libra, the houses of Venus, are indicative of elegance and of attention to the person. In Taurus especially are signified the neck and the throat.",
+      "body_part": "neck and throat",
+      "seasonal_quality": "Mid-spring - consolidation of warmth and growth"
+    },
+    {
+      "id": "sign-gemini",
+      "name": "Gemini",
+      "symbol": "♊",
+      "level": 1,
+      "type": "sign",
+      "element": "air",
+      "modality": "mutable",
+      "gender": "masculine",
+      "ruler": "planet-mercury",
+      "ptolemy_description": "Gemini and Virgo, the houses of Mercury, are significative of the pursuit of learning and of science. In Gemini especially are indicated the shoulders and the arms.",
+      "body_part": "shoulders and arms",
+      "seasonal_quality": "Late spring - variability and exchange of energies"
+    },
+    {
+      "id": "sign-cancer",
+      "name": "Cancer",
+      "symbol": "♋",
+      "level": 1,
+      "type": "sign",
+      "element": "water",
+      "modality": "cardinal",
+      "gender": "feminine",
+      "ruler": "planet-moon",
+      "ptolemy_description": "Cancer, the house of the Moon, is indicative of all changeable and mutable circumstances. In Cancer especially are signified the breast and the stomach.",
+      "body_part": "breast and stomach",
+      "seasonal_quality": "Summer solstice - maximum moisture and receptivity"
+    },
+    {
+      "id": "sign-leo",
+      "name": "Leo",
+      "symbol": "♌",
+      "level": 1,
+      "type": "sign",
+      "element": "fire",
+      "modality": "fixed",
+      "gender": "masculine",
+      "ruler": "planet-sun",
+      "ptolemy_description": "Leo, the house of the Sun, is indicative of royalty, of command, and of authority. In Leo especially are signified the sides, the heart, and the back.",
+      "body_part": "heart, sides, and back",
+      "seasonal_quality": "Mid-summer - peak of solar heat and vitality"
+    },
+    {
+      "id": "sign-virgo",
+      "name": "Virgo",
+      "symbol": "♍",
+      "level": 1,
+      "type": "sign",
+      "element": "earth",
+      "modality": "mutable",
+      "gender": "feminine",
+      "ruler": "planet-mercury",
+      "ptolemy_description": "Virgo, having Mercury as its ruler, signifies reason, discrimination, and service. In Virgo especially are indicated the belly and the intestines.",
+      "body_part": "belly and intestines",
+      "seasonal_quality": "Late summer - harvest and discrimination"
+    },
+    {
+      "id": "sign-libra",
+      "name": "Libra",
+      "symbol": "♎",
+      "level": 1,
+      "type": "sign",
+      "element": "air",
+      "modality": "cardinal",
+      "gender": "masculine",
+      "ruler": "planet-venus",
+      "ptolemy_description": "Libra, the house of Venus, is indicative of justice, of balance, and of partnership. In Libra especially are signified the hips and the lower belly.",
+      "body_part": "hips and lower belly",
+      "seasonal_quality": "Autumn equinox - balance of light and dark"
+    },
+    {
+      "id": "sign-scorpio",
+      "name": "Scorpio",
+      "symbol": "♏",
+      "level": 1,
+      "type": "sign",
+      "element": "water",
+      "modality": "fixed",
+      "gender": "feminine",
+      "ruler": "planet-mars",
+      "ptolemy_description": "Scorpio, the nocturnal house of Mars, is indicative of death, regeneration, and hidden matters. In Scorpio especially are signified the generative organs.",
+      "body_part": "generative organs",
+      "seasonal_quality": "Mid-autumn - descent into darkness and transformation"
+    },
+    {
+      "id": "sign-sagittarius",
+      "name": "Sagittarius",
+      "symbol": "♐",
+      "level": 1,
+      "type": "sign",
+      "element": "fire",
+      "modality": "mutable",
+      "gender": "masculine",
+      "ruler": "planet-jupiter",
+      "ptolemy_description": "Sagittarius and Pisces, the houses of Jupiter, are indicative of reverence for the gods, of religion, and of philosophy. In Sagittarius especially are signified the thighs.",
+      "body_part": "thighs",
+      "seasonal_quality": "Late autumn - expansion of vision before winter"
+    },
+    {
+      "id": "sign-capricorn",
+      "name": "Capricorn",
+      "symbol": "♑",
+      "level": 1,
+      "type": "sign",
+      "element": "earth",
+      "modality": "cardinal",
+      "gender": "feminine",
+      "ruler": "planet-saturn",
+      "ptolemy_description": "Capricorn and Aquarius, the houses of Saturn, are indicative of toil, of discipline, and of restriction. In Capricorn especially are signified the knees.",
+      "body_part": "knees",
+      "seasonal_quality": "Winter solstice - maximum cold and restriction"
+    },
+    {
+      "id": "sign-aquarius",
+      "name": "Aquarius",
+      "symbol": "♒",
+      "level": 1,
+      "type": "sign",
+      "element": "air",
+      "modality": "fixed",
+      "gender": "masculine",
+      "ruler": "planet-saturn",
+      "ptolemy_description": "Aquarius, the diurnal house of Saturn, is indicative of community, of humanity, and of innovation within boundaries. In Aquarius especially are signified the legs and ankles.",
+      "body_part": "legs and ankles",
+      "seasonal_quality": "Mid-winter - consolidation of structure"
+    },
+    {
+      "id": "sign-pisces",
+      "name": "Pisces",
+      "symbol": "♓",
+      "level": 1,
+      "type": "sign",
+      "element": "water",
+      "modality": "mutable",
+      "gender": "feminine",
+      "ruler": "planet-jupiter",
+      "ptolemy_description": "Pisces, the nocturnal house of Jupiter, is indicative of completion, dissolution, and spiritual matters. In Pisces especially are signified the feet.",
+      "body_part": "feet",
+      "seasonal_quality": "Late winter - dissolution before spring renewal"
+    },
+    {
+      "id": "house-1",
+      "name": "First House (Ascendant)",
+      "greek_name": "Horoskopos",
+      "level": 1,
+      "type": "house",
+      "ptolemy_description": "The angle of the east, called the Ascendant or Horoscope, signifies life itself, the soul, the body, and its constitution.",
+      "significations": "Life, body, appearance, temperament, the native's self, beginnings",
+      "angular_type": "angular"
+    },
+    {
+      "id": "house-2",
+      "name": "Second House",
+      "greek_name": "Gate of Hades",
+      "level": 1,
+      "type": "house",
+      "ptolemy_description": "The place which follows the Ascendant pertains to livelihood and possessions.",
+      "significations": "Possessions, wealth, resources, movable goods, sustenance",
+      "angular_type": "succedent"
+    },
+    {
+      "id": "house-3",
+      "name": "Third House",
+      "greek_name": "Goddess",
+      "level": 1,
+      "type": "house",
+      "ptolemy_description": "The place of the Goddess pertains to brothers, kindred, and short journeys.",
+      "significations": "Brothers, sisters, kindred, neighbors, short journeys, communication",
+      "angular_type": "cadent"
+    },
+    {
+      "id": "house-4",
+      "name": "Fourth House (IC)",
+      "greek_name": "Hypogeion (Subterranean)",
+      "level": 1,
+      "type": "house",
+      "ptolemy_description": "The angle beneath the Earth, called the Subterranean, pertains to parents, ancestors, foundations, lands, and the end of matters.",
+      "significations": "Parents, ancestry, lands, foundations, hidden things, the end of life",
+      "angular_type": "angular"
+    },
+    {
+      "id": "house-5",
+      "name": "Fifth House",
+      "greek_name": "Good Fortune",
+      "level": 1,
+      "type": "house",
+      "ptolemy_description": "The place of Good Fortune pertains to children, pleasure, and creative works.",
+      "significations": "Children, pleasure, games, love affairs, creativity, speculation",
+      "angular_type": "succedent"
+    },
+    {
+      "id": "house-6",
+      "name": "Sixth House",
+      "greek_name": "Bad Fortune",
+      "level": 1,
+      "type": "house",
+      "ptolemy_description": "The place of Bad Fortune pertains to illness, servants, and small animals.",
+      "significations": "Illness, servants, slaves, small animals, labor, infirmity",
+      "angular_type": "cadent"
+    },
+    {
+      "id": "house-7",
+      "name": "Seventh House (Descendant)",
+      "greek_name": "Dysis (Setting)",
+      "level": 1,
+      "type": "house",
+      "ptolemy_description": "The angle of the west, called the Setting or Descendant, pertains to marriage, partnerships, and open enemies.",
+      "significations": "Marriage, partnerships, contracts, open enemies, death (if afflicted)",
+      "angular_type": "angular"
+    },
+    {
+      "id": "house-8",
+      "name": "Eighth House",
+      "greek_name": "Idle Place",
+      "level": 1,
+      "type": "house",
+      "ptolemy_description": "The place following the Descendant pertains to death, inheritance, and the goods of the dead.",
+      "significations": "Death, inheritance, legacies, fear, anxiety, the goods of others",
+      "angular_type": "succedent"
+    },
+    {
+      "id": "house-9",
+      "name": "Ninth House",
+      "greek_name": "God",
+      "level": 1,
+      "type": "house",
+      "ptolemy_description": "The place of God pertains to religion, philosophy, long journeys, and divination.",
+      "significations": "Religion, philosophy, long journeys, dreams, divination, foreign lands",
+      "angular_type": "cadent"
+    },
+    {
+      "id": "house-10",
+      "name": "Tenth House (MC)",
+      "greek_name": "Mesouranema (Midheaven)",
+      "level": 1,
+      "type": "house",
+      "ptolemy_description": "The angle of the south, called the Midheaven or Culmination, pertains to actions, profession, reputation, and authority.",
+      "significations": "Actions, profession, reputation, honors, authority, the mother",
+      "angular_type": "angular"
+    },
+    {
+      "id": "house-11",
+      "name": "Eleventh House",
+      "greek_name": "Good Spirit",
+      "level": 1,
+      "type": "house",
+      "ptolemy_description": "The place of the Good Spirit pertains to friends, hopes, and benefactors.",
+      "significations": "Friends, hopes, wishes, benefactors, good fortune, acquisition",
+      "angular_type": "succedent"
+    },
+    {
+      "id": "house-12",
+      "name": "Twelfth House",
+      "greek_name": "Bad Spirit",
+      "level": 1,
+      "type": "house",
+      "ptolemy_description": "The place of the Bad Spirit pertains to enemies, imprisonment, large animals, and self-undoing.",
+      "significations": "Hidden enemies, imprisonment, exile, large animals, sorrow, self-undoing",
+      "angular_type": "cadent"
+    },
+    {
+      "id": "aspect-conjunction",
+      "name": "Conjunction",
+      "symbol": "☌",
+      "level": 1,
+      "type": "aspect",
+      "degrees": 0,
+      "nature": "variable",
+      "ptolemy_description": "When stars are in the same degree, they unite their powers, whether for good or ill, according to the nature of the stars involved.",
+      "significations": "Union, blending, intensification of planetary natures"
+    },
+    {
+      "id": "aspect-sextile",
+      "name": "Sextile",
+      "symbol": "⚹",
+      "level": 1,
+      "type": "aspect",
+      "degrees": 60,
+      "nature": "benefic",
+      "ptolemy_description": "The sextile, comprehending two signs, is considered friendly, as signs in sextile share the same gender but differ in element, producing harmony through difference.",
+      "significations": "Opportunity, cooperation, mild benefit, compatible exchange"
+    },
+    {
+      "id": "aspect-square",
+      "name": "Square",
+      "symbol": "□",
+      "level": 1,
+      "type": "aspect",
+      "degrees": 90,
+      "nature": "malefic",
+      "ptolemy_description": "The square, comprehending three signs, is considered inharmonious and discordant, as signs in square share the same modality but are of contrary elements.",
+      "significations": "Tension, conflict, obstacles, crisis requiring action"
+    },
+    {
+      "id": "aspect-trine",
+      "name": "Trine",
+      "symbol": "△",
+      "level": 1,
+      "type": "aspect",
+      "degrees": 120,
+      "nature": "benefic",
+      "ptolemy_description": "The trine, comprehending four signs, is considered most harmonious and beneficial, as signs in trine share the same element and thus the same essential nature.",
+      "significations": "Harmony, ease, blessing, natural flow of benefit"
+    },
+    {
+      "id": "aspect-opposition",
+      "name": "Opposition",
+      "symbol": "☍",
+      "level": 1,
+      "type": "aspect",
+      "degrees": 180,
+      "nature": "malefic",
+      "ptolemy_description": "The opposition, comprehending six signs, produces disharmony through complete separation, as opposing signs are furthest apart and thus contrary in influence.",
+      "significations": "Awareness through polarity, separation, completion or culmination"
+    },
+    {
+      "id": "triplicity-fire",
+      "name": "Fire Triplicity",
+      "level": 2,
+      "type": "triplicity",
+      "element": "fire",
+      "qualities": "hot and dry",
+      "composite_of": ["sign-aries", "sign-leo", "sign-sagittarius"],
+      "ptolemy_description": "The fiery triplicity consists of Aries, Leo, and Sagittarius. These signs are hot and dry in nature, masculine, and productive of heat and dryness.",
+      "day_ruler": "planet-sun",
+      "night_ruler": "planet-jupiter",
+      "participating_ruler": "planet-saturn"
+    },
+    {
+      "id": "triplicity-earth",
+      "name": "Earth Triplicity",
+      "level": 2,
+      "type": "triplicity",
+      "element": "earth",
+      "qualities": "cold and dry",
+      "composite_of": ["sign-taurus", "sign-virgo", "sign-capricorn"],
+      "ptolemy_description": "The earthy triplicity consists of Taurus, Virgo, and Capricorn. These signs are cold and dry in nature, feminine, and productive of cold and dryness.",
+      "day_ruler": "planet-venus",
+      "night_ruler": "planet-moon",
+      "participating_ruler": "planet-mars"
+    },
+    {
+      "id": "triplicity-air",
+      "name": "Air Triplicity",
+      "level": 2,
+      "type": "triplicity",
+      "element": "air",
+      "qualities": "hot and moist",
+      "composite_of": ["sign-gemini", "sign-libra", "sign-aquarius"],
+      "ptolemy_description": "The airy triplicity consists of Gemini, Libra, and Aquarius. These signs are hot and moist in nature, masculine, and productive of heat and moisture.",
+      "day_ruler": "planet-saturn",
+      "night_ruler": "planet-mercury",
+      "participating_ruler": "planet-jupiter"
+    },
+    {
+      "id": "triplicity-water",
+      "name": "Water Triplicity",
+      "level": 2,
+      "type": "triplicity",
+      "element": "water",
+      "qualities": "cold and moist",
+      "composite_of": ["sign-cancer", "sign-scorpio", "sign-pisces"],
+      "ptolemy_description": "The watery triplicity consists of Cancer, Scorpio, and Pisces. These signs are cold and moist in nature, feminine, and productive of cold and moisture.",
+      "day_ruler": "planet-venus",
+      "night_ruler": "planet-mars",
+      "participating_ruler": "planet-moon"
+    },
+    {
+      "id": "quadruplicity-cardinal",
+      "name": "Cardinal Signs (Tropical)",
+      "level": 2,
+      "type": "quadruplicity",
+      "modality": "cardinal",
+      "composite_of": ["sign-aries", "sign-cancer", "sign-libra", "sign-capricorn"],
+      "ptolemy_description": "The tropical or cardinal signs mark the solstices and equinoxes. They are Aries and Libra at the equinoxes, Cancer and Capricorn at the solstices. These signs initiate the seasons and are productive of change."
+    },
+    {
+      "id": "quadruplicity-fixed",
+      "name": "Fixed Signs (Solid)",
+      "level": 2,
+      "type": "quadruplicity",
+      "modality": "fixed",
+      "composite_of": ["sign-taurus", "sign-leo", "sign-scorpio", "sign-aquarius"],
+      "ptolemy_description": "The fixed or solid signs follow the tropical signs and consolidate the qualities of each season. They are Taurus, Leo, Scorpio, and Aquarius. These signs are steadfast and resistant to change."
+    },
+    {
+      "id": "quadruplicity-mutable",
+      "name": "Mutable Signs (Bicorporeal)",
+      "level": 2,
+      "type": "quadruplicity",
+      "modality": "mutable",
+      "composite_of": ["sign-gemini", "sign-virgo", "sign-sagittarius", "sign-pisces"],
+      "ptolemy_description": "The mutable or bicorporeal signs conclude each season and transition to the next. They are Gemini, Virgo, Sagittarius, and Pisces. These signs partake of two natures and are changeable."
+    },
+    {
+      "id": "sect-diurnal",
+      "name": "Diurnal Sect",
+      "level": 2,
+      "type": "sect",
+      "composite_of": ["planet-sun", "planet-jupiter", "planet-saturn"],
+      "ptolemy_description": "The diurnal or day sect consists of the Sun, Jupiter, and Saturn. These planets are more powerful and favorable when above the horizon by day, and when in masculine signs."
+    },
+    {
+      "id": "sect-nocturnal",
+      "name": "Nocturnal Sect",
+      "level": 2,
+      "type": "sect",
+      "composite_of": ["planet-moon", "planet-venus", "planet-mars"],
+      "ptolemy_description": "The nocturnal or night sect consists of the Moon, Venus, and Mars. These planets are more powerful and favorable when above the horizon by night, and when in feminine signs."
+    },
+    {
+      "id": "lot-fortune",
+      "name": "Lot of Fortune",
+      "greek_name": "Kleros Tyches",
+      "level": 2,
+      "type": "lot",
+      "ptolemy_description": "The Lot of Fortune is calculated from the distance between the Sun and Moon, projected from the Ascendant. By day, it is the arc from Sun to Moon added to the Ascendant; by night, from Moon to Sun. It signifies the body, health, and material fortune.",
+      "significations": "Body, health, material fortune, wealth, physical circumstances"
+    },
+    {
+      "id": "lot-spirit",
+      "name": "Lot of Spirit",
+      "greek_name": "Kleros Daimonos",
+      "level": 2,
+      "type": "lot",
+      "ptolemy_description": "The Lot of Spirit is calculated inversely to the Lot of Fortune. By day, it is the arc from Moon to Sun added to the Ascendant; by night, from Sun to Moon. It signifies the soul, intellect, and actions.",
+      "significations": "Soul, intellect, actions, profession, intention"
+    },
+    {
+      "id": "angular-houses",
+      "name": "Angular Houses (Kentra)",
+      "level": 2,
+      "type": "house-classification",
+      "composite_of": ["house-1", "house-4", "house-7", "house-10"],
+      "ptolemy_description": "The angular or cardinal houses are the four angles of the chart: the Ascendant, IC, Descendant, and Midheaven. Planets in these places are most powerful and most visible in their effects."
+    },
+    {
+      "id": "succedent-houses",
+      "name": "Succedent Houses (Epanaphora)",
+      "level": 2,
+      "type": "house-classification",
+      "composite_of": ["house-2", "house-5", "house-8", "house-11"],
+      "ptolemy_description": "The succedent houses follow the angles and are moderately powerful. Planets here support or succeed the angular places in their effects."
+    },
+    {
+      "id": "cadent-houses",
+      "name": "Cadent Houses (Apoklima)",
+      "level": 2,
+      "type": "house-classification",
+      "composite_of": ["house-3", "house-6", "house-9", "house-12"],
+      "ptolemy_description": "The cadent houses fall away from the angles and are weakest in power. Planets here are less effective and less visible in their manifestation, though they prepare for the next angular place."
+    },
+    {
+      "id": "benefic-planets",
+      "name": "Benefic Planets",
+      "level": 2,
+      "type": "planetary-classification",
+      "composite_of": ["planet-jupiter", "planet-venus"],
+      "ptolemy_description": "Jupiter and Venus are called benefics because their temperament is hot and moist, which is productive of life and growth. They tend toward increase, fertility, and favorable outcomes."
+    },
+    {
+      "id": "malefic-planets",
+      "name": "Malefic Planets",
+      "level": 2,
+      "type": "planetary-classification",
+      "composite_of": ["planet-saturn", "planet-mars"],
+      "ptolemy_description": "Saturn and Mars are called malefics because Saturn is excessively cold and Mars excessively dry and hot. They tend toward destruction, decrease, and unfavorable outcomes when poorly placed."
+    },
+    {
+      "id": "luminaries",
+      "name": "Luminaries",
+      "level": 2,
+      "type": "planetary-classification",
+      "composite_of": ["planet-sun", "planet-moon"],
+      "ptolemy_description": "The Sun and Moon are called the Luminaries or Lights, as they provide illumination to the world. The Sun rules the day and the vital spirit; the Moon rules the night and the bodily humors."
+    },
+    {
+      "id": "l3-planets",
+      "name": "Planets",
+      "level": 3,
+      "type": "meta-category",
+      "description": "The seven wandering stars of classical astrology, each exercising particular influences according to their nature, position, and aspects.",
+      "contains": ["planet-saturn", "planet-jupiter", "planet-mars", "planet-sun", "planet-venus", "planet-mercury", "planet-moon"]
+    },
+    {
+      "id": "l3-signs",
+      "name": "Zodiacal Signs",
+      "level": 3,
+      "type": "meta-category",
+      "description": "The twelve divisions of the ecliptic, each possessing particular qualities derived from their element, modality, and ruling planet.",
+      "contains": ["sign-aries", "sign-taurus", "sign-gemini", "sign-cancer", "sign-leo", "sign-virgo", "sign-libra", "sign-scorpio", "sign-sagittarius", "sign-capricorn", "sign-aquarius", "sign-pisces"]
+    },
+    {
+      "id": "l3-houses",
+      "name": "Houses (Places)",
+      "level": 3,
+      "type": "meta-category",
+      "description": "The twelve mundane divisions of the horoscope, each governing particular areas of life and circumstances.",
+      "contains": ["house-1", "house-2", "house-3", "house-4", "house-5", "house-6", "house-7", "house-8", "house-9", "house-10", "house-11", "house-12"]
+    },
+    {
+      "id": "l3-aspects",
+      "name": "Aspects",
+      "level": 3,
+      "type": "meta-category",
+      "description": "The angular relationships between planets that modify their influences, being harmonious, discordant, or neutral according to their nature.",
+      "contains": ["aspect-conjunction", "aspect-sextile", "aspect-square", "aspect-trine", "aspect-opposition"]
+    },
+    {
+      "id": "l3-dignities",
+      "name": "Dignities and Classifications",
+      "level": 3,
+      "type": "meta-category",
+      "description": "The systems of planetary dignity and classification that describe how planets are strengthened or weakened by sign, sect, and position.",
+      "contains": ["triplicity-fire", "triplicity-earth", "triplicity-air", "triplicity-water", "quadruplicity-cardinal", "quadruplicity-fixed", "quadruplicity-mutable", "sect-diurnal", "sect-nocturnal", "benefic-planets", "malefic-planets", "luminaries", "angular-houses", "succedent-houses", "cadent-houses", "lot-fortune", "lot-spirit"]
+    }
+  ]
+}
