@@ -1,0 +1,3485 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "Yve Lepkowski",
+        "url": "",
+        "date": "2026-01-22",
+        "note": "Original creator"
+      }
+    ]
+  },
+  "name": "Arlecchino's Augmented Arcana",
+  "description": "An expanded Bolognese tarot deck featuring the commedia dell'arte trickster Arlecchino (Harlequin) and his companion Colombina, with additional virtue cards.\n\nThis second edition of Tarocchino Arlecchino, created between August 2020 and October 2022, expands the traditional Bolognese deck with the Theological Virtues (Faith, Hope, Charity) and Cardinal Virtue (Prudence), plus the iconic characters of Arlecchino and Colombina from Italian theatrical tradition.\n\nThe deck uses Italian card names (Venetian/Bolognese dialect) to honor its regional origins. Court cards use traditional Italian nomenclature with King, Queen, Knight, and Knave.\n\nArtwork by Yve Lepkowski (https://stolen-thyme.com/). Licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA 4.0). You may share and adapt this work with proper attribution.",
+  "cover_image_url": "https://drive.google.com/uc?export=view&id=1B1_3K2L4r9PfUirvZks5TsO0UO2jns0T",
+  "tags": [
+    "bolognese",
+    "tarocchino",
+    "commedia dell'arte",
+    "italian",
+    "expanded",
+    "virtues"
+  ],
+  "grammar_type": "tarot",
+  "items": [
+    {
+      "id": "augmented-matto",
+      "name": "Il Matto (The Fool)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1B1_3K2L4r9PfUirvZks5TsO0UO2jns0T",
+      "sections": {
+        "Summary": "Innocent wandering and unlimited potential.",
+        "Interpretation": "Il Matto steps into the unknown with innocent trust. Every journey begins with willingness to take the first step.",
+        "Reversed": "Recklessness or fear of starting. Are you hesitating or leaping without thought?"
+      },
+      "keywords": [
+        "innocence",
+        "freedom",
+        "beginning",
+        "spontaneity",
+        "trust"
+      ],
+      "questions": [
+        "What new adventure awaits?",
+        "Can I trust the journey?"
+      ],
+      "sort_order": 0,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 0,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "fool",
+          "journey",
+          "bundle",
+          "dog"
+        ],
+        "image_filename": "augmented-matto"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-begato",
+      "name": "Il Begato (The Magician)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1ePiFw-VkuXl2gKMGQGfCVrhQzTtTh_Ig",
+      "sections": {
+        "Summary": "Skill and the power to manifest.",
+        "Interpretation": "Il Begato (the juggler/magician) transforms intention into reality. All resources are at hand—focus your will.",
+        "Reversed": "Manipulation or wasted potential. Are you using your abilities wisely?"
+      },
+      "keywords": [
+        "skill",
+        "manifestation",
+        "power",
+        "action",
+        "resourcefulness"
+      ],
+      "questions": [
+        "What tools do I have?",
+        "Am I focused on my goal?"
+      ],
+      "sort_order": 1,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 1,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "wand",
+          "table",
+          "tools",
+          "infinity"
+        ],
+        "image_filename": "augmented-begato"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-01",
+      "name": "La Papessa (The Papess)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1ZgDLXUqKdOOXqC-zx9FkSKszrdNabrWa",
+      "sections": {
+        "Summary": "Hidden knowledge and intuitive wisdom.",
+        "Interpretation": "La Papessa guards hidden knowledge. Trust your intuition and look beneath the surface.",
+        "Reversed": "Blocked intuition or secrets. Are you ignoring inner wisdom?"
+      },
+      "keywords": [
+        "intuition",
+        "mystery",
+        "wisdom",
+        "secrets",
+        "patience"
+      ],
+      "questions": [
+        "What am I not seeing?",
+        "What does my intuition tell me?"
+      ],
+      "sort_order": 2,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 2,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "book",
+          "veil",
+          "pillars"
+        ],
+        "image_filename": "augmented-01"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-02",
+      "name": "L'Imperatrice (The Empress)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1uqqN6eeOVvSfJkEL-Tw-7MPz79wBp8Lt",
+      "sections": {
+        "Summary": "Abundance, creativity, and nurturing.",
+        "Interpretation": "L'Imperatrice represents fertile creativity and abundant growth. Nurture your projects and relationships.",
+        "Reversed": "Creative blocks or neglect. What needs more care?"
+      },
+      "keywords": [
+        "abundance",
+        "creativity",
+        "nurturing",
+        "growth",
+        "beauty"
+      ],
+      "questions": [
+        "What am I nurturing?",
+        "Where is abundance?"
+      ],
+      "sort_order": 3,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 3,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "crown",
+          "nature",
+          "fertility"
+        ],
+        "image_filename": "augmented-02"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-03",
+      "name": "L'Imperatore (The Emperor)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1UTrxA6mfZizca3Vqy8C3EClTniA6PHTS",
+      "sections": {
+        "Summary": "Structure and stable authority.",
+        "Interpretation": "L'Imperatore brings order and stability. Establish clear boundaries and take responsibility.",
+        "Reversed": "Rigidity or chaos. Are you being too controlling or not enough?"
+      },
+      "keywords": [
+        "authority",
+        "structure",
+        "stability",
+        "leadership",
+        "boundaries"
+      ],
+      "questions": [
+        "What structure do I need?",
+        "How do I use my authority?"
+      ],
+      "sort_order": 4,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 4,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "throne",
+          "scepter",
+          "armor"
+        ],
+        "image_filename": "augmented-03"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-04",
+      "name": "Il Papa (The Pope)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1cSu4f7VnPqALSBLe8-MwStCdK6qgZKop",
+      "sections": {
+        "Summary": "Tradition and spiritual guidance.",
+        "Interpretation": "Il Papa represents established wisdom and spiritual guidance. Honor traditions that serve growth.",
+        "Reversed": "Dogmatism or rebellion. Are you blindly following or needlessly rejecting?"
+      },
+      "keywords": [
+        "tradition",
+        "guidance",
+        "teaching",
+        "conformity",
+        "wisdom"
+      ],
+      "questions": [
+        "What traditions guide me?",
+        "Who can I learn from?"
+      ],
+      "sort_order": 5,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 5,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "keys",
+          "blessing",
+          "pillars"
+        ],
+        "image_filename": "augmented-04"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-05",
+      "name": "L'Amore (Love)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1raDcm7wZEaTuNMjdYDROvRVKVRS4TQbP",
+      "sections": {
+        "Summary": "Choice and values alignment.",
+        "Interpretation": "L'Amore represents meaningful choice and connection. Align your actions with your deepest values.",
+        "Reversed": "Disharmony or avoidance. Are you honoring your values?"
+      },
+      "keywords": [
+        "love",
+        "choice",
+        "values",
+        "partnership",
+        "harmony"
+      ],
+      "questions": [
+        "What do I truly value?",
+        "What choice must I make?"
+      ],
+      "sort_order": 6,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 6,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "cupid",
+          "lovers",
+          "choice"
+        ],
+        "image_filename": "augmented-05"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-06",
+      "name": "Il Carro (The Chariot)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1Kh6yGZYJh2MsqmatZVuNNBExwJUHQnrW",
+      "sections": {
+        "Summary": "Victory through determined will.",
+        "Interpretation": "Il Carro achieves victory through focused determination. Harness conflicting energies and move forward.",
+        "Reversed": "Loss of direction or aggression. Are you forcing or drifting?"
+      },
+      "keywords": [
+        "victory",
+        "willpower",
+        "determination",
+        "control",
+        "direction"
+      ],
+      "questions": [
+        "Where am I headed?",
+        "Can I harness opposing forces?"
+      ],
+      "sort_order": 7,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 7,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "chariot",
+          "horses",
+          "crown"
+        ],
+        "image_filename": "augmented-06"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-07",
+      "name": "La Tempra (Temperance)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1i33kLtj9H0izBbLW9TCNnm_sZ0aQBT3u",
+      "sections": {
+        "Summary": "Balance and patient blending.",
+        "Interpretation": "La Tempra asks for moderation and careful blending. Find the middle path and trust integration.",
+        "Reversed": "Imbalance or extremes. Are you swinging between opposites?"
+      },
+      "keywords": [
+        "balance",
+        "moderation",
+        "patience",
+        "healing",
+        "harmony"
+      ],
+      "questions": [
+        "What needs balancing?",
+        "Am I patient with the process?"
+      ],
+      "sort_order": 8,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 8,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "cups",
+          "water",
+          "angel"
+        ],
+        "image_filename": "augmented-07"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-08",
+      "name": "La Giusta (Justice)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1wRgUxLsdvBTRIsiRbGj9A6bb4wzdPGgB",
+      "sections": {
+        "Summary": "Truth and fair judgment.",
+        "Interpretation": "La Giusta calls for honest assessment and fair action. Take responsibility and seek balance.",
+        "Reversed": "Injustice or dishonesty. Are you avoiding accountability?"
+      },
+      "keywords": [
+        "justice",
+        "truth",
+        "fairness",
+        "karma",
+        "accountability"
+      ],
+      "questions": [
+        "What is the fair outcome?",
+        "Am I being honest?"
+      ],
+      "sort_order": 9,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 9,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "scales",
+          "sword",
+          "throne"
+        ],
+        "image_filename": "augmented-08"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-09",
+      "name": "La Forza (Strength)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1i5cjLpzKW884THbMFmMpbH370kfGZpgh",
+      "sections": {
+        "Summary": "Inner power and gentle courage.",
+        "Interpretation": "La Forza comes from within. Face challenges with courage and compassion.",
+        "Reversed": "Self-doubt or aggression. Are you trusting your inner power?"
+      },
+      "keywords": [
+        "strength",
+        "courage",
+        "patience",
+        "compassion",
+        "inner power"
+      ],
+      "questions": [
+        "What inner strength can I access?",
+        "How can I be gentle yet firm?"
+      ],
+      "sort_order": 10,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 10,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "lion",
+          "woman",
+          "infinity"
+        ],
+        "image_filename": "augmented-09"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-10",
+      "name": "La Roda (Wheel of Fortune)",
+      "image_url": "https://drive.google.com/uc?export=view&id=18MX4ReDrRzug9X6GnSUItWnOtRJQQP2N",
+      "sections": {
+        "Summary": "Cycles of change and fate.",
+        "Interpretation": "La Roda turns constantly. Embrace change—what rises will fall; what falls will rise.",
+        "Reversed": "Resistance to change or stagnation. Are you fighting cycles?"
+      },
+      "keywords": [
+        "cycles",
+        "change",
+        "fate",
+        "turning point",
+        "opportunity"
+      ],
+      "questions": [
+        "What cycle am I in?",
+        "How do I adapt to change?"
+      ],
+      "sort_order": 11,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 11,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "wheel",
+          "sphinx",
+          "creatures"
+        ],
+        "image_filename": "augmented-10"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-11",
+      "name": "Il Vecchio (The Old Man/Hermit)",
+      "image_url": "https://drive.google.com/uc?export=view&id=170kXaKS0BXT9ZlRU1vzAAv_r1Qnnlj6m",
+      "sections": {
+        "Summary": "Solitary wisdom and inner guidance.",
+        "Interpretation": "Il Vecchio seeks truth in solitude. Take time for reflection and trust your inner light.",
+        "Reversed": "Isolation or avoiding reflection. Are you withdrawing wisely or hiding?"
+      },
+      "keywords": [
+        "solitude",
+        "wisdom",
+        "guidance",
+        "introspection",
+        "searching"
+      ],
+      "questions": [
+        "What truth awaits in solitude?",
+        "Am I listening to inner wisdom?"
+      ],
+      "sort_order": 12,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 12,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "lantern",
+          "staff",
+          "cloak"
+        ],
+        "image_filename": "augmented-11"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-12",
+      "name": "Il Traditore (The Traitor/Hanged Man)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1yLaw0gh_TLkl9n1dvIYypsoImmPsiomt",
+      "sections": {
+        "Summary": "Surrender and new perspective.",
+        "Interpretation": "Il Traditore (the one who 'crosses over') gains wisdom through surrender. See from a new angle.",
+        "Reversed": "Stalling or martyrdom. Are you stuck or sacrificing needlessly?"
+      },
+      "keywords": [
+        "surrender",
+        "perspective",
+        "sacrifice",
+        "pause",
+        "letting go"
+      ],
+      "questions": [
+        "What do I need to release?",
+        "How can I see differently?"
+      ],
+      "sort_order": 13,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 13,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "hanging",
+          "tree",
+          "halo"
+        ],
+        "image_filename": "augmented-12"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-13",
+      "name": "La Morte (Death)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1B6YSaB7uSHfdshYXX4npQfWB_vh78mQM",
+      "sections": {
+        "Summary": "Transformation and necessary endings.",
+        "Interpretation": "La Morte brings necessary endings for new growth. Release what no longer serves.",
+        "Reversed": "Resistance to change or stagnation. What are you holding onto?"
+      },
+      "keywords": [
+        "transformation",
+        "ending",
+        "change",
+        "renewal",
+        "release"
+      ],
+      "questions": [
+        "What must end?",
+        "What transformation is occurring?"
+      ],
+      "sort_order": 14,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 14,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "skeleton",
+          "scythe",
+          "sunrise"
+        ],
+        "image_filename": "augmented-13"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-14",
+      "name": "Il Diavolo (The Devil)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1nYzoQN2GDSt0xeNAs8ZnafZruVSrA4f_",
+      "sections": {
+        "Summary": "Bondage and shadow.",
+        "Interpretation": "Il Diavolo reveals self-imposed chains. Face your shadow—freedom is closer than it seems.",
+        "Reversed": "Breaking free or denial. Are you confronting your shadows?"
+      },
+      "keywords": [
+        "bondage",
+        "shadow",
+        "addiction",
+        "materialism",
+        "temptation"
+      ],
+      "questions": [
+        "What chains bind me?",
+        "What am I avoiding in myself?"
+      ],
+      "sort_order": 15,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 15,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "devil",
+          "chains",
+          "torch"
+        ],
+        "image_filename": "augmented-14"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-15",
+      "name": "La Saetta (The Lightning/Tower)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1G_DqM6CSBPLM-zm5mIJUzHUyUnqgVuKx",
+      "sections": {
+        "Summary": "Sudden change and revelation.",
+        "Interpretation": "La Saetta (the lightning bolt) strikes false structures. Truth liberates, though it may shock.",
+        "Reversed": "Avoided disaster or prolonged crisis. Has the storm passed?"
+      },
+      "keywords": [
+        "upheaval",
+        "revelation",
+        "liberation",
+        "sudden change",
+        "truth"
+      ],
+      "questions": [
+        "What needs to fall?",
+        "What truth am I avoiding?"
+      ],
+      "sort_order": 16,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 16,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "tower",
+          "lightning",
+          "falling"
+        ],
+        "image_filename": "augmented-15"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-16",
+      "name": "La Stella (The Star)",
+      "image_url": "https://drive.google.com/uc?export=view&id=19Aa_vPfsGqywXXt66D1kvwjK1LX3TAh-",
+      "sections": {
+        "Summary": "Hope and renewed inspiration.",
+        "Interpretation": "La Stella brings hope after crisis. Trust in renewal and let inspiration guide you.",
+        "Reversed": "Despair or disconnection. Have you lost hope?"
+      },
+      "keywords": [
+        "hope",
+        "inspiration",
+        "faith",
+        "healing",
+        "serenity"
+      ],
+      "questions": [
+        "What gives me hope?",
+        "How can I find peace?"
+      ],
+      "sort_order": 17,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 17,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "star",
+          "water",
+          "woman"
+        ],
+        "image_filename": "augmented-16"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-17",
+      "name": "La Luna (The Moon)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1D-_NOYPKBkshePzBVjNDgXlQQ6Fi3Eo4",
+      "sections": {
+        "Summary": "Illusion and the unconscious.",
+        "Interpretation": "La Luna illuminates dreams and fears. Trust intuition but question illusion.",
+        "Reversed": "Clarity emerging or repressed fears. Are illusions dissolving?"
+      },
+      "keywords": [
+        "illusion",
+        "intuition",
+        "fear",
+        "unconscious",
+        "dreams"
+      ],
+      "questions": [
+        "What fears are surfacing?",
+        "What is hidden?"
+      ],
+      "sort_order": 18,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 18,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "moon",
+          "dogs",
+          "water",
+          "crayfish"
+        ],
+        "image_filename": "augmented-17"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-18",
+      "name": "Il Sole (The Sun)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1UcClw0PhDl0Sez1RAZDuQVxVb8dO23xr",
+      "sections": {
+        "Summary": "Joy and radiant clarity.",
+        "Interpretation": "Il Sole brings warmth and clarity. Celebrate success and embrace joy.",
+        "Reversed": "Dimmed joy or setbacks. Is something blocking your light?"
+      },
+      "keywords": [
+        "joy",
+        "success",
+        "clarity",
+        "vitality",
+        "confidence"
+      ],
+      "questions": [
+        "What brings me joy?",
+        "Where is success blooming?"
+      ],
+      "sort_order": 19,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 19,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "sun",
+          "child",
+          "garden"
+        ],
+        "image_filename": "augmented-18"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-19",
+      "name": "Il Mondo (The World)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1H4mBig5vc-VtmJ1vg4-QhuXxdVveWUlm",
+      "sections": {
+        "Summary": "Completion and wholeness.",
+        "Interpretation": "Il Mondo celebrates completion. A cycle ends in fulfillment—honor your achievement.",
+        "Reversed": "Incomplete or seeking closure. What remains unfinished?"
+      },
+      "keywords": [
+        "completion",
+        "integration",
+        "wholeness",
+        "achievement",
+        "fulfillment"
+      ],
+      "questions": [
+        "What cycle is completing?",
+        "Have I integrated the lesson?"
+      ],
+      "sort_order": 20,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 20,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "dancer",
+          "wreath",
+          "four creatures"
+        ],
+        "image_filename": "augmented-19"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-20",
+      "name": "L'Angelo (The Angel/Judgment)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1kcrooxiIxbKIO08mRYbOZhrORYxEVwVj",
+      "sections": {
+        "Summary": "Awakening and answering the call.",
+        "Interpretation": "L'Angelo calls you to rise. Answer your calling—this is invitation, not punishment.",
+        "Reversed": "Ignoring the call or self-judgment. Are you hearing but not responding?"
+      },
+      "keywords": [
+        "judgment",
+        "awakening",
+        "calling",
+        "rebirth",
+        "reckoning"
+      ],
+      "questions": [
+        "What am I being called to?",
+        "How do I answer?"
+      ],
+      "sort_order": 21,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 21,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "angel",
+          "trumpet",
+          "rising figures"
+        ],
+        "image_filename": "augmented-20"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-arlecchino",
+      "name": "Arlecchino (The Harlequin)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1BMpdPKB4gzRluXsFh1Z7x9i3yue6erQ7",
+      "sections": {
+        "Summary": "The trickster, transformation through play.",
+        "Interpretation": "Arlecchino, the clever servant of commedia dell'arte, teaches through wit and mischief. Sometimes the trickster path leads to truth. Embrace adaptability and find wisdom in play.",
+        "Reversed": "Deception or superficiality. Are you hiding behind the mask, or playing games that hurt?"
+      },
+      "keywords": [
+        "trickster",
+        "transformation",
+        "play",
+        "wit",
+        "adaptability"
+      ],
+      "questions": [
+        "How can humor help me now?",
+        "What mask am I wearing?"
+      ],
+      "sort_order": 22,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 22,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "harlequin",
+          "mask",
+          "diamonds",
+          "slapstick"
+        ],
+        "image_filename": "augmented-arlecchino"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-colombina",
+      "name": "Colombina (The Dove)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1O6JpBxq4bPTHfgBfY4U406h9ctOUA4ol",
+      "sections": {
+        "Summary": "Wit, loyalty, and practical wisdom.",
+        "Interpretation": "Colombina, Arlecchino's counterpart, combines practical wisdom with deep loyalty. She sees through pretense while remaining kind. Balance cleverness with compassion.",
+        "Reversed": "Cynicism or naive loyalty. Are you being too clever, or too trusting?"
+      },
+      "keywords": [
+        "wit",
+        "loyalty",
+        "practicality",
+        "compassion",
+        "intelligence"
+      ],
+      "questions": [
+        "How can I serve with wisdom?",
+        "Where is my loyalty?"
+      ],
+      "sort_order": 23,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 23,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "dove",
+          "fan",
+          "apron",
+          "keys"
+        ],
+        "image_filename": "augmented-colombina"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-fede",
+      "name": "La Fede (Faith)",
+      "image_url": "https://drive.google.com/uc?export=view&id=148WhB2iUl5j4QZD2RQgA_VvTVdrio1a1",
+      "sections": {
+        "Summary": "Trust in the unseen and belief.",
+        "Interpretation": "La Fede (Faith) invites trust in what cannot be proven. Some truths are felt rather than known. Open to belief.",
+        "Reversed": "Doubt or blind faith. Are you questioning wisely, or lost in skepticism?"
+      },
+      "keywords": [
+        "faith",
+        "trust",
+        "belief",
+        "hope",
+        "spirituality"
+      ],
+      "questions": [
+        "What do I believe in?",
+        "Where can I trust more?"
+      ],
+      "sort_order": 24,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 24,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "cross",
+          "chalice",
+          "light",
+          "heart"
+        ],
+        "image_filename": "augmented-fede"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-speranza",
+      "name": "La Speranza (Hope)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1OwTz6Mn01FTB5abK_EqJKOC44AgIHqKg",
+      "sections": {
+        "Summary": "Optimism and expectation of good.",
+        "Interpretation": "La Speranza (Hope) is the anchor in storms. Even when evidence is scarce, hope sustains forward movement. Don't give up.",
+        "Reversed": "Despair or false hope. Are you losing hope, or hoping for the wrong things?"
+      },
+      "keywords": [
+        "hope",
+        "optimism",
+        "expectation",
+        "future",
+        "resilience"
+      ],
+      "questions": [
+        "What am I hoping for?",
+        "Can I sustain hope?"
+      ],
+      "sort_order": 25,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 25,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "anchor",
+          "dove",
+          "sunrise",
+          "green"
+        ],
+        "image_filename": "augmented-speranza"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-carita",
+      "name": "La Carità (Charity)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1dyap87jT147TtTN65f1HoouY9m3BdSrY",
+      "sections": {
+        "Summary": "Unconditional love and generosity.",
+        "Interpretation": "La Carità (Charity, or Divine Love) gives without expectation. This is love in action—generous, warm, unconditional.",
+        "Reversed": "Selfishness or martyrdom. Are you giving too little, or giving to your own detriment?"
+      },
+      "keywords": [
+        "charity",
+        "love",
+        "generosity",
+        "compassion",
+        "giving"
+      ],
+      "questions": [
+        "How can I give more?",
+        "Am I acting from love?"
+      ],
+      "sort_order": 26,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 26,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "heart",
+          "children",
+          "flames",
+          "hands"
+        ],
+        "image_filename": "augmented-carita"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-prudenza",
+      "name": "La Prudenza (Prudence)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1-TjPzLv-bPO-6QxUg6T45aWr6HTYwQh-",
+      "sections": {
+        "Summary": "Wisdom, foresight, and careful judgment.",
+        "Interpretation": "La Prudenza (Prudence) looks before leaping. This cardinal virtue balances past experience with future foresight. Choose carefully.",
+        "Reversed": "Recklessness or excessive caution. Are you overthinking, or not thinking enough?"
+      },
+      "keywords": [
+        "prudence",
+        "wisdom",
+        "foresight",
+        "caution",
+        "discernment"
+      ],
+      "questions": [
+        "Am I acting wisely?",
+        "What consequences should I consider?"
+      ],
+      "sort_order": 27,
+      "category": "major",
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 27,
+        "suit": null,
+        "arcana": "major",
+        "symbols": [
+          "mirror",
+          "snake",
+          "compass",
+          "two faces"
+        ],
+        "image_filename": "augmented-prudenza"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-batons-king",
+      "name": "Re di Bastoni (King of Batons)",
+      "image_url": "https://drive.google.com/uc?export=view&id=16AuJLX3UQP1D5RLL9f5zJO4n9MrJM9Rs",
+      "sections": {
+        "Summary": "Visionary leadership and bold action.",
+        "Interpretation": "The King of Batons leads with passion and vision. Take bold action and inspire through your example.",
+        "Reversed": "Tyranny or impulsiveness. Are you leading wisely?"
+      },
+      "keywords": [
+        "leadership",
+        "vision",
+        "boldness",
+        "enterprise",
+        "charisma"
+      ],
+      "questions": [
+        "Am I leading with vision?",
+        "How do I inspire others?"
+      ],
+      "sort_order": 28,
+      "category": "minor",
+      "subcategory": "bastoni",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 14,
+        "suit": "bastoni",
+        "arcana": "minor",
+        "symbols": [
+          "king",
+          "wand",
+          "throne"
+        ],
+        "image_filename": "augmented-batons-king"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-batons-queen",
+      "name": "Regina di Bastoni (Queen of Batons)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1l1EhRG6ANpPDdMC363A8VPTZ11nN5hov",
+      "sections": {
+        "Summary": "Confident creativity and warmth.",
+        "Interpretation": "The Queen of Batons radiates warmth and creative confidence. Trust your abilities.",
+        "Reversed": "Jealousy or dimmed light. Are you shining fully?"
+      },
+      "keywords": [
+        "confidence",
+        "creativity",
+        "warmth",
+        "determination",
+        "vibrancy"
+      ],
+      "questions": [
+        "Am I expressing my creativity?",
+        "Do I radiate confidence?"
+      ],
+      "sort_order": 29,
+      "category": "minor",
+      "subcategory": "bastoni",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 13,
+        "suit": "bastoni",
+        "arcana": "minor",
+        "symbols": [
+          "queen",
+          "wand",
+          "sunflower"
+        ],
+        "image_filename": "augmented-batons-queen"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-batons-knight",
+      "name": "Cavaliere di Bastoni (Knight of Batons)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1cFeSOqWDbVyJCRpEgLv_gCCzqR-0zMld",
+      "sections": {
+        "Summary": "Adventure and passionate pursuit.",
+        "Interpretation": "The Knight of Batons charges forward with passion. Pursue goals with energy.",
+        "Reversed": "Recklessness or delays. Are you rushing without direction?"
+      },
+      "keywords": [
+        "adventure",
+        "energy",
+        "passion",
+        "action",
+        "travel"
+      ],
+      "questions": [
+        "What adventure calls?",
+        "Am I acting on passion?"
+      ],
+      "sort_order": 30,
+      "category": "minor",
+      "subcategory": "bastoni",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 12,
+        "suit": "bastoni",
+        "arcana": "minor",
+        "symbols": [
+          "knight",
+          "horse",
+          "wand"
+        ],
+        "image_filename": "augmented-batons-knight"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-batons-knave",
+      "name": "Fante di Bastoni (Knave of Batons)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1clWHyxbdrXpMWUwaT4dd6ryWA4PQGVU1",
+      "sections": {
+        "Summary": "New inspiration and enthusiasm.",
+        "Interpretation": "The Knave brings news of opportunity. Approach new ideas with curiosity.",
+        "Reversed": "Lack of direction or setbacks. Is enthusiasm scattered?"
+      },
+      "keywords": [
+        "exploration",
+        "enthusiasm",
+        "discovery",
+        "messages",
+        "potential"
+      ],
+      "questions": [
+        "What new idea excites me?",
+        "Am I open to inspiration?"
+      ],
+      "sort_order": 31,
+      "category": "minor",
+      "subcategory": "bastoni",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 11,
+        "suit": "bastoni",
+        "arcana": "minor",
+        "symbols": [
+          "page",
+          "wand",
+          "landscape"
+        ],
+        "image_filename": "augmented-batons-knave"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-batons-10",
+      "name": "Dieci di Bastoni (Ten of Batons)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1nAW4X9iPXf9vwsTc-xG3Lwau7XmgMRix",
+      "sections": {
+        "Summary": "Heavy burdens and responsibility.",
+        "Interpretation": "Consider what you can delegate or release.",
+        "Reversed": "Releasing burdens or collapse."
+      },
+      "keywords": [
+        "burden",
+        "responsibility",
+        "hard work",
+        "stress",
+        "completion"
+      ],
+      "questions": [
+        "What burdens am I carrying?",
+        "Can I share the load?"
+      ],
+      "sort_order": 32,
+      "category": "minor",
+      "subcategory": "bastoni",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 10,
+        "suit": "bastoni",
+        "arcana": "minor",
+        "symbols": [
+          "ten wands",
+          "burden"
+        ],
+        "image_filename": "augmented-batons-10"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-batons-09",
+      "name": "Nove di Bastoni (Nine of Batons)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1SPS8R32hhsYAoQsYqsW8E11Oi37Ypd4Z",
+      "sections": {
+        "Summary": "Resilience and perseverance.",
+        "Interpretation": "You've been tested but remain standing. Hold your ground.",
+        "Reversed": "Paranoia or giving up."
+      },
+      "keywords": [
+        "resilience",
+        "persistence",
+        "defense",
+        "boundaries",
+        "courage"
+      ],
+      "questions": [
+        "What am I defending?",
+        "Do I have strength to continue?"
+      ],
+      "sort_order": 33,
+      "category": "minor",
+      "subcategory": "bastoni",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 9,
+        "suit": "bastoni",
+        "arcana": "minor",
+        "symbols": [
+          "nine wands",
+          "defense"
+        ],
+        "image_filename": "augmented-batons-09"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-batons-08",
+      "name": "Otto di Bastoni (Eight of Batons)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1rxwf7xmgq7AbCyDTKeZyYALHaQclzTzG",
+      "sections": {
+        "Summary": "Swift movement and progress.",
+        "Interpretation": "Things are moving fast. Act quickly and communicate clearly.",
+        "Reversed": "Delays or chaos."
+      },
+      "keywords": [
+        "speed",
+        "action",
+        "movement",
+        "progress",
+        "communication"
+      ],
+      "questions": [
+        "What is accelerating?",
+        "Am I ready for rapid change?"
+      ],
+      "sort_order": 34,
+      "category": "minor",
+      "subcategory": "bastoni",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 8,
+        "suit": "bastoni",
+        "arcana": "minor",
+        "symbols": [
+          "eight wands",
+          "flight"
+        ],
+        "image_filename": "augmented-batons-08"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-batons-07",
+      "name": "Sette di Bastoni (Seven of Batons)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1lIOSRlabid35hzYRIVS4s0iLAKSrTK5j",
+      "sections": {
+        "Summary": "Defending your position.",
+        "Interpretation": "You have the advantage. Stand firm.",
+        "Reversed": "Overwhelmed or giving up."
+      },
+      "keywords": [
+        "defense",
+        "competition",
+        "perseverance",
+        "challenge",
+        "courage"
+      ],
+      "questions": [
+        "What am I fighting for?",
+        "Is this battle worth it?"
+      ],
+      "sort_order": 35,
+      "category": "minor",
+      "subcategory": "bastoni",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 7,
+        "suit": "bastoni",
+        "arcana": "minor",
+        "symbols": [
+          "seven wands",
+          "high ground"
+        ],
+        "image_filename": "augmented-batons-07"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-batons-06",
+      "name": "Sei di Bastoni (Six of Batons)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1QvVzd2Icuqp4eUcgjhWN6ZvywnEkW5Ss",
+      "sections": {
+        "Summary": "Victory and recognition.",
+        "Interpretation": "Your efforts are recognized. Accept praise.",
+        "Reversed": "Delayed recognition or ego."
+      },
+      "keywords": [
+        "victory",
+        "success",
+        "recognition",
+        "achievement",
+        "pride"
+      ],
+      "questions": [
+        "What victory am I celebrating?"
+      ],
+      "sort_order": 36,
+      "category": "minor",
+      "subcategory": "bastoni",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 6,
+        "suit": "bastoni",
+        "arcana": "minor",
+        "symbols": [
+          "six wands",
+          "laurel"
+        ],
+        "image_filename": "augmented-batons-06"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-batons-05",
+      "name": "Cinque di Bastoni (Five of Batons)",
+      "image_url": "https://drive.google.com/uc?export=view&id=11v5B_VFv9zvcspv1LQSqp_WCK3WUMpbt",
+      "sections": {
+        "Summary": "Conflict and competition.",
+        "Interpretation": "Channel competitive energy constructively.",
+        "Reversed": "Avoiding conflict or escalation."
+      },
+      "keywords": [
+        "conflict",
+        "competition",
+        "tension",
+        "diversity",
+        "challenge"
+      ],
+      "questions": [
+        "What conflict needs resolution?"
+      ],
+      "sort_order": 37,
+      "category": "minor",
+      "subcategory": "bastoni",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 5,
+        "suit": "bastoni",
+        "arcana": "minor",
+        "symbols": [
+          "five wands",
+          "struggle"
+        ],
+        "image_filename": "augmented-batons-05"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-batons-04",
+      "name": "Quattro di Bastoni (Four of Batons)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1r_G0UcwBeZ3Sp9y-1r_QZyP1bEGgw_Kz",
+      "sections": {
+        "Summary": "Celebration and home.",
+        "Interpretation": "Gather with community and celebrate.",
+        "Reversed": "Delayed celebration or instability."
+      },
+      "keywords": [
+        "celebration",
+        "harmony",
+        "homecoming",
+        "community",
+        "stability"
+      ],
+      "questions": [
+        "What milestone am I celebrating?"
+      ],
+      "sort_order": 38,
+      "category": "minor",
+      "subcategory": "bastoni",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 4,
+        "suit": "bastoni",
+        "arcana": "minor",
+        "symbols": [
+          "four wands",
+          "garland"
+        ],
+        "image_filename": "augmented-batons-04"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-batons-03",
+      "name": "Tre di Bastoni (Three of Batons)",
+      "image_url": "https://drive.google.com/uc?export=view&id=13Us7HhSZZambj9qwBfnJ20WGnzgypsal",
+      "sections": {
+        "Summary": "Expansion and foresight.",
+        "Interpretation": "Your plans are in motion. Trust the process.",
+        "Reversed": "Delays or limited vision."
+      },
+      "keywords": [
+        "expansion",
+        "foresight",
+        "exploration",
+        "progress",
+        "waiting"
+      ],
+      "questions": [
+        "What am I waiting for?",
+        "Am I thinking big enough?"
+      ],
+      "sort_order": 39,
+      "category": "minor",
+      "subcategory": "bastoni",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 3,
+        "suit": "bastoni",
+        "arcana": "minor",
+        "symbols": [
+          "three wands",
+          "horizon"
+        ],
+        "image_filename": "augmented-batons-03"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-batons-02",
+      "name": "Due di Bastoni (Two of Batons)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1NNDwgm_YQ0E6bwyRNg49aU2j7dtiHYos",
+      "sections": {
+        "Summary": "Planning and decisions.",
+        "Interpretation": "Consider your options carefully before committing.",
+        "Reversed": "Fear of the unknown or poor planning."
+      },
+      "keywords": [
+        "planning",
+        "decisions",
+        "future",
+        "options",
+        "discovery"
+      ],
+      "questions": [
+        "What decision am I weighing?"
+      ],
+      "sort_order": 40,
+      "category": "minor",
+      "subcategory": "bastoni",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 2,
+        "suit": "bastoni",
+        "arcana": "minor",
+        "symbols": [
+          "two wands",
+          "globe"
+        ],
+        "image_filename": "augmented-batons-02"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-batons-01",
+      "name": "Asso di Bastoni (Ace of Batons)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1A4Z9kuICtRU4yt4vo-HWv0JEngq_g-lg",
+      "sections": {
+        "Summary": "New creative spark.",
+        "Interpretation": "Seize this moment of inspiration.",
+        "Reversed": "Blocked creativity or delays."
+      },
+      "keywords": [
+        "inspiration",
+        "potential",
+        "new beginning",
+        "creativity",
+        "power"
+      ],
+      "questions": [
+        "What new venture calls?",
+        "Am I ready to begin?"
+      ],
+      "sort_order": 41,
+      "category": "minor",
+      "subcategory": "bastoni",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 1,
+        "suit": "bastoni",
+        "arcana": "minor",
+        "symbols": [
+          "wand",
+          "hand",
+          "clouds"
+        ],
+        "image_filename": "augmented-batons-01"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-coins-king",
+      "name": "Re di Denari (King of Coins)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1_wzdgUjkCteyE-hi6YToIkGsrjILwn9X",
+      "sections": {
+        "Summary": "Material mastery and wisdom.",
+        "Interpretation": "Master the material world through steady effort.",
+        "Reversed": "Greed or instability."
+      },
+      "keywords": [
+        "abundance",
+        "security",
+        "business",
+        "discipline",
+        "prosperity"
+      ],
+      "questions": [
+        "Am I building something lasting?"
+      ],
+      "sort_order": 42,
+      "category": "minor",
+      "subcategory": "denari",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 14,
+        "suit": "denari",
+        "arcana": "minor",
+        "symbols": [
+          "king",
+          "coin",
+          "castle"
+        ],
+        "image_filename": "augmented-coins-king"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-coins-queen",
+      "name": "Regina di Denari (Queen of Coins)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1tp5uJizOvGcH1Oq1nPxWc5HFkbqCWHL4",
+      "sections": {
+        "Summary": "Nurturing abundance.",
+        "Interpretation": "Create abundance through care.",
+        "Reversed": "Neglect or possessiveness."
+      },
+      "keywords": [
+        "nurturing",
+        "practical",
+        "abundance",
+        "sensuality",
+        "security"
+      ],
+      "questions": [
+        "Am I nurturing my resources?"
+      ],
+      "sort_order": 43,
+      "category": "minor",
+      "subcategory": "denari",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 13,
+        "suit": "denari",
+        "arcana": "minor",
+        "symbols": [
+          "queen",
+          "coin",
+          "garden"
+        ],
+        "image_filename": "augmented-coins-queen"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-coins-knight",
+      "name": "Cavaliere di Denari (Knight of Coins)",
+      "image_url": "https://drive.google.com/uc?export=view&id=12Atxh1oCESSz0xysQUe2FxPD_hoA6Igf",
+      "sections": {
+        "Summary": "Steady progress.",
+        "Interpretation": "Trust steady effort and routines.",
+        "Reversed": "Stagnation or stubbornness."
+      },
+      "keywords": [
+        "hard work",
+        "routine",
+        "persistence",
+        "reliability",
+        "patience"
+      ],
+      "questions": [
+        "Am I making steady progress?"
+      ],
+      "sort_order": 44,
+      "category": "minor",
+      "subcategory": "denari",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 12,
+        "suit": "denari",
+        "arcana": "minor",
+        "symbols": [
+          "knight",
+          "horse",
+          "coin"
+        ],
+        "image_filename": "augmented-coins-knight"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-coins-knave",
+      "name": "Fante di Denari (Knave of Coins)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1T0ijBf9XGKJk5N1pk0h4bTCaXzQCS3Qc",
+      "sections": {
+        "Summary": "New opportunity.",
+        "Interpretation": "Study and build practical skills.",
+        "Reversed": "Missed opportunities."
+      },
+      "keywords": [
+        "opportunity",
+        "study",
+        "skill building",
+        "diligence",
+        "manifestation"
+      ],
+      "questions": [
+        "What skill am I developing?"
+      ],
+      "sort_order": 45,
+      "category": "minor",
+      "subcategory": "denari",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 11,
+        "suit": "denari",
+        "arcana": "minor",
+        "symbols": [
+          "page",
+          "coin"
+        ],
+        "image_filename": "augmented-coins-knave"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-coins-10",
+      "name": "Dieci di Denari (Ten of Coins)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1ZIWh8zAnjreMgzaTbuXpskG209U2m-7L",
+      "sections": {
+        "Summary": "Legacy and wealth.",
+        "Interpretation": "Build something that endures.",
+        "Reversed": "Family disputes."
+      },
+      "keywords": [
+        "legacy",
+        "inheritance",
+        "family",
+        "wealth",
+        "tradition"
+      ],
+      "questions": [
+        "What legacy am I building?"
+      ],
+      "sort_order": 46,
+      "category": "minor",
+      "subcategory": "denari",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 10,
+        "suit": "denari",
+        "arcana": "minor",
+        "symbols": [
+          "ten coins",
+          "family"
+        ],
+        "image_filename": "augmented-coins-10"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-coins-09",
+      "name": "Nove di Denari (Nine of Coins)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1JhXLxjcsxSSmA-wyEf81oH05yDaSTvBF",
+      "sections": {
+        "Summary": "Self-sufficiency.",
+        "Interpretation": "Enjoy the fruits of discipline.",
+        "Reversed": "Overwork or dependence."
+      },
+      "keywords": [
+        "abundance",
+        "luxury",
+        "self-sufficiency",
+        "discipline",
+        "reward"
+      ],
+      "questions": [
+        "Am I enjoying my success?"
+      ],
+      "sort_order": 47,
+      "category": "minor",
+      "subcategory": "denari",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 9,
+        "suit": "denari",
+        "arcana": "minor",
+        "symbols": [
+          "nine coins",
+          "garden"
+        ],
+        "image_filename": "augmented-coins-09"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-coins-08",
+      "name": "Otto di Denari (Eight of Coins)",
+      "image_url": "https://drive.google.com/uc?export=view&id=17a4wPBqrW1u_Ar7kxj34fdNVVSb2km_F",
+      "sections": {
+        "Summary": "Craftsmanship.",
+        "Interpretation": "Dedicate yourself to your craft.",
+        "Reversed": "Shortcuts or perfectionism."
+      },
+      "keywords": [
+        "craftsmanship",
+        "skill",
+        "diligence",
+        "apprenticeship",
+        "quality"
+      ],
+      "questions": [
+        "What skill am I developing?"
+      ],
+      "sort_order": 48,
+      "category": "minor",
+      "subcategory": "denari",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 8,
+        "suit": "denari",
+        "arcana": "minor",
+        "symbols": [
+          "eight coins",
+          "craftsman"
+        ],
+        "image_filename": "augmented-coins-08"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-coins-07",
+      "name": "Sette di Denari (Seven of Coins)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1eZWThGPl6wZq0nZo4hKQ_DpB5qzG7Aom",
+      "sections": {
+        "Summary": "Assessment.",
+        "Interpretation": "Evaluate progress and persist.",
+        "Reversed": "Impatience or wasted effort."
+      },
+      "keywords": [
+        "patience",
+        "investment",
+        "evaluation",
+        "reward",
+        "perseverance"
+      ],
+      "questions": [
+        "Is my investment paying off?"
+      ],
+      "sort_order": 49,
+      "category": "minor",
+      "subcategory": "denari",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 7,
+        "suit": "denari",
+        "arcana": "minor",
+        "symbols": [
+          "seven coins",
+          "vine"
+        ],
+        "image_filename": "augmented-coins-07"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-coins-06",
+      "name": "Sei di Denari (Six of Coins)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1JjFtf987y9nYExB-YvNjdLvpnZTHzN09",
+      "sections": {
+        "Summary": "Generosity.",
+        "Interpretation": "Share abundance generously.",
+        "Reversed": "Strings attached."
+      },
+      "keywords": [
+        "generosity",
+        "charity",
+        "giving",
+        "receiving",
+        "balance"
+      ],
+      "questions": [
+        "Am I giving and receiving in balance?"
+      ],
+      "sort_order": 50,
+      "category": "minor",
+      "subcategory": "denari",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 6,
+        "suit": "denari",
+        "arcana": "minor",
+        "symbols": [
+          "six coins",
+          "scales"
+        ],
+        "image_filename": "augmented-coins-06"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-coins-05",
+      "name": "Cinque di Denari (Five of Coins)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1JMnkeYU03SjO-OfcRh3HVBXdE5ZxlM0k",
+      "sections": {
+        "Summary": "Hardship.",
+        "Interpretation": "Help may be closer than you realize.",
+        "Reversed": "Recovery or deeper difficulty."
+      },
+      "keywords": [
+        "poverty",
+        "hardship",
+        "isolation",
+        "worry",
+        "recovery"
+      ],
+      "questions": [
+        "Am I overlooking help?"
+      ],
+      "sort_order": 51,
+      "category": "minor",
+      "subcategory": "denari",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 5,
+        "suit": "denari",
+        "arcana": "minor",
+        "symbols": [
+          "five coins",
+          "snow"
+        ],
+        "image_filename": "augmented-coins-05"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-coins-04",
+      "name": "Quattro di Denari (Four of Coins)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1l8iZGXsxIIw2-eqxw9xpTAtsNpSD37fU",
+      "sections": {
+        "Summary": "Security.",
+        "Interpretation": "Build security, but don't hoard.",
+        "Reversed": "Letting go or greed."
+      },
+      "keywords": [
+        "security",
+        "control",
+        "conservation",
+        "stability",
+        "possession"
+      ],
+      "questions": [
+        "What am I holding onto?"
+      ],
+      "sort_order": 52,
+      "category": "minor",
+      "subcategory": "denari",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 4,
+        "suit": "denari",
+        "arcana": "minor",
+        "symbols": [
+          "four coins",
+          "city"
+        ],
+        "image_filename": "augmented-coins-04"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-coins-03",
+      "name": "Tre di Denari (Three of Coins)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1j0z-j0OUuuIhGn6bITfYx1TYiCf1kKn7",
+      "sections": {
+        "Summary": "Teamwork.",
+        "Interpretation": "Different talents create something greater.",
+        "Reversed": "Poor teamwork."
+      },
+      "keywords": [
+        "teamwork",
+        "collaboration",
+        "skill",
+        "planning",
+        "learning"
+      ],
+      "questions": [
+        "Who should I collaborate with?"
+      ],
+      "sort_order": 53,
+      "category": "minor",
+      "subcategory": "denari",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 3,
+        "suit": "denari",
+        "arcana": "minor",
+        "symbols": [
+          "three coins",
+          "cathedral"
+        ],
+        "image_filename": "augmented-coins-03"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-coins-02",
+      "name": "Due di Denari (Two of Coins)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1_mU-v5iGyG_Bcxy4l6WjQZEWSzDzpdVT",
+      "sections": {
+        "Summary": "Balance.",
+        "Interpretation": "Stay flexible and adapt.",
+        "Reversed": "Overwhelmed."
+      },
+      "keywords": [
+        "balance",
+        "adaptability",
+        "time management",
+        "priorities",
+        "change"
+      ],
+      "questions": [
+        "Am I juggling too much?"
+      ],
+      "sort_order": 54,
+      "category": "minor",
+      "subcategory": "denari",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 2,
+        "suit": "denari",
+        "arcana": "minor",
+        "symbols": [
+          "two coins",
+          "infinity"
+        ],
+        "image_filename": "augmented-coins-02"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-coins-01",
+      "name": "Asso di Denari (Ace of Coins)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1BL5qF8AwxqnXC-vM29_iJTBshSJLeix3",
+      "sections": {
+        "Summary": "New opportunity.",
+        "Interpretation": "Build on this foundation.",
+        "Reversed": "Missed opportunity."
+      },
+      "keywords": [
+        "opportunity",
+        "prosperity",
+        "new venture",
+        "manifestation",
+        "abundance"
+      ],
+      "questions": [
+        "What opportunity is manifesting?"
+      ],
+      "sort_order": 55,
+      "category": "minor",
+      "subcategory": "denari",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 1,
+        "suit": "denari",
+        "arcana": "minor",
+        "symbols": [
+          "coin",
+          "hand",
+          "garden"
+        ],
+        "image_filename": "augmented-coins-01"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-cups-king",
+      "name": "Re di Coppe (King of Cups)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1fvumQJjQhluzef-nlMCrA0A_BHMH3IQv",
+      "sections": {
+        "Summary": "Emotional wisdom.",
+        "Interpretation": "Balance heart and mind.",
+        "Reversed": "Emotional manipulation."
+      },
+      "keywords": [
+        "emotional balance",
+        "compassion",
+        "diplomacy",
+        "wisdom",
+        "calm"
+      ],
+      "questions": [
+        "Am I mastering my emotions?"
+      ],
+      "sort_order": 56,
+      "category": "minor",
+      "subcategory": "coppe",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 14,
+        "suit": "coppe",
+        "arcana": "minor",
+        "symbols": [
+          "king",
+          "cup",
+          "water"
+        ],
+        "image_filename": "augmented-cups-king"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-cups-queen",
+      "name": "Regina di Coppe (Queen of Cups)",
+      "image_url": "https://drive.google.com/uc?export=view&id=17lxymlLVAkbv8CO5Lzcry1Pq-wtqWgbg",
+      "sections": {
+        "Summary": "Intuitive depth.",
+        "Interpretation": "Trust your feelings.",
+        "Reversed": "Emotional overwhelm."
+      },
+      "keywords": [
+        "intuition",
+        "compassion",
+        "nurturing",
+        "emotional depth",
+        "psychic"
+      ],
+      "questions": [
+        "What is my intuition telling me?"
+      ],
+      "sort_order": 57,
+      "category": "minor",
+      "subcategory": "coppe",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 13,
+        "suit": "coppe",
+        "arcana": "minor",
+        "symbols": [
+          "queen",
+          "cup",
+          "water"
+        ],
+        "image_filename": "augmented-cups-queen"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-cups-knight",
+      "name": "Cavaliere di Coppe (Knight of Cups)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1OB3GqxOpQ-7jRjEwZmGgHpDswhF4HEnr",
+      "sections": {
+        "Summary": "Romantic pursuit.",
+        "Interpretation": "Follow your heart but stay grounded.",
+        "Reversed": "Unrealistic expectations."
+      },
+      "keywords": [
+        "romance",
+        "charm",
+        "imagination",
+        "invitation",
+        "dreams"
+      ],
+      "questions": [
+        "What invitation is offered?"
+      ],
+      "sort_order": 58,
+      "category": "minor",
+      "subcategory": "coppe",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 12,
+        "suit": "coppe",
+        "arcana": "minor",
+        "symbols": [
+          "knight",
+          "horse",
+          "cup"
+        ],
+        "image_filename": "augmented-cups-knight"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-cups-knave",
+      "name": "Fante di Coppe (Knave of Cups)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1p3rXUCthcUbV4KGv1yYqZfLGP5B6vcYT",
+      "sections": {
+        "Summary": "Emotional messages.",
+        "Interpretation": "Stay open to inspiration.",
+        "Reversed": "Emotional immaturity."
+      },
+      "keywords": [
+        "creativity",
+        "intuition",
+        "messages",
+        "inner child",
+        "sensitivity"
+      ],
+      "questions": [
+        "What message am I receiving?"
+      ],
+      "sort_order": 59,
+      "category": "minor",
+      "subcategory": "coppe",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 11,
+        "suit": "coppe",
+        "arcana": "minor",
+        "symbols": [
+          "page",
+          "cup",
+          "fish"
+        ],
+        "image_filename": "augmented-cups-knave"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-cups-10",
+      "name": "Dieci di Coppe (Ten of Cups)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1-aBux1x_mpC6EhiZ-JBvrpW2obsT40iu",
+      "sections": {
+        "Summary": "Emotional fulfillment.",
+        "Interpretation": "Cherish happy relationships.",
+        "Reversed": "Broken harmony."
+      },
+      "keywords": [
+        "happiness",
+        "harmony",
+        "family",
+        "fulfillment",
+        "peace"
+      ],
+      "questions": [
+        "Where is lasting happiness?"
+      ],
+      "sort_order": 60,
+      "category": "minor",
+      "subcategory": "coppe",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 10,
+        "suit": "coppe",
+        "arcana": "minor",
+        "symbols": [
+          "ten cups",
+          "rainbow"
+        ],
+        "image_filename": "augmented-cups-10"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-cups-09",
+      "name": "Nove di Coppe (Nine of Cups)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1pn3D9jo1XOV619FwqDwLJBw3iJr2ijpI",
+      "sections": {
+        "Summary": "Wishes fulfilled.",
+        "Interpretation": "Savor satisfaction and gratitude.",
+        "Reversed": "Greed or dissatisfaction."
+      },
+      "keywords": [
+        "wishes",
+        "satisfaction",
+        "pleasure",
+        "contentment",
+        "gratitude"
+      ],
+      "questions": [
+        "What do I truly wish for?"
+      ],
+      "sort_order": 61,
+      "category": "minor",
+      "subcategory": "coppe",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 9,
+        "suit": "coppe",
+        "arcana": "minor",
+        "symbols": [
+          "nine cups",
+          "satisfaction"
+        ],
+        "image_filename": "augmented-cups-09"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-cups-08",
+      "name": "Otto di Coppe (Eight of Cups)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1kzUZrdcgqxw-bdCtRDQP2udD8fCIq8y5",
+      "sections": {
+        "Summary": "Walking away.",
+        "Interpretation": "Seek deeper meaning.",
+        "Reversed": "Fear of leaving."
+      },
+      "keywords": [
+        "departure",
+        "seeking",
+        "growth",
+        "disappointment",
+        "journey"
+      ],
+      "questions": [
+        "What am I leaving behind?"
+      ],
+      "sort_order": 62,
+      "category": "minor",
+      "subcategory": "coppe",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 8,
+        "suit": "coppe",
+        "arcana": "minor",
+        "symbols": [
+          "eight cups",
+          "moon"
+        ],
+        "image_filename": "augmented-cups-08"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-cups-07",
+      "name": "Sette di Coppe (Seven of Cups)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1Dngkf4nq52WVGxw0H8jX44dktdFcTvWp",
+      "sections": {
+        "Summary": "Choices and illusion.",
+        "Interpretation": "Distinguish fantasy from reality.",
+        "Reversed": "Clarity or paralysis."
+      },
+      "keywords": [
+        "choices",
+        "fantasy",
+        "illusion",
+        "wishful thinking",
+        "options"
+      ],
+      "questions": [
+        "Am I seeing clearly?"
+      ],
+      "sort_order": 63,
+      "category": "minor",
+      "subcategory": "coppe",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 7,
+        "suit": "coppe",
+        "arcana": "minor",
+        "symbols": [
+          "seven cups",
+          "clouds"
+        ],
+        "image_filename": "augmented-cups-07"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-cups-06",
+      "name": "Sei di Coppe (Six of Cups)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1E7R_pUiJ1HbkspXi_bbixayqXtXJsmgD",
+      "sections": {
+        "Summary": "Nostalgia.",
+        "Interpretation": "Honor your past while living present.",
+        "Reversed": "Living in the past."
+      },
+      "keywords": [
+        "nostalgia",
+        "memories",
+        "childhood",
+        "innocence",
+        "reunion"
+      ],
+      "questions": [
+        "What memories surface?"
+      ],
+      "sort_order": 64,
+      "category": "minor",
+      "subcategory": "coppe",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 6,
+        "suit": "coppe",
+        "arcana": "minor",
+        "symbols": [
+          "six cups",
+          "children"
+        ],
+        "image_filename": "augmented-cups-06"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-cups-05",
+      "name": "Cinque di Coppe (Five of Cups)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1_WnDsHsV1szihU6__LwdDyu8YZYyGvxe",
+      "sections": {
+        "Summary": "Loss.",
+        "Interpretation": "Grieve, but notice what remains.",
+        "Reversed": "Moving through grief."
+      },
+      "keywords": [
+        "loss",
+        "grief",
+        "disappointment",
+        "regret",
+        "perspective"
+      ],
+      "questions": [
+        "What am I grieving?"
+      ],
+      "sort_order": 65,
+      "category": "minor",
+      "subcategory": "coppe",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 5,
+        "suit": "coppe",
+        "arcana": "minor",
+        "symbols": [
+          "five cups",
+          "bridge"
+        ],
+        "image_filename": "augmented-cups-05"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-cups-04",
+      "name": "Quattro di Coppe (Four of Cups)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1GCEddmyblYJlR9wzeOCtmi1FVtSIZgog",
+      "sections": {
+        "Summary": "Apathy.",
+        "Interpretation": "Look around—you may be missing something.",
+        "Reversed": "Renewed interest."
+      },
+      "keywords": [
+        "apathy",
+        "contemplation",
+        "dissatisfaction",
+        "meditation",
+        "opportunity"
+      ],
+      "questions": [
+        "What am I missing?"
+      ],
+      "sort_order": 66,
+      "category": "minor",
+      "subcategory": "coppe",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 4,
+        "suit": "coppe",
+        "arcana": "minor",
+        "symbols": [
+          "four cups",
+          "tree"
+        ],
+        "image_filename": "augmented-cups-04"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-cups-03",
+      "name": "Tre di Coppe (Three of Cups)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1mjCX15dh63-GOAWxEE9E3Dd1m1VGDCFK",
+      "sections": {
+        "Summary": "Celebration.",
+        "Interpretation": "Gather with friends and share joy.",
+        "Reversed": "Isolation or overindulgence."
+      },
+      "keywords": [
+        "celebration",
+        "friendship",
+        "community",
+        "creativity",
+        "joy"
+      ],
+      "questions": [
+        "Who am I celebrating with?"
+      ],
+      "sort_order": 67,
+      "category": "minor",
+      "subcategory": "coppe",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 3,
+        "suit": "coppe",
+        "arcana": "minor",
+        "symbols": [
+          "three cups",
+          "women"
+        ],
+        "image_filename": "augmented-cups-03"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-cups-02",
+      "name": "Due di Coppe (Two of Cups)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1UzNwxEpBknRXEL5IKJziRZ8SPRAnz43-",
+      "sections": {
+        "Summary": "Partnership.",
+        "Interpretation": "Deep connection and partnership.",
+        "Reversed": "Imbalance or separation."
+      },
+      "keywords": [
+        "partnership",
+        "love",
+        "attraction",
+        "connection",
+        "harmony"
+      ],
+      "questions": [
+        "What partnership is forming?"
+      ],
+      "sort_order": 68,
+      "category": "minor",
+      "subcategory": "coppe",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 2,
+        "suit": "coppe",
+        "arcana": "minor",
+        "symbols": [
+          "two cups",
+          "couple"
+        ],
+        "image_filename": "augmented-cups-02"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-cups-01",
+      "name": "Asso di Coppe (Ace of Cups)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1iFswu1lLn6-X_4Xob5Z3PgAX88CuSBDz",
+      "sections": {
+        "Summary": "New emotional beginning.",
+        "Interpretation": "Open your heart.",
+        "Reversed": "Blocked emotions."
+      },
+      "keywords": [
+        "new love",
+        "emotional beginning",
+        "intuition",
+        "compassion",
+        "creativity"
+      ],
+      "questions": [
+        "What new feeling is emerging?"
+      ],
+      "sort_order": 69,
+      "category": "minor",
+      "subcategory": "coppe",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 1,
+        "suit": "coppe",
+        "arcana": "minor",
+        "symbols": [
+          "cup",
+          "hand",
+          "dove"
+        ],
+        "image_filename": "augmented-cups-01"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-swords-king",
+      "name": "Re di Spade (King of Swords)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1KOhrD9GZAYjDkr9mzuTHvYnrjpR9UZ_L",
+      "sections": {
+        "Summary": "Intellectual authority.",
+        "Interpretation": "Make decisions based on truth.",
+        "Reversed": "Cruel intellect."
+      },
+      "keywords": [
+        "authority",
+        "truth",
+        "intellect",
+        "judgment",
+        "ethics"
+      ],
+      "questions": [
+        "Am I thinking clearly?"
+      ],
+      "sort_order": 70,
+      "category": "minor",
+      "subcategory": "spade",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 14,
+        "suit": "spade",
+        "arcana": "minor",
+        "symbols": [
+          "king",
+          "sword",
+          "throne"
+        ],
+        "image_filename": "augmented-swords-king"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-swords-queen",
+      "name": "Regina di Spade (Queen of Swords)",
+      "image_url": "https://drive.google.com/uc?export=view&id=17_mGVhIW-ZzxTbm_SzJVlP_BfxAZivOW",
+      "sections": {
+        "Summary": "Clear perception.",
+        "Interpretation": "Cut through confusion.",
+        "Reversed": "Cruelty or coldness."
+      },
+      "keywords": [
+        "perception",
+        "clarity",
+        "independence",
+        "boundaries",
+        "truth"
+      ],
+      "questions": [
+        "Am I seeing clearly?"
+      ],
+      "sort_order": 71,
+      "category": "minor",
+      "subcategory": "spade",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 13,
+        "suit": "spade",
+        "arcana": "minor",
+        "symbols": [
+          "queen",
+          "sword",
+          "clouds"
+        ],
+        "image_filename": "augmented-swords-queen"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-swords-knight",
+      "name": "Cavaliere di Spade (Knight of Swords)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1XuCLIbbYGu7S8o1nc5pQnquKjEH7jw_q",
+      "sections": {
+        "Summary": "Swift action.",
+        "Interpretation": "Be direct but don't sacrifice wisdom.",
+        "Reversed": "Recklessness."
+      },
+      "keywords": [
+        "action",
+        "ambition",
+        "directness",
+        "speed",
+        "determination"
+      ],
+      "questions": [
+        "Am I rushing in?"
+      ],
+      "sort_order": 72,
+      "category": "minor",
+      "subcategory": "spade",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 12,
+        "suit": "spade",
+        "arcana": "minor",
+        "symbols": [
+          "knight",
+          "horse",
+          "sword"
+        ],
+        "image_filename": "augmented-swords-knight"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-swords-knave",
+      "name": "Fante di Spade (Knave of Swords)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1R1PFCcylhpKeem0GYcsgiU1jdb11cUrP",
+      "sections": {
+        "Summary": "Curious mind.",
+        "Interpretation": "Investigate carefully.",
+        "Reversed": "Gossip or scattered thinking."
+      },
+      "keywords": [
+        "curiosity",
+        "vigilance",
+        "communication",
+        "truth-seeking",
+        "new ideas"
+      ],
+      "questions": [
+        "What am I curious about?"
+      ],
+      "sort_order": 73,
+      "category": "minor",
+      "subcategory": "spade",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 11,
+        "suit": "spade",
+        "arcana": "minor",
+        "symbols": [
+          "page",
+          "sword",
+          "wind"
+        ],
+        "image_filename": "augmented-swords-knave"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-swords-10",
+      "name": "Dieci di Spade (Ten of Swords)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1DXIBg7-36M5vARne9hT-AC6lGnw8ADX2",
+      "sections": {
+        "Summary": "Painful ending.",
+        "Interpretation": "The worst is over. The only way is up.",
+        "Reversed": "Recovery or prolonged pain."
+      },
+      "keywords": [
+        "ending",
+        "betrayal",
+        "rock bottom",
+        "release",
+        "new beginning"
+      ],
+      "questions": [
+        "What has ended?"
+      ],
+      "sort_order": 74,
+      "category": "minor",
+      "subcategory": "spade",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 10,
+        "suit": "spade",
+        "arcana": "minor",
+        "symbols": [
+          "ten swords",
+          "dawn"
+        ],
+        "image_filename": "augmented-swords-10"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-swords-09",
+      "name": "Nove di Spade (Nine of Swords)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1MmfUIvzwiomnuGLxRGUhIjOr4PA0Uwcn",
+      "sections": {
+        "Summary": "Anxiety.",
+        "Interpretation": "Seek perspective and support.",
+        "Reversed": "Release from anxiety."
+      },
+      "keywords": [
+        "anxiety",
+        "worry",
+        "nightmares",
+        "guilt",
+        "despair"
+      ],
+      "questions": [
+        "What keeps me awake?"
+      ],
+      "sort_order": 75,
+      "category": "minor",
+      "subcategory": "spade",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 9,
+        "suit": "spade",
+        "arcana": "minor",
+        "symbols": [
+          "nine swords",
+          "night"
+        ],
+        "image_filename": "augmented-swords-09"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-swords-08",
+      "name": "Otto di Spade (Eight of Swords)",
+      "image_url": "https://drive.google.com/uc?export=view&id=123OXkfLHUjW9wNRtweMYG1ridsFogwob",
+      "sections": {
+        "Summary": "Feeling trapped.",
+        "Interpretation": "The prison is often self-created. Freedom is possible.",
+        "Reversed": "Breaking free."
+      },
+      "keywords": [
+        "restriction",
+        "imprisonment",
+        "victim mentality",
+        "fear",
+        "self-limiting"
+      ],
+      "questions": [
+        "How am I limiting myself?"
+      ],
+      "sort_order": 76,
+      "category": "minor",
+      "subcategory": "spade",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 8,
+        "suit": "spade",
+        "arcana": "minor",
+        "symbols": [
+          "eight swords",
+          "bound figure"
+        ],
+        "image_filename": "augmented-swords-08"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-swords-07",
+      "name": "Sette di Spade (Seven of Swords)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1ufb7_KCfrIncIODWf-FTrvXZfSwc7yrP",
+      "sections": {
+        "Summary": "Strategy.",
+        "Interpretation": "Consider whether cleverness crosses into dishonesty.",
+        "Reversed": "Conscience or getting caught."
+      },
+      "keywords": [
+        "strategy",
+        "deception",
+        "stealth",
+        "cunning",
+        "betrayal"
+      ],
+      "questions": [
+        "Am I being strategic or deceptive?"
+      ],
+      "sort_order": 77,
+      "category": "minor",
+      "subcategory": "spade",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 7,
+        "suit": "spade",
+        "arcana": "minor",
+        "symbols": [
+          "seven swords",
+          "tents"
+        ],
+        "image_filename": "augmented-swords-07"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-swords-06",
+      "name": "Sei di Spade (Six of Swords)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1k5Ri90Dihf4Ki6YNISPquZrbTqzIwQrL",
+      "sections": {
+        "Summary": "Transition.",
+        "Interpretation": "Though you carry wounds, healing is underway.",
+        "Reversed": "Stuck."
+      },
+      "keywords": [
+        "transition",
+        "moving on",
+        "travel",
+        "healing",
+        "relief"
+      ],
+      "questions": [
+        "What am I leaving behind?"
+      ],
+      "sort_order": 78,
+      "category": "minor",
+      "subcategory": "spade",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 6,
+        "suit": "spade",
+        "arcana": "minor",
+        "symbols": [
+          "six swords",
+          "boat"
+        ],
+        "image_filename": "augmented-swords-06"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-swords-05",
+      "name": "Cinque di Spade (Five of Swords)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1FzeE4URb3x_QJqdKpUkicc6ZiVyZE_pH",
+      "sections": {
+        "Summary": "Conflict.",
+        "Interpretation": "Consider walking away.",
+        "Reversed": "Reconciliation."
+      },
+      "keywords": [
+        "conflict",
+        "defeat",
+        "winning at cost",
+        "tension",
+        "hostility"
+      ],
+      "questions": [
+        "Is this battle worth winning?"
+      ],
+      "sort_order": 79,
+      "category": "minor",
+      "subcategory": "spade",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 5,
+        "suit": "spade",
+        "arcana": "minor",
+        "symbols": [
+          "five swords",
+          "figures"
+        ],
+        "image_filename": "augmented-swords-05"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-swords-04",
+      "name": "Quattro di Spade (Four of Swords)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1XsJ1k0qOvFsr7uO2aj5I_ezMPLAGWii4",
+      "sections": {
+        "Summary": "Rest.",
+        "Interpretation": "Recover and restore.",
+        "Reversed": "Restlessness."
+      },
+      "keywords": [
+        "rest",
+        "recovery",
+        "contemplation",
+        "meditation",
+        "retreat"
+      ],
+      "questions": [
+        "Do I need rest?"
+      ],
+      "sort_order": 80,
+      "category": "minor",
+      "subcategory": "spade",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 4,
+        "suit": "spade",
+        "arcana": "minor",
+        "symbols": [
+          "four swords",
+          "tomb"
+        ],
+        "image_filename": "augmented-swords-04"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-swords-03",
+      "name": "Tre di Spade (Three of Swords)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1gL5uuWXvNg4STsAbLCLIy9oYfq5Oq6-t",
+      "sections": {
+        "Summary": "Heartbreak.",
+        "Interpretation": "Feel the pain so healing can begin.",
+        "Reversed": "Healing."
+      },
+      "keywords": [
+        "heartbreak",
+        "grief",
+        "sorrow",
+        "pain",
+        "truth"
+      ],
+      "questions": [
+        "What is causing heartbreak?"
+      ],
+      "sort_order": 81,
+      "category": "minor",
+      "subcategory": "spade",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 3,
+        "suit": "spade",
+        "arcana": "minor",
+        "symbols": [
+          "three swords",
+          "heart"
+        ],
+        "image_filename": "augmented-swords-03"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-swords-02",
+      "name": "Due di Spade (Two of Swords)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1Krta4YHqdW0rFog3-kHNMUAInwIsUiJh",
+      "sections": {
+        "Summary": "Difficult decision.",
+        "Interpretation": "Make the decision.",
+        "Reversed": "Finally choosing."
+      },
+      "keywords": [
+        "indecision",
+        "stalemate",
+        "blocked",
+        "denial",
+        "balance"
+      ],
+      "questions": [
+        "What decision am I avoiding?"
+      ],
+      "sort_order": 82,
+      "category": "minor",
+      "subcategory": "spade",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 2,
+        "suit": "spade",
+        "arcana": "minor",
+        "symbols": [
+          "two swords",
+          "blindfold"
+        ],
+        "image_filename": "augmented-swords-02"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "augmented-swords-01",
+      "name": "Asso di Spade (Ace of Swords)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1Zsokshb6n462MeyTnMd_ejsAsHS4sTQj",
+      "sections": {
+        "Summary": "Breakthrough.",
+        "Interpretation": "A breakthrough of clarity arrives.",
+        "Reversed": "Confusion."
+      },
+      "keywords": [
+        "breakthrough",
+        "clarity",
+        "truth",
+        "new idea",
+        "mental power"
+      ],
+      "questions": [
+        "What truth is breaking through?"
+      ],
+      "sort_order": 83,
+      "category": "minor",
+      "subcategory": "spade",
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 1,
+        "suit": "spade",
+        "arcana": "minor",
+        "symbols": [
+          "sword",
+          "hand",
+          "crown"
+        ],
+        "image_filename": "augmented-swords-01"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:58.494Z"
+      },
+      "level": 1
+    }
+  ],
+  "creator_name": "Yve Lepkowski",
+  "creator_link": ""
+}
