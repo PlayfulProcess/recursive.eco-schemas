@@ -1,174 +1,190 @@
 # Astrology Schemas
 
-This directory contains interpretive schemas for astrological systems using the unified recursive.eco grammar format.
+This directory contains interpretive schemas for astrological systems using the recursive.eco grammar format.
 
-## Available Schemas
+## Import Format (AstrologyInterpretationInput)
 
-| File | Description |
-|------|-------------|
-| `L1-basic.json` | Foundation astrology tokens - planets, signs, houses, aspects |
-| `alan-leo.json` | Classical interpretations from Alan Leo (1860-1917) |
-| `jyotish-vedic.json` | Comprehensive Vedic/Hindu astrology with nakshatras and yogas |
-
-## Unified Format
-
-All astrology schemas use the unified `items` array format:
+**This is the canonical format for all astrology schemas that need to import into recursive.eco.**
 
 ```json
 {
   "name": "Schema Name",
-  "description": "Description",
+  "description": "Description of the schema",
   "grammar_type": "astrology",
-  "items": [
+  "attribution": {
+    "source_name": "Original Work Title",
+    "source_author": "Author Name",
+    "source_year": "Year",
+    "license": "Public Domain",
+    "source_url": "https://..."
+  },
+  "interpretations": [
     {
-      "id": "sign-aries",
-      "name": "Aries",
-      "category": "sign",
-      "subcategory": "fire",
-      "keywords": ["initiative", "courage", "pioneer"],
-      "sort_order": 0,
-      "sections": {
-        "Interpretation": "Main interpretation text...",
-        "Shadow": "Challenge patterns..."
-      },
-      "metadata": {
-        "element": "fire",
-        "quality": "cardinal",
-        "ruler": "Mars"
-      }
+      "type": "planet",
+      "planet": "Saturn",
+      "story": "The narrative interpretation - the main body of text",
+      "light": "Positive expression, gifts, beneficial manifestation",
+      "shadow": "Challenge expression, difficulties, shadow side",
+      "keywords": ["keyword1", "keyword2", "keyword3"],
+      "sort_order": 0
+    },
+    {
+      "type": "sign",
+      "sign": "Aries",
+      "story": "The narrative interpretation",
+      "light": "Positive expression",
+      "shadow": "Challenge expression",
+      "keywords": ["fire", "cardinal", "Mars"],
+      "sort_order": 10
+    },
+    {
+      "type": "house",
+      "house": 1,
+      "story": "The narrative interpretation",
+      "light": "Positive expression",
+      "shadow": "Challenge expression",
+      "keywords": ["angular", "self", "beginnings"],
+      "sort_order": 30
+    },
+    {
+      "type": "aspect",
+      "aspect": "Conjunction",
+      "story": "The narrative interpretation",
+      "light": "Positive expression",
+      "shadow": "Challenge expression",
+      "keywords": ["0 degrees", "union"],
+      "sort_order": 50
     }
   ]
 }
 ```
 
-## ID Conventions
+### Interpretation Types
 
-Use lowercase IDs with category prefixes:
+| type | Required Fields | Description |
+|------|-----------------|-------------|
+| `planet` | `planet` | One of: Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto |
+| `sign` | `sign` | One of: Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius, Pisces |
+| `house` | `house` | Number 1-12 |
+| `aspect` | `aspect` | One of: Conjunction, Sextile, Square, Trine, Opposition |
+| `planet_sign` | `planet`, `sign` | Planet-in-sign combination |
+| `planet_house` | `planet`, `house` | Planet-in-house combination |
 
-| Category | Prefix | Examples |
-|----------|--------|----------|
-| Signs | `sign-` | `sign-aries`, `sign-taurus` |
-| Planets | `planet-` | `planet-sun`, `planet-moon` |
-| Houses | `house-` | `house-1`, `house-12` |
-| Aspects | `aspect-` | `aspect-conjunction`, `aspect-trine` |
+### Required Fields
 
-## Categories & Subcategories
+All interpretation objects must have:
 
-### Signs
-- **category**: `sign`
-- **subcategory**: element (`fire`, `earth`, `air`, `water`)
-- **metadata**: `element`, `quality` (cardinal/fixed/mutable), `ruler`
+| Field | Type | Description |
+|-------|------|-------------|
+| `type` | string | One of the types above |
+| `story` | string | The main narrative interpretation |
+| `light` | string | Positive/beneficial expression |
+| `shadow` | string | Challenging/difficult expression |
+| `keywords` | string[] | Array of keywords |
+| `sort_order` | number | For ordering (see ranges below) |
 
-### Planets
-- **category**: `planet`
-- **subcategory**: `null` or type (`luminary`, `personal`, `social`, `transpersonal`)
-- **metadata**: `element`, `rules`
-
-### Houses
-- **category**: `house`
-- **subcategory**: `null` or type (`angular`, `succedent`, `cadent`)
-- **metadata**: `natural_sign`, `quadrant`, `number`
-
-### Aspects
-- **category**: `aspect`
-- **subcategory**: `null` or type (`major`, `minor`)
-- **metadata**: `degrees`, `orb`, `nature` (harmonious/challenging/neutral)
-
-## Sort Order Ranges
-
-To maintain consistent ordering across schemas:
+### Sort Order Ranges
 
 | Category | Sort Order Range |
 |----------|-----------------|
-| Signs | 0-11 |
-| Planets | 12-21 |
-| Houses | 22-33 |
-| Aspects | 34+ |
+| Planets | 0-9 |
+| Signs | 10-21 |
+| Houses | 30-41 |
+| Aspects | 50-59 |
 
-## Section Patterns
+## Available Schemas
 
-Common section names for astrology items:
+| Schema | Description |
+|--------|-------------|
+| `ptolemy-tetrabiblos/` | Classical Western astrology from Ptolemy's Tetrabiblos (c. 150 CE) |
+| `proctor-skeptical-astrology/` | Victorian skeptical commentary on astrology from Proctor (1896) |
+| `jyotish-vedic.json` | Comprehensive Vedic/Hindu astrology with nakshatras and yogas |
 
-```json
-"sections": {
-  "Interpretation": "Primary meaning",
-  "Shadow": "Challenge patterns",
-  "Keywords": "Core keyword phrase",
-  "Questions": "Reflective prompts",
-  "Dynamic": "How this energy expresses"
-}
-```
+## Schema Templates
 
-## Level System for Emergence
-
-Schemas use a level system to organize base items and their emergent combinations:
-
-- **L1 (level: 1)**: Base items (planets, signs, houses, individual hexagrams, songs)
-- **L2 (level: 2)**: Emergent combinations of L1 items (yogas, aspects, albums)
-- **L3 (level: 3)**: Meta-categories or higher-order groupings (organizing principles, artists)
-
-### Example: Vedic Yoga
+### Minimal Planet Example
 
 ```json
 {
-  "id": "yoga-raja",
-  "name": "Raja Yoga",
-  "level": 2,
-  "composite_of": ["graha-surya", "graha-chandra", "graha-guru"],
-  "sections": {
-    "Interpretation": "When Sun, Moon, Jupiter combine in specific houses..."
-  }
+  "type": "planet",
+  "planet": "Saturn",
+  "story": "Saturn represents structure, limitation, and mastery through time.",
+  "light": "Discipline, wisdom, patience, endurance, responsibility",
+  "shadow": "Restriction, fear, rigidity, melancholy, delay",
+  "keywords": ["discipline", "time", "structure", "limitation"],
+  "sort_order": 0
 }
 ```
 
-### Example: Meta-category
+### Minimal Sign Example
 
 ```json
 {
-  "id": "l3-yogas",
-  "name": "Vedic Yogas",
-  "level": 3,
-  "composite_of": ["yoga-raja", "yoga-gajakesari", "yoga-budhaditya"],
-  "sections": {
-    "Summary": "Planetary combinations that produce specific life patterns..."
-  }
+  "type": "sign",
+  "sign": "Aries",
+  "story": "Aries initiates the zodiac with cardinal fire energy.",
+  "light": "Initiative, courage, leadership, direct action",
+  "shadow": "Impatience, aggression, selfishness",
+  "keywords": ["fire", "cardinal", "Mars", "initiative"],
+  "sort_order": 10
 }
 ```
 
-The `composite_of` array references the IDs of items at the level below, creating explicit emergence relationships.
+### Minimal House Example
 
-## Jyotish (Vedic) Schema
+```json
+{
+  "type": "house",
+  "house": 1,
+  "story": "The first house represents self, body, and beginnings.",
+  "light": "Self-identity, vitality, personal initiative",
+  "shadow": "Self-absorption, difficulty seeing beyond self",
+  "keywords": ["angular", "self", "ascendant", "beginnings"],
+  "sort_order": 30
+}
+```
 
-The `jyotish-vedic.json` schema provides comprehensive Hindu astrology interpretations including:
+### Minimal Aspect Example
 
-**L1 Items (60 items):**
-- 9 Grahas (planets including Rahu/Ketu)
-- 12 Rashis (signs with sidereal zodiac)
-- 12 Bhavas (houses with traditional classifications)
-- 27 Nakshatras (lunar mansions with deities and shaktis)
+```json
+{
+  "type": "aspect",
+  "aspect": "Conjunction",
+  "story": "Conjunction unites planetary energies in the same degree.",
+  "light": "Fusion, intensification, new beginnings",
+  "shadow": "Overwhelm, blind spots, excessive intensity",
+  "keywords": ["0 degrees", "union", "fusion"],
+  "sort_order": 50
+}
+```
 
-**L2 Emergences:**
-- Pancha Mahapurusha Yogas (5 planetary strength yogas)
-- Lunar Yogas (Gajakesari, Chandra-Mangala, etc.)
-- Viparita Raja Yogas (Harsha, Sarala, Vimala)
-- Nakshatra Gana groupings (Deva, Manushya, Rakshasa)
+## Attribution
 
-**L3 Emergences:**
-- Raja Yogas (kendra-trikona combinations)
-- Dhana Yogas (wealth combinations)
-- Special Yogas (Saraswati, Amala, Kala Sarpa)
+Always include attribution for source material:
+
+```json
+{
+  "attribution": {
+    "source_name": "Original Work Title",
+    "source_author": "Author Name",
+    "source_year": "Publication Year",
+    "license": "Public Domain",
+    "source_url": "https://..."
+  }
+}
+```
 
 ## Contributing
 
-When adding astrological schemas:
+When creating new astrology schemas:
 
-1. Use the unified `items` format (not separate arrays)
-2. Specify the tradition (Western, Vedic, etc.)
-3. Include both light and shadow interpretations
-4. Document house systems where relevant
-5. Add proper attribution for source material
-6. Use the level system for composite/emergent patterns
+1. **Use the `interpretations` array format** (required for import)
+2. **Include all required fields** (type, story, light, shadow, keywords, sort_order)
+3. **Specify the tradition** (Western, Vedic, etc.) in the description
+4. **Include both light and shadow interpretations**
+5. **Add proper attribution** for source material
+6. **Follow sort_order ranges** for consistent ordering
 
-## Legacy Format
+## Legacy Formats
 
-The import system in recursive.eco can handle legacy formats with separate arrays (`signs`, `planets`, `houses`, `aspects`), but **new files should use the unified `items` format**.
+The import system can handle some legacy formats (separate `signs`, `planets`, `houses`, `aspects` arrays or unified `items` array), but **new schemas should use the `interpretations` array format** documented above.
