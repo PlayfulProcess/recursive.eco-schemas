@@ -1758,6 +1758,170 @@
         "tree": "Mahua (Madhuca)",
         "sounds": "De, Do, Cha, Chi"
       }
+    },
+    {
+      "id": "dignity-swakshetra",
+      "name": "Swakshetra (Own Sign)",
+      "symbol": "🏠",
+      "level": 1,
+      "category": "dignity",
+      "subcategory": "strength",
+      "keywords": ["own sign", "comfort", "natural expression", "strength", "home"],
+      "sort_order": 80,
+      "sections": {
+        "Interpretation": "A planet in its own sign (swakshetra) is like a person in their own home—comfortable, powerful, and able to express its natural qualities without obstruction. This is one of the primary sources of planetary strength (bala).",
+        "Effects": "The planet gives its full positive results. Natural significations flourish. The house ruled by this planet also benefits.",
+        "Examples": "Sun in Leo, Moon in Cancer, Mars in Aries/Scorpio, Mercury in Gemini/Virgo, Jupiter in Sagittarius/Pisces, Venus in Taurus/Libra, Saturn in Capricorn/Aquarius."
+      },
+      "metadata": {
+        "dignity_type": "strength",
+        "relative_strength": 100,
+        "sanskrit": "Swakshetra"
+      }
+    },
+    {
+      "id": "dignity-uchcha",
+      "name": "Uchcha (Exaltation)",
+      "symbol": "⬆️",
+      "level": 1,
+      "category": "dignity",
+      "subcategory": "strength",
+      "keywords": ["exaltation", "peak power", "honored", "elevated", "maximum strength"],
+      "sort_order": 81,
+      "sections": {
+        "Interpretation": "A planet in its exaltation sign (uchcha) reaches its peak expression—like a guest of honor given the best seat. The planet's significations manifest with exceptional power and beneficence.",
+        "Effects": "Strongest possible expression of planetary qualities. Native excels in matters ruled by this planet. Career and life direction often connected to the exalted planet's significations.",
+        "Exaltation Points": "Sun: Aries 10°, Moon: Taurus 3°, Mars: Capricorn 28°, Mercury: Virgo 15°, Jupiter: Cancer 5°, Venus: Pisces 27°, Saturn: Libra 20°."
+      },
+      "metadata": {
+        "dignity_type": "strength",
+        "relative_strength": 150,
+        "sanskrit": "Uchcha"
+      }
+    },
+    {
+      "id": "dignity-neecha",
+      "name": "Neecha (Debilitation)",
+      "symbol": "⬇️",
+      "level": 1,
+      "category": "dignity",
+      "subcategory": "weakness",
+      "keywords": ["debilitation", "weakness", "struggle", "fallen", "challenged"],
+      "sort_order": 82,
+      "sections": {
+        "Interpretation": "A planet in its debilitation sign (neecha) struggles to express its natural qualities—like a person in hostile territory. However, debilitation can be cancelled (neecha bhanga), potentially transforming weakness into exceptional strength.",
+        "Effects": "Planet's significations face obstacles. Native must work harder in these areas. Often indicates karmic lessons. Can indicate late success after initial struggles.",
+        "Debilitation Points": "Sun: Libra 10°, Moon: Scorpio 3°, Mars: Cancer 28°, Mercury: Pisces 15°, Jupiter: Capricorn 5°, Venus: Virgo 27°, Saturn: Aries 20°."
+      },
+      "metadata": {
+        "dignity_type": "weakness",
+        "relative_strength": 25,
+        "sanskrit": "Neecha"
+      }
+    },
+    {
+      "id": "dignity-moolatrikona",
+      "name": "Moolatrikona",
+      "symbol": "🔺",
+      "level": 1,
+      "category": "dignity",
+      "subcategory": "strength",
+      "keywords": ["root trine", "office", "profession", "strong", "functional"],
+      "sort_order": 83,
+      "sections": {
+        "Interpretation": "Moolatrikona ('root trine') is a planet's 'office'—where it functions most professionally and effectively. Strength between own sign and exaltation. The planet works with purpose and direction.",
+        "Effects": "Professional success, clear life direction, effective action. The planet's significations manifest with focus and productivity.",
+        "Moolatrikona Signs": "Sun: Leo 0-20°, Moon: Taurus 4-30°, Mars: Aries 0-12°, Mercury: Virgo 16-20°, Jupiter: Sagittarius 0-10°, Venus: Libra 0-15°, Saturn: Aquarius 0-20°."
+      },
+      "metadata": {
+        "dignity_type": "strength",
+        "relative_strength": 120,
+        "sanskrit": "Moolatrikona"
+      }
+    },
+    {
+      "id": "position-kendra",
+      "name": "Kendra (Angular)",
+      "symbol": "◆",
+      "level": 1,
+      "category": "position",
+      "subcategory": "power",
+      "keywords": ["angular", "pillar", "power", "visibility", "action", "1-4-7-10"],
+      "sort_order": 85,
+      "sections": {
+        "Interpretation": "The kendras (houses 1, 4, 7, 10) are the four pillars of the horoscope—the angles where planets have maximum power to act and be seen. Like the four corners of a building, they provide structural strength to the chart.",
+        "Houses": "1st (self/body), 4th (home/mother), 7th (partnership/spouse), 10th (career/status).",
+        "Effects": "Planets in kendras are powerful and their results manifest visibly in the native's life. Benefics here protect and elevate; malefics here can dominate."
+      },
+      "metadata": {
+        "position_type": "angular",
+        "houses": [1, 4, 7, 10],
+        "power_level": "maximum",
+        "sanskrit": "Kendra"
+      }
+    },
+    {
+      "id": "position-trikona",
+      "name": "Trikona (Trine)",
+      "symbol": "△",
+      "level": 1,
+      "category": "position",
+      "subcategory": "fortune",
+      "keywords": ["trine", "dharma", "fortune", "luck", "grace", "1-5-9"],
+      "sort_order": 86,
+      "sections": {
+        "Interpretation": "The trikonas (houses 1, 5, 9) are the houses of dharma and fortune—where divine grace flows into life. These are considered the most auspicious houses, representing past-life merit manifesting as present-life blessings.",
+        "Houses": "1st (self/dharma of being), 5th (creativity/purva punya), 9th (fortune/guru/father).",
+        "Effects": "Planets in trikonas bring luck and ease in their significations. Even malefics here are softened. Benefics here are exceptionally fortunate."
+      },
+      "metadata": {
+        "position_type": "trine",
+        "houses": [1, 5, 9],
+        "power_level": "auspicious",
+        "sanskrit": "Trikona"
+      }
+    },
+    {
+      "id": "position-dusthana",
+      "name": "Dusthana (Difficult)",
+      "symbol": "⚠️",
+      "level": 1,
+      "category": "position",
+      "subcategory": "challenge",
+      "keywords": ["difficult", "challenge", "obstacle", "hidden", "6-8-12"],
+      "sort_order": 87,
+      "sections": {
+        "Interpretation": "The dusthanas (houses 6, 8, 12) are houses of difficulty—enemies, death/transformation, and loss. Planets here face challenges, but these houses also offer growth through adversity and can be powerful for specific purposes.",
+        "Houses": "6th (enemies/disease/service), 8th (death/transformation/occult), 12th (loss/liberation/foreign).",
+        "Effects": "Planets here struggle with their natural significations but may excel in dusthana-related matters. Malefics here can destroy obstacles (6th) or give occult power (8th)."
+      },
+      "metadata": {
+        "position_type": "difficult",
+        "houses": [6, 8, 12],
+        "power_level": "challenging",
+        "sanskrit": "Dusthana"
+      }
+    },
+    {
+      "id": "position-upachaya",
+      "name": "Upachaya (Growing)",
+      "symbol": "📈",
+      "level": 1,
+      "category": "position",
+      "subcategory": "growth",
+      "keywords": ["growing", "improving", "increasing", "effort", "3-6-10-11"],
+      "sort_order": 88,
+      "sections": {
+        "Interpretation": "The upachayas (houses 3, 6, 10, 11) are houses where results improve over time through effort. Unlike fixed results, upachaya matters grow stronger as life progresses. Malefics do well here as their harsh energy fuels growth.",
+        "Houses": "3rd (courage/siblings), 6th (enemies/competition), 10th (career), 11th (gains/friends).",
+        "Effects": "Difficulties in these areas in early life transform to strengths later. Malefics here (especially Mars, Saturn) give eventual success through struggle."
+      },
+      "metadata": {
+        "position_type": "growing",
+        "houses": [3, 6, 10, 11],
+        "power_level": "improving",
+        "sanskrit": "Upachaya"
+      }
     }
   ],
   "emergences": [
@@ -1768,7 +1932,7 @@
       "category": "pancha-mahapurusha",
       "keywords": ["mars", "strength", "commander", "courage", "warrior", "leadership"],
       "sort_order": 100,
-      "composite_of": ["graha-mangala"],
+      "composite_of": ["graha-mangala", "dignity-swakshetra", "dignity-uchcha", "position-kendra"],
       "sections": {
         "Interpretation": "Ruchaka Yoga forms when Mars occupies its own sign (Aries or Scorpio) or exaltation (Capricorn) in a kendra (1st, 4th, 7th, or 10th house). This is one of the five Pancha Mahapurusha Yogas, creating a powerful individual with martial qualities. The native becomes a commander, leader, or warrior with exceptional courage and physical strength.",
         "Effects": "Handsome physique with ruddy complexion, long face, and well-proportioned limbs. Becomes a leader of armies or organizations, courageous in battle, famous for bravery. May live to 70 years. Attains wealth through martial pursuits, government service, or competitive fields.",
@@ -1789,7 +1953,7 @@
       "category": "pancha-mahapurusha",
       "keywords": ["mercury", "intelligence", "speech", "commerce", "learning", "communication"],
       "sort_order": 101,
-      "composite_of": ["graha-budha"],
+      "composite_of": ["graha-budha", "dignity-swakshetra", "dignity-uchcha", "position-kendra"],
       "sections": {
         "Interpretation": "Bhadra Yoga forms when Mercury occupies its own sign (Gemini or Virgo) or exaltation (Virgo) in a kendra. This creates a highly intelligent individual with exceptional communication abilities and business acumen. The native becomes learned, wealthy, and influential through intellectual pursuits.",
         "Effects": "Well-built body, lion-like face, long arms, intelligent appearance. Becomes learned in scriptures and sciences, skilled in debate, eloquent speaker. Lives long (to 80 years). Wealth through commerce, writing, or intellectual work. Blessed with good spouse and children.",
@@ -1810,7 +1974,7 @@
       "category": "pancha-mahapurusha",
       "keywords": ["jupiter", "wisdom", "dharma", "teacher", "fortune", "spirituality"],
       "sort_order": 102,
-      "composite_of": ["graha-guru"],
+      "composite_of": ["graha-guru", "dignity-swakshetra", "dignity-uchcha", "position-kendra"],
       "sections": {
         "Interpretation": "Hamsa Yoga forms when Jupiter occupies its own sign (Sagittarius or Pisces) or exaltation (Cancer) in a kendra. Named after the divine swan that separates milk from water (wisdom from ignorance), this yoga creates a highly spiritual and fortunate individual. The native becomes a teacher, judge, or spiritual guide.",
         "Effects": "Fair complexion, beautiful face, honey-colored eyes, prominent cheeks. Becomes righteous, spiritually inclined, respected by kings and scholars. Lives long (to 100 years). Wealth through dharmic means, teaching, or religious work. Natural wisdom and discrimination.",
@@ -1831,7 +1995,7 @@
       "category": "pancha-mahapurusha",
       "keywords": ["venus", "beauty", "luxury", "art", "pleasure", "spouse"],
       "sort_order": 103,
-      "composite_of": ["graha-shukra"],
+      "composite_of": ["graha-shukra", "dignity-swakshetra", "dignity-uchcha", "position-kendra"],
       "sections": {
         "Interpretation": "Malavya Yoga forms when Venus occupies its own sign (Taurus or Libra) or exaltation (Pisces) in a kendra. This creates a beautiful, artistic, and pleasure-blessed individual. The native enjoys all material comforts, has a beautiful spouse, and excels in artistic or diplomatic fields.",
         "Effects": "Beautiful body, attractive face, graceful limbs, lovely eyes. Becomes wealthy, enjoys vehicles and luxuries, has beautiful spouse. Lives long (to 70 years). Success in art, music, entertainment, or diplomacy. Sensual pleasures and refined tastes.",
@@ -1852,7 +2016,7 @@
       "category": "pancha-mahapurusha",
       "keywords": ["saturn", "discipline", "authority", "servants", "longevity", "administration"],
       "sort_order": 104,
-      "composite_of": ["graha-shani"],
+      "composite_of": ["graha-shani", "dignity-swakshetra", "dignity-uchcha", "position-kendra"],
       "sections": {
         "Interpretation": "Shasha Yoga forms when Saturn occupies its own sign (Capricorn or Aquarius) or exaltation (Libra) in a kendra. This creates a powerful administrator with authority over many people. The native becomes a leader through discipline, hard work, and patience.",
         "Effects": "Medium stature, prominent teeth, alert eyes, strong body. Commands servants and workers, holds authority over villages or cities. Lives long (to 70 years). Wealth through administration, labor management, or traditional industries. Known for discipline and justice.",
@@ -1933,7 +2097,7 @@
       "category": "viparita-raja",
       "keywords": ["6th lord", "dusthana", "victory", "enemies", "obstacles overcome"],
       "sort_order": 108,
-      "composite_of": [],
+      "composite_of": ["bhava-6", "position-dusthana"],
       "sections": {
         "Interpretation": "Harsha Yoga is a Viparita Raja Yoga formed when the 6th lord is placed in the 6th, 8th, or 12th house. This creates a situation where the lord of enemies and obstacles is trapped in houses of loss, converting difficulties into triumphs. The native overcomes enemies and obstacles with relative ease.",
         "Effects": "Victory over enemies, good health, freedom from debts. Obstacles that would trouble others seem to dissolve for the native. Success in competitive fields, litigation, or medical profession. Hidden protection from difficulties.",
@@ -1953,7 +2117,7 @@
       "category": "viparita-raja",
       "keywords": ["8th lord", "transformation", "longevity", "inheritance", "occult"],
       "sort_order": 109,
-      "composite_of": [],
+      "composite_of": ["bhava-8", "position-dusthana"],
       "sections": {
         "Interpretation": "Sarala Yoga forms when the 8th lord is placed in the 6th, 8th, or 12th house. The lord of death, transformation, and hidden matters is confined to dusthanas, reducing its power to harm. The native gains through 8th house matters—inheritance, insurance, research—without the typical dangers.",
         "Effects": "Long life, success in research or occult, unexpected inheritance. The native navigates transformative experiences with less trauma. Good for psychology, investigation, or dealing with others' resources. Protection during dangerous periods.",
@@ -1973,7 +2137,7 @@
       "category": "viparita-raja",
       "keywords": ["12th lord", "liberation", "foreign", "expenses", "spirituality"],
       "sort_order": 110,
-      "composite_of": [],
+      "composite_of": ["bhava-12", "position-dusthana"],
       "sections": {
         "Interpretation": "Vimala Yoga forms when the 12th lord is placed in the 6th, 8th, or 12th house. The lord of loss and expenditure is trapped in difficulty houses, reducing wasteful spending and converting potential losses into spiritual or foreign gains.",
         "Effects": "Freedom from excessive loss, success abroad, spiritual progress. Expenses become investments. Foreign residence or travel for gain. Peaceful sleep, good for meditation and spiritual practices. Final liberation (moksha) is supported.",
@@ -2147,7 +2311,7 @@
       "category": "raja-yoga",
       "keywords": ["kingship", "authority", "success", "power", "status", "achievement"],
       "sort_order": 200,
-      "composite_of": [],
+      "composite_of": ["position-kendra", "position-trikona"],
       "sections": {
         "Interpretation": "The fundamental Raja Yoga forms when lords of kendra houses (1, 4, 7, 10) and trikona houses (1, 5, 9) combine through conjunction, mutual aspect, or exchange. This merges the power of action (kendra) with the grace of fortune (trikona), creating conditions for significant achievement and authority.",
         "Principle": "Kendra houses represent manifest power—the ability to act in the world. Trikona houses represent dharma and accumulated merit. When their lords combine, worldly power is blessed by divine grace, creating lasting success.",
@@ -2169,7 +2333,7 @@
       "category": "raja-yoga",
       "keywords": ["9th lord", "10th lord", "destiny", "career dharma", "highest raja yoga"],
       "sort_order": 201,
-      "composite_of": [],
+      "composite_of": ["bhava-9", "bhava-10", "position-kendra", "position-trikona"],
       "sections": {
         "Interpretation": "Dharma-Karma Adhipati Yoga forms when the 9th lord (dharma, fortune) and 10th lord (karma, career) are conjunct, in mutual aspect, or exchange signs. This is considered the most powerful raja yoga because it aligns one's destined purpose (9th) with worldly action (10th).",
         "Principle": "The 9th house represents the divine plan, guru's blessings, and accumulated merit. The 10th house represents one's contribution to society and professional life. When aligned, the native's career becomes their dharma—they succeed by doing what they're meant to do.",
@@ -2190,7 +2354,7 @@
       "category": "dhana-yoga",
       "keywords": ["wealth", "income", "gains", "accumulation", "prosperity"],
       "sort_order": 210,
-      "composite_of": [],
+      "composite_of": ["bhava-2", "bhava-11"],
       "sections": {
         "Interpretation": "Dhana Yoga forms when the lords of wealth houses (2nd - accumulated wealth, 11th - gains/income) combine. This creates a direct channel between earning capacity and wealth accumulation, indicating financial prosperity.",
         "Principle": "The 2nd house is the vault—what we store and accumulate. The 11th house is the income stream—what comes to us. When their lords connect, income flows into savings, creating lasting wealth.",
@@ -2231,7 +2395,7 @@
       "category": "raja-yoga",
       "keywords": ["debilitation cancelled", "rise from fall", "transformation", "redemption", "strength through weakness"],
       "sort_order": 220,
-      "composite_of": [],
+      "composite_of": ["dignity-neecha", "position-kendra"],
       "sections": {
         "Interpretation": "Neecha Bhanga Raja Yoga forms when a debilitated planet has its debilitation 'cancelled' (bhanga) through specific conditions, transforming apparent weakness into exceptional strength. This is one of astrology's most profound teachings—that our greatest weaknesses, properly addressed, become our greatest strengths.",
         "Cancellation Conditions": "(1) Lord of debilitation sign in kendra from Lagna or Moon, (2) Lord of exaltation sign in kendra from Lagna or Moon, (3) Debilitated planet conjunct or aspected by its debilitation sign lord, (4) Debilitated planet in exalted navamsa, (5) Debilitated planet conjunct an exalted planet.",
@@ -2252,7 +2416,7 @@
       "category": "special-yoga",
       "keywords": ["bold", "leadership", "courage", "4th lord", "9th lord", "stubbornness"],
       "sort_order": 230,
-      "composite_of": [],
+      "composite_of": ["bhava-4", "bhava-9", "position-kendra", "position-trikona"],
       "sections": {
         "Interpretation": "Kahala Yoga forms when the lords of 4th and 9th houses are in mutual kendras and the Lagna lord is strong. This creates a bold, energetic leader with both emotional stability (4th) and dharmic conviction (9th). The native charges forward like a war elephant (kahala).",
         "Formation": "4th lord and 9th lord in kendra from each other (1, 4, 7, or 10 houses apart) AND Lagna lord is strong (in own sign, exalted, or well-placed).",
