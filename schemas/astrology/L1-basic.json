@@ -7,157 +7,17 @@
   "tags": ["astrology", "natal", "foundation"],
   "items": [
     {
-      "id": "planet-sun",
-      "name": "Sun",
-      "symbol": "☉",
-      "category": "planet",
-      "subcategory": "luminary",
-      "keywords": ["identity", "ego", "vitality", "purpose", "will"],
-      "sections": {
-        "Core Meaning": "The Sun represents your core identity, ego, and life force. It's the central point of your chart - who you ARE at your deepest level.",
-        "Questions": "What gives you a sense of purpose? Where do you shine brightest? What makes you feel truly alive?"
-      },
-      "sort_order": 0,
-      "metadata": { "element": "fire", "rules": "Leo" }
-    },
-    {
-      "id": "planet-moon",
-      "name": "Moon",
-      "symbol": "☽",
-      "category": "planet",
-      "subcategory": "luminary",
-      "keywords": ["emotions", "instincts", "nurturing", "security", "habits"],
-      "sections": {
-        "Core Meaning": "The Moon governs your emotional nature, instincts, and subconscious patterns. It reveals how you nurture yourself and others.",
-        "Questions": "What makes you feel emotionally secure? How do you process feelings? What patterns did you inherit from childhood?"
-      },
-      "sort_order": 1,
-      "metadata": { "element": "water", "rules": "Cancer" }
-    },
-    {
-      "id": "planet-mercury",
-      "name": "Mercury",
-      "symbol": "☿",
-      "category": "planet",
-      "subcategory": "personal",
-      "keywords": ["communication", "mind", "learning", "logic", "expression"],
-      "sections": {
-        "Core Meaning": "Mercury rules how you think, communicate, and process information. It governs learning style, speech, and mental patterns.",
-        "Questions": "How do you express your ideas? What's your learning style? How do you make decisions?"
-      },
-      "sort_order": 2,
-      "metadata": { "element": "air", "rules": "Gemini, Virgo" }
-    },
-    {
-      "id": "planet-venus",
-      "name": "Venus",
-      "symbol": "♀",
-      "category": "planet",
-      "subcategory": "personal",
-      "keywords": ["love", "beauty", "values", "pleasure", "attraction"],
-      "sections": {
-        "Core Meaning": "Venus governs love, beauty, and what you value. It shows how you attract and what attracts you - in relationships and aesthetics.",
-        "Questions": "What do you find beautiful? How do you express love? What do you truly value?"
-      },
-      "sort_order": 3,
-      "metadata": { "element": "earth/air", "rules": "Taurus, Libra" }
-    },
-    {
-      "id": "planet-mars",
-      "name": "Mars",
-      "symbol": "♂",
-      "category": "planet",
-      "subcategory": "personal",
-      "keywords": ["action", "drive", "courage", "anger", "desire"],
-      "sections": {
-        "Core Meaning": "Mars represents your drive, assertiveness, and how you take action. It governs passion, anger, and physical energy.",
-        "Questions": "How do you assert yourself? What motivates you to act? How do you handle conflict?"
-      },
-      "sort_order": 4,
-      "metadata": { "element": "fire", "rules": "Aries" }
-    },
-    {
-      "id": "planet-jupiter",
-      "name": "Jupiter",
-      "symbol": "♃",
-      "category": "planet",
-      "subcategory": "social",
-      "keywords": ["expansion", "luck", "wisdom", "growth", "faith"],
-      "sections": {
-        "Core Meaning": "Jupiter expands whatever it touches. It represents growth, optimism, philosophy, and where you find meaning and abundance.",
-        "Questions": "Where do you seek growth? What gives your life meaning? How do you approach opportunity?"
-      },
-      "sort_order": 5,
-      "metadata": { "element": "fire", "rules": "Sagittarius" }
-    },
-    {
-      "id": "planet-saturn",
-      "name": "Saturn",
-      "symbol": "♄",
-      "category": "planet",
-      "subcategory": "social",
-      "keywords": ["structure", "discipline", "limits", "responsibility", "mastery"],
-      "sections": {
-        "Core Meaning": "Saturn represents structure, discipline, and lessons. It shows where you face challenges that build character and mastery over time.",
-        "Questions": "Where do you feel limited? What lessons keep recurring? What are you building long-term?"
-      },
-      "sort_order": 6,
-      "metadata": { "element": "earth", "rules": "Capricorn" }
-    },
-    {
-      "id": "planet-uranus",
-      "name": "Uranus",
-      "symbol": "♅",
-      "category": "planet",
-      "subcategory": "transpersonal",
-      "keywords": ["revolution", "freedom", "innovation", "awakening", "disruption"],
-      "sections": {
-        "Core Meaning": "Uranus brings sudden change, innovation, and liberation. It shows where you break from convention and express your unique genius.",
-        "Questions": "Where do you rebel? What makes you feel free? How do you innovate?"
-      },
-      "sort_order": 7,
-      "metadata": { "element": "air", "rules": "Aquarius" }
-    },
-    {
-      "id": "planet-neptune",
-      "name": "Neptune",
-      "symbol": "♆",
-      "category": "planet",
-      "subcategory": "transpersonal",
-      "keywords": ["dreams", "illusion", "spirituality", "compassion", "transcendence"],
-      "sections": {
-        "Core Meaning": "Neptune dissolves boundaries and connects to the transcendent. It governs dreams, intuition, spirituality, and creative imagination.",
-        "Questions": "Where do you seek transcendence? What are your dreams? Where might you be deceiving yourself?"
-      },
-      "sort_order": 8,
-      "metadata": { "element": "water", "rules": "Pisces" }
-    },
-    {
-      "id": "planet-pluto",
-      "name": "Pluto",
-      "symbol": "♇",
-      "category": "planet",
-      "subcategory": "transpersonal",
-      "keywords": ["transformation", "power", "death/rebirth", "shadow", "intensity"],
-      "sections": {
-        "Core Meaning": "Pluto represents deep transformation, power dynamics, and the cycle of death and rebirth. It reveals shadow material and evolutionary growth.",
-        "Questions": "What needs to die for you to grow? Where do you hold power or feel powerless? What are you transforming?"
-      },
-      "sort_order": 9,
-      "metadata": { "element": "water", "rules": "Scorpio" }
-    },
-    {
       "id": "sign-aries",
       "name": "Aries",
       "symbol": "♈",
       "category": "sign",
-      "subcategory": "cardinal-fire",
+      "subcategory": "fire",
       "keywords": ["initiative", "courage", "pioneering", "independence", "impulsive"],
       "sections": {
-        "Core Meaning": "Aries energy is pioneering, direct, and courageous. It initiates action, leads with boldness, and embodies the warrior spirit.",
+        "Interpretation": "Aries energy is pioneering, direct, and courageous. It initiates action, leads with boldness, and embodies the warrior spirit.",
         "Shadow": "Impatience, aggression, selfishness, lack of follow-through."
       },
-      "sort_order": 10,
+      "sort_order": 0,
       "metadata": { "element": "fire", "modality": "cardinal", "ruler": "Mars" }
     },
     {
@@ -165,13 +25,13 @@
       "name": "Taurus",
       "symbol": "♉",
       "category": "sign",
-      "subcategory": "fixed-earth",
+      "subcategory": "earth",
       "keywords": ["stability", "sensuality", "patience", "values", "stubborn"],
       "sections": {
-        "Core Meaning": "Taurus energy is grounded, sensual, and patient. It builds slowly, values security, and appreciates beauty and comfort.",
+        "Interpretation": "Taurus energy is grounded, sensual, and patient. It builds slowly, values security, and appreciates beauty and comfort.",
         "Shadow": "Stubbornness, possessiveness, materialism, resistance to change."
       },
-      "sort_order": 11,
+      "sort_order": 1,
       "metadata": { "element": "earth", "modality": "fixed", "ruler": "Venus" }
     },
     {
@@ -179,13 +39,13 @@
       "name": "Gemini",
       "symbol": "♊",
       "category": "sign",
-      "subcategory": "mutable-air",
+      "subcategory": "air",
       "keywords": ["communication", "curiosity", "duality", "adaptable", "intellectual"],
       "sections": {
-        "Core Meaning": "Gemini energy is curious, communicative, and versatile. It gathers information, makes connections, and adapts quickly.",
+        "Interpretation": "Gemini energy is curious, communicative, and versatile. It gathers information, makes connections, and adapts quickly.",
         "Shadow": "Superficiality, inconsistency, nervousness, gossip."
       },
-      "sort_order": 12,
+      "sort_order": 2,
       "metadata": { "element": "air", "modality": "mutable", "ruler": "Mercury" }
     },
     {
@@ -193,13 +53,13 @@
       "name": "Cancer",
       "symbol": "♋",
       "category": "sign",
-      "subcategory": "cardinal-water",
+      "subcategory": "water",
       "keywords": ["nurturing", "protective", "emotional", "home", "intuitive"],
       "sections": {
-        "Core Meaning": "Cancer energy is nurturing, protective, and emotionally attuned. It creates safety, remembers the past, and cares deeply.",
+        "Interpretation": "Cancer energy is nurturing, protective, and emotionally attuned. It creates safety, remembers the past, and cares deeply.",
         "Shadow": "Moodiness, clinginess, over-sensitivity, living in the past."
       },
-      "sort_order": 13,
+      "sort_order": 3,
       "metadata": { "element": "water", "modality": "cardinal", "ruler": "Moon" }
     },
     {
@@ -207,13 +67,13 @@
       "name": "Leo",
       "symbol": "♌",
       "category": "sign",
-      "subcategory": "fixed-fire",
+      "subcategory": "fire",
       "keywords": ["creativity", "pride", "leadership", "warmth", "dramatic"],
       "sections": {
-        "Core Meaning": "Leo energy is creative, warm, and radiates self-expression. It leads with heart, seeks recognition, and brings joy.",
+        "Interpretation": "Leo energy is creative, warm, and radiates self-expression. It leads with heart, seeks recognition, and brings joy.",
         "Shadow": "Arrogance, attention-seeking, stubbornness, drama."
       },
-      "sort_order": 14,
+      "sort_order": 4,
       "metadata": { "element": "fire", "modality": "fixed", "ruler": "Sun" }
     },
     {
@@ -221,13 +81,13 @@
       "name": "Virgo",
       "symbol": "♍",
       "category": "sign",
-      "subcategory": "mutable-earth",
+      "subcategory": "earth",
       "keywords": ["service", "analysis", "perfection", "healing", "practical"],
       "sections": {
-        "Core Meaning": "Virgo energy is analytical, service-oriented, and detail-focused. It improves, heals, and brings order to chaos.",
+        "Interpretation": "Virgo energy is analytical, service-oriented, and detail-focused. It improves, heals, and brings order to chaos.",
         "Shadow": "Criticism, worry, perfectionism, over-analysis."
       },
-      "sort_order": 15,
+      "sort_order": 5,
       "metadata": { "element": "earth", "modality": "mutable", "ruler": "Mercury" }
     },
     {
@@ -235,13 +95,13 @@
       "name": "Libra",
       "symbol": "♎",
       "category": "sign",
-      "subcategory": "cardinal-air",
+      "subcategory": "air",
       "keywords": ["balance", "harmony", "partnership", "justice", "aesthetic"],
       "sections": {
-        "Core Meaning": "Libra energy seeks balance, harmony, and partnership. It negotiates, appreciates beauty, and values fairness.",
+        "Interpretation": "Libra energy seeks balance, harmony, and partnership. It negotiates, appreciates beauty, and values fairness.",
         "Shadow": "Indecision, people-pleasing, conflict avoidance, superficiality."
       },
-      "sort_order": 16,
+      "sort_order": 6,
       "metadata": { "element": "air", "modality": "cardinal", "ruler": "Venus" }
     },
     {
@@ -249,13 +109,13 @@
       "name": "Scorpio",
       "symbol": "♏",
       "category": "sign",
-      "subcategory": "fixed-water",
+      "subcategory": "water",
       "keywords": ["intensity", "transformation", "depth", "power", "mystery"],
       "sections": {
-        "Core Meaning": "Scorpio energy is intense, transformative, and deeply perceptive. It seeks truth beneath surfaces and isn't afraid of darkness.",
+        "Interpretation": "Scorpio energy is intense, transformative, and deeply perceptive. It seeks truth beneath surfaces and isn't afraid of darkness.",
         "Shadow": "Jealousy, manipulation, obsession, vindictiveness."
       },
-      "sort_order": 17,
+      "sort_order": 7,
       "metadata": { "element": "water", "modality": "fixed", "ruler": "Pluto" }
     },
     {
@@ -263,13 +123,13 @@
       "name": "Sagittarius",
       "symbol": "♐",
       "category": "sign",
-      "subcategory": "mutable-fire",
+      "subcategory": "fire",
       "keywords": ["adventure", "philosophy", "freedom", "optimism", "truth-seeking"],
       "sections": {
-        "Core Meaning": "Sagittarius energy is expansive, philosophical, and freedom-loving. It seeks meaning, explores horizons, and shares wisdom.",
+        "Interpretation": "Sagittarius energy is expansive, philosophical, and freedom-loving. It seeks meaning, explores horizons, and shares wisdom.",
         "Shadow": "Dogmatism, restlessness, tactlessness, over-promising."
       },
-      "sort_order": 18,
+      "sort_order": 8,
       "metadata": { "element": "fire", "modality": "mutable", "ruler": "Jupiter" }
     },
     {
@@ -277,13 +137,13 @@
       "name": "Capricorn",
       "symbol": "♑",
       "category": "sign",
-      "subcategory": "cardinal-earth",
+      "subcategory": "earth",
       "keywords": ["ambition", "structure", "mastery", "responsibility", "discipline"],
       "sections": {
-        "Core Meaning": "Capricorn energy is ambitious, disciplined, and builds for the long-term. It masters through patience and takes responsibility.",
+        "Interpretation": "Capricorn energy is ambitious, disciplined, and builds for the long-term. It masters through patience and takes responsibility.",
         "Shadow": "Coldness, workaholism, pessimism, status-seeking."
       },
-      "sort_order": 19,
+      "sort_order": 9,
       "metadata": { "element": "earth", "modality": "cardinal", "ruler": "Saturn" }
     },
     {
@@ -291,13 +151,13 @@
       "name": "Aquarius",
       "symbol": "♒",
       "category": "sign",
-      "subcategory": "fixed-air",
+      "subcategory": "air",
       "keywords": ["innovation", "community", "independence", "humanitarian", "unconventional"],
       "sections": {
-        "Core Meaning": "Aquarius energy is innovative, humanitarian, and values freedom within community. It thinks ahead and challenges norms.",
+        "Interpretation": "Aquarius energy is innovative, humanitarian, and values freedom within community. It thinks ahead and challenges norms.",
         "Shadow": "Detachment, rebelliousness, eccentricity, emotional distance."
       },
-      "sort_order": 20,
+      "sort_order": 10,
       "metadata": { "element": "air", "modality": "fixed", "ruler": "Uranus" }
     },
     {
@@ -305,24 +165,164 @@
       "name": "Pisces",
       "symbol": "♓",
       "category": "sign",
-      "subcategory": "mutable-water",
+      "subcategory": "water",
       "keywords": ["compassion", "intuition", "dreams", "dissolution", "transcendence"],
       "sections": {
-        "Core Meaning": "Pisces energy is compassionate, intuitive, and connected to the collective unconscious. It dissolves boundaries and imagines possibilities.",
+        "Interpretation": "Pisces energy is compassionate, intuitive, and connected to the collective unconscious. It dissolves boundaries and imagines possibilities.",
         "Shadow": "Escapism, victimhood, confusion, lack of boundaries."
       },
-      "sort_order": 21,
+      "sort_order": 11,
       "metadata": { "element": "water", "modality": "mutable", "ruler": "Neptune" }
+    },
+    {
+      "id": "planet-sun",
+      "name": "Sun",
+      "symbol": "☉",
+      "category": "planet",
+      "subcategory": null,
+      "keywords": ["identity", "ego", "vitality", "purpose", "will"],
+      "sections": {
+        "Interpretation": "The Sun represents your core identity, ego, and life force. It's the central point of your chart - who you ARE at your deepest level.",
+        "Questions": "What gives you a sense of purpose? Where do you shine brightest? What makes you feel truly alive?"
+      },
+      "sort_order": 12,
+      "metadata": { "element": "fire", "rules": "Leo" }
+    },
+    {
+      "id": "planet-moon",
+      "name": "Moon",
+      "symbol": "☽",
+      "category": "planet",
+      "subcategory": null,
+      "keywords": ["emotions", "instincts", "nurturing", "security", "habits"],
+      "sections": {
+        "Interpretation": "The Moon governs your emotional nature, instincts, and subconscious patterns. It reveals how you nurture yourself and others.",
+        "Questions": "What makes you feel emotionally secure? How do you process feelings? What patterns did you inherit from childhood?"
+      },
+      "sort_order": 13,
+      "metadata": { "element": "water", "rules": "Cancer" }
+    },
+    {
+      "id": "planet-mercury",
+      "name": "Mercury",
+      "symbol": "☿",
+      "category": "planet",
+      "subcategory": null,
+      "keywords": ["communication", "mind", "learning", "logic", "expression"],
+      "sections": {
+        "Interpretation": "Mercury rules how you think, communicate, and process information. It governs learning style, speech, and mental patterns.",
+        "Questions": "How do you express your ideas? What's your learning style? How do you make decisions?"
+      },
+      "sort_order": 14,
+      "metadata": { "element": "air", "rules": "Gemini, Virgo" }
+    },
+    {
+      "id": "planet-venus",
+      "name": "Venus",
+      "symbol": "♀",
+      "category": "planet",
+      "subcategory": null,
+      "keywords": ["love", "beauty", "values", "pleasure", "attraction"],
+      "sections": {
+        "Interpretation": "Venus governs love, beauty, and what you value. It shows how you attract and what attracts you - in relationships and aesthetics.",
+        "Questions": "What do you find beautiful? How do you express love? What do you truly value?"
+      },
+      "sort_order": 15,
+      "metadata": { "element": "earth/air", "rules": "Taurus, Libra" }
+    },
+    {
+      "id": "planet-mars",
+      "name": "Mars",
+      "symbol": "♂",
+      "category": "planet",
+      "subcategory": null,
+      "keywords": ["action", "drive", "courage", "anger", "desire"],
+      "sections": {
+        "Interpretation": "Mars represents your drive, assertiveness, and how you take action. It governs passion, anger, and physical energy.",
+        "Questions": "How do you assert yourself? What motivates you to act? How do you handle conflict?"
+      },
+      "sort_order": 16,
+      "metadata": { "element": "fire", "rules": "Aries" }
+    },
+    {
+      "id": "planet-jupiter",
+      "name": "Jupiter",
+      "symbol": "♃",
+      "category": "planet",
+      "subcategory": null,
+      "keywords": ["expansion", "luck", "wisdom", "growth", "faith"],
+      "sections": {
+        "Interpretation": "Jupiter expands whatever it touches. It represents growth, optimism, philosophy, and where you find meaning and abundance.",
+        "Questions": "Where do you seek growth? What gives your life meaning? How do you approach opportunity?"
+      },
+      "sort_order": 17,
+      "metadata": { "element": "fire", "rules": "Sagittarius" }
+    },
+    {
+      "id": "planet-saturn",
+      "name": "Saturn",
+      "symbol": "♄",
+      "category": "planet",
+      "subcategory": null,
+      "keywords": ["structure", "discipline", "limits", "responsibility", "mastery"],
+      "sections": {
+        "Interpretation": "Saturn represents structure, discipline, and lessons. It shows where you face challenges that build character and mastery over time.",
+        "Questions": "Where do you feel limited? What lessons keep recurring? What are you building long-term?"
+      },
+      "sort_order": 18,
+      "metadata": { "element": "earth", "rules": "Capricorn" }
+    },
+    {
+      "id": "planet-uranus",
+      "name": "Uranus",
+      "symbol": "♅",
+      "category": "planet",
+      "subcategory": null,
+      "keywords": ["revolution", "freedom", "innovation", "awakening", "disruption"],
+      "sections": {
+        "Interpretation": "Uranus brings sudden change, innovation, and liberation. It shows where you break from convention and express your unique genius.",
+        "Questions": "Where do you rebel? What makes you feel free? How do you innovate?"
+      },
+      "sort_order": 19,
+      "metadata": { "element": "air", "rules": "Aquarius" }
+    },
+    {
+      "id": "planet-neptune",
+      "name": "Neptune",
+      "symbol": "♆",
+      "category": "planet",
+      "subcategory": null,
+      "keywords": ["dreams", "illusion", "spirituality", "compassion", "transcendence"],
+      "sections": {
+        "Interpretation": "Neptune dissolves boundaries and connects to the transcendent. It governs dreams, intuition, spirituality, and creative imagination.",
+        "Questions": "Where do you seek transcendence? What are your dreams? Where might you be deceiving yourself?"
+      },
+      "sort_order": 20,
+      "metadata": { "element": "water", "rules": "Pisces" }
+    },
+    {
+      "id": "planet-pluto",
+      "name": "Pluto",
+      "symbol": "♇",
+      "category": "planet",
+      "subcategory": null,
+      "keywords": ["transformation", "power", "death/rebirth", "shadow", "intensity"],
+      "sections": {
+        "Interpretation": "Pluto represents deep transformation, power dynamics, and the cycle of death and rebirth. It reveals shadow material and evolutionary growth.",
+        "Questions": "What needs to die for you to grow? Where do you hold power or feel powerless? What are you transforming?"
+      },
+      "sort_order": 21,
+      "metadata": { "element": "water", "rules": "Scorpio" }
     },
     {
       "id": "house-1",
       "name": "1st House",
       "symbol": "I",
       "category": "house",
-      "subcategory": "angular",
+      "subcategory": null,
       "keywords": ["self", "identity", "appearance", "beginnings", "persona"],
       "sections": {
-        "Core Meaning": "The house of Self - how you present yourself, physical appearance, first impressions, and approach to new beginnings.",
+        "Interpretation": "The house of Self - how you present yourself, physical appearance, first impressions, and approach to new beginnings.",
         "Questions": "How do others see you? What mask do you wear? How do you start things?"
       },
       "sort_order": 22,
@@ -333,10 +333,10 @@
       "name": "2nd House",
       "symbol": "II",
       "category": "house",
-      "subcategory": "succedent",
+      "subcategory": null,
       "keywords": ["values", "money", "possessions", "self-worth", "resources"],
       "sections": {
-        "Core Meaning": "The house of Values - material resources, money, possessions, and what you value including self-worth.",
+        "Interpretation": "The house of Values - material resources, money, possessions, and what you value including self-worth.",
         "Questions": "What do you value? How do you earn? What gives you a sense of worth?"
       },
       "sort_order": 23,
@@ -347,10 +347,10 @@
       "name": "3rd House",
       "symbol": "III",
       "category": "house",
-      "subcategory": "cadent",
+      "subcategory": null,
       "keywords": ["communication", "siblings", "learning", "neighborhood", "short trips"],
       "sections": {
-        "Core Meaning": "The house of Communication - daily interactions, siblings, early education, local environment, and mental processes.",
+        "Interpretation": "The house of Communication - daily interactions, siblings, early education, local environment, and mental processes.",
         "Questions": "How do you communicate? What's your learning style? How do you relate to siblings?"
       },
       "sort_order": 24,
@@ -361,10 +361,10 @@
       "name": "4th House",
       "symbol": "IV",
       "category": "house",
-      "subcategory": "angular",
+      "subcategory": null,
       "keywords": ["home", "family", "roots", "foundation", "private self"],
       "sections": {
-        "Core Meaning": "The house of Home - family of origin, roots, emotional foundation, private life, and the parent who nurtures.",
+        "Interpretation": "The house of Home - family of origin, roots, emotional foundation, private life, and the parent who nurtures.",
         "Questions": "What does home mean to you? What patterns come from family? What's your emotional foundation?"
       },
       "sort_order": 25,
@@ -375,10 +375,10 @@
       "name": "5th House",
       "symbol": "V",
       "category": "house",
-      "subcategory": "succedent",
+      "subcategory": null,
       "keywords": ["creativity", "romance", "children", "play", "self-expression"],
       "sections": {
-        "Core Meaning": "The house of Creativity - self-expression, romance, children, play, hobbies, and what brings you joy.",
+        "Interpretation": "The house of Creativity - self-expression, romance, children, play, hobbies, and what brings you joy.",
         "Questions": "How do you express creatively? What brings you joy? How do you approach romance?"
       },
       "sort_order": 26,
@@ -389,10 +389,10 @@
       "name": "6th House",
       "symbol": "VI",
       "category": "house",
-      "subcategory": "cadent",
+      "subcategory": null,
       "keywords": ["health", "service", "routine", "work", "improvement"],
       "sections": {
-        "Core Meaning": "The house of Service - daily work, health habits, routines, service to others, and self-improvement.",
+        "Interpretation": "The house of Service - daily work, health habits, routines, service to others, and self-improvement.",
         "Questions": "What are your daily rituals? How do you serve others? What's your relationship with health?"
       },
       "sort_order": 27,
@@ -403,10 +403,10 @@
       "name": "7th House",
       "symbol": "VII",
       "category": "house",
-      "subcategory": "angular",
+      "subcategory": null,
       "keywords": ["partnership", "marriage", "others", "contracts", "open enemies"],
       "sections": {
-        "Core Meaning": "The house of Partnership - committed relationships, marriage, business partners, and how you relate one-on-one.",
+        "Interpretation": "The house of Partnership - committed relationships, marriage, business partners, and how you relate one-on-one.",
         "Questions": "What do you seek in partners? How do you compromise? What do you project onto others?"
       },
       "sort_order": 28,
@@ -417,10 +417,10 @@
       "name": "8th House",
       "symbol": "VIII",
       "category": "house",
-      "subcategory": "succedent",
+      "subcategory": null,
       "keywords": ["transformation", "shared resources", "death/rebirth", "intimacy", "occult"],
       "sections": {
-        "Core Meaning": "The house of Transformation - shared resources, intimacy, death/rebirth cycles, taxes, inheritance, and the occult.",
+        "Interpretation": "The house of Transformation - shared resources, intimacy, death/rebirth cycles, taxes, inheritance, and the occult.",
         "Questions": "What are you transforming? How do you share resources? What are your taboo areas?"
       },
       "sort_order": 29,
@@ -431,10 +431,10 @@
       "name": "9th House",
       "symbol": "IX",
       "category": "house",
-      "subcategory": "cadent",
+      "subcategory": null,
       "keywords": ["philosophy", "travel", "higher education", "beliefs", "expansion"],
       "sections": {
-        "Core Meaning": "The house of Philosophy - higher education, long-distance travel, beliefs, religion, publishing, and meaning-making.",
+        "Interpretation": "The house of Philosophy - higher education, long-distance travel, beliefs, religion, publishing, and meaning-making.",
         "Questions": "What do you believe? How do you expand your horizons? What's your philosophy of life?"
       },
       "sort_order": 30,
@@ -445,10 +445,10 @@
       "name": "10th House",
       "symbol": "X",
       "category": "house",
-      "subcategory": "angular",
+      "subcategory": null,
       "keywords": ["career", "reputation", "public image", "authority", "achievement"],
       "sections": {
-        "Core Meaning": "The house of Career - public reputation, achievements, career path, authority figures, and legacy.",
+        "Interpretation": "The house of Career - public reputation, achievements, career path, authority figures, and legacy.",
         "Questions": "What's your calling? How do you want to be remembered? What are you building in the world?"
       },
       "sort_order": 31,
@@ -459,10 +459,10 @@
       "name": "11th House",
       "symbol": "XI",
       "category": "house",
-      "subcategory": "succedent",
+      "subcategory": null,
       "keywords": ["community", "hopes", "friends", "groups", "humanitarian"],
       "sections": {
-        "Core Meaning": "The house of Community - friends, groups, hopes and wishes, humanitarian causes, and collective endeavors.",
+        "Interpretation": "The house of Community - friends, groups, hopes and wishes, humanitarian causes, and collective endeavors.",
         "Questions": "What are your hopes and dreams? How do you contribute to community? Who are your people?"
       },
       "sort_order": 32,
@@ -473,10 +473,10 @@
       "name": "12th House",
       "symbol": "XII",
       "category": "house",
-      "subcategory": "cadent",
+      "subcategory": null,
       "keywords": ["unconscious", "spirituality", "isolation", "hidden", "transcendence"],
       "sections": {
-        "Core Meaning": "The house of the Unconscious - hidden patterns, spirituality, isolation, self-undoing, and connection to the divine.",
+        "Interpretation": "The house of the Unconscious - hidden patterns, spirituality, isolation, self-undoing, and connection to the divine.",
         "Questions": "What do you keep hidden? Where do you sabotage yourself? How do you connect to spirit?"
       },
       "sort_order": 33,
@@ -487,10 +487,10 @@
       "name": "Conjunction",
       "symbol": "☌",
       "category": "aspect",
-      "subcategory": "major",
+      "subcategory": null,
       "keywords": ["fusion", "intensity", "blending", "focus", "new cycle"],
       "sections": {
-        "Core Meaning": "0° - Planets merge their energies completely. A fusion that creates something new but can be blind to itself.",
+        "Interpretation": "0° - Planets merge their energies completely. A fusion that creates something new but can be blind to itself.",
         "Dynamic": "Neither harmonious nor challenging - depends entirely on the planets involved."
       },
       "sort_order": 34,
@@ -501,10 +501,10 @@
       "name": "Sextile",
       "symbol": "⚹",
       "category": "aspect",
-      "subcategory": "major",
+      "subcategory": null,
       "keywords": ["opportunity", "ease", "talent", "potential", "cooperation"],
       "sections": {
-        "Core Meaning": "60° - Gentle flow of energy between compatible elements. Opportunities that require some effort to activate.",
+        "Interpretation": "60° - Gentle flow of energy between compatible elements. Opportunities that require some effort to activate.",
         "Dynamic": "Harmonious but requires conscious engagement to manifest."
       },
       "sort_order": 35,
@@ -515,10 +515,10 @@
       "name": "Square",
       "symbol": "□",
       "category": "aspect",
-      "subcategory": "major",
+      "subcategory": null,
       "keywords": ["tension", "challenge", "growth", "friction", "action"],
       "sections": {
-        "Core Meaning": "90° - Friction that demands action and growth. The discomfort that builds strength and character.",
+        "Interpretation": "90° - Friction that demands action and growth. The discomfort that builds strength and character.",
         "Dynamic": "Challenging but productive - creates the pressure needed for change."
       },
       "sort_order": 36,
@@ -529,10 +529,10 @@
       "name": "Trine",
       "symbol": "△",
       "category": "aspect",
-      "subcategory": "major",
+      "subcategory": null,
       "keywords": ["flow", "ease", "talent", "harmony", "gifts"],
       "sections": {
-        "Core Meaning": "120° - Natural flow between planets in the same element. Talents that come easily, sometimes too easily.",
+        "Interpretation": "120° - Natural flow between planets in the same element. Talents that come easily, sometimes too easily.",
         "Dynamic": "Harmonious - can indicate natural gifts but also complacency."
       },
       "sort_order": 37,
@@ -543,10 +543,10 @@
       "name": "Opposition",
       "symbol": "☍",
       "category": "aspect",
-      "subcategory": "major",
+      "subcategory": null,
       "keywords": ["polarity", "awareness", "balance", "projection", "relationship"],
       "sections": {
-        "Core Meaning": "180° - Two planets face off, creating awareness through polarity. What you see in others is in you.",
+        "Interpretation": "180° - Two planets face off, creating awareness through polarity. What you see in others is in you.",
         "Dynamic": "Challenging but offers perspective - requires integration of opposites."
       },
       "sort_order": 38,
