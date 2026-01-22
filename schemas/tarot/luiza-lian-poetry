@@ -769,6 +769,34 @@
       ]
     },
     {
+      "id": "single-alumio",
+      "name": "Alumiô",
+      "level": 1,
+      "category": "Singles",
+      "sort_order": 29,
+      "metadata": {
+        "album": "Single (with Bixiga 70)",
+        "year": 2022,
+        "track_number": 1,
+        "spotify_url": "https://open.spotify.com/track/4xJdhCp5VNkLfNkkJPqK5g",
+        "collaboration": "Bixiga 70"
+      },
+      "sections": {
+        "Português": "[Add Portuguese lyrics here]",
+        "Images": "[Describe what this song means to you in images]",
+        "Yoruba English": "Alumiô—\nthe light that names itself,\nthe brightness that announces its arrival\nbefore you see it.\n\nWith Bixiga 70's brass breath behind her,\nshe becomes parade,\nshe becomes procession,\nshe becomes the street that dances itself.\n\nAlumiar—to illuminate, to light up.\nThis is not quiet burning.\nThis is festival fire,\nthe kind that needs a whole neighborhood\nto hold it.\n\nWhen the big band joins the voice,\nthe personal becomes collective,\nthe whisper becomes announcement:\nI am here. I am lit. I am lighting.",
+        "Reflection": "What in you wants to be announced, not whispered? What would it mean to let others amplify your light?"
+      },
+      "keywords": [
+        "light",
+        "illumination",
+        "Bixiga 70",
+        "brass",
+        "collective",
+        "festival"
+      ]
+    },
+    {
       "id": "album-oya-tempo",
       "name": "Oyá Tempo",
       "level": 2,
@@ -877,6 +905,28 @@
       ]
     },
     {
+      "id": "collection-singles",
+      "name": "Singles & Collaborations",
+      "level": 2,
+      "category": "collection",
+      "sort_order": 103,
+      "composite_of": [
+        "single-alumio"
+      ],
+      "metadata": {
+        "type": "singles"
+      },
+      "sections": {
+        "Summary": "Singles and collaborative releases outside the main album cycle, including the Bixiga 70 partnership.",
+        "Themes": "Collaboration, expansion beyond solo work, big band energy"
+      },
+      "keywords": [
+        "singles",
+        "collaboration",
+        "Bixiga 70"
+      ]
+    },
+    {
       "id": "l3-luiza-lian",
       "name": "Luiza Lian",
       "level": 3,
@@ -885,7 +935,8 @@
       "composite_of": [
         "album-oya-tempo",
         "album-azul-moderno",
-        "album-sete-estrelas"
+        "album-sete-estrelas",
+        "collection-singles"
       ],
       "metadata": {
         "spotify_url": "https://open.spotify.com/artist/0JkAzyamqqEHsOfbLvvWMF",
