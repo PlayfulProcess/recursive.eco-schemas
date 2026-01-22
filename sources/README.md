@@ -31,7 +31,19 @@ All materials in this directory must be in the **public domain**. This includes:
 - [Sacred Texts Archive](https://sacred-texts.com) - Religious and esoteric texts
 - [Wikisource](https://wikisource.org) - Source texts in multiple languages
 
-### Historical Tarot & Astrology
+### Astrology - Ready to Download from Project Gutenberg
+
+| Text | Author | Year | Plain Text Download |
+|------|--------|------|---------------------|
+| **Tetrabiblos (Quadripartite)** | Ptolemy (trans. J.M. Ashmand) | ~150 CE / 1822 | [Download TXT](https://www.gutenberg.org/cache/epub/70850/pg70850.txt) |
+| **Astrology: How to Make and Read Your Own Horoscope** | Sepharial | 1920 | [Download TXT](https://www.gutenberg.org/cache/epub/46963/pg46963.txt) |
+| **Myths and Marvels of Astronomy** | Richard A. Proctor | 1896 | [Download TXT](https://www.gutenberg.org/cache/epub/26556/pg26556.txt) |
+
+**Ptolemy's Tetrabiblos** is the foundational text of Western astrology—the ancient Greek source that shaped all subsequent astrological interpretation.
+
+**Sepharial** (Walter Gorn Old) was a prominent early 20th century astrologer whose work provides practical instruction on natal chart interpretation.
+
+### Historical Tarot & Astrology (Other Sources)
 
 - Antoine Court de Gébelin's writings (18th century)
 - Etteilla's tarot works (18th century)
