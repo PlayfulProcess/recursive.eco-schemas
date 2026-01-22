@@ -50,6 +50,44 @@ Suggested file structure:
 }
 ```
 
+## Level System for Emergence
+
+Schemas use a level system to organize base items and their emergent combinations:
+
+- **L1 (level: 1)**: Base items (planets, signs, houses, individual hexagrams, songs)
+- **L2 (level: 2)**: Emergent combinations of L1 items (yogas, aspects, albums)
+- **L3 (level: 3)**: Meta-categories or higher-order groupings (organizing principles, artists)
+
+### Example: Vedic Yoga
+
+```json
+{
+  "id": "yoga-raja",
+  "name": "Raja Yoga",
+  "level": 2,
+  "composite_of": ["graha-surya", "graha-chandra", "graha-guru"],
+  "sections": {
+    "Interpretation": "When Sun, Moon, Jupiter combine in specific houses..."
+  }
+}
+```
+
+### Example: Meta-category
+
+```json
+{
+  "id": "l3-yogas",
+  "name": "Vedic Yogas",
+  "level": 3,
+  "composite_of": ["yoga-raja", "yoga-gajakesari", "yoga-budhaditya"],
+  "sections": {
+    "Summary": "Planetary combinations that produce specific life patterns..."
+  }
+}
+```
+
+The `composite_of` array references the IDs of items at the level below, creating explicit emergence relationships.
+
 ## Contributing
 
 When adding astrological schemas:
@@ -57,3 +95,4 @@ When adding astrological schemas:
 - Include both traditional and modern interpretations
 - Document house systems clearly
 - Explain calculation methods where relevant
+- Use the level system for composite/emergent patterns
