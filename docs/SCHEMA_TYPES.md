@@ -64,8 +64,8 @@ schemas/
 │   ├── traditional.json       # L1 hexagrams
 │   └── human-design           # L1 + L2 (gates as emergences)
 ├── astrology/
-│   ├── L1-basic               # L1 planets, signs, houses
-│   └── alan-leo               # L1 interpretive layer
+│   ├── L1-basic.json          # L1 planets, signs, houses, aspects
+│   └── alan-leo.json          # L1 classical interpretations (Alan Leo)
 └── other/
     └── plutchik-wheel.json    # L1 + L2 (dyads as emergences)
 ```
