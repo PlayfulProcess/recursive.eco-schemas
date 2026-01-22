@@ -99,15 +99,43 @@ Common section names for astrology items:
 }
 ```
 
-## Contributing
+## Level System for Emergence
 
-When adding astrological schemas:
+Schemas use a level system to organize base items and their emergent combinations:
 
-1. Use the unified `items` format (not separate arrays)
-2. Specify the tradition (Western, Vedic, etc.)
-3. Include both light and shadow interpretations
-4. Document house systems where relevant
-5. Add proper attribution for source material
+- **L1 (level: 1)**: Base items (planets, signs, houses, individual hexagrams, songs)
+- **L2 (level: 2)**: Emergent combinations of L1 items (yogas, aspects, albums)
+- **L3 (level: 3)**: Meta-categories or higher-order groupings (organizing principles, artists)
+
+### Example: Vedic Yoga
+
+```json
+{
+  "id": "yoga-raja",
+  "name": "Raja Yoga",
+  "level": 2,
+  "composite_of": ["graha-surya", "graha-chandra", "graha-guru"],
+  "sections": {
+    "Interpretation": "When Sun, Moon, Jupiter combine in specific houses..."
+  }
+}
+```
+
+### Example: Meta-category
+
+```json
+{
+  "id": "l3-yogas",
+  "name": "Vedic Yogas",
+  "level": 3,
+  "composite_of": ["yoga-raja", "yoga-gajakesari", "yoga-budhaditya"],
+  "sections": {
+    "Summary": "Planetary combinations that produce specific life patterns..."
+  }
+}
+```
+
+The `composite_of` array references the IDs of items at the level below, creating explicit emergence relationships.
 
 ## Jyotish (Vedic) Schema
 
@@ -129,6 +157,17 @@ The `jyotish-vedic.json` schema provides comprehensive Hindu astrology interpret
 - Raja Yogas (kendra-trikona combinations)
 - Dhana Yogas (wealth combinations)
 - Special Yogas (Saraswati, Amala, Kala Sarpa)
+
+## Contributing
+
+When adding astrological schemas:
+
+1. Use the unified `items` format (not separate arrays)
+2. Specify the tradition (Western, Vedic, etc.)
+3. Include both light and shadow interpretations
+4. Document house systems where relevant
+5. Add proper attribution for source material
+6. Use the level system for composite/emergent patterns
 
 ## Legacy Format
 
