@@ -38,6 +38,45 @@ Each card schema should include:
 }
 ```
 
+## Level System for Emergence
+
+Schemas use a level system to organize base items and their emergent combinations:
+
+- **L1 (level: 1)**: Base items (individual cards, songs)
+- **L2 (level: 2)**: Emergent combinations (spreads, albums, card pairings)
+- **L3 (level: 3)**: Meta-categories (deck collections, artists)
+
+### Example: Music/Poetry Deck
+
+```json
+{
+  "id": "album-example",
+  "name": "Album Name",
+  "level": 2,
+  "composite_of": ["song-01", "song-02", "song-03"],
+  "sections": {
+    "Summary": "Thematic description of the album...",
+    "Themes": "Key themes explored across these songs"
+  }
+}
+```
+
+### Example: Tarot Spread
+
+```json
+{
+  "id": "spread-celtic-cross",
+  "name": "Celtic Cross",
+  "level": 2,
+  "composite_of": ["position-1", "position-2", "position-3"],
+  "sections": {
+    "Interpretation": "How to read cards in these positions together..."
+  }
+}
+```
+
+The `composite_of` array references the IDs of items at the level below, creating explicit emergence relationships.
+
 ## Contributing
 
 Multiple traditions and interpretations are welcome! Consider:
@@ -45,3 +84,4 @@ Multiple traditions and interpretations are welcome! Consider:
 - Citing sources and traditions
 - Adding cultural context where relevant
 - Respecting the lineage of teachings
+- Using the level system for composite/emergent patterns
