@@ -1,0 +1,2352 @@
+{
+  "name": "Jyotish: Vedic Astrology",
+  "description": "Traditional Hindu astrology (Jyotisha) using the sidereal zodiac. Jyotish means 'science of light' and is one of the six Vedangas (limbs of the Vedas). Unlike Western tropical astrology, Vedic astrology uses the fixed stars as reference points, creating a ~24° difference in sign positions. Central concepts include the Nakshatras (27 lunar mansions), Dashas (planetary periods), and Yogas (planetary combinations). This schema provides interpretations rooted in classical texts like Brihat Parashara Hora Shastra, Jataka Parijata, and Phaladeepika.",
+  "grammar_type": "astrology",
+  "tradition": "Vedic/Hindu",
+  "zodiac_type": "sidereal",
+  "ayanamsa": "Lahiri (Chitrapaksha)",
+  "source": "Brihat Parashara Hora Shastra, Jataka Parijata, Phaladeepika, Saravali",
+  "license": "CC-BY-SA-4.0",
+  "tags": ["jyotish", "vedic", "hindu", "sidereal", "nakshatras", "dashas", "yogas"],
+  "items": [
+    {
+      "id": "graha-surya",
+      "name": "Surya",
+      "symbol": "☉",
+      "level": 1,
+      "category": "graha",
+      "subcategory": "luminary",
+      "english_name": "Sun",
+      "keywords": ["atma", "soul", "father", "authority", "vitality", "ego", "government", "king"],
+      "sort_order": 0,
+      "sections": {
+        "Interpretation": "Surya is the Atmakaraka, significator of the soul and self. He represents the divine spark within, our connection to the eternal. As king of the Grahas, Surya governs authority, leadership, and the father. He illuminates dharma (righteous path) and gives the strength to follow it. A strong Surya bestows confidence, leadership ability, and recognition from authority. The Sun's placement shows where we must develop self-mastery and express our unique purpose.",
+        "Karakatvas": "Soul (Atma), father, government, authority, kings, vitality, health, eyes (right), heart, bones, self-confidence, fame, honor, temples, copper, wheat, ruby.",
+        "Digbala": "Tenth house (strongest directional strength in the house of career and public status).",
+        "Nature": "Sattvic (pure), masculine, Kshatriya (warrior caste), hot and dry, Pitta constitution.",
+        "Relationships": "Friends: Moon, Mars, Jupiter. Enemies: Venus, Saturn. Neutral: Mercury.",
+        "Mantra": "Om Suryaya Namaha. Om Hraam Hreem Hraum Sah Suryaya Namaha (Beej mantra)."
+      },
+      "metadata": {
+        "vimshottari_years": 6,
+        "own_signs": ["Leo"],
+        "exaltation": "Aries 10°",
+        "debilitation": "Libra 10°",
+        "moolatrikona": "Leo 0-20°",
+        "element": "fire",
+        "direction": "east",
+        "day": "Sunday",
+        "gemstone": "Ruby",
+        "metal": "Gold",
+        "color": "Red/Orange"
+      }
+    },
+    {
+      "id": "graha-chandra",
+      "name": "Chandra",
+      "symbol": "☽",
+      "level": 1,
+      "category": "graha",
+      "subcategory": "luminary",
+      "english_name": "Moon",
+      "keywords": ["manas", "mind", "mother", "emotions", "nurturing", "public", "fluids", "queen"],
+      "sort_order": 1,
+      "sections": {
+        "Interpretation": "Chandra is the Manokaraka, significator of the mind and emotions. She represents our inner feeling nature, instincts, and capacity for nurturing. As queen of the Grahas, Chandra governs the mother, public perception, and emotional security. The Moon's nakshatra placement is considered more important than the rashi in Vedic astrology, determining the Dasha sequence. A strong Chandra gives emotional stability, popularity, and strong intuition. Her placement shows our emotional needs and how we nurture ourselves and others.",
+        "Karakatvas": "Mind (Manas), mother, emotions, feelings, public, women, water, milk, pearl, silver, white things, left eye, blood, sleep, travel, agriculture.",
+        "Digbala": "Fourth house (strongest in the house of home, mother, and emotional foundations).",
+        "Nature": "Sattvic when waxing, Tamasic when waning. Feminine, Vaishya (merchant caste), cold and moist, Kapha-Vata constitution.",
+        "Relationships": "Friends: Sun, Mercury. Enemies: None. Neutral: Mars, Jupiter, Venus, Saturn.",
+        "Mantra": "Om Chandraya Namaha. Om Shraam Shreem Shraum Sah Chandraya Namaha (Beej mantra)."
+      },
+      "metadata": {
+        "vimshottari_years": 10,
+        "own_signs": ["Cancer"],
+        "exaltation": "Taurus 3°",
+        "debilitation": "Scorpio 3°",
+        "moolatrikona": "Taurus 4-30°",
+        "element": "water",
+        "direction": "northwest",
+        "day": "Monday",
+        "gemstone": "Pearl",
+        "metal": "Silver",
+        "color": "White"
+      }
+    },
+    {
+      "id": "graha-mangala",
+      "name": "Mangala",
+      "symbol": "♂",
+      "level": 1,
+      "category": "graha",
+      "subcategory": "inner",
+      "english_name": "Mars",
+      "keywords": ["kuja", "energy", "courage", "brothers", "land", "surgery", "war", "commander"],
+      "sort_order": 2,
+      "sections": {
+        "Interpretation": "Mangala (also called Kuja) is the commander of the celestial army. He represents raw energy, courage, and the will to act. Mars governs brothers, land and property, technical skills, and martial arts. He is the karaka for the third and fourth houses. A strong Mangala gives courage, leadership in action, and the ability to overcome obstacles through direct effort. His placement shows where we must assert ourselves and develop strength through challenge.",
+        "Karakatvas": "Courage, brothers (especially younger), energy, passion, anger, accidents, surgery, blood, muscles, land, property, fire, copper, red coral, engineering, military.",
+        "Digbala": "Tenth house (strongest in the house of action and career).",
+        "Nature": "Tamasic, masculine, Kshatriya (warrior caste), hot and dry, Pitta constitution.",
+        "Relationships": "Friends: Sun, Moon, Jupiter. Enemies: Mercury. Neutral: Venus, Saturn.",
+        "Mantra": "Om Mangalaya Namaha. Om Kraam Kreem Kraum Sah Bhaumaya Namaha (Beej mantra)."
+      },
+      "metadata": {
+        "vimshottari_years": 7,
+        "own_signs": ["Aries", "Scorpio"],
+        "exaltation": "Capricorn 28°",
+        "debilitation": "Cancer 28°",
+        "moolatrikona": "Aries 0-12°",
+        "element": "fire",
+        "direction": "south",
+        "day": "Tuesday",
+        "gemstone": "Red Coral",
+        "metal": "Copper",
+        "color": "Red"
+      }
+    },
+    {
+      "id": "graha-budha",
+      "name": "Budha",
+      "symbol": "☿",
+      "level": 1,
+      "category": "graha",
+      "subcategory": "inner",
+      "english_name": "Mercury",
+      "keywords": ["intellect", "speech", "commerce", "learning", "communication", "prince", "adaptability"],
+      "sort_order": 3,
+      "sections": {
+        "Interpretation": "Budha is the prince among planets, representing intellect, speech, and discrimination (viveka). He governs communication, commerce, education, and analytical thinking. Mercury is unique in being a 'chameleon' planet—he takes on the nature of planets he associates with. A strong Budha gives sharp intellect, eloquent speech, business acumen, and skill in writing or mathematics. His placement shows how we learn, communicate, and process information.",
+        "Karakatvas": "Intelligence, speech, writing, commerce, mathematics, astrology, education, friends, maternal uncle, skin, nervous system, emerald, green things, Wednesday.",
+        "Digbala": "First house (strongest in the ascendant, house of self-expression).",
+        "Nature": "Rajasic, neutral gender (becomes masculine/feminine based on associations), Vaishya (merchant caste), mixed constitution.",
+        "Relationships": "Friends: Sun, Venus. Enemies: Moon. Neutral: Mars, Jupiter, Saturn.",
+        "Mantra": "Om Budhaya Namaha. Om Braam Breem Braum Sah Budhaya Namaha (Beej mantra)."
+      },
+      "metadata": {
+        "vimshottari_years": 17,
+        "own_signs": ["Gemini", "Virgo"],
+        "exaltation": "Virgo 15°",
+        "debilitation": "Pisces 15°",
+        "moolatrikona": "Virgo 16-20°",
+        "element": "earth",
+        "direction": "north",
+        "day": "Wednesday",
+        "gemstone": "Emerald",
+        "metal": "Bronze/Brass",
+        "color": "Green"
+      }
+    },
+    {
+      "id": "graha-guru",
+      "name": "Guru",
+      "symbol": "♃",
+      "level": 1,
+      "category": "graha",
+      "subcategory": "outer",
+      "english_name": "Jupiter",
+      "keywords": ["brihaspati", "wisdom", "dharma", "husband", "children", "teacher", "expansion", "minister"],
+      "sort_order": 4,
+      "sections": {
+        "Interpretation": "Guru (Brihaspati) is the great teacher and minister to the gods. He represents wisdom, dharma, expansion, and divine grace. Jupiter is the most benefic planet, governing higher knowledge, spirituality, children, and for women, the husband. He is karaka for the second, fifth, ninth, and eleventh houses. A strong Guru bestows wisdom, good fortune, wealth, progeny, and spiritual inclination. His placement shows where we find meaning, growth, and divine blessings.",
+        "Karakatvas": "Wisdom, dharma, guru/teacher, husband (for women), children, wealth, liver, fat, yellow topaz, gold, Thursday, temples, religious ceremonies, law, philosophy.",
+        "Digbala": "First house (strongest in the ascendant, radiating wisdom).",
+        "Nature": "Sattvic, masculine, Brahmin (priestly caste), Kapha constitution, temperate.",
+        "Relationships": "Friends: Sun, Moon, Mars. Enemies: Mercury, Venus. Neutral: Saturn.",
+        "Mantra": "Om Gurave Namaha. Om Graam Greem Graum Sah Gurave Namaha (Beej mantra)."
+      },
+      "metadata": {
+        "vimshottari_years": 16,
+        "own_signs": ["Sagittarius", "Pisces"],
+        "exaltation": "Cancer 5°",
+        "debilitation": "Capricorn 5°",
+        "moolatrikona": "Sagittarius 0-10°",
+        "element": "ether/space",
+        "direction": "northeast",
+        "day": "Thursday",
+        "gemstone": "Yellow Sapphire",
+        "metal": "Gold",
+        "color": "Yellow"
+      }
+    },
+    {
+      "id": "graha-shukra",
+      "name": "Shukra",
+      "symbol": "♀",
+      "level": 1,
+      "category": "graha",
+      "subcategory": "inner",
+      "english_name": "Venus",
+      "keywords": ["beauty", "love", "wife", "art", "luxury", "vehicles", "pleasure", "minister"],
+      "sort_order": 5,
+      "sections": {
+        "Interpretation": "Shukra is the minister to the Asuras and teacher of the demons, possessing the knowledge of Sanjivani (resurrection). He represents beauty, love, pleasure, and material comforts. Venus governs marriage (for men), art, music, vehicles, and luxury. He is the most benefic planet for material enjoyment. A strong Shukra bestows beauty, artistic talent, happy marriage, wealth, and refined taste. His placement shows where we find pleasure, beauty, and what we value most.",
+        "Karakatvas": "Wife (for men), marriage, love, beauty, art, music, vehicles, luxury, jewelry, diamonds, silk, reproductive organs, Friday, perfumes, flowers.",
+        "Digbala": "Fourth house (strongest in the house of comfort and vehicles).",
+        "Nature": "Rajasic, feminine, Brahmin (priestly caste), Kapha-Vata constitution, watery.",
+        "Relationships": "Friends: Mercury, Saturn. Enemies: Sun, Moon. Neutral: Mars, Jupiter.",
+        "Mantra": "Om Shukraya Namaha. Om Draam Dreem Draum Sah Shukraya Namaha (Beej mantra)."
+      },
+      "metadata": {
+        "vimshottari_years": 20,
+        "own_signs": ["Taurus", "Libra"],
+        "exaltation": "Pisces 27°",
+        "debilitation": "Virgo 27°",
+        "moolatrikona": "Libra 0-15°",
+        "element": "water",
+        "direction": "southeast",
+        "day": "Friday",
+        "gemstone": "Diamond",
+        "metal": "Silver",
+        "color": "White/Variegated"
+      }
+    },
+    {
+      "id": "graha-shani",
+      "name": "Shani",
+      "symbol": "♄",
+      "level": 1,
+      "category": "graha",
+      "subcategory": "outer",
+      "english_name": "Saturn",
+      "keywords": ["karma", "time", "discipline", "servant", "delay", "sorrow", "longevity", "judge"],
+      "sort_order": 6,
+      "sections": {
+        "Interpretation": "Shani is the great karmic teacher, son of Surya and Chhaya (shadow). He represents time, karma, discipline, and the consequences of our actions. Saturn governs longevity, servants, chronic conditions, and hard work. Though feared, Shani is actually the most just planet—he gives exactly what is deserved. A well-placed Shani bestows discipline, longevity, success through perseverance, and spiritual detachment. His placement shows where we must develop patience, accept limitations, and learn through difficulty.",
+        "Karakatvas": "Karma, time, longevity, servants, the elderly, chronic disease, delay, sorrow, discipline, iron, blue sapphire, Saturday, legs, teeth, oil, coal, agriculture.",
+        "Digbala": "Seventh house (strongest in the house of partnerships and the public).",
+        "Nature": "Tamasic, neutral gender (eunuch), Shudra (servant caste), Vata constitution, cold and dry.",
+        "Relationships": "Friends: Mercury, Venus. Enemies: Sun, Moon, Mars. Neutral: Jupiter.",
+        "Mantra": "Om Shanaischaraya Namaha. Om Praam Preem Praum Sah Shanaischaraya Namaha (Beej mantra)."
+      },
+      "metadata": {
+        "vimshottari_years": 19,
+        "own_signs": ["Capricorn", "Aquarius"],
+        "exaltation": "Libra 20°",
+        "debilitation": "Aries 20°",
+        "moolatrikona": "Aquarius 0-20°",
+        "element": "air",
+        "direction": "west",
+        "day": "Saturday",
+        "gemstone": "Blue Sapphire",
+        "metal": "Iron",
+        "color": "Blue/Black"
+      }
+    },
+    {
+      "id": "graha-rahu",
+      "name": "Rahu",
+      "symbol": "☊",
+      "level": 1,
+      "category": "graha",
+      "subcategory": "shadow",
+      "english_name": "North Node",
+      "keywords": ["obsession", "illusion", "foreigners", "technology", "unconventional", "amplification", "desire"],
+      "sort_order": 7,
+      "sections": {
+        "Interpretation": "Rahu is the north lunar node, the head of the demon who swallowed the nectar of immortality. He represents our worldly desires, obsessions, and the direction of karmic growth. Rahu amplifies whatever he touches, creating insatiable hunger. He governs foreigners, outcasts, technology, unconventional paths, and sudden gains. Rahu operates like an exalted Saturn with the ambition of Mars. His placement shows where we are driven by intense desire, often from unfulfilled past-life experiences.",
+        "Karakatvas": "Foreign lands, foreigners, outcasts, paternal grandfather, illusion, obsession, technology, sudden events, epidemics, poisons, snakes, hessonite garnet, southwest.",
+        "Digbala": "No traditional digbala, though some consider the 10th house strong.",
+        "Nature": "Tamasic, masculine, outcaste, Vata constitution. Functions like Saturn-Mars combination.",
+        "Relationships": "Friends: Mercury, Venus, Saturn. Enemies: Sun, Moon, Mars. Neutral: Jupiter.",
+        "Mantra": "Om Rahave Namaha. Om Bhraam Bhreem Bhraum Sah Rahave Namaha (Beej mantra)."
+      },
+      "metadata": {
+        "vimshottari_years": 18,
+        "own_signs": ["Aquarius (some traditions)"],
+        "exaltation": "Taurus/Gemini (varying traditions)",
+        "debilitation": "Scorpio/Sagittarius (varying traditions)",
+        "moolatrikona": "Virgo (some traditions)",
+        "element": "air",
+        "direction": "southwest",
+        "day": "Saturday",
+        "gemstone": "Hessonite (Gomed)",
+        "metal": "Lead",
+        "color": "Smoky/Ultraviolet"
+      }
+    },
+    {
+      "id": "graha-ketu",
+      "name": "Ketu",
+      "symbol": "☋",
+      "level": 1,
+      "category": "graha",
+      "subcategory": "shadow",
+      "english_name": "South Node",
+      "keywords": ["moksha", "liberation", "spirituality", "past-life", "detachment", "loss", "intuition"],
+      "sort_order": 8,
+      "sections": {
+        "Interpretation": "Ketu is the south lunar node, the headless body of the demon. He represents spiritual liberation, past-life skills, and the dissolution of worldly attachments. Ketu gives what we have already mastered—there is natural talent but also disinterest. He governs moksha (liberation), maternal grandfather, spiritual practices, and psychic abilities. Ketu operates like an exalted Mars with Saturn's detachment. His placement shows where we have past-life mastery and must learn to let go.",
+        "Karakatvas": "Moksha, liberation, maternal grandfather, spiritual practices, psychic ability, loss, separation, wounds, insects, cat's eye gemstone, flags, salvation.",
+        "Digbala": "No traditional digbala, though some consider the 12th house strong.",
+        "Nature": "Tamasic, neutral (eunuch), outcaste, Pitta constitution. Functions like Mars-Saturn combination.",
+        "Relationships": "Friends: Mercury, Venus, Saturn. Enemies: Sun, Moon, Mars. Neutral: Jupiter.",
+        "Mantra": "Om Ketave Namaha. Om Sraam Sreem Sraum Sah Ketave Namaha (Beej mantra)."
+      },
+      "metadata": {
+        "vimshottari_years": 7,
+        "own_signs": ["Scorpio (some traditions)"],
+        "exaltation": "Scorpio/Sagittarius (varying traditions)",
+        "debilitation": "Taurus/Gemini (varying traditions)",
+        "moolatrikona": "Pisces (some traditions)",
+        "element": "fire",
+        "direction": "northeast",
+        "day": "Tuesday",
+        "gemstone": "Cat's Eye (Lehsunia)",
+        "metal": "Mixed metals",
+        "color": "Gray/Multicolored"
+      }
+    },
+    {
+      "id": "rashi-mesha",
+      "name": "Mesha",
+      "symbol": "♈",
+      "level": 1,
+      "category": "rashi",
+      "subcategory": "fire",
+      "english_name": "Aries",
+      "keywords": ["initiative", "courage", "pioneering", "head", "east", "cardinal", "male"],
+      "sort_order": 10,
+      "sections": {
+        "Interpretation": "Mesha (Aries) is the first rashi, marking the beginning of the zodiac at the vernal equinox point in the sidereal zodiac. Ruled by Mangala (Mars), it embodies the primal creative impulse—the ram charging forward without hesitation. This is a movable (chara) sign representing initiation and new beginnings. Mesha natives are natural pioneers with abundant energy and courage. The sign governs the head and brain, giving sharp intellect but also potential for headaches and head injuries.",
+        "Physical Traits": "Medium height, muscular build, ruddy complexion, prominent forehead, quick movements, athletic bearing.",
+        "Temperament": "Active, courageous, independent, impulsive, pioneering, competitive, quick-tempered but forgiving.",
+        "Body Parts": "Head, brain, face, upper jaw, cerebral hemispheres.",
+        "Diseases": "Headaches, migraines, head injuries, fevers, inflammation, insomnia, mental stress.",
+        "Directions & Timing": "East direction. Dawn hours. Spring season (in sidereal calendar)."
+      },
+      "metadata": {
+        "ruler": "Mangala (Mars)",
+        "element": "Agni (Fire)",
+        "quality": "Chara (Cardinal/Movable)",
+        "gender": "Male",
+        "nature": "Cruel/Fierce",
+        "caste": "Kshatriya",
+        "tattva": "Fire",
+        "rising_direction": "Back first",
+        "nakshatras": ["Ashwini", "Bharani", "Krittika (1st pada)"]
+      }
+    },
+    {
+      "id": "rashi-vrishabha",
+      "name": "Vrishabha",
+      "symbol": "♉",
+      "level": 1,
+      "category": "rashi",
+      "subcategory": "earth",
+      "english_name": "Taurus",
+      "keywords": ["stability", "wealth", "beauty", "throat", "south", "fixed", "female"],
+      "sort_order": 11,
+      "sections": {
+        "Interpretation": "Vrishabha (Taurus) is the second rashi, ruled by Shukra (Venus). The bull represents stability, endurance, and the accumulation of material and sensory pleasures. This is a fixed (sthira) sign, giving persistence and determination. Vrishabha natives are practical, artistic, and devoted to comfort and security. The sign governs the throat, face, and neck, giving potential for beautiful voice and artistic expression, but also vulnerability in these areas.",
+        "Physical Traits": "Strong build, thick neck, beautiful face, large expressive eyes, pleasant voice, deliberate movements.",
+        "Temperament": "Patient, reliable, sensual, artistic, possessive, stubborn, pleasure-loving, practical.",
+        "Body Parts": "Throat, neck, face, lower jaw, cerebellum, vocal cords.",
+        "Diseases": "Throat problems, thyroid issues, neck pain, tonsillitis, obesity from overindulgence.",
+        "Directions & Timing": "South direction. Late morning. Early summer (Vrishabha masa)."
+      },
+      "metadata": {
+        "ruler": "Shukra (Venus)",
+        "element": "Prithvi (Earth)",
+        "quality": "Sthira (Fixed)",
+        "gender": "Female",
+        "nature": "Gentle/Mild",
+        "caste": "Vaishya",
+        "tattva": "Earth",
+        "rising_direction": "Back first",
+        "nakshatras": ["Krittika (2-4 pada)", "Rohini", "Mrigashira (1-2 pada)"]
+      }
+    },
+    {
+      "id": "rashi-mithuna",
+      "name": "Mithuna",
+      "symbol": "♊",
+      "level": 1,
+      "category": "rashi",
+      "subcategory": "air",
+      "english_name": "Gemini",
+      "keywords": ["communication", "duality", "intellect", "arms", "west", "dual", "male"],
+      "sort_order": 12,
+      "sections": {
+        "Interpretation": "Mithuna (Gemini) is the third rashi, ruled by Budha (Mercury). The twins represent duality, communication, and the restless seeking of knowledge. This is a dual (dvisvabhava) sign, giving adaptability and versatility but also inconsistency. Mithuna natives are intellectual, curious, and skilled communicators. The sign governs arms, hands, shoulders, and lungs, giving manual dexterity and respiratory sensitivity.",
+        "Physical Traits": "Tall and slender, long arms, quick movements, youthful appearance, intelligent eyes, animated gestures.",
+        "Temperament": "Intellectual, communicative, adaptable, curious, restless, dual-natured, witty, superficial at times.",
+        "Body Parts": "Arms, hands, shoulders, upper chest, lungs, nervous system, collar bones.",
+        "Diseases": "Respiratory issues, nervous disorders, shoulder/arm problems, anxiety, asthma.",
+        "Directions & Timing": "West direction. Evening hours. Summer (Mithuna masa)."
+      },
+      "metadata": {
+        "ruler": "Budha (Mercury)",
+        "element": "Vayu (Air)",
+        "quality": "Dvisvabhava (Dual/Mutable)",
+        "gender": "Male",
+        "nature": "Cruel/Fierce",
+        "caste": "Shudra",
+        "tattva": "Air",
+        "rising_direction": "Head first",
+        "nakshatras": ["Mrigashira (3-4 pada)", "Ardra", "Punarvasu (1-3 pada)"]
+      }
+    },
+    {
+      "id": "rashi-karka",
+      "name": "Karka",
+      "symbol": "♋",
+      "level": 1,
+      "category": "rashi",
+      "subcategory": "water",
+      "english_name": "Cancer",
+      "keywords": ["nurturing", "emotions", "home", "mother", "north", "cardinal", "female"],
+      "sort_order": 13,
+      "sections": {
+        "Interpretation": "Karka (Cancer) is the fourth rashi, ruled by Chandra (Moon). The crab represents emotional depth, nurturing, and the protective shell we create around our vulnerabilities. This is a movable (chara) sign, but the movement is sideways—indirect, intuitive, feeling-based. Karka natives are sensitive, protective, and deeply connected to family and homeland. The sign governs the chest, heart, stomach, and breasts, giving emotional sensitivity in these areas.",
+        "Physical Traits": "Medium height, round face, prominent chest, pale complexion, expressive eyes that reflect emotions.",
+        "Temperament": "Emotional, nurturing, protective, intuitive, moody, attached to home and family, retentive memory.",
+        "Body Parts": "Chest, breasts, stomach, upper digestive tract, heart (emotional), ribs.",
+        "Diseases": "Digestive issues, breast problems, water retention, emotional/mental disturbances, gastric problems.",
+        "Directions & Timing": "North direction. Night hours. Monsoon season (Karka masa)."
+      },
+      "metadata": {
+        "ruler": "Chandra (Moon)",
+        "element": "Jala (Water)",
+        "quality": "Chara (Cardinal/Movable)",
+        "gender": "Female",
+        "nature": "Gentle/Mild",
+        "caste": "Brahmin",
+        "tattva": "Water",
+        "rising_direction": "Back first",
+        "nakshatras": ["Punarvasu (4th pada)", "Pushya", "Ashlesha"]
+      }
+    },
+    {
+      "id": "rashi-simha",
+      "name": "Simha",
+      "symbol": "♌",
+      "level": 1,
+      "category": "rashi",
+      "subcategory": "fire",
+      "english_name": "Leo",
+      "keywords": ["royalty", "pride", "authority", "heart", "east", "fixed", "male"],
+      "sort_order": 14,
+      "sections": {
+        "Interpretation": "Simha (Leo) is the fifth rashi, ruled by Surya (Sun). The lion represents royalty, dignity, self-expression, and the radiant power of individual consciousness. This is a fixed (sthira) sign, giving stability and determination in creative and leadership pursuits. Simha natives are dignified, generous, and naturally commanding. The sign governs the heart, spine, and upper back, the seat of courage and vital force.",
+        "Physical Traits": "Strong build, broad shoulders, dignified bearing, prominent hair (lion's mane), commanding presence.",
+        "Temperament": "Dignified, generous, proud, authoritative, creative, dramatic, loyal, can be arrogant.",
+        "Body Parts": "Heart, spine, upper back, spleen, vital force, right eye.",
+        "Diseases": "Heart problems, spinal issues, back pain, blood pressure, ego-related stress.",
+        "Directions & Timing": "East direction. Noon hours. Late summer (Simha masa)."
+      },
+      "metadata": {
+        "ruler": "Surya (Sun)",
+        "element": "Agni (Fire)",
+        "quality": "Sthira (Fixed)",
+        "gender": "Male",
+        "nature": "Cruel/Fierce",
+        "caste": "Kshatriya",
+        "tattva": "Fire",
+        "rising_direction": "Head first",
+        "nakshatras": ["Magha", "Purva Phalguni", "Uttara Phalguni (1st pada)"]
+      }
+    },
+    {
+      "id": "rashi-kanya",
+      "name": "Kanya",
+      "symbol": "♍",
+      "level": 1,
+      "category": "rashi",
+      "subcategory": "earth",
+      "english_name": "Virgo",
+      "keywords": ["analysis", "service", "purity", "discrimination", "south", "dual", "female"],
+      "sort_order": 15,
+      "sections": {
+        "Interpretation": "Kanya (Virgo) is the sixth rashi, ruled by Budha (Mercury) who is also exalted here. The virgin represents purity, discrimination, analytical ability, and service. This is a dual (dvisvabhava) sign, giving mental flexibility and attention to detail. Kanya natives are analytical, health-conscious, and devoted to improvement and service. The sign governs the intestines, nervous system, and digestive processes—the body's discrimination of what to absorb and eliminate.",
+        "Physical Traits": "Medium height, slender build, intelligent features, modest demeanor, graceful movements, youthful appearance.",
+        "Temperament": "Analytical, discriminating, service-oriented, perfectionist, critical, modest, health-conscious, anxious.",
+        "Body Parts": "Intestines, lower digestive system, nervous system, solar plexus, hands (fine motor).",
+        "Diseases": "Digestive disorders, intestinal problems, nervous anxiety, hypochondria, skin issues from stress.",
+        "Directions & Timing": "South direction. Afternoon hours. Autumn (Kanya masa)."
+      },
+      "metadata": {
+        "ruler": "Budha (Mercury)",
+        "exalted_planet": "Budha (Mercury)",
+        "element": "Prithvi (Earth)",
+        "quality": "Dvisvabhava (Dual/Mutable)",
+        "gender": "Female",
+        "nature": "Gentle/Mild",
+        "caste": "Vaishya",
+        "tattva": "Earth",
+        "rising_direction": "Head first",
+        "nakshatras": ["Uttara Phalguni (2-4 pada)", "Hasta", "Chitra (1-2 pada)"]
+      }
+    },
+    {
+      "id": "rashi-tula",
+      "name": "Tula",
+      "symbol": "♎",
+      "level": 1,
+      "category": "rashi",
+      "subcategory": "air",
+      "english_name": "Libra",
+      "keywords": ["balance", "partnership", "harmony", "justice", "west", "cardinal", "male"],
+      "sort_order": 16,
+      "sections": {
+        "Interpretation": "Tula (Libra) is the seventh rashi, ruled by Shukra (Venus) with Shani (Saturn) exalted here. The scales represent balance, justice, partnership, and the weighing of opposites. This is a movable (chara) sign, initiating relationships and seeking equilibrium. Tula natives are diplomatic, artistic, and relationship-oriented. The sign governs the kidneys, lower back, and skin—organs of balance and filtration.",
+        "Physical Traits": "Well-proportioned, attractive features, graceful bearing, charming smile, diplomatic expression.",
+        "Temperament": "Diplomatic, balanced, partnership-oriented, aesthetic, indecisive, peace-loving, social.",
+        "Body Parts": "Kidneys, lower back, skin, lumbar region, adrenal glands, ovaries.",
+        "Diseases": "Kidney problems, lower back pain, skin disorders, adrenal fatigue, urinary issues.",
+        "Directions & Timing": "West direction. Evening hours. Autumn equinox (Tula masa)."
+      },
+      "metadata": {
+        "ruler": "Shukra (Venus)",
+        "exalted_planet": "Shani (Saturn)",
+        "element": "Vayu (Air)",
+        "quality": "Chara (Cardinal/Movable)",
+        "gender": "Male",
+        "nature": "Cruel/Fierce",
+        "caste": "Shudra",
+        "tattva": "Air",
+        "rising_direction": "Head first",
+        "nakshatras": ["Chitra (3-4 pada)", "Swati", "Vishakha (1-3 pada)"]
+      }
+    },
+    {
+      "id": "rashi-vrishchika",
+      "name": "Vrishchika",
+      "symbol": "♏",
+      "level": 1,
+      "category": "rashi",
+      "subcategory": "water",
+      "english_name": "Scorpio",
+      "keywords": ["transformation", "intensity", "secrets", "occult", "north", "fixed", "female"],
+      "sort_order": 17,
+      "sections": {
+        "Interpretation": "Vrishchika (Scorpio) is the eighth rashi, ruled by Mangala (Mars) with Chandra (Moon) debilitated here and Ketu often considered strong. The scorpion represents transformation, intensity, hidden depths, and the power to regenerate through destruction. This is a fixed (sthira) sign, giving tremendous willpower and determination. Vrishchika natives are intense, secretive, and drawn to life's mysteries. The sign governs the reproductive organs and excretory system—the realm of death, sex, and transformation.",
+        "Physical Traits": "Medium height, magnetic eyes, intense gaze, secretive expression, strong constitution, powerful presence.",
+        "Temperament": "Intense, secretive, transformative, jealous, determined, investigative, passionate, vindictive if wronged.",
+        "Body Parts": "Reproductive organs, excretory organs, pelvis, bladder, colon, prostate/uterus.",
+        "Diseases": "Reproductive issues, sexually transmitted diseases, piles, fistula, urinary infections, poisoning.",
+        "Directions & Timing": "North direction. Night hours. Late autumn (Vrishchika masa)."
+      },
+      "metadata": {
+        "ruler": "Mangala (Mars)",
+        "debilitated_planet": "Chandra (Moon)",
+        "element": "Jala (Water)",
+        "quality": "Sthira (Fixed)",
+        "gender": "Female",
+        "nature": "Gentle/Mild",
+        "caste": "Brahmin",
+        "tattva": "Water",
+        "rising_direction": "Head first",
+        "nakshatras": ["Vishakha (4th pada)", "Anuradha", "Jyeshtha"]
+      }
+    },
+    {
+      "id": "rashi-dhanu",
+      "name": "Dhanu",
+      "symbol": "♐",
+      "level": 1,
+      "category": "rashi",
+      "subcategory": "fire",
+      "english_name": "Sagittarius",
+      "keywords": ["dharma", "philosophy", "expansion", "teacher", "east", "dual", "male"],
+      "sort_order": 18,
+      "sections": {
+        "Interpretation": "Dhanu (Sagittarius) is the ninth rashi, ruled by Guru (Jupiter) in his moolatrikona. The archer (centaur) represents the quest for higher truth, philosophy, and the arrow of dharma aimed at distant goals. This is a dual (dvisvabhava) sign, combining human wisdom with animal instinct, spiritual aspiration with worldly action. Dhanu natives are philosophical, optimistic, and drawn to teaching and travel. The sign governs the thighs and liver—organs of movement toward goals and the seat of optimism.",
+        "Physical Traits": "Tall and well-built, athletic, expressive face, optimistic demeanor, prominent thighs.",
+        "Temperament": "Philosophical, optimistic, freedom-loving, adventurous, honest to a fault, preachy at times.",
+        "Body Parts": "Thighs, hips, liver, sciatic nerve, arterial system.",
+        "Diseases": "Liver problems, hip/thigh injuries, sciatica, obesity, accidents during travel.",
+        "Directions & Timing": "East direction. Dawn hours. Early winter (Dhanu masa)."
+      },
+      "metadata": {
+        "ruler": "Guru (Jupiter)",
+        "moolatrikona": true,
+        "element": "Agni (Fire)",
+        "quality": "Dvisvabhava (Dual/Mutable)",
+        "gender": "Male",
+        "nature": "Cruel/Fierce",
+        "caste": "Kshatriya",
+        "tattva": "Fire",
+        "rising_direction": "Back first",
+        "nakshatras": ["Mula", "Purva Ashadha", "Uttara Ashadha (1st pada)"]
+      }
+    },
+    {
+      "id": "rashi-makara",
+      "name": "Makara",
+      "symbol": "♑",
+      "level": 1,
+      "category": "rashi",
+      "subcategory": "earth",
+      "english_name": "Capricorn",
+      "keywords": ["ambition", "structure", "karma", "discipline", "south", "cardinal", "female"],
+      "sort_order": 19,
+      "sections": {
+        "Interpretation": "Makara (Capricorn) is the tenth rashi, ruled by Shani (Saturn) with Mangala (Mars) exalted here. The sea-goat (makara is a mythical creature) represents the climb from ocean depths to mountain peaks—worldly ambition grounded in karmic reality. This is a movable (chara) sign, initiating practical achievement. Makara natives are ambitious, disciplined, and focused on status and lasting accomplishment. The sign governs the knees and skeletal structure—the framework that supports all movement toward goals.",
+        "Physical Traits": "Medium to tall, thin build, prominent bone structure, serious expression, aged appearance when young.",
+        "Temperament": "Ambitious, disciplined, practical, pessimistic, status-conscious, hardworking, calculating.",
+        "Body Parts": "Knees, joints, bones, skeletal system, skin, teeth.",
+        "Diseases": "Knee problems, arthritis, bone diseases, skin disorders, depression, dental issues.",
+        "Directions & Timing": "South direction. Midnight hours. Winter solstice (Makara masa/Makara Sankranti)."
+      },
+      "metadata": {
+        "ruler": "Shani (Saturn)",
+        "exalted_planet": "Mangala (Mars)",
+        "element": "Prithvi (Earth)",
+        "quality": "Chara (Cardinal/Movable)",
+        "gender": "Female",
+        "nature": "Gentle/Mild",
+        "caste": "Vaishya",
+        "tattva": "Earth",
+        "rising_direction": "Back first",
+        "nakshatras": ["Uttara Ashadha (2-4 pada)", "Shravana", "Dhanishtha (1-2 pada)"]
+      }
+    },
+    {
+      "id": "rashi-kumbha",
+      "name": "Kumbha",
+      "symbol": "♒",
+      "level": 1,
+      "category": "rashi",
+      "subcategory": "air",
+      "english_name": "Aquarius",
+      "keywords": ["innovation", "humanity", "networks", "eccentricity", "west", "fixed", "male"],
+      "sort_order": 20,
+      "sections": {
+        "Interpretation": "Kumbha (Aquarius) is the eleventh rashi, ruled by Shani (Saturn) in his moolatrikona, with Rahu often considered strong here. The water-bearer represents the distribution of knowledge to humanity—pouring out innovations for collective benefit. This is a fixed (sthira) sign, giving persistence in humanitarian and intellectual pursuits. Kumbha natives are innovative, humanitarian, and often eccentric. The sign governs the ankles, calves, and circulatory system—the network that distributes life force.",
+        "Physical Traits": "Tall, lean build, unusual features, intelligent eyes, detached expression, distinctive appearance.",
+        "Temperament": "Innovative, humanitarian, eccentric, detached, intellectual, rebellious, network-oriented.",
+        "Body Parts": "Ankles, calves, shins, circulatory system, electrical impulses in body.",
+        "Diseases": "Ankle injuries, circulatory problems, varicose veins, nervous disorders, unusual illnesses.",
+        "Directions & Timing": "West direction. Late night hours. Late winter (Kumbha masa)."
+      },
+      "metadata": {
+        "ruler": "Shani (Saturn)",
+        "moolatrikona": true,
+        "element": "Vayu (Air)",
+        "quality": "Sthira (Fixed)",
+        "gender": "Male",
+        "nature": "Cruel/Fierce",
+        "caste": "Shudra",
+        "tattva": "Air",
+        "rising_direction": "Head first",
+        "nakshatras": ["Dhanishtha (3-4 pada)", "Shatabhisha", "Purva Bhadrapada (1-3 pada)"]
+      }
+    },
+    {
+      "id": "rashi-meena",
+      "name": "Meena",
+      "symbol": "♓",
+      "level": 1,
+      "category": "rashi",
+      "subcategory": "water",
+      "english_name": "Pisces",
+      "keywords": ["moksha", "dissolution", "spirituality", "imagination", "north", "dual", "female"],
+      "sort_order": 21,
+      "sections": {
+        "Interpretation": "Meena (Pisces) is the twelfth and final rashi, ruled by Guru (Jupiter) with Shukra (Venus) exalted here. The two fish swimming in opposite directions represent the soul's choice between material and spiritual worlds at the end of the zodiacal journey. This is a dual (dvisvabhava) sign, giving spiritual flexibility and otherworldly imagination. Meena natives are intuitive, compassionate, and drawn to transcendence. The sign governs the feet and lymphatic system—the foundation that connects us to earth and the subtle system of purification.",
+        "Physical Traits": "Medium height, soft features, dreamy eyes, gentle demeanor, graceful or clumsy feet.",
+        "Temperament": "Intuitive, compassionate, imaginative, escapist, spiritual, impressionable, artistic.",
+        "Body Parts": "Feet, toes, lymphatic system, pineal gland, immune system.",
+        "Diseases": "Foot problems, lymphatic disorders, addiction, immune deficiency, psychosomatic illness.",
+        "Directions & Timing": "North direction. Before dawn hours. Spring approach (Meena masa)."
+      },
+      "metadata": {
+        "ruler": "Guru (Jupiter)",
+        "exalted_planet": "Shukra (Venus)",
+        "element": "Jala (Water)",
+        "quality": "Dvisvabhava (Dual/Mutable)",
+        "gender": "Female",
+        "nature": "Gentle/Mild",
+        "caste": "Brahmin",
+        "tattva": "Water",
+        "rising_direction": "Head and back together",
+        "nakshatras": ["Purva Bhadrapada (4th pada)", "Uttara Bhadrapada", "Revati"]
+      }
+    },
+    {
+      "id": "bhava-1",
+      "name": "Lagna Bhava",
+      "symbol": "I",
+      "level": 1,
+      "category": "bhava",
+      "subcategory": "kendra",
+      "english_name": "First House / Ascendant",
+      "keywords": ["self", "body", "personality", "birth", "beginning", "head", "tanu"],
+      "sort_order": 30,
+      "sections": {
+        "Interpretation": "The Lagna (Ascendant) is the most important point in the horoscope—the sign rising on the eastern horizon at birth. It represents the self, physical body, personality, and how we engage with the world. The Lagna is the seed of the entire chart; all other house meanings flow from it. A strong Lagna with benefic aspects gives health, vitality, and success in self-initiated endeavors. The Lagna lord's placement colors the entire life direction.",
+        "Karakatvas": "Self, body, constitution, health, vitality, personality, appearance, character, fame, longevity, beginning of life, head.",
+        "Classification": "Kendra (angular), Trikona (trine), Upachaya (growing house). The Lagna is uniquely all three.",
+        "Natural Significator": "Surya (Sun) for vitality; the Lagna lord for overall life direction.",
+        "Auspicious Placements": "Benefics (Jupiter, Venus, Mercury, Moon) in the 1st bring health, beauty, and fortune. The Lagna lord strong and well-placed ensures success."
+      },
+      "metadata": {
+        "sanskrit": "Tanu Bhava",
+        "house_group": "Kendra (Angular)",
+        "element": "Fire (natural Aries correspondence)",
+        "karaka": "Surya",
+        "direction": "East",
+        "body_part": "Head, brain, appearance"
+      }
+    },
+    {
+      "id": "bhava-2",
+      "name": "Dhana Bhava",
+      "symbol": "II",
+      "level": 1,
+      "category": "bhava",
+      "subcategory": "panapara",
+      "english_name": "Second House",
+      "keywords": ["wealth", "speech", "family", "food", "face", "values", "kutumba"],
+      "sort_order": 31,
+      "sections": {
+        "Interpretation": "The Dhana Bhava governs accumulated wealth, family lineage, speech, and what we value. It represents the resources we inherit and accumulate, both material and cultural. As a maraka (death-inflicting) house, the 2nd also relates to the manner of death. A strong 2nd house gives wealth, eloquent speech, good family relations, and the ability to accumulate resources. The 2nd lord's placement shows the primary source of wealth.",
+        "Karakatvas": "Wealth, accumulated resources, family (kutumba), speech, face, right eye, food intake, early childhood, values, precious stones, death (maraka).",
+        "Classification": "Panapara (succedent), Maraka (death-inflicting). Neutral house.",
+        "Natural Significator": "Guru (Jupiter) for wealth; Shukra (Venus) for speech and face.",
+        "Auspicious Placements": "Jupiter or Venus here brings wealth and sweet speech. The 2nd lord in the 11th or with the 11th lord creates dhana yoga."
+      },
+      "metadata": {
+        "sanskrit": "Dhana Bhava / Kutumba Bhava",
+        "house_group": "Panapara (Succedent)",
+        "element": "Earth (natural Taurus correspondence)",
+        "karaka": "Guru",
+        "direction": "North-northeast",
+        "body_part": "Face, right eye, mouth, speech organs"
+      }
+    },
+    {
+      "id": "bhava-3",
+      "name": "Sahaja Bhava",
+      "symbol": "III",
+      "level": 1,
+      "category": "bhava",
+      "subcategory": "upachaya",
+      "english_name": "Third House",
+      "keywords": ["siblings", "courage", "communication", "skills", "short travel", "arms", "parakrama"],
+      "sort_order": 32,
+      "sections": {
+        "Interpretation": "The Sahaja Bhava governs siblings (especially younger), courage, communication, manual skills, and short journeys. It represents our immediate environment, neighbors, and the courage to act on desires. As an upachaya (growing) house, 3rd house matters improve with age and effort. A strong 3rd gives courage, good relations with siblings, communication skills, and success in writing or media.",
+        "Karakatvas": "Younger siblings, courage (parakrama), valor, communication, writing, short travels, neighbors, arms, hands, ears, throat, artistic skills, hobbies.",
+        "Classification": "Upachaya (growing house), Apoklima (cadent). Mildly malefic.",
+        "Natural Significator": "Mangala (Mars) for courage; Budha (Mercury) for communication.",
+        "Auspicious Placements": "Mars here gives great courage. Malefics generally do well in upachaya houses. The 3rd lord strong gives many siblings."
+      },
+      "metadata": {
+        "sanskrit": "Sahaja Bhava / Parakrama Bhava",
+        "house_group": "Upachaya (Growing) / Apoklima (Cadent)",
+        "element": "Air (natural Gemini correspondence)",
+        "karaka": "Mangala",
+        "direction": "East-northeast",
+        "body_part": "Arms, hands, shoulders, ears, throat"
+      }
+    },
+    {
+      "id": "bhava-4",
+      "name": "Sukha Bhava",
+      "symbol": "IV",
+      "level": 1,
+      "category": "bhava",
+      "subcategory": "kendra",
+      "english_name": "Fourth House",
+      "keywords": ["mother", "home", "happiness", "property", "education", "heart", "vehicles"],
+      "sort_order": 33,
+      "sections": {
+        "Interpretation": "The Sukha Bhava governs the mother, home, landed property, vehicles, formal education, and inner happiness. It represents our emotional foundation, sense of security, and connection to homeland. As a kendra (angular) house, the 4th is powerful for establishing life stability. A strong 4th gives happiness, property, good education, loving mother, and emotional contentment.",
+        "Karakatvas": "Mother, home, landed property, vehicles, happiness (sukha), formal education, chest/heart, domestic peace, throne/seat, underground, agriculture.",
+        "Classification": "Kendra (angular), Moksha trikona. Highly benefic.",
+        "Natural Significator": "Chandra (Moon) for mother and emotions; Shukra (Venus) for vehicles and comforts.",
+        "Auspicious Placements": "Moon or Venus here gives domestic happiness. Jupiter gives wisdom and property. The 4th lord in a kendra or trikona ensures stable home life."
+      },
+      "metadata": {
+        "sanskrit": "Sukha Bhava / Matru Bhava / Bandhu Bhava",
+        "house_group": "Kendra (Angular)",
+        "element": "Water (natural Cancer correspondence)",
+        "karaka": "Chandra, Shukra",
+        "direction": "North",
+        "body_part": "Chest, heart, lungs, breasts"
+      }
+    },
+    {
+      "id": "bhava-5",
+      "name": "Putra Bhava",
+      "symbol": "V",
+      "level": 1,
+      "category": "bhava",
+      "subcategory": "trikona",
+      "english_name": "Fifth House",
+      "keywords": ["children", "intelligence", "creativity", "romance", "purva punya", "mantra", "speculation"],
+      "sort_order": 34,
+      "sections": {
+        "Interpretation": "The Putra Bhava governs children, intelligence, creativity, romance, past-life merit (purva punya), and spiritual practices like mantra. It represents the creative extension of self through progeny, art, or knowledge. As a trikona (trine), the 5th is highly auspicious—the house of good fortune from past karmas. A strong 5th gives children, sharp intelligence, creative talent, romantic happiness, and spiritual inclination.",
+        "Karakatvas": "Children (especially first child), intelligence (buddhi), creativity, romance, speculation, mantras, past-life merit, stomach, education, disciples, ministry.",
+        "Classification": "Trikona (trine), Dharma house. Highly benefic—the house of purva punya.",
+        "Natural Significator": "Guru (Jupiter) for children, wisdom, and fortune.",
+        "Auspicious Placements": "Jupiter here is exceptionally blessed. The 5th lord in the 9th or 9th lord in the 5th creates powerful raja yoga."
+      },
+      "metadata": {
+        "sanskrit": "Putra Bhava / Buddhi Bhava",
+        "house_group": "Trikona (Trine)",
+        "element": "Fire (natural Leo correspondence)",
+        "karaka": "Guru",
+        "direction": "East-southeast",
+        "body_part": "Stomach, upper abdomen, heart (emotional)"
+      }
+    },
+    {
+      "id": "bhava-6",
+      "name": "Ripu Bhava",
+      "symbol": "VI",
+      "level": 1,
+      "category": "bhava",
+      "subcategory": "dusthana",
+      "english_name": "Sixth House",
+      "keywords": ["enemies", "disease", "service", "debts", "obstacles", "maternal uncle", "competition"],
+      "sort_order": 35,
+      "sections": {
+        "Interpretation": "The Ripu Bhava governs enemies, diseases, debts, service, and obstacles. It represents the struggles and conflicts we must overcome. As a dusthana (difficult house) yet also upachaya (growing), 6th house matters can be conquered with effort. A strong 6th gives victory over enemies and disease, success in competition, and ability to serve. Malefics here actually strengthen the chart by destroying obstacles.",
+        "Karakatvas": "Enemies, disease, debts, service, servants, maternal uncle, pets, daily work, obstacles, wounds, litigation, competitors, thieves.",
+        "Classification": "Dusthana (difficult), Upachaya (growing), Artha house. Mildly malefic but improvable.",
+        "Natural Significator": "Mangala (Mars) for enemies; Shani (Saturn) for service and chronic disease.",
+        "Auspicious Placements": "Malefics (Mars, Saturn, Rahu, Ketu) do well here, destroying enemies. The 6th lord in the 6th or 12th neutralizes enemies."
+      },
+      "metadata": {
+        "sanskrit": "Ripu Bhava / Shatru Bhava / Ari Bhava",
+        "house_group": "Dusthana (Difficult) / Upachaya (Growing)",
+        "element": "Earth (natural Virgo correspondence)",
+        "karaka": "Mangala, Shani",
+        "direction": "South-southeast",
+        "body_part": "Intestines, navel region, digestive system"
+      }
+    },
+    {
+      "id": "bhava-7",
+      "name": "Kalatra Bhava",
+      "symbol": "VII",
+      "level": 1,
+      "category": "bhava",
+      "subcategory": "kendra",
+      "english_name": "Seventh House",
+      "keywords": ["spouse", "partnership", "marriage", "business", "public", "desire", "foreign travel"],
+      "sort_order": 36,
+      "sections": {
+        "Interpretation": "The Kalatra Bhava governs spouse, marriage, partnerships, business associates, and the public. It represents the 'other'—how we relate to those who complement or oppose us. As a kendra (angular) and maraka (death-inflicting) house, the 7th is powerful for both relationship and longevity matters. A strong 7th gives happy marriage, successful partnerships, and good public reputation.",
+        "Karakatvas": "Spouse (kalatra), marriage, partnerships, business, trade, foreign travel, public dealings, sexual relations, the 'other', open enemies, death (maraka).",
+        "Classification": "Kendra (angular), Maraka (death-inflicting), Kama house. Powerful but requires careful assessment.",
+        "Natural Significator": "Shukra (Venus) for marriage and spouse.",
+        "Auspicious Placements": "Venus or Jupiter here blesses marriage. The 7th lord well-placed and strong ensures marital happiness. Malefics here can delay marriage or cause marital strife."
+      },
+      "metadata": {
+        "sanskrit": "Kalatra Bhava / Jaya Bhava",
+        "house_group": "Kendra (Angular)",
+        "element": "Air (natural Libra correspondence)",
+        "karaka": "Shukra",
+        "direction": "West",
+        "body_part": "Lower abdomen, kidneys, reproductive area"
+      }
+    },
+    {
+      "id": "bhava-8",
+      "name": "Randhra Bhava",
+      "symbol": "VIII",
+      "level": 1,
+      "category": "bhava",
+      "subcategory": "dusthana",
+      "english_name": "Eighth House",
+      "keywords": ["death", "transformation", "occult", "longevity", "inheritance", "secrets", "kundalini"],
+      "sort_order": 37,
+      "sections": {
+        "Interpretation": "The Randhra Bhava governs death, transformation, longevity, occult knowledge, hidden matters, and unearned wealth (inheritance, insurance). It represents the mysteries of life—what is hidden, transformative, or taboo. As the most difficult dusthana, the 8th brings sudden changes and deep challenges. Yet it also offers profound transformation and occult knowledge. A strong 8th gives longevity, inheritance, research ability, and occult powers.",
+        "Karakatvas": "Death, longevity, transformation, occult, tantra, inheritance, insurance, chronic disease, reproductive organs, research, secrets, scandals, other's money.",
+        "Classification": "Dusthana (difficult), Moksha house. The most challenging house but also the most transformative.",
+        "Natural Significator": "Shani (Saturn) for longevity and chronic conditions.",
+        "Auspicious Placements": "The 8th lord in the 8th (harsha yoga) neutralizes difficulties. Saturn here can give long life. Benefics here may suffer, but transform spiritually."
+      },
+      "metadata": {
+        "sanskrit": "Randhra Bhava / Mrityu Bhava / Ayur Bhava",
+        "house_group": "Dusthana (Difficult)",
+        "element": "Water (natural Scorpio correspondence)",
+        "karaka": "Shani",
+        "direction": "North-northwest",
+        "body_part": "Reproductive organs, anus, chronic disease areas"
+      }
+    },
+    {
+      "id": "bhava-9",
+      "name": "Dharma Bhava",
+      "symbol": "IX",
+      "level": 1,
+      "category": "bhava",
+      "subcategory": "trikona",
+      "english_name": "Ninth House",
+      "keywords": ["dharma", "guru", "father", "fortune", "pilgrimage", "higher education", "past life"],
+      "sort_order": 38,
+      "sections": {
+        "Interpretation": "The Dharma Bhava governs father, guru, dharma (righteous path), fortune, higher education, long journeys, and past-life influences. It represents our connection to divine grace and the principles we live by. As the most benefic trikona, the 9th is the house of bhagya (fortune)—where past-life merit manifests. A strong 9th gives fortunate circumstances, wise teachers, good father, spiritual inclination, and higher learning.",
+        "Karakatvas": "Father, guru, dharma, fortune (bhagya), religion, philosophy, higher education, long journeys, pilgrimage, grandchildren, past-life merit, temples, law.",
+        "Classification": "Trikona (trine), Dharma house. The most auspicious house—bhagya sthana.",
+        "Natural Significator": "Guru (Jupiter) for wisdom; Surya (Sun) for father.",
+        "Auspicious Placements": "Jupiter or Sun here is extremely fortunate. The 9th lord in a kendra or trikona ensures divine grace. Raja yogas involving the 9th are most powerful."
+      },
+      "metadata": {
+        "sanskrit": "Dharma Bhava / Bhagya Bhava / Pitru Bhava",
+        "house_group": "Trikona (Trine)",
+        "element": "Fire (natural Sagittarius correspondence)",
+        "karaka": "Guru, Surya",
+        "direction": "East",
+        "body_part": "Thighs, hips"
+      }
+    },
+    {
+      "id": "bhava-10",
+      "name": "Karma Bhava",
+      "symbol": "X",
+      "level": 1,
+      "category": "bhava",
+      "subcategory": "kendra",
+      "english_name": "Tenth House",
+      "keywords": ["career", "karma", "status", "authority", "father", "government", "public action"],
+      "sort_order": 39,
+      "sections": {
+        "Interpretation": "The Karma Bhava governs career, public action, status, authority, and one's contribution to society. It represents our visible achievements and how we're known in the world. As the highest kendra (angular house), the 10th shows our pinnacle achievements and worldly karma. A strong 10th gives successful career, high status, government favor, and recognition for one's work.",
+        "Karakatvas": "Career, profession, karma (action), status, authority, government, father (some traditions), public reputation, knees, commerce, livelihood.",
+        "Classification": "Kendra (angular), Upachaya (growing), Artha house. The most visible house of worldly achievement.",
+        "Natural Significator": "Surya (Sun) for authority; Shani (Saturn) for career; Budha (Mercury) for commerce.",
+        "Auspicious Placements": "Sun or Saturn well-placed here gives career success. The 10th lord in a kendra or trikona ensures professional achievement. Digbala planets excel here."
+      },
+      "metadata": {
+        "sanskrit": "Karma Bhava / Rajya Bhava",
+        "house_group": "Kendra (Angular) / Upachaya (Growing)",
+        "element": "Earth (natural Capricorn correspondence)",
+        "karaka": "Surya, Shani, Budha",
+        "direction": "South",
+        "body_part": "Knees, joints"
+      }
+    },
+    {
+      "id": "bhava-11",
+      "name": "Labha Bhava",
+      "symbol": "XI",
+      "level": 1,
+      "category": "bhava",
+      "subcategory": "upachaya",
+      "english_name": "Eleventh House",
+      "keywords": ["gains", "income", "friends", "elder siblings", "desires", "ankles", "networks"],
+      "sort_order": 40,
+      "sections": {
+        "Interpretation": "The Labha Bhava governs gains, income, friends, elder siblings, fulfilled desires, and social networks. It represents the fruits of our efforts—where we receive rewards. As the strongest upachaya (growing house), 11th house matters continuously expand through life. A strong 11th gives abundant income, good friends, supportive elder siblings, and fulfillment of desires.",
+        "Karakatvas": "Gains (labha), income, profits, friends, elder siblings, social networks, desires fulfilled, ankles, calves, left ear, recovery from illness.",
+        "Classification": "Upachaya (growing), Kama house. Highly benefic—the house of fulfillment.",
+        "Natural Significator": "Guru (Jupiter) for gains and expansion.",
+        "Auspicious Placements": "Any planet does well here; even malefics give gains in their areas. The 11th lord connected to the 2nd creates wealth. Multiple planets here indicate diverse income sources."
+      },
+      "metadata": {
+        "sanskrit": "Labha Bhava / Aya Bhava",
+        "house_group": "Upachaya (Growing)",
+        "element": "Air (natural Aquarius correspondence)",
+        "karaka": "Guru",
+        "direction": "West-northwest",
+        "body_part": "Ankles, calves, left ear"
+      }
+    },
+    {
+      "id": "bhava-12",
+      "name": "Vyaya Bhava",
+      "symbol": "XII",
+      "level": 1,
+      "category": "bhava",
+      "subcategory": "dusthana",
+      "english_name": "Twelfth House",
+      "keywords": ["moksha", "loss", "expenditure", "foreign lands", "isolation", "liberation", "sleep"],
+      "sort_order": 41,
+      "sections": {
+        "Interpretation": "The Vyaya Bhava governs expenditure, loss, foreign residence, isolation, sleep, spiritual liberation (moksha), and the end of the cycle. It represents what we release, whether through loss, charity, or spiritual surrender. As a dusthana yet also moksha house, the 12th brings challenges that can lead to liberation. A well-directed 12th gives spiritual growth, peaceful sleep, foreign success, and eventual moksha.",
+        "Karakatvas": "Expenditure (vyaya), loss, foreign lands, isolation, hospitals, prisons, ashrams, sleep, bedroom pleasures, left eye, feet, moksha, donation, final liberation.",
+        "Classification": "Dusthana (difficult), Moksha house. Challenging materially but significant spiritually.",
+        "Natural Significator": "Shani (Saturn) for loss; Ketu for moksha.",
+        "Auspicious Placements": "Ketu here gives spiritual liberation. The 12th lord in the 12th (vimala yoga) converts losses to spiritual gains. Benefics here may indicate foreign residence or spiritual retreat."
+      },
+      "metadata": {
+        "sanskrit": "Vyaya Bhava / Moksha Bhava",
+        "house_group": "Dusthana (Difficult) / Moksha house",
+        "element": "Water (natural Pisces correspondence)",
+        "karaka": "Shani, Ketu",
+        "direction": "North-northeast",
+        "body_part": "Feet, left eye"
+      }
+    },
+    {
+      "id": "nakshatra-ashwini",
+      "name": "Ashwini",
+      "symbol": "🐴",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "deva",
+      "english_name": "Horse's Head",
+      "keywords": ["healing", "speed", "beginnings", "twins", "physicians", "horses", "dawn"],
+      "sort_order": 50,
+      "sections": {
+        "Interpretation": "Ashwini is the first nakshatra, spanning 0°-13°20' Aries. Ruled by Ketu and presided over by the Ashwini Kumaras (divine twin horsemen and physicians to the gods), this nakshatra embodies swift healing, new beginnings, and miraculous intervention. Ashwini natives are quick, helpful, and drawn to healing arts. They initiate things rapidly but may lack staying power. The energy is fresh, youthful, and eager to help others.",
+        "Deity": "Ashwini Kumaras—the divine twin physicians who restored youth to the aged sage Chyavana and serve as healers to the gods.",
+        "Shakti": "Shidhra vyapani shakti—the power to quickly reach things or achieve goals.",
+        "Shadow": "Impatience, starting things without finishing, aggressive helpfulness, identity confusion.",
+        "Padas": "1st pada (Aries navamsa): Pioneering courage. 2nd pada (Taurus): Grounded healing. 3rd pada (Gemini): Communicative medicine. 4th pada (Cancer): Nurturing care."
+      },
+      "metadata": {
+        "degree_span": "0°00' - 13°20' Aries",
+        "ruler": "Ketu",
+        "deity": "Ashwini Kumaras",
+        "gana": "Deva (divine)",
+        "guna": "Rajas-Rajas-Rajas",
+        "animal": "Male Horse",
+        "bird": "Wild Eagle",
+        "tree": "Poison Nut Tree (Strychnos)",
+        "sounds": "Chu, Che, Cho, La"
+      }
+    },
+    {
+      "id": "nakshatra-bharani",
+      "name": "Bharani",
+      "symbol": "🔻",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "manushya",
+      "english_name": "The Bearer",
+      "keywords": ["birth", "death", "transformation", "restriction", "sexuality", "creativity", "womb"],
+      "sort_order": 51,
+      "sections": {
+        "Interpretation": "Bharani spans 13°20'-26°40' Aries. Ruled by Venus and presided over by Yama (god of death and dharma), this nakshatra represents the entire cycle of birth, life, death, and rebirth. Bharani holds tremendous creative and destructive power—the womb that contains and transforms. Natives are intensely creative, carry heavy responsibilities, and often experience extreme life circumstances. The energy is fertile, patient under burden, and deeply transformative.",
+        "Deity": "Yama—the god of death, dharma, and the lord of the ancestors. He maintains cosmic order through righteous judgment.",
+        "Shakti": "Apabharani shakti—the power to carry things away (to the next world).",
+        "Shadow": "Extremism, moral rigidity, carrying too much burden, sexual excess or repression.",
+        "Padas": "1st pada (Leo): Creative self-expression. 2nd pada (Virgo): Analytical transformation. 3rd pada (Libra): Balanced relationships. 4th pada (Scorpio): Intense depth."
+      },
+      "metadata": {
+        "degree_span": "13°20' - 26°40' Aries",
+        "ruler": "Shukra (Venus)",
+        "deity": "Yama",
+        "gana": "Manushya (human)",
+        "guna": "Rajas-Rajas-Tamas",
+        "animal": "Male Elephant",
+        "bird": "Crow",
+        "tree": "Amla (Indian Gooseberry)",
+        "sounds": "Li, Lu, Le, Lo"
+      }
+    },
+    {
+      "id": "nakshatra-krittika",
+      "name": "Krittika",
+      "symbol": "🔥",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "rakshasa",
+      "english_name": "The Cutter",
+      "keywords": ["fire", "purification", "cutting", "nourishment", "criticism", "foster-mother", "fame"],
+      "sort_order": 52,
+      "sections": {
+        "Interpretation": "Krittika spans 26°40' Aries - 10° Taurus. Ruled by the Sun and presided over by Agni (fire god), this nakshatra represents the purifying flame that cuts away impurities. Associated with the six Krittikas (Pleiades) who fostered Kartikeya, it combines nurturing with fierce discrimination. Natives are sharp, critical, and capable of both nurturing and destroying. The energy is fiery, purifying, and uncompromisingly truthful.",
+        "Deity": "Agni—the fire god who carries offerings to the gods and purifies everything he touches.",
+        "Shakti": "Dahana shakti—the power to burn or cut away negativity.",
+        "Shadow": "Harsh criticism, burning bridges, destructive anger, inability to nurture without controlling.",
+        "Padas": "1st pada (Sagittarius): Philosophical fire. 2nd pada (Capricorn): Disciplined purification. 3rd pada (Aquarius): Humanitarian cleansing. 4th pada (Pisces): Spiritual burning."
+      },
+      "metadata": {
+        "degree_span": "26°40' Aries - 10°00' Taurus",
+        "ruler": "Surya (Sun)",
+        "deity": "Agni",
+        "gana": "Rakshasa (demon)",
+        "guna": "Rajas-Tamas-Sattva",
+        "animal": "Female Sheep",
+        "bird": "Peacock",
+        "tree": "Fig Tree (Cluster Fig)",
+        "sounds": "A, I, U, E"
+      }
+    },
+    {
+      "id": "nakshatra-rohini",
+      "name": "Rohini",
+      "symbol": "🐂",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "manushya",
+      "english_name": "The Red One",
+      "keywords": ["growth", "beauty", "fertility", "desire", "creativity", "attachment", "abundance"],
+      "sort_order": 53,
+      "sections": {
+        "Interpretation": "Rohini spans 10°-23°20' Taurus. Ruled by the Moon and presided over by Brahma (creator god), this nakshatra is considered the most fertile and creative. The Moon is exalted here, making it ideal for growth and manifestation. Rohini natives are beautiful, creative, and magnetically attractive. They have refined tastes and strong desires. The energy is lush, abundant, and deeply sensual.",
+        "Deity": "Brahma—the creator god, or Prajapati, the progenitor of all beings.",
+        "Shakti": "Rohana shakti—the power of growth and creation.",
+        "Shadow": "Excessive attachment, jealousy, possessiveness, materialism, inability to let go.",
+        "Padas": "1st pada (Aries): Passionate creation. 2nd pada (Taurus): Stable abundance. 3rd pada (Gemini): Versatile creativity. 4th pada (Cancer): Nurturing growth."
+      },
+      "metadata": {
+        "degree_span": "10°00' - 23°20' Taurus",
+        "ruler": "Chandra (Moon)",
+        "deity": "Brahma/Prajapati",
+        "gana": "Manushya (human)",
+        "guna": "Rajas-Tamas-Rajas",
+        "animal": "Male Serpent",
+        "bird": "Owl",
+        "tree": "Jamun (Java Plum)",
+        "sounds": "O, Va, Vi, Vu"
+      }
+    },
+    {
+      "id": "nakshatra-mrigashira",
+      "name": "Mrigashira",
+      "symbol": "🦌",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "deva",
+      "english_name": "Deer's Head",
+      "keywords": ["searching", "curiosity", "gentleness", "wandering", "research", "sensitivity", "quest"],
+      "sort_order": 54,
+      "sections": {
+        "Interpretation": "Mrigashira spans 23°20' Taurus - 6°40' Gemini. Ruled by Mars and presided over by Soma (the Moon god), this nakshatra embodies the eternal search for fulfillment. Like a deer always alert and seeking, Mrigashira natives are curious, gentle, and perpetually questing. They make excellent researchers but may never feel fully satisfied. The energy is alert, seeking, and perpetually curious.",
+        "Deity": "Soma—the Moon god associated with the divine nectar of immortality.",
+        "Shakti": "Prinana shakti—the power to give fulfillment.",
+        "Shadow": "Restlessness, inability to commit, perpetual dissatisfaction, fickleness, suspicious nature.",
+        "Padas": "1st pada (Leo): Creative searching. 2nd pada (Virgo): Analytical quest. 3rd pada (Libra): Relational seeking. 4th pada (Scorpio): Intense investigation."
+      },
+      "metadata": {
+        "degree_span": "23°20' Taurus - 6°40' Gemini",
+        "ruler": "Mangala (Mars)",
+        "deity": "Soma",
+        "gana": "Deva (divine)",
+        "guna": "Rajas-Tamas-Tamas",
+        "animal": "Female Serpent",
+        "bird": "Hen",
+        "tree": "Khadira (Acacia Catechu)",
+        "sounds": "Ve, Vo, Ka, Ki"
+      }
+    },
+    {
+      "id": "nakshatra-ardra",
+      "name": "Ardra",
+      "symbol": "💧",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "manushya",
+      "english_name": "The Moist One",
+      "keywords": ["storm", "destruction", "renewal", "tears", "effort", "intensity", "transformation"],
+      "sort_order": 55,
+      "sections": {
+        "Interpretation": "Ardra spans 6°40'-20° Gemini. Ruled by Rahu and presided over by Rudra (the storm form of Shiva), this nakshatra represents the necessary destruction that precedes renewal. Associated with the star Betelgeuse, Ardra brings intense experiences that transform through crisis. Natives are intelligent, hardworking, and often face significant struggles. The energy is stormy, transformative, and ultimately renewing.",
+        "Deity": "Rudra—the fierce howling form of Shiva who destroys to transform.",
+        "Shakti": "Yatna shakti—the power of effort and achievement through struggle.",
+        "Shadow": "Destructiveness, cruelty, emotional storms, causing pain to others, arrogance.",
+        "Padas": "1st pada (Sagittarius): Philosophical destruction. 2nd pada (Capricorn): Disciplined effort. 3rd pada (Aquarius): Humanitarian struggle. 4th pada (Pisces): Emotional storms."
+      },
+      "metadata": {
+        "degree_span": "6°40' - 20°00' Gemini",
+        "ruler": "Rahu",
+        "deity": "Rudra",
+        "gana": "Manushya (human)",
+        "guna": "Tamas-Sattva-Sattva",
+        "animal": "Female Dog",
+        "bird": "Black Andril",
+        "tree": "Long Pepper",
+        "sounds": "Ku, Gha, Ng, Chha"
+      }
+    },
+    {
+      "id": "nakshatra-punarvasu",
+      "name": "Punarvasu",
+      "symbol": "🏠",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "deva",
+      "english_name": "Return of the Light",
+      "keywords": ["renewal", "return", "home", "restoration", "repetition", "motherhood", "abundance"],
+      "sort_order": 56,
+      "sections": {
+        "Interpretation": "Punarvasu spans 20° Gemini - 3°20' Cancer. Ruled by Jupiter and presided over by Aditi (mother of the gods), this nakshatra represents restoration and the return home. After the storms of Ardra comes renewal. Punarvasu natives are optimistic, philosophical, and have the ability to bounce back from adversity. They often return to places, ideas, or relationships. The energy is nurturing, optimistic, and endlessly renewable.",
+        "Deity": "Aditi—the cosmic mother, boundless and infinite, mother of the twelve Adityas (solar deities).",
+        "Shakti": "Vasutva prapana shakti—the power to gain wealth or substance.",
+        "Shadow": "Simplistic thinking, over-optimism, lack of depth, repeating mistakes, spiritual bypassing.",
+        "Padas": "1st pada (Aries): Renewed initiative. 2nd pada (Taurus): Material restoration. 3rd pada (Gemini): Intellectual return. 4th pada (Cancer): Emotional homecoming."
+      },
+      "metadata": {
+        "degree_span": "20°00' Gemini - 3°20' Cancer",
+        "ruler": "Guru (Jupiter)",
+        "deity": "Aditi",
+        "gana": "Deva (divine)",
+        "guna": "Tamas-Sattva-Rajas",
+        "animal": "Female Cat",
+        "bird": "Swan",
+        "tree": "Bamboo",
+        "sounds": "Ke, Ko, Ha, Hi"
+      }
+    },
+    {
+      "id": "nakshatra-pushya",
+      "name": "Pushya",
+      "symbol": "🌸",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "deva",
+      "english_name": "The Nourisher",
+      "keywords": ["nourishment", "protection", "prosperity", "ritual", "preservation", "dharma", "care"],
+      "sort_order": 57,
+      "sections": {
+        "Interpretation": "Pushya spans 3°20'-16°40' Cancer. Ruled by Saturn and presided over by Brihaspati (Jupiter as divine teacher), this is considered the most auspicious nakshatra. The combination of Saturn's discipline with Jupiter's wisdom creates ideal conditions for dharmic achievement. Pushya natives are nurturing, principled, and devoted to preservation of what is good. The energy is protective, nourishing, and deeply dharmic.",
+        "Deity": "Brihaspati—Jupiter as the guru of the gods, teacher of dharma and ritual.",
+        "Shakti": "Brahmavarchasa shakti—the power of spiritual energy and priestly wisdom.",
+        "Shadow": "Orthodoxy, over-protectiveness, rigid traditionalism, selfishness disguised as care.",
+        "Padas": "1st pada (Leo): Regal nurturing. 2nd pada (Virgo): Practical care. 3rd pada (Libra): Balanced protection. 4th pada (Scorpio): Intense devotion."
+      },
+      "metadata": {
+        "degree_span": "3°20' - 16°40' Cancer",
+        "ruler": "Shani (Saturn)",
+        "deity": "Brihaspati",
+        "gana": "Deva (divine)",
+        "guna": "Tamas-Sattva-Tamas",
+        "animal": "Male Sheep",
+        "bird": "Sea Crow",
+        "tree": "Peepal (Sacred Fig)",
+        "sounds": "Hu, He, Ho, Da"
+      }
+    },
+    {
+      "id": "nakshatra-ashlesha",
+      "name": "Ashlesha",
+      "symbol": "🐍",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "rakshasa",
+      "english_name": "The Embracer",
+      "keywords": ["kundalini", "serpent", "wisdom", "deception", "hypnosis", "poison", "embrace"],
+      "sort_order": 58,
+      "sections": {
+        "Interpretation": "Ashlesha spans 16°40'-30° Cancer. Ruled by Mercury and presided over by the Nagas (serpent deities), this nakshatra holds the coiled serpent power. It represents both the poison and the medicine—wisdom that can heal or destroy. Ashlesha natives are intuitive, magnetic, and often psychically gifted. They may struggle with trust issues. The energy is serpentine, penetrating, and deeply psychological.",
+        "Deity": "Nagas—the serpent deities who guard treasures and esoteric wisdom.",
+        "Shakti": "Visasleshana shakti—the power to inflict poison or to paralyze through embrace.",
+        "Shadow": "Manipulation, coldness, deception, using wisdom for harm, possessiveness.",
+        "Padas": "1st pada (Sagittarius): Philosophical wisdom. 2nd pada (Capricorn): Practical cunning. 3rd pada (Aquarius): Humanitarian insight. 4th pada (Pisces): Intuitive depth."
+      },
+      "metadata": {
+        "degree_span": "16°40' - 30°00' Cancer",
+        "ruler": "Budha (Mercury)",
+        "deity": "Nagas (Serpent gods)",
+        "gana": "Rakshasa (demon)",
+        "guna": "Tamas-Rajas-Sattva",
+        "animal": "Male Cat",
+        "bird": "Small Blue Sparrow",
+        "tree": "Nag Champa",
+        "sounds": "Di, Du, De, Do"
+      }
+    },
+    {
+      "id": "nakshatra-magha",
+      "name": "Magha",
+      "symbol": "👑",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "rakshasa",
+      "english_name": "The Mighty",
+      "keywords": ["ancestors", "throne", "authority", "lineage", "power", "ceremony", "tradition"],
+      "sort_order": 59,
+      "sections": {
+        "Interpretation": "Magha spans 0°-13°20' Leo. Ruled by Ketu and presided over by the Pitris (ancestral spirits), this nakshatra represents the throne of power inherited from the ancestors. Associated with Regulus, the heart of the Lion, Magha carries royal energy and ancestral responsibility. Natives are dignified, traditional, and carry their lineage forward. The energy is regal, ceremonial, and ancestrally connected.",
+        "Deity": "Pitris—the ancestral spirits to whom we owe our existence and must honor.",
+        "Shakti": "Tyage kshepani shakti—the power to leave the body (spiritual liberation through honoring ancestors).",
+        "Shadow": "Arrogance, living in the past, using authority for ego, ignoring practical needs for ceremony.",
+        "Padas": "1st pada (Aries): Pioneering authority. 2nd pada (Taurus): Material legacy. 3rd pada (Gemini): Intellectual heritage. 4th pada (Cancer): Emotional ancestry."
+      },
+      "metadata": {
+        "degree_span": "0°00' - 13°20' Leo",
+        "ruler": "Ketu",
+        "deity": "Pitris (Ancestors)",
+        "gana": "Rakshasa (demon)",
+        "guna": "Tamas-Rajas-Rajas",
+        "animal": "Male Rat",
+        "bird": "Eagle",
+        "tree": "Banyan",
+        "sounds": "Ma, Mi, Mu, Me"
+      }
+    },
+    {
+      "id": "nakshatra-purvaphalguni",
+      "name": "Purva Phalguni",
+      "symbol": "🛏️",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "manushya",
+      "english_name": "Former Reddish One",
+      "keywords": ["pleasure", "relaxation", "creativity", "love", "luxury", "rest", "procreation"],
+      "sort_order": 60,
+      "sections": {
+        "Interpretation": "Purva Phalguni spans 13°20'-26°40' Leo. Ruled by Venus and presided over by Bhaga (god of delight and fortune), this nakshatra represents the enjoyment of creative fruits. After earning the throne in Magha, one relaxes and enjoys. Natives are creative, pleasure-loving, and attract good fortune. They may struggle with laziness. The energy is luxurious, creative, and sensually fulfilling.",
+        "Deity": "Bhaga—one of the twelve Adityas, god of marital happiness, fortune, and delight.",
+        "Shakti": "Prajanana shakti—the power of procreation and creative generation.",
+        "Shadow": "Laziness, excessive pleasure-seeking, vanity, inability to handle difficulties.",
+        "Padas": "1st pada (Leo): Creative pride. 2nd pada (Virgo): Refined pleasure. 3rd pada (Libra): Relational enjoyment. 4th pada (Scorpio): Intense indulgence."
+      },
+      "metadata": {
+        "degree_span": "13°20' - 26°40' Leo",
+        "ruler": "Shukra (Venus)",
+        "deity": "Bhaga",
+        "gana": "Manushya (human)",
+        "guna": "Tamas-Rajas-Tamas",
+        "animal": "Female Rat",
+        "bird": "Female Eagle",
+        "tree": "Palash (Flame of the Forest)",
+        "sounds": "Mo, Ta, Ti, Tu"
+      }
+    },
+    {
+      "id": "nakshatra-uttaraphalguni",
+      "name": "Uttara Phalguni",
+      "symbol": "☀️",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "manushya",
+      "english_name": "Latter Reddish One",
+      "keywords": ["patronage", "contracts", "friendship", "service", "prosperity", "healing", "union"],
+      "sort_order": 61,
+      "sections": {
+        "Interpretation": "Uttara Phalguni spans 26°40' Leo - 10° Virgo. Ruled by the Sun and presided over by Aryaman (god of patronage and contracts), this nakshatra represents the formalization of pleasures into lasting arrangements. After enjoyment comes commitment. Natives are helpful, prosperous, and skilled at forming beneficial alliances. The energy is warm, generous, and contract-oriented.",
+        "Deity": "Aryaman—one of the twelve Adityas, god of patronage, hospitality, and formal agreements.",
+        "Shakti": "Chayani shakti—the power of accumulation through proper alliances.",
+        "Shadow": "Over-dependence on others, using connections manipulatively, resentment when help isn't reciprocated.",
+        "Padas": "1st pada (Sagittarius): Philosophical alliance. 2nd pada (Capricorn): Practical contracts. 3rd pada (Aquarius): Humanitarian service. 4th pada (Pisces): Spiritual friendship."
+      },
+      "metadata": {
+        "degree_span": "26°40' Leo - 10°00' Virgo",
+        "ruler": "Surya (Sun)",
+        "deity": "Aryaman",
+        "gana": "Manushya (human)",
+        "guna": "Tamas-Tamas-Sattva",
+        "animal": "Male Cow/Bull",
+        "bird": "Beetle",
+        "tree": "Rose Laurel",
+        "sounds": "Te, To, Pa, Pi"
+      }
+    },
+    {
+      "id": "nakshatra-hasta",
+      "name": "Hasta",
+      "symbol": "✋",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "deva",
+      "english_name": "The Hand",
+      "keywords": ["skill", "craftsmanship", "healing hands", "laughter", "dexterity", "cleverness", "manifestation"],
+      "sort_order": 62,
+      "sections": {
+        "Interpretation": "Hasta spans 10°-23°20' Virgo. Ruled by the Moon and presided over by Savitar (the solar deity of the golden hand), this nakshatra represents skillful manifestation through the hands. Associated with the five fingers and the power to grasp opportunity, Hasta natives are clever, skillful, and dexterous. They make excellent healers, craftspeople, and comedians. The energy is nimble, creative, and manifesting.",
+        "Deity": "Savitar—the solar deity who extends his golden hand to bestow blessings and direct the world.",
+        "Shakti": "Hasta sthapaniya agama shakti—the power to place what one desires in one's hands.",
+        "Shadow": "Trickery, using skills for deception, restlessness, nervous habits, cunning.",
+        "Padas": "1st pada (Aries): Skillful initiative. 2nd pada (Taurus): Crafted stability. 3rd pada (Gemini): Clever communication. 4th pada (Cancer): Nurturing hands."
+      },
+      "metadata": {
+        "degree_span": "10°00' - 23°20' Virgo",
+        "ruler": "Chandra (Moon)",
+        "deity": "Savitar",
+        "gana": "Deva (divine)",
+        "guna": "Tamas-Tamas-Rajas",
+        "animal": "Female Buffalo",
+        "bird": "Vulture",
+        "tree": "Hog Plum",
+        "sounds": "Pu, Sha, Na, Tha"
+      }
+    },
+    {
+      "id": "nakshatra-chitra",
+      "name": "Chitra",
+      "symbol": "💎",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "rakshasa",
+      "english_name": "The Bright One",
+      "keywords": ["brilliance", "architecture", "illusion", "beauty", "craftsmanship", "jewels", "maya"],
+      "sort_order": 63,
+      "sections": {
+        "Interpretation": "Chitra spans 23°20' Virgo - 6°40' Libra. Ruled by Mars and presided over by Vishvakarma (divine architect), this nakshatra represents the creation of beautiful and functional forms. Associated with Spica, one of the brightest stars, Chitra natives are attractive, creative, and skilled in design. They create things that captivate. The energy is artistic, architectural, and brilliantly creative.",
+        "Deity": "Vishvakarma—the divine architect who built the palaces of the gods and crafted their weapons.",
+        "Shakti": "Punya chayani shakti—the power to accumulate merit through creation.",
+        "Shadow": "Superficiality, obsession with appearance, creating illusions, criticism of others' work.",
+        "Padas": "1st pada (Leo): Creative brilliance. 2nd pada (Virgo): Precise design. 3rd pada (Libra): Harmonious architecture. 4th pada (Scorpio): Deep aesthetic."
+      },
+      "metadata": {
+        "degree_span": "23°20' Virgo - 6°40' Libra",
+        "ruler": "Mangala (Mars)",
+        "deity": "Vishvakarma/Tvashtar",
+        "gana": "Rakshasa (demon)",
+        "guna": "Tamas-Tamas-Tamas",
+        "animal": "Female Tiger",
+        "bird": "Woodpecker",
+        "tree": "Wood Apple",
+        "sounds": "Pe, Po, Ra, Ri"
+      }
+    },
+    {
+      "id": "nakshatra-swati",
+      "name": "Swati",
+      "symbol": "🌱",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "deva",
+      "english_name": "The Sword",
+      "keywords": ["independence", "wind", "flexibility", "scatter", "trade", "movement", "freedom"],
+      "sort_order": 64,
+      "sections": {
+        "Interpretation": "Swati spans 6°40'-20° Libra. Ruled by Rahu and presided over by Vayu (wind god), this nakshatra represents independent movement like a blade of grass swaying in the wind—bending but not breaking. Associated with Arcturus, Swati natives are independent, adaptable, and drawn to business and travel. They value freedom above security. The energy is mobile, independent, and commercially minded.",
+        "Deity": "Vayu—the wind god, vital breath (prana), father of Hanuman and Bhima.",
+        "Shakti": "Pradhvamsa shakti—the power to scatter like the wind.",
+        "Shadow": "Restlessness, inability to commit, superficiality in relationships, being scattered.",
+        "Padas": "1st pada (Sagittarius): Philosophical freedom. 2nd pada (Capricorn): Disciplined independence. 3rd pada (Aquarius): Humanitarian movement. 4th pada (Pisces): Spiritual wandering."
+      },
+      "metadata": {
+        "degree_span": "6°40' - 20°00' Libra",
+        "ruler": "Rahu",
+        "deity": "Vayu",
+        "gana": "Deva (divine)",
+        "guna": "Sattva-Sattva-Sattva",
+        "animal": "Male Buffalo",
+        "bird": "Honey Bee",
+        "tree": "Arjun Tree",
+        "sounds": "Ru, Re, Ro, Ta"
+      }
+    },
+    {
+      "id": "nakshatra-vishakha",
+      "name": "Vishakha",
+      "symbol": "🌳",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "rakshasa",
+      "english_name": "The Forked Branch",
+      "keywords": ["goal", "determination", "transformation", "triumph", "ambition", "focus", "achievement"],
+      "sort_order": 65,
+      "sections": {
+        "Interpretation": "Vishakha spans 20° Libra - 3°20' Scorpio. Ruled by Jupiter and presided over by Indra-Agni (king of gods and fire god together), this nakshatra represents single-pointed focus toward a goal. The forked branch symbolizes the moment before harvest—tremendous energy concentrated for achievement. Natives are ambitious, determined, and eventually triumphant. The energy is focused, transformative, and triumphant.",
+        "Deity": "Indra-Agni—the combined power of the king of gods and the fire god, representing transformation through divine will.",
+        "Shakti": "Vyapana shakti—the power to achieve many and various fruits.",
+        "Shadow": "Obsessive ambition, envy of others' success, ruthlessness, feeling unfulfilled despite achievement.",
+        "Padas": "1st pada (Aries): Fiery determination. 2nd pada (Taurus): Stable ambition. 3rd pada (Gemini): Strategic focus. 4th pada (Cancer): Emotional drive."
+      },
+      "metadata": {
+        "degree_span": "20°00' Libra - 3°20' Scorpio",
+        "ruler": "Guru (Jupiter)",
+        "deity": "Indra-Agni",
+        "gana": "Rakshasa (demon)",
+        "guna": "Sattva-Sattva-Rajas",
+        "animal": "Male Tiger",
+        "bird": "Sparrow",
+        "tree": "Wood Apple",
+        "sounds": "Ti, Tu, Te, To"
+      }
+    },
+    {
+      "id": "nakshatra-anuradha",
+      "name": "Anuradha",
+      "symbol": "⭐",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "deva",
+      "english_name": "Following Radha",
+      "keywords": ["devotion", "friendship", "organization", "success abroad", "numerology", "cooperation"],
+      "sort_order": 66,
+      "sections": {
+        "Interpretation": "Anuradha spans 3°20'-16°40' Scorpio. Ruled by Saturn and presided over by Mitra (god of friendship and contracts), this nakshatra represents devoted friendship and success through cooperation. 'Anuradha' means 'following Radha' or 'subsequent success.' Natives are friendly, devoted, and often find success in foreign lands. They excel at organizing and maintaining relationships. The energy is devotional, cooperative, and organizationally skilled.",
+        "Deity": "Mitra—the god of friendship, keeping oaths, and the light of dawn.",
+        "Shakti": "Radhana shakti—the power of worship and devotion to achieve goals.",
+        "Shadow": "Over-devotion leading to loss of self, difficulty maintaining boundaries, jealousy in friendship.",
+        "Padas": "1st pada (Leo): Devoted leadership. 2nd pada (Virgo): Analytical friendship. 3rd pada (Libra): Harmonious cooperation. 4th pada (Scorpio): Deep loyalty."
+      },
+      "metadata": {
+        "degree_span": "3°20' - 16°40' Scorpio",
+        "ruler": "Shani (Saturn)",
+        "deity": "Mitra",
+        "gana": "Deva (divine)",
+        "guna": "Sattva-Sattva-Tamas",
+        "animal": "Female Deer/Hare",
+        "bird": "Nightingale",
+        "tree": "Bullet Wood (Bakula)",
+        "sounds": "Na, Ni, Nu, Ne"
+      }
+    },
+    {
+      "id": "nakshatra-jyeshtha",
+      "name": "Jyeshtha",
+      "symbol": "☔",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "rakshasa",
+      "english_name": "The Eldest",
+      "keywords": ["seniority", "protection", "heroism", "occult power", "chief", "authority", "defense"],
+      "sort_order": 67,
+      "sections": {
+        "Interpretation": "Jyeshtha spans 16°40'-30° Scorpio. Ruled by Mercury and presided over by Indra (king of gods), this nakshatra represents the protective power of the eldest or chief. Associated with the star Antares (rival of Mars), Jyeshtha natives are senior, protective, and may struggle with pride. They defend the weak but expect respect. The energy is protective, senior, and martially inclined.",
+        "Deity": "Indra—king of the gods, wielder of the thunderbolt, protector against demons.",
+        "Shakti": "Arohana shakti—the power to rise and conquer.",
+        "Shadow": "Pride, jealousy, using power to control, difficulty accepting equals or superiors.",
+        "Padas": "1st pada (Sagittarius): Philosophical authority. 2nd pada (Capricorn): Practical leadership. 3rd pada (Aquarius): Humanitarian protection. 4th pada (Pisces): Spiritual seniority."
+      },
+      "metadata": {
+        "degree_span": "16°40' - 30°00' Scorpio",
+        "ruler": "Budha (Mercury)",
+        "deity": "Indra",
+        "gana": "Rakshasa (demon)",
+        "guna": "Sattva-Rajas-Sattva",
+        "animal": "Male Deer/Hare",
+        "bird": "Brahmani Duck",
+        "tree": "Pine (Shalmali)",
+        "sounds": "No, Ya, Yi, Yu"
+      }
+    },
+    {
+      "id": "nakshatra-mula",
+      "name": "Mula",
+      "symbol": "🌿",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "rakshasa",
+      "english_name": "The Root",
+      "keywords": ["root", "destruction", "investigation", "foundation", "uprooting", "research", "origin"],
+      "sort_order": 68,
+      "sections": {
+        "Interpretation": "Mula spans 0°-13°20' Sagittarius. Ruled by Ketu and presided over by Nirriti (goddess of destruction), this nakshatra represents the root of all things—where growth begins and where things must be uprooted to transform. At the galactic center, Mula connects to cosmic origins. Natives are investigative, often experience foundational changes, and get to the root of matters. The energy is destructive, foundational, and deeply transformative.",
+        "Deity": "Nirriti—goddess of destruction, calamity, and the southwest direction. Also associated with Alakshmi.",
+        "Shakti": "Barhana shakti—the power to ruin, break apart, or destroy.",
+        "Shadow": "Destructiveness without purpose, inability to build, uprooting everything including what should remain.",
+        "Padas": "1st pada (Aries): Fiery destruction. 2nd pada (Taurus): Material uprooting. 3rd pada (Gemini): Intellectual investigation. 4th pada (Cancer): Emotional root work."
+      },
+      "metadata": {
+        "degree_span": "0°00' - 13°20' Sagittarius",
+        "ruler": "Ketu",
+        "deity": "Nirriti",
+        "gana": "Rakshasa (demon)",
+        "guna": "Sattva-Rajas-Rajas",
+        "animal": "Male Dog",
+        "bird": "Red Vulture",
+        "tree": "Anjan (Kino Tree)",
+        "sounds": "Ye, Yo, Bha, Bhi"
+      }
+    },
+    {
+      "id": "nakshatra-purvaashadha",
+      "name": "Purva Ashadha",
+      "symbol": "🌊",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "manushya",
+      "english_name": "Former Invincible One",
+      "keywords": ["invincibility", "purification", "declaration", "pride", "water", "improvement", "victory"],
+      "sort_order": 69,
+      "sections": {
+        "Interpretation": "Purva Ashadha spans 13°20'-26°40' Sagittarius. Ruled by Venus and presided over by Apas (water deity), this nakshatra represents invincibility through purification. Water cleanses and nothing can stand against its persistent flow. Natives are proud, purifying, and eventually victorious. They improve whatever they touch. The energy is cleansing, victorious, and invincibly flowing.",
+        "Deity": "Apas—the cosmic waters, goddess of the purifying element.",
+        "Shakti": "Varchograhana shakti—the power of invigoration and improvement.",
+        "Shadow": "Over-confidence, pride before victory, declaring triumph too early, arrogance.",
+        "Padas": "1st pada (Leo): Proud invincibility. 2nd pada (Virgo): Analytical purification. 3rd pada (Libra): Harmonious victory. 4th pada (Scorpio): Transformative flow."
+      },
+      "metadata": {
+        "degree_span": "13°20' - 26°40' Sagittarius",
+        "ruler": "Shukra (Venus)",
+        "deity": "Apas (Waters)",
+        "gana": "Manushya (human)",
+        "guna": "Sattva-Rajas-Tamas",
+        "animal": "Male Monkey",
+        "bird": "Francolin",
+        "tree": "Ashoka Tree",
+        "sounds": "Bhu, Dha, Pha, Dha"
+      }
+    },
+    {
+      "id": "nakshatra-uttaraashadha",
+      "name": "Uttara Ashadha",
+      "symbol": "🐘",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "manushya",
+      "english_name": "Latter Invincible One",
+      "keywords": ["permanent victory", "leadership", "penetration", "final conquest", "responsibility", "achievement"],
+      "sort_order": 70,
+      "sections": {
+        "Interpretation": "Uttara Ashadha spans 26°40' Sagittarius - 10° Capricorn. Ruled by the Sun and presided over by the Vishvadevas (universal gods), this nakshatra represents permanent, lasting victory. While Purva Ashadha declares victory, Uttara Ashadha achieves it permanently. Natives are responsible leaders who achieve lasting success. The energy is conquering, responsible, and permanently victorious.",
+        "Deity": "Vishvadevas—the ten universal gods representing totality of divine virtues.",
+        "Shakti": "Apradhrishya shakti—the power of permanent victory that cannot be defeated.",
+        "Shadow": "Inflexibility after success, inability to change course, loneliness at the top.",
+        "Padas": "1st pada (Sagittarius): Philosophical victory. 2nd pada (Capricorn): Practical achievement. 3rd pada (Aquarius): Humanitarian triumph. 4th pada (Pisces): Spiritual conquest."
+      },
+      "metadata": {
+        "degree_span": "26°40' Sagittarius - 10°00' Capricorn",
+        "ruler": "Surya (Sun)",
+        "deity": "Vishvadevas",
+        "gana": "Manushya (human)",
+        "guna": "Sattva-Tamas-Sattva",
+        "animal": "Male Mongoose",
+        "bird": "Stork",
+        "tree": "Jackfruit",
+        "sounds": "Bhe, Bho, Ja, Ji"
+      }
+    },
+    {
+      "id": "nakshatra-shravana",
+      "name": "Shravana",
+      "symbol": "👂",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "deva",
+      "english_name": "The Ear",
+      "keywords": ["listening", "learning", "connection", "fame", "knowledge", "tradition", "media"],
+      "sort_order": 71,
+      "sections": {
+        "Interpretation": "Shravana spans 10°-23°20' Capricorn. Ruled by the Moon and presided over by Vishnu (the preserver), this nakshatra represents listening and learning as the path to wisdom. Associated with three footsteps (Vishnu's strides across the universe), Shravana natives are excellent listeners who gain knowledge and spread it. The energy is receptive, traditional, and knowledge-preserving.",
+        "Deity": "Vishnu—the preserver god who maintains cosmic order through his avatars.",
+        "Shakti": "Samhanana shakti—the power of connection and linking together.",
+        "Shadow": "Gossip, hearing only what one wants to hear, rigid traditionalism, slander.",
+        "Padas": "1st pada (Aries): Active listening. 2nd pada (Taurus): Grounded learning. 3rd pada (Gemini): Communicative knowledge. 4th pada (Cancer): Nurturing tradition."
+      },
+      "metadata": {
+        "degree_span": "10°00' - 23°20' Capricorn",
+        "ruler": "Chandra (Moon)",
+        "deity": "Vishnu",
+        "gana": "Deva (divine)",
+        "guna": "Sattva-Tamas-Rajas",
+        "animal": "Female Monkey",
+        "bird": "Francolin",
+        "tree": "Crown Flower (Arka)",
+        "sounds": "Ju, Je, Jo, Gha"
+      }
+    },
+    {
+      "id": "nakshatra-dhanishtha",
+      "name": "Dhanishtha",
+      "symbol": "🥁",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "rakshasa",
+      "english_name": "The Drum",
+      "keywords": ["rhythm", "wealth", "fame", "music", "group harmony", "martial", "hollow"],
+      "sort_order": 72,
+      "sections": {
+        "Interpretation": "Dhanishtha spans 23°20' Capricorn - 6°40' Aquarius. Ruled by Mars and presided over by the eight Vasus (elemental gods), this nakshatra represents rhythm, wealth, and group harmony. The drum symbol indicates both the beat of life and the hollow vessel that must be empty to resonate. Natives are wealthy, musical, and work well in groups but may struggle in one-on-one relationships. The energy is rhythmic, prosperous, and martially skilled.",
+        "Deity": "Ashta Vasus—the eight elemental gods representing earth, water, fire, air, space, moon, sun, and stars.",
+        "Shakti": "Khyapayitri shakti—the power to give fame and abundance.",
+        "Shadow": "Emptiness despite achievement, marital difficulties, being hollow inside, greed.",
+        "Padas": "1st pada (Leo): Proud rhythm. 2nd pada (Virgo): Precise musicality. 3rd pada (Libra): Harmonious wealth. 4th pada (Scorpio): Deep resonance."
+      },
+      "metadata": {
+        "degree_span": "23°20' Capricorn - 6°40' Aquarius",
+        "ruler": "Mangala (Mars)",
+        "deity": "Ashta Vasus",
+        "gana": "Rakshasa (demon)",
+        "guna": "Sattva-Tamas-Tamas",
+        "animal": "Female Lion",
+        "bird": "Golden Bee",
+        "tree": "Shami (Prosopis)",
+        "sounds": "Ga, Gi, Gu, Ge"
+      }
+    },
+    {
+      "id": "nakshatra-shatabhisha",
+      "name": "Shatabhisha",
+      "symbol": "⭕",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "rakshasa",
+      "english_name": "Hundred Healers",
+      "keywords": ["healing", "secrecy", "veiling", "mysticism", "aquatic", "hundred physicians", "isolation"],
+      "sort_order": 73,
+      "sections": {
+        "Interpretation": "Shatabhisha spans 6°40'-20° Aquarius. Ruled by Rahu and presided over by Varuna (god of cosmic waters and truth), this nakshatra represents the hundred physicians who heal through hidden means. The circle symbol indicates both wholeness and containment—secrets kept within. Natives are healing, secretive, and often isolated. They see through veils others cannot. The energy is healing, mysterious, and truth-seeking.",
+        "Deity": "Varuna—god of the cosmic ocean, keeper of cosmic law (rita), and lord of truth.",
+        "Shakti": "Bheshaja shakti—the power of healing and medicine.",
+        "Shadow": "Excessive secrecy, paranoia, isolation, addiction, harshness in truth-telling.",
+        "Padas": "1st pada (Sagittarius): Philosophical healing. 2nd pada (Capricorn): Practical medicine. 3rd pada (Aquarius): Humanitarian healing. 4th pada (Pisces): Spiritual restoration."
+      },
+      "metadata": {
+        "degree_span": "6°40' - 20°00' Aquarius",
+        "ruler": "Rahu",
+        "deity": "Varuna",
+        "gana": "Rakshasa (demon)",
+        "guna": "Rajas-Sattva-Sattva",
+        "animal": "Female Horse",
+        "bird": "Raven",
+        "tree": "Kadamba",
+        "sounds": "Go, Sa, Si, Su"
+      }
+    },
+    {
+      "id": "nakshatra-purvabhadrapada",
+      "name": "Purva Bhadrapada",
+      "symbol": "⚡",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "manushya",
+      "english_name": "Former Lucky Feet",
+      "keywords": ["lightning", "transformation", "funeral", "severity", "penance", "two-faced", "scorching"],
+      "sort_order": 74,
+      "sections": {
+        "Interpretation": "Purva Bhadrapada spans 20° Aquarius - 3°20' Pisces. Ruled by Jupiter and presided over by Aja Ekapada (one-footed goat, a form of Rudra), this nakshatra represents the lightning bolt of transformation—sudden, fierce, and purifying. Associated with funeral pyres and severe penance, natives are intense, transformative, and may have two sides to their nature. The energy is fiery, purifying, and intensely transformative.",
+        "Deity": "Aja Ekapada—the one-footed goat, a fierce form of Rudra/Shiva associated with lightning.",
+        "Shakti": "Yajamana udyamana shakti—the power of spiritual fire and elevation.",
+        "Shadow": "Extremism, cynicism, burning others with words, hypocrisy, punishing severity.",
+        "Padas": "1st pada (Aries): Fiery transformation. 2nd pada (Taurus): Grounded intensity. 3rd pada (Gemini): Communicative severity. 4th pada (Cancer): Emotional burning."
+      },
+      "metadata": {
+        "degree_span": "20°00' Aquarius - 3°20' Pisces",
+        "ruler": "Guru (Jupiter)",
+        "deity": "Aja Ekapada",
+        "gana": "Manushya (human)",
+        "guna": "Rajas-Sattva-Rajas",
+        "animal": "Male Lion",
+        "bird": "Blue Jay",
+        "tree": "Mango",
+        "sounds": "Se, So, Da, Di"
+      }
+    },
+    {
+      "id": "nakshatra-uttarabhadrapada",
+      "name": "Uttara Bhadrapada",
+      "symbol": "🛏️",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "manushya",
+      "english_name": "Latter Lucky Feet",
+      "keywords": ["depth", "sleep", "kundalini", "cosmic serpent", "wisdom", "control", "absorption"],
+      "sort_order": 75,
+      "sections": {
+        "Interpretation": "Uttara Bhadrapada spans 3°20'-16°40' Pisces. Ruled by Saturn and presided over by Ahir Budhnya (the serpent of the deep), this nakshatra represents the deep wisdom of the cosmic serpent—kundalini fully risen or the depths of the cosmic ocean. After the burning of Purva Bhadrapada comes profound rest and integration. Natives are deeply wise, controlled, and connected to profound sources. The energy is deep, absorbing, and profoundly wise.",
+        "Deity": "Ahir Budhnya—the serpent of the deep, connected to kundalini and the cosmic ocean floor.",
+        "Shakti": "Varshodyamana shakti—the power of bringing rain (cosmic fertility and depth).",
+        "Shadow": "Laziness, excessive introversion, sorcery, using depth for manipulation.",
+        "Padas": "1st pada (Leo): Deep pride. 2nd pada (Virgo): Analytical depth. 3rd pada (Libra): Harmonious wisdom. 4th pada (Scorpio): Transformative depth."
+      },
+      "metadata": {
+        "degree_span": "3°20' - 16°40' Pisces",
+        "ruler": "Shani (Saturn)",
+        "deity": "Ahir Budhnya",
+        "gana": "Manushya (human)",
+        "guna": "Rajas-Sattva-Tamas",
+        "animal": "Female Cow",
+        "bird": "Koyal (Cuckoo)",
+        "tree": "Neem",
+        "sounds": "Du, Tha, Jha, Da"
+      }
+    },
+    {
+      "id": "nakshatra-revati",
+      "name": "Revati",
+      "symbol": "🐟",
+      "level": 1,
+      "category": "nakshatra",
+      "subcategory": "deva",
+      "english_name": "The Wealthy",
+      "keywords": ["completion", "nourishment", "journey's end", "safe travel", "prosperity", "final liberation"],
+      "sort_order": 76,
+      "sections": {
+        "Interpretation": "Revati spans 16°40'-30° Pisces. Ruled by Mercury and presided over by Pushan (nourisher and protector of journeys), this nakshatra represents the completion of the zodiacal journey—the soul's final nourishment before rebirth. The fish symbol indicates both the end of the oceanic journey and the wealth accumulated. Natives are wealthy, nourishing, and help others complete their journeys. The energy is completing, nourishing, and transcendently wealthy.",
+        "Deity": "Pushan—the nourisher god who protects travelers, finds lost things, and guides souls to the afterlife.",
+        "Shakti": "Kshiradyapani shakti—the power of nourishment through milk (cosmic nurturing).",
+        "Shadow": "Over-giving leading to depletion, difficulty starting new things, escapism into completion.",
+        "Padas": "1st pada (Sagittarius): Philosophical completion. 2nd pada (Capricorn): Practical nourishment. 3rd pada (Aquarius): Humanitarian wealth. 4th pada (Pisces): Spiritual transcendence."
+      },
+      "metadata": {
+        "degree_span": "16°40' - 30°00' Pisces",
+        "ruler": "Budha (Mercury)",
+        "deity": "Pushan",
+        "gana": "Deva (divine)",
+        "guna": "Rajas-Tamas-Sattva",
+        "animal": "Female Elephant",
+        "bird": "Kite",
+        "tree": "Mahua (Madhuca)",
+        "sounds": "De, Do, Cha, Chi"
+      }
+    }
+  ],
+  "emergences": [
+    {
+      "id": "yoga-ruchaka",
+      "name": "Ruchaka Yoga",
+      "level": 2,
+      "category": "pancha-mahapurusha",
+      "keywords": ["mars", "strength", "commander", "courage", "warrior", "leadership"],
+      "sort_order": 100,
+      "composite_of": ["graha-mangala", "bhava-1", "bhava-4", "bhava-7", "bhava-10"],
+      "sections": {
+        "Interpretation": "Ruchaka Yoga forms when Mars occupies its own sign (Aries or Scorpio) or exaltation (Capricorn) in a kendra (1st, 4th, 7th, or 10th house). This is one of the five Pancha Mahapurusha Yogas, creating a powerful individual with martial qualities. The native becomes a commander, leader, or warrior with exceptional courage and physical strength.",
+        "Effects": "Handsome physique with ruddy complexion, long face, and well-proportioned limbs. Becomes a leader of armies or organizations, courageous in battle, famous for bravery. May live to 70 years. Attains wealth through martial pursuits, government service, or competitive fields.",
+        "Formation": "Mars in Aries, Scorpio, or Capricorn AND in houses 1, 4, 7, or 10 from Lagna.",
+        "Cancellation": "Combust by Sun, aspected by malefics without benefic influence, Mars debilitated in navamsa."
+      },
+      "metadata": {
+        "yoga_type": "Pancha Mahapurusha",
+        "planet": "Mars",
+        "required_dignity": "own sign or exaltation",
+        "required_houses": [1, 4, 7, 10]
+      }
+    },
+    {
+      "id": "yoga-bhadra",
+      "name": "Bhadra Yoga",
+      "level": 2,
+      "category": "pancha-mahapurusha",
+      "keywords": ["mercury", "intelligence", "speech", "commerce", "learning", "communication"],
+      "sort_order": 101,
+      "composite_of": ["graha-budha", "bhava-1", "bhava-4", "bhava-7", "bhava-10"],
+      "sections": {
+        "Interpretation": "Bhadra Yoga forms when Mercury occupies its own sign (Gemini or Virgo) or exaltation (Virgo) in a kendra. This creates a highly intelligent individual with exceptional communication abilities and business acumen. The native becomes learned, wealthy, and influential through intellectual pursuits.",
+        "Effects": "Well-built body, lion-like face, long arms, intelligent appearance. Becomes learned in scriptures and sciences, skilled in debate, eloquent speaker. Lives long (to 80 years). Wealth through commerce, writing, or intellectual work. Blessed with good spouse and children.",
+        "Formation": "Mercury in Gemini or Virgo AND in houses 1, 4, 7, or 10 from Lagna.",
+        "Cancellation": "Combust by Sun, afflicted by malefics, Mercury debilitated in navamsa."
+      },
+      "metadata": {
+        "yoga_type": "Pancha Mahapurusha",
+        "planet": "Mercury",
+        "required_dignity": "own sign or exaltation",
+        "required_houses": [1, 4, 7, 10]
+      }
+    },
+    {
+      "id": "yoga-hamsa",
+      "name": "Hamsa Yoga",
+      "level": 2,
+      "category": "pancha-mahapurusha",
+      "keywords": ["jupiter", "wisdom", "dharma", "teacher", "fortune", "spirituality"],
+      "sort_order": 102,
+      "composite_of": ["graha-guru", "bhava-1", "bhava-4", "bhava-7", "bhava-10"],
+      "sections": {
+        "Interpretation": "Hamsa Yoga forms when Jupiter occupies its own sign (Sagittarius or Pisces) or exaltation (Cancer) in a kendra. Named after the divine swan that separates milk from water (wisdom from ignorance), this yoga creates a highly spiritual and fortunate individual. The native becomes a teacher, judge, or spiritual guide.",
+        "Effects": "Fair complexion, beautiful face, honey-colored eyes, prominent cheeks. Becomes righteous, spiritually inclined, respected by kings and scholars. Lives long (to 100 years). Wealth through dharmic means, teaching, or religious work. Natural wisdom and discrimination.",
+        "Formation": "Jupiter in Sagittarius, Pisces, or Cancer AND in houses 1, 4, 7, or 10 from Lagna.",
+        "Cancellation": "Combust by Sun, afflicted by malefics, Jupiter debilitated in navamsa."
+      },
+      "metadata": {
+        "yoga_type": "Pancha Mahapurusha",
+        "planet": "Jupiter",
+        "required_dignity": "own sign or exaltation",
+        "required_houses": [1, 4, 7, 10]
+      }
+    },
+    {
+      "id": "yoga-malavya",
+      "name": "Malavya Yoga",
+      "level": 2,
+      "category": "pancha-mahapurusha",
+      "keywords": ["venus", "beauty", "luxury", "art", "pleasure", "spouse"],
+      "sort_order": 103,
+      "composite_of": ["graha-shukra", "bhava-1", "bhava-4", "bhava-7", "bhava-10"],
+      "sections": {
+        "Interpretation": "Malavya Yoga forms when Venus occupies its own sign (Taurus or Libra) or exaltation (Pisces) in a kendra. This creates a beautiful, artistic, and pleasure-blessed individual. The native enjoys all material comforts, has a beautiful spouse, and excels in artistic or diplomatic fields.",
+        "Effects": "Beautiful body, attractive face, graceful limbs, lovely eyes. Becomes wealthy, enjoys vehicles and luxuries, has beautiful spouse. Lives long (to 70 years). Success in art, music, entertainment, or diplomacy. Sensual pleasures and refined tastes.",
+        "Formation": "Venus in Taurus, Libra, or Pisces AND in houses 1, 4, 7, or 10 from Lagna.",
+        "Cancellation": "Combust by Sun, afflicted by malefics, Venus debilitated in navamsa."
+      },
+      "metadata": {
+        "yoga_type": "Pancha Mahapurusha",
+        "planet": "Venus",
+        "required_dignity": "own sign or exaltation",
+        "required_houses": [1, 4, 7, 10]
+      }
+    },
+    {
+      "id": "yoga-shasha",
+      "name": "Shasha Yoga",
+      "level": 2,
+      "category": "pancha-mahapurusha",
+      "keywords": ["saturn", "discipline", "authority", "servants", "longevity", "administration"],
+      "sort_order": 104,
+      "composite_of": ["graha-shani", "bhava-1", "bhava-4", "bhava-7", "bhava-10"],
+      "sections": {
+        "Interpretation": "Shasha Yoga forms when Saturn occupies its own sign (Capricorn or Aquarius) or exaltation (Libra) in a kendra. This creates a powerful administrator with authority over many people. The native becomes a leader through discipline, hard work, and patience.",
+        "Effects": "Medium stature, prominent teeth, alert eyes, strong body. Commands servants and workers, holds authority over villages or cities. Lives long (to 70 years). Wealth through administration, labor management, or traditional industries. Known for discipline and justice.",
+        "Formation": "Saturn in Capricorn, Aquarius, or Libra AND in houses 1, 4, 7, or 10 from Lagna.",
+        "Cancellation": "Combust by Sun (rare), afflicted by malefics, Saturn debilitated in navamsa."
+      },
+      "metadata": {
+        "yoga_type": "Pancha Mahapurusha",
+        "planet": "Saturn",
+        "required_dignity": "own sign or exaltation",
+        "required_houses": [1, 4, 7, 10]
+      }
+    },
+    {
+      "id": "yoga-gajakesari",
+      "name": "Gajakesari Yoga",
+      "level": 2,
+      "category": "lunar-yoga",
+      "keywords": ["moon", "jupiter", "fame", "intelligence", "fortune", "respect"],
+      "sort_order": 105,
+      "composite_of": ["graha-chandra", "graha-guru"],
+      "sections": {
+        "Interpretation": "Gajakesari Yoga forms when Jupiter is in a kendra (1st, 4th, 7th, or 10th) from the Moon. The name means 'elephant-lion,' suggesting the native combines the strength and memory of an elephant with the courage and nobility of a lion. This is one of the most celebrated yogas for overall success.",
+        "Effects": "Intelligence, good memory, fame, respect from authority. The native becomes learned, wealthy, and honored. Good reputation that outlasts life. Success in education, teaching, or advisory roles. Blessed with supportive teachers and wise counsel.",
+        "Formation": "Jupiter in houses 1, 4, 7, or 10 from Moon. Strongest when both are in good dignity and unafflicted.",
+        "Variations": "Most powerful when Jupiter is in its own or exaltation sign. Weakened if either planet is combust, debilitated, or heavily afflicted."
+      },
+      "metadata": {
+        "yoga_type": "Lunar Yoga",
+        "planets": ["Moon", "Jupiter"],
+        "relationship": "Jupiter in kendra from Moon"
+      }
+    },
+    {
+      "id": "yoga-chandra-mangala",
+      "name": "Chandra-Mangala Yoga",
+      "level": 2,
+      "category": "lunar-yoga",
+      "keywords": ["moon", "mars", "wealth", "courage", "earning", "enterprise"],
+      "sort_order": 106,
+      "composite_of": ["graha-chandra", "graha-mangala"],
+      "sections": {
+        "Interpretation": "Chandra-Mangala Yoga forms when Moon and Mars are conjunct or in mutual aspect. This combination brings wealth through one's own efforts, enterprise, and courage. The native earns money through active pursuits rather than inheritance.",
+        "Effects": "Self-made wealth, business acumen, courage in earning. The native is enterprising, active, and willing to take risks for financial gain. Good for business, real estate, or competitive fields. May indicate wealth through mother's side.",
+        "Formation": "Moon and Mars in conjunction or mutual aspect. Best in upachaya houses (3, 6, 10, 11).",
+        "Caution": "Can also indicate emotional volatility, arguments with mother, or aggressive emotional nature if afflicted."
+      },
+      "metadata": {
+        "yoga_type": "Lunar Yoga",
+        "planets": ["Moon", "Mars"],
+        "relationship": "conjunction or mutual aspect"
+      }
+    },
+    {
+      "id": "yoga-budhaditya",
+      "name": "Budhaditya Yoga",
+      "level": 2,
+      "category": "solar-yoga",
+      "keywords": ["sun", "mercury", "intelligence", "fame", "communication", "authority"],
+      "sort_order": 107,
+      "composite_of": ["graha-surya", "graha-budha"],
+      "sections": {
+        "Interpretation": "Budhaditya Yoga forms when Sun and Mercury are conjunct. Since Mercury is never more than 28° from the Sun, this is common, but its strength varies greatly. When Mercury is not combust (more than 14° from Sun) and both are well-placed, this yoga gives intelligence combined with authority.",
+        "Effects": "Sharp intellect, eloquent speech, fame through intellectual work. The native combines solar authority with Mercurial intelligence. Good for government service, writing, administration, or any field requiring both leadership and communication.",
+        "Formation": "Sun and Mercury in conjunction. Strongest when Mercury is ahead of Sun (direct) and not combust. Best in houses 1, 4, 5, 9, 10, or 11.",
+        "Weakness": "If Mercury is combust (within 14°) or retrograde close to Sun, intelligence may be clouded by ego or the native may not receive recognition for their ideas."
+      },
+      "metadata": {
+        "yoga_type": "Solar Yoga",
+        "planets": ["Sun", "Mercury"],
+        "relationship": "conjunction"
+      }
+    },
+    {
+      "id": "yoga-viparita-harsha",
+      "name": "Harsha Yoga (Viparita Raja)",
+      "level": 2,
+      "category": "viparita-raja",
+      "keywords": ["6th lord", "dusthana", "victory", "enemies", "obstacles overcome"],
+      "sort_order": 108,
+      "composite_of": ["bhava-6"],
+      "sections": {
+        "Interpretation": "Harsha Yoga is a Viparita Raja Yoga formed when the 6th lord is placed in the 6th, 8th, or 12th house. This creates a situation where the lord of enemies and obstacles is trapped in houses of loss, converting difficulties into triumphs. The native overcomes enemies and obstacles with relative ease.",
+        "Effects": "Victory over enemies, good health, freedom from debts. Obstacles that would trouble others seem to dissolve for the native. Success in competitive fields, litigation, or medical profession. Hidden protection from difficulties.",
+        "Formation": "6th house lord placed in the 6th, 8th, or 12th house from Lagna.",
+        "Note": "Works best when the 6th lord is not simultaneously damaging other house significations through lordship or aspect."
+      },
+      "metadata": {
+        "yoga_type": "Viparita Raja Yoga",
+        "house_lord": 6,
+        "placement_houses": [6, 8, 12]
+      }
+    },
+    {
+      "id": "yoga-viparita-sarala",
+      "name": "Sarala Yoga (Viparita Raja)",
+      "level": 2,
+      "category": "viparita-raja",
+      "keywords": ["8th lord", "transformation", "longevity", "inheritance", "occult"],
+      "sort_order": 109,
+      "composite_of": ["bhava-8"],
+      "sections": {
+        "Interpretation": "Sarala Yoga forms when the 8th lord is placed in the 6th, 8th, or 12th house. The lord of death, transformation, and hidden matters is confined to dusthanas, reducing its power to harm. The native gains through 8th house matters—inheritance, insurance, research—without the typical dangers.",
+        "Effects": "Long life, success in research or occult, unexpected inheritance. The native navigates transformative experiences with less trauma. Good for psychology, investigation, or dealing with others' resources. Protection during dangerous periods.",
+        "Formation": "8th house lord placed in the 6th, 8th, or 12th house from Lagna.",
+        "Note": "The 8th lord in the 8th is particularly powerful (karaka bhava nashaya does not apply to dusthana lords)."
+      },
+      "metadata": {
+        "yoga_type": "Viparita Raja Yoga",
+        "house_lord": 8,
+        "placement_houses": [6, 8, 12]
+      }
+    },
+    {
+      "id": "yoga-viparita-vimala",
+      "name": "Vimala Yoga (Viparita Raja)",
+      "level": 2,
+      "category": "viparita-raja",
+      "keywords": ["12th lord", "liberation", "foreign", "expenses", "spirituality"],
+      "sort_order": 110,
+      "composite_of": ["bhava-12"],
+      "sections": {
+        "Interpretation": "Vimala Yoga forms when the 12th lord is placed in the 6th, 8th, or 12th house. The lord of loss and expenditure is trapped in difficulty houses, reducing wasteful spending and converting potential losses into spiritual or foreign gains.",
+        "Effects": "Freedom from excessive loss, success abroad, spiritual progress. Expenses become investments. Foreign residence or travel for gain. Peaceful sleep, good for meditation and spiritual practices. Final liberation (moksha) is supported.",
+        "Formation": "12th house lord placed in the 6th, 8th, or 12th house from Lagna.",
+        "Note": "12th lord in 12th is especially good for spiritual life and foreign settlement."
+      },
+      "metadata": {
+        "yoga_type": "Viparita Raja Yoga",
+        "house_lord": 12,
+        "placement_houses": [6, 8, 12]
+      }
+    },
+    {
+      "id": "yoga-kemadruma",
+      "name": "Kemadruma Yoga",
+      "level": 2,
+      "category": "lunar-yoga",
+      "keywords": ["moon", "isolation", "poverty", "difficulty", "cancelled by aspects"],
+      "sort_order": 111,
+      "composite_of": ["graha-chandra"],
+      "sections": {
+        "Interpretation": "Kemadruma Yoga forms when there are no planets in the 2nd or 12th from the Moon (excluding Sun, Rahu, Ketu). The Moon is isolated, without support from neighboring planets. This can indicate poverty, struggle, and emotional isolation—but has many cancellations.",
+        "Effects": "If uncancelled: poverty, emotional loneliness, struggle in early life. The native may feel unsupported and have difficulty with finances or emotional stability. Hard work doesn't seem to yield proportional results.",
+        "Cancellation": "Cancelled if: (1) Planet in kendra from Lagna or Moon, (2) Moon in kendra, (3) Moon conjunct or aspected by benefic, (4) Moon in own or exaltation sign, (5) Full Moon. Many charts have this yoga technically but cancelled.",
+        "Note": "One of the most commonly cancelled 'bad' yogas. Check for cancellations before predicting negative results."
+      },
+      "metadata": {
+        "yoga_type": "Lunar Yoga (Affliction)",
+        "condition": "No planets in 2nd or 12th from Moon",
+        "cancellation": "Multiple methods available"
+      }
+    },
+    {
+      "id": "yoga-sunapha",
+      "name": "Sunapha Yoga",
+      "level": 2,
+      "category": "lunar-yoga",
+      "keywords": ["moon", "2nd from moon", "wealth", "self-made", "intelligence"],
+      "sort_order": 112,
+      "composite_of": ["graha-chandra"],
+      "sections": {
+        "Interpretation": "Sunapha Yoga forms when there is a planet (other than Sun) in the 2nd house from Moon. This creates support for the Moon through resources that follow—wealth that accumulates, family support, or earned income. The native is self-made and intelligent.",
+        "Effects": "Self-acquired wealth, intelligence equal to a king, good reputation. The specific planet modifies results: Mars gives courage and property, Mercury gives learning, Jupiter gives wisdom and children, Venus gives luxury, Saturn gives authority through labor.",
+        "Formation": "Any planet except Sun, Rahu, Ketu in the 2nd house from Moon.",
+        "Strength": "Multiple planets in 2nd from Moon strengthen the yoga. Benefics give easier acquisition, malefics give wealth through struggle."
+      },
+      "metadata": {
+        "yoga_type": "Lunar Yoga (Support)",
+        "condition": "Planet in 2nd from Moon"
+      }
+    },
+    {
+      "id": "yoga-anapha",
+      "name": "Anapha Yoga",
+      "level": 2,
+      "category": "lunar-yoga",
+      "keywords": ["moon", "12th from moon", "fame", "well-dressed", "enjoyment"],
+      "sort_order": 113,
+      "composite_of": ["graha-chandra"],
+      "sections": {
+        "Interpretation": "Anapha Yoga forms when there is a planet (other than Sun) in the 12th house from Moon. This creates support through what precedes the Moon—inherited resources, past-life merit, or intuitive guidance. The native is well-regarded and enjoys life.",
+        "Effects": "Famous, well-dressed, pleasant disposition. Good health and enjoyment of life. The specific planet modifies: Mars gives valor and property, Mercury gives eloquence, Jupiter gives virtuous fame, Venus gives comfort, Saturn gives authority through tradition.",
+        "Formation": "Any planet except Sun, Rahu, Ketu in the 12th house from Moon.",
+        "Strength": "Multiple planets strengthen the yoga. Combined with Sunapha creates the powerful Durudhara Yoga."
+      },
+      "metadata": {
+        "yoga_type": "Lunar Yoga (Support)",
+        "condition": "Planet in 12th from Moon"
+      }
+    },
+    {
+      "id": "yoga-durudhara",
+      "name": "Durudhara Yoga",
+      "level": 2,
+      "category": "lunar-yoga",
+      "keywords": ["moon", "surrounded", "wealth", "vehicles", "charity", "support"],
+      "sort_order": 114,
+      "composite_of": ["graha-chandra"],
+      "sections": {
+        "Interpretation": "Durudhara Yoga forms when there are planets (other than Sun) in both the 2nd and 12th from Moon. The Moon is surrounded by planetary support—both inherited blessings and self-earned wealth. This is a highly auspicious yoga for material prosperity and social standing.",
+        "Effects": "Wealthy, charitable, blessed with vehicles and comforts. The native enjoys both inherited and self-made wealth, is generous, and well-supported throughout life. Good reputation and lasting prosperity.",
+        "Formation": "Planets (excluding Sun, Rahu, Ketu) in both 2nd and 12th houses from Moon.",
+        "Combinations": "Many variations depending on which planets occupy these positions. Benefics give easy prosperity, malefics give wealth through effort."
+      },
+      "metadata": {
+        "yoga_type": "Lunar Yoga (Support)",
+        "condition": "Planets in both 2nd and 12th from Moon"
+      }
+    },
+    {
+      "id": "yoga-adhi",
+      "name": "Adhi Yoga",
+      "level": 2,
+      "category": "lunar-yoga",
+      "keywords": ["moon", "benefics", "6-7-8 from moon", "commander", "minister", "king"],
+      "sort_order": 115,
+      "composite_of": ["graha-chandra", "graha-budha", "graha-guru", "graha-shukra"],
+      "sections": {
+        "Interpretation": "Adhi Yoga forms when benefics (Mercury, Jupiter, Venus) occupy the 6th, 7th, and/or 8th houses from Moon. This creates a powerful yoga for authority, with the level of power depending on how many benefics participate. One benefic makes a commander, two a minister, three a king.",
+        "Effects": "Authority, wealth, victory over enemies. The native becomes a leader, conquers opposition, and lives long with good health. Polite, prosperous, and famous. Surrounded by supporters and capable of great achievement.",
+        "Formation": "One or more benefics (Mercury, Jupiter, Venus) in houses 6, 7, or 8 from Moon. Three benefics give full royal status.",
+        "Strength": "Strongest when benefics are in their own or exalted signs. Weakened if benefics are combust or afflicted."
+      },
+      "metadata": {
+        "yoga_type": "Lunar Yoga (Authority)",
+        "benefics_required": ["Mercury", "Jupiter", "Venus"],
+        "placement_from_moon": [6, 7, 8]
+      }
+    },
+    {
+      "id": "emergence-nakshatra-deva",
+      "name": "Deva Gana Nakshatras",
+      "level": 2,
+      "category": "nakshatra-group",
+      "keywords": ["divine", "sattvic", "gentle", "dharmic", "compatibility"],
+      "sort_order": 120,
+      "composite_of": ["nakshatra-ashwini", "nakshatra-mrigashira", "nakshatra-punarvasu", "nakshatra-pushya", "nakshatra-hasta", "nakshatra-swati", "nakshatra-anuradha", "nakshatra-shravana", "nakshatra-revati"],
+      "sections": {
+        "Interpretation": "The nine Deva (divine) Gana nakshatras share a sattvic, dharmic quality. Natives born in these nakshatras tend toward righteousness, gentleness, and spiritual inclination. In compatibility matching (koota), Deva-Deva combinations are ideal, while Deva-Rakshasa pairings require careful consideration.",
+        "Characteristics": "Divine temperament, inclined to dharma, gentle approach, spiritual interest. These natives generally follow rules, respect tradition, and treat others kindly. They may struggle with more aggressive or manipulative types.",
+        "Nakshatras": "Ashwini, Mrigashira, Punarvasu, Pushya, Hasta, Swati, Anuradha, Shravana, Revati."
+      },
+      "metadata": {
+        "gana": "Deva",
+        "quality": "Sattvic",
+        "count": 9
+      }
+    },
+    {
+      "id": "emergence-nakshatra-manushya",
+      "name": "Manushya Gana Nakshatras",
+      "level": 2,
+      "category": "nakshatra-group",
+      "keywords": ["human", "rajasic", "balanced", "worldly", "practical"],
+      "sort_order": 121,
+      "composite_of": ["nakshatra-bharani", "nakshatra-rohini", "nakshatra-ardra", "nakshatra-purvaphalguni", "nakshatra-uttaraphalguni", "nakshatra-purvaashadha", "nakshatra-uttaraashadha", "nakshatra-purvabhadrapada", "nakshatra-uttarabhadrapada"],
+      "sections": {
+        "Interpretation": "The nine Manushya (human) Gana nakshatras share a rajasic, practical quality. Natives born in these nakshatras are worldly, balanced, and capable of both virtue and vice depending on circumstances. In compatibility, Manushya-Manushya and Manushya-Deva pairings work well.",
+        "Characteristics": "Human temperament, practical approach, worldly success orientation. These natives navigate both spiritual and material realms, adapting to circumstances. They understand both dharmic principles and practical necessities.",
+        "Nakshatras": "Bharani, Rohini, Ardra, Purva Phalguni, Uttara Phalguni, Purva Ashadha, Uttara Ashadha, Purva Bhadrapada, Uttara Bhadrapada."
+      },
+      "metadata": {
+        "gana": "Manushya",
+        "quality": "Rajasic",
+        "count": 9
+      }
+    },
+    {
+      "id": "emergence-nakshatra-rakshasa",
+      "name": "Rakshasa Gana Nakshatras",
+      "level": 2,
+      "category": "nakshatra-group",
+      "keywords": ["demon", "tamasic", "fierce", "independent", "transformative"],
+      "sort_order": 122,
+      "composite_of": ["nakshatra-krittika", "nakshatra-ashlesha", "nakshatra-magha", "nakshatra-chitra", "nakshatra-vishakha", "nakshatra-jyeshtha", "nakshatra-mula", "nakshatra-dhanishtha", "nakshatra-shatabhisha"],
+      "sections": {
+        "Interpretation": "The nine Rakshasa (demon) Gana nakshatras share a tamasic, fierce quality. Despite the name, 'rakshasa' here means independent, unconventional, and transformative rather than evil. These natives break rules, challenge norms, and create change. Rakshasa-Rakshasa pairings can be intensely compatible.",
+        "Characteristics": "Fierce temperament, independent nature, transformative power. These natives don't follow convention easily, may be misunderstood by society, but often accomplish great things through unconventional means. They have the power to destroy and transform.",
+        "Nakshatras": "Krittika, Ashlesha, Magha, Chitra, Vishakha, Jyeshtha, Mula, Dhanishtha, Shatabhisha."
+      },
+      "metadata": {
+        "gana": "Rakshasa",
+        "quality": "Tamasic",
+        "count": 9
+      }
+    },
+    {
+      "id": "yoga-raja-kendra-trikona",
+      "name": "Raja Yoga (Kendra-Trikona)",
+      "level": 3,
+      "category": "raja-yoga",
+      "keywords": ["kingship", "authority", "success", "power", "status", "achievement"],
+      "sort_order": 200,
+      "composite_of": ["bhava-1", "bhava-4", "bhava-5", "bhava-7", "bhava-9", "bhava-10"],
+      "sections": {
+        "Interpretation": "The fundamental Raja Yoga forms when lords of kendra houses (1, 4, 7, 10) and trikona houses (1, 5, 9) combine through conjunction, mutual aspect, or exchange. This merges the power of action (kendra) with the grace of fortune (trikona), creating conditions for significant achievement and authority.",
+        "Principle": "Kendra houses represent manifest power—the ability to act in the world. Trikona houses represent dharma and accumulated merit. When their lords combine, worldly power is blessed by divine grace, creating lasting success.",
+        "Strongest Combinations": "9th lord + 10th lord (Dharma-Karma Adhipati Yoga), 5th lord + 10th lord, 4th lord + 9th lord, 1st lord + 5th or 9th lord. The Lagna lord is both kendra and trikona lord, making it especially significant.",
+        "Conditions": "Strongest when: (1) Both lords are in good dignity, (2) Combination occurs in kendra or trikona, (3) Not afflicted by malefics, (4) Lords are not also dusthana lords (for certain lagnas).",
+        "Results": "Rise to position of authority, leadership, fame, wealth. The specific field depends on the houses and planets involved. Timing follows the dashas of the involved planets."
+      },
+      "metadata": {
+        "yoga_type": "Raja Yoga (Primary)",
+        "kendra_houses": [1, 4, 7, 10],
+        "trikona_houses": [1, 5, 9],
+        "requirement": "Lords of kendra and trikona combine"
+      }
+    },
+    {
+      "id": "yoga-dharma-karma-adhipati",
+      "name": "Dharma-Karma Adhipati Yoga",
+      "level": 3,
+      "category": "raja-yoga",
+      "keywords": ["9th lord", "10th lord", "destiny", "career dharma", "highest raja yoga"],
+      "sort_order": 201,
+      "composite_of": ["bhava-9", "bhava-10"],
+      "sections": {
+        "Interpretation": "Dharma-Karma Adhipati Yoga forms when the 9th lord (dharma, fortune) and 10th lord (karma, career) are conjunct, in mutual aspect, or exchange signs. This is considered the most powerful raja yoga because it aligns one's destined purpose (9th) with worldly action (10th).",
+        "Principle": "The 9th house represents the divine plan, guru's blessings, and accumulated merit. The 10th house represents one's contribution to society and professional life. When aligned, the native's career becomes their dharma—they succeed by doing what they're meant to do.",
+        "Formation": "9th lord and 10th lord in: (1) Same house (conjunction), (2) Mutual aspect, (3) Exchange of signs (parivartana), (4) One in the other's house while aspecting.",
+        "Results": "Exceptional career success that feels destined, recognition from authorities, lasting reputation. The native finds that doing good and doing well align perfectly. Often indicates leadership in one's field.",
+        "Examples": "Common in charts of successful spiritual teachers, ethical leaders, and those who achieve fame through dharmic means."
+      },
+      "metadata": {
+        "yoga_type": "Raja Yoga (Supreme)",
+        "houses": [9, 10],
+        "considered": "Highest of raja yogas"
+      }
+    },
+    {
+      "id": "yoga-dhana-2-11",
+      "name": "Dhana Yoga (2nd-11th Lords)",
+      "level": 3,
+      "category": "dhana-yoga",
+      "keywords": ["wealth", "income", "gains", "accumulation", "prosperity"],
+      "sort_order": 210,
+      "composite_of": ["bhava-2", "bhava-11"],
+      "sections": {
+        "Interpretation": "Dhana Yoga forms when the lords of wealth houses (2nd - accumulated wealth, 11th - gains/income) combine. This creates a direct channel between earning capacity and wealth accumulation, indicating financial prosperity.",
+        "Principle": "The 2nd house is the vault—what we store and accumulate. The 11th house is the income stream—what comes to us. When their lords connect, income flows into savings, creating lasting wealth.",
+        "Formation": "2nd lord and 11th lord in: (1) Conjunction, (2) Mutual aspect, (3) Exchange, (4) Either in the other's house. Strongest when occurring in 2nd, 11th, or a kendra.",
+        "Enhancements": "Strengthened when Jupiter aspects the combination, when either lord is in own or exalted sign, when occurring in signs of wealth-giving planets (Taurus, Libra, Jupiter's signs).",
+        "Results": "Steady wealth accumulation, good income that translates to savings, financial security. The specific nature of wealth depends on the planets and signs involved."
+      },
+      "metadata": {
+        "yoga_type": "Dhana Yoga (Primary)",
+        "wealth_houses": [2, 11],
+        "requirement": "2nd and 11th lords combine"
+      }
+    },
+    {
+      "id": "yoga-dhana-lakshmi",
+      "name": "Lakshmi Yoga",
+      "level": 3,
+      "category": "dhana-yoga",
+      "keywords": ["wealth", "prosperity", "venus", "9th lord", "fortune", "goddess"],
+      "sort_order": 211,
+      "composite_of": ["graha-shukra", "bhava-9"],
+      "sections": {
+        "Interpretation": "Lakshmi Yoga forms when the 9th lord is powerful and Venus occupies its own or exaltation sign in a kendra or trikona. Named after the goddess of wealth, this yoga brings prosperity through fortunate circumstances and blessings rather than just hard work.",
+        "Principle": "Lakshmi is the goddess who chooses whom to bless. When the 9th house (fortune, divine grace) is strong and Venus (significator of Lakshmi) is well-placed, the goddess's blessings flow into the life.",
+        "Formation": "9th lord in own/exaltation/friend's sign AND Venus in Taurus, Libra, or Pisces in houses 1, 4, 5, 7, 9, or 10.",
+        "Results": "Wealth that seems to come easily, luxury, beautiful possessions, fortunate marriage. The native is blessed with comforts and rarely experiences true poverty. Grace in financial matters.",
+        "Variations": "Some texts require both conditions, others allow either. The stronger both factors, the more pronounced the results."
+      },
+      "metadata": {
+        "yoga_type": "Dhana Yoga (Fortune)",
+        "key_factors": ["9th lord strong", "Venus dignified in kendra/trikona"]
+      }
+    },
+    {
+      "id": "yoga-neecha-bhanga-raja",
+      "name": "Neecha Bhanga Raja Yoga",
+      "level": 3,
+      "category": "raja-yoga",
+      "keywords": ["debilitation cancelled", "rise from fall", "transformation", "redemption", "strength through weakness"],
+      "sort_order": 220,
+      "composite_of": [],
+      "sections": {
+        "Interpretation": "Neecha Bhanga Raja Yoga forms when a debilitated planet has its debilitation 'cancelled' (bhanga) through specific conditions, transforming apparent weakness into exceptional strength. This is one of astrology's most profound teachings—that our greatest weaknesses, properly addressed, become our greatest strengths.",
+        "Cancellation Conditions": "(1) Lord of debilitation sign in kendra from Lagna or Moon, (2) Lord of exaltation sign in kendra from Lagna or Moon, (3) Debilitated planet conjunct or aspected by its debilitation sign lord, (4) Debilitated planet in exalted navamsa, (5) Debilitated planet conjunct an exalted planet.",
+        "Principle": "A debilitated planet represents a karmic weakness—an area where we must struggle. When cancellation occurs, the struggle itself becomes the path to mastery. The native rises through overcoming the very weakness indicated.",
+        "Results": "Rise to prominence, often from humble or difficult beginnings. Success that comes after initial struggle. The native develops exceptional abilities precisely in the area of initial weakness. Often indicates a dramatic turnaround in life.",
+        "Examples": "Sun debilitated in Libra but Libra lord Venus in kendra—initial lack of confidence transforms into diplomatic leadership. Mars debilitated in Cancer but Moon in kendra—initial fear transforms into protective courage."
+      },
+      "metadata": {
+        "yoga_type": "Raja Yoga (Transformative)",
+        "condition": "Debilitated planet with cancellation",
+        "principle": "Weakness transformed to strength"
+      }
+    },
+    {
+      "id": "yoga-kahala",
+      "name": "Kahala Yoga",
+      "level": 3,
+      "category": "special-yoga",
+      "keywords": ["bold", "leadership", "courage", "4th lord", "9th lord", "stubbornness"],
+      "sort_order": 230,
+      "composite_of": ["bhava-4", "bhava-9"],
+      "sections": {
+        "Interpretation": "Kahala Yoga forms when the lords of 4th and 9th houses are in mutual kendras and the Lagna lord is strong. This creates a bold, energetic leader with both emotional stability (4th) and dharmic conviction (9th). The native charges forward like a war elephant (kahala).",
+        "Formation": "4th lord and 9th lord in kendra from each other (1, 4, 7, or 10 houses apart) AND Lagna lord is strong (in own sign, exalted, or well-placed).",
+        "Results": "Bold and courageous, leads others, stubborn in convictions, energetic throughout life. The native has both the emotional foundation (4th) and philosophical conviction (9th) to lead without wavering. May be seen as headstrong.",
+        "Variations": "Some texts define this as 4th lord in own/exaltation AND 9th lord in kendra, or 4th and 9th lords conjoined with strong Lagna lord."
+      },
+      "metadata": {
+        "yoga_type": "Special Yoga",
+        "houses": [4, 9],
+        "additional_requirement": "Strong Lagna lord"
+      }
+    },
+    {
+      "id": "yoga-saraswati",
+      "name": "Saraswati Yoga",
+      "level": 3,
+      "category": "special-yoga",
+      "keywords": ["learning", "arts", "wisdom", "jupiter", "venus", "mercury", "education"],
+      "sort_order": 231,
+      "composite_of": ["graha-guru", "graha-shukra", "graha-budha"],
+      "sections": {
+        "Interpretation": "Saraswati Yoga forms when Jupiter, Venus, and Mercury occupy kendra, trikona, or 2nd houses from Lagna, AND Jupiter is in its own, exaltation, or friendly sign. Named after the goddess of learning and arts, this yoga bestows exceptional intellectual and artistic abilities.",
+        "Formation": "Jupiter, Venus, and Mercury all in houses 1, 2, 4, 5, 7, 9, or 10 AND Jupiter in Sagittarius, Pisces, Cancer, or friendly signs.",
+        "Results": "Exceptional learning ability, skilled in arts and sciences, eloquent speech, poetic talent. The native becomes learned in multiple fields, may be a writer, teacher, or artist. Respected for wisdom and knowledge.",
+        "Goddess": "Saraswati is the goddess of knowledge, music, arts, and learning. Her blessings flow through the intellectual planets when properly aligned."
+      },
+      "metadata": {
+        "yoga_type": "Special Yoga (Learning)",
+        "planets": ["Jupiter", "Venus", "Mercury"],
+        "required_positions": "Kendra, trikona, or 2nd house",
+        "jupiter_condition": "Own, exalted, or friendly sign"
+      }
+    },
+    {
+      "id": "yoga-amala",
+      "name": "Amala Yoga",
+      "level": 3,
+      "category": "special-yoga",
+      "keywords": ["reputation", "fame", "10th from moon", "benefics", "pure", "lasting"],
+      "sort_order": 232,
+      "composite_of": ["graha-chandra", "bhava-10"],
+      "sections": {
+        "Interpretation": "Amala Yoga (also called Mala Yoga) forms when a natural benefic (Jupiter, Venus, Mercury, or waxing Moon) occupies the 10th house from Lagna or Moon. 'Amala' means pure or spotless—this yoga gives a pure, lasting reputation.",
+        "Formation": "Jupiter, Venus, Mercury, or waxing Moon in the 10th house from Lagna or from Moon.",
+        "Results": "Spotless reputation, fame for good deeds, lasting legacy. The native is known for virtuous actions and maintains good standing throughout life. Professional success with ethical foundation. Even after death, the reputation remains honorable.",
+        "Variations": "Stronger when the benefic is in its own or exalted sign. Multiple benefics in the 10th increase the yoga's power. Check both from Lagna and Moon."
+      },
+      "metadata": {
+        "yoga_type": "Special Yoga (Reputation)",
+        "position": "10th from Lagna or Moon",
+        "required_planets": ["Jupiter", "Venus", "Mercury", "waxing Moon"]
+      }
+    },
+    {
+      "id": "yoga-kala-sarpa",
+      "name": "Kala Sarpa Yoga",
+      "level": 3,
+      "category": "special-yoga",
+      "keywords": ["rahu", "ketu", "serpent", "karma", "constraint", "transformation", "controversial"],
+      "sort_order": 240,
+      "composite_of": ["graha-rahu", "graha-ketu"],
+      "sections": {
+        "Interpretation": "Kala Sarpa Yoga forms when all seven planets (Sun through Saturn) are hemmed between Rahu and Ketu. This creates a karmic constraint where life seems bound by fate, with sudden reversals and intense experiences. Controversial among astrologers—some consider it highly significant, others dismiss it entirely.",
+        "Formation": "All planets (Sun, Moon, Mars, Mercury, Jupiter, Venus, Saturn) on one side of the Rahu-Ketu axis. No planet should be conjunct Rahu or Ketu (partial yoga if conjunction exists).",
+        "Traditional View": "Indicates serpent-related karma, obstacles, sudden rises and falls, constraint followed by eventual liberation. The native may feel fated or trapped until spiritual practices break the pattern.",
+        "Modern View": "Many highly successful people have this yoga. It may indicate intense focus in one direction of life, karmic acceleration, or spiritual catalyst rather than pure affliction.",
+        "Types": "12 types based on which house Rahu occupies. Ananta (Rahu in 1st) through Shankha (Rahu in 12th). Each has different implications.",
+        "Cancellation": "Some texts say a planet conjunct Rahu or Ketu partially cancels the yoga. Others require specific remedial measures."
+      },
+      "metadata": {
+        "yoga_type": "Special Yoga (Karmic)",
+        "condition": "All planets between Rahu-Ketu axis",
+        "controversy": "Significance debated among astrologers"
+      }
+    },
+    {
+      "id": "yoga-pancha-mahapurusha-multiple",
+      "name": "Multiple Mahapurusha Yogas",
+      "level": 3,
+      "category": "combined-yoga",
+      "keywords": ["multiple yogas", "exceptional chart", "destiny", "great person"],
+      "sort_order": 250,
+      "composite_of": ["yoga-ruchaka", "yoga-bhadra", "yoga-hamsa", "yoga-malavya", "yoga-shasha"],
+      "sections": {
+        "Interpretation": "When two or more Pancha Mahapurusha Yogas occur in the same chart, an exceptional individual is indicated. The qualities of each yoga combine, creating a multifaceted great person with the strengths of multiple planetary archetypes.",
+        "Principle": "Each Mahapurusha Yoga (Ruchaka, Bhadra, Hamsa, Malavya, Shasha) represents mastery in one domain. Multiple yogas indicate mastery across domains—a true 'great person' (mahapurusha).",
+        "Combinations": "Ruchaka + Hamsa: Warrior-philosopher, Jupiter + Mars. Bhadra + Malavya: Artist-intellectual, Mercury + Venus. Hamsa + Shasha: Wise administrator, Jupiter + Saturn. Each combination has its own character.",
+        "Rarity": "Single Mahapurusha Yogas are uncommon in pure form; multiple are rare. However, even partial formations contribute their qualities."
+      },
+      "metadata": {
+        "yoga_type": "Combined Yoga",
+        "component_yogas": ["Ruchaka", "Bhadra", "Hamsa", "Malavya", "Shasha"],
+        "condition": "Two or more Pancha Mahapurusha Yogas in same chart"
+      }
+    }
+  ]
+}
