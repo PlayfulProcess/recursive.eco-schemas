@@ -8,6 +8,7 @@ This directory contains interpretive schemas for astrological systems using the 
 |------|-------------|
 | `L1-basic.json` | Foundation astrology tokens - planets, signs, houses, aspects |
 | `alan-leo.json` | Classical interpretations from Alan Leo (1860-1917) |
+| `jyotish-vedic.json` | Comprehensive Vedic/Hindu astrology with nakshatras and yogas |
 
 ## Unified Format
 
@@ -107,6 +108,27 @@ When adding astrological schemas:
 3. Include both light and shadow interpretations
 4. Document house systems where relevant
 5. Add proper attribution for source material
+
+## Jyotish (Vedic) Schema
+
+The `jyotish-vedic.json` schema provides comprehensive Hindu astrology interpretations including:
+
+**L1 Items (60 items):**
+- 9 Grahas (planets including Rahu/Ketu)
+- 12 Rashis (signs with sidereal zodiac)
+- 12 Bhavas (houses with traditional classifications)
+- 27 Nakshatras (lunar mansions with deities and shaktis)
+
+**L2 Emergences:**
+- Pancha Mahapurusha Yogas (5 planetary strength yogas)
+- Lunar Yogas (Gajakesari, Chandra-Mangala, etc.)
+- Viparita Raja Yogas (Harsha, Sarala, Vimala)
+- Nakshatra Gana groupings (Deva, Manushya, Rakshasa)
+
+**L3 Emergences:**
+- Raja Yogas (kendra-trikona combinations)
+- Dhana Yogas (wealth combinations)
+- Special Yogas (Saraswati, Amala, Kala Sarpa)
 
 ## Legacy Format
 
