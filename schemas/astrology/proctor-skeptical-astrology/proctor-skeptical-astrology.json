@@ -9,13 +9,16 @@
     "license": "Public Domain",
     "source_url": "https://www.gutenberg.org/ebooks/26556"
   },
-  "interpretations": [
+  "items": [
     {
-      "type": "planet",
-      "planet": "Saturn",
-      "story": "Saturn is the Greater Infortune, 'by universal experience acknowledged to be the most potent, evil, and malignant of all the planets.' Those born under him have 'small, black, leering eyes, thick lips and nostrils, large ears, thin face, lowering looks, cloudy aspect.' The most certain characteristic: 'he will never look thee in the face.' Chaucer summarizes: 'My loking is the fader of pestilence.'",
-      "light": "Constant in friendship, laborious, patient, enduring—if you can endure him",
-      "shadow": "Drowning, prison, strangling, rebellion, poisoning, ruin, cold diseases, dark treasons—'the fader of pestilence'",
+      "id": "saturn",
+      "name": "Saturn",
+      "category": "planet",
+      "sections": {
+        "Interpretation": "Saturn is the Greater Infortune, 'by universal experience acknowledged to be the most potent, evil, and malignant of all the planets.' Those born under him have 'small, black, leering eyes, thick lips and nostrils, large ears, thin face, lowering looks, cloudy aspect.' The most certain characteristic: 'he will never look thee in the face.' Chaucer summarizes: 'My loking is the fader of pestilence.'",
+        "Light": "Constant in friendship, laborious, patient, enduring—if you can endure him",
+        "Shadow": "Drowning, prison, strangling, rebellion, poisoning, ruin, cold diseases, dark treasons—'the fader of pestilence'"
+      },
       "keywords": ["malefic", "cold", "melancholy", "leering eyes", "gravediggers", "lead", "black"],
       "quotes": [
         "Saturn is the Greater Infortune of the old system of astrology, and is by universal experience acknowledged to be the most potent, evil, and malignant of all the planets.",
@@ -28,11 +31,14 @@
       "sort_order": 0
     },
     {
-      "type": "planet",
-      "planet": "Jupiter",
-      "story": "Jupiter is 'the most propitious of all the planets, and the native born under his influence has every reason to be jovial in fact as he is by nature.' Such natives will be 'tall and fair, handsome and erect, robust, ruddy, and altogether a good-looking person.' Unless Jupiter is afflicted—then he denotes 'quacks and mountebanks, knaves, cheats, and drunkards.'",
-      "light": "Judges, counsellors, church dignitaries, scholars, woollendrapers (possibly explaining the woolsack)",
-      "shadow": "When afflicted: quacks, mountebanks, knaves, cheats, and drunkards—quite a fall from cardinals to drunkards",
+      "id": "jupiter",
+      "name": "Jupiter",
+      "category": "planet",
+      "sections": {
+        "Interpretation": "Jupiter is 'the most propitious of all the planets, and the native born under his influence has every reason to be jovial in fact as he is by nature.' Such natives will be 'tall and fair, handsome and erect, robust, ruddy, and altogether a good-looking person.' Unless Jupiter is afflicted—then he denotes 'quacks and mountebanks, knaves, cheats, and drunkards.'",
+        "Light": "Judges, counsellors, church dignitaries, scholars, woollendrapers (possibly explaining the woolsack)",
+        "Shadow": "When afflicted: quacks, mountebanks, knaves, cheats, and drunkards—quite a fall from cardinals to drunkards"
+      },
       "keywords": ["benefic", "jovial", "ruddy", "fortunate", "tin", "red-green"],
       "quotes": [
         "Jupiter, on the contrary, though Saturn's next neighbour in the solar system, produces effects of an entirely contrary kind.",
@@ -45,11 +51,14 @@
       "sort_order": 1
     },
     {
-      "type": "planet",
-      "planet": "Mars",
-      "story": "Mars, the Lesser Infortune, makes natives 'of fierce countenance, his eyes sparkling, or sharp and darting, his complexion fiery or yellowish, and his countenance scarred or furrowed.' Hair color depends on sign: watery sign gives flaxen hair, earthy gives chestnut. 'The influence of Saturn may be compared to a lingering but fatal consumption; that of Mars to a burning fever.'",
-      "light": "Generals, surgeons, barbers, smiths, sculptors, cooks—'all cut throat people'",
-      "shadow": "When afflicted with Mercury or Moon: thieves, hangmen, and 'all cut throat people' (literally this time)",
+      "id": "mars",
+      "name": "Mars",
+      "category": "planet",
+      "sections": {
+        "Interpretation": "Mars, the Lesser Infortune, makes natives 'of fierce countenance, his eyes sparkling, or sharp and darting, his complexion fiery or yellowish, and his countenance scarred or furrowed.' Hair color depends on sign: watery sign gives flaxen hair, earthy gives chestnut. 'The influence of Saturn may be compared to a lingering but fatal consumption; that of Mars to a burning fever.'",
+        "Light": "Generals, surgeons, barbers, smiths, sculptors, cooks—'all cut throat people'",
+        "Shadow": "When afflicted with Mercury or Moon: thieves, hangmen, and 'all cut throat people' (literally this time)"
+      },
       "keywords": ["malefic", "fiery", "martial", "scarred", "iron", "red"],
       "quotes": [
         "Next in order comes Mars, inferior only in malefic influence to Saturn, and called by the old astrologers the Lesser Infortune.",
@@ -62,11 +71,14 @@
       "sort_order": 2
     },
     {
-      "type": "planet",
-      "planet": "Sun",
-      "story": "The solar native has 'a round face (like pictures of the sun in old books of astronomy), with a short chin.' The Sun is 'the natural significator of respectability; for which I can discover no reason, unless it be that the sun travelling always in the ecliptic has no latitude, and so solar folk are allowed none.' When ill aspected: 'proud and mean, tyrannical and sycophantic.'",
-      "light": "Emperors, kings, titled folk, goldsmiths, jewellers, coiners—the respectable (or those pretending to be)",
-      "shadow": "When afflicted: 'pretenders either to power or knowledge'—arrogance and ignorant pomposity",
+      "id": "sun",
+      "name": "Sun",
+      "category": "planet",
+      "sections": {
+        "Interpretation": "The solar native has 'a round face (like pictures of the sun in old books of astronomy), with a short chin.' The Sun is 'the natural significator of respectability; for which I can discover no reason, unless it be that the sun travelling always in the ecliptic has no latitude, and so solar folk are allowed none.' When ill aspected: 'proud and mean, tyrannical and sycophantic.'",
+        "Light": "Emperors, kings, titled folk, goldsmiths, jewellers, coiners—the respectable (or those pretending to be)",
+        "Shadow": "When afflicted: 'pretenders either to power or knowledge'—arrogance and ignorant pomposity"
+      },
       "keywords": ["benefic", "respectability", "royalty", "gold", "yellow-purple"],
       "quotes": [
         "The solar native has generally a round face (like pictures of the sun in old books of astronomy), with a short chin; his complexion somewhat sanguine; curling sandy hair, and a white tender skin.",
@@ -79,11 +91,14 @@
       "sort_order": 3
     },
     {
-      "type": "planet",
-      "planet": "Venus",
-      "story": "'The native of Venus hath a love-dimple in the chin, a lovely mouth, cherry lips, and a right merry countenance.' Venus's benevolence was proven, according to Raphael (1828), by 'our present beloved monarch' George IV—'a most illustrious proof of the celestial science.' (George IV was notorious for dissipation, which Proctor notes with evident irony.)",
-      "light": "Musicians, embroiderers, perfumers, classic modellers—those who administer to luxuries of the great",
-      "shadow": "When afflicted: 'the lower orders of the votaries of voluptuousness'",
+      "id": "venus",
+      "name": "Venus",
+      "category": "planet",
+      "sections": {
+        "Interpretation": "'The native of Venus hath a love-dimple in the chin, a lovely mouth, cherry lips, and a right merry countenance.' Venus's benevolence was proven, according to Raphael (1828), by 'our present beloved monarch' George IV—'a most illustrious proof of the celestial science.' (George IV was notorious for dissipation, which Proctor notes with evident irony.)",
+        "Light": "Musicians, embroiderers, perfumers, classic modellers—those who administer to luxuries of the great",
+        "Shadow": "When afflicted: 'the lower orders of the votaries of voluptuousness'"
+      },
       "keywords": ["benefic", "dimples", "cherry lips", "copper", "white-purple"],
       "quotes": [
         "Venus, the next in order, bore the same relation to the Greater Fortune Jupiter which Mars bore to Saturn the Greater Ill-fortune. She was the Lesser Fortune, and her influence was in nearly all respects benevolent.",
@@ -96,11 +111,14 @@
       "sort_order": 4
     },
     {
-      "type": "planet",
-      "planet": "Mercury",
-      "story": "Mercury is 'a cold, dry, melancholy star.' The Mercurial has 'high forehead and thin sharp nose, thin beard (many times none at all), slender of body, and with small weak eyes.' When well affected: 'a strong, vigorous, active mind.' Long slender hands and fingers are 'especial marks of Mercury.'",
-      "light": "Astrologers, philosophers, mathematicians, politicians, merchants, poets—all ingenious, clever men",
-      "shadow": "When ill affected: pettifoggers, cunning vile persons, thieves, messengers, footmen, and servants",
+      "id": "mercury",
+      "name": "Mercury",
+      "category": "planet",
+      "sections": {
+        "Interpretation": "Mercury is 'a cold, dry, melancholy star.' The Mercurial has 'high forehead and thin sharp nose, thin beard (many times none at all), slender of body, and with small weak eyes.' When well affected: 'a strong, vigorous, active mind.' Long slender hands and fingers are 'especial marks of Mercury.'",
+        "Light": "Astrologers, philosophers, mathematicians, politicians, merchants, poets—all ingenious, clever men",
+        "Shadow": "When ill affected: pettifoggers, cunning vile persons, thieves, messengers, footmen, and servants"
+      },
       "keywords": ["neutral", "melancholy", "thin", "clever", "quicksilver", "azure"],
       "quotes": [
         "Mercury is considered by astrologers 'a cold, dry, melancholy star.'",
@@ -113,11 +131,14 @@
       "sort_order": 5
     },
     {
-      "type": "planet",
-      "planet": "Moon",
-      "story": "The Moon's natives are 'of good stature, fair, and pale, moon-faced, with grey eyes, short arms, thick hands and feet, smooth, corpulent and phlegmatic body.' When in watery signs: 'he or she is blub-cheeked, not a handsome body, but a muddling creature.' 'Unless the moon is very well aspected, she ever signifies an ordinary vulgar person.'",
-      "light": "Sailors, all persons connected with water or any kind of fluid, those in inferior and common offices",
-      "shadow": "The muddling creature: blub-cheeked, ordinary, vulgar—unless very well aspected",
+      "id": "moon",
+      "name": "Moon",
+      "category": "planet",
+      "sections": {
+        "Interpretation": "The Moon's natives are 'of good stature, fair, and pale, moon-faced, with grey eyes, short arms, thick hands and feet, smooth, corpulent and phlegmatic body.' When in watery signs: 'he or she is blub-cheeked, not a handsome body, but a muddling creature.' 'Unless the moon is very well aspected, she ever signifies an ordinary vulgar person.'",
+        "Light": "Sailors, all persons connected with water or any kind of fluid, those in inferior and common offices",
+        "Shadow": "The muddling creature: blub-cheeked, ordinary, vulgar—unless very well aspected"
+      },
       "keywords": ["neutral", "moon-faced", "blub-cheeked", "phlegmatic", "silver", "spotted"],
       "quotes": [
         "The moon comes last in planetary sequence, as nearest to the earth. She is regarded by astrologers as a cold, moist, watery, phlegmatic planet, variable to an extreme.",
@@ -130,11 +151,14 @@
       "sort_order": 6
     },
     {
-      "type": "planet",
-      "planet": "Uranus",
-      "story": "'It is unfortunate for astrology that nothing was ever observed which seemed to suggest the possibility of an unknown planet. Astrologers tell us now that Uranus is a very potent planet; yet the old astrologers seem to have got on very well without him.' Raphael falsely claimed Halley and Bradley discovered Uranus through perturbation analysis—'Of course there is not a word of truth in this.'",
-      "light": "If well aspected: profound in secret sciences, magnanimous, lofty of mind",
-      "shadow": "Uranus is 'peculiarly hostile to' women, 'and very evil in love.' Beware marriage when Uranus afflicts!",
+      "id": "uranus",
+      "name": "Uranus",
+      "category": "planet",
+      "sections": {
+        "Interpretation": "'It is unfortunate for astrology that nothing was ever observed which seemed to suggest the possibility of an unknown planet. Astrologers tell us now that Uranus is a very potent planet; yet the old astrologers seem to have got on very well without him.' Raphael falsely claimed Halley and Bradley discovered Uranus through perturbation analysis—'Of course there is not a word of truth in this.'",
+        "Light": "If well aspected: profound in secret sciences, magnanimous, lofty of mind",
+        "Shadow": "Uranus is 'peculiarly hostile to' women, 'and very evil in love.' Beware marriage when Uranus afflicts!"
+      },
       "keywords": ["post-hoc addition", "eccentric", "romantic", "unsettled", "hostile to women"],
       "quotes": [
         "It is unfortunate for astrology that, despite the asserted careful comparison of events with the planetary positions preceding and indicating them, nothing was ever observed which seemed to suggest the possibility that there may be an unknown planet ruling very strongly the affairs of men.",
@@ -147,11 +171,14 @@
       "sort_order": 7
     },
     {
-      "type": "sign",
-      "sign": "Aries",
-      "story": "Aries is 'vernal, dry, fiery, masculine, cardinal, equinoctial, diurnal, movable, commanding, eastern, choleric, violent, and quadrupedalian.' It 'signifies a dry constitution, long face and neck, thick shoulders, swarthy complexion, and a hasty, passionate temper.' Governs head and face. Reigns over England, France, Germany, Syria, Naples, Verona.",
-      "light": "Fortunate, commanding, initiating—the house of Mars at its most martial",
-      "shadow": "Hasty, passionate, violent, choleric—'destruction by burning, and murder'",
+      "id": "aries",
+      "name": "Aries",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Aries is 'vernal, dry, fiery, masculine, cardinal, equinoctial, diurnal, movable, commanding, eastern, choleric, violent, and quadrupedalian.' It 'signifies a dry constitution, long face and neck, thick shoulders, swarthy complexion, and a hasty, passionate temper.' Governs head and face. Reigns over England, France, Germany, Syria, Naples, Verona.",
+        "Light": "Fortunate, commanding, initiating—the house of Mars at its most martial",
+        "Shadow": "Hasty, passionate, violent, choleric—'destruction by burning, and murder'"
+      },
       "keywords": ["fire", "cardinal", "masculine", "Mars", "head", "fortunate", "violent"],
       "quotes": [
         "Astrologers say that Aries is a vernal, dry, fiery, masculine, cardinal, equinoctial, diurnal, movable, commanding, eastern, choleric, violent, and quadrupedalian sign.",
@@ -164,11 +191,14 @@
       "sort_order": 10
     },
     {
-      "type": "sign",
-      "sign": "Taurus",
-      "story": "Taurus 'gives to the native a stout athletic frame, broad bull-like forehead, dark curly hair, short neck, and so forth, and a dull apathetic temper, exceedingly cruel and malicious if once aroused.' Governs neck and throat. Reigns over Ireland, Holland, Persia, Leipzig. Feminine and unfortunate.",
-      "light": "Stout, athletic, strong—physical power if nothing else",
-      "shadow": "Dull, apathetic, but 'exceedingly cruel and malicious if once aroused'—the sleeping bull",
+      "id": "taurus",
+      "name": "Taurus",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Taurus 'gives to the native a stout athletic frame, broad bull-like forehead, dark curly hair, short neck, and so forth, and a dull apathetic temper, exceedingly cruel and malicious if once aroused.' Governs neck and throat. Reigns over Ireland, Holland, Persia, Leipzig. Feminine and unfortunate.",
+        "Light": "Stout, athletic, strong—physical power if nothing else",
+        "Shadow": "Dull, apathetic, but 'exceedingly cruel and malicious if once aroused'—the sleeping bull"
+      },
       "keywords": ["earth", "fixed", "feminine", "Venus", "neck", "unfortunate", "bull-like"],
       "quotes": [
         "Taurus gives to the native born under his auspices a stout athletic frame, broad bull-like forehead, dark curly hair, short neck, and so forth.",
@@ -181,11 +211,14 @@
       "sort_order": 11
     },
     {
-      "type": "sign",
-      "sign": "Gemini",
-      "story": "The native of Gemini will have 'sanguine complexion and tall, straight figure, dark eyes quick and piercing, brown hair, active ways, and will be of exceedingly ingenious intellect.' Governs arms and shoulders. Rules London (the great fire, plague, and London Bridge all occurred when Gemini was prominent—or so astrologers claim after the fact).",
-      "light": "Ingenious intellect, quick eyes, active ways—Mercury's house at its best",
-      "shadow": "Post-hoc reasoning: any major London event gets attributed to Gemini after it happens",
+      "id": "gemini",
+      "name": "Gemini",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "The native of Gemini will have 'sanguine complexion and tall, straight figure, dark eyes quick and piercing, brown hair, active ways, and will be of exceedingly ingenious intellect.' Governs arms and shoulders. Rules London (the great fire, plague, and London Bridge all occurred when Gemini was prominent—or so astrologers claim after the fact).",
+        "Light": "Ingenious intellect, quick eyes, active ways—Mercury's house at its best",
+        "Shadow": "Post-hoc reasoning: any major London event gets attributed to Gemini after it happens"
+      },
       "keywords": ["air", "mutable", "masculine", "Mercury", "arms", "fortunate", "London"],
       "quotes": [
         "Gemini is the house of Mercury. The native of Gemini will have a sanguine complexion and tall, straight figure, dark eyes quick and piercing, brown hair, active ways, and will be of exceedingly ingenious intellect.",
@@ -198,11 +231,14 @@
       "sort_order": 12
     },
     {
-      "type": "sign",
-      "sign": "Cancer",
-      "story": "Cancer natives are 'of fair but pale complexion, round face, grey or mild blue eyes, weak voice, the upper part of the body large, slender arms, small feet, and an effeminate constitution.' Governs breast and stomach. Reigns over Scotland, Holland, Africa, Constantinople, New York. Feminine and unfortunate.",
-      "light": "Fair complexion, grey eyes—the Moon's own sign",
-      "shadow": "Effeminate constitution, weak voice—'indicative of all changeable and mutable circumstances'",
+      "id": "cancer",
+      "name": "Cancer",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Cancer natives are 'of fair but pale complexion, round face, grey or mild blue eyes, weak voice, the upper part of the body large, slender arms, small feet, and an effeminate constitution.' Governs breast and stomach. Reigns over Scotland, Holland, Africa, Constantinople, New York. Feminine and unfortunate.",
+        "Light": "Fair complexion, grey eyes—the Moon's own sign",
+        "Shadow": "Effeminate constitution, weak voice—'indicative of all changeable and mutable circumstances'"
+      },
       "keywords": ["water", "cardinal", "feminine", "Moon", "breast", "unfortunate", "changeable"],
       "quotes": [
         "Cancer is the house of the Moon and exaltation of Jupiter.",
@@ -215,11 +251,14 @@
       "sort_order": 13
     },
     {
-      "type": "sign",
-      "sign": "Leo",
-      "story": "Leo natives are 'of large body, broad shoulders, austere countenance, with dark eyes and tawny hair, strong voice, and leonine character, resolute and ambitious, but generous, free, and courteous.' Governs heart and back. Reigns over Italy, France, Rome, Philadelphia. Masculine and fortunate.",
-      "light": "Leonine character: resolute, ambitious, generous, free, courteous—the Sun's royal house",
-      "shadow": "Austere countenance—royalty demands its distance",
+      "id": "leo",
+      "name": "Leo",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Leo natives are 'of large body, broad shoulders, austere countenance, with dark eyes and tawny hair, strong voice, and leonine character, resolute and ambitious, but generous, free, and courteous.' Governs heart and back. Reigns over Italy, France, Rome, Philadelphia. Masculine and fortunate.",
+        "Light": "Leonine character: resolute, ambitious, generous, free, courteous—the Sun's royal house",
+        "Shadow": "Austere countenance—royalty demands its distance"
+      },
       "keywords": ["fire", "fixed", "masculine", "Sun", "heart", "fortunate", "leonine"],
       "quotes": [
         "The native born under Leo will be of large body, broad shoulders, austere countenance, with dark eyes and tawny hair, strong voice, and leonine character, resolute and ambitious, but generous, free, and courteous.",
@@ -232,11 +271,14 @@
       "sort_order": 14
     },
     {
-      "type": "sign",
-      "sign": "Virgo",
-      "story": "Virgo natives 'are of moderate stature, seldom handsome, slender but compact, thrifty and ingenious.' Governs abdomen. Reigns over Turkey, Greece, Crete, Jerusalem, Paris, Lyons. Feminine and 'generally unfortunate.'",
-      "light": "Thrifty, ingenious, compact—Mercury's practical house",
-      "shadow": "Seldom handsome, generally unfortunate—the maid's modest lot",
+      "id": "virgo",
+      "name": "Virgo",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Virgo natives 'are of moderate stature, seldom handsome, slender but compact, thrifty and ingenious.' Governs abdomen. Reigns over Turkey, Greece, Crete, Jerusalem, Paris, Lyons. Feminine and 'generally unfortunate.'",
+        "Light": "Thrifty, ingenious, compact—Mercury's practical house",
+        "Shadow": "Seldom handsome, generally unfortunate—the maid's modest lot"
+      },
       "keywords": ["earth", "mutable", "feminine", "Mercury", "abdomen", "unfortunate", "thrifty"],
       "quotes": [
         "Virgo is the joy of Mercury.",
@@ -249,11 +291,14 @@
       "sort_order": 15
     },
     {
-      "type": "sign",
-      "sign": "Libra",
-      "story": "Libra natives are 'tall and well made, elegant in person, round-faced and ruddy, but plain-featured and inclined to eruptions that disfigure the face when old; they are of sweet disposition, just and upright in dealing.' Governs lumbar regions. Reigns over Austria, Portugal, India, Vienna, Charleston. Masculine and fortunate.",
-      "light": "Elegant, sweet disposition, just and upright—Venus brings beauty and balance",
-      "shadow": "Plain-featured and 'inclined to eruptions that disfigure the face when old'—time comes for all",
+      "id": "libra",
+      "name": "Libra",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Libra natives are 'tall and well made, elegant in person, round-faced and ruddy, but plain-featured and inclined to eruptions that disfigure the face when old; they are of sweet disposition, just and upright in dealing.' Governs lumbar regions. Reigns over Austria, Portugal, India, Vienna, Charleston. Masculine and fortunate.",
+        "Light": "Elegant, sweet disposition, just and upright—Venus brings beauty and balance",
+        "Shadow": "Plain-featured and 'inclined to eruptions that disfigure the face when old'—time comes for all"
+      },
       "keywords": ["air", "cardinal", "masculine", "Venus", "lumbar", "fortunate", "eruptions when old"],
       "quotes": [
         "Libra is the house of Venus.",
@@ -266,11 +311,14 @@
       "sort_order": 16
     },
     {
-      "type": "sign",
-      "sign": "Scorpio",
-      "story": "Scorpio natives are 'strong, corpulent, and robust, with large bones, dark curly hair and eyes (presumably the eyes dark only, not curly), middle stature, dusky complexion, active bodies; they are usually reserved in speech.' Governs the groin. Feminine and unfortunate. '(It would appear likely, by the way, that astrology was a purely masculine science.)'",
-      "light": "Strong, robust, active, reserved—Mars's nocturnal power",
-      "shadow": "Proctor's aside: astrology consistently marks feminine signs as unfortunate—suspicious pattern",
+      "id": "scorpio",
+      "name": "Scorpio",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Scorpio natives are 'strong, corpulent, and robust, with large bones, dark curly hair and eyes (presumably the eyes dark only, not curly), middle stature, dusky complexion, active bodies; they are usually reserved in speech.' Governs the groin. Feminine and unfortunate. '(It would appear likely, by the way, that astrology was a purely masculine science.)'",
+        "Light": "Strong, robust, active, reserved—Mars's nocturnal power",
+        "Shadow": "Proctor's aside: astrology consistently marks feminine signs as unfortunate—suspicious pattern"
+      },
       "keywords": ["water", "fixed", "feminine", "Mars", "groin", "unfortunate", "masculine science"],
       "quotes": [
         "Scorpio is, like Aries, the house of Mars, 'and also his joy.'",
@@ -283,11 +331,14 @@
       "sort_order": 17
     },
     {
-      "type": "sign",
-      "sign": "Sagittarius",
-      "story": "Sagittarius natives are 'well formed and tall, ruddy, handsome, and jovial, with fine clear eyes, chestnut hair, and oval fleshy face. They are generally jolly fellows at either bin or board, active, intrepid, generous, and obliging.' Governs thighs. Masculine and 'of course fortunate.'",
-      "light": "Jolly fellows at either bin or board—Jupiter's merry house",
-      "shadow": "Of course fortunate—because masculine (Proctor notes the pattern)",
+      "id": "sagittarius",
+      "name": "Sagittarius",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Sagittarius natives are 'well formed and tall, ruddy, handsome, and jovial, with fine clear eyes, chestnut hair, and oval fleshy face. They are generally jolly fellows at either bin or board, active, intrepid, generous, and obliging.' Governs thighs. Masculine and 'of course fortunate.'",
+        "Light": "Jolly fellows at either bin or board—Jupiter's merry house",
+        "Shadow": "Of course fortunate—because masculine (Proctor notes the pattern)"
+      },
       "keywords": ["fire", "mutable", "masculine", "Jupiter", "thighs", "fortunate", "jolly"],
       "quotes": [
         "Sagittarius is the house and joy of Jupiter.",
@@ -300,11 +351,14 @@
       "sort_order": 18
     },
     {
-      "type": "sign",
-      "sign": "Capricorn",
-      "story": "Capricorn gives 'a dry constitution and slender make, with a long thin visage, thin beard (a generally goaty aspect, in fact), dark hair, long neck, narrow chin, and weak knees. It governs, nevertheless, the knees and hams.' Reigns over India, Greece, Mexico, Oxford. Feminine and unfortunate.",
-      "light": "Saturn's house of discipline and toil—there must be some virtue in that",
-      "shadow": "A generally goaty aspect, weak knees—unfortunate being feminine, as usual",
+      "id": "capricorn",
+      "name": "Capricorn",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Capricorn gives 'a dry constitution and slender make, with a long thin visage, thin beard (a generally goaty aspect, in fact), dark hair, long neck, narrow chin, and weak knees. It governs, nevertheless, the knees and hams.' Reigns over India, Greece, Mexico, Oxford. Feminine and unfortunate.",
+        "Light": "Saturn's house of discipline and toil—there must be some virtue in that",
+        "Shadow": "A generally goaty aspect, weak knees—unfortunate being feminine, as usual"
+      },
       "keywords": ["earth", "cardinal", "feminine", "Saturn", "knees", "unfortunate", "goaty"],
       "quotes": [
         "Capricorn is the house of Saturn and exaltation of Mars.",
@@ -317,11 +371,14 @@
       "sort_order": 19
     },
     {
-      "type": "sign",
-      "sign": "Aquarius",
-      "story": "Aquarius natives are 'robust, steady, strong, healthy, and of middle stature; delicate complexion, clear but not pale, sandy hair, hazel eyes, and generally an honest disposition.' Governs legs and ankles. Reigns over Russia, Denmark, Hamburg, Bremen. Masculine and fortunate.",
-      "light": "Robust, honest, healthy—Saturn's better side in a masculine sign",
-      "shadow": "Even Saturn produces fortunate results when the sign is masculine",
+      "id": "aquarius",
+      "name": "Aquarius",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Aquarius natives are 'robust, steady, strong, healthy, and of middle stature; delicate complexion, clear but not pale, sandy hair, hazel eyes, and generally an honest disposition.' Governs legs and ankles. Reigns over Russia, Denmark, Hamburg, Bremen. Masculine and fortunate.",
+        "Light": "Robust, honest, healthy—Saturn's better side in a masculine sign",
+        "Shadow": "Even Saturn produces fortunate results when the sign is masculine"
+      },
       "keywords": ["air", "fixed", "masculine", "Saturn", "ankles", "fortunate", "honest"],
       "quotes": [
         "Aquarius also is the house of Saturn.",
@@ -334,11 +391,14 @@
       "sort_order": 20
     },
     {
-      "type": "sign",
-      "sign": "Pisces",
-      "story": "Pisces natives are 'short, pale, thick-set, and round-shouldered (like fish), its character phlegmatic and effeminate.' Governs feet and toes. Reigns over Portugal, Spain, Egypt, Normandy. 'It is feminine, and therefore, naturally, unfortunate.'",
-      "light": "Jupiter's nocturnal house—some capacity for reverence and philosophy",
-      "shadow": "Round-shouldered like fish, phlegmatic, effeminate—'feminine, and therefore, naturally, unfortunate'",
+      "id": "pisces",
+      "name": "Pisces",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Pisces natives are 'short, pale, thick-set, and round-shouldered (like fish), its character phlegmatic and effeminate.' Governs feet and toes. Reigns over Portugal, Spain, Egypt, Normandy. 'It is feminine, and therefore, naturally, unfortunate.'",
+        "Light": "Jupiter's nocturnal house—some capacity for reverence and philosophy",
+        "Shadow": "Round-shouldered like fish, phlegmatic, effeminate—'feminine, and therefore, naturally, unfortunate'"
+      },
       "keywords": ["water", "mutable", "feminine", "Jupiter", "feet", "unfortunate", "fish-like"],
       "quotes": [
         "Pisces is the house of Jupiter and exaltation of Venus.",
@@ -351,11 +411,14 @@
       "sort_order": 21
     },
     {
-      "type": "house",
-      "house": 1,
-      "story": "The Ascendant House, rising above the horizon at the east, 'was regarded as the House of Life, the planets located therein at the moment of birth having most potent influence on the life and destiny of the native.' From this comes our expression that something is 'in the ascendant.' Angular and powerful.",
-      "light": "Life, destiny, beginnings—the most important house for the native",
-      "shadow": "If malefics occupy, the native's life and health suffer from the start",
+      "id": "house-1",
+      "name": "First House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The Ascendant House, rising above the horizon at the east, 'was regarded as the House of Life, the planets located therein at the moment of birth having most potent influence on the life and destiny of the native.' From this comes our expression that something is 'in the ascendant.' Angular and powerful.",
+        "Light": "Life, destiny, beginnings—the most important house for the native",
+        "Shadow": "If malefics occupy, the native's life and health suffer from the start"
+      },
       "keywords": ["angular", "life", "ascendant", "destiny", "east", "rising"],
       "quotes": [
         "The first, called the Ascendant House, was the portion rising above the horizon at the east.",
@@ -368,11 +431,14 @@
       "sort_order": 30
     },
     {
-      "type": "house",
-      "house": 2,
-      "story": "The House of Riches, 'one-third of the way from the east below the horizon towards the place of the sun at midnight.' Succedent, supporting the angular first house. Material sustenance follows life itself.",
-      "light": "Riches, possessions, material security",
-      "shadow": "Or poverty, if malefics are found here",
+      "id": "house-2",
+      "name": "Second House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The House of Riches, 'one-third of the way from the east below the horizon towards the place of the sun at midnight.' Succedent, supporting the angular first house. Material sustenance follows life itself.",
+        "Light": "Riches, possessions, material security",
+        "Shadow": "Or poverty, if malefics are found here"
+      },
       "keywords": ["succedent", "riches", "possessions", "material"],
       "quotes": [
         "The next house was the House of Riches, and was one-third of the way from the east below the horizon towards the place of the sun at midnight.",
@@ -385,11 +451,14 @@
       "sort_order": 31
     },
     {
-      "type": "house",
-      "house": 3,
-      "story": "The House of Kindred, short journeys, letters, messages. Two-thirds of the way toward midnight. Cadent and weak in power, preparing for the fourth house angle.",
-      "light": "Brothers, sisters, neighbors, communication, short travels",
-      "shadow": "Cadent houses are weakest—kindred may offer little support",
+      "id": "house-3",
+      "name": "Third House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The House of Kindred, short journeys, letters, messages. Two-thirds of the way toward midnight. Cadent and weak in power, preparing for the fourth house angle.",
+        "Light": "Brothers, sisters, neighbors, communication, short travels",
+        "Shadow": "Cadent houses are weakest—kindred may offer little support"
+      },
       "keywords": ["cadent", "kindred", "journeys", "letters", "messages"],
       "quotes": [
         "The third was the House of Kindred, short journeys, letters, messages, etc.",
@@ -402,11 +471,14 @@
       "sort_order": 32
     },
     {
-      "type": "house",
-      "house": 4,
-      "story": "The House of Parents, at the midnight position of the sun. Angular and powerful. 'The place of the sun at midnight'—foundations, ancestry, endings.",
-      "light": "Parents, ancestry, lands, inheritance, the foundation of life",
-      "shadow": "Also 'the end of matters'—where things conclude",
+      "id": "house-4",
+      "name": "Fourth House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The House of Parents, at the midnight position of the sun. Angular and powerful. 'The place of the sun at midnight'—foundations, ancestry, endings.",
+        "Light": "Parents, ancestry, lands, inheritance, the foundation of life",
+        "Shadow": "Also 'the end of matters'—where things conclude"
+      },
       "keywords": ["angular", "parents", "inheritance", "midnight", "endings"],
       "quotes": [
         "The fourth was the House of Parents, and was the house which the sun reached at midnight.",
@@ -419,11 +491,14 @@
       "sort_order": 33
     },
     {
-      "type": "house",
-      "house": 5,
-      "story": "The House of Children and Women, 'also of all sorts of amusements, theatres, banquets, and merry-making.' Succedent, supporting the fourth house. The pleasures that spring from secure foundations.",
-      "light": "Children, pleasure, creativity, amusement, theatres, banquets",
-      "shadow": "Excessive merry-making can squander what foundations provide",
+      "id": "house-5",
+      "name": "Fifth House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The House of Children and Women, 'also of all sorts of amusements, theatres, banquets, and merry-making.' Succedent, supporting the fourth house. The pleasures that spring from secure foundations.",
+        "Light": "Children, pleasure, creativity, amusement, theatres, banquets",
+        "Shadow": "Excessive merry-making can squander what foundations provide"
+      },
       "keywords": ["succedent", "children", "pleasure", "amusement", "theatres"],
       "quotes": [
         "The fifth was the House of Children and Women, also of all sorts of amusements, theatres, banquets, and merry-making.",
@@ -436,11 +511,14 @@
       "sort_order": 34
     },
     {
-      "type": "house",
-      "house": 6,
-      "story": "The House of Sickness. Cadent and weak. Service, labor, and the ailments that come with them. The house before the Descendant, preparing for partnership through service.",
-      "light": "Service, daily work, health practices when well managed",
-      "shadow": "Sickness, servitude—the trials before relationship",
+      "id": "house-6",
+      "name": "Sixth House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The House of Sickness. Cadent and weak. Service, labor, and the ailments that come with them. The house before the Descendant, preparing for partnership through service.",
+        "Light": "Service, daily work, health practices when well managed",
+        "Shadow": "Sickness, servitude—the trials before relationship"
+      },
       "keywords": ["cadent", "sickness", "service", "labor", "weak"],
       "quotes": [
         "The sixth was the House of Sickness.",
@@ -453,11 +531,14 @@
       "sort_order": 35
     },
     {
-      "type": "house",
-      "house": 7,
-      "story": "The House of Love and Marriage, at the western horizon where the sun sets. Angular and powerful. 'Opposite to the first'—what completes us lies across from our self.",
-      "light": "Marriage, partnership, love, contracts, committed relationships",
-      "shadow": "Also 'death (if afflicted)'—marriage unto death, one way or another",
+      "id": "house-7",
+      "name": "Seventh House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The House of Love and Marriage, at the western horizon where the sun sets. Angular and powerful. 'Opposite to the first'—what completes us lies across from our self.",
+        "Light": "Marriage, partnership, love, contracts, committed relationships",
+        "Shadow": "Also 'death (if afflicted)'—marriage unto death, one way or another"
+      },
       "keywords": ["angular", "marriage", "love", "descendant", "west", "setting"],
       "quotes": [
         "The seventh was the House of Love and Marriage.",
@@ -470,11 +551,14 @@
       "sort_order": 36
     },
     {
-      "type": "house",
-      "house": 8,
-      "story": "The House of Death, 'the first house above the horizon, lying to the west.' Succedent, following the seventh. What marriage shares: resources, intimacy, and ultimately mortality.",
-      "light": "Inheritance, shared resources, transformation",
-      "shadow": "Death, fear, anxiety, the goods of the dead",
+      "id": "house-8",
+      "name": "Eighth House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The House of Death, 'the first house above the horizon, lying to the west.' Succedent, following the seventh. What marriage shares: resources, intimacy, and ultimately mortality.",
+        "Light": "Inheritance, shared resources, transformation",
+        "Shadow": "Death, fear, anxiety, the goods of the dead"
+      },
       "keywords": ["succedent", "death", "inheritance", "transformation"],
       "quotes": [
         "The eighth house was the first house above the horizon, lying to the west, and was the House of Death.",
@@ -487,11 +571,14 @@
       "sort_order": 37
     },
     {
-      "type": "house",
-      "house": 9,
-      "story": "The House of Religion, science, learning, books, and long voyages. 'Next to the mid-heaven on the west.' Cadent, preparing for the culminating tenth house. The wisdom sought before worldly achievement.",
-      "light": "Religion, philosophy, higher learning, long journeys, divination",
-      "shadow": "Cadent weakness—knowledge without power to apply it",
+      "id": "house-9",
+      "name": "Ninth House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The House of Religion, science, learning, books, and long voyages. 'Next to the mid-heaven on the west.' Cadent, preparing for the culminating tenth house. The wisdom sought before worldly achievement.",
+        "Light": "Religion, philosophy, higher learning, long journeys, divination",
+        "Shadow": "Cadent weakness—knowledge without power to apply it"
+      },
       "keywords": ["cadent", "religion", "science", "learning", "voyages"],
       "quotes": [
         "The ninth house, next to the mid-heaven on the west, was the House of Religion, science, learning, books, and long voyages.",
@@ -504,11 +591,14 @@
       "sort_order": 38
     },
     {
-      "type": "house",
-      "house": 10,
-      "story": "The Mid-heaven, 'the region occupied by the sun at midday.' Angular and most visible. 'The House of Honour, denoting credit, renown, profession or calling, trade, preferment.' The peak of worldly achievement.",
-      "light": "Honor, profession, reputation, authority, achievement, visibility",
-      "shadow": "Empty honor, reputation without substance, the loneliness of the peak",
+      "id": "house-10",
+      "name": "Tenth House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The Mid-heaven, 'the region occupied by the sun at midday.' Angular and most visible. 'The House of Honour, denoting credit, renown, profession or calling, trade, preferment.' The peak of worldly achievement.",
+        "Light": "Honor, profession, reputation, authority, achievement, visibility",
+        "Shadow": "Empty honor, reputation without substance, the loneliness of the peak"
+      },
       "keywords": ["angular", "honor", "profession", "midheaven", "noon", "visible"],
       "quotes": [
         "The tenth, which was in the mid-heaven, or region occupied by the sun at midday, was the House of Honour, denoting credit, renown, profession or calling, trade, preferment, etc.",
@@ -521,11 +611,14 @@
       "sort_order": 39
     },
     {
-      "type": "house",
-      "house": 11,
-      "story": "The House of Friends, 'next to the mid-heaven on the east.' Succedent, supporting the tenth. The allies who gather around our public position.",
-      "light": "Friends, hopes, benefactors, good fortune, future vision",
-      "shadow": "False friends, hopes disappointed—those who attach to success",
+      "id": "house-11",
+      "name": "Eleventh House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The House of Friends, 'next to the mid-heaven on the east.' Succedent, supporting the tenth. The allies who gather around our public position.",
+        "Light": "Friends, hopes, benefactors, good fortune, future vision",
+        "Shadow": "False friends, hopes disappointed—those who attach to success"
+      },
       "keywords": ["succedent", "friends", "hopes", "benefactors"],
       "quotes": [
         "The eleventh house, next to the mid-heaven on the east, was the House of Friends.",
@@ -538,11 +631,14 @@
       "sort_order": 40
     },
     {
-      "type": "house",
-      "house": 12,
-      "story": "The House of Enemies. Cadent and weak. 'Even Lilly himself was indicted in 1655 because he had given judgment respecting stolen goods—apparently the twelfth house, House of Enemies, had caught up with him.'",
-      "light": "Solitude, retreat, hidden strengths, spiritual work",
-      "shadow": "Hidden enemies, imprisonment, self-undoing—the house that catches up with astrologers",
+      "id": "house-12",
+      "name": "Twelfth House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The House of Enemies. Cadent and weak. 'Even Lilly himself was indicted in 1655 because he had given judgment respecting stolen goods—apparently the twelfth house, House of Enemies, had caught up with him.'",
+        "Light": "Solitude, retreat, hidden strengths, spiritual work",
+        "Shadow": "Hidden enemies, imprisonment, self-undoing—the house that catches up with astrologers"
+      },
       "keywords": ["cadent", "enemies", "imprisonment", "hidden", "self-undoing"],
       "quotes": [
         "Lastly, the twelfth house was the House of Enemies.",
@@ -555,11 +651,14 @@
       "sort_order": 41
     },
     {
-      "type": "aspect",
-      "aspect": "Conjunction",
-      "story": "When planets occupy the same degree, their powers unite—'whether for good or ill, according to the nature of the stars involved.' The most powerful configuration, for better or worse.",
-      "light": "Fusion of powers, intensification, new beginnings",
-      "shadow": "Malefics in conjunction magnify each other's harm",
+      "id": "conjunction",
+      "name": "Conjunction",
+      "category": "aspect",
+      "sections": {
+        "Interpretation": "When planets occupy the same degree, their powers unite—'whether for good or ill, according to the nature of the stars involved.' The most powerful configuration, for better or worse.",
+        "Light": "Fusion of powers, intensification, new beginnings",
+        "Shadow": "Malefics in conjunction magnify each other's harm"
+      },
       "keywords": ["0 degrees", "union", "powerful", "variable"],
       "quotes": [
         "Signs and planets, in aspects sextile, quartile, trine, conjoined, or opposite.",
@@ -572,11 +671,14 @@
       "sort_order": 50
     },
     {
-      "type": "aspect",
-      "aspect": "Sextile",
-      "story": "Sixty degrees apart, 'comprehending two signs.' Considered friendly because signs in sextile 'share the same gender but differ in element, producing harmony through difference.'",
-      "light": "Harmony through difference, friendly cooperation",
-      "shadow": "Mild benefit only—not powerful enough to overcome serious affliction",
+      "id": "sextile",
+      "name": "Sextile",
+      "category": "aspect",
+      "sections": {
+        "Interpretation": "Sixty degrees apart, 'comprehending two signs.' Considered friendly because signs in sextile 'share the same gender but differ in element, producing harmony through difference.'",
+        "Light": "Harmony through difference, friendly cooperation",
+        "Shadow": "Mild benefit only—not powerful enough to overcome serious affliction"
+      },
       "keywords": ["60 degrees", "benefic", "friendly", "harmony"],
       "quotes": [
         "Signs and planets, in aspects sextile, quartile, trine, conjoined, or opposite.",
@@ -589,11 +691,14 @@
       "sort_order": 51
     },
     {
-      "type": "aspect",
-      "aspect": "Square",
-      "story": "Ninety degrees apart, 'comprehending three signs.' Considered inharmonious because signs in square 'share the same modality but are of contrary elements.'",
-      "light": "Tension that motivates action, crisis that builds strength",
-      "shadow": "Conflict, obstacles, frustration—the difficult aspect",
+      "id": "square",
+      "name": "Square",
+      "category": "aspect",
+      "sections": {
+        "Interpretation": "Ninety degrees apart, 'comprehending three signs.' Considered inharmonious because signs in square 'share the same modality but are of contrary elements.'",
+        "Light": "Tension that motivates action, crisis that builds strength",
+        "Shadow": "Conflict, obstacles, frustration—the difficult aspect"
+      },
       "keywords": ["90 degrees", "malefic", "tension", "conflict"],
       "quotes": [
         "Signs and planets, in aspects sextile, quartile, trine, conjoined, or opposite.",
@@ -606,11 +711,14 @@
       "sort_order": 52
     },
     {
-      "type": "aspect",
-      "aspect": "Trine",
-      "story": "One hundred twenty degrees apart, 'comprehending four signs.' Considered 'most harmonious and beneficial, as signs in trine share the same element and thus the same essential nature.'",
-      "light": "Natural harmony, ease, blessing, grace",
-      "shadow": "Gifts taken for granted, complacency, unrealized potential",
+      "id": "trine",
+      "name": "Trine",
+      "category": "aspect",
+      "sections": {
+        "Interpretation": "One hundred twenty degrees apart, 'comprehending four signs.' Considered 'most harmonious and beneficial, as signs in trine share the same element and thus the same essential nature.'",
+        "Light": "Natural harmony, ease, blessing, grace",
+        "Shadow": "Gifts taken for granted, complacency, unrealized potential"
+      },
       "keywords": ["120 degrees", "benefic", "harmonious", "blessing"],
       "quotes": [
         "Signs and planets, in aspects sextile, quartile, trine, conjoined, or opposite.",
@@ -623,11 +731,14 @@
       "sort_order": 53
     },
     {
-      "type": "aspect",
-      "aspect": "Opposition",
-      "story": "One hundred eighty degrees apart, 'comprehending six signs.' Produces 'disharmony through complete separation, as opposing signs are furthest apart and thus contrary in influence.'",
-      "light": "Awareness through polarity, the tension that creates relationship",
-      "shadow": "Separation, contrary influences, the pull of opposites",
+      "id": "opposition",
+      "name": "Opposition",
+      "category": "aspect",
+      "sections": {
+        "Interpretation": "One hundred eighty degrees apart, 'comprehending six signs.' Produces 'disharmony through complete separation, as opposing signs are furthest apart and thus contrary in influence.'",
+        "Light": "Awareness through polarity, the tension that creates relationship",
+        "Shadow": "Separation, contrary influences, the pull of opposites"
+      },
       "keywords": ["180 degrees", "malefic", "polarity", "separation"],
       "quotes": [
         "Signs and planets, in aspects sextile, quartile, trine, conjoined, or opposite.",
