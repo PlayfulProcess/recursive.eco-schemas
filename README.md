@@ -9,16 +9,13 @@ This repository serves as a commons for interpretive schemas used in divination 
 ## What's Inside
 
 - **`/schemas/`** - Structured interpretive schemas for Tarot, I Ching, Astrology, and other systems
-- **`/data/`** - Data files that circulate in the recursive.eco ecosystem (exportable/importable via offer tab or flow app)
-- **`/templates/`** - Reusable templates for creating offers, flows, and ritual structures
-- **`/docs/`** - Documentation and guidelines
+- **`/sources/`** - Public domain source materials for schema creation
 
 ## Quick Start
 
 1. Browse the `/schemas/` directory to find interpretive frameworks
-2. Check `/templates/` for reusable patterns
-3. See `/data/` for real-world examples
-4. Read [CONTRIBUTING.md](CONTRIBUTING.md) to add your own schemas
+2. Check `/sources/` for public domain materials to reference
+3. Read [CONTRIBUTING.md](CONTRIBUTING.md) to add your own schemas
 
 ## Repository Structure
 
