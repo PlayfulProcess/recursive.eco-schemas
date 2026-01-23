@@ -1,0 +1,839 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "attribution": [
+      {
+        "name": "Thomas Bulfinch",
+        "source": "Bulfinch's Mythology: The Age of Fable (1855)",
+        "url": "https://www.gutenberg.org/ebooks/4928",
+        "note": "Primary source for Greek and Roman star myths"
+      }
+    ]
+  },
+  "name": "Stellar Mythology: Stars of the Ancients",
+  "description": "A contemplative deck of the brightest stars visible to the ancients, their mythological stories, and the constellations that house them. Each star carries a story placed in the heavens by the gods—lovers transformed, heroes immortalized, monsters defeated. Draw a star and look up: the same light that inspired these myths still falls on your face tonight.\n\nL1: Individual stars with their myths\nL2: Constellations as composite patterns\nL3: Zodiac regions grouping the constellations",
+  "grammar_type": "poetry",
+  "items": [
+    {
+      "id": "star-sirius",
+      "name": "Sirius",
+      "level": 1,
+      "category": "Stars",
+      "sort_order": 1,
+      "metadata": {
+        "constellation": "Canis Major",
+        "magnitude": -1.46,
+        "also_known_as": "Dog Star, Alpha Canis Majoris",
+        "zodiac_region": "Cancer"
+      },
+      "sections": {
+        "Myth": "Sirius is the faithful hound of Orion the Hunter, placed in the sky to follow his master forever. When Orion was slain—by Diana's accidental arrow or the Scorpion's sting—his loyal dog was set beside him among the stars, eternally at heel.",
+        "Reflection": "What loyalty follows you even into darkness? Who runs beside you, asking nothing but to be near?",
+        "Bulfinch": "Sirius, his dog, follows him, and the Pleiads fly before him."
+      },
+      "keywords": ["loyalty", "devotion", "hunting", "brightest star", "dog days"]
+    },
+    {
+      "id": "star-betelgeuse",
+      "name": "Betelgeuse",
+      "level": 1,
+      "category": "Stars",
+      "sort_order": 2,
+      "metadata": {
+        "constellation": "Orion",
+        "magnitude": 0.42,
+        "also_known_as": "Alpha Orionis, Orion's Right Shoulder",
+        "zodiac_region": "Gemini"
+      },
+      "sections": {
+        "Myth": "The red shoulder of the giant Orion, who waded through the sea with his head above the waves, who loved the goddess Diana and was tricked into death by her jealous brother Apollo. This ruddy star marks where the hero's arm once drew his bow.",
+        "Reflection": "What strength do you carry in your shoulders? What bow are you drawing back, and what target calls you?",
+        "Bulfinch": "Orion was the son of Neptune. He was a handsome giant and a mighty hunter. His father gave him the power of wading through the depths of the sea, or, as others say, of walking on its surface."
+      },
+      "keywords": ["strength", "giant", "hunter", "red star", "mortality"]
+    },
+    {
+      "id": "star-rigel",
+      "name": "Rigel",
+      "level": 1,
+      "category": "Stars",
+      "sort_order": 3,
+      "metadata": {
+        "constellation": "Orion",
+        "magnitude": 0.13,
+        "also_known_as": "Beta Orionis, Orion's Left Foot",
+        "zodiac_region": "Gemini"
+      },
+      "sections": {
+        "Myth": "The blue-white foot of Orion, brilliant and cold, marking where the hunter plants his stance to draw his bow. While Betelgeuse burns red with life, Rigel shines blue with the cold light of precision—the hunter's steady footing before the arrow flies.",
+        "Reflection": "Where do you plant your feet? What stance gives you the stability to aim true?",
+        "Bulfinch": "Where he appears as a giant, with a girdle, sword, lion's skin, and club."
+      },
+      "keywords": ["precision", "stance", "steadiness", "blue star", "foundation"]
+    },
+    {
+      "id": "star-aldebaran",
+      "name": "Aldebaran",
+      "level": 1,
+      "category": "Stars",
+      "sort_order": 4,
+      "metadata": {
+        "constellation": "Taurus",
+        "magnitude": 0.85,
+        "also_known_as": "Alpha Tauri, Eye of the Bull, The Follower",
+        "zodiac_region": "Taurus"
+      },
+      "sections": {
+        "Myth": "The blazing red eye of the Bull—Zeus in his disguise, watching Europa even now from the heavens. When Jupiter transformed himself to abduct the Phoenician princess, he became a bull so beautiful she trusted him. That watchful eye still burns, following the Pleiades across the sky as the bull once carried Europa across the sea.",
+        "Reflection": "What are you watching with such intensity? What beauty have you assumed to approach what you desire?",
+        "Bulfinch": "Jupiter, under the disguise of a bull, had carried away Europa, the daughter of Agenor, king of Phoenicia."
+      },
+      "keywords": ["desire", "disguise", "watchfulness", "passion", "pursuit"]
+    },
+    {
+      "id": "star-pleiades",
+      "name": "The Pleiades",
+      "level": 1,
+      "category": "Stars",
+      "sort_order": 5,
+      "metadata": {
+        "constellation": "Taurus",
+        "magnitude": 1.6,
+        "also_known_as": "Seven Sisters, Messier 45",
+        "zodiac_region": "Taurus"
+      },
+      "sections": {
+        "Myth": "Seven sisters, daughters of Atlas, fleeing from Orion's pursuit. Jupiter took pity and transformed them into doves, then placed them in the sky where the hunter could never catch them. One sister, Electra, hid her face when Troy fell—founded by her son Dardanus—and her sisters have looked pale ever since.",
+        "Reflection": "What are you fleeing? What grief has dimmed you, and who grieves alongside you?",
+        "Bulfinch": "The Pleiads were daughters of Atlas, and nymphs of Diana's train. One day Orion saw them and became enamoured and pursued them. In their distress they prayed to the gods to change their form, and Jupiter in pity turned them into pigeons, and then made them a constellation in the sky."
+      },
+      "keywords": ["sisters", "flight", "grief", "transformation", "seven"]
+    },
+    {
+      "id": "star-castor",
+      "name": "Castor",
+      "level": 1,
+      "category": "Stars",
+      "sort_order": 6,
+      "metadata": {
+        "constellation": "Gemini",
+        "magnitude": 1.58,
+        "also_known_as": "Alpha Geminorum, The Mortal Twin",
+        "zodiac_region": "Gemini"
+      },
+      "sections": {
+        "Myth": "The mortal twin, born from Leda's egg alongside his immortal brother Pollux. Castor was famous for taming horses, mortal and beloved. When he was slain, Pollux could not bear to be parted and begged Jupiter to let them share immortality—one day in heaven, one day below.",
+        "Reflection": "What mortality do you share with those you love? What would you give up to remain together?",
+        "Bulfinch": "Castor was famous for taming and managing horses, and Pollux for skill in boxing. They were united by the warmest affection and inseparable in all their enterprises."
+      },
+      "keywords": ["mortality", "brotherhood", "horses", "devotion", "loss"]
+    },
+    {
+      "id": "star-pollux",
+      "name": "Pollux",
+      "level": 1,
+      "category": "Stars",
+      "sort_order": 7,
+      "metadata": {
+        "constellation": "Gemini",
+        "magnitude": 1.14,
+        "also_known_as": "Beta Geminorum, The Immortal Twin",
+        "zodiac_region": "Gemini"
+      },
+      "sections": {
+        "Myth": "The immortal twin who could not accept eternal life without his brother. When Castor fell in battle, Pollux begged to share his divinity. Jupiter placed them together in the heavens—two stars that never separate, rising and setting as one, teaching that love transcends even the boundary between mortal and immortal.",
+        "Reflection": "What would you sacrifice of your own gifts to keep someone beside you? What makes togetherness worth more than individual glory?",
+        "Bulfinch": "Castor was slain, and Pollux, inconsolable for the loss of his brother, besought Jupiter to be permitted to give his own life as a ransom for him."
+      },
+      "keywords": ["immortality", "sacrifice", "brotherhood", "sharing", "love"]
+    },
+    {
+      "id": "star-regulus",
+      "name": "Regulus",
+      "level": 1,
+      "category": "Stars",
+      "sort_order": 8,
+      "metadata": {
+        "constellation": "Leo",
+        "magnitude": 1.40,
+        "also_known_as": "Alpha Leonis, Heart of the Lion, The Little King",
+        "zodiac_region": "Leo"
+      },
+      "sections": {
+        "Myth": "The heart of the Nemean Lion, the invincible beast whose hide could not be pierced by any weapon. Hercules strangled it with his bare hands in his first great labor, then wore its skin as armor. The lion's heart still beats in the sky—a reminder that what seems invincible can be overcome by those who grapple directly.",
+        "Reflection": "What invincible thing have you faced? What protection do you wear from victories hard-won?",
+        "Bulfinch": "The first was the fight with the Nemean lion. After using in vain his club and arrows against the lion, Hercules strangled the animal with his hands."
+      },
+      "keywords": ["courage", "invincibility", "heart", "victory", "strength"]
+    },
+    {
+      "id": "star-spica",
+      "name": "Spica",
+      "level": 1,
+      "category": "Stars",
+      "sort_order": 9,
+      "metadata": {
+        "constellation": "Virgo",
+        "magnitude": 0.97,
+        "also_known_as": "Alpha Virginis, Ear of Wheat",
+        "zodiac_region": "Virgo"
+      },
+      "sections": {
+        "Myth": "The ear of wheat held by Virgo—Astraea, goddess of justice, or Demeter mourning her lost daughter, or perhaps Persephone herself returning from the underworld. The grain represents the hope of harvest, the promise that what is buried will rise again, that loss is not forever.",
+        "Reflection": "What are you holding that promises future abundance? What buried thing are you waiting to see rise?",
+        "Bulfinch": "The Fates were the daughters of Themis (Law), who sits by Jove on his throne to give him counsel."
+      },
+      "keywords": ["harvest", "hope", "justice", "return", "abundance"]
+    },
+    {
+      "id": "star-arcturus",
+      "name": "Arcturus",
+      "level": 1,
+      "category": "Stars",
+      "sort_order": 10,
+      "metadata": {
+        "constellation": "Boötes",
+        "magnitude": -0.05,
+        "also_known_as": "Alpha Boötis, Guardian of the Bear",
+        "zodiac_region": "Libra"
+      },
+      "sections": {
+        "Myth": "The guardian who follows the Great Bear around the pole—some say Arcas, son of Callisto, nearly killing his own mother before Jupiter transformed them both into bears and placed them in the sky. Arcturus forever follows, forever watches, the loyal son who almost committed the unforgivable.",
+        "Reflection": "What do you guard without knowing why? What almost-tragedy has become your eternal vigilance?",
+        "Bulfinch": "Jupiter, to save her from this fate, raised her to the heavens, and the two constellations of the Great and Little Bear shine to this day."
+      },
+      "keywords": ["guardian", "vigilance", "near-tragedy", "loyalty", "watching"]
+    },
+    {
+      "id": "star-antares",
+      "name": "Antares",
+      "level": 1,
+      "category": "Stars",
+      "sort_order": 11,
+      "metadata": {
+        "constellation": "Scorpius",
+        "magnitude": 1.06,
+        "also_known_as": "Alpha Scorpii, Heart of the Scorpion, Rival of Mars",
+        "zodiac_region": "Scorpio"
+      },
+      "sections": {
+        "Myth": "The red heart of the Scorpion sent to kill Orion—placed opposite him in the sky so they never rise together. When the Scorpion climbs the east, Orion flees below the western horizon. Antares burns red like Mars, the god of war, reminding us that some conflicts have no resolution, only eternal distance.",
+        "Reflection": "What enemy can you never face directly? What conflict requires distance rather than resolution?",
+        "Bulfinch": "Here the Scorpion extended his two great arms, with his tail and crooked claws stretching over two signs of the zodiac."
+      },
+      "keywords": ["rivalry", "danger", "distance", "heart", "eternal conflict"]
+    },
+    {
+      "id": "star-vega",
+      "name": "Vega",
+      "level": 1,
+      "category": "Stars",
+      "sort_order": 12,
+      "metadata": {
+        "constellation": "Lyra",
+        "magnitude": 0.03,
+        "also_known_as": "Alpha Lyrae, The Harp Star",
+        "zodiac_region": "Capricorn"
+      },
+      "sections": {
+        "Myth": "The brightest star in the Lyre of Orpheus, the musician who charmed even death with his song. When Orpheus was torn apart by the Maenads, the Muses gathered his lyre and placed it in the heavens. Vega is the music that outlasts the musician—art that survives its maker.",
+        "Reflection": "What song of yours will outlast you? What beauty have you made that no longer needs you to exist?",
+        "Bulfinch": "Mercury is said to have invented the lyre. The cords were nine, in honor of the nine Muses. Mercury gave the lyre to Apollo."
+      },
+      "keywords": ["music", "art", "immortality", "beauty", "survival"]
+    },
+    {
+      "id": "star-altair",
+      "name": "Altair",
+      "level": 1,
+      "category": "Stars",
+      "sort_order": 13,
+      "metadata": {
+        "constellation": "Aquila",
+        "magnitude": 0.76,
+        "also_known_as": "Alpha Aquilae, The Eagle",
+        "zodiac_region": "Aquarius"
+      },
+      "sections": {
+        "Myth": "The bright heart of the Eagle that served Jupiter—the bird that carried his thunderbolts and, in some tales, the very form Jupiter took to abduct young Ganymede from Mount Ida. Altair represents divine reach, the sudden descent from above, the moment you are chosen by powers greater than yourself.",
+        "Reflection": "What has descended to carry you away? What power chose you before you could choose it?",
+        "Bulfinch": "Her successor was Ganymede, a Trojan boy, whom Jupiter, in the disguise of an eagle, seized and carried off from the midst of his playfellows on Mount Ida."
+      },
+      "keywords": ["eagle", "divine choice", "elevation", "thunderbolt", "sudden change"]
+    },
+    {
+      "id": "star-deneb",
+      "name": "Deneb",
+      "level": 1,
+      "category": "Stars",
+      "sort_order": 14,
+      "metadata": {
+        "constellation": "Cygnus",
+        "magnitude": 1.25,
+        "also_known_as": "Alpha Cygni, Tail of the Swan",
+        "zodiac_region": "Aquarius"
+      },
+      "sections": {
+        "Myth": "The tail of the Swan—Jupiter's disguise when he visited Leda, from which union came the egg bearing Castor and Pollux, Helen of Troy and Clytemnestra. Deneb marks the end of the swan's body, the departure point after the divine encounter, the last thing seen as the god flies away.",
+        "Reflection": "What divine encounter have you survived? What was left behind when the sacred departed?",
+        "Bulfinch": "Castor and Pollux were the offspring of Leda and the Swan, under which disguise Jupiter had concealed himself. Leda gave birth to an egg from which sprang the twins."
+      },
+      "keywords": ["disguise", "departure", "divine visit", "transformation", "aftermath"]
+    },
+    {
+      "id": "star-fomalhaut",
+      "name": "Fomalhaut",
+      "level": 1,
+      "category": "Stars",
+      "sort_order": 15,
+      "metadata": {
+        "constellation": "Piscis Austrinus",
+        "magnitude": 1.16,
+        "also_known_as": "Alpha Piscis Austrini, Mouth of the Fish",
+        "zodiac_region": "Aquarius"
+      },
+      "sections": {
+        "Myth": "The solitary bright star of autumn skies, called the Loneliest Star because no other bright stars surround it. Fomalhaut drinks from the stream poured by Aquarius—the fish that swims in celestial waters, sustained by what flows from above. Sometimes to be alone is to be directly fed by heaven.",
+        "Reflection": "What loneliness has become your sustenance? What flows to you precisely because nothing else is near?",
+        "Bulfinch": "The gods retired to sleep in their respective dwellings."
+      },
+      "keywords": ["solitude", "sustenance", "autumn", "loneliness", "receiving"]
+    },
+    {
+      "id": "star-polaris",
+      "name": "Polaris",
+      "level": 1,
+      "category": "Stars",
+      "sort_order": 16,
+      "metadata": {
+        "constellation": "Ursa Minor",
+        "magnitude": 1.98,
+        "also_known_as": "Alpha Ursae Minoris, North Star, Pole Star",
+        "zodiac_region": "Circumpolar"
+      },
+      "sections": {
+        "Myth": "The star at the tail of the Little Bear—Arcas or perhaps his mother Callisto, transformed by Jupiter to save them from Juno's wrath. While all other stars wheel around the sky, Polaris holds nearly still, the fixed point by which all travelers find their way. The wound became the guide.",
+        "Reflection": "What in you stays fixed while everything else spins? What transformation made you a guide for others?",
+        "Bulfinch": "Jupiter, to save her from this fate, raised her to the heavens as the constellation Ursa Minor."
+      },
+      "keywords": ["guidance", "stillness", "north", "fixed point", "navigation"]
+    },
+    {
+      "id": "star-algol",
+      "name": "Algol",
+      "level": 1,
+      "category": "Stars",
+      "sort_order": 17,
+      "metadata": {
+        "constellation": "Perseus",
+        "magnitude": "2.1 (variable)",
+        "also_known_as": "Beta Persei, The Demon Star, Gorgon's Eye",
+        "zodiac_region": "Aries"
+      },
+      "sections": {
+        "Myth": "The winking eye of Medusa's severed head, held aloft by Perseus. Algol dims and brightens every three days—the Gorgon blinking even in death. The ancients called it the most dangerous star in heaven. But remember: Perseus used this horror as a weapon to save Andromeda. What terrifies can also protect.",
+        "Reflection": "What horror do you carry that could become your weapon? What do you hold up to turn enemies to stone?",
+        "Bulfinch": "Perseus, finding the giant too strong for him, said, 'Since my enemy cannot be conquered by courage, I must make him defend me,' and with a terrible look turned the giant to stone."
+      },
+      "keywords": ["terror", "protection", "winking", "demon", "power"]
+    },
+    {
+      "id": "star-capella",
+      "name": "Capella",
+      "level": 1,
+      "category": "Stars",
+      "sort_order": 18,
+      "metadata": {
+        "constellation": "Auriga",
+        "magnitude": 0.08,
+        "also_known_as": "Alpha Aurigae, The Little Goat",
+        "zodiac_region": "Taurus"
+      },
+      "sections": {
+        "Myth": "The goat Amalthea who nursed the infant Jupiter in hiding, while his father Saturn sought to devour him. When Jupiter came to power, he placed his nurse among the stars in gratitude. Capella reminds us that the mightiest powers began helpless, sustained by humble care.",
+        "Reflection": "Who nourished you when you were hidden and helpless? What humble care made your power possible?",
+        "Bulfinch": "Jupiter, however, escaped this fate, and when grown up... rebelled against their father Saturn and his brothers the Titans; vanquished them."
+      },
+      "keywords": ["nourishment", "gratitude", "humble care", "infancy", "nursing"]
+    },
+    {
+      "id": "star-procyon",
+      "name": "Procyon",
+      "level": 1,
+      "category": "Stars",
+      "sort_order": 19,
+      "metadata": {
+        "constellation": "Canis Minor",
+        "magnitude": 0.34,
+        "also_known_as": "Alpha Canis Minoris, The Little Dog Star",
+        "zodiac_region": "Cancer"
+      },
+      "sections": {
+        "Myth": "The lesser dog who runs ahead of Sirius, rising before the great Dog Star as if announcing the hunter's approach. Some say this is Maera, the faithful hound of Icarius, who led people to his murdered master's body. Procyon teaches that small faithful things often arrive first with the truth.",
+        "Reflection": "What small sign runs ahead of larger truths in your life? What faithful messenger do you overlook?",
+        "Bulfinch": "Sirius, his dog, follows him, and the Pleiads fly before him."
+      },
+      "keywords": ["herald", "faithfulness", "small", "truth", "preceding"]
+    },
+
+    {
+      "id": "constellation-orion",
+      "name": "Orion the Hunter",
+      "level": 2,
+      "category": "Constellation",
+      "sort_order": 100,
+      "composite_of": ["star-betelgeuse", "star-rigel"],
+      "metadata": {
+        "zodiac_region": "Gemini",
+        "best_seen": "Winter",
+        "notable_features": "Orion's Belt, Orion Nebula"
+      },
+      "sections": {
+        "Summary": "The great hunter who wades through the sky, his belt of three stars the most recognizable pattern in the heavens. Orion loved Diana and was slain through her brother's trick. Now he hunts eternally, fleeing the Scorpion, followed by his dogs.",
+        "Bulfinch": "After this he dwelt as a hunter with Diana, with whom he was a favorite, and it is even said she was about to marry him. Her brother was highly displeased and often chid her, but to no purpose."
+      },
+      "keywords": ["hunter", "winter", "belt", "Diana", "pursuit"]
+    },
+    {
+      "id": "constellation-taurus",
+      "name": "Taurus the Bull",
+      "level": 2,
+      "category": "Constellation",
+      "sort_order": 101,
+      "composite_of": ["star-aldebaran", "star-pleiades"],
+      "metadata": {
+        "zodiac_region": "Taurus",
+        "best_seen": "Winter",
+        "notable_features": "Hyades cluster, V-shape of face"
+      },
+      "sections": {
+        "Summary": "Jupiter disguised as a beautiful white bull to approach Europa. The Pleiades ride on his back, fleeing Orion. Aldebaran is his red eye, still watching, still pursuing, still carrying his prize across the heavenly sea.",
+        "Bulfinch": "Encouraged by the tameness of the animal Europa ventured to mount his back, whereupon Jupiter advanced into the sea and swam with her to Crete."
+      },
+      "keywords": ["bull", "Zeus", "Europa", "disguise", "abduction"]
+    },
+    {
+      "id": "constellation-gemini",
+      "name": "Gemini the Twins",
+      "level": 2,
+      "category": "Constellation",
+      "sort_order": 102,
+      "composite_of": ["star-castor", "star-pollux"],
+      "metadata": {
+        "zodiac_region": "Gemini",
+        "best_seen": "Winter",
+        "notable_features": "Two bright stars side by side"
+      },
+      "sections": {
+        "Summary": "The divine twins born from Leda's egg—Castor mortal, Pollux immortal, their love so great that Pollux surrendered half his divinity to keep his brother beside him. They rise together, set together, teaching that love can negotiate even with death.",
+        "Bulfinch": "According to another form of the story, Jupiter rewarded the attachment of the brothers by placing them among the stars as Gemini the Twins."
+      },
+      "keywords": ["twins", "brotherhood", "love", "sacrifice", "unity"]
+    },
+    {
+      "id": "constellation-canis-major",
+      "name": "Canis Major",
+      "level": 2,
+      "category": "Constellation",
+      "sort_order": 103,
+      "composite_of": ["star-sirius"],
+      "metadata": {
+        "zodiac_region": "Cancer",
+        "best_seen": "Winter",
+        "notable_features": "Contains the brightest star"
+      },
+      "sections": {
+        "Summary": "Orion's greater hunting dog, faithful beyond death. Sirius is so bright the ancients believed it added its heat to the sun during 'dog days.' The dog follows his master through the sky, eternally loyal, eternally at heel.",
+        "Bulfinch": "Sirius, his dog, follows him, and the Pleiads fly before him."
+      },
+      "keywords": ["dog", "loyalty", "brightest", "hunting", "companionship"]
+    },
+    {
+      "id": "constellation-leo",
+      "name": "Leo the Lion",
+      "level": 2,
+      "category": "Constellation",
+      "sort_order": 104,
+      "composite_of": ["star-regulus"],
+      "metadata": {
+        "zodiac_region": "Leo",
+        "best_seen": "Spring",
+        "notable_features": "Sickle asterism"
+      },
+      "sections": {
+        "Summary": "The Nemean Lion, invincible to weapons, strangled by Hercules in his first great labor. Its impenetrable hide became the hero's armor. The lion's heart still beats in the sky—Regulus, the little king.",
+        "Bulfinch": "The valley of Nemea was infested by a terrible lion. Eurystheus ordered Hercules to bring him the skin of this monster."
+      },
+      "keywords": ["lion", "Hercules", "invincibility", "labor", "courage"]
+    },
+    {
+      "id": "constellation-virgo",
+      "name": "Virgo the Maiden",
+      "level": 2,
+      "category": "Constellation",
+      "sort_order": 105,
+      "composite_of": ["star-spica"],
+      "metadata": {
+        "zodiac_region": "Virgo",
+        "best_seen": "Spring",
+        "notable_features": "Second largest constellation"
+      },
+      "sections": {
+        "Summary": "Astraea, goddess of justice, last of the immortals to leave earth when humanity grew wicked. She holds the scales of Libra beside her, and Spica, the ear of wheat promising that harvest will come again even after the darkest winter.",
+        "Bulfinch": "The Fates were the daughters of Themis (Law), who sits by Jove on his throne to give him counsel."
+      },
+      "keywords": ["justice", "maiden", "harvest", "hope", "last to leave"]
+    },
+    {
+      "id": "constellation-bootes",
+      "name": "Boötes the Herdsman",
+      "level": 2,
+      "category": "Constellation",
+      "sort_order": 106,
+      "composite_of": ["star-arcturus"],
+      "metadata": {
+        "zodiac_region": "Libra",
+        "best_seen": "Spring",
+        "notable_features": "Kite shape"
+      },
+      "sections": {
+        "Summary": "The guardian who drives the bears around the pole—Arcas, son of Callisto, forever following his mother whom Jupiter transformed to save from Juno's wrath. He almost killed her not knowing who she was. Now he follows forever, watching, protecting.",
+        "Bulfinch": "Jupiter, to save her from this fate, raised her to the heavens."
+      },
+      "keywords": ["guardian", "herdsman", "bears", "vigilance", "near-tragedy"]
+    },
+    {
+      "id": "constellation-scorpius",
+      "name": "Scorpius the Scorpion",
+      "level": 2,
+      "category": "Constellation",
+      "sort_order": 107,
+      "composite_of": ["star-antares"],
+      "metadata": {
+        "zodiac_region": "Scorpio",
+        "best_seen": "Summer",
+        "notable_features": "Curved tail, red Antares"
+      },
+      "sections": {
+        "Summary": "The scorpion sent to slay Orion—placed opposite him in the sky so hunter and killer never meet. When Scorpius rises in the east, Orion sets in the west. Antares, rival of Mars, burns red at its heart. Some conflicts have no resolution, only distance.",
+        "Bulfinch": "Here the Scorpion extended his two great arms, with his tail and crooked claws stretching over two signs of the zodiac."
+      },
+      "keywords": ["scorpion", "opposition", "Orion", "eternal conflict", "distance"]
+    },
+    {
+      "id": "constellation-lyra",
+      "name": "Lyra the Lyre",
+      "level": 2,
+      "category": "Constellation",
+      "sort_order": 108,
+      "composite_of": ["star-vega"],
+      "metadata": {
+        "zodiac_region": "Capricorn",
+        "best_seen": "Summer",
+        "notable_features": "Small but brilliant"
+      },
+      "sections": {
+        "Summary": "The lyre of Orpheus, whose music charmed stones and trees, beasts and gods, even Death himself. When the musician was torn apart, the Muses placed his instrument in the sky. The music outlasts the musician. Vega still sings.",
+        "Bulfinch": "Mercury is said to have invented the lyre. Mercury gave the lyre to Apollo, and received from him in exchange the caduceus."
+      },
+      "keywords": ["lyre", "music", "Orpheus", "immortal art", "beauty"]
+    },
+    {
+      "id": "constellation-aquila",
+      "name": "Aquila the Eagle",
+      "level": 2,
+      "category": "Constellation",
+      "sort_order": 109,
+      "composite_of": ["star-altair"],
+      "metadata": {
+        "zodiac_region": "Aquarius",
+        "best_seen": "Summer",
+        "notable_features": "Altair in Summer Triangle"
+      },
+      "sections": {
+        "Summary": "Jupiter's eagle, carrier of thunderbolts, the form the god took to seize Ganymede and carry him to Olympus. Altair flies through the summer sky, reminding us that divine attention descends swiftly, without warning, and changes everything.",
+        "Bulfinch": "Jupiter, in the disguise of an eagle, seized and carried off from the midst of his playfellows on Mount Ida, bore up to heaven."
+      },
+      "keywords": ["eagle", "Jupiter", "Ganymede", "divine choice", "sudden"]
+    },
+    {
+      "id": "constellation-cygnus",
+      "name": "Cygnus the Swan",
+      "level": 2,
+      "category": "Constellation",
+      "sort_order": 110,
+      "composite_of": ["star-deneb"],
+      "metadata": {
+        "zodiac_region": "Aquarius",
+        "best_seen": "Summer",
+        "notable_features": "Northern Cross asterism"
+      },
+      "sections": {
+        "Summary": "Jupiter in the form of a swan, visiting Leda, from which union came the twins Castor and Pollux and Helen whose face launched a thousand ships. The swan flies along the Milky Way, wings spread, the aftermath of divine encounter.",
+        "Bulfinch": "Castor and Pollux were the offspring of Leda and the Swan, under which disguise Jupiter had concealed himself."
+      },
+      "keywords": ["swan", "Leda", "Zeus", "disguise", "aftermath"]
+    },
+    {
+      "id": "constellation-perseus",
+      "name": "Perseus the Hero",
+      "level": 2,
+      "category": "Constellation",
+      "sort_order": 111,
+      "composite_of": ["star-algol"],
+      "metadata": {
+        "zodiac_region": "Aries",
+        "best_seen": "Autumn",
+        "notable_features": "Contains the Demon Star"
+      },
+      "sections": {
+        "Summary": "The hero who slew Medusa and rescued Andromeda, forever holding the Gorgon's head aloft. Algol, the demon star, blinks where Medusa's eye would be. Perseus teaches that we can carry our monsters as weapons, turning what terrified us into what protects us.",
+        "Bulfinch": "Perseus, bearing with him the head of the Gorgon, flew far and wide, over land and sea."
+      },
+      "keywords": ["hero", "Medusa", "rescue", "monster", "transformation"]
+    },
+    {
+      "id": "constellation-auriga",
+      "name": "Auriga the Charioteer",
+      "level": 2,
+      "category": "Constellation",
+      "sort_order": 112,
+      "composite_of": ["star-capella"],
+      "metadata": {
+        "zodiac_region": "Taurus",
+        "best_seen": "Winter",
+        "notable_features": "Pentagon shape"
+      },
+      "sections": {
+        "Summary": "The charioteer who carries the goat Amalthea on his arm—the nurse who fed infant Jupiter while he hid from devouring Saturn. Capella, the little she-goat, reminds us that the mightiest powers began helpless, dependent on humble nurture.",
+        "Bulfinch": "Jupiter, however, escaped this fate, and when grown up... rebelled against their father Saturn."
+      },
+      "keywords": ["charioteer", "goat", "nursing", "gratitude", "humble origins"]
+    },
+    {
+      "id": "constellation-ursa-minor",
+      "name": "Ursa Minor",
+      "level": 2,
+      "category": "Constellation",
+      "sort_order": 113,
+      "composite_of": ["star-polaris"],
+      "metadata": {
+        "zodiac_region": "Circumpolar",
+        "best_seen": "Year-round",
+        "notable_features": "Contains the Pole Star"
+      },
+      "sections": {
+        "Summary": "The Little Bear—Callisto or her son Arcas, transformed by Jupiter to save them from Juno's vengeance. Polaris marks its tail, the fixed point around which all the heavens turn. What was punishment became navigation; what was exile became the guide home.",
+        "Bulfinch": "Jupiter, to save her from this fate, raised her to the heavens as the constellation Ursa Minor."
+      },
+      "keywords": ["bear", "pole", "guide", "fixed", "transformation"]
+    },
+    {
+      "id": "constellation-canis-minor",
+      "name": "Canis Minor",
+      "level": 2,
+      "category": "Constellation",
+      "sort_order": 114,
+      "composite_of": ["star-procyon"],
+      "metadata": {
+        "zodiac_region": "Cancer",
+        "best_seen": "Winter",
+        "notable_features": "Only two main stars"
+      },
+      "sections": {
+        "Summary": "The lesser dog who runs ahead of Sirius, herald of the greater hound. Small but faithful, rising before the Dog Star as if announcing the hunter's coming. Not all important things are large; sometimes the small one arrives first with news.",
+        "Bulfinch": "Sirius, his dog, follows him."
+      },
+      "keywords": ["small dog", "herald", "preceding", "faithful", "announcement"]
+    },
+    {
+      "id": "constellation-piscis-austrinus",
+      "name": "Piscis Austrinus",
+      "level": 2,
+      "category": "Constellation",
+      "sort_order": 115,
+      "composite_of": ["star-fomalhaut"],
+      "metadata": {
+        "zodiac_region": "Aquarius",
+        "best_seen": "Autumn",
+        "notable_features": "Contains the Loneliest Star"
+      },
+      "sections": {
+        "Summary": "The Southern Fish who drinks from the stream of Aquarius—the sole bright star in an empty region of sky. Fomalhaut is called the Loneliest Star, reminding us that solitude can be a form of direct nourishment, drinking from heaven without distraction.",
+        "Bulfinch": "The robes and other parts of the dress of the goddesses were woven by Minerva and the Graces."
+      },
+      "keywords": ["fish", "solitude", "nourishment", "autumn", "loneliness"]
+    },
+
+    {
+      "id": "zodiac-aries",
+      "name": "Aries Region",
+      "level": 3,
+      "category": "Zodiac",
+      "sort_order": 200,
+      "composite_of": ["constellation-perseus"],
+      "sections": {
+        "Summary": "The region of the Ram, where Perseus holds aloft the Gorgon's head. Here heroes learn to carry their conquered fears as weapons. The spring equinox once rose here—the beginning of the astrological year.",
+        "Theme": "Courage, beginnings, transformation of fear into power"
+      },
+      "keywords": ["spring", "beginning", "courage", "hero"]
+    },
+    {
+      "id": "zodiac-taurus",
+      "name": "Taurus Region",
+      "level": 3,
+      "category": "Zodiac",
+      "sort_order": 201,
+      "composite_of": ["constellation-taurus", "constellation-auriga"],
+      "sections": {
+        "Summary": "The region of the Bull, where Zeus in disguise pursues Europa, where the Pleiades flee, where Capella remembers nursing the infant king of gods. A region of desire, pursuit, and humble origins of great power.",
+        "Theme": "Desire, pursuit, nourishment, hidden divinity"
+      },
+      "keywords": ["desire", "bull", "sisters", "nurture"]
+    },
+    {
+      "id": "zodiac-gemini",
+      "name": "Gemini Region",
+      "level": 3,
+      "category": "Zodiac",
+      "sort_order": 202,
+      "composite_of": ["constellation-gemini", "constellation-orion"],
+      "sections": {
+        "Summary": "The region of the Twins, where Castor and Pollux shine in eternal brotherhood, where Orion hunts with red shoulder and blue foot. Here love negotiates with death, and the hunter pursues across the winter sky.",
+        "Theme": "Brotherhood, hunting, love transcending mortality"
+      },
+      "keywords": ["twins", "hunter", "brotherhood", "winter"]
+    },
+    {
+      "id": "zodiac-cancer",
+      "name": "Cancer Region",
+      "level": 3,
+      "category": "Zodiac",
+      "sort_order": 203,
+      "composite_of": ["constellation-canis-major", "constellation-canis-minor"],
+      "sections": {
+        "Summary": "The region of the Crab, where the faithful dogs of Orion run—Sirius blazing brightest of all stars, Procyon running ahead as herald. A region of loyalty, companionship, and faithful service.",
+        "Theme": "Loyalty, companionship, faithful service, heralds"
+      },
+      "keywords": ["dogs", "loyalty", "brightest", "herald"]
+    },
+    {
+      "id": "zodiac-leo",
+      "name": "Leo Region",
+      "level": 3,
+      "category": "Zodiac",
+      "sort_order": 204,
+      "composite_of": ["constellation-leo"],
+      "sections": {
+        "Summary": "The region of the Lion, where the Nemean beast prowls with Regulus as its heart. Invincible to weapons, it yielded only to Hercules' embrace. A region of courage, strength, and victory through direct engagement.",
+        "Theme": "Courage, strength, invincibility overcome, heart"
+      },
+      "keywords": ["lion", "courage", "heart", "Hercules"]
+    },
+    {
+      "id": "zodiac-virgo",
+      "name": "Virgo Region",
+      "level": 3,
+      "category": "Zodiac",
+      "sort_order": 205,
+      "composite_of": ["constellation-virgo"],
+      "sections": {
+        "Summary": "The region of the Maiden, where Astraea holds her ear of wheat, last goddess to leave earth, still hoping for humanity's return to virtue. A region of justice, harvest, and hope that what is planted will rise.",
+        "Theme": "Justice, harvest, hope, patient waiting"
+      },
+      "keywords": ["maiden", "justice", "harvest", "hope"]
+    },
+    {
+      "id": "zodiac-libra",
+      "name": "Libra Region",
+      "level": 3,
+      "category": "Zodiac",
+      "sort_order": 206,
+      "composite_of": ["constellation-bootes"],
+      "sections": {
+        "Summary": "The region of the Scales, where Boötes the guardian follows the bears around the pole. Arcturus watches over what he almost destroyed. A region of balance, vigilance, and redemption through eternal care.",
+        "Theme": "Balance, vigilance, guardianship, near-tragedy redeemed"
+      },
+      "keywords": ["scales", "guardian", "balance", "watching"]
+    },
+    {
+      "id": "zodiac-scorpio",
+      "name": "Scorpio Region",
+      "level": 3,
+      "category": "Zodiac",
+      "sort_order": 207,
+      "composite_of": ["constellation-scorpius"],
+      "sections": {
+        "Summary": "The region of the Scorpion, Orion's killer placed opposite him forever. Antares burns red at its heart, rival of Mars. A region of necessary distance, eternal conflict held in check by cosmic arrangement.",
+        "Theme": "Danger, distance, eternal opposition, red heart"
+      },
+      "keywords": ["scorpion", "opposition", "danger", "distance"]
+    },
+    {
+      "id": "zodiac-sagittarius",
+      "name": "Sagittarius Region",
+      "level": 3,
+      "category": "Zodiac",
+      "sort_order": 208,
+      "composite_of": [],
+      "sections": {
+        "Summary": "The region of the Archer, pointing toward the center of our galaxy. Here Chiron the wise centaur was placed—teacher of heroes, healer wounded by poison he could not cure. A region of wisdom, teaching, and the wound that opens understanding.",
+        "Theme": "Wisdom, teaching, the wounded healer, galactic center"
+      },
+      "keywords": ["archer", "centaur", "wisdom", "teaching"]
+    },
+    {
+      "id": "zodiac-capricorn",
+      "name": "Capricorn Region",
+      "level": 3,
+      "category": "Zodiac",
+      "sort_order": 209,
+      "composite_of": ["constellation-lyra"],
+      "sections": {
+        "Summary": "The region of the Sea-Goat, where Orpheus' lyre plays on through Vega's light. Pan transformed here, fleeing Typhon, becoming the hybrid creature that adapts to survive. A region of transformation, music, and art that outlasts its maker.",
+        "Theme": "Transformation, music, survival through adaptation"
+      },
+      "keywords": ["sea-goat", "lyre", "transformation", "music"]
+    },
+    {
+      "id": "zodiac-aquarius",
+      "name": "Aquarius Region",
+      "level": 3,
+      "category": "Zodiac",
+      "sort_order": 210,
+      "composite_of": ["constellation-aquila", "constellation-cygnus", "constellation-piscis-austrinus"],
+      "sections": {
+        "Summary": "The region of the Water-Bearer, where eagle and swan fly through the Milky Way, where the lonely fish drinks from heaven's stream. Jupiter's birds soar here—the eagle that carried Ganymede, the swan that visited Leda. A region of divine visitation and solitary nourishment.",
+        "Theme": "Divine descent, aftermath of sacred encounter, solitary sustenance"
+      },
+      "keywords": ["water", "eagle", "swan", "divine visit", "solitude"]
+    },
+    {
+      "id": "zodiac-pisces",
+      "name": "Pisces Region",
+      "level": 3,
+      "category": "Zodiac",
+      "sort_order": 211,
+      "composite_of": [],
+      "sections": {
+        "Summary": "The region of the Fishes, where Venus and Cupid fled Typhon by transforming into fish tied together. The cord that binds them represents love that holds even through transformation and flight. A region of escape, connection, and love's persistence.",
+        "Theme": "Escape, transformation, bonds of love, persistence"
+      },
+      "keywords": ["fish", "escape", "love", "connection", "transformation"]
+    },
+    {
+      "id": "zodiac-circumpolar",
+      "name": "Circumpolar Realm",
+      "level": 3,
+      "category": "Zodiac",
+      "sort_order": 212,
+      "composite_of": ["constellation-ursa-minor"],
+      "sections": {
+        "Summary": "The region that never sets, circling the pole while all other stars rise and fall. Here Callisto the bear is forever pursued by her son who almost killed her. Polaris holds still while creation wheels around it. What was exile became the fixed point of navigation.",
+        "Theme": "Stillness amid motion, eternal vigilance, transformation into guidance"
+      },
+      "keywords": ["pole", "circumpolar", "fixed", "guide", "eternal"]
+    }
+  ]
+}
