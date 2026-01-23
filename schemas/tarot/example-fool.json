@@ -1,49 +1,60 @@
 {
-  "version": "1.0",
-  "description": "Example Tarot card schema - The Fool from the Major Arcana",
-  "tradition": "Rider-Waite-Smith",
-  "cards": [
+  "name": "Tarot: The Fool (Example)",
+  "description": "Example Tarot card schema demonstrating the unified format. The Fool (Card 0) represents the beginning of the journey, the leap into the unknown. Based on the Rider-Waite-Smith tradition with scholarly annotations.",
+  "grammar_type": "tarot",
+  "attribution": {
+    "source_name": "The Pictorial Key to the Tarot",
+    "source_author": "Arthur Edward Waite",
+    "source_year": "1911",
+    "license": "Public Domain",
+    "illustrator": "Pamela Colman Smith"
+  },
+  "items": [
     {
-      "id": "major_00_fool",
+      "id": "major-00-fool",
       "name": "The Fool",
-      "arcana": "major",
-      "number": 0,
-      "element": "air",
-      "astrology": "Uranus",
-      "keywords": [
-        "new beginnings",
-        "innocence",
-        "spontaneity",
-        "free spirit",
-        "adventure",
-        "leap of faith"
-      ],
-      "interpretation": {
-        "upright": "The Fool represents new beginnings, having faith in the future, being inexperienced, not knowing what to expect, having beginner's luck, improvisation and believing in the universe. The card indicates that anything can happen and the universe is on your side. The Fool is a fresh start, a step into the unknown with optimism and trust.",
-        "reversed": "When reversed, The Fool can indicate recklessness, taking foolish risks, being naive or gullible, living in a fantasy world, or refusing to commit. It may suggest you need to think before you leap, or that you're acting without considering consequences."
+      "symbol": "0",
+      "category": "major",
+      "sections": {
+        "Interpretation": "The Fool stands at the edge of a precipice, gazing upward at the sky rather than at the cliff before him. He carries a white rose of purity and a small bundle of possessions. A little dog dances at his heels. Waite wrote: 'He is a prince of the other world on his travels through this one.' The Fool is numbered 0—both nothing and infinite potential. He precedes the journey and completes it; the Tarot is circular, and The Fool is everywhere and nowhere in the sequence.",
+        "Upright": "New beginnings, innocence, spontaneity, a free spirit. The call to leap into the unknown with trust. Beginner's mind. A time to take risks, start fresh, and trust the process even when you cannot see where you're going. The universe supports the leap of faith.",
+        "Reversed": "Recklessness, risk-taking without awareness, naivety that leads to harm. Fear of the unknown preventing necessary change. Living in fantasy rather than reality. Sometimes indicates the need to think before acting, or that you're ignoring obvious warnings.",
+        "Symbolism": "The WHITE ROSE represents purity and innocence. The CLIFF edge is the threshold between known and unknown. The small BUNDLE contains all he needs—or thinks he needs. The WHITE SUN behind him is the divine light guiding the journey. The LITTLE DOG represents either the animal instincts that try to warn us, or the faithful companion on the journey. The MOUNTAINS in the distance are the challenges ahead. His MULTICOLORED CLOTHES suggest the diversity of experience awaiting.",
+        "Esoteric": "Qabalistically, The Fool is attributed to the Hebrew letter Aleph (א) and the path connecting Kether (Crown) to Chokmah (Wisdom) on the Tree of Life. This is the breath of life, the spirit before manifestation. In astrology, The Fool is associated with Uranus—sudden change, liberation, and the shattering of old forms. The Golden Dawn called this card 'The Spirit of Ether.'"
       },
-      "symbolism": {
-        "dog": "Loyalty and protection, animal nature",
-        "cliff": "The leap of faith, the unknown",
-        "white_rose": "Purity and innocence",
-        "mountains": "Challenges ahead",
-        "sun": "Optimism and enlightenment",
-        "knapsack": "Untapped potential and memories"
-      },
-      "questions_to_consider": [
-        "What new journey am I beginning?",
-        "Where do I need more faith and trust?",
+      "keywords": ["new beginnings", "innocence", "spontaneity", "leap of faith", "adventure", "potential", "zero"],
+      "questions": [
+        "What new journey am I being called to begin?",
+        "Where do I need more faith and less calculation?",
         "What would I do if I weren't afraid?",
         "How can I embrace beginner's mind?"
       ],
-      "source": "Traditional Rider-Waite-Smith interpretation",
-      "contributors": ["community"]
+      "quotes": [
+        "With light step, as if earth and its trammels had little power to restrain him, a young man in gorgeous vestments pauses at the brink of a precipice among the great heights of the world.",
+        "He is a prince of the other world on his travels through this one—all amidst the morning glory, in the keen air.",
+        "He surveys the blue distance before him—its expanse of sky rather than the prospect below.",
+        "The edge which opens on the depth has no terror; it is as if angels were waiting to uphold him, if it came about that he leaped from the height."
+      ],
+      "sort_order": 0,
+      "metadata": {
+        "number": 0,
+        "arcana": "major",
+        "element": "air",
+        "planet": "Uranus",
+        "hebrew_letter": "Aleph",
+        "path": "11 (Kether to Chokmah)"
+      }
     }
   ],
+  "_category_roles": {
+    "major": "card",
+    "minor": "card",
+    "court": "card"
+  },
   "metadata": {
     "created": "2026-01-12",
-    "last_updated": "2026-01-12",
+    "last_updated": "2026-01-23",
     "license": "CC-BY-SA-4.0",
-    "note": "This is an example schema showing the recommended format. Replace with actual data from the community."
+    "note": "Example schema demonstrating unified format for Tarot. Quotes are from Waite's Pictorial Key (1911)."
   }
 }

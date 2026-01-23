@@ -1,66 +1,171 @@
 {
-  "version": "1.0",
-  "description": "Example I Ching hexagram schema - Hexagram 1, The Creative",
-  "tradition": "Wilhelm/Baynes translation",
-  "hexagrams": [
+  "name": "I Ching: Hexagram 1 - The Creative",
+  "description": "Example I Ching hexagram schema based on the Wilhelm/Baynes translation. Hexagram 1 (Qián) represents pure yang energy, the primal creative force of the universe. This example demonstrates the unified format for I Ching schemas.",
+  "grammar_type": "iching",
+  "attribution": {
+    "source_name": "I Ching or Book of Changes",
+    "source_author": "Richard Wilhelm (translator), Cary F. Baynes (English)",
+    "source_year": "1950",
+    "original": "c. 1000-750 BCE",
+    "license": "Public Domain (original text)",
+    "source_url": "https://en.wikipedia.org/wiki/I_Ching"
+  },
+  "items": [
     {
-      "id": "hexagram_01",
-      "number": 1,
-      "name_chinese": "乾",
-      "name_pinyin": "Qián",
-      "name_english": "The Creative",
-      "alternate_names": ["Heaven", "Force"],
-      "trigrams": {
-        "upper": "qian_heaven",
-        "lower": "qian_heaven"
+      "id": "hexagram-01",
+      "name": "The Creative (Qián)",
+      "symbol": "䷀",
+      "category": "hexagram",
+      "sections": {
+        "Judgment": "THE CREATIVE works sublime success, furthering through perseverance.",
+        "Image": "The movement of heaven is full of power. Thus the superior man makes himself strong and untiring.",
+        "Interpretation": "Hexagram 1 represents Ch'ien, the Creative, pure yang in its fullest expression. Six unbroken lines form a symbol of primal power, the origin of all things. This is heaven in action, the dragon ascending. Wilhelm notes: 'The hexagram is consistently strong in character, and since it is without weakness, its essence is power or energy.' When this hexagram appears, creative force moves through you—act with confidence, but remember that even heaven moves in cycles.",
+        "Light": "Supreme creative power, strength without weakness, the capacity to initiate and lead",
+        "Shadow": "The arrogant dragon—power that overreaches itself, yang unchecked by yin",
+        "Commentary": "Confucius wrote in the Ten Wings: 'Great indeed is the sublimity of the Creative, to which all beings owe their beginning and which permeates all heaven.' The Creative represents not mere strength but the principle of origination itself. In Chinese cosmology, Ch'ien is the father principle complementing K'un (the Receptive, Hexagram 2). Together they generate the ten thousand things."
       },
-      "element": "heaven",
-      "attribute": "strong",
-      "judgment": "The Creative works sublime success, furthering through perseverance.",
-      "image": "The movement of heaven is full of power. Thus the superior person makes themselves strong and untiring.",
-      "interpretation": "The Creative represents pure yang energy, the primal force of the universe. It symbolizes creative power, strength, and dynamic action. This hexagram suggests a time of great potential and the ability to manifest your will. Success comes through persistent effort and staying true to your highest principles.",
-      "keywords": [
-        "creativity",
-        "strength",
-        "heaven",
-        "leadership",
-        "persistence",
-        "primal force"
-      ],
-      "lines": {
-        "line_1": {
-          "text": "Hidden dragon. Do not act.",
-          "interpretation": "The creative force is still latent. This is not the time to act, but to gather strength and wait for the right moment."
-        },
-        "line_2": {
-          "text": "Dragon appearing in the field. It furthers one to see the great person.",
-          "interpretation": "The creative force begins to manifest. Seek guidance from those who are wise and experienced."
-        },
-        "line_3": {
-          "text": "All day long the superior person is creatively active. At nightfall thoughts still beset them. Danger. No blame.",
-          "interpretation": "Continued creative effort is necessary, but be aware of the dangers of overexertion. Balance action with reflection."
-        },
-        "line_4": {
-          "text": "Wavering flight over the depths. No blame.",
-          "interpretation": "A time of transition and decision. Either advance or retreat, but do not remain stuck in hesitation."
-        },
-        "line_5": {
-          "text": "Flying dragon in the heavens. It furthers one to see the great person.",
-          "interpretation": "The peak of creative power and influence. This is the optimal time to act and to collaborate with others of vision."
-        },
-        "line_6": {
-          "text": "Arrogant dragon will have cause to repent.",
-          "interpretation": "Overreaching and arrogance lead to downfall. Know when to withdraw and maintain humility."
-        }
+      "keywords": ["creation", "heaven", "strength", "father", "dragon", "origination", "pure yang"],
+      "questions": ["What are you being called to initiate?", "Where does your creative power want to flow?", "Are you acting from strength or from force?"],
+      "sort_order": 1,
+      "metadata": {
+        "number": 1,
+        "chinese": "乾",
+        "pinyin": "Qián",
+        "upper_trigram": "Heaven (Ch'ien)",
+        "lower_trigram": "Heaven (Ch'ien)",
+        "nuclear_hexagram": 1,
+        "opposite_hexagram": 2
+      }
+    },
+    {
+      "id": "hexagram-01-line-1",
+      "name": "Line 1: Hidden Dragon",
+      "symbol": "⚊",
+      "category": "line",
+      "level": 1,
+      "composite_of": ["hexagram-01"],
+      "sections": {
+        "Line Text": "Nine at the beginning means: Hidden dragon. Do not act.",
+        "Interpretation": "The dragon lies hidden in the deep. This is not yet the time for action. Like a seed beneath the soil or a plan not yet ripe, the creative force gathers strength in darkness. Wilhelm explains: 'The dragon, symbol of electrically charged, dynamic, arousing force, is still hidden in the earth.' Patience is required. To act now would be premature—the season has not come.",
+        "Light": "Wisdom to recognize when conditions are not yet ripe; conservation of energy",
+        "Shadow": "Impatience, premature action, revealing oneself before the time is right"
       },
-      "source": "Wilhelm/Baynes translation",
-      "contributors": ["community"]
+      "keywords": ["waiting", "hidden", "latent", "patience", "potential"],
+      "sort_order": 2,
+      "metadata": {
+        "position": 1,
+        "line_type": "yang"
+      }
+    },
+    {
+      "id": "hexagram-01-line-2",
+      "name": "Line 2: Dragon in the Field",
+      "symbol": "⚊",
+      "category": "line",
+      "level": 1,
+      "composite_of": ["hexagram-01"],
+      "sections": {
+        "Line Text": "Nine in the second place means: Dragon appearing in the field. It furthers one to see the great man.",
+        "Interpretation": "The dragon emerges from concealment. Your influence begins to be felt in the world. Wilhelm notes this line represents 'the great man in the early stages of his activity.' Now is the time to seek out those who can recognize your qualities—mentors, allies, collaborators. The creative force needs witnesses and support to fully manifest.",
+        "Light": "Emergence, recognition, the value of seeking guidance and community",
+        "Shadow": "Isolation, refusing help, believing you must do everything alone"
+      },
+      "keywords": ["emergence", "mentor", "recognition", "guidance", "appearing"],
+      "sort_order": 3,
+      "metadata": {
+        "position": 2,
+        "line_type": "yang"
+      }
+    },
+    {
+      "id": "hexagram-01-line-3",
+      "name": "Line 3: Active All Day",
+      "symbol": "⚊",
+      "category": "line",
+      "level": 1,
+      "composite_of": ["hexagram-01"],
+      "sections": {
+        "Line Text": "Nine in the third place means: All day long the superior man is creatively active. At nightfall his mind is still beset with cares. Danger. No blame.",
+        "Interpretation": "The transition point between inner and outer trigrams—a dangerous position. Creative work demands full engagement, but the mind continues churning even at rest. Wilhelm warns: 'This is a phase of transition from the lower to the upper sphere of influence.' The danger is exhaustion and anxiety. Work hard, but know when to release the day's concerns.",
+        "Light": "Diligence, sustained creative effort, conscientiousness",
+        "Shadow": "Burnout, anxiety, inability to rest, work becoming obsession"
+      },
+      "keywords": ["diligence", "transition", "care", "danger", "effort"],
+      "sort_order": 4,
+      "metadata": {
+        "position": 3,
+        "line_type": "yang"
+      }
+    },
+    {
+      "id": "hexagram-01-line-4",
+      "name": "Line 4: Wavering Flight",
+      "symbol": "⚊",
+      "category": "line",
+      "level": 1,
+      "composite_of": ["hexagram-01"],
+      "sections": {
+        "Line Text": "Nine in the fourth place means: Wavering flight over the depths. No blame.",
+        "Interpretation": "The dragon hovers between earth and heaven, between retreat and advance. This is the moment of choice—a liminal threshold. Wilhelm explains: 'The way is open both to advance and to retreat. Either path serves the general interest.' There is no wrong choice here, only the necessity of choosing. Remaining suspended is the only error.",
+        "Light": "Freedom to choose your path, flexibility, openness to multiple possibilities",
+        "Shadow": "Indecision, paralysis, trying to keep all options open forever"
+      },
+      "keywords": ["choice", "threshold", "flexibility", "decision", "liminal"],
+      "sort_order": 5,
+      "metadata": {
+        "position": 4,
+        "line_type": "yang"
+      }
+    },
+    {
+      "id": "hexagram-01-line-5",
+      "name": "Line 5: Flying Dragon",
+      "symbol": "⚊",
+      "category": "line",
+      "level": 1,
+      "composite_of": ["hexagram-01"],
+      "sections": {
+        "Line Text": "Nine in the fifth place means: Flying dragon in the heavens. It furthers one to see the great man.",
+        "Interpretation": "The ruler's position—the peak of the hexagram. The dragon has reached the heavens. Wilhelm writes: 'This symbolizes a great man who has attained to the sphere where he can affect the whole world.' Your influence is at its height. Connect with other visionaries. This is the optimal time to act on your highest aspirations. The great man you should see may be yourself.",
+        "Light": "Full manifestation of creative power, influence, the capacity to benefit many",
+        "Shadow": "Forgetting that what rises must also descend; attachment to peak experience"
+      },
+      "keywords": ["influence", "peak", "heaven", "manifestation", "leadership"],
+      "sort_order": 6,
+      "metadata": {
+        "position": 5,
+        "line_type": "yang"
+      }
+    },
+    {
+      "id": "hexagram-01-line-6",
+      "name": "Line 6: Arrogant Dragon",
+      "symbol": "⚊",
+      "category": "line",
+      "level": 1,
+      "composite_of": ["hexagram-01"],
+      "sections": {
+        "Line Text": "Nine at the top means: Arrogant dragon will have cause to repent.",
+        "Interpretation": "The dragon has risen too high. There is nowhere to go but down. Wilhelm soberly notes: 'When a man rises to a height where he can no longer serve mankind, he has become isolated.' This line warns against overreaching—the hubris that follows success. Know when to withdraw. Power that cannot yield becomes brittle and breaks.",
+        "Light": "Recognizing limits, knowing when to step back, humility after achievement",
+        "Shadow": "Arrogance, isolation, refusing to yield, clinging to power past its time"
+      },
+      "keywords": ["arrogance", "excess", "withdrawal", "humility", "repentance"],
+      "sort_order": 7,
+      "metadata": {
+        "position": 6,
+        "line_type": "yang"
+      }
     }
   ],
+  "_category_roles": {
+    "hexagram": "hexagram",
+    "line": "emergence"
+  },
   "metadata": {
     "created": "2026-01-12",
-    "last_updated": "2026-01-12",
+    "last_updated": "2026-01-23",
     "license": "CC-BY-SA-4.0",
-    "note": "This is an example schema showing the recommended format. Replace with actual data from the community."
+    "note": "Example schema demonstrating unified format for I Ching. Lines are modeled as L1 emergences of the hexagram."
   }
 }
