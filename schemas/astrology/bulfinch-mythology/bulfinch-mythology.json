@@ -9,13 +9,16 @@
     "license": "Public Domain",
     "source_url": "https://www.gutenberg.org/ebooks/4928"
   },
-  "interpretations": [
+  "items": [
     {
-      "type": "planet",
-      "planet": "Saturn",
-      "story": "Saturn (Cronos) was father of Jupiter, Neptune, and Pluto. 'His reign is said to have been the golden age of innocence and purity, and on the other he is described as a monster who devoured his children.' Jupiter escaped and later caused Saturn to disgorge his siblings. The Titans were overthrown and Saturn's dominion transferred to Jupiter.",
-      "light": "The Golden Age of innocence and purity—when 'all things belonged equally to all'",
-      "shadow": "The devouring father—time that consumes all it creates",
+      "id": "saturn",
+      "name": "Saturn",
+      "category": "planet",
+      "sections": {
+        "Mythology": "Saturn (Cronos) was father of Jupiter, Neptune, and Pluto. 'His reign is said to have been the golden age of innocence and purity, and on the other he is described as a monster who devoured his children.' Jupiter escaped and later caused Saturn to disgorge his siblings. The Titans were overthrown and Saturn's dominion transferred to Jupiter.",
+        "Light": "The Golden Age of innocence and purity—when 'all things belonged equally to all'",
+        "Shadow": "The devouring father—time that consumes all it creates"
+      },
       "keywords": ["Cronos", "Titans", "Golden Age", "time", "father", "devouring"],
       "quotes": [
         "Saturn (Cronos) was his father, and Rhea (Ops) his mother. Saturn and Rhea were of the race of Titans, who were the children of Earth and Heaven, which sprang from Chaos.",
@@ -28,11 +31,14 @@
       "sort_order": 0
     },
     {
-      "type": "planet",
-      "planet": "Jupiter",
-      "story": "Jupiter (Zeus), 'though called the father of gods and men, had himself a beginning.' He overthrew his father Saturn and divided the cosmos with his brothers—taking the heavens for himself. 'The thunder was his weapon, and he bore a shield called Aegis.' The eagle was his favorite bird and bore his thunderbolts.",
-      "light": "King of gods and men, wielder of thunder, supreme authority and order",
-      "shadow": "The usurper who overthrew his own father—power gained through rebellion",
+      "id": "jupiter",
+      "name": "Jupiter",
+      "category": "planet",
+      "sections": {
+        "Mythology": "Jupiter (Zeus), 'though called the father of gods and men, had himself a beginning.' He overthrew his father Saturn and divided the cosmos with his brothers—taking the heavens for himself. 'The thunder was his weapon, and he bore a shield called Aegis.' The eagle was his favorite bird and bore his thunderbolts.",
+        "Light": "King of gods and men, wielder of thunder, supreme authority and order",
+        "Shadow": "The usurper who overthrew his own father—power gained through rebellion"
+      },
       "keywords": ["Zeus", "thunder", "eagle", "Aegis", "king", "Olympus"],
       "quotes": [
         "Jupiter, or Jove (Zeus), though called the father of gods and men, had himself a beginning.",
@@ -45,11 +51,14 @@
       "sort_order": 1
     },
     {
-      "type": "planet",
-      "planet": "Mars",
-      "story": "Mars (Ares), the god of war, was the son of Jupiter and Juno. Unlike the Greek tradition which considered him brutal and bloodthirsty, the Romans honored Mars as the father of Romulus, founder of Rome. His sacred animals were the wolf and the woodpecker.",
-      "light": "Courage in battle, the protector of cities, father of civilization",
-      "shadow": "Bloodshed and destruction, the violence that builds empires",
+      "id": "mars",
+      "name": "Mars",
+      "category": "planet",
+      "sections": {
+        "Mythology": "Mars (Ares), the god of war, was the son of Jupiter and Juno. Unlike the Greek tradition which considered him brutal and bloodthirsty, the Romans honored Mars as the father of Romulus, founder of Rome. His sacred animals were the wolf and the woodpecker.",
+        "Light": "Courage in battle, the protector of cities, father of civilization",
+        "Shadow": "Bloodshed and destruction, the violence that builds empires"
+      },
       "keywords": ["Ares", "war", "battle", "Romulus", "wolf", "courage"],
       "quotes": [
         "Mars (Ares), the god of war, was the son of Jupiter and Juno.",
@@ -62,11 +71,14 @@
       "sort_order": 2
     },
     {
-      "type": "planet",
-      "planet": "Sun",
-      "story": "Phoebus Apollo drove the chariot of the sun across the sky each day. His son Phaeton begged to drive the sun chariot to prove his divine parentage. 'Phaeton immediately asked to be permitted for one day to drive the chariot of the sun.' Unable to control the horses, Phaeton set the world ablaze until Jupiter struck him down with a thunderbolt.",
-      "light": "Divine radiance, truth revealed, the proof of one's heritage",
-      "shadow": "Hubris punished—reaching beyond one's capacity brings destruction",
+      "id": "sun",
+      "name": "Sun",
+      "category": "planet",
+      "sections": {
+        "Mythology": "Phoebus Apollo drove the chariot of the sun across the sky each day. His son Phaeton begged to drive the sun chariot to prove his divine parentage. 'Phaeton immediately asked to be permitted for one day to drive the chariot of the sun.' Unable to control the horses, Phaeton set the world ablaze until Jupiter struck him down with a thunderbolt.",
+        "Light": "Divine radiance, truth revealed, the proof of one's heritage",
+        "Shadow": "Hubris punished—reaching beyond one's capacity brings destruction"
+      },
       "keywords": ["Apollo", "Phoebus", "Phaeton", "chariot", "radiance", "hubris"],
       "quotes": [
         "Phoebus Apollo, the god of archery, prophecy, and music, was the son of Jupiter and Latona, and brother of Diana. He was god of the sun, as Diana, his sister, was the goddess of the moon.",
@@ -79,11 +91,14 @@
       "sort_order": 3
     },
     {
-      "type": "planet",
-      "planet": "Venus",
-      "story": "Venus (Aphrodite), the goddess of love and beauty, 'sprang from the foam of the sea. The zephyr wafted her along the waves to the Isle of Cyprus, where she was received and attired by the Seasons.' Though the most beautiful goddess, Jupiter gave her to Vulcan, the most ill-favored of gods. She possessed the Cestus, an embroidered girdle with the power of inspiring love.",
-      "light": "Love and beauty that charm all hearts, the power to inspire devotion",
-      "shadow": "Beauty given to the unworthy—the mismatch of outer and inner worth",
+      "id": "venus",
+      "name": "Venus",
+      "category": "planet",
+      "sections": {
+        "Mythology": "Venus (Aphrodite), the goddess of love and beauty, 'sprang from the foam of the sea. The zephyr wafted her along the waves to the Isle of Cyprus, where she was received and attired by the Seasons.' Though the most beautiful goddess, Jupiter gave her to Vulcan, the most ill-favored of gods. She possessed the Cestus, an embroidered girdle with the power of inspiring love.",
+        "Light": "Love and beauty that charm all hearts, the power to inspire devotion",
+        "Shadow": "Beauty given to the unworthy—the mismatch of outer and inner worth"
+      },
       "keywords": ["Aphrodite", "love", "beauty", "Cestus", "sea foam", "Cyprus"],
       "quotes": [
         "Venus (Aphrodite), the goddess of love and beauty, was the daughter of Jupiter and Dione. Others say that Venus sprang from the foam of the sea.",
@@ -96,11 +111,14 @@
       "sort_order": 4
     },
     {
-      "type": "planet",
-      "planet": "Mercury",
-      "story": "Mercury (Hermes) was the son of Jupiter and Maia, messenger of the gods. 'He presided over commerce, wrestling, and other gymnastic exercises, even over thieving, and everything which required skill and dexterity.' He wore winged cap and winged shoes, and bore the caduceus, a rod entwined with two serpents. Mercury invented the lyre from a tortoise shell.",
-      "light": "Swift messenger, patron of eloquence, inventor and guide of souls",
-      "shadow": "God of thieves—skill and dexterity used for cunning purposes",
+      "id": "mercury",
+      "name": "Mercury",
+      "category": "planet",
+      "sections": {
+        "Mythology": "Mercury (Hermes) was the son of Jupiter and Maia, messenger of the gods. 'He presided over commerce, wrestling, and other gymnastic exercises, even over thieving, and everything which required skill and dexterity.' He wore winged cap and winged shoes, and bore the caduceus, a rod entwined with two serpents. Mercury invented the lyre from a tortoise shell.",
+        "Light": "Swift messenger, patron of eloquence, inventor and guide of souls",
+        "Shadow": "God of thieves—skill and dexterity used for cunning purposes"
+      },
       "keywords": ["Hermes", "messenger", "caduceus", "commerce", "eloquence", "thievery"],
       "quotes": [
         "Mercury (Hermes) was the son of Jupiter and Maia. He presided over commerce, wrestling, and other gymnastic exercises, even over thieving, and everything, in short, which required skill and dexterity.",
@@ -113,11 +131,14 @@
       "sort_order": 5
     },
     {
-      "type": "planet",
-      "planet": "Moon",
-      "story": "Diana (Artemis), goddess of the moon, was twin sister to Apollo the sun god. She was goddess of the hunt and protectress of the young. The tragic tale of Orion tells how 'observing Orion wading through the sea with his head just above the water, Apollo pointed it out to his sister and maintained that she could not hit that black thing on the sea.' Diana shot her beloved Orion by accident.",
-      "light": "Huntress and protector, mistress of the wild places and the night",
-      "shadow": "Fatal accuracy—the arrow that strikes those we love most",
+      "id": "moon",
+      "name": "Moon",
+      "category": "planet",
+      "sections": {
+        "Mythology": "Diana (Artemis), goddess of the moon, was twin sister to Apollo the sun god. She was goddess of the hunt and protectress of the young. The tragic tale of Orion tells how 'observing Orion wading through the sea with his head just above the water, Apollo pointed it out to his sister and maintained that she could not hit that black thing on the sea.' Diana shot her beloved Orion by accident.",
+        "Light": "Huntress and protector, mistress of the wild places and the night",
+        "Shadow": "Fatal accuracy—the arrow that strikes those we love most"
+      },
       "keywords": ["Diana", "Artemis", "huntress", "Orion", "night", "chastity"],
       "quotes": [
         "Phoebus Apollo was god of the sun, as Diana, his sister, was the goddess of the moon.",
@@ -130,11 +151,14 @@
       "sort_order": 6
     },
     {
-      "type": "sign",
-      "sign": "Aries",
-      "story": "The Golden Ram that saved Phryxus from sacrifice. His stepmother Ino plotted against him, but his mother Nephele 'obtained from Mercury a ram with a golden fleece, on which she set the two children, trusting that the ram would convey them to a place of safety.' The ram flew east; Helle fell into the sea (the Hellespont), but Phryxus reached Colchis safely and sacrificed the ram to Jupiter.",
-      "light": "Divine rescue, the fleece of gold that carries the worthy to safety",
-      "shadow": "The sacrifice of the savior—the ram dies to complete its mission",
+      "id": "aries",
+      "name": "Aries",
+      "category": "sign",
+      "sections": {
+        "Mythology": "The Golden Ram that saved Phryxus from sacrifice. His stepmother Ino plotted against him, but his mother Nephele 'obtained from Mercury a ram with a golden fleece, on which she set the two children, trusting that the ram would convey them to a place of safety.' The ram flew east; Helle fell into the sea (the Hellespont), but Phryxus reached Colchis safely and sacrificed the ram to Jupiter.",
+        "Light": "Divine rescue, the fleece of gold that carries the worthy to safety",
+        "Shadow": "The sacrifice of the savior—the ram dies to complete its mission"
+      },
       "keywords": ["Golden Fleece", "Phryxus", "Helle", "Colchis", "sacrifice", "rescue"],
       "quotes": [
         "From every region of Aegea's shore the brave assembled... On deep Iolcos' sandy shore they thronged, gleaming in armor, ardent of exploits.",
@@ -147,11 +171,14 @@
       "sort_order": 10
     },
     {
-      "type": "sign",
-      "sign": "Taurus",
-      "story": "Jupiter, disguised as a beautiful white bull, carried off Europa, princess of Phoenicia. 'Jupiter, under the disguise of a bull, had carried away Europa, the daughter of Agenor, king of Phoenicia.' The bull swam across the sea to Crete, where Europa became mother of King Minos. Her brother Cadmus was sent to find her and founded Thebes instead.",
-      "light": "Divine abduction leading to royal lineage—beauty that attracts the gods",
-      "shadow": "Deception in gentleness—the mild bull conceals the ravisher",
+      "id": "taurus",
+      "name": "Taurus",
+      "category": "sign",
+      "sections": {
+        "Mythology": "Jupiter, disguised as a beautiful white bull, carried off Europa, princess of Phoenicia. 'Jupiter, under the disguise of a bull, had carried away Europa, the daughter of Agenor, king of Phoenicia.' The bull swam across the sea to Crete, where Europa became mother of King Minos. Her brother Cadmus was sent to find her and founded Thebes instead.",
+        "Light": "Divine abduction leading to royal lineage—beauty that attracts the gods",
+        "Shadow": "Deception in gentleness—the mild bull conceals the ravisher"
+      },
       "keywords": ["Europa", "Zeus", "Crete", "Minos", "Cadmus", "abduction"],
       "quotes": [
         "Jupiter, under the disguise of a bull, had carried away Europa, the daughter of Agenor, king of Phoenicia.",
@@ -164,11 +191,14 @@
       "sort_order": 11
     },
     {
-      "type": "sign",
-      "sign": "Gemini",
-      "story": "Castor and Pollux, the divine twins, were born from an egg after Jupiter visited Leda as a swan. 'Castor was famous for taming and managing horses, and Pollux for skill in boxing. They were united by the warmest affection and inseparable in all their enterprises.' When Castor was slain, Pollux begged to share his immortality, and Jupiter placed them together among the stars.",
-      "light": "Inseparable brotherhood, devotion that transcends death",
-      "shadow": "One mortal, one divine—the asymmetry of twin fates",
+      "id": "gemini",
+      "name": "Gemini",
+      "category": "sign",
+      "sections": {
+        "Mythology": "Castor and Pollux, the divine twins, were born from an egg after Jupiter visited Leda as a swan. 'Castor was famous for taming and managing horses, and Pollux for skill in boxing. They were united by the warmest affection and inseparable in all their enterprises.' When Castor was slain, Pollux begged to share his immortality, and Jupiter placed them together among the stars.",
+        "Light": "Inseparable brotherhood, devotion that transcends death",
+        "Shadow": "One mortal, one divine—the asymmetry of twin fates"
+      },
       "keywords": ["Castor", "Pollux", "Dioscuri", "twins", "Leda", "devotion"],
       "quotes": [
         "Castor and Pollux were the offspring of Leda and the Swan, under which disguise Jupiter had concealed himself. Leda gave birth to an egg from which sprang the twins.",
@@ -181,11 +211,14 @@
       "sort_order": 12
     },
     {
-      "type": "sign",
-      "sign": "Cancer",
-      "story": "When Hercules battled the nine-headed Hydra in the swamp of Lerna, Juno sent a giant crab to attack him, biting at his heels. Hercules crushed the crab, but Juno honored its service by placing it among the stars. The crab's loyalty to the queen of heaven, even against the greatest hero, earned it immortality in the zodiac.",
-      "light": "Loyal service to higher powers, persistence against overwhelming odds",
-      "shadow": "Crushed underfoot—devotion that ends in destruction",
+      "id": "cancer",
+      "name": "Cancer",
+      "category": "sign",
+      "sections": {
+        "Mythology": "When Hercules battled the nine-headed Hydra in the swamp of Lerna, Juno sent a giant crab to attack him, biting at his heels. Hercules crushed the crab, but Juno honored its service by placing it among the stars. The crab's loyalty to the queen of heaven, even against the greatest hero, earned it immortality in the zodiac.",
+        "Light": "Loyal service to higher powers, persistence against overwhelming odds",
+        "Shadow": "Crushed underfoot—devotion that ends in destruction"
+      },
       "keywords": ["Hercules", "Hydra", "Juno", "crab", "loyalty", "Lerna"],
       "quotes": [
         "His next labor was the slaughter of the Hydra. This monster ravaged the country of Argos, and dwelt in a swamp near the well of Amymone.",
@@ -198,11 +231,14 @@
       "sort_order": 13
     },
     {
-      "type": "sign",
-      "sign": "Leo",
-      "story": "The Nemean Lion was Hercules' first of twelve labors. 'The valley of Nemea was infested by a terrible lion. Eurystheus ordered Hercules to bring him the skin of this monster.' The lion's hide could not be pierced by weapons, so Hercules strangled it with his bare hands. He ever after wore the lion's skin as armor, and the lion was placed among the stars.",
-      "light": "Invincible strength, the trophy of supreme victory worn as protection",
-      "shadow": "A terror that required a hero—evil so great only divinity could defeat it",
+      "id": "leo",
+      "name": "Leo",
+      "category": "sign",
+      "sections": {
+        "Mythology": "The Nemean Lion was Hercules' first of twelve labors. 'The valley of Nemea was infested by a terrible lion. Eurystheus ordered Hercules to bring him the skin of this monster.' The lion's hide could not be pierced by weapons, so Hercules strangled it with his bare hands. He ever after wore the lion's skin as armor, and the lion was placed among the stars.",
+        "Light": "Invincible strength, the trophy of supreme victory worn as protection",
+        "Shadow": "A terror that required a hero—evil so great only divinity could defeat it"
+      },
       "keywords": ["Hercules", "Nemean Lion", "labor", "strength", "invincible", "lion skin"],
       "quotes": [
         "The first was the fight with the Nemean lion. The valley of Nemea was infested by a terrible lion.",
@@ -215,11 +251,14 @@
       "sort_order": 14
     },
     {
-      "type": "sign",
-      "sign": "Virgo",
-      "story": "Virgo represents Astraea, goddess of justice, who was the last of the immortals to leave earth at the end of the Golden Age. As humanity grew wicked, the gods withdrew one by one to Olympus. Astraea lingered longest, hoping for humanity's return to virtue. Finally even she departed, but was placed among the stars holding her scales of justice (Libra beside her).",
-      "light": "Hope that lingers when all others have abandoned—faith in human virtue",
-      "shadow": "The last departure—even justice eventually flees corruption",
+      "id": "virgo",
+      "name": "Virgo",
+      "category": "sign",
+      "sections": {
+        "Mythology": "Virgo represents Astraea, goddess of justice, who was the last of the immortals to leave earth at the end of the Golden Age. As humanity grew wicked, the gods withdrew one by one to Olympus. Astraea lingered longest, hoping for humanity's return to virtue. Finally even she departed, but was placed among the stars holding her scales of justice (Libra beside her).",
+        "Light": "Hope that lingers when all others have abandoned—faith in human virtue",
+        "Shadow": "The last departure—even justice eventually flees corruption"
+      },
       "keywords": ["Astraea", "justice", "purity", "Golden Age", "departure", "virtue"],
       "quotes": [
         "In memory of his beneficent dominion, the feast of Saturnalia was held every year in the winter season.",
@@ -232,11 +271,14 @@
       "sort_order": 15
     },
     {
-      "type": "sign",
-      "sign": "Libra",
-      "story": "The Scales of Justice belong to Astraea (Virgo), placed beside her in the heavens. They represent the balance by which mortals are judged—the weighing of hearts against truth. In the Golden Age under Saturn, 'all things belonged equally to all,' but as that age ended, the scales became necessary to measure what was owed to each.",
-      "light": "Divine balance, the measure of truth against falsehood",
-      "shadow": "The end of equality—scales needed only when natural harmony fails",
+      "id": "libra",
+      "name": "Libra",
+      "category": "sign",
+      "sections": {
+        "Mythology": "The Scales of Justice belong to Astraea (Virgo), placed beside her in the heavens. They represent the balance by which mortals are judged—the weighing of hearts against truth. In the Golden Age under Saturn, 'all things belonged equally to all,' but as that age ended, the scales became necessary to measure what was owed to each.",
+        "Light": "Divine balance, the measure of truth against falsehood",
+        "Shadow": "The end of equality—scales needed only when natural harmony fails"
+      },
       "keywords": ["Astraea", "scales", "justice", "balance", "equality", "judgment"],
       "quotes": [
         "The Fates were armed with shears, with which they cut it off when they pleased. They were the daughters of Themis (Law), who sits by Jove on his throne to give him counsel.",
@@ -249,11 +291,14 @@
       "sort_order": 16
     },
     {
-      "type": "sign",
-      "sign": "Scorpio",
-      "story": "In Phaeton's disastrous ride, the scorpion was among the terrors that caused him to lose control. 'Here the Scorpion extended his two great arms, with his tail and crooked claws stretching over two signs of the zodiac. When the boy beheld him, reeking with poison and menacing with his fangs, his courage failed, and the reins fell from his hands.' The scorpion is also linked to Orion's death in some tellings.",
-      "light": "Cosmic guardian, the terror that keeps mortals from overreaching",
-      "shadow": "Poison that waits in darkness, menace that paralyzes the bold",
+      "id": "scorpio",
+      "name": "Scorpio",
+      "category": "sign",
+      "sections": {
+        "Mythology": "In Phaeton's disastrous ride, the scorpion was among the terrors that caused him to lose control. 'Here the Scorpion extended his two great arms, with his tail and crooked claws stretching over two signs of the zodiac. When the boy beheld him, reeking with poison and menacing with his fangs, his courage failed, and the reins fell from his hands.' The scorpion is also linked to Orion's death in some tellings.",
+        "Light": "Cosmic guardian, the terror that keeps mortals from overreaching",
+        "Shadow": "Poison that waits in darkness, menace that paralyzes the bold"
+      },
       "keywords": ["Phaeton", "Orion", "poison", "terror", "zodiac", "venom"],
       "quotes": [
         "He sees with terror the monstrous forms scattered over the surface of heaven.",
@@ -266,11 +311,14 @@
       "sort_order": 17
     },
     {
-      "type": "sign",
-      "sign": "Sagittarius",
-      "story": "Chiron was the wisest of the Centaurs, 'instructed by Apollo and Diana, and renowned for his skill in hunting, medicine, music, and the art of prophecy.' Unlike the wild centaurs, he taught the greatest heroes of Greece. 'Chiron was the wisest and justest of all the Centaurs, and at his death Jupiter placed him among the stars as the constellation Sagittarius.'",
-      "light": "Wisdom that bridges human and divine, teacher of heroes",
-      "shadow": "The civilized among the wild—nobility that exists in isolation",
+      "id": "sagittarius",
+      "name": "Sagittarius",
+      "category": "sign",
+      "sections": {
+        "Mythology": "Chiron was the wisest of the Centaurs, 'instructed by Apollo and Diana, and renowned for his skill in hunting, medicine, music, and the art of prophecy.' Unlike the wild centaurs, he taught the greatest heroes of Greece. 'Chiron was the wisest and justest of all the Centaurs, and at his death Jupiter placed him among the stars as the constellation Sagittarius.'",
+        "Light": "Wisdom that bridges human and divine, teacher of heroes",
+        "Shadow": "The civilized among the wild—nobility that exists in isolation"
+      },
       "keywords": ["Chiron", "centaur", "teacher", "wisdom", "prophecy", "medicine"],
       "quotes": [
         "But not all the Centaurs were like the rude guests of Pirithous. Chiron was instructed by Apollo and Diana, and was renowned for his skill in hunting, medicine, music, and the art of prophecy.",
@@ -283,11 +331,14 @@
       "sort_order": 18
     },
     {
-      "type": "sign",
-      "sign": "Capricorn",
-      "story": "Pan, god of flocks and shepherds, transformed into a fish-goat to escape the monster Typhon. 'Pan was the god of flocks and shepherds. His favorite residence was in Arcadia.' When the gods fled Typhon, Pan leaped into the Nile—his upper body became a goat, his lower a fish. Jupiter commemorated this creative escape by placing the sea-goat among the stars.",
-      "light": "Transformation under pressure, creative adaptation that ensures survival",
-      "shadow": "The hybrid—neither fully one thing nor the other, caught between realms",
+      "id": "capricorn",
+      "name": "Capricorn",
+      "category": "sign",
+      "sections": {
+        "Mythology": "Pan, god of flocks and shepherds, transformed into a fish-goat to escape the monster Typhon. 'Pan was the god of flocks and shepherds. His favorite residence was in Arcadia.' When the gods fled Typhon, Pan leaped into the Nile—his upper body became a goat, his lower a fish. Jupiter commemorated this creative escape by placing the sea-goat among the stars.",
+        "Light": "Transformation under pressure, creative adaptation that ensures survival",
+        "Shadow": "The hybrid—neither fully one thing nor the other, caught between realms"
+      },
       "keywords": ["Pan", "goat", "fish", "Typhon", "Arcadia", "transformation"],
       "quotes": [
         "Pan was the god of flocks and shepherds. His favorite residence was in Arcadia.",
@@ -300,11 +351,14 @@
       "sort_order": 19
     },
     {
-      "type": "sign",
-      "sign": "Aquarius",
-      "story": "Ganymede was a Trojan prince so beautiful that 'Jupiter, in the disguise of an eagle, seized and carried off from the midst of his playfellows on Mount Ida, bore up to heaven, and installed' as cupbearer to the gods. He replaced Hebe, goddess of youth. The eagle (Aquila) and the water-bearer stand together in the sky as reminders of divine favor.",
-      "light": "Beauty that catches divine attention, elevation to serve the gods",
-      "shadow": "Abducted youth—the mortal seized for immortal purposes",
+      "id": "aquarius",
+      "name": "Aquarius",
+      "category": "sign",
+      "sections": {
+        "Mythology": "Ganymede was a Trojan prince so beautiful that 'Jupiter, in the disguise of an eagle, seized and carried off from the midst of his playfellows on Mount Ida, bore up to heaven, and installed' as cupbearer to the gods. He replaced Hebe, goddess of youth. The eagle (Aquila) and the water-bearer stand together in the sky as reminders of divine favor.",
+        "Light": "Beauty that catches divine attention, elevation to serve the gods",
+        "Shadow": "Abducted youth—the mortal seized for immortal purposes"
+      },
       "keywords": ["Ganymede", "cupbearer", "eagle", "Zeus", "Hebe", "Ida"],
       "quotes": [
         "Hebe, the daughter of Juno, and goddess of youth, was cup-bearer to the gods.",
@@ -317,11 +371,14 @@
       "sort_order": 20
     },
     {
-      "type": "sign",
-      "sign": "Pisces",
-      "story": "When the monster Typhon attacked Olympus, Venus and her son Cupid fled and leaped into the Euphrates River. To escape, they transformed into fish. They tied themselves together with a cord so they would not be separated in the current. Jupiter commemorated their escape by placing two fish bound together among the stars.",
-      "light": "Love's bond that holds even in transformation, connection that survives chaos",
-      "shadow": "Flight and disguise—love forced to hide its true form",
+      "id": "pisces",
+      "name": "Pisces",
+      "category": "sign",
+      "sections": {
+        "Mythology": "When the monster Typhon attacked Olympus, Venus and her son Cupid fled and leaped into the Euphrates River. To escape, they transformed into fish. They tied themselves together with a cord so they would not be separated in the current. Jupiter commemorated their escape by placing two fish bound together among the stars.",
+        "Light": "Love's bond that holds even in transformation, connection that survives chaos",
+        "Shadow": "Flight and disguise—love forced to hide its true form"
+      },
       "keywords": ["Venus", "Cupid", "Aphrodite", "Eros", "fish", "Typhon"],
       "quotes": [
         "Cupid (Eros), the god of love, was the son of Venus. He was her constant companion; and, armed with bow and arrows, he shot the darts of desire into the bosoms of both gods and men.",
