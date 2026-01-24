@@ -107,6 +107,43 @@ For non-standard categories, add `_category_roles` at the grammar level:
 }
 ```
 
+### Why Metadata Matters
+
+With unified grammar systems, **metadata becomes essential for rendering symbols and icons easily**. Rich metadata enables UIs to display meaningful visual representations without hardcoding system-specific logic.
+
+**I Ching Example:**
+```json
+{
+  "id": "hexagram-1",
+  "name": "The Creative",
+  "metadata": {
+    "number": 1,
+    "chinese_name": "乾",
+    "pinyin": "Qián",
+    "trigram_above": "heaven",
+    "trigram_below": "heaven",
+    "binary": "111111"
+  }
+}
+```
+
+**Astrology Example:**
+```json
+{
+  "id": "sign-aries",
+  "name": "Aries",
+  "symbol": "♈",
+  "category": "sign",
+  "subcategory": "fire"
+}
+```
+
+This approach allows renderers to:
+- Display Unicode symbols (♈, ☉, ☿) directly
+- Show Chinese characters for I Ching
+- Generate visual representations from binary patterns
+- Group items by subcategory (fire signs, cardinal signs, etc.)
+
 ### Field Classification (Field-Agnostic Import)
 
 When using the field-agnostic converter, fields are classified as:
