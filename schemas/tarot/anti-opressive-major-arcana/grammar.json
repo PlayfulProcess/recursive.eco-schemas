@@ -1,0 +1,395 @@
+{
+  "$schema": "https://recursive.eco/schemas/grammar/v1",
+  "id": "anti-oppressive-major-arcana",
+  "name": "Anti-Oppressive Major Arcana",
+  "version": "1.0.0",
+  "description": "A Major Arcana tarot deck examining interlocking oppressions in social work history through inverse visibility metrics",
+  "type": "tarot",
+  "methodology": {
+    "inverse_visibility": true,
+    "source_text": "Chapman & Withers (2019). A Violent History of Benevolence",
+    "core_principle": "All figures are complicit. No moral judgments. Reflection on complicity, not identification with innocence.",
+    "formula": "inverse_weight = average_visibility / individual_visibility"
+  },
+  "items": [
+    {
+      "id": "0-the-fool",
+      "number": 0,
+      "name": "The Fool",
+      "historical_figure": {
+        "id": "pa-carvery",
+        "name": "Aaron 'Pa' Carvery",
+        "era": "1900s-1970s",
+        "context": "Final holdout in Africville, refusing to leave until 1970"
+      },
+      "inverse_weight": 17.40,
+      "sections": {
+        "standard_meaning": "New beginnings, innocence, spontaneity, free spirit",
+        "critical_meaning": "The journey's beginning and end. Innocence that is not innocent—the fool who sees what others refuse to see.",
+        "reflection_prompt": "What does it mean to hold ground when the world insists you move?"
+      }
+    },
+    {
+      "id": "1-the-magician",
+      "number": 1,
+      "name": "The Magician",
+      "historical_figure": {
+        "id": "maggie-l-walker",
+        "name": "Maggie L. Walker",
+        "era": "1864-1934",
+        "context": "Founded St. Luke Penny Savings Bank—first woman bank president in America"
+      },
+      "inverse_weight": 1.14,
+      "sections": {
+        "standard_meaning": "Manifestation, resourcefulness, power, inspired action",
+        "critical_meaning": "Transformative action within hostile systems. Made something from nothing when systems refused to recognize her resources.",
+        "reflection_prompt": "What resources do you have that systems refuse to recognize?"
+      }
+    },
+    {
+      "id": "2-the-high-priestess",
+      "number": 2,
+      "name": "The High Priestess",
+      "historical_figure": {
+        "id": "elizabeth-jackson-shadd-shreve",
+        "name": "Elizabeth Williams Shadd Shreve",
+        "era": "1826-1870",
+        "context": "Circuit-riding missionary in Buxton fugitive settlement"
+      },
+      "inverse_weight": 14.50,
+      "sections": {
+        "standard_meaning": "Intuition, sacred knowledge, divine feminine, the subconscious",
+        "critical_meaning": "Hidden knowledge, keeper of paths and secrets. Nearly invisible to history while sustaining community survival.",
+        "reflection_prompt": "Whose knowledge sustains communities while remaining unwritten?"
+      }
+    },
+    {
+      "id": "3-the-empress",
+      "number": 3,
+      "name": "The Empress",
+      "historical_figure": {
+        "id": "janie-barrett",
+        "name": "Janie Porter Barrett",
+        "era": "1865-1948",
+        "context": "Founded first Black settlement house in Virginia from her own home"
+      },
+      "inverse_weight": 3.11,
+      "sections": {
+        "standard_meaning": "Femininity, beauty, nature, nurturing, abundance",
+        "critical_meaning": "Creation that grows from home. Built institutions that sustained community life without institutional recognition.",
+        "reflection_prompt": "What grows from care that refuses institutional recognition?"
+      }
+    },
+    {
+      "id": "4-the-emperor",
+      "number": 4,
+      "name": "The Emperor",
+      "historical_figure": {
+        "id": "mary-richmond",
+        "name": "Mary Richmond",
+        "era": "1861-1928",
+        "context": "Created 'scientific casework'—the architecture of professional social control"
+      },
+      "inverse_weight": 0.60,
+      "sections": {
+        "standard_meaning": "Authority, structure, control, fatherhood",
+        "critical_meaning": "The father-energy of professional social control. Structure that becomes surveillance dressed as help.",
+        "reflection_prompt": "When does structure become a cage? When does help become control?"
+      }
+    },
+    {
+      "id": "5-the-hierophant",
+      "number": 5,
+      "name": "The Hierophant",
+      "historical_figure": {
+        "id": "jane-addams",
+        "name": "Jane Addams",
+        "era": "1860-1935",
+        "context": "Nobel laureate, Hull-House founder, eugenics supporter"
+      },
+      "inverse_weight": 0.46,
+      "sections": {
+        "standard_meaning": "Spiritual wisdom, religious beliefs, conformity, tradition",
+        "critical_meaning": "High morals firmly embedded in colonial institutions. The priest who blesses the empire while believing in reform.",
+        "reflection_prompt": "What violences hide behind moral authority?"
+      }
+    },
+    {
+      "id": "6-the-lovers",
+      "number": 6,
+      "name": "The Lovers",
+      "historical_figure": {
+        "id": "henry-bibb",
+        "name": "Henry Bibb",
+        "era": "1815-1854",
+        "context": "Escaped slavery multiple times trying to free his family. Founded Voice of the Fugitive."
+      },
+      "inverse_weight": 1.81,
+      "sections": {
+        "standard_meaning": "Love, harmony, relationships, values alignment, choices",
+        "critical_meaning": "Love as revolutionary force and impossible choice. What would you risk everything to return to?",
+        "reflection_prompt": "What would you risk everything to return to?"
+      }
+    },
+    {
+      "id": "7-the-chariot",
+      "number": 7,
+      "name": "The Chariot",
+      "historical_figure": {
+        "id": "claudette-colvin",
+        "name": "Claudette Colvin",
+        "era": "1939-present",
+        "context": "At 15, refused to give up her bus seat—nine months before Rosa Parks"
+      },
+      "inverse_weight": 0.97,
+      "sections": {
+        "standard_meaning": "Control, willpower, success, action, determination",
+        "critical_meaning": "Moved forward when told to move back. Determination that history chose not to remember.",
+        "reflection_prompt": "Whose determination is remembered? Whose is erased?"
+      }
+    },
+    {
+      "id": "8-strength",
+      "number": 8,
+      "name": "Strength",
+      "historical_figure": {
+        "id": "ida-b-wells",
+        "name": "Ida B. Wells",
+        "era": "1862-1931",
+        "context": "Anti-lynching crusader who documented terror when doing so meant death threats"
+      },
+      "inverse_weight": 0.56,
+      "sections": {
+        "standard_meaning": "Strength, courage, persuasion, influence, compassion",
+        "critical_meaning": "Strength that speaks truth to murderous power. Courage that costs everything and persists.",
+        "reflection_prompt": "What truth requires courage to speak in your context?"
+      }
+    },
+    {
+      "id": "9-the-hermit",
+      "number": 9,
+      "name": "The Hermit",
+      "historical_figure": {
+        "id": "reverdy-ransom",
+        "name": "Reverdy Cassius Ransom",
+        "era": "1861-1959",
+        "context": "AME Bishop who brought social gospel to Black churches"
+      },
+      "inverse_weight": 2.90,
+      "sections": {
+        "standard_meaning": "Soul-searching, introspection, inner guidance",
+        "critical_meaning": "Light held up in institutional darkness. Wisdom that comes from standing apart from mainstream success.",
+        "reflection_prompt": "What wisdom comes from standing apart from mainstream success?"
+      }
+    },
+    {
+      "id": "10-wheel-of-fortune",
+      "number": 10,
+      "name": "Wheel of Fortune",
+      "historical_figure": {
+        "id": "oscar-mcculloch",
+        "name": "Oscar McCulloch",
+        "era": "1843-1891",
+        "context": "His 'Tribe of Ishmael' study launched eugenic policy—then he changed his mind, too late"
+      },
+      "inverse_weight": 3.63,
+      "sections": {
+        "standard_meaning": "Good luck, karma, life cycles, destiny, turning point",
+        "critical_meaning": "The wheel that crushes those it claims to study. Cycles of harm that continue from research done with good intentions.",
+        "reflection_prompt": "What cycles of harm continue from research done with good intentions?"
+      }
+    },
+    {
+      "id": "11-justice",
+      "number": 11,
+      "name": "Justice",
+      "historical_figure": {
+        "id": "george-haynes",
+        "name": "George Edmund Haynes",
+        "era": "1880-1960",
+        "context": "First Black PhD from Columbia, co-founded Urban League"
+      },
+      "inverse_weight": 2.29,
+      "sections": {
+        "standard_meaning": "Justice, fairness, truth, cause and effect, law",
+        "critical_meaning": "Built institutions to address systemic inequality within systems that created it. Can justice be built within unjust institutions?",
+        "reflection_prompt": "Can justice be built within unjust institutions?"
+      }
+    },
+    {
+      "id": "12-the-hanged-man",
+      "number": 12,
+      "name": "The Hanged Man",
+      "historical_figure": {
+        "id": "zaynab-al-ghazali",
+        "name": "Zaynab al-Ghazali",
+        "era": "1917-2005",
+        "context": "Imprisoned and tortured for organizing. Founded Muslim Women's Association."
+      },
+      "inverse_weight": 1.36,
+      "sections": {
+        "standard_meaning": "Pause, surrender, letting go, new perspectives",
+        "critical_meaning": "Surrendered to a vision that cost everything. What becomes visible only from a position of suspension?",
+        "reflection_prompt": "What becomes visible only from a position of surrender?"
+      }
+    },
+    {
+      "id": "13-death",
+      "number": 13,
+      "name": "Death",
+      "historical_figure": {
+        "id": "albert-rose",
+        "name": "Albert Rose",
+        "era": "1917-1996",
+        "context": "Wrote the report that destroyed Africville. Called Regent Park a failure."
+      },
+      "inverse_weight": 5.12,
+      "sections": {
+        "standard_meaning": "Endings, change, transformation, transition",
+        "critical_meaning": "The professional who signs death warrants for communities. What dies when experts decide communities must be 'renewed'?",
+        "reflection_prompt": "What dies when experts decide communities must be 'renewed'?"
+      }
+    },
+    {
+      "id": "14-temperance",
+      "number": 14,
+      "name": "Temperance",
+      "historical_figure": {
+        "id": "booker-t-washington",
+        "name": "Booker T. Washington",
+        "era": "1856-1915",
+        "context": "Accommodation politics—the middle path that critics called complicity"
+      },
+      "inverse_weight": 0.53,
+      "sections": {
+        "standard_meaning": "Balance, moderation, patience, purpose",
+        "critical_meaning": "Patience that some saw as wisdom, others as surrender. The middle path within impossible conditions.",
+        "reflection_prompt": "When is patience wisdom? When is it collaboration with oppression?"
+      }
+    },
+    {
+      "id": "15-the-devil",
+      "number": 15,
+      "name": "The Devil",
+      "historical_figure": {
+        "id": "richard-henry-pratt",
+        "name": "Richard Henry Pratt",
+        "era": "1840-1924",
+        "context": "'Kill the Indian, save the man.' Founded Carlisle Indian School."
+      },
+      "inverse_weight": 1.04,
+      "sections": {
+        "standard_meaning": "Shadow self, attachment, addiction, restriction",
+        "critical_meaning": "The shadow that calls itself salvation. Bondage that presents itself as education, as help, as love.",
+        "reflection_prompt": "What bondage presents itself as education? As help?"
+      }
+    },
+    {
+      "id": "16-the-tower",
+      "number": 16,
+      "name": "The Tower",
+      "historical_figure": {
+        "id": "john-edward-lloyd",
+        "name": "John Edward Lloyd",
+        "era": "1900s-1970s",
+        "context": "Halifax Mayor during Africville destruction. 'Sometimes people need to be shown what's in their best interests.'"
+      },
+      "inverse_weight": 9.67,
+      "sections": {
+        "standard_meaning": "Sudden change, upheaval, chaos, revelation, awakening",
+        "critical_meaning": "The tower falls on those inside while those outside call it progress. Whose structures must fall?",
+        "reflection_prompt": "Whose towers are destroyed? Who decides which structures must fall?"
+      }
+    },
+    {
+      "id": "17-the-star",
+      "number": 17,
+      "name": "The Star",
+      "historical_figure": {
+        "id": "mary-ann-shadd-cary",
+        "name": "Mary Ann Shadd Cary",
+        "era": "1823-1893",
+        "context": "First Black woman newspaper editor in North America. Voice of the fugitive."
+      },
+      "inverse_weight": 1.55,
+      "sections": {
+        "standard_meaning": "Hope, faith, purpose, renewal, spirituality",
+        "critical_meaning": "Star that guided the way north. Hope that sustains when the journey has no guaranteed end.",
+        "reflection_prompt": "What hope sustains when the journey has no guaranteed end?"
+      }
+    },
+    {
+      "id": "18-the-moon",
+      "number": 18,
+      "name": "The Moon",
+      "historical_figure": {
+        "id": "katherine-bement-davis",
+        "name": "Katherine Bement Davis",
+        "era": "1860-1935",
+        "context": "Led eugenic criminology, built Bedford Hills to confine 'defective' women for life"
+      },
+      "inverse_weight": 2.42,
+      "sections": {
+        "standard_meaning": "Illusion, fear, anxiety, subconscious, intuition",
+        "critical_meaning": "Science as shadow, reform as nightmare. Fears that drive policies claiming to be rational.",
+        "reflection_prompt": "What fears drive policies that claim to be rational?"
+      }
+    },
+    {
+      "id": "19-the-sun",
+      "number": 19,
+      "name": "The Sun",
+      "historical_figure": {
+        "id": "viola-desmond",
+        "name": "Viola Desmond",
+        "era": "1914-1965",
+        "context": "Sat in the whites-only section in Nova Scotia, 1946. Now on the Canadian $10 bill."
+      },
+      "inverse_weight": 1.14,
+      "sections": {
+        "standard_meaning": "Positivity, fun, warmth, success, vitality",
+        "critical_meaning": "Light that refused to be dimmed. Joy as an act of resistance.",
+        "reflection_prompt": "What joy is an act of resistance?"
+      }
+    },
+    {
+      "id": "20-judgement",
+      "number": 20,
+      "name": "Judgement",
+      "historical_figure": {
+        "id": "josephine-shaw-lowell",
+        "name": "Josephine Shaw Lowell",
+        "era": "1843-1905",
+        "context": "COS founder who led eugenic criminology while supporting labor rights"
+      },
+      "inverse_weight": 1.98,
+      "sections": {
+        "standard_meaning": "Judgement, rebirth, inner calling, absolution",
+        "critical_meaning": "The call to account that implicates the judge. How do we reckon with those who did both harm and good?",
+        "reflection_prompt": "How do we reckon with those who did both harm and good?"
+      }
+    },
+    {
+      "id": "21-the-world",
+      "number": 21,
+      "name": "The World",
+      "historical_figure": {
+        "id": "philip-c-garrett",
+        "name": "Philip C. Garrett",
+        "era": "1840s-1900s",
+        "context": "Chaired the 1892 conference where Pratt spoke. Nearly invisible now."
+      },
+      "inverse_weight": 21.75,
+      "sections": {
+        "standard_meaning": "Completion, integration, accomplishment, travel",
+        "critical_meaning": "The world that was built on erased foundations. Whose completion required whose erasure?",
+        "reflection_prompt": "What world is complete? Whose completion required whose erasure?"
+      }
+    }
+  ],
+  "attribution": {
+    "source": "Chapman, C., & Withers, A. J. (2019). A Violent History of Benevolence: Interlocking oppression in the moral economies of social working. University of Toronto Press.",
+    "created_with": "Claude (Anthropic AI) via Claude Code CLI",
+    "methodology_inspired_by": "Spivak's 'persistent dredging operation' and analeptic thinking"
+  }
+}
