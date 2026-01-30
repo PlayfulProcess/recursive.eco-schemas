@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This is a Social Work program project that combines academic critical analysis with tarot card creation. The deck focuses on **decolonizing social work history** by centering erased voices of resistance while critically examining the complicit figures typically celebrated in the "standard account" of social work.
+This is a Social Work program project that combines academic critical analysis with tarot card creation. The deck uses an inverse visibility metric to examine figures from social work history—all of whom are complicit in interlocking systems of oppression. No moral judgments are made; the deck invites reflection on complicity rather than identification with innocence.
 
 ### Core Concept
 Using an **inverse visibility metric**, this deck mathematically disrupts the "moral economy of white supremacy" by giving Major Arcana status to historically marginalized figures who have been systematically erased from social work's canonical history.
@@ -21,43 +21,26 @@ Using an **inverse visibility metric**, this deck mathematically disrupts the "m
 Systematically extract all named historical figures from the source chapters.
 
 ### Tasks
-1. [ ] Read through Chapter 1 completely and extract all named individuals
+1. [x] Read through Chapter 1 completely and extract all named individuals
 2. [ ] Read through Chapter 2 completely and extract all named individuals
-3. [ ] Create a master list of all extracted names
-4. [ ] Categorize initial groupings:
-   - **Complicit Figures**: Those who participated in oppressive systems
-   - **Resistant Figures**: Those who challenged oppression and built alternative systems
+3. [x] Create a master list of all extracted names (40 figures from Chapter 1)
 
-### Already Identified Figures
+### Sample of Extracted Figures (All Complicit)
 
-#### Complicit Figures (High Visibility Expected)
-| Name | Role/Description | Notes |
-|------|------------------|-------|
-| Jane Addams | Settlement house movement, Hull-House founder | Also involved in eugenics, despite anti-racist work |
-| Mary Richmond | COS, "scientific casework" | Liberal individualism, blamed poor for poverty |
-| Katherine Bement Davis | Bedford Hills Reformatory superintendent | Leader in eugenic criminology |
-| Josephine Shaw Lowell | COS leader, eugenic criminology | Close ally of Addams |
-| Richard Henry Pratt | Indian Boarding Schools | "Kill the Indian, save the man" |
-| Albert Rose | Regent Park/Africville relocations | Director of U of T School of Social Work |
-| Abraham Flexner | Professionalization/Racist medical models | |
-| Oscar McCulloch | COS leader, The Tribe of Ishmael | Eugenic propaganda |
+| Name | Role/Description |
+|------|------------------|
+| Jane Addams | Settlement house movement, Hull-House founder, eugenics supporter |
+| Mary Richmond | COS, "scientific casework", liberal individualism |
+| Katherine Bement Davis | Bedford Hills Reformatory, eugenic criminology |
+| Richard Henry Pratt | Indian Boarding Schools |
+| Albert Rose | Regent Park/Africville relocations |
+| Ida B. Wells | Anti-lynching activism, journalism |
+| W.E.B. Du Bois | NAACP, activism |
+| Maggie L. Walker | St. Luke Bank, financial autonomy |
+| Claudette Colvin | Refused bus seat before Rosa Parks |
+| Oscar McCulloch | COS leader, The Tribe of Ishmael |
 
-#### Resistant Figures (Low Visibility Expected)
-| Name | Role/Description | Notes |
-|------|------------------|-------|
-| Ida B. Wells | Anti-lynching activism, radical social work | Published *Southern Horrors* (1892) |
-| W.E.B. Du Bois | Radical activism, NAACP | Supported feminism |
-| Maggie L. Walker | St. Luke Bank, financial autonomy | "Newcomer settlement social work" |
-| Zaynab al-Ghazali | Society of Muslim Ladies (Egypt) | Global, non-secular community care |
-| Janie Barrett | Locust Street Settlement | May predate Addams's services |
-| Mary Ann Shadd Cary | Black community social services, media | Integration and self-sufficiency advocate |
-| George Haynes | National Urban League | Black social work education |
-| Reverdy Ransom | Social Gospel/Socialism | |
-| Henry Bibb | Settlements | Colonizer contradiction noted |
-| Frederick Douglass | Abolitionist | Supported feminism |
-| Bayard Rustin | Civil rights organizer | Supported feminism |
-| James Baldwin | Writer, activist | Supported feminism |
-| Huey Newton | Black Panther Party | Supported feminism |
+*See `data/names-extracted.json` for complete list of 40 figures.*
 
 ### Deliverable
 - `names-extracted.json` - Complete list with initial categorization
@@ -228,8 +211,8 @@ Assign the 22 Major Arcana cards to figures based on:
 ### Assignment Criteria
 1. **Visibility-based priority**: Lower visibility figures get priority for Major Arcana
 2. **Archetypal fit**: Card meaning should resonate with figure's historical role
-3. **Representation balance**: Final deck should have homogeneous representation
-4. **Narrative coherence**: The deck should tell the story of social work's complicity and resistance
+3. **Representation balance**: Final deck should have homogeneous representation across racial categories
+4. **Narrative coherence**: The deck should invite reflection on interlocking systems of complicity
 
 ### Tasks
 1. [ ] Calculate final visibility rankings
@@ -356,8 +339,9 @@ Document the methodology and ethical considerations of the project.
 ### Repository Structure
 ```
 schemas/tarot/anti-opressive-major-arcana/
-├── readme.md                    # Original outline and source chapters
+├── README.md                    # Project documentation
 ├── PROJECT_PLAN.md              # This document
+├── outline.md                   # Source chapters and initial project notes
 ├── data/
 │   ├── names-extracted.json     # Phase 1 output
 │   ├── visibility-raw-data.json # Phase 2 output
@@ -398,4 +382,4 @@ schemas/tarot/anti-opressive-major-arcana/
 
 ---
 
-*This plan embodies "analeptic thinking" - holding the contradiction of the white-dominated history while manifesting a different, non-majoritarian narrative. It refuses to synthesize the two histories into a comfortable "diverse" whole and instead re-centres the perspective of the oppressed.*
+*This plan embodies "analeptic thinking" - holding contradiction while manifesting alternative narratives. All figures are complicit; the deck refuses to offer a comfortable "other side of the river" to identify with.*
