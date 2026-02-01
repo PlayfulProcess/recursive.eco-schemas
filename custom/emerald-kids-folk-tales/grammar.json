@@ -17,7 +17,7 @@
     ]
   },
   "name": "Emerald Kids: Folk Tales & Mythology for Young Listeners",
-  "description": "A kid-friendly playlist of animated folk tales and mythology videos inspired by stories referenced in The Emerald podcast. Josh Schrei's podcast explores myth and story through an adult lens, but many of the tales he references have wonderful children's versions. This playlist collects animated retellings suitable for young viewers (ages 4-10).",
+  "description": "A kid-friendly playlist of animated folk tales and mythology videos inspired by stories referenced in The Emerald podcast. This playlist starts with joyful creation stories, Mother Earth celebrations, and nature myths before exploring tricksters, transformations, and life's deeper mysteries. Josh Schrei's podcast explores myth and story through an adult lens, but many of the tales he references have wonderful children's versions. Suitable for young viewers (ages 4-12).",
   "cover_image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fairy_tales_of_Charles_Perrault_(Clarke)_frontispiece.png",
   "tags": [
     "kids",
@@ -31,7 +31,261 @@
   "grammar_type": "sequence",
   "items": [
     {
-      "id": "kids-tale-01",
+      "id": "kids-cheerful-01",
+      "name": "What is Myth? - Crash Course Mythology",
+      "level": 1,
+      "category": "introduction",
+      "sections": {
+        "Summary": "An animated introduction to world mythology! Learn what myths are, why humans tell stories, and how these ancient tales help us understand the world.",
+        "Emerald_Reference": "The Emerald podcast is built on the premise that 'the imaginative, poetic, animate heart of human experience — elucidated by so many cultures over so many thousands of years — is missing in modern discourse.'",
+        "Lesson": "Stories help us make sense of the world. Every culture has myths that teach us about nature, ourselves, and each other."
+      },
+      "image_url": "https://i.ytimg.com/vi/HeX6CX5LEj0/maxresdefault.jpg",
+      "sort_order": 1,
+      "metadata": {
+        "item_type": "video",
+        "youtube_url": "https://www.youtube.com/watch?v=HeX6CX5LEj0",
+        "youtube_video_id": "HeX6CX5LEj0",
+        "video_title": "What Is Myth? Crash Course World Mythology #1",
+        "channel": "CrashCourse",
+        "age_range": "8-14",
+        "duration_estimate": "12 min",
+        "mood": "cheerful"
+      }
+    },
+    {
+      "id": "kids-cheerful-02",
+      "name": "Earth Mothers: How the World Was Made",
+      "level": 1,
+      "category": "creation",
+      "sections": {
+        "Summary": "Discover how different cultures imagine Mother Earth! From Gaia in Greece to Pachamama in Peru, meet the great goddesses who gave birth to mountains, rivers, and all living things.",
+        "Emerald_Reference": "The Emerald episode 'For the Divine Mother of the Universe' honors 'the goddess as the animating power of the universe itself, felt in bodies, alive in trees and stones and living geography.'",
+        "Lesson": "Many cultures see the Earth as our mother who gives us everything we need. Taking care of the Earth is like taking care of family."
+      },
+      "image_url": "https://i.ytimg.com/vi/TlFVFRkEfwo/maxresdefault.jpg",
+      "sort_order": 2,
+      "metadata": {
+        "item_type": "video",
+        "youtube_url": "https://www.youtube.com/watch?v=TlFVFRkEfwo",
+        "youtube_video_id": "TlFVFRkEfwo",
+        "video_title": "Earth Mothers and Rebellious Sons - Creation Part 3: Crash Course World Mythology #4",
+        "channel": "CrashCourse",
+        "age_range": "8-14",
+        "duration_estimate": "12 min",
+        "emerald_episode": {
+          "title": "For the Divine Mother of the Universe (Remixed and Reissued)",
+          "note": "The goddess as animating power of creation"
+        },
+        "mood": "cheerful"
+      }
+    },
+    {
+      "id": "kids-cheerful-03",
+      "name": "Turtle Island: The World on Turtle's Back",
+      "level": 1,
+      "category": "creation",
+      "sections": {
+        "Summary": "In many Indigenous cultures, North America is called 'Turtle Island.' This beautiful creation story tells how Sky Woman fell from the heavens, and a giant turtle offered its back to create a home for all beings.",
+        "Emerald_Reference": "The Emerald explores how 'traditional cultures tend to be constructed around networks of support' including 'turtles and elephants and the great mother goddess herself — who is known as the support of everything that is.'",
+        "Lesson": "The world is supported by cooperation and kindness. Even the smallest creature can help create something wonderful."
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Turtle_Island_(North_America).svg",
+      "sort_order": 3,
+      "metadata": {
+        "item_type": "story-reference",
+        "tradition": "Indigenous North American (Iroquois, Ojibwe, Lenape)",
+        "age_range": "4-10",
+        "emerald_episode": {
+          "title": "Carry That Weight: On Mythic Burdens and Cosmic Supports",
+          "note": "Turtles as weight-bearers in world mythology"
+        },
+        "youtube_search": "Search 'Turtle Island creation story animated' on YouTube",
+        "mood": "cheerful"
+      }
+    },
+    {
+      "id": "kids-cheerful-04",
+      "name": "The Rainbow Serpent - Australian Aboriginal Creation",
+      "level": 1,
+      "category": "creation",
+      "sections": {
+        "Summary": "The Rainbow Serpent is one of the most important beings in Aboriginal Australian mythology. This magnificent creature shaped the mountains, rivers, and valleys as it moved across the land, bringing life and color to the world.",
+        "Emerald_Reference": "The Emerald's exploration of animate landscapes connects to indigenous worldviews where 'the goddess is alive in trees and stones and living geography.'",
+        "Lesson": "The natural world is alive with stories. Rivers, mountains, and rainbows all have their own sacred histories."
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rainbow_serpent.jpg",
+      "sort_order": 4,
+      "metadata": {
+        "item_type": "story-reference",
+        "tradition": "Australian Aboriginal",
+        "age_range": "4-10",
+        "youtube_search": "Search 'Rainbow Serpent story for kids' on YouTube",
+        "mood": "cheerful"
+      }
+    },
+    {
+      "id": "kids-cheerful-05",
+      "name": "Why Do We Have Seasons? - Demeter's Gift",
+      "level": 1,
+      "category": "mythology",
+      "sections": {
+        "Summary": "Demeter is the Greek goddess of the harvest who makes the crops grow. When she's happy, the earth blooms with flowers and fruit. This is why we have beautiful spring and summer!",
+        "Emerald_Reference": "The Emerald explores Demeter and Persephone as part of 'the great cycle' - not just a sad story, but a celebration of how death and life are connected in nature's rhythms.",
+        "Lesson": "The changing seasons are a gift! Each season has its own beauty and purpose in the cycle of life."
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Demeter_Altemps_Inv8546.jpg",
+      "sort_order": 5,
+      "metadata": {
+        "item_type": "story-reference",
+        "tradition": "Greek",
+        "age_range": "5-10",
+        "related_video": "The Hades and Persephone TED-Ed video explains this further",
+        "mood": "cheerful"
+      }
+    },
+    {
+      "id": "kids-cheerful-06",
+      "name": "Mythical Birds: Eagles, Ravens, and Hummingbirds",
+      "level": 1,
+      "category": "nature-mythology",
+      "sections": {
+        "Summary": "Birds appear in myths from every culture! Eagles carry messages to the sky gods, ravens bring light to the world, hummingbirds represent joy, and roosters announce each new day.",
+        "Emerald_Reference": "The Emerald has an episode featuring 'mythologies of eagles, falcons, macaws, roosters, ravens, hummingbirds, hoopoes and more' that 'invites a whole lot of upward soaring.'",
+        "Lesson": "Birds connect us to the sky and remind us that we can rise above our problems. Their songs celebrate each new day!"
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bald_Eagle_Portrait.jpg",
+      "sort_order": 6,
+      "metadata": {
+        "item_type": "theme-reference",
+        "age_range": "4-10",
+        "emerald_episode": {
+          "title": "The Emerald's Bird Mythology Episode",
+          "note": "Eagles, falcons, macaws, roosters, ravens, hummingbirds, hoopoes"
+        },
+        "mood": "cheerful"
+      }
+    },
+    {
+      "id": "kids-cheerful-07",
+      "name": "The Tree of Life - World Trees in Mythology",
+      "level": 1,
+      "category": "mythology",
+      "sections": {
+        "Summary": "Many cultures imagine a great World Tree that connects heaven, earth, and the underworld. The Norse have Yggdrasil, a giant ash tree. Other cultures have sacred fig trees, oaks, or ceibas.",
+        "Emerald_Reference": "Trees appear throughout The Emerald as symbols of life, connection, and the animate world. The 'Akashatri' in Egyptian texts means 'the body is a tree' from which the soul rises.",
+        "Lesson": "Trees are some of the oldest living things on Earth. They give us air to breathe, homes for animals, and shade to rest in."
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Ash_Yggdrasil_by_Friedrich_Wilhelm_Heine.jpg",
+      "sort_order": 7,
+      "metadata": {
+        "item_type": "theme-reference",
+        "traditions": "Norse (Yggdrasil), Hindu (Ashvattha), Mayan (Ceiba)",
+        "age_range": "5-12",
+        "mood": "cheerful"
+      }
+    },
+    {
+      "id": "kids-cheerful-08",
+      "name": "Creation Stories from Around the World - Crash Course",
+      "level": 1,
+      "category": "creation",
+      "sections": {
+        "Summary": "How did the world begin? Different cultures have amazing answers! Some say a cosmic egg hatched. Others say gods shaped us from clay. Still others say we emerged from water or darkness into light.",
+        "Emerald_Reference": "The Emerald explores how 'creation stories' are not just about the past - they shape how cultures understand their place in the universe and their relationship with nature.",
+        "Lesson": "There are many beautiful ways to imagine how our world began. Each story teaches something important about being human."
+      },
+      "image_url": "https://i.ytimg.com/vi/PBbTkzakiM8/maxresdefault.jpg",
+      "sort_order": 8,
+      "metadata": {
+        "item_type": "video",
+        "youtube_url": "https://www.youtube.com/watch?v=PBbTkzakiM8",
+        "youtube_video_id": "PBbTkzakiM8",
+        "video_title": "Social Orders and Creation Stories: Crash Course World Mythology #5",
+        "channel": "CrashCourse",
+        "age_range": "8-14",
+        "duration_estimate": "11 min",
+        "mood": "cheerful"
+      }
+    },
+    {
+      "id": "kids-cheerful-09",
+      "name": "The Sun and Moon: How Day and Night Were Made",
+      "level": 1,
+      "category": "mythology",
+      "sections": {
+        "Summary": "Every culture has stories about the sun and moon! Some say they're siblings who take turns watching over us. Others say they're lovers who can only meet during eclipses. All celebrate the gift of light!",
+        "Emerald_Reference": "The Emerald explores how 'the sun rises and sets' as part of the great rhythms that ancient peoples celebrated - light and dark, day and night, waking and sleeping.",
+        "Lesson": "The sun gives us warmth and helps plants grow. The moon lights the night and moves the tides. Together they create the rhythm of our days."
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sun_and_Moon_Nuremberg_chronicle.jpg",
+      "sort_order": 9,
+      "metadata": {
+        "item_type": "theme-reference",
+        "traditions": "Universal theme across all cultures",
+        "age_range": "4-10",
+        "mood": "cheerful"
+      }
+    },
+    {
+      "id": "kids-cheerful-10",
+      "name": "Water Spirits and Ocean Friends",
+      "level": 1,
+      "category": "nature-mythology",
+      "sections": {
+        "Summary": "Dive into the world of water mythology! Meet river spirits, ocean gods and goddesses, friendly dolphins, wise whales, and the magical creatures who live beneath the waves.",
+        "Emerald_Reference": "The Emerald explores how water is sacred in nearly every culture - from sacred rivers like the Ganges to oceanic goddesses like Yemanja. Water gives life and connects us all.",
+        "Lesson": "Water is precious and full of life. Rivers, lakes, and oceans are homes to countless creatures and have been honored by peoples everywhere."
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hokusai_The_Great_Wave.jpg",
+      "sort_order": 10,
+      "metadata": {
+        "item_type": "theme-reference",
+        "traditions": "Universal - African (Yemanja), Japanese (Ryujin), Greek (Poseidon), Hindu (Ganga)",
+        "age_range": "4-10",
+        "mood": "cheerful"
+      }
+    },
+    {
+      "id": "kids-cheerful-11",
+      "name": "Animal Helpers in Mythology",
+      "level": 1,
+      "category": "nature-mythology",
+      "sections": {
+        "Summary": "In myths from around the world, animals are wise helpers and teachers! Bears teach courage, foxes teach cleverness, elephants teach memory, and bees teach the value of working together.",
+        "Emerald_Reference": "The Emerald celebrates the 'animate world' where 'everything in nature - animals, plants, stones, rivers - was considered alive, aware, and worthy of relationship.'",
+        "Lesson": "Animals have so much to teach us. Each creature has its own wisdom and special gifts."
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Elefantes_africanos_de_sabana_(Loxodonta_africana),_Elephant_Sands,_Botsuana,_2018-07-28,_DD_100.jpg",
+      "sort_order": 11,
+      "metadata": {
+        "item_type": "theme-reference",
+        "traditions": "Universal - animal wisdom across all cultures",
+        "age_range": "4-10",
+        "mood": "cheerful"
+      }
+    },
+    {
+      "id": "kids-cheerful-12",
+      "name": "Celebrating the Seasons: Ancient Festivals",
+      "level": 1,
+      "category": "celebration",
+      "sections": {
+        "Summary": "People have always celebrated nature's rhythms with festivals! Spring festivals welcome new life, summer celebrations honor the sun, autumn gives thanks for the harvest, and winter festivals bring light to the darkest days.",
+        "Emerald_Reference": "The Emerald explores how ancient peoples 'lived in rhythm with the seasons' and created 'rituals and festivals that marked the great turning points of the year.'",
+        "Lesson": "Celebrating nature's cycles helps us feel connected to the earth and to each other. Every season has something special to celebrate!"
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stonehenge,_Condado_de_Wiltshire,_Inglaterra,_2014-08-12,_DD_09.JPG",
+      "sort_order": 12,
+      "metadata": {
+        "item_type": "theme-reference",
+        "examples": "Solstice celebrations, harvest festivals, spring equinox, Diwali, Hanukkah, Christmas, etc.",
+        "age_range": "4-10",
+        "mood": "cheerful"
+      }
+    },
+    {
+      "id": "kids-cheerful-13",
       "name": "Stone Soup - Animated Folk Tale",
       "level": 1,
       "category": "folk-tale",
@@ -41,7 +295,7 @@
         "Lesson": "Sharing and cooperation can create something wonderful that no one person could make alone."
       },
       "image_url": "https://i.ytimg.com/vi/dqbWMlQyEK8/maxresdefault.jpg",
-      "sort_order": 1,
+      "sort_order": 13,
       "metadata": {
         "item_type": "video",
         "youtube_url": "https://www.youtube.com/watch?v=dqbWMlQyEK8",
@@ -49,6 +303,7 @@
         "video_title": "Stone Soup - Animated Folk Tale",
         "age_range": "4-10",
         "duration_estimate": "8 min",
+        "mood": "cheerful",
         "emerald_episode": {
           "title": "Stone Soup: In Which I Argue Strongly in Favor of The Worship of Rocks",
           "url": "https://podcasts.apple.com/us/podcast/stone-soup-in-which-i-argue-strongly-in-favor-of/id1465445746?i=1000445183662",
@@ -67,7 +322,7 @@
         "Lesson": "The search for eternal life teaches us to appreciate the present moment. True immortality might be found in how we live, not in how long."
       },
       "image_url": "https://i.ytimg.com/vi/BV9t3Cp18Rc/maxresdefault.jpg",
-      "sort_order": 2,
+      "sort_order": 14,
       "metadata": {
         "item_type": "video",
         "youtube_url": "https://www.youtube.com/watch?v=BV9t3Cp18Rc",
@@ -94,7 +349,7 @@
         "Lesson": "Change is part of life's cycle. Endings can lead to new beginnings, just as winter leads to spring."
       },
       "image_url": "https://i.ytimg.com/vi/zLAYGZeVTPQ/maxresdefault.jpg",
-      "sort_order": 3,
+      "sort_order": 15,
       "metadata": {
         "item_type": "video",
         "youtube_url": "https://www.youtube.com/watch?v=zLAYGZeVTPQ",
@@ -120,7 +375,7 @@
         "Lesson": "Ancient peoples weren't afraid of death - they prepared for it as an important journey. What we do in life matters."
       },
       "image_url": "https://i.ytimg.com/vi/1yv_MXNYbAo/maxresdefault.jpg",
-      "sort_order": 4,
+      "sort_order": 16,
       "metadata": {
         "item_type": "video",
         "youtube_url": "https://www.youtube.com/watch?v=1yv_MXNYbAo",
@@ -146,7 +401,7 @@
         "Lesson": "Cleverness and wit can be more powerful than strength. But tricksters also teach us that breaking rules has consequences!"
       },
       "image_url": "https://i.ytimg.com/vi/h0lLJG6fUig/maxresdefault.jpg",
-      "sort_order": 5,
+      "sort_order": 17,
       "metadata": {
         "item_type": "video",
         "youtube_url": "https://www.youtube.com/watch?v=h0lLJG6fUig",
@@ -172,7 +427,7 @@
         "Lesson": "Sometimes we need to be brave and clever to solve problems that affect everyone."
       },
       "image_url": "https://i.ytimg.com/vi/mNVw3oDUXig/maxresdefault.jpg",
-      "sort_order": 6,
+      "sort_order": 18,
       "metadata": {
         "item_type": "video",
         "youtube_url": "https://www.youtube.com/watch?v=mNVw3oDUXig",
@@ -197,7 +452,7 @@
         "Lesson": "True transformation often requires giving away what we thought was most important. What looks like an ending can be a new beginning."
       },
       "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jumping_Mouse.jpg",
-      "sort_order": 7,
+      "sort_order": 19,
       "metadata": {
         "item_type": "book-reference",
         "recommended_book": "The Story of Jumping Mouse by John Steptoe (Caldecott Honor Book)",
@@ -222,7 +477,7 @@
         "Lesson": "Light and knowledge are meant to be shared with everyone, not hoarded by the few."
       },
       "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Raven_Stealing_the_Sun.jpg",
-      "sort_order": 8,
+      "sort_order": 20,
       "metadata": {
         "item_type": "story-reference",
         "tradition": "Pacific Northwest Indigenous (Haida, Tlingit, Tsimshian)",
@@ -245,7 +500,7 @@
         "Lesson": "Even troublemakers can accidentally create wonderful things. The world needs both order and chaos."
       },
       "image_url": "https://i.ytimg.com/vi/R3RbiYlmV7Y/maxresdefault.jpg",
-      "sort_order": 9,
+      "sort_order": 21,
       "metadata": {
         "item_type": "video",
         "youtube_url": "https://www.youtube.com/watch?v=R3RbiYlmV7Y",
@@ -271,7 +526,7 @@
         "Lesson": "The forest represents the unknown - both dangerous and full of wonder. We must be wise but not afraid to explore."
       },
       "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Little_Red_Riding_Hood_-_J._W._Smith.jpg",
-      "sort_order": 10,
+      "sort_order": 22,
       "metadata": {
         "item_type": "story-reference",
         "tradition": "European (Perrault, Brothers Grimm)",
@@ -295,7 +550,7 @@
         "Lesson": "Sometimes we must face our fears and trust in ourselves and each other to find our way home."
       },
       "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hansel-and-gretel-rackham.jpg",
-      "sort_order": 11,
+      "sort_order": 23,
       "metadata": {
         "item_type": "story-reference",
         "tradition": "German (Brothers Grimm)",
@@ -317,7 +572,7 @@
         "Lesson": "Many cultures have beautiful ideas about what happens after death. Learning about them helps us appreciate life."
       },
       "image_url": "https://i.ytimg.com/vi/nOs8s5zTGnA/maxresdefault.jpg",
-      "sort_order": 12,
+      "sort_order": 24,
       "metadata": {
         "item_type": "video",
         "youtube_url": "https://www.youtube.com/watch?v=nOs8s5zTGnA",
@@ -343,7 +598,7 @@
         "Lesson": "Working together, even small animals can accomplish great things. Sharing important gifts helps everyone."
       },
       "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coyote_from_Death_Valley.jpg",
-      "sort_order": 13,
+      "sort_order": 25,
       "metadata": {
         "item_type": "story-reference",
         "tradition": "Native American (Karok, Shoshone, Apache variants)",
@@ -366,7 +621,7 @@
         "Lesson": "Some gifts are worth any price. Heroes sometimes sacrifice themselves so others can thrive."
       },
       "image_url": "https://i.ytimg.com/vi/U_u91SjrEOE/maxresdefault.jpg",
-      "sort_order": 14,
+      "sort_order": 26,
       "metadata": {
         "item_type": "video",
         "youtube_url": "https://www.youtube.com/watch?v=U_u91SjrEOE",
@@ -391,7 +646,7 @@
         "Lesson": "Poetry helps us express big feelings in small words. Nature reminds us that everything changes - and that's okay."
       },
       "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basho_by_Hokusai-small.jpg",
-      "sort_order": 15,
+      "sort_order": 27,
       "metadata": {
         "item_type": "poetry-reference",
         "tradition": "Japanese",
