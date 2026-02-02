@@ -10,9 +10,19 @@
         "note": "Source text: A Violent History of Benevolence (University of Toronto Press)"
       },
       {
+        "name": "Eisler, Riane",
+        "date": "1987",
+        "note": "The Chalice and the Blade: partnership vs. dominator models; roles survive, not names"
+      },
+      {
+        "name": "Maguire, Gregory",
+        "date": "1995",
+        "note": "Wicked: The Life and Times of the Wicked Witch of the West—retelling from the 'villain's' perspective"
+      },
+      {
         "name": "PlayfulProcess",
         "date": "2026-01-30",
-        "note": "Deck design, curation, and expansion"
+        "note": "Deck design, curation, analeptic framing, and expansion"
       },
       {
         "name": "Claude (Anthropic AI, Opus 4.5)",
@@ -26,10 +36,11 @@
       "full_credits_url": "See README.md for complete image attribution table"
     }
   },
-  "name": "A Violent History of Benevolence: The Deck",
-  "description": "A 55-card tarot deck examining interlocking oppressions in social work history. Phase 1: Initial 40 figures extracted from Chapman & Withers' 'A Violent History of Benevolence' (2019), Chapter 1: 'Troubling the Standard Account of Social Work'—producing figures from both the 'standard account' (Jane Addams, Mary Richmond) and those erased from it (Ida B. Wells, Claudette Colvin). Phase 2: Recognizing the source text's limitations in addressing Indigenous perspectives and non-Western community care, the deck was expanded with contemporary decolonial voices (Bayo Akomolafe, Vanessa Andreotti, Josh Shrei) and 'The Cracks' (The Grandmother, Preto Velho, The Doula). Phase 3: Organized into four suits with archetypal resonances rather than 1-1 Major Arcana mapping. All figures are complicit. As Bayo Akomolafe says: 'There are always cracks in the systems.'",
+  "name": "Social Working: An Analeptic Deck",
+  "description": "An analeptic exploration of social working—not social work (the profession), but the verb: what communities, spirits, elements, and all beings have always done. Closing analysis in 'social work as profession' is already colonizing. Decolonizing means putting social work in a social working perspective. L4 'Social Working' contains: L3 'The Violent History' (Chapman & Withers' 40 names from professional social work); L3 'The Partnership Way' (Eisler's insight that the opposite of patriarchy isn't matriarchy but partnership—where ROLES survive, not names); L3 'Wicked History' (cultural memory that dwarfs the standard account—Jane Addams is a flat line on Google Trends while Wicked explodes); L3 'The Rest of the Worlds' (more-than-human social working: kingdoms, elements, epistemologies). All figures are complicit. The mainstream has never run clean.",
   "grammar_type": "tarot",
-  "tags": ["social work", "decolonial", "history", "anti-oppressive", "tarot", "critical theory", "Bayo Akomolafe", "Vanessa Andreotti"],
+  "tags": ["social working", "decolonial", "analeptic", "Chapman Withers", "Eisler", "Wicked", "more-than-human", "Bayo Akomolafe"],
+  "image_url": "https://drive.google.com/file/d/1p847gJt6ACnO2zrVAQSaBZQ9KJP7wkm5/view?usp=drive_link",
   "items": [
     {
       "id": "suit-standard-account",
@@ -861,6 +872,483 @@
         "Reflection": "What ancestral wisdom moves through your art, your work, your body?"
       },
       "keywords": ["Brazilian music", "ancestral", "feminine", "ritual", "voice"]
+    },
+    {
+      "id": "l-frank-baum",
+      "name": "L. Frank Baum",
+      "level": 1,
+      "sort_order": 56,
+      "category": "wicked_history",
+      "sections": {
+        "Context": "The Wonderful Wizard of Oz (1900). Created the canonical American fairy tale. Also wrote editorials calling for the extermination of Native Americans.",
+        "Source": "Two Aberdeen Saturday Pioneer editorials (1890) advocated 'the total annihilation of the few remaining Indians' after Wounded Knee.",
+        "Archetypal Resonances": "The Magician, The Fool, The World",
+        "Reflection": "What genocides hide behind our beloved stories?"
+      },
+      "keywords": ["Wizard of Oz", "1900", "American fairy tale", "genocide editorials"],
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/L._Frank_Baum_%281911%29.jpg"
+    },
+    {
+      "id": "judy-garland",
+      "name": "Judy Garland",
+      "level": 1,
+      "sort_order": 57,
+      "category": "wicked_history",
+      "sections": {
+        "Context": "Dorothy in the 1939 film. MGM fed her amphetamines to control her weight and barbiturates to sleep. Dead at 47.",
+        "Source": "The studio system that created 'Somewhere Over the Rainbow' also destroyed the girl who sang it.",
+        "Archetypal Resonances": "The Star, The Moon, Death",
+        "Reflection": "What does the rainbow cost the one who sings it?"
+      },
+      "keywords": ["Dorothy", "1939", "MGM", "studio exploitation", "icon"],
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Judy_Garland_in_The_Wizard_of_Oz_trailer_2.jpg"
+    },
+    {
+      "id": "charlie-smalls",
+      "name": "Charlie Smalls",
+      "level": 1,
+      "sort_order": 58,
+      "category": "wicked_history",
+      "sections": {
+        "Context": "Composer/lyricist of The Wiz (1975). Won the Tony for Best Original Score. 'Ease on Down the Road.' Died in 1987, largely forgotten.",
+        "Source": "The Wiz reimagined Kansas as Harlem, the Yellow Brick Road as Black cultural expression. 7 Tony Awards. Then erasure.",
+        "Archetypal Resonances": "The Magician, The Wheel of Fortune, The Hermit",
+        "Reflection": "What Black genius is celebrated then forgotten?"
+      },
+      "keywords": ["The Wiz", "1975", "Tony Award", "Ease on Down", "forgotten"]
+    },
+    {
+      "id": "diana-ross",
+      "name": "Diana Ross",
+      "level": 1,
+      "sort_order": 59,
+      "category": "wicked_history",
+      "sections": {
+        "Context": "Dorothy in The Wiz film (1978). A 33-year-old playing a 24-year-old schoolteacher. Motown royalty crossing to cinema.",
+        "Archetypal Resonances": "The Empress, The Star, The Chariot",
+        "Reflection": "Who gets to reimagine themselves?"
+      },
+      "keywords": ["The Wiz film", "1978", "Motown", "Dorothy reimagined"],
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Diana_Ross_1976.jpg"
+    },
+    {
+      "id": "michael-jackson",
+      "name": "Michael Jackson",
+      "level": 1,
+      "sort_order": 60,
+      "category": "wicked_history",
+      "sections": {
+        "Context": "Scarecrow in The Wiz (1978). 19 years old. Met Quincy Jones on set—beginning the collaboration that made Thriller.",
+        "Source": "The Scarecrow who needed a brain became the King of Pop. Also: allegations, contradictions, tragedy.",
+        "Archetypal Resonances": "The Fool, The Star, The Moon",
+        "Reflection": "What transformation costs everything?"
+      },
+      "keywords": ["Scarecrow", "1978", "Quincy Jones", "Thriller", "transformation"],
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Michael_Jackson_in_1988.jpg"
+    },
+    {
+      "id": "quincy-jones",
+      "name": "Quincy Jones",
+      "level": 1,
+      "sort_order": 61,
+      "category": "wicked_history",
+      "sections": {
+        "Context": "Musical director of The Wiz film (1978). The collaboration with Michael Jackson that began here led to Off the Wall, Thriller, Bad.",
+        "Archetypal Resonances": "The Magician, The Emperor, The World",
+        "Reflection": "What connections create new worlds?"
+      },
+      "keywords": ["The Wiz", "producer", "Michael Jackson", "Thriller"],
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Quincy_Jones_2014.jpg"
+    },
+    {
+      "id": "gregory-maguire",
+      "name": "Gregory Maguire",
+      "level": 1,
+      "sort_order": 62,
+      "category": "wicked_history",
+      "sections": {
+        "Context": "Wicked: The Life and Times of the Wicked Witch of the West (1995). Told the story from the 'villain's' perspective. Elphaba wasn't wicked—she was green, different, fighting oppression.",
+        "Source": "'People are so rarely what they seem.' The moral: wickedness is constructed by those in power.",
+        "Archetypal Resonances": "The Hermit, The High Priestess, Justice",
+        "Reflection": "Whose perspective makes the villain?"
+      },
+      "keywords": ["Wicked novel", "1995", "Elphaba", "villain perspective"],
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Gregory_Maguire.JPG"
+    },
+    {
+      "id": "stephen-schwartz",
+      "name": "Stephen Schwartz",
+      "level": 1,
+      "sort_order": 63,
+      "category": "wicked_history",
+      "sections": {
+        "Context": "Composer/lyricist of Wicked the musical (2003). Also Godspell, Pippin, Pocahontas, Prince of Egypt. 'Defying Gravity.'",
+        "Archetypal Resonances": "The Magician, The Star, The Chariot",
+        "Reflection": "What does it mean to defy gravity?"
+      },
+      "keywords": ["Wicked musical", "2003", "Defying Gravity", "Broadway"]
+    },
+    {
+      "id": "idina-menzel",
+      "name": "Idina Menzel",
+      "level": 1,
+      "sort_order": 64,
+      "category": "wicked_history",
+      "sections": {
+        "Context": "Original Elphaba (2003). The voice that made 'Defying Gravity' an anthem. Later: Elsa in Frozen. 'Let It Go.'",
+        "Source": "From Wicked Witch to Snow Queen—both stories about women called monstrous for their power.",
+        "Archetypal Resonances": "Strength, The Star, The Tower",
+        "Reflection": "What power gets called monstrous?"
+      },
+      "keywords": ["Elphaba", "Defying Gravity", "Frozen", "Let It Go"],
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Idina_Menzel_2014_%28cropped%29.jpg"
+    },
+    {
+      "id": "animal-kingdom",
+      "name": "The Animal Kingdom",
+      "level": 1,
+      "sort_order": 65,
+      "category": "rest_of_worlds",
+      "sections": {
+        "Context": "All beings that move, eat, breathe, feel. Social working predates humans by hundreds of millions of years. Ant colonies. Wolf packs. Elephant grief.",
+        "Archetypal Resonances": "Strength, The Chariot, The Empress",
+        "Reflection": "What social working did animals teach us that we forgot?"
+      },
+      "keywords": ["animals", "sentience", "pack", "herd", "colony", "grief"]
+    },
+    {
+      "id": "plant-kingdom",
+      "name": "The Plant Kingdom",
+      "level": 1,
+      "sort_order": 66,
+      "category": "rest_of_worlds",
+      "sections": {
+        "Context": "The Wood Wide Web. Trees share nutrients through fungal networks. Mother trees feed their seedlings. Plants warn each other of predators.",
+        "Source": "Suzanne Simard: 'A forest is a cooperative system.'",
+        "Archetypal Resonances": "The Empress, The World, Temperance",
+        "Reflection": "What do the trees know about mutual aid?"
+      },
+      "keywords": ["plants", "Wood Wide Web", "mother trees", "cooperation", "Suzanne Simard"]
+    },
+    {
+      "id": "mineral-kingdom",
+      "name": "The Mineral Kingdom",
+      "level": 1,
+      "sort_order": 67,
+      "category": "rest_of_worlds",
+      "sections": {
+        "Context": "Stone, crystal, metal, earth. The bones of the planet. Time scales that make human history a blink.",
+        "Archetypal Resonances": "The Emperor, The World, The Hermit",
+        "Reflection": "What does the mountain know about patience?"
+      },
+      "keywords": ["minerals", "crystals", "stone", "deep time", "geology"]
+    },
+    {
+      "id": "fungi-kingdom",
+      "name": "The Fungi Kingdom",
+      "level": 1,
+      "sort_order": 68,
+      "category": "rest_of_worlds",
+      "sections": {
+        "Context": "Neither plant nor animal. The decomposers. The connectors. Mycelium networks that make forests possible. Psychedelics that dissolve ego.",
+        "Source": "Merlin Sheldrake: 'Fungi make worlds. They also unmake them.'",
+        "Archetypal Resonances": "The High Priestess, Death, The Magician",
+        "Reflection": "What needs to decompose so something else can live?"
+      },
+      "keywords": ["fungi", "mycelium", "decomposition", "connection", "Merlin Sheldrake"]
+    },
+    {
+      "id": "element-water",
+      "name": "Water",
+      "level": 1,
+      "sort_order": 69,
+      "category": "rest_of_worlds",
+      "sections": {
+        "Context": "Flows, adapts, erodes, sustains. 60% of your body. The element of emotion, intuition, the unconscious.",
+        "Source": "Spivak: 'The mainstream has never run clean.'",
+        "Archetypal Resonances": "The Moon, The Star, Temperance",
+        "Reflection": "What flows through you that you cannot control?"
+      },
+      "keywords": ["water", "flow", "emotion", "adaptation", "mainstream"]
+    },
+    {
+      "id": "element-fire",
+      "name": "Fire",
+      "level": 1,
+      "sort_order": 70,
+      "category": "rest_of_worlds",
+      "sections": {
+        "Context": "Transforms, destroys, warms, illuminates. The element of will, passion, action. Some ecosystems need fire to regenerate.",
+        "Archetypal Resonances": "The Tower, Strength, The Sun",
+        "Reflection": "What needs to burn so something else can grow?"
+      },
+      "keywords": ["fire", "transformation", "passion", "destruction", "regeneration"]
+    },
+    {
+      "id": "element-air",
+      "name": "Air",
+      "level": 1,
+      "sort_order": 71,
+      "category": "rest_of_worlds",
+      "sections": {
+        "Context": "Breath, wind, thought, communication. Invisible but essential. The element of mind, ideas, connection across distance.",
+        "Archetypal Resonances": "The Fool, The Magician, The Star",
+        "Reflection": "What ideas carry on the wind?"
+      },
+      "keywords": ["air", "breath", "thought", "wind", "communication"]
+    },
+    {
+      "id": "element-earth",
+      "name": "Earth",
+      "level": 1,
+      "sort_order": 72,
+      "category": "rest_of_worlds",
+      "sections": {
+        "Context": "Ground, body, matter, stability. The element of manifestation, the physical, the practical. What we stand on.",
+        "Archetypal Resonances": "The Empress, The Emperor, The World",
+        "Reflection": "What ground do you stand on? Whose ground is it?"
+      },
+      "keywords": ["earth", "ground", "body", "matter", "land"]
+    },
+    {
+      "id": "spirit",
+      "name": "Spirit",
+      "level": 1,
+      "sort_order": 73,
+      "category": "rest_of_worlds",
+      "sections": {
+        "Context": "The immaterial. Consciousness, soul, the animating principle. What religions try to name and science tries to ignore.",
+        "Archetypal Resonances": "The High Priestess, The Hermit, The World",
+        "Reflection": "What is the part of you that cannot be measured?"
+      },
+      "keywords": ["spirit", "consciousness", "soul", "immaterial", "animation"]
+    },
+    {
+      "id": "matter",
+      "name": "Matter",
+      "level": 1,
+      "sort_order": 74,
+      "category": "rest_of_worlds",
+      "sections": {
+        "Context": "The material. Atoms, mass, the physical universe. What science can measure. What breaks down.",
+        "Archetypal Resonances": "The Emperor, The Devil, The World",
+        "Reflection": "What is the part of you that will return to dust?"
+      },
+      "keywords": ["matter", "atoms", "physical", "measurement", "entropy"]
+    },
+    {
+      "id": "science",
+      "name": "Science",
+      "level": 1,
+      "sort_order": 75,
+      "category": "rest_of_worlds",
+      "sections": {
+        "Context": "The epistemology of measurement, experiment, falsification. Powerful. Also: colonial, extractive, often weaponized.",
+        "Archetypal Resonances": "The Magician, Justice, The Tower",
+        "Reflection": "What can science see? What is it blind to?"
+      },
+      "keywords": ["science", "epistemology", "measurement", "objectivity", "colonialism"]
+    },
+    {
+      "id": "religion",
+      "name": "Religion",
+      "level": 1,
+      "sort_order": 76,
+      "category": "rest_of_worlds",
+      "sections": {
+        "Context": "The epistemology of revelation, tradition, faith. Meaning-making. Community. Also: dogma, violence, control.",
+        "Archetypal Resonances": "The Hierophant, The High Priestess, Judgement",
+        "Reflection": "What can religion see? What is it blind to?"
+      },
+      "keywords": ["religion", "epistemology", "faith", "tradition", "revelation"]
+    },
+    {
+      "id": "l2-wizard-of-oz",
+      "name": "The Wizard of Oz",
+      "level": 2,
+      "sort_order": 0,
+      "relationship_type": "emergence",
+      "composite_of": ["l-frank-baum", "judy-garland"],
+      "sections": {
+        "Description": "The canonical American fairy tale (1900/1939). The 'standard account' of Oz—white Kansas girl's journey. Beloved. Also: written by a man who called for Native genocide.",
+        "Reflection": "What genocides hide behind our beloved stories?"
+      },
+      "keywords": ["canonical", "1900", "1939", "Dorothy", "standard account"]
+    },
+    {
+      "id": "l2-the-wiz",
+      "name": "The Wiz",
+      "level": 2,
+      "sort_order": 0,
+      "relationship_type": "emergence",
+      "composite_of": ["charlie-smalls", "diana-ross", "michael-jackson", "quincy-jones"],
+      "sections": {
+        "Description": "Black cultural reimagining (1975/1978). Kansas becomes Harlem. Yellow Brick Road becomes 'Ease on Down.' 7 Tony Awards. Then the composer dies forgotten.",
+        "Reflection": "What Black genius is celebrated then erased?"
+      },
+      "keywords": ["Black reimagining", "1975", "1978", "Harlem", "Ease on Down"]
+    },
+    {
+      "id": "l2-wicked",
+      "name": "Wicked",
+      "level": 2,
+      "sort_order": 0,
+      "relationship_type": "emergence",
+      "composite_of": ["gregory-maguire", "stephen-schwartz", "idina-menzel"],
+      "sections": {
+        "Description": "The villain's perspective (1995/2003). Elphaba wasn't wicked—she was different, fighting oppression, painted green and monstrous by those in power. 'No one is born wicked.'",
+        "Reflection": "What if the villain was right all along?"
+      },
+      "keywords": ["villain perspective", "Elphaba", "Defying Gravity", "no one is born wicked"]
+    },
+    {
+      "id": "l2-kingdoms",
+      "name": "The Kingdoms",
+      "level": 2,
+      "sort_order": 0,
+      "relationship_type": "emergence",
+      "composite_of": ["animal-kingdom", "plant-kingdom", "mineral-kingdom", "fungi-kingdom"],
+      "sections": {
+        "Description": "Animal, Plant, Mineral, Fungi. The more-than-human worlds that were social working before humans existed. Cooperation, decomposition, deep time.",
+        "Reflection": "What did the other kingdoms know before we forgot?"
+      },
+      "keywords": ["kingdoms", "more-than-human", "cooperation", "ecology"]
+    },
+    {
+      "id": "l2-elements",
+      "name": "The Elements",
+      "level": 2,
+      "sort_order": 0,
+      "relationship_type": "emergence",
+      "composite_of": ["element-water", "element-fire", "element-air", "element-earth"],
+      "sections": {
+        "Description": "Water, Fire, Air, Earth. The classical elements that predate chemistry. Metaphors for aspects of existence that science alone cannot capture.",
+        "Reflection": "What element are you avoiding?"
+      },
+      "keywords": ["elements", "classical", "water", "fire", "air", "earth"]
+    },
+    {
+      "id": "l2-non-duality",
+      "name": "Non-Duality",
+      "level": 2,
+      "sort_order": 0,
+      "relationship_type": "emergence",
+      "composite_of": ["spirit", "matter"],
+      "sections": {
+        "Description": "Spirit and Matter—the split that defines Western metaphysics. But what if they were never separate? What if the split itself is the problem?",
+        "Reflection": "What would it mean to stop dividing spirit from matter?"
+      },
+      "keywords": ["non-duality", "spirit", "matter", "Cartesian split", "wholeness"]
+    },
+    {
+      "id": "l2-epistemologies",
+      "name": "Epistemologies",
+      "level": 2,
+      "sort_order": 0,
+      "relationship_type": "emergence",
+      "composite_of": ["science", "religion"],
+      "sections": {
+        "Description": "Science and Religion—two ways of knowing, each blind to what the other sees. Both have been weapons. Both have been medicine.",
+        "Reflection": "What can neither science nor religion alone understand?"
+      },
+      "keywords": ["epistemology", "ways of knowing", "science", "religion", "complementarity"]
+    },
+    {
+      "id": "l2-umbanda",
+      "name": "Umbanda",
+      "level": 2,
+      "sort_order": 0,
+      "relationship_type": "emergence",
+      "composite_of": ["preto-velho", "caboclo", "pai-mae-de-santo"],
+      "sections": {
+        "Description": "Afro-Brazilian spiritual tradition. Ancestral spirits—Preto Velho (enslaved elders), Caboclo (Indigenous spirits). ROLES, not named individuals. What partnership societies preserved.",
+        "Source": "Eisler: in partnership societies, roles survived, not names. The Grandmother, not a specific grandmother.",
+        "Reflection": "What wisdom lives in roles rather than names?"
+      },
+      "keywords": ["Umbanda", "Afro-Brazilian", "ancestral", "roles", "Eisler"]
+    },
+    {
+      "id": "l2-everyday-roles",
+      "name": "Everyday Roles",
+      "level": 2,
+      "sort_order": 0,
+      "relationship_type": "emergence",
+      "composite_of": ["the-grandmother", "the-mother", "the-friend", "the-doula", "neighbor-who-brings-food", "child-who-asks-why"],
+      "sections": {
+        "Description": "The roles that do social working without credentials: Grandmother, Mother, Friend, Doula, Neighbor, Child. As Bayo Akomolafe says: 'Decolonization might be more about grandmothers than about systems.'",
+        "Source": "Eisler's insight: in partnership societies, individual names didn't survive—only ROLES. The Chalice and the Blade.",
+        "Reflection": "What role are you playing that no institution recognizes?"
+      },
+      "keywords": ["roles", "grandmother", "mutual aid", "Eisler", "partnership"]
+    },
+    {
+      "id": "l3-violent-history",
+      "name": "The Violent History",
+      "level": 3,
+      "sort_order": 0,
+      "relationship_type": "emergence",
+      "composite_of": ["suit-standard-account", "suit-erased-voices"],
+      "sections": {
+        "Description": "Chapman & Withers' 40 names: the Standard Account (Jane Addams, Mary Richmond) and those Erased from it (Ida B. Wells, Claudette Colvin). Professional social work history—complicit figures, all.",
+        "Source": "A Violent History of Benevolence (2019): 'The mainstream has never run clean.'",
+        "Reflection": "What violences hide behind the profession's origin story?"
+      },
+      "keywords": ["Chapman Withers", "professional history", "standard account", "erased"]
+    },
+    {
+      "id": "l3-partnership-way",
+      "name": "The Partnership Way",
+      "level": 3,
+      "sort_order": 0,
+      "relationship_type": "emergence",
+      "composite_of": ["l2-umbanda", "l2-everyday-roles"],
+      "sections": {
+        "Description": "Eisler's insight from The Chalice and the Blade: the opposite of patriarchy isn't matriarchy—it's partnership (gylany). In partnership societies, ROLES survived, not names. The Grandmother, not Jane Addams.",
+        "Source": "Riane Eisler (1987): dominator vs. partnership models. The chalice (partnership) vs. the blade (domination).",
+        "Reflection": "What would social working look like without named heroes?"
+      },
+      "keywords": ["Eisler", "partnership", "gylany", "roles not names", "Chalice and Blade"]
+    },
+    {
+      "id": "l3-wicked-history",
+      "name": "Wicked History",
+      "level": 3,
+      "sort_order": 0,
+      "relationship_type": "emergence",
+      "composite_of": ["l2-wizard-of-oz", "l2-the-wiz", "l2-wicked", "suit-contemporary-witnesses"],
+      "sections": {
+        "Description": "Cultural memory that dwarfs the standard account. Google Trends: Jane Addams is a flat line; Wicked explodes. The Oz-to-Wiz-to-Wicked arc: canonical story → Black reimagining → villain's perspective. What actually lives in collective imagination.",
+        "Source": "Google Trends data shows what matters: MLK spikes annually, Wicked peaks in 2024, Jane Addams barely registers.",
+        "Reflection": "What if cultural memory is more honest than academic history?"
+      },
+      "keywords": ["cultural memory", "Google Trends", "Wizard of Oz", "The Wiz", "Wicked"]
+    },
+    {
+      "id": "l3-rest-of-worlds",
+      "name": "The Rest of the Worlds",
+      "level": 3,
+      "sort_order": 0,
+      "relationship_type": "emergence",
+      "composite_of": ["l2-kingdoms", "l2-elements", "l2-non-duality", "l2-epistemologies"],
+      "sections": {
+        "Description": "More-than-human social working. The Kingdoms (Animal, Plant, Mineral, Fungi), The Elements (Water, Fire, Air, Earth), Non-Duality (Spirit/Matter), Epistemologies (Science/Religion). Social working was happening for billions of years before humans named it.",
+        "Reflection": "What would it mean to learn social working from fungi?"
+      },
+      "keywords": ["more-than-human", "kingdoms", "elements", "epistemologies", "ecology"]
+    },
+    {
+      "id": "l4-social-working",
+      "name": "Social Working",
+      "level": 4,
+      "sort_order": 0,
+      "relationship_type": "emergence",
+      "composite_of": ["l3-violent-history", "l3-partnership-way", "l3-wicked-history", "l3-rest-of-worlds"],
+      "sections": {
+        "Description": "Not social work (noun, profession, colonial)—social working (verb, what all beings do). Closing analysis in 'social work as profession' is already colonizing. Decolonizing means putting social work in a social working perspective. This deck is an analeptic exploration: holding contradictions without resolving them, dredging the mainstream that has never run clean.",
+        "Source": "Analepsis: from Chapman & Withers' call for 'a persistent dredging operation' of history. The mainstream has never run clean, perhaps never can.",
+        "Reflection": "What if everyone and everything is always already social working?"
+      },
+      "keywords": ["social working", "analeptic", "decolonial", "verb not noun", "all beings"]
     }
   ]
 }
