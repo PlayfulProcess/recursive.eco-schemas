@@ -1,66 +1,91 @@
-# Anti-Oppressive Major Arcana Tarot Deck
+# A Violent History of Benevolence: The Deck
 
-A Social Work program project that uses data-driven methodology to create a Major Arcana tarot deck examining the interlocking oppressions in social work history.
+A 55-card tarot deck examining interlocking oppressions in social work history, enriched with indigenous wisdom, spiritual practices, and contemporary voices.
 
 ## About This Project
 
-This deck extracts historical figures from critical social work scholarship and assigns them to Major Arcana cards using an **inverse visibility metric**. Figures who have been systematically erased from mainstream history receive higher weighting, mathematically centering voices that the "standard account" of social work has marginalized.
+This deck began as a Social Work program project to examine the "standard account" of social work history through the lens of Chapman & Withers' critical scholarship. It evolved into something larger: a deck that holds both the violent history and the cracks where something else lives.
 
 ### Core Principle
 
-**All figures are complicit.** This project does not make moral judgments or divide figures into "good" vs "bad" categories. Everyone named in the history of social work—whether celebrated founders or erased resisters—participated in interlocking systems of oppression. The deck invites reflection on complicity rather than identification with innocence.
+**All figures are complicit.** This project does not make moral judgments or divide figures into "good" vs "bad" categories. Everyone named—whether celebrated founders or erased resisters—participated in interlocking systems of oppression. The deck invites reflection on complicity rather than identification with innocence.
 
-## Methodology
+As Bayo Akomolafe says: *"There are always cracks in the systems."* And: *"Decolonization might be more about grandmothers than about systems."*
 
-### 1. Name Extraction
-Historical figures are extracted from:
+## How the Deck Was Built
+
+### Phase 1: Initial Extraction (40 figures)
+
+The initial 40 names were systematically extracted from:
 - **Chapman, Chris & Withers, A.J. (2019).** *A Violent History of Benevolence: Interlocking Oppression in the Moral Economies of Social Working.* University of Toronto Press.
+- Specifically Chapter 1: "Troubling the Standard Account of Social Work"
 
-### 2. Visibility Metrics
-Using Google APIs (Trends, Scholar, Search), we quantify each figure's presence in public discourse—measuring both academic citation counts and general search visibility.
+This produced figures from both the "standard account" (Jane Addams, Mary Richmond, etc.) and those erased from it (Ida B. Wells, Claudette Colvin, etc.).
 
-### 3. Inverse Weighting Formula
-```
-Representation Weight (W) = 1 / Visibility Score (V)
-```
-Lower visibility = higher card ranking. This formula forces the system to prioritize recovery of erased voices.
+### Phase 2: Recognizing What the Book Excludes
 
-### 4. Intersectional Metadata
-Each figure is tagged with:
-- Race
-- Gender
-- Geographic context
-- Era
-- Primary domain (settlement houses, COS, civil rights, etc.)
+The source text itself acknowledges its limitations—it centers a critique of white social work history but does not fully address Indigenous perspectives or non-Western forms of community care.
 
-### 5. Card Assignment
-The 22 Major Arcana cards are assigned based on:
-- Inverse visibility ranking
-- Archetypal resonance with the figure's historical role
-- Balanced representation across categories
+In recognition of this, the deck was expanded to include:
 
-## Current Progress
+**Contemporary Decolonial Voices (6 cards):**
+- Bayo Akomolafe (post-activist philosophy, "slowing down")
+- Vanessa Andreotti (hospicing modernity, GTDF collective)
+- Josh Shrei (The Emerald podcast, ancestral medicine)
+- Sam Harris (secular meditation, contradictions)
+- Neil deGrasse Tyson (science communication)
+- Luiza Lian (Brazilian ancestral music)
+
+**"The Cracks" - Roles Beyond the Standard Account (9 cards):**
+- The Grandmother, The Mother, The Friend, The Doula
+- Preto Velho (Umbanda elder spirit)
+- Caboclo (Indigenous ancestral spirit in Umbanda)
+- Pai de Santo / Mãe de Santo (Candomblé/Umbanda priesthood)
+- The Neighbor Who Brings Food
+- The Child Who Asks Why
+
+### Phase 3: Structure
+
+The final 55-card deck is organized into four suits:
+
+| Suit | Cards | Description |
+|------|-------|-------------|
+| **standard_account** | 17 | Canonical social work figures |
+| **erased_voices** | 23 | Marginalized figures from the book |
+| **the_cracks** | 9 | Indigenous wisdom, spiritual practices, everyday roles |
+| **contemporary_witnesses** | 6 | Those doing "social working" differently today |
+
+### Not a 1-1 Mapping
+
+Unlike traditional tarot, this deck does not assign one figure per Major Arcana card. Instead, each card has **archetypal resonances**—multiple tarot archetypes that might apply. This reflects the source text's insistence that there is no clean binary, no "other side of the river" to cross to.
+
+## Current Status
 
 | Phase | Status | Output |
 |-------|--------|--------|
-| Name Extraction (Ch. 1) | Complete | 40 figures extracted |
-| Name Extraction (Ch. 2) | Pending | - |
-| Visibility Metrics | Pending | - |
-| Inverse Weighting | Pending | - |
-| Card Assignments | Pending | - |
-| JSON Schema | Pending | - |
+| Name Extraction | Complete | 40 figures from Chapter 1 |
+| Deck Expansion | Complete | +15 cards (contemporary voices, the cracks) |
+| Grammar Schema | Complete | `grammar.json` (55 cards) |
+| Wikimedia Images | Complete | ~25 public domain portraits |
+| Pytrends Script | Available | `scripts/fetch_trends.py` (run locally) |
 
 ## Repository Structure
 
 ```
 anti-opressive-major-arcana/
 ├── README.md                 # This file
-├── PROJECT_PLAN.md           # Detailed 7-phase implementation plan
-├── outline.md                # Source material and initial project notes
+├── PROJECT_PLAN.md           # Original implementation plan
+├── outline.md                # Source chapters and project notes
+├── grammar.json              # Complete 55-card deck for recursive.eco
 ├── data/
-│   └── names-extracted.json  # Extracted historical figures
-├── cards/                    # (future) Individual card descriptions
-└── docs/                     # (future) Methodology and ethics documentation
+│   ├── names-extracted.json  # Initial 40 figures
+│   ├── visibility-raw-data.json
+│   ├── weighted-scores.json
+│   └── intersectional-metadata.json
+├── cards/
+│   └── major-arcana-assignments.json
+└── scripts/
+    └── fetch_trends.py       # Google Trends data collection
 ```
 
 ## Sources
@@ -117,9 +142,35 @@ The completed deck will be available as a JSON schema compatible with [recursive
 - Reflection prompts connecting card meanings to social work practice
 - Pivot table analysis of representation across categories
 
+## Image Credits
+
+All portrait images are sourced from **Wikimedia Commons** under public domain or Creative Commons licenses:
+
+| Figure | Image Source | License |
+|--------|--------------|---------|
+| Jane Addams | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Jane_Addams_profile.jpg) | Public Domain |
+| Mary Richmond | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Mary_Ellen_Richmond.jpg) | Public Domain |
+| Ida B. Wells | Mary Garrity, via [Google Art Project](https://commons.wikimedia.org/wiki/File:Mary_Garrity_-_Ida_B._Wells-Barnett_-_Google_Art_Project_-_restoration_crop.jpg) | Public Domain |
+| W.E.B. Du Bois | James E. Purdy, 1907, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:W.E.B._Du_Bois_by_James_E._Purdy,_1907.jpg) | Public Domain |
+| Frederick Douglass | c. 1840s, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Frederick_Douglass_(1840s).jpg) | Public Domain |
+| Rosa Parks | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Rosaparks.jpg) | Public Domain |
+| Malcolm X | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Malcolm_X_NYWTS_4.jpg) | Public Domain |
+| Martin Luther King Jr | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Martin_Luther_King,_Jr..jpg) | Public Domain |
+| James Baldwin | Allan Warren, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:James_Baldwin_37_Allan_Warren_(cropped).jpg) | CC BY-SA 3.0 |
+| Bayard Rustin | 1963, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bayard_Rustin_1963.jpg) | Public Domain |
+| Gandhi | 1931, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Mahatma-Gandhi,_studio,_1931.jpg) | Public Domain |
+| Emma Goldman | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Emma_Goldman_seated.jpg) | Public Domain |
+| Theodore Roosevelt | Pach Bros., [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:President_Roosevelt_-_Pach_Bros.jpg) | Public Domain |
+| Booker T. Washington | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Booker_T_Washington_retouched_flattened-crop.jpg) | Public Domain |
+| Neil deGrasse Tyson | 2017, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Neil_deGrasse_Tyson_in_June_2017_(cropped).jpg) | CC BY 2.0 |
+
+Cards without images include very low-visibility historical figures (no known portraits), archetypal roles (The Grandmother, The Doula), and some contemporary figures.
+
 ## License
 
-[TBD]
+Content: **CC-BY-SA-4.0**
+
+Images: See individual credits above. Most are public domain; some require attribution under Creative Commons.
 
 ## Contact
 
@@ -128,3 +179,5 @@ The completed deck will be available as a JSON schema compatible with [recursive
 ---
 
 *"The mainstream has never run clean, perhaps never can. Part of mainstream education involves learning to ignore this absolutely, with a sanctioned ignorance."* — Gayatri Spivak
+
+*"The times are urgent; let us slow down."* — Bayo Akomolafe
