@@ -1,582 +1,719 @@
 {
-  "$schema": "https://recursive.eco/schemas/grammar/v1",
-  "id": "anti-oppressive-tarot-complete",
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "Chapman, Chris & Withers, A.J.",
+        "date": "2019",
+        "note": "Source text: A Violent History of Benevolence"
+      },
+      {
+        "name": "PlayfulProcess",
+        "date": "2026-01-30",
+        "note": "Deck design and curation"
+      },
+      {
+        "name": "Claude (Anthropic AI)",
+        "date": "2026-01-30",
+        "note": "AI-assisted extraction and compilation"
+      }
+    ]
+  },
   "name": "A Violent History of Benevolence: The Deck",
-  "version": "2.0.0",
-  "description": "A complete tarot deck examining interlocking oppressions in social work history, enriched with indigenous wisdom, spiritual practices, and contemporary voices. Not a 1-1 mapping—there are always cracks in the systems.",
-  "methodology": {
-    "source_text": "Chapman & Withers (2019). A Violent History of Benevolence",
-    "core_principle": "All figures are complicit. Decolonization might be more about grandmothers than about perpetuating different versions of the standard account.",
-    "inspiration": ["Bayo Akomolafe", "Vanessa Andreotti", "Spivak's persistent dredging operation"],
-    "structure": "Archetypal resonances, not strict assignments. Cracks in the system."
-  },
-  "suits": {
-    "standard_account": "Figures from the canonical social work history",
-    "erased_voices": "Those systematically marginalized in social work historiography",
-    "the_cracks": "Indigenous wisdom, spiritual practices, everyday roles",
-    "contemporary_witnesses": "Those doing social working today in different ways"
-  },
-  "cards": [
+  "description": "A 55-card tarot deck examining interlocking oppressions in social work history, enriched with indigenous wisdom, spiritual practices, and contemporary voices. All figures are complicit. There are always cracks in the systems.",
+  "grammar_type": "tarot",
+  "tags": ["social work", "decolonial", "history", "anti-oppressive", "tarot", "critical theory", "Bayo Akomolafe", "Vanessa Andreotti"],
+  "items": [
     {
-      "id": "001",
+      "id": "jane-addams",
       "name": "Jane Addams",
-      "suit": "standard_account",
-      "archetypal_resonances": ["The Hierophant", "The Empress", "The World"],
+      "sort_order": 1,
+      "category": "standard_account",
+      "sections": {
+        "Context": "Hull-House founder, Nobel laureate, eugenics supporter. High morals embedded in colonial institutions.",
+        "Archetypal Resonances": "The Hierophant, The Empress, The World",
+        "Reflection": "What violences hide behind moral authority?"
+      },
       "keywords": ["institution", "moral authority", "settlement", "eugenics", "peace"],
-      "context": "Hull-House founder, Nobel laureate, eugenics supporter. High morals embedded in colonial institutions.",
-      "quote": null,
-      "reflection": "What violences hide behind moral authority?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Jane_Addams_profile.jpg"
     },
     {
-      "id": "002",
+      "id": "mary-richmond",
       "name": "Mary Richmond",
-      "suit": "standard_account",
-      "archetypal_resonances": ["The Emperor", "Justice", "The Magician"],
+      "sort_order": 2,
+      "category": "standard_account",
+      "sections": {
+        "Context": "Created 'scientific casework'—the architecture of professional social control.",
+        "Archetypal Resonances": "The Emperor, Justice, The Magician",
+        "Reflection": "When does structure become a cage?"
+      },
       "keywords": ["casework", "scientific", "surveillance", "professionalization"],
-      "context": "Created 'scientific casework'—the architecture of professional social control.",
-      "quote": null,
-      "reflection": "When does structure become a cage?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Mary_Ellen_Richmond.jpg"
     },
     {
-      "id": "003",
+      "id": "katherine-bement-davis",
       "name": "Katherine Bement Davis",
-      "suit": "standard_account",
-      "archetypal_resonances": ["The Moon", "The Tower", "Judgement"],
-      "keywords": ["prison", "eugenic criminology", "reform", "sexology"],
-      "context": "Bedford Hills Reformatory superintendent. Built institutions to confine 'defective' women for life.",
-      "quote": null,
-      "reflection": "What fears drive policies that claim to be rational?"
+      "sort_order": 3,
+      "category": "standard_account",
+      "sections": {
+        "Context": "Bedford Hills Reformatory superintendent. Built institutions to confine 'defective' women for life.",
+        "Archetypal Resonances": "The Moon, The Tower, Judgement",
+        "Reflection": "What fears drive policies that claim to be rational?"
+      },
+      "keywords": ["prison", "eugenic criminology", "reform", "sexology"]
     },
     {
-      "id": "004",
+      "id": "josephine-shaw-lowell",
       "name": "Josephine Shaw Lowell",
-      "suit": "standard_account",
-      "archetypal_resonances": ["Judgement", "The High Priestess", "Temperance"],
+      "sort_order": 4,
+      "category": "standard_account",
+      "sections": {
+        "Context": "COS founder who led eugenic criminology while supporting labor rights.",
+        "Archetypal Resonances": "Judgement, The High Priestess, Temperance",
+        "Reflection": "How do we reckon with those who did both harm and good?"
+      },
       "keywords": ["COS", "labor rights", "eugenic criminology", "contradiction"],
-      "context": "COS founder who led eugenic criminology while supporting labor rights.",
-      "quote": null,
-      "reflection": "How do we reckon with those who did both harm and good?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Josephine_Shaw_Lowell.jpg"
     },
     {
-      "id": "005",
+      "id": "richard-henry-pratt",
       "name": "Richard Henry Pratt",
-      "suit": "standard_account",
-      "archetypal_resonances": ["The Devil", "The Tower", "Death"],
+      "sort_order": 5,
+      "category": "standard_account",
+      "sections": {
+        "Context": "'Kill the Indian, save the man.' Founded Carlisle Indian School.",
+        "Archetypal Resonances": "The Devil, The Tower, Death",
+        "Reflection": "What bondage presents itself as education?"
+      },
       "keywords": ["boarding schools", "assimilation", "kill the Indian", "military"],
-      "context": "'Kill the Indian, save the man.' Founded Carlisle Indian School.",
-      "quote": null,
-      "reflection": "What bondage presents itself as education?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Pratt-Richard-Henry-Carlisle.jpg"
     },
     {
-      "id": "006",
+      "id": "albert-rose",
       "name": "Albert Rose",
-      "suit": "standard_account",
-      "archetypal_resonances": ["Death", "The Tower", "The Emperor"],
-      "keywords": ["urban renewal", "Africville", "Regent Park", "destruction"],
-      "context": "Wrote the report that destroyed Africville. Called Regent Park a failure.",
-      "quote": null,
-      "reflection": "What dies when experts decide communities must be 'renewed'?"
+      "sort_order": 6,
+      "category": "standard_account",
+      "sections": {
+        "Context": "Wrote the report that destroyed Africville. Called Regent Park a failure.",
+        "Archetypal Resonances": "Death, The Tower, The Emperor",
+        "Reflection": "What dies when experts decide communities must be 'renewed'?"
+      },
+      "keywords": ["urban renewal", "Africville", "Regent Park", "destruction"]
     },
     {
-      "id": "007",
+      "id": "abraham-flexner",
       "name": "Abraham Flexner",
-      "suit": "standard_account",
-      "archetypal_resonances": ["The Hierophant", "The Emperor", "Wheel of Fortune"],
+      "sort_order": 7,
+      "category": "standard_account",
+      "sections": {
+        "Context": "Professionalization of medicine and social work. Racist medical models.",
+        "Archetypal Resonances": "The Hierophant, The Emperor, Wheel of Fortune",
+        "Reflection": "Who decides what counts as professional knowledge?"
+      },
       "keywords": ["professionalization", "medical model", "standards", "gatekeeping"],
-      "context": "Professionalization of medicine and social work. Racist medical models.",
-      "quote": null,
-      "reflection": "Who decides what counts as professional knowledge?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Abraham_Flexner_1895.jpg"
     },
     {
-      "id": "008",
+      "id": "oscar-mcculloch",
       "name": "Oscar McCulloch",
-      "suit": "standard_account",
-      "archetypal_resonances": ["Wheel of Fortune", "The Moon", "The Hanged Man"],
-      "keywords": ["Tribe of Ishmael", "eugenics", "COS", "recantation"],
-      "context": "His study launched eugenic policy—then he changed his mind, too late.",
-      "quote": null,
-      "reflection": "What cycles of harm continue from research done with good intentions?"
+      "sort_order": 8,
+      "category": "standard_account",
+      "sections": {
+        "Context": "His 'Tribe of Ishmael' study launched eugenic policy—then he changed his mind, too late.",
+        "Archetypal Resonances": "Wheel of Fortune, The Moon, The Hanged Man",
+        "Reflection": "What cycles of harm continue from research done with good intentions?"
+      },
+      "keywords": ["Tribe of Ishmael", "eugenics", "COS", "recantation"]
     },
     {
-      "id": "009",
+      "id": "jj-kelso",
       "name": "J.J. Kelso",
-      "suit": "standard_account",
-      "archetypal_resonances": ["The Chariot", "The Fool", "The Emperor"],
-      "keywords": ["child welfare", "Children's Aid", "apprehension", "conversion"],
-      "context": "Architect of Canada's Children's Aid Society. Aimed to convert Catholic children to Protestantism.",
-      "quote": null,
-      "reflection": "Whose children are 'saved'? From what? For whom?"
+      "sort_order": 9,
+      "category": "standard_account",
+      "sections": {
+        "Context": "Architect of Canada's Children's Aid Society. Aimed to convert Catholic children to Protestantism.",
+        "Archetypal Resonances": "The Chariot, The Fool, The Emperor",
+        "Reflection": "Whose children are 'saved'? From what? For whom?"
+      },
+      "keywords": ["child welfare", "Children's Aid", "apprehension", "conversion"]
     },
     {
-      "id": "010",
+      "id": "jeffery-brackett",
       "name": "Jeffery Brackett",
-      "suit": "standard_account",
-      "archetypal_resonances": ["The Magician", "The Hierophant"],
-      "keywords": ["coined social work", "Baltimore COS", "professionalization"],
-      "context": "Credited with coining the term 'social work'—orderly, responsible, disciplined.",
-      "quote": null,
-      "reflection": "What is named into existence? What is named out?"
+      "sort_order": 10,
+      "category": "standard_account",
+      "sections": {
+        "Context": "Credited with coining the term 'social work'—orderly, responsible, disciplined.",
+        "Archetypal Resonances": "The Magician, The Hierophant",
+        "Reflection": "What is named into existence? What is named out?"
+      },
+      "keywords": ["coined social work", "Baltimore COS", "professionalization"]
     },
     {
-      "id": "011",
+      "id": "simon-patten",
       "name": "Simon Patten",
-      "suit": "standard_account",
-      "archetypal_resonances": ["The Magician", "The Star", "Temperance"],
-      "keywords": ["coined social worker", "economics", "consumption", "integration"],
-      "context": "Coined 'social worker' in 1900. Believed the poor needed training in proper consumption.",
-      "quote": null,
-      "reflection": "Who teaches whom how to live?"
+      "sort_order": 11,
+      "category": "standard_account",
+      "sections": {
+        "Context": "Coined 'social worker' in 1900. Believed the poor needed training in proper consumption.",
+        "Archetypal Resonances": "The Magician, The Star, Temperance",
+        "Reflection": "Who teaches whom how to live?"
+      },
+      "keywords": ["coined social worker", "economics", "consumption", "integration"]
     },
     {
-      "id": "012",
+      "id": "philip-c-garrett",
       "name": "Philip C. Garrett",
-      "suit": "standard_account",
-      "archetypal_resonances": ["The World", "The Emperor", "The Hierophant"],
-      "keywords": ["Indian policy", "conference chairman", "invisible architect"],
-      "context": "Chaired the 1892 conference where Pratt spoke. Nearly invisible now.",
-      "quote": null,
-      "reflection": "What world was built on erased foundations?"
+      "sort_order": 12,
+      "category": "standard_account",
+      "sections": {
+        "Context": "Chaired the 1892 conference where Pratt spoke. Nearly invisible now.",
+        "Archetypal Resonances": "The World, The Emperor, The Hierophant",
+        "Reflection": "What world was built on erased foundations?"
+      },
+      "keywords": ["Indian policy", "conference chairman", "invisible architect"]
     },
     {
-      "id": "013",
+      "id": "theodore-roosevelt",
       "name": "Theodore Roosevelt",
-      "suit": "standard_account",
-      "archetypal_resonances": ["The Emperor", "The Chariot", "Strength"],
+      "sort_order": 13,
+      "category": "standard_account",
+      "sections": {
+        "Context": "Eugenicist president whose nomination Addams seconded.",
+        "Archetypal Resonances": "The Emperor, The Chariot, Strength",
+        "Reflection": "What does 'progress' require? Whose bodies?"
+      },
       "keywords": ["presidency", "imperialism", "eugenics", "Progressive Era"],
-      "context": "Eugenicist president whose nomination Addams seconded.",
-      "quote": null,
-      "reflection": "What does 'progress' require? Whose bodies?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/President_Roosevelt_-_Pach_Bros.jpg"
     },
     {
-      "id": "014",
+      "id": "sir-francis-galton",
       "name": "Sir Francis Galton",
-      "suit": "standard_account",
-      "archetypal_resonances": ["The Magician", "The Devil", "Wheel of Fortune"],
+      "sort_order": 14,
+      "category": "standard_account",
+      "sections": {
+        "Context": "Coined 'eugenics' in 1883. The word that named a genocide.",
+        "Archetypal Resonances": "The Magician, The Devil, Wheel of Fortune",
+        "Reflection": "What words do we coin that will be condemned?"
+      },
       "keywords": ["eugenics coined", "heredity", "statistics", "fitness"],
-      "context": "Coined 'eugenics' in 1883. The word that named a genocide.",
-      "quote": null,
-      "reflection": "What words do we coin that will be condemned?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Francis_Galton_1850s.jpg"
     },
     {
-      "id": "015",
+      "id": "john-edward-lloyd",
       "name": "John Edward Lloyd",
-      "suit": "standard_account",
-      "archetypal_resonances": ["The Tower", "The Emperor", "Justice"],
-      "keywords": ["Halifax mayor", "Africville", "urban renewal", "paternalism"],
-      "context": "'Sometimes people need to be shown what's in their best interests.'",
-      "quote": "Sometimes people need to be shown what's in their best interests.",
-      "reflection": "Who decides what's best for whom?"
+      "sort_order": 15,
+      "category": "standard_account",
+      "sections": {
+        "Context": "'Sometimes people need to be shown what's in their best interests.'",
+        "Archetypal Resonances": "The Tower, The Emperor, Justice",
+        "Reflection": "Who decides what's best for whom?",
+        "Quote": "Sometimes people need to be shown what's in their best interests."
+      },
+      "keywords": ["Halifax mayor", "Africville", "urban renewal", "paternalism"]
     },
     {
-      "id": "016",
+      "id": "reverend-william-baldwin",
       "name": "Reverend William Baldwin",
-      "suit": "standard_account",
-      "archetypal_resonances": ["The Hierophant", "Judgement", "The Emperor"],
-      "keywords": ["Toronto COS", "hard work", "discipline", "elimination"],
-      "context": "Advocated hard work and strict discipline as 'the best means of getting rid of the professional vagrant.'",
-      "quote": null,
-      "reflection": "What would it mean to 'get rid of' poverty without getting rid of the poor?"
+      "sort_order": 16,
+      "category": "standard_account",
+      "sections": {
+        "Context": "Advocated hard work and strict discipline as 'the best means of getting rid of the professional vagrant.'",
+        "Archetypal Resonances": "The Hierophant, Judgement, The Emperor",
+        "Reflection": "What would it mean to 'get rid of' poverty without getting rid of the poor?"
+      },
+      "keywords": ["Toronto COS", "hard work", "discipline", "elimination"]
     },
     {
-      "id": "017",
+      "id": "emma-goldman",
       "name": "Emma Goldman",
-      "suit": "standard_account",
-      "archetypal_resonances": ["The Fool", "The Tower", "Strength"],
+      "sort_order": 17,
+      "category": "standard_account",
+      "sections": {
+        "Context": "Anarchist revolutionary who was also a eugenicist. Contradictions all the way down.",
+        "Archetypal Resonances": "The Fool, The Tower, Strength",
+        "Reflection": "What blind spots hide in our most radical visions?"
+      },
       "keywords": ["anarchism", "birth control", "eugenics", "feminism"],
-      "context": "Anarchist revolutionary who was also a eugenicist. Contradictions all the way down.",
-      "quote": null,
-      "reflection": "What blind spots hide in our most radical visions?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Emma_Goldman_seated.jpg"
     },
     {
-      "id": "018",
+      "id": "ida-b-wells",
       "name": "Ida B. Wells",
-      "suit": "erased_voices",
-      "archetypal_resonances": ["Strength", "Justice", "The Star"],
+      "sort_order": 18,
+      "category": "erased_voices",
+      "sections": {
+        "Context": "Documented terror when doing so meant death threats. Published Southern Horrors.",
+        "Archetypal Resonances": "Strength, Justice, The Star",
+        "Reflection": "What truth requires courage to speak in your context?"
+      },
       "keywords": ["anti-lynching", "journalism", "documentation", "truth-telling"],
-      "context": "Documented terror when doing so meant death threats. Published Southern Horrors.",
-      "quote": null,
-      "reflection": "What truth requires courage to speak in your context?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Mary_Garrity_-_Ida_B._Wells-Barnett_-_Google_Art_Project_-_restoration_crop.jpg"
     },
     {
-      "id": "019",
+      "id": "web-du-bois",
       "name": "W.E.B. Du Bois",
-      "suit": "erased_voices",
-      "archetypal_resonances": ["The Magician", "The Hermit", "The Star"],
+      "sort_order": 19,
+      "category": "erased_voices",
+      "sections": {
+        "Context": "Radical activism, scholarly rigor. Spoke at Hull-House while critiquing its limits.",
+        "Archetypal Resonances": "The Magician, The Hermit, The Star",
+        "Reflection": "What does it mean to work within institutions you're critiquing?"
+      },
       "keywords": ["NAACP", "sociology", "double consciousness", "Pan-Africanism"],
-      "context": "Radical activism, scholarly rigor. Spoke at Hull-House while critiquing its limits.",
-      "quote": null,
-      "reflection": "What does it mean to work within institutions you're critiquing?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/W.E.B._Du_Bois_by_James_E._Purdy%2C_1907.jpg"
     },
     {
-      "id": "020",
+      "id": "maggie-l-walker",
       "name": "Maggie L. Walker",
-      "suit": "erased_voices",
-      "archetypal_resonances": ["The Magician", "The Empress", "Strength"],
+      "sort_order": 20,
+      "category": "erased_voices",
+      "sections": {
+        "Context": "First woman bank president in America. Made something from nothing within hostile systems.",
+        "Archetypal Resonances": "The Magician, The Empress, Strength",
+        "Reflection": "What resources do you have that systems refuse to recognize?"
+      },
       "keywords": ["banking", "St. Luke", "financial autonomy", "mutual aid"],
-      "context": "First woman bank president in America. Made something from nothing within hostile systems.",
-      "quote": null,
-      "reflection": "What resources do you have that systems refuse to recognize?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Maggie_L._Walker.jpg"
     },
     {
-      "id": "021",
+      "id": "zaynab-al-ghazali",
       "name": "Zaynab al-Ghazali",
-      "suit": "erased_voices",
-      "archetypal_resonances": ["The Hanged Man", "Strength", "The High Priestess"],
-      "keywords": ["Islamic feminism", "Muslim Sisters", "imprisonment", "torture"],
-      "context": "Founded Muslim Women's Association. Imprisoned and tortured for organizing.",
-      "quote": null,
-      "reflection": "What becomes visible only from a position of surrender?"
+      "sort_order": 21,
+      "category": "erased_voices",
+      "sections": {
+        "Context": "Founded Muslim Women's Association. Imprisoned and tortured for organizing.",
+        "Archetypal Resonances": "The Hanged Man, Strength, The High Priestess",
+        "Reflection": "What becomes visible only from a position of surrender?"
+      },
+      "keywords": ["Islamic feminism", "Muslim Sisters", "imprisonment", "torture"]
     },
     {
-      "id": "022",
+      "id": "janie-porter-barrett",
       "name": "Janie Porter Barrett",
-      "suit": "erased_voices",
-      "archetypal_resonances": ["The Empress", "The Star", "The Magician"],
-      "keywords": ["settlement house", "Locust Street", "Virginia", "women's clubs"],
-      "context": "Founded first Black settlement house in Virginia from her own home.",
-      "quote": null,
-      "reflection": "What grows from care that refuses institutional recognition?"
+      "sort_order": 22,
+      "category": "erased_voices",
+      "sections": {
+        "Context": "Founded first Black settlement house in Virginia from her own home.",
+        "Archetypal Resonances": "The Empress, The Star, The Magician",
+        "Reflection": "What grows from care that refuses institutional recognition?"
+      },
+      "keywords": ["settlement house", "Locust Street", "Virginia", "women's clubs"]
     },
     {
-      "id": "023",
+      "id": "mary-ann-shadd-cary",
       "name": "Mary Ann Shadd Cary",
-      "suit": "erased_voices",
-      "archetypal_resonances": ["The Star", "The Chariot", "The Magician"],
+      "sort_order": 23,
+      "category": "erased_voices",
+      "sections": {
+        "Context": "First Black woman newspaper editor in North America. Voice of the fugitive.",
+        "Archetypal Resonances": "The Star, The Chariot, The Magician",
+        "Reflection": "What hope sustains when the journey has no guaranteed end?"
+      },
       "keywords": ["journalism", "first Black woman editor", "fugitive", "integration"],
-      "context": "First Black woman newspaper editor in North America. Voice of the fugitive.",
-      "quote": null,
-      "reflection": "What hope sustains when the journey has no guaranteed end?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/MaryAnnShaddCary.png"
     },
     {
-      "id": "024",
+      "id": "george-edmund-haynes",
       "name": "George Edmund Haynes",
-      "suit": "erased_voices",
-      "archetypal_resonances": ["Justice", "The Hierophant", "The Magician"],
-      "keywords": ["Urban League", "first Black PhD Columbia", "social work education"],
-      "context": "Co-founded Urban League. Built institutions to address inequality within systems that created it.",
-      "quote": null,
-      "reflection": "Can justice be built within unjust institutions?"
+      "sort_order": 24,
+      "category": "erased_voices",
+      "sections": {
+        "Context": "Co-founded Urban League. Built institutions to address inequality within systems that created it.",
+        "Archetypal Resonances": "Justice, The Hierophant, The Magician",
+        "Reflection": "Can justice be built within unjust institutions?"
+      },
+      "keywords": ["Urban League", "first Black PhD Columbia", "social work education"]
     },
     {
-      "id": "025",
+      "id": "reverdy-cassius-ransom",
       "name": "Reverdy Cassius Ransom",
-      "suit": "erased_voices",
-      "archetypal_resonances": ["The Hermit", "The Hierophant", "Strength"],
-      "keywords": ["AME Church", "social gospel", "socialism", "Black church"],
-      "context": "AME Bishop who brought social gospel to Black churches. Christian socialist.",
-      "quote": null,
-      "reflection": "What wisdom comes from standing apart from mainstream success?"
+      "sort_order": 25,
+      "category": "erased_voices",
+      "sections": {
+        "Context": "AME Bishop who brought social gospel to Black churches. Christian socialist.",
+        "Archetypal Resonances": "The Hermit, The Hierophant, Strength",
+        "Reflection": "What wisdom comes from standing apart from mainstream success?"
+      },
+      "keywords": ["AME Church", "social gospel", "socialism", "Black church"]
     },
     {
-      "id": "026",
+      "id": "henry-bibb",
       "name": "Henry Bibb",
-      "suit": "erased_voices",
-      "archetypal_resonances": ["The Lovers", "The Chariot", "The Fool"],
+      "sort_order": 26,
+      "category": "erased_voices",
+      "sections": {
+        "Context": "Escaped slavery multiple times trying to free his family. Founded Voice of the Fugitive.",
+        "Archetypal Resonances": "The Lovers, The Chariot, The Fool",
+        "Reflection": "What would you risk everything to return to?"
+      },
       "keywords": ["fugitive slave", "Voice of the Fugitive", "Canada", "return"],
-      "context": "Escaped slavery multiple times trying to free his family. Founded Voice of the Fugitive.",
-      "quote": null,
-      "reflection": "What would you risk everything to return to?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Henry_Bibb.png"
     },
     {
-      "id": "027",
+      "id": "booker-t-washington",
       "name": "Booker T. Washington",
-      "suit": "erased_voices",
-      "archetypal_resonances": ["Temperance", "The Emperor", "The Hierophant"],
+      "sort_order": 27,
+      "category": "erased_voices",
+      "sections": {
+        "Context": "Accommodation politics—the middle path that critics called complicity.",
+        "Archetypal Resonances": "Temperance, The Emperor, The Hierophant",
+        "Reflection": "When is patience wisdom? When is it collaboration?"
+      },
       "keywords": ["Tuskegee", "accommodation", "self-help", "controversy"],
-      "context": "Accommodation politics—the middle path that critics called complicity.",
-      "quote": null,
-      "reflection": "When is patience wisdom? When is it collaboration?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Booker_T_Washington_retouched_flattened-crop.jpg"
     },
     {
-      "id": "028",
+      "id": "frederick-douglass",
       "name": "Frederick Douglass",
-      "suit": "erased_voices",
-      "archetypal_resonances": ["Strength", "The Chariot", "The Star"],
+      "sort_order": 28,
+      "category": "erased_voices",
+      "sections": {
+        "Context": "Self-liberated, self-educated, self-made. Supported feminism.",
+        "Archetypal Resonances": "Strength, The Chariot, The Star",
+        "Reflection": "What does it mean to make yourself when the world unmakes you?"
+      },
       "keywords": ["abolitionism", "oratory", "self-liberation", "feminism"],
-      "context": "Self-liberated, self-educated, self-made. Supported feminism.",
-      "quote": null,
-      "reflection": "What does it mean to make yourself when the world unmakes you?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Frederick_Douglass_%281840s%29.jpg"
     },
     {
-      "id": "029",
+      "id": "claudette-colvin",
       "name": "Claudette Colvin",
-      "suit": "erased_voices",
-      "archetypal_resonances": ["The Chariot", "Strength", "The Fool"],
-      "keywords": ["bus seat", "before Rosa Parks", "teenage mother", "erased"],
-      "context": "At 15, refused to give up her bus seat—nine months before Rosa Parks. A teenage mom.",
-      "quote": null,
-      "reflection": "Whose determination is remembered? Whose is erased?"
+      "sort_order": 29,
+      "category": "erased_voices",
+      "sections": {
+        "Context": "At 15, refused to give up her bus seat—nine months before Rosa Parks. A teenage mom.",
+        "Archetypal Resonances": "The Chariot, Strength, The Fool",
+        "Reflection": "Whose determination is remembered? Whose is erased?"
+      },
+      "keywords": ["bus seat", "before Rosa Parks", "teenage mother", "erased"]
     },
     {
-      "id": "030",
+      "id": "rosa-parks",
       "name": "Rosa Parks",
-      "suit": "erased_voices",
-      "archetypal_resonances": ["Strength", "Justice", "The Chariot"],
+      "sort_order": 30,
+      "category": "erased_voices",
+      "sections": {
+        "Context": "Trained NAACP organizer. The staged action that sparked a movement.",
+        "Archetypal Resonances": "Strength, Justice, The Chariot",
+        "Reflection": "What gets remembered as spontaneous that was actually organized?"
+      },
       "keywords": ["Montgomery", "NAACP", "trained organizer", "icon"],
-      "context": "Trained NAACP organizer. The staged action that sparked a movement.",
-      "quote": null,
-      "reflection": "What gets remembered as spontaneous that was actually organized?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Rosaparks.jpg"
     },
     {
-      "id": "031",
+      "id": "viola-desmond",
       "name": "Viola Desmond",
-      "suit": "erased_voices",
-      "archetypal_resonances": ["The Sun", "Strength", "Justice"],
+      "sort_order": 31,
+      "category": "erased_voices",
+      "sections": {
+        "Context": "Sat in whites-only section in Nova Scotia, 1946. Now on the Canadian $10 bill.",
+        "Archetypal Resonances": "The Sun, Strength, Justice",
+        "Reflection": "What joy is an act of resistance?"
+      },
       "keywords": ["Canada", "segregation", "$10 bill", "recognition"],
-      "context": "Sat in whites-only section in Nova Scotia, 1946. Now on the Canadian $10 bill.",
-      "quote": null,
-      "reflection": "What joy is an act of resistance?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Viola_Desmond.jpg"
     },
     {
-      "id": "032",
+      "id": "aaron-pa-carvery",
       "name": "Aaron 'Pa' Carvery",
-      "suit": "erased_voices",
-      "archetypal_resonances": ["The Fool", "Strength", "The Hermit"],
-      "keywords": ["Africville", "last holdout", "1970", "resistance"],
-      "context": "Final holdout in Africville, refusing to leave until 1970.",
-      "quote": null,
-      "reflection": "What does it mean to hold ground when the world insists you move?"
+      "sort_order": 32,
+      "category": "erased_voices",
+      "sections": {
+        "Context": "Final holdout in Africville, refusing to leave until 1970.",
+        "Archetypal Resonances": "The Fool, Strength, The Hermit",
+        "Reflection": "What does it mean to hold ground when the world insists you move?"
+      },
+      "keywords": ["Africville", "last holdout", "1970", "resistance"]
     },
     {
-      "id": "033",
+      "id": "elizabeth-shadd-shreve",
       "name": "Elizabeth Williams Shadd Shreve",
-      "suit": "erased_voices",
-      "archetypal_resonances": ["The High Priestess", "The Star", "The Hermit"],
-      "keywords": ["Buxton", "missionary", "fugitive settlement", "invisible"],
-      "context": "Circuit-riding missionary in Buxton fugitive settlement. Nearly invisible to history.",
-      "quote": null,
-      "reflection": "Whose knowledge sustains communities while remaining unwritten?"
+      "sort_order": 33,
+      "category": "erased_voices",
+      "sections": {
+        "Context": "Circuit-riding missionary in Buxton fugitive settlement. Nearly invisible to history.",
+        "Archetypal Resonances": "The High Priestess, The Star, The Hermit",
+        "Reflection": "Whose knowledge sustains communities while remaining unwritten?"
+      },
+      "keywords": ["Buxton", "missionary", "fugitive settlement", "invisible"]
     },
     {
-      "id": "034",
+      "id": "bayard-rustin",
       "name": "Bayard Rustin",
-      "suit": "erased_voices",
-      "archetypal_resonances": ["The Magician", "The Hermit", "Temperance"],
+      "sort_order": 34,
+      "category": "erased_voices",
+      "sections": {
+        "Context": "Organized the March on Washington. Erased for being gay.",
+        "Archetypal Resonances": "The Magician, The Hermit, Temperance",
+        "Reflection": "What work happens behind the scenes? Who gets credited?"
+      },
       "keywords": ["March on Washington", "gay", "pacifism", "behind the scenes"],
-      "context": "Organized the March on Washington. Erased for being gay.",
-      "quote": null,
-      "reflection": "What work happens behind the scenes? Who gets credited?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Bayard_Rustin_1963.jpg"
     },
     {
-      "id": "035",
+      "id": "james-baldwin",
       "name": "James Baldwin",
-      "suit": "erased_voices",
-      "archetypal_resonances": ["The Hermit", "The Star", "Judgement"],
+      "sort_order": 35,
+      "category": "erased_voices",
+      "sections": {
+        "Context": "Writer, witness, exile.",
+        "Archetypal Resonances": "The Hermit, The Star, Judgement",
+        "Reflection": "What are you refusing to face?",
+        "Quote": "Not everything that is faced can be changed, but nothing can be changed until it is faced."
+      },
       "keywords": ["writer", "witness", "exile", "love"],
-      "context": "Writer, witness, exile. 'Not everything that is faced can be changed, but nothing can be changed until it is faced.'",
-      "quote": "Not everything that is faced can be changed, but nothing can be changed until it is faced.",
-      "reflection": "What are you refusing to face?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/James_Baldwin_37_Allan_Warren_%28cropped%29.jpg"
     },
     {
-      "id": "036",
+      "id": "huey-newton",
       "name": "Huey Newton",
-      "suit": "erased_voices",
-      "archetypal_resonances": ["The Chariot", "The Tower", "Strength"],
+      "sort_order": 36,
+      "category": "erased_voices",
+      "sections": {
+        "Context": "Co-founded Black Panther Party. Free breakfast programs as revolutionary praxis.",
+        "Archetypal Resonances": "The Chariot, The Tower, Strength",
+        "Reflection": "What does it mean to feed people as an act of revolution?"
+      },
       "keywords": ["Black Panther Party", "survival programs", "revolution", "contradiction"],
-      "context": "Co-founded Black Panther Party. Free breakfast programs as revolutionary praxis.",
-      "quote": null,
-      "reflection": "What does it mean to feed people as an act of revolution?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/0/0b/Huey_Newton.jpg"
     },
     {
-      "id": "037",
+      "id": "malcolm-x",
       "name": "Malcolm X",
-      "suit": "erased_voices",
-      "archetypal_resonances": ["The Tower", "Death", "The Star"],
+      "sort_order": 37,
+      "category": "erased_voices",
+      "sections": {
+        "Context": "Transformation upon transformation. Assassinated before Africville was emptied.",
+        "Archetypal Resonances": "The Tower, Death, The Star",
+        "Reflection": "What would it mean to change your mind completely?"
+      },
       "keywords": ["Nation of Islam", "transformation", "anti-integration", "Pan-Africanism"],
-      "context": "Transformation upon transformation. Assassinated before Africville was emptied.",
-      "quote": null,
-      "reflection": "What would it mean to change your mind completely?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Malcolm_X_NYWTS_4.jpg"
     },
     {
-      "id": "038",
+      "id": "martin-luther-king-jr",
       "name": "Martin Luther King Jr",
-      "suit": "erased_voices",
-      "archetypal_resonances": ["The Hierophant", "Strength", "The Star"],
+      "sort_order": 38,
+      "category": "erased_voices",
+      "sections": {
+        "Context": "The sanitized dream vs. the radical reality. Assassinated before Africville was emptied.",
+        "Archetypal Resonances": "The Hierophant, Strength, The Star",
+        "Reflection": "What parts of your heroes have been sanitized?"
+      },
       "keywords": ["nonviolence", "dream", "sanitized", "radical"],
-      "context": "The sanitized dream vs. the radical reality. Assassinated before Africville was emptied.",
-      "quote": null,
-      "reflection": "What parts of your heroes have been sanitized?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Martin_Luther_King%2C_Jr..jpg"
     },
     {
-      "id": "039",
+      "id": "mohandas-gandhi",
       "name": "Mohandas Gandhi",
-      "suit": "erased_voices",
-      "archetypal_resonances": ["The Hermit", "Temperance", "The Hanged Man"],
+      "sort_order": 39,
+      "category": "erased_voices",
+      "sections": {
+        "Context": "Troubling relationship with 'untouchable' caste. Contradictions.",
+        "Archetypal Resonances": "The Hermit, Temperance, The Hanged Man",
+        "Reflection": "What contradictions do our heroes carry?"
+      },
       "keywords": ["nonviolence", "independence", "caste", "contradiction"],
-      "context": "Troubling relationship with 'untouchable' caste. Contradictions.",
-      "quote": null,
-      "reflection": "What contradictions do our heroes carry?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Mahatma-Gandhi%2C_studio%2C_1931.jpg"
     },
     {
-      "id": "040",
+      "id": "che-guevara",
       "name": "Ernesto 'Che' Guevara",
-      "suit": "erased_voices",
-      "archetypal_resonances": ["The Fool", "The Chariot", "Death"],
+      "sort_order": 40,
+      "category": "erased_voices",
+      "sections": {
+        "Context": "The river crossing metaphor. Symbolic radicalization. Icon on t-shirts.",
+        "Archetypal Resonances": "The Fool, The Chariot, Death",
+        "Reflection": "What does it mean to 'cross to the other side' when there is no other side?"
+      },
       "keywords": ["revolution", "crossing the river", "icon", "violence"],
-      "context": "The river crossing metaphor. Symbolic radicalization. Icon on t-shirts.",
-      "quote": null,
-      "reflection": "What does it mean to 'cross to the other side' when there is no other side?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/58/ChesGuevarasignature.svg"
     },
     {
-      "id": "041",
+      "id": "the-grandmother",
       "name": "The Grandmother",
-      "suit": "the_cracks",
-      "archetypal_resonances": ["The Empress", "The High Priestess", "The World"],
-      "keywords": ["elder", "memory", "kitchen", "medicine", "survival"],
-      "context": "As Bayo Akomolafe says, decolonization might be more about grandmothers than about systems.",
-      "quote": "Decolonization might be more about grandmothers.",
-      "reflection": "What did your grandmother know that no institution taught?"
+      "sort_order": 41,
+      "category": "the_cracks",
+      "sections": {
+        "Context": "As Bayo Akomolafe says, decolonization might be more about grandmothers than about systems.",
+        "Archetypal Resonances": "The Empress, The High Priestess, The World",
+        "Reflection": "What did your grandmother know that no institution taught?",
+        "Quote": "Decolonization might be more about grandmothers."
+      },
+      "keywords": ["elder", "memory", "kitchen", "medicine", "survival"]
     },
     {
-      "id": "042",
+      "id": "the-mother",
       "name": "The Mother",
-      "suit": "the_cracks",
-      "archetypal_resonances": ["The Empress", "Strength", "The Star"],
-      "keywords": ["labor", "care", "unpaid", "invisible", "everything"],
-      "context": "The work that holds the world together. Never counted in GDP.",
-      "quote": null,
-      "reflection": "What labor is invisible because it is constant?"
+      "sort_order": 42,
+      "category": "the_cracks",
+      "sections": {
+        "Context": "The work that holds the world together. Never counted in GDP.",
+        "Archetypal Resonances": "The Empress, Strength, The Star",
+        "Reflection": "What labor is invisible because it is constant?"
+      },
+      "keywords": ["labor", "care", "unpaid", "invisible", "everything"]
     },
     {
-      "id": "043",
+      "id": "the-friend",
       "name": "The Friend",
-      "suit": "the_cracks",
-      "archetypal_resonances": ["The Lovers", "Temperance", "The Star"],
-      "keywords": ["witness", "presence", "reciprocity", "showing up"],
-      "context": "The one who shows up. No professional boundary. No billing code.",
-      "quote": null,
-      "reflection": "Who shows up for you without being paid?"
+      "sort_order": 43,
+      "category": "the_cracks",
+      "sections": {
+        "Context": "The one who shows up. No professional boundary. No billing code.",
+        "Archetypal Resonances": "The Lovers, Temperance, The Star",
+        "Reflection": "Who shows up for you without being paid?"
+      },
+      "keywords": ["witness", "presence", "reciprocity", "showing up"]
     },
     {
-      "id": "044",
+      "id": "the-doula",
       "name": "The Doula",
-      "suit": "the_cracks",
-      "archetypal_resonances": ["The Empress", "The High Priestess", "Strength"],
-      "keywords": ["birth", "death", "threshold", "holding space", "witness"],
-      "context": "Holding space at thresholds. Birth and death doulas. The ancient role.",
-      "quote": null,
-      "reflection": "Who holds space for you at thresholds?"
+      "sort_order": 44,
+      "category": "the_cracks",
+      "sections": {
+        "Context": "Holding space at thresholds. Birth and death doulas. The ancient role.",
+        "Archetypal Resonances": "The Empress, The High Priestess, Strength",
+        "Reflection": "Who holds space for you at thresholds?"
+      },
+      "keywords": ["birth", "death", "threshold", "holding space", "witness"]
     },
     {
-      "id": "045",
+      "id": "preto-velho",
       "name": "Preto Velho",
-      "suit": "the_cracks",
-      "archetypal_resonances": ["The Hermit", "The Hierophant", "The High Priestess"],
-      "keywords": ["Umbanda", "ancestor", "enslaved elder", "wisdom", "patience"],
-      "context": "Spirit of enslaved African elders in Umbanda. Slow wisdom. Pipe smoke. Patience earned through suffering.",
-      "quote": null,
-      "reflection": "What wisdom comes only through suffering that should never have been?"
+      "sort_order": 45,
+      "category": "the_cracks",
+      "sections": {
+        "Context": "Spirit of enslaved African elders in Umbanda. Slow wisdom. Pipe smoke. Patience earned through suffering.",
+        "Archetypal Resonances": "The Hermit, The Hierophant, The High Priestess",
+        "Reflection": "What wisdom comes only through suffering that should never have been?"
+      },
+      "keywords": ["Umbanda", "ancestor", "enslaved elder", "wisdom", "patience"]
     },
     {
-      "id": "046",
+      "id": "caboclo",
       "name": "Caboclo",
-      "suit": "the_cracks",
-      "archetypal_resonances": ["The Chariot", "Strength", "The Fool"],
-      "keywords": ["Umbanda", "Indigenous spirit", "forest", "warrior", "healing"],
-      "context": "Indigenous ancestral spirits in Umbanda. Warriors and healers. The forest's knowledge.",
-      "quote": null,
-      "reflection": "What knowledge lives in the land that was stolen?"
+      "sort_order": 46,
+      "category": "the_cracks",
+      "sections": {
+        "Context": "Indigenous ancestral spirits in Umbanda. Warriors and healers. The forest's knowledge.",
+        "Archetypal Resonances": "The Chariot, Strength, The Fool",
+        "Reflection": "What knowledge lives in the land that was stolen?"
+      },
+      "keywords": ["Umbanda", "Indigenous spirit", "forest", "warrior", "healing"]
     },
     {
-      "id": "047",
+      "id": "pai-mae-de-santo",
       "name": "Pai de Santo / Mãe de Santo",
-      "suit": "the_cracks",
-      "archetypal_resonances": ["The Hierophant", "The High Priestess", "The Magician"],
-      "keywords": ["Candomblé", "Umbanda", "priesthood", "community", "initiation"],
-      "context": "Father/Mother of the saints. Keeper of Axé. Community anchor.",
-      "quote": null,
-      "reflection": "What communities anchor you that no institution recognizes?"
+      "sort_order": 47,
+      "category": "the_cracks",
+      "sections": {
+        "Context": "Father/Mother of the saints. Keeper of Axé. Community anchor.",
+        "Archetypal Resonances": "The Hierophant, The High Priestess, The Magician",
+        "Reflection": "What communities anchor you that no institution recognizes?"
+      },
+      "keywords": ["Candomblé", "Umbanda", "priesthood", "community", "initiation"]
     },
     {
-      "id": "048",
+      "id": "neighbor-who-brings-food",
       "name": "The Neighbor Who Brings Food",
-      "suit": "the_cracks",
-      "archetypal_resonances": ["The Empress", "Temperance", "The Star"],
-      "keywords": ["mutual aid", "casserole", "no questions", "just showing up"],
-      "context": "The ethics Addams admired in poor communities: 'the ready outflow of sympathy and material assistance.'",
-      "quote": null,
-      "reflection": "When did someone just show up with what you needed?"
+      "sort_order": 48,
+      "category": "the_cracks",
+      "sections": {
+        "Context": "The ethics Addams admired in poor communities: 'the ready outflow of sympathy and material assistance.'",
+        "Archetypal Resonances": "The Empress, Temperance, The Star",
+        "Reflection": "When did someone just show up with what you needed?"
+      },
+      "keywords": ["mutual aid", "casserole", "no questions", "just showing up"]
     },
     {
-      "id": "049",
+      "id": "child-who-asks-why",
       "name": "The Child Who Asks Why",
-      "suit": "the_cracks",
-      "archetypal_resonances": ["The Fool", "The Star", "The Sun"],
-      "keywords": ["innocence", "disruption", "obvious questions", "emperor's clothes"],
-      "context": "The one who asks the obvious question that no one else will ask.",
-      "quote": null,
-      "reflection": "What obvious question are you afraid to ask?"
+      "sort_order": 49,
+      "category": "the_cracks",
+      "sections": {
+        "Context": "The one who asks the obvious question that no one else will ask.",
+        "Archetypal Resonances": "The Fool, The Star, The Sun",
+        "Reflection": "What obvious question are you afraid to ask?"
+      },
+      "keywords": ["innocence", "disruption", "obvious questions", "emperor's clothes"]
     },
     {
-      "id": "050",
+      "id": "bayo-akomolafe",
       "name": "Bayo Akomolafe",
-      "suit": "contemporary_witnesses",
-      "archetypal_resonances": ["The Fool", "The Hermit", "The High Priestess"],
-      "keywords": ["slowing down", "cracks", "fugitivity", "post-activism", "compost"],
-      "context": "'The times are urgent; let us slow down.' Nigerian philosopher, psychologist, professor.",
-      "quote": "The times are urgent; let us slow down.",
-      "reflection": "What becomes possible when you stop trying to fix?"
+      "sort_order": 50,
+      "category": "contemporary_witnesses",
+      "sections": {
+        "Context": "'The times are urgent; let us slow down.' Nigerian philosopher, psychologist, professor.",
+        "Archetypal Resonances": "The Fool, The Hermit, The High Priestess",
+        "Reflection": "What becomes possible when you stop trying to fix?",
+        "Quote": "The times are urgent; let us slow down."
+      },
+      "keywords": ["slowing down", "cracks", "fugitivity", "post-activism", "compost"]
     },
     {
-      "id": "051",
+      "id": "vanessa-andreotti",
       "name": "Vanessa Andreotti",
-      "suit": "contemporary_witnesses",
-      "archetypal_resonances": ["The High Priestess", "The Tower", "The Hermit"],
-      "keywords": ["hospicing modernity", "GTDF", "Gesturing Towards Decolonial Futures", "complicity"],
-      "context": "Hospicing modernity. 'We cannot continue to consume the world and expect different results.'",
-      "quote": null,
-      "reflection": "What needs to die so something else can live?"
+      "sort_order": 51,
+      "category": "contemporary_witnesses",
+      "sections": {
+        "Context": "Hospicing modernity. 'We cannot continue to consume the world and expect different results.'",
+        "Archetypal Resonances": "The High Priestess, The Tower, The Hermit",
+        "Reflection": "What needs to die so something else can live?"
+      },
+      "keywords": ["hospicing modernity", "GTDF", "Gesturing Towards Decolonial Futures", "complicity"]
     },
     {
-      "id": "052",
+      "id": "josh-shrei",
       "name": "Josh Shrei",
-      "suit": "contemporary_witnesses",
-      "archetypal_resonances": ["The Hermit", "The High Priestess", "The Magician"],
-      "keywords": ["The Emerald", "ancestral medicine", "podcast", "remembering"],
-      "context": "The Emerald podcast. Remembering what was almost forgotten. Ancestral practices.",
-      "quote": null,
-      "reflection": "What have you almost forgotten that wants to be remembered?"
+      "sort_order": 52,
+      "category": "contemporary_witnesses",
+      "sections": {
+        "Context": "The Emerald podcast. Remembering what was almost forgotten. Ancestral practices.",
+        "Archetypal Resonances": "The Hermit, The High Priestess, The Magician",
+        "Reflection": "What have you almost forgotten that wants to be remembered?"
+      },
+      "keywords": ["The Emerald", "ancestral medicine", "podcast", "remembering"]
     },
     {
-      "id": "053",
+      "id": "sam-harris",
       "name": "Sam Harris",
-      "suit": "contemporary_witnesses",
-      "archetypal_resonances": ["The Magician", "The Hierophant", "Justice"],
-      "keywords": ["meditation", "rationalism", "controversy", "mindfulness industrial complex"],
-      "context": "Bringing meditation to secular spaces. Also: contradictions and controversies.",
-      "quote": null,
-      "reflection": "What wisdom traditions get extracted and repackaged?"
+      "sort_order": 53,
+      "category": "contemporary_witnesses",
+      "sections": {
+        "Context": "Bringing meditation to secular spaces. Also: contradictions and controversies.",
+        "Archetypal Resonances": "The Magician, The Hierophant, Justice",
+        "Reflection": "What wisdom traditions get extracted and repackaged?"
+      },
+      "keywords": ["meditation", "rationalism", "controversy", "mindfulness industrial complex"]
     },
     {
-      "id": "054",
+      "id": "neil-degrasse-tyson",
       "name": "Neil deGrasse Tyson",
-      "suit": "contemporary_witnesses",
-      "archetypal_resonances": ["The Star", "The Magician", "The Sun"],
+      "sort_order": 54,
+      "category": "contemporary_witnesses",
+      "sections": {
+        "Context": "Making science accessible. Wonder as public education.",
+        "Archetypal Resonances": "The Star, The Magician, The Sun",
+        "Reflection": "What knowledge do you make accessible? What do you gatekeep?"
+      },
       "keywords": ["science communication", "wonder", "cosmos", "accessibility"],
-      "context": "Making science accessible. Wonder as public education.",
-      "quote": null,
-      "reflection": "What knowledge do you make accessible? What do you gatekeep?"
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Neil_deGrasse_Tyson_in_June_2017_%28cropped%29.jpg"
     },
     {
-      "id": "055",
+      "id": "luiza-lian",
       "name": "Luiza Lian",
-      "suit": "contemporary_witnesses",
-      "archetypal_resonances": ["The High Priestess", "The Star", "The Empress"],
-      "keywords": ["Brazilian music", "ancestral", "feminine", "ritual", "voice"],
-      "context": "Brazilian artist weaving ancestral wisdom through contemporary sound.",
-      "quote": null,
-      "reflection": "What ancestral wisdom moves through your art, your work, your body?"
+      "sort_order": 55,
+      "category": "contemporary_witnesses",
+      "sections": {
+        "Context": "Brazilian artist weaving ancestral wisdom through contemporary sound.",
+        "Archetypal Resonances": "The High Priestess, The Star, The Empress",
+        "Reflection": "What ancestral wisdom moves through your art, your work, your body?"
+      },
+      "keywords": ["Brazilian music", "ancestral", "feminine", "ritual", "voice"]
     }
-  ],
-  "reading_instructions": {
-    "single_card": "Draw one card. Sit with the figure, their context, their contradictions. What reflection arises?",
-    "three_card": "Past complicity / Present reckoning / Future possibility",
-    "full_spread": "The River: Draw 7 cards. This is not two sides. These are all tributaries of the same river."
-  },
-  "attribution": {
-    "source": "Chapman, C., & Withers, A. J. (2019). A Violent History of Benevolence.",
-    "additional_inspiration": ["Bayo Akomolafe", "Vanessa Andreotti", "Gayatri Spivak", "Josh Shrei"],
-    "created_with": "Claude (Anthropic AI) via Claude Code CLI",
-    "note": "All figures are complicit. There is no other side of the river."
-  }
+  ]
 }
