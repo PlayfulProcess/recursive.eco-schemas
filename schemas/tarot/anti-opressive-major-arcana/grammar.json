@@ -7,24 +7,64 @@
       {
         "name": "Chapman, Chris & Withers, A.J.",
         "date": "2019",
-        "note": "Source text: A Violent History of Benevolence"
+        "note": "Source text: A Violent History of Benevolence (University of Toronto Press)"
       },
       {
         "name": "PlayfulProcess",
         "date": "2026-01-30",
-        "note": "Deck design and curation"
+        "note": "Deck design, curation, and expansion"
       },
       {
-        "name": "Claude (Anthropic AI)",
+        "name": "Claude (Anthropic AI, Opus 4.5)",
         "date": "2026-01-30",
-        "note": "AI-assisted extraction and compilation"
+        "note": "AI-assisted extraction, compilation, and documentation"
       }
-    ]
+    ],
+    "image_credits": {
+      "source": "Wikimedia Commons",
+      "license_notes": "Most images are Public Domain. James Baldwin (CC BY-SA 3.0, Allan Warren), Neil deGrasse Tyson (CC BY 2.0).",
+      "full_credits_url": "See README.md for complete image attribution table"
+    },
+    "creation_process": {
+      "phase_1": {
+        "description": "Initial 40 figures extracted from Chapman & Withers' 'A Violent History of Benevolence', Chapter 1: 'Troubling the Standard Account of Social Work'",
+        "output": "Figures from both the 'standard account' (Jane Addams, Mary Richmond) and those erased from it (Ida B. Wells, Claudette Colvin)"
+      },
+      "phase_2": {
+        "description": "Recognizing that the source text itself acknowledges limitations—centering critique of white social work history but not fully addressing Indigenous perspectives or non-Western community care—the deck was expanded",
+        "additions": [
+          "Contemporary decolonial voices: Bayo Akomolafe, Vanessa Andreotti, Josh Shrei, Sam Harris, Neil deGrasse Tyson, Luiza Lian",
+          "The Cracks: The Grandmother, The Mother, The Friend, The Doula, Preto Velho, Caboclo, Pai/Mãe de Santo, The Neighbor Who Brings Food, The Child Who Asks Why"
+        ]
+      },
+      "phase_3": {
+        "description": "Organized into four suits with archetypal resonances rather than 1-1 Major Arcana mapping",
+        "rationale": "As Bayo Akomolafe says, 'there are always cracks in the systems.' No clean binary, no 'other side of the river' to cross to."
+      }
+    }
   },
   "name": "A Violent History of Benevolence: The Deck",
   "description": "A 55-card tarot deck examining interlocking oppressions in social work history, enriched with indigenous wisdom, spiritual practices, and contemporary voices. All figures are complicit. There are always cracks in the systems.",
   "grammar_type": "tarot",
   "tags": ["social work", "decolonial", "history", "anti-oppressive", "tarot", "critical theory", "Bayo Akomolafe", "Vanessa Andreotti"],
+  "suits": {
+    "standard_account": {
+      "count": 17,
+      "description": "Figures from the canonical social work history"
+    },
+    "erased_voices": {
+      "count": 23,
+      "description": "Those systematically marginalized in social work historiography"
+    },
+    "the_cracks": {
+      "count": 9,
+      "description": "Indigenous wisdom, spiritual practices, everyday roles—where something else lives"
+    },
+    "contemporary_witnesses": {
+      "count": 6,
+      "description": "Those doing 'social working' differently today"
+    }
+  },
   "items": [
     {
       "id": "jane-addams",
