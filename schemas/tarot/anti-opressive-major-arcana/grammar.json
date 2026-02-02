@@ -24,51 +24,89 @@
       "source": "Wikimedia Commons",
       "license_notes": "Most images are Public Domain. James Baldwin (CC BY-SA 3.0, Allan Warren), Neil deGrasse Tyson (CC BY 2.0).",
       "full_credits_url": "See README.md for complete image attribution table"
-    },
-    "creation_process": {
-      "phase_1": {
-        "description": "Initial 40 figures extracted from Chapman & Withers' 'A Violent History of Benevolence', Chapter 1: 'Troubling the Standard Account of Social Work'",
-        "output": "Figures from both the 'standard account' (Jane Addams, Mary Richmond) and those erased from it (Ida B. Wells, Claudette Colvin)"
-      },
-      "phase_2": {
-        "description": "Recognizing that the source text itself acknowledges limitations—centering critique of white social work history but not fully addressing Indigenous perspectives or non-Western community care—the deck was expanded",
-        "additions": [
-          "Contemporary decolonial voices: Bayo Akomolafe, Vanessa Andreotti, Josh Shrei, Sam Harris, Neil deGrasse Tyson, Luiza Lian",
-          "The Cracks: The Grandmother, The Mother, The Friend, The Doula, Preto Velho, Caboclo, Pai/Mãe de Santo, The Neighbor Who Brings Food, The Child Who Asks Why"
-        ]
-      },
-      "phase_3": {
-        "description": "Organized into four suits with archetypal resonances rather than 1-1 Major Arcana mapping",
-        "rationale": "As Bayo Akomolafe says, 'there are always cracks in the systems.' No clean binary, no 'other side of the river' to cross to."
-      }
     }
   },
   "name": "A Violent History of Benevolence: The Deck",
-  "description": "A 55-card tarot deck examining interlocking oppressions in social work history, enriched with indigenous wisdom, spiritual practices, and contemporary voices. All figures are complicit. There are always cracks in the systems.",
+  "description": "A 55-card tarot deck examining interlocking oppressions in social work history. Phase 1: Initial 40 figures extracted from Chapman & Withers' 'A Violent History of Benevolence' (2019), Chapter 1: 'Troubling the Standard Account of Social Work'—producing figures from both the 'standard account' (Jane Addams, Mary Richmond) and those erased from it (Ida B. Wells, Claudette Colvin). Phase 2: Recognizing the source text's limitations in addressing Indigenous perspectives and non-Western community care, the deck was expanded with contemporary decolonial voices (Bayo Akomolafe, Vanessa Andreotti, Josh Shrei) and 'The Cracks' (The Grandmother, Preto Velho, The Doula). Phase 3: Organized into four suits with archetypal resonances rather than 1-1 Major Arcana mapping. All figures are complicit. As Bayo Akomolafe says: 'There are always cracks in the systems.'",
   "grammar_type": "tarot",
   "tags": ["social work", "decolonial", "history", "anti-oppressive", "tarot", "critical theory", "Bayo Akomolafe", "Vanessa Andreotti"],
-  "suits": {
-    "standard_account": {
-      "count": 17,
-      "description": "Figures from the canonical social work history"
-    },
-    "erased_voices": {
-      "count": 23,
-      "description": "Those systematically marginalized in social work historiography"
-    },
-    "the_cracks": {
-      "count": 9,
-      "description": "Indigenous wisdom, spiritual practices, everyday roles—where something else lives"
-    },
-    "contemporary_witnesses": {
-      "count": 6,
-      "description": "Those doing 'social working' differently today"
-    }
-  },
   "items": [
+    {
+      "id": "suit-standard-account",
+      "name": "Standard Account",
+      "level": 2,
+      "sort_order": 0,
+      "relationship_type": "emergence",
+      "composite_of": [
+        "jane-addams", "mary-richmond", "katherine-bement-davis", "josephine-shaw-lowell",
+        "richard-henry-pratt", "albert-rose", "abraham-flexner", "oscar-mcculloch",
+        "jj-kelso", "jeffery-brackett", "simon-patten", "philip-c-garrett",
+        "theodore-roosevelt", "sir-francis-galton", "john-edward-lloyd",
+        "reverend-william-baldwin", "emma-goldman"
+      ],
+      "sections": {
+        "Description": "Figures from the canonical social work history—the names taught in textbooks, celebrated in professional lore. All complicit in interlocking systems of oppression.",
+        "Reflection": "What violences hide behind the names we are taught to honor?"
+      },
+      "keywords": ["canonical", "professional", "institutional", "celebrated", "complicit"]
+    },
+    {
+      "id": "suit-erased-voices",
+      "name": "Erased Voices",
+      "level": 2,
+      "sort_order": 0,
+      "relationship_type": "emergence",
+      "composite_of": [
+        "ida-b-wells", "web-du-bois", "maggie-l-walker", "zaynab-al-ghazali",
+        "janie-porter-barrett", "mary-ann-shadd-cary", "george-edmund-haynes",
+        "reverdy-cassius-ransom", "henry-bibb", "booker-t-washington", "frederick-douglass",
+        "claudette-colvin", "rosa-parks", "viola-desmond", "aaron-pa-carvery",
+        "elizabeth-shadd-shreve", "bayard-rustin", "james-baldwin", "huey-newton",
+        "malcolm-x", "martin-luther-king-jr", "mohandas-gandhi", "che-guevara"
+      ],
+      "sections": {
+        "Description": "Those systematically marginalized in social work historiography—erased, footnoted, or sanitized. Their work preceded, paralleled, or challenged the 'standard account.'",
+        "Reflection": "Whose determination is remembered? Whose is erased?"
+      },
+      "keywords": ["marginalized", "erased", "resistance", "parallel history", "complicit"]
+    },
+    {
+      "id": "suit-the-cracks",
+      "name": "The Cracks",
+      "level": 2,
+      "sort_order": 0,
+      "relationship_type": "emergence",
+      "composite_of": [
+        "the-grandmother", "the-mother", "the-friend", "the-doula",
+        "preto-velho", "caboclo", "pai-mae-de-santo",
+        "neighbor-who-brings-food", "child-who-asks-why"
+      ],
+      "sections": {
+        "Description": "Indigenous wisdom, spiritual practices, everyday roles—where something else lives. As Bayo Akomolafe says, 'Decolonization might be more about grandmothers than about systems.'",
+        "Reflection": "What did your grandmother know that no institution taught?"
+      },
+      "keywords": ["indigenous", "spiritual", "everyday", "grandmother", "cracks"]
+    },
+    {
+      "id": "suit-contemporary-witnesses",
+      "name": "Contemporary Witnesses",
+      "level": 2,
+      "sort_order": 0,
+      "relationship_type": "emergence",
+      "composite_of": [
+        "bayo-akomolafe", "vanessa-andreotti", "josh-shrei",
+        "sam-harris", "neil-degrasse-tyson", "luiza-lian"
+      ],
+      "sections": {
+        "Description": "Those doing 'social working' differently today—through philosophy, podcasts, science communication, music. Not a clean alternative, but witnesses to the cracks.",
+        "Reflection": "What becomes possible when you stop trying to fix?"
+      },
+      "keywords": ["contemporary", "decolonial", "witness", "alternative", "complicit"]
+    },
     {
       "id": "jane-addams",
       "name": "Jane Addams",
+      "level": 1,
       "sort_order": 1,
       "category": "standard_account",
       "sections": {
@@ -82,6 +120,7 @@
     {
       "id": "mary-richmond",
       "name": "Mary Richmond",
+      "level": 1,
       "sort_order": 2,
       "category": "standard_account",
       "sections": {
@@ -95,6 +134,7 @@
     {
       "id": "katherine-bement-davis",
       "name": "Katherine Bement Davis",
+      "level": 1,
       "sort_order": 3,
       "category": "standard_account",
       "sections": {
@@ -107,6 +147,7 @@
     {
       "id": "josephine-shaw-lowell",
       "name": "Josephine Shaw Lowell",
+      "level": 1,
       "sort_order": 4,
       "category": "standard_account",
       "sections": {
@@ -120,6 +161,7 @@
     {
       "id": "richard-henry-pratt",
       "name": "Richard Henry Pratt",
+      "level": 1,
       "sort_order": 5,
       "category": "standard_account",
       "sections": {
@@ -133,6 +175,7 @@
     {
       "id": "albert-rose",
       "name": "Albert Rose",
+      "level": 1,
       "sort_order": 6,
       "category": "standard_account",
       "sections": {
@@ -145,6 +188,7 @@
     {
       "id": "abraham-flexner",
       "name": "Abraham Flexner",
+      "level": 1,
       "sort_order": 7,
       "category": "standard_account",
       "sections": {
@@ -158,6 +202,7 @@
     {
       "id": "oscar-mcculloch",
       "name": "Oscar McCulloch",
+      "level": 1,
       "sort_order": 8,
       "category": "standard_account",
       "sections": {
@@ -170,6 +215,7 @@
     {
       "id": "jj-kelso",
       "name": "J.J. Kelso",
+      "level": 1,
       "sort_order": 9,
       "category": "standard_account",
       "sections": {
@@ -182,6 +228,7 @@
     {
       "id": "jeffery-brackett",
       "name": "Jeffery Brackett",
+      "level": 1,
       "sort_order": 10,
       "category": "standard_account",
       "sections": {
@@ -194,6 +241,7 @@
     {
       "id": "simon-patten",
       "name": "Simon Patten",
+      "level": 1,
       "sort_order": 11,
       "category": "standard_account",
       "sections": {
@@ -206,6 +254,7 @@
     {
       "id": "philip-c-garrett",
       "name": "Philip C. Garrett",
+      "level": 1,
       "sort_order": 12,
       "category": "standard_account",
       "sections": {
@@ -218,6 +267,7 @@
     {
       "id": "theodore-roosevelt",
       "name": "Theodore Roosevelt",
+      "level": 1,
       "sort_order": 13,
       "category": "standard_account",
       "sections": {
@@ -231,6 +281,7 @@
     {
       "id": "sir-francis-galton",
       "name": "Sir Francis Galton",
+      "level": 1,
       "sort_order": 14,
       "category": "standard_account",
       "sections": {
@@ -244,6 +295,7 @@
     {
       "id": "john-edward-lloyd",
       "name": "John Edward Lloyd",
+      "level": 1,
       "sort_order": 15,
       "category": "standard_account",
       "sections": {
@@ -257,6 +309,7 @@
     {
       "id": "reverend-william-baldwin",
       "name": "Reverend William Baldwin",
+      "level": 1,
       "sort_order": 16,
       "category": "standard_account",
       "sections": {
@@ -269,6 +322,7 @@
     {
       "id": "emma-goldman",
       "name": "Emma Goldman",
+      "level": 1,
       "sort_order": 17,
       "category": "standard_account",
       "sections": {
@@ -282,6 +336,7 @@
     {
       "id": "ida-b-wells",
       "name": "Ida B. Wells",
+      "level": 1,
       "sort_order": 18,
       "category": "erased_voices",
       "sections": {
@@ -295,6 +350,7 @@
     {
       "id": "web-du-bois",
       "name": "W.E.B. Du Bois",
+      "level": 1,
       "sort_order": 19,
       "category": "erased_voices",
       "sections": {
@@ -308,6 +364,7 @@
     {
       "id": "maggie-l-walker",
       "name": "Maggie L. Walker",
+      "level": 1,
       "sort_order": 20,
       "category": "erased_voices",
       "sections": {
@@ -321,6 +378,7 @@
     {
       "id": "zaynab-al-ghazali",
       "name": "Zaynab al-Ghazali",
+      "level": 1,
       "sort_order": 21,
       "category": "erased_voices",
       "sections": {
@@ -333,6 +391,7 @@
     {
       "id": "janie-porter-barrett",
       "name": "Janie Porter Barrett",
+      "level": 1,
       "sort_order": 22,
       "category": "erased_voices",
       "sections": {
@@ -345,6 +404,7 @@
     {
       "id": "mary-ann-shadd-cary",
       "name": "Mary Ann Shadd Cary",
+      "level": 1,
       "sort_order": 23,
       "category": "erased_voices",
       "sections": {
@@ -358,6 +418,7 @@
     {
       "id": "george-edmund-haynes",
       "name": "George Edmund Haynes",
+      "level": 1,
       "sort_order": 24,
       "category": "erased_voices",
       "sections": {
@@ -370,6 +431,7 @@
     {
       "id": "reverdy-cassius-ransom",
       "name": "Reverdy Cassius Ransom",
+      "level": 1,
       "sort_order": 25,
       "category": "erased_voices",
       "sections": {
@@ -382,6 +444,7 @@
     {
       "id": "henry-bibb",
       "name": "Henry Bibb",
+      "level": 1,
       "sort_order": 26,
       "category": "erased_voices",
       "sections": {
@@ -395,6 +458,7 @@
     {
       "id": "booker-t-washington",
       "name": "Booker T. Washington",
+      "level": 1,
       "sort_order": 27,
       "category": "erased_voices",
       "sections": {
@@ -408,6 +472,7 @@
     {
       "id": "frederick-douglass",
       "name": "Frederick Douglass",
+      "level": 1,
       "sort_order": 28,
       "category": "erased_voices",
       "sections": {
@@ -421,6 +486,7 @@
     {
       "id": "claudette-colvin",
       "name": "Claudette Colvin",
+      "level": 1,
       "sort_order": 29,
       "category": "erased_voices",
       "sections": {
@@ -433,6 +499,7 @@
     {
       "id": "rosa-parks",
       "name": "Rosa Parks",
+      "level": 1,
       "sort_order": 30,
       "category": "erased_voices",
       "sections": {
@@ -446,6 +513,7 @@
     {
       "id": "viola-desmond",
       "name": "Viola Desmond",
+      "level": 1,
       "sort_order": 31,
       "category": "erased_voices",
       "sections": {
@@ -459,6 +527,7 @@
     {
       "id": "aaron-pa-carvery",
       "name": "Aaron 'Pa' Carvery",
+      "level": 1,
       "sort_order": 32,
       "category": "erased_voices",
       "sections": {
@@ -471,6 +540,7 @@
     {
       "id": "elizabeth-shadd-shreve",
       "name": "Elizabeth Williams Shadd Shreve",
+      "level": 1,
       "sort_order": 33,
       "category": "erased_voices",
       "sections": {
@@ -483,6 +553,7 @@
     {
       "id": "bayard-rustin",
       "name": "Bayard Rustin",
+      "level": 1,
       "sort_order": 34,
       "category": "erased_voices",
       "sections": {
@@ -496,6 +567,7 @@
     {
       "id": "james-baldwin",
       "name": "James Baldwin",
+      "level": 1,
       "sort_order": 35,
       "category": "erased_voices",
       "sections": {
@@ -510,6 +582,7 @@
     {
       "id": "huey-newton",
       "name": "Huey Newton",
+      "level": 1,
       "sort_order": 36,
       "category": "erased_voices",
       "sections": {
@@ -523,6 +596,7 @@
     {
       "id": "malcolm-x",
       "name": "Malcolm X",
+      "level": 1,
       "sort_order": 37,
       "category": "erased_voices",
       "sections": {
@@ -536,6 +610,7 @@
     {
       "id": "martin-luther-king-jr",
       "name": "Martin Luther King Jr",
+      "level": 1,
       "sort_order": 38,
       "category": "erased_voices",
       "sections": {
@@ -549,6 +624,7 @@
     {
       "id": "mohandas-gandhi",
       "name": "Mohandas Gandhi",
+      "level": 1,
       "sort_order": 39,
       "category": "erased_voices",
       "sections": {
@@ -562,6 +638,7 @@
     {
       "id": "che-guevara",
       "name": "Ernesto 'Che' Guevara",
+      "level": 1,
       "sort_order": 40,
       "category": "erased_voices",
       "sections": {
@@ -575,6 +652,7 @@
     {
       "id": "the-grandmother",
       "name": "The Grandmother",
+      "level": 1,
       "sort_order": 41,
       "category": "the_cracks",
       "sections": {
@@ -588,6 +666,7 @@
     {
       "id": "the-mother",
       "name": "The Mother",
+      "level": 1,
       "sort_order": 42,
       "category": "the_cracks",
       "sections": {
@@ -600,6 +679,7 @@
     {
       "id": "the-friend",
       "name": "The Friend",
+      "level": 1,
       "sort_order": 43,
       "category": "the_cracks",
       "sections": {
@@ -612,6 +692,7 @@
     {
       "id": "the-doula",
       "name": "The Doula",
+      "level": 1,
       "sort_order": 44,
       "category": "the_cracks",
       "sections": {
@@ -624,6 +705,7 @@
     {
       "id": "preto-velho",
       "name": "Preto Velho",
+      "level": 1,
       "sort_order": 45,
       "category": "the_cracks",
       "sections": {
@@ -636,6 +718,7 @@
     {
       "id": "caboclo",
       "name": "Caboclo",
+      "level": 1,
       "sort_order": 46,
       "category": "the_cracks",
       "sections": {
@@ -648,6 +731,7 @@
     {
       "id": "pai-mae-de-santo",
       "name": "Pai de Santo / Mãe de Santo",
+      "level": 1,
       "sort_order": 47,
       "category": "the_cracks",
       "sections": {
@@ -660,6 +744,7 @@
     {
       "id": "neighbor-who-brings-food",
       "name": "The Neighbor Who Brings Food",
+      "level": 1,
       "sort_order": 48,
       "category": "the_cracks",
       "sections": {
@@ -672,6 +757,7 @@
     {
       "id": "child-who-asks-why",
       "name": "The Child Who Asks Why",
+      "level": 1,
       "sort_order": 49,
       "category": "the_cracks",
       "sections": {
@@ -684,6 +770,7 @@
     {
       "id": "bayo-akomolafe",
       "name": "Bayo Akomolafe",
+      "level": 1,
       "sort_order": 50,
       "category": "contemporary_witnesses",
       "sections": {
@@ -697,6 +784,7 @@
     {
       "id": "vanessa-andreotti",
       "name": "Vanessa Andreotti",
+      "level": 1,
       "sort_order": 51,
       "category": "contemporary_witnesses",
       "sections": {
@@ -709,6 +797,7 @@
     {
       "id": "josh-shrei",
       "name": "Josh Shrei",
+      "level": 1,
       "sort_order": 52,
       "category": "contemporary_witnesses",
       "sections": {
@@ -721,6 +810,7 @@
     {
       "id": "sam-harris",
       "name": "Sam Harris",
+      "level": 1,
       "sort_order": 53,
       "category": "contemporary_witnesses",
       "sections": {
@@ -733,6 +823,7 @@
     {
       "id": "neil-degrasse-tyson",
       "name": "Neil deGrasse Tyson",
+      "level": 1,
       "sort_order": 54,
       "category": "contemporary_witnesses",
       "sections": {
@@ -746,6 +837,7 @@
     {
       "id": "luiza-lian",
       "name": "Luiza Lian",
+      "level": 1,
       "sort_order": 55,
       "category": "contemporary_witnesses",
       "sections": {
