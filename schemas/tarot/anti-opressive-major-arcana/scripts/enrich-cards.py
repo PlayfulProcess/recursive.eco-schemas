@@ -89,7 +89,133 @@ CARD_SEARCH_CONFIG = {
         "key_themes": ["killed before Africville emptied", "integration debate"],
         "page_refs": ["68"]
     },
-    # Add more cards...
+    # Standard Account - additional
+    "katherine-bement-davis": {
+        "search_terms": ["Katherine Davis", "Katharine Davis", "Bedford Hills", "eugenic grounds"],
+        "key_themes": ["incarceration", "eugenic criminology", "Addams ally"],
+        "page_refs": ["50-51"]
+    },
+    "josephine-shaw-lowell": {
+        "search_terms": ["Josephine Shaw Lowell", "Lowell", "COS founder", "eugenic criminology"],
+        "key_themes": ["social Darwinism", "character of the poor", "Anti-Imperialist League"],
+        "page_refs": ["50, 52"]
+    },
+    "abraham-flexner": {
+        "search_terms": ["Flexner", "professionalization", "medical"],
+        "key_themes": ["professionalization", "medical model", "gatekeeping"],
+        "page_refs": ["various"]
+    },
+    "jj-kelso": {
+        "search_terms": ["Kelso", "Children's Aid", "Catholic children", "Protestantism"],
+        "key_themes": ["child apprehension", "religious conversion", "child welfare"],
+        "page_refs": ["35"]
+    },
+    "jeffery-brackett": {
+        "search_terms": ["Jeffery Brackett", "Brackett", "Baltimore COS", "coined social work"],
+        "key_themes": ["orderly responsible disciplined", "professionalization", "naming power"],
+        "page_refs": ["43"]
+    },
+    "simon-patten": {
+        "search_terms": ["Simon Patten", "Patten", "social worker", "consumption"],
+        "key_themes": ["coined social worker", "consumption education", "contested origins"],
+        "page_refs": ["43-44, 48"]
+    },
+    "philip-c-garrett": {
+        "search_terms": ["Philip Garrett", "Garrett", "1892 conference", "Indian"],
+        "key_themes": ["conference chairman", "Indian policy", "invisible architect"],
+        "page_refs": ["60"]
+    },
+    "theodore-roosevelt": {
+        "search_terms": ["Theodore Roosevelt", "Roosevelt", "Progressive Party", "eugenics"],
+        "key_themes": ["Addams seconded nomination", "Progressive Era eugenics"],
+        "page_refs": ["47"]
+    },
+    "sir-francis-galton": {
+        "search_terms": ["Francis Galton", "Galton", "eugenics", "coined", "1883"],
+        "key_themes": ["coined eugenics", "fitness", "heredity"],
+        "page_refs": ["34-35"]
+    },
+    "john-edward-lloyd": {
+        "search_terms": ["Lloyd", "Halifax", "best interests"],
+        "key_themes": ["paternalism", "urban renewal", "Africville"],
+        "page_refs": ["67-70"]
+    },
+    "reverend-william-baldwin": {
+        "search_terms": ["William Baldwin", "Baldwin", "Toronto", "Associated Charities", "tramps"],
+        "key_themes": ["eradicate poor people", "hard work", "strict discipline"],
+        "page_refs": ["34"]
+    },
+    # Erased Voices - additional
+    "web-du-bois": {
+        "search_terms": ["W.E.B. Du Bois", "Du Bois", "NAACP", "Washington"],
+        "key_themes": ["critiqued Washington", "radical activism", "political ally of Addams"],
+        "page_refs": ["48"]
+    },
+    "maggie-l-walker": {
+        "search_terms": ["Maggie Walker", "Maggie L. Walker", "St. Luke", "streetcar boycott"],
+        "key_themes": ["financial autonomy", "mutual aid", "Black banking"],
+        "page_refs": ["74-75"]
+    },
+    "janie-porter-barrett": {
+        "search_terms": ["Janie Porter Barrett", "Barrett", "Locust Street", "Virginia"],
+        "key_themes": ["Black settlement house", "women's clubs"],
+        "page_refs": ["chapter 2"]
+    },
+    "mary-ann-shadd-cary": {
+        "search_terms": ["Mary Ann Shadd", "Shadd Cary", "Provincial Freeman"],
+        "key_themes": ["first Black woman editor", "fugitive", "integration"],
+        "page_refs": ["chapter 2"]
+    },
+    "george-edmund-haynes": {
+        "search_terms": ["George Haynes", "Haynes", "Urban League", "Columbia"],
+        "key_themes": ["first Black PhD", "Urban League founder", "social work education"],
+        "page_refs": ["chapter 2"]
+    },
+    "reverdy-cassius-ransom": {
+        "search_terms": ["Reverdy Ransom", "Ransom", "AME", "social gospel"],
+        "key_themes": ["Black church", "socialism", "social gospel"],
+        "page_refs": ["chapter 2"]
+    },
+    "henry-bibb": {
+        "search_terms": ["Henry Bibb", "Bibb", "Voice of the Fugitive", "fugitive slave"],
+        "key_themes": ["fugitive settlement", "Canada", "self-liberation"],
+        "page_refs": ["chapter 2"]
+    },
+    "frederick-douglass": {
+        "search_terms": ["Frederick Douglass", "Douglass", "abolitionist"],
+        "key_themes": ["self-liberation", "oratory", "feminism"],
+        "page_refs": ["various"]
+    },
+    "elizabeth-shadd-shreve": {
+        "search_terms": ["Elizabeth Shadd", "Shreve", "Buxton"],
+        "key_themes": ["missionary", "fugitive settlement", "invisible"],
+        "page_refs": ["chapter 2"]
+    },
+    "bayard-rustin": {
+        "search_terms": ["Bayard Rustin", "Rustin", "March on Washington", "gay"],
+        "key_themes": ["erased for being gay", "behind the scenes", "pacifism"],
+        "page_refs": ["various"]
+    },
+    "james-baldwin": {
+        "search_terms": ["James Baldwin", "Baldwin", "writer", "exile"],
+        "key_themes": ["witness", "exile", "facing truth"],
+        "page_refs": ["various"]
+    },
+    "huey-newton": {
+        "search_terms": ["Huey Newton", "Newton", "Black Panther", "breakfast"],
+        "key_themes": ["survival programs", "revolution", "feeding children"],
+        "page_refs": ["various"]
+    },
+    "mohandas-gandhi": {
+        "search_terms": ["Gandhi", "nonviolence", "caste"],
+        "key_themes": ["contradictions", "celebrated but complicit"],
+        "page_refs": ["28-29"]
+    },
+    "che-guevara": {
+        "search_terms": ["Che Guevara", "Guevara", "revolution"],
+        "key_themes": ["crossing the river", "icon", "violence"],
+        "page_refs": ["various"]
+    },
 }
 
 def load_outline(path: Path) -> str:
