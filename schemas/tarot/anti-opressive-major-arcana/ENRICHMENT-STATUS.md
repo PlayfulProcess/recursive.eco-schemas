@@ -68,14 +68,16 @@ Each card should have:
 
 ## Search Terms for Enrichment
 
-Use `enrich-cards.py` to find quotes:
+Use `scripts/enrich-cards.py` to find quotes:
 
 ```bash
+cd schemas/tarot/anti-opressive-major-arcana
+
 # Single card
-python enrich-cards.py --card-id jane-addams
+python scripts/enrich-cards.py --card-id jane-addams
 
 # All configured cards
-python enrich-cards.py --all --output json > enrichment-data.json
+python scripts/enrich-cards.py --all --output json > data/enrichment-data.json
 ```
 
 ## Key Quotes to Add
