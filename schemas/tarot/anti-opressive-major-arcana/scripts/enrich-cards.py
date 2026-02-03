@@ -177,7 +177,7 @@ def main():
     parser.add_argument("--output", choices=["json", "markdown"], default="markdown")
     args = parser.parse_args()
 
-    base_path = Path(__file__).parent
+    base_path = Path(__file__).parent.parent  # Go up from scripts/ to deck folder
     outline_path = base_path / "outline.md"
     grammar_path = base_path / "grammar.json"
 
