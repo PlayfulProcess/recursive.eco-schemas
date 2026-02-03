@@ -73,14 +73,28 @@
         "reverdy-cassius-ransom", "henry-bibb", "booker-t-washington", "frederick-douglass",
         "claudette-colvin", "rosa-parks", "viola-desmond", "aaron-pa-carvery",
         "elizabeth-shadd-shreve", "bayard-rustin", "james-baldwin", "huey-newton",
-        "malcolm-x", "martin-luther-king-jr", "mohandas-gandhi", "che-guevara",
         "zumbi-dos-palmares"
       ],
       "sections": {
-        "Description": "Those systematically marginalized in social work historiography—erased, footnoted, or sanitized. Their work preceded, paralleled, or challenged the 'standard account.'",
+        "Description": "Those systematically marginalized in social work historiography—truly erased, footnoted, or invisible. Their work preceded, paralleled, or challenged the 'standard account' but they don't appear in textbooks.",
         "Reflection": "Whose determination is remembered? Whose is erased?"
       },
-      "keywords": ["marginalized", "erased", "resistance", "parallel history", "complicit"]
+      "keywords": ["marginalized", "erased", "resistance", "parallel history", "invisible"]
+    },
+    {
+      "id": "suit-sanitized-icons",
+      "name": "Sanitized Icons",
+      "level": 2,
+      "sort_order": 0,
+      "relationship_type": "emergence",
+      "composite_of": [
+        "martin-luther-king-jr", "malcolm-x", "mohandas-gandhi", "che-guevara"
+      ],
+      "sections": {
+        "Description": "Highly visible figures whose complexity is hidden. MLK's radical economic critique is sanitized into 'I Have a Dream.' Gandhi's caste contradictions disappear. Malcolm X becomes a t-shirt. Chapman & Withers (28-29): 'We want Gandhi, Goldman, King, and Malcolm X to be celebrated for their important work... But celebrating their work isn't best facilitated by positioning them as always and only on the side of justice.'",
+        "Reflection": "What parts of your heroes have been sanitized?"
+      },
+      "keywords": ["visible", "celebrated", "sanitized", "contradictions hidden", "neither demonize nor romanticize"]
     },
     {
       "id": "suit-the-cracks",
@@ -660,7 +674,7 @@
       "name": "Malcolm X",
       "level": 1,
       "sort_order": 37,
-      "category": "erased_voices",
+      "category": "sanitized_icons",
       "sections": {
         "Context": "Transformation upon transformation. Assassinated before Africville was emptied.",
         "Archetypal Resonances": "The Tower, Death, The Star",
@@ -675,7 +689,7 @@
       "name": "Martin Luther King Jr",
       "level": 1,
       "sort_order": 38,
-      "category": "erased_voices",
+      "category": "sanitized_icons",
       "sections": {
         "Context": "The sanitized dream vs. the radical reality. Assassinated before Africville was emptied.",
         "Archetypal Resonances": "The Hierophant, Strength, The Star",
@@ -690,7 +704,7 @@
       "name": "Mohandas Gandhi",
       "level": 1,
       "sort_order": 39,
-      "category": "erased_voices",
+      "category": "sanitized_icons",
       "sections": {
         "Context": "Troubling relationship with 'untouchable' caste. Contradictions.",
         "Archetypal Resonances": "The Hermit, Temperance, The Hanged Man",
@@ -705,7 +719,7 @@
       "name": "Ernesto 'Che' Guevara",
       "level": 1,
       "sort_order": 40,
-      "category": "erased_voices",
+      "category": "sanitized_icons",
       "sections": {
         "Context": "The river crossing metaphor. Symbolic radicalization. Icon on t-shirts.",
         "Archetypal Resonances": "The Fool, The Chariot, Death",
@@ -1565,10 +1579,10 @@
       "level": 3,
       "sort_order": 0,
       "relationship_type": "emergence",
-      "composite_of": ["suit-standard-account", "suit-erased-voices"],
+      "composite_of": ["suit-standard-account", "suit-erased-voices", "suit-sanitized-icons"],
       "sections": {
-        "Description": "Chapman & Withers' 40 names: the Standard Account (Jane Addams, Mary Richmond) and those Erased from it (Ida B. Wells, Claudette Colvin). Professional social work history—complicit figures, all.",
-        "Source": "A Violent History of Benevolence (2019): 'The mainstream has never run clean.'",
+        "Description": "Chapman & Withers' names: the Standard Account (Jane Addams, Mary Richmond), the truly Erased (Ida B. Wells, Claudette Colvin), and the Sanitized Icons (MLK, Gandhi—visible but their complexity hidden). Professional social work history—complicit figures, all.",
+        "Source": "A Violent History of Benevolence (2019): 'The mainstream has never run clean.' Also: 'We should neither demonize nor romanticize' any of these figures.",
         "Reflection": "What violences hide behind the profession's origin story?"
       },
       "keywords": ["Chapman Withers", "professional history", "standard account", "erased"]
