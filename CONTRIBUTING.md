@@ -34,6 +34,17 @@ Welcome! This repository is a commons for interpretive schemas used in divinatio
    }
    ```
 
+### Grammar Type Must Match Content
+
+Set `grammar_type` to match what your grammar actually contains:
+
+- `"tarot"` — Must have card-style items with Interpretation/Reversed sections
+- `"iching"` — Must have 64 hexagrams with line data (use the `lines` property)
+- `"astrology"` — Must have items with planet/sign/house categories
+- `"custom"` — For everything else (sequences, poetry, courses, etc.)
+
+Mismatched types (e.g., `"iching"` with only 10 items) will cause broken rendering in Flow.
+
 ### Adding Templates
 
 Templates go in `/templates/` and should:
