@@ -1,126 +1,43 @@
-# Quick Start: Completing the Import
+# Quickstart: Create Your First Grammar
 
-This document provides quick instructions for completing the file import from the recursive-eco repository.
+**Time: 15 minutes. No coding required.**
 
-## Status
-✓ Repository structure is ready
-✓ Documentation is complete
-✓ Import automation is available
-⏳ Waiting for file access to complete import
+## Option A: Copy and Edit (Fastest)
 
-## Prerequisites
+1. Go to [flow.recursive.eco](https://flow.recursive.eco)
+2. Choose Tarot or I Ching, ask a question, draw a card
+3. Click "Copy to My Grammars" on the card or deck
+4. Sign in when prompted — the grammar appears in your drafts at [offer.recursive.eco](https://offer.recursive.eco)
+5. Edit the interpretations, add your images, make it yours
+6. Click "Export to Commons" to get the JSON file
+7. Add it to your fork of this repo and submit a pull request
 
-You need:
-1. Access to https://github.com/PlayfulProcess/recursive-eco (private repository)
-2. Git installed on your system
-3. Bash shell (Linux, macOS, or WSL on Windows)
+## Option B: Create from JSON
 
-## Quick Import Steps
+1. Fork this repository
+2. Copy an example file as your starting point:
+   - Tarot: `schemas/tarot/example-fool.json`
+   - I Ching: `schemas/iching/example-hexagram-01.json`
+   - Astrology: `schemas/astrology/L1-basic.json`
+3. Edit the JSON with your own content
+4. Test at: `recursive.eco/pages/grammar-viewer.html?github=YOUR-USERNAME/recursive.eco-schemas/path/to/grammar`
+5. Submit a pull request when ready
 
-### 1. Clone Both Repositories
+## Option C: AI-Assisted Creation
 
-```bash
-# Clone the source repository (if you have access)
-git clone https://github.com/PlayfulProcess/recursive-eco.git
+Best for creating grammars from existing books or texts.
 
-# Clone this repository (if not already done)
-git clone https://github.com/PlayfulProcess/recursive.eco-schemas.git
-```
+1. Fork this repository
+2. Upload your source text to [NotebookLM](https://notebooklm.google.com/) to understand its structure
+3. Open your fork in [Claude Code](https://claude.ai/code)
+4. Tell Claude: "Create a grammar JSON for [topic] following the format in [example path]"
+5. Work in batches of 10-20 items
+6. Test and submit
 
-### 2. Run the Import Script
+Full walkthrough: [Create Grammars with AI](https://recursive.eco/pages/courses/course-viewer.html?course=create-grammars-with-ai)
 
-```bash
-cd recursive.eco-schemas
-./scripts/import-from-recursive-eco.sh ../recursive-eco
-```
+## What's Next?
 
-The script will automatically:
-- Copy files from `apps/flow/public/data` → `data/`
-- Copy files from `apps/offer/public/templates` → `templates/`
-- Create backups of placeholder files
-- Show you what was imported
-
-### 3. Review the Imported Files
-
-```bash
-# Check what was imported
-ls -la data/
-ls -la templates/
-
-# Review file contents
-```
-
-Look for:
-- Personal information that should be anonymized
-- Sensitive data that shouldn't be public
-- Files that need additional documentation
-- File formats and structures
-
-### 4. Organize and Document
-
-Based on what you find:
-
-```bash
-# Add README files explaining the imported data
-# For example:
-echo "# Flow Data Files
-
-These files contain...
-
-## File Descriptions
-- file1.json - Description
-- file2.json - Description
-" > data/README-imported.md
-```
-
-### 5. Commit the Changes
-
-```bash
-git add .
-git commit -m "Import files from recursive-eco repository
-
-- Imported ecosystem data from apps/flow/public/data (circulates via offer/flow apps)
-- Imported offer templates from apps/offer/public/templates
-- Added documentation for imported files"
-
-git push origin main
-```
-
-## Alternative: Manual Import
-
-If the automated script doesn't work:
-
-### For Flow Data Files:
-1. Navigate to https://github.com/PlayfulProcess/recursive-eco/tree/main/apps/flow/public/data
-2. Download the files
-3. Copy them to the `data/` directory in this repository
-4. Remove the `.import-placeholder.json` file
-5. Add a README describing the files
-
-### For Offer Templates:
-1. Navigate to https://github.com/PlayfulProcess/recursive-eco/tree/main/apps/offer/public/templates
-2. Download the files
-3. Copy them to the `templates/` directory in this repository
-4. Remove the `.import-placeholder.json` file
-5. Add a README describing the templates
-
-## After Import
-
-Once files are imported:
-
-1. Update `IMPORT_STATUS.md` to reflect completion
-2. Remove or update the placeholder files
-3. Add specific documentation for each file set
-4. Consider adding more example schemas based on imported data
-5. Announce to the community that schemas are available
-
-## Questions?
-
-- For organizational questions → see STRUCTURE.md
-- For contribution guidelines → see CONTRIBUTING.md
-- For detailed import instructions → see docs/IMPORT_GUIDE.md
-- For repository status → see IMPORT_STATUS.md
-
-## Contact
-
-Open an issue in this repository if you need help with the import process.
+- **Use it in Flow** — Cast readings with your custom grammar
+- **Share via Altars** — Offer your grammar to the community at [altars.recursive.eco](https://altars.recursive.eco)
+- **Iterate** — Edit and improve based on use
