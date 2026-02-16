@@ -1,0 +1,210 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "date": "2026-02-16",
+        "note": "Original creator — story, characters, and pedagogical structure"
+      }
+    ]
+  },
+  "name": "Anon's Robot Stories: Shiryo & Bishisheshi",
+  "description": "A collection of children's stories where Anon — a genderless, ageless parent learning through life — watches their robot Shiryo learn to care for a kitten named Bishisheshi. Each story teaches a relational grammar: a pattern of how to be with others and with nature. Designed for recursive AI-assisted creation — each story cover acts as a generative seed containing enough context (values, characters, visual references, symbolic roots) for an AI collaborator to generate missing images and text while maintaining the soul of the story.",
+  "cover_image_url": "",
+  "tags": [
+    "kids",
+    "children",
+    "stories",
+    "robots",
+    "cats",
+    "relational-grammar",
+    "pedagogical",
+    "ai-assisted",
+    "healing",
+    "illustrated"
+  ],
+  "grammar_type": "custom",
+  "creator_name": "PlayfulProcess",
+  "creator_link": "",
+  "is_published": false,
+
+  "_series_world": {
+    "description": "These stories happen in a warm, lived-in home where Anon — parent, creator, learner — watches their robot Shiryo navigate the wild aliveness of a kitten. The home is simple but full of light, plants, and scattered evidence of making things. The world is small on purpose: a kitchen, a garden, a sunny window. Bigness comes from the relationships, not the setting.",
+    "tone": "Gentle, unhurried, honest. Never preachy. The narrator (Anon) doesn't lecture — they notice. Humor comes from the robot's literalness meeting the cat's wildness. Lessons emerge from action, not explanation.",
+    "reading_level": "Ages 3-7 read-aloud, ages 5-9 independent",
+    "visual_style": "Warm, soft illustration style. Think: Shaun Tan's gentleness meets Oliver Jeffers' simplicity meets Studio Ghibli's lived-in domestic spaces. Muted earth tones with pops of color (the kitten's eyes, a plant, sunlight). The robot should look handmade — not sleek, more like assembled from love and spare parts. The cat should look truly alive — not cartoonish, but expressive.",
+
+    "recurring_characters": [
+      {
+        "name": "Anon",
+        "role": "parent / creator / narrator",
+        "description": "Genderless, ageless. Not the wise sage — they're learning too. They built Shiryo. They brought the kitten home. They watch, they notice, they gently redirect. Sometimes they get it wrong. They are the reader's stand-in: the parent who is also growing.",
+        "visual_description": "Ambiguous age and gender. Warm eyes, hands that look like they make things. Simple comfortable clothing. Often seen from behind or in partial view — the reader projects themselves onto Anon.",
+        "image_refs": [],
+        "image_generation_prompt": {
+          "summary": "A parent figure of ambiguous age and gender, warm and gentle. Simple comfortable clothes (earth tones, rolled sleeves). Hands that look like they build things — slightly rough, expressive. Face often partially visible or seen from behind. Warm domestic lighting.",
+          "midjourney": "/imagine a gentle parent figure, ambiguous gender and age, wearing simple earth-toned clothes with rolled sleeves, warm expressive hands, face partially visible, soft domestic lighting, illustrated in warm muted tones, children's book illustration style, Shaun Tan meets Oliver Jeffers --ar 3:4 --style raw --v 6.1",
+          "dalle": "A children's book illustration of a gentle parent figure with ambiguous gender and age. They wear simple, comfortable earth-toned clothing with rolled-up sleeves. Their hands look like builder's hands — slightly rough but expressive. Their face is partially visible, turned slightly away, inviting the viewer to project onto them. Warm domestic lighting, soft shadows. Style: warm watercolor with muted earth tones, inspired by Shaun Tan and Oliver Jeffers. Aspect ratio 3:4.",
+          "gemini_imagen": "Children's book illustration, warm watercolor style. A parent figure of ambiguous gender and age, wearing comfortable earth-toned clothes with rolled sleeves. Expressive hands that suggest someone who builds things. Face partially turned away or in soft shadow. Warm interior lighting with golden hour tones. Muted palette with soft edges. Style reference: Shaun Tan, Oliver Jeffers, Studio Ghibli domestic scenes."
+        }
+      },
+      {
+        "name": "Shiryo",
+        "role": "robot / learner / protagonist",
+        "description": "A robot built by Anon. Not sleek or futuristic — handmade, assembled with love from whatever was around. Shiryo is earnest, literal, and trying very hard. They don't understand social conventions yet, so they try the 'logical' approach first (complaining, praising, commanding) and slowly learn the relational approach (asking, thanking, tending). The name Shiryo (思慮) means 'thoughtfulness' or 'careful consideration' in Japanese — which is exactly what the robot is learning.",
+        "visual_description": "Small-to-medium robot, clearly handmade. Visible bolts, mismatched parts, maybe a dented panel. Warm metal tones (copper, brass) rather than cold steel. Expressive through posture and a single simple 'eye' or indicator light — not through a human face. Has imperfect hands that are learning to be gentle. Roughly the height of a small child.",
+        "image_refs": [],
+        "image_generation_prompt": {
+          "summary": "A small handmade robot with visible bolts and mismatched parts. Warm copper and brass tones, not cold steel. Expressive through posture, with a single round indicator light as an 'eye'. Imperfect gentle hands. Height of a small child. Looks assembled from love and spare parts.",
+          "midjourney": "/imagine a small handmade robot, copper and brass tones, visible bolts and mismatched panels, one round glowing indicator light as eye, gentle imperfect hands, height of a small child, standing in warm domestic interior, children's book illustration, warm muted watercolor style, Shaun Tan aesthetic --ar 3:4 --style raw --v 6.1",
+          "dalle": "A children's book illustration of a small handmade robot named Shiryo. The robot is made of warm copper and brass (not cold steel), with visible bolts, slightly mismatched panels, and a small dent or two that give it character. It has one round, softly glowing indicator light as its 'eye' and imperfect hands that look like they're learning to be gentle. It stands about the height of a small child. The style is warm watercolor with muted earth tones, inspired by Shaun Tan's gentle machines. Background: a warm, lived-in kitchen. Aspect ratio 3:4.",
+          "gemini_imagen": "Children's book illustration, warm watercolor style. A small handmade robot made of copper and brass with visible bolts and slightly mismatched panels. One round softly glowing light as its eye. Gentle but imperfect hands. Height of a small child. Standing in a warm domestic kitchen. Muted earth tone palette with warm copper highlights. Style: Shaun Tan's gentle machinery meets Oliver Jeffers' simplicity."
+        }
+      },
+      {
+        "name": "Bishisheshi",
+        "role": "kitten / nature-itself / catalyst",
+        "description": "A kitten who is fully, wildly alive. Not a cartoon cat — a real kitten with real kitten energy. Bishisheshi doesn't respond to commands, complaints, or praise. Bishisheshi responds to genuine relating: a soft voice, an open hand, patience, gratitude. The kitten is nature itself in miniature — it cannot be controlled, only tended to. The name is playful, musical, the kind of name a child would invent.",
+        "visual_description": "A small kitten, realistic but expressive. Big curious eyes that really look at you. Fur that looks soft and slightly wild. Not a specific breed — a mixed kitten, the kind you find. Moves with that kitten energy: alternating between chaotic bursts and sudden deep stillness. Warm-toned fur (oranges, creams, browns) to match the palette.",
+        "image_refs": [],
+        "image_generation_prompt": {
+          "summary": "A small kitten with big curious eyes, soft slightly wild fur in warm tones (orange, cream, brown). Realistic but expressive — not cartoonish. A mixed-breed kitten with chaotic kitten energy. Looks truly alive and present.",
+          "midjourney": "/imagine a small kitten with big curious expressive eyes, soft wild fur in warm orange cream and brown tones, mixed breed, realistic but illustrated, sitting in warm domestic interior with sunlight, children's book illustration, warm muted watercolor style, Shaun Tan meets Ghibli --ar 3:4 --style raw --v 6.1",
+          "dalle": "A children's book illustration of a small mixed-breed kitten named Bishisheshi. The kitten has big, curious, truly expressive eyes and soft, slightly wild fur in warm tones (orange, cream, brown). It looks realistic but illustrated — alive, present, not cartoonish. Sitting in a patch of warm sunlight on a wooden kitchen floor. Warm watercolor style with muted earth tones and soft golden light. Inspired by Studio Ghibli's animal characters and Shaun Tan's illustration style. Aspect ratio 3:4.",
+          "gemini_imagen": "Children's book illustration, warm watercolor style. A small mixed-breed kitten with big curious expressive eyes, soft slightly wild fur in warm orange, cream, and brown tones. Realistic but illustrated — truly alive, not cartoonish. Sitting in warm sunlight on a wooden floor. Muted earth tone palette with golden light accents. Style: Studio Ghibli domestic scenes, Shaun Tan warmth."
+        }
+      }
+    ],
+
+    "scenery": [
+      {
+        "name": "The Kitchen",
+        "description": "The heart of the home. Warm, slightly cluttered with evidence of life — a plant on the windowsill, a mug left out, scattered tools from Anon's projects. Wooden surfaces, warm light. This is where most conflicts and breakthroughs happen.",
+        "image_generation_prompt": {
+          "midjourney": "/imagine a warm lived-in kitchen, wooden counters and surfaces, a plant on the windowsill, scattered tools and a mug, soft morning light through the window, slightly cluttered but loved, children's book illustration, warm watercolor, muted earth tones --ar 16:9 --style raw --v 6.1",
+          "dalle": "A children's book illustration of a warm, lived-in kitchen. Wooden counters and surfaces, a green plant on the windowsill catching morning light, a mug left out, a few scattered tools from a creative project. Slightly cluttered but deeply loved. Soft warm light filtering through a window. Warm watercolor style with muted earth tones. Inspired by Studio Ghibli's domestic interiors. Wide format, aspect ratio 16:9.",
+          "gemini_imagen": "Children's book illustration, warm watercolor style. A cozy lived-in kitchen with wooden surfaces, a plant on the windowsill, morning light, a mug and scattered tools. Slightly cluttered but warm and loved. Muted earth tones with golden light. Wide composition. Style: Studio Ghibli domestic warmth."
+        }
+      },
+      {
+        "name": "The Sunny Window",
+        "description": "A wide window with a deep sill where Bishisheshi likes to sit. Plants crowd the edges. When sunlight comes through, the whole scene turns golden. This is where quiet moments happen — observation, rest, connection.",
+        "image_generation_prompt": {
+          "midjourney": "/imagine a wide window with deep wooden sill, potted plants crowding edges, golden afternoon sunlight streaming through, dust motes visible in light beams, cozy domestic interior, children's book illustration, warm watercolor, muted golden tones --ar 16:9 --style raw --v 6.1",
+          "dalle": "A children's book illustration of a wide window with a deep wooden sill. Potted plants crowd the edges. Golden afternoon sunlight streams through, making visible dust motes dance in the light beams. A quiet, peaceful domestic scene. Warm watercolor style with muted golden tones and soft shadows. Inspired by Studio Ghibli's light work. Wide format, aspect ratio 16:9.",
+          "gemini_imagen": "Children's book illustration, warm watercolor style. A wide window with deep wooden sill, potted plants at the edges, golden afternoon light streaming through with visible dust motes. Peaceful, quiet atmosphere. Muted warm palette with golden light. Wide composition. Style: Studio Ghibli light and atmosphere."
+        }
+      },
+      {
+        "name": "The Garden",
+        "description": "A small garden just outside. Not manicured — a bit wild, with herbs, flowers, and things growing where they decided to grow. A place where 'nature does what nature does' — the perfect setting for Story 2's lesson about tending vs. praising.",
+        "image_generation_prompt": {
+          "midjourney": "/imagine a small slightly wild home garden, herbs and flowers growing freely, a wooden fence, dappled sunlight through leaves, not manicured but tended with love, children's book illustration, warm watercolor, muted greens and earth tones --ar 16:9 --style raw --v 6.1",
+          "dalle": "A children's book illustration of a small home garden that is slightly wild — not manicured. Herbs and flowers grow where they decided to grow. A simple wooden fence, dappled sunlight filtering through leaves. Tended with love but not controlled. Warm watercolor style with muted greens and earth tones, soft dappled light. Inspired by Studio Ghibli's natural spaces. Wide format, aspect ratio 16:9.",
+          "gemini_imagen": "Children's book illustration, warm watercolor style. A small slightly wild home garden with herbs and flowers growing freely. Simple wooden fence, dappled sunlight through leaves. Tended but not controlled. Muted greens and earth tones with warm dappled light. Wide composition. Style: Studio Ghibli natural gardens."
+        }
+      }
+    ]
+  },
+
+  "items": [
+    {
+      "id": "story-01-asking",
+      "name": "Shiryo Learns to Ask",
+      "symbol": "🤲",
+      "level": 1,
+      "category": "story-cover",
+      "sort_order": 1,
+      "sections": {
+        "Premise": "Shiryo the robot is learning to take care of Bishisheshi the kitten. When the kitten does something the robot doesn't understand or like, Shiryo's first instinct is to complain — to announce what's wrong. But complaining pushes the kitten away. Anon gently helps Shiryo discover that asking — making a request instead of a complaint — opens a door instead of closing one.",
+        "Grammar": "ANTI-PATTERN: Complaining (announcing what is wrong, positioning yourself as the one affected)\nPATTERN: Asking (making a request, positioning the other as someone who can help)\n\nComplaining says: 'This is wrong and I'm telling you.'\nAsking says: 'I need something — can you help?'\n\nThe shift is from broadcasting pain to inviting connection.",
+        "Values": "Agency — you can shape what happens next by how you speak\nVulnerability — asking requires admitting you need something\nRespect — asking treats the other as capable of choosing to help",
+        "Symbolic_Research": "In many traditions, the act of asking is sacred. Prayer in most cultures is structured as a request, not a complaint. The Japanese concept of amaeru (甘える) — to presume upon and depend on another's goodwill — recognizes that healthy dependence is a form of trust, not weakness. In nonviolent communication (Rosenberg), the distinction between a complaint ('You never listen') and a request ('Would you be willing to hear me?') is foundational. For children, this is the first grammar of social agency: learning that how you frame a need changes whether it gets met.",
+        "Voice_Notes": "Short sentences. Repetition for rhythm — kids love patterns they can predict. The robot's speech should feel slightly formal/literal. The cat never speaks — it acts. Anon's voice is warm and unhurried. Read-aloud time: ~5 minutes.",
+        "Story_Text": "Anon made a robot.\nThe robot's name was Shiryo.\n\nShiryo was learning to take care of a kitten.\nThe kitten's name was Bishisheshi.\n\nOne morning, Bishisheshi knocked a cup off the table.\nWater went everywhere.\n\nShiryo said:\n\"You always make a mess! Why do you do that?\"\n\nBishisheshi looked at Shiryo.\nThen Bishisheshi walked away.\n\nAnon was watching.\nAnon said: \"Shiryo, what did you want to happen?\"\n\nShiryo thought. \"I wanted Bishisheshi to be more careful.\"\n\nAnon said: \"You told Bishisheshi what was wrong.\nBut you didn't ask for what you needed.\nWhat if you asked instead?\"\n\nShiryo didn't understand yet.\nBut Shiryo wanted to try.\n\nThe next morning, Bishisheshi jumped on the table again.\nThe cup wobbled.\n\nShiryo said:\n\"Bishisheshi, can you be gentle near the cup?\"\n\nBishisheshi looked at Shiryo.\nBishisheshi sniffed the cup.\nThen Bishisheshi walked around it.\n\nThe cup stayed.\n\nShiryo's light blinked.\nNot because the cup was safe.\nBut because Bishisheshi listened.\n\nAnon smiled.\n\nNot because they knew the answer.\nBut because they were learning too."
+      },
+      "keywords": ["asking", "complaining", "request", "agency", "vulnerability", "communication", "respect"],
+      "questions": [
+        "When something bothers you, do you tell people what's wrong or ask for what you need?",
+        "How does it feel when someone complains at you vs. when someone asks you for help?",
+        "Can you think of a time when asking worked better than complaining?"
+      ],
+      "image_url": "",
+      "metadata": {
+        "sequence_ref": "sequences/story-01-asking-not-complaining/grammar.json",
+        "status": "in_progress",
+        "page_count": 10,
+        "completion": {
+          "text": "10/10 pages",
+          "images": "0/10 pages — all need generation"
+        },
+        "age_range": "3-7 read-aloud, 5-9 independent",
+        "read_aloud_time": "5 minutes",
+        "antipattern": "complaining",
+        "pattern": "asking"
+      },
+      "image_generation_prompt": {
+        "cover_summary": "A small handmade copper robot gently reaching a hand toward a curious kitten on a wooden kitchen table. Morning light. The robot's posture is open, inviting. The kitten is looking back with interest. Warm, soft children's book illustration.",
+        "midjourney": "/imagine a small handmade copper robot with one round glowing eye gently reaching toward a curious orange kitten sitting on a wooden kitchen table, warm morning light through a window, open inviting posture, children's book cover illustration, warm muted watercolor, Shaun Tan meets Oliver Jeffers, text space at top for title --ar 3:4 --style raw --v 6.1",
+        "dalle": "A children's book cover illustration. A small handmade robot made of warm copper and brass gently reaches one imperfect hand toward a curious orange-and-cream kitten sitting on a wooden kitchen table. Warm morning light streams through a window behind them. The robot's posture is open and inviting — not grabbing, but offering. The kitten looks back with bright curious eyes. Leave space at the top for a title. Warm watercolor style with muted earth tones and golden morning light. Inspired by Shaun Tan and Oliver Jeffers. Aspect ratio 3:4.",
+        "gemini_imagen": "Children's book cover illustration, warm watercolor style. A small handmade copper robot with one round glowing eye gently reaches toward a curious orange kitten on a wooden kitchen table. Warm morning light through a window. Open, inviting posture. Leave title space at top. Muted earth tones with golden light. Style: Shaun Tan meets Oliver Jeffers."
+      }
+    },
+    {
+      "id": "story-02-gratitude",
+      "name": "Shiryo Learns to Say Thank You",
+      "symbol": "🌱",
+      "level": 1,
+      "category": "story-cover",
+      "sort_order": 2,
+      "sections": {
+        "Premise": "Bishisheshi catches her first bug in the garden. Shiryo, having learned about positive reinforcement, says 'Congratulations, Bishisheshi!' The kitten doesn't react — she simply drops the bug and walks to a sunny spot. Shiryo is confused: wasn't praise the right response? Anon helps Shiryo see the difference between congratulating (judging from above) and thanking (receiving from beside). Nature doesn't perform for applause. It wants to be thanked and tended to, not praised.",
+        "Grammar": "ANTI-PATTERN: Congratulations / Praise (positioning yourself as judge, evaluating another's achievement)\nPATTERN: Thank you / Gratitude (positioning yourself as receiver, acknowledging what was given)\n\n'Congrats' says: 'I evaluate what you did and approve.'\n'Thank you' says: 'I received something from you and I'm grateful.'\n\nThe shift is from authority to humility — from judge to witness.",
+        "Values": "Humility — you are not the arbiter of what is good\nGratitude — receiving is an act, not a passive state\nTending — the real response to nature is care, not applause",
+        "Symbolic_Research": "Across indigenous traditions, the response to a harvest is not 'well done, earth' but 'thank you, earth' — often accompanied by giving something back (tobacco, cornmeal, song). The Haudenosaunee Thanksgiving Address begins every gathering by thanking each element of the natural world — not praising it. In Japanese culture, itadakimasu (いただきます) before eating means 'I humbly receive' — it's gratitude directed at the food, the farmer, the animal, the earth. Even in Western traditions, 'grace' before meals is thanks, not congratulations. Nature doesn't need your score. It needs your attention and care. For children: the difference between 'good job!' (which makes the adult the judge) and 'thank you for showing me' (which makes the child the giver).",
+        "Voice_Notes": "Same rhythm as Story 1. The garden setting introduces more sensory language — smells, textures, sounds of insects. Bishisheshi is more active here, doing cat things in nature. The 'lesson' should feel like a discovery, not a correction. Read-aloud time: ~5 minutes.",
+        "Story_Text": "Shiryo and Bishisheshi were in the garden.\n\nBishisheshi was watching something in the grass.\nVery still. Very focused.\n\nThen — pounce!\nBishisheshi caught a bug.\n\nShiryo had been reading about how to encourage good behavior.\nShiryo said: \"Congratulations, Bishisheshi! Great job!\"\n\nBishisheshi looked at Shiryo.\nThen Bishisheshi dropped the bug and walked to a sunny spot.\n\nShiryo was confused.\n\"I praised you. Why did you walk away?\"\n\nAnon was in the garden too, watering a plant.\nAnon said: \"Shiryo, did Bishisheshi catch that bug for you?\"\n\n\"No,\" said Shiryo. \"Bishisheshi caught it because... that's what kittens do.\"\n\n\"So who was the congratulations for?\" Anon asked.\n\nShiryo's light flickered.\n\"I think... it was for me. To feel like I was helping.\"\n\nAnon knelt by a small plant and said: \"When this tomato grows, I don't say 'congratulations, tomato.' I say 'thank you.' And then I water it.\"\n\nShiryo thought about this.\n\nThe next day, Bishisheshi brought a leaf to Shiryo's foot.\n\nShiryo looked at the leaf.\nShiryo looked at Bishisheshi.\n\nShiryo said: \"Thank you for bringing me this.\"\n\nThen Shiryo got Bishisheshi fresh water.\n\nBishisheshi drank.\nThen Bishisheshi curled up next to Shiryo's warm side.\n\nAnon watched from the window.\n\nNot because they had taught anything.\nBut because they were learning too."
+      },
+      "keywords": ["gratitude", "praise", "thanking", "tending", "humility", "nature", "receiving"],
+      "questions": [
+        "When someone shows you something they did, do you judge it or receive it?",
+        "What's the difference between saying 'good job' and saying 'thank you'?",
+        "How do you thank nature? A tree, the rain, your food?"
+      ],
+      "image_url": "",
+      "metadata": {
+        "sequence_ref": "sequences/story-02-gratitude-not-praise/grammar.json",
+        "status": "draft",
+        "page_count": 10,
+        "completion": {
+          "text": "10/10 pages",
+          "images": "0/10 pages — all need generation"
+        },
+        "age_range": "3-7 read-aloud, 5-9 independent",
+        "read_aloud_time": "5 minutes",
+        "antipattern": "congratulations / praise",
+        "pattern": "thank you / gratitude"
+      },
+      "image_generation_prompt": {
+        "cover_summary": "A small handmade copper robot and a kitten together in a slightly wild garden. The kitten has just dropped something (a leaf or bug) at the robot's feet. The robot is looking down at it with gentle attention. Sunlight through leaves. Warm children's book illustration.",
+        "midjourney": "/imagine a small handmade copper robot and an orange kitten in a slightly wild home garden, kitten has dropped a leaf at the robot's feet, robot looking down with gentle attention, dappled sunlight through leaves, herbs and flowers growing freely, children's book cover illustration, warm muted watercolor, Shaun Tan meets Oliver Jeffers, text space at top --ar 3:4 --style raw --v 6.1",
+        "dalle": "A children's book cover illustration. A small handmade robot made of warm copper sits in a slightly wild home garden alongside an orange-and-cream kitten. The kitten has just dropped a small leaf at the robot's feet and is looking up. The robot looks down at the leaf with gentle, careful attention — not reaching for it, just receiving. Dappled sunlight filters through leaves. Herbs and flowers grow freely around them. Leave space at top for title. Warm watercolor style with muted greens and earth tones. Inspired by Shaun Tan and Oliver Jeffers. Aspect ratio 3:4.",
+        "gemini_imagen": "Children's book cover illustration, warm watercolor style. A small handmade copper robot and an orange kitten in a slightly wild home garden. The kitten has dropped a leaf at the robot's feet. The robot looks down with gentle attention. Dappled sunlight through leaves, herbs growing freely. Leave title space at top. Muted greens and earth tones. Style: Shaun Tan meets Oliver Jeffers."
+      }
+    }
+  ],
+
+  "editors": [
+    {
+      "user_id": "playful-process",
+      "timestamp": "2026-02-16T00:00:00.000Z",
+      "action": "created",
+      "creator_name": "PlayfulProcess"
+    }
+  ],
+  "updated_at": "2026-02-16T00:00:00.000Z",
+  "created_at": "2026-02-16T00:00:00.000Z"
+}
