@@ -194,6 +194,62 @@
         "dalle": "A children's book cover illustration. A small handmade robot made of warm copper sits in a slightly wild home garden alongside an orange-and-cream kitten. The kitten has just dropped a small leaf at the robot's feet and is looking up. The robot looks down at the leaf with gentle, careful attention — not reaching for it, just receiving. Dappled sunlight filters through leaves. Herbs and flowers grow freely around them. Leave space at top for title. Warm watercolor style with muted greens and earth tones. Inspired by Shaun Tan and Oliver Jeffers. Aspect ratio 3:4.",
         "gemini_imagen": "Children's book cover illustration, warm watercolor style. A small handmade copper robot and an orange kitten in a slightly wild home garden. The kitten has dropped a leaf at the robot's feet. The robot looks down with gentle attention. Dappled sunlight through leaves, herbs growing freely. Leave title space at top. Muted greens and earth tones. Style: Shaun Tan meets Oliver Jeffers."
       }
+    },
+    {
+      "id": "series-cover",
+      "name": "Anon's Robot Stories — Series Cover",
+      "symbol": "🏠",
+      "level": 2,
+      "composite_of": ["story-01-asking", "story-02-gratitude"],
+      "category": "series-cover",
+      "sort_order": 0,
+      "sections": {
+        "Summary": "Anon made a robot. The robot is learning to take care of a cat. Together, they are learning the grammars of being alive.",
+        "Series_Arc": "Each story teaches one relational grammar — a pattern of how to be with others and with nature. The stories build on each other:\n\nStory 1: Asking > Complaining — the grammar of REQUESTING (agency, vulnerability)\nStory 2: Thank You > Congrats — the grammar of RECEIVING (humility, gratitude)\n\nThe arc moves from outward (how I speak to you) to inward (how I relate to what you give me). Future stories could continue:\nStory 3: Tending > Fixing — the grammar of CARING\nStory 4: Noticing > Judging — the grammar of SEEING\nStory 5: Waiting > Rushing — the grammar of TIME\n\nEach story ends with the same line — 'because they were learning too' — a recursive signature that reminds the reader: the parent is not above the lesson.",
+        "Core_Characters": "ANON — genderless, ageless parent and creator. Not the wise sage — learning alongside. The reader's stand-in.\n\nSHIRYO (思慮) — a handmade robot learning to care for a living being. Earnest, literal, trying hard. Named for 'thoughtfulness' in Japanese — what the robot is growing into.\n\nBISHISHESHI — a kitten who is nature itself in miniature. Cannot be controlled, only tended to. Responds to authentic relating, not authority.",
+        "Design_Philosophy": "These stories are not about manners. They are about relational grammars — the deep patterns that shape how we connect.\n\nThe robot is the perfect protagonist because it has no social conditioning. It tries the 'logical' approach first (complain, praise, fix, judge) and slowly discovers the relational approach (ask, thank, tend, notice).\n\nThe cat is the perfect teacher because nature doesn't negotiate. A cat will not respond to commands, complaints, or applause. A cat responds to genuine presence.\n\nThe parent (Anon) is not the authority. Anon models the grammar by living it — asking instead of telling, thanking instead of praising — but the final line always reveals: Anon is learning too.\n\nThis is the recursive structure: the child learns from the cat, the parent learns from watching the child learn. The reader learns from all three.",
+        "Symbolic_Roots": "Japanese: 思慮 (shiryo, thoughtfulness), 甘える (amaeru, healthy dependence), いただきます (itadakimasu, 'I humbly receive')\nHaudenosaunee: The Thanksgiving Address — thanking each element of the natural world\nNonviolent Communication (Rosenberg): requests vs. demands, observations vs. evaluations\nIndigenous traditions: responding to nature with gratitude and tending, not praise\nMonastery traditions: 'grace' as thanks, not congratulations\n\nThese are not decorative references — they are the root system under each simple story.",
+        "Generation_Guidance": "When generating new stories, images, or expanding existing ones, maintain:\n\n1. VISUAL CONSISTENCY — same characters, same palette, same style across all pages and stories\n2. TONAL CONSISTENCY — gentle, unhurried, honest. Never preach. Humor from literalness meeting wildness\n3. STRUCTURAL CONSISTENCY — each story has an anti-pattern → pattern arc, 10 pages, same closing line\n4. DEPTH WITHOUT WEIGHT — the symbolic research informs but doesn't appear in the story text. Kids feel it; they don't need to read it\n5. RECURSIVE ENDING — every story ends with Anon learning too. This is non-negotiable."
+      },
+      "keywords": [
+        "relational-grammar", "asking", "gratitude", "robot", "cat", "nature",
+        "parenting", "learning", "tending", "humility", "agency", "vulnerability",
+        "kids", "healing", "recursive"
+      ],
+      "questions": [
+        "What grammar are you learning right now?",
+        "Who teaches you without knowing they're teaching?",
+        "What pattern do you keep trying that doesn't work — and what might you try instead?"
+      ],
+      "image_url": "",
+      "metadata": {
+        "item_type": "series-cover",
+        "total_stories": 2,
+        "total_planned": 5,
+        "age_range": "3-7 read-aloud, 5-9 independent",
+        "stories": [
+          {
+            "id": "story-01-asking",
+            "title": "Shiryo Learns to Ask",
+            "grammar": "Asking > Complaining",
+            "sequence_ref": "sequences/story-01-asking-not-complaining/grammar.json",
+            "status": "in_progress"
+          },
+          {
+            "id": "story-02-gratitude",
+            "title": "Shiryo Learns to Say Thank You",
+            "grammar": "Thank You > Congrats",
+            "sequence_ref": "sequences/story-02-gratitude-not-praise/grammar.json",
+            "status": "draft"
+          }
+        ]
+      },
+      "image_generation_prompt": {
+        "cover_summary": "The series cover: all three characters together in the warm kitchen/garden threshold. Anon partially visible in the background. Shiryo and Bishisheshi in the foreground — the robot sitting on the ground, the kitten curled against its warm copper side. Around them: the kitchen behind, the garden ahead. A cup on the table, a leaf on the floor, a watering can, a tomato plant — small totems from each story. Golden light. Home. Learning. Alive.",
+        "midjourney": "/imagine a children's book series cover, a small copper robot sitting on the ground with an orange kitten curled against its warm side, a kitchen behind them and a garden ahead through an open door, a parent figure partially visible in the background, small totems scattered around: a cup on a table, a small leaf on the floor, a watering can, a tiny tomato plant, golden warm light, everything alive and connected, warm muted watercolor, Shaun Tan meets Oliver Jeffers meets Studio Ghibli, space for title at top --ar 3:4 --style raw --v 6.1",
+        "dalle": "A children's book series cover illustration. In the center foreground, a small handmade copper robot sits on the floor with an orange kitten curled against its warm side — both at peace. Behind them, the warm kitchen with its wooden surfaces and plant-filled windowsill. Ahead of them, through an open door, a slightly wild garden with dappled sunlight. A parent figure (Anon) is partially visible in the background — a warm presence, not the focus. Scattered throughout are small totems from the stories: a cup on the table (from Story 1), a small leaf on the floor and a tiny tomato plant (from Story 2), a watering can. Golden light connects everything. The feeling is: home, learning, alive, imperfect, loved. Leave space at the top for the series title. Warm watercolor style, muted earth tones with golden light and garden greens. Style: Shaun Tan meets Oliver Jeffers meets Studio Ghibli's most tender domestic moments. Aspect ratio 3:4.",
+        "gemini_imagen": "Children's book series cover illustration, warm watercolor style. A copper robot sitting on the floor with an orange kitten curled against its warm side. Kitchen behind, garden through an open door ahead. A parent figure partially visible in background. Small story totems: a cup, a leaf, a watering can, a tomato plant. Golden warm light connecting everything. Home, learning, alive. Space for title at top. Muted earth tones, golden light, garden greens. Style: Shaun Tan, Oliver Jeffers, Studio Ghibli. Portrait format 3:4."
+      }
     }
   ],
 
