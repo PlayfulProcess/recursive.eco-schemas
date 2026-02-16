@@ -1,0 +1,273 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "date": "2026-02-16",
+        "note": "Original story, characters, and structure"
+      }
+    ]
+  },
+  "name": "Shiryo Learns to Ask — Full Story",
+  "description": "The complete page-by-page sequence for Story 1: Shiryo learns that asking is better than complaining. Each page includes narrative text, image status, and generation prompts for AI image creation (Midjourney, DALL-E, Gemini Imagen). Pages without images are marked for generation. The prompts maintain visual consistency with the series style guide defined in the parent grammar.",
+  "cover_image_url": "",
+  "tags": ["kids", "story-sequence", "illustrated", "ai-assisted", "robot", "cat", "asking"],
+  "grammar_type": "sequence",
+  "creator_name": "PlayfulProcess",
+
+  "_generation_context": {
+    "parent_grammar": "custom/anon-shiryo-cat-stories/grammar.json",
+    "story_id": "story-01-asking",
+    "visual_style": "Warm watercolor, muted earth tones with golden light accents. Shaun Tan gentleness meets Oliver Jeffers simplicity meets Studio Ghibli domestic warmth. Consistent characters across all pages.",
+    "color_palette": ["#C4956A", "#E8D5B7", "#8B6914", "#5C4033", "#D4A574", "#F5E6D3", "#7A9E7E", "#B8860B"],
+    "palette_names": ["warm copper (Shiryo)", "soft cream (light)", "golden brown (wood)", "dark earth (shadows)", "warm sand (walls)", "soft white (paper/steam)", "sage green (plants)", "deep gold (sunlight)"],
+    "consistency_notes": "Shiryo must look the same on every page — small copper robot, one round eye-light, mismatched panels, gentle hands. Bishisheshi must be consistent — small orange/cream/brown kitten, big expressive eyes. Anon appears partially — warm hands, earth-toned clothes, face partially hidden or soft. The kitchen is the same kitchen throughout."
+  },
+
+  "items": [
+    {
+      "id": "page-01",
+      "name": "Page 1 — Anon Made a Robot",
+      "level": 1,
+      "sort_order": 1,
+      "sections": {
+        "Text": "Anon made a robot.\nThe robot's name was Shiryo.",
+        "Page_Notes": "Opening spread. Introduce Anon (partially visible) and Shiryo. The robot is newly made — maybe Anon is tightening a last bolt, or Shiryo is opening their eye-light for the first time. The workshop/kitchen is visible. Warm, hopeful feeling — something new is beginning."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Anon", "Shiryo"],
+        "setting": "kitchen / workshop"
+      },
+      "image_generation_prompt": {
+        "scene": "Anon's hands (partially visible, warm skin, rolled sleeves) tightening a small bolt on a copper robot. The robot's single round eye-light is just flickering on for the first time — a soft warm glow. Workshop-kitchen setting: wooden table, scattered tools, a mug, a plant on the windowsill. Morning light.",
+        "midjourney": "/imagine close-up of warm hands with rolled sleeves tightening a bolt on a small copper robot on a wooden workbench, the robot's single round eye-light flickering on for the first time with a soft glow, scattered tools and a mug nearby, plant on windowsill, warm morning light, children's book illustration, warm muted watercolor, Shaun Tan meets Oliver Jeffers --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration. Close-up of warm, gentle hands (sleeves rolled up, skin tone ambiguous) carefully tightening a small bolt on a little copper-and-brass robot sitting on a wooden workbench. The robot's single round eye-light is just flickering on for the first time — emitting a soft, warm glow. The scene is a kitchen-workshop: scattered tools, a coffee mug, a small green plant on the windowsill catching morning light. The feeling is tender and hopeful — something new is being born. Warm watercolor style, muted earth tones with golden morning light. Style: Shaun Tan meets Oliver Jeffers. Aspect ratio 16:9.",
+        "gemini_imagen": "Children's book illustration, warm watercolor style. Close-up of gentle hands tightening a bolt on a small copper robot on a wooden workbench. The robot's round eye-light flickers on for the first time with a soft warm glow. Kitchen-workshop setting with scattered tools, a mug, morning light through a window, a plant on the sill. Muted earth tones, golden light. Tender, hopeful mood. Style: Shaun Tan, Oliver Jeffers. Wide format 16:9."
+      }
+    },
+    {
+      "id": "page-02",
+      "name": "Page 2 — Meet Bishisheshi",
+      "level": 1,
+      "sort_order": 2,
+      "sections": {
+        "Text": "Shiryo was learning to take care of a kitten.\nThe kitten's name was Bishisheshi.",
+        "Page_Notes": "Introduce the kitten. Shiryo and Bishisheshi seeing each other for the first time — or the early days. The kitten is curious, maybe sniffing Shiryo's hand. Shiryo is trying to be gentle but a bit stiff/uncertain. The dynamic between mechanical and alive is visible."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Shiryo", "Bishisheshi"],
+        "setting": "kitchen"
+      },
+      "image_generation_prompt": {
+        "scene": "Shiryo the copper robot kneeling on the kitchen floor, awkwardly extending one imperfect hand. Bishisheshi the orange kitten cautiously sniffing the robot's metal fingers. The robot is stiff and uncertain but trying. The kitten is curious and bold. Eye-level perspective — we're on the floor with them. Warm kitchen background, soft light.",
+        "midjourney": "/imagine a small copper robot with one round glowing eye kneeling on a wooden kitchen floor, awkwardly extending an imperfect hand, a small orange kitten cautiously sniffing the metal fingers, eye-level floor perspective, warm kitchen background, soft light, children's book illustration, warm muted watercolor, gentle and tender --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration at floor level. A small copper-and-brass robot with one round glowing eye kneels awkwardly on a warm wooden kitchen floor, extending one imperfect metal hand toward a small orange-and-cream kitten. The kitten cautiously sniffs the robot's fingers — curious, bold, alive. The robot is stiff and uncertain but clearly trying its best. Eye-level perspective puts us right on the floor with them. Warm kitchen in soft focus behind. Watercolor style, muted earth tones, soft warm light. Style: Shaun Tan meets Oliver Jeffers. Aspect ratio 16:9.",
+        "gemini_imagen": "Children's book illustration, warm watercolor style. Floor-level view: a small copper robot kneels awkwardly on wooden kitchen floor, extending an imperfect hand. A small orange kitten cautiously sniffs the robot's metal fingers. Eye-level perspective. Warm kitchen background in soft focus. Muted earth tones, soft light. Tender first meeting between mechanical and alive. Style: Shaun Tan, Oliver Jeffers. Wide format 16:9."
+      }
+    },
+    {
+      "id": "page-03",
+      "name": "Page 3 — The Cup Falls",
+      "level": 1,
+      "sort_order": 3,
+      "sections": {
+        "Text": "One morning, Bishisheshi knocked a cup off the table.\nWater went everywhere.",
+        "Page_Notes": "The inciting incident. Dynamic action — the kitten mid-leap or just after the knock, the cup falling or just fallen, water splashing. This should feel kinetic and alive — the chaos of a real kitten. Not angry chaos, just kitten chaos."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Bishisheshi"],
+        "setting": "kitchen table"
+      },
+      "image_generation_prompt": {
+        "scene": "A cup tumbling off a wooden kitchen table, water arcing through the air in a splash. Bishisheshi the orange kitten is mid-leap on the table, paw still extended from the knock — looking surprised but not guilty. Just being a kitten. Morning light catches the water droplets. Dynamic, kinetic composition — movement and life.",
+        "midjourney": "/imagine a cup tumbling off a wooden kitchen table with water splashing through the air, an orange kitten mid-leap on the table with paw extended, looking surprised, morning light catching water droplets, dynamic kinetic composition, children's book illustration, warm muted watercolor, movement and energy --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration full of movement. A ceramic cup tumbles off a wooden kitchen table, water arcing through the air in a dynamic splash. Morning light catches the individual water droplets. An orange-and-cream kitten is on the table, paw still extended from the accidental knock — looking surprised but not guilty. Just being a kitten being a kitten. The composition is kinetic and alive — you can almost hear the splash. Warm watercolor style, muted earth tones with the water catching golden light. Style: Shaun Tan meets Oliver Jeffers. Aspect ratio 16:9.",
+        "gemini_imagen": "Children's book illustration, warm watercolor style. Dynamic action scene: a cup tumbling off a wooden kitchen table with water splashing. An orange kitten on the table, paw extended, looking surprised. Morning light catches water droplets. Kinetic, alive composition. Muted earth tones with golden light on water. Style: Shaun Tan, Oliver Jeffers. Wide format 16:9."
+      }
+    },
+    {
+      "id": "page-04",
+      "name": "Page 4 — Shiryo Complains",
+      "level": 1,
+      "sort_order": 4,
+      "sections": {
+        "Text": "Shiryo said:\n\"You always make a mess! Why do you do that?\"",
+        "Page_Notes": "The anti-pattern in action. Shiryo's posture should be closed — arms slightly raised, body leaning forward/away from the kitten. The eye-light might be flickering or red-shifted. The robot is frustrated and broadcasting it. This isn't mean — it's a machine trying to process a problem and outputting the most 'logical' response: identify the fault."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Shiryo", "Bishisheshi"],
+        "setting": "kitchen"
+      },
+      "image_generation_prompt": {
+        "scene": "Shiryo standing in the kitchen with a closed, frustrated posture — arms slightly raised, body leaning forward. The robot's eye-light flickers with an orange-ish tint (not angry red, just unsettled). A small speech-like visual element suggests the robot is speaking firmly. The spilled water is on the floor between them. Bishisheshi sits on the table looking at Shiryo. The emotional distance between them is visible in the composition — space between the two characters.",
+        "midjourney": "/imagine a small copper robot standing with closed frustrated posture, arms slightly raised, eye-light flickering orange, in a kitchen with spilled water on wooden floor, an orange kitten sitting on table looking at the robot, emotional distance visible between them, children's book illustration, warm muted watercolor, slight tension in the scene --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration showing emotional distance. A small copper robot stands in the kitchen with a closed, frustrated posture — arms slightly raised, body leaning forward. Its single round eye-light flickers with a warm orange tint (unsettled, not angry). Spilled water on the wooden floor between the robot and the table. On the table, the orange kitten sits still, looking at the robot with big eyes. There is visible space between them — the composition emphasizes the gap. Not hostile, just disconnected. Warm watercolor style, muted earth tones, the light slightly cooler in this scene. Style: Shaun Tan meets Oliver Jeffers. Aspect ratio 16:9.",
+        "gemini_imagen": "Children's book illustration, warm watercolor style. A small copper robot with closed frustrated posture in a kitchen, arms slightly raised, eye-light flickering orange. Spilled water on wooden floor. An orange kitten on the table looking at the robot. Visible emotional distance between characters. Slight tension. Muted earth tones, slightly cooler light. Style: Shaun Tan, Oliver Jeffers. Wide format 16:9."
+      }
+    },
+    {
+      "id": "page-05",
+      "name": "Page 5 — Bishisheshi Walks Away",
+      "level": 1,
+      "sort_order": 5,
+      "sections": {
+        "Text": "Bishisheshi looked at Shiryo.\nThen Bishisheshi walked away.",
+        "Page_Notes": "The consequence. This is a quiet, powerful page. The kitten simply leaves — not dramatically, just... walks away. Tail low but not tucked. The robot is left standing alone with the spilled water. This is what complaining does: it doesn't fix anything, and it pushes away the one you're trying to reach."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Shiryo", "Bishisheshi"],
+        "setting": "kitchen"
+      },
+      "image_generation_prompt": {
+        "scene": "Bishisheshi walking away from Shiryo, seen from behind — small orange kitten walking toward a doorway or another room, tail low but not tucked. Shiryo stands alone in the kitchen with the spilled water at its feet, eye-light dim. The composition emphasizes the growing distance. Quiet, slightly melancholy. The kitten is in the foreground walking away; the robot is in the middle ground, still.",
+        "midjourney": "/imagine an orange kitten walking away toward a doorway seen from behind, tail low, in a warm kitchen, a small copper robot standing alone in the background near spilled water on the floor, eye-light dim, growing distance between them, quiet melancholy, children's book illustration, warm muted watercolor --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration that is quiet and powerful. An orange kitten walks away from us toward a doorway, seen from behind — tail low but not tucked, small and dignified. Behind the kitten, in the middle ground, a small copper robot stands alone in the kitchen. Spilled water at the robot's feet. The robot's eye-light is dim. The composition emphasizes the growing distance between them — the space tells the story. Quiet, slightly melancholy, but not dramatic. Warm watercolor style, muted earth tones, soft diffused light. Style: Shaun Tan meets Oliver Jeffers. Aspect ratio 16:9.",
+        "gemini_imagen": "Children's book illustration, warm watercolor style. An orange kitten walks away toward a doorway, seen from behind, tail low. A small copper robot stands alone in the kitchen background near spilled water, eye-light dim. Growing distance between them. Quiet, melancholy mood. Muted earth tones, soft diffused light. Style: Shaun Tan, Oliver Jeffers. Wide format 16:9."
+      }
+    },
+    {
+      "id": "page-06",
+      "name": "Page 6 — Anon Asks a Question",
+      "level": 1,
+      "sort_order": 6,
+      "sections": {
+        "Text": "Anon was watching.\nAnon said: \"Shiryo, what did you want to happen?\"\n\nShiryo thought. \"I wanted Bishisheshi to be more careful.\"",
+        "Page_Notes": "Anon enters — not to lecture but to ask. Anon models the very grammar the story is teaching: they ask instead of telling. Anon is partially visible (hands, shoulder, warm presence). Shiryo is looking up at Anon. The light shifts warmer — a safe space for reflection."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Anon", "Shiryo"],
+        "setting": "kitchen"
+      },
+      "image_generation_prompt": {
+        "scene": "Anon crouching or kneeling near Shiryo — we see Anon's hands, shoulder, and side of face but not full features. Warm, safe posture. Shiryo looks up at Anon, eye-light soft. The spilled water is still visible but not the focus — the conversation is. Warmer light than the previous page — a shift toward reflection and safety. The composition is intimate, close.",
+        "midjourney": "/imagine a warm domestic scene, a parent figure crouching near a small copper robot, we see the parent's hands and shoulder but not full face, robot looking up with soft glowing eye, intimate close composition, spilled water in background, warm golden light, children's book illustration, warm muted watercolor, safe reflective mood --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration of an intimate conversation. A parent figure (Anon) crouches or kneels near a small copper robot — we see Anon's warm hands, shoulder, and the side of their face but not their full features. Their posture is open and safe. The small robot looks up at Anon, its single eye-light soft and attentive. Spilled water is visible in the background but not the focus. The light has shifted warmer — golden, safe, reflective. Close, intimate composition. Warm watercolor style, muted earth tones with golden light. Style: Shaun Tan meets Oliver Jeffers. Aspect ratio 16:9.",
+        "gemini_imagen": "Children's book illustration, warm watercolor style. Intimate scene: a parent figure crouches near a small copper robot, only hands and shoulder visible. Robot looks up with soft eye-light. Spilled water in background. Warm golden light, safe reflective mood. Close composition. Muted earth tones with golden accents. Style: Shaun Tan, Oliver Jeffers. Wide format 16:9."
+      }
+    },
+    {
+      "id": "page-07",
+      "name": "Page 7 — What If You Asked Instead?",
+      "level": 1,
+      "sort_order": 7,
+      "sections": {
+        "Text": "Anon said: \"You told Bishisheshi what was wrong.\nBut you didn't ask for what you needed.\nWhat if you asked instead?\"\n\nShiryo didn't understand yet.\nBut Shiryo wanted to try.",
+        "Page_Notes": "The pivot. Anon plants the seed. Shiryo doesn't get it immediately — and that's honest. The robot is processing, thinking. Maybe we see a visual metaphor: the robot's eye-light changing color slightly, or Shiryo looking at its own hands as if reconsidering what they're for. The mood is quiet determination."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Shiryo"],
+        "setting": "kitchen"
+      },
+      "image_generation_prompt": {
+        "scene": "Shiryo alone, looking down at its own open hands — reconsidering what they're for. The robot's eye-light is shifting to a slightly warmer, softer tone. Anon's hand is just leaving the frame (they've stepped back, given Shiryo space). The kitchen is quiet. Soft light. The mood is not understanding yet — it's willingness. Quiet determination in a small robot.",
+        "midjourney": "/imagine a small copper robot alone in a warm kitchen looking down at its own open hands, eye-light shifting to a softer warmer glow, a parent's hand just leaving the edge of frame, quiet contemplative mood, soft light, children's book illustration, warm muted watercolor, gentle determination --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration of quiet determination. A small copper robot stands alone in a warm kitchen, looking down at its own open hands — as if reconsidering what they're for. Its single eye-light is shifting to a warmer, softer tone. At the very edge of the frame, a parent's hand is just leaving — they've stepped back to give the robot space to think. The kitchen is quiet and still. Soft, warm light. The mood is not understanding — it's willingness. Warm watercolor style, muted earth tones. Style: Shaun Tan meets Oliver Jeffers. Aspect ratio 16:9.",
+        "gemini_imagen": "Children's book illustration, warm watercolor style. A small copper robot alone in a kitchen looking at its own open hands. Eye-light shifting warmer. A parent's hand just leaving the frame edge. Quiet, contemplative mood. Soft warm light. Gentle determination. Muted earth tones. Style: Shaun Tan, Oliver Jeffers. Wide format 16:9."
+      }
+    },
+    {
+      "id": "page-08",
+      "name": "Page 8 — Shiryo Asks",
+      "level": 1,
+      "sort_order": 8,
+      "sections": {
+        "Text": "The next morning, Bishisheshi jumped on the table again.\nThe cup wobbled.\n\nShiryo said:\n\"Bishisheshi, can you be gentle near the cup?\"",
+        "Page_Notes": "The new pattern in action. Same situation as Page 3 — but everything is different. Shiryo's posture is open now, leaning slightly toward the kitten instead of away. The robot's voice (suggested visually) is soft, not sharp. The cup wobbles but hasn't fallen. There's still time. The composition should echo Page 4 but warmer, more open."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Shiryo", "Bishisheshi"],
+        "setting": "kitchen table"
+      },
+      "image_generation_prompt": {
+        "scene": "Same kitchen, next morning. Bishisheshi on the table near a wobbling cup. But this time Shiryo's posture is completely different — open, leaning gently toward the kitten, one hand softly extended (not grabbing, not waving away — offering). The robot's eye-light is warm and steady. The cup wobbles but hasn't fallen. Morning light is warmer and more golden than Page 3. The composition echoes Page 4 but the emotional distance is gone — they're close.",
+        "midjourney": "/imagine a small copper robot with open welcoming posture gently reaching toward an orange kitten on a wooden kitchen table near a wobbling cup, robot's eye-light warm and steady, morning golden light, closeness and connection between them, children's book illustration, warm muted watercolor, hopeful and gentle --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration that mirrors an earlier scene but transformed. Same warm kitchen, morning light. An orange kitten is on the wooden table near a wobbling cup. But this time, the small copper robot's posture is completely different — open, leaning gently toward the kitten, one imperfect hand softly extended. Not grabbing, not pushing away. Offering. The robot's eye-light is warm and steady. The cup wobbles but hasn't fallen — there's still time. The golden morning light is warmer than before. The emotional distance from earlier is gone — robot and kitten are close. Warm watercolor style, muted earth tones, golden light. Style: Shaun Tan meets Oliver Jeffers. Aspect ratio 16:9.",
+        "gemini_imagen": "Children's book illustration, warm watercolor style. A copper robot with open gentle posture reaching softly toward an orange kitten on a kitchen table near a wobbling cup. Eye-light warm and steady. Golden morning light. Connection and closeness between characters. Echoes an earlier scene but transformed. Muted earth tones, warm golden light. Style: Shaun Tan, Oliver Jeffers. Wide format 16:9."
+      }
+    },
+    {
+      "id": "page-09",
+      "name": "Page 9 — Bishisheshi Listens",
+      "level": 1,
+      "sort_order": 9,
+      "sections": {
+        "Text": "Bishisheshi looked at Shiryo.\nBishisheshi sniffed the cup.\nThen Bishisheshi walked around it.\n\nThe cup stayed.",
+        "Page_Notes": "The response. Three beats — look, sniff, walk around. The kitten doesn't obey (cats don't obey). The kitten *chooses* to be careful. This is crucial: the pattern (asking) didn't create obedience, it created space for choice. The cup stays. Small victory. Quiet triumph."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Bishisheshi"],
+        "setting": "kitchen table"
+      },
+      "image_generation_prompt": {
+        "scene": "Three-moment sequence on one page (or the final moment): Bishisheshi carefully walking around the cup on the table. The cup is still standing — small, quiet, victorious. The kitten moves with intention now, not reckless chaos. Soft morning light on the cup. Maybe we see Shiryo's reflection in the cup's surface, or Shiryo watching from the edge of frame. The mood is gentle triumph — not dramatic, just... the cup stayed.",
+        "midjourney": "/imagine an orange kitten carefully walking around a cup on a wooden kitchen table, the cup still standing, morning light, gentle quiet triumph, kitten moving with intention, a copper robot watching from edge of frame, children's book illustration, warm muted watercolor, peaceful moment --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration of a quiet triumph. An orange kitten carefully walks around a cup on a wooden kitchen table — the cup is still standing. Morning light illuminates the small scene. The kitten moves with intention now, deliberate and aware, choosing to be careful. At the edge of the frame, we can see the small copper robot watching — its eye-light warm and steady. The mood is gentle and victorious — not dramatic. Just: the cup stayed. Warm watercolor style, muted earth tones, golden morning light highlighting the cup. Style: Shaun Tan meets Oliver Jeffers. Aspect ratio 16:9.",
+        "gemini_imagen": "Children's book illustration, warm watercolor style. An orange kitten carefully walking around a cup on a wooden kitchen table. The cup is still standing — quiet triumph. Morning light on the cup. A copper robot visible at the frame edge, watching. Gentle peaceful mood. Muted earth tones, golden light on the cup. Style: Shaun Tan, Oliver Jeffers. Wide format 16:9."
+      }
+    },
+    {
+      "id": "page-10",
+      "name": "Page 10 — Learning Too",
+      "level": 1,
+      "sort_order": 10,
+      "sections": {
+        "Text": "Shiryo's light blinked.\nNot because the cup was safe.\nBut because Bishisheshi listened.\n\nAnon smiled.\n\nNot because they knew the answer.\nBut because they were learning too.",
+        "Page_Notes": "The closing. This is the emotional heart. Shiryo's light blinks — joy, recognition, connection. But the text redirects: it's not about the cup, it's about being heard. Then Anon — watching from a distance, smiling. And the final line breaks the expected frame: Anon didn't have this figured out. Anon is learning alongside the robot. This is the recursive part — the parent learns from watching the child (robot) learn. Wide shot of the warm kitchen: robot, kitten (now closer together), Anon in the background by the window. Golden light. Everything in its place, not because it's perfect, but because it's alive."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Anon", "Shiryo", "Bishisheshi"],
+        "setting": "kitchen"
+      },
+      "image_generation_prompt": {
+        "scene": "Wide shot of the warm kitchen bathed in golden morning light. Shiryo and Bishisheshi are close together near the table — the robot's eye-light is glowing its warmest, brightest. The kitten is near the robot's feet, relaxed. In the background, by the sunny window with plants, Anon leans against the counter or windowsill, partially visible, smiling softly. The whole scene breathes — warm, alive, imperfect, connected. This is home. This is learning.",
+        "midjourney": "/imagine wide shot of a warm kitchen in golden morning light, a small copper robot and an orange kitten close together near a wooden table, robot's eye-light glowing warmly, kitten relaxed nearby, a parent figure leaning against the window in the background partially visible smiling softly, plants on windowsill, everything alive and connected, children's book illustration, warm muted watercolor, Shaun Tan meets Oliver Jeffers meets Studio Ghibli --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration — the final page, wide and warm. A kitchen bathed in golden morning light. Near the wooden table, a small copper robot and an orange kitten are close together — the robot's single eye-light glows its warmest, brightest. The kitten sits relaxed near the robot's feet. In the background, by the window with green plants on the sill, a parent figure (Anon) leans against the counter — partially visible, face soft, a gentle smile. The whole scene breathes with warmth, connection, and life. Not perfect. Just alive. Just learning. Warm watercolor style, muted earth tones, rich golden light filling the room. Style: Shaun Tan meets Oliver Jeffers meets Studio Ghibli domestic warmth. Aspect ratio 16:9.",
+        "gemini_imagen": "Children's book illustration, warm watercolor style. Wide shot: warm kitchen in golden morning light. A copper robot and orange kitten close together near a table, robot's eye-light glowing warmly. Kitten relaxed. A parent figure partially visible by the window in background, smiling softly. Plants on windowsill. Warm, alive, connected feeling. Muted earth tones, rich golden light. Style: Shaun Tan, Oliver Jeffers, Studio Ghibli. Wide format 16:9."
+      }
+    }
+  ],
+
+  "editors": [
+    {
+      "user_id": "playful-process",
+      "timestamp": "2026-02-16T00:00:00.000Z",
+      "action": "created",
+      "creator_name": "PlayfulProcess"
+    }
+  ],
+  "updated_at": "2026-02-16T00:00:00.000Z",
+  "created_at": "2026-02-16T00:00:00.000Z"
+}
