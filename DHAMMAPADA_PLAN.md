@@ -13,7 +13,7 @@ Each of the 26 chapters becomes a batch. Each verse becomes a grammar item.
 | # | Chapter | Pali Name | Verses | Items | Status |
 |---|---------|-----------|--------|-------|--------|
 | 1 | The Twin Verses | Yamakavagga | 1–20 | 20 | **Done** |
-| 2 | On Earnestness | Appamādavagga | 21–32 | 12 | Pending |
+| 2 | On Earnestness | Appamādavagga | 21–32 | 12 | **Done** |
 | 3 | Thought | Cittavagga | 33–43 | 11 | Pending |
 | 4 | Flowers | Pupphavagga | 44–59 | 16 | Pending |
 | 5 | The Fool | Bālavagga | 60–75 | 16 | Pending |
