@@ -14,30 +14,30 @@ Each of the 26 chapters becomes a batch. Each verse becomes a grammar item.
 |---|---------|-----------|--------|-------|--------|
 | 1 | The Twin Verses | Yamakavagga | 1–20 | 20 | **Done** |
 | 2 | On Earnestness | Appamādavagga | 21–32 | 12 | **Done** |
-| 3 | Thought | Cittavagga | 33–43 | 11 | Pending |
-| 4 | Flowers | Pupphavagga | 44–59 | 16 | Pending |
-| 5 | The Fool | Bālavagga | 60–75 | 16 | Pending |
-| 6 | The Wise Man | Paṇḍitavagga | 76–89 | 14 | Pending |
-| 7 | The Venerable (Arhat) | Arahantavagga | 90–99 | 10 | Pending |
-| 8 | The Thousands | Sahassavagga | 100–115 | 16 | Pending |
-| 9 | Evil | Pāpavagga | 116–128 | 13 | Pending |
-| 10 | Punishment | Daṇḍavagga | 129–145 | 17 | Pending |
-| 11 | Old Age | Jarāvagga | 146–156 | 11 | Pending |
-| 12 | Self | Attavagga | 157–166 | 10 | Pending |
-| 13 | The World | Lokavagga | 167–178 | 12 | Pending |
-| 14 | The Buddha | Buddhavagga | 179–196 | 18 | Pending |
-| 15 | Happiness | Sukhavagga | 197–208 | 12 | Pending |
-| 16 | Pleasure | Piyavagga | 209–220 | 12 | Pending |
-| 17 | Anger | Kodhavagga | 221–234 | 14 | Pending |
-| 18 | Impurity | Malavagga | 235–255 | 21 | Pending |
-| 19 | The Just | Dhammaṭṭhavagga | 256–272 | 17 | Pending |
-| 20 | The Way | Maggavagga | 273–289 | 17 | Pending |
-| 21 | Miscellaneous | Pakiṇṇakavagga | 290–305 | 16 | Pending |
-| 22 | The Downward Course | Nirayavagga | 306–319 | 14 | Pending |
-| 23 | The Elephant | Nāgavagga | 320–333 | 14 | Pending |
-| 24 | Thirst | Taṇhāvagga | 334–359 | 26 | Pending |
-| 25 | The Bhikshu | Bhikkhuvagga | 360–382 | 23 | Pending |
-| 26 | The Brahmana | Brāhmaṇavagga | 383–423 | 41 | Pending |
+| 3 | Thought | Cittavagga | 33–43 | 11 | **Done** |
+| 4 | Flowers | Pupphavagga | 44–59 | 15 | **Done** |
+| 5 | The Fool | Bālavagga | 60–75 | 16 | **Done** |
+| 6 | The Wise Man | Paṇḍitavagga | 76–89 | 13 | **Done** |
+| 7 | The Venerable (Arhat) | Arahantavagga | 90–99 | 10 | **Done** |
+| 8 | The Thousands | Sahassavagga | 100–115 | 15 | **Done** |
+| 9 | Evil | Pāpavagga | 116–128 | 13 | **Done** |
+| 10 | Punishment | Daṇḍavagga | 129–145 | 17 | **Done** |
+| 11 | Old Age | Jarāvagga | 146–156 | 10 | **Done** |
+| 12 | Self | Attavagga | 157–166 | 10 | **Done** |
+| 13 | The World | Lokavagga | 167–178 | 12 | **Done** |
+| 14 | The Buddha | Buddhavagga | 179–196 | 17 | **Done** |
+| 15 | Happiness | Sukhavagga | 197–208 | 12 | In Progress |
+| 16 | Pleasure | Piyavagga | 209–220 | 12 | In Progress |
+| 17 | Anger | Kodhavagga | 221–234 | 14 | In Progress |
+| 18 | Impurity | Malavagga | 235–255 | 21 | In Progress |
+| 19 | The Just | Dhammaṭṭhavagga | 256–272 | 17 | In Progress |
+| 20 | The Way | Maggavagga | 273–289 | 17 | In Progress |
+| 21 | Miscellaneous | Pakiṇṇakavagga | 290–305 | 16 | In Progress |
+| 22 | The Downward Course | Nirayavagga | 306–319 | 14 | In Progress |
+| 23 | The Elephant | Nāgavagga | 320–333 | 14 | In Progress |
+| 24 | Thirst | Taṇhāvagga | 334–359 | 26 | In Progress |
+| 25 | The Bhikshu | Bhikkhuvagga | 360–382 | 23 | In Progress |
+| 26 | The Brahmana | Brāhmaṇavagga | 383–423 | 41 | In Progress |
 
 ## Item Structure
 
