@@ -17,33 +17,38 @@ Welcome! This repository is a commons for interpretive schemas used in divinatio
    - Include metadata: `source`, `tradition`, `contributor`
    - Add `description` fields to make schemas accessible
 
-3. **Example Schema Structure**
+3. **Use the Unified Items Format**
+
+   All grammars use the unified `items[]` array with flexible `sections: Record<string, string>`. This is the current standard — the editor always saves in this format.
+
    ```json
    {
-     "id": "major_arcana_0",
+     "id": "major-00-fool",
      "name": "The Fool",
-     "number": 0,
-     "tradition": "Rider-Waite-Smith",
-     "keywords": ["new beginnings", "innocence", "spontaneity"],
-     "interpretation": {
-       "upright": "...",
-       "reversed": "..."
+     "sort_order": 0,
+     "category": "major_arcana",
+     "sections": {
+       "Interpretation": "The beginning of all journeys...",
+       "Reversed": "Fear of the unknown...",
+       "Summary": "Innocence, new beginnings"
      },
-     "source": "community",
-     "contributors": ["username"]
+     "keywords": ["new beginnings", "innocence", "spontaneity"],
+     "image_url": "https://upload.wikimedia.org/..."
    }
    ```
 
+   Section keys are flexible — use whatever makes sense for your content (`Story`, `Light`, `Shadow`, `For Young Readers`, `Karakatvas`, etc.). The viewer displays all sections.
+
 ### Grammar Type Must Match Content
 
-Set `grammar_type` to match what your grammar actually contains:
+Set `grammar_type` to match what your grammar actually contains. All types use the same unified `items[]` format:
 
 - `"tarot"` — Must have card-style items with Interpretation/Reversed sections
 - `"iching"` — Must have 64 hexagrams with line data (use the `lines` property)
 - `"astrology"` — Must have items with planet/sign/house categories
-- `"custom"` — For everything else (sequences, poetry, courses, etc.)
+- `"custom"` — Fully supported for everything else (chapter books, sequences, poetry, courses, folk tales, etc.)
 
-Mismatched types (e.g., `"iching"` with only 10 items) will cause broken rendering in Flow.
+Mismatched types (e.g., `"iching"` with only 10 items) will cause broken rendering in Flow. Legacy `interpretations[]` arrays still work but `items[]` is the way forward.
 
 ### Adding Templates
 

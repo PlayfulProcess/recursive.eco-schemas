@@ -30,9 +30,9 @@ creators/               # UUID-based user folders
 sources/                # Public domain source materials & attribution
 ```
 
-## Grammar JSON Format
+## Grammar JSON Format — The Unified Items Standard
 
-Every grammar is a JSON file with this structure:
+Every grammar is a JSON file using the **unified items format**. This is the current standard — the editor always saves with an `items[]` array containing flexible `sections: Record<string, string>`.
 
 ```json
 {
@@ -54,18 +54,36 @@ Every grammar is a JSON file with this structure:
 }
 ```
 
+### Unified Format vs Legacy Format
+
+Both formats work — the system handles both automatically.
+
+**Unified items format (current standard):** The editor always saves with `items[]` array, using flexible `sections: Record<string, string>`. This is what all new grammars use. The `grammar_type` can be `'custom'`, `'astrology'`, `'tarot'`, `'iching'`, etc.
+
+**Legacy `interpretations[]` arrays still work.** The loading code (e.g., in AstrologyOracle) checks three fields in order:
+
+1. `_unified_items` (old field name from early unified migration)
+2. `items` (current standard)
+3. `interpretations` (legacy fallback)
+
+If it finds unified items, it converts them on-the-fly via `convertUnifiedToInterpretations()` which maps flexible sections (`Story`, `Light`, `Shadow`, `Core Meaning`, `Interpretation`, `Mantra`, etc.) into the fixed interpretation fields. It also handles Vedic/Jyotish tradition names (`graha`→planet, `rashi`→sign, `bhava`→house) via `metadata.english_name`.
+
+**Bottom line:** You don't need to worry about format — unified is the way forward, `custom` grammar_type is fully supported, and the astrology viewer will convert either format when looking up interpretations.
+
 ### Grammar Type
 
-`grammar_type` determines how Flow renders your grammar when someone uses it for a reading.
+`grammar_type` determines how Flow renders your grammar when someone uses it for a reading. All types use the same unified `items[]` format.
 
 | Value | Flow renders it as | Notes |
 |-------|-------------------|-------|
 | `"tarot"` | Card oracle — draw cards, get interpretations | Expects card-style items |
 | `"iching"` | Hexagram oracle — coin toss, changing lines | Expects 64 hexagrams with line data |
 | `"astrology"` | Birth chart integration | Expects planets, signs, houses |
-| `"custom"` | Sequence/general viewer | No oracle integration, browse only |
+| `"custom"` | Sequence/general viewer | Fully supported — browse, read, explore |
 
 If you set `grammar_type: "iching"` but your grammar doesn't have 64 hexagrams with line data, the I Ching oracle won't work. Match the type to your content.
+
+The `custom` type is not a second-class citizen — it's fully supported for chapter books, poetry collections, video sequences, folk tales, courses, and anything else that doesn't need oracle integration.
 
 ### Items
 
@@ -108,9 +126,11 @@ Each item in the `items` array represents one element — a card, hexagram, plan
 - `image_url` — Direct URL to image (Wikimedia Commons works best)
 - `metadata` — Object for structured data (numbers, booleans, short strings)
 
-### Sections — What Flow Actually Reads
+### Sections — Flexible by Design
 
-Sections are flexible — you can add any key you want and the viewer will display it. But Flow's oracle components look for **specific keys** to populate dedicated UI elements.
+Sections are `Record<string, string>` — you can add any key you want and the viewer will display it. This is the heart of the unified format: your section names are your own. A tarot grammar might use `Interpretation` and `Reversed`, while a chapter book uses `Story` and `For Young Readers`, and a Vedic astrology grammar uses `Karakatvas` and `Mantra`.
+
+Flow's oracle components look for **specific keys** to populate dedicated UI elements, but any section key you add will be displayed in the detail view.
 
 **Tarot grammars:**
 
@@ -256,20 +276,27 @@ All levels are displayed in the grammar viewer with level badges (L2, L3). Users
 
 ### Vedic Astrology Grammars
 
-Include `english_name` in metadata for cross-tradition lookup:
+Vedic/Jyotish grammars should use the unified `items[]` format with `grammar_type: 'astrology'` (or `'custom'`). The `convertUnifiedToInterpretations()` function handles mapping Vedic categories automatically.
+
+Each item needs a proper `category` (e.g., `'graha'`, `'rashi'`, `'bhava'`) and optionally `metadata.english_name` for Western chart matching:
 
 ```json
 {
   "id": "surya",
   "name": "सूर्य (Surya)",
   "category": "graha",
+  "sections": {
+    "Interpretation": "The soul indicator, the king of the grahas...",
+    "Karakatvas": "Soul, father, authority, vitality, government...",
+    "Mantra": "Om Suryaya Namah"
+  },
   "metadata": {
     "english_name": "Sun"
   }
 }
 ```
 
-This lets the astrology viewer match Vedic items to Western chart positions.
+The astrology viewer matches Vedic items to Western chart positions via `metadata.english_name`, so `"Sun"` in metadata connects `surya` to the Sun position in a birth chart.
 
 ## Creating Grammars with AI
 
