@@ -1,0 +1,186 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "url": "https://lifeisprocess.substack.com/",
+        "date": "2026-02-27",
+        "note": "Original creator"
+      }
+    ]
+  },
+  "name": "Greek Mythology & Astrology",
+  "description": "The gods and heroes of Greek mythology as a living family tree and astrology source. Planet-gods use English names for chart compatibility. Zodiac signs are the mythological characters placed in the sky. Myths weave gods, heroes, and signs together through composite_of connections, drawing a constellation map of the ancient world.",
+  "grammar_type": "astrology",
+  "creator_name": "PlayfulProcess",
+  "creator_link": "https://lifeisprocess.substack.com/",
+  "tags": ["mythology", "astrology", "greek", "roman", "family-tree", "zodiac", "gods", "heroes"],
+  "cover_image_url": "",
+  "items": [
+    {
+      "id": "chaos",
+      "name": "Chaos",
+      "level": 1,
+      "category": "primordial",
+      "sort_order": 0,
+      "sections": {
+        "Profile": "The first of all things — the yawning void from which everything emerged. Not a god but a state: the formless, infinite gap that existed before creation. From Chaos came Gaia (Earth), Tartarus (the Abyss), Erebus (Darkness), Nyx (Night), and Eros (Desire).",
+        "Domains & Epithets": "The Void, the Gap, the Primeval Emptiness. In Hesiod's Theogony, Chaos is the first entity — 'first of all, Chaos came to be.'",
+        "Character": "Chaos is not a personality but a principle — the potential that precedes all form. It is the blank canvas before the first stroke, the silence before the first sound."
+      },
+      "keywords": ["Khaos", "void", "emptiness", "beginning", "origin", "Hesiod", "Theogony"],
+      "metadata": {
+        "greek_name": "Khaos",
+        "generation": "primordial",
+        "source": "Hesiod, Theogony"
+      }
+    },
+    {
+      "id": "gaia",
+      "name": "Gaia",
+      "level": 1,
+      "category": "primordial",
+      "sort_order": 1,
+      "sections": {
+        "Profile": "Mother Earth — the broad-bosomed foundation upon which all life stands. Gaia emerged after Chaos and became the mother of everything: sky, sea, mountains, and the gods themselves. She bore Uranus (Sky) from herself, then mated with him to produce the Titans, Cyclopes, and Hundred-Handed Ones.",
+        "Family": "Children by herself: Uranus (Sky), Pontus (Sea), Ourea (Mountains). Children with Uranus: the twelve Titans, three Cyclopes, three Hundred-Handed Ones. Later: Typhon (with Tartarus).",
+        "Domains & Epithets": "Earth, fertility, motherhood, prophecy. 'Broad-Bosomed Gaia', 'Mother of All'. The Oracle at Delphi was originally hers before Apollo claimed it.",
+        "Character": "Nurturing yet fierce. Gaia loves her children unconditionally — but when Uranus imprisoned the Cyclopes and Hundred-Handed Ones in her body, she armed Saturn with a sickle and plotted his overthrow. She is the mother who will destroy a tyrant to protect her young."
+      },
+      "keywords": ["Ge", "Earth", "mother", "fertility", "Titans", "prophecy", "Delphi"],
+      "metadata": {
+        "greek_name": "Gaia",
+        "roman_name": "Terra",
+        "generation": "primordial",
+        "element": "earth",
+        "source": "Hesiod, Theogony"
+      }
+    },
+    {
+      "id": "uranus",
+      "name": "Uranus",
+      "symbol": "♅",
+      "level": 1,
+      "category": "planet",
+      "sort_order": 2,
+      "sections": {
+        "Profile": "The starry sky itself — Gaia's first-born and first consort. Uranus was the dome of heaven that covered Earth each night. He fathered the Titans, Cyclopes, and Hundred-Handed Ones, but feared and hated his monstrous children, imprisoning them back inside Gaia's body.",
+        "Family": "Mother/consort: Gaia. Children with Gaia: twelve Titans (Saturn, Rhea, Oceanus, Tethys, Hyperion, Theia, Coeus, Phoebe, Mnemosyne, Themis, Iapetus, Crius), three Cyclopes, three Hundred-Handed Ones.",
+        "Domains & Epithets": "The Sky, the starry heavens. 'Starry Uranus', 'Father Sky'. His castration by Saturn produced Aphrodite (Venus) from the sea foam where his severed parts fell.",
+        "Character": "A tyrant-father who feared being surpassed by his own offspring. His downfall was inevitable — the archetype of the ruler who creates the very rebellion he tries to prevent."
+      },
+      "keywords": ["Ouranos", "sky", "heaven", "stars", "castration", "father", "rebellion"],
+      "metadata": {
+        "greek_name": "Ouranos",
+        "roman_name": "Caelus",
+        "generation": "primordial",
+        "element": "air",
+        "source": "Hesiod, Theogony",
+        "discovery": "1781 by William Herschel"
+      }
+    },
+    {
+      "id": "pontus",
+      "name": "Pontus",
+      "level": 1,
+      "category": "primordial",
+      "sort_order": 3,
+      "sections": {
+        "Profile": "The primordial sea — born from Gaia without a father, Pontus is the personification of the deep ocean. He is older than Neptune, older than Oceanus. He is the raw, untamed sea that existed before the gods gave it order.",
+        "Family": "Mother: Gaia (parthenogenesis). Children with Gaia: Nereus (Old Man of the Sea), Thaumas, Phorcys, Ceto, Eurybia. Through his descendants came the sea nymphs, sea monsters, and many creatures of myth.",
+        "Domains & Epithets": "The primordial sea, the deep. Father of Nereus and grandfather of the Nereids (sea nymphs including Thetis, mother of Achilles).",
+        "Character": "Ancient and elemental — not a personality so much as a force. Pontus represents the ocean before it was charted, the abyss before it was named."
+      },
+      "keywords": ["sea", "ocean", "deep", "Nereus", "primordial-sea"],
+      "metadata": {
+        "greek_name": "Pontos",
+        "generation": "primordial",
+        "element": "water",
+        "source": "Hesiod, Theogony"
+      }
+    },
+    {
+      "id": "tartarus",
+      "name": "Tartarus",
+      "level": 1,
+      "category": "primordial",
+      "sort_order": 4,
+      "sections": {
+        "Profile": "The deepest abyss — as far below the earth as the sky is above it. Tartarus is both a primordial being and a place: the pit beneath the underworld where the defeated Titans were imprisoned after the Titanomachy, and where the worst sinners (Sisyphus, Tantalus) endure eternal punishment.",
+        "Family": "Children with Gaia: Typhon (the most fearsome monster in all of Greek mythology). Some traditions also credit him as father of Echidna.",
+        "Domains & Epithets": "The Abyss, the Pit, the prison of the Titans. Hesiod says a bronze anvil falling from heaven would fall nine days and nine nights before reaching earth — and nine more before reaching Tartarus.",
+        "Character": "Tartarus is both warden and prison. He is the consequence that awaits those who defy the cosmic order — the place where even immortals can be made to suffer."
+      },
+      "keywords": ["abyss", "pit", "underworld", "prison", "Titans", "Typhon", "punishment"],
+      "metadata": {
+        "greek_name": "Tartaros",
+        "generation": "primordial",
+        "source": "Hesiod, Theogony"
+      }
+    },
+    {
+      "id": "erebus",
+      "name": "Erebus",
+      "level": 1,
+      "category": "primordial",
+      "sort_order": 5,
+      "sections": {
+        "Profile": "Primordial Darkness — the deep shadow that fills every crack and cavern. Erebus emerged from Chaos and mated with his sister Nyx (Night) to produce Aether (Brightness) and Hemera (Day). The paradox: from absolute darkness came light.",
+        "Family": "Born from Chaos. Consort: Nyx (Night). Children: Aether (Upper Air/Light), Hemera (Day).",
+        "Domains & Epithets": "Darkness, shadow, the space between worlds. Also the name for the region of the underworld through which the dead pass immediately after dying.",
+        "Character": "Silent and enveloping. Erebus is the darkness that is not evil but simply the absence of light — the necessary precondition for light to have meaning."
+      },
+      "keywords": ["darkness", "shadow", "Nyx", "Aether", "Hemera", "underworld"],
+      "metadata": {
+        "greek_name": "Erebos",
+        "generation": "primordial",
+        "element": "darkness",
+        "source": "Hesiod, Theogony"
+      }
+    },
+    {
+      "id": "nyx",
+      "name": "Nyx",
+      "level": 1,
+      "category": "primordial",
+      "sort_order": 6,
+      "sections": {
+        "Profile": "Primordial Night — one of the most powerful forces in the cosmos, feared even by Zeus himself. Nyx emerged from Chaos and brought forth a vast brood of abstract forces: Death, Sleep, Dreams, Fate, Retribution, Misery, and many more. She drives her chariot of darkness across the sky each evening.",
+        "Family": "Born from Chaos. Consort: Erebus (Darkness). Children alone: Thanatos (Death), Hypnos (Sleep), the Oneiroi (Dreams), the Moirai (Fates), Nemesis (Retribution), Eris (Strife), the Keres, the Hesperides, and many others.",
+        "Domains & Epithets": "Night, darkness, mystery. Homer records that even Zeus dared not displease Nyx when she sheltered Hypnos from his wrath — the king of gods feared the queen of night.",
+        "Character": "Majestic, inescapable, and sovereign. Nyx rules a domain older than the Olympians. She represents the mysteries that even the gods cannot master — death, fate, dreams, and the passage of time."
+      },
+      "keywords": ["Night", "darkness", "Thanatos", "Hypnos", "Moirai", "Fates", "Dreams", "feared-by-Zeus"],
+      "metadata": {
+        "greek_name": "Nyx",
+        "roman_name": "Nox",
+        "generation": "primordial",
+        "element": "darkness",
+        "source": "Hesiod, Theogony; Homer, Iliad"
+      }
+    },
+    {
+      "id": "eros-primordial",
+      "name": "Eros",
+      "level": 1,
+      "category": "primordial",
+      "sort_order": 7,
+      "sections": {
+        "Profile": "Primordial Desire — the cosmic force that draws all things together. This is not Cupid the cherub with arrows, but the fundamental attractive principle that existed from the beginning. Without Eros, Gaia and Uranus would never have joined; the Titans would never have been born. He is the engine of creation itself.",
+        "Family": "Emerged from Chaos (in Hesiod). In later traditions, Eros/Cupid is the son of Venus and Mars — a different figure entirely. This primordial Eros precedes all the gods.",
+        "Domains & Epithets": "Desire, attraction, the binding force of creation. 'Fairest among the immortal gods', 'limb-relaxer' (Hesiod). He 'overcomes the mind and wise counsel of all gods and all men.'",
+        "Character": "Not a personality but a cosmic law — the force that makes union possible. Every marriage of gods, every coupling that produces divine offspring, is Eros at work. He is gravity for souls."
+      },
+      "keywords": ["desire", "love", "attraction", "creation", "union", "Hesiod", "cosmic-force"],
+      "metadata": {
+        "greek_name": "Eros",
+        "generation": "primordial",
+        "note": "Distinct from Cupid (son of Venus and Mars). This is the primordial cosmic force.",
+        "source": "Hesiod, Theogony"
+      }
+    }
+  ]
+}
