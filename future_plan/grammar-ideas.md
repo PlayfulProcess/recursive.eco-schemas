@@ -1,5 +1,7 @@
 # Grammar Ideas & Future Capabilities
 
+> **Active build plans**: See [`greek-mythology-plan.md`](greek-mythology-plan.md) for the step-by-step execution plan for the Greek Mythology grammars.
+
 ## 1. Multi-Level Scene Breakdown (Implemented: Alice in Wonderland)
 
 ### What We Did
