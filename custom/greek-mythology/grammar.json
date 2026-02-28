@@ -1575,8 +1575,8 @@
       }
     },
     {
-      "id": "heracles",
-      "name": "Heracles",
+      "id": "hercules",
+      "name": "Hercules",
       "level": 5,
       "category": "hero",
       "sort_order": 45,
@@ -1678,8 +1678,8 @@
       }
     },
     {
-      "id": "odysseus",
-      "name": "Odysseus",
+      "id": "ulysses",
+      "name": "Ulysses",
       "level": 5,
       "category": "hero",
       "sort_order": 48,
@@ -3088,6 +3088,178 @@
         "dissolution"
       ],
       "sort_order": 95
+    },
+    {
+      "id": "epimetheus",
+      "name": "Epimetheus",
+      "level": 3,
+      "category": "titan",
+      "sort_order": 96,
+      "composite_of": [
+        "iapetus"
+      ],
+      "sections": {
+        "Profile": "The Titan whose name means 'Afterthought' — brother of Prometheus ('Forethought') and his perfect opposite. Where Prometheus looked ahead and planned, Epimetheus acted first and regretted later. When the gods created animals and humans, Epimetheus was tasked with distributing gifts — strength, speed, fur, wings. He gave everything away to the animals and left humanity naked and defenseless, forcing Prometheus to steal fire to compensate.",
+        "Family": "Father: Iapetus. Brother: Prometheus. Wife: Pandora.",
+        "Domains & Epithets": "'Afterthought', 'Hindsight'. The one who acts before thinking.",
+        "Character": "Not malicious but fatally incautious. Prometheus warned him never to accept gifts from Jupiter, but when Pandora arrived — beautiful, alluring, bearing a sealed jar — Epimetheus could not resist. He is the archetype of the person who knows the lesson but learns it too late."
+      },
+      "keywords": [
+        "Afterthought",
+        "Pandora",
+        "careless",
+        "brother",
+        "gifts",
+        "hindsight"
+      ],
+      "metadata": {
+        "greek_name": "Epimetheus",
+        "generation": "titan-child",
+        "source": "Hesiod, Works and Days"
+      }
+    },
+    {
+      "id": "chiron",
+      "name": "Chiron",
+      "level": 3,
+      "category": "titan",
+      "sort_order": 97,
+      "composite_of": [
+        "saturn"
+      ],
+      "sections": {
+        "Profile": "The wisest of all beings — a centaur born of Saturn in horse-form and the nymph Philyra. Unlike the savage centaurs descended from Ixion, Chiron was gentle, learned, and immortal. From his cave on Mount Pelion he taught music, medicine, hunting, and ethics to the greatest heroes of Greece: Achilles, Jason, Asclepius, Hercules, and Perseus.",
+        "Family": "Father: Saturn (in horse form). Mother: Philyra. Notable students: Achilles, Jason, Hercules, Asclepius.",
+        "Domains & Epithets": "Healing, music, prophecy, archery, mentorship. 'The Wise Centaur', 'The Wounded Healer'. His wound from Hercules' poisoned arrow could not be healed despite his mastery of medicine.",
+        "Character": "The archetype of the teacher who sacrifices himself for his students. Chiron surrendered his immortality to free Prometheus from his chains, choosing a meaningful death over eternal suffering. Jupiter placed him in the sky as Sagittarius."
+      },
+      "keywords": [
+        "centaur",
+        "teacher",
+        "healer",
+        "Pelion",
+        "wounded healer",
+        "Philyra",
+        "mentor"
+      ],
+      "metadata": {
+        "greek_name": "Kheiron",
+        "generation": "titan-child",
+        "element": "fire",
+        "source": "Pindar; Apollodorus"
+      }
+    },
+    {
+      "id": "pan",
+      "name": "Pan",
+      "level": 4,
+      "category": "god",
+      "sort_order": 98,
+      "composite_of": [
+        "mercury"
+      ],
+      "sections": {
+        "Profile": "God of the wild, shepherds, flocks, and rustic music — half man, half goat, with horns, hooves, and a shaggy pelt. Son of Mercury, Pan was born so strange-looking that his nurse fled in terror. But Mercury, delighted with his odd son, wrapped him in a hare skin and carried him to Olympus, where the gods laughed with joy and named him Pan ('All') because he delighted them all.",
+        "Family": "Father: Mercury. Pan's homeland: Arcadia, the wild heart of Greece.",
+        "Domains & Epithets": "The wild, shepherds, flocks, fertility, music, woodland. Inventor of the pan-pipes (syrinx). The source of 'panic' — his shout could cause terror in armies and travelers.",
+        "Character": "Playful, lustful, musical, and frightening. Pan chased nymphs, played his pipes in lonely glades, and slept at noon — disturbing him at that hour caused panic. The most earthy of the gods, he represents nature untamed and unashamed."
+      },
+      "keywords": [
+        "goat-god",
+        "Arcadia",
+        "pipes",
+        "syrinx",
+        "panic",
+        "shepherd",
+        "wild"
+      ],
+      "metadata": {
+        "greek_name": "Pan",
+        "generation": "second-gen-olympian",
+        "source": "Homeric Hymn to Pan"
+      }
+    },
+    {
+      "id": "castor",
+      "name": "Castor",
+      "level": 5,
+      "category": "hero",
+      "sort_order": 99,
+      "composite_of": [
+        "jupiter"
+      ],
+      "sections": {
+        "Profile": "The mortal twin — horseman, warrior, and inseparable companion of his divine brother Pollux. Son of Jupiter (who visited Leda as a swan) and the mortal Tyndareus on the same night, Castor was born from one egg, Pollux from another. Despite being mortal, Castor matched his immortal brother in courage and surpassed him in horsemanship.",
+        "Family": "Father: Tyndareus (mortal) / Jupiter (divine). Mother: Leda. Twin: Pollux. Sisters: Helen, Clytemnestra.",
+        "Domains & Epithets": "Horsemanship, taming wild horses. One of the Dioscuri ('sons of Jupiter'). Sailed with the Argonauts.",
+        "Character": "Brave, loyal, and the perfect complement to his brother. When Castor was killed in battle, Pollux chose to share his immortality rather than live without him. They shine together as Gemini — mortality and divinity side by side."
+      },
+      "keywords": [
+        "Dioscuri",
+        "twin",
+        "horseman",
+        "Leda",
+        "mortal",
+        "Argonaut"
+      ],
+      "metadata": {
+        "greek_name": "Kastor",
+        "generation": "demigod"
+      }
+    },
+    {
+      "id": "pollux",
+      "name": "Pollux",
+      "level": 5,
+      "category": "hero",
+      "sort_order": 100,
+      "composite_of": [
+        "jupiter"
+      ],
+      "sections": {
+        "Profile": "The immortal twin — boxer, fighter, and the brother who chose death over separation. Son of Jupiter (as a swan) and Leda, Pollux was divine where Castor was mortal. The greatest boxer in the ancient world, he fought with divine strength but gentle spirit.",
+        "Family": "Father: Jupiter. Mother: Leda. Twin: Castor. Sisters: Helen, Clytemnestra.",
+        "Domains & Epithets": "Boxing, combat. One of the Dioscuri. Sailed with the Argonauts. Patron of sailors — the twins' stars were seen as a good omen at sea.",
+        "Character": "When Castor was slain, Pollux begged Jupiter to let him die rather than live alone as an immortal. Jupiter offered a choice: eternal life on Olympus, or sharing immortality with his brother — each living on alternate days. Pollux chose to share. Love stronger than immortality."
+      },
+      "keywords": [
+        "Dioscuri",
+        "twin",
+        "boxer",
+        "Leda",
+        "immortal",
+        "Argonaut"
+      ],
+      "metadata": {
+        "greek_name": "Polydeukes",
+        "generation": "demigod"
+      }
+    },
+    {
+      "id": "ganymede",
+      "name": "Ganymede",
+      "level": 5,
+      "category": "hero",
+      "sort_order": 101,
+      "composite_of": [],
+      "sections": {
+        "Profile": "The most beautiful mortal who ever lived — a Trojan prince carried to Olympus by Jupiter in the form of an eagle. Ganymede became the cup-bearer of the gods, pouring nectar at the divine table, replacing Hebe (Juno's daughter) in the role. His elevation from mortal shepherd to immortal servant of heaven represents the human soul lifted to serve the divine.",
+        "Family": "Father: Tros, founder of Troy. Abductor/patron: Jupiter.",
+        "Domains & Epithets": "Cup-bearer of the gods. The most beautiful mortal. Associated with the eagle and the water-urn.",
+        "Character": "Youthful, beautiful, and passive in the myths — chosen for what he is rather than what he does. Ganymede is the one who serves rather than commands, who pours rather than drinks. Placed in the sky as Aquarius, he eternally pours the waters of life from heaven to earth."
+      },
+      "keywords": [
+        "cup-bearer",
+        "Troy",
+        "eagle",
+        "beauty",
+        "nectar",
+        "Aquarius"
+      ],
+      "metadata": {
+        "greek_name": "Ganymedes",
+        "generation": "mortal"
+      }
     }
   ]
 }
