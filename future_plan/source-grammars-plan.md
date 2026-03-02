@@ -55,16 +55,15 @@
 - 52 out of 53 sections are completely empty arrays
 - The "Addenda" section has a dict with 3 empty volumes
 
-### Strategy
-- **STRATEGY WILL NOT WORK** as planned. There is not enough source text to build a chapter-book grammar. The source file is essentially a skeleton/schema with section names but no content.
-- **Fallback options**:
-  - (a) Build a grammar from just the 7 Bereshit passages + the 53 section names as L1 placeholders
-  - (b) Use the section names as L1 items and write brief descriptions of each Torah portion's Kabbalistic themes
-  - (c) Skip Zohar entirely and note it needs a better source
-  - (d) Find the actual text content online and supplement
+### Strategy — SKIPPED
+- **Source is too empty to build a grammar** — only 7 passages out of 53 sections.
+- **Decision**: Skip Zohar for now. Return to it when a complete source text is available.
 
-### Decision needed
-- Flag to user that source is mostly empty. Recommend option (b): use the 53 parashah names as L1 items with Kabbalistic context written in, and group them by the 5 Books of Moses as L2 composites. This would produce ~58 items.
+### Source needed
+- The Sefaria Zohar in English: https://www.sefaria.org/Zohar — the full Pritzker edition translation
+- Alternative: The Zohar: Pritzker Edition (Daniel Matt translation) — the scholarly standard
+- User should upload a complete Zohar text file to `sources/zohar` to replace the current skeleton
+- Claude Code has a built-in `WebFetch` tool and can also use MCP servers (e.g. `@anthropic/fetch`) for direct web import if the user configures one
 
 ---
 
@@ -118,24 +117,28 @@
 _This section tracks what works and what doesn't during execution._
 
 ### Confucius
-- [ ] Paragraph-boundary splitting works for individual teachings
-- [ ] Book number detection finds all 20 books correctly
-- [ ] L2 brief summaries accurately capture each book's themes
-- [ ] Final validation passes (refs, sort_order, orphans)
+- [x] Book number detection finds all 20 books correctly — `^\s+(\d+)\s*$` regex found all 20 at first try
+- [x] **FAIL then FIX**: Paragraph-boundary splitting (`\n\n`) did NOT work — source uses consistent indentation without blank lines between passages. Got only 21 "passages" (1 per book). **Fixed** by splitting on `\n(?=   [A-Z])` (newline followed by 3-space indent + capital letter), which correctly identifies new speaker attributions. Got 729 passages.
+- [x] L2 brief summaries written for all 20 books with thematic content
+- [x] Final validation passes: 729 L1 + 20 L2 = 749 items, 0 orphan refs, 0 unreferenced L1
+- Output: `custom/confucian-analects/grammar.json` (484K)
 
-### Zohar
-- [ ] Source text is sufficient for grammar (UNLIKELY — flagged as risk)
-- [ ] Fallback strategy (parashah names + written descriptions) produces useful grammar
-- [ ] Final validation passes
+### Zohar — SKIPPED
+- [x] Source text is NOT sufficient — confirmed. Only 7 passages out of 53 sections have text.
+- Needs a complete source upload (Sefaria Pritzker edition recommended)
 
 ### Shakespeare
-- [ ] Play boundary detection correctly isolates individual plays
-- [ ] ACT/SCENE parsing correctly splits within plays
-- [ ] Full scene text fits reasonably in grammar items
-- [ ] Proof-of-concept play grammar validates and looks good
-- [ ] Batch processing of remaining plays works
+- [x] Play boundary detection works — matched TOC titles against standalone lines after line 83. Found all 44+ works.
+- [x] **FAIL then FIX**: Smart apostrophe (`'` / U+2019) in "A MIDSUMMER NIGHT'S DREAM" caused title match to fail with straight quotes. Fixed by using the actual Unicode character in the lookup dict.
+- [x] **FAIL then FIX**: Twelfth Night ACT markers use trailing period (`ACT I.`) instead of bare (`ACT I`). Original regex `^ACT ([IVX]+)$` missed them, causing all scenes to be assigned to "Act V". Fixed by making period optional: `^ACT ([IVX]+)\.?\s*$`
+- [x] Play-start detection works: finding 2nd occurrence of "ACT I" skips the Dramatis Personae/TOC section correctly
+- [x] Full scene text fits in grammar items — largest scene is Hamlet II.ii at 27,643 chars
+- [x] All 10 plays parsed successfully: 187 scenes, 50 acts, 10 plays = 247 items total
+- [x] Final validation passes: 0 orphan refs, 0 unreferenced L1
+- Output: `custom/shakespeare-ten-greatest/grammar.json` (1.4M)
 
 ---
 
 _Plan created: 2026-03-02_
+_Updated: 2026-03-02 (execution complete)_
 _Branch: claude/review-source-grammar-nmK0B_
