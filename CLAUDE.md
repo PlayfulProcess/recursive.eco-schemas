@@ -16,6 +16,7 @@ mythology/      — Myths and legends (Greek Mythology, Bulfinch, death traditio
 kids/           — Children's content (Aesop, Grimm, PBS Kids, folk tales, workouts)
 music/          — Music and performing arts
 practice/       — Social/therapeutic practice decks
+nature/         — Science, ecology, and the living universe (Scales of Being, Euclid, Darwin)
 sequences/      — Ordered video/content collections
 sources/        — Public domain source texts used to build grammars
 future_plan/    — Build logs, pipeline, grammar ideas, principles
@@ -94,6 +95,24 @@ L2 items should have `composite_of` referencing all L1 items in the group, a des
 3. Output `grammar.json` into the appropriate category folder
 4. Always strip commentary, footnotes, and editorial content — keep only the primary text
 5. Write a build log in `future_plan/build-logs/`
+
+### Downloading Source Texts (Local Script Pattern)
+
+When source texts need to be downloaded from Project Gutenberg, generate a single copy-paste bash command for the user to run locally. The command should:
+- `curl -L -o sources/<filename>` from `https://www.gutenberg.org/cache/epub/<ID>/pg<ID>.txt`
+- `git add` + `git commit` + `git push` to the working branch
+- Use descriptive filenames (e.g., `origin-of-species`, not `1228.txt`)
+- Include Gutenberg eBook numbers in the commit message
+
+Example pattern:
+```bash
+curl -L -o sources/origin-of-species "https://www.gutenberg.org/cache/epub/1228/pg1228.txt" && \
+git add sources/origin-of-species && \
+git commit -m "Add Origin of Species source text (Gutenberg #1228)" && \
+git push origin <branch>
+```
+
+This is needed because the cloud environment cannot access external URLs directly — the user downloads locally and pushes to the branch.
 
 ### From Memory
 1. Plan the taxonomy (list all items at each level) before writing content
