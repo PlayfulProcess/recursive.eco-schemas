@@ -133,7 +133,7 @@ curl -sL "https://www.gutenberg.org/cache/epub/2591/pg2591.txt" \
 | Text | Source | Status | Notes |
 |------|--------|--------|-------|
 | Confucian Analects | sources/confucius | DONE | 749 items |
-| Dhammapada | sources/Dhammapada | TODO (user in progress) | Buddhist verses |
+| Dhammapada | sources/Dhammapada | DONE (431 items) | Buddhist verses, 405 numbered verses in 26 chapters |
 | Zohar | sources/zohar | BLOCKED — source empty | Needs Sefaria or sacred-texts.com download |
 | Tao Te Ching | Gutenberg #216 | TODO | 81 chapters, very clean structure |
 | Bhagavad Gita | sacred-texts.com | TODO | 18 chapters, verse-numbered |
