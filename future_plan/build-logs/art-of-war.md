@@ -4,8 +4,8 @@
 **Source**: `sources/art-of-war` (Project Gutenberg, Lionel Giles translation, 1910)
 **Type**: from-source-text
 **Status**: COMPLETE
-**Items**: 376 verses across 13 chapters
-**File size**: 230KB
+**Items**: 389 (376 L1 verses + 13 L2 chapters)
+**File size**: 246KB
 
 ---
 
@@ -50,6 +50,14 @@
 - **For numbered verse texts**: Pre-compute chapter/section boundaries, then extract verses within each section
 - **When agents time out**: Fall back to direct Python scripting with targeted regex
 - **Scholarly translations**: Always check for commentary, footnotes, and editorial additions that should be stripped
+
+## Emergence Layer (L2)
+
+Added 13 L2 chapter items with hand-written summaries covering each chapter's strategic theme:
+- Laying Plans, Waging War, Attack by Stratagem, Tactical Dispositions, Energy, Weak Points and Strong, Manoeuvering, Variation of Tactics, The Army on the March, Terrain, The Nine Situations, The Attack by Fire, The Use of Spies
+
+### Emergence Key Learning
+- **Watch for encoding issues in category names.** The original parser created `man-uvering` instead of `manoeuvering` due to character encoding in the source text. The L2 chapter's `composite_of` must match the actual category values in the L1 items — always verify with a category inventory before building L2 composites.
 
 ## Prompt for Similar Tasks
 
