@@ -4,8 +4,8 @@
 **Source**: `sources/meditations-marcus-aurelius` (Project Gutenberg, Meric Casaubon translation, 1634)
 **Type**: from-source-text
 **Status**: COMPLETE
-**Items**: 365 passages across 12 books
-**File size**: 448KB
+**Items**: 377 (365 L1 passages + 12 L2 books)
+**File size**: 468KB
 
 ---
 
@@ -43,6 +43,29 @@
 - **For multi-book texts**: Always include an end-of-content marker (appendix, colophon, etc.)
 - **For gratitude/attribution texts (like Book 1)**: Map person names manually — they can't be auto-extracted reliably
 - **Stoic/philosophical texts** benefit from theme-based keywords: nature, reason, virtue, death, impermanence, duty, anger, opinion, gods, contentment, community, time, body, soul, philosophy
+
+## Emergence Layer (L2)
+
+Added L2 book items — 12 chapters with hand-written summaries:
+
+| Book | Passages | Theme |
+|------|----------|-------|
+| Book 1 | 17 | Debts and Lessons (gratitude list) |
+| Book 2 | 14 | Written Among the Quadi (mortality, urgency) |
+| Book 3 | 17 | In Carnuntum (aging, hidden beauty) |
+| Book 4 | 39 | Inner Retreat (impermanence, fame) |
+| Book 5 | 30 | Morning Resistance (duty, social responsibility) |
+| Book 6 | 36 | The Nature of Things (cosmology, change) |
+| Book 7 | 39 | Pain and Opinion (Stoic judgment) |
+| Book 8 | 39 | Against Vainglory (fame, praise) |
+| Book 9 | 39 | Justice and Injustice (interconnectedness) |
+| Book 10 | 37 | The Discipline of Assent (stripping events bare) |
+| Book 11 | 31 | The Rational Soul (soul's properties) |
+| Book 12 | 27 | The Last Book (distilled urgency) |
+
+### Emergence Key Learning
+
+- **Texts with natural chapter/book divisions should ALWAYS get L2 items.** This is the simplest form of emergence — the author already created the grouping. The L2 item adds editorial value through a descriptive summary that helps readers understand what each book is about before diving in.
 
 ## Prompt for Similar Tasks
 
