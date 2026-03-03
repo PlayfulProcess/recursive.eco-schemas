@@ -67,6 +67,17 @@ Every `grammar.json` follows this structure:
 - **L2** (level 2): Emergent combinations — chapters, acts, archetypal dynamics. Use `composite_of: ["id1", "id2"]` and `relationship_type: "emergence"`
 - **L3** (level 3): Meta-categories — plays, individuation stages, macro-themes
 
+### Creating Emergence When None Exists Naturally
+
+**Every grammar should have L2/L3 emergence, even if the source text has no obvious hierarchy.** When there's no chronological or structural grouping (like chapters or acts), create one:
+
+- **By character/subject**: Group fables by animal (Fox Fables, Lion Fables, Bird Fables), group myths by deity, etc.
+- **By theme/moral**: Group items that share a teaching theme (Honesty & Trust, Greed & Contentment, Kindness & Cruelty). Think: "A parent wants to teach X — what stories should they browse?"
+- **By natural chapters**: When a text has book/chapter divisions, always create L2 items for them with descriptive summaries.
+- **Multiple classification axes**: A grammar can have BOTH animal groups AND moral themes at L2, with L3 meta-categories for each axis (e.g., "The Animal Kingdom" and "Life Lessons").
+
+L2 items should have `composite_of` referencing all L1 items in the group, a descriptive "About" section explaining what the group represents, and a practical "For Parents" / "For Readers" / "How to Use" section.
+
 ### Grammar Types
 
 - `tarot` — Oracle/card-draw systems (Rider-Waite, Jungian Archetypes)
@@ -95,6 +106,13 @@ Every `grammar.json` follows this structure:
 - For tarot-type: include "Shadow", "Light", "Questions" sections
 - For kids: include "Reflection" or discussion questions
 - Attribution is mandatory — include source, translator, date
+
+### Grammar Description Format
+
+The `description` field should include:
+1. **What it is**: The text, its author, and its significance
+2. **Source attribution**: Translator, date, and Project Gutenberg eBook number with link (e.g., `Source: Project Gutenberg eBook #21 (https://www.gutenberg.org/ebooks/21)`)
+3. **Illustration references** (on a new paragraph, prefixed with `PUBLIC DOMAIN ILLUSTRATION REFERENCES:`): List public domain illustrators and editions whose images would be good visual companions — these help the website agent search for and upload appropriate artwork. Include artist name, date, publisher, and art style.
 
 ## Current Grammar Inventory (37 grammars)
 
