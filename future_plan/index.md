@@ -15,6 +15,7 @@ future_plan/
   build-logs/
     confucian-analects.md   ← Build log: strategies, failures, fixes
     shakespeare-ten-greatest.md
+    dhammapada.md           ← Easiest sacred text — first-try success
     zohar.md                ← Skipped — source too empty
     winnie-the-pooh.md
     alice-in-wonderland.md
@@ -30,11 +31,12 @@ future_plan/
 | Alice in Wonderland | from-book | 59 | 47 | 12 | — | [log](build-logs/alice-in-wonderland.md) |
 | Winnie-the-Pooh | from-book | 41 | 31 | 10 | — | [log](build-logs/winnie-the-pooh.md) |
 | Confucian Analects | from-sacred-text | 749 | 729 | 20 | — | [log](build-logs/confucian-analects.md) |
+| Dhammapada | from-sacred-text | 431 | 405 | 26 | — | [log](build-logs/dhammapada.md) |
 | Shakespeare (10 plays) | from-dramatic-text | 247 | 187 | 50 | 10 | [log](build-logs/shakespeare-ten-greatest.md) |
 | Greek Mythology | from-memory | 102 | 20 | 15 | 15 | [log](build-logs/greek-mythology.md) |
 | Zohar | from-sacred-text | — | — | — | — | [log](build-logs/zohar.md) (skipped) |
 
-**Total items across all grammars: ~1,198**
+**Total items across all grammars: ~1,629**
 
 ---
 
@@ -65,6 +67,7 @@ Strategies that worked well and should be reused:
 | Multi-audience sections | Children's books | "Original Text" + "For Young Readers" + "What Happens" serves multiple reading levels |
 | 3-level hierarchy for drama | Plays | Scene → Act → Play maps perfectly to L1 → L2 → L3 |
 | Post-build validation | All grammars | Check orphan refs, unreferenced L1, duplicate IDs after every build |
+| Verse-number splitting | Sacred texts | `^\d+\.\s` at line start reliably finds numbered verses (Dhammapada — first-try success) |
 
 ---
 
@@ -86,7 +89,7 @@ Strategies that worked well and should be reused:
 2. Run the download prompt to get the source text
 3. Check `principles.md` for the relevant grammar type's rules
 4. Build the grammar
-5. Create a new log file in `logs/` documenting what worked and what didn't
+5. Create a new log file in `build-logs/` documenting what worked and what didn't
 6. Update this index
 
 ### As the website assistant
@@ -97,5 +100,5 @@ Strategies that worked well and should be reused:
 
 ---
 
-_Last updated: 2026-03-02_
+_Last updated: 2026-03-03_
 _Branch: claude/review-source-grammar-nmK0B_
