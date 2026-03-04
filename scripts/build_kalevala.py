@@ -167,13 +167,27 @@ def extract_proem(text):
     lines = text.split("\n")
     proem_start = None
     proem_end = None
+    # Find the PROEM that's followed by actual verse text (not the one in TOC)
     for i, line in enumerate(lines):
         stripped = line.strip()
-        if stripped == "PROEM" and proem_start is None:
-            proem_start = i + 1
-        if proem_start is not None and re.match(r'^RUNE\s+I\.$', stripped):
-            proem_end = i
-            break
+        if stripped == "PROEM":
+            # Check if this is the actual poem (next non-blank line starts with verse text)
+            for j in range(i + 1, min(i + 5, len(lines))):
+                if lines[j].strip().startswith("Mastered") or (
+                    lines[j].strip() and not lines[j].strip().startswith("RUNE") and
+                    not lines[j].strip()[0].isdigit() and
+                    len(lines[j].strip()) > 10
+                ):
+                    proem_start = i + 1
+                    break
+            if proem_start is not None:
+                break
+    if proem_start is not None:
+        for i in range(proem_start, len(lines)):
+            stripped = lines[i].strip()
+            if re.match(r'^RUNE\s+I\.$', stripped):
+                proem_end = i
+                break
     if proem_start and proem_end:
         text = "\n".join(lines[proem_start:proem_end]).strip()
         text = re.sub(r'\n{3,}', '\n\n', text)
