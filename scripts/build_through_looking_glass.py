@@ -77,8 +77,21 @@ def roman_to_int(roman):
     return result
 
 
+def normalize_quotes(text):
+    """Normalize smart/curly quotes to straight quotes."""
+    text = text.replace('\u2018', "'")  # left single quote
+    text = text.replace('\u2019', "'")  # right single quote
+    text = text.replace('\u201C', '"')  # left double quote
+    text = text.replace('\u201D', '"')  # right double quote
+    text = text.replace('\u2014', '--')  # em dash
+    text = text.replace('\u2013', '-')   # en dash
+    return text
+
+
 def clean_text(text):
     """Clean up text: remove illustration markers, normalize whitespace."""
+    # Normalize smart quotes
+    text = normalize_quotes(text)
     # Remove [Illustration...] markers
     text = re.sub(r'\[Illustration[^\]]*\]', '', text)
     # Remove asterisk dividers
