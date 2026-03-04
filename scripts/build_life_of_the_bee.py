@@ -107,10 +107,9 @@ def parse_chapters(text):
     chapters = []
 
     # Try multiple heading patterns
-    # Pattern 1: "CHAPTER I" or "I" on its own line followed by title
-    # Pattern 2: Numbered sections like "I\n\nON THE THRESHOLD..."
+    # Pattern 1: "I -- ON THE THRESHOLD OF THE HIVE" (Roman numeral + dash + title)
     chapter_pattern = re.compile(
-        r'^(?:CHAPTER\s+)?([IVXLC]+)\s*$',
+        r'^([IVXLC]+)\s+--\s+',
         re.MULTILINE
     )
     matches = list(chapter_pattern.finditer(text))
@@ -120,8 +119,16 @@ def parse_chapters(text):
     matches = [m for m in matches if m.group(1) in valid_romans]
 
     if not matches:
-        print("WARNING: Could not find chapter headings. Trying alternative patterns...")
-        # Try "BOOK I", "BOOK II" etc.
+        print("WARNING: Could not find 'I -- TITLE' pattern. Trying 'CHAPTER I' pattern...")
+        chapter_pattern = re.compile(
+            r'^(?:CHAPTER\s+)?([IVXLC]+)\s*$',
+            re.MULTILINE
+        )
+        matches = list(chapter_pattern.finditer(text))
+        matches = [m for m in matches if m.group(1) in valid_romans]
+
+    if not matches:
+        print("WARNING: Could not find chapter headings. Trying 'BOOK I' pattern...")
         chapter_pattern = re.compile(r'^BOOK\s+([IVXLC]+)', re.MULTILINE)
         matches = list(chapter_pattern.finditer(text))
 
