@@ -152,24 +152,14 @@ def extract_stories(text):
     # Find positions of each title
     positions = []
     for title in titles:
-        # Match the title on its own line
-        pattern = re.compile(r'^\s*' + re.escape(title) + r'\s*$', re.MULTILINE)
+        # Match the title on its own line (not indented = actual story, not TOC)
+        pattern = re.compile(r'^' + re.escape(title) + r'\s*$', re.MULTILINE)
         matches = list(pattern.finditer(text))
         if matches:
-            # Use the last occurrence (skip table of contents)
-            # For Just So Stories, titles appear first in TOC then in text
-            # The story text starts after a blank line following the title
-            # Pick the match that's followed by actual story text (not TOC)
-            for m in matches:
-                # Check if this is a TOC entry or actual story title
-                # TOC entries are near the top and closely spaced
-                after = text[m.end():m.end() + 100]
-                if re.search(r'[a-z]', after[:80]):
-                    positions.append((title, m.start()))
-                    break
-            else:
-                # Fall back to last match
-                positions.append((title, matches[-1].start()))
+            # Use the last non-indented match (the actual story heading, not TOC)
+            positions.append((title, matches[-1].start()))
+        else:
+            print(f"  WARNING: Could not find title: {title}")
 
     positions.sort(key=lambda x: x[1])
 
