@@ -4,11 +4,24 @@ These seed files contain the wrong text due to Gutenberg ID reassignments:
 
 | File | Expected | Got | Gutenberg # | Correct # |
 |------|----------|-----|-------------|-----------|
-| `chuang-tzu.txt` | Musings of a Chinese Mystic (Zhuangzi/Giles) | The Waste Land (T.S. Eliot) | #1321 | Needs research |
+| `chuang-tzu.txt` | Musings of a Chinese Mystic (Zhuangzi/Giles) | The Waste Land (T.S. Eliot) | #1321 | #59709 (full Giles translation: "Chuang Tzu: Mystic, Moralist, and Social Reformer") |
 | `life-of-the-bee.txt` | The Life of the Bee (Maeterlinck) | Brochure Series of Architectural Illustration | #18852 | Needs research |
+| `buddhist-suttas.txt` | Buddhist Suttas (T.W. Rhys Davids) | The Book of Mormon (Joseph Smith) | #17 | Not on Gutenberg as standalone; available on Internet Archive |
+| `sayings-of-lao-tzu.txt` | The Sayings of Lao Tzu (Lionel Giles) | The Guardian Angel (Oliver Wendell Holmes) | #2697 | Not found on Gutenberg; available on Internet Archive and sacred-texts.com |
 
 ## To Fix
 
-Re-download with correct Gutenberg IDs. Search at gutenberg.org for:
-- "Musings of a Chinese Mystic" or "Chuang Tzu" by Herbert Giles
-- "The Life of the Bee" by Maurice Maeterlinck
+Re-download with correct Gutenberg IDs or from Internet Archive:
+
+### Chuang Tzu (has correct Gutenberg alternative)
+```bash
+curl -L -o seeds/chuang-tzu.txt "https://www.gutenberg.org/cache/epub/59709/pg59709.txt" && \
+git add seeds/chuang-tzu.txt && \
+git commit -m "Re-download Chuang Tzu with correct Gutenberg #59709 (full Giles translation)" && \
+git push origin <branch>
+```
+
+### Other texts needing research
+- "The Life of the Bee" by Maurice Maeterlinck — search gutenberg.org
+- "Buddhist Suttas" by T.W. Rhys Davids (Sacred Books of the East Vol. 11) — may need Internet Archive source
+- "The Sayings of Lao Tzu" by Lionel Giles — may need Internet Archive source
