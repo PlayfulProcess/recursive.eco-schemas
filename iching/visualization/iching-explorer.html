@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Ching Explorer — Leibniz Binary Hypercube</title>
+<style>
+:root {
+  --bg: #0d1117; --bg2: #161b22; --bg3: #21262d;
+  --fg: #e6edf3; --fg2: #8b949e; --fg3: #484f58;
+  --accent: #58a6ff; --accent2: #3fb950;
+  --line1: #e74c3c; --line2: #e67e22; --line3: #f1c40f;
+  --line4: #2ecc71; --line5: #3498db; --line6: #9b59b6;
+  --palace-qian: #d4a017; --palace-kun: #8b7355;
+  --palace-kan: #2980b9; --palace-li: #c0392b;
+  --palace-zhen: #27ae60; --palace-gen: #7f8c8d;
+  --palace-xun: #16a085; --palace-dui: #8e44ad;
+  --rel-inverse: #58a6ff; --rel-complement: #f97583;
+  --rel-nuclear: #3fb950; --rel-kwpair: #d29922;
+  --rel-zagua: #bc8cff;
+  --cell-size: 72px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: -apple-system, 'Segoe UI', sans-serif; overflow: hidden; height: 100vh; }
+
+/* ─── Layout ─── */
+#app { display: flex; flex-direction: column; height: 100vh; }
+#topbar { background: var(--bg2); border-bottom: 1px solid var(--bg3); padding: 8px 16px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; min-height: 48px; }
+#topbar h1 { font-size: 15px; font-weight: 600; white-space: nowrap; }
+#topbar h1 span { color: var(--fg2); font-weight: 400; }
+#main { display: flex; flex: 1; overflow: hidden; }
+#grid-area { flex: 1; display: flex; align-items: center; justify-content: center; position: relative; overflow: auto; padding: 16px; }
+#detail-panel { width: 380px; background: var(--bg2); border-left: 1px solid var(--bg3); overflow-y: auto; padding: 16px; flex-shrink: 0; transition: width 0.2s; }
+#detail-panel.collapsed { width: 0; padding: 0; overflow: hidden; }
+
+/* ─── Controls ─── */
+.layer-toggles { display: flex; gap: 4px; flex-wrap: wrap; }
+.layer-btn { background: var(--bg3); color: var(--fg2); border: 1px solid transparent; border-radius: 4px; padding: 3px 8px; font-size: 11px; cursor: pointer; transition: all 0.15s; white-space: nowrap; }
+.layer-btn:hover { color: var(--fg); }
+.layer-btn.active { color: #fff; border-color: currentColor; }
+.layer-btn[data-layer="lines"].active { background: rgba(88,166,255,0.2); color: var(--accent); }
+.layer-btn[data-layer="inverse"].active { background: rgba(88,166,255,0.2); color: var(--rel-inverse); }
+.layer-btn[data-layer="complement"].active { background: rgba(249,117,131,0.2); color: var(--rel-complement); }
+.layer-btn[data-layer="nuclear"].active { background: rgba(63,185,80,0.2); color: var(--rel-nuclear); }
+.layer-btn[data-layer="kwpair"].active { background: rgba(210,153,34,0.2); color: var(--rel-kwpair); }
+.layer-btn[data-layer="zagua"].active { background: rgba(188,140,255,0.2); color: var(--rel-zagua); }
+.layer-btn[data-layer="palace"].active { background: rgba(210,153,34,0.2); color: var(--palace-qian); }
+#path-btn, #overlay-btn { background: var(--bg3); color: var(--fg2); border: 1px solid var(--fg3); border-radius: 4px; padding: 3px 10px; font-size: 11px; cursor: pointer; }
+#path-btn:hover, #overlay-btn:hover { color: var(--fg); border-color: var(--fg2); }
+.sep { width: 1px; height: 20px; background: var(--bg3); }
+
+/* ─── Grid ─── */
+#grid-container { position: relative; }
+#hex-grid { display: grid; grid-template-columns: 40px repeat(8, var(--cell-size)); grid-template-rows: 40px repeat(8, var(--cell-size)); gap: 2px; }
+.axis-label { display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--fg2); flex-direction: column; line-height: 1.2; }
+.axis-label .tri-sym { font-size: 16px; }
+.axis-corner { }
+.hex-cell { background: var(--bg3); border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; position: relative; transition: all 0.15s; border: 2px solid transparent; overflow: hidden; line-height: 1.1; }
+.hex-cell:hover { background: #2d333b; z-index: 2; }
+.hex-cell.selected { border-color: var(--accent); background: rgba(88,166,255,0.15); z-index: 3; }
+.hex-cell.neighbor { border-color: var(--accent); opacity: 1; }
+.hex-cell.path-highlight { border-color: #f0883e; background: rgba(240,136,62,0.15); }
+.hex-cell.relation-highlight { box-shadow: 0 0 0 2px var(--accent); }
+.hex-cell .sym { font-size: 20px; line-height: 1; }
+.hex-cell .kw { font-size: 10px; color: var(--fg2); margin-top: 1px; }
+.hex-cell .cn { font-size: 12px; }
+.hex-cell .line-dot { position: absolute; width: 6px; height: 6px; border-radius: 50%; }
+.hex-cell .palace-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 3px; }
+.dim { opacity: 0.25; }
+
+/* ─── SVG Overlay ─── */
+#svg-overlay { position: absolute; top: 0; left: 0; pointer-events: none; overflow: visible; }
+#svg-overlay line, #svg-overlay path { stroke-width: 2; fill: none; }
+
+/* ─── Detail Panel ─── */
+.detail-header { text-align: center; padding-bottom: 12px; border-bottom: 1px solid var(--bg3); margin-bottom: 12px; }
+.detail-header .sym { font-size: 48px; line-height: 1; }
+.detail-header .name { font-size: 16px; font-weight: 600; margin-top: 4px; }
+.detail-header .sub { font-size: 12px; color: var(--fg2); margin-top: 2px; }
+.detail-header .binary { font-family: monospace; font-size: 13px; color: var(--accent); letter-spacing: 2px; margin-top: 4px; }
+.detail-section { margin-bottom: 14px; }
+.detail-section h3 { font-size: 11px; color: var(--fg2); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.rel-row { display: flex; align-items: center; gap: 8px; padding: 4px 6px; border-radius: 4px; cursor: pointer; font-size: 12px; }
+.rel-row:hover { background: var(--bg3); }
+.rel-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.rel-label { color: var(--fg2); min-width: 60px; }
+.rel-target { color: var(--fg); }
+.line-text { font-size: 12px; color: var(--fg); margin-bottom: 6px; line-height: 1.5; }
+.line-text .line-num { display: inline-block; width: 18px; height: 18px; border-radius: 50%; text-align: center; line-height: 18px; font-size: 10px; color: #fff; margin-right: 4px; flex-shrink: 0; }
+.detail-empty { color: var(--fg2); font-size: 13px; text-align: center; padding-top: 40px; }
+.trigram-comp { display: flex; gap: 12px; justify-content: center; margin-top: 8px; }
+.trigram-comp .tri { text-align: center; font-size: 12px; }
+.trigram-comp .tri .sym { font-size: 24px; display: block; }
+.trigram-comp .tri .label { color: var(--fg2); font-size: 10px; }
+
+/* ─── Tabs for overlay ─── */
+.tabs { display: flex; gap: 2px; margin-bottom: 8px; }
+.tab-btn { background: var(--bg3); color: var(--fg2); border: none; padding: 4px 10px; font-size: 11px; cursor: pointer; border-radius: 4px 4px 0 0; }
+.tab-btn.active { background: var(--bg); color: var(--fg); }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* ─── Path Finder Modal ─── */
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; align-items: center; justify-content: center; z-index: 100; }
+.modal-overlay.visible { display: flex; }
+.modal { background: var(--bg2); border: 1px solid var(--bg3); border-radius: 8px; padding: 20px; width: 480px; max-width: 90vw; max-height: 80vh; overflow-y: auto; }
+.modal h2 { font-size: 16px; margin-bottom: 12px; }
+.modal label { font-size: 12px; color: var(--fg2); display: block; margin-bottom: 4px; }
+.modal select, .modal input[type="text"] { background: var(--bg); color: var(--fg); border: 1px solid var(--fg3); border-radius: 4px; padding: 6px 10px; font-size: 13px; width: 100%; margin-bottom: 12px; }
+.modal .path-result { background: var(--bg); border-radius: 4px; padding: 12px; font-size: 12px; line-height: 1.8; }
+.modal .path-step { display: flex; align-items: center; gap: 8px; padding: 4px 0; cursor: pointer; }
+.modal .path-step:hover { color: var(--accent); }
+.modal .path-arrow { color: var(--fg3); font-size: 14px; }
+.modal .close-btn { position: absolute; top: 10px; right: 14px; background: none; border: none; color: var(--fg2); font-size: 20px; cursor: pointer; }
+.modal .close-btn:hover { color: var(--fg); }
+.modal-inner { position: relative; }
+.btn-row { display: flex; gap: 8px; margin-top: 8px; }
+.btn { background: var(--accent); color: #000; border: none; border-radius: 4px; padding: 6px 14px; font-size: 12px; cursor: pointer; font-weight: 600; }
+.btn:hover { opacity: 0.9; }
+.btn-secondary { background: var(--bg3); color: var(--fg); }
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="topbar">
+    <h1>易經 Explorer <span>· Leibniz Binary Hypercube</span></h1>
+    <div class="sep"></div>
+    <div class="layer-toggles">
+      <button class="layer-btn active" data-layer="palace" title="八宮 Palace coloring">Palace</button>
+      <button class="layer-btn" data-layer="lines" title="6 line-change neighbors">Lines</button>
+      <button class="layer-btn" data-layer="inverse" title="綜卦 Reverse line order">Inverse</button>
+      <button class="layer-btn" data-layer="complement" title="錯卦 Flip all bits">Complement</button>
+      <button class="layer-btn" data-layer="nuclear" title="互卦 Inner hexagram">Nuclear</button>
+      <button class="layer-btn" data-layer="kwpair" title="序卦 King Wen pair">KW Pair</button>
+      <button class="layer-btn" data-layer="zagua" title="雜卦傳 Philosophical contrast">Zagua</button>
+    </div>
+    <div class="sep"></div>
+    <button id="path-btn" title="Find transformation path between two hexagrams">Path Finder</button>
+    <button id="overlay-btn" title="Load another grammar for comparison">Load Grammar</button>
+  </div>
+  <div id="main">
+    <div id="grid-area">
+      <div id="grid-container">
+        <div id="hex-grid"></div>
+        <svg id="svg-overlay"></svg>
+      </div>
+    </div>
+    <div id="detail-panel">
+      <div class="detail-empty">Click a hexagram to explore its relationships</div>
+    </div>
+  </div>
+</div>
+
+<!-- Path Finder Modal -->
+<div class="modal-overlay" id="path-modal">
+  <div class="modal"><div class="modal-inner">
+    <button class="close-btn" onclick="closeModal('path-modal')">&times;</button>
+    <h2>Path Finder</h2>
+    <label>From hexagram:</label>
+    <select id="path-from"></select>
+    <label>To hexagram:</label>
+    <select id="path-to"></select>
+    <div class="btn-row">
+      <button class="btn" onclick="findPath()">Find Path</button>
+      <button class="btn btn-secondary" onclick="closeModal('path-modal')">Close</button>
+    </div>
+    <div id="path-result" style="margin-top:12px"></div>
+  </div></div>
+</div>
+
+<!-- Grammar Loader Modal -->
+<div class="modal-overlay" id="overlay-modal">
+  <div class="modal"><div class="modal-inner">
+    <button class="close-btn" onclick="closeModal('overlay-modal')">&times;</button>
+    <h2>Load Grammar for Comparison</h2>
+    <label>Grammar JSON URL:</label>
+    <input type="text" id="grammar-url" placeholder="https://... or relative path to grammar.json">
+    <div class="btn-row">
+      <button class="btn" onclick="loadGrammarFromURL()">Load URL</button>
+    </div>
+    <div style="margin:12px 0;color:var(--fg2);font-size:12px;text-align:center">— or —</div>
+    <label>Upload grammar.json file:</label>
+    <input type="file" id="grammar-file" accept=".json" style="margin-bottom:12px;font-size:12px;color:var(--fg2)">
+    <div id="overlay-status" style="margin-top:8px;font-size:12px"></div>
+  </div></div>
+</div>
+
+<script>
+// ─── Data (loaded via fetch or embedded) ───
+let DATA = null;
+let HEXAGRAMS = {}; // num → hexagram
+let TRIGRAMS = {}; // binary → trigram
+let GRID = []; // [row][col] → hexagram num (row=lower trigram leibniz, col=upper trigram leibniz)
+let selectedHex = null;
+let activeLayers = new Set(["palace"]);
+let overlayGrammars = []; // [{name, hexagrams: {num → {sections, name, ...}}}]
+let pathHighlight = [];
+
+const PALACE_COLORS = {
+  "乾": "var(--palace-qian)", "坤": "var(--palace-kun)",
+  "坎": "var(--palace-kan)", "離": "var(--palace-li)",
+  "震": "var(--palace-zhen)", "艮": "var(--palace-gen)",
+  "巽": "var(--palace-xun)", "兌": "var(--palace-dui)",
+};
+const LINE_COLORS = ["var(--line1)","var(--line2)","var(--line3)","var(--line4)","var(--line5)","var(--line6)"];
+
+// ─── Initialization ───
+async function init() {
+  try {
+    const resp = await fetch("viz-data.json");
+    DATA = await resp.json();
+  } catch(e) {
+    document.getElementById("grid-area").innerHTML = '<div style="color:var(--fg2);padding:40px;text-align:center"><h2>Could not load viz-data.json</h2><p style="margin-top:8px">Serve this directory with a local web server:<br><code style="color:var(--accent)">python3 -m http.server 8000</code><br>Then open <code style="color:var(--accent)">http://localhost:8000/iching-explorer.html</code></p></div>';
+    return;
+  }
+  // Build lookups
+  DATA.hexagrams.forEach(h => { HEXAGRAMS[h.num] = h; });
+  DATA.trigrams.forEach(t => { TRIGRAMS[t.binary] = t; });
+  // Build grid mapping: leibniz = lower*8 + upper
+  for (let r = 0; r < 8; r++) {
+    GRID[r] = [];
+    for (let c = 0; c < 8; c++) {
+      const lv = r * 8 + c;
+      const h = DATA.hexagrams.find(x => x.leibniz === lv);
+      GRID[r][c] = h ? h.num : null;
+    }
+  }
+  renderGrid();
+  setupControls();
+  populatePathSelectors();
+  setupFileUpload();
+  // Check URL params
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("hex")) selectHexagram(parseInt(params.get("hex")));
+  if (params.get("overlay")) loadGrammarURL(params.get("overlay"));
+}
+
+// ─── Grid Rendering ───
+function renderGrid() {
+  const grid = document.getElementById("hex-grid");
+  grid.innerHTML = "";
+  // Corner cell
+  grid.appendChild(el("div", "axis-label axis-corner", "Lower↓ Upper→"));
+  // Top axis labels (upper trigrams, cols 0-7)
+  for (let c = 0; c < 8; c++) {
+    const bin = c.toString(2).padStart(3, "0");
+    const t = TRIGRAMS[bin];
+    const label = el("div", "axis-label");
+    label.innerHTML = `<span class="tri-sym">${t.symbol}</span><span>${t.chinese}</span>`;
+    grid.appendChild(label);
+  }
+  // Rows
+  for (let r = 0; r < 8; r++) {
+    const bin = r.toString(2).padStart(3, "0");
+    const t = TRIGRAMS[bin];
+    // Row label
+    const label = el("div", "axis-label");
+    label.innerHTML = `<span class="tri-sym">${t.symbol}</span><span>${t.chinese}</span>`;
+    grid.appendChild(label);
+    // Cells
+    for (let c = 0; c < 8; c++) {
+      const num = GRID[r][c];
+      const h = HEXAGRAMS[num];
+      const cell = el("div", "hex-cell");
+      cell.dataset.num = num;
+      cell.dataset.row = r;
+      cell.dataset.col = c;
+      cell.innerHTML = `<span class="sym">${h.symbol||""}</span><span class="cn">${h.chinese}</span><span class="kw">#${h.num}</span>`;
+      // Palace bar
+      const bar = el("div", "palace-bar");
+      bar.style.background = PALACE_COLORS[h.palace] || "transparent";
+      bar.style.display = activeLayers.has("palace") ? "block" : "none";
+      cell.appendChild(bar);
+      cell.addEventListener("click", () => selectHexagram(num));
+      grid.appendChild(cell);
+    }
+  }
+  positionSVG();
+}
+
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text) e.textContent = text;
+  return e;
+}
+
+// ─── SVG Overlay Positioning ───
+function positionSVG() {
+  const gridEl = document.getElementById("hex-grid");
+  const svg = document.getElementById("svg-overlay");
+  const rect = gridEl.getBoundingClientRect();
+  svg.style.width = rect.width + "px";
+  svg.style.height = rect.height + "px";
+  // Match grid position
+  svg.style.top = gridEl.offsetTop + "px";
+  svg.style.left = gridEl.offsetLeft + "px";
+}
+
+function getCellCenter(num) {
+  const h = HEXAGRAMS[num];
+  const lowerBin = h.binary.slice(0, 3);
+  const upperBin = h.binary.slice(3, 6);
+  const r = parseInt(lowerBin, 2);
+  const c = parseInt(upperBin, 2);
+  const cell = document.querySelector(`.hex-cell[data-row="${r}"][data-col="${c}"]`);
+  if (!cell) return null;
+  const grid = document.getElementById("hex-grid");
+  const gridRect = grid.getBoundingClientRect();
+  const cellRect = cell.getBoundingClientRect();
+  return {
+    x: cellRect.left - gridRect.left + cellRect.width / 2,
+    y: cellRect.top - gridRect.top + cellRect.height / 2,
+  };
+}
+
+// ─── Selection & Highlighting ───
+function selectHexagram(num) {
+  selectedHex = num;
+  pathHighlight = [];
+  // Remove old classes
+  document.querySelectorAll(".hex-cell").forEach(c => {
+    c.classList.remove("selected", "neighbor", "dim", "relation-highlight", "path-highlight");
+  });
+  // Select
+  const h = HEXAGRAMS[num];
+  getCellEl(num)?.classList.add("selected");
+  // Dim others if any layer is active (besides palace)
+  const showingRelations = activeLayers.has("lines") || activeLayers.has("inverse") ||
+    activeLayers.has("complement") || activeLayers.has("nuclear") ||
+    activeLayers.has("kwpair") || activeLayers.has("zagua");
+  if (showingRelations) {
+    const highlighted = new Set([num]);
+    if (activeLayers.has("lines")) h.neighbors.forEach(n => highlighted.add(n));
+    if (activeLayers.has("inverse")) highlighted.add(h.inverse_num);
+    if (activeLayers.has("complement")) highlighted.add(h.complement_num);
+    if (activeLayers.has("nuclear")) highlighted.add(h.nuclear_num);
+    if (activeLayers.has("kwpair")) highlighted.add(h.kw_pair_num);
+    if (activeLayers.has("zagua")) highlighted.add(h.zagua_pair_num);
+    document.querySelectorAll(".hex-cell").forEach(c => {
+      const n = parseInt(c.dataset.num);
+      if (!highlighted.has(n)) c.classList.add("dim");
+    });
+  }
+  drawRelationships(num);
+  renderDetail(num);
+}
+
+function getCellEl(num) {
+  return document.querySelector(`.hex-cell[data-num="${num}"]`);
+}
+
+// ─── Draw SVG Relationships ───
+function drawRelationships(num) {
+  const svg = document.getElementById("svg-overlay");
+  svg.innerHTML = "";
+  if (!num) return;
+  const h = HEXAGRAMS[num];
+  const from = getCellCenter(num);
+  if (!from) return;
+
+  if (activeLayers.has("lines")) {
+    h.neighbors.forEach((nnum, i) => {
+      const to = getCellCenter(nnum);
+      if (to) drawLine(svg, from, to, LINE_COLORS[i], 2, false, `Line ${i+1} → #${nnum}`);
+    });
+  }
+  if (activeLayers.has("inverse") && h.inverse_num !== num) {
+    const to = getCellCenter(h.inverse_num);
+    if (to) drawLine(svg, from, to, "var(--rel-inverse)", 2.5, true);
+  }
+  if (activeLayers.has("complement")) {
+    const to = getCellCenter(h.complement_num);
+    if (to) drawLine(svg, from, to, "var(--rel-complement)", 2.5, true);
+  }
+  if (activeLayers.has("nuclear") && h.nuclear_num !== num) {
+    const to = getCellCenter(h.nuclear_num);
+    if (to) drawLine(svg, from, to, "var(--rel-nuclear)", 2.5, true);
+  }
+  if (activeLayers.has("kwpair")) {
+    const to = getCellCenter(h.kw_pair_num);
+    if (to) drawLine(svg, from, to, "var(--rel-kwpair)", 2.5, true);
+  }
+  if (activeLayers.has("zagua")) {
+    const to = getCellCenter(h.zagua_pair_num);
+    if (to) drawLine(svg, from, to, "var(--rel-zagua)", 2.5, true);
+  }
+}
+
+function drawLine(svg, from, to, color, width, dashed, title) {
+  const dx = to.x - from.x, dy = to.y - from.y;
+  const dist = Math.sqrt(dx*dx + dy*dy);
+  if (dist < 5) return; // same cell
+  // Shorten by 20px on each end
+  const shorten = 24;
+  const ratio1 = shorten / dist, ratio2 = (dist - shorten) / dist;
+  const x1 = from.x + dx * ratio1, y1 = from.y + dy * ratio1;
+  const x2 = from.x + dx * ratio2, y2 = from.y + dy * ratio2;
+  // Curve for long lines
+  const mid = { x: (x1+x2)/2, y: (y1+y2)/2 };
+  const perp = { x: -dy/dist * 15, y: dx/dist * 15 };
+  const ctrl = { x: mid.x + perp.x, y: mid.y + perp.y };
+
+  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  path.setAttribute("d", `M${x1},${y1} Q${ctrl.x},${ctrl.y} ${x2},${y2}`);
+  path.setAttribute("stroke", color);
+  path.setAttribute("stroke-width", width);
+  path.setAttribute("fill", "none");
+  path.setAttribute("opacity", "0.7");
+  if (dashed) path.setAttribute("stroke-dasharray", "6,4");
+  // Arrow head
+  const angle = Math.atan2(y2 - ctrl.y, x2 - ctrl.x);
+  const arrowSize = 8;
+  const ax1 = x2 - arrowSize * Math.cos(angle - 0.4);
+  const ay1 = y2 - arrowSize * Math.sin(angle - 0.4);
+  const ax2 = x2 - arrowSize * Math.cos(angle + 0.4);
+  const ay2 = y2 - arrowSize * Math.sin(angle + 0.4);
+  const arrow = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  arrow.setAttribute("d", `M${ax1},${ay1} L${x2},${y2} L${ax2},${ay2}`);
+  arrow.setAttribute("stroke", color);
+  arrow.setAttribute("stroke-width", width);
+  arrow.setAttribute("fill", "none");
+  arrow.setAttribute("opacity", "0.7");
+
+  svg.appendChild(path);
+  svg.appendChild(arrow);
+}
+
+// ─── Detail Panel ───
+function renderDetail(num) {
+  const panel = document.getElementById("detail-panel");
+  const h = HEXAGRAMS[num];
+  const lowerBin = h.binary.slice(0,3), upperBin = h.binary.slice(3,6);
+  const lt = TRIGRAMS[lowerBin], ut = TRIGRAMS[upperBin];
+
+  let html = `<div class="detail-header">
+    <div class="sym">${h.symbol||""}</div>
+    <div class="name">${h.chinese} ${h.name}</div>
+    <div class="sub">#${h.num} · ${h.pinyin} · Leibniz ${h.leibniz}</div>
+    <div class="binary">${h.binary.split("").map((b,i) => `<span style="color:${b==="1"?"var(--accent)":"var(--fg3)"}">${b}</span>`).join("")}</div>
+    <div class="trigram-comp">
+      <div class="tri"><span class="sym">${lt.symbol}</span><span class="label">Lower: ${lt.chinese} ${lt.pinyin}</span></div>
+      <div class="tri"><span class="sym">${ut.symbol}</span><span class="label">Upper: ${ut.chinese} ${ut.pinyin}</span></div>
+    </div>
+  </div>`;
+
+  // Relationships
+  html += `<div class="detail-section"><h3>Relationships</h3>`;
+  const rels = [
+    { color: "var(--rel-inverse)", label: "綜卦 Inverse", target: h.inverse_num, extra: h.is_palindrome ? " (palindrome)" : "" },
+    { color: "var(--rel-complement)", label: "錯卦 Complement", target: h.complement_num },
+    { color: "var(--rel-nuclear)", label: "互卦 Nuclear", target: h.nuclear_num },
+    { color: "var(--rel-kwpair)", label: "序卦 KW Pair", target: h.kw_pair_num },
+    { color: "var(--rel-zagua)", label: "雜卦 Zagua", target: h.zagua_pair_num, extra: h.zagua_char ? ` "${h.zagua_char}"` : "" },
+  ];
+  rels.forEach(r => {
+    const t = HEXAGRAMS[r.target];
+    html += `<div class="rel-row" onclick="selectHexagram(${r.target})">
+      <span class="rel-dot" style="background:${r.color}"></span>
+      <span class="rel-label">${r.label}</span>
+      <span class="rel-target">${t.chinese} ${t.name} #${t.num}${r.extra||""}</span>
+    </div>`;
+  });
+  html += `</div>`;
+
+  // Palace
+  html += `<div class="detail-section"><h3>Palace (八宮)</h3>
+    <div style="font-size:12px;padding:4px 6px">
+      <span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${PALACE_COLORS[h.palace]};margin-right:6px"></span>
+      ${h.palace} Palace · ${h.palace_pos_name}
+      · Mawangdui #${h.mawangdui}
+    </div>
+  </div>`;
+
+  // Line change neighbors
+  html += `<div class="detail-section"><h3>Line Changes (Neighbors)</h3>`;
+  h.neighbors.forEach((nnum, i) => {
+    const t = HEXAGRAMS[nnum];
+    html += `<div class="rel-row" onclick="selectHexagram(${nnum})">
+      <span class="line-num" style="background:${LINE_COLORS[i]}">${i+1}</span>
+      <span class="rel-target">${t.chinese} ${t.name} #${t.num}</span>
+    </div>`;
+  });
+  html += `</div>`;
+
+  // Tabs for text content
+  const tabNames = ["Structure"];
+  const tabContents = [];
+
+  // Structure tab - line texts from Chinese Original
+  let structHtml = "";
+  if (h.judgment) structHtml += `<div class="line-text"><strong>Judgment:</strong> ${escHtml(h.judgment)}</div>`;
+  if (h.image) structHtml += `<div class="line-text"><strong>Image:</strong> ${escHtml(h.image)}</div>`;
+  for (let i = 1; i <= 6; i++) {
+    const lt = h[`line${i}`];
+    if (lt) structHtml += `<div class="line-text"><span class="line-num" style="background:${LINE_COLORS[i-1]}">${i}</span>${escHtml(lt)}</div>`;
+  }
+  tabContents.push(structHtml || '<div style="color:var(--fg2);font-size:12px">No line texts available</div>');
+
+  // Overlay grammar tabs
+  overlayGrammars.forEach(g => {
+    tabNames.push(g.name);
+    const oh = g.hexagrams[num];
+    if (!oh) { tabContents.push('<div style="color:var(--fg2);font-size:12px">No matching hexagram found</div>'); return; }
+    let ohtml = "";
+    if (oh.name) ohtml += `<div style="font-size:13px;font-weight:600;margin-bottom:8px">${escHtml(oh.name)}</div>`;
+    for (const [key, val] of Object.entries(oh.sections || {})) {
+      if (key === "Interpretation") {
+        ohtml += `<div class="line-text"><strong>${escHtml(key)}:</strong> ${escHtml(val.slice(0, 500))}${val.length > 500 ? "..." : ""}</div>`;
+      } else {
+        ohtml += `<div class="line-text"><strong>${escHtml(key)}:</strong> ${escHtml(val)}</div>`;
+      }
+    }
+    tabContents.push(ohtml || '<div style="color:var(--fg2);font-size:12px">No sections</div>');
+  });
+
+  if (tabNames.length > 1) {
+    html += `<div class="detail-section"><h3>Texts</h3><div class="tabs">`;
+    tabNames.forEach((name, i) => {
+      html += `<button class="tab-btn ${i===0?"active":""}" onclick="switchTab(this,${i})">${escHtml(name)}</button>`;
+    });
+    html += `</div>`;
+    tabContents.forEach((content, i) => {
+      html += `<div class="tab-content ${i===0?"active":""}" data-tab="${i}">${content}</div>`;
+    });
+    html += `</div>`;
+  } else {
+    html += `<div class="detail-section"><h3>Texts</h3>${tabContents[0]}</div>`;
+  }
+
+  panel.innerHTML = html;
+}
+
+function switchTab(btn, idx) {
+  btn.closest(".detail-section").querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+  btn.closest(".detail-section").querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
+  btn.closest(".detail-section").querySelector(`.tab-content[data-tab="${idx}"]`).classList.add("active");
+}
+
+function escHtml(s) { return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+// ─── Layer Controls ───
+function setupControls() {
+  document.querySelectorAll(".layer-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const layer = btn.dataset.layer;
+      if (activeLayers.has(layer)) {
+        activeLayers.delete(layer);
+        btn.classList.remove("active");
+      } else {
+        activeLayers.add(layer);
+        btn.classList.add("active");
+      }
+      // Update palace bars
+      document.querySelectorAll(".palace-bar").forEach(bar => {
+        bar.style.display = activeLayers.has("palace") ? "block" : "none";
+      });
+      if (selectedHex) selectHexagram(selectedHex);
+    });
+  });
+  document.getElementById("path-btn").addEventListener("click", () => openModal("path-modal"));
+  document.getElementById("overlay-btn").addEventListener("click", () => openModal("overlay-modal"));
+  // Keyboard navigation
+  document.addEventListener("keydown", e => {
+    if (!selectedHex || e.target.tagName === "INPUT" || e.target.tagName === "SELECT") return;
+    const h = HEXAGRAMS[selectedHex];
+    const lr = parseInt(h.binary.slice(0,3), 2), uc = parseInt(h.binary.slice(3,6), 2);
+    let nr = lr, nc = uc;
+    if (e.key === "ArrowUp") nr = Math.max(0, lr - 1);
+    else if (e.key === "ArrowDown") nr = Math.min(7, lr + 1);
+    else if (e.key === "ArrowLeft") nc = Math.max(0, uc - 1);
+    else if (e.key === "ArrowRight") nc = Math.min(7, uc + 1);
+    else if (e.key === "Escape") { closeAllModals(); return; }
+    else return;
+    e.preventDefault();
+    if (GRID[nr] && GRID[nr][nc]) selectHexagram(GRID[nr][nc]);
+  });
+}
+
+// ─── Path Finder ───
+function populatePathSelectors() {
+  const opts = DATA.hexagrams.map(h => `<option value="${h.num}">#${h.num} ${h.chinese} ${h.name}</option>`).join("");
+  document.getElementById("path-from").innerHTML = opts;
+  document.getElementById("path-to").innerHTML = opts;
+  if (DATA.hexagrams.length > 1) document.getElementById("path-to").value = DATA.hexagrams[1].num;
+}
+
+function findPath() {
+  const fromNum = parseInt(document.getElementById("path-from").value);
+  const toNum = parseInt(document.getElementById("path-to").value);
+  const from = HEXAGRAMS[fromNum], to = HEXAGRAMS[toNum];
+  if (!from || !to) return;
+
+  // Find differing bits
+  const diffs = [];
+  for (let i = 0; i < 6; i++) {
+    if (from.binary[i] !== to.binary[i]) diffs.push(i);
+  }
+
+  // Build path (change one line at a time)
+  const path = [fromNum];
+  let currentBin = from.binary.split("");
+  const binToNum = {};
+  DATA.hexagrams.forEach(h => { binToNum[h.binary] = h.num; });
+
+  diffs.forEach(i => {
+    currentBin[i] = currentBin[i] === "1" ? "0" : "1";
+    path.push(binToNum[currentBin.join("")]);
+  });
+
+  // Render result
+  const resultEl = document.getElementById("path-result");
+  if (fromNum === toNum) {
+    resultEl.innerHTML = '<div class="path-result">Same hexagram — no transformation needed.</div>';
+    return;
+  }
+
+  let html = `<div class="path-result">
+    <div style="margin-bottom:8px;color:var(--fg2)">Hamming distance: <strong style="color:var(--fg)">${diffs.length}</strong> line change${diffs.length>1?"s":""}</div>
+    <div style="margin-bottom:8px;color:var(--fg2)">Lines to change: ${diffs.map(i => `<span class="line-num" style="background:${LINE_COLORS[i]};display:inline-block">${i+1}</span>`).join(" ")}</div>`;
+
+  for (let i = 0; i < path.length; i++) {
+    const h = HEXAGRAMS[path[i]];
+    html += `<div class="path-step" onclick="selectHexagram(${h.num});closeModal('path-modal')">
+      <span style="font-size:18px">${h.symbol||""}</span>
+      <span>${h.chinese} ${h.name} #${h.num}</span>
+      <span style="color:var(--fg3);font-family:monospace;font-size:11px">${h.binary}</span>
+    </div>`;
+    if (i < path.length - 1) {
+      const lineIdx = diffs[i];
+      html += `<div class="path-arrow" style="padding-left:8px">
+        <span class="line-num" style="background:${LINE_COLORS[lineIdx]};display:inline-block">${lineIdx+1}</span>
+        ↓ change Line ${lineIdx+1}
+      </div>`;
+    }
+  }
+  html += `</div>`;
+  resultEl.innerHTML = html;
+
+  // Highlight path on grid
+  pathHighlight = path;
+  document.querySelectorAll(".hex-cell").forEach(c => c.classList.remove("path-highlight"));
+  path.forEach(num => getCellEl(num)?.classList.add("path-highlight"));
+}
+
+// ─── Grammar Overlay ───
+function loadGrammarFromURL() {
+  const url = document.getElementById("grammar-url").value.trim();
+  if (!url) return;
+  loadGrammarURL(url);
+}
+
+async function loadGrammarURL(url) {
+  const status = document.getElementById("overlay-status");
+  status.textContent = "Loading...";
+  status.style.color = "var(--fg2)";
+  try {
+    const resp = await fetch(url);
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const data = await resp.json();
+    addOverlayGrammar(data);
+    status.textContent = `Loaded: ${data.name || "Grammar"}`;
+    status.style.color = "var(--accent2)";
+  } catch(e) {
+    status.textContent = `Error: ${e.message}`;
+    status.style.color = "var(--rel-complement)";
+  }
+}
+
+function setupFileUpload() {
+  document.getElementById("grammar-file").addEventListener("change", e => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const data = JSON.parse(reader.result);
+        addOverlayGrammar(data);
+        document.getElementById("overlay-status").textContent = `Loaded: ${data.name || file.name}`;
+        document.getElementById("overlay-status").style.color = "var(--accent2)";
+      } catch(e) {
+        document.getElementById("overlay-status").textContent = `Parse error: ${e.message}`;
+        document.getElementById("overlay-status").style.color = "var(--rel-complement)";
+      }
+    };
+    reader.readAsText(file);
+  });
+}
+
+function addOverlayGrammar(data) {
+  const name = data.name || "Overlay";
+  const hexMap = {};
+  (data.items || []).forEach(item => {
+    // Match by metadata.number or by ID pattern
+    let num = item.metadata?.number;
+    if (!num) {
+      const m = item.id?.match(/(?:hexagram|hex)-(\d+)/);
+      if (m) num = parseInt(m[1]);
+    }
+    if (num && num >= 1 && num <= 64) {
+      hexMap[num] = { name: item.name, sections: item.sections || {} };
+    }
+  });
+  overlayGrammars.push({ name, hexagrams: hexMap });
+  if (selectedHex) renderDetail(selectedHex);
+}
+
+// ─── Modal Helpers ───
+function openModal(id) { document.getElementById(id).classList.add("visible"); }
+function closeModal(id) { document.getElementById(id).classList.remove("visible"); }
+function closeAllModals() { document.querySelectorAll(".modal-overlay").forEach(m => m.classList.remove("visible")); }
+
+// Close modals on backdrop click
+document.querySelectorAll(".modal-overlay").forEach(m => {
+  m.addEventListener("click", e => { if (e.target === m) m.classList.remove("visible"); });
+});
+
+// ─── Start ───
+window.addEventListener("resize", () => { positionSVG(); if (selectedHex) drawRelationships(selectedHex); });
+init();
+</script>
+</body>
+</html>
