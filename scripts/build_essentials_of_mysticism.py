@@ -121,15 +121,23 @@ def find_essay_boundaries(text):
     # Each essay title appears as centered ALL CAPS text
     # We'll match against our known patterns
 
+    # Find the end of the preface / start of actual essays (around line 120)
+    preface_end = 90
+    for i, line in enumerate(lines):
+        if 'E. U.' in line and i > 50:
+            preface_end = i + 3
+            break
+
     for essay in ESSAYS:
         pattern = essay["title_pattern"]
         for i, line in enumerate(lines):
-            stripped = line.strip()
-            if stripped == pattern:
-                # For sub-essays within "Three Medieval Mystics" and "Mysticism in Modern France",
-                # we need to be careful not to match the TOC entries
-                # Check that this isn't in the first 100 lines (TOC area)
-                if i > 100:
+            stripped = line.strip().rstrip('.')  # Remove trailing period
+            if pattern in stripped:
+                # Skip TOC entries (before preface end)
+                if i < preface_end:
+                    continue
+                # Avoid duplicate matches
+                if not any(b[0] == essay["id"] for b in boundaries):
                     boundaries.append((essay["id"], i))
                     break
 
