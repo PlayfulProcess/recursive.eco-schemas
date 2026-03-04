@@ -191,36 +191,38 @@ def extract_sections(text):
     return sections
 
 
-def clean_story_text(text, is_song=False):
+def clean_story_text(text, is_song=False, skip_title=True):
     """Clean a story or song text for inclusion in the grammar."""
-    # Remove the title line(s) at the beginning
     lines = text.split('\n')
-    # Skip title and subtitle lines (centered, all caps or mostly caps)
+
     content_start = 0
-    blank_after_title = False
-    for i, line in enumerate(lines):
-        stripped = line.strip()
-        if not stripped:
+    if skip_title:
+        # Remove the title line(s) at the beginning
+        # Skip title and subtitle lines (centered, all caps or mostly caps)
+        blank_after_title = False
+        for i, line in enumerate(lines):
+            stripped = line.strip()
+            if not stripped:
+                if i > 0:
+                    blank_after_title = True
+                continue
+            # Title lines are centered (heavily indented) and mostly uppercase
+            if len(line) - len(line.lstrip()) > 10 and (stripped.isupper() or (stripped.startswith('"') and stripped.endswith('"'))):
+                content_start = i + 1
+                blank_after_title = False
+                continue
+            # Subtitle lines like "THAT HE SANG AT THE COUNCIL ROCK..."
+            if len(line) - len(line.lstrip()) > 10 and stripped.isupper():
+                content_start = i + 1
+                blank_after_title = False
+                continue
+            # If we hit content after blank line after title, we're done
+            if blank_after_title:
+                content_start = i
+                break
             if i > 0:
-                blank_after_title = True
-            continue
-        # Title lines are centered (heavily indented) and mostly uppercase
-        if len(line) - len(line.lstrip()) > 10 and (stripped.isupper() or stripped.startswith('"') and stripped.endswith('"')):
-            content_start = i + 1
-            blank_after_title = False
-            continue
-        # Subtitle lines like "THAT HE SANG AT THE COUNCIL ROCK..."
-        if len(line) - len(line.lstrip()) > 10 and stripped.isupper():
-            content_start = i + 1
-            blank_after_title = False
-            continue
-        # If we hit content after blank line after title, we're done
-        if blank_after_title:
-            content_start = i
-            break
-        if i > 0:
-            content_start = i
-            break
+                content_start = i
+                break
 
     content = '\n'.join(lines[content_start:])
 
@@ -230,6 +232,8 @@ def clean_story_text(text, is_song=False):
     # For songs, check for subtitle lines like "(THE SONG THAT TOOMAI'S MOTHER SANG...)"
     if is_song:
         content = re.sub(r'^\s*\(THE SONG[^\)]+\)\s*\n', '', content, flags=re.MULTILINE)
+        # Remove attribution lines like "_Night-Song in the Jungle._"
+        content = re.sub(r'^\s*_Night-Song in the Jungle\._\s*$', '', content, flags=re.MULTILINE)
 
     # Clean up excessive whitespace
     content = re.sub(r'\n{3,}', '\n\n', content)
@@ -391,7 +395,9 @@ def build_items(sections):
         if not raw:
             continue
 
-        text = clean_story_text(raw, is_song=meta["is_song"])
+        # Night-song has no title line to strip (it starts directly with poem text)
+        skip_title = (key != "night-song")
+        text = clean_story_text(raw, is_song=meta["is_song"], skip_title=skip_title)
 
         if meta["is_song"]:
             section_dict = {
