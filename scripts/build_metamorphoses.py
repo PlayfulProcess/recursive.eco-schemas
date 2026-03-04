@@ -166,47 +166,65 @@ def parse_books_and_fables(text):
 
 def extract_synopsis_and_story(raw_text):
     """
-    Separate the synopsis (indented italic text at start) from the story body.
+    Separate the synopsis (italic summary at start) from the story body.
     Also strip footnotes and explanations.
+
+    The synopsis pattern is: first line at column 0, continuation lines
+    indented with 2+ spaces, followed by a blank line, then the story body.
     """
     lines = raw_text.split('\n')
     synopsis_lines = []
     story_lines = []
-    in_synopsis = True
     in_footnote = False
     in_explanation = False
-    found_story_start = False
 
-    for line in lines:
+    # Phase 1: Extract synopsis from the beginning
+    # Synopsis is the first paragraph where continuation lines are indented
+    i = 0
+    # Skip leading blank lines
+    while i < len(lines) and not lines[i].strip():
+        i += 1
+
+    # Read the synopsis block: first line + indented continuation lines
+    if i < len(lines):
+        first_line = lines[i].strip()
+        # Check if the NEXT line is indented (indicating this is a synopsis block)
+        if i + 1 < len(lines) and lines[i + 1].startswith('  ') and lines[i + 1].strip():
+            synopsis_lines.append(first_line)
+            i += 1
+            while i < len(lines):
+                line = lines[i]
+                stripped = line.strip()
+                if stripped == '':
+                    i += 1
+                    break
+                if line.startswith('  ') or line.startswith('\t'):
+                    synopsis_lines.append(stripped)
+                    i += 1
+                else:
+                    break
+        # If it's a short single-line synopsis followed by blank then story
+        elif i + 1 < len(lines) and not lines[i + 1].strip() and i + 2 < len(lines) and not lines[i + 2].startswith('  '):
+            # Single line followed by blank - could be synopsis
+            # Check if it looks like a synopsis (short descriptive text, not story)
+            if len(first_line) < 200 and not first_line.startswith('"'):
+                synopsis_lines.append(first_line)
+                i += 1
+                # Skip blank line
+                while i < len(lines) and not lines[i].strip():
+                    i += 1
+
+    # Phase 2: Process remaining lines as story
+    while i < len(lines):
+        line = lines[i]
         stripped = line.strip()
-
-        # Skip empty lines at the very beginning
-        if in_synopsis and not stripped and not synopsis_lines:
-            continue
-
-        # Synopsis is the indented block at the start (typically 2+ spaces indent)
-        if in_synopsis:
-            if stripped and (line.startswith('  ') or line.startswith('\t')):
-                synopsis_lines.append(stripped)
-                continue
-            elif stripped == '':
-                if synopsis_lines:
-                    in_synopsis = False
-                continue
-            else:
-                in_synopsis = False
-                # Fall through to story processing
+        i += 1
 
         # Skip EXPLANATION sections
         if stripped == 'EXPLANATION.':
             in_explanation = True
             continue
         if in_explanation:
-            if stripped == '' and story_lines and story_lines[-1] == '':
-                # Could be end of explanation - check if next content is a new section
-                pass
-            # Explanation continues until we hit something that looks like a new section
-            # or we run out of indented text
             if re.match(r'^FABLE [IVXLC]', stripped) or re.match(r'^BOOK THE', stripped):
                 in_explanation = False
             else:
