@@ -161,7 +161,12 @@ def find_story_positions(text):
             if i in used_lines:
                 continue
             stripped = lines[i].strip()
-            if stripped == title:
+            # Case-insensitive match, also handle minor variations (e.g., "The Story of the Tikgi")
+            if stripped.lower() == title.lower() or (
+                title.lower() in stripped.lower() and
+                len(stripped) <= len(title) + 10 and
+                len(stripped) >= len(title) - 5
+            ):
                 # Verify: for stories that appear multiple times (like "The Flood Story"),
                 # check that the tribal attribution nearby matches
                 # Look for _Sub_ marker within a few lines
