@@ -151,31 +151,49 @@ def create_reflection(text):
 
 def parse_discourses(text):
     """Parse the Discourses section into individual items."""
-    # Find the start of the discourses
-    disc_start = text.find("A SELECTION FROM THE DISCOURSES OF EPICTETUS.")
-    if disc_start == -1:
+    # Find the ACTUAL start of the discourses section (not the TOC entry).
+    # The real section is the last occurrence of the heading before the Encheiridion.
+    disc_matches = list(re.finditer(
+        r"A SELECTION FROM THE DISCOURSES OF EPICTETUS\.", text
+    ))
+    if not disc_matches:
         raise ValueError("Could not find start of Discourses section")
+    disc_start = disc_matches[-1].start()
 
-    # Find the start of the Encheiridion
-    ench_start = text.find("THE ENCHEIRIDION, OR MANUAL.")
-    if ench_start == -1:
+    # Find the ACTUAL Encheiridion section (the last occurrence, which has content)
+    ench_matches = list(re.finditer(
+        r"THE ENCHEIRIDION, OR MANUAL\.", text
+    ))
+    if not ench_matches:
         raise ValueError("Could not find start of Encheiridion section")
+    ench_start = ench_matches[-1].start()
 
     disc_text = text[disc_start:ench_start]
 
-    # Pattern: ALL CAPS TITLE followed by em dash and text
-    # Titles start at beginning of line, are ALL CAPS, and end with .—
-    pattern = re.compile(
-        r'^([A-Z][A-Z ,.\'-]+?)\.—(.+?)(?=\n\n\n[A-Z][A-Z ,.\'-]+\.—|\Z)',
-        re.DOTALL | re.MULTILINE
+    # Two-step approach: first find all title positions using .em-dash pattern,
+    # then extract text between them.
+    # Titles may span multiple lines (e.g., "HOW A MAN SHOULD PROCEED FROM THE PRINCIPLE OF GOD BEING THE FATHER OF\nALL MEN TO THE REST")
+    em_dash = "\u2014"
+    title_pattern = re.compile(
+        r"([A-Z][A-Z ,.'()\-]+(?:\n[A-Z][A-Z ,.'()\-]+)*)\." + em_dash,
     )
 
-    matches = list(pattern.finditer(disc_text))
+    matches = list(title_pattern.finditer(disc_text))
     discourses = []
 
-    for match in matches:
+    for i, match in enumerate(matches):
         raw_title = match.group(1).strip()
-        body = match.group(2).strip()
+        # Clean up multi-line titles
+        raw_title = re.sub(r"\s*\n\s*", " ", raw_title)
+
+        # Body starts after the .— and goes until the next title or end
+        body_start = match.end()
+        if i + 1 < len(matches):
+            body_end = matches[i + 1].start()
+        else:
+            body_end = len(disc_text)
+
+        body = disc_text[body_start:body_end].strip()
 
         # Clean up body text - normalize whitespace
         body = re.sub(r'\n(?!\n)', ' ', body)  # Join lines within paragraphs
@@ -194,14 +212,15 @@ def parse_discourses(text):
 
 def parse_encheiridion(text):
     """Parse the Encheiridion into individual chapters."""
-    ench_start = text.find("THE ENCHEIRIDION, OR MANUAL.")
-    if ench_start == -1:
+    ench_matches = list(re.finditer(r"THE ENCHEIRIDION, OR MANUAL\.", text))
+    if not ench_matches:
         raise ValueError("Could not find Encheiridion")
+    ench_start = ench_matches[-1].start()
 
     ench_text = text[ench_start:]
 
     # Split by Roman numeral markers (standalone lines like "I.", "II.", etc.)
-    pattern = re.compile(r'^((?:X{0,3})(?:IX|IV|V?I{0,3}))\.\s*$', re.MULTILINE)
+    pattern = re.compile(r'^([IVXLC]+)\.\s*$', re.MULTILINE)
     matches = list(pattern.finditer(ench_text))
 
     chapters = []
