@@ -18,23 +18,15 @@ Or, to create from scratch or from a source text, see the [AI-assisted creation 
 ## Repository Structure
 
 ```
-tarot/                  # Tarot decks and card oracle systems
-├── schemas/            # Reference data (Marseille, Etteilla, Lenormand, etc.)
-iching/                 # I Ching hexagram systems
-├── schemas/            # Reference data (Chinese, Human Design, etc.)
-astrology/              # Astrological interpretation systems
-├── schemas/            # L1 basic, Vedic, Ptolemy, etc.
-classics/               # Sacred & philosophical texts (Confucius, Dhammapada, Shakespeare)
-├── schemas/            # Chapter-level schemas
-literature/             # Fiction & literary works (Alice, Pooh)
-mythology/              # Myths & legends (Greek, Bulfinch, death traditions)
-kids/                   # Children's content (stories, workouts, PBS, etc.)
-music/                  # Music & performing arts (Luiza Lian, Ballet & Opera)
-practice/               # Social & therapeutic practice
-sequences/              # Ordered video/content collections
-sources/                # Public domain source texts & attribution
-future_plan/            # Build logs, pipeline, grammar ideas
+grammars/       # ALL grammars — flat, one folder per grammar (no categories)
+seeds/          # Raw source texts (public domain downloads, the compost heap)
+schemas/        # Reference structures (tarot templates, I Ching mappings, astrology tables)
+scripts/        # Build tools (download, validate, generate manifest)
+plan/           # Vision, pipeline, build logs, grammar ideas
+manifest.json   # Computed index of all grammars (run: python3 scripts/generate_manifest.py)
 ```
+
+Grammars aren't sorted into categories — the Dhammapada isn't a "classic" and Aesop isn't "for kids." Each grammar is a self-contained monad; metadata inside it determines how the library surfaces it.
 
 ## Grammar JSON Format — The Unified Items Standard
 
@@ -339,7 +331,7 @@ For each card include:
 - keywords array
 
 Start with the Major Arcana (22 cards).
-Follow the format in tarot/rider-waite-smith-tarot/grammar.json.
+Follow the format in grammars/rider-waite-smith-tarot/grammar.json.
 ```
 
 **Example prompt for I Ching:**
@@ -353,7 +345,7 @@ For each hexagram include:
 - lines property with readings for all 6 lines
 - metadata: number, chinese_name, pinyin, trigram_above, trigram_below
 
-Work in batches of 8 hexagrams. Follow the format in iching/schemas/summary-ai.
+Work in batches of 8 hexagrams. Follow the format in schemas/iching/summary-ai.
 ```
 
 **Tips:**
@@ -377,7 +369,7 @@ recursive.eco/pages/grammar-viewer.html?github=YOUR-USERNAME/recursive.eco-schem
 
 Short path (this repo):
 ```
-recursive.eco/pages/grammar-viewer.html?github=tarot/rider-waite-smith-tarot
+recursive.eco/pages/grammar-viewer.html?github=grammars/rider-waite-smith-tarot
 ```
 
 ### Import to Your Account
@@ -390,7 +382,7 @@ recursive.eco/pages/grammar-viewer.html?github=tarot/rider-waite-smith-tarot
 ## Contributing
 
 1. Fork this repository
-2. Create your grammar in the appropriate folder
+2. Create your grammar in `grammars/<your-grammar-name>/grammar.json`
 3. Test with the viewer URL above
 4. Submit a pull request
 
