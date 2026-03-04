@@ -111,7 +111,7 @@ def split_into_scenes(chapter_num, title, content):
     if scene_defs:
         for scene_def in scene_defs:
             scene_text = extract_scene_text(content, scene_def["start"], scene_def.get("end"))
-            if scene_text and len(scene_text.strip()) > 50:
+            if scene_text and len(scene_text.strip()) > 20:
                 scenes.append({
                     "name": scene_def["name"],
                     "text": clean_text(scene_text),
@@ -122,15 +122,40 @@ def split_into_scenes(chapter_num, title, content):
     return scenes
 
 
+def find_phrase_in_wrapped(content, phrase):
+    """Find a phrase in line-wrapped text by collapsing whitespace for matching."""
+    if not phrase:
+        return -1
+    # Collapse all whitespace in both content and phrase for matching
+    collapsed = re.sub(r'\s+', ' ', content)
+    collapsed_phrase = re.sub(r'\s+', ' ', phrase)
+    idx_collapsed = collapsed.find(collapsed_phrase)
+    if idx_collapsed == -1:
+        idx_collapsed = collapsed.lower().find(collapsed_phrase.lower())
+    if idx_collapsed == -1:
+        return -1
+    # Map back to original position: count non-whitespace chars up to idx_collapsed
+    # Actually, simpler: the collapsed position maps roughly to original
+    # Walk through original counting chars to find the right spot
+    orig_pos = 0
+    collapsed_pos = 0
+    while collapsed_pos < idx_collapsed and orig_pos < len(content):
+        if content[orig_pos].isspace():
+            # Skip extra whitespace in original (already collapsed to single space)
+            orig_pos += 1
+            if collapsed_pos < len(collapsed) and collapsed[collapsed_pos] == ' ':
+                collapsed_pos += 1
+        else:
+            orig_pos += 1
+            collapsed_pos += 1
+    return orig_pos
+
+
 def extract_scene_text(content, start_phrase, end_phrase=None):
-    """Extract text between two phrases."""
+    """Extract text between two phrases, handling line-wrapped text."""
     start_idx = 0
     if start_phrase:
-        idx = content.find(start_phrase)
-        if idx == -1:
-            # Try case-insensitive
-            lower = content.lower()
-            idx = lower.find(start_phrase.lower())
+        idx = find_phrase_in_wrapped(content, start_phrase)
         if idx != -1:
             start_idx = idx
         else:
@@ -138,12 +163,9 @@ def extract_scene_text(content, start_phrase, end_phrase=None):
 
     end_idx = len(content)
     if end_phrase:
-        idx = content.find(end_phrase, start_idx + 1)
-        if idx == -1:
-            lower = content.lower()
-            idx = lower.find(end_phrase.lower(), start_idx + 1)
+        idx = find_phrase_in_wrapped(content[start_idx + 1:], end_phrase)
         if idx != -1:
-            end_idx = idx
+            end_idx = start_idx + 1 + idx
 
     return content[start_idx:end_idx].strip()
 
@@ -213,7 +235,7 @@ def get_scene_definitions(chapter_num, title):
             },
             {
                 "name": "Running to Stay in Place",
-                "start": "it takes all the running",
+                "start": "A slow sort of country",
                 "end": "she was a Pawn, and that it would soon be time",
                 "keywords": ["running", "effort", "progress", "exhaustion", "wisdom"],
                 "reflection": "'It takes all the running you can do, to keep in the same place.' Where in your life does this feel true? What would it mean to run twice as fast?",
@@ -312,7 +334,7 @@ def get_scene_definitions(chapter_num, title):
             },
             {
                 "name": "The Meaning of Words",
-                "start": "Must a name mean something",
+                "start": "_Must_ a name mean something",
                 "end": "You seem very clever at explaining words",
                 "keywords": ["language", "meaning", "power", "words", "mastery", "portmanteau"],
                 "reflection": "'When I use a word, it means just what I choose it to mean.' Who gets to decide what words mean? Is language a democracy or a dictatorship?",
@@ -420,7 +442,7 @@ def get_scene_definitions(chapter_num, title):
         11: [
             {
                 "name": "Waking",
-                "start": "and it really _was_ a kitten",
+                "start": "",
                 "end": "",
                 "keywords": ["waking", "kitten", "dream", "reality", "return"],
                 "reflection": "The entire adventure collapses into the simple reality of a kitten. What grand experiences in your life have dissolved back into the everyday?",
@@ -429,7 +451,7 @@ def get_scene_definitions(chapter_num, title):
         12: [
             {
                 "name": "Which Dreamed It?",
-                "start": "Your majesty shouldn't purr so loud",
+                "start": "Your majesty shouldn't purr",
                 "end": "Life, what is it but a dream?",
                 "keywords": ["dream", "reality", "philosophy", "question", "wonder", "identity"],
                 "reflection": "'Was it the Red King, Kitty?' The question of who is dreaming whom is never answered. What if the deepest questions in life are meant to remain open?",
