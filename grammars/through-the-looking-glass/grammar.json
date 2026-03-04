@@ -847,9 +847,31 @@
       }
     },
     {
+      "id": "ch11-waking",
+      "name": "Waking",
+      "sort_order": 35,
+      "level": 1,
+      "category": "chapter-11",
+      "sections": {
+        "Story": "--and it really _was_ a kitten, after all.",
+        "Reflection": "The entire adventure collapses into the simple reality of a kitten. What grand experiences in your life have dissolved back into the everyday?"
+      },
+      "keywords": [
+        "waking",
+        "kitten",
+        "dream",
+        "reality",
+        "return"
+      ],
+      "metadata": {
+        "source": "Through the Looking-Glass, Lewis Carroll, 1871",
+        "chapter": "Chapter XI. Waking"
+      }
+    },
+    {
       "id": "ch12-which-dreamed-it",
       "name": "Which Dreamed It?",
-      "sort_order": 35,
+      "sort_order": 36,
       "level": 1,
       "category": "chapter-12",
       "sections": {
@@ -872,7 +894,7 @@
     {
       "id": "chapter-1",
       "name": "Chapter I. Looking-Glass house",
-      "sort_order": 36,
+      "sort_order": 37,
       "level": 2,
       "category": "chapters",
       "composite_of": [
@@ -898,7 +920,7 @@
     {
       "id": "chapter-2",
       "name": "Chapter II. The Garden of Live Flowers",
-      "sort_order": 37,
+      "sort_order": 38,
       "level": 2,
       "category": "chapters",
       "composite_of": [
@@ -923,7 +945,7 @@
     {
       "id": "chapter-3",
       "name": "Chapter III. Looking-Glass Insects",
-      "sort_order": 38,
+      "sort_order": 39,
       "level": 2,
       "category": "chapters",
       "composite_of": [
@@ -947,7 +969,7 @@
     {
       "id": "chapter-4",
       "name": "Chapter IV. Tweedledum And Tweedledee",
-      "sort_order": 39,
+      "sort_order": 40,
       "level": 2,
       "category": "chapters",
       "composite_of": [
@@ -972,7 +994,7 @@
     {
       "id": "chapter-5",
       "name": "Chapter V. Wool and Water",
-      "sort_order": 40,
+      "sort_order": 41,
       "level": 2,
       "category": "chapters",
       "composite_of": [
@@ -997,7 +1019,7 @@
     {
       "id": "chapter-6",
       "name": "Chapter VI. Humpty Dumpty",
-      "sort_order": 41,
+      "sort_order": 42,
       "level": 2,
       "category": "chapters",
       "composite_of": [
@@ -1022,7 +1044,7 @@
     {
       "id": "chapter-7",
       "name": "Chapter VII. The Lion and the Unicorn",
-      "sort_order": 42,
+      "sort_order": 43,
       "level": 2,
       "category": "chapters",
       "composite_of": [
@@ -1046,7 +1068,7 @@
     {
       "id": "chapter-8",
       "name": "Chapter VIII. \"It's my own Invention\"",
-      "sort_order": 43,
+      "sort_order": 44,
       "level": 2,
       "category": "chapters",
       "composite_of": [
@@ -1071,7 +1093,7 @@
     {
       "id": "chapter-9",
       "name": "Chapter IX. Queen Alice",
-      "sort_order": 44,
+      "sort_order": 45,
       "level": 2,
       "category": "chapters",
       "composite_of": [
@@ -1095,7 +1117,7 @@
     {
       "id": "chapter-10",
       "name": "Chapter X. Shaking",
-      "sort_order": 45,
+      "sort_order": 46,
       "level": 2,
       "category": "chapters",
       "composite_of": [
@@ -1117,10 +1139,12 @@
     {
       "id": "chapter-11",
       "name": "Chapter XI. Waking",
-      "sort_order": 46,
+      "sort_order": 47,
       "level": 2,
       "category": "chapters",
-      "composite_of": [],
+      "composite_of": [
+        "ch11-waking"
+      ],
       "relationship_type": "emergence",
       "sections": {
         "About": "A single sentence: the Red Queen was a kitten all along. The dream ends.",
@@ -1137,7 +1161,7 @@
     {
       "id": "chapter-12",
       "name": "Chapter XII. Which Dreamed it?",
-      "sort_order": 47,
+      "sort_order": 48,
       "level": 2,
       "category": "chapters",
       "composite_of": [
@@ -1159,7 +1183,7 @@
     {
       "id": "theme-language-wordplay",
       "name": "Language and Wordplay",
-      "sort_order": 48,
+      "sort_order": 49,
       "level": 2,
       "category": "themes",
       "composite_of": [
@@ -1189,7 +1213,7 @@
     {
       "id": "theme-chess-game",
       "name": "The Chess Game",
-      "sort_order": 49,
+      "sort_order": 50,
       "level": 2,
       "category": "themes",
       "composite_of": [
@@ -1220,7 +1244,7 @@
     {
       "id": "theme-identity",
       "name": "Identity and Existence",
-      "sort_order": 50,
+      "sort_order": 51,
       "level": 2,
       "category": "themes",
       "composite_of": [
@@ -1249,7 +1273,7 @@
     {
       "id": "theme-mirrors-reversal",
       "name": "Mirrors and Reversal",
-      "sort_order": 51,
+      "sort_order": 52,
       "level": 2,
       "category": "themes",
       "composite_of": [
@@ -1281,7 +1305,7 @@
     {
       "id": "theme-authority-rules",
       "name": "Authority and Absurd Rules",
-      "sort_order": 52,
+      "sort_order": 53,
       "level": 2,
       "category": "themes",
       "composite_of": [
@@ -1312,7 +1336,7 @@
     {
       "id": "theme-poetry-songs",
       "name": "Poetry and Songs",
-      "sort_order": 53,
+      "sort_order": 54,
       "level": 2,
       "category": "themes",
       "composite_of": [
@@ -1341,7 +1365,7 @@
     {
       "id": "meta-narrative-journey",
       "name": "The Narrative Journey",
-      "sort_order": 54,
+      "sort_order": 55,
       "level": 3,
       "category": "meta",
       "composite_of": [
@@ -1376,7 +1400,7 @@
     {
       "id": "meta-themes-ideas",
       "name": "Themes and Ideas",
-      "sort_order": 55,
+      "sort_order": 56,
       "level": 3,
       "category": "meta",
       "composite_of": [
