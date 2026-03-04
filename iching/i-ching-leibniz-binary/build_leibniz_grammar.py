@@ -402,6 +402,163 @@ def leibniz_value(binary_str):
     return int(binary_str, 2)
 
 
+# ─── Relationship computation functions ───
+
+
+def compute_inverse(binary_str):
+    """綜卦 (Zōngguà): flip upside down — reverse the line order."""
+    return binary_str[::-1]
+
+
+def compute_complement(binary_str):
+    """錯卦 (Cuòguà): swap all yin↔yang — bitwise NOT."""
+    return "".join("1" if b == "0" else "0" for b in binary_str)
+
+
+def compute_nuclear(binary_str):
+    """互卦 (Hùguà): inner hexagram — lines 2-3-4 as lower, 3-4-5 as upper."""
+    return binary_str[1:4] + binary_str[2:5]
+
+
+def compute_king_wen_pair(kw_number):
+    """序卦傳: adjacent pair in King Wen sequence (1↔2, 3↔4, ... 63↔64)."""
+    return kw_number + 1 if kw_number % 2 == 1 else kw_number - 1
+
+
+# ─── Jing Fang's Eight Palaces (京房八宮) ───
+
+PALACE_POSITION_NAMES = {
+    1: "本宮 (Palace Master)",
+    2: "一世 (1st Generation)",
+    3: "二世 (2nd Generation)",
+    4: "三世 (3rd Generation)",
+    5: "四世 (4th Generation)",
+    6: "五世 (5th Generation)",
+    7: "遊魂 (Wandering Soul)",
+    8: "歸魂 (Returning Soul)",
+}
+
+
+def build_palace_map():
+    """Compute Jing Fang's Eight Palaces.
+
+    Algorithm: start from each pure (doubled-trigram) hexagram, then
+    cumulatively change lines 1→2→3→4→5. Position 7 (遊魂) restores line 4.
+    Position 8 (歸魂) restores the lower trigram to the palace trigram.
+    Line 6 never changes — the upper trigram defines the palace.
+
+    Returns: {binary_str: (palace_chinese, palace_position)}
+    """
+    palace_map = {}
+    # The 8 pure hexagrams (doubled trigrams)
+    pure_binaries = [
+        "111111", "000000", "010010", "101101",
+        "100100", "001001", "011011", "110110",
+    ]
+
+    for pure_bin in pure_binaries:
+        palace_chinese = TRIGRAM_INFO[pure_bin[0:3]]["chinese"]
+        current = pure_bin
+        palace_map[pure_bin] = (palace_chinese, 1)
+
+        # Positions 2-6: cumulatively flip lines 1 through 5
+        for pos in range(2, 7):
+            line_idx = pos - 2  # line 1 = index 0, line 2 = index 1, ...
+            current = flip_bit(current, line_idx)
+            palace_map[current] = (palace_chinese, pos)
+
+        # Position 7 (遊魂): restore line 4 (flip index 3 back)
+        current = flip_bit(current, 3)
+        palace_map[current] = (palace_chinese, 7)
+
+        # Position 8 (歸魂): restore lower trigram to palace trigram
+        current = pure_bin[0:3] + current[3:6]
+        palace_map[current] = (palace_chinese, 8)
+
+    return palace_map
+
+
+# ─── Mawangdui Sequence (馬王堆) ───
+# From the 168 BCE silk manuscript discovered in 1973 at Mawangdui, Changsha.
+# Groups hexagrams by upper trigram. The upper and lower trigram orderings
+# follow a specific pattern documented by Edward Shaughnessy (1996).
+#
+# Upper trigram order: 乾 坤 艮 兌 坎 離 震 巽
+# Lower trigram order within each group: 乾 坤 艮 兌 坎 離 震 巽
+# (same order — creating an 8×8 matrix read row by row)
+
+MAWANGDUI_UPPER_ORDER = ["111", "000", "001", "110", "010", "101", "100", "011"]
+MAWANGDUI_LOWER_ORDER = ["111", "000", "001", "110", "010", "101", "100", "011"]
+
+
+def build_mawangdui_map():
+    """Compute Mawangdui silk manuscript positions (1-64).
+
+    Returns: {binary_str: position}
+    """
+    mawangdui_map = {}
+    pos = 1
+    for upper in MAWANGDUI_UPPER_ORDER:
+        for lower in MAWANGDUI_LOWER_ORDER:
+            binary = lower + upper  # binary_str[0:3] = lower, [3:6] = upper
+            mawangdui_map[binary] = pos
+            pos += 1
+    return mawangdui_map
+
+
+# ─── 雜卦傳 (Zá Guà Zhuàn) — Miscellaneous Notes Pairings ───
+# One of the Ten Wings — pairs hexagrams by philosophical contrast.
+# 32 pairs with brief Chinese characterizations.
+# Format: (kw_a, kw_b): (characterization_a, characterization_b)
+
+ZAGUA_PAIRS = {
+    (1, 2): ("剛", "柔"),
+    (3, 4): ("見而不失其居", "雜而著"),
+    (5, 6): ("不進", "不親"),
+    (7, 8): ("眾", "樂"),  # 師 = multitude, 比 = closeness
+    (9, 10): ("寡", "不處"),
+    (11, 12): ("通", "否"),  # 泰 = open, 否 = blocked
+    (13, 14): ("親", "眾"),  # 同人 = kinship, 大有 = abundance
+    (15, 16): ("輕", "怠"),
+    (17, 18): ("無故", "則飭"),
+    (19, 20): ("與", "求"),  # 臨 = giving approach, 觀 = seeking observation
+    (21, 22): ("食", "無色"),
+    (23, 24): ("爛", "反"),
+    (25, 26): ("災", "時"),  # 無妄 = calamity, 大畜 = timely
+    (27, 28): ("養正", "顛"),  # 頤 = nourishing, 大過 = toppling
+    (29, 30): ("陷", "麗"),  # 坎 = falling in, 離 = clinging beauty
+    (31, 32): ("速", "久"),
+    (33, 34): ("退", "壯"),  # 遯 = withdrawing, 大壯 = great strength
+    (35, 36): ("晝", "誅"),
+    (37, 38): ("內", "外"),
+    (39, 40): ("難", "緩"),
+    (41, 42): ("衰之始", "盛之始"),
+    (43, 44): ("決", "遇"),
+    (45, 46): ("聚", "升"),  # 萃 = gathering, 升 = ascending
+    (47, 48): ("困乎上", "通乎下"),  # 困 = confined above, 井 = flowing below
+    (49, 50): ("去故", "取新"),
+    (51, 52): ("起", "止"),
+    (53, 54): ("女歸待男行", "女之終"),
+    (55, 56): ("多故", "親寡"),
+    (57, 58): ("伏", "見"),  # 巽 = hidden, 兌 = manifest
+    (59, 60): ("離", "止"),  # 渙 = dispersal, 節 = restraint
+    (61, 62): ("信", "過"),  # 中孚 = sincerity, 小過 = excess
+    (63, 64): ("定", "男之窮"),
+}
+
+
+def build_zagua_lookup():
+    """Build bidirectional lookup from ZAGUA_PAIRS.
+
+    Returns: {kw_number: (pair_kw, own_characterization, pair_characterization)}
+    """
+    lookup = {}
+    for (kw_a, kw_b), (char_a, char_b) in ZAGUA_PAIRS.items():
+        lookup[kw_a] = (kw_b, char_a, char_b)
+        lookup[kw_b] = (kw_a, char_b, char_a)
+    return lookup
+
+
 def build_trigram_items():
     """Build the 8 trigram items in Leibniz binary order (0-7)."""
     trigrams = []
@@ -526,7 +683,8 @@ def build_line_items(source_items, binary_to_item):
     return lines
 
 
-def build_hexagram_items(source_items):
+def build_hexagram_items(source_items, binary_to_item, palace_map,
+                         mawangdui_map, zagua_lookup):
     """Transform source hexagrams to L3 items in Leibniz order."""
     hexagrams = []
 
@@ -587,6 +745,47 @@ def build_hexagram_items(source_items):
             f"col {upper_info['leibniz']} ({upper_info['chinese']})"
         )
 
+        # ─── Relationship 1: 綜卦 Inverse (reverse line order) ───
+        inverse_bin = compute_inverse(binary)
+        inverse_kw = binary_to_item[inverse_bin]["metadata"]["number"]
+        item["metadata"]["inverse_id"] = f"hexagram-{inverse_kw}"
+        item["metadata"]["inverse_name"] = "綜卦"
+        item["metadata"]["is_palindrome"] = (binary == inverse_bin)
+
+        # ─── Relationship 2: 錯卦 Complement (flip all bits) ───
+        complement_bin = compute_complement(binary)
+        complement_kw = binary_to_item[complement_bin]["metadata"]["number"]
+        item["metadata"]["complement_id"] = f"hexagram-{complement_kw}"
+        item["metadata"]["complement_name"] = "錯卦"
+
+        # ─── Relationship 3: 互卦 Nuclear (inner hexagram) ───
+        nuclear_bin = compute_nuclear(binary)
+        nuclear_kw = binary_to_item[nuclear_bin]["metadata"]["number"]
+        item["metadata"]["nuclear_id"] = f"hexagram-{nuclear_kw}"
+        item["metadata"]["nuclear_name"] = "互卦"
+
+        # ─── Relationship 4: 序卦 King Wen Pair ───
+        pair_kw = compute_king_wen_pair(hex_num)
+        item["metadata"]["king_wen_pair_id"] = f"hexagram-{pair_kw}"
+        item["metadata"]["king_wen_pair_name"] = "序卦"
+
+        # ─── Relationship 5: 京房八宮 Jing Fang Palace ───
+        palace_chinese, palace_pos = palace_map[binary]
+        item["metadata"]["palace"] = palace_chinese
+        item["metadata"]["palace_position"] = palace_pos
+        item["metadata"]["palace_position_name"] = PALACE_POSITION_NAMES[palace_pos]
+
+        # ─── Relationship 6: 馬王堆 Mawangdui Position ───
+        item["metadata"]["mawangdui_position"] = mawangdui_map[binary]
+
+        # ─── Relationship 7: 雜卦傳 Zagua Pairing ───
+        if hex_num in zagua_lookup:
+            pair_kw_z, own_char, pair_char = zagua_lookup[hex_num]
+            item["metadata"]["zagua_pair_id"] = f"hexagram-{pair_kw_z}"
+            item["metadata"]["zagua_characterization"] = own_char
+            item["metadata"]["zagua_pair_characterization"] = pair_char
+            item["metadata"]["zagua_name"] = "雜卦傳"
+
         # Clean up legacy fields
         item.pop("origin", None)
         item.pop("subcategory", None)
@@ -628,11 +827,18 @@ def build_grammar():
     source = load_source()
     binary_to_item = build_lookups(source["items"])
 
+    # Build relationship maps
+    palace_map = build_palace_map()
+    mawangdui_map = build_mawangdui_map()
+    zagua_lookup = build_zagua_lookup()
+
     # Build all item groups
     foundation = deepcopy(FOUNDATION_LINES)
     lines = build_line_items(source["items"], binary_to_item)
     trigrams = build_trigram_items()
-    hexagrams = build_hexagram_items(source["items"])
+    hexagrams = build_hexagram_items(
+        source["items"], binary_to_item, palace_map, mawangdui_map, zagua_lookup
+    )
 
     # Assign sort orders
     assign_sort_orders(foundation, lines, trigrams, hexagrams)
@@ -677,6 +883,31 @@ def build_grammar():
                         "that Leibniz later recognized as binary. The ordering predates Leibniz by 600 years."
                     ),
                 },
+                {
+                    "name": "序卦傳 / 雜卦傳 (Xù Guà Zhuàn / Zá Guà Zhuàn)",
+                    "date": "c. 300 BCE",
+                    "note": (
+                        "Two of the Ten Wings (十翼): the Sequence of Hexagrams explains the King Wen "
+                        "pairing logic; the Miscellaneous Notes pairs hexagrams by philosophical contrast."
+                    ),
+                },
+                {
+                    "name": "京房 Jing Fang (Jīng Fáng)",
+                    "date": "78-37 BCE",
+                    "note": (
+                        "Han dynasty scholar who created the Eight Palaces (八宮) system, classifying "
+                        "all 64 hexagrams into 8 groups of 8 by progressive line changes from pure trigrams. "
+                        "From his work 京氏易傳 (Jīng Shì Yì Zhuàn)."
+                    ),
+                },
+                {
+                    "name": "馬王堆帛書 Mawangdui Silk Manuscript",
+                    "date": "168 BCE (discovered 1973)",
+                    "note": (
+                        "Alternative hexagram sequence found in a Han dynasty tomb at Mawangdui, Changsha. "
+                        "Groups hexagrams by upper trigram. Studied by Edward Shaughnessy (1996)."
+                    ),
+                },
             ],
         },
         "name": "易經 · Leibniz Binary Tree of Change (Lines → Trigrams → Hexagrams)",
@@ -688,6 +919,10 @@ def build_grammar():
             "one bit and transforms one hexagram into another. The 64 hexagrams are vertices "
             "of the hypercube, connected by their 6 lines to 6 neighboring hexagrams. "
             "8 trigrams represent the 3-bit building blocks. "
+            "Each hexagram carries 7 historical relationship systems in its metadata: "
+            "綜卦 (inverse), 錯卦 (complement), 互卦 (nuclear), 序卦 (King Wen pair), "
+            "京房八宮 (Jing Fang's Eight Palaces), 馬王堆 (Mawangdui sequence), "
+            "and 雜卦傳 (Miscellaneous Notes pairings). "
             "All hexagram text is classical Chinese from Project Gutenberg eBook #25501.\n\n"
             "Source: Project Gutenberg eBook #25501 (https://www.gutenberg.org/ebooks/25501)\n\n"
             "PUBLIC DOMAIN ILLUSTRATION REFERENCES: "
@@ -712,6 +947,15 @@ def build_grammar():
             "transformation",
             "classical",
             "public-domain",
+            "inverse",
+            "complement",
+            "nuclear",
+            "king-wen",
+            "jing-fang",
+            "eight-palaces",
+            "mawangdui",
+            "zagua",
+            "relationships",
         ],
         "items": all_items,
     }
@@ -800,6 +1044,118 @@ def validate_grammar(grammar):
                 f"but {target} line {pos} → {transform_map[reverse_key]}"
             )
 
+    # ─── Validate 7 Historical Relationship Systems ───
+
+    hex_items = [item for item in items if item["level"] == 3]
+    hex_id_to_item = {item["id"]: item for item in hex_items}
+    hex_id_to_binary = {}
+    for item in hex_items:
+        hex_id_to_binary[item["id"]] = item["metadata"]["binary"]
+
+    # 10. Inverse (綜卦): inverse(inverse(x)) == x
+    palindrome_count = 0
+    for item in hex_items:
+        binary = item["metadata"]["binary"]
+        inv_id = item["metadata"]["inverse_id"]
+        assert inv_id in hex_id_to_item, f"Bad inverse_id in {item['id']}: {inv_id}"
+        inv_item = hex_id_to_item[inv_id]
+        assert inv_item["metadata"]["inverse_id"] == item["id"], (
+            f"Inverse not symmetric: {item['id']} → {inv_id} → {inv_item['metadata']['inverse_id']}"
+        )
+        if item["metadata"]["is_palindrome"]:
+            assert inv_id == item["id"], f"Palindrome {item['id']} should be its own inverse"
+            palindrome_count += 1
+    assert palindrome_count == 8, f"Expected 8 palindromes, got {palindrome_count}"
+
+    # 11. Complement (錯卦): complement(complement(x)) == x, Leibniz sum == 63
+    for item in hex_items:
+        comp_id = item["metadata"]["complement_id"]
+        assert comp_id in hex_id_to_item, f"Bad complement_id in {item['id']}: {comp_id}"
+        comp_item = hex_id_to_item[comp_id]
+        assert comp_item["metadata"]["complement_id"] == item["id"], (
+            f"Complement not symmetric: {item['id']} → {comp_id} → {comp_item['metadata']['complement_id']}"
+        )
+        lv_sum = item["metadata"]["leibniz_number"] + comp_item["metadata"]["leibniz_number"]
+        assert lv_sum == 63, (
+            f"Complement Leibniz sum != 63: {item['id']}({item['metadata']['leibniz_number']}) + "
+            f"{comp_id}({comp_item['metadata']['leibniz_number']}) = {lv_sum}"
+        )
+
+    # 12. Nuclear (互卦): all nuclear_id point to valid hexagram IDs
+    for item in hex_items:
+        nuc_id = item["metadata"]["nuclear_id"]
+        assert nuc_id in hex_id_to_item, f"Bad nuclear_id in {item['id']}: {nuc_id}"
+
+    # 13. King Wen Pair (序卦): symmetric, 32 unique pairs
+    kw_pairs = set()
+    for item in hex_items:
+        pair_id = item["metadata"]["king_wen_pair_id"]
+        assert pair_id in hex_id_to_item, f"Bad king_wen_pair_id in {item['id']}: {pair_id}"
+        pair_item = hex_id_to_item[pair_id]
+        assert pair_item["metadata"]["king_wen_pair_id"] == item["id"], (
+            f"KW pair not symmetric: {item['id']} → {pair_id}"
+        )
+        pair_key = tuple(sorted([item["id"], pair_id]))
+        kw_pairs.add(pair_key)
+    assert len(kw_pairs) == 32, f"Expected 32 KW pairs, got {len(kw_pairs)}"
+
+    # 14. Eight Palaces (八宮): 64 unique assignments, 8 palaces × 8 positions
+    palace_assignments = set()
+    palace_counts = {}
+    for item in hex_items:
+        palace = item["metadata"]["palace"]
+        pos = item["metadata"]["palace_position"]
+        key = (palace, pos)
+        assert key not in palace_assignments, (
+            f"Duplicate palace assignment: {palace} pos {pos} for {item['id']}"
+        )
+        palace_assignments.add(key)
+        palace_counts[palace] = palace_counts.get(palace, 0) + 1
+    assert len(palace_assignments) == 64, f"Expected 64 palace assignments, got {len(palace_assignments)}"
+    for palace, count in palace_counts.items():
+        assert count == 8, f"Palace {palace} has {count} members, expected 8"
+    assert len(palace_counts) == 8, f"Expected 8 palaces, got {len(palace_counts)}"
+
+    # 14b. Spot check: Qian palace should be KW# 1, 44, 33, 12, 20, 23, 35, 14
+    qian_palace_kw = sorted([
+        item["metadata"]["number"]
+        for item in hex_items
+        if item["metadata"]["palace"] == "乾"
+    ])
+    expected_qian = sorted([1, 44, 33, 12, 20, 23, 35, 14])
+    assert qian_palace_kw == expected_qian, (
+        f"Qian palace KW numbers wrong: {qian_palace_kw} != {expected_qian}"
+    )
+
+    # 15. Mawangdui: all 64 positions assigned, values 1-64
+    mwd_positions = sorted([item["metadata"]["mawangdui_position"] for item in hex_items])
+    assert mwd_positions == list(range(1, 65)), (
+        f"Mawangdui positions not 1-64: {mwd_positions[:5]}...{mwd_positions[-5:]}"
+    )
+
+    # 16. Zagua (雜卦傳): all 64 hexagrams have pairs, all symmetric
+    zagua_count = 0
+    for item in hex_items:
+        if "zagua_pair_id" in item["metadata"]:
+            zagua_count += 1
+            zpair_id = item["metadata"]["zagua_pair_id"]
+            assert zpair_id in hex_id_to_item, f"Bad zagua_pair_id in {item['id']}: {zpair_id}"
+            zpair_item = hex_id_to_item[zpair_id]
+            assert "zagua_pair_id" in zpair_item["metadata"], (
+                f"Zagua pair {zpair_id} missing zagua_pair_id"
+            )
+            assert zpair_item["metadata"]["zagua_pair_id"] == item["id"], (
+                f"Zagua not symmetric: {item['id']} → {zpair_id} → {zpair_item['metadata']['zagua_pair_id']}"
+            )
+    assert zagua_count == 64, f"Expected 64 hexagrams with zagua pairs, got {zagua_count}"
+
+    # ─── All relationship references resolve ───
+    for item in hex_items:
+        for field in ["inverse_id", "complement_id", "nuclear_id",
+                      "king_wen_pair_id"]:
+            ref = item["metadata"][field]
+            assert ref in hex_id_to_item, f"Bad {field} in {item['id']}: {ref}"
+
     print("✓ All validations passed!")
     print(f"  - {len(items)} total items (2 foundation + 384 lines + 8 trigrams + 64 hexagrams)")
     print(f"  - Level distribution: L1={levels[1]}, L2={levels[2]}, L3={levels[3]}")
@@ -808,6 +1164,14 @@ def validate_grammar(grammar):
     print(f"  - Transformation symmetry verified (A→B implies B→A)")
     print(f"  - Leibniz ordering verified (trigrams 0-7, hexagrams 0-63)")
     print(f"  - Sort order sequential (0-457)")
+    print(f"  - 綜卦 Inverse: symmetric, {palindrome_count} palindromes")
+    print(f"  - 錯卦 Complement: symmetric, all Leibniz sums = 63")
+    print(f"  - 互卦 Nuclear: all references valid")
+    print(f"  - 序卦 King Wen pairs: {len(kw_pairs)} symmetric pairs")
+    print(f"  - 八宮 Eight Palaces: {len(palace_counts)} palaces × 8 = {len(palace_assignments)} assignments")
+    print(f"  - 八宮 Qian palace spot check: {expected_qian} ✓")
+    print(f"  - 馬王堆 Mawangdui: positions 1-64 assigned")
+    print(f"  - 雜卦傳 Zagua: {zagua_count} hexagrams paired, all symmetric")
 
 
 def main():
