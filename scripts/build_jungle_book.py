@@ -129,45 +129,41 @@ def find_section_boundaries(text):
     # Stories appear after the front matter is stripped, so we look for centered titles
     # that appear as standalone lines (not in TOC format with page numbers)
 
-    found_sections = set()
+    # For each title, find ALL occurrences, then pick the right one
+    # Stories have their title appear twice: once with an epigraph poem, once before prose
+    # Songs have their title appear once
+    for key, pattern in title_patterns:
+        occurrences = []
+        for i, line in enumerate(lines):
+            stripped = line.strip()
+            if (stripped == pattern or stripped == f'"{pattern}"') and \
+               len(line) - len(line.lstrip()) > 10:
+                occurrences.append(i)
 
-    for i, line in enumerate(lines):
-        stripped = line.strip()
-        for key, pattern in title_patterns:
-            # Skip if already found (we want the LAST occurrence which is the actual text,
-            # not TOC or illustration references)
-            # Actually we want the first occurrence AFTER front matter
-            if key in found_sections:
-                continue
+        if not occurrences:
+            continue
 
-            # Check for centered title (lots of leading spaces, matching pattern)
-            if stripped == pattern or stripped == f'"{pattern}"':
-                # Make sure this isn't in the TOC (TOC lines have page numbers after)
-                # Check it's a centered heading by looking at indentation
-                if len(line) - len(line.lstrip()) > 10:  # significantly indented = centered
-                    # Check next few lines aren't page-number style TOC entries
-                    is_toc = False
-                    for j in range(max(0, i-3), min(len(lines), i+3)):
-                        if re.search(r'\d+\s*$', lines[j].strip()) and len(lines[j].strip()) > 20:
-                            # Could be TOC
-                            pass
-                    # For stories, look for the actual story text following
-                    # Skip if there's a duplicate (story titles appear twice sometimes)
-                    # Use heuristic: if the next non-blank line is also a centered title, skip
-                    next_content = ""
-                    for j in range(i+1, min(len(lines), i+10)):
-                        if lines[j].strip():
-                            next_content = lines[j].strip()
-                            break
+        # Song titles: the patterns for songs are unique enough, take the first
+        is_song_key = key in [
+            "HUNTING-SONG OF THE SEEONEE PACK",
+            "ROAD-SONG OF THE BANDAR-LOG",
+            "MOWGLI'S SONG",
+            "LUKANNON",
+            "DARZEE'S CHAUNT",
+            "SHIV AND THE GRASSHOPPER",
+            "PARADE-SONG OF THE CAMP ANIMALS",
+        ]
 
-                    # If next content is the same title repeated, this is the first occurrence
-                    # (decorative), skip it
-                    if next_content == stripped or next_content == f'"{pattern}"' or next_content == pattern:
-                        continue
+        if is_song_key:
+            boundaries.append((key, occurrences[0]))
+        elif len(occurrences) >= 2:
+            # Story titles appear twice -- take the LAST one (before the prose)
+            boundaries.append((key, occurrences[-1]))
+        else:
+            boundaries.append((key, occurrences[0]))
 
-                    boundaries.append((key, i))
-                    found_sections.add(key)
-                    break
+    # Sort boundaries by line number
+    boundaries.sort(key=lambda x: x[1])
 
     return boundaries, lines
 
