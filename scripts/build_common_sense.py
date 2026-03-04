@@ -380,6 +380,7 @@ def build_grammar(chapters):
     urgency_ids = find_paragraphs_matching(urgency_patterns)
 
     # Practical Calculation - ch4's military/economic analysis
+    # Only match passages specifically about practical planning, resources, costs
     practical_patterns = [
         "continental navy",
         "debt we may contract",
@@ -397,6 +398,14 @@ def build_grammar(chapters):
         "continental form of government",
         "charter and petition",
         "let the assemblies be annual",
+        "the commerce by which she hath enriched herself",
+        "the mercantile and reasonable part",
+        "three millions of debt",
+        "we are not in debt",
+        "four or five millions",
+        "an army of twenty-five",
+        "the continental belt",
+        "take a general survey of things",
     ]
     practical_ids = find_paragraphs_matching(practical_patterns)
 
