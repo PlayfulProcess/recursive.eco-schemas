@@ -4,7 +4,7 @@ Parse The Communist Manifesto (Marx & Engels, 1888 English edition, Gutenberg #6
 into a grammar.json.
 
 Structure:
-- L1: Individual paragraphs with chapter/section context
+- L1: Individual paragraphs (merged for substance) with chapter/section context
 - L2: Preamble + 4 chapters as emergence groups, Chapter III subsections,
       and thematic groupings across chapters
 - L3: "The Communist Manifesto" meta-item connecting everything
@@ -19,13 +19,23 @@ SEED = os.path.join(SCRIPT_DIR, "..", "seeds", "communist-manifesto.txt")
 OUTPUT_DIR = os.path.join(SCRIPT_DIR, "..", "grammars", "communist-manifesto")
 OUTPUT = os.path.join(OUTPUT_DIR, "grammar.json")
 
+# Ch3 subsection markers — text patterns that mark boundaries
+CH3_SUBSECTION_MARKERS = [
+    ('1. REACTIONARY SOCIALISM', 'reactionary-socialism'),
+    ('_A. Feudal Socialism_', 'reactionary-socialism'),
+    ('_B. Petty-Bourgeois Socialism_', 'reactionary-socialism'),
+    ('_C. German, or "True," Socialism_', 'reactionary-socialism'),
+    ('2. CONSERVATIVE, OR BOURGEOIS, SOCIALISM', 'conservative-bourgeois-socialism'),
+    ('3. CRITICAL-UTOPIAN SOCIALISM AND COMMUNISM', 'critical-utopian-socialism'),
+]
+
 
 def strip_gutenberg(text):
     """Remove Gutenberg header and footer."""
     start = text.find("*** START OF THE PROJECT GUTENBERG EBOOK")
-    end = text.find("*** END OF THE PROJECT GUTENBERG EBOOK")
     if start != -1:
         text = text[text.index("\n", start) + 1:]
+    end = text.find("*** END OF THE PROJECT GUTENBERG EBOOK")
     if end != -1:
         text = text[:end]
     return text.strip()
@@ -40,20 +50,11 @@ def strip_front_matter(text):
 
 
 def split_into_sections(text):
-    """Split the manifesto into preamble + 4 chapters.
-
-    Chapter headers appear as:
-      I.
-      BOURGEOIS AND PROLETARIANS
-    or
-      IV.
-      POSITION OF THE COMMUNISTS...
-    """
-    # Pattern: Roman numeral on its own line, followed by chapter title in caps
+    """Split the manifesto into preamble + 4 chapters."""
     chapter_pattern = re.compile(
-        r'\n\s*\n\s*\n\s*\n*'  # multiple blank lines before
-        r'(I{1,3}V?|IV|VI{0,3})\.\s*\n'  # Roman numeral + period on its own line
-        r'([A-Z][A-Z\s,\-\']+(?:\n[A-Z][A-Z\s,\-\']+)*)\s*\n',  # Title in ALL CAPS (may span lines)
+        r'\n\s*\n\s*\n\s*\n*'
+        r'(I{1,3}V?|IV|VI{0,3})\.\s*\n'
+        r'([A-Z][A-Z\s,\-\']+(?:\n[A-Z][A-Z\s,\-\']+)*)\s*\n',
         re.MULTILINE
     )
 
@@ -63,102 +64,124 @@ def split_into_sections(text):
     if not matches:
         raise ValueError("Could not find any chapter headers")
 
-    # Preamble is everything before the first chapter
     preamble_text = text[:matches[0].start()].strip()
     sections.append({
-        'number': 0,
-        'roman': '',
-        'title': 'Preamble',
-        'slug': 'preamble',
-        'text': preamble_text
+        'number': 0, 'title': 'Preamble', 'slug': 'preamble', 'text': preamble_text
     })
 
     chapter_info = [
-        (1, 'I', 'Bourgeois and Proletarians', 'bourgeois-and-proletarians'),
-        (2, 'II', 'Proletarians and Communists', 'proletarians-and-communists'),
-        (3, 'III', 'Socialist and Communist Literature', 'socialist-and-communist-literature'),
-        (4, 'IV', 'Position of the Communists in Relation to the Various Existing Opposition Parties',
-         'position-of-communists'),
+        (1, 'Bourgeois and Proletarians', 'bourgeois-and-proletarians'),
+        (2, 'Proletarians and Communists', 'proletarians-and-communists'),
+        (3, 'Socialist and Communist Literature', 'socialist-and-communist-literature'),
+        (4, 'Position of the Communists', 'position-of-communists'),
     ]
 
     for i, match in enumerate(matches):
         end_pos = matches[i + 1].start() if i + 1 < len(matches) else len(text)
         chapter_text = text[match.end():end_pos].strip()
-        num, roman, title, slug = chapter_info[i]
+        num, title, slug = chapter_info[i]
         sections.append({
-            'number': num,
-            'roman': roman,
-            'title': title,
-            'slug': slug,
-            'text': chapter_text
+            'number': num, 'title': title, 'slug': slug, 'text': chapter_text
         })
 
     return sections
 
 
+def is_subsection_header(text):
+    """Check if a paragraph is a subsection header (not real content)."""
+    text = text.strip()
+    if re.match(r'^\d+\.\s*[A-Z][A-Z\s,\-\"]+$', text):
+        return True
+    if re.match(r'^_[A-Z]\.\s+.*_$', text):
+        return True
+    return False
+
+
+def get_ch3_subsection(text):
+    """Determine which Ch3 subsection a header paragraph indicates."""
+    text = text.strip()
+    if re.match(r'^1\.\s*REACTIONARY', text):
+        return 'reactionary-socialism'
+    if re.match(r'^_A\.\s+Feudal', text):
+        return 'reactionary-socialism'
+    if re.match(r'^_B\.\s+Petty', text):
+        return 'reactionary-socialism'
+    if re.match(r'^_C\.\s+German', text):
+        return 'reactionary-socialism'
+    if re.match(r'^2\.\s*CONSERVATIVE', text):
+        return 'conservative-bourgeois-socialism'
+    if re.match(r'^3\.\s*CRITICAL', text):
+        return 'critical-utopian-socialism'
+    return None
+
+
 def split_paragraphs(text):
-    """Split text into paragraphs on double newlines, filtering out empty ones."""
+    """Split text into paragraphs on double newlines."""
     paragraphs = re.split(r'\n\s*\n', text)
     result = []
     for p in paragraphs:
-        # Join continuation lines (single newlines within a paragraph)
         cleaned = ' '.join(line.strip() for line in p.strip().split('\n') if line.strip())
         if cleaned:
             result.append(cleaned)
     return result
 
 
-def merge_short_paragraphs(paragraphs, min_length=120):
-    """Merge very short paragraphs with their neighbors to create more substantial items.
+def merge_paragraphs(paragraphs, min_length=500):
+    """Merge short paragraphs with neighbors. Target: substantial reading units.
 
-    Strategy:
-    - If a paragraph is shorter than min_length, merge it with the next paragraph
-    - The 10-point program (items starting with "1." through "10.") gets merged into one block
-    - Short Q&A rhetorical pairs get merged together
-    - Subsection headers are never merged (handled separately)
+    Rules:
+    - The 10-point program gets merged into a single item
+    - Subsection headers are preserved as markers (not content)
+    - Short paragraphs merge forward; remaining short ones merge backward
     """
     if not paragraphs:
         return paragraphs
 
-    merged = []
+    # Pass 0: Merge the 10-point program into a single paragraph
+    pre_merged = []
     i = 0
     while i < len(paragraphs):
-        current = paragraphs[i]
-
-        # Detect the 10-point program: starts with "1. Abolition of property"
-        if re.match(r'^1\.\s*Abolition of property in land', current):
-            # Merge all numbered items until we hit a non-numbered paragraph
-            program_parts = [current]
+        if re.match(r'^1\.\s*Abolition of property in land', paragraphs[i]):
+            program_parts = [paragraphs[i]]
             j = i + 1
-            while j < len(paragraphs):
-                if re.match(r'^\d+\.', paragraphs[j]):
-                    program_parts.append(paragraphs[j])
-                    j += 1
-                else:
-                    break
-            merged.append('\n\n'.join(program_parts))
+            while j < len(paragraphs) and re.match(r'^\d+\.', paragraphs[j]):
+                program_parts.append(paragraphs[j])
+                j += 1
+            pre_merged.append('\n\n'.join(program_parts))
             i = j
-            continue
+        else:
+            pre_merged.append(paragraphs[i])
+            i += 1
 
-        # Skip subsection headers — don't merge them
+    # Pass 1: Merge short paragraphs forward
+    merged = []
+    i = 0
+    while i < len(pre_merged):
+        current = pre_merged[i]
+
+        # Preserve subsection headers
         if is_subsection_header(current):
             merged.append(current)
             i += 1
             continue
 
-        # If current paragraph is short, try to merge with next
-        if len(current) < min_length and i + 1 < len(paragraphs):
-            next_p = paragraphs[i + 1]
-            # Don't merge across subsection headers
+        # If short, merge with next non-header paragraph(s)
+        if len(current) < min_length and i + 1 < len(pre_merged):
+            next_p = pre_merged[i + 1]
             if not is_subsection_header(next_p):
-                merged.append(current + '\n\n' + next_p)
-                i += 2
+                combined = current + '\n\n' + next_p
+                j = i + 2
+                while len(combined) < min_length and j < len(pre_merged) and not is_subsection_header(pre_merged[j]):
+                    combined = combined + '\n\n' + pre_merged[j]
+                    j += 1
+                merged.append(combined)
+                i = j
                 continue
 
         merged.append(current)
         i += 1
 
-    # Second pass: merge any remaining short paragraphs with previous
+    # Pass 2: Merge remaining short non-header paragraphs with previous
     final = []
     for p in merged:
         if is_subsection_header(p):
@@ -174,66 +197,18 @@ def merge_short_paragraphs(paragraphs, min_length=120):
 
 def first_sentence(text, max_len=80):
     """Extract first sentence, truncated to max_len characters."""
-    # Find sentence end
-    m = re.search(r'[.!?](?:\s|$)', text)
+    # Handle merged paragraphs — only use the first one
+    first_para = text.split('\n\n')[0] if '\n\n' in text else text
+    m = re.search(r'[.!?](?:\s|$)', first_para)
     if m and m.end() <= max_len:
-        return text[:m.end()].strip()
-    # No sentence end found within limit, truncate at word boundary
-    if len(text) <= max_len:
-        return text
-    truncated = text[:max_len]
-    # Find last space
+        return first_para[:m.end()].strip()
+    if len(first_para) <= max_len:
+        return first_para
+    truncated = first_para[:max_len]
     last_space = truncated.rfind(' ')
     if last_space > 40:
         truncated = truncated[:last_space]
     return truncated + "..."
-
-
-def identify_ch3_subsections(paragraphs):
-    """Identify which paragraphs in Chapter III belong to which subsection.
-
-    Subsection headers appear as paragraphs like:
-    - "1. REACTIONARY SOCIALISM"
-    - "_A. Feudal Socialism_"
-    - "_B. Petty-Bourgeois Socialism_"
-    - "_C. German, or \"True,\" Socialism_"
-    - "2. CONSERVATIVE, OR BOURGEOIS, SOCIALISM"
-    - "3. CRITICAL-UTOPIAN SOCIALISM AND COMMUNISM"
-
-    Returns a list of (subsection_key, start_para_idx, end_para_idx) tuples.
-    """
-    # Track subsection boundaries
-    subsection_markers = []
-
-    for i, p in enumerate(paragraphs):
-        text = p.strip()
-        # Major subsection headers
-        if re.match(r'^1\.\s*REACTIONARY SOCIALISM', text):
-            subsection_markers.append(('reactionary-socialism', i))
-        elif re.match(r'^2\.\s*CONSERVATIVE', text):
-            subsection_markers.append(('conservative-bourgeois-socialism', i))
-        elif re.match(r'^3\.\s*CRITICAL-UTOPIAN', text):
-            subsection_markers.append(('critical-utopian-socialism', i))
-
-    # Build ranges
-    ranges = []
-    for j, (key, start) in enumerate(subsection_markers):
-        end = subsection_markers[j + 1][0] if j + 1 < len(subsection_markers) else None
-        end_idx = subsection_markers[j + 1][1] if j + 1 < len(subsection_markers) else len(paragraphs)
-        ranges.append((key, start, end_idx))
-
-    return ranges
-
-
-def is_subsection_header(text):
-    """Check if a paragraph is a subsection header (not real content)."""
-    text = text.strip()
-    # Match patterns like "1. REACTIONARY SOCIALISM", "_A. Feudal Socialism_", etc.
-    if re.match(r'^\d+\.\s*[A-Z][A-Z\s,\-]+$', text):
-        return True
-    if re.match(r'^_[A-Z]\.\s+.*_$', text):
-        return True
-    return False
 
 
 def build_grammar():
@@ -242,24 +217,17 @@ def build_grammar():
 
     text = strip_gutenberg(raw)
     text = strip_front_matter(text)
-
-    # Also strip the trailing "WORKING MEN OF ALL COUNTRIES, UNITE!" —
-    # we'll include it as the last paragraph of chapter IV
     sections = split_into_sections(text)
 
     items = []
     sort_order = 0
 
-    # Track paragraph IDs per chapter for L2 composite_of
-    chapter_paragraph_ids = {}  # slug -> [ids]
-    # Track Ch3 subsection paragraph IDs
+    chapter_paragraph_ids = {}
     ch3_subsection_ids = {
         'reactionary-socialism': [],
         'conservative-bourgeois-socialism': [],
         'critical-utopian-socialism': [],
     }
-
-    # IDs for thematic groupings (manually curated by paragraph ID)
     thematic_ids = {
         'class-struggle-history': [],
         'bourgeoisie-revolutionary-role': [],
@@ -271,34 +239,35 @@ def build_grammar():
         slug = section['slug']
         num = section['number']
         raw_paragraphs = split_paragraphs(section['text'])
-
-        # Merge short paragraphs to get substantial items
-        paragraphs = merge_short_paragraphs(raw_paragraphs)
+        paragraphs = merge_paragraphs(raw_paragraphs)
 
         chapter_paragraph_ids[slug] = []
         prefix = 'preamble' if num == 0 else f'ch{num}'
         para_counter = 0
 
-        # For Ch3 subsection tracking, use content-based markers
-        current_ch3_subsection = None
+        # Ch3 subsection tracking
+        current_ch3_sub = None
 
-        for i, para in enumerate(paragraphs):
-            # Skip pure subsection headers
+        for para in paragraphs:
+            # Check if this is a subsection header
             if is_subsection_header(para):
-                continue
+                sub = get_ch3_subsection(para)
+                if sub:
+                    current_ch3_sub = sub
+                continue  # Don't create L1 items for headers
 
-            # Track Ch3 subsection boundaries by content
+            # For Ch3, also detect subsection boundaries from content
+            # (in case headers got merged with content)
             if num == 3:
-                if '1. REACTIONARY SOCIALISM' in para or 'REACTIONARY SOCIALISM' in para:
-                    current_ch3_subsection = 'reactionary-socialism'
-                elif '2. CONSERVATIVE' in para or 'CONSERVATIVE, OR BOURGEOIS, SOCIALISM' in para:
-                    current_ch3_subsection = 'conservative-bourgeois-socialism'
-                elif '3. CRITICAL-UTOPIAN' in para or 'CRITICAL-UTOPIAN SOCIALISM' in para:
-                    current_ch3_subsection = 'critical-utopian-socialism'
-                # Also detect subsection markers embedded in merged paragraphs
-                if re.search(r'Feudal Socialism|Petty-Bourgeois Socialism|German.*True.*Socialism', para):
-                    if current_ch3_subsection is None:
-                        current_ch3_subsection = 'reactionary-socialism'
+                if 'REACTIONARY SOCIALISM' in para and current_ch3_sub is None:
+                    current_ch3_sub = 'reactionary-socialism'
+                elif 'CONSERVATIVE, OR BOURGEOIS, SOCIALISM' in para:
+                    current_ch3_sub = 'conservative-bourgeois-socialism'
+                elif 'CRITICAL-UTOPIAN SOCIALISM' in para:
+                    current_ch3_sub = 'critical-utopian-socialism'
+                # Content-based detection for first content paragraph
+                if current_ch3_sub is None:
+                    current_ch3_sub = 'reactionary-socialism'
 
             para_counter += 1
             para_id = f"{prefix}-p{para_counter:02d}"
@@ -324,27 +293,23 @@ def build_grammar():
             chapter_paragraph_ids[slug].append(para_id)
 
             # Assign to Ch3 subsections
-            if num == 3 and current_ch3_subsection:
-                ch3_subsection_ids[current_ch3_subsection].append(para_id)
+            if num == 3 and current_ch3_sub:
+                ch3_subsection_ids[current_ch3_sub].append(para_id)
 
-            # Assign to thematic groupings based on content heuristics
+            # Assign to thematic groupings
             lower = para.lower()
 
-            # Class Struggle Through History — historical materialist paragraphs in Ch1
-            if num == 1 and para_counter <= 5:
-                # First few paragraphs of Ch1 are the famous historical materialism opening
+            # Class Struggle Through History
+            if num == 1 and para_counter <= 4:
                 thematic_ids['class-struggle-history'].append(para_id)
-            elif num == 0:
-                # Preamble paragraphs about communism as a power
-                pass
             elif num == 1 and ('history of' in lower and ('class' in lower or 'struggle' in lower)):
                 thematic_ids['class-struggle-history'].append(para_id)
-            elif num == 1 and ('feudal' in lower and 'bourgeois' in lower and 'epoch' in lower):
+            elif num == 1 and ('oppressor and oppressed' in lower or 'class antagonisms' in lower):
                 thematic_ids['class-struggle-history'].append(para_id)
 
-            # Bourgeoisie's Revolutionary Role — Ch1 paragraphs praising capitalism
+            # Bourgeoisie's Revolutionary Role
             if num == 1 and any(phrase in lower for phrase in [
-                'bourgeoisie, historically, has played a most revolutionary',
+                'has played a most revolutionary',
                 'has put an end to all feudal',
                 'has stripped of its halo',
                 'has torn away from the family',
@@ -355,27 +320,21 @@ def build_grammar():
                 'by the rapid improvement of all instruments',
                 'has subjected the country to the rule',
                 'keeps more and more doing away',
-                'more massive and more colossal productive forces',
+                'colossal productive forces',
                 'egyptian pyramids',
                 'all that is solid melts into air',
             ]):
                 thematic_ids['bourgeoisie-revolutionary-role'].append(para_id)
 
-            # Communist Program — the 10 points and surrounding argument in Ch2
+            # Communist Program
             if num == 2 and any(phrase in lower for phrase in [
                 'abolition of private property',
                 'proletariat will use its political supremacy',
                 'despotic inroads',
-                'following will be pretty generally applicable',
+                'generally applicable',
                 'abolition of property in land',
                 'heavy progressive',
-                'abolition of all right of inheritance',
-                'confiscation of the property',
                 'centralisation of credit',
-                'centralisation of the means of communication',
-                'extension of factories',
-                'equal liability of all to labour',
-                'combination of agriculture',
                 'free education for all children',
                 'class distinctions have disappeared',
                 'free development of each',
@@ -386,7 +345,7 @@ def build_grammar():
             if num == 3:
                 thematic_ids['critique-other-socialisms'].append(para_id)
 
-    # Deduplicate thematic IDs
+    # Deduplicate
     for key in thematic_ids:
         thematic_ids[key] = list(dict.fromkeys(thematic_ids[key]))
 
@@ -569,7 +528,6 @@ def build_grammar():
     print(f"  L3 meta: {len(l3_items)}")
     print()
 
-    # Per-chapter breakdown
     for section in ['preamble', 'bourgeois-and-proletarians', 'proletarians-and-communists',
                      'socialist-and-communist-literature', 'position-of-communists']:
         count = len(chapter_paragraph_ids.get(section, []))

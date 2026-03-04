@@ -43,37 +43,37 @@ def strip_transcriber_additions(text):
 CHAPTERS = [
     {
         "slug": "introduction",
-        "prefix": "intro",
+        "prefix": "intro-para",
         "title": "Introduction",
         "header_pattern": r"^INTRODUCTION\.$",
     },
     {
         "slug": "origin-and-design-of-government",
-        "prefix": "ch1",
+        "prefix": "ch1-para",
         "title": "Of the Origin and Design of Government in General",
         "header_pattern": r"^OF THE ORIGIN AND DESIGN OF GOVERNMENT IN GENERAL",
     },
     {
         "slug": "monarchy-and-hereditary-succession",
-        "prefix": "ch2",
+        "prefix": "ch2-para",
         "title": "Of Monarchy and Hereditary Succession",
         "header_pattern": r"^OF MONARCHY AND HEREDITARY SUCCESSION",
     },
     {
         "slug": "present-state-of-american-affairs",
-        "prefix": "ch3",
+        "prefix": "ch3-para",
         "title": "Thoughts on the Present State of American Affairs",
         "header_pattern": r"^THOUGHTS ON THE PRESENT STATE OF AMERICAN AFFAIRS",
     },
     {
         "slug": "present-ability-of-america",
-        "prefix": "ch4",
+        "prefix": "ch4-para",
         "title": "Of the Present Ability of America",
         "header_pattern": r"^OF THE PRESENT ABILITY OF AMERICA",
     },
     {
         "slug": "appendix",
-        "prefix": "ch5",
+        "prefix": "appendix-para",
         "title": "Appendix",
         "header_pattern": r"^APPENDIX\.$",
     },
@@ -236,7 +236,7 @@ def build_grammar(chapters):
 
         for i, para in enumerate(paragraphs):
             sort_order += 1
-            para_id = f"{ch['prefix']}-p{i+1:02d}"
+            para_id = f"{ch['prefix']}-{i+1:02d}"
             name = first_sentence_name(para)
 
             items.append({
