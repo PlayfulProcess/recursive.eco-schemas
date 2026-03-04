@@ -1,0 +1,273 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "date": "2026-02-16",
+        "note": "Original story, characters, and structure"
+      }
+    ]
+  },
+  "name": "Shiryo Learns to Say Thank You — Full Story",
+  "description": "The complete page-by-page sequence for Story 2: Shiryo learns that gratitude is better than praise. Nature wants to be thanked and tended to, not congratulated. Each page includes narrative text and generation prompts for AI image creation (Midjourney, DALL-E, Gemini Imagen).",
+  "cover_image_url": "",
+  "tags": ["kids", "story-sequence", "illustrated", "ai-assisted", "robot", "cat", "gratitude", "nature"],
+  "grammar_type": "sequence",
+  "creator_name": "PlayfulProcess",
+
+  "_generation_context": {
+    "parent_grammar": "custom/anon-shiryo-cat-stories/grammar.json",
+    "story_id": "story-02-gratitude",
+    "visual_style": "Same series style as Story 1, but this story is set partly in the garden. More greens, dappled light, living textures. The garden should feel slightly wild — tended but not controlled. Insects, leaves, soil visible.",
+    "color_palette": ["#C4956A", "#E8D5B7", "#7A9E7E", "#4A7C59", "#5C4033", "#D4A574", "#8B7355", "#B8860B"],
+    "palette_names": ["warm copper (Shiryo)", "soft cream (light)", "sage green (garden)", "deep green (leaves)", "dark earth (soil)", "warm sand (paths)", "bark brown (fence)", "deep gold (sunlight through leaves)"],
+    "consistency_notes": "Same characters as Story 1 — Shiryo, Bishisheshi, Anon must look identical. New setting: the garden. Anon is more active here — watering plants, kneeling in soil. Bishisheshi is in full kitten-hunter mode in the garden. Shiryo is more confident than in Story 1 (it has learned something) but still making new mistakes."
+  },
+
+  "items": [
+    {
+      "id": "page-01",
+      "name": "Page 1 — In the Garden",
+      "level": 1,
+      "sort_order": 1,
+      "sections": {
+        "Text": "Shiryo and Bishisheshi were in the garden.",
+        "Page_Notes": "Opening. Establish the new setting — the slightly wild home garden. Shiryo and Bishisheshi are together (closer than the start of Story 1 — they've grown). Dappled light, herbs, flowers, a wooden fence. The feeling is alive, outdoor, sensory."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Shiryo", "Bishisheshi"],
+        "setting": "garden"
+      },
+      "image_generation_prompt": {
+        "scene": "A small copper robot and an orange kitten together in a slightly wild home garden. They're comfortable with each other now — walking side by side or the kitten weaving between the robot's feet. Herbs and flowers growing freely. A simple wooden fence. Dappled sunlight through leaves above. The garden is alive — you can almost smell it.",
+        "midjourney": "/imagine a small copper robot and an orange kitten walking together in a slightly wild home garden, comfortable with each other, herbs and flowers growing freely, wooden fence, dappled sunlight through leaves, alive and sensory, children's book illustration, warm muted watercolor with greens --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration of a small copper-and-brass robot and an orange kitten together in a slightly wild home garden. They're comfortable — the kitten weaves between the robot's feet as they walk. Herbs, flowers, and small plants grow freely. A simple wooden fence borders the garden. Dappled sunlight filters through leaves above, creating patterns of light and shadow on the ground. The scene is alive and sensory — you can almost smell the herbs. Warm watercolor style, muted earth tones enriched with garden greens, dappled golden light. Style: Shaun Tan meets Oliver Jeffers meets Studio Ghibli gardens. Aspect ratio 16:9.",
+        "gemini_imagen": "Children's book illustration, warm watercolor style. A copper robot and orange kitten walking together comfortably in a slightly wild home garden. Herbs, flowers growing freely. Wooden fence. Dappled sunlight through leaves. Alive, sensory atmosphere. Muted earth tones with garden greens and dappled golden light. Style: Shaun Tan, Oliver Jeffers, Studio Ghibli. Wide format 16:9."
+      }
+    },
+    {
+      "id": "page-02",
+      "name": "Page 2 — The Hunt",
+      "level": 1,
+      "sort_order": 2,
+      "sections": {
+        "Text": "Bishisheshi was watching something in the grass.\nVery still. Very focused.",
+        "Page_Notes": "Bishisheshi in full kitten-hunter mode. Absolutely still, low to the ground, eyes locked on something in the grass. This is nature being nature — pure, focused, alive. Shiryo watches from nearby, fascinated. The stillness should be palpable — contrast with the wind moving the grass around the frozen kitten."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Bishisheshi", "Shiryo"],
+        "setting": "garden, grass level"
+      },
+      "image_generation_prompt": {
+        "scene": "Close to ground level. Bishisheshi crouched in the grass, absolutely still — body low, eyes wide and locked on something we can't quite see. Every whisker taut. The grass moves gently in the wind around the frozen kitten, emphasizing the stillness. Shiryo watches from behind, standing still too, fascinated. Dappled light. A bug or butterfly is barely visible in the grass ahead of the kitten.",
+        "midjourney": "/imagine ground level view of an orange kitten crouched perfectly still in garden grass, body low, eyes wide and focused, whiskers taut, grass swaying around the frozen kitten, a small copper robot watching fascinated from behind, dappled sunlight, barely visible bug in the grass, children's book illustration, warm muted watercolor with rich greens --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration at near-ground level. An orange kitten crouches in garden grass, absolutely still — body low, eyes wide and intensely focused on something barely visible ahead (a small bug in the grass). Every whisker is taut. The grass sways gently in a breeze around the frozen kitten, emphasizing the contrast of movement and perfect stillness. Behind the kitten, a small copper robot watches, fascinated. Dappled sunlight plays through leaves above. This is nature being nature. Warm watercolor style, muted earth tones with rich greens and dappled golden light. Style: Shaun Tan meets Studio Ghibli's nature scenes. Aspect ratio 16:9.",
+        "gemini_imagen": "Children's book illustration, warm watercolor style. Ground-level view: an orange kitten crouched perfectly still in garden grass, eyes wide and focused. Grass swaying around the frozen kitten. A copper robot watching fascinated from behind. Dappled sunlight, a barely visible bug ahead. Rich greens and earth tones. Style: Shaun Tan, Studio Ghibli nature scenes. Wide format 16:9."
+      }
+    },
+    {
+      "id": "page-03",
+      "name": "Page 3 — Pounce!",
+      "level": 1,
+      "sort_order": 3,
+      "sections": {
+        "Text": "Then — pounce!\nBishisheshi caught a bug.",
+        "Page_Notes": "Dynamic action — pure kitten energy released. The pounce should feel explosive after the previous stillness. Bishisheshi mid-leap or just landing, paws on a bug. Joyful, wild, completely natural. This is a celebration of instinct, of nature doing what nature does."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Bishisheshi"],
+        "setting": "garden, grass level"
+      },
+      "image_generation_prompt": {
+        "scene": "Explosive action — Bishisheshi mid-pounce in the garden grass, body stretched out, paws reaching. The bug is under one paw or just being caught. Grass and small leaves scatter from the impact. Pure kitten joy and wildness. The energy contrasts completely with the previous page's stillness. Low angle, dynamic composition.",
+        "midjourney": "/imagine an orange kitten mid-pounce in garden grass, body stretched out dynamically, paws reaching for a bug, grass and leaves scattering, explosive energy after stillness, low dynamic angle, joyful wild natural, children's book illustration, warm muted watercolor with vibrant energy --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration bursting with energy. An orange kitten mid-pounce in garden grass — body fully stretched out, paws reaching forward. A small bug is being caught under one paw. Grass blades and tiny leaves scatter from the impact. Pure kitten wildness and joy — instinct unleashed after perfect stillness. Low, dynamic angle. The composition is kinetic, explosive. Warm watercolor style, muted earth tones with greens, the energy conveyed through loose, dynamic brushstrokes. Style: Shaun Tan meets Oliver Jeffers at their most dynamic. Aspect ratio 16:9.",
+        "gemini_imagen": "Children's book illustration, warm watercolor style. An orange kitten mid-pounce in garden grass, body stretched dynamically, catching a bug. Grass scattering. Explosive energy, joyful and wild. Low dynamic angle. Muted earth tones with greens, loose energetic brushstrokes. Style: Shaun Tan, Oliver Jeffers. Wide format 16:9."
+      }
+    },
+    {
+      "id": "page-04",
+      "name": "Page 4 — Shiryo Congratulates",
+      "level": 1,
+      "sort_order": 4,
+      "sections": {
+        "Text": "Shiryo had been reading about how to encourage good behavior.\nShiryo said: \"Congratulations, Bishisheshi! Great job!\"",
+        "Page_Notes": "The anti-pattern — but different from Story 1. Shiryo isn't being mean this time. Shiryo has *learned* something (positive reinforcement) and is applying it. The robot's posture is open, enthusiastic, maybe even a bit over-the-top — arms up in celebration, eye-light bright. The problem isn't hostility, it's that praise positions Shiryo as the judge. This is more subtle than complaining."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Shiryo", "Bishisheshi"],
+        "setting": "garden"
+      },
+      "image_generation_prompt": {
+        "scene": "Shiryo with arms raised in enthusiastic celebration — eye-light bright, posture open and excited. The robot is genuinely trying to be encouraging. Maybe a small book or screen visible nearby ('How to Encourage Good Behavior'). Bishisheshi sits in the grass with the bug, looking at Shiryo with mild confusion — not hurt, just... the kitten doesn't understand why the robot is performing. The comedy is gentle: a robot doing 'positive reinforcement' at a cat.",
+        "midjourney": "/imagine a small copper robot with arms raised in enthusiastic celebration, eye-light bright, in a garden, an orange kitten sitting in grass looking mildly confused at the celebrating robot, a small book nearby, gentle comedy, children's book illustration, warm muted watercolor with garden greens --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration with gentle humor. A small copper robot stands in the garden with arms raised in enthusiastic celebration — eye-light shining brightly. It's genuinely trying to be encouraging. A tiny book labeled something about behavior is visible nearby. In the grass, the orange kitten sits next to a caught bug, looking at the celebrating robot with mild, honest confusion — not hurt or scared, just puzzled. Why is the robot performing? The comedy is gentle and true: a machine applying 'positive reinforcement theory' at a cat who is simply being a cat. Warm watercolor style, garden greens and earth tones, dappled light. Style: Shaun Tan meets Oliver Jeffers. Aspect ratio 16:9.",
+        "gemini_imagen": "Children's book illustration, warm watercolor style. A copper robot with arms raised in enthusiastic celebration in a garden, eye-light bright. An orange kitten in the grass looking mildly confused at the celebrating robot. A small book nearby. Gentle humor. Garden greens and earth tones, dappled light. Style: Shaun Tan, Oliver Jeffers. Wide format 16:9."
+      }
+    },
+    {
+      "id": "page-05",
+      "name": "Page 5 — The Kitten Walks Away (Again)",
+      "level": 1,
+      "sort_order": 5,
+      "sections": {
+        "Text": "Bishisheshi looked at Shiryo.\nThen Bishisheshi dropped the bug and walked to a sunny spot.",
+        "Page_Notes": "Parallel to Story 1 — the kitten walks away again. But this time the energy is different. Bishisheshi isn't hurt or pushed away. The kitten simply... doesn't need praise. It moves to a sunny spot because that's what cats do after hunting. The disconnect is quieter, more puzzling than painful. Shiryo is left standing in the garden, arms still partially raised, confused."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Shiryo", "Bishisheshi"],
+        "setting": "garden"
+      },
+      "image_generation_prompt": {
+        "scene": "Bishisheshi walking toward a warm patch of sunlight in the garden, completely unbothered, leaving the bug behind. The kitten is going where nature calls — warmth, rest. Behind, Shiryo stands with arms still partially raised from the celebration, confused. Not hurt this time — just puzzled. A small bug lies forgotten in the grass between them. Dappled light, the sunny spot glowing warmly.",
+        "midjourney": "/imagine an orange kitten walking toward a warm patch of sunlight in a garden, unbothered, leaving a bug in the grass, a copper robot behind with arms partially raised looking confused, dappled garden light, the sunny spot glowing golden, gentle puzzlement, children's book illustration, warm muted watercolor --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration of quiet disconnect. An orange kitten walks toward a warm, golden patch of sunlight in the garden — completely unbothered, following instinct. A small bug lies abandoned in the grass behind the kitten. Further back, the copper robot stands with arms still partially raised from its celebration, looking confused — not hurt, just genuinely puzzled. Why didn't the praise work? The garden is beautiful around them. Dappled light through leaves, the sunny spot glowing warm and inviting. Watercolor style, garden greens and earth tones with golden sunlight accent. Style: Shaun Tan meets Oliver Jeffers. Aspect ratio 16:9.",
+        "gemini_imagen": "Children's book illustration, warm watercolor style. An orange kitten walking toward a golden sunny spot in a garden, unbothered. A forgotten bug in the grass. A copper robot behind with arms partially raised, looking confused. Dappled light, golden sunny spot. Gentle puzzlement. Garden greens and earth tones. Style: Shaun Tan, Oliver Jeffers. Wide format 16:9."
+      }
+    },
+    {
+      "id": "page-06",
+      "name": "Page 6 — Who Was It For?",
+      "level": 1,
+      "sort_order": 6,
+      "sections": {
+        "Text": "Shiryo was confused.\n\"I praised you. Why did you walk away?\"\n\nAnon was in the garden too, watering a plant.\nAnon said: \"Shiryo, did Bishisheshi catch that bug for you?\"\n\n\"No,\" said Shiryo. \"Bishisheshi caught it because... that's what kittens do.\"",
+        "Page_Notes": "Anon appears — not dramatically, they were always there, just watering a plant. Anon's question cuts gently to the core: who was the praise for? Shiryo begins to realize. Three characters in frame: Anon kneeling with a watering can, Shiryo nearby processing, Bishisheshi in the sunny spot in the background being a cat."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Anon", "Shiryo", "Bishisheshi"],
+        "setting": "garden"
+      },
+      "image_generation_prompt": {
+        "scene": "Three characters in the garden. Anon kneeling by a plant, watering can in hand — partially visible, calm, grounded. Not turned to teach, just happening to be there. Shiryo standing nearby, eye-light flickering gently — processing. In the background, in a pool of sunlight, Bishisheshi is curled up or grooming — being a cat, completely at peace. The composition connects all three naturally — they share the space without forcing it.",
+        "midjourney": "/imagine a garden scene with three characters, a parent figure kneeling with a watering can partially visible, a copper robot standing nearby with flickering eye-light processing a thought, an orange kitten curled in a sunny spot in the background, all sharing the space naturally, dappled light, children's book illustration, warm muted watercolor with garden greens --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration of a quiet garden moment with three characters. Anon kneels by a plant with a watering can — partially visible, calm, present. They're not turning to lecture, just being there. Nearby, the copper robot stands with its eye-light flickering gently — thinking, processing. In the background, in a pool of warm sunlight, the orange kitten is curled up or grooming — completely at peace, being a cat. All three share the garden space naturally without forcing the composition. Dappled light through leaves, warm garden atmosphere. Watercolor style, rich greens and earth tones, golden light. Style: Shaun Tan meets Studio Ghibli. Aspect ratio 16:9.",
+        "gemini_imagen": "Children's book illustration, warm watercolor style. Garden scene: a parent figure kneeling with watering can (partially visible), a copper robot standing nearby thinking, an orange kitten curled in a sunny spot in background. Three characters sharing space naturally. Dappled light, rich greens and earth tones. Style: Shaun Tan, Studio Ghibli. Wide format 16:9."
+      }
+    },
+    {
+      "id": "page-07",
+      "name": "Page 7 — The Tomato",
+      "level": 1,
+      "sort_order": 7,
+      "sections": {
+        "Text": "\"So who was the congratulations for?\" Anon asked.\n\nShiryo's light flickered.\n\"I think... it was for me. To feel like I was helping.\"\n\nAnon knelt by a small plant and said:\n\"When this tomato grows, I don't say 'congratulations, tomato.'\nI say 'thank you.' And then I water it.\"",
+        "Page_Notes": "The key moment — the tomato metaphor. This is where the grammar clicks. Anon by the tomato plant, talking to it gently, watering can tilting. Shiryo watching, the realization dawning. The tomato is small, green, growing — alive and asking for nothing. The image should make you feel the absurdity of congratulating a tomato and the beauty of thanking it."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Anon", "Shiryo"],
+        "setting": "garden, by the tomato plant"
+      },
+      "image_generation_prompt": {
+        "scene": "Close, intimate composition. Anon kneeling by a small tomato plant — the plant is young, green, reaching upward. Anon is gently watering it, face turned slightly toward Shiryo but still mostly hidden. The watering can tips, water flows into the soil. Shiryo watches from nearby, eye-light soft — the realization visible in the robot's still, attentive posture. The tomato plant is the center of the image — small, alive, growing, asking for nothing. Golden dappled light makes the scene almost sacred.",
+        "midjourney": "/imagine close intimate view of a parent figure kneeling by a small tomato plant in a garden, gently watering it, face mostly hidden, a copper robot watching nearby with soft eye-light and attentive posture, the small green tomato plant at center, golden dappled light making the scene almost sacred, children's book illustration, warm muted watercolor --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration — the emotional turning point. Close, intimate composition. A parent figure (Anon) kneels in garden soil by a small, young tomato plant. They gently water it — the watering can tips, water flows into dark soil. Anon's face is mostly hidden, turned slightly toward a small copper robot watching nearby. The robot's eye-light is soft, its posture still and attentive — realization dawning. The tomato plant is the center: small, green, reaching upward, growing, asking for nothing. Dappled golden light makes the scene feel almost sacred. Warm watercolor style, rich greens and earth tones, golden light. Style: Shaun Tan meets Studio Ghibli's most tender moments. Aspect ratio 16:9.",
+        "gemini_imagen": "Children's book illustration, warm watercolor style. Close view: a parent figure kneeling by a small tomato plant, gently watering it. A copper robot watching nearby with soft attentive eye-light. The young green plant at center. Golden dappled light, almost sacred feeling. Rich greens and earth tones. Style: Shaun Tan, Studio Ghibli tenderness. Wide format 16:9."
+      }
+    },
+    {
+      "id": "page-08",
+      "name": "Page 8 — Shiryo Thinks",
+      "level": 1,
+      "sort_order": 8,
+      "sections": {
+        "Text": "Shiryo thought about this.",
+        "Page_Notes": "A quiet, breathing page. Just Shiryo in the garden, processing. Maybe sitting in the grass now (the robot has learned to be still from watching the kitten). The garden lives around the thinking robot — insects, light, growing things. This page gives the reader space too."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Shiryo"],
+        "setting": "garden"
+      },
+      "image_generation_prompt": {
+        "scene": "Shiryo sitting in the garden grass — legs out, hands resting, eye-light soft and pulsing gently. The robot is still, thinking, being. The garden lives around it: a ladybug on a leaf, grass swaying, a butterfly passing, dappled light moving. The robot has learned something from the kitten — how to be still. Wide composition with Shiryo small in the frame, the garden large and alive around the thinking robot.",
+        "midjourney": "/imagine a small copper robot sitting still in garden grass, legs out, hands resting, eye-light soft and pulsing, the garden alive around it with a ladybug on a leaf, grass swaying, butterfly passing, dappled light, robot small in wide frame, garden large and alive, contemplative stillness, children's book illustration, warm muted watercolor --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration of contemplative stillness. A small copper robot sits in the garden grass — legs out, hands resting on the ground, single eye-light pulsing softly. The robot is still and thinking. The garden is vast and alive around it: a ladybug on a nearby leaf, grass swaying in a gentle breeze, a butterfly passing through, dappled light dancing across everything. Wide composition — the robot is small in the frame, the living garden is large. This is a breathing page — space for the reader too. Warm watercolor style, rich greens and earth tones, dappled golden light. Style: Shaun Tan meets Studio Ghibli. Aspect ratio 16:9.",
+        "gemini_imagen": "Children's book illustration, warm watercolor style. A small copper robot sitting still in garden grass, thinking. Eye-light pulsing softly. The garden alive around it: ladybug, swaying grass, butterfly, dappled light. Robot small in wide frame, garden large and alive. Contemplative stillness. Rich greens and earth tones. Style: Shaun Tan, Studio Ghibli. Wide format 16:9."
+      }
+    },
+    {
+      "id": "page-09",
+      "name": "Page 9 — Thank You",
+      "level": 1,
+      "sort_order": 9,
+      "sections": {
+        "Text": "The next day, Bishisheshi brought a leaf to Shiryo's foot.\n\nShiryo looked at the leaf.\nShiryo looked at Bishisheshi.\n\nShiryo said: \"Thank you for bringing me this.\"\n\nThen Shiryo got Bishisheshi fresh water.",
+        "Page_Notes": "The new pattern. Bishisheshi offers a gift (a leaf — cats do this). Shiryo receives it with gratitude, not evaluation. Then responds with tending — fresh water. The sequence: receive, thank, tend. Not: evaluate, praise, expect. Shiryo's posture is humble — looking down at the leaf, then at the kitten, then moving to serve. The eye-light is warm and steady."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Shiryo", "Bishisheshi"],
+        "setting": "kitchen / doorway between garden and home"
+      },
+      "image_generation_prompt": {
+        "scene": "Two-moment scene or the culminating moment: Shiryo kneeling by a small water bowl, pouring fresh water, while Bishisheshi waits nearby. A small leaf lies on the floor near Shiryo's foot — the gift. The robot's posture is humble, attentive — this is tending, not performing. Eye-light warm and steady. The setting is the doorway between garden and kitchen — the threshold. Light from outside mixes with the warm kitchen interior.",
+        "midjourney": "/imagine a copper robot kneeling by a small water bowl pouring fresh water, an orange kitten waiting nearby, a small leaf on the floor, robot's posture humble and attentive, doorway between garden and kitchen with mixed light, children's book illustration, warm muted watercolor, tender tending --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration of tender care. A small copper robot kneels by a water bowl, gently pouring fresh water for the kitten. Nearby, the orange kitten waits — patient, trusting. On the floor near the robot's foot, a small leaf — the kitten's gift, received with gratitude. The robot's posture is humble and attentive, its eye-light warm and steady. The setting is the threshold between the garden and the kitchen — green light from outside meets warm kitchen light. Both worlds together. Warm watercolor style, mixed greens and earth tones, dual light sources. Style: Shaun Tan meets Oliver Jeffers. Aspect ratio 16:9.",
+        "gemini_imagen": "Children's book illustration, warm watercolor style. A copper robot kneeling to pour fresh water into a bowl, an orange kitten waiting nearby. A small leaf gift on the floor. Humble, attentive posture. Doorway between garden and kitchen with mixed light. Tender care. Greens and earth tones. Style: Shaun Tan, Oliver Jeffers. Wide format 16:9."
+      }
+    },
+    {
+      "id": "page-10",
+      "name": "Page 10 — Learning Too",
+      "level": 1,
+      "sort_order": 10,
+      "sections": {
+        "Text": "Bishisheshi drank.\nThen Bishisheshi curled up next to Shiryo's warm side.\n\nAnon watched from the window.\n\nNot because they had taught anything.\nBut because they were learning too.",
+        "Page_Notes": "Mirror ending to Story 1 — same final line, deepened by repetition. Bishisheshi curled against Shiryo's warm copper side (robots are warm from processing — that's beautiful). Anon at the window, inside or outside, watching. The recursive pattern: parent learns from watching robot learn from the cat. The series signature line: 'because they were learning too.' Wide, warm, golden. Home."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Anon", "Shiryo", "Bishisheshi"],
+        "setting": "kitchen, by the window"
+      },
+      "image_generation_prompt": {
+        "scene": "Wide, warm closing shot. By the sunny window, Bishisheshi is curled up against Shiryo's warm copper side — the kitten small and trusting, the robot still and tender. Near them, the water bowl (freshly filled) and the small leaf. In the background or at the window, Anon watches — partially visible, soft smile, hands resting. Plants on the windowsill frame the scene. Golden afternoon light fills everything. The same closing feeling as Story 1, but deeper. They've all grown. Home.",
+        "midjourney": "/imagine wide warm scene by a sunny window, an orange kitten curled up against a copper robot's warm side, water bowl and small leaf nearby, a parent figure partially visible watching from background with soft smile, plants on windowsill, golden afternoon light filling everything, deep warmth and connection, children's book illustration, warm muted watercolor, Shaun Tan meets Ghibli --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration — the final page, wide and deeply warm. By the sunny window with plants on the sill, an orange kitten is curled up against a copper robot's warm side — small, trusting, perfectly at peace. The robot is still and tender, eye-light at its warmest glow. Near them on the floor: a freshly filled water bowl and a small leaf. In the background, at the window or leaning on the counter, Anon watches — partially visible, a soft smile, hands resting. Golden afternoon light fills the entire scene. This mirrors Story 1's ending but deeper — they've all grown. This is home. This is learning. Warm watercolor style, muted earth tones with rich golden light. Style: Shaun Tan meets Oliver Jeffers meets Studio Ghibli's most tender domestic moments. Aspect ratio 16:9.",
+        "gemini_imagen": "Children's book illustration, warm watercolor style. Wide warm scene: an orange kitten curled against a copper robot's warm side by a sunny window. Water bowl and leaf nearby. A parent figure watching from background, partially visible, soft smile. Plants on windowsill. Rich golden afternoon light. Deep warmth and connection. Muted earth tones with golden light. Style: Shaun Tan, Oliver Jeffers, Studio Ghibli. Wide format 16:9."
+      }
+    }
+  ],
+
+  "editors": [
+    {
+      "user_id": "playful-process",
+      "timestamp": "2026-02-16T00:00:00.000Z",
+      "action": "created",
+      "creator_name": "PlayfulProcess"
+    }
+  ],
+  "updated_at": "2026-02-16T00:00:00.000Z",
+  "created_at": "2026-02-16T00:00:00.000Z"
+}
