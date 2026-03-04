@@ -1,6 +1,6 @@
 {
   "generated": true,
-  "grammar_count": 49,
+  "grammar_count": 61,
   "grammars": {
     "aesops-fables": {
       "id": "aesops-fables",
@@ -42,7 +42,7 @@
     "alice-in-wonderland-chapter-book": {
       "id": "alice-in-wonderland-chapter-book",
       "name": "Alice’s Adventures in Wonderland — A Chapter Book",
-      "description": "Lewis Carroll's beloved classic broken into scenes for multi-level reading. Level 2 chapters are emergent summaries (perfect for the littlest readers). Level 1 scenes contain the COMPLETE ORIGINAL TEXT alongside age-adapted retellings. Based on Sir John Tenniel's 1865 public domain illustrations.",
+      "description": "Lewis Carroll's beloved classic broken into scenes for multi-level reading. Level 2 chapters are emergent summaries (perfect for the littlest readers). Level 1 scenes contain the COMPLETE ORIGINAL TEXT alongside age-adapted retellings. Illustrated with public domain artwork from 5 artists: Lewis Carroll's own manuscript drawings (1864), Arthur Rackham (1907), Bessie Pease Gutmann (1933), Sir John Tenniel (1865), and Charles F.A. Voysey textile design (c.1930).\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES:\n- Lewis Carroll original manuscript drawings (1864, British Library) - 42 pen-and-ink illustrations drawn by Carroll himself for Alice Liddell\n- Arthur Rackham (1907, William Heinemann) - 13 color plates, art nouveau style\n- Bessie Pease Gutmann (1933, Dodge Publishing) - 6 soft pastel illustrations\n- Sir John Tenniel (1865, Macmillan) - the iconic original illustrations\n- Charles F.A. Voysey (c.1930) - Arts & Crafts textile design featuring Alice characters",
       "grammar_type": "custom",
       "creator_name": "",
       "tags": [
@@ -87,6 +87,54 @@
       "shelves": [],
       "lineages": [],
       "worldview": ""
+    },
+    "andersens-fairy-tales": {
+      "id": "andersens-fairy-tales",
+      "name": "Andersen's Fairy Tales",
+      "description": "Eighteen fairy tales by Hans Christian Andersen (1805-1875), the Danish master whose stories transformed children's literature forever. From the naked Emperor to the freezing match girl, from the Snow Queen's icy palace to the red shoes that would not stop dancing, these tales blend wonder, humor, and an unflinching honesty about suffering that sets Andersen apart from all other fairy tale writers. Unlike the Grimms, Andersen wrote original literary fairy tales drawn from his own imagination and his own pain — and they are among the most widely translated works in all of literature. Source: Project Gutenberg eBook #1597 (https://www.gutenberg.org/ebooks/1597).\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Vilhelm Pedersen's original illustrations for Andersen's tales (1849-1850s) — the first and most iconic illustrations, pen-and-ink, public domain. Lorenz Frølich's illustrations (1870s) — refined pen-and-ink drawings, public domain. Arthur Rackham's illustrations for 'Fairy Tales by Hans Andersen' (1932, Harrap) — watercolor and pen-and-ink in Rackham's distinctive style, public domain. Edmund Dulac's illustrations for 'Stories from Hans Andersen' (1911, Hodder & Stoughton) — luminous color plates, public domain. W. Heath Robinson's illustrations for 'Hans Andersen's Fairy Tales' (1913, Constable) — pen-and-ink with gentle humor, public domain. Kay Nielsen's illustrations for 'Fairy Tales by Hans Andersen' (1924, Hodder & Stoughton) — Art Nouveau masterworks, public domain.",
+      "grammar_type": "custom",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "fairy-tales",
+        "kids",
+        "danish",
+        "andersen",
+        "morals",
+        "fantasy",
+        "classic",
+        "oracle"
+      ],
+      "item_count": 30,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "characters",
+        "death-tales",
+        "identity-tales",
+        "kindness-tales",
+        "love-tales",
+        "meta",
+        "nature-tales",
+        "themes",
+        "transformation-tales",
+        "vanity-tales"
+      ],
+      "roots": [
+        "european-letters",
+        "romanticism"
+      ],
+      "shelves": [
+        "children",
+        "wonder"
+      ],
+      "lineages": [
+        "Shrei",
+        "Andreotti"
+      ],
+      "worldview": "devotional"
     },
     "anon-shiryo-cat-stories": {
       "id": "anon-shiryo-cat-stories",
@@ -356,7 +404,7 @@
         "marxism",
         "class-struggle"
       ],
-      "item_count": 179,
+      "item_count": 106,
       "levels": [
         1,
         2,
@@ -445,6 +493,50 @@
       "shelves": [],
       "lineages": [],
       "worldview": ""
+    },
+    "discourses-epictetus": {
+      "id": "discourses-epictetus",
+      "name": "Discourses of Epictetus with the Encheiridion",
+      "description": "A selection from the Discourses of Epictetus (c. 50-135 CE), the Stoic philosopher who was born a slave and became one of the most influential teachers of practical ethics in the ancient world. Includes the complete Encheiridion (Manual), a distillation of his core teachings. Translated by George Long (1877). \"It is not things that disturb us, but our judgments about things.\" Epictetus taught that freedom lies not in controlling circumstances but in mastering our responses to them — a teaching that directly influenced Marcus Aurelius, and centuries later, cognitive behavioral therapy. Source: Project Gutenberg eBook #10661 (https://www.gutenberg.org/ebooks/10661).\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Engraved portrait of Epictetus from Thomas Stanley's \"History of Philosophy\" (1655). Illustrations from 17th and 18th century editions of the Encheiridion. Classical Greek and Roman sculpture photography — busts of Stoic philosophers. Manuscript illuminations from medieval copies of the Discourses. Engravings of Nicopolis ruins where Epictetus taught. Illustrations from Edward Poynter and Lawrence Alma-Tadema depicting Roman philosophical life.",
+      "grammar_type": "custom",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "philosophy",
+        "stoicism",
+        "greek",
+        "ethics",
+        "wisdom",
+        "public-domain",
+        "full-text",
+        "epictetus",
+        "ancient",
+        "self-help",
+        "freedom",
+        "virtue"
+      ],
+      "item_count": 129,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "discourses",
+        "encheiridion",
+        "meta",
+        "sections",
+        "thematic-groups"
+      ],
+      "roots": [
+        "greek-philosophy"
+      ],
+      "shelves": [
+        "wisdom"
+      ],
+      "lineages": [
+        "Linehan"
+      ],
+      "worldview": "rationalist"
     },
     "emerald-death-card-no-one-here-gets-out-alive": {
       "id": "emerald-death-card-no-one-here-gets-out-alive",
@@ -611,6 +703,63 @@
       ],
       "worldview": "rationalist"
     },
+    "frederick-douglass": {
+      "id": "frederick-douglass",
+      "name": "Narrative of the Life of Frederick Douglass",
+      "description": "Frederick Douglass's 'Narrative of the Life of Frederick Douglass, an American Slave, Written by Himself' (1845) — one of the most powerful and influential autobiographies in American literature. Born into slavery in Maryland, Douglass taught himself to read, fought his overseer, escaped to freedom, and became the most prominent voice of the abolitionist movement. This Narrative is testimony, argument, and literature at once: a first-person account that dismantled every justification for slavery and changed the conscience of a nation.\n\nSource: Project Gutenberg eBook #23 (https://www.gutenberg.org/ebooks/23)\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Daguerreotypes and photographs of Frederick Douglass (the most photographed American of the 19th century). Illustrations from the 1845 first edition published by the Anti-Slavery Office, Boston. Woodcuts and engravings from abolitionist publications including The Liberator. Portraits by Elisha Hammond and other period artists.",
+      "grammar_type": "custom",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "autobiography",
+        "slavery",
+        "abolition",
+        "resistance",
+        "freedom",
+        "literacy",
+        "public-domain",
+        "full-text",
+        "american-literature",
+        "social-justice",
+        "testimony"
+      ],
+      "item_count": 199,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "appendix",
+        "ch01",
+        "ch02",
+        "ch03",
+        "ch04",
+        "ch05",
+        "ch06",
+        "ch07",
+        "ch08",
+        "ch09",
+        "ch10",
+        "ch11",
+        "chapter-group",
+        "meta-category",
+        "parody",
+        "thematic-group"
+      ],
+      "roots": [
+        "social-justice",
+        "freedom-commons"
+      ],
+      "shelves": [
+        "resilience",
+        "mirror"
+      ],
+      "lineages": [
+        "Akomolafe",
+        "Andreotti"
+      ],
+      "worldview": "dialectical"
+    },
     "gitanjali": {
       "id": "gitanjali",
       "name": "Gitanjali: Song Offerings",
@@ -650,6 +799,53 @@
         "Andreotti"
       ],
       "worldview": "devotional"
+    },
+    "gospel-of-buddha": {
+      "id": "gospel-of-buddha",
+      "name": "The Gospel of Buddha",
+      "description": "The Gospel of Buddha, compiled from ancient records by Paul Carus (1894, illustrated edition 1915). A harmonized retelling of the life and teachings of Siddhattha Gotama drawn from Pali, Sanskrit, and Chinese sources. One hundred chapters trace the arc from the Bodhisatta's birth through enlightenment, the founding of the Sangha, decades of teaching through sermons and parables, to the final entering into Nirvana at Kusinara. Carus sought to present Buddhism's essential spirit on common ground shared by all schools.\n\nSource: Project Gutenberg eBook #35895 (https://www.gutenberg.org/ebooks/35895)\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Olga Kopetzky (1915, Open Court Publishing), pen-and-ink drawings inspired by Ajanta cave paintings and Gandhara sculpture. Classical Buddhist art style with European draftsmanship. Also consider: illustrations from Edwin Arnold's 'The Light of Asia' (various editions, 1879+).",
+      "grammar_type": "custom",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "buddhism",
+        "sacred-text",
+        "life-of-buddha",
+        "parables",
+        "dharma",
+        "philosophy",
+        "compassion"
+      ],
+      "item_count": 115,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "becomes-buddha",
+        "conclusion",
+        "consolidation",
+        "foundation",
+        "introduction",
+        "last-days",
+        "life-phase",
+        "meta",
+        "parables",
+        "teacher",
+        "theme"
+      ],
+      "roots": [
+        "eastern-wisdom"
+      ],
+      "shelves": [
+        "wisdom"
+      ],
+      "lineages": [
+        "Linehan",
+        "Akomolafe",
+        "Shrei"
+      ],
+      "worldview": "non-dual"
     },
     "greek-mythology": {
       "id": "greek-mythology",
@@ -883,6 +1079,55 @@
       "lineages": [],
       "worldview": ""
     },
+    "japanese-fairy-tales": {
+      "id": "japanese-fairy-tales",
+      "name": "Japanese Fairy Tales",
+      "description": "Twenty-two classic Japanese fairy tales compiled by Yei Theodora Ozaki (1908), translated from the modern Japanese versions of Sadanami Sanjin. These beloved stories — including Momotaro, Urashima Taro, Kaguya-hime, and Kintaro — are the foundational fairy tales of Japan, featuring brave warriors, clever animals, enchanted princesses, and journeys to supernatural realms. They carry deep moral teachings about courage, kindness, loyalty, and the consequences of greed. Source: Project Gutenberg eBook #4018 (https://www.gutenberg.org/ebooks/4018).\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Kakuzo Fujiyama's original illustrations for the 1908 Archibald Constable & Co. edition of 'Japanese Fairy Tales' — color plates in traditional Japanese art style. Hasegawa Takejiro's 'Japanese Fairy Tale Series' (1885-1922, T. Hasegawa, Tokyo) — beautiful color woodblock-printed crêpe paper books, public domain. Warwick Goble's illustrations for 'Green Willow and Other Japanese Fairy Tales' (1910, Macmillan) — watercolor illustrations of Japanese scenes and characters, public domain.",
+      "grammar_type": "custom",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "fairy-tales",
+        "kids",
+        "japanese",
+        "folklore",
+        "animals",
+        "heroes",
+        "morals",
+        "mythology",
+        "oracle"
+      ],
+      "item_count": 34,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "animal-tales",
+        "characters",
+        "family-tales",
+        "hero-tales",
+        "legend-tales",
+        "meta",
+        "princess-tales",
+        "supernatural-tales",
+        "themes"
+      ],
+      "roots": [
+        "eastern-wisdom",
+        "animism"
+      ],
+      "shelves": [
+        "wonder",
+        "children",
+        "wisdom"
+      ],
+      "lineages": [
+        "Shrei",
+        "Akomolafe"
+      ],
+      "worldview": "animist"
+    },
     "jungian-archetypes": {
       "id": "jungian-archetypes",
       "name": "Jungian Archetypes — The Inner Cast",
@@ -917,6 +1162,54 @@
       "lineages": [],
       "worldview": ""
     },
+    "jungle-book": {
+      "id": "jungle-book",
+      "name": "The Jungle Book",
+      "description": "Rudyard Kipling's masterwork of animal fable and adventure (1894) -- seven stories and seven companion poems set in the jungles of India, the seal beaches of the Bering Sea, and the military camps of the British Raj. At its heart are the Mowgli stories: a human child raised by wolves who must find his identity between the jungle and the village. Alongside them, Rikki-tikki-tavi battles cobras in a garden, Kotick the white seal searches the oceans for sanctuary, Little Toomai witnesses the secret elephant dance, and the camp animals debate duty and fear. Source: Project Gutenberg eBook #35997 (https://www.gutenberg.org/ebooks/35997).\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: The original 1894 Century Co. edition illustrated by John Lockwood Kipling (Rudyard's father), W.H. Drake, and P. Frenzeny -- detailed pen-and-ink drawings of jungle animals, Indian landscapes, and colonial settings. Maurice and Edward Detmold's 1908 illustrations for 'The Jungle Book' (Macmillan) -- lush, painterly watercolors of Mowgli, the wolves, and the jungle, widely considered the finest Jungle Book illustrations. Aldren Watson's 1948 illustrations (Grosset & Dunlap) -- classic mid-century pen-and-ink. Fritz Eichenberg's 1950 woodcut illustrations -- bold, dramatic black-and-white.",
+      "grammar_type": "custom",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "children",
+        "adventure",
+        "animals",
+        "jungle",
+        "india",
+        "fables",
+        "poetry",
+        "coming-of-age",
+        "nature",
+        "identity"
+      ],
+      "item_count": 25,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "epigraph",
+        "meta",
+        "mowgli-songs",
+        "mowgli-stories",
+        "standalone-songs",
+        "standalone-stories",
+        "story-cycles",
+        "themes"
+      ],
+      "roots": [
+        "romanticism",
+        "colonialism"
+      ],
+      "shelves": [
+        "children",
+        "wonder"
+      ],
+      "lineages": [
+        "Akomolafe",
+        "Andreotti"
+      ],
+      "worldview": "animist"
+    },
     "kids-workouts-gvo-kids-youtube-playlist": {
       "id": "kids-workouts-gvo-kids-youtube-playlist",
       "name": "Kids Workouts - GVO Kids YouTube Playlist",
@@ -938,6 +1231,91 @@
       "shelves": [],
       "lineages": [],
       "worldview": ""
+    },
+    "leaves-of-grass": {
+      "id": "leaves-of-grass",
+      "name": "Leaves of Grass",
+      "description": "Walt Whitman's Leaves of Grass — the complete \"deathbed\" edition of 1891-92, containing nearly 400 poems spanning four decades of work. From the cosmic ecstasy of \"Song of Myself\" to the Civil War witness of \"Drum-Taps\" to the luminous late poems of \"Sands at Seventy,\" this is the foundational text of American poetry and one of the great sacred books of democratic civilization. Source: Project Gutenberg eBook #1322 (https://www.gutenberg.org/ebooks/1322).\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Thomas Eakins' 1887 portrait of Whitman (oil on canvas, Pennsylvania Academy of Fine Arts) — intimate, luminous portrait of the poet in old age. Samuel Hollyer's 1855 engraving of Whitman (frontispiece to the first edition) — the young Whitman in workman's clothes, hat cocked. George C. Cox's 1887 photographs of Whitman — multiple poses showing the \"Good Gray Poet\" in his Camden years. Frederick Gutekunst's 1889 photograph — the iconic white-bearded profile.",
+      "grammar_type": "custom",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "poetry",
+        "american-literature",
+        "democracy",
+        "transcendentalism",
+        "nature",
+        "war",
+        "love",
+        "body",
+        "soul",
+        "death",
+        "civil-war",
+        "spirituality",
+        "identity",
+        "public-domain",
+        "oracle"
+      ],
+      "item_count": 425,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "a-broadway-pageant",
+        "a-song-for-occupations",
+        "a-song-of-joys",
+        "a-song-of-the-rolling-earth",
+        "autumn-rivulets",
+        "birds-of-passage",
+        "book-clusters",
+        "by-blue-ontarios-shore",
+        "by-the-roadside",
+        "calamus",
+        "children-of-adam",
+        "crossing-brooklyn-ferry",
+        "drum-taps",
+        "from-noon-to-starry-night",
+        "good-bye-my-fancy",
+        "inscriptions",
+        "memories-of-president-lincoln",
+        "meta-categories",
+        "our-old-feuillage",
+        "passage-to-india",
+        "prayer-of-columbus",
+        "proud-music-of-the-storm",
+        "salut-au-monde",
+        "sands-at-seventy",
+        "sea-drift",
+        "song-of-myself",
+        "song-of-the-answerer",
+        "song-of-the-broad-axe",
+        "song-of-the-exposition",
+        "song-of-the-open-road",
+        "song-of-the-redwood-tree",
+        "songs-of-parting",
+        "starting-from-paumanok",
+        "the-sleepers",
+        "thematic-groups",
+        "thou-mother-with-thy-equal-brood",
+        "to-think-of-time",
+        "whispers-of-heavenly-death"
+      ],
+      "roots": [
+        "transcendentalism",
+        "democratic-thought",
+        "mysticism"
+      ],
+      "shelves": [
+        "wisdom",
+        "mirror"
+      ],
+      "lineages": [
+        "Shrei",
+        "Akomolafe",
+        "Kelty"
+      ],
+      "worldview": "non-dual"
     },
     "luiza-lian": {
       "id": "luiza-lian",
@@ -1007,6 +1385,56 @@
       "lineages": [],
       "worldview": ""
     },
+    "metamorphoses-ovid": {
+      "id": "metamorphoses-ovid",
+      "name": "Ovid's Metamorphoses",
+      "description": "The Metamorphoses of Ovid (Books I-VII), the great Roman poem of transformation, rendered into English prose by Henry T. Riley (1851). Spanning from the creation of the world out of Chaos to the magical flights of Medea, these 66 myths form a continuous river of change: gods become animals, mortals become trees, love becomes loss, and grief becomes landscape. Every story is a metamorphosis -- and every metamorphosis asks what it means to become something other than what you were. Source: Project Gutenberg eBook #21765 (https://www.gutenberg.org/ebooks/21765).\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Arthur Rackham's illustrations for 'Tales from Shakespeare' and mythological subjects (early 1900s) -- atmospheric watercolors of classical scenes. John William Waterhouse's paintings of mythological subjects (1880s-1910s) -- Pre-Raphaelite oil paintings of Apollo, Narcissus, Hylas, etc. Gustave Dore's illustrations for classical texts -- dramatic engravings. Walter Crane's illustrations for classical mythology (1890s) -- decorative Arts and Crafts style. Virgil Solis woodcuts for the 1563 Frankfurt edition of the Metamorphoses -- the earliest major illustrated edition, 178 woodcuts, public domain. Bernard Salomon's woodcuts for the 1557 Lyon Metamorphoses -- elegant Renaissance illustrations, public domain.",
+      "grammar_type": "custom",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "mythology",
+        "transformation",
+        "classical",
+        "roman",
+        "greek",
+        "poetry",
+        "love",
+        "gods",
+        "nature",
+        "oracle",
+        "wisdom"
+      ],
+      "item_count": 86,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "book-1",
+        "book-2",
+        "book-3",
+        "book-4",
+        "book-5",
+        "book-6",
+        "book-7",
+        "books",
+        "meta",
+        "themes"
+      ],
+      "roots": [
+        "greek-philosophy",
+        "mythology"
+      ],
+      "shelves": [
+        "wonder"
+      ],
+      "lineages": [
+        "Shrei",
+        "Andreotti"
+      ],
+      "worldview": "animist"
+    },
     "national-geographic-tucci-in-italy": {
       "id": "national-geographic-tucci-in-italy",
       "name": "National Geographic: Tucci in Italy",
@@ -1067,6 +1495,66 @@
       "shelves": [],
       "lineages": [],
       "worldview": ""
+    },
+    "peter-pan": {
+      "id": "peter-pan",
+      "name": "Peter Pan",
+      "description": "J.M. Barrie's Peter Pan (originally published as Peter and Wendy, 1911) — the beloved story of the boy who never grew up, the Darling children's flight to Neverland, and the bittersweet truth that all children, except one, grow up. Structured as scenes within 17 chapters, with thematic groupings for adventure, imagination, growing up, mothers and home, and good and evil.\n\nSource: Project Gutenberg eBook #16 (https://www.gutenberg.org/ebooks/16). Text matches the 1911 original publication.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES:\n- F.D. Bedford (1911, Hodder & Stoughton) — original edition illustrator, detailed pen-and-ink drawings of Neverland, the Darling nursery, and the pirate ship\n- Arthur Rackham (1906, Hodder & Stoughton) — illustrated Peter Pan in Kensington Gardens, atmospheric watercolors of fairies and the Serpentine\n- Mabel Lucie Attwell (1921, Hodder & Stoughton) — charming, rounded children's illustrations",
+      "grammar_type": "custom",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "children",
+        "classic",
+        "adventure",
+        "fantasy",
+        "public-domain",
+        "j-m-barrie",
+        "peter-pan",
+        "neverland",
+        "full-text",
+        "scenes",
+        "multi-level"
+      ],
+      "item_count": 88,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "chapter-01",
+        "chapter-02",
+        "chapter-03",
+        "chapter-04",
+        "chapter-05",
+        "chapter-06",
+        "chapter-07",
+        "chapter-08",
+        "chapter-09",
+        "chapter-10",
+        "chapter-11",
+        "chapter-12",
+        "chapter-13",
+        "chapter-14",
+        "chapter-16",
+        "chapter-17",
+        "chapter-summary",
+        "meta",
+        "theme"
+      ],
+      "roots": [
+        "western-literary",
+        "romanticism"
+      ],
+      "shelves": [
+        "children",
+        "wonder"
+      ],
+      "lineages": [
+        "Shrei",
+        "Andreotti"
+      ],
+      "worldview": "romantic"
     },
     "playful-process-the-path-of-the-ontoject": {
       "id": "playful-process-the-path-of-the-ontoject",
@@ -1435,6 +1923,50 @@
       "lineages": [],
       "worldview": ""
     },
+    "symposium-plato": {
+      "id": "symposium-plato",
+      "name": "Symposium",
+      "description": "Plato's Symposium (c. 385-370 BCE) -- the most perfect dialogue on the nature of love ever written. At a banquet celebrating the tragic poet Agathon's first victory, seven speakers offer speeches in praise of Love (Eros). From Phaedrus' mythological praise through Aristophanes' famous myth of the split humans to Socrates' account of Diotima's 'Ladder of Beauty' -- the ascent from earthly love to the contemplation of Beauty itself -- the Symposium traces every dimension of love: ethical, cosmic, comic, poetic, philosophical, and confessional. Benjamin Jowett translation. Source: Project Gutenberg eBook #1600 (https://www.gutenberg.org/ebooks/1600).\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Anselm Feuerbach's 'The Symposium' (1869, second version 1873) -- monumental oil painting of the banquet scene, Nationalgalerie Berlin, public domain. Greek red-figure pottery depicting symposia (banquet scenes), widely available from museum collections. Jacques-Louis David's 'The Death of Socrates' (1787) for the figure of Socrates. Raphael's 'The School of Athens' (1509-1511) for Plato's figure. John Flaxman's line illustrations of Greek subjects (early 19th century), public domain.",
+      "grammar_type": "custom",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "philosophy",
+        "love",
+        "plato",
+        "greek",
+        "dialogue",
+        "beauty",
+        "wisdom",
+        "public-domain",
+        "full-text"
+      ],
+      "item_count": 33,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "alcibiades",
+        "by-speaker",
+        "by-theme",
+        "frame-narrative",
+        "interludes",
+        "meta",
+        "speeches"
+      ],
+      "roots": [
+        "greek-philosophy"
+      ],
+      "shelves": [
+        "wisdom"
+      ],
+      "lineages": [
+        "Shrei",
+        "Andreotti"
+      ],
+      "worldview": "dialectical"
+    },
     "tao-te-ching": {
       "id": "tao-te-ching",
       "name": "Tao Te Ching",
@@ -1477,24 +2009,126 @@
       ],
       "worldview": "non-dual"
     },
-    "upanishads": {
-      "id": "upanishads",
-      "name": "The Upanishads",
-      "description": "Three principal Upanishads — Isha, Katha, and Kena — translated from Sanskrit by Swami Paramananda. The Upanishads ('sitting near the teacher') are the philosophical conclusion of the Vedas, exploring the nature of Brahman (ultimate reality), Atman (the Self), and their identity. These texts are the fountainhead of Vedanta philosophy and the deepest roots of yoga, meditation, and non-dual awareness.\n\nSource: Project Gutenberg eBook #3283 (https://www.gutenberg.org/ebooks/3283)\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Rajput miniature paintings of sages and forest ashrams. Illustrations from early 20th century Vedanta Society publications. Traditional Indian manuscript illuminations.",
+    "through-the-looking-glass": {
+      "id": "through-the-looking-glass",
+      "name": "Through the Looking-Glass",
+      "description": "Lewis Carroll's beloved sequel to Alice's Adventures in Wonderland (1871), in which Alice steps through a mirror into a world where everything runs backwards. Structured as a chess game, the story follows Alice from Pawn to Queen through encounters with Tweedledum and Tweedledee, Humpty Dumpty, the White Knight, and the Red Queen. Contains some of the most famous poems in the English language, including Jabberwocky and The Walrus and the Carpenter. Source: Project Gutenberg eBook #12 (https://www.gutenberg.org/ebooks/12).\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: John Tenniel's original 1871 illustrations for 'Through the Looking-Glass' (Macmillan) -- the definitive visual companion, featuring detailed wood engravings of Alice, Humpty Dumpty, the Jabberwock, the White Knight, and all major characters. Peter Newell's 1902 illustrations (Harper & Brothers) -- softer, more whimsical pen-and-ink drawings. Arthur Rackham's 1907 illustrations for 'Alice's Adventures in Wonderland' (Heinemann) -- while primarily for the first book, Rackham's style perfectly complements the Looking-Glass world. Blanche McManus's 1899 illustrations -- color plates with Art Nouveau influences.",
+      "grammar_type": "custom",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "alice",
+        "carroll",
+        "chess",
+        "mirror",
+        "nonsense",
+        "children",
+        "fantasy",
+        "wordplay",
+        "philosophy",
+        "victorian",
+        "poetry"
+      ],
+      "item_count": 57,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "chapter-1",
+        "chapter-10",
+        "chapter-11",
+        "chapter-12",
+        "chapter-2",
+        "chapter-3",
+        "chapter-4",
+        "chapter-5",
+        "chapter-6",
+        "chapter-7",
+        "chapter-8",
+        "chapter-9",
+        "chapters",
+        "meta",
+        "themes"
+      ],
+      "roots": [
+        "western-philosophy",
+        "imagination"
+      ],
+      "shelves": [
+        "children",
+        "wonder"
+      ],
+      "lineages": [
+        "Shrei",
+        "Andreotti"
+      ],
+      "worldview": "dialectical"
+    },
+    "thus-spoke-zarathustra": {
+      "id": "thus-spoke-zarathustra",
+      "name": "Thus Spoke Zarathustra",
+      "description": "Friedrich Nietzsche's philosophical masterpiece, written between 1883 and 1885 — a prose-poem in four parts in which the prophet Zarathustra descends from mountain solitude to teach humanity about the Overman, the eternal recurrence, and the will to power. Through eighty speeches of extraordinary lyrical force, Nietzsche dismantles conventional morality and calls for a radical affirmation of life. Thomas Common translation (1909). Source: Project Gutenberg eBook #1998 (https://www.gutenberg.org/ebooks/1998).\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: No widely known public domain illustration editions exist specifically for Zarathustra, but appropriate visual companions include: Caspar David Friedrich's paintings (1774-1840) — 'Wanderer above the Sea of Fog' and mountain landscapes that capture Zarathustra's solitary heights. William Blake's visionary prints (1757-1827) — prophetic figures and cosmic imagery fitting Nietzsche's tone. Gustave Doré's biblical and literary illustrations (1832-1883) — mountain scenes, prophetic figures, and cosmic vistas.",
       "grammar_type": "custom",
       "creator_name": "PlayfulProcess",
       "tags": [
         "philosophy",
-        "vedanta",
-        "indian",
-        "sacred-text",
-        "public-domain",
-        "full-text",
+        "nietzsche",
+        "existentialism",
+        "overman",
+        "eternal-recurrence",
+        "will-to-power",
+        "german-philosophy",
+        "prose-poetry",
         "wisdom",
-        "non-dual",
-        "sanskrit"
+        "oracle"
       ],
-      "item_count": 191,
+      "item_count": 95,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "first-part",
+        "fourth-part",
+        "meta-structure",
+        "meta-themes",
+        "parts",
+        "second-part",
+        "thematic-groups",
+        "third-part"
+      ],
+      "roots": [
+        "western-philosophy",
+        "mysticism",
+        "individualism"
+      ],
+      "shelves": [
+        "wisdom",
+        "mirror"
+      ],
+      "lineages": [
+        "Shrei",
+        "Akomolafe",
+        "Andreotti"
+      ],
+      "worldview": "non-dual"
+    },
+    "upanishads": {
+      "id": "upanishads",
+      "name": "The Upanishads",
+      "description": "Three principal Upanishads — Isha, Katha, and Kena — translated from Sanskrit by Swami Paramananda (1919). The Upanishads ('sitting near the teacher') are the philosophical conclusion of the Vedas, exploring the nature of Brahman (ultimate reality), Atman (the Self), and their identity. These texts are the fountainhead of Vedanta philosophy and the deepest roots of yoga, meditation, and non-dual awareness. Each verse is presented with Paramananda's commentary.\n\nSource: Project Gutenberg eBook #3283 (https://www.gutenberg.org/ebooks/3283)\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Rajput miniature paintings of sages and forest ashrams from the 17th-18th centuries. Illustrations from early 20th century Vedanta Society publications. Traditional Indian manuscript illuminations depicting scenes of guru-disciple teaching in forest settings.",
+      "grammar_type": "custom",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "upanishads",
+        "hindu",
+        "vedanta",
+        "sacred-text",
+        "philosophy"
+      ],
+      "item_count": 194,
       "levels": [
         1,
         2,
@@ -1511,14 +2145,15 @@
         "upanishad-group"
       ],
       "roots": [
-        "eastern-wisdom"
+        "eastern-wisdom",
+        "mysticism"
       ],
       "shelves": [
         "wisdom"
       ],
       "lineages": [
         "Shrei",
-        "Andreotti"
+        "Akomolafe"
       ],
       "worldview": "non-dual"
     },
@@ -1561,6 +2196,7 @@
       "custom": [
         "aesops-fables",
         "alice-in-wonderland-chapter-book",
+        "andersens-fairy-tales",
         "anon-shiryo-cat-stories",
         "art-of-war",
         "bulfinch-s-classical-mythology",
@@ -1570,17 +2206,25 @@
         "communist-manifesto",
         "confucian-analects",
         "dhammapada",
+        "discourses-epictetus",
         "emerald-death-card-no-one-here-gets-out-alive",
         "emerald-kids-folk-tales",
         "enchiridion",
+        "frederick-douglass",
         "gitanjali",
+        "gospel-of-buddha",
         "greek-mythology-for-kids",
         "grimms-fairy-tales",
         "i-ching-chinese-original-with-brief-translation",
+        "japanese-fairy-tales",
+        "jungle-book",
+        "leaves-of-grass",
         "meditations-marcus-aurelius",
+        "metamorphoses-ovid",
         "national-geographic-tucci-in-italy",
         "patchwork-pawls-filmbilder-friends",
         "pbs-kids",
+        "peter-pan",
         "playful-process-the-path-of-the-ontoject",
         "popol-vuh",
         "practice-presence-of-god",
@@ -1589,7 +2233,10 @@
         "social-working",
         "songs-of-kabir",
         "sonnets-from-portuguese",
+        "symposium-plato",
         "tao-te-ching",
+        "through-the-looking-glass",
+        "thus-spoke-zarathustra",
         "upanishads",
         "winnie-the-pooh-chapter-book"
       ],
@@ -1624,6 +2271,13 @@
       "a-a-milne": [
         "winnie-the-pooh-chapter-book"
       ],
+      "abolition": [
+        "frederick-douglass"
+      ],
+      "adventure": [
+        "jungle-book",
+        "peter-pan"
+      ],
       "age-adapted": [
         "alice-in-wonderland-chapter-book"
       ],
@@ -1633,16 +2287,27 @@
         "story-02-gratitude-not-praise"
       ],
       "alice": [
-        "alice-in-wonderland-chapter-book"
+        "alice-in-wonderland-chapter-book",
+        "through-the-looking-glass"
+      ],
+      "american-literature": [
+        "frederick-douglass",
+        "leaves-of-grass"
       ],
       "analeptic": [
         "social-working"
       ],
       "ancient": [
-        "art-of-war"
+        "art-of-war",
+        "discourses-epictetus"
+      ],
+      "andersen": [
+        "andersens-fairy-tales"
       ],
       "animals": [
         "aesops-fables",
+        "japanese-fairy-tales",
+        "jungle-book",
         "patchwork-pawls-filmbilder-friends"
       ],
       "animated": [
@@ -1663,11 +2328,20 @@
         "archetypal-astrology-tarnas",
         "greek-mythology"
       ],
+      "autobiography": [
+        "frederick-douglass"
+      ],
+      "beauty": [
+        "symposium-plato"
+      ],
       "bengali": [
         "gitanjali"
       ],
       "binary": [
         "i-ching-leibniz-binary"
+      ],
+      "body": [
+        "leaves-of-grass"
       ],
       "brazilian": [
         "luiza-lian"
@@ -1676,10 +2350,14 @@
         "grimms-fairy-tales"
       ],
       "buddhism": [
-        "dhammapada"
+        "dhammapada",
+        "gospel-of-buddha"
       ],
       "builders": [
         "rider-waite-smith-tarot"
+      ],
+      "carroll": [
+        "through-the-looking-glass"
       ],
       "cat": [
         "story-01-asking-not-complaining",
@@ -1692,10 +2370,16 @@
         "alice-in-wonderland-chapter-book",
         "winnie-the-pooh-chapter-book"
       ],
+      "chess": [
+        "through-the-looking-glass"
+      ],
       "children": [
         "alice-in-wonderland-chapter-book",
         "anon-shiryo-cat-stories",
         "emerald-kids-folk-tales",
+        "jungle-book",
+        "peter-pan",
+        "through-the-looking-glass",
         "winnie-the-pooh-chapter-book"
       ],
       "chinese": [
@@ -1709,19 +2393,25 @@
       "christian": [
         "practice-presence-of-god"
       ],
+      "civil-war": [
+        "leaves-of-grass"
+      ],
       "class-struggle": [
         "communist-manifesto"
       ],
       "classic": [
         "alice-in-wonderland-chapter-book",
+        "andersens-fairy-tales",
         "confucian-analects",
         "dhammapada",
+        "peter-pan",
         "shakespeare-ten-greatest",
         "winnie-the-pooh-chapter-book"
       ],
       "classical": [
         "i-ching-chinese-emergent",
-        "i-ching-leibniz-binary"
+        "i-ching-leibniz-binary",
+        "metamorphoses-ovid"
       ],
       "classics": [
         "meditations-marcus-aurelius"
@@ -1732,8 +2422,14 @@
       "comedy": [
         "shakespeare-ten-greatest"
       ],
+      "coming-of-age": [
+        "jungle-book"
+      ],
       "community": [
         "playful-process-the-path-of-the-ontoject"
+      ],
+      "compassion": [
+        "gospel-of-buddha"
       ],
       "complement": [
         "i-ching-leibniz-binary"
@@ -1759,15 +2455,20 @@
       "culture": [
         "national-geographic-tucci-in-italy"
       ],
+      "danish": [
+        "andersens-fairy-tales"
+      ],
       "death": [
         "emerald-death-card-no-one-here-gets-out-alive",
-        "emerald-death-card-visuals"
+        "emerald-death-card-visuals",
+        "leaves-of-grass"
       ],
       "decolonial": [
         "social-working"
       ],
       "democracy": [
-        "common-sense"
+        "common-sense",
+        "leaves-of-grass"
       ],
       "depth-psychology": [
         "archetypal-astrology-tarnas",
@@ -1776,6 +2477,12 @@
       "devotional": [
         "gitanjali",
         "songs-of-kabir"
+      ],
+      "dharma": [
+        "gospel-of-buddha"
+      ],
+      "dialogue": [
+        "symposium-plato"
       ],
       "disney": [
         "kids-workouts-gvo-kids-youtube-playlist"
@@ -1806,30 +2513,51 @@
       "english-literature": [
         "shakespeare-ten-greatest"
       ],
+      "epictetus": [
+        "discourses-epictetus"
+      ],
       "essay": [
         "civil-disobedience"
       ],
+      "eternal-recurrence": [
+        "thus-spoke-zarathustra"
+      ],
       "ethics": [
+        "discourses-epictetus",
         "enchiridion"
       ],
+      "existentialism": [
+        "thus-spoke-zarathustra"
+      ],
       "fables": [
-        "aesops-fables"
+        "aesops-fables",
+        "jungle-book"
       ],
       "fairy-tales": [
-        "grimms-fairy-tales"
+        "andersens-fairy-tales",
+        "grimms-fairy-tales",
+        "japanese-fairy-tales"
       ],
       "family-tree": [
         "greek-mythology"
+      ],
+      "fantasy": [
+        "andersens-fairy-tales",
+        "peter-pan",
+        "through-the-looking-glass"
       ],
       "folk-tales": [
         "emerald-kids-folk-tales"
       ],
       "folklore": [
-        "grimms-fairy-tales"
+        "grimms-fairy-tales",
+        "japanese-fairy-tales"
       ],
       "freedom": [
         "civil-disobedience",
-        "common-sense"
+        "common-sense",
+        "discourses-epictetus",
+        "frederick-douglass"
       ],
       "fu-xi": [
         "i-ching-leibniz-binary"
@@ -1841,15 +2569,18 @@
         "communist-manifesto",
         "confucian-analects",
         "dhammapada",
+        "discourses-epictetus",
         "enchiridion",
+        "frederick-douglass",
         "gitanjali",
+        "peter-pan",
         "popol-vuh",
         "practice-presence-of-god",
         "shakespeare-ten-greatest",
         "songs-of-kabir",
         "sonnets-from-portuguese",
+        "symposium-plato",
         "tao-te-ching",
-        "upanishads",
         "winnie-the-pooh-chapter-book"
       ],
       "fun": [
@@ -1858,15 +2589,22 @@
       "german-folklore": [
         "grimms-fairy-tales"
       ],
+      "german-philosophy": [
+        "thus-spoke-zarathustra"
+      ],
       "gods": [
-        "greek-mythology"
+        "greek-mythology",
+        "metamorphoses-ovid"
       ],
       "gratitude": [
         "story-02-gratitude-not-praise"
       ],
       "greek": [
         "aesops-fables",
-        "greek-mythology"
+        "discourses-epictetus",
+        "greek-mythology",
+        "metamorphoses-ovid",
+        "symposium-plato"
       ],
       "grimm": [
         "grimms-fairy-tales"
@@ -1875,14 +2613,22 @@
         "anon-shiryo-cat-stories"
       ],
       "heroes": [
-        "greek-mythology"
+        "greek-mythology",
+        "japanese-fairy-tales"
       ],
       "hexagrams": [
         "i-ching-chinese-emergent",
         "i-ching-leibniz-binary"
       ],
+      "hindu": [
+        "upanishads"
+      ],
       "hypercube": [
         "i-ching-leibniz-binary"
+      ],
+      "identity": [
+        "jungle-book",
+        "leaves-of-grass"
       ],
       "illustrated": [
         "alice-in-wonderland-chapter-book",
@@ -1890,10 +2636,12 @@
         "story-01-asking-not-complaining",
         "story-02-gratitude-not-praise"
       ],
+      "india": [
+        "jungle-book"
+      ],
       "indian": [
         "gitanjali",
-        "songs-of-kabir",
-        "upanishads"
+        "songs-of-kabir"
       ],
       "indigenous": [
         "popol-vuh"
@@ -1907,6 +2655,12 @@
       "italy": [
         "national-geographic-tucci-in-italy"
       ],
+      "j-m-barrie": [
+        "peter-pan"
+      ],
+      "japanese": [
+        "japanese-fairy-tales"
+      ],
       "jing-fang": [
         "i-ching-leibniz-binary"
       ],
@@ -1914,10 +2668,15 @@
         "archetypal-astrology-tarnas",
         "jungian-archetypes"
       ],
+      "jungle": [
+        "jungle-book"
+      ],
       "kids": [
         "aesops-fables",
+        "andersens-fairy-tales",
         "anon-shiryo-cat-stories",
         "emerald-kids-folk-tales",
+        "japanese-fairy-tales",
         "story-01-asking-not-complaining",
         "story-02-gratitude-not-praise"
       ],
@@ -1933,12 +2692,21 @@
       "lewis-carroll": [
         "alice-in-wonderland-chapter-book"
       ],
+      "life-of-buddha": [
+        "gospel-of-buddha"
+      ],
       "lines": [
         "i-ching-chinese-emergent",
         "i-ching-leibniz-binary"
       ],
+      "literacy": [
+        "frederick-douglass"
+      ],
       "love": [
-        "sonnets-from-portuguese"
+        "leaves-of-grass",
+        "metamorphoses-ovid",
+        "sonnets-from-portuguese",
+        "symposium-plato"
       ],
       "major-arcana": [
         "playful-process-the-path-of-the-ontoject"
@@ -1971,14 +2739,20 @@
       "mindfulness": [
         "practice-presence-of-god"
       ],
+      "mirror": [
+        "through-the-looking-glass"
+      ],
       "mocement": [
         "kids-workouts-gvo-kids-youtube-playlist"
       ],
       "morals": [
-        "aesops-fables"
+        "aesops-fables",
+        "andersens-fairy-tales",
+        "japanese-fairy-tales"
       ],
       "multi-level": [
-        "alice-in-wonderland-chapter-book"
+        "alice-in-wonderland-chapter-book",
+        "peter-pan"
       ],
       "music": [
         "luiza-lian"
@@ -1994,20 +2768,33 @@
         "emerald-kids-folk-tales",
         "greek-mythology",
         "greek-mythology-for-kids",
+        "japanese-fairy-tales",
+        "metamorphoses-ovid",
         "popol-vuh"
       ],
       "national-geographic": [
         "national-geographic-tucci-in-italy"
       ],
       "nature": [
+        "jungle-book",
+        "leaves-of-grass",
+        "metamorphoses-ovid",
         "story-02-gratitude-not-praise"
+      ],
+      "neverland": [
+        "peter-pan"
+      ],
+      "nietzsche": [
+        "thus-spoke-zarathustra"
       ],
       "nobel-prize": [
         "gitanjali"
       ],
       "non-dual": [
-        "tao-te-ching",
-        "upanishads"
+        "tao-te-ching"
+      ],
+      "nonsense": [
+        "through-the-looking-glass"
       ],
       "nonviolence": [
         "civil-disobedience"
@@ -2020,14 +2807,22 @@
       ],
       "oracle": [
         "aesops-fables",
+        "andersens-fairy-tales",
         "art-of-war",
         "grimms-fairy-tales",
-        "jungian-archetypes"
+        "japanese-fairy-tales",
+        "jungian-archetypes",
+        "leaves-of-grass",
+        "metamorphoses-ovid",
+        "thus-spoke-zarathustra"
       ],
       "original": [
         "i-ching-chinese-emergent",
         "i-ching-chinese-original-with-brief-translation",
         "i-ching-leibniz-binary"
+      ],
+      "overman": [
+        "thus-spoke-zarathustra"
       ],
       "pali-canon": [
         "dhammapada"
@@ -2035,11 +2830,17 @@
       "pamphlet": [
         "common-sense"
       ],
+      "parables": [
+        "gospel-of-buddha"
+      ],
       "pbs-kids": [
         "pbs-kids"
       ],
       "pedagogical": [
         "anon-shiryo-cat-stories"
+      ],
+      "peter-pan": [
+        "peter-pan"
       ],
       "philosophy": [
         "art-of-war",
@@ -2048,13 +2849,21 @@
         "communist-manifesto",
         "confucian-analects",
         "dhammapada",
+        "discourses-epictetus",
         "enchiridion",
+        "gospel-of-buddha",
         "meditations-marcus-aurelius",
+        "symposium-plato",
         "tao-te-ching",
+        "through-the-looking-glass",
+        "thus-spoke-zarathustra",
         "upanishads"
       ],
       "planets": [
         "archetypal-astrology-tarnas"
+      ],
+      "plato": [
+        "symposium-plato"
       ],
       "plays": [
         "shakespeare-ten-greatest"
@@ -2064,9 +2873,13 @@
       ],
       "poetry": [
         "gitanjali",
+        "jungle-book",
+        "leaves-of-grass",
         "luiza-lian",
+        "metamorphoses-ovid",
         "songs-of-kabir",
-        "sonnets-from-portuguese"
+        "sonnets-from-portuguese",
+        "through-the-looking-glass"
       ],
       "politics": [
         "civil-disobedience",
@@ -2076,6 +2889,9 @@
       "practice": [
         "enchiridion",
         "practice-presence-of-god"
+      ],
+      "prose-poetry": [
+        "thus-spoke-zarathustra"
       ],
       "psychology": [
         "jungian-archetypes"
@@ -2087,19 +2903,23 @@
         "communist-manifesto",
         "confucian-analects",
         "dhammapada",
+        "discourses-epictetus",
         "enchiridion",
+        "frederick-douglass",
         "gitanjali",
         "i-ching-chinese-emergent",
         "i-ching-chinese-original-with-brief-translation",
         "i-ching-leibniz-binary",
+        "leaves-of-grass",
         "meditations-marcus-aurelius",
+        "peter-pan",
         "popol-vuh",
         "practice-presence-of-god",
         "shakespeare-ten-greatest",
         "songs-of-kabir",
         "sonnets-from-portuguese",
+        "symposium-plato",
         "tao-te-ching",
-        "upanishads",
         "winnie-the-pooh-chapter-book"
       ],
       "recursive": [
@@ -2115,7 +2935,8 @@
         "enchiridion"
       ],
       "resistance": [
-        "civil-disobedience"
+        "civil-disobedience",
+        "frederick-douglass"
       ],
       "revolution": [
         "common-sense"
@@ -2132,7 +2953,8 @@
       ],
       "roman": [
         "greek-mythology",
-        "meditations-marcus-aurelius"
+        "meditations-marcus-aurelius",
+        "metamorphoses-ovid"
       ],
       "romance": [
         "sonnets-from-portuguese"
@@ -2141,16 +2963,18 @@
         "dhammapada",
         "enchiridion",
         "gitanjali",
+        "gospel-of-buddha",
         "songs-of-kabir",
         "tao-te-ching",
         "upanishads"
       ],
-      "sanskrit": [
-        "upanishads"
-      ],
       "scenes": [
         "alice-in-wonderland-chapter-book",
+        "peter-pan",
         "winnie-the-pooh-chapter-book"
+      ],
+      "self-help": [
+        "discourses-epictetus"
       ],
       "shadow": [
         "jungian-archetypes"
@@ -2161,16 +2985,29 @@
       "shao-yong": [
         "i-ching-leibniz-binary"
       ],
+      "slavery": [
+        "frederick-douglass"
+      ],
       "social working": [
         "social-working"
       ],
+      "social-justice": [
+        "frederick-douglass"
+      ],
       "sonnets": [
         "sonnets-from-portuguese"
+      ],
+      "soul": [
+        "leaves-of-grass"
+      ],
+      "spirituality": [
+        "leaves-of-grass"
       ],
       "sports": [
         "kids-workouts-gvo-kids-youtube-playlist"
       ],
       "stoicism": [
+        "discourses-epictetus",
         "enchiridion",
         "meditations-marcus-aurelius"
       ],
@@ -2209,6 +3046,9 @@
       "teachings": [
         "confucian-analects"
       ],
+      "testimony": [
+        "frederick-douglass"
+      ],
       "tibetan": [
         "emerald-death-card-no-one-here-gets-out-alive",
         "emerald-death-card-visuals"
@@ -2216,14 +3056,21 @@
       "tragedy": [
         "shakespeare-ten-greatest"
       ],
+      "transcendentalism": [
+        "leaves-of-grass"
+      ],
       "transformation": [
         "emerald-death-card-no-one-here-gets-out-alive",
         "emerald-death-card-visuals",
-        "i-ching-leibniz-binary"
+        "i-ching-leibniz-binary",
+        "metamorphoses-ovid"
       ],
       "trigrams": [
         "i-ching-chinese-emergent",
         "i-ching-leibniz-binary"
+      ],
+      "upanishads": [
+        "upanishads"
       ],
       "vedanta": [
         "songs-of-kabir",
@@ -2233,13 +3080,19 @@
         "dhammapada"
       ],
       "victorian": [
-        "sonnets-from-portuguese"
+        "sonnets-from-portuguese",
+        "through-the-looking-glass"
       ],
       "virtue": [
+        "discourses-epictetus",
         "meditations-marcus-aurelius"
       ],
       "war": [
-        "art-of-war"
+        "art-of-war",
+        "leaves-of-grass"
+      ],
+      "will-to-power": [
+        "thus-spoke-zarathustra"
       ],
       "winnie-the-pooh": [
         "winnie-the-pooh-chapter-book"
@@ -2249,12 +3102,18 @@
         "art-of-war",
         "confucian-analects",
         "dhammapada",
+        "discourses-epictetus",
         "enchiridion",
         "gitanjali",
+        "metamorphoses-ovid",
         "practice-presence-of-god",
         "songs-of-kabir",
+        "symposium-plato",
         "tao-te-ching",
-        "upanishads"
+        "thus-spoke-zarathustra"
+      ],
+      "wordplay": [
+        "through-the-looking-glass"
       ],
       "wu-wei": [
         "tao-te-ching"
@@ -2282,14 +3141,18 @@
       "PlayfulProcess": [
         "aesops-fables",
         "alice-s-tarot-my-5-years-old",
+        "andersens-fairy-tales",
         "anon-shiryo-cat-stories",
         "archetypal-astrology-tarnas",
         "art-of-war",
         "civil-disobedience",
         "common-sense",
         "communist-manifesto",
+        "discourses-epictetus",
         "enchiridion",
+        "frederick-douglass",
         "gitanjali",
+        "gospel-of-buddha",
         "greek-mythology",
         "greek-mythology-for-kids",
         "grimms-fairy-tales",
@@ -2298,11 +3161,16 @@
         "i-ching-hd-meta-categories-three-lenses-for-viewing-the-64-hexagrams-my-version",
         "i-ching-hd-meta-categories-three-lenses-for-viewing-the-64-hexagrams-my-version-copy",
         "i-ching-leibniz-binary",
+        "japanese-fairy-tales",
         "jungian-archetypes",
+        "jungle-book",
         "kids-workouts-gvo-kids-youtube-playlist",
+        "leaves-of-grass",
         "luiza-lian",
         "meditations-marcus-aurelius",
+        "metamorphoses-ovid",
         "patchwork-pawls-filmbilder-friends",
+        "peter-pan",
         "playful-process-the-path-of-the-ontoject",
         "popol-vuh",
         "practice-presence-of-god",
@@ -2312,7 +3180,10 @@
         "sonnets-from-portuguese",
         "story-01-asking-not-complaining",
         "story-02-gratitude-not-praise",
+        "symposium-plato",
         "tao-te-ching",
+        "through-the-looking-glass",
+        "thus-spoke-zarathustra",
         "upanishads"
       ],
       "The Emerald Podcast / PlayfulProcess": [
@@ -2322,9 +3193,20 @@
       ]
     },
     "by_root": {
+      "animism": [
+        "japanese-fairy-tales"
+      ],
+      "colonialism": [
+        "jungle-book"
+      ],
+      "democratic-thought": [
+        "leaves-of-grass"
+      ],
       "eastern-wisdom": [
         "enchiridion",
         "gitanjali",
+        "gospel-of-buddha",
+        "japanese-fairy-tales",
         "songs-of-kabir",
         "tao-te-ching",
         "upanishads"
@@ -2332,52 +3214,130 @@
       "emotion-love": [
         "sonnets-from-portuguese"
       ],
+      "european-letters": [
+        "andersens-fairy-tales"
+      ],
       "freedom-commons": [
         "civil-disobedience",
         "common-sense",
-        "communist-manifesto"
+        "communist-manifesto",
+        "frederick-douglass"
+      ],
+      "greek-philosophy": [
+        "discourses-epictetus",
+        "metamorphoses-ovid",
+        "symposium-plato"
+      ],
+      "imagination": [
+        "through-the-looking-glass"
       ],
       "indigenous-mythology": [
         "popol-vuh"
       ],
+      "individualism": [
+        "thus-spoke-zarathustra"
+      ],
       "mysticism": [
+        "leaves-of-grass",
         "practice-presence-of-god",
-        "songs-of-kabir"
+        "songs-of-kabir",
+        "thus-spoke-zarathustra",
+        "upanishads"
+      ],
+      "mythology": [
+        "metamorphoses-ovid"
+      ],
+      "romanticism": [
+        "andersens-fairy-tales",
+        "jungle-book",
+        "peter-pan"
+      ],
+      "social-justice": [
+        "frederick-douglass"
+      ],
+      "transcendentalism": [
+        "leaves-of-grass"
+      ],
+      "western-literary": [
+        "peter-pan"
+      ],
+      "western-philosophy": [
+        "through-the-looking-glass",
+        "thus-spoke-zarathustra"
       ]
     },
     "by_shelf": {
+      "children": [
+        "andersens-fairy-tales",
+        "japanese-fairy-tales",
+        "jungle-book",
+        "peter-pan",
+        "through-the-looking-glass"
+      ],
       "contested": [
         "communist-manifesto"
       ],
       "earth": [
         "popol-vuh"
       ],
+      "mirror": [
+        "frederick-douglass",
+        "leaves-of-grass",
+        "thus-spoke-zarathustra"
+      ],
       "resilience": [
         "civil-disobedience",
         "common-sense",
-        "enchiridion"
+        "enchiridion",
+        "frederick-douglass"
       ],
       "wisdom": [
+        "discourses-epictetus",
         "gitanjali",
+        "gospel-of-buddha",
+        "japanese-fairy-tales",
+        "leaves-of-grass",
         "practice-presence-of-god",
         "songs-of-kabir",
+        "symposium-plato",
         "tao-te-ching",
+        "thus-spoke-zarathustra",
         "upanishads"
       ],
       "wonder": [
-        "sonnets-from-portuguese"
+        "andersens-fairy-tales",
+        "japanese-fairy-tales",
+        "jungle-book",
+        "metamorphoses-ovid",
+        "peter-pan",
+        "sonnets-from-portuguese",
+        "through-the-looking-glass"
       ]
     },
     "by_lineage": {
       "Akomolafe": [
-        "tao-te-ching"
+        "frederick-douglass",
+        "gospel-of-buddha",
+        "japanese-fairy-tales",
+        "jungle-book",
+        "leaves-of-grass",
+        "tao-te-ching",
+        "thus-spoke-zarathustra",
+        "upanishads"
       ],
       "Andreotti": [
+        "andersens-fairy-tales",
         "communist-manifesto",
+        "frederick-douglass",
         "gitanjali",
+        "jungle-book",
+        "metamorphoses-ovid",
+        "peter-pan",
         "popol-vuh",
         "songs-of-kabir",
-        "upanishads"
+        "symposium-plato",
+        "through-the-looking-glass",
+        "thus-spoke-zarathustra"
       ],
       "Johnson": [
         "sonnets-from-portuguese"
@@ -2385,18 +3345,30 @@
       "Kelty": [
         "civil-disobedience",
         "common-sense",
-        "communist-manifesto"
+        "communist-manifesto",
+        "leaves-of-grass"
       ],
       "Linehan": [
+        "discourses-epictetus",
         "enchiridion",
+        "gospel-of-buddha",
         "practice-presence-of-god",
         "tao-te-ching"
       ],
       "Shrei": [
+        "andersens-fairy-tales",
         "gitanjali",
+        "gospel-of-buddha",
+        "japanese-fairy-tales",
+        "leaves-of-grass",
+        "metamorphoses-ovid",
+        "peter-pan",
         "popol-vuh",
         "songs-of-kabir",
+        "symposium-plato",
         "tao-te-ching",
+        "through-the-looking-glass",
+        "thus-spoke-zarathustra",
         "upanishads"
       ]
     }
