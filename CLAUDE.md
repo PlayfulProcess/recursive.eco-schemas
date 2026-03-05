@@ -133,9 +133,26 @@ git push origin <branch>
 This is needed because the cloud environment cannot access external URLs directly — the user downloads locally and pushes to the branch.
 
 ### From Memory
-1. Plan the taxonomy (list all items at each level) before writing content
-2. Write content for each item with appropriate sections
+
+**IMPORTANT: From-memory grammars must be built across multiple sessions.** Do NOT attempt to generate all content in a single session — it will time out or produce low-quality results.
+
+**Session 1 — Skeleton only:**
+1. Create the complete item tree: all IDs, names, levels, categories, sort_orders, composite_of references
+2. Use empty or single-sentence placeholder sections
 3. Validate referential integrity (`composite_of` references must exist)
+4. Commit the skeleton
+
+**Session 2-N — Fill content by section/system:**
+1. Pick one system or group of items (e.g., one body system, one mythology family)
+2. Write full content for those items' sections (~5-10 items per session)
+3. Commit after each session
+
+**Final session — L3 meta + review:**
+1. Write L3 meta-category content
+2. Review all items for consistency and accuracy
+3. Validate the complete grammar
+
+**Why multi-session**: Source-text grammars restructure existing text (~50 lines of parser code → grammar). From-memory grammars generate every word (~50-80KB of original prose). Single-session attempts time out on grammars with 50+ items.
 
 ### Key Conventions
 - IDs: lowercase, hyphenated, hierarchical (e.g., `book-4-17`, `hamlet-act1-scene1`)
