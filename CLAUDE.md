@@ -151,13 +151,13 @@ The `description` field should include:
 2. **Source attribution**: Translator, date, and Project Gutenberg eBook number with link (e.g., `Source: Project Gutenberg eBook #21 (https://www.gutenberg.org/ebooks/21)`)
 3. **Illustration references** (on a new paragraph, prefixed with `PUBLIC DOMAIN ILLUSTRATION REFERENCES:`): List public domain illustrators and editions whose images would be good visual companions — these help the website agent search for and upload appropriate artwork. Include artist name, date, publisher, and art style.
 
-## Current Grammar Inventory (38 grammars)
+## Current Grammar Inventory (46 grammars)
 
 All grammars live in `grammars/` — run `python3 scripts/generate_manifest.py` to see the full index, or check `manifest.json` for computed views by type, tag, creator, root, shelf, and lineage.
 
 | Type | Count | Notable |
 |------|-------|---------|
-| custom | 25 | Confucian Analects (749), Dhammapada (431), Art of War (376), Aesop's Fables (284), Shakespeare (247) |
+| custom | 33 | Confucian Analects (749), Dhammapada (431), Art of War (376), Aesop's Fables (284), Shakespeare (247), Chuang Tzu (41), Alhambra (47), Sojourner Truth (39), Spirits' Book (33) |
 | tarot | 6 | Rider-Waite (78), Jungian Archetypes (34), Alice's Tarot |
 | iching | 5 | Chinese original (64), Emergent, Leibniz Binary, HD Meta-Categories |
 | astrology | 1 | Archetypal Astrology (Tarnas) |
@@ -170,6 +170,13 @@ All grammars live in `grammars/` — run `python3 scripts/generate_manifest.py` 
 - **Roman numerals**: Use `((?:X{0,3})(?:IX|IV|V?I{0,3}))\.` pattern. Handle up to XXXIX.
 - **Multi-part texts** (Grimm): Combine parts into single items.
 - **Background agents**: Good for regular-structure texts under ~5000 lines. Time out on complex/commentary-heavy texts — use direct Python scripting instead.
+- **Heading format varies between Gutenberg editions**: Always check the actual heading format in the seed file — don't assume. Build parsers with a fallback chain of patterns (e.g., try `I -- TITLE` first, then bare `I`, then `BOOK I`).
+- **TOC vs body heading conflicts**: When a Gutenberg text has ALL CAPS headings in both the Table of Contents and the body, skip the TOC region to avoid double-matching. Use line offset or marker-based body detection.
+- **Spelling inconsistencies**: Gutenberg texts sometimes differ between TOC and body (e.g., "Conal" vs "Conall"). Always verify each title match and fix manually if needed.
+- **Internet Archive OCR is much worse than Gutenberg**: Expect garbled text, random characters, broken line wraps. Strategy: use KNOWN structure of well-documented works to find section boundaries even in messy text. Clean aggressively (remove lines < 3 chars, strip garbage). Accept artifacts and note them in the grammar description.
+- **Accented characters in titles** (FÊTES, Alcántara, Tzŭ): Need careful handling in pattern matching. Use case-insensitive or normalized matching.
+- **Fairy tale collections** follow a reusable pattern: STORY_DEFS array with title, id, name, keywords, reflection — directly reusable for any anthology (Indian, Celtic, Grimm, etc.).
+- **verify_seed() pattern**: Add a function to confirm the seed file is the correct book before parsing. Catches wrong-Gutenberg-number downloads early.
 - **Always log learnings** in `plan/build-logs/`.
 
 ## Pipeline (What's Next)
@@ -177,7 +184,7 @@ All grammars live in `grammars/` — run `python3 scripts/generate_manifest.py` 
 See `plan/pipeline.md` for planned grammars. The Seed Library (`plan/SEED_100.md`) maps 100 public domain texts to intellectual lineages feeding Bayo Akomolafe, Josh Shrei, Marsha Linehan, John Gottman, Sue Johnson, Vanessa Andreotti, and Christopher Kelty.
 
 Priorities include:
-- From source: Tao Te Ching, Bhagavad Gita, Chuang Tzu, Souls of Black Folk, Walden
+- From source: Tao Te Ching, Bhagavad Gita, Souls of Black Folk, Walden
 - From memory: Human Body, Language Family Trees, Enneagram, Periodic Table
 - See `plan/grammar-ideas.md` for the full wishlist
 
