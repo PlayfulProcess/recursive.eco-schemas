@@ -134,25 +134,22 @@ This is needed because the cloud environment cannot access external URLs directl
 
 ### From Memory
 
-**IMPORTANT: From-memory grammars must be built across multiple sessions.** Do NOT attempt to generate all content in a single session — it will time out or produce low-quality results.
+**CRITICAL: NEVER delegate from-memory grammar generation to a background agent.** Background agents time out on content-heavy grammars because the combination of content generation + JSON management exceeds their budget. Work inline instead.
 
-**Session 1 — Skeleton only:**
-1. Create the complete item tree: all IDs, names, levels, categories, sort_orders, composite_of references
-2. Use empty or single-sentence placeholder sections
-3. Validate referential integrity (`composite_of` references must exist)
-4. Commit the skeleton
+**Approach: Skeleton + Edit-per-item (works in a single session for up to ~80 items)**
 
-**Session 2-N — Fill content by section/system:**
-1. Pick one system or group of items (e.g., one body system, one mythology family)
-2. Write full content for those items' sections (~5-10 items per session)
-3. Commit after each session
+1. **Write the full skeleton** with the `Write` tool: all IDs, names, levels, categories, sort_orders, composite_of references, keywords, and `"Placeholder."` sections
+2. **Validate immediately** with a Python one-liner (JSON parse, duplicate IDs, bad refs, sort_order)
+3. **Commit the skeleton** (safety checkpoint)
+4. **Fill content system-by-system** using the `Edit` tool: replace one item's placeholder sections at a time with full prose
+5. **Validate again** (check zero placeholders remaining)
+6. Update manifest, commit, push
 
-**Final session — L3 meta + review:**
-1. Write L3 meta-category content
-2. Review all items for consistency and accuracy
-3. Validate the complete grammar
+**Why this works**: The `Edit` tool makes small, surgical replacements — one item's 4 sections per call. No risk of corrupting the file. Working inline avoids background agent context overhead. System-by-system focus keeps domain knowledge coherent.
 
-**Why multi-session**: Source-text grammars restructure existing text (~50 lines of parser code → grammar). From-memory grammars generate every word (~50-80KB of original prose). Single-session attempts time out on grammars with 50+ items.
+**When to use multi-session instead**: If the grammar exceeds ~80 items, or if content requires deep per-item research, split across sessions: skeleton in session 1, content fill in sessions 2-N.
+
+**The Edit tool is the MVP for from-memory grammars.** After the skeleton exists, every content addition is an Edit call replacing `"Placeholder."` with real prose. Write is for initial creation only.
 
 ### Key Conventions
 - IDs: lowercase, hyphenated, hierarchical (e.g., `book-4-17`, `hamlet-act1-scene1`)
@@ -195,6 +192,29 @@ All grammars live in `grammars/` — run `python3 scripts/generate_manifest.py` 
 - **Fairy tale collections** follow a reusable pattern: STORY_DEFS array with title, id, name, keywords, reflection — directly reusable for any anthology (Indian, Celtic, Grimm, etc.).
 - **verify_seed() pattern**: Add a function to confirm the seed file is the correct book before parsing. Catches wrong-Gutenberg-number downloads early.
 - **Always log learnings** in `plan/build-logs/`.
+
+## Tool Usage by Grammar Type
+
+### From-Source Grammars (seed text → parser → grammar)
+| Step | Tool | Why |
+|------|------|-----|
+| Inspect seed file | `Read` | Understand heading format, structure, quirks |
+| Write parser | `Write` | Create Python script in `scripts/` (~50-150 lines) |
+| Run parser | `Bash` | Execute parser, generate grammar.json |
+| Fix parser bugs | `Edit` | Adjust regex, fix edge cases |
+| Validate output | `Bash` | Python one-liner: JSON parse, ID checks, ref checks |
+| Add L2/L3 emergence | `Edit` | Add system-level items to existing grammar |
+
+### From-Memory Grammars (no seed, all original content)
+| Step | Tool | Why |
+|------|------|-----|
+| Create skeleton | `Write` | One-shot: all items with placeholder sections |
+| Validate skeleton | `Bash` | Python one-liner: JSON, IDs, refs, sort_order |
+| Fill content per item | `Edit` | Replace "Placeholder." with prose, one item at a time |
+| Check completeness | `Bash` | Verify zero placeholders remaining |
+| Update manifest | `Bash` | Run `python3 scripts/generate_manifest.py` |
+
+**Key insight**: `Edit` is the MVP tool for both types. For from-source, it fixes parser output. For from-memory, it fills content surgically. `Write` is for initial file creation only — after that, everything is `Edit`.
 
 ## Pipeline (What's Next)
 
