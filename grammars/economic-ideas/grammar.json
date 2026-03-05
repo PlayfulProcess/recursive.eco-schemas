@@ -1,0 +1,725 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "url": "https://lifeisprocess.substack.com/",
+        "date": "2026-03-05",
+        "note": "Grammar structure, organization, and synthesis"
+      }
+    ]
+  },
+  "name": "The Grammar of Economic Ideas",
+  "description": "Fifty-five foundational economic concepts — from Adam Smith to Karl Marx to Elinor Ostrom to Kropotkin — presented without hierarchy between schools of thought. Classical, behavioral, Marxist, anarchist, ecological, and complexity economics sit side by side. Each idea gets a plain-language explanation, a real-world sighting, its common misuse, and threads connecting it to other concepts in the grammar. The goal is not to judge which lens is right, but to make the ideas accessible and see where they weave — or don't.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: William Hogarth's satirical prints on commerce and morality (18th century). Honoré Daumier's lithographs of capitalists and workers (1830s-1870s). Diego Rivera's murals depicting labor and industry. Illustrations from Adam Smith's 'Wealth of Nations' early editions. Soviet constructivist economic posters (1920s-1930s). WPA-era American economic education posters.",
+  "grammar_type": "custom",
+  "creator_name": "PlayfulProcess",
+  "creator_link": "https://lifeisprocess.substack.com/",
+  "tags": [
+    "economics",
+    "philosophy",
+    "political-economy",
+    "marxism",
+    "anarchism",
+    "behavioral-economics",
+    "complexity",
+    "commons",
+    "critique",
+    "systems-thinking"
+  ],
+  "roots": ["western-philosophy", "social-theory"],
+  "shelves": ["wisdom", "contested"],
+  "lineages": ["Andreotti", "Kelty", "Akomolafe"],
+  "worldview": "dialectical",
+  "cover_image_url": "",
+  "items": [
+    {
+      "id": "opportunity-cost",
+      "name": "Opportunity Cost",
+      "level": 1,
+      "category": "costs-and-tradeoffs",
+      "sort_order": 0,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["choice", "tradeoff", "scarcity", "decision"],
+      "metadata": {}
+    },
+    {
+      "id": "sunk-cost",
+      "name": "Sunk Cost",
+      "level": 1,
+      "category": "costs-and-tradeoffs",
+      "sort_order": 1,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["fallacy", "loss", "irrecoverable", "decision"],
+      "metadata": {}
+    },
+    {
+      "id": "marginal-cost",
+      "name": "Marginal Cost",
+      "level": 1,
+      "category": "costs-and-tradeoffs",
+      "sort_order": 2,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["marginal", "incremental", "production", "decision"],
+      "metadata": {}
+    },
+    {
+      "id": "transaction-costs",
+      "name": "Transaction Costs",
+      "level": 1,
+      "category": "costs-and-tradeoffs",
+      "sort_order": 3,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["friction", "negotiation", "coase", "institutions"],
+      "metadata": {}
+    },
+    {
+      "id": "externalities",
+      "name": "Externalities",
+      "level": 1,
+      "category": "costs-and-tradeoffs",
+      "sort_order": 4,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["spillover", "pollution", "third-party", "market-failure"],
+      "metadata": {}
+    },
+    {
+      "id": "switching-costs",
+      "name": "Switching Costs",
+      "level": 1,
+      "category": "costs-and-tradeoffs",
+      "sort_order": 5,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["lock-in", "friction", "platform", "monopoly"],
+      "metadata": {}
+    },
+    {
+      "id": "diminishing-marginal-returns",
+      "name": "Diminishing Marginal Returns",
+      "level": 1,
+      "category": "returns-and-scale",
+      "sort_order": 6,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["diminishing", "productivity", "saturation", "marginal"],
+      "metadata": {}
+    },
+    {
+      "id": "economies-of-scale",
+      "name": "Economies of Scale",
+      "level": 1,
+      "category": "returns-and-scale",
+      "sort_order": 7,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["scale", "efficiency", "bigness", "production"],
+      "metadata": {}
+    },
+    {
+      "id": "comparative-advantage",
+      "name": "Comparative Advantage",
+      "level": 1,
+      "category": "returns-and-scale",
+      "sort_order": 8,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["trade", "specialization", "ricardo", "efficiency"],
+      "metadata": {}
+    },
+    {
+      "id": "division-of-labor",
+      "name": "Division of Labor",
+      "level": 1,
+      "category": "returns-and-scale",
+      "sort_order": 9,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["specialization", "smith", "pins", "productivity"],
+      "metadata": {}
+    },
+    {
+      "id": "compound-interest",
+      "name": "Compound Interest",
+      "level": 1,
+      "category": "returns-and-scale",
+      "sort_order": 10,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["exponential", "growth", "debt", "accumulation"],
+      "metadata": {}
+    },
+    {
+      "id": "feedback-loops",
+      "name": "Feedback Loops",
+      "level": 1,
+      "category": "returns-and-scale",
+      "sort_order": 11,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["positive", "negative", "reinforcing", "balancing", "complexity"],
+      "metadata": {}
+    },
+    {
+      "id": "supply-and-demand",
+      "name": "Supply and Demand",
+      "level": 1,
+      "category": "supply-and-demand",
+      "sort_order": 12,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["price", "market", "equilibrium", "fundamental"],
+      "metadata": {}
+    },
+    {
+      "id": "elasticity",
+      "name": "Elasticity",
+      "level": 1,
+      "category": "supply-and-demand",
+      "sort_order": 13,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["responsiveness", "price", "sensitivity", "demand"],
+      "metadata": {}
+    },
+    {
+      "id": "price-equilibrium",
+      "name": "Price Equilibrium",
+      "level": 1,
+      "category": "supply-and-demand",
+      "sort_order": 14,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["balance", "market-clearing", "stability", "convergence"],
+      "metadata": {}
+    },
+    {
+      "id": "arbitrage",
+      "name": "Arbitrage",
+      "level": 1,
+      "category": "supply-and-demand",
+      "sort_order": 15,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["price-difference", "profit", "markets", "efficiency"],
+      "metadata": {}
+    },
+    {
+      "id": "price-discrimination",
+      "name": "Price Discrimination",
+      "level": 1,
+      "category": "supply-and-demand",
+      "sort_order": 16,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["pricing", "segmentation", "power", "surplus"],
+      "metadata": {}
+    },
+    {
+      "id": "substitutes-and-complements",
+      "name": "Substitutes and Complements",
+      "level": 1,
+      "category": "goods-and-resources",
+      "sort_order": 17,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["substitution", "complementary", "relationship", "goods"],
+      "metadata": {}
+    },
+    {
+      "id": "public-goods",
+      "name": "Public Goods",
+      "level": 1,
+      "category": "goods-and-resources",
+      "sort_order": 18,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["non-rival", "non-excludable", "provision", "collective"],
+      "metadata": {}
+    },
+    {
+      "id": "common-pool-resources",
+      "name": "Common-Pool Resources",
+      "level": 1,
+      "category": "goods-and-resources",
+      "sort_order": 19,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["commons", "ostrom", "governance", "shared"],
+      "metadata": {}
+    },
+    {
+      "id": "normal-and-inferior-goods",
+      "name": "Normal and Inferior Goods",
+      "level": 1,
+      "category": "goods-and-resources",
+      "sort_order": 20,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["income", "demand", "poverty", "class"],
+      "metadata": {}
+    },
+    {
+      "id": "veblen-goods",
+      "name": "Veblen Goods",
+      "level": 1,
+      "category": "goods-and-resources",
+      "sort_order": 21,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["conspicuous", "consumption", "status", "luxury"],
+      "metadata": {}
+    },
+    {
+      "id": "artificial-scarcity",
+      "name": "Artificial Scarcity",
+      "level": 1,
+      "category": "goods-and-resources",
+      "sort_order": 22,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["intellectual-property", "digital", "enclosure", "abundance"],
+      "metadata": {}
+    },
+    {
+      "id": "pareto-efficiency",
+      "name": "Pareto Efficiency",
+      "level": 1,
+      "category": "efficiency-and-welfare",
+      "sort_order": 23,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["optimality", "allocation", "improvement", "welfare"],
+      "metadata": {}
+    },
+    {
+      "id": "deadweight-loss",
+      "name": "Deadweight Loss",
+      "level": 1,
+      "category": "efficiency-and-welfare",
+      "sort_order": 24,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["inefficiency", "tax", "monopoly", "welfare-loss"],
+      "metadata": {}
+    },
+    {
+      "id": "tragedy-of-the-commons",
+      "name": "Tragedy of the Commons",
+      "level": 1,
+      "category": "efficiency-and-welfare",
+      "sort_order": 25,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["overuse", "commons", "hardin", "depletion"],
+      "metadata": {}
+    },
+    {
+      "id": "free-rider-problem",
+      "name": "Free Rider Problem",
+      "level": 1,
+      "category": "efficiency-and-welfare",
+      "sort_order": 26,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["collective-action", "incentives", "public-goods", "cooperation"],
+      "metadata": {}
+    },
+    {
+      "id": "moral-hazard",
+      "name": "Moral Hazard",
+      "level": 1,
+      "category": "efficiency-and-welfare",
+      "sort_order": 27,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["risk", "insurance", "bailout", "incentives"],
+      "metadata": {}
+    },
+    {
+      "id": "adverse-selection",
+      "name": "Adverse Selection",
+      "level": 1,
+      "category": "efficiency-and-welfare",
+      "sort_order": 28,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["information", "asymmetry", "lemons", "akerlof"],
+      "metadata": {}
+    },
+    {
+      "id": "loss-aversion",
+      "name": "Loss Aversion",
+      "level": 1,
+      "category": "behavioral",
+      "sort_order": 29,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["kahneman", "tversky", "prospect-theory", "psychology"],
+      "metadata": {}
+    },
+    {
+      "id": "bounded-rationality",
+      "name": "Bounded Rationality",
+      "level": 1,
+      "category": "behavioral",
+      "sort_order": 30,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["simon", "satisficing", "limits", "cognition"],
+      "metadata": {}
+    },
+    {
+      "id": "anchoring",
+      "name": "Anchoring",
+      "level": 1,
+      "category": "behavioral",
+      "sort_order": 31,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["bias", "reference-point", "negotiation", "framing"],
+      "metadata": {}
+    },
+    {
+      "id": "endowment-effect",
+      "name": "Endowment Effect",
+      "level": 1,
+      "category": "behavioral",
+      "sort_order": 32,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["ownership", "overvaluation", "status-quo", "loss-aversion"],
+      "metadata": {}
+    },
+    {
+      "id": "hyperbolic-discounting",
+      "name": "Hyperbolic Discounting",
+      "level": 1,
+      "category": "behavioral",
+      "sort_order": 33,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["time-preference", "impatience", "present-bias", "future"],
+      "metadata": {}
+    },
+    {
+      "id": "nudge-theory",
+      "name": "Nudge Theory",
+      "level": 1,
+      "category": "behavioral",
+      "sort_order": 34,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["thaler", "sunstein", "choice-architecture", "paternalism"],
+      "metadata": {}
+    },
+    {
+      "id": "creative-destruction",
+      "name": "Creative Destruction",
+      "level": 1,
+      "category": "systems-and-cycles",
+      "sort_order": 35,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["schumpeter", "innovation", "disruption", "capitalism"],
+      "metadata": {}
+    },
+    {
+      "id": "rent-seeking",
+      "name": "Rent-Seeking",
+      "level": 1,
+      "category": "systems-and-cycles",
+      "sort_order": 36,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["lobbying", "monopoly", "unproductive", "extraction"],
+      "metadata": {}
+    },
+    {
+      "id": "regulatory-capture",
+      "name": "Regulatory Capture",
+      "level": 1,
+      "category": "systems-and-cycles",
+      "sort_order": 37,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["regulation", "corruption", "revolving-door", "power"],
+      "metadata": {}
+    },
+    {
+      "id": "reflexivity",
+      "name": "Reflexivity",
+      "level": 1,
+      "category": "systems-and-cycles",
+      "sort_order": 38,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["soros", "self-fulfilling", "recursion", "complexity"],
+      "metadata": {}
+    },
+    {
+      "id": "inflation",
+      "name": "Inflation",
+      "level": 1,
+      "category": "systems-and-cycles",
+      "sort_order": 39,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["money", "prices", "purchasing-power", "monetary-policy"],
+      "metadata": {}
+    },
+    {
+      "id": "boom-and-bust",
+      "name": "Boom and Bust Cycles",
+      "level": 1,
+      "category": "systems-and-cycles",
+      "sort_order": 40,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["cycles", "crisis", "recession", "mania", "minsky"],
+      "metadata": {}
+    },
+    {
+      "id": "emergence-in-markets",
+      "name": "Emergence in Markets",
+      "level": 1,
+      "category": "systems-and-cycles",
+      "sort_order": 41,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["complexity", "self-organization", "bottom-up", "emergent-order"],
+      "metadata": {}
+    },
+    {
+      "id": "commodity-fetishism",
+      "name": "Commodity Fetishism",
+      "level": 1,
+      "category": "critique-and-power",
+      "sort_order": 42,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["marx", "alienation", "value", "social-relations"],
+      "metadata": {}
+    },
+    {
+      "id": "surplus-value",
+      "name": "Surplus Value",
+      "level": 1,
+      "category": "critique-and-power",
+      "sort_order": 43,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["marx", "exploitation", "labor", "profit", "capital"],
+      "metadata": {}
+    },
+    {
+      "id": "primitive-accumulation",
+      "name": "Primitive Accumulation",
+      "level": 1,
+      "category": "critique-and-power",
+      "sort_order": 44,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["marx", "enclosure", "dispossession", "origins-of-capital"],
+      "metadata": {}
+    },
+    {
+      "id": "alienation",
+      "name": "Alienation",
+      "level": 1,
+      "category": "critique-and-power",
+      "sort_order": 45,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["marx", "labor", "estrangement", "meaning", "work"],
+      "metadata": {}
+    },
+    {
+      "id": "reserve-army-of-labor",
+      "name": "Reserve Army of Labor",
+      "level": 1,
+      "category": "critique-and-power",
+      "sort_order": 46,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["marx", "unemployment", "wages", "discipline", "precarity"],
+      "metadata": {}
+    },
+    {
+      "id": "planned-obsolescence",
+      "name": "Planned Obsolescence",
+      "level": 1,
+      "category": "critique-and-power",
+      "sort_order": 47,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["waste", "consumption", "design", "profit-motive"],
+      "metadata": {}
+    },
+    {
+      "id": "mutual-aid",
+      "name": "Mutual Aid",
+      "level": 1,
+      "category": "solidarity-and-alternatives",
+      "sort_order": 48,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["kropotkin", "cooperation", "anarchism", "survival", "reciprocity"],
+      "metadata": {}
+    },
+    {
+      "id": "gift-economy",
+      "name": "Gift Economy",
+      "level": 1,
+      "category": "solidarity-and-alternatives",
+      "sort_order": 49,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["mauss", "reciprocity", "potlatch", "indigenous", "obligation"],
+      "metadata": {}
+    },
+    {
+      "id": "commons-based-peer-production",
+      "name": "Commons-Based Peer Production",
+      "level": 1,
+      "category": "solidarity-and-alternatives",
+      "sort_order": 50,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["benkler", "open-source", "wikipedia", "collaboration", "digital-commons"],
+      "metadata": {}
+    },
+    {
+      "id": "prefigurative-economics",
+      "name": "Prefigurative Economics",
+      "level": 1,
+      "category": "solidarity-and-alternatives",
+      "sort_order": 51,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["anarchism", "practice", "means-ends", "cooperatives", "direct-action"],
+      "metadata": {}
+    },
+    {
+      "id": "degrowth",
+      "name": "Degrowth",
+      "level": 1,
+      "category": "solidarity-and-alternatives",
+      "sort_order": 52,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["ecology", "limits", "sufficiency", "well-being", "gdp"],
+      "metadata": {}
+    },
+    {
+      "id": "recursive-value",
+      "name": "Recursive Value",
+      "level": 1,
+      "category": "solidarity-and-alternatives",
+      "sort_order": 53,
+      "sections": { "The Idea": "Placeholder.", "In the Wild": "Placeholder.", "The Trap": "Placeholder.", "Connects To": "Placeholder." },
+      "keywords": ["recursion", "self-reference", "value-creation", "complexity", "autopoiesis"],
+      "metadata": {}
+    },
+
+    {
+      "id": "l2-costs-and-tradeoffs",
+      "name": "Everything Has a Price (Even Doing Nothing)",
+      "level": 2,
+      "category": "costs-and-tradeoffs",
+      "sort_order": 54,
+      "composite_of": ["opportunity-cost", "sunk-cost", "marginal-cost", "transaction-costs", "externalities", "switching-costs"],
+      "relationship_type": "emergence",
+      "sections": { "About": "Placeholder.", "How These Weave": "Placeholder." },
+      "keywords": ["costs", "tradeoffs", "decisions", "meta"],
+      "metadata": {}
+    },
+    {
+      "id": "l2-returns-and-scale",
+      "name": "More Is Not Always Better",
+      "level": 2,
+      "category": "returns-and-scale",
+      "sort_order": 55,
+      "composite_of": ["diminishing-marginal-returns", "economies-of-scale", "comparative-advantage", "division-of-labor", "compound-interest", "feedback-loops"],
+      "relationship_type": "emergence",
+      "sections": { "About": "Placeholder.", "How These Weave": "Placeholder." },
+      "keywords": ["returns", "scale", "growth", "meta"],
+      "metadata": {}
+    },
+    {
+      "id": "l2-supply-and-demand",
+      "name": "The Dance of Buyers and Sellers",
+      "level": 2,
+      "category": "supply-and-demand",
+      "sort_order": 56,
+      "composite_of": ["supply-and-demand", "elasticity", "price-equilibrium", "arbitrage", "price-discrimination"],
+      "relationship_type": "emergence",
+      "sections": { "About": "Placeholder.", "How These Weave": "Placeholder." },
+      "keywords": ["markets", "price", "exchange", "meta"],
+      "metadata": {}
+    },
+    {
+      "id": "l2-goods-and-resources",
+      "name": "Not All Things Are Alike",
+      "level": 2,
+      "category": "goods-and-resources",
+      "sort_order": 57,
+      "composite_of": ["substitutes-and-complements", "public-goods", "common-pool-resources", "normal-and-inferior-goods", "veblen-goods", "artificial-scarcity"],
+      "relationship_type": "emergence",
+      "sections": { "About": "Placeholder.", "How These Weave": "Placeholder." },
+      "keywords": ["goods", "types", "resources", "meta"],
+      "metadata": {}
+    },
+    {
+      "id": "l2-efficiency-and-welfare",
+      "name": "When Markets Fail",
+      "level": 2,
+      "category": "efficiency-and-welfare",
+      "sort_order": 58,
+      "composite_of": ["pareto-efficiency", "deadweight-loss", "tragedy-of-the-commons", "free-rider-problem", "moral-hazard", "adverse-selection"],
+      "relationship_type": "emergence",
+      "sections": { "About": "Placeholder.", "How These Weave": "Placeholder." },
+      "keywords": ["failure", "welfare", "efficiency", "meta"],
+      "metadata": {}
+    },
+    {
+      "id": "l2-behavioral",
+      "name": "The Irrational Animal",
+      "level": 2,
+      "category": "behavioral",
+      "sort_order": 59,
+      "composite_of": ["loss-aversion", "bounded-rationality", "anchoring", "endowment-effect", "hyperbolic-discounting", "nudge-theory"],
+      "relationship_type": "emergence",
+      "sections": { "About": "Placeholder.", "How These Weave": "Placeholder." },
+      "keywords": ["behavioral", "psychology", "bias", "meta"],
+      "metadata": {}
+    },
+    {
+      "id": "l2-systems-and-cycles",
+      "name": "The Economy Eats Itself",
+      "level": 2,
+      "category": "systems-and-cycles",
+      "sort_order": 60,
+      "composite_of": ["creative-destruction", "rent-seeking", "regulatory-capture", "reflexivity", "inflation", "boom-and-bust", "emergence-in-markets"],
+      "relationship_type": "emergence",
+      "sections": { "About": "Placeholder.", "How These Weave": "Placeholder." },
+      "keywords": ["systems", "cycles", "dynamics", "meta"],
+      "metadata": {}
+    },
+    {
+      "id": "l2-critique-and-power",
+      "name": "Who Benefits?",
+      "level": 2,
+      "category": "critique-and-power",
+      "sort_order": 61,
+      "composite_of": ["commodity-fetishism", "surplus-value", "primitive-accumulation", "alienation", "reserve-army-of-labor", "planned-obsolescence"],
+      "relationship_type": "emergence",
+      "sections": { "About": "Placeholder.", "How These Weave": "Placeholder." },
+      "keywords": ["marxism", "critique", "power", "meta"],
+      "metadata": {}
+    },
+    {
+      "id": "l2-solidarity-and-alternatives",
+      "name": "Another Economy Is Possible",
+      "level": 2,
+      "category": "solidarity-and-alternatives",
+      "sort_order": 62,
+      "composite_of": ["mutual-aid", "gift-economy", "commons-based-peer-production", "prefigurative-economics", "degrowth", "recursive-value"],
+      "relationship_type": "emergence",
+      "sections": { "About": "Placeholder.", "How These Weave": "Placeholder." },
+      "keywords": ["alternatives", "anarchism", "commons", "solidarity", "meta"],
+      "metadata": {}
+    },
+
+    {
+      "id": "l3-the-rational-actor",
+      "name": "The Rational Actor",
+      "level": 3,
+      "category": "meta-lens",
+      "sort_order": 63,
+      "composite_of": ["l2-costs-and-tradeoffs", "l2-returns-and-scale", "l2-supply-and-demand"],
+      "relationship_type": "emergence",
+      "sections": { "About": "Placeholder.", "The Lens": "Placeholder.", "What It Illuminates": "Placeholder.", "What It Obscures": "Placeholder." },
+      "keywords": ["classical", "neoclassical", "rational", "homo-economicus"],
+      "metadata": {}
+    },
+    {
+      "id": "l3-the-messy-reality",
+      "name": "The Messy Reality",
+      "level": 3,
+      "category": "meta-lens",
+      "sort_order": 64,
+      "composite_of": ["l2-goods-and-resources", "l2-efficiency-and-welfare", "l2-behavioral"],
+      "relationship_type": "emergence",
+      "sections": { "About": "Placeholder.", "The Lens": "Placeholder.", "What It Illuminates": "Placeholder.", "What It Obscures": "Placeholder." },
+      "keywords": ["institutional", "behavioral", "complexity", "real-world"],
+      "metadata": {}
+    },
+    {
+      "id": "l3-the-political-economy",
+      "name": "The Political Economy",
+      "level": 3,
+      "category": "meta-lens",
+      "sort_order": 65,
+      "composite_of": ["l2-systems-and-cycles", "l2-critique-and-power", "l2-solidarity-and-alternatives"],
+      "relationship_type": "emergence",
+      "sections": { "About": "Placeholder.", "The Lens": "Placeholder.", "What It Illuminates": "Placeholder.", "What It Obscures": "Placeholder." },
+      "keywords": ["political-economy", "marxism", "anarchism", "power", "alternatives"],
+      "metadata": {}
+    }
+  ]
+}
