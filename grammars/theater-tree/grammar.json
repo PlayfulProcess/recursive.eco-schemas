@@ -1,0 +1,629 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "date": "2026",
+        "note": "Original grammar created from memory, mapping the lineages of theater practice from Stanislavski to Boal, from Greek chorus to contemporary devised work."
+      }
+    ]
+  },
+  "name": "Theater Tree: The Empty Space",
+  "description": "A grammar of theater as embodied practice — not plays, but the art of making theater. From Stanislavski's emotional truth to Grotowski's holy actor, from Brecht's political interruption to Boal's liberation. Each practitioner is a node in a living tree whose roots reach back to Greek ritual and whose branches keep growing. Named for Peter Brook's insight: 'I can take any empty space and call it a bare stage.'\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Ancient Greek theater masks and vase paintings (5th century BCE). Commedia dell'arte engravings by Jacques Callot (1622). Victorian theatrical photographs and playbills. Constructivist stage designs by Meyerhold/Popova (1920s).",
+  "grammar_type": "custom",
+  "creator_name": "PlayfulProcess",
+  "tags": ["theater", "embodiment", "performance", "acting", "directing", "ritual", "politics", "body"],
+  "roots": ["western-philosophy", "embodiment", "liberation"],
+  "shelves": ["wonder", "resilience"],
+  "lineages": ["Akomolafe", "Andreotti"],
+  "worldview": "dialectical",
+  "grammars": [
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/shakespeare-complete-works",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/modern-dance-breaking-ground",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/indian-classical-dance"
+  ],
+  "items": [
+    {
+      "id": "stanislavski",
+      "name": "Konstantin Stanislavski — The System",
+      "sort_order": 1,
+      "category": "practitioner",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["stanislavski", "system", "emotional-memory", "given-circumstances", "realism"],
+      "metadata": {}
+    },
+    {
+      "id": "meyerhold",
+      "name": "Vsevolod Meyerhold — Biomechanics",
+      "sort_order": 2,
+      "category": "practitioner",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["meyerhold", "biomechanics", "constructivism", "physical", "anti-realism"],
+      "metadata": {}
+    },
+    {
+      "id": "brecht",
+      "name": "Bertolt Brecht — The Alienation Effect",
+      "sort_order": 3,
+      "category": "practitioner",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["brecht", "verfremdung", "epic-theater", "political", "gestus"],
+      "metadata": {}
+    },
+    {
+      "id": "artaud",
+      "name": "Antonin Artaud — Theatre of Cruelty",
+      "sort_order": 4,
+      "category": "practitioner",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["artaud", "cruelty", "ritual", "visceral", "plague", "sensation"],
+      "metadata": {}
+    },
+    {
+      "id": "grotowski",
+      "name": "Jerzy Grotowski — Poor Theatre",
+      "sort_order": 5,
+      "category": "practitioner",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["grotowski", "poor-theatre", "holy-actor", "via-negativa", "body"],
+      "metadata": {}
+    },
+    {
+      "id": "brook",
+      "name": "Peter Brook — The Empty Space",
+      "sort_order": 6,
+      "category": "practitioner",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["brook", "empty-space", "deadly-theater", "holy-theater", "intercultural"],
+      "metadata": {}
+    },
+    {
+      "id": "strasberg",
+      "name": "Lee Strasberg — The Method",
+      "sort_order": 7,
+      "category": "practitioner",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["strasberg", "method", "affective-memory", "actors-studio", "immersion"],
+      "metadata": {}
+    },
+    {
+      "id": "meisner",
+      "name": "Sanford Meisner — The Reality of Doing",
+      "sort_order": 8,
+      "category": "practitioner",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["meisner", "repetition", "listening", "instinct", "reality-of-doing"],
+      "metadata": {}
+    },
+    {
+      "id": "adler",
+      "name": "Stella Adler — The Imagination",
+      "sort_order": 9,
+      "category": "practitioner",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["adler", "imagination", "given-circumstances", "action", "script-analysis"],
+      "metadata": {}
+    },
+    {
+      "id": "spolin",
+      "name": "Viola Spolin — Theater Games",
+      "sort_order": 10,
+      "category": "practitioner",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["spolin", "improv", "games", "spontaneity", "play", "yes-and"],
+      "metadata": {}
+    },
+    {
+      "id": "boal",
+      "name": "Augusto Boal — Theatre of the Oppressed",
+      "sort_order": 11,
+      "category": "practitioner",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["boal", "oppressed", "forum-theater", "spect-actor", "liberation", "freire"],
+      "metadata": {}
+    },
+    {
+      "id": "suzuki",
+      "name": "Tadashi Suzuki — The Grammar of the Feet",
+      "sort_order": 12,
+      "category": "practitioner",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["suzuki", "feet", "stamping", "animal-energy", "japan", "physical"],
+      "metadata": {}
+    },
+    {
+      "id": "lecoq",
+      "name": "Jacques Lecoq — Le Jeu",
+      "sort_order": 13,
+      "category": "practitioner",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["lecoq", "play", "clown", "mask", "physical-theater", "neutral-mask"],
+      "metadata": {}
+    },
+    {
+      "id": "bogart",
+      "name": "Anne Bogart — Viewpoints",
+      "sort_order": 14,
+      "category": "practitioner",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["bogart", "viewpoints", "composition", "time", "space", "siti-company"],
+      "metadata": {}
+    },
+    {
+      "id": "mnouchkine",
+      "name": "Ariane Mnouchkine — Théâtre du Soleil",
+      "sort_order": 15,
+      "category": "practitioner",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["mnouchkine", "soleil", "collective", "epic", "intercultural", "devised"],
+      "metadata": {}
+    },
+    {
+      "id": "barba",
+      "name": "Eugenio Barba — Theatre Anthropology",
+      "sort_order": 16,
+      "category": "practitioner",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["barba", "anthropology", "pre-expressivity", "odin", "third-theater"],
+      "metadata": {}
+    },
+    {
+      "id": "laban",
+      "name": "Rudolf Laban — Movement Analysis",
+      "sort_order": 17,
+      "category": "practitioner",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["laban", "effort", "movement-analysis", "space", "weight", "time", "flow"],
+      "metadata": {}
+    },
+    {
+      "id": "chekhov-michael",
+      "name": "Michael Chekhov — The Psychological Gesture",
+      "sort_order": 18,
+      "category": "practitioner",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["chekhov", "psychological-gesture", "imagination", "atmosphere", "archetype"],
+      "metadata": {}
+    },
+    {
+      "id": "greek-chorus",
+      "name": "The Greek Chorus — The Voice of the Community",
+      "sort_order": 19,
+      "category": "ancient-form",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["greek", "chorus", "collective", "dithyramb", "dionysus", "ritual"],
+      "metadata": {}
+    },
+    {
+      "id": "noh",
+      "name": "Noh Theatre — The Flower of Stillness",
+      "sort_order": 20,
+      "category": "ancient-form",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["noh", "japan", "zeami", "flower", "mask", "stillness", "yugen"],
+      "metadata": {}
+    },
+    {
+      "id": "kabuki",
+      "name": "Kabuki — The Art of Transformation",
+      "sort_order": 21,
+      "category": "ancient-form",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["kabuki", "japan", "onnagata", "mie", "spectacular", "popular"],
+      "metadata": {}
+    },
+    {
+      "id": "commedia",
+      "name": "Commedia dell'Arte — The Masked Improvisation",
+      "sort_order": 22,
+      "category": "ancient-form",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["commedia", "mask", "improvisation", "stock-characters", "lazzi", "italy"],
+      "metadata": {}
+    },
+    {
+      "id": "chinese-opera",
+      "name": "Chinese Opera — The Total Art",
+      "sort_order": 23,
+      "category": "ancient-form",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["chinese-opera", "beijing-opera", "mei-lanfang", "stylization", "acrobatics"],
+      "metadata": {}
+    },
+    {
+      "id": "clown",
+      "name": "The Clown — The Most Vulnerable Performer",
+      "sort_order": 24,
+      "category": "archetype",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["clown", "vulnerability", "failure", "red-nose", "laughter", "truth"],
+      "metadata": {}
+    },
+    {
+      "id": "mask-work",
+      "name": "Mask Work — Becoming Other",
+      "sort_order": 25,
+      "category": "archetype",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["mask", "neutral-mask", "character-mask", "transformation", "body"],
+      "metadata": {}
+    },
+    {
+      "id": "devised-theater",
+      "name": "Devised Theater — Making It Together",
+      "sort_order": 26,
+      "category": "method",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["devised", "collective", "creation", "ensemble", "process"],
+      "metadata": {}
+    },
+    {
+      "id": "verbatim-theater",
+      "name": "Verbatim Theater — The Words of the Living",
+      "sort_order": 27,
+      "category": "method",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["verbatim", "documentary", "testimony", "real-words", "justice"],
+      "metadata": {}
+    },
+    {
+      "id": "site-specific",
+      "name": "Site-Specific Theater — The Place Performs",
+      "sort_order": 28,
+      "category": "method",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["site-specific", "immersive", "place", "architecture", "audience"],
+      "metadata": {}
+    },
+    {
+      "id": "forum-theater",
+      "name": "Forum Theater — The Rehearsal for Revolution",
+      "sort_order": 29,
+      "category": "method",
+      "level": 1,
+      "sections": {
+        "The Practice": "Placeholder.",
+        "The Insight": "Placeholder.",
+        "The Lineage": "Placeholder.",
+        "Try This": "Placeholder."
+      },
+      "keywords": ["forum", "boal", "spect-actor", "intervention", "oppression", "liberation"],
+      "metadata": {}
+    },
+    {
+      "id": "line-realist",
+      "name": "The Realist Line — Truth on Stage",
+      "sort_order": 30,
+      "category": "lineage",
+      "level": 2,
+      "composite_of": ["stanislavski", "strasberg", "meisner", "adler", "chekhov-michael"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Through-Line": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["realism", "emotion", "truth", "acting", "america"],
+      "metadata": {}
+    },
+    {
+      "id": "line-body",
+      "name": "The Body Line — Flesh Before Words",
+      "sort_order": 31,
+      "category": "lineage",
+      "level": 2,
+      "composite_of": ["meyerhold", "grotowski", "suzuki", "lecoq", "barba", "laban"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Through-Line": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["physical-theater", "body", "training", "presence", "europe"],
+      "metadata": {}
+    },
+    {
+      "id": "line-political",
+      "name": "The Political Line — Theater as Weapon",
+      "sort_order": 32,
+      "category": "lineage",
+      "level": 2,
+      "composite_of": ["brecht", "boal", "forum-theater", "verbatim-theater"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Through-Line": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["political", "liberation", "epic", "oppressed", "justice"],
+      "metadata": {}
+    },
+    {
+      "id": "line-ritual",
+      "name": "The Ritual Line — Theater as Ceremony",
+      "sort_order": 33,
+      "category": "lineage",
+      "level": 2,
+      "composite_of": ["artaud", "grotowski", "brook", "mnouchkine"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Through-Line": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["ritual", "ceremony", "sacred", "cruelty", "holy"],
+      "metadata": {}
+    },
+    {
+      "id": "line-play",
+      "name": "The Play Line — Improvisation and Joy",
+      "sort_order": 34,
+      "category": "lineage",
+      "level": 2,
+      "composite_of": ["spolin", "lecoq", "commedia", "clown", "mask-work"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Through-Line": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["play", "improv", "clown", "mask", "spontaneity", "joy"],
+      "metadata": {}
+    },
+    {
+      "id": "line-ancient",
+      "name": "The Ancient Roots — Where Theater Begins",
+      "sort_order": 35,
+      "category": "lineage",
+      "level": 2,
+      "composite_of": ["greek-chorus", "noh", "kabuki", "commedia", "chinese-opera"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Through-Line": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["ancient", "roots", "ritual", "tradition", "origin"],
+      "metadata": {}
+    },
+    {
+      "id": "line-contemporary",
+      "name": "Contemporary Making — The Ensemble Speaks",
+      "sort_order": 36,
+      "category": "lineage",
+      "level": 2,
+      "composite_of": ["bogart", "devised-theater", "site-specific", "verbatim-theater"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Through-Line": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["contemporary", "devised", "ensemble", "new-forms", "process"],
+      "metadata": {}
+    },
+    {
+      "id": "meta-catharsis",
+      "name": "Catharsis — Theater Heals",
+      "sort_order": 37,
+      "category": "meta-question",
+      "level": 3,
+      "composite_of": ["line-realist", "line-ritual", "line-ancient"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Bigger Picture": "Placeholder."
+      },
+      "keywords": ["catharsis", "aristotle", "healing", "purification", "emotion"],
+      "metadata": {}
+    },
+    {
+      "id": "meta-alienation",
+      "name": "Alienation — Theater Wakes You Up",
+      "sort_order": 38,
+      "category": "meta-question",
+      "level": 3,
+      "composite_of": ["line-political", "line-body"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Bigger Picture": "Placeholder."
+      },
+      "keywords": ["alienation", "brecht", "critical", "awakening", "politics"],
+      "metadata": {}
+    },
+    {
+      "id": "meta-communion",
+      "name": "Communion — Theater Connects",
+      "sort_order": 39,
+      "category": "meta-question",
+      "level": 3,
+      "composite_of": ["line-ritual", "line-play", "line-contemporary"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Bigger Picture": "Placeholder."
+      },
+      "keywords": ["communion", "grotowski", "connection", "presence", "holy"],
+      "metadata": {}
+    },
+    {
+      "id": "meta-liberation",
+      "name": "Liberation — Theater Frees",
+      "sort_order": 40,
+      "category": "meta-question",
+      "level": 3,
+      "composite_of": ["line-political", "line-play"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Bigger Picture": "Placeholder."
+      },
+      "keywords": ["liberation", "boal", "freedom", "spect-actor", "change"],
+      "metadata": {}
+    }
+  ]
+}

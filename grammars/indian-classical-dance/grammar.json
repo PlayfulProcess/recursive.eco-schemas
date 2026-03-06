@@ -1,0 +1,734 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "date": "2026",
+        "note": "Original grammar created from memory, synthesizing the Natyashastra tradition, the eight classical Indian dance forms, the nine rasas, and the mudra vocabulary into an embodied grammar of sacred expression."
+      }
+    ]
+  },
+  "name": "Indian Classical Dance: Natya — The Fifth Veda",
+  "description": "The Natyashastra, attributed to Bharata Muni (~200 BCE), is sometimes called the Fifth Veda — a scripture of embodied knowledge where every gesture is a word, every expression a sentence, every dance a prayer. This grammar maps the nine rasas (emotional essences), the hand mudras (gesture vocabulary), the eight classical dance forms, and the repertoire structure — from the opening Alarippu to the devotional Padam. A living tradition spanning two millennia, performed today by millions.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Illustrations from early translations of the Natyashastra. Bronze Chola dynasty Nataraja sculptures (10th-12th century). Tanjore paintings of dancers (18th-19th century). Ajanta cave murals depicting dance postures (2nd century BCE - 6th century CE).",
+  "grammar_type": "custom",
+  "creator_name": "PlayfulProcess",
+  "tags": ["dance", "india", "embodiment", "sacred", "natyashastra", "rasa", "mudra", "classical", "devotion"],
+  "roots": ["eastern-wisdom", "embodiment", "myth-and-symbol"],
+  "shelves": ["wisdom", "wonder"],
+  "lineages": ["Shrei", "Akomolafe"],
+  "worldview": "devotional",
+  "grammars": [
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/yoga-body-as-temple",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/human-body",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/anthropological-dance"
+  ],
+  "items": [
+    {
+      "id": "shringara",
+      "name": "Shringara — Love / Beauty",
+      "sort_order": 1,
+      "category": "rasa",
+      "level": 1,
+      "sections": {
+        "The Essence": "Placeholder.",
+        "How It Moves": "Placeholder.",
+        "Where You See It": "Placeholder.",
+        "The Deeper Teaching": "Placeholder."
+      },
+      "keywords": ["rasa", "love", "beauty", "erotic", "devotion"],
+      "metadata": {"astrology": {"planets": ["Venus"], "signs": ["Libra", "Taurus"], "themes": ["beauty", "attraction", "devotion"]}}
+    },
+    {
+      "id": "hasya",
+      "name": "Hasya — Laughter / Comedy",
+      "sort_order": 2,
+      "category": "rasa",
+      "level": 1,
+      "sections": {
+        "The Essence": "Placeholder.",
+        "How It Moves": "Placeholder.",
+        "Where You See It": "Placeholder.",
+        "The Deeper Teaching": "Placeholder."
+      },
+      "keywords": ["rasa", "laughter", "comedy", "joy", "play"],
+      "metadata": {"astrology": {"planets": ["Mercury", "Jupiter"], "signs": ["Gemini", "Sagittarius"], "themes": ["play", "lightness", "wit"]}}
+    },
+    {
+      "id": "karuna",
+      "name": "Karuna — Compassion / Sorrow",
+      "sort_order": 3,
+      "category": "rasa",
+      "level": 1,
+      "sections": {
+        "The Essence": "Placeholder.",
+        "How It Moves": "Placeholder.",
+        "Where You See It": "Placeholder.",
+        "The Deeper Teaching": "Placeholder."
+      },
+      "keywords": ["rasa", "compassion", "sorrow", "pathos", "tenderness"],
+      "metadata": {"astrology": {"planets": ["Moon", "Neptune"], "signs": ["Cancer", "Pisces"], "themes": ["sorrow", "empathy", "tenderness"]}}
+    },
+    {
+      "id": "raudra",
+      "name": "Raudra — Fury / Wrath",
+      "sort_order": 4,
+      "category": "rasa",
+      "level": 1,
+      "sections": {
+        "The Essence": "Placeholder.",
+        "How It Moves": "Placeholder.",
+        "Where You See It": "Placeholder.",
+        "The Deeper Teaching": "Placeholder."
+      },
+      "keywords": ["rasa", "fury", "wrath", "anger", "destruction"],
+      "metadata": {"astrology": {"planets": ["Mars"], "signs": ["Aries", "Scorpio"], "themes": ["rage", "destruction", "righteous-anger"]}}
+    },
+    {
+      "id": "veera",
+      "name": "Veera — Heroism / Valor",
+      "sort_order": 5,
+      "category": "rasa",
+      "level": 1,
+      "sections": {
+        "The Essence": "Placeholder.",
+        "How It Moves": "Placeholder.",
+        "Where You See It": "Placeholder.",
+        "The Deeper Teaching": "Placeholder."
+      },
+      "keywords": ["rasa", "heroism", "valor", "courage", "strength"],
+      "metadata": {"astrology": {"planets": ["Mars", "Sun"], "signs": ["Leo", "Aries"], "themes": ["courage", "triumph", "nobility"]}}
+    },
+    {
+      "id": "bhayanaka",
+      "name": "Bhayanaka — Terror / Fear",
+      "sort_order": 6,
+      "category": "rasa",
+      "level": 1,
+      "sections": {
+        "The Essence": "Placeholder.",
+        "How It Moves": "Placeholder.",
+        "Where You See It": "Placeholder.",
+        "The Deeper Teaching": "Placeholder."
+      },
+      "keywords": ["rasa", "terror", "fear", "dread", "vulnerability"],
+      "metadata": {"astrology": {"planets": ["Saturn", "Pluto"], "signs": ["Scorpio", "Capricorn"], "themes": ["fear", "shadow", "survival"]}}
+    },
+    {
+      "id": "bibhatsa",
+      "name": "Bibhatsa — Disgust / Aversion",
+      "sort_order": 7,
+      "category": "rasa",
+      "level": 1,
+      "sections": {
+        "The Essence": "Placeholder.",
+        "How It Moves": "Placeholder.",
+        "Where You See It": "Placeholder.",
+        "The Deeper Teaching": "Placeholder."
+      },
+      "keywords": ["rasa", "disgust", "aversion", "repulsion", "discernment"],
+      "metadata": {"astrology": {"planets": ["Saturn"], "signs": ["Virgo"], "themes": ["discernment", "purification", "boundaries"]}}
+    },
+    {
+      "id": "adbhuta",
+      "name": "Adbhuta — Wonder / Amazement",
+      "sort_order": 8,
+      "category": "rasa",
+      "level": 1,
+      "sections": {
+        "The Essence": "Placeholder.",
+        "How It Moves": "Placeholder.",
+        "Where You See It": "Placeholder.",
+        "The Deeper Teaching": "Placeholder."
+      },
+      "keywords": ["rasa", "wonder", "amazement", "awe", "miracle"],
+      "metadata": {"astrology": {"planets": ["Uranus", "Neptune"], "signs": ["Aquarius", "Pisces"], "themes": ["wonder", "revelation", "divine-surprise"]}}
+    },
+    {
+      "id": "shanta",
+      "name": "Shanta — Peace / Serenity",
+      "sort_order": 9,
+      "category": "rasa",
+      "level": 1,
+      "sections": {
+        "The Essence": "Placeholder.",
+        "How It Moves": "Placeholder.",
+        "Where You See It": "Placeholder.",
+        "The Deeper Teaching": "Placeholder."
+      },
+      "keywords": ["rasa", "peace", "serenity", "stillness", "liberation"],
+      "metadata": {"astrology": {"planets": ["Neptune", "Moon"], "signs": ["Pisces"], "themes": ["transcendence", "stillness", "moksha"]}}
+    },
+    {
+      "id": "anjali",
+      "name": "Anjali — Prayer Hands",
+      "sort_order": 10,
+      "category": "mudra",
+      "level": 1,
+      "sections": {
+        "The Gesture": "Placeholder.",
+        "What It Means": "Placeholder.",
+        "In Performance": "Placeholder.",
+        "Beyond Dance": "Placeholder."
+      },
+      "keywords": ["mudra", "prayer", "namaste", "greeting", "devotion"],
+      "metadata": {}
+    },
+    {
+      "id": "alapadma",
+      "name": "Alapadma — Full-Blown Lotus",
+      "sort_order": 11,
+      "category": "mudra",
+      "level": 1,
+      "sections": {
+        "The Gesture": "Placeholder.",
+        "What It Means": "Placeholder.",
+        "In Performance": "Placeholder.",
+        "Beyond Dance": "Placeholder."
+      },
+      "keywords": ["mudra", "lotus", "beauty", "fullness", "bloom"],
+      "metadata": {}
+    },
+    {
+      "id": "pataka",
+      "name": "Pataka — Flag Hand",
+      "sort_order": 12,
+      "category": "mudra",
+      "level": 1,
+      "sections": {
+        "The Gesture": "Placeholder.",
+        "What It Means": "Placeholder.",
+        "In Performance": "Placeholder.",
+        "Beyond Dance": "Placeholder."
+      },
+      "keywords": ["mudra", "flag", "wind", "cloud", "forest"],
+      "metadata": {}
+    },
+    {
+      "id": "tripataka",
+      "name": "Tripataka — Three Parts of the Flag",
+      "sort_order": 13,
+      "category": "mudra",
+      "level": 1,
+      "sections": {
+        "The Gesture": "Placeholder.",
+        "What It Means": "Placeholder.",
+        "In Performance": "Placeholder.",
+        "Beyond Dance": "Placeholder."
+      },
+      "keywords": ["mudra", "crown", "tree", "lamp", "fire"],
+      "metadata": {}
+    },
+    {
+      "id": "kartarimukha",
+      "name": "Kartarimukha — Scissors Face",
+      "sort_order": 14,
+      "category": "mudra",
+      "level": 1,
+      "sections": {
+        "The Gesture": "Placeholder.",
+        "What It Means": "Placeholder.",
+        "In Performance": "Placeholder.",
+        "Beyond Dance": "Placeholder."
+      },
+      "keywords": ["mudra", "scissors", "separation", "opposition", "death"],
+      "metadata": {}
+    },
+    {
+      "id": "mayura",
+      "name": "Mayura — Peacock Hand",
+      "sort_order": 15,
+      "category": "mudra",
+      "level": 1,
+      "sections": {
+        "The Gesture": "Placeholder.",
+        "What It Means": "Placeholder.",
+        "In Performance": "Placeholder.",
+        "Beyond Dance": "Placeholder."
+      },
+      "keywords": ["mudra", "peacock", "beauty", "pride", "bird"],
+      "metadata": {}
+    },
+    {
+      "id": "ardhachandra",
+      "name": "Ardhachandra — Half Moon",
+      "sort_order": 16,
+      "category": "mudra",
+      "level": 1,
+      "sections": {
+        "The Gesture": "Placeholder.",
+        "What It Means": "Placeholder.",
+        "In Performance": "Placeholder.",
+        "Beyond Dance": "Placeholder."
+      },
+      "keywords": ["mudra", "moon", "meditation", "waist", "origin"],
+      "metadata": {}
+    },
+    {
+      "id": "mrigashirsha",
+      "name": "Mrigashirsha — Deer Head",
+      "sort_order": 17,
+      "category": "mudra",
+      "level": 1,
+      "sections": {
+        "The Gesture": "Placeholder.",
+        "What It Means": "Placeholder.",
+        "In Performance": "Placeholder.",
+        "Beyond Dance": "Placeholder."
+      },
+      "keywords": ["mudra", "deer", "grace", "calling", "fear"],
+      "metadata": {}
+    },
+    {
+      "id": "hamsasya",
+      "name": "Hamsasya — Swan's Beak",
+      "sort_order": 18,
+      "category": "mudra",
+      "level": 1,
+      "sections": {
+        "The Gesture": "Placeholder.",
+        "What It Means": "Placeholder.",
+        "In Performance": "Placeholder.",
+        "Beyond Dance": "Placeholder."
+      },
+      "keywords": ["mudra", "swan", "delicacy", "painting", "jasmine"],
+      "metadata": {}
+    },
+    {
+      "id": "katakamukha",
+      "name": "Katakamukha — Opening in a Bracelet",
+      "sort_order": 19,
+      "category": "mudra",
+      "level": 1,
+      "sections": {
+        "The Gesture": "Placeholder.",
+        "What It Means": "Placeholder.",
+        "In Performance": "Placeholder.",
+        "Beyond Dance": "Placeholder."
+      },
+      "keywords": ["mudra", "bracelet", "flower", "pulling", "garland"],
+      "metadata": {}
+    },
+    {
+      "id": "bharatanatyam",
+      "name": "Bharatanatyam — Fire of the Temple",
+      "sort_order": 20,
+      "category": "dance-form",
+      "level": 1,
+      "sections": {
+        "The Form": "Placeholder.",
+        "How It Moves": "Placeholder.",
+        "What It Carries": "Placeholder.",
+        "Living Tradition": "Placeholder."
+      },
+      "keywords": ["bharatanatyam", "tamil-nadu", "temple", "devadasi", "nritta"],
+      "metadata": {"astrology": {"planets": ["Sun", "Mars"], "signs": ["Leo"], "themes": ["sacred-fire", "precision", "devotion"]}}
+    },
+    {
+      "id": "kathak",
+      "name": "Kathak — The Storyteller's Feet",
+      "sort_order": 21,
+      "category": "dance-form",
+      "level": 1,
+      "sections": {
+        "The Form": "Placeholder.",
+        "How It Moves": "Placeholder.",
+        "What It Carries": "Placeholder.",
+        "Living Tradition": "Placeholder."
+      },
+      "keywords": ["kathak", "north-india", "storytelling", "footwork", "mughal", "spin"],
+      "metadata": {"astrology": {"planets": ["Mercury", "Venus"], "signs": ["Gemini"], "themes": ["storytelling", "speed", "fusion"]}}
+    },
+    {
+      "id": "odissi",
+      "name": "Odissi — Sculpture in Motion",
+      "sort_order": 22,
+      "category": "dance-form",
+      "level": 1,
+      "sections": {
+        "The Form": "Placeholder.",
+        "How It Moves": "Placeholder.",
+        "What It Carries": "Placeholder.",
+        "Living Tradition": "Placeholder."
+      },
+      "keywords": ["odissi", "odisha", "tribhanga", "temple-sculpture", "lyrical"],
+      "metadata": {"astrology": {"planets": ["Venus", "Moon"], "signs": ["Taurus", "Cancer"], "themes": ["sensuality", "devotion", "fluid-beauty"]}}
+    },
+    {
+      "id": "kathakali",
+      "name": "Kathakali — The Painted Warriors",
+      "sort_order": 23,
+      "category": "dance-form",
+      "level": 1,
+      "sections": {
+        "The Form": "Placeholder.",
+        "How It Moves": "Placeholder.",
+        "What It Carries": "Placeholder.",
+        "Living Tradition": "Placeholder."
+      },
+      "keywords": ["kathakali", "kerala", "makeup", "epic", "drama", "mudra"],
+      "metadata": {"astrology": {"planets": ["Mars", "Jupiter"], "signs": ["Scorpio", "Sagittarius"], "themes": ["epic-battle", "transformation", "myth"]}}
+    },
+    {
+      "id": "kuchipudi",
+      "name": "Kuchipudi — Dance-Drama of Andhra",
+      "sort_order": 24,
+      "category": "dance-form",
+      "level": 1,
+      "sections": {
+        "The Form": "Placeholder.",
+        "How It Moves": "Placeholder.",
+        "What It Carries": "Placeholder.",
+        "Living Tradition": "Placeholder."
+      },
+      "keywords": ["kuchipudi", "andhra-pradesh", "drama", "brass-plate", "devotion"],
+      "metadata": {"astrology": {"planets": ["Jupiter", "Venus"], "signs": ["Sagittarius", "Pisces"], "themes": ["devotion", "playfulness", "virtuosity"]}}
+    },
+    {
+      "id": "manipuri",
+      "name": "Manipuri — The Gentle Ras",
+      "sort_order": 25,
+      "category": "dance-form",
+      "level": 1,
+      "sections": {
+        "The Form": "Placeholder.",
+        "How It Moves": "Placeholder.",
+        "What It Carries": "Placeholder.",
+        "Living Tradition": "Placeholder."
+      },
+      "keywords": ["manipuri", "manipur", "ras-lila", "krishna", "gentle", "circular"],
+      "metadata": {"astrology": {"planets": ["Moon", "Venus"], "signs": ["Cancer", "Pisces"], "themes": ["divine-love", "circular-time", "gentleness"]}}
+    },
+    {
+      "id": "mohiniyattam",
+      "name": "Mohiniyattam — Dance of the Enchantress",
+      "sort_order": 26,
+      "category": "dance-form",
+      "level": 1,
+      "sections": {
+        "The Form": "Placeholder.",
+        "How It Moves": "Placeholder.",
+        "What It Carries": "Placeholder.",
+        "Living Tradition": "Placeholder."
+      },
+      "keywords": ["mohiniyattam", "kerala", "mohini", "feminine", "swaying", "lasya"],
+      "metadata": {"astrology": {"planets": ["Venus", "Neptune"], "signs": ["Libra", "Pisces"], "themes": ["enchantment", "feminine-power", "illusion"]}}
+    },
+    {
+      "id": "sattriya",
+      "name": "Sattriya — The Monastery Dance",
+      "sort_order": 27,
+      "category": "dance-form",
+      "level": 1,
+      "sections": {
+        "The Form": "Placeholder.",
+        "How It Moves": "Placeholder.",
+        "What It Carries": "Placeholder.",
+        "Living Tradition": "Placeholder."
+      },
+      "keywords": ["sattriya", "assam", "vaishnavism", "monastery", "devotion"],
+      "metadata": {"astrology": {"planets": ["Jupiter", "Saturn"], "signs": ["Sagittarius", "Capricorn"], "themes": ["devotion", "discipline", "monastic-practice"]}}
+    },
+    {
+      "id": "alarippu",
+      "name": "Alarippu — The Flowering",
+      "sort_order": 28,
+      "category": "repertoire",
+      "level": 1,
+      "sections": {
+        "The Piece": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "For the Audience": "Placeholder.",
+        "The Deeper Teaching": "Placeholder."
+      },
+      "keywords": ["alarippu", "opening", "invocation", "rhythm", "pure-dance"],
+      "metadata": {}
+    },
+    {
+      "id": "jatiswaram",
+      "name": "Jatiswaram — Melody in Motion",
+      "sort_order": 29,
+      "category": "repertoire",
+      "level": 1,
+      "sections": {
+        "The Piece": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "For the Audience": "Placeholder.",
+        "The Deeper Teaching": "Placeholder."
+      },
+      "keywords": ["jatiswaram", "melody", "rhythm", "pure-dance", "abstract"],
+      "metadata": {}
+    },
+    {
+      "id": "shabdam",
+      "name": "Shabdam — The First Words",
+      "sort_order": 30,
+      "category": "repertoire",
+      "level": 1,
+      "sections": {
+        "The Piece": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "For the Audience": "Placeholder.",
+        "The Deeper Teaching": "Placeholder."
+      },
+      "keywords": ["shabdam", "words", "narrative", "devotion", "introduction"],
+      "metadata": {}
+    },
+    {
+      "id": "varnam",
+      "name": "Varnam — The Heart of the Recital",
+      "sort_order": 31,
+      "category": "repertoire",
+      "level": 1,
+      "sections": {
+        "The Piece": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "For the Audience": "Placeholder.",
+        "The Deeper Teaching": "Placeholder."
+      },
+      "keywords": ["varnam", "centerpiece", "virtuosity", "narrative", "rasa"],
+      "metadata": {}
+    },
+    {
+      "id": "padam",
+      "name": "Padam — The Devotional Song",
+      "sort_order": 32,
+      "category": "repertoire",
+      "level": 1,
+      "sections": {
+        "The Piece": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "For the Audience": "Placeholder.",
+        "The Deeper Teaching": "Placeholder."
+      },
+      "keywords": ["padam", "devotion", "emotion", "abhinaya", "love"],
+      "metadata": {}
+    },
+    {
+      "id": "tillana",
+      "name": "Tillana — The Joyous Finale",
+      "sort_order": 33,
+      "category": "repertoire",
+      "level": 1,
+      "sections": {
+        "The Piece": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "For the Audience": "Placeholder.",
+        "The Deeper Teaching": "Placeholder."
+      },
+      "keywords": ["tillana", "finale", "joy", "rhythm", "celebration"],
+      "metadata": {}
+    },
+    {
+      "id": "mangalam",
+      "name": "Mangalam — The Blessing",
+      "sort_order": 34,
+      "category": "repertoire",
+      "level": 1,
+      "sections": {
+        "The Piece": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "For the Audience": "Placeholder.",
+        "The Deeper Teaching": "Placeholder."
+      },
+      "keywords": ["mangalam", "blessing", "closing", "peace", "gratitude"],
+      "metadata": {}
+    },
+    {
+      "id": "nritta",
+      "name": "Nritta — Pure Dance",
+      "sort_order": 35,
+      "category": "concept",
+      "level": 1,
+      "sections": {
+        "The Concept": "Placeholder.",
+        "How It Moves": "Placeholder.",
+        "Why It Matters": "Placeholder.",
+        "The Deeper Teaching": "Placeholder."
+      },
+      "keywords": ["nritta", "pure-dance", "rhythm", "abstract", "technique"],
+      "metadata": {}
+    },
+    {
+      "id": "nritya",
+      "name": "Nritya — Expressive Dance",
+      "sort_order": 36,
+      "category": "concept",
+      "level": 1,
+      "sections": {
+        "The Concept": "Placeholder.",
+        "How It Moves": "Placeholder.",
+        "Why It Matters": "Placeholder.",
+        "The Deeper Teaching": "Placeholder."
+      },
+      "keywords": ["nritya", "expression", "narrative", "abhinaya", "emotion"],
+      "metadata": {}
+    },
+    {
+      "id": "natya",
+      "name": "Natya — Dance-Drama",
+      "sort_order": 37,
+      "category": "concept",
+      "level": 1,
+      "sections": {
+        "The Concept": "Placeholder.",
+        "How It Moves": "Placeholder.",
+        "Why It Matters": "Placeholder.",
+        "The Deeper Teaching": "Placeholder."
+      },
+      "keywords": ["natya", "drama", "theater", "complete-art", "story"],
+      "metadata": {}
+    },
+    {
+      "id": "abhinaya",
+      "name": "Abhinaya — The Art of Expression",
+      "sort_order": 38,
+      "category": "concept",
+      "level": 1,
+      "sections": {
+        "The Concept": "Placeholder.",
+        "How It Moves": "Placeholder.",
+        "Why It Matters": "Placeholder.",
+        "The Deeper Teaching": "Placeholder."
+      },
+      "keywords": ["abhinaya", "expression", "face", "eyes", "emotion", "communication"],
+      "metadata": {}
+    },
+    {
+      "id": "tala",
+      "name": "Tala — The Rhythm Cycle",
+      "sort_order": 39,
+      "category": "concept",
+      "level": 1,
+      "sections": {
+        "The Concept": "Placeholder.",
+        "How It Moves": "Placeholder.",
+        "Why It Matters": "Placeholder.",
+        "The Deeper Teaching": "Placeholder."
+      },
+      "keywords": ["tala", "rhythm", "cycle", "time", "mathematics"],
+      "metadata": {}
+    },
+    {
+      "id": "group-rasas",
+      "name": "The Nine Rasas — Emotional Alchemy",
+      "sort_order": 40,
+      "category": "rasa-group",
+      "level": 2,
+      "composite_of": ["shringara", "hasya", "karuna", "raudra", "veera", "bhayanaka", "bibhatsa", "adbhuta", "shanta"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["rasa", "emotion", "essence", "navarasa", "expression"],
+      "metadata": {}
+    },
+    {
+      "id": "group-mudras",
+      "name": "The Mudra Vocabulary — Hands That Speak",
+      "sort_order": 41,
+      "category": "mudra-group",
+      "level": 2,
+      "composite_of": ["anjali", "alapadma", "pataka", "tripataka", "kartarimukha", "mayura", "ardhachandra", "mrigashirsha", "hamsasya", "katakamukha"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["mudra", "hand-gesture", "vocabulary", "language", "symbol"],
+      "metadata": {}
+    },
+    {
+      "id": "group-eight-forms",
+      "name": "The Eight Classical Forms — Eight Rivers, One Ocean",
+      "sort_order": 42,
+      "category": "form-group",
+      "level": 2,
+      "composite_of": ["bharatanatyam", "kathak", "odissi", "kathakali", "kuchipudi", "manipuri", "mohiniyattam", "sattriya"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["classical", "eight-forms", "india", "diversity", "tradition"],
+      "metadata": {}
+    },
+    {
+      "id": "group-repertoire",
+      "name": "The Margam — A Complete Recital",
+      "sort_order": 43,
+      "category": "repertoire-group",
+      "level": 2,
+      "composite_of": ["alarippu", "jatiswaram", "shabdam", "varnam", "padam", "tillana", "mangalam"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["margam", "recital", "structure", "journey", "complete"],
+      "metadata": {}
+    },
+    {
+      "id": "group-concepts",
+      "name": "The Grammar of Dance — Nritta, Nritya, Natya",
+      "sort_order": 44,
+      "category": "concept-group",
+      "level": 2,
+      "composite_of": ["nritta", "nritya", "natya", "abhinaya", "tala"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["grammar", "theory", "natyashastra", "bharata", "framework"],
+      "metadata": {}
+    },
+    {
+      "id": "meta-natyashastra",
+      "name": "The Natyashastra — A Scripture of the Body",
+      "sort_order": 45,
+      "category": "cosmology",
+      "level": 3,
+      "composite_of": ["group-rasas", "group-mudras", "group-concepts"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Bigger Picture": "Placeholder."
+      },
+      "keywords": ["natyashastra", "bharata", "scripture", "cosmology", "sacred"],
+      "metadata": {}
+    },
+    {
+      "id": "meta-living-forms",
+      "name": "The Living Forms — Two Thousand Years of Dance",
+      "sort_order": 46,
+      "category": "cosmology",
+      "level": 3,
+      "composite_of": ["group-eight-forms", "group-repertoire"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Bigger Picture": "Placeholder."
+      },
+      "keywords": ["tradition", "living", "evolution", "survival", "revival"],
+      "metadata": {}
+    },
+    {
+      "id": "meta-nataraja",
+      "name": "Nataraja — The Cosmic Dancer",
+      "sort_order": 47,
+      "category": "cosmology",
+      "level": 3,
+      "composite_of": ["group-rasas", "group-eight-forms", "group-concepts"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Bigger Picture": "Placeholder."
+      },
+      "keywords": ["nataraja", "shiva", "cosmic-dance", "creation", "destruction", "ananda-tandava"],
+      "metadata": {"astrology": {"planets": ["Pluto", "Sun"], "signs": ["Scorpio", "Leo"], "themes": ["creation-destruction", "cosmic-rhythm", "divine-play"]}}
+    }
+  ]
+}
