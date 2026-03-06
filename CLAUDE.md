@@ -165,13 +165,13 @@ The `description` field should include:
 2. **Source attribution**: Translator, date, and Project Gutenberg eBook number with link (e.g., `Source: Project Gutenberg eBook #21 (https://www.gutenberg.org/ebooks/21)`)
 3. **Illustration references** (on a new paragraph, prefixed with `PUBLIC DOMAIN ILLUSTRATION REFERENCES:`): List public domain illustrators and editions whose images would be good visual companions — these help the website agent search for and upload appropriate artwork. Include artist name, date, publisher, and art style.
 
-## Current Grammar Inventory (46 grammars)
+## Current Grammar Inventory (52+ grammars)
 
 All grammars live in `grammars/` — run `python3 scripts/generate_manifest.py` to see the full index, or check `manifest.json` for computed views by type, tag, creator, root, shelf, and lineage.
 
 | Type | Count | Notable |
 |------|-------|---------|
-| custom | 33 | Confucian Analects (749), Dhammapada (431), Art of War (376), Aesop's Fables (284), Shakespeare (247), Chuang Tzu (41), Alhambra (47), Sojourner Truth (39), Spirits' Book (33) |
+| custom | 39+ | Confucian Analects (749), Dhammapada (431), Art of War (376), Aesop's Fables (284), Shakespeare (247), Myths Through Many Eyes (73), Russian Folk Tales (61), Hesiod & Homeric Hymns (49), Arabian Nights (44), Myth of the Birth of the Hero (18), Mabinogion (15), Golden Ass (14) |
 | tarot | 6 | Rider-Waite (78), Jungian Archetypes (34), Alice's Tarot |
 | iching | 5 | Chinese original (64), Emergent, Leibniz Binary, HD Meta-Categories |
 | astrology | 1 | Archetypal Astrology (Tarnas) |
@@ -179,19 +179,62 @@ All grammars live in `grammars/` — run `python3 scripts/generate_manifest.py` 
 
 ## Parsing Lessons (from build-logs)
 
+### Gutenberg Text Handling
+- **Always use the Gutenberg start/end markers**: `*** START OF THE PROJECT GUTENBERG EBOOK` and `*** END OF THE PROJECT GUTENBERG EBOOK` to isolate body text. Never assume body starts at a fixed byte offset.
+- **Heading format varies between editions**: Always check the actual heading format in the seed file — don't assume. Build parsers with a fallback chain of patterns (e.g., try `I -- TITLE` first, then bare `I`, then `BOOK I`).
+- **TOC vs body heading conflicts**: When a text has ALL CAPS headings in both Table of Contents and body, skip the TOC region to avoid double-matching. Use the Gutenberg start marker to find the real body.
+- **Unicode apostrophes**: Gutenberg texts mix ASCII `'` and Unicode `'` (U+2019). Always test for both. Example: `HESIOD'S` uses U+2019, not ASCII.
+- **Spelling inconsistencies**: TOC and body sometimes differ (e.g., "Conal" vs "Conall", title case vs ALL CAPS). Always verify against actual body headings.
+- **Accented characters in titles** (FÊTES, Alcántara, Tzŭ): Need careful handling. Use case-insensitive or normalized matching.
+- **Missing section headings**: Some editions skip headings entirely (e.g., Golden Ass missing "FIFTH BOOKE"). Insert synthetic breaks at midpoints when needed.
+- **Footnote markers**: Strip `[21]`-style footnote markers from headings before matching.
+- **verify_seed() pattern**: Add a function to confirm the seed file is the correct book before parsing. Catches wrong-Gutenberg-number downloads early.
+
+### Parser Patterns
+- **Line-based heading search beats byte-position search**: `line.strip() == heading` is far more reliable than `body.find("\n" + spaces + heading)`. Byte positions drift due to encoding and whitespace differences.
+- **Centered headings**: Match with `len(line) - len(line.lstrip()) > 20` for Gutenberg texts with centered ALL CAPS headings.
+- **STORY_DEFS array pattern**: For fairy tales and anthologies, define a list of `(heading_text, id, name, cycle_category, keywords)` tuples. Directly reusable for any collection (Indian, Celtic, Grimm, Arabian Nights, etc.).
+- **Text truncation**: Truncate at ~2800 chars, find last period before cutoff: `bp = text.rfind(".", 0, 2800)`. Append `[Text continues for approximately N more words...]`.
+- **Duplicate title handling**: When multiple items share the same heading (e.g., "A Tale of the Dead" x3), use suffix numbering: `id-1`, `id-2`, `id-3`.
 - **Sacred texts**: Don't assume `\n\n` splits passages. Look for speaker attributions or verse numbering.
 - **Scholarly translations** (like Giles' Art of War): Use character-level bracket removal to strip commentary, not regex.
 - **Roman numerals**: Use `((?:X{0,3})(?:IX|IV|V?I{0,3}))\.` pattern. Handle up to XXXIX.
 - **Multi-part texts** (Grimm): Combine parts into single items.
-- **Background agents**: Good for regular-structure texts under ~5000 lines. Time out on complex/commentary-heavy texts — use direct Python scripting instead.
-- **Heading format varies between Gutenberg editions**: Always check the actual heading format in the seed file — don't assume. Build parsers with a fallback chain of patterns (e.g., try `I -- TITLE` first, then bare `I`, then `BOOK I`).
-- **TOC vs body heading conflicts**: When a Gutenberg text has ALL CAPS headings in both the Table of Contents and the body, skip the TOC region to avoid double-matching. Use line offset or marker-based body detection.
-- **Spelling inconsistencies**: Gutenberg texts sometimes differ between TOC and body (e.g., "Conal" vs "Conall"). Always verify each title match and fix manually if needed.
-- **Internet Archive OCR is much worse than Gutenberg**: Expect garbled text, random characters, broken line wraps. Strategy: use KNOWN structure of well-documented works to find section boundaries even in messy text. Clean aggressively (remove lines < 3 chars, strip garbage). Accept artifacts and note them in the grammar description.
-- **Accented characters in titles** (FÊTES, Alcántara, Tzŭ): Need careful handling in pattern matching. Use case-insensitive or normalized matching.
-- **Fairy tale collections** follow a reusable pattern: STORY_DEFS array with title, id, name, keywords, reflection — directly reusable for any anthology (Indian, Celtic, Grimm, etc.).
-- **verify_seed() pattern**: Add a function to confirm the seed file is the correct book before parsing. Catches wrong-Gutenberg-number downloads early.
+- **Internet Archive OCR is much worse than Gutenberg**: Expect garbled text, random characters, broken line wraps. Use KNOWN structure to find section boundaries. Clean aggressively (remove lines < 3 chars, strip garbage). Accept artifacts and note in grammar description.
+
+### Background Agents vs Inline Work
+- **Background agents**: Good for regular-structure seed texts under ~5000 lines with clear heading patterns.
+- **CRITICAL: NEVER use background agents for from-memory grammars**: They time out on content-heavy grammars because content generation + JSON management exceeds their context/time budget. Work inline instead using the Skeleton + Edit pattern.
+- **Complex/commentary-heavy texts**: Use direct Python scripting, not agents.
 - **Always log learnings** in `plan/build-logs/`.
+
+## Cross-Linking and Metadata Patterns
+
+### `grammars[]` Cross-Linking
+Items can reference other grammars using a `grammars[]` array with GitHub direct links:
+```json
+{
+  "id": "myth-psyche-eros",
+  "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/golden-ass-apuleius"],
+  ...
+}
+```
+When uploaded to Supabase, folder names get swapped for grammar UUIDs. Use this to link a myth item to its full source text grammar.
+
+### `metadata.astrology` Pattern
+For mythology and symbolic grammars, add astrological associations:
+```json
+{
+  "metadata": {
+    "astrology": {
+      "planets": ["Venus", "Pluto"],
+      "signs": ["Scorpio", "Libra"],
+      "themes": ["descent", "transformation"]
+    }
+  }
+}
+```
+Every major myth has well-established planetary/zodiacal associations dating back to classical astrology (Inanna=Venus, Odin=Mercury, Prometheus=Uranus, etc.). This enables cross-grammar querying in astrology apps.
 
 ## Tool Usage by Grammar Type
 
@@ -227,10 +270,33 @@ Priorities include:
 
 ## Validation
 
-Run `python3 scripts/validate.py` to check all grammars, or validate manually:
-1. Valid JSON (`python3 -c "import json; json.load(open('grammar.json'))"`)
+Run `python3 scripts/validate.py` to check all grammars, or use this one-liner for a single grammar:
+
+```bash
+python3 -c "
+import json
+with open('grammars/GRAMMAR-NAME/grammar.json') as f:
+    g = json.load(f)
+items = g['items']
+ids = [i['id'] for i in items]
+dupes = [x for x in ids if ids.count(x) > 1]
+bad_refs = [(i['id'], r) for i in items for r in i.get('composite_of', []) if r not in ids]
+orders = [i['sort_order'] for i in items]
+placeholders = [(i['id'], k) for i in items for k, v in i.get('sections', {}).items() if v == 'Placeholder.']
+print(f'Items: {len(items)}, L1: {sum(1 for i in items if i[\"level\"]==1)}, L2: {sum(1 for i in items if i[\"level\"]==2)}, L3: {sum(1 for i in items if i[\"level\"]==3)}')
+print(f'Sections: {sum(len(i.get(\"sections\",{})) for i in items)}')
+print(f'Duplicate IDs: {dupes}')
+print(f'Bad refs: {bad_refs}')
+print(f'Sort orders sequential: {orders == list(range(1, len(items)+1))}')
+print(f'Remaining placeholders: {len(placeholders)}')
+"
+```
+
+Checks:
+1. Valid JSON parse
 2. No duplicate IDs
 3. All `composite_of` references point to existing item IDs
-4. `sort_order` is sequential
+4. `sort_order` is sequential (1, 2, 3, ...)
 5. All items have `id`, `name`, `sections`, `level`, `category`
 6. Attribution metadata is present in `_grammar_commons`
+7. Zero remaining `"Placeholder."` sections (for from-memory grammars)
