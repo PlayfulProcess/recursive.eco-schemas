@@ -1,0 +1,616 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "date": "2026-03-06",
+        "note": "Original from-memory grammar based on California native plant botany. Inspired by Mary Elizabeth Parsons' 'The Wild Flowers of California' (1897) and the Jepson Manual."
+      }
+    ]
+  },
+  "name": "Wildflowers of California",
+  "description": "A field guide to 30 beloved California wildflowers — from the golden poppies of spring hillsides to the desert lilies of the Mojave. Each flower is a doorway into California's extraordinary ecological diversity, with tiered content for young children (Story) and older readers (Science). Organized by habitat: coast, valley, foothill, mountain, and desert.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Mary Elizabeth Parsons' 'The Wild Flowers of California' (1897, Cunningham, Curtiss & Welch) with illustrations by Margaret Warriner Buck — delicate, accurate botanical line drawings. Albert Kellogg (1813–1887), founding member of the California Academy of Sciences, botanical illustrations of California flora.",
+  "grammar_type": "custom",
+  "creator_name": "PlayfulProcess",
+  "tags": ["wildflowers", "california", "botany", "nature", "kids", "field-guide", "native-plants", "ecology"],
+  "roots": ["natural-philosophy"],
+  "shelves": ["earth", "wonder", "children"],
+  "lineages": ["Kelty"],
+  "worldview": "rationalist",
+  "items": [
+    {
+      "id": "california-poppy",
+      "name": "California Poppy",
+      "sort_order": 1,
+      "category": "valley-foothill",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["poppy", "state-flower", "orange", "spring", "iconic"],
+      "metadata": {"scientific_name": "Eschscholzia californica", "bloom": "February–September", "color": "orange-gold", "habitat": "grasslands, roadsides, open slopes"}
+    },
+    {
+      "id": "lupine",
+      "name": "Lupine",
+      "sort_order": 2,
+      "category": "valley-foothill",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["lupine", "blue", "purple", "nitrogen-fixer", "superbloom"],
+      "metadata": {"scientific_name": "Lupinus spp.", "bloom": "March–June", "color": "blue, purple, white, yellow", "habitat": "grasslands, coastal bluffs, forest openings"}
+    },
+    {
+      "id": "tidytips",
+      "name": "Tidytips",
+      "sort_order": 3,
+      "category": "valley-foothill",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["tidytips", "yellow-white", "daisy-like", "spring"],
+      "metadata": {"scientific_name": "Layia platyglossa", "bloom": "March–June", "color": "yellow with white tips", "habitat": "grasslands, open fields"}
+    },
+    {
+      "id": "baby-blue-eyes",
+      "name": "Baby Blue Eyes",
+      "sort_order": 4,
+      "category": "valley-foothill",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["baby-blue-eyes", "blue", "delicate", "spring"],
+      "metadata": {"scientific_name": "Nemophila menziesii", "bloom": "February–June", "color": "sky blue with white center", "habitat": "grasslands, meadows, open woodland"}
+    },
+    {
+      "id": "goldfields",
+      "name": "Goldfields",
+      "sort_order": 5,
+      "category": "valley-foothill",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["goldfields", "yellow", "carpet", "mass-bloom"],
+      "metadata": {"scientific_name": "Lasthenia californica", "bloom": "March–May", "color": "bright yellow", "habitat": "grasslands, vernal pools"}
+    },
+    {
+      "id": "shooting-star",
+      "name": "Shooting Star",
+      "sort_order": 6,
+      "category": "valley-foothill",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["shooting-star", "pink", "swept-back-petals", "primrose-family"],
+      "metadata": {"scientific_name": "Dodecatheon clevelandii", "bloom": "January–April", "color": "pink to magenta", "habitat": "moist meadows, grassy slopes"}
+    },
+    {
+      "id": "owl-clover",
+      "name": "Owl's Clover",
+      "sort_order": 7,
+      "category": "valley-foothill",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["owls-clover", "pink-purple", "hemiparasite", "superbloom"],
+      "metadata": {"scientific_name": "Castilleja exserta", "bloom": "March–May", "color": "pink to purple", "habitat": "grasslands, open fields"}
+    },
+    {
+      "id": "matilija-poppy",
+      "name": "Matilija Poppy",
+      "sort_order": 8,
+      "category": "coastal-chaparral",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["matilija", "fried-egg", "largest-poppy", "white", "fire-follower"],
+      "metadata": {"scientific_name": "Romneya coulteri", "bloom": "May–July", "color": "white with yellow center", "habitat": "coastal sage scrub, chaparral, canyons"}
+    },
+    {
+      "id": "seaside-daisy",
+      "name": "Seaside Daisy",
+      "sort_order": 9,
+      "category": "coastal-chaparral",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["seaside-daisy", "lavender", "coastal", "bluffs"],
+      "metadata": {"scientific_name": "Erigeron glaucus", "bloom": "April–August", "color": "lavender-pink", "habitat": "coastal bluffs, dunes, headlands"}
+    },
+    {
+      "id": "sticky-monkey-flower",
+      "name": "Sticky Monkey Flower",
+      "sort_order": 10,
+      "category": "coastal-chaparral",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["monkey-flower", "orange", "sticky", "drought-tolerant"],
+      "metadata": {"scientific_name": "Diplacus aurantiacus", "bloom": "March–August", "color": "orange to salmon", "habitat": "coastal scrub, chaparral, rocky slopes"}
+    },
+    {
+      "id": "california-fuchsia",
+      "name": "California Fuchsia",
+      "sort_order": 11,
+      "category": "coastal-chaparral",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["fuchsia", "red", "hummingbird", "late-bloomer", "fall"],
+      "metadata": {"scientific_name": "Epilobium canum", "bloom": "August–October", "color": "scarlet red", "habitat": "dry slopes, rocky outcrops, road cuts"}
+    },
+    {
+      "id": "ceanothus",
+      "name": "California Lilac (Ceanothus)",
+      "sort_order": 12,
+      "category": "coastal-chaparral",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["ceanothus", "blue", "nitrogen-fixer", "chaparral", "fragrant"],
+      "metadata": {"scientific_name": "Ceanothus spp.", "bloom": "March–May", "color": "blue to white", "habitat": "chaparral, coastal scrub, mixed forest"}
+    },
+    {
+      "id": "indian-paintbrush",
+      "name": "Indian Paintbrush",
+      "sort_order": 13,
+      "category": "coastal-chaparral",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["paintbrush", "red", "hemiparasite", "bracts"],
+      "metadata": {"scientific_name": "Castilleja spp.", "bloom": "March–August", "color": "red, orange, yellow", "habitat": "meadows, coastal bluffs, mountain slopes"}
+    },
+    {
+      "id": "farewell-to-spring",
+      "name": "Farewell to Spring",
+      "sort_order": 14,
+      "category": "coastal-chaparral",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["clarkia", "pink", "late-spring", "farewell"],
+      "metadata": {"scientific_name": "Clarkia amoena", "bloom": "May–July", "color": "pink to lavender", "habitat": "grassy slopes, coastal bluffs, road cuts"}
+    },
+    {
+      "id": "snow-plant",
+      "name": "Snow Plant",
+      "sort_order": 15,
+      "category": "mountain",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["snow-plant", "red", "mycoheterotroph", "no-chlorophyll", "mountain"],
+      "metadata": {"scientific_name": "Sarcodes sanguinea", "bloom": "May–July", "color": "bright red", "habitat": "montane conifer forest, near melting snow"}
+    },
+    {
+      "id": "sierra-lily",
+      "name": "Sierra Tiger Lily",
+      "sort_order": 16,
+      "category": "mountain",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["lily", "orange", "spotted", "mountain-meadow"],
+      "metadata": {"scientific_name": "Lilium parvum", "bloom": "June–August", "color": "orange with dark spots", "habitat": "wet mountain meadows, stream banks"}
+    },
+    {
+      "id": "mountain-pride",
+      "name": "Mountain Pride Penstemon",
+      "sort_order": 17,
+      "category": "mountain",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["penstemon", "pink", "rock-garden", "mountain"],
+      "metadata": {"scientific_name": "Penstemon newberryi", "bloom": "June–August", "color": "magenta pink", "habitat": "rocky outcrops, granite crevices, mountain slopes"}
+    },
+    {
+      "id": "alpine-shooting-star",
+      "name": "Alpine Shooting Star",
+      "sort_order": 18,
+      "category": "mountain",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["shooting-star", "alpine", "pink", "high-elevation"],
+      "metadata": {"scientific_name": "Primula tetrandra", "bloom": "June–August", "color": "pink to lavender", "habitat": "alpine meadows, wet areas above timberline"}
+    },
+    {
+      "id": "sierra-iris",
+      "name": "Western Blue Flag Iris",
+      "sort_order": 19,
+      "category": "mountain",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["iris", "blue", "wetland", "elegant"],
+      "metadata": {"scientific_name": "Iris missouriensis", "bloom": "May–July", "color": "pale blue to violet", "habitat": "wet meadows, stream edges, 4000-10000 ft"}
+    },
+    {
+      "id": "sky-pilot",
+      "name": "Sky Pilot",
+      "sort_order": 20,
+      "category": "mountain",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["sky-pilot", "purple", "alpine", "highest-flower"],
+      "metadata": {"scientific_name": "Polemonium eximium", "bloom": "July–August", "color": "deep blue-purple", "habitat": "alpine scree, rocky ridges, above 11,000 ft"}
+    },
+    {
+      "id": "desert-lily",
+      "name": "Desert Lily",
+      "sort_order": 21,
+      "category": "desert",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["desert-lily", "white", "mojave", "ephemeral"],
+      "metadata": {"scientific_name": "Hesperocallis undulata", "bloom": "March–May", "color": "white with green stripe", "habitat": "sandy desert flats, Mojave and Colorado deserts"}
+    },
+    {
+      "id": "desert-sunflower",
+      "name": "Desert Sunflower",
+      "sort_order": 22,
+      "category": "desert",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["sunflower", "yellow", "desert", "superbloom"],
+      "metadata": {"scientific_name": "Geraea canescens", "bloom": "February–May", "color": "bright yellow", "habitat": "sandy desert washes, desert floor"}
+    },
+    {
+      "id": "mojave-aster",
+      "name": "Mojave Aster",
+      "sort_order": 23,
+      "category": "desert",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["aster", "lavender", "mojave", "rocky"],
+      "metadata": {"scientific_name": "Xylorhiza tortifolia", "bloom": "March–May", "color": "lavender with yellow center", "habitat": "rocky desert slopes, creosote bush scrub"}
+    },
+    {
+      "id": "desert-sand-verbena",
+      "name": "Desert Sand Verbena",
+      "sort_order": 24,
+      "category": "desert",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["verbena", "pink", "sand", "fragrant", "desert"],
+      "metadata": {"scientific_name": "Abronia villosa", "bloom": "February–May", "color": "pink to magenta", "habitat": "sandy desert flats, dunes"}
+    },
+    {
+      "id": "joshua-tree-bloom",
+      "name": "Joshua Tree Bloom",
+      "sort_order": 25,
+      "category": "desert",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["joshua-tree", "yucca", "moth-pollination", "desert-icon"],
+      "metadata": {"scientific_name": "Yucca brevifolia", "bloom": "February–April", "color": "cream white", "habitat": "Mojave Desert, 2000-6000 ft"}
+    },
+    {
+      "id": "ocotillo",
+      "name": "Ocotillo",
+      "sort_order": 26,
+      "category": "desert",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["ocotillo", "red", "drought-deciduous", "hummingbird"],
+      "metadata": {"scientific_name": "Fouquieria splendens", "bloom": "March–June", "color": "red-orange", "habitat": "desert slopes, washes, Colorado Desert"}
+    },
+    {
+      "id": "redwood-sorrel",
+      "name": "Redwood Sorrel",
+      "sort_order": 27,
+      "category": "forest",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["sorrel", "pink", "redwood-forest", "shade-lover"],
+      "metadata": {"scientific_name": "Oxalis oregana", "bloom": "April–September", "color": "pink to white", "habitat": "redwood forest floor, deep shade"}
+    },
+    {
+      "id": "trillium",
+      "name": "Western Trillium",
+      "sort_order": 28,
+      "category": "forest",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["trillium", "white", "three-petals", "forest-floor", "ancient"],
+      "metadata": {"scientific_name": "Trillium ovatum", "bloom": "February–June", "color": "white aging to pink", "habitat": "shaded forest floors, moist ravines"}
+    },
+    {
+      "id": "calypso-orchid",
+      "name": "Calypso Orchid (Fairy Slipper)",
+      "sort_order": 29,
+      "category": "forest",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["orchid", "pink", "rare", "fairy-slipper", "mycorrhizal"],
+      "metadata": {"scientific_name": "Calypso bulbosa", "bloom": "April–July", "color": "pink-purple", "habitat": "moist conifer forest floor, shaded mossy areas"}
+    },
+    {
+      "id": "fire-poppy",
+      "name": "Fire Poppy",
+      "sort_order": 30,
+      "category": "forest",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Where to Find": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["fire-poppy", "orange", "fire-follower", "rare", "ephemeral"],
+      "metadata": {"scientific_name": "Papaver californicum", "bloom": "March–May (year after fire)", "color": "orange with green center", "habitat": "recently burned chaparral, forest clearings"}
+    },
+
+    {
+      "id": "valley-foothill-flowers",
+      "name": "Valley and Foothill — The Superbloom Palette",
+      "sort_order": 31,
+      "category": "by-habitat",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["valley", "foothill", "grassland", "superbloom"],
+      "composite_of": ["california-poppy", "lupine", "tidytips", "baby-blue-eyes", "goldfields", "shooting-star", "owl-clover"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "coastal-chaparral-flowers",
+      "name": "Coast and Chaparral — Where Land Meets Sea",
+      "sort_order": 32,
+      "category": "by-habitat",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["coastal", "chaparral", "mediterranean", "drought"],
+      "composite_of": ["matilija-poppy", "seaside-daisy", "sticky-monkey-flower", "california-fuchsia", "ceanothus", "indian-paintbrush", "farewell-to-spring"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "mountain-flowers",
+      "name": "Mountain and Alpine — Flowers Above the Clouds",
+      "sort_order": 33,
+      "category": "by-habitat",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["mountain", "alpine", "sierra", "high-elevation"],
+      "composite_of": ["snow-plant", "sierra-lily", "mountain-pride", "alpine-shooting-star", "sierra-iris", "sky-pilot"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "desert-flowers",
+      "name": "Desert — Blooming Against All Odds",
+      "sort_order": 34,
+      "category": "by-habitat",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["desert", "mojave", "colorado-desert", "ephemeral"],
+      "composite_of": ["desert-lily", "desert-sunflower", "mojave-aster", "desert-sand-verbena", "joshua-tree-bloom", "ocotillo"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "forest-flowers",
+      "name": "Forest Floor — Shade Garden Treasures",
+      "sort_order": 35,
+      "category": "by-habitat",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["forest", "shade", "redwood", "woodland"],
+      "composite_of": ["redwood-sorrel", "trillium", "calypso-orchid", "fire-poppy"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "pollinator-flowers",
+      "name": "Pollinator Partners — Flowers and Their Visitors",
+      "sort_order": 36,
+      "category": "by-theme",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["pollination", "bees", "hummingbirds", "moths", "butterflies"],
+      "composite_of": ["california-fuchsia", "ceanothus", "indian-paintbrush", "joshua-tree-bloom", "calypso-orchid", "sticky-monkey-flower"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "fire-adapted-flowers",
+      "name": "Born from Fire — Fire-Following Flowers",
+      "sort_order": 37,
+      "category": "by-theme",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["fire", "fire-follower", "resilience", "regeneration"],
+      "composite_of": ["fire-poppy", "matilija-poppy", "ceanothus", "owl-clover"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "superbloom-flowers",
+      "name": "The Superbloom — When the Desert Explodes",
+      "sort_order": 38,
+      "category": "by-theme",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["superbloom", "mass-bloom", "desert", "ephemeral"],
+      "composite_of": ["california-poppy", "lupine", "goldfields", "owl-clover", "desert-sunflower", "desert-sand-verbena"],
+      "relationship_type": "emergence"
+    },
+
+    {
+      "id": "california-habitats",
+      "name": "California's Wild Gardens — Five Habitats",
+      "sort_order": 39,
+      "category": "meta",
+      "level": 3,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["california", "habitats", "diversity", "ecology"],
+      "composite_of": ["valley-foothill-flowers", "coastal-chaparral-flowers", "mountain-flowers", "desert-flowers", "forest-flowers"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "ecological-stories",
+      "name": "Ecological Stories — How Flowers Survive",
+      "sort_order": 40,
+      "category": "meta",
+      "level": 3,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["ecology", "adaptation", "pollination", "fire", "survival"],
+      "composite_of": ["pollinator-flowers", "fire-adapted-flowers", "superbloom-flowers"],
+      "relationship_type": "emergence"
+    }
+  ]
+}
