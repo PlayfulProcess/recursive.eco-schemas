@@ -1,6 +1,6 @@
 {
   "generated": true,
-  "grammar_count": 130,
+  "grammar_count": 132,
   "grammars": {
     "a-little-princess": {
       "id": "a-little-princess",
@@ -385,6 +385,55 @@
       "shelves": [],
       "lineages": [],
       "worldview": ""
+    },
+    "arabian-nights": {
+      "id": "arabian-nights",
+      "name": "The Arabian Nights Entertainments",
+      "description": "The Thousand and One Nights — one of the greatest story collections in world literature — told through Andrew Lang's 1898 selection. Thirty-four tales organized into eight story cycles, from the frame story of Scheherazade's life-saving narration through the voyages of Sindbad, the wonders of Aladdin, and the justice of Haroun-al-Raschid. Each story exists because a life depends on its telling.\n\nSource: Project Gutenberg eBook #128 (https://www.gutenberg.org/ebooks/128). Andrew Lang's edition, after Longmans, Green and Co, 1918 (1898).\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Edmund Dulac's illustrations for Stories from the Arabian Nights (1907) — the definitive visual companion. Maxfield Parrish's Arabian Nights illustrations (1909). René Bull's illustrations for the Newnes edition. William Harvey's woodcuts for Lane's translation (1841). Persian and Mughal miniature paintings depicting scenes from Alf Layla wa-Layla.",
+      "grammar_type": "custom",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "arabian-nights",
+        "1001-nights",
+        "fairy-tales",
+        "frame-tale",
+        "scheherazade",
+        "storytelling",
+        "persian",
+        "arabic"
+      ],
+      "item_count": 44,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "calenders-cycle",
+        "caliph-tales",
+        "cycles",
+        "fisherman-cycle",
+        "frame",
+        "hunchback-cycle",
+        "love-tales",
+        "magic-tales",
+        "merchants-genies",
+        "meta",
+        "sindbad-cycle"
+      ],
+      "roots": [
+        "eastern-wisdom",
+        "oral-tradition"
+      ],
+      "shelves": [
+        "wisdom",
+        "wonder"
+      ],
+      "lineages": [
+        "Warner",
+        "Shrei"
+      ],
+      "worldview": "narrative"
     },
     "archetypal-astrology-tarnas": {
       "id": "archetypal-astrology-tarnas",
@@ -3997,6 +4046,46 @@
       "lineages": [],
       "worldview": ""
     },
+    "russian-folk-tales": {
+      "id": "russian-folk-tales",
+      "name": "Russian Folk-Tales",
+      "description": "Seventy-three Russian folk tales from the collection of Alexander Afanasyev, translated by Leonard A. Magnus (1915). The wild forest of Russian imagination: Bába Yagá and her hut on chicken legs, enchanted tsareviches, clever fools, heroic bogatyrs, talking animals, and the dead who dance at midnight. Organized into eight thematic groups from supernatural enchantment to animal tales to the cosmic stories of sun, moon, and river.\n\nSource: Project Gutenberg eBook #62509 (https://www.gutenberg.org/ebooks/62509).\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Ivan Bilibin's illustrations for Russian fairy tales (1899-1902) — the definitive visual style. Viktor Vasnetsov's paintings of Russian folklore subjects (1880s-1920s). Elena Polenova's folk art illustrations. Palekh miniature lacquer box paintings of folk tale scenes.",
+      "grammar_type": "custom",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "russian",
+        "folk-tales",
+        "fairy-tales",
+        "afanasyev",
+        "slavic",
+        "baba-yaga",
+        "bogatyr"
+      ],
+      "item_count": 61,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "meta",
+        "tales",
+        "themes"
+      ],
+      "roots": [
+        "oral-tradition",
+        "mysticism"
+      ],
+      "shelves": [
+        "wonder",
+        "wisdom"
+      ],
+      "lineages": [
+        "Shrei",
+        "Akomolafe"
+      ],
+      "worldview": "animist"
+    },
     "sadhana": {
       "id": "sadhana",
       "name": "Sadhana: The Realisation of Life",
@@ -5357,6 +5446,7 @@
         "andersens-fairy-tales",
         "anne-of-green-gables",
         "anon-shiryo-cat-stories",
+        "arabian-nights",
         "areopagitica",
         "art-of-love-ovid",
         "art-of-war",
@@ -5436,6 +5526,7 @@
         "revelations-divine-love",
         "rights-of-man",
         "royal-ballet-and-opera",
+        "russian-folk-tales",
         "sadhana",
         "secret-garden",
         "seven-rays-ancient-roots",
@@ -5487,6 +5578,9 @@
       ]
     },
     "by_tag": {
+      "1001-nights": [
+        "arabian-nights"
+      ],
       "American-philosophy": [
         "pragmatism"
       ],
@@ -5549,6 +5643,9 @@
       ],
       "aesthetics": [
         "book-of-tea"
+      ],
+      "afanasyev": [
+        "russian-folk-tales"
       ],
       "africa": [
         "olaudah-equiano"
@@ -5651,6 +5748,12 @@
       "aphorism": [
         "beyond-good-and-evil"
       ],
+      "arabian-nights": [
+        "arabian-nights"
+      ],
+      "arabic": [
+        "arabian-nights"
+      ],
       "archetypes": [
         "archetypal-astrology-tarnas",
         "grimms-fairy-tales",
@@ -5682,6 +5785,9 @@
         "olaudah-equiano",
         "sojourner-truth",
         "up-from-slavery"
+      ],
+      "baba-yaga": [
+        "russian-folk-tales"
       ],
       "bailey": [
         "seven-rays-bailey-expressions"
@@ -5719,6 +5825,9 @@
       "body": [
         "expression-of-emotions",
         "leaves-of-grass"
+      ],
+      "bogatyr": [
+        "russian-folk-tales"
       ],
       "brazilian": [
         "luiza-lian"
@@ -6128,11 +6237,13 @@
       ],
       "fairy-tales": [
         "andersens-fairy-tales",
+        "arabian-nights",
         "celtic-fairy-tales",
         "fairy-tales-south-africa",
         "grimms-fairy-tales",
         "indian-fairy-tales",
-        "japanese-fairy-tales"
+        "japanese-fairy-tales",
+        "russian-folk-tales"
       ],
       "family-tree": [
         "greek-mythology"
@@ -6160,6 +6271,7 @@
       "folk-tales": [
         "emerald-kids-folk-tales",
         "folk-stories-southern-nigeria",
+        "russian-folk-tales",
         "west-african-folk-tales"
       ],
       "folklore": [
@@ -6172,6 +6284,9 @@
         "japanese-fairy-tales",
         "philippine-folk-tales",
         "west-african-folk-tales"
+      ],
+      "frame-tale": [
+        "arabian-nights"
       ],
       "frances-hodgson-burnett": [
         "a-little-princess",
@@ -6762,6 +6877,9 @@
       "pedagogical": [
         "anon-shiryo-cat-stories"
       ],
+      "persian": [
+        "arabian-nights"
+      ],
       "personality": [
         "seven-rays-bailey-expressions"
       ],
@@ -7063,6 +7181,9 @@
       "rudyard-kipling": [
         "just-so-stories"
       ],
+      "russian": [
+        "russian-folk-tales"
+      ],
       "sacred": [
         "song-of-songs"
       ],
@@ -7093,6 +7214,9 @@
         "alice-in-wonderland-chapter-book",
         "peter-pan",
         "winnie-the-pooh-chapter-book"
+      ],
+      "scheherazade": [
+        "arabian-nights"
       ],
       "science": [
         "expression-of-emotions",
@@ -7142,6 +7266,9 @@
         "olaudah-equiano",
         "sojourner-truth",
         "the-negro"
+      ],
+      "slavic": [
+        "russian-folk-tales"
       ],
       "social working": [
         "social-working"
@@ -7202,6 +7329,7 @@
         "story-02-gratitude-not-praise"
       ],
       "storytelling": [
+        "arabian-nights",
         "grimms-fairy-tales"
       ],
       "strategy": [
@@ -7452,6 +7580,7 @@
         "andersens-fairy-tales",
         "anne-of-green-gables",
         "anon-shiryo-cat-stories",
+        "arabian-nights",
         "archetypal-astrology-tarnas",
         "areopagitica",
         "art-of-love-ovid",
@@ -7532,6 +7661,7 @@
         "revelations-divine-love",
         "rights-of-man",
         "royal-ballet-and-opera",
+        "russian-folk-tales",
         "sadhana",
         "secret-garden",
         "seven-rays-ancient-roots",
@@ -7600,6 +7730,7 @@
         "leaves-of-grass"
       ],
       "eastern-wisdom": [
+        "arabian-nights",
         "bhagavad-gita",
         "book-of-tea",
         "chuang-tzu",
@@ -7694,6 +7825,7 @@
         "leaves-of-grass",
         "myths-through-many-eyes",
         "practice-presence-of-god",
+        "russian-folk-tales",
         "sadhana",
         "seven-rays-ancient-roots",
         "seven-rays-bailey-expressions",
@@ -7705,6 +7837,10 @@
       ],
       "mythology": [
         "metamorphoses-ovid"
+      ],
+      "oral-tradition": [
+        "arabian-nights",
+        "russian-folk-tales"
       ],
       "process-philosophy": [
         "creative-evolution",
@@ -7844,6 +7980,7 @@
         "up-from-slavery"
       ],
       "wisdom": [
+        "arabian-nights",
         "bhagavad-gita",
         "book-of-tea",
         "chuang-tzu",
@@ -7862,6 +7999,7 @@
         "myths-through-many-eyes",
         "practice-presence-of-god",
         "revelations-divine-love",
+        "russian-folk-tales",
         "sadhana",
         "seven-rays-ancient-roots",
         "seven-rays-bailey-expressions",
@@ -7876,6 +8014,7 @@
       "wonder": [
         "adventures-of-pinocchio",
         "andersens-fairy-tales",
+        "arabian-nights",
         "celtic-fairy-tales",
         "egyptian-mythology",
         "human-body",
@@ -7887,6 +8026,7 @@
         "metamorphoses-ovid",
         "peter-pan",
         "phaedrus-plato",
+        "russian-folk-tales",
         "song-of-songs",
         "sonnets-from-portuguese",
         "through-the-looking-glass",
@@ -7915,6 +8055,7 @@
         "olaudah-equiano",
         "origin-of-species",
         "pragmatism",
+        "russian-folk-tales",
         "seven-rays-ancient-roots",
         "seven-rays-bailey-expressions",
         "sojourner-truth",
@@ -8011,6 +8152,7 @@
       ],
       "Shrei": [
         "andersens-fairy-tales",
+        "arabian-nights",
         "bhagavad-gita",
         "book-of-tea",
         "celtic-fairy-tales",
@@ -8041,6 +8183,7 @@
         "philippine-folk-tales",
         "popol-vuh",
         "prose-edda",
+        "russian-folk-tales",
         "sadhana",
         "secret-garden",
         "seven-rays-ancient-roots",
@@ -8056,6 +8199,9 @@
         "upanishads",
         "varieties-religious-experience",
         "voyage-of-the-beagle"
+      ],
+      "Warner": [
+        "arabian-nights"
       ],
       "universal": [
         "adventures-of-pinocchio",
