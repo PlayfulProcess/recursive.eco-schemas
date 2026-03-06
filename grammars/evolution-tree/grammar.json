@@ -1,0 +1,616 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "date": "2026-03-06",
+        "note": "Original from-memory grammar based on current evolutionary biology consensus"
+      }
+    ]
+  },
+  "name": "Evolution Tree",
+  "description": "The tree of life — 30 major transitions in evolution, from the first self-replicating molecules to the human mind. Each branch point represents a moment when life invented something new: a new body plan, a new way to eat, a new way to move, a new way to think. Tiered content for young children (Story) and older readers (Science).\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Ernst Haeckel (1834–1919), whose 'Kunstformen der Natur' (Art Forms in Nature, 1904) contains spectacular illustrations of radiolarians, jellyfish, and other organisms that celebrate the beauty of evolutionary diversity. Charles Darwin's own tree-of-life sketch from his notebook (1837).",
+  "grammar_type": "custom",
+  "creator_name": "PlayfulProcess",
+  "tags": ["evolution", "biology", "tree-of-life", "kids", "science", "natural-history", "adaptation"],
+  "roots": ["natural-philosophy"],
+  "shelves": ["wonder", "children"],
+  "lineages": ["Kelty"],
+  "worldview": "rationalist",
+  "items": [
+    {
+      "id": "self-replicators",
+      "name": "Self-Replicating Molecules",
+      "sort_order": 1,
+      "category": "origins",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["RNA", "replication", "origin-of-life", "chemistry-to-biology"],
+      "metadata": {"time": "~4 billion years ago", "domain": "pre-life"}
+    },
+    {
+      "id": "first-cells",
+      "name": "The First Cells",
+      "sort_order": 2,
+      "category": "origins",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["cell", "membrane", "LUCA", "prokaryote"],
+      "metadata": {"time": "~3.8 billion years ago", "domain": "Bacteria/Archaea"}
+    },
+    {
+      "id": "photosynthesis-evolves",
+      "name": "Photosynthesis — Eating Sunlight",
+      "sort_order": 3,
+      "category": "origins",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["photosynthesis", "cyanobacteria", "oxygen", "energy"],
+      "metadata": {"time": "~3.4 billion years ago", "domain": "Bacteria"}
+    },
+    {
+      "id": "eukaryotes",
+      "name": "Complex Cells — Endosymbiosis",
+      "sort_order": 4,
+      "category": "origins",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["eukaryote", "mitochondria", "endosymbiosis", "complex-cell"],
+      "metadata": {"time": "~2 billion years ago", "domain": "Eukaryota"}
+    },
+    {
+      "id": "sexual-reproduction",
+      "name": "Sexual Reproduction — Mixing Genes",
+      "sort_order": 5,
+      "category": "origins",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["sex", "meiosis", "genetic-diversity", "recombination"],
+      "metadata": {"time": "~1.2 billion years ago", "domain": "Eukaryota"}
+    },
+    {
+      "id": "multicellularity",
+      "name": "Multicellular Life — Teamwork",
+      "sort_order": 6,
+      "category": "origins",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["multicellular", "cooperation", "differentiation", "bodies"],
+      "metadata": {"time": "~600 million years ago", "domain": "Eukaryota"}
+    },
+    {
+      "id": "bilateral-symmetry",
+      "name": "Bilateral Symmetry — Left and Right",
+      "sort_order": 7,
+      "category": "body-plans",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["bilateral", "symmetry", "bilateria", "head-tail"],
+      "metadata": {"time": "~555 million years ago", "domain": "Animalia"}
+    },
+    {
+      "id": "eyes-evolve",
+      "name": "Eyes — The Light Switch",
+      "sort_order": 8,
+      "category": "body-plans",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["eyes", "vision", "cambrian", "light", "PAX6"],
+      "metadata": {"time": "~540 million years ago", "domain": "Animalia"}
+    },
+    {
+      "id": "skeleton",
+      "name": "Hard Parts — Shells and Bones",
+      "sort_order": 9,
+      "category": "body-plans",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["skeleton", "shells", "bones", "mineralization", "armor"],
+      "metadata": {"time": "~540 million years ago", "domain": "Animalia"}
+    },
+    {
+      "id": "vertebrate-body",
+      "name": "The Vertebrate Body Plan",
+      "sort_order": 10,
+      "category": "body-plans",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["vertebrate", "backbone", "skull", "chordate"],
+      "metadata": {"time": "~530 million years ago", "domain": "Chordata"}
+    },
+    {
+      "id": "jaws",
+      "name": "Jaws — The Predator Upgrade",
+      "sort_order": 11,
+      "category": "body-plans",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["jaws", "gnathostome", "predation", "gill-arch"],
+      "metadata": {"time": "~450 million years ago", "domain": "Gnathostomata"}
+    },
+    {
+      "id": "plants-on-land",
+      "name": "Plants Conquer Land",
+      "sort_order": 12,
+      "category": "land-conquest",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["land-plants", "embryophyte", "roots", "cuticle"],
+      "metadata": {"time": "~470 million years ago", "domain": "Plantae"}
+    },
+    {
+      "id": "insects-evolve",
+      "name": "Insects — Six-Legged World Conquerors",
+      "sort_order": 13,
+      "category": "land-conquest",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["insects", "exoskeleton", "flight", "metamorphosis"],
+      "metadata": {"time": "~400 million years ago", "domain": "Insecta"}
+    },
+    {
+      "id": "fish-to-land",
+      "name": "Fish Walk on Land",
+      "sort_order": 14,
+      "category": "land-conquest",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["tetrapod", "tiktaalik", "limbs", "lungs"],
+      "metadata": {"time": "~375 million years ago", "domain": "Tetrapoda"}
+    },
+    {
+      "id": "amniotic-egg",
+      "name": "The Amniotic Egg — Freedom from Water",
+      "sort_order": 15,
+      "category": "land-conquest",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["amniote", "egg", "reptile", "waterproof"],
+      "metadata": {"time": "~340 million years ago", "domain": "Amniota"}
+    },
+    {
+      "id": "seed-plants",
+      "name": "Seeds — Plants' Time Capsules",
+      "sort_order": 16,
+      "category": "land-conquest",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["seed", "gymnosperm", "dispersal", "dormancy"],
+      "metadata": {"time": "~360 million years ago", "domain": "Spermatophyta"}
+    },
+    {
+      "id": "dinosaurs-rise",
+      "name": "Dinosaurs Take Over",
+      "sort_order": 17,
+      "category": "diversification",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["dinosaur", "archosaur", "erect-posture", "mesozoic"],
+      "metadata": {"time": "~230 million years ago", "domain": "Dinosauria"}
+    },
+    {
+      "id": "mammals-emerge",
+      "name": "The First Mammals",
+      "sort_order": 18,
+      "category": "diversification",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["mammal", "warm-blooded", "milk", "fur", "synapsid"],
+      "metadata": {"time": "~225 million years ago", "domain": "Mammalia"}
+    },
+    {
+      "id": "flight",
+      "name": "Powered Flight — Three Times!",
+      "sort_order": 19,
+      "category": "diversification",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["flight", "wings", "convergent-evolution", "insects-birds-bats"],
+      "metadata": {"time": "~350, ~150, ~55 million years ago", "domain": "Multiple"}
+    },
+    {
+      "id": "flowering-plants",
+      "name": "Flowering Plants — The Color Revolution",
+      "sort_order": 20,
+      "category": "diversification",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["angiosperm", "flower", "pollination", "fruit", "coevolution"],
+      "metadata": {"time": "~130 million years ago", "domain": "Angiospermae"}
+    },
+    {
+      "id": "social-insects",
+      "name": "Social Insects — Superorganisms",
+      "sort_order": 21,
+      "category": "diversification",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["eusocial", "ants", "bees", "termites", "colony"],
+      "metadata": {"time": "~130 million years ago", "domain": "Insecta"}
+    },
+    {
+      "id": "mass-extinction-recovery",
+      "name": "Extinction and Recovery",
+      "sort_order": 22,
+      "category": "diversification",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["extinction", "recovery", "resilience", "big-five"],
+      "metadata": {"time": "Multiple events", "domain": "All life"}
+    },
+    {
+      "id": "primate-brain",
+      "name": "The Primate Brain",
+      "sort_order": 23,
+      "category": "human-story",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["primate", "brain", "intelligence", "social", "vision"],
+      "metadata": {"time": "~65 million years ago", "domain": "Primates"}
+    },
+    {
+      "id": "bipedalism",
+      "name": "Walking Upright",
+      "sort_order": 24,
+      "category": "human-story",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["bipedal", "upright", "australopithecus", "free-hands"],
+      "metadata": {"time": "~6 million years ago", "domain": "Hominini"}
+    },
+    {
+      "id": "tool-use",
+      "name": "Tool Use — Extending the Body",
+      "sort_order": 25,
+      "category": "human-story",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["tools", "stone-age", "oldowan", "technology"],
+      "metadata": {"time": "~3.3 million years ago", "domain": "Hominini"}
+    },
+    {
+      "id": "fire-mastery",
+      "name": "Mastering Fire",
+      "sort_order": 26,
+      "category": "human-story",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["fire", "cooking", "warmth", "homo-erectus"],
+      "metadata": {"time": "~1 million years ago", "domain": "Homo"}
+    },
+    {
+      "id": "language",
+      "name": "Language — Sharing Minds",
+      "sort_order": 27,
+      "category": "human-story",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["language", "speech", "communication", "symbolism"],
+      "metadata": {"time": "~100,000 years ago", "domain": "Homo sapiens"}
+    },
+    {
+      "id": "agriculture",
+      "name": "Agriculture — Taming Nature",
+      "sort_order": 28,
+      "category": "human-story",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["agriculture", "farming", "domestication", "neolithic"],
+      "metadata": {"time": "~12,000 years ago", "domain": "Homo sapiens"}
+    },
+    {
+      "id": "science",
+      "name": "Science — Understanding Evolution",
+      "sort_order": 29,
+      "category": "human-story",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["darwin", "natural-selection", "DNA", "tree-of-life"],
+      "metadata": {"time": "~160 years ago", "domain": "Homo sapiens"}
+    },
+    {
+      "id": "tree-of-life-today",
+      "name": "The Tree of Life Today",
+      "sort_order": 30,
+      "category": "human-story",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Key Innovation": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["biodiversity", "tree-of-life", "interconnection", "conservation"],
+      "metadata": {"time": "Now", "domain": "All life"}
+    },
+
+    {
+      "id": "era-origins",
+      "name": "Origins — From Chemistry to Cells",
+      "sort_order": 31,
+      "category": "by-era",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["origins", "cells", "early-life"],
+      "composite_of": ["self-replicators", "first-cells", "photosynthesis-evolves", "eukaryotes", "sexual-reproduction", "multicellularity"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "era-body-plans",
+      "name": "Body Plans — Building Animals",
+      "sort_order": 32,
+      "category": "by-era",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["body-plans", "cambrian", "anatomy"],
+      "composite_of": ["bilateral-symmetry", "eyes-evolve", "skeleton", "vertebrate-body", "jaws"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "era-land-conquest",
+      "name": "Conquering Land — The Great Migration",
+      "sort_order": 33,
+      "category": "by-era",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["land", "terrestrial", "adaptation"],
+      "composite_of": ["plants-on-land", "insects-evolve", "fish-to-land", "amniotic-egg", "seed-plants"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "era-diversification",
+      "name": "The Great Diversification",
+      "sort_order": 34,
+      "category": "by-era",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["diversification", "radiation", "innovation"],
+      "composite_of": ["dinosaurs-rise", "mammals-emerge", "flight", "flowering-plants", "social-insects", "mass-extinction-recovery"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "era-human-story",
+      "name": "The Human Chapter",
+      "sort_order": 35,
+      "category": "by-era",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["human", "evolution", "culture", "technology"],
+      "composite_of": ["primate-brain", "bipedalism", "tool-use", "fire-mastery", "language", "agriculture", "science", "tree-of-life-today"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "theme-cooperation-evo",
+      "name": "Cooperation in Evolution",
+      "sort_order": 36,
+      "category": "by-theme",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["cooperation", "symbiosis", "mutualism"],
+      "composite_of": ["eukaryotes", "multicellularity", "flowering-plants", "social-insects"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "theme-convergence",
+      "name": "Convergent Evolution — Same Solution, Different Branch",
+      "sort_order": 37,
+      "category": "by-theme",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["convergence", "analogy", "independent-evolution"],
+      "composite_of": ["eyes-evolve", "flight", "social-insects"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "theme-transitions",
+      "name": "Major Transitions — Levels of Organization",
+      "sort_order": 38,
+      "category": "by-theme",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["major-transitions", "complexity", "hierarchy"],
+      "composite_of": ["self-replicators", "first-cells", "eukaryotes", "multicellularity", "social-insects", "language"],
+      "relationship_type": "emergence"
+    },
+
+    {
+      "id": "full-tree",
+      "name": "The Full Tree — 4 Billion Years of Life",
+      "sort_order": 39,
+      "category": "meta",
+      "level": 3,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["tree-of-life", "overview", "timeline"],
+      "composite_of": ["era-origins", "era-body-plans", "era-land-conquest", "era-diversification", "era-human-story"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "evolution-themes",
+      "name": "Patterns of Evolution",
+      "sort_order": 40,
+      "category": "meta",
+      "level": 3,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["patterns", "themes", "principles"],
+      "composite_of": ["theme-cooperation-evo", "theme-convergence", "theme-transitions"],
+      "relationship_type": "emergence"
+    }
+  ]
+}
