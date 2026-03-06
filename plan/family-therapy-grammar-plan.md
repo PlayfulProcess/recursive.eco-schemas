@@ -103,7 +103,8 @@ How we meet children where they are.
 | `floor-time-greenspan` | Floor Time (Greenspan/DIR) |
 | `circle-of-security` | Circle of Security |
 | `emotion-coaching` | Emotion Coaching (Gottman for Kids) |
-| `emerson-relational` | Relational Repair with Children |
+| `emerson-developmental-cycles` | Emerson's Cycles of Development |
+| `piaget-cognitive-stages` | Piaget's Cognitive Development Stages |
 
 #### 5. `pedagogy` — Pedagogical Approaches (15–18 items)
 How cultures teach, from Waldorf to Indigenous to Montessori.
@@ -186,6 +187,7 @@ Cross-category connections. Each has `composite_of` referencing L1 items.
 | **When Pedagogy Is Therapy** | `child-centered-play`, `reggio-emilia`, `forest-school`, `emotion-coaching` | The best classrooms are therapeutic without trying to be. The best therapy is pedagogical without trying to be |
 | **Structural Power in Families** | `structural-family`, `boundaries-enmeshment`, `triangulation`, `identified-patient` | Who holds power? Who carries the symptom? Minuchin's lens on family architecture |
 | **Decolonizing the Healing Frame** | `indigenous-pedagogy`, `cultural-trauma`, `african-ubuntu-pedagogy`, `narrative-family` | Western therapy is not the only healing tradition. What does it mean to honor indigenous approaches? |
+| **The Child Unfolds in Stages** | `emerson-developmental-cycles`, `piaget-cognitive-stages`, `waldorf-steiner`, `montessori-method`, `floor-time-greenspan` | Emerson's cycles (symbiosis → differentiation → practicing → rapprochement) mapped alongside Piaget's cognitive stages (sensorimotor → preoperational → concrete → formal). Both say the child spirals through separation and return — Emerson from the relational body, Piaget from the thinking mind. Waldorf's 7-year rhythms, Montessori's sensitive periods, and Greenspan's functional emotional stages are parallel maps of the same terrain. The L2 insight: development is not a ladder, it's a helix |
 
 ### L3: Meta-Categories (~6–8 items)
 
@@ -411,4 +413,4 @@ Key items will carry astrological metadata for cross-grammar querying:
 
 - **Should the grammar be `custom` or a new type like `therapy`?** Leaning `custom` since it's a knowledge map, not an oracle. But it could work beautifully as a `tarot`-type draw system ("draw a concept for your family today").
 - **How deep on pedagogy?** Could easily be its own grammar. For now, keeping it to one card per approach with cross-links to future dedicated pedagogy grammars.
-- **Emerson specifically**: Need to clarify — Ralph Waldo Emerson (self-reliance, already in SEED_100) or a specific child therapy Emerson? Will adjust child-therapy section accordingly.
+- **Emerson + Piaget as developmental helix**: Emerson's cycles (symbiosis → differentiation → practicing → rapprochement) track the *relational* body; Piaget's stages track the *cognitive* mind. The L2 item "The Child Unfolds in Stages" maps them alongside Waldorf's 7-year rhythms, Montessori's sensitive periods, and Greenspan's functional emotional stages. All say development spirals, not climbs. Future question: should this become its own dedicated "Child Development Across Frameworks" grammar?
