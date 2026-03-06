@@ -41,11 +41,11 @@ Tillich's "ground of being" draws on German Idealism, existentialism, and Protes
 | 5 | Timaeus | Plato / Jowett | 1572 | — | Cosmology, demiurge |
 | 6 | Critique of Pure Reason | Kant / Meiklejohn | 4280 | [DONE] | Already built |
 | 7 | Critique of Practical Reason | Kant / Abbott | 5683 | — | Moral law, categorical imperative |
-| 8 | Phenomenology of Spirit | Hegel / Baillie | 39064 | — | Master-slave dialectic, Absolute Spirit |
-| 9 | Philosophy of Right | Hegel / Dyde | 39297 | — | State, civil society, ethical life |
+| 8 | Phenomenology of Spirit | Hegel / Baillie | — | [ALT SOURCE] | NOT on Gutenberg. Check archive.org for Baillie 1910 translation. Master-slave dialectic, Absolute Spirit |
+| 9 | Philosophy of Right | Hegel / Dyde | — | [ALT SOURCE] | NOT on Gutenberg. Check archive.org for Dyde 1896 translation. State, civil society, ethical life |
 | 10 | Philosophy of History | Hegel / Sibree | 1900 | — | World-historical spirit |
 | 11 | Either/Or (excerpts) | Kierkegaard | — | [NOT PD] | English translations still under copyright; Danish originals may be PD |
-| 12 | Fear and Trembling | Kierkegaard | — | [NOT PD] | Same — seek Swenson/Lowrie translations in libraries |
+| 12 | Selections from Kierkegaard (incl. Fear and Trembling) | Kierkegaard / Hollander | 60333 | — | Selections only, not complete texts. Lee M. Hollander translation. |
 | 13 | Sickness Unto Death | Kierkegaard | — | [NOT PD] | Key existentialist text on despair |
 | 14 | Beyond Good and Evil | Nietzsche / Zimmern | 4363 | [DONE] | Already built |
 | 15 | Thus Spoke Zarathustra | Nietzsche / Common | 1998 | [DONE] | Already built |
@@ -59,14 +59,14 @@ Deleuze's philosophy of difference, becoming, and immanence draws on Spinoza's m
 | # | Title | Author | Gutenberg ID | Status | Notes |
 |---|-------|--------|-------------|--------|-------|
 | 17 | Ethics | Spinoza / Elwes | 3800 | [DONE] | Already built |
-| 18 | Monadology | Leibniz | 39441 | — | 90 propositions on substance and harmony |
+| 18 | Monadology | Leibniz | 39441 (German), 17641 (French) | [ALT SOURCE] | NO English on Gutenberg. German and French originals available. Check archive.org for English translations. 90 propositions on substance and harmony |
 | 19 | Treatise of Human Nature | Hume | 4705 | — | Empiricism, causation, identity |
 | 20 | Enquiry Concerning Human Understanding | Hume | 9662 | — | Shorter, more accessible |
-| 21 | The Gay Science | Nietzsche / Common | 52881 | — | Eternal return, death of God, amor fati |
-| 22 | Birth of Tragedy | Nietzsche / Haussmann | 7205 | — | Apollo vs Dionysus |
+| 21 | The Joyful Wisdom (Gay Science) | Nietzsche / Common | 52124 | — | Eternal return, death of God, amor fati |
+| 22 | Birth of Tragedy | Nietzsche | 51356 | — | Apollo vs Dionysus, "Hellenism and Pessimism" |
 | 23 | Creative Evolution | Bergson / Mitchell | 26163 | [DONE] | Already built |
-| 24 | Matter and Memory | Bergson / Paul & Palmer | 57898 | — | Duration, perception, virtual/actual |
-| 25 | Time and Free Will | Bergson / Pogson | 56674 | — | Duration vs spatialized time |
+| 24 | Matter and Memory | Bergson / Paul & Palmer | — | [ALT SOURCE] | NOT on Gutenberg. Check archive.org for Paul & Palmer 1911 translation. Duration, perception, virtual/actual |
+| 25 | Time and Free Will | Bergson / Pogson | 56852 | — | Duration vs spatialized time |
 | 26 | **Gilles Deleuze** — all works | — | — | [NOT PD] | Died 1995. *Difference and Repetition*, *Anti-Oedipus*, *A Thousand Plateaus*, *Logic of Sense* all under copyright. |
 
 ### Shared Foundations (Both Lines)
@@ -96,7 +96,7 @@ Deleuze's philosophy of difference, becoming, and immanence draws on Spinoza's m
 | 38 | Discourse on Inequality | Rousseau / Cole | 11136 | — | Origin of inequality, noble savage |
 | 39 | Emile, or On Education | Rousseau / Payne | 5427 | — | Education, natural development |
 | 40 | Confessions | Rousseau | 3913 | — | Autobiography, radical self-disclosure |
-| 41 | Spirit of Laws | Montesquieu / Nugent | 27573 | — | Separation of powers, political liberty |
+| 41 | Spirit of Laws | Montesquieu / Nugent | 27573 (French only) | [ALT SOURCE] | NO English on Gutenberg. French original available. Check archive.org for Nugent English translation. Separation of powers, political liberty |
 | 42 | On Liberty | Mill | 34901 | [DONE] | Already built |
 | 43 | Utilitarianism | Mill | 11224 | — | Greatest happiness principle |
 | 44 | Republic | Plato / Jowett | 1497 | — | (also listed under Philosophy) |
@@ -109,7 +109,7 @@ Deleuze's philosophy of difference, becoming, and immanence draws on Spinoza's m
 | 46 | Common Sense | Thomas Paine | 147 | [DONE] | Already built |
 | 47 | Rights of Man | Thomas Paine | 3742 | [DONE] | Already built |
 | 48 | Communist Manifesto | Marx & Engels | 61 | [DONE] | Already built |
-| 49 | Capital Vol 1 | Marx / Moore & Aveling | 46423 | — | Political economy, surplus value |
+| 49 | Capital Vol 1 | Marx / Moore & Aveling | — | [ALT SOURCE] | NO English on Gutenberg (Spanish #67939, Greek #37098 only). English available on marxists.org |
 | 50 | Vindication of Rights of Woman | Wollstonecraft | 3420 | [DONE] | Already built |
 | 51 | Civil Disobedience | Thoreau | 71 | [DONE] | Already built |
 | 52 | Walden | Thoreau | 205 | [DONE] | Already built |
@@ -164,12 +164,14 @@ Deleuze's philosophy of difference, becoming, and immanence draws on Spinoza's m
 
 | # | Title | Author | Gutenberg ID | Status | Notes |
 |---|-------|--------|-------------|--------|-------|
-| 80 | Dom Casmurro | Machado de Assis | 55752 | — | In English. Unreliable narrator, jealousy, Brazilian society |
-| 81 | Posthumous Memoirs of Bras Cubas | Machado de Assis | 54829 | — | In English ("Epitaph of a Small Winner"). Dead narrator, irony, modernism before modernism |
-| 82 | Quincas Borba | Machado de Assis | 55753 | — | In English. Philosophy of "Humanitism" — satire of systems |
+| 80 | Dom Casmurro | Machado de Assis | 55752 | [ALT SOURCE] | PORTUGUESE ONLY on Gutenberg. No English translation available. Check archive.org for English. Unreliable narrator, jealousy, Brazilian society |
+| 81 | Posthumous Memoirs of Bras Cubas | Machado de Assis | 54829 | [ALT SOURCE] | PORTUGUESE ONLY on Gutenberg. No English translation available. Check archive.org for English. Dead narrator, irony, modernism before modernism |
+| 82 | Quincas Borba | Machado de Assis | 55753 | [ALT SOURCE] | PORTUGUESE ONLY. Check archive.org for English. Philosophy of "Humanitism" — satire of systems |
 | 83 | The Alienist | Machado de Assis | — | [ALT SOURCE] | Short novel. Check archive.org |
-| 84 | **Fernando Pessoa** — works | — | — | [ALT SOURCE] | Pessoa died 1935. Portuguese originals are PD in many jurisdictions. Some poems available on archive.org and poetryfoundation.org. English translations by Richard Zenith (2003+) are under copyright. Check archive.org for Portuguese originals: *Mensagem*, *Livro do Desassossego* (Book of Disquiet). Older English translations by Edwin Honig and others may be findable. |
-| 85 | **Clarice Lispector** — works | — | — | [NOT PD] | Died 1977. All works under copyright. *The Passion According to G.H.*, *The Hour of the Star*, *Near to the Wild Heart*. Must be sourced from bookstores/libraries. Extraordinarily important — she's the Kafka of Latin America. |
+| 84 | 35 Sonnets (English) | Fernando Pessoa | 19978 | — | Pessoa wrote these IN ENGLISH. Available on Gutenberg! |
+| 85 | English Poems Vol 1 & 2 | Fernando Pessoa | 66039, 66040 | — | Also written in English by Pessoa. Includes "Antinous" and "Epithalamium" |
+| 86 | Mensagem / Book of Disquiet (Portuguese) | Fernando Pessoa | — | [ALT SOURCE] | Portuguese originals PD. Check archive.org. English translations by Zenith (2003+) under copyright |
+| 87 | **Clarice Lispector** — works | — | — | [NOT PD] | Died 1977. All works under copyright. *The Passion According to G.H.*, *The Hour of the Star*, *Near to the Wild Heart*. Must be sourced from bookstores/libraries. Extraordinarily important — she's the Kafka of Latin America. |
 
 ### British Fantasy & Mythopoeia
 
@@ -184,7 +186,7 @@ Deleuze's philosophy of difference, becoming, and immanence draws on Spinoza's m
 
 ### The Hesse–Jung Connection
 
-Hermann Hesse was not literally Jung's patient — he was treated by J.B. Lang, a student of Jung's, in 1916-17. But Jung's ideas profoundly shaped Hesse's later work: *Demian*, *Steppenwolf*, *Siddhartha*, *The Glass Bead Game*. Only *Siddhartha* (1922) and *Steppenwolf* (1927, English trans. 1929) are potentially PD depending on jurisdiction. *Siddhartha* IS on Gutenberg (#2500) in German.
+Hermann Hesse was not literally Jung's patient — he was treated by J.B. Lang, a student of Jung's, in 1916-17. But Jung's ideas profoundly shaped Hesse's later work: *Demian*, *Steppenwolf*, *Siddhartha*, *The Glass Bead Game*. *Siddhartha* is on Gutenberg in both English (#2500) and German (#2499). An alternative English translation is also available (#58344).
 
 ---
 
@@ -219,8 +221,8 @@ Hermann Hesse was not literally Jung's patient — he was treated by J.B. Lang, 
 | # | Title | Author | Gutenberg ID | Status | Notes |
 |---|-------|--------|-------------|--------|-------|
 | 106 | The Golden Bough | J.G. Frazer | 3623 | [DONE] | Already built. Abridged edition. |
-| 107 | Primitive Culture Vol 1 | E.B. Tylor | 61944 | — | Origins of religion, animism |
-| 108 | Primitive Culture Vol 2 | E.B. Tylor | 61960 | — | Myth, ritual, survival |
+| 107 | Primitive Culture Vol 1 | E.B. Tylor | 70458 | — | Origins of religion, animism |
+| 108 | Primitive Culture Vol 2 | E.B. Tylor | 70484 | — | Myth, ritual, survival |
 | 109 | Ancient Society | Lewis Henry Morgan | 45950 | — | Social evolution, kinship systems |
 | 110 | The Gift (Essai sur le don) | Marcel Mauss | — | [ALT SOURCE] | 1925 essay. French original PD. English translations by Ian Cunnison (1954) or Jane Guyer (2016) under copyright. French available at classiques.uqac.ca |
 | 111 | Totem and Taboo | Sigmund Freud | 41214 | — | Psychoanalysis meets anthropology |
@@ -294,22 +296,22 @@ git add seeds/critique-practical-reason.txt && \
 git commit -m "Add Critique of Practical Reason by Kant source text (Gutenberg #5683)" && \
 git push origin claude/merge-iching-grammar-ND6pW
 
-# Hegel - Phenomenology of Spirit
-curl -L -o seeds/phenomenology-of-spirit.txt "https://www.gutenberg.org/cache/epub/39064/pg39064.txt" && \
-git add seeds/phenomenology-of-spirit.txt && \
-git commit -m "Add Phenomenology of Spirit by Hegel source text (Gutenberg #39064)" && \
-git push origin claude/merge-iching-grammar-ND6pW
+# Hegel - Phenomenology of Spirit: NOT ON GUTENBERG
+# Check archive.org for Baillie 1910 translation
 
-# Hegel - Philosophy of Right
-curl -L -o seeds/philosophy-of-right-hegel.txt "https://www.gutenberg.org/cache/epub/39297/pg39297.txt" && \
-git add seeds/philosophy-of-right-hegel.txt && \
-git commit -m "Add Philosophy of Right by Hegel source text (Gutenberg #39297)" && \
-git push origin claude/merge-iching-grammar-ND6pW
+# Hegel - Philosophy of Right: NOT ON GUTENBERG
+# Check archive.org for Dyde 1896 translation
 
 # Hegel - Philosophy of History
 curl -L -o seeds/philosophy-of-history-hegel.txt "https://www.gutenberg.org/cache/epub/1900/pg1900.txt" && \
 git add seeds/philosophy-of-history-hegel.txt && \
 git commit -m "Add Philosophy of History by Hegel source text (Gutenberg #1900)" && \
+git push origin claude/merge-iching-grammar-ND6pW
+
+# Kierkegaard - Selections (incl. Fear and Trembling excerpts)
+curl -L -o seeds/kierkegaard-selections.txt "https://www.gutenberg.org/cache/epub/60333/pg60333.txt" && \
+git add seeds/kierkegaard-selections.txt && \
+git commit -m "Add Selections from Kierkegaard source text (Gutenberg #60333)" && \
 git push origin claude/merge-iching-grammar-ND6pW
 ```
 
@@ -334,28 +336,25 @@ git add seeds/enquiry-human-understanding-hume.txt && \
 git commit -m "Add Enquiry Concerning Human Understanding by Hume source text (Gutenberg #9662)" && \
 git push origin claude/merge-iching-grammar-ND6pW
 
-# Nietzsche - The Gay Science
-curl -L -o seeds/gay-science-nietzsche.txt "https://www.gutenberg.org/cache/epub/52881/pg52881.txt" && \
-git add seeds/gay-science-nietzsche.txt && \
-git commit -m "Add The Gay Science by Nietzsche source text (Gutenberg #52881)" && \
+# Nietzsche - The Joyful Wisdom (Gay Science)
+curl -L -o seeds/joyful-wisdom-nietzsche.txt "https://www.gutenberg.org/cache/epub/52124/pg52124.txt" && \
+git add seeds/joyful-wisdom-nietzsche.txt && \
+git commit -m "Add The Joyful Wisdom (Gay Science) by Nietzsche source text (Gutenberg #52124)" && \
 git push origin claude/merge-iching-grammar-ND6pW
 
 # Nietzsche - Birth of Tragedy
-curl -L -o seeds/birth-of-tragedy-nietzsche.txt "https://www.gutenberg.org/cache/epub/7205/pg7205.txt" && \
+curl -L -o seeds/birth-of-tragedy-nietzsche.txt "https://www.gutenberg.org/cache/epub/51356/pg51356.txt" && \
 git add seeds/birth-of-tragedy-nietzsche.txt && \
-git commit -m "Add Birth of Tragedy by Nietzsche source text (Gutenberg #7205)" && \
+git commit -m "Add Birth of Tragedy by Nietzsche source text (Gutenberg #51356)" && \
 git push origin claude/merge-iching-grammar-ND6pW
 
-# Bergson - Matter and Memory
-curl -L -o seeds/matter-and-memory-bergson.txt "https://www.gutenberg.org/cache/epub/57898/pg57898.txt" && \
-git add seeds/matter-and-memory-bergson.txt && \
-git commit -m "Add Matter and Memory by Bergson source text (Gutenberg #57898)" && \
-git push origin claude/merge-iching-grammar-ND6pW
+# Bergson - Matter and Memory: NOT ON GUTENBERG
+# Check archive.org for Paul & Palmer 1911 translation
 
 # Bergson - Time and Free Will
-curl -L -o seeds/time-and-free-will-bergson.txt "https://www.gutenberg.org/cache/epub/56674/pg56674.txt" && \
+curl -L -o seeds/time-and-free-will-bergson.txt "https://www.gutenberg.org/cache/epub/56852/pg56852.txt" && \
 git add seeds/time-and-free-will-bergson.txt && \
-git commit -m "Add Time and Free Will by Bergson source text (Gutenberg #56674)" && \
+git commit -m "Add Time and Free Will by Bergson source text (Gutenberg #56852)" && \
 git push origin claude/merge-iching-grammar-ND6pW
 
 # Bergson - Introduction to Metaphysics
@@ -426,11 +425,8 @@ git add seeds/confessions-rousseau.txt && \
 git commit -m "Add Confessions by Rousseau source text (Gutenberg #3913)" && \
 git push origin claude/merge-iching-grammar-ND6pW
 
-# Montesquieu - Spirit of Laws
-curl -L -o seeds/spirit-of-laws-montesquieu.txt "https://www.gutenberg.org/cache/epub/27573/pg27573.txt" && \
-git add seeds/spirit-of-laws-montesquieu.txt && \
-git commit -m "Add Spirit of Laws by Montesquieu source text (Gutenberg #27573)" && \
-git push origin claude/merge-iching-grammar-ND6pW
+# Montesquieu - Spirit of Laws: FRENCH ONLY ON GUTENBERG (#27573)
+# Check archive.org for Nugent English translation
 
 # Mill - Utilitarianism
 curl -L -o seeds/utilitarianism-mill.txt "https://www.gutenberg.org/cache/epub/11224/pg11224.txt" && \
@@ -444,11 +440,8 @@ git add seeds/politics-aristotle.txt && \
 git commit -m "Add Politics by Aristotle source text (Gutenberg #6762)" && \
 git push origin claude/merge-iching-grammar-ND6pW
 
-# Marx - Capital Vol 1
-curl -L -o seeds/capital-marx.txt "https://www.gutenberg.org/cache/epub/46423/pg46423.txt" && \
-git add seeds/capital-marx.txt && \
-git commit -m "Add Capital Vol 1 by Marx source text (Gutenberg #46423)" && \
-git push origin claude/merge-iching-grammar-ND6pW
+# Marx - Capital Vol 1: NO ENGLISH ON GUTENBERG
+# English available on marxists.org
 
 # Adam Smith - Wealth of Nations
 curl -L -o seeds/wealth-of-nations-smith.txt "https://www.gutenberg.org/cache/epub/3300/pg3300.txt" && \
@@ -514,16 +507,34 @@ git add seeds/songs-innocence-experience-blake.txt && \
 git commit -m "Add Songs of Innocence and Experience by Blake source text (Gutenberg #1934)" && \
 git push origin claude/merge-iching-grammar-ND6pW
 
-# Machado de Assis - Dom Casmurro
-curl -L -o seeds/dom-casmurro-machado.txt "https://www.gutenberg.org/cache/epub/55752/pg55752.txt" && \
-git add seeds/dom-casmurro-machado.txt && \
-git commit -m "Add Dom Casmurro by Machado de Assis source text (Gutenberg #55752)" && \
+# Machado de Assis - Dom Casmurro (PORTUGUESE ONLY on Gutenberg)
+curl -L -o seeds/dom-casmurro-machado-pt.txt "https://www.gutenberg.org/cache/epub/55752/pg55752.txt" && \
+git add seeds/dom-casmurro-machado-pt.txt && \
+git commit -m "Add Dom Casmurro by Machado de Assis, Portuguese (Gutenberg #55752)" && \
 git push origin claude/merge-iching-grammar-ND6pW
 
-# Machado de Assis - Posthumous Memoirs of Bras Cubas
-curl -L -o seeds/bras-cubas-machado.txt "https://www.gutenberg.org/cache/epub/54829/pg54829.txt" && \
-git add seeds/bras-cubas-machado.txt && \
-git commit -m "Add Posthumous Memoirs of Bras Cubas by Machado de Assis source text (Gutenberg #54829)" && \
+# Machado de Assis - Posthumous Memoirs of Bras Cubas (PORTUGUESE ONLY on Gutenberg)
+curl -L -o seeds/bras-cubas-machado-pt.txt "https://www.gutenberg.org/cache/epub/54829/pg54829.txt" && \
+git add seeds/bras-cubas-machado-pt.txt && \
+git commit -m "Add Posthumous Memoirs of Bras Cubas by Machado de Assis, Portuguese (Gutenberg #54829)" && \
+git push origin claude/merge-iching-grammar-ND6pW
+
+# Fernando Pessoa - 35 Sonnets (written in English)
+curl -L -o seeds/35-sonnets-pessoa.txt "https://www.gutenberg.org/cache/epub/19978/pg19978.txt" && \
+git add seeds/35-sonnets-pessoa.txt && \
+git commit -m "Add 35 Sonnets by Fernando Pessoa source text (Gutenberg #19978)" && \
+git push origin claude/merge-iching-grammar-ND6pW
+
+# Fernando Pessoa - English Poems Vol 1
+curl -L -o seeds/english-poems-pessoa-1.txt "https://www.gutenberg.org/cache/epub/66039/pg66039.txt" && \
+git add seeds/english-poems-pessoa-1.txt && \
+git commit -m "Add English Poems Vol 1 by Fernando Pessoa source text (Gutenberg #66039)" && \
+git push origin claude/merge-iching-grammar-ND6pW
+
+# Fernando Pessoa - English Poems Vol 2
+curl -L -o seeds/english-poems-pessoa-2.txt "https://www.gutenberg.org/cache/epub/66040/pg66040.txt" && \
+git add seeds/english-poems-pessoa-2.txt && \
+git commit -m "Add English Poems Vol 2 by Fernando Pessoa source text (Gutenberg #66040)" && \
 git push origin claude/merge-iching-grammar-ND6pW
 
 # George MacDonald - Princess and the Goblin
@@ -583,9 +594,9 @@ git push origin claude/merge-iching-grammar-ND6pW
 
 ```bash
 # Tylor - Primitive Culture Vol 1
-curl -L -o seeds/primitive-culture-tylor-1.txt "https://www.gutenberg.org/cache/epub/61944/pg61944.txt" && \
+curl -L -o seeds/primitive-culture-tylor-1.txt "https://www.gutenberg.org/cache/epub/70458/pg70458.txt" && \
 git add seeds/primitive-culture-tylor-1.txt && \
-git commit -m "Add Primitive Culture Vol 1 by Tylor source text (Gutenberg #61944)" && \
+git commit -m "Add Primitive Culture Vol 1 by Tylor source text (Gutenberg #70458)" && \
 git push origin claude/merge-iching-grammar-ND6pW
 
 # Morgan - Ancient Society
@@ -618,7 +629,13 @@ git push origin claude/merge-iching-grammar-ND6pW
 
 | Author | Work | Where to Look |
 |--------|------|---------------|
-| **Fernando Pessoa** | *Mensagem*, *Book of Disquiet* (Portuguese) | archive.org, Biblioteca Nacional Digital |
+| **Hegel** | *Phenomenology of Spirit*, *Philosophy of Right* | archive.org (Baillie 1910, Dyde 1896 translations) |
+| **Bergson** | *Matter and Memory* | archive.org (Paul & Palmer 1911 translation) |
+| **Leibniz** | *Monadology* (English) | archive.org. German (#39441) and French (#17641) on Gutenberg |
+| **Montesquieu** | *Spirit of Laws* (English) | archive.org. French on Gutenberg (#27573) |
+| **Marx** | *Capital Vol 1* (English) | marxists.org. Spanish/Greek on Gutenberg |
+| **Machado de Assis** | *Dom Casmurro*, *Bras Cubas* (English) | archive.org. Portuguese on Gutenberg (#55752, #54829) |
+| **Fernando Pessoa** | *Mensagem*, *Book of Disquiet* (Portuguese) | archive.org. Note: his English-language poetry IS on Gutenberg (#19978, #66039, #66040) |
 | **Marcel Mauss** | *The Gift* (French original) | classiques.uqac.ca |
 | **Durkheim** | *Elementary Forms of Religious Life* | archive.org (Swain 1915 translation) |
 
