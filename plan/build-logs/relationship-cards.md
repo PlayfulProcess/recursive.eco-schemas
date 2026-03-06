@@ -133,6 +133,38 @@ This pattern could be replicated for other oracle grammars: Jungian Archetypes, 
 - **5 suits maps well to 5 sessions**: Each suit has its own domain knowledge (Gottman, Johnson, Porges, etc.), so a session agent can build domain coherence within a single suit.
 - **The AI system prompt is as important as the grammar**: For oracle-type grammars, the interpretation prompt determines the user experience. Writing it alongside the grammar (not after) ensures they're aligned.
 
+## What Failed / What to Avoid
+
+### Strategies That Don't Work (from this build + prior builds)
+
+1. **Background agents for content-heavy from-memory grammars**: They time out. The combination of (a) generating original prose + (b) maintaining valid JSON + (c) managing 50+ items exceeds agent context/time budgets. This is documented in CLAUDE.md but worth repeating: NEVER delegate from-memory content generation to background agents.
+
+2. **Writing full prose in the skeleton session**: Attempting to write final-quality prose for 298 sections in one session is a trap. You'll get ~20-30 items deep before quality degrades, context fills up, or the session stalls. The skeleton session should focus on STRUCTURE and NOTES, not polish.
+
+3. **Edit-per-item without a content plan**: The original CLAUDE.md pattern (Skeleton + Edit-per-item) works for small grammars (~30 items) but breaks down at 50+. Without pre-written content outlines, each Edit call requires the agent to both DECIDE what to write and WRITE it. Separating the deciding (content skeleton) from the writing (polish session) is the fix.
+
+4. **Filling items in random order**: Jumping between suits/categories loses domain coherence. The agent writing about Gottman's flooding should also write about the Four Horsemen, because the research context is shared. Suit-by-suit sessions maintain this coherence.
+
+5. **Skipping the game design doc**: For tarot/oracle grammars, writing the grammar without first designing the game (spread positions, AI prompt, journal template) leads to cards that don't work as a system. The game design doc should come FIRST — it determines section structure, tone, and what the cards need to DO.
+
+6. **Over-structuring L2/L3 before L1 is solid**: In prior builds, attempting to design emergence patterns before the base items exist led to `composite_of` references that didn't match actual IDs. Build L1 first, validate IDs, THEN design L2/L3 composites.
+
+### Strategies That Worked
+
+1. **Content skeleton approach** (new pattern): Placeholder → content outline with [SESSION-N] tags → polish in parallel sessions. This is the breakthrough for grammars > 30 items.
+
+2. **Game design doc before grammar**: Writing `relationship-cards-game-plan.md` FIRST (with spread positions, suit definitions, AI prompt) then building the grammar to match. The plan is the blueprint.
+
+3. **Cross-links designed at skeleton stage**: Adding `grammars[]` references during the skeleton phase (not as an afterthought) ensures cross-linking is structural, not decorative.
+
+4. **Validation after every stage**: JSON parse + duplicate IDs + bad refs + sort_order + placeholder count after EACH commit. Catches structural problems before they compound.
+
+5. **The 5-section tarot structure** (Interpretation, Shadow, Light, Summary, Questions): Maps cleanly to therapeutic concepts where every pattern has a healthy and unhealthy expression. This is THE section template for psychology/therapy oracle grammars.
+
+6. **Committing at every stable state**: Skeleton commit, content skeleton commit, build log commit. Each is a safety checkpoint. If anything goes wrong, you can roll back to a known-good state.
+
+7. **Session distribution table in the build log**: Writing the session plan (which session handles which suit, how many sections) makes the handoff to future agents explicit and unambiguous.
+
 ## Files
 
 - `grammars/relationship-cards/grammar.json` — 68-item grammar with content skeletons
