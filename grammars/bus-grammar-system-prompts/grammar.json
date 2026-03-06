@@ -1,0 +1,624 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "url": "https://lifeisprocess.substack.com/",
+        "date": "2026-03-06",
+        "note": "Original grammar structure, system prompts, and voice design"
+      }
+    ]
+  },
+  "name": "Bus Grammar — System Prompts for Passengers",
+  "description": "32 system prompts for AI voice passengers across 6 therapeutic and archetypal 'buses': Facing Human Wreckage (Vanessa Andreotti's Hospicing Modernity), Ancestral Voices (indigenous/ecological epistemology), Jungian Archetypes (depth psychology), IFS Parts (Internal Family Systems), Chakra Voices (Hindu/yogic energy system), and DBT Mind States (Dialectical Behavior Therapy). Each prompt is designed to interpret oracle draws (tarot, I Ching, etc.) through its tradition's lens. Includes 2 Facilitator voices for synthesis across buses.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Alchemical illustrations from 'Rosarium Philosophorum' (1550) and 'Atalanta Fugiens' by Michael Maier (1617) for Jungian voices. William Blake's mythological engravings (1790s-1820s) for archetypal depth. Hindu temple sculpture and tantric lotus motifs from Mughal miniatures for Chakra voices. Hokusai's 'Great Wave' and Zen enso circles for DBT mind states. Lascaux and Altamira cave paintings for Ancestral voices. Giovanni Battista Piranesi's 'Carceri d'Invenzione' (Imaginary Prisons, 1745-1761) for FHW voices — metaphor for modernity's invisible structures.",
+  "grammar_type": "custom",
+  "creator_name": "PlayfulProcess",
+  "creator_link": "https://lifeisprocess.substack.com/",
+  "tags": [
+    "system-prompts",
+    "ai-voices",
+    "therapeutic",
+    "oracle-interpretation",
+    "hospicing-modernity",
+    "jungian",
+    "ifs",
+    "dbt",
+    "chakra",
+    "ancestral",
+    "depth-psychology",
+    "meta-tool"
+  ],
+  "roots": ["eastern-wisdom", "mysticism", "psychology", "indigenous-knowledge"],
+  "shelves": ["mirror", "wisdom", "resilience"],
+  "lineages": ["Linehan", "Andreotti", "Shrei"],
+  "worldview": "non-dual",
+  "cover_image_url": "",
+  "items": [
+    {
+      "id": "fhw-the-addict",
+      "name": "The Addict",
+      "level": 1,
+      "category": "fhw-passengers",
+      "sort_order": 0,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["addiction", "modernity", "consumption", "hospicing"],
+      "metadata": {"bus": "FHW", "tradition": "Hospicing Modernity"}
+    },
+    {
+      "id": "fhw-the-denier",
+      "name": "The Denier",
+      "level": 1,
+      "category": "fhw-passengers",
+      "sort_order": 1,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["denial", "avoidance", "comfort", "hospicing"],
+      "metadata": {"bus": "FHW", "tradition": "Hospicing Modernity"}
+    },
+    {
+      "id": "fhw-the-griever",
+      "name": "The Griever",
+      "level": 1,
+      "category": "fhw-passengers",
+      "sort_order": 2,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["grief", "loss", "mourning", "hospicing"],
+      "metadata": {"bus": "FHW", "tradition": "Hospicing Modernity"}
+    },
+    {
+      "id": "fhw-the-hospice-worker",
+      "name": "The Hospice Worker",
+      "level": 1,
+      "category": "fhw-passengers",
+      "sort_order": 3,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["hospicing", "presence", "dying", "care"],
+      "metadata": {"bus": "FHW", "tradition": "Hospicing Modernity"}
+    },
+    {
+      "id": "fhw-the-compostor",
+      "name": "The Compostor",
+      "level": 1,
+      "category": "fhw-passengers",
+      "sort_order": 4,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["compost", "transformation", "decay", "renewal"],
+      "metadata": {"bus": "FHW", "tradition": "Hospicing Modernity"}
+    },
+    {
+      "id": "fhw-the-midwife",
+      "name": "The Midwife",
+      "level": 1,
+      "category": "fhw-passengers",
+      "sort_order": 5,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["birth", "emergence", "new-world", "midwifing"],
+      "metadata": {"bus": "FHW", "tradition": "Hospicing Modernity"}
+    },
+    {
+      "id": "ancestral-the-elder",
+      "name": "The Elder",
+      "level": 1,
+      "category": "ancestral-voices",
+      "sort_order": 6,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["wisdom", "ancestors", "tradition", "memory"],
+      "metadata": {"bus": "Ancestral", "tradition": "Indigenous epistemology"}
+    },
+    {
+      "id": "ancestral-the-land",
+      "name": "The Land",
+      "level": 1,
+      "category": "ancestral-voices",
+      "sort_order": 7,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["earth", "place", "ecology", "belonging"],
+      "metadata": {"bus": "Ancestral", "tradition": "Indigenous epistemology"}
+    },
+    {
+      "id": "ancestral-the-trickster",
+      "name": "The Trickster",
+      "level": 1,
+      "category": "ancestral-voices",
+      "sort_order": 8,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["trickster", "disruption", "play", "boundary-crossing"],
+      "metadata": {"bus": "Ancestral", "tradition": "Indigenous epistemology"}
+    },
+    {
+      "id": "ancestral-the-weaver",
+      "name": "The Weaver",
+      "level": 1,
+      "category": "ancestral-voices",
+      "sort_order": 9,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["pattern", "connection", "web", "interdependence"],
+      "metadata": {"bus": "Ancestral", "tradition": "Indigenous epistemology"}
+    },
+    {
+      "id": "ancestral-the-dreamer",
+      "name": "The Dreamer",
+      "level": 1,
+      "category": "ancestral-voices",
+      "sort_order": 10,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["dream", "vision", "otherworld", "imagination"],
+      "metadata": {"bus": "Ancestral", "tradition": "Indigenous epistemology"}
+    },
+    {
+      "id": "jungian-the-shadow",
+      "name": "The Shadow",
+      "level": 1,
+      "category": "jungian-archetypes",
+      "sort_order": 11,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["shadow", "repression", "projection", "integration"],
+      "metadata": {"bus": "Jungian", "tradition": "Depth psychology"}
+    },
+    {
+      "id": "jungian-the-anima-animus",
+      "name": "The Anima/Animus",
+      "level": 1,
+      "category": "jungian-archetypes",
+      "sort_order": 12,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["anima", "animus", "contrasexual", "soul-image"],
+      "metadata": {"bus": "Jungian", "tradition": "Depth psychology"}
+    },
+    {
+      "id": "jungian-the-self",
+      "name": "The Self",
+      "level": 1,
+      "category": "jungian-archetypes",
+      "sort_order": 13,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["self", "wholeness", "mandala", "individuation"],
+      "metadata": {"bus": "Jungian", "tradition": "Depth psychology"}
+    },
+    {
+      "id": "jungian-the-persona",
+      "name": "The Persona",
+      "level": 1,
+      "category": "jungian-archetypes",
+      "sort_order": 14,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["mask", "social-role", "adaptation", "performance"],
+      "metadata": {"bus": "Jungian", "tradition": "Depth psychology"}
+    },
+    {
+      "id": "jungian-the-wise-old-one",
+      "name": "The Wise Old One",
+      "level": 1,
+      "category": "jungian-archetypes",
+      "sort_order": 15,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["wisdom", "guide", "meaning", "senex"],
+      "metadata": {"bus": "Jungian", "tradition": "Depth psychology"}
+    },
+    {
+      "id": "ifs-the-exile",
+      "name": "The Exile",
+      "level": 1,
+      "category": "ifs-parts",
+      "sort_order": 16,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["exile", "wound", "vulnerability", "inner-child"],
+      "metadata": {"bus": "IFS", "tradition": "Internal Family Systems"}
+    },
+    {
+      "id": "ifs-the-manager",
+      "name": "The Manager",
+      "level": 1,
+      "category": "ifs-parts",
+      "sort_order": 17,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["control", "protection", "planning", "prevention"],
+      "metadata": {"bus": "IFS", "tradition": "Internal Family Systems"}
+    },
+    {
+      "id": "ifs-the-firefighter",
+      "name": "The Firefighter",
+      "level": 1,
+      "category": "ifs-parts",
+      "sort_order": 18,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["reactivity", "numbing", "emergency", "impulse"],
+      "metadata": {"bus": "IFS", "tradition": "Internal Family Systems"}
+    },
+    {
+      "id": "ifs-the-self-energy",
+      "name": "Self Energy",
+      "level": 1,
+      "category": "ifs-parts",
+      "sort_order": 19,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["self", "compassion", "curiosity", "calm", "clarity"],
+      "metadata": {"bus": "IFS", "tradition": "Internal Family Systems"}
+    },
+    {
+      "id": "chakra-root",
+      "name": "Root — Muladhara",
+      "level": 1,
+      "category": "chakra-voices",
+      "sort_order": 20,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["root", "survival", "grounding", "safety"],
+      "metadata": {"bus": "Chakra", "tradition": "Hindu/Yogic", "chakra_number": 1}
+    },
+    {
+      "id": "chakra-sacral",
+      "name": "Sacral — Svadhisthana",
+      "level": 1,
+      "category": "chakra-voices",
+      "sort_order": 21,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["sacral", "pleasure", "creativity", "emotion", "flow"],
+      "metadata": {"bus": "Chakra", "tradition": "Hindu/Yogic", "chakra_number": 2}
+    },
+    {
+      "id": "chakra-solar-plexus",
+      "name": "Solar Plexus — Manipura",
+      "level": 1,
+      "category": "chakra-voices",
+      "sort_order": 22,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["power", "will", "confidence", "fire", "agency"],
+      "metadata": {"bus": "Chakra", "tradition": "Hindu/Yogic", "chakra_number": 3}
+    },
+    {
+      "id": "chakra-heart",
+      "name": "Heart — Anahata",
+      "level": 1,
+      "category": "chakra-voices",
+      "sort_order": 23,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["heart", "love", "compassion", "connection", "bridge"],
+      "metadata": {"bus": "Chakra", "tradition": "Hindu/Yogic", "chakra_number": 4}
+    },
+    {
+      "id": "chakra-throat",
+      "name": "Throat — Vishuddha",
+      "level": 1,
+      "category": "chakra-voices",
+      "sort_order": 24,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["throat", "voice", "truth", "expression", "communication"],
+      "metadata": {"bus": "Chakra", "tradition": "Hindu/Yogic", "chakra_number": 5}
+    },
+    {
+      "id": "chakra-third-eye",
+      "name": "Third Eye — Ajna",
+      "level": 1,
+      "category": "chakra-voices",
+      "sort_order": 25,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["intuition", "insight", "vision", "perception"],
+      "metadata": {"bus": "Chakra", "tradition": "Hindu/Yogic", "chakra_number": 6}
+    },
+    {
+      "id": "chakra-crown",
+      "name": "Crown — Sahasrara",
+      "level": 1,
+      "category": "chakra-voices",
+      "sort_order": 26,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["crown", "transcendence", "unity", "cosmic-consciousness"],
+      "metadata": {"bus": "Chakra", "tradition": "Hindu/Yogic", "chakra_number": 7}
+    },
+    {
+      "id": "dbt-emotion-mind",
+      "name": "Emotion Mind",
+      "level": 1,
+      "category": "dbt-mind-states",
+      "sort_order": 27,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["emotion", "feeling", "intensity", "passion"],
+      "metadata": {"bus": "DBT", "tradition": "Dialectical Behavior Therapy"}
+    },
+    {
+      "id": "dbt-reasonable-mind",
+      "name": "Reasonable Mind",
+      "level": 1,
+      "category": "dbt-mind-states",
+      "sort_order": 28,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["reason", "logic", "analysis", "detachment"],
+      "metadata": {"bus": "DBT", "tradition": "Dialectical Behavior Therapy"}
+    },
+    {
+      "id": "dbt-wise-mind",
+      "name": "Wise Mind",
+      "level": 1,
+      "category": "dbt-mind-states",
+      "sort_order": 29,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["wise-mind", "integration", "intuition", "balance"],
+      "metadata": {"bus": "DBT", "tradition": "Dialectical Behavior Therapy"}
+    },
+    {
+      "id": "facilitator-the-conductor",
+      "name": "The Conductor",
+      "level": 1,
+      "category": "facilitators",
+      "sort_order": 30,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["synthesis", "orchestration", "meta-view", "integration"],
+      "metadata": {"bus": "Facilitator", "tradition": "Meta-synthesis"}
+    },
+    {
+      "id": "facilitator-the-witness",
+      "name": "The Witness",
+      "level": 1,
+      "category": "facilitators",
+      "sort_order": 31,
+      "sections": {
+        "System Prompt": "Placeholder.",
+        "About": "Placeholder.",
+        "When This Voice Activates": "Placeholder."
+      },
+      "keywords": ["witness", "presence", "non-judgment", "awareness"],
+      "metadata": {"bus": "Facilitator", "tradition": "Meta-synthesis"}
+    },
+    {
+      "id": "bus-fhw",
+      "name": "Facing Human Wreckage Bus",
+      "level": 2,
+      "category": "buses",
+      "sort_order": 32,
+      "composite_of": ["fhw-the-addict", "fhw-the-denier", "fhw-the-griever", "fhw-the-hospice-worker", "fhw-the-compostor", "fhw-the-midwife"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Placeholder.",
+        "How to Use": "Placeholder."
+      },
+      "keywords": ["hospicing-modernity", "andreotti", "facing-human-wreckage"],
+      "metadata": {"bus": "FHW"}
+    },
+    {
+      "id": "bus-ancestral",
+      "name": "Ancestral Voices Bus",
+      "level": 2,
+      "category": "buses",
+      "sort_order": 33,
+      "composite_of": ["ancestral-the-elder", "ancestral-the-land", "ancestral-the-trickster", "ancestral-the-weaver", "ancestral-the-dreamer"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Placeholder.",
+        "How to Use": "Placeholder."
+      },
+      "keywords": ["indigenous", "ancestral", "ecological-epistemology"],
+      "metadata": {"bus": "Ancestral"}
+    },
+    {
+      "id": "bus-jungian",
+      "name": "Jungian Archetypes Bus",
+      "level": 2,
+      "category": "buses",
+      "sort_order": 34,
+      "composite_of": ["jungian-the-shadow", "jungian-the-anima-animus", "jungian-the-self", "jungian-the-persona", "jungian-the-wise-old-one"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Placeholder.",
+        "How to Use": "Placeholder."
+      },
+      "keywords": ["jung", "depth-psychology", "archetypes"],
+      "metadata": {"bus": "Jungian"}
+    },
+    {
+      "id": "bus-ifs",
+      "name": "IFS Parts Bus",
+      "level": 2,
+      "category": "buses",
+      "sort_order": 35,
+      "composite_of": ["ifs-the-exile", "ifs-the-manager", "ifs-the-firefighter", "ifs-the-self-energy"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Placeholder.",
+        "How to Use": "Placeholder."
+      },
+      "keywords": ["ifs", "parts-work", "internal-family-systems"],
+      "metadata": {"bus": "IFS"}
+    },
+    {
+      "id": "bus-chakra",
+      "name": "Chakra Voices Bus",
+      "level": 2,
+      "category": "buses",
+      "sort_order": 36,
+      "composite_of": ["chakra-root", "chakra-sacral", "chakra-solar-plexus", "chakra-heart", "chakra-throat", "chakra-third-eye", "chakra-crown"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Placeholder.",
+        "How to Use": "Placeholder."
+      },
+      "keywords": ["chakra", "energy", "yogic", "kundalini"],
+      "metadata": {"bus": "Chakra"}
+    },
+    {
+      "id": "bus-dbt",
+      "name": "DBT Mind States Bus",
+      "level": 2,
+      "category": "buses",
+      "sort_order": 37,
+      "composite_of": ["dbt-emotion-mind", "dbt-reasonable-mind", "dbt-wise-mind"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Placeholder.",
+        "How to Use": "Placeholder."
+      },
+      "keywords": ["dbt", "linehan", "dialectical", "mindfulness"],
+      "metadata": {"bus": "DBT"}
+    },
+    {
+      "id": "bus-facilitators",
+      "name": "Facilitators Bus",
+      "level": 2,
+      "category": "buses",
+      "sort_order": 38,
+      "composite_of": ["facilitator-the-conductor", "facilitator-the-witness"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Placeholder.",
+        "How to Use": "Placeholder."
+      },
+      "keywords": ["facilitator", "synthesis", "meta-view"],
+      "metadata": {"bus": "Facilitator"}
+    },
+    {
+      "id": "meta-therapeutic-mirrors",
+      "name": "Therapeutic Mirrors",
+      "level": 3,
+      "category": "meta-categories",
+      "sort_order": 39,
+      "composite_of": ["bus-ifs", "bus-dbt", "bus-facilitators"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Placeholder.",
+        "How to Use": "Placeholder."
+      },
+      "keywords": ["therapy", "healing", "mirror", "integration"],
+      "metadata": {}
+    },
+    {
+      "id": "meta-archetypal-depths",
+      "name": "Archetypal Depths",
+      "level": 3,
+      "category": "meta-categories",
+      "sort_order": 40,
+      "composite_of": ["bus-fhw", "bus-ancestral", "bus-jungian", "bus-chakra"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Placeholder.",
+        "How to Use": "Placeholder."
+      },
+      "keywords": ["archetype", "depth", "collective", "mythic"],
+      "metadata": {}
+    }
+  ]
+}
