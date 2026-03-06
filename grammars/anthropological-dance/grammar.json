@@ -1,0 +1,555 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "date": "2026",
+        "note": "Original grammar created from memory, mapping dance traditions from around the world through an anthropological lens — what people dance, why they dance, and what the dancing body says about being human."
+      }
+    ]
+  },
+  "name": "Anthropological Dance: The Body Politic",
+  "description": "Every culture dances. This grammar maps dance traditions from six continents through the lens of function — why do people dance? Sacred ritual, social bonding, martial power, courtship, resistance, trance. From Sufi whirling to Afrobeat, from Balinese temple dance to New York voguing, each tradition encodes a culture's relationship to the body, to power, to the divine. Dance is the first language; this grammar is its dictionary.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Henri Matisse, *La Danse* (1910). Edgar Degas, dance studies and pastels. Ancient Egyptian dance reliefs (Tomb of Nebamun, ~1350 BCE). Mughal miniature paintings of court dancers. Greek red-figure vase paintings of maenads and satyrs.",
+  "grammar_type": "custom",
+  "creator_name": "PlayfulProcess",
+  "tags": ["dance", "anthropology", "embodiment", "ritual", "resistance", "trance", "social", "global", "sacred"],
+  "roots": ["embodiment", "myth-and-symbol", "liberation"],
+  "shelves": ["wonder", "resilience", "earth"],
+  "lineages": ["Akomolafe", "Andreotti"],
+  "worldview": "animist",
+  "grammars": [
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/indian-classical-dance",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/ballet-living-architecture",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/modern-dance-breaking-ground",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/movement-culture"
+  ],
+  "items": [
+    {
+      "id": "sufi-whirling",
+      "name": "Sufi Whirling — The Turning Prayer",
+      "sort_order": 1,
+      "category": "tradition",
+      "level": 1,
+      "sections": {
+        "The Dance": "Placeholder.",
+        "Where It Lives": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "The Body Speaks": "Placeholder."
+      },
+      "keywords": ["sufi", "whirling", "dervish", "mevlevi", "rumi", "turkey", "prayer"],
+      "metadata": {}
+    },
+    {
+      "id": "flamenco",
+      "name": "Flamenco — Duende and Fire",
+      "sort_order": 2,
+      "category": "tradition",
+      "level": 1,
+      "sections": {
+        "The Dance": "Placeholder.",
+        "Where It Lives": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "The Body Speaks": "Placeholder."
+      },
+      "keywords": ["flamenco", "spain", "andalusia", "romani", "duende", "zapateado"],
+      "metadata": {}
+    },
+    {
+      "id": "tango",
+      "name": "Tango — The Conversation of Bodies",
+      "sort_order": 3,
+      "category": "tradition",
+      "level": 1,
+      "sections": {
+        "The Dance": "Placeholder.",
+        "Where It Lives": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "The Body Speaks": "Placeholder."
+      },
+      "keywords": ["tango", "argentina", "buenos-aires", "partner", "improvisation", "embrace"],
+      "metadata": {}
+    },
+    {
+      "id": "samba",
+      "name": "Samba — The Heartbeat of Brazil",
+      "sort_order": 4,
+      "category": "tradition",
+      "level": 1,
+      "sections": {
+        "The Dance": "Placeholder.",
+        "Where It Lives": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "The Body Speaks": "Placeholder."
+      },
+      "keywords": ["samba", "brazil", "carnival", "african-roots", "percussion", "joy"],
+      "metadata": {}
+    },
+    {
+      "id": "capoeira",
+      "name": "Capoeira — The Fight That Dances",
+      "sort_order": 5,
+      "category": "tradition",
+      "level": 1,
+      "sections": {
+        "The Dance": "Placeholder.",
+        "Where It Lives": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "The Body Speaks": "Placeholder."
+      },
+      "keywords": ["capoeira", "brazil", "african", "martial", "resistance", "roda", "berimbau"],
+      "metadata": {}
+    },
+    {
+      "id": "hula",
+      "name": "Hula — The Voice of the Land",
+      "sort_order": 6,
+      "category": "tradition",
+      "level": 1,
+      "sections": {
+        "The Dance": "Placeholder.",
+        "Where It Lives": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "The Body Speaks": "Placeholder."
+      },
+      "keywords": ["hula", "hawaii", "polynesia", "chant", "land", "genealogy", "sacred"],
+      "metadata": {}
+    },
+    {
+      "id": "west-african",
+      "name": "West African Dance — The Drum Speaks, The Body Answers",
+      "sort_order": 7,
+      "category": "tradition",
+      "level": 1,
+      "sections": {
+        "The Dance": "Placeholder.",
+        "Where It Lives": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "The Body Speaks": "Placeholder."
+      },
+      "keywords": ["west-african", "djembe", "polyrhythm", "community", "celebration", "griot"],
+      "metadata": {}
+    },
+    {
+      "id": "balinese",
+      "name": "Balinese Dance — Temple, Trance, and Gamelan",
+      "sort_order": 8,
+      "category": "tradition",
+      "level": 1,
+      "sections": {
+        "The Dance": "Placeholder.",
+        "Where It Lives": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "The Body Speaks": "Placeholder."
+      },
+      "keywords": ["bali", "indonesia", "gamelan", "legong", "kecak", "temple", "trance"],
+      "metadata": {}
+    },
+    {
+      "id": "butoh",
+      "name": "Butoh — The Dance of Darkness",
+      "sort_order": 9,
+      "category": "tradition",
+      "level": 1,
+      "sections": {
+        "The Dance": "Placeholder.",
+        "Where It Lives": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "The Body Speaks": "Placeholder."
+      },
+      "keywords": ["butoh", "japan", "hijikata", "ohno", "darkness", "death", "transformation"],
+      "metadata": {}
+    },
+    {
+      "id": "irish-step",
+      "name": "Irish Step Dance — The Still Torso, The Speaking Feet",
+      "sort_order": 10,
+      "category": "tradition",
+      "level": 1,
+      "sections": {
+        "The Dance": "Placeholder.",
+        "Where It Lives": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "The Body Speaks": "Placeholder."
+      },
+      "keywords": ["irish", "step-dance", "sean-nos", "riverdance", "percussive", "celtic"],
+      "metadata": {}
+    },
+    {
+      "id": "cossack",
+      "name": "Cossack Dance — Hopak and the Warrior Body",
+      "sort_order": 11,
+      "category": "tradition",
+      "level": 1,
+      "sections": {
+        "The Dance": "Placeholder.",
+        "Where It Lives": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "The Body Speaks": "Placeholder."
+      },
+      "keywords": ["cossack", "hopak", "ukraine", "warrior", "acrobatic", "strength"],
+      "metadata": {}
+    },
+    {
+      "id": "haka",
+      "name": "Haka — The War Dance That Welcomes",
+      "sort_order": 12,
+      "category": "tradition",
+      "level": 1,
+      "sections": {
+        "The Dance": "Placeholder.",
+        "Where It Lives": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "The Body Speaks": "Placeholder."
+      },
+      "keywords": ["haka", "maori", "new-zealand", "warrior", "challenge", "unity", "rugby"],
+      "metadata": {}
+    },
+    {
+      "id": "gnawa",
+      "name": "Gnawa — The Healing Trance",
+      "sort_order": 13,
+      "category": "tradition",
+      "level": 1,
+      "sections": {
+        "The Dance": "Placeholder.",
+        "Where It Lives": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "The Body Speaks": "Placeholder."
+      },
+      "keywords": ["gnawa", "morocco", "trance", "healing", "lila", "sub-saharan", "spirit"],
+      "metadata": {}
+    },
+    {
+      "id": "tarantella",
+      "name": "Tarantella — Dancing Out the Poison",
+      "sort_order": 14,
+      "category": "tradition",
+      "level": 1,
+      "sections": {
+        "The Dance": "Placeholder.",
+        "Where It Lives": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "The Body Speaks": "Placeholder."
+      },
+      "keywords": ["tarantella", "italy", "spider", "cure", "frenzy", "southern-italy"],
+      "metadata": {}
+    },
+    {
+      "id": "powwow",
+      "name": "Powwow Dance — The Circle of Nations",
+      "sort_order": 15,
+      "category": "tradition",
+      "level": 1,
+      "sections": {
+        "The Dance": "Placeholder.",
+        "Where It Lives": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "The Body Speaks": "Placeholder."
+      },
+      "keywords": ["powwow", "native-american", "circle", "regalia", "honor", "tradition"],
+      "metadata": {}
+    },
+    {
+      "id": "aboriginal-stomp",
+      "name": "Aboriginal Dance — Dreaming the Land",
+      "sort_order": 16,
+      "category": "tradition",
+      "level": 1,
+      "sections": {
+        "The Dance": "Placeholder.",
+        "Where It Lives": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "The Body Speaks": "Placeholder."
+      },
+      "keywords": ["aboriginal", "australia", "dreaming", "songline", "corroboree", "land"],
+      "metadata": {}
+    },
+    {
+      "id": "waltz",
+      "name": "Waltz — The Scandal of the Embrace",
+      "sort_order": 17,
+      "category": "tradition",
+      "level": 1,
+      "sections": {
+        "The Dance": "Placeholder.",
+        "Where It Lives": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "The Body Speaks": "Placeholder."
+      },
+      "keywords": ["waltz", "vienna", "partner", "three-four", "revolution", "embrace"],
+      "metadata": {}
+    },
+    {
+      "id": "lindy-hop",
+      "name": "Lindy Hop — Swinging Through Harlem",
+      "sort_order": 18,
+      "category": "tradition",
+      "level": 1,
+      "sections": {
+        "The Dance": "Placeholder.",
+        "Where It Lives": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "The Body Speaks": "Placeholder."
+      },
+      "keywords": ["lindy-hop", "swing", "harlem", "jazz", "african-american", "partnership"],
+      "metadata": {}
+    },
+    {
+      "id": "breaking",
+      "name": "Breaking — The Cypher and the Floor",
+      "sort_order": 19,
+      "category": "tradition",
+      "level": 1,
+      "sections": {
+        "The Dance": "Placeholder.",
+        "Where It Lives": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "The Body Speaks": "Placeholder."
+      },
+      "keywords": ["breaking", "bboy", "bgirl", "hip-hop", "bronx", "cypher", "battle"],
+      "metadata": {}
+    },
+    {
+      "id": "voguing",
+      "name": "Voguing — The Ballroom Revolution",
+      "sort_order": 20,
+      "category": "tradition",
+      "level": 1,
+      "sections": {
+        "The Dance": "Placeholder.",
+        "Where It Lives": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "The Body Speaks": "Placeholder."
+      },
+      "keywords": ["voguing", "ballroom", "queer", "harlem", "house", "pose", "resistance"],
+      "metadata": {}
+    },
+    {
+      "id": "krump",
+      "name": "Krumping — The Rage That Heals",
+      "sort_order": 21,
+      "category": "tradition",
+      "level": 1,
+      "sections": {
+        "The Dance": "Placeholder.",
+        "Where It Lives": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "The Body Speaks": "Placeholder."
+      },
+      "keywords": ["krump", "los-angeles", "expression", "rage", "community", "youth"],
+      "metadata": {}
+    },
+    {
+      "id": "ecstatic-dance",
+      "name": "Ecstatic Dance — The Freeform Gathering",
+      "sort_order": 22,
+      "category": "tradition",
+      "level": 1,
+      "sections": {
+        "The Dance": "Placeholder.",
+        "Where It Lives": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "The Body Speaks": "Placeholder."
+      },
+      "keywords": ["ecstatic", "freeform", "five-rhythms", "roth", "community", "no-talking"],
+      "metadata": {}
+    },
+    {
+      "id": "contact-improv",
+      "name": "Contact Improvisation — The Listening Touch",
+      "sort_order": 23,
+      "category": "tradition",
+      "level": 1,
+      "sections": {
+        "The Dance": "Placeholder.",
+        "Where It Lives": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "The Body Speaks": "Placeholder."
+      },
+      "keywords": ["contact", "improvisation", "paxton", "weight", "trust", "listening"],
+      "metadata": {}
+    },
+    {
+      "id": "kathak-folk",
+      "name": "Kathak Folk Traditions — The Village Circle",
+      "sort_order": 24,
+      "category": "tradition",
+      "level": 1,
+      "sections": {
+        "The Dance": "Placeholder.",
+        "Where It Lives": "Placeholder.",
+        "What It Does": "Placeholder.",
+        "The Body Speaks": "Placeholder."
+      },
+      "keywords": ["folk", "india", "village", "bhangra", "garba", "dandiya", "celebration"],
+      "metadata": {}
+    },
+    {
+      "id": "group-sacred",
+      "name": "Sacred & Ritual Dance — The Body Prays",
+      "sort_order": 25,
+      "category": "function",
+      "level": 2,
+      "composite_of": ["sufi-whirling", "balinese", "hula", "powwow", "aboriginal-stomp", "gnawa"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["sacred", "ritual", "prayer", "divine", "ceremony"],
+      "metadata": {}
+    },
+    {
+      "id": "group-social",
+      "name": "Social & Communal Dance — The Body Bonds",
+      "sort_order": 26,
+      "category": "function",
+      "level": 2,
+      "composite_of": ["waltz", "lindy-hop", "samba", "irish-step", "kathak-folk", "ecstatic-dance"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["social", "communal", "partner", "celebration", "bonding"],
+      "metadata": {}
+    },
+    {
+      "id": "group-martial",
+      "name": "Martial & Power Dance — The Body Fights",
+      "sort_order": 27,
+      "category": "function",
+      "level": 2,
+      "composite_of": ["capoeira", "cossack", "haka"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["martial", "warrior", "power", "strength", "challenge"],
+      "metadata": {}
+    },
+    {
+      "id": "group-courtship",
+      "name": "Courtship Dance — The Body Desires",
+      "sort_order": 28,
+      "category": "function",
+      "level": 2,
+      "composite_of": ["tango", "waltz", "flamenco"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["courtship", "desire", "partner", "seduction", "attraction"],
+      "metadata": {}
+    },
+    {
+      "id": "group-resistance",
+      "name": "Resistance Dance — The Body Refuses",
+      "sort_order": 29,
+      "category": "function",
+      "level": 2,
+      "composite_of": ["capoeira", "voguing", "krump", "breaking", "hula"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["resistance", "liberation", "oppression", "identity", "reclamation"],
+      "metadata": {}
+    },
+    {
+      "id": "group-trance",
+      "name": "Trance & Ecstasy — The Body Dissolves",
+      "sort_order": 30,
+      "category": "function",
+      "level": 2,
+      "composite_of": ["sufi-whirling", "gnawa", "ecstatic-dance", "tarantella", "butoh"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["trance", "ecstasy", "dissolution", "altered-state", "healing"],
+      "metadata": {}
+    },
+    {
+      "id": "group-expressive",
+      "name": "Expressive & Narrative Dance — The Body Tells",
+      "sort_order": 31,
+      "category": "function",
+      "level": 2,
+      "composite_of": ["flamenco", "west-african", "balinese", "contact-improv"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["expression", "narrative", "storytelling", "emotion", "communication"],
+      "metadata": {}
+    },
+    {
+      "id": "meta-prayer",
+      "name": "Dance as Prayer — The Body Speaks to the Divine",
+      "sort_order": 32,
+      "category": "anthropological-theme",
+      "level": 3,
+      "composite_of": ["group-sacred", "group-trance"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Bigger Picture": "Placeholder."
+      },
+      "keywords": ["prayer", "divine", "sacred", "transcendence", "devotion"],
+      "metadata": {}
+    },
+    {
+      "id": "meta-social-contract",
+      "name": "Dance as Social Contract — Who Dances With Whom",
+      "sort_order": 33,
+      "category": "anthropological-theme",
+      "level": 3,
+      "composite_of": ["group-social", "group-courtship"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Bigger Picture": "Placeholder."
+      },
+      "keywords": ["social", "power", "gender", "class", "belonging"],
+      "metadata": {}
+    },
+    {
+      "id": "meta-resistance",
+      "name": "Dance as Resistance — The Oppressed Body Reclaims Itself",
+      "sort_order": 34,
+      "category": "anthropological-theme",
+      "level": 3,
+      "composite_of": ["group-resistance", "group-martial"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Bigger Picture": "Placeholder."
+      },
+      "keywords": ["resistance", "liberation", "colonialism", "reclamation", "power"],
+      "metadata": {}
+    },
+    {
+      "id": "meta-first-language",
+      "name": "Dance as First Language — Before Words, We Moved",
+      "sort_order": 35,
+      "category": "anthropological-theme",
+      "level": 3,
+      "composite_of": ["group-expressive", "group-sacred", "group-social"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Bigger Picture": "Placeholder."
+      },
+      "keywords": ["language", "origin", "embodiment", "universal", "human"],
+      "metadata": {}
+    }
+  ]
+}

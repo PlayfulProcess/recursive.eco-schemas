@@ -1,0 +1,236 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "date": "2026",
+        "note": "Meta grammar mapping the constellation of embodied knowledge — yoga, dance, theater, and movement as interconnected ways of knowing through the body."
+      }
+    ]
+  },
+  "name": "Embodied Grammars: A Constellation",
+  "description": "A map of maps. This meta grammar connects seven grammars of embodied knowledge — Yoga, Indian Classical Dance, Ballet, Modern Dance, Anthropological Dance, Theater, and Movement Culture. Each item here is a doorway into a full grammar. Together, they trace humanity's relationship to the moving body: as prayer, as protest, as play, as architecture, as liberation. The body is the first instrument; these are its many tunings.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Eadweard Muybridge, *Animal Locomotion* (1887). Auguste Rodin, drawings of Cambodian dancers (1906). Henri Matisse, *La Danse* (1910). Nataraja bronze sculptures (Chola dynasty, 10th-12th century).",
+  "grammar_type": "custom",
+  "creator_name": "PlayfulProcess",
+  "tags": ["embodiment", "dance", "yoga", "theater", "movement", "body", "constellation", "meta"],
+  "roots": ["embodiment", "eastern-wisdom", "myth-and-symbol", "liberation"],
+  "shelves": ["wonder", "earth", "resilience"],
+  "lineages": ["Shrei", "Akomolafe", "Andreotti", "Linehan", "Kelty"],
+  "worldview": "non-dual",
+  "grammars": [
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/yoga-body-as-temple",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/indian-classical-dance",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/ballet-living-architecture",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/modern-dance-breaking-ground",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/anthropological-dance",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/theater-tree",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/movement-culture",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/human-body"
+  ],
+  "items": [
+    {
+      "id": "yoga",
+      "name": "Yoga: Body as Temple",
+      "sort_order": 1,
+      "category": "grammar",
+      "level": 1,
+      "sections": {
+        "What It Is": "Placeholder.",
+        "Why It Belongs": "Placeholder.",
+        "The Bridge": "Placeholder."
+      },
+      "keywords": ["yoga", "india", "asana", "breath", "philosophy", "temple"],
+      "metadata": {}
+    },
+    {
+      "id": "natya",
+      "name": "Indian Classical Dance: Natya — The Fifth Veda",
+      "sort_order": 2,
+      "category": "grammar",
+      "level": 1,
+      "sections": {
+        "What It Is": "Placeholder.",
+        "Why It Belongs": "Placeholder.",
+        "The Bridge": "Placeholder."
+      },
+      "keywords": ["natyashastra", "indian", "classical", "rasa", "mudra", "sacred"],
+      "metadata": {}
+    },
+    {
+      "id": "ballet",
+      "name": "Ballet: A Living Architecture",
+      "sort_order": 3,
+      "category": "grammar",
+      "level": 1,
+      "sections": {
+        "What It Is": "Placeholder.",
+        "Why It Belongs": "Placeholder.",
+        "The Bridge": "Placeholder."
+      },
+      "keywords": ["ballet", "classical", "european", "codified", "architecture"],
+      "metadata": {}
+    },
+    {
+      "id": "modern-dance",
+      "name": "Modern Dance: Breaking Ground",
+      "sort_order": 4,
+      "category": "grammar",
+      "level": 1,
+      "sections": {
+        "What It Is": "Placeholder.",
+        "Why It Belongs": "Placeholder.",
+        "The Bridge": "Placeholder."
+      },
+      "keywords": ["modern", "contemporary", "innovation", "rebellion", "lineage"],
+      "metadata": {}
+    },
+    {
+      "id": "anthropological-dance",
+      "name": "Anthropological Dance: The Body Politic",
+      "sort_order": 5,
+      "category": "grammar",
+      "level": 1,
+      "sections": {
+        "What It Is": "Placeholder.",
+        "Why It Belongs": "Placeholder.",
+        "The Bridge": "Placeholder."
+      },
+      "keywords": ["anthropology", "global", "ritual", "resistance", "social"],
+      "metadata": {}
+    },
+    {
+      "id": "theater",
+      "name": "Theater Tree: The Empty Space",
+      "sort_order": 6,
+      "category": "grammar",
+      "level": 1,
+      "sections": {
+        "What It Is": "Placeholder.",
+        "Why It Belongs": "Placeholder.",
+        "The Bridge": "Placeholder."
+      },
+      "keywords": ["theater", "acting", "directing", "body", "politics", "ritual"],
+      "metadata": {}
+    },
+    {
+      "id": "movement-culture",
+      "name": "Movement Culture: The Generalist Body",
+      "sort_order": 7,
+      "category": "grammar",
+      "level": 1,
+      "sections": {
+        "What It Is": "Placeholder.",
+        "Why It Belongs": "Placeholder.",
+        "The Bridge": "Placeholder."
+      },
+      "keywords": ["movement", "generalist", "practice", "play", "cross-training"],
+      "metadata": {}
+    },
+    {
+      "id": "human-body",
+      "name": "The Human Body — The Substrate",
+      "sort_order": 8,
+      "category": "grammar",
+      "level": 1,
+      "sections": {
+        "What It Is": "Placeholder.",
+        "Why It Belongs": "Placeholder.",
+        "The Bridge": "Placeholder."
+      },
+      "keywords": ["anatomy", "body", "systems", "substrate", "instrument"],
+      "metadata": {}
+    },
+    {
+      "id": "theme-body-as-prayer",
+      "name": "The Body as Prayer",
+      "sort_order": 9,
+      "category": "theme",
+      "level": 2,
+      "composite_of": ["yoga", "natya", "anthropological-dance"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "Across the Grammars": "Placeholder."
+      },
+      "keywords": ["prayer", "sacred", "devotion", "divine", "ritual"],
+      "metadata": {}
+    },
+    {
+      "id": "theme-body-as-protest",
+      "name": "The Body as Protest",
+      "sort_order": 10,
+      "category": "theme",
+      "level": 2,
+      "composite_of": ["modern-dance", "anthropological-dance", "theater"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "Across the Grammars": "Placeholder."
+      },
+      "keywords": ["protest", "resistance", "liberation", "politics", "oppression"],
+      "metadata": {}
+    },
+    {
+      "id": "theme-body-as-architecture",
+      "name": "The Body as Architecture",
+      "sort_order": 11,
+      "category": "theme",
+      "level": 2,
+      "composite_of": ["ballet", "yoga", "human-body"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "Across the Grammars": "Placeholder."
+      },
+      "keywords": ["architecture", "structure", "codification", "geometry", "discipline"],
+      "metadata": {}
+    },
+    {
+      "id": "theme-body-as-play",
+      "name": "The Body as Play",
+      "sort_order": 12,
+      "category": "theme",
+      "level": 2,
+      "composite_of": ["movement-culture", "theater", "anthropological-dance"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "Across the Grammars": "Placeholder."
+      },
+      "keywords": ["play", "improvisation", "joy", "spontaneity", "game"],
+      "metadata": {}
+    },
+    {
+      "id": "theme-body-as-story",
+      "name": "The Body as Story",
+      "sort_order": 13,
+      "category": "theme",
+      "level": 2,
+      "composite_of": ["natya", "ballet", "theater", "modern-dance"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "Across the Grammars": "Placeholder."
+      },
+      "keywords": ["narrative", "story", "expression", "drama", "emotion"],
+      "metadata": {}
+    },
+    {
+      "id": "meta-first-instrument",
+      "name": "The First Instrument — Before Words, Before Tools, We Moved",
+      "sort_order": 14,
+      "category": "meta",
+      "level": 3,
+      "composite_of": ["theme-body-as-prayer", "theme-body-as-protest", "theme-body-as-architecture", "theme-body-as-play", "theme-body-as-story"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Bigger Picture": "Placeholder."
+      },
+      "keywords": ["first", "instrument", "body", "human", "movement", "origin"],
+      "metadata": {}
+    }
+  ]
+}
