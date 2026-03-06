@@ -1,0 +1,1372 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "url": "https://lifeisprocess.substack.com/",
+        "date": "2026-03-06",
+        "note": "Original grammar structure and interpretations. Based on the published research of John Gottman, Sue Johnson, John Bowlby, Mary Ainsworth, Stephen Porges, Peter Levine, Marsha Linehan, and Dan Siegel. No text is copied from copyrighted works — all card content is original synthesis."
+      }
+    ]
+  },
+  "name": "Relationship Cards — A Couples Oracle",
+  "description": "A 54-card oracle deck for couples based on relationship science. Draw three cards together — The Pattern (what's showing up), The Need (what's underneath), The Move (what you could try) — and use them as a mirror for your relationship. Grounded in Gottman's research on the masters and disasters of love, Sue Johnson's Emotionally Focused Therapy, Bowlby's attachment theory, and Linehan's dialectical thinking. No card is bad. Even contempt is pointing toward what the relationship is starving for.\n\n5 suits: Patterns (the big dynamics), Needs (what's underneath), Repairs (moves you can make), Strengths (what's already alive), and Shadows (the hard truths). Designed to be played weekly as a couple's ritual — draw, discuss, journal, repeat.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Gustav Klimt's 'The Kiss' (1907-1908) and other Secessionist works depicting intimacy and embrace. Edvard Munch's relationship paintings — 'The Dance of Life' (1899-1900), 'Separation' (1896), 'Attraction' (1896). Auguste Rodin sculptures — 'The Kiss' (1882), 'The Cathedral' (hands). Egon Schiele's embrace paintings (1910s). Japanese ukiyo-e depicting couples — Utamaro's bijin-ga. Indian Mughal miniatures of Radha-Krishna embraces. William Blake's illustrations of marriage from 'Songs of Innocence and Experience' (1789-1794).",
+  "grammar_type": "tarot",
+  "creator_name": "PlayfulProcess",
+  "creator_link": "https://lifeisprocess.substack.com/",
+  "tags": [
+    "relationships",
+    "couples",
+    "gottman",
+    "eft",
+    "attachment",
+    "oracle",
+    "therapy",
+    "love",
+    "repair",
+    "connection"
+  ],
+  "roots": ["emotion-love", "self-knowledge"],
+  "shelves": ["mirror", "resilience"],
+  "lineages": ["Gottman", "Johnson", "Linehan"],
+  "worldview": "dialectical",
+  "cover_image_url": "",
+  "items": [
+    {
+      "id": "the-four-horsemen",
+      "name": "The Four Horsemen",
+      "symbol": "⚔️",
+      "level": 1,
+      "category": "pattern",
+      "sort_order": 1,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["criticism", "contempt", "defensiveness", "stonewalling", "gottman"],
+      "metadata": {
+        "suit": "pattern",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "the-protest-polka",
+      "name": "The Protest Polka",
+      "symbol": "🔄",
+      "level": 1,
+      "category": "pattern",
+      "sort_order": 2,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["pursue-withdraw", "demand", "retreat", "cycle", "eft"],
+      "metadata": {
+        "suit": "pattern",
+        "source": "Johnson"
+      }
+    },
+    {
+      "id": "flooding",
+      "name": "Flooding",
+      "symbol": "🌊",
+      "level": 1,
+      "category": "pattern",
+      "sort_order": 3,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["overwhelm", "shutdown", "heartbeat", "fight-or-flight", "nervous-system"],
+      "metadata": {
+        "suit": "pattern",
+        "source": "Gottman"
+      },
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/expression-of-emotions-darwin"]
+    },
+    {
+      "id": "the-distance-cascade",
+      "name": "The Distance Cascade",
+      "symbol": "🧊",
+      "level": 1,
+      "category": "pattern",
+      "sort_order": 4,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["emotional-distance", "parallel-lives", "loneliness", "disconnection"],
+      "metadata": {
+        "suit": "pattern",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "gridlock",
+      "name": "Gridlock",
+      "symbol": "🔒",
+      "level": 1,
+      "category": "pattern",
+      "sort_order": 5,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["perpetual-problem", "stuck", "dreams-underneath", "impasse"],
+      "metadata": {
+        "suit": "pattern",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "the-bid",
+      "name": "The Bid",
+      "symbol": "🤲",
+      "level": 1,
+      "category": "pattern",
+      "sort_order": 6,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["reaching-out", "turning-toward", "small-moments", "connection"],
+      "metadata": {
+        "suit": "pattern",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "positive-sentiment-override",
+      "name": "The Emotional Bank Account",
+      "symbol": "🏦",
+      "level": 1,
+      "category": "pattern",
+      "sort_order": 7,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["goodwill", "benefit-of-the-doubt", "deposits", "ratio"],
+      "metadata": {
+        "suit": "pattern",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "the-betrayal-cascade",
+      "name": "The Betrayal Cascade",
+      "symbol": "💔",
+      "level": 1,
+      "category": "pattern",
+      "sort_order": 8,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["trust-erosion", "negative-comparison", "secret-keeping", "betrayal"],
+      "metadata": {
+        "suit": "pattern",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "sliding-door-moment",
+      "name": "The Sliding Door Moment",
+      "symbol": "🚪",
+      "level": 1,
+      "category": "pattern",
+      "sort_order": 9,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["choice-point", "turning-toward", "turning-away", "micro-moment"],
+      "metadata": {
+        "suit": "pattern",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "the-secure-base",
+      "name": "The Secure Base",
+      "symbol": "🏠",
+      "level": 1,
+      "category": "pattern",
+      "sort_order": 10,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["safety", "home", "attachment", "haven"],
+      "metadata": {
+        "suit": "pattern",
+        "source": "Bowlby"
+      },
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/winnie-the-pooh"]
+    },
+    {
+      "id": "the-attachment-injury",
+      "name": "The Attachment Injury",
+      "symbol": "🩹",
+      "level": 1,
+      "category": "pattern",
+      "sort_order": 11,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["wound", "primal-panic", "betrayal", "trust-violation"],
+      "metadata": {
+        "suit": "pattern",
+        "source": "Johnson"
+      }
+    },
+    {
+      "id": "the-softening",
+      "name": "The Softening",
+      "symbol": "🕊️",
+      "level": 1,
+      "category": "pattern",
+      "sort_order": 12,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["vulnerability", "walls-down", "turning-point", "breakthrough"],
+      "metadata": {
+        "suit": "pattern",
+        "source": "Johnson"
+      },
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/jungian-archetypes"]
+    },
+    {
+      "id": "need-safety",
+      "name": "I Need to Feel Safe",
+      "symbol": "🛡️",
+      "level": 1,
+      "category": "need",
+      "sort_order": 13,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["security", "predictability", "reliability", "nervous-system"],
+      "metadata": {
+        "suit": "need",
+        "source": "Bowlby/Porges"
+      }
+    },
+    {
+      "id": "need-seen",
+      "name": "I Need to Be Seen",
+      "symbol": "👁️",
+      "level": 1,
+      "category": "need",
+      "sort_order": 14,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["visibility", "recognition", "being-known", "attunement"],
+      "metadata": {
+        "suit": "need",
+        "source": "Johnson"
+      }
+    },
+    {
+      "id": "need-chosen",
+      "name": "I Need to Be Chosen",
+      "symbol": "💍",
+      "level": 1,
+      "category": "need",
+      "sort_order": 15,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["priority", "commitment", "chosen", "special"],
+      "metadata": {
+        "suit": "need",
+        "source": "Johnson"
+      }
+    },
+    {
+      "id": "need-belonging",
+      "name": "I Need to Belong",
+      "symbol": "🌿",
+      "level": 1,
+      "category": "need",
+      "sort_order": 16,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["home", "we-ness", "team", "togetherness"],
+      "metadata": {
+        "suit": "need",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "need-autonomy",
+      "name": "I Need My Own Space",
+      "symbol": "🌄",
+      "level": 1,
+      "category": "need",
+      "sort_order": 17,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["freedom", "identity", "breathing-room", "differentiation"],
+      "metadata": {
+        "suit": "need",
+        "source": "Bowen"
+      }
+    },
+    {
+      "id": "need-desire",
+      "name": "I Need Desire",
+      "symbol": "🔥",
+      "level": 1,
+      "category": "need",
+      "sort_order": 18,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["passion", "wanting", "being-wanted", "eros"],
+      "metadata": {
+        "suit": "need",
+        "source": "Perel/Johnson"
+      },
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/song-of-songs"]
+    },
+    {
+      "id": "need-forgiveness",
+      "name": "I Need Forgiveness",
+      "symbol": "🌅",
+      "level": 1,
+      "category": "need",
+      "sort_order": 19,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["second-chance", "grace", "letting-go", "mercy"],
+      "metadata": {
+        "suit": "need",
+        "source": "Johnson"
+      }
+    },
+    {
+      "id": "need-play",
+      "name": "I Need Us to Play",
+      "symbol": "🎭",
+      "level": 1,
+      "category": "need",
+      "sort_order": 20,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["lightness", "humor", "fun", "spontaneity"],
+      "metadata": {
+        "suit": "need",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "need-respect",
+      "name": "I Need Respect",
+      "symbol": "⚖️",
+      "level": 1,
+      "category": "need",
+      "sort_order": 21,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["equality", "influence", "voice", "dignity"],
+      "metadata": {
+        "suit": "need",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "need-comfort",
+      "name": "I Need Comfort",
+      "symbol": "🫂",
+      "level": 1,
+      "category": "need",
+      "sort_order": 22,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["holding", "soothing", "presence", "co-regulation"],
+      "metadata": {
+        "suit": "need",
+        "source": "Johnson/Porges"
+      }
+    },
+    {
+      "id": "need-truth",
+      "name": "I Need the Truth",
+      "symbol": "🔍",
+      "level": 1,
+      "category": "need",
+      "sort_order": 23,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["honesty", "transparency", "no-hiding", "authenticity"],
+      "metadata": {
+        "suit": "need",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "need-meaning",
+      "name": "I Need Shared Meaning",
+      "symbol": "🌳",
+      "level": 1,
+      "category": "need",
+      "sort_order": 24,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["purpose", "legacy", "vision", "building-together"],
+      "metadata": {
+        "suit": "need",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "gentle-startup",
+      "name": "The Gentle Startup",
+      "symbol": "🌱",
+      "level": 1,
+      "category": "repair",
+      "sort_order": 25,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["soft-beginning", "i-statement", "no-blame", "approach"],
+      "metadata": {
+        "suit": "repair",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "take-responsibility",
+      "name": "Taking Responsibility",
+      "symbol": "🪞",
+      "level": 1,
+      "category": "repair",
+      "sort_order": 26,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["owning-your-part", "accountability", "humility"],
+      "metadata": {
+        "suit": "repair",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "self-soothing",
+      "name": "Self-Soothing",
+      "symbol": "🧘",
+      "level": 1,
+      "category": "repair",
+      "sort_order": 27,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["pause", "breathe", "20-minute-break", "regulation"],
+      "metadata": {
+        "suit": "repair",
+        "source": "Gottman/Linehan"
+      }
+    },
+    {
+      "id": "accepting-influence",
+      "name": "Accepting Influence",
+      "symbol": "🤝",
+      "level": 1,
+      "category": "repair",
+      "sort_order": 28,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["yielding", "compromise", "respect", "partnership"],
+      "metadata": {
+        "suit": "repair",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "the-repair-attempt",
+      "name": "The Repair Attempt",
+      "symbol": "🩹",
+      "level": 1,
+      "category": "repair",
+      "sort_order": 29,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["humor", "touch", "de-escalation", "start-over"],
+      "metadata": {
+        "suit": "repair",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "fondness-admiration",
+      "name": "Fondness & Admiration",
+      "symbol": "✨",
+      "level": 1,
+      "category": "repair",
+      "sort_order": 30,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["appreciation", "respect", "saying-it-aloud", "admiration"],
+      "metadata": {
+        "suit": "repair",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "love-map-update",
+      "name": "The Love Map Update",
+      "symbol": "🗺️",
+      "level": 1,
+      "category": "repair",
+      "sort_order": 31,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["curiosity", "real-questions", "staying-current", "knowing"],
+      "metadata": {
+        "suit": "repair",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "the-dream-conversation",
+      "name": "The Dream Conversation",
+      "symbol": "💭",
+      "level": 1,
+      "category": "repair",
+      "sort_order": 32,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["dreams-underneath", "gridlock", "meaning", "honoring"],
+      "metadata": {
+        "suit": "repair",
+        "source": "Gottman"
+      },
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/myths-through-many-eyes"]
+    },
+    {
+      "id": "the-ritual",
+      "name": "Creating a Ritual",
+      "symbol": "🕯️",
+      "level": 1,
+      "category": "repair",
+      "sort_order": 33,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["daily-check-in", "weekly-date", "rhythm", "container"],
+      "metadata": {
+        "suit": "repair",
+        "source": "Gottman"
+      },
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/confucian-analects"]
+    },
+    {
+      "id": "the-apology",
+      "name": "The Real Apology",
+      "symbol": "🙏",
+      "level": 1,
+      "category": "repair",
+      "sort_order": 34,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["sorry-that", "not-sorry-if", "accountability", "repair"],
+      "metadata": {
+        "suit": "repair",
+        "source": "Gottman/Johnson"
+      }
+    },
+    {
+      "id": "the-boundary",
+      "name": "Setting a Boundary",
+      "symbol": "🚧",
+      "level": 1,
+      "category": "repair",
+      "sort_order": 35,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["what-i-need", "limit", "self-respect", "clarity"],
+      "metadata": {
+        "suit": "repair",
+        "source": "Linehan"
+      }
+    },
+    {
+      "id": "the-story-edit",
+      "name": "Rewriting the Story",
+      "symbol": "📖",
+      "level": 1,
+      "category": "repair",
+      "sort_order": 36,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["narrative", "reframe", "from-always-to-sometimes", "story-of-us"],
+      "metadata": {
+        "suit": "repair",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "friendship",
+      "name": "Friendship",
+      "symbol": "🌻",
+      "level": 1,
+      "category": "strength",
+      "sort_order": 37,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["knowing", "liking", "fondness", "base"],
+      "metadata": {
+        "suit": "strength",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "shared-humor",
+      "name": "Shared Humor",
+      "symbol": "😂",
+      "level": 1,
+      "category": "strength",
+      "sort_order": 38,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["inside-jokes", "lightness", "laughing-together", "play"],
+      "metadata": {
+        "suit": "strength",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "shared-meaning",
+      "name": "Shared Meaning",
+      "symbol": "🌍",
+      "level": 1,
+      "category": "strength",
+      "sort_order": 39,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["values", "vision", "purpose", "what-we-stand-for"],
+      "metadata": {
+        "suit": "strength",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "trust",
+      "name": "Trust",
+      "symbol": "🔑",
+      "level": 1,
+      "category": "strength",
+      "sort_order": 40,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["reliability", "transparency", "dependability", "faith"],
+      "metadata": {
+        "suit": "strength",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "commitment",
+      "name": "Commitment",
+      "symbol": "⚓",
+      "level": 1,
+      "category": "strength",
+      "sort_order": 41,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["choosing", "cherishing", "maximizing", "loyalty"],
+      "metadata": {
+        "suit": "strength",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "physical-affection",
+      "name": "Physical Affection",
+      "symbol": "💞",
+      "level": 1,
+      "category": "strength",
+      "sort_order": 42,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["touch", "closeness", "body-language", "warmth"],
+      "metadata": {
+        "suit": "strength",
+        "source": "Gottman/Johnson"
+      }
+    },
+    {
+      "id": "good-conflict",
+      "name": "Good Conflict",
+      "symbol": "🔥",
+      "level": 1,
+      "category": "strength",
+      "sort_order": 43,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["productive-fighting", "respecting-differences", "growth"],
+      "metadata": {
+        "suit": "strength",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "gratitude",
+      "name": "Gratitude",
+      "symbol": "🙌",
+      "level": 1,
+      "category": "strength",
+      "sort_order": 44,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["noticing", "thanking", "appreciation", "not-taking-for-granted"],
+      "metadata": {
+        "suit": "strength",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "co-regulation",
+      "name": "Co-Regulation",
+      "symbol": "🫁",
+      "level": 1,
+      "category": "strength",
+      "sort_order": 45,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["breathing-together", "calming", "nervous-system", "attunement"],
+      "metadata": {
+        "suit": "strength",
+        "source": "Porges"
+      },
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/dhammapada"]
+    },
+    {
+      "id": "resilience",
+      "name": "Relationship Resilience",
+      "symbol": "🌱",
+      "level": 1,
+      "category": "strength",
+      "sort_order": 46,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["survived", "endurance", "history", "strength"],
+      "metadata": {
+        "suit": "strength",
+        "source": "Gottman/Johnson"
+      }
+    },
+    {
+      "id": "contempt",
+      "name": "Contempt",
+      "symbol": "🐍",
+      "level": 1,
+      "category": "shadow",
+      "sort_order": 47,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["superiority", "disgust", "eye-roll", "relationship-killer"],
+      "metadata": {
+        "suit": "shadow",
+        "source": "Gottman"
+      },
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/art-of-war-sun-tzu"]
+    },
+    {
+      "id": "stonewalling",
+      "name": "Stonewalling",
+      "symbol": "🧱",
+      "level": 1,
+      "category": "shadow",
+      "sort_order": 48,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["shutting-down", "walking-away", "going-blank", "withdrawal"],
+      "metadata": {
+        "suit": "shadow",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "criticism",
+      "name": "Criticism",
+      "symbol": "🗡️",
+      "level": 1,
+      "category": "shadow",
+      "sort_order": 49,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["you-always", "you-never", "character-attack", "blame"],
+      "metadata": {
+        "suit": "shadow",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "defensiveness",
+      "name": "Defensiveness",
+      "symbol": "🛡️",
+      "level": 1,
+      "category": "shadow",
+      "sort_order": 50,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["yes-but", "counter-attack", "righteous-indignation", "innocence"],
+      "metadata": {
+        "suit": "shadow",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "the-story-of-us-negative",
+      "name": "The Negative Story of Us",
+      "symbol": "📕",
+      "level": 1,
+      "category": "shadow",
+      "sort_order": 51,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["rewriting-history", "it-was-never-good", "nostalgia-erased", "doom"],
+      "metadata": {
+        "suit": "shadow",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "secret-keeping",
+      "name": "Secret Keeping",
+      "symbol": "🕳️",
+      "level": 1,
+      "category": "shadow",
+      "sort_order": 52,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["hidden-life", "lies-of-omission", "unlived-truth", "double-life"],
+      "metadata": {
+        "suit": "shadow",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "parentification-in-couple",
+      "name": "Becoming the Parent",
+      "symbol": "👨‍👧",
+      "level": 1,
+      "category": "shadow",
+      "sort_order": 53,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["parenting-partner", "resentment", "inequality", "role-reversal"],
+      "metadata": {
+        "suit": "shadow",
+        "source": "Bowen/Johnson"
+      }
+    },
+    {
+      "id": "the-exit",
+      "name": "Turning Away / The Exit",
+      "symbol": "🚶",
+      "level": 1,
+      "category": "shadow",
+      "sort_order": 54,
+      "sections": {
+        "Interpretation": "Placeholder.",
+        "Shadow": "Placeholder.",
+        "Light": "Placeholder.",
+        "Summary": "Placeholder.",
+        "Questions": "Placeholder."
+      },
+      "keywords": ["emotional-divorce", "one-foot-out", "fantasy-alternatives", "checking-out"],
+      "metadata": {
+        "suit": "shadow",
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "l2-the-gottman-cascade",
+      "name": "The Gottman Cascade",
+      "symbol": "📉",
+      "level": 2,
+      "category": "dynamics",
+      "sort_order": 55,
+      "composite_of": ["the-four-horsemen", "the-distance-cascade", "the-betrayal-cascade", "the-exit"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Placeholder.",
+        "How to Use": "Placeholder."
+      },
+      "keywords": ["cascade", "prediction", "divorce", "sequence"],
+      "metadata": {
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "l2-pursue-withdraw",
+      "name": "The Pursue-Withdraw Cycle",
+      "symbol": "🔄",
+      "level": 2,
+      "category": "dynamics",
+      "sort_order": 56,
+      "composite_of": ["the-protest-polka", "flooding", "need-safety", "need-seen"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Placeholder.",
+        "How to Use": "Placeholder."
+      },
+      "keywords": ["cycle", "pursue", "withdraw", "attachment-protest"],
+      "metadata": {
+        "source": "Johnson/Gottman"
+      }
+    },
+    {
+      "id": "l2-the-repair-kit",
+      "name": "The Repair Kit",
+      "symbol": "🧰",
+      "level": 2,
+      "category": "dynamics",
+      "sort_order": 57,
+      "composite_of": ["the-repair-attempt", "gentle-startup", "take-responsibility", "self-soothing", "the-apology"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Placeholder.",
+        "How to Use": "Placeholder."
+      },
+      "keywords": ["toolkit", "repair", "de-escalation", "skills"],
+      "metadata": {
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "l2-sound-house",
+      "name": "The Sound Relationship House",
+      "symbol": "🏛️",
+      "level": 2,
+      "category": "dynamics",
+      "sort_order": 58,
+      "composite_of": ["love-map-update", "fondness-admiration", "the-bid", "good-conflict", "shared-meaning", "trust", "commitment"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Placeholder.",
+        "How to Use": "Placeholder."
+      },
+      "keywords": ["architecture", "seven-floors", "foundation", "structure"],
+      "metadata": {
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "l2-attachment-in-action",
+      "name": "Attachment in Action",
+      "symbol": "💗",
+      "level": 2,
+      "category": "dynamics",
+      "sort_order": 59,
+      "composite_of": ["the-secure-base", "the-attachment-injury", "need-safety", "need-chosen", "the-softening"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Placeholder.",
+        "How to Use": "Placeholder."
+      },
+      "keywords": ["attachment", "are-you-there", "bonding", "eft"],
+      "metadata": {
+        "source": "Johnson/Bowlby"
+      }
+    },
+    {
+      "id": "l2-shadow-work-for-two",
+      "name": "Shadow Work for Two",
+      "symbol": "🌑",
+      "level": 2,
+      "category": "dynamics",
+      "sort_order": 60,
+      "composite_of": ["contempt", "criticism", "defensiveness", "stonewalling", "secret-keeping"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Placeholder.",
+        "How to Use": "Placeholder."
+      },
+      "keywords": ["shadow", "facing", "naming", "courage"],
+      "metadata": {
+        "source": "Gottman/Jung"
+      }
+    },
+    {
+      "id": "l2-daily-practice",
+      "name": "The Daily Practice",
+      "symbol": "☀️",
+      "level": 2,
+      "category": "dynamics",
+      "sort_order": 61,
+      "composite_of": ["the-ritual", "love-map-update", "fondness-admiration", "gratitude", "physical-affection"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Placeholder.",
+        "How to Use": "Placeholder."
+      },
+      "keywords": ["small-things-often", "daily", "ritual", "deposits"],
+      "metadata": {
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "l2-when-body-speaks",
+      "name": "When the Body Speaks",
+      "symbol": "🫀",
+      "level": 2,
+      "category": "dynamics",
+      "sort_order": 62,
+      "composite_of": ["flooding", "co-regulation", "self-soothing", "physical-affection", "need-comfort"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Placeholder.",
+        "How to Use": "Placeholder."
+      },
+      "keywords": ["somatic", "nervous-system", "heartbeat", "body"],
+      "metadata": {
+        "source": "Porges/Gottman"
+      }
+    },
+    {
+      "id": "l2-rewriting-together",
+      "name": "Rewriting the Story Together",
+      "symbol": "📝",
+      "level": 2,
+      "category": "dynamics",
+      "sort_order": 63,
+      "composite_of": ["the-story-edit", "the-story-of-us-negative", "the-dream-conversation", "shared-meaning"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Placeholder.",
+        "How to Use": "Placeholder."
+      },
+      "keywords": ["narrative", "story-of-us", "fondness", "rewriting"],
+      "metadata": {
+        "source": "Gottman"
+      }
+    },
+    {
+      "id": "l2-dialectics-of-love",
+      "name": "The Dialectics of Love",
+      "symbol": "☯️",
+      "level": 2,
+      "category": "dynamics",
+      "sort_order": 64,
+      "composite_of": ["need-autonomy", "need-belonging", "need-truth", "the-boundary", "accepting-influence"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Placeholder.",
+        "How to Use": "Placeholder."
+      },
+      "keywords": ["both-and", "dialectical", "paradox", "holding-opposites"],
+      "metadata": {
+        "source": "Linehan"
+      },
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/discourses-epictetus"]
+    },
+    {
+      "id": "l3-the-cycle",
+      "name": "The Cycle",
+      "symbol": "🌀",
+      "level": 3,
+      "category": "meta",
+      "sort_order": 65,
+      "composite_of": ["l2-the-gottman-cascade", "l2-pursue-withdraw", "l2-shadow-work-for-two"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Placeholder.",
+        "How to Use": "Placeholder."
+      },
+      "keywords": ["cycle", "pattern", "enemy", "naming"],
+      "metadata": {}
+    },
+    {
+      "id": "l3-the-bond",
+      "name": "The Bond",
+      "symbol": "💛",
+      "level": 3,
+      "category": "meta",
+      "sort_order": 66,
+      "composite_of": ["l2-attachment-in-action", "l2-sound-house", "l2-daily-practice"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Placeholder.",
+        "How to Use": "Placeholder."
+      },
+      "keywords": ["bond", "attachment", "connection", "responsiveness"],
+      "metadata": {}
+    },
+    {
+      "id": "l3-body-of-relationship",
+      "name": "The Body of the Relationship",
+      "symbol": "🫁",
+      "level": 3,
+      "category": "meta",
+      "sort_order": 67,
+      "composite_of": ["l2-when-body-speaks", "l2-dialectics-of-love"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Placeholder.",
+        "How to Use": "Placeholder."
+      },
+      "keywords": ["somatic", "nervous-system", "rhythm", "embodiment"],
+      "metadata": {}
+    },
+    {
+      "id": "l3-the-story",
+      "name": "The Story We Tell",
+      "symbol": "📚",
+      "level": 3,
+      "category": "meta",
+      "sort_order": 68,
+      "composite_of": ["l2-rewriting-together", "l2-the-repair-kit"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Placeholder.",
+        "How to Use": "Placeholder."
+      },
+      "keywords": ["narrative", "story-of-us", "meaning", "identity"],
+      "metadata": {}
+    }
+  ]
+}
