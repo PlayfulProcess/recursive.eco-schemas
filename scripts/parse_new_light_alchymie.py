@@ -261,8 +261,11 @@ def extract_sections(body):
         })
 
     # Of the Three Principles of All Things
-    of_sulphur_start = body.find('OF SVLPHVR:\n\n\n')
-    # This is the second occurrence (not the treatise title)
+    # Find the OF SVLPHVR: that comes AFTER the three principles section
+    of_sulphur_start = body.find('OF SVLPHVR:\n\n\n', principles_start if principles_start != -1 else 0)
+    if of_sulphur_start != -1 and of_sulphur_start < principles_start + 100:
+        # Too close — this is probably the wrong one; find the next one
+        of_sulphur_start = body.find('OF SVLPHVR:\n\n\n', of_sulphur_start + 100)
     if principles_start != -1 and of_sulphur_start != -1 and of_sulphur_start > principles_start:
         sections.append({
             'id': 'sulphur-three-principles',
