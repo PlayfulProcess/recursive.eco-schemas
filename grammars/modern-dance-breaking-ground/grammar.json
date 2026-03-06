@@ -1,0 +1,479 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "date": "2026",
+        "note": "Original grammar created from memory, tracing the lineages of modern and contemporary dance from Isadora Duncan's barefoot revolution to today's genre-defying artists."
+      }
+    ]
+  },
+  "name": "Modern Dance: Breaking Ground",
+  "description": "Modern dance begins with a refusal — Isadora Duncan takes off her shoes and corset. What follows is 120 years of artists inventing new ways to move, each generation rebelling against the last while building on it. This grammar maps the pioneers (Duncan, Graham, Cunningham), the lineage chains that connect them, and the meta-movements (liberation, system-building, system-demolishing, synthesis) that give the story its shape.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Photographs of Isadora Duncan by Arnold Genthe (1910s-1920s). Edward Steichen photographs of Martha Graham. Bauhaus stage design sketches by Oskar Schlemmer. Ruth St. Denis photographs in orientalist costume (early 1900s).",
+  "grammar_type": "custom",
+  "creator_name": "PlayfulProcess",
+  "tags": ["dance", "modern", "contemporary", "embodiment", "innovation", "rebellion", "lineage"],
+  "roots": ["embodiment", "liberation", "western-philosophy"],
+  "shelves": ["wonder", "resilience"],
+  "lineages": ["Akomolafe", "Andreotti"],
+  "worldview": "dialectical",
+  "grammars": [
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/ballet-living-architecture",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/anthropological-dance",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/theater-tree"
+  ],
+  "items": [
+    {
+      "id": "isadora-duncan",
+      "name": "Isadora Duncan — The Barefoot Prophet",
+      "sort_order": 1,
+      "category": "pioneer",
+      "level": 1,
+      "sections": {
+        "The Innovation": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Legacy": "Placeholder.",
+        "See It": "Placeholder."
+      },
+      "keywords": ["duncan", "freedom", "barefoot", "nature", "greek", "improvisation"],
+      "metadata": {}
+    },
+    {
+      "id": "loie-fuller",
+      "name": "Loïe Fuller — Light and Fabric",
+      "sort_order": 2,
+      "category": "pioneer",
+      "level": 1,
+      "sections": {
+        "The Innovation": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Legacy": "Placeholder.",
+        "See It": "Placeholder."
+      },
+      "keywords": ["fuller", "light", "silk", "technology", "art-nouveau", "spectacle"],
+      "metadata": {}
+    },
+    {
+      "id": "ruth-st-denis",
+      "name": "Ruth St. Denis — The Temple Dancer",
+      "sort_order": 3,
+      "category": "pioneer",
+      "level": 1,
+      "sections": {
+        "The Innovation": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Legacy": "Placeholder.",
+        "See It": "Placeholder."
+      },
+      "keywords": ["st-denis", "oriental", "spiritual", "denishawn", "spectacle"],
+      "metadata": {}
+    },
+    {
+      "id": "ted-shawn",
+      "name": "Ted Shawn — The Male Body on Stage",
+      "sort_order": 4,
+      "category": "pioneer",
+      "level": 1,
+      "sections": {
+        "The Innovation": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Legacy": "Placeholder.",
+        "See It": "Placeholder."
+      },
+      "keywords": ["shawn", "denishawn", "male-dance", "jacob-pillow", "athleticism"],
+      "metadata": {}
+    },
+    {
+      "id": "martha-graham",
+      "name": "Martha Graham — Contraction and Release",
+      "sort_order": 5,
+      "category": "pioneer",
+      "level": 1,
+      "sections": {
+        "The Innovation": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Legacy": "Placeholder.",
+        "See It": "Placeholder."
+      },
+      "keywords": ["graham", "contraction", "release", "pelvis", "myth", "technique"],
+      "metadata": {}
+    },
+    {
+      "id": "doris-humphrey",
+      "name": "Doris Humphrey — Fall and Recovery",
+      "sort_order": 6,
+      "category": "pioneer",
+      "level": 1,
+      "sections": {
+        "The Innovation": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Legacy": "Placeholder.",
+        "See It": "Placeholder."
+      },
+      "keywords": ["humphrey", "fall", "recovery", "gravity", "arc", "breath"],
+      "metadata": {}
+    },
+    {
+      "id": "katherine-dunham",
+      "name": "Katherine Dunham — The Anthropologist Who Danced",
+      "sort_order": 7,
+      "category": "pioneer",
+      "level": 1,
+      "sections": {
+        "The Innovation": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Legacy": "Placeholder.",
+        "See It": "Placeholder."
+      },
+      "keywords": ["dunham", "african-diaspora", "anthropology", "technique", "haiti", "isolation"],
+      "metadata": {}
+    },
+    {
+      "id": "mary-wigman",
+      "name": "Mary Wigman — Ausdruckstanz",
+      "sort_order": 8,
+      "category": "pioneer",
+      "level": 1,
+      "sections": {
+        "The Innovation": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Legacy": "Placeholder.",
+        "See It": "Placeholder."
+      },
+      "keywords": ["wigman", "expressionism", "germany", "mask", "witch-dance", "dark"],
+      "metadata": {}
+    },
+    {
+      "id": "merce-cunningham",
+      "name": "Merce Cunningham — Chance and Independence",
+      "sort_order": 9,
+      "category": "pioneer",
+      "level": 1,
+      "sections": {
+        "The Innovation": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Legacy": "Placeholder.",
+        "See It": "Placeholder."
+      },
+      "keywords": ["cunningham", "chance", "cage", "technology", "decentralized", "pure-movement"],
+      "metadata": {}
+    },
+    {
+      "id": "alvin-ailey",
+      "name": "Alvin Ailey — Revelations",
+      "sort_order": 10,
+      "category": "pioneer",
+      "level": 1,
+      "sections": {
+        "The Innovation": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Legacy": "Placeholder.",
+        "See It": "Placeholder."
+      },
+      "keywords": ["ailey", "revelations", "african-american", "spiritual", "glory", "popular"],
+      "metadata": {}
+    },
+    {
+      "id": "paul-taylor",
+      "name": "Paul Taylor — The Joyful Formalist",
+      "sort_order": 11,
+      "category": "pioneer",
+      "level": 1,
+      "sections": {
+        "The Innovation": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Legacy": "Placeholder.",
+        "See It": "Placeholder."
+      },
+      "keywords": ["taylor", "joy", "dark", "musicality", "american", "esplanade"],
+      "metadata": {}
+    },
+    {
+      "id": "yvonne-rainer",
+      "name": "Yvonne Rainer — No to Spectacle",
+      "sort_order": 12,
+      "category": "pioneer",
+      "level": 1,
+      "sections": {
+        "The Innovation": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Legacy": "Placeholder.",
+        "See It": "Placeholder."
+      },
+      "keywords": ["rainer", "judson", "pedestrian", "no-manifesto", "minimalism", "postmodern"],
+      "metadata": {}
+    },
+    {
+      "id": "steve-paxton",
+      "name": "Steve Paxton — Contact Improvisation",
+      "sort_order": 13,
+      "category": "pioneer",
+      "level": 1,
+      "sections": {
+        "The Innovation": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Legacy": "Placeholder.",
+        "See It": "Placeholder."
+      },
+      "keywords": ["paxton", "contact", "improvisation", "weight", "touch", "democracy"],
+      "metadata": {}
+    },
+    {
+      "id": "twyla-tharp",
+      "name": "Twyla Tharp — The Crossover Artist",
+      "sort_order": 14,
+      "category": "pioneer",
+      "level": 1,
+      "sections": {
+        "The Innovation": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Legacy": "Placeholder.",
+        "See It": "Placeholder."
+      },
+      "keywords": ["tharp", "crossover", "ballet", "pop", "broadway", "virtuosity"],
+      "metadata": {}
+    },
+    {
+      "id": "pina-bausch",
+      "name": "Pina Bausch — Tanztheater",
+      "sort_order": 15,
+      "category": "pioneer",
+      "level": 1,
+      "sections": {
+        "The Innovation": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Legacy": "Placeholder.",
+        "See It": "Placeholder."
+      },
+      "keywords": ["bausch", "tanztheater", "wuppertal", "emotion", "repetition", "theater"],
+      "metadata": {}
+    },
+    {
+      "id": "bill-t-jones",
+      "name": "Bill T. Jones — The Political Body",
+      "sort_order": 16,
+      "category": "pioneer",
+      "level": 1,
+      "sections": {
+        "The Innovation": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Legacy": "Placeholder.",
+        "See It": "Placeholder."
+      },
+      "keywords": ["jones", "political", "aids", "identity", "text", "still-here"],
+      "metadata": {}
+    },
+    {
+      "id": "ohad-naharin",
+      "name": "Ohad Naharin — Gaga Movement Language",
+      "sort_order": 17,
+      "category": "pioneer",
+      "level": 1,
+      "sections": {
+        "The Innovation": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Legacy": "Placeholder.",
+        "See It": "Placeholder."
+      },
+      "keywords": ["naharin", "gaga", "batsheva", "sensation", "pleasure", "effort"],
+      "metadata": {}
+    },
+    {
+      "id": "crystal-pite",
+      "name": "Crystal Pite — The Choreographic Mind",
+      "sort_order": 18,
+      "category": "pioneer",
+      "level": 1,
+      "sections": {
+        "The Innovation": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Legacy": "Placeholder.",
+        "See It": "Placeholder."
+      },
+      "keywords": ["pite", "kidd-pivot", "narrative", "text", "ensemble", "precision"],
+      "metadata": {}
+    },
+    {
+      "id": "akram-khan",
+      "name": "Akram Khan — Where Kathak Meets Contemporary",
+      "sort_order": 19,
+      "category": "pioneer",
+      "level": 1,
+      "sections": {
+        "The Innovation": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Legacy": "Placeholder.",
+        "See It": "Placeholder."
+      },
+      "keywords": ["khan", "kathak", "contemporary", "hybrid", "storytelling", "identity"],
+      "metadata": {}
+    },
+    {
+      "id": "hofesh-shechter",
+      "name": "Hofesh Shechter — The Sound of Movement",
+      "sort_order": 20,
+      "category": "pioneer",
+      "level": 1,
+      "sections": {
+        "The Innovation": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Legacy": "Placeholder.",
+        "See It": "Placeholder."
+      },
+      "keywords": ["shechter", "music", "primal", "ensemble", "darkness", "rhythm"],
+      "metadata": {}
+    },
+    {
+      "id": "line-duncan",
+      "name": "The Duncan Line — From Nature to Denishawn",
+      "sort_order": 21,
+      "category": "lineage",
+      "level": 2,
+      "composite_of": ["isadora-duncan", "loie-fuller", "ruth-st-denis", "ted-shawn"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Through-Line": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["duncan", "denishawn", "origins", "freedom", "nature"],
+      "metadata": {}
+    },
+    {
+      "id": "line-graham",
+      "name": "The Graham Tree — Technique Becomes Language",
+      "sort_order": 22,
+      "category": "lineage",
+      "level": 2,
+      "composite_of": ["martha-graham", "paul-taylor", "twyla-tharp", "merce-cunningham"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Through-Line": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["graham", "technique", "rebellion", "american"],
+      "metadata": {}
+    },
+    {
+      "id": "line-cunningham",
+      "name": "The Cunningham Branch — Chance, Pedestrian, Contact",
+      "sort_order": 23,
+      "category": "lineage",
+      "level": 2,
+      "composite_of": ["merce-cunningham", "yvonne-rainer", "steve-paxton"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Through-Line": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["cunningham", "judson", "postmodern", "democracy", "chance"],
+      "metadata": {}
+    },
+    {
+      "id": "line-european",
+      "name": "The European Thread — Expression to Tanztheater",
+      "sort_order": 24,
+      "category": "lineage",
+      "level": 2,
+      "composite_of": ["mary-wigman", "pina-bausch"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Through-Line": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["european", "expressionism", "tanztheater", "germany", "emotion"],
+      "metadata": {}
+    },
+    {
+      "id": "line-diaspora",
+      "name": "The African Diaspora — From Dunham to Ailey to Now",
+      "sort_order": 25,
+      "category": "lineage",
+      "level": 2,
+      "composite_of": ["katherine-dunham", "alvin-ailey", "bill-t-jones"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Through-Line": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["african-diaspora", "dunham", "ailey", "jones", "identity", "spirituality"],
+      "metadata": {}
+    },
+    {
+      "id": "line-contemporary",
+      "name": "The Contemporary Synthesis — Everybody's Child",
+      "sort_order": 26,
+      "category": "lineage",
+      "level": 2,
+      "composite_of": ["ohad-naharin", "crystal-pite", "akram-khan", "hofesh-shechter"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Through-Line": "Placeholder.",
+        "For Practitioners": "Placeholder."
+      },
+      "keywords": ["contemporary", "hybrid", "global", "synthesis", "genre-defying"],
+      "metadata": {}
+    },
+    {
+      "id": "meta-breaking-free",
+      "name": "Breaking Free — The First Generation",
+      "sort_order": 27,
+      "category": "meta-movement",
+      "level": 3,
+      "composite_of": ["line-duncan"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Bigger Picture": "Placeholder."
+      },
+      "keywords": ["liberation", "barefoot", "corset", "nature", "origins"],
+      "metadata": {}
+    },
+    {
+      "id": "meta-building-systems",
+      "name": "Building Systems — The Codifiers",
+      "sort_order": 28,
+      "category": "meta-movement",
+      "level": 3,
+      "composite_of": ["line-graham", "line-european"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Bigger Picture": "Placeholder."
+      },
+      "keywords": ["technique", "system", "codification", "training", "rigor"],
+      "metadata": {}
+    },
+    {
+      "id": "meta-demolishing-systems",
+      "name": "Demolishing Systems — The Postmoderns",
+      "sort_order": 29,
+      "category": "meta-movement",
+      "level": 3,
+      "composite_of": ["line-cunningham"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Bigger Picture": "Placeholder."
+      },
+      "keywords": ["postmodern", "demolition", "pedestrian", "democracy", "anti-technique"],
+      "metadata": {}
+    },
+    {
+      "id": "meta-rebuilding",
+      "name": "Rebuilding With Everything — The Contemporary Moment",
+      "sort_order": 30,
+      "category": "meta-movement",
+      "level": 3,
+      "composite_of": ["line-diaspora", "line-contemporary"],
+      "sections": {
+        "About": "Placeholder.",
+        "The Body Speaks": "Placeholder.",
+        "The Bigger Picture": "Placeholder."
+      },
+      "keywords": ["synthesis", "hybrid", "global", "identity", "everything"],
+      "metadata": {}
+    }
+  ]
+}
