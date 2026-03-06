@@ -1,0 +1,524 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "date": "2026",
+        "note": "Original grammar created from memory, tracing ballet from the court of Louis XIV through Romantic and Classical eras to contemporary deconstruction."
+      }
+    ]
+  },
+  "name": "Ballet: A Living Architecture",
+  "description": "Ballet is architecture in motion — a 400-year tradition of codified positions, geometries of the body, and gravity-defying feats that evolved from courtly entertainment to one of humanity's most demanding art forms. This grammar maps the vocabulary (positions, steps, jumps), the canon (Swan Lake to The Rite of Spring), and the eras (court ballet to contemporary) — always asking what the body is being asked to do, and why.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Edgar Degas, ballet paintings and pastels (1870s-1890s). Engravings from Raoul-Auger Feuillet's *Chorégraphie* (1700). Lithographs of Marie Taglioni and Romantic era ballerinas. Henri de Toulouse-Lautrec, dance-hall paintings.",
+  "grammar_type": "custom",
+  "creator_name": "PlayfulProcess",
+  "tags": ["ballet", "dance", "embodiment", "architecture", "classical", "european", "discipline"],
+  "roots": ["western-philosophy", "embodiment"],
+  "shelves": ["wonder"],
+  "lineages": ["Kelty"],
+  "worldview": "rationalist",
+  "grammars": [
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/modern-dance-breaking-ground",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/anthropological-dance",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/human-body"
+  ],
+  "items": [
+    {
+      "id": "first-position",
+      "name": "First Position — The Beginning",
+      "sort_order": 1,
+      "category": "position",
+      "level": 1,
+      "sections": {
+        "The Movement": "Heels touching, toes turned outward, legs straight, weight distributed equally on both feet. Arms in a gentle oval below the navel (bras bas). The spine is long, the shoulders are down, the chin is level. It looks simple — a child can do it in seconds. But doing it correctly, with true rotation from the hip sockets, full engagement of the deep rotators, the pelvis neither tucked nor tipped — this is the work of years.",
+        "The Feeling": "First position feels like zero — the blank page, the breath before speech. Everything begins here and returns here. It is the dancer's home address, the place from which all movement departs and to which all movement resolves. Standing in first position well is an act of complete presence: nothing is happening, but everything is possible.",
+        "The History": "Pierre Beauchamps, ballet master to Louis XIV, codified the five positions around 1680 — though the turned-out stance likely predates him in court dance. The genius of codification was this: by establishing fixed starting and ending positions, Beauchamps created a grammar that could be written, taught, and transmitted across generations and borders. First position is the first letter of that alphabet.",
+        "Watch For": "The quality of a dancer's first position tells you almost everything about their training. Look for rotation that comes from the hips, not the knees or ankles. Look for a long, neutral spine — no arching, no tucking. Look for ease: a great first position looks effortless because the alignment is doing the work, not muscular force. The body should look like a building standing on its foundation — organized, quiet, ready."
+      },
+      "keywords": ["position", "foundation", "turnout", "alignment"],
+      "metadata": {}
+    },
+    {
+      "id": "second-position",
+      "name": "Second Position — The Opening",
+      "sort_order": 2,
+      "category": "position",
+      "level": 1,
+      "sections": {
+        "The Movement": "Feet apart, roughly shoulder-width, toes turned out. Arms open to the sides in a long, gently curved line (second position arms). The body occupies more space now — a statement of width, of presence, of openness. The challenge shifts from alignment to stability: maintaining the turnout with the feet apart requires the inner thighs and deep rotators to work in concert.",
+        "The Feeling": "Second position feels like welcome — arms open, chest open, a generous claiming of space. It is the position of reception and display. Where first position gathers inward, second position radiates outward. There is a regal quality: think of a king surveying his domain, or a dancer at the height of an adagio, arms wide, balanced on one leg.",
+        "The History": "Second position appears throughout court dance as the position of display. The wide stance, the open arms — these are the gestures of someone who owns the room. In the Sun King's court, where ballet was born, spatial command was political: how much room you occupied was a statement of rank. The vocabulary of ballet carries this aristocratic DNA. Every grand plié in second position is a distant echo of Versailles.",
+        "Watch For": "In second position, watch for the tendency to splay the feet wider than the hips can support — forcing turnout from the ankles rather than rotating from the hip sockets. The knees should track directly over the toes. The arms should extend without tension, the hands alive but not stiff. Second position grande plié is one of the most demanding early-class exercises: the depth of the bend reveals the dancer's true flexibility and strength."
+      },
+      "keywords": ["position", "wide", "stability", "port-de-bras"],
+      "metadata": {}
+    },
+    {
+      "id": "third-position",
+      "name": "Third Position — The Crossing",
+      "sort_order": 3,
+      "category": "position",
+      "level": 1,
+      "sections": {
+        "The Movement": "One foot placed in front of the other, the heel of the front foot touching the arch of the back foot. Turnout maintained in both legs. Arms typically in third position: one arm curved in front of the body (first position arms), the other extended to the side (second position arms). It is the first asymmetrical position — the body is no longer the same on both sides.",
+        "The Feeling": "Third position introduces tension — the asymmetry of front and back, the imbalance that creates the possibility of movement. Where first and second positions are stable, third is already leaning toward departure. It is the position of 'about to' — the body beginning to organize itself for action.",
+        "The History": "Third position is the least used of the five in professional ballet — it has been largely absorbed by the more demanding fifth position. But it remains important in teaching: it is the bridge between the open symmetry of first and second and the tight cross of fifth. For beginners, third position teaches the concept of crossing without the extreme rotation that fifth demands. It is the training wheels of ballet positions.",
+        "Watch For": "Third position reveals whether a student is ready for fifth. If the front heel touches the back arch cleanly, with both legs rotated, the body is developing the necessary range. If the front foot slides forward to avoid the cross, or the back knee rolls inward, the rotation isn't there yet. Third position is honest — it shows where the body is without allowing the compensations that fifth position can hide."
+      },
+      "keywords": ["position", "crossing", "transitional"],
+      "metadata": {}
+    },
+    {
+      "id": "fourth-position",
+      "name": "Fourth Position — The Preparation",
+      "sort_order": 4,
+      "category": "position",
+      "level": 1,
+      "sections": {
+        "The Movement": "One foot in front of the other, separated by roughly a foot's length, toes turned out. It is like first position split front-to-back — or like fifth position with a gap. The weight must be centered between both feet, which requires significant core engagement. Arms typically in fourth position: one in first (front oval), one in fifth (overhead).",
+        "The Feeling": "Fourth position is suspense. The body is split between forward and backward, poised between advance and retreat. It is the preparation position for pirouettes — the coiled-spring moment before the turn. There is an inherent drama to fourth: the body held in opposition, the front arm reaching toward something, the back foot anchoring to something, the center suspended between.",
+        "The History": "Fourth position is the most contested of the five — different schools (Vaganova, Cecchetti, RAD, Bournonville) define it differently, particularly the relationship between the front and back feet. This disagreement is a microcosm of ballet's larger history: a tradition that appears monolithic but is actually a family of related but distinct schools, each with its own aesthetic priorities and technical solutions.",
+        "Watch For": "Fourth position is the test of a dancer's center. If the weight shifts too far forward, the back foot becomes decorative. If too far back, the front foot loses contact. Watch for the pelvis: it should remain square, level, and centered despite the front-back split. In the preparation for pirouette, the quality of fourth position determines the quality of the turn — a centered fourth produces a centered spin."
+      },
+      "keywords": ["position", "split", "preparation", "pirouette"],
+      "metadata": {}
+    },
+    {
+      "id": "fifth-position",
+      "name": "Fifth Position — The Lock",
+      "sort_order": 5,
+      "category": "position",
+      "level": 1,
+      "sections": {
+        "The Movement": "Feet fully crossed, the toe of each foot touching the heel of the other, both legs turned out from the hips. Fifth position is the most demanding and most important of the five — it is the default position from which most ballet movement begins and ends. The feet should be so tightly crossed that no light passes between them. Achieving this with true hip rotation (not forced from the knees) requires years of training.",
+        "The Feeling": "Fifth position feels like a locked door — complete, contained, ready. It is the highest concentration of ballet's principle of turnout: the legs rotated to their maximum, the feet interleaved like fingers clasped together. There is a satisfaction to a well-held fifth — the body organized to its tightest, most precise configuration, a coiled spring of potential energy.",
+        "The History": "Fifth position is Beauchamps' greatest innovation and ballet's defining shape. No other dance form in the world asks the human body to stand with feet fully crossed and externally rotated. This extreme position makes possible the entire vocabulary that follows: jumps that begin and end in crossed feet, turns from crossed preparations, the illusion of effortlessness that comes from having mastered the most effortful stance. Fifth position is the signature of classical ballet — the thing that makes it ballet and not anything else.",
+        "Watch For": "Fifth position is where injuries begin if forced. Watch for knees that roll inward (the rotation is coming from the ankles, not the hips). Watch for feet that wing (the weight falls to the inside edge). Watch for a pelvis that tucks under to create the illusion of more turnout. A clean fifth position — truly rotated from the hips, weight centered, spine long — is one of the rarest and most beautiful sights in dance. It is the measure of a classical dancer."
+      },
+      "keywords": ["position", "closed", "demanding", "foundation"],
+      "metadata": {}
+    },
+    {
+      "id": "plie",
+      "name": "Plié — The Bend",
+      "sort_order": 6,
+      "category": "step",
+      "level": 1,
+      "sections": {
+        "The Movement": "Plié (from plier, to bend) is the bending of the knees with the back held straight and the turnout maintained. Demi-plié: a half-bend, heels stay on the floor. Grand plié: a full bend, heels lift in most positions (except second). Every ballet class begins with pliés at the barre, in every position, because plié is the foundation of everything: every jump launches from and lands in plié, every turn begins from plié, every transition passes through plié.",
+        "The Feeling": "Plié is yielding — the body's conversation with gravity. It is the only movement in ballet that goes down rather than up. There is a quality of gathering: energy compresses into the legs like a spring loading. In grand plié, the deepest moment feels like sinking into the earth — and the rise out of it feels like the earth pushing you back up. A good plié has the quality of breath: inhale down, exhale up.",
+        "The History": "Plié has been the opening exercise of ballet class since classes have existed. It warms the joints gradually (ankles, knees, hips), stretches the Achilles tendons, and establishes the turnout that will be maintained throughout class. Its pedagogical position — first exercise, every class — reflects its metaphysical position in the ballet universe: without plié, nothing else works. You can skip barre exercises; you cannot skip pliés.",
+        "Watch For": "In plié, watch the knees: they should track directly over the middle toes, never rolling inward. Watch the back: it should remain vertical, not tilting forward. Watch the heels: in demi-plié they press firmly into the floor, creating the stretch in the Achilles that will make jumps possible. The speed of a plié reveals its purpose: slow pliés in class are for warming up; fast pliés in allegro are the shock absorbers that make spectacular jumps look effortless."
+      },
+      "keywords": ["plie", "bend", "foundation", "warm-up", "knees"],
+      "metadata": {}
+    },
+    {
+      "id": "tendu",
+      "name": "Tendu — The Stretch",
+      "sort_order": 7,
+      "category": "step",
+      "level": 1,
+      "sections": {
+        "The Movement": "Battement tendu (stretched beating): the working foot slides along the floor from a closed position (first or fifth) to a fully pointed position, toe still touching the ground, then returns. The leg extends front, side, or back — and the entire foot articulates through its length: heel lifts, arch stretches, toe points, then the reverse. Hundreds of tendus in every class. Thousands in a week. Millions in a career.",
+        "The Feeling": "Tendu is the act of reaching — the foot stretches toward the horizon without leaving the earth. It is desire with restraint, extension with connection. The working leg extends but the standing leg holds firm: a conversation between going and staying. Fast tendus have a sharpness, a snapping quality; slow tendus have a luxurious, stretching quality. Both are essential.",
+        "The History": "The tendu is the single most repeated movement in ballet training. Agrippina Vaganova, the great Russian pedagogue, considered tendus the foundation of all technique: 'The tendu teaches the foot how to speak.' Every grande battement, every jeté, every jump begins with the foot articulation that tendu drills into the body. It is the scales of ballet — unglamorous, repetitive, and absolutely indispensable.",
+        "Watch For": "Watch the foot in tendu: it should slide through the floor (not lift off), fully articulating through the metatarsals to a pointed toe. The heel leads on the way out (front tendu), and the toe leads on the return. Watch for the standing leg: it should remain absolutely still and straight. The hip should not hike up. A perfect tendu is invisible technique — so ingrained that the foot knows its path without conscious direction."
+      },
+      "keywords": ["tendu", "stretch", "foot", "articulation", "barre"],
+      "metadata": {}
+    },
+    {
+      "id": "releve",
+      "name": "Relevé — The Rise",
+      "sort_order": 8,
+      "category": "step",
+      "level": 1,
+      "sections": {
+        "The Movement": "Relevé (from relever, to raise): the dancer rises from flat feet to the balls of the feet (demi-pointe) or, for women in pointe shoes, to the tips of the toes (full pointe). The rise can be gradual (rolling through the foot) or sudden (springing up). In either case, the body's center of gravity lifts, the calves engage, the ankles stabilize, and the dancer balances on a dramatically reduced base of support.",
+        "The Feeling": "Relevé is aspiration made physical — the body reaching upward against gravity. On demi-pointe, the world shifts: you are taller, lighter, less grounded, more precarious. On full pointe, the sensation is almost transcendent — the body balanced on an impossibly small point, defying the earth's pull through a combination of strength, alignment, and will. Every relevé contains a micro-drama: the earth releases you, then reclaims you.",
+        "The History": "The rise to demi-pointe has been part of ballet from the beginning, but full pointe work emerged in the early 1800s, with Marie Taglioni often credited as the first to dance an entire role on pointe (La Sylphide, 1832). The development of the reinforced pointe shoe — that deceptive pink satin block of wood, paste, and fabric — made possible the ethereal aesthetic of Romantic ballet: women as weightless spirits, barely touching the earth.",
+        "Watch For": "In relevé, watch for the alignment of the ankle: it should be straight, not rolling in or out (sickling). Watch for the height: a strong relevé reaches the highest point of the metatarsal arch. Watch for the descent: a controlled lowering through the foot is as important as the rise. The best relevés look effortless — as if gravity simply decided not to apply."
+      },
+      "keywords": ["releve", "rise", "demi-pointe", "pointe", "balance"],
+      "metadata": {}
+    },
+    {
+      "id": "arabesque",
+      "name": "Arabesque — The Line",
+      "sort_order": 9,
+      "category": "step",
+      "level": 1,
+      "sections": {
+        "The Movement": "The dancer stands on one leg while the other extends behind — straight, turned out, lifted. One arm reaches forward, the other opens to the side or behind. The body creates a single line from fingertip to toe that stretches across the maximum possible space. There are four numbered arabesques in most schools, differing in the arrangement of arms and the direction the body faces. In all of them, the extended line is the point — the body reaching in two directions simultaneously, balanced on a single point.",
+        "The Feeling": "Arabesque feels like flight without leaving the ground. The back leg lifts, the front arm reaches, and the body becomes a vector — pointing toward something, striving for something. It is ballet's most iconic shape, the one that appears on every logo and poster, because it captures the art form's central aspiration: to transform the human body into a line of beauty that seems to defy gravity and anatomy simultaneously.",
+        "The History": "The name comes from the arabesque patterns of Islamic art — those flowing, interweaving lines that suggest infinity through repetition. The ballet arabesque captures that same aesthetic of the infinite line, and the same tension between geometry and organic form. The arabesque evolved from a modest extended leg in 18th-century dance to the extreme 180-degree extensions of contemporary ballet, tracing the art form's gradual push toward ever more spectacular bodies.",
+        "Watch For": "In arabesque, look for the quality of the line: does it flow continuously from hand through shoulder through spine through extended leg to pointed toe? Or does it break at the shoulder, the hip, the knee? The back should not arch excessively — the lift comes from the leg, not from collapsing the spine. The standing leg should be straight and strong, the hip of the extended leg pulled down rather than hiked up. A great arabesque looks effortless and inevitable, as if the body simply grew into that shape."
+      },
+      "keywords": ["arabesque", "line", "extension", "back", "iconic"],
+      "metadata": {}
+    },
+    {
+      "id": "pirouette",
+      "name": "Pirouette — The Turn",
+      "sort_order": 10,
+      "category": "step",
+      "level": 1,
+      "sections": {
+        "The Movement": "A controlled spin on one leg, the other drawn up (usually in retiré — toe touching the knee of the standing leg). The turn is initiated from a preparation (typically fourth or fifth position), driven by a coordinated push from the legs and a twist of the torso, and controlled by 'spotting' — the technique of fixing the gaze on one point and whipping the head around at the last moment to find that point again. Single, double, triple, and beyond: professional dancers routinely execute multiple pirouettes.",
+        "The Feeling": "A pirouette is a small act of faith — you push off and for a moment you are spinning, the room blurring, held together only by your center, your spot, and the physics of angular momentum. A good pirouette feels like stillness inside motion: the body is turning, but if the axis is true, the dancer's experience at the center is calm. A bad pirouette feels like falling sideways in a circle. The difference is in the preparation.",
+        "The History": "Pirouettes became a competitive showpiece in the 18th and 19th centuries — male dancers vied for records, and the development of spotting technique (often attributed to Italian dancers) made multiple turns possible. Balanchine's neoclassical style made pirouettes faster and more numerous; contemporary ballet has pushed toward seemingly impossible counts. But the real revolution was subtler: the recognition that a perfectly controlled single pirouette can be more beautiful than a wobbly quadruple.",
+        "Watch For": "Watch the preparation: a clean fourth or fifth position relevé. Watch the spot: the head should arrive before the body on each revolution. Watch the finish: a good pirouette ends in a clear, held position (usually fourth or fifth), not a stumble. The most revealing moment is the transition from spinning to stillness — the dancer who can stop on a dime, balanced, composed, has mastered the pirouette not just as a trick but as a movement."
+      },
+      "keywords": ["pirouette", "turn", "spot", "balance", "centripetal"],
+      "metadata": {}
+    },
+    {
+      "id": "grand-jete",
+      "name": "Grand Jeté — The Great Leap",
+      "sort_order": 11,
+      "category": "step",
+      "level": 1,
+      "sections": {
+        "The Movement": "A running leap where the dancer pushes off one foot, splits both legs in the air (front leg reaching forward, back leg reaching back), and lands on the front foot. At the peak of a grand jeté, the body is airborne in a full split — suspended, for a fraction of a second, in defiance of gravity. The approach run provides momentum; the plié on the launching leg provides spring; the arms provide lift; and the landing plié absorbs the impact.",
+        "The Feeling": "Grand jeté is the closest ballet comes to flight. For the briefest moment — a tenth of a second, maybe two — the dancer is free of the earth, legs split wide, body soaring. The audience gasps not at the split (which is a flexibility feat) but at the hang time — that impossible-seeming pause at the top of the arc. The feeling for the dancer is one of expansion: everything extends outward, the body becomes as large as possible in space.",
+        "The History": "The grand jeté has become ballet's most photographed moment — the male dancer frozen at the apex of his leap, the female dancer soaring across the stage. Rudolf Nureyev and Mikhail Baryshnikov turned the male grand jeté into a competitive event, pushing height and extension to new limits. Sylvie Guillem's 180-degree extensions redefined what the female grand jeté could look like. The step remains the public face of ballet: raw, spectacular, undeniable.",
+        "Watch For": "The quality of a grand jeté is in the arc, not just the height. Watch for even split — both legs equally extended. Watch for the moment of suspension at the top (great dancers seem to hover). Watch the landing: it should be in a controlled plié, silent, the impact absorbed. Listen: a loud landing means the dancer's technique isn't cushioning the fall. The best grand jetés are both silent and enormous."
+      },
+      "keywords": ["jete", "leap", "split", "flight", "power"],
+      "metadata": {}
+    },
+    {
+      "id": "fouette",
+      "name": "Fouetté — The Whip",
+      "sort_order": 12,
+      "category": "step",
+      "level": 1,
+      "sections": {
+        "The Movement": "Fouetté en tournant (whipped turning): the dancer spins on one leg while the working leg whips out to the side and back in to retiré with each revolution, generating fresh momentum for the next turn. The classic challenge is 32 consecutive fouettés — the Black Swan variation in Swan Lake, Act III. Each revolution requires the working leg to extend, whip around, and retract while the standing leg maintains its axis on pointe or demi-pointe.",
+        "The Feeling": "Fouettés feel like controlled violence — the working leg is a whip, generating centripetal force with each crack, the standing leg a drill bit turning on its axis. The challenge is not the first fouetté but the fifteenth, the twenty-fifth, the thirty-second: as fatigue accumulates, the axis drifts, the working leg shortens its arc, and the dancer must battle the creeping pull of entropy. Completing 32 clean fouettés is one of ballet's supreme athletic feats.",
+        "The History": "The 32 fouettés were first performed by Pierina Legnani in 1893, in the original St. Petersburg production of Swan Lake. The audience was so astonished they demanded an encore. The passage became fixed in the choreography and has been the benchmark for female technical virtuosity ever since. Generations of ballerinas have been judged by their fouettés — how many, how clean, how centered. It is ballet's equivalent of hitting a home run.",
+        "Watch For": "Watch whether the dancer stays in place or travels across the stage (traveling means the axis is off). Watch the working leg: does it extend fully with each revolution, or does fatigue shorten it? Watch the arms: they should open and close with rhythmic precision, like a metronome. Watch the face: the best fouetté performers look calm, even joyful, while executing what is essentially a feat of extraordinary physical endurance."
+      },
+      "keywords": ["fouette", "whip", "turn", "virtuosity", "black-swan"],
+      "metadata": {}
+    },
+    {
+      "id": "pas-de-deux",
+      "name": "Pas de Deux — The Dance for Two",
+      "sort_order": 13,
+      "category": "step",
+      "level": 1,
+      "sections": {
+        "The Movement": "The pas de deux (step for two) is the duet form in ballet — typically a man and woman dancing together. The classical grand pas de deux follows a fixed structure: entrée (introduction), adagio (slow partnered section), male variation (solo), female variation (solo), and coda (finale together). In the adagio, the man supports, lifts, and turns the woman, enabling shapes and balances she could not achieve alone. In the variations, each dancer displays their individual virtuosity.",
+        "The Feeling": "The pas de deux is the architecture of intimacy. The adagio requires absolute trust: the woman extends into impossible balances supported only by her partner's hand; the man lifts her overhead with a combination of strength and precision that leaves no room for error. When it works, the two bodies become one instrument — breathing together, counterbalancing, communicating through pressure and timing. When it fails, the mechanics become visible and the magic collapses.",
+        "The History": "The pas de deux evolved from the social dances of the French court into the central dramatic event of classical ballet. Petipa codified the grand pas de deux structure in the late 19th century — the same structure used in Swan Lake, Sleeping Beauty, and Don Quixote. In the 20th century, choreographers from Balanchine to MacMillan to Forsythe reinvented partnering, making it more athletic, more sexual, more brutal, more equal. Contemporary pas de deux often dispenses with gender roles entirely.",
+        "Watch For": "In pas de deux, watch for the invisible: the hand at the waist that makes the balance possible, the precise timing of a lift that makes it look effortless, the eye contact that tells a story. Great partnering is selfless — the man's job is to make the woman look as if she is floating, flying, spinning without assistance. Watch the transitions: how they move from one shape to another, whether the mechanics are visible or concealed. The greatest pas de deux partnerships (Fonteyn/Nureyev, Vishneva/Malakhov) create the illusion that two bodies share one nervous system."
+      },
+      "keywords": ["pas-de-deux", "partner", "adagio", "trust", "duet"],
+      "metadata": {}
+    },
+    {
+      "id": "port-de-bras",
+      "name": "Port de Bras — The Carriage of Arms",
+      "sort_order": 14,
+      "category": "step",
+      "level": 1,
+      "sections": {
+        "The Movement": "Port de bras (carriage of the arms) refers to the movement of the arms through the established positions: bras bas (low), first (oval in front), second (open to sides), third (one front, one side), fourth (one front, one up), and fifth (overhead). The arms should move through these positions with continuous, flowing motion — never sharp, never angular, never dead. The wrists lead, the elbows follow, the fingers arrive last, creating a wave-like quality.",
+        "The Feeling": "If the legs are ballet's engine, the arms are its poetry. Port de bras is where technique meets artistry — where the dancer stops being an athlete and becomes a musician. Good port de bras breathes: the arms inhale upward, exhale downward, float through space as if moving through water. The quality of a dancer's arms often determines whether a performance is merely technically impressive or genuinely moving.",
+        "The History": "The French school has always emphasized port de bras — the épaulement (subtle angling of the shoulders), the coordination of head and arms, the quality of the hands. The Russian Vaganova method systematized port de bras into numbered exercises. Balanchine stripped arms to their essentials, making them sharper and faster. Bournonville (Danish school) gave the arms a particular buoyancy. Each school's arm style is as distinctive as a painter's brushwork.",
+        "Watch For": "Watch the hands: they should be alive but not tense, fingers gently grouped (not splayed). Watch the transition between positions: the arms should move through space, not simply arrive at positions. Watch the coordination with the head: in classical épaulement, the head tilts gently toward the lower arm, creating a diagonal line through the body. Port de bras is the first thing a trained eye notices and the last thing an untrained eye sees."
+      },
+      "keywords": ["port-de-bras", "arms", "grace", "upper-body", "expression"],
+      "metadata": {}
+    },
+    {
+      "id": "entrechat",
+      "name": "Entrechat — The Beating Wings",
+      "sort_order": 15,
+      "category": "step",
+      "level": 1,
+      "sections": {
+        "The Movement": "A vertical jump from fifth position in which the feet change position rapidly in the air — the legs beat together like scissors before landing. Entrechat quatre: jump, cross, uncross, land. Entrechat six: jump, cross, uncross, cross again, land. The number refers to the total crossings of the legs. Entrechat huit (eight crossings) is the province of exceptional male dancers — the feet must beat four times before gravity reclaims the body.",
+        "The Feeling": "Entrechats feel like flight confined to a vertical column — you go straight up, your legs do impossible things in mid-air, and you return to exactly where you started. The speed is the thrill: the legs must beat faster than the eye can follow. For the dancer, there is a quality of contained explosion — maximum activity in minimum space and time. The landing should feel like arriving home: fifth position, clean, quiet.",
+        "The History": "Legend attributes spectacular entrechats to 18th-century virtuosi like Auguste Vestris, who allegedly performed entrechat douze (twelve crossings). Whether true or not, the entrechat has always been a measure of male technical prowess — the vertical equivalent of the pirouette competition. Nijinsky was famed for his entrechat dix (ten crossings) and his ability to pause at the top of his jump. The entrechat remains a standard test of elevation and speed in male variations.",
+        "Watch For": "Watch for crispness: each beat should be audible (if the dancer wears soft shoes) or visible — clean crossings with fully pointed feet, not a blur of fluttering ankles. Watch the landing: it should be in a clean fifth position, knees over toes, silent. Count the beats if you can — distinguishing entrechat quatre from six requires practice. Watch the body: everything above the waist should remain calm and elegant while the legs work at hummingbird speed below."
+      },
+      "keywords": ["entrechat", "beats", "jump", "speed", "virtuosity"],
+      "metadata": {}
+    },
+    {
+      "id": "pointe-work",
+      "name": "Pointe Work — Dancing on the Impossible",
+      "sort_order": 16,
+      "category": "step",
+      "level": 1,
+      "sections": {
+        "The Movement": "Dancing on the tips of the toes, supported by specially constructed pointe shoes — stiffened boxes of satin, paste, burlap, and cardboard that create a small platform at the toe. The dancer rises (relevé) onto the platform and performs the full ballet vocabulary from this reduced base of support. Pointe work requires extraordinary strength in the feet, ankles, calves, and core — years of preparation before a student is ready for her first pair of pointe shoes, typically around age 11-12.",
+        "The Feeling": "Dancing on pointe is dancing on a knife's edge — the margin between balanced and falling is measured in millimeters. The pain is real: blisters, bruised toenails, and the constant ache of weight compressed onto a tiny surface are part of every pointe dancer's life. But so is the transcendence: the sensation of balancing at the top of the foot, the body stacked in a perfect vertical line, the feeling of being taller, lighter, other than human. Pointe is where ballet's illusion lives.",
+        "The History": "Early pointe work in the 1820s-30s was brief and tentative — Marie Taglioni rose to her toes for moments, not entire variations. The development of the blocked pointe shoe (late 19th century) made sustained dancing on pointe possible, transforming ballet's aesthetic. The Romantic ideal of the weightless, ethereal female — a sylph, a swan, a spirit — was made physically possible by this invention. Pointe work remains overwhelmingly female in classical ballet, though some contemporary choreographers and male dancers challenge this convention.",
+        "Watch For": "Watch for stability: the ankle should be straight over the toe box, not wobbling. Watch for the illusion: great pointe work looks effortless, as if the dancer simply floats upward — the immense muscular effort is invisible. Watch for musicality: the best pointe dancers use the relevé and descent as rhythmic tools, matching the rise and fall of the music. And know this: every moment of beauty you see on pointe is purchased with pain, labor, and broken toenails. The illusion of weightlessness is the heaviest thing in ballet."
+      },
+      "keywords": ["pointe", "shoes", "toes", "strength", "illusion", "pain"],
+      "metadata": {}
+    },
+    {
+      "id": "swan-lake",
+      "name": "Swan Lake — The Double Woman",
+      "sort_order": 17,
+      "category": "work",
+      "level": 1,
+      "sections": {
+        "The Work": "Swan Lake (1895 revival, Petipa/Ivanov, music by Tchaikovsky): Prince Siegfried falls in love with Odette, a princess cursed to live as a swan, only to be deceived by the sorcerer Rothbart's daughter Odile, who impersonates Odette at the ball. The same ballerina dances both roles — the white swan (Odette: gentle, tragic, lyrical) and the black swan (Odile: seductive, triumphant, virtuosic). This dual role is the ultimate test of a ballerina's range.",
+        "The Movement": "The White Swan adagio (Act II) is the emotional heart: Odette's first encounter with Siegfried, danced in a corps of swans whose synchronized arabesques create one of ballet's most famous images. The Black Swan pas de deux (Act III) is the technical climax — culminating in the 32 fouettés that Odile performs as her victory lap. The contrast between acts is the contrast between lyric and bravura, vulnerability and power, legato and staccato.",
+        "Why It Matters": "Swan Lake is ballet's most performed work — every major company stages it, every ballerina is measured by it. Its central premise — one dancer, two opposite roles — captures something essential about ballet's fascination with the body's capacity for transformation. The same arms that float like wings in Act II strike like weapons in Act III. The same face that conveys tenderness radiates predatory triumph. The work endures because it asks the most fundamental question about performance: can one body contain contradictions?",
+        "Watch For": "Compare the white and black swan: how does the same dancer change her quality of movement? Odette should be soft, sustained, the arms rippling like water. Odile should be sharp, brilliant, the arms cutting through space. Watch the corps in the lakeside acts — 24 or 32 women moving as one, their synchronized arabesques creating the illusion of a single undulating creature. Watch the fouettés: they are the moment when the audience collectively holds its breath."
+      },
+      "keywords": ["swan-lake", "tchaikovsky", "petipa", "ivanov", "white-act", "black-swan"],
+      "metadata": {}
+    },
+    {
+      "id": "giselle",
+      "name": "Giselle — Love Beyond Death",
+      "sort_order": 18,
+      "category": "work",
+      "level": 1,
+      "sections": {
+        "The Work": "Giselle (1841, choreography by Jean Coralli and Jules Perrot, music by Adolphe Adam): A peasant girl, Giselle, falls in love with a nobleman disguised as a villager. When she discovers his deception and his betrothal to another, she goes mad and dies. In Act II, she rises as a Wili — one of a band of vengeful ghost-brides who dance men to death in the forest at midnight. But Giselle's love transcends even death: she protects Albrecht from the Wilis until dawn releases him.",
+        "The Movement": "Act I is earthbound and joyful — peasant dances, a love duet, then the devastating mad scene where Giselle relives her happiest moments while disintegrating. Act II is ballet's most purely Romantic creation: the Wilis in their long white tutus move through the forest in formations of ethereal precision, their bourées (tiny traveling steps on pointe) creating the illusion of floating. Giselle's ghostly dancing is the same vocabulary as Act I but transformed — lighter, more transparent, as if the body has been subtracted and only movement remains.",
+        "Why It Matters": "Giselle is the oldest ballet in continuous repertoire — performed without significant interruption since 1841. It defined the Romantic era: the division between the 'real' world (Act I, bright, folksy, narrative) and the 'supernatural' world (Act II, moonlit, ethereal, abstract) became a template for an entire era. It also established the Romantic ballerina's ideal: a woman so pure, so feeling, that the material world cannot contain her. This ideal is both beautiful and troubling — the apotheosis of feminine power through self-destruction.",
+        "Watch For": "The mad scene is the dramatic test: watch how the ballerina transitions from joy to confusion to grief to death — it is as demanding as any operatic aria. In Act II, watch Giselle's first entrance: she rises from her grave, still learning to be a ghost, her movements tentative before she regains her dance. Watch the contrast between the merciless Myrtha (queen of the Wilis) and the merciful Giselle — two models of feminine power, one punishing, one forgiving."
+      },
+      "keywords": ["giselle", "romantic", "wili", "ghost", "betrayal", "forgiveness"],
+      "metadata": {}
+    },
+    {
+      "id": "sleeping-beauty",
+      "name": "The Sleeping Beauty — The Perfect Classical",
+      "sort_order": 19,
+      "category": "work",
+      "level": 1,
+      "sections": {
+        "The Work": "The Sleeping Beauty (1890, Petipa/Tchaikovsky): The ballet world considers this Petipa's masterpiece — a full-evening spectacle based on Perrault's fairy tale. Princess Aurora is cursed by the fairy Caraboss to prick her finger and die; the Lilac Fairy softens the curse to a hundred-year sleep. Prince Désiré awakens her with a kiss. The wedding celebration in Act III is a parade of fairy-tale characters, each with their own variation. It is ballet's cathedral — grand, ornate, symmetrical, complete.",
+        "The Movement": "Sleeping Beauty is a showcase of classical technique at its most demanding and elegant. The Rose Adagio in Act I — where Aurora balances in attitude while four suitors offer their hands — is the single most exposed test of a ballerina's balance and poise. The Act III pas de deux is a jewel of partnering. The fairy variations (six in the Prologue) each demonstrate a different quality of movement: breadth, delicacy, bounce, lyricism, ferocity, generosity. The work is an encyclopedia of ballet.",
+        "Why It Matters": "Sleeping Beauty represents the apex of Imperial Russian ballet — the moment when Petipa's genius, Tchaikovsky's music, and the Mariinsky's resources combined to create something that no subsequent era has surpassed in sheer classical grandeur. It is the work that Balanchine grew up watching and that shaped his sense of what ballet should be. It is also the work most difficult to stage well today: the corps must be enormous, the sets lavish, the technique flawless. When it works, nothing in ballet is more satisfying.",
+        "Watch For": "The Rose Adagio: Aurora extends her hand to each prince, balances in attitude, and is released — four times, each prince withdrawing his support while she holds. It is trust, balance, and nerve made visible. Watch the Lilac Fairy: her gentle, expansive movement is the moral center of the ballet. In Act III, watch Bluebird — the male variation that demands spectacular jumps, beats, and turns. Sleeping Beauty is ballet's greatest ensemble piece: every rank of dancer, from prima to corps, has their moment."
+      },
+      "keywords": ["sleeping-beauty", "tchaikovsky", "petipa", "classical", "fairy-tale"],
+      "metadata": {}
+    },
+    {
+      "id": "nutcracker",
+      "name": "The Nutcracker — The Gateway Ballet",
+      "sort_order": 20,
+      "category": "work",
+      "level": 1,
+      "sections": {
+        "The Work": "The Nutcracker (1892, Ivanov/Tchaikovsky, after E.T.A. Hoffmann): On Christmas Eve, young Clara receives a nutcracker doll that comes to life, defeats the Mouse King, and takes her on a journey to the Land of Sweets. The second act is a divertissement — a parade of character dances (Spanish, Arabian, Chinese, Russian, Waltz of the Flowers) climaxing in the Sugar Plum Fairy's grand pas de deux. It was not a success at its premiere. It became the most performed ballet in the world.",
+        "The Movement": "Act I belongs to the children: party scenes, the battle with the mice, the transformation of the Christmas tree (one of theater's great stage effects). Act II is a showcase of national character dances and classical variations. The Waltz of the Snowflakes (end of Act I) is a stunning corps piece. The Sugar Plum Fairy variation — originally accompanied by the celesta, an instrument Tchaikovsky discovered — is delicate and precise. Each character dance offers a different flavor: the fiery Spanish, the sinuous Arabian, the acrobatic Russian trepak.",
+        "Why It Matters": "The Nutcracker is ballet's gateway drug — the first ballet most people ever see, often as children. It funds the entire art form: in America, Nutcracker ticket sales can account for 40-60% of a company's annual revenue. Its accessibility (familiar story, spectacular staging, roles for children) makes it the entry point for audiences and young dancers alike. Every professional dancer has a Nutcracker origin story. Love it or resent it, the Nutcracker is the economic and cultural engine of Western ballet.",
+        "Watch For": "Watch the transformation scene: how does the production make the Christmas tree grow? Watch the Snow scene: the corps of snowflakes is one of ballet's most beautiful ensemble pieces, often with real (paper) snow falling. In Act II, watch the character dances for their theatrical personality — each should be a distinct world in two minutes. Watch the children: many future professionals have their first stage experience in Nutcracker. You may be watching the next Misty Copeland in a mouse costume."
+      },
+      "keywords": ["nutcracker", "tchaikovsky", "christmas", "children", "popular"],
+      "metadata": {}
+    },
+    {
+      "id": "rite-of-spring",
+      "name": "The Rite of Spring — The Night Ballet Died and Was Reborn",
+      "sort_order": 21,
+      "category": "work",
+      "level": 1,
+      "sections": {
+        "The Work": "Le Sacre du Printemps (1913, Nijinsky/Stravinsky, for Diaghilev's Ballets Russes): A pagan community selects a maiden who must dance herself to death as a sacrifice to ensure spring's return. The premiere at the Théâtre des Champs-Élysées in Paris caused a riot — the audience fought, screamed, and threw objects. The music was percussive and dissonant; the choreography was deliberately anti-beautiful: turned-in feet, hunched bodies, stamping instead of gliding. Everything ballet had been, Rite rejected.",
+        "The Movement": "Nijinsky's original choreography (lost and reconstructed by Millicent Hodson in 1987) replaced turnout with turn-in, elevation with earthbound stomping, grace with intentional ugliness. The dancers faced front like icons rather than performing for each other. The rhythms were brutally complex — dancers counted in irregular groupings that contradicted the body's instincts. It was not a narrative but a ritual: the group's will imposed on the individual, the earth demanding its price.",
+        "Why It Matters": "The Rite of Spring is the hinge of dance history — the before and after of modernism. Before Rite: ballet was beauty, grace, and fairy tales. After Rite: ballet could be anything. The work proved that the same stage, the same trained bodies, the same institutional framework could produce art that was raw, disturbing, and revolutionary. It opened the door through which all of modern and contemporary dance would pass. Every choreographer who has turned ballet against itself — Forsythe, Pite, Shechter — owes something to that night in 1913.",
+        "Watch For": "Seek out both the Hodson reconstruction of Nijinsky's original and Pina Bausch's 1975 version (danced on a stage covered in dirt). Compare them: Nijinsky's is ritualistic and geometric; Bausch's is psychological and visceral. Both end with the Chosen One dancing herself to exhaustion and death. Watch the Chosen One's final solo in any version — it is one of the most harrowing moments in all of dance, the body pushed past beauty into survival."
+      },
+      "keywords": ["rite-of-spring", "stravinsky", "nijinsky", "riot", "modernism", "sacrifice"],
+      "metadata": {}
+    },
+    {
+      "id": "apollo",
+      "name": "Apollo — Balanchine's Declaration",
+      "sort_order": 22,
+      "category": "work",
+      "level": 1,
+      "sections": {
+        "The Work": "Apollo (Apollon Musagète, 1928, Balanchine/Stravinsky, for Diaghilev): The young god Apollo is born, learns to play the lyre, and encounters three Muses — Calliope (poetry), Polyhymnia (mime), and Terpsichore (dance). He dances with each, chooses Terpsichore, and ascends to Mount Parnassus. It is a coming-of-age story told in pure movement: no sets, no dramatic narrative, just four dancers and Stravinsky's neoclassical score.",
+        "The Movement": "Apollo was the work where Balanchine found his voice. The vocabulary is classical but distorted: arabesques are angular rather than curved, positions are held off-center, the body is both athletic and strange. Apollo's first solo — newborn, learning to move — uses the floor in ways ballet had never attempted. His pas de deux with Terpsichore is one of the most inventive in the repertoire: they intertwine, she rides on his back, their limbs create geometric shapes that are simultaneously abstract and deeply human.",
+        "Why It Matters": "Balanchine called Apollo 'the turning point of my life' — and it was the turning point of ballet's 20th century. It proved that ballet could be modern without abandoning its classical foundation. No tutus, no fairy tales, no mime — but turnout, pointe work, and classical line used in entirely new ways. Apollo established the neoclassical aesthetic that would dominate American ballet for the next sixty years and influence every ballet choreographer who followed.",
+        "Watch For": "Watch Apollo's birth solo: a god learning to use his body, stumbling, reaching, gradually finding coordination. Watch the three Muse variations: each has a distinct personality expressed purely through movement. Watch the final image: Apollo leading the three Muses in a sunburst formation toward Parnassus — one of ballet's most iconic endings. The whole work is only 30 minutes, but it contains more choreographic ideas than most full-evening ballets."
+      },
+      "keywords": ["apollo", "balanchine", "stravinsky", "neoclassical", "muses"],
+      "metadata": {}
+    },
+    {
+      "id": "romeo-juliet",
+      "name": "Romeo and Juliet — The Dramatic Ballet",
+      "sort_order": 23,
+      "category": "work",
+      "level": 1,
+      "sections": {
+        "The Work": "Romeo and Juliet (multiple versions, most notably Kenneth MacMillan's 1965 production for the Royal Ballet, music by Prokofiev): Shakespeare's tragedy translated into three acts of ballet — the Capulet ball, the balcony scene, the street fights, the tomb. MacMillan's version, created for Margot Fonteyn and Rudolf Nureyev, became the definitive dramatic ballet — proving that ballet could handle complex narrative, psychological depth, and genuine tragedy without a word spoken.",
+        "The Movement": "The balcony pas de deux is the centerpiece — one of the most romantic duets ever choreographed. MacMillan's partnering is both lyrical and urgent: lifts that suspend Juliet in the air like the breath caught in the chest, runs toward each other that express the headlong quality of first love. The sword fights use ballet vocabulary (turns, jumps, lunges) transformed into combat. The death scene is devastating in its simplicity: the two bodies, the poison, the dagger, the final embrace.",
+        "Why It Matters": "MacMillan's Romeo proved that ballet could compete with opera and theater as a vehicle for serious drama. Prokofiev's score — which was initially rejected as 'undanceable' — is now recognized as one of the greatest ballet scores ever written. The work opened the door for the dramatic ballet tradition that continues today: works by John Cranko, John Neumeier, and Crystal Pite that tell complex stories through the body. It also demonstrated that ballet's emotional range extends far beyond fairy tales.",
+        "Watch For": "The balcony pas de deux: notice how the lifts express specific emotions — ecstasy, yearning, playfulness, fear of separation. Watch Tybalt's death: MacMillan choreographed it as a frenzied, chaotic fight, not a stylized duel. Watch the final tomb scene: Juliet wakes to find Romeo dead, and the movement language shifts from dance to something closer to pure human grief. The moment is usually performed in near-silence, and the body speaks more eloquently than any words."
+      },
+      "keywords": ["romeo-juliet", "prokofiev", "macmillan", "dramatic", "pas-de-deux"],
+      "metadata": {}
+    },
+    {
+      "id": "la-bayadere",
+      "name": "La Bayadère — The Kingdom of the Shades",
+      "sort_order": 24,
+      "category": "work",
+      "level": 1,
+      "sections": {
+        "The Work": "La Bayadère (1877, Petipa, music by Minkus): Set in an imagined India, the temple dancer Nikiya loves the warrior Solor, who betrays her for the Rajah's daughter Gamzatti. Nikiya is killed by a snake hidden in a basket of flowers. In Act III (The Kingdom of the Shades), Solor, in an opium dream, enters the afterlife where Nikiya's spirit awaits among rows of identical white-clad shades. The plot is melodramatic; the Kingdom of the Shades is transcendent.",
+        "The Movement": "The Kingdom of the Shades entrance is one of the most breathtaking sequences in all of ballet. One by one, then in pairs, then in groups, the shades descend a ramp in a slow, repeated arabesque-cambré sequence — the same simple phrase performed over and over, rippling through the line like a wave. It takes several minutes for all 32 (or more) dancers to appear, and the cumulative effect is hypnotic: repetition as meditation, the corps as a single breathing organism.",
+        "Why It Matters": "The Kingdom of the Shades is Petipa's greatest achievement in corps de ballet writing. It demonstrates that the most powerful effect in ballet is not individual virtuosity but collective precision — many bodies performing the same movement in perfect unison or cascading sequence. The simplicity of the movement material (arabesque, cambré, simple port de bras) is the point: nothing distracts from the pure visual music of 32 bodies in phase. It is ballet's equivalent of a Bach fugue.",
+        "Watch For": "The entrance of the Shades: count the repetitions of the arabesque phrase and notice how the accumulation of bodies transforms a simple step into something overwhelming. Watch the spacing: each shade should be exactly the same distance from the next, creating a living grid. Watch Nikiya's solo within the Shades scene: she is one of them but distinct — her movement has an individuality that the corps does not. This is the visual argument: the one and the many, the self and the collective, the dream and the dreamer."
+      },
+      "keywords": ["bayadere", "petipa", "shades", "corps-de-ballet", "india", "opium"],
+      "metadata": {}
+    },
+    {
+      "id": "group-positions",
+      "name": "The Five Positions — The Grammar of the Body",
+      "sort_order": 25,
+      "category": "vocabulary-group",
+      "level": 2,
+      "composite_of": ["first-position", "second-position", "third-position", "fourth-position", "fifth-position"],
+      "sections": {
+        "About": "Pierre Beauchamps codified the five positions of the feet around 1680, and in doing so he created something unprecedented: a formal grammar of the human body. Every movement in ballet begins from one of these five positions and ends in one. They are the alphabet from which the entire language is built — positions, steps, jumps, turns, and combinations all connect through this fundamental architecture. The five positions are to ballet what the five vowels are to language: finite, foundational, and endlessly generative.",
+        "The Body Speaks": "The five positions are organized around a single principle: turnout (en dehors) — the external rotation of the legs from the hip sockets. This rotation opens the body to the audience, increases the visible range of leg movement, and creates the characteristic diamond-shaped silhouettes of ballet. Turnout is not natural — it is a cultural choice, the Enlightenment's geometry imposed on the medieval body. Every position is an argument for order, symmetry, and the rational organization of the human form.",
+        "For Practitioners": "Begin with first and second — find your natural turnout (never force from the knees) and build from there. Third position is the stepping stone to fifth; don't rush past it. Fourth position is the key to turning. Fifth position is the summit — work toward it gradually over years, building the hip rotation and foot strength it demands. The positions should feel like home bases: wherever your movement goes, you know how to return."
+      },
+      "keywords": ["positions", "foundation", "beauchamps", "codification"],
+      "metadata": {}
+    },
+    {
+      "id": "group-steps",
+      "name": "The Vocabulary — Steps, Turns, Jumps",
+      "sort_order": 26,
+      "category": "vocabulary-group",
+      "level": 2,
+      "composite_of": ["plie", "tendu", "releve", "arabesque", "pirouette", "grand-jete", "fouette", "pas-de-deux", "port-de-bras", "entrechat", "pointe-work"],
+      "sections": {
+        "About": "The ballet vocabulary runs to several hundred named steps, each preserved in the French that was the language of ballet's founding court. This grammar presents eleven essential movements that together represent the full range of what ballet asks the body to do: bend (plié), stretch (tendu), rise (relevé), extend (arabesque), turn (pirouette), leap (grand jeté), beat (entrechat), whip (fouetté), partner (pas de deux), carry (port de bras), and defy (pointe work). Every ballet ever choreographed is built from combinations of these fundamental elements.",
+        "The Body Speaks": "The vocabulary maps the body's relationship to six fundamental forces: gravity (plié yields to it, relevé defies it, grand jeté escapes it), rotation (pirouette and fouetté), extension (arabesque and tendu), elevation (entrechat and grand jeté), partnership (pas de deux), and the specific demands of pointe work. Each class systematically develops all six capacities, beginning at the barre (one hand for support) and progressing to center (no support) and then allegro (fast-moving combinations). The class structure is itself a work of pedagogical architecture.",
+        "For Practitioners": "The ballet vocabulary is learned over years of daily repetition. There are no shortcuts: plié before tendu, tendu before relevé, barre before center, demi-pointe before full pointe. The sequence is not arbitrary but physiological — each exercise builds the specific strength, coordination, and proprioception needed for the next. This grammar presents only a fraction of the full vocabulary; a complete study involves hundreds of steps, each with multiple variations. But these eleven are the load-bearing walls."
+      },
+      "keywords": ["vocabulary", "technique", "steps", "training"],
+      "metadata": {}
+    },
+    {
+      "id": "era-romantic",
+      "name": "The Romantic Era — Ghosts and Sylphs",
+      "sort_order": 27,
+      "category": "era",
+      "level": 2,
+      "composite_of": ["giselle", "pointe-work"],
+      "sections": {
+        "About": "The Romantic era (roughly 1830-1870) transformed ballet from aristocratic entertainment into an art of supernatural yearning. The signature works — La Sylphide (1832), Giselle (1841), Coppélia (1870) — explored the boundary between the human and the otherworldly. The development of pointe work and the long white tutu (tutu romantique) created an aesthetic of ethereal femininity: women as spirits, barely touching the earth. The era established the ballerina as the central figure of ballet — and the idealization (and suffering) of the female body as the art form's central currency.",
+        "The Body Speaks": "Romantic ballet invented the 'white act' — an entire scene danced by a corps of women in white, representing spirits, sylphs, or ghosts. The movement quality is sustained, floating, continuous — bourées that skim the surface, arabesques that extend into infinity, port de bras that ripple like wind through grass. The gaslight in 19th-century theaters gave these white-clad figures an unearthly glow. The body was asked to deny its weight, its earthiness, its mortality — to become pure movement, pure spirit.",
+        "For Practitioners": "Study the Romantic aesthetic through Giselle and La Sylphide. Notice how different the movement quality is from later classical ballet: softer, less angular, more emphasis on the upper body and arms. The Romantic ballerina is not a technician but a poet — the technique serves the atmosphere. Bourneville's Danish school preserves the Romantic style most faithfully: lighter, more buoyant, less extreme in its extension than the Russian school that followed."
+      },
+      "keywords": ["romantic", "taglioni", "sylphide", "supernatural", "1830s"],
+      "metadata": {}
+    },
+    {
+      "id": "era-classical",
+      "name": "The Classical Era — Petipa's Empire",
+      "sort_order": 28,
+      "category": "era",
+      "level": 2,
+      "composite_of": ["swan-lake", "sleeping-beauty", "nutcracker", "la-bayadere"],
+      "sections": {
+        "About": "The Classical era (roughly 1870-1910) was dominated by one man: Marius Petipa, ballet master of the Imperial Mariinsky Theatre in St. Petersburg. Working with Tchaikovsky (and lesser composers like Minkus and Glazunov), Petipa created the grand spectacles that define ballet in the popular imagination: Swan Lake, Sleeping Beauty, The Nutcracker, La Bayadère, Don Quixote, Raymonda. He established the structures (grand pas de deux, divertissement, character dance) that still organize ballet today.",
+        "The Body Speaks": "Classical ballet demanded more from the body than the Romantic era: higher extensions, faster turns, stronger pointe work. The short tutu (tutu classique) replaced the long Romantic skirt, exposing the legs and demanding visible technical perfection. The corps de ballet became a precision instrument — Petipa's geometric formations in Swan Lake and La Bayadère required military coordination. The classical body is a display body: visible from every angle, technically flawless, performing difficulty with apparent ease.",
+        "For Practitioners": "Petipa's works are the backbone of every classical company's repertoire. Studying them reveals the architecture of ballet at its most organized: the grand pas de deux structure (entrée, adagio, two variations, coda), the hierarchy of roles (principal, soloist, corps), the integration of character dance and classical technique. The Rose Adagio, the Black Swan pas de deux, and the Kingdom of the Shades are essential viewing — they define what classical ballet IS."
+      },
+      "keywords": ["classical", "petipa", "tchaikovsky", "imperial", "russia"],
+      "metadata": {}
+    },
+    {
+      "id": "era-modern",
+      "name": "The Modernist Rupture — Diaghilev's Revolution",
+      "sort_order": 29,
+      "category": "era",
+      "level": 2,
+      "composite_of": ["rite-of-spring", "apollo"],
+      "sections": {
+        "About": "Serge Diaghilev's Ballets Russes (1909-1929) exploded the classical consensus. Operating from Paris rather than St. Petersburg, Diaghilev commissioned radical collaborations between choreographers (Fokine, Nijinsky, Nijinska, Balanchine), composers (Stravinsky, Debussy, Prokofiev, Satie), and visual artists (Picasso, Matisse, Coco Chanel). The results ranged from the Orientalist exoticism of Schéhérazade to the pagan shock of The Rite of Spring to the neoclassical clarity of Apollo. In twenty years, Diaghilev single-handedly dragged ballet into the 20th century.",
+        "The Body Speaks": "The modernist body was no longer required to be beautiful in the classical sense. Nijinsky turned in, stomped, hunched. Nijinska (his sister, equally revolutionary) created angular, athletic women in Les Noces. Balanchine streamlined: stripping away mime, story, and décor to reveal the body-in-music. The body was liberated from narrative obligation — it could now be used as a medium for formal exploration, psychological expression, or pure kinetic abstraction.",
+        "For Practitioners": "Study the Ballets Russes period as a masterclass in artistic courage. Watch the Hodson reconstruction of Rite of Spring, Nijinska's Les Noces, and Balanchine's Apollo back to back. Notice how each work reinvents what the ballet-trained body can do: Nijinsky's body is a primitive force, Nijinska's body is a social unit, Balanchine's body is a musical instrument. All three use classical vocabulary as raw material but build entirely different architectures."
+      },
+      "keywords": ["modern", "diaghilev", "ballets-russes", "nijinsky", "revolution"],
+      "metadata": {}
+    },
+    {
+      "id": "era-neoclassical",
+      "name": "The Neoclassical — Balanchine's America",
+      "sort_order": 30,
+      "category": "era",
+      "level": 2,
+      "composite_of": ["apollo"],
+      "sections": {
+        "About": "George Balanchine emigrated to America in 1933 and spent the next fifty years creating a new ballet aesthetic at New York City Ballet. Neoclassical ballet: no story, no sets, simple costumes (leotards and tights), everything in service of the relationship between movement and music. Balanchine made over 400 works, from the athletic Agon to the lush Serenade to the jazzy Who Cares? His famous dictum — 'See the music, hear the dance' — captured his belief that ballet at its best is music made visible.",
+        "The Body Speaks": "The Balanchine body is fast, sharp, long-limbed, and musical. He pushed extension further (higher legs, deeper arabesques), demanded faster footwork, and stripped away the softening elements of Romantic and Classical style. His women are not ethereal spirits or tragic heroines — they are athletes and musicians who happen to move in pointe shoes. His men partner but also dance with a speed and attack borrowed from American vernacular dance. The body in Balanchine is an instrument of precision, tuned to the finest gradations of rhythm.",
+        "For Practitioners": "Watch Serenade (1934), Balanchine's first American ballet, to see how he creates emotional depth without narrative. Watch Agon (1957) for the partnership with Stravinsky at its most abstract and thrilling. Watch The Four Temperaments (1946) for his fusion of ballet and Hindemith's angular modernism. The neoclassical aesthetic requires a specific kind of seeing: don't look for story or character — look for the relationship between the body and the music, the way a phrase shapes itself in space."
+      },
+      "keywords": ["neoclassical", "balanchine", "nycb", "speed", "musicality"],
+      "metadata": {}
+    },
+    {
+      "id": "era-contemporary",
+      "name": "The Contemporary — Forsythe, Pite, and Beyond",
+      "sort_order": 31,
+      "category": "era",
+      "level": 2,
+      "composite_of": ["romeo-juliet"],
+      "sections": {
+        "About": "Contemporary ballet (1980s-present) deconstructs and recombines everything that came before. William Forsythe (Frankfurt Ballet, then The Forsythe Company) asked: what happens if you take ballet's classical lines and push them off-axis, off-balance, into collapse? Crystal Pite fuses ballet with text, theater, and social commentary. Wayne McGregor explores the limits of speed and extension. Justin Peck brings a democratic, American energy. The field is wider now than at any point in history — there is no single dominant aesthetic.",
+        "The Body Speaks": "The contemporary ballet body has absorbed modern dance, contact improvisation, martial arts, and street dance. It can do everything the classical body can do — and also fall, collapse, roll on the floor, move in silence, move with text. Forsythe's 'improvisation technologies' use the classical body as a starting point for real-time spatial investigation. The body is no longer an instrument executing prescribed steps but an intelligent agent making compositional choices. The training is still classical; the application is radically open.",
+        "For Practitioners": "Watch Forsythe's In the Middle, Somewhat Elevated (1987) to see classical ballet pushed to its physical extreme. Watch Pite's The Seasons' Canon (2016) for a breathtaking fusion of ballet corps and organic, rippling group movement. Watch McGregor's Chroma (2006) for hyperextension and speed. These works all require classical training but use it in ways Petipa could never have imagined. Contemporary ballet is the proof that a 400-year-old tradition remains vibrantly alive precisely because it keeps asking: what else can this body do?"
+      },
+      "keywords": ["contemporary", "forsythe", "pite", "deconstruction", "hybrid"],
+      "metadata": {}
+    },
+    {
+      "id": "meta-vocabulary",
+      "name": "The Body as Instrument — 400 Years of Codification",
+      "sort_order": 32,
+      "category": "meta",
+      "level": 3,
+      "composite_of": ["group-positions", "group-steps"],
+      "sections": {
+        "About": "No other physical discipline in human history has been so systematically codified as ballet. From Beauchamps' five positions (1680) through the Cecchetti method (1890s) to the Vaganova system (1930s), the ballet vocabulary has been cataloged, debated, refined, and transmitted with a precision that approaches scientific taxonomy. Every joint angle, every foot position, every arm trajectory has a name, a rule, and a pedagogical method. The result is a physical language of extraordinary expressiveness built on a foundation of extraordinary rigor.",
+        "The Body Speaks": "The codification of ballet creates a paradox: maximum freedom through maximum constraint. The dancer who has mastered the vocabulary can say anything because the vocabulary covers everything the body can do in an upright, turned-out position. Like a poet who has mastered prosody — the rules make possible what would otherwise be impossible. The body trained in ballet carries a deep physical intelligence: the positions, steps, and combinations have been repeated so many times that they live in the muscles, the nervous system, the proprioceptive map. The body knows where it is in space because the vocabulary has given it a coordinate system.",
+        "The Bigger Picture": "Ballet's codification raises questions that extend far beyond dance. What is lost when embodied knowledge is systematized? What is gained? The indigenous dance traditions of the world carry their knowledge in bodies, without written notation or codified methods — and they are vulnerable to disruption because the knowledge dies when the bodies do. Ballet's survival over 400 years, across revolutions and world wars, owes much to its codification. But that same codification has also produced rigidity, exclusion, and the enforcement of a narrow body type as the 'correct' instrument. The living architecture of ballet is both fortress and prison — and the contemporary moment is defined by the attempt to keep the fortress while demolishing the prison."
+      },
+      "keywords": ["codification", "instrument", "discipline", "tradition"],
+      "metadata": {}
+    },
+    {
+      "id": "meta-canon",
+      "name": "The Canon — Great Works and Their Ghosts",
+      "sort_order": 33,
+      "category": "meta",
+      "level": 3,
+      "composite_of": ["era-romantic", "era-classical", "era-modern", "era-neoclassical", "era-contemporary"],
+      "sections": {
+        "About": "Ballet's canon — the works performed season after season by companies worldwide — traces a clear arc from Romantic supernatural yearning (Giselle) through Classical spectacle (Swan Lake, Sleeping Beauty) to Modernist rupture (Rite of Spring) to Neoclassical abstraction (Apollo, Agon) to Contemporary deconstruction (Forsythe, Pite). Each era rebelled against the previous while inheriting its technique. The result is a layered tradition where a single company might perform Petipa's 1890 Sleeping Beauty and Forsythe's 1987 In the Middle in the same week — the classical body simultaneously preserving and destroying its own inheritance.",
+        "The Body Speaks": "The canon is not a list but a living argument about what the body should do on stage. Should it aspire to weightlessness (Romantic)? Display technical perfection (Classical)? Express primal forces (Modernist)? Become music (Neoclassical)? Question its own premises (Contemporary)? Each era answers differently, and each answer is visible in the body: the Romantic body floats, the Classical body shines, the Modernist body stamps, the Neoclassical body speeds, the Contemporary body falls. All five bodies coexist in today's companies, and a dancer must be fluent in all of them.",
+        "The Bigger Picture": "The ballet canon raises the same questions as every canon: whose stories are told? Whose bodies are centered? The classical repertoire is overwhelmingly European, overwhelmingly white, and historically organized around a narrow physical ideal (tall, thin, hyper-flexible, long-limbed). The contemporary moment is defined by the challenge to these norms: Misty Copeland's rise at ABT, Alonzo King's LINES Ballet, companies of all body types performing classical works. The architecture endures, but the question of who gets to inhabit it is, finally, being asked. Ballet's greatest work may be the one it is building now: a tradition capacious enough to hold every body."
+      },
+      "keywords": ["canon", "history", "evolution", "tradition", "rebellion"],
+      "metadata": {}
+    }
+  ]
+}
