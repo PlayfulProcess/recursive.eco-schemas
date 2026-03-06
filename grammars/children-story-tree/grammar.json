@@ -1,0 +1,809 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "url": "https://lifeisprocess.substack.com/",
+        "date": "2026-03-06",
+        "note": "Original curation and multi-age retellings"
+      }
+    ]
+  },
+  "name": "The Story Tree: Children's Stories for Every Age",
+  "description": "A curated collection of 33 essential children's stories drawn from the world's great traditions — Aesop's fables, Grimm and Andersen fairy tales, Greek and Norse myths, folk tales from six continents, and beloved classics of children's literature. Each story is told four ways: a gentle preschool version for the youngest listeners, a faithful classic telling, cultural roots showing how the story travels across traditions, and a modern reflection on why it still matters. Cross-linked to full source grammars in this repository.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Arthur Rackham's fairy tale illustrations (1900s-1920s) — atmospheric watercolors for Grimm, Andersen, and Aesop. Walter Crane's picture books (1870s-1890s) — Art Nouveau nursery illustrations. Edmund Dulac's fairy tale plates (1907-1916) — rich color illustrations for Arabian Nights, Andersen, and myth collections. Gustave Doré's fairy tale engravings (1862-1870s) — dramatic black-and-white for Perrault and La Fontaine. John Tenniel's Alice illustrations (1865) — the definitive Alice in Wonderland images. W.W. Denslow's Oz illustrations (1900) — original Wizard of Oz art. Randolph Caldecott's nursery illustrations (1878-1886) — lively watercolors of folk tales and nursery rhymes.",
+  "grammar_type": "custom",
+  "creator_name": "PlayfulProcess",
+  "creator_link": "https://lifeisprocess.substack.com/",
+  "tags": [
+    "children",
+    "stories",
+    "fables",
+    "fairy-tales",
+    "myths",
+    "folk-tales",
+    "parenting",
+    "multi-age",
+    "oral-tradition",
+    "world-literature"
+  ],
+  "roots": ["western-canon", "eastern-wisdom", "indigenous-knowledge"],
+  "shelves": ["children", "wonder", "wisdom"],
+  "lineages": ["Shrei", "Gottman"],
+  "worldview": "pluralist",
+  "cover_image_url": "",
+  "items": [
+    {
+      "id": "tortoise-and-hare",
+      "name": "The Tortoise and the Hare",
+      "sort_order": 1,
+      "level": 1,
+      "category": "animal-wisdom",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["patience", "persistence", "overconfidence", "slow-and-steady"],
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/aesops-fables"],
+      "metadata": {"age_range": "2-10", "tradition": "Greek fable", "source_grammar_item": "the-hare-and-the-tortoise"}
+    },
+    {
+      "id": "lion-and-mouse",
+      "name": "The Lion and the Mouse",
+      "sort_order": 2,
+      "level": 1,
+      "category": "animal-wisdom",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["kindness", "reciprocity", "size", "mercy", "gratitude"],
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/aesops-fables"],
+      "metadata": {"age_range": "2-8", "tradition": "Greek fable", "source_grammar_item": "the-lion-and-the-mouse"}
+    },
+    {
+      "id": "boy-who-cried-wolf",
+      "name": "The Boy Who Cried Wolf",
+      "sort_order": 3,
+      "level": 1,
+      "category": "animal-wisdom",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["honesty", "trust", "consequences", "lying", "credibility"],
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/aesops-fables"],
+      "metadata": {"age_range": "3-10", "tradition": "Greek fable", "source_grammar_item": "the-shepherd-boy-and-the-wolf"}
+    },
+    {
+      "id": "ugly-duckling",
+      "name": "The Ugly Duckling",
+      "sort_order": 4,
+      "level": 1,
+      "category": "animal-wisdom",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["identity", "belonging", "transformation", "self-worth", "bullying"],
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/andersens-fairy-tales"],
+      "metadata": {"age_range": "3-10", "tradition": "Danish literary fairy tale"}
+    },
+    {
+      "id": "jungle-book-mowgli",
+      "name": "Mowgli and the Jungle",
+      "sort_order": 5,
+      "level": 1,
+      "category": "animal-wisdom",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["belonging", "nature", "wildness", "law", "found-family"],
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/jungle-book"],
+      "metadata": {"age_range": "5-12", "tradition": "British-Indian literary tale"}
+    },
+    {
+      "id": "how-elephant-got-trunk",
+      "name": "How the Elephant Got His Trunk",
+      "sort_order": 6,
+      "level": 1,
+      "category": "animal-wisdom",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["curiosity", "consequences", "origin-story", "humor", "adventure"],
+      "metadata": {"age_range": "3-8", "tradition": "British literary tale (Kipling)"}
+    },
+    {
+      "id": "brer-rabbit-tar-baby",
+      "name": "Brer Rabbit and the Tar Baby",
+      "sort_order": 7,
+      "level": 1,
+      "category": "animal-wisdom",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["trickster", "cleverness", "wit", "resistance", "humor"],
+      "metadata": {"age_range": "4-10", "tradition": "African-American / West African"}
+    },
+    {
+      "id": "cinderella",
+      "name": "Cinderella",
+      "sort_order": 8,
+      "level": 1,
+      "category": "enchanted-world",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["transformation", "kindness", "justice", "perseverance", "magic"],
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/grimms-fairy-tales"],
+      "metadata": {"age_range": "3-10", "tradition": "European fairy tale (Grimm/Perrault)", "source_grammar_item": "cinderella"}
+    },
+    {
+      "id": "frog-prince",
+      "name": "The Frog Prince",
+      "sort_order": 9,
+      "level": 1,
+      "category": "enchanted-world",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["promises", "transformation", "disgust", "acceptance", "enchantment"],
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/grimms-fairy-tales"],
+      "metadata": {"age_range": "3-8", "tradition": "German fairy tale (Grimm)", "source_grammar_item": "the-frog-prince"}
+    },
+    {
+      "id": "snow-queen",
+      "name": "The Snow Queen",
+      "sort_order": 10,
+      "level": 1,
+      "category": "enchanted-world",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["friendship", "love", "ice", "quest", "good-vs-evil"],
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/andersens-fairy-tales"],
+      "metadata": {"age_range": "5-12", "tradition": "Danish literary fairy tale"}
+    },
+    {
+      "id": "beauty-and-beast",
+      "name": "Beauty and the Beast",
+      "sort_order": 11,
+      "level": 1,
+      "category": "enchanted-world",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["love", "appearance", "inner-beauty", "transformation", "sacrifice"],
+      "metadata": {"age_range": "4-12", "tradition": "French literary fairy tale (Beaumont)"}
+    },
+    {
+      "id": "hansel-and-gretel",
+      "name": "Hansel and Gretel",
+      "sort_order": 12,
+      "level": 1,
+      "category": "enchanted-world",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["siblings", "courage", "abandonment", "resourcefulness", "danger"],
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/grimms-fairy-tales"],
+      "metadata": {"age_range": "4-10", "tradition": "German fairy tale (Grimm)", "source_grammar_item": "hansel-and-gretel"}
+    },
+    {
+      "id": "sleeping-beauty",
+      "name": "Sleeping Beauty",
+      "sort_order": 13,
+      "level": 1,
+      "category": "enchanted-world",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["curse", "sleep", "awakening", "fate", "protection"],
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/grimms-fairy-tales"],
+      "metadata": {"age_range": "3-10", "tradition": "European fairy tale (Grimm/Perrault)", "source_grammar_item": "briar-rose"}
+    },
+    {
+      "id": "jack-and-beanstalk",
+      "name": "Jack and the Beanstalk",
+      "sort_order": 14,
+      "level": 1,
+      "category": "enchanted-world",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["adventure", "daring", "giants", "cleverness", "risk"],
+      "metadata": {"age_range": "3-10", "tradition": "English fairy tale"}
+    },
+    {
+      "id": "red-riding-hood",
+      "name": "Little Red Riding Hood",
+      "sort_order": 15,
+      "level": 1,
+      "category": "enchanted-world",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["stranger-danger", "disobedience", "wolf", "grandmother", "rescue"],
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/grimms-fairy-tales"],
+      "metadata": {"age_range": "3-8", "tradition": "European fairy tale (Grimm/Perrault)", "source_grammar_item": "little-red-cap"}
+    },
+    {
+      "id": "theseus-minotaur",
+      "name": "Theseus and the Minotaur",
+      "sort_order": 16,
+      "level": 1,
+      "category": "heroes-and-tricksters",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["hero", "labyrinth", "monster", "courage", "sacrifice"],
+      "grammars": [
+        "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/greek-mythology",
+        "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/bulfinch-s-classical-mythology"
+      ],
+      "metadata": {"age_range": "5-12", "tradition": "Greek mythology"}
+    },
+    {
+      "id": "perseus-medusa",
+      "name": "Perseus and Medusa",
+      "sort_order": 17,
+      "level": 1,
+      "category": "heroes-and-tricksters",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["hero", "quest", "gods", "monsters", "cunning"],
+      "grammars": [
+        "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/greek-mythology",
+        "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/bulfinch-s-classical-mythology"
+      ],
+      "metadata": {"age_range": "6-12", "tradition": "Greek mythology"}
+    },
+    {
+      "id": "thor-and-giants",
+      "name": "Thor and the Giants",
+      "sort_order": 18,
+      "level": 1,
+      "category": "heroes-and-tricksters",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["strength", "trickery", "gods", "humor", "pride"],
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/prose-edda"],
+      "metadata": {"age_range": "5-12", "tradition": "Norse mythology"}
+    },
+    {
+      "id": "mulan",
+      "name": "The Ballad of Mulan",
+      "sort_order": 19,
+      "level": 1,
+      "category": "heroes-and-tricksters",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["courage", "duty", "family", "disguise", "honor"],
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/myths-china-japan"],
+      "metadata": {"age_range": "5-12", "tradition": "Chinese legend"}
+    },
+    {
+      "id": "anansi-spider",
+      "name": "Anansi the Spider",
+      "sort_order": 20,
+      "level": 1,
+      "category": "heroes-and-tricksters",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["trickster", "stories", "cleverness", "origin", "spider"],
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/west-african-folk-tales"],
+      "metadata": {"age_range": "4-10", "tradition": "Akan / West African"}
+    },
+    {
+      "id": "emperor-new-clothes",
+      "name": "The Emperor's New Clothes",
+      "sort_order": 21,
+      "level": 1,
+      "category": "heroes-and-tricksters",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["honesty", "vanity", "truth", "conformity", "innocence"],
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/andersens-fairy-tales"],
+      "metadata": {"age_range": "4-10", "tradition": "Danish literary fairy tale"}
+    },
+    {
+      "id": "puss-in-boots",
+      "name": "Puss in Boots",
+      "sort_order": 22,
+      "level": 1,
+      "category": "heroes-and-tricksters",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["cleverness", "loyalty", "bluff", "social-climbing", "wit"],
+      "metadata": {"age_range": "4-10", "tradition": "French fairy tale (Perrault)"}
+    },
+    {
+      "id": "momotaro",
+      "name": "Momotaro the Peach Boy",
+      "sort_order": 23,
+      "level": 1,
+      "category": "voices-of-the-world",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["hero", "teamwork", "courage", "generosity", "quest"],
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/japanese-fairy-tales"],
+      "metadata": {"age_range": "3-10", "tradition": "Japanese folk tale"}
+    },
+    {
+      "id": "firebird",
+      "name": "The Firebird",
+      "sort_order": 24,
+      "level": 1,
+      "category": "voices-of-the-world",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["quest", "magic", "bird", "youngest-son", "enchantment"],
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/russian-folk-tales"],
+      "metadata": {"age_range": "5-12", "tradition": "Russian folk tale"}
+    },
+    {
+      "id": "magic-paintbrush",
+      "name": "The Magic Paintbrush",
+      "sort_order": 25,
+      "level": 1,
+      "category": "voices-of-the-world",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["justice", "art", "generosity", "greed", "power"],
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/myths-china-japan"],
+      "metadata": {"age_range": "4-10", "tradition": "Chinese folk tale"}
+    },
+    {
+      "id": "selkie",
+      "name": "The Selkie Wife",
+      "sort_order": 26,
+      "level": 1,
+      "category": "voices-of-the-world",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["freedom", "longing", "sea", "identity", "captivity"],
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/celtic-fairy-tales"],
+      "metadata": {"age_range": "6-12", "tradition": "Celtic / Scottish / Irish"}
+    },
+    {
+      "id": "stone-soup",
+      "name": "Stone Soup",
+      "sort_order": 27,
+      "level": 1,
+      "category": "voices-of-the-world",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["community", "sharing", "cleverness", "generosity", "cooperation"],
+      "metadata": {"age_range": "3-8", "tradition": "European folk tale (multiple origins)"}
+    },
+    {
+      "id": "paul-bunyan",
+      "name": "Paul Bunyan",
+      "sort_order": 28,
+      "level": 1,
+      "category": "voices-of-the-world",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["tall-tale", "strength", "frontier", "humor", "exaggeration"],
+      "metadata": {"age_range": "4-10", "tradition": "American tall tale"}
+    },
+    {
+      "id": "alice-wonderland",
+      "name": "Alice in Wonderland",
+      "sort_order": 29,
+      "level": 1,
+      "category": "great-adventures",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["imagination", "nonsense", "identity", "logic", "curiosity"],
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/alice-in-wonderland-chapter-book"],
+      "metadata": {"age_range": "5-12", "tradition": "British literary fairy tale"}
+    },
+    {
+      "id": "wizard-of-oz",
+      "name": "The Wonderful Wizard of Oz",
+      "sort_order": 30,
+      "level": 1,
+      "category": "great-adventures",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["journey", "home", "friendship", "self-discovery", "courage"],
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/wonderful-wizard-of-oz"],
+      "metadata": {"age_range": "4-12", "tradition": "American literary fairy tale"}
+    },
+    {
+      "id": "peter-pan",
+      "name": "Peter Pan",
+      "sort_order": 31,
+      "level": 1,
+      "category": "great-adventures",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["childhood", "growing-up", "flight", "imagination", "adventure"],
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/peter-pan"],
+      "metadata": {"age_range": "5-12", "tradition": "British literary fairy tale"}
+    },
+    {
+      "id": "pinocchio",
+      "name": "Pinocchio",
+      "sort_order": 32,
+      "level": 1,
+      "category": "great-adventures",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["honesty", "growing-up", "conscience", "transformation", "temptation"],
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/adventures-of-pinocchio"],
+      "metadata": {"age_range": "4-12", "tradition": "Italian literary fairy tale"}
+    },
+    {
+      "id": "secret-garden",
+      "name": "The Secret Garden",
+      "sort_order": 33,
+      "level": 1,
+      "category": "great-adventures",
+      "sections": {
+        "Preschool Telling": "Placeholder.",
+        "Classic Telling": "Placeholder.",
+        "Cultural Roots": "Placeholder.",
+        "Modern Reflection": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["healing", "nature", "friendship", "neglect", "renewal"],
+      "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/secret-garden"],
+      "metadata": {"age_range": "6-12", "tradition": "British children's literature"}
+    },
+    {
+      "id": "group-small-and-mighty",
+      "name": "The Small and the Mighty",
+      "sort_order": 34,
+      "level": 2,
+      "category": "animal-wisdom",
+      "composite_of": ["tortoise-and-hare", "lion-and-mouse", "boy-who-cried-wolf", "ugly-duckling"],
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["fables", "aesop", "andersen", "moral-tales"],
+      "metadata": {}
+    },
+    {
+      "id": "group-wild-wisdom",
+      "name": "Wild Wisdom",
+      "sort_order": 35,
+      "level": 2,
+      "category": "animal-wisdom",
+      "composite_of": ["jungle-book-mowgli", "how-elephant-got-trunk", "brer-rabbit-tar-baby"],
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["jungle", "trickster", "nature", "animal-stories"],
+      "metadata": {}
+    },
+    {
+      "id": "group-transformation-tales",
+      "name": "Transformation Tales",
+      "sort_order": 36,
+      "level": 2,
+      "category": "enchanted-world",
+      "composite_of": ["cinderella", "frog-prince", "snow-queen", "beauty-and-beast"],
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["transformation", "enchantment", "love", "spells"],
+      "metadata": {}
+    },
+    {
+      "id": "group-dark-woods",
+      "name": "Into the Dark Woods",
+      "sort_order": 37,
+      "level": 2,
+      "category": "enchanted-world",
+      "composite_of": ["hansel-and-gretel", "sleeping-beauty", "jack-and-beanstalk", "red-riding-hood"],
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["danger", "courage", "dark-forest", "fairy-tale"],
+      "metadata": {}
+    },
+    {
+      "id": "group-heros-journey",
+      "name": "The Hero's Journey",
+      "sort_order": 38,
+      "level": 2,
+      "category": "heroes-and-tricksters",
+      "composite_of": ["theseus-minotaur", "perseus-medusa", "thor-and-giants", "mulan"],
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["hero", "quest", "mythology", "courage"],
+      "metadata": {}
+    },
+    {
+      "id": "group-clever-ones",
+      "name": "The Clever Ones",
+      "sort_order": 39,
+      "level": 2,
+      "category": "heroes-and-tricksters",
+      "composite_of": ["anansi-spider", "emperor-new-clothes", "puss-in-boots"],
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["trickster", "wit", "cleverness", "outsmarting"],
+      "metadata": {}
+    },
+    {
+      "id": "group-east-and-south",
+      "name": "Stories from East and South",
+      "sort_order": 40,
+      "level": 2,
+      "category": "voices-of-the-world",
+      "composite_of": ["momotaro", "firebird", "magic-paintbrush"],
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["japanese", "russian", "chinese", "world-tales"],
+      "metadata": {}
+    },
+    {
+      "id": "group-north-and-west",
+      "name": "Stories from North and West",
+      "sort_order": 41,
+      "level": 2,
+      "category": "voices-of-the-world",
+      "composite_of": ["selkie", "stone-soup", "paul-bunyan"],
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["celtic", "european", "american", "folk-tales"],
+      "metadata": {}
+    },
+    {
+      "id": "group-doorways",
+      "name": "Through the Doorway",
+      "sort_order": 42,
+      "level": 2,
+      "category": "great-adventures",
+      "composite_of": ["alice-wonderland", "wizard-of-oz"],
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["portal", "fantasy", "other-worlds", "imagination"],
+      "metadata": {}
+    },
+    {
+      "id": "group-growing-up",
+      "name": "Growing Up",
+      "sort_order": 43,
+      "level": 2,
+      "category": "great-adventures",
+      "composite_of": ["peter-pan", "pinocchio", "secret-garden"],
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["coming-of-age", "maturity", "childhood", "growth"],
+      "metadata": {}
+    },
+    {
+      "id": "tradition-animal-wisdom",
+      "name": "The Animal Teachers",
+      "sort_order": 44,
+      "level": 3,
+      "category": "traditions",
+      "composite_of": ["group-small-and-mighty", "group-wild-wisdom"],
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["fables", "animals", "moral-tales", "nature"],
+      "metadata": {}
+    },
+    {
+      "id": "tradition-enchanted-world",
+      "name": "The Enchanted World",
+      "sort_order": 45,
+      "level": 3,
+      "category": "traditions",
+      "composite_of": ["group-transformation-tales", "group-dark-woods"],
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["fairy-tales", "magic", "enchantment", "wonder"],
+      "metadata": {}
+    },
+    {
+      "id": "tradition-heroes-and-tricksters",
+      "name": "Heroes, Gods & Tricksters",
+      "sort_order": 46,
+      "level": 3,
+      "category": "traditions",
+      "composite_of": ["group-heros-journey", "group-clever-ones"],
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["mythology", "heroes", "tricksters", "legends"],
+      "metadata": {}
+    },
+    {
+      "id": "tradition-voices-of-the-world",
+      "name": "Voices of the World",
+      "sort_order": 47,
+      "level": 3,
+      "category": "traditions",
+      "composite_of": ["group-east-and-south", "group-north-and-west"],
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["world-cultures", "folk-tales", "diversity", "oral-tradition"],
+      "metadata": {}
+    },
+    {
+      "id": "tradition-great-adventures",
+      "name": "The Great Adventures",
+      "sort_order": 48,
+      "level": 3,
+      "category": "traditions",
+      "composite_of": ["group-doorways", "group-growing-up"],
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["classics", "children-literature", "novels", "adventures"],
+      "metadata": {}
+    }
+  ]
+}
