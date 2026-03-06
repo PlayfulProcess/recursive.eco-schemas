@@ -105,6 +105,46 @@ Priority order (most needed for cross-linking):
 | `pistis-sophia.txt` | pistis-sophia | myth-sophia-fall | Not started |
 | `five-stages-greek-religion.txt` | five-stages-greek-religion | context for interp-frazer | Not started |
 
+### 5. Myth of the Birth of the Hero (Rank) — 18 items
+
+**Source**: `seeds/myth-birth-hero-rank.txt` (Gutenberg #66192, 1914)
+**Parser**: `scripts/parse_rank_birth_hero.py`
+
+15 hero birth myths (Sargon, Moses, Karna, Oedipus, Paris, Telephos, Perseus, Gilgamesh, Cyrus, Tristan, Romulus, Hercules, Jesus, Siegfried, Lohengrin) + Introduction + Interpretation + meta card. Each hero has astrology metadata.
+
+**Issue**: Initial parser used byte-position search with `"\n" + spaces + heading` but failed because the body variable didn't preserve the exact positions. Fixed by switching to line-by-line `strip()` matching.
+
+### 6. Hesiod, Homeric Hymns — 49 items
+
+**Source**: `seeds/hesiod-homeric-hymns.txt` (Gutenberg #348)
+**Parser**: `scripts/parse_hesiod.py`
+
+45 sections: Works and Days, Theogony, Shield of Heracles, 8 Hesiodic fragments, 33 Homeric Hymns + 3 L2 groups (Major Works, Great Hymns, Short Hymns) + 1 L3 meta.
+
+**Issue**: `HESIOD'S WORKS AND DAYS` uses a Unicode right single quotation mark (`'`, U+2019), not an ASCII apostrophe. Fixed by using the actual Unicode character.
+
+**Learning**: Always check for Unicode apostrophes/quotes in Gutenberg texts. The `'` vs `'` distinction breaks exact string matching.
+
+### 7. Golden Ass (Apuleius) — 14 items
+
+**Source**: `seeds/golden-ass-apuleius.txt` (Gutenberg #1666)
+**Parser**: `scripts/parse_golden_ass_mabinogion.py`
+
+11 books (Book V heading missing from edition — inserted synthetically at midpoint of Books IV-VI) + Cupid & Psyche cycle + Isis Revelation cycle + meta card.
+
+**Issue**: The Adlington 1566 edition is missing the "FIFTH BOOKE" heading entirely — the Cupid & Psyche tale just continues without a break from Book IV. Solved by inserting a synthetic midpoint. Acceptable because the tale flows continuously regardless.
+
+### 8. Mabinogion — 15 items
+
+**Source**: `seeds/mabinogion.txt` (Guest translation)
+**Parser**: `scripts/parse_golden_ass_mabinogion.py` (same script)
+
+12 tales + Four Branches group + Arthurian Romances group + meta card.
+
+**Issue**: "The story of Lludd and Llevelys" in the TOC doesn't match the body heading, which reads `HERE IS THE STORY OF LLUDD AND LLEVELYS`. Fixed by using the actual body heading.
+
+**Learning**: Mabinogion headings are inconsistent between TOC (title case) and body (sometimes ALL CAPS with "HERE IS"). Always verify body headings against the actual file.
+
 ## Validation Summary
 
 | Grammar | Items | L1 | L2 | L3 | Sections | Dupes | Bad Refs |
@@ -112,3 +152,16 @@ Priority order (most needed for cross-linking):
 | myths-through-many-eyes | 73 | 43 | 27 | 3 | 299 | 0 | 0 |
 | arabian-nights | 44 | 34 | 8 | 2 | 54 | 0 | 0 |
 | russian-folk-tales | 61 | 52 | 8 | 1 | 70 | 0 | 0 |
+| myth-birth-hero-rank | 18 | 15 | 2 | 1 | 18 | 0 | 0 |
+| hesiod-homeric-hymns | 49 | 45 | 3 | 1 | 49 | 0 | 0 |
+| golden-ass-apuleius | 14 | 11 | 2 | 1 | 19 | 0 | 0 |
+| mabinogion | 15 | 12 | 2 | 1 | 18 | 0 | 0 |
+
+## Systematic Learnings
+
+1. **Unicode apostrophes in Gutenberg**: Always test for both `'` (ASCII) and `'` (U+2019) in headings
+2. **Missing section headings**: Some editions skip book numbers (Golden Ass). Insert synthetic breaks
+3. **TOC vs body mismatch**: Mabinogion, Russian Folk Tales both have different heading formats in TOC vs body. Always verify against actual body text
+4. **Line-based search beats byte-position search**: For centered headings, `line.strip() == heading` is more reliable than `body.find("\n" + spaces + heading)`
+5. **Astrology metadata is easy for mythology**: Every Greek/Norse/Egyptian myth has well-established planetary associations. This adds value for cross-grammar querying
+6. **Batch parsing in one script** (Golden Ass + Mabinogion) saves time when the patterns are similar
