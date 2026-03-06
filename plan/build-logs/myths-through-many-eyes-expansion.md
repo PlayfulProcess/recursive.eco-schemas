@@ -156,6 +156,48 @@ Priority order (most needed for cross-linking):
 | hesiod-homeric-hymns | 49 | 45 | 3 | 1 | 49 | 0 | 0 |
 | golden-ass-apuleius | 14 | 11 | 2 | 1 | 19 | 0 | 0 |
 | mabinogion | 15 | 12 | 2 | 1 | 18 | 0 | 0 |
+| myths-babylonia-assyria | 26 | 20 | 5 | 1 | 30 | 0 | 0 |
+| hidden-symbolism-alchemy | 17 | 10 | 6 | 1 | 21 | 0 | 0 |
+| indian-myth-legend | 31 | 26 | 4 | 1 | 36 | 0 | 0 |
+| myths-china-japan | 25 | 21 | 3 | 1 | 29 | 0 | 0 |
+| pistis-sophia | 14 | 9 | 4 | 1 | 18 | 0 | 0 |
+
+### Session 2 Grammars (2026-03-06)
+
+#### 9. Myths of Babylonia and Assyria — 26 items
+**Source**: `seeds/myths-babylonia-assyria.txt` (Gutenberg #16653, Mackenzie 1915)
+**Parser**: `scripts/parse_myths_babylonia.py`
+20 L1 chapters (preface + intro + 20 chapters) + 3 L2 thematic groups (Gods & Myths, History & Empire, Stars & Wisdom) + 1 L3 meta. Astrology metadata on 7 key chapters (Tammuz/Ishtar, Creation, Gilgamesh, Deluge, Astrology, Ashur, Demons).
+
+#### 10. Hidden Symbolism of Alchemy — 17 items
+**Source**: `seeds/hidden-symbolism-alchemy.txt` (Gutenberg #27755, Silberer 1914)
+**Parser**: `scripts/parse_hidden_symbolism_alchemy.py`
+10 L1 sections (Translator's Preface + 3 Parts × sections + Notes + Bibliography) + 3 L2 part groups + 1 L3 meta.
+**Issue**: Unicode apostrophe in "TRANSLATOR'S PREFACE" (U+2019). TOC skip threshold initially too high (90) — body heading was at line 62. Fixed by lowering to 50.
+
+#### 11. Indian Myth and Legend — 31 items
+**Source**: `seeds/indian-myth-legend.txt` (Gutenberg #47228, Mackenzie 1913)
+**Parser**: `scripts/parse_indian_myth_legend.py`
+26 L1 chapters + 4 L2 groups (Vedic Gods, Mahābhārata, Rāmāyaṇa, Nala & Damayantí) + 1 L3 meta.
+
+#### 12. Myths of China and Japan — 25 items
+**Source**: `seeds/myths-china-japan.txt` (Gutenberg #67344, Mackenzie 1923)
+**Parser**: `scripts/parse_myths_china_japan.py`
+21 L1 chapters + 3 L2 groups (Chinese Mythology, Japanese Mythology, Cultural Origins) + 1 L3 meta.
+
+#### 13. Pistis Sophia — 14 items
+**Source**: `seeds/pistis-sophia.txt` (Gutenberg #76266, Horner/Legge 1924)
+**Parser**: `scripts/parse_pistis_sophia.py`
+9 L1 items (4 intro sections + 5 documents) + 3 L2 groups (Introduction, Sophia Drama, Mysteries) + 1 L3 meta.
+**Issue**: Heading "3. THE PURPOSE AND COMPOSITION OF THE MS." didn't match because the body uses "3. PURPOSE AND COMPOSITION OF THE MS." (no "THE"). Fixed.
+
+#### Cross-Linking Update
+Added `grammars[]` links in Myths Through Many Eyes for all 5 new grammars:
+- `myth-gilgamesh`, `myth-inanna`, `myth-tammuz-dumuzi` → `myths-babylonia-assyria`
+- `interp-alchemists` → `hidden-symbolism-alchemy`
+- `myth-krishna-arjuna`, `myth-churning-ocean` → `indian-myth-legend`
+- `myth-sun-wukong`, `myth-amaterasu` → `myths-china-japan`
+- `myth-sophia-fall` → `pistis-sophia`
 
 ## Systematic Learnings
 
