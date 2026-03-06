@@ -27,14 +27,14 @@ From-memory grammar. All content provided by the user as system prompts for AI v
 **Root cause**: Spent too long on planning/exploring before starting the actual write. The from-memory grammar approach (skeleton + edit-per-item) is correct per CLAUDE.md, but I never got to the skeleton write.
 **Lesson**: For large from-memory grammars, start the Write immediately after confirming structure. Don't over-plan. The skeleton IS the plan.
 
-### Attempt 2 — 2026-03-06
-**Strategy**: Write the FULL grammar in one Write call — not skeleton + edit. Since all prompts are already provided by the user, there's no "placeholder" phase needed. Include system prompts, history/context, and visual references directly.
-**Key sections per L1 item**:
-- "System Prompt": The actual AI prompt text (provided by user)
-- "About": Brief description of this voice
-- "History & Context": The tradition this voice comes from
-- "Visual Reference": Public domain art suggestions
-- "When This Voice Activates": Trigger conditions
+### Attempt 2 — 2026-03-06 (FAILED)
+**Strategy**: Write the FULL grammar in one Write call — not skeleton + edit. Since all prompts are already provided by the user, there's no "placeholder" phase needed.
+**What happened**: Session started by writing the build log itself (this file), then got interrupted by the stop-hook requiring a commit of the untracked build log. After committing and pushing the build log, the session turn ended again — never reached the grammar Write call.
+**Root cause**: Two-phase failure. (1) Started the session by writing the build log instead of the grammar file. (2) The stop-hook commit/push cycle consumed the remaining turn budget. Net result: two full turns spent on meta-work (logging, committing logs) with zero grammar content produced.
+**Lesson**: Write the grammar file FIRST. Log the build AFTER. Meta-work is important but not more important than the deliverable. If a stop-hook forces a commit mid-turn, that's fine — but the grammar should already exist by that point.
+
+### Attempt 3 — 2026-03-06
+**Strategy**: Write grammar.json immediately. No build log updates, no planning, no exploration. Grammar first, everything else after.
 **Status**: IN PROGRESS
 
 ## Visual Reference Strategy
