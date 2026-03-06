@@ -1,0 +1,616 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "date": "2026-03-06",
+        "note": "Original from-memory grammar based on current astrophysics and cosmology consensus, inspired by the storytelling style of Neil deGrasse Tyson's Cosmos"
+      }
+    ]
+  },
+  "name": "Cosmic Unfolding",
+  "description": "The story of everything — from the Big Bang to you reading this sentence. Thirty milestones in the 13.8-billion-year history of the universe, told with wonder and awe. Each event is a turning point: the moment the first light escaped, the first star ignited, the first planet formed, the first cell divided, the first eye opened. Tiered content for young children (Story) and older readers (Science).\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Camille Flammarion (1842–1925), whose astronomical illustrations in 'Astronomie Populaire' (1880) and 'L'Atmosphère' (1888) combined scientific accuracy with cosmic wonder. Étienne Léopold Trouvelot (1827–1895), whose astronomical pastels at Harvard Observatory captured planets, nebulae, and solar phenomena with remarkable beauty.",
+  "grammar_type": "custom",
+  "creator_name": "PlayfulProcess",
+  "tags": ["cosmos", "big-bang", "astrophysics", "evolution", "kids", "science", "wonder", "timeline"],
+  "roots": ["natural-philosophy"],
+  "shelves": ["wonder", "children"],
+  "lineages": ["Kelty"],
+  "worldview": "rationalist",
+  "items": [
+    {
+      "id": "big-bang",
+      "name": "The Big Bang",
+      "sort_order": 1,
+      "category": "first-moments",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["big-bang", "origin", "singularity", "beginning"],
+      "metadata": {"time": "13.8 billion years ago", "era": "Planck Epoch"}
+    },
+    {
+      "id": "first-forces",
+      "name": "The Four Forces Separate",
+      "sort_order": 2,
+      "category": "first-moments",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["forces", "gravity", "electromagnetism", "symmetry-breaking"],
+      "metadata": {"time": "13.8 billion years ago", "era": "Grand Unification Epoch"}
+    },
+    {
+      "id": "inflation",
+      "name": "Cosmic Inflation",
+      "sort_order": 3,
+      "category": "first-moments",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["inflation", "expansion", "exponential", "quantum"],
+      "metadata": {"time": "10^-36 to 10^-32 seconds", "era": "Inflationary Epoch"}
+    },
+    {
+      "id": "quarks-to-protons",
+      "name": "Quarks Become Protons and Neutrons",
+      "sort_order": 4,
+      "category": "first-moments",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["quarks", "protons", "neutrons", "matter"],
+      "metadata": {"time": "1 microsecond after Big Bang", "era": "Quark Epoch"}
+    },
+    {
+      "id": "first-atoms",
+      "name": "The First Atoms — Hydrogen and Helium",
+      "sort_order": 5,
+      "category": "first-moments",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["nucleosynthesis", "hydrogen", "helium", "atoms"],
+      "metadata": {"time": "3 minutes after Big Bang", "era": "Big Bang Nucleosynthesis"}
+    },
+    {
+      "id": "first-light",
+      "name": "The First Light — The Cosmic Microwave Background",
+      "sort_order": 6,
+      "category": "first-moments",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["CMB", "light", "transparency", "photons", "recombination"],
+      "metadata": {"time": "380,000 years after Big Bang", "era": "Recombination"}
+    },
+    {
+      "id": "dark-ages",
+      "name": "The Cosmic Dark Ages",
+      "sort_order": 7,
+      "category": "stellar-era",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["dark-ages", "darkness", "gravity", "gas-clouds"],
+      "metadata": {"time": "380,000 to ~200 million years", "era": "Dark Ages"}
+    },
+    {
+      "id": "first-stars",
+      "name": "The First Stars Ignite",
+      "sort_order": 8,
+      "category": "stellar-era",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["population-III", "first-stars", "fusion", "reionization"],
+      "metadata": {"time": "~200 million years after Big Bang", "era": "Cosmic Dawn"}
+    },
+    {
+      "id": "stellar-forges",
+      "name": "Stars as Element Factories",
+      "sort_order": 9,
+      "category": "stellar-era",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["nucleosynthesis", "elements", "carbon", "oxygen", "iron"],
+      "metadata": {"time": "Ongoing since first stars", "era": "Stellar Nucleosynthesis"}
+    },
+    {
+      "id": "supernovae",
+      "name": "Supernovae — Death Creates Life",
+      "sort_order": 10,
+      "category": "stellar-era",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["supernova", "explosion", "heavy-elements", "gold", "stardust"],
+      "metadata": {"time": "Ongoing since first massive stars died", "era": "Stellar Evolution"}
+    },
+    {
+      "id": "galaxies-form",
+      "name": "Galaxies Assemble",
+      "sort_order": 11,
+      "category": "stellar-era",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["galaxies", "milky-way", "dark-matter", "structure"],
+      "metadata": {"time": "~1 billion years after Big Bang", "era": "Galaxy Formation"}
+    },
+    {
+      "id": "milky-way",
+      "name": "Our Galaxy — The Milky Way",
+      "sort_order": 12,
+      "category": "stellar-era",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["milky-way", "spiral", "home-galaxy", "100-billion-stars"],
+      "metadata": {"time": "~13.6 billion years ago (began forming)", "era": "Galaxy Evolution"}
+    },
+    {
+      "id": "solar-nebula",
+      "name": "A Cloud Collapses — The Solar Nebula",
+      "sort_order": 13,
+      "category": "solar-system",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["solar-nebula", "collapse", "spinning", "disk"],
+      "metadata": {"time": "4.6 billion years ago", "era": "Solar System Formation"}
+    },
+    {
+      "id": "sun-ignites",
+      "name": "Our Sun Ignites",
+      "sort_order": 14,
+      "category": "solar-system",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["sun", "star", "fusion", "yellow-dwarf"],
+      "metadata": {"time": "4.6 billion years ago", "era": "Solar System Formation"}
+    },
+    {
+      "id": "planets-form",
+      "name": "The Planets Take Shape",
+      "sort_order": 15,
+      "category": "solar-system",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["planets", "accretion", "rocky", "gas-giants"],
+      "metadata": {"time": "4.6–4.5 billion years ago", "era": "Planetary Formation"}
+    },
+    {
+      "id": "moon-forming-impact",
+      "name": "Theia Strikes — The Moon is Born",
+      "sort_order": 16,
+      "category": "solar-system",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["moon", "theia", "impact", "tides"],
+      "metadata": {"time": "4.5 billion years ago", "era": "Hadean"}
+    },
+    {
+      "id": "late-heavy-bombardment",
+      "name": "The Late Heavy Bombardment",
+      "sort_order": 17,
+      "category": "earth-story",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["bombardment", "asteroids", "water", "hadean"],
+      "metadata": {"time": "4.1–3.8 billion years ago", "era": "Late Hadean"}
+    },
+    {
+      "id": "first-oceans",
+      "name": "The First Oceans",
+      "sort_order": 18,
+      "category": "earth-story",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["oceans", "water", "liquid", "cooling"],
+      "metadata": {"time": "~4.4 billion years ago", "era": "Hadean"}
+    },
+    {
+      "id": "first-life",
+      "name": "The First Life",
+      "sort_order": 19,
+      "category": "earth-story",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["abiogenesis", "bacteria", "RNA", "origin-of-life"],
+      "metadata": {"time": "~3.8 billion years ago", "era": "Archean"}
+    },
+    {
+      "id": "photosynthesis",
+      "name": "Photosynthesis — Life Learns to Eat Sunlight",
+      "sort_order": 20,
+      "category": "earth-story",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["photosynthesis", "cyanobacteria", "oxygen", "sunlight"],
+      "metadata": {"time": "~3.4 billion years ago", "era": "Archean"}
+    },
+    {
+      "id": "great-oxidation",
+      "name": "The Great Oxidation Event",
+      "sort_order": 21,
+      "category": "earth-story",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["oxygen", "catastrophe", "atmosphere", "rust"],
+      "metadata": {"time": "~2.4 billion years ago", "era": "Proterozoic"}
+    },
+    {
+      "id": "complex-cells",
+      "name": "Complex Cells — Endosymbiosis",
+      "sort_order": 22,
+      "category": "earth-story",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["eukaryotes", "mitochondria", "endosymbiosis", "cooperation"],
+      "metadata": {"time": "~2 billion years ago", "era": "Proterozoic"}
+    },
+    {
+      "id": "multicellular-life",
+      "name": "Multicellular Life",
+      "sort_order": 23,
+      "category": "earth-story",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["multicellular", "cooperation", "ediacaran", "bodies"],
+      "metadata": {"time": "~600 million years ago", "era": "Ediacaran"}
+    },
+    {
+      "id": "cambrian-explosion",
+      "name": "The Cambrian Explosion",
+      "sort_order": 24,
+      "category": "life-diversifies",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["cambrian", "explosion", "eyes", "body-plans", "diversity"],
+      "metadata": {"time": "~540 million years ago", "era": "Cambrian"}
+    },
+    {
+      "id": "life-on-land",
+      "name": "Life Conquers Land",
+      "sort_order": 25,
+      "category": "life-diversifies",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["land", "plants", "tetrapods", "tiktaalik"],
+      "metadata": {"time": "~470–375 million years ago", "era": "Ordovician to Devonian"}
+    },
+    {
+      "id": "age-of-dinosaurs",
+      "name": "The Age of Dinosaurs",
+      "sort_order": 26,
+      "category": "life-diversifies",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["dinosaurs", "mesozoic", "reptiles", "birds"],
+      "metadata": {"time": "252–66 million years ago", "era": "Mesozoic"}
+    },
+    {
+      "id": "asteroid-impact",
+      "name": "The Asteroid — End and Beginning",
+      "sort_order": 27,
+      "category": "life-diversifies",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["asteroid", "chicxulub", "extinction", "mammals"],
+      "metadata": {"time": "66 million years ago", "era": "K-Pg boundary"}
+    },
+    {
+      "id": "rise-of-mammals",
+      "name": "The Rise of Mammals",
+      "sort_order": 28,
+      "category": "life-diversifies",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["mammals", "cenozoic", "primates", "diversification"],
+      "metadata": {"time": "66–2 million years ago", "era": "Cenozoic"}
+    },
+    {
+      "id": "humans-arrive",
+      "name": "Humans Walk the Earth",
+      "sort_order": 29,
+      "category": "life-diversifies",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["humans", "homo-sapiens", "africa", "consciousness"],
+      "metadata": {"time": "~300,000 years ago", "era": "Pleistocene"}
+    },
+    {
+      "id": "the-present-moment",
+      "name": "Now — You Are Here",
+      "sort_order": 30,
+      "category": "life-diversifies",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Mind-Blowing Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["present", "awareness", "perspective", "cosmic-address"],
+      "metadata": {"time": "Now", "era": "Holocene/Anthropocene"}
+    },
+
+    {
+      "id": "era-first-moments",
+      "name": "The First Moments — From Nothing to Something",
+      "sort_order": 31,
+      "category": "by-era",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["big-bang", "first-moments", "physics"],
+      "composite_of": ["big-bang", "first-forces", "inflation", "quarks-to-protons", "first-atoms", "first-light"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "era-stars-galaxies",
+      "name": "Stars and Galaxies — The Universe Lights Up",
+      "sort_order": 32,
+      "category": "by-era",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["stars", "galaxies", "elements", "astrophysics"],
+      "composite_of": ["dark-ages", "first-stars", "stellar-forges", "supernovae", "galaxies-form", "milky-way"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "era-solar-system",
+      "name": "Our Solar System — Home Takes Shape",
+      "sort_order": 33,
+      "category": "by-era",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["solar-system", "sun", "planets", "moon"],
+      "composite_of": ["solar-nebula", "sun-ignites", "planets-form", "moon-forming-impact"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "era-earth-life",
+      "name": "Earth and Early Life — The Living Planet",
+      "sort_order": 34,
+      "category": "by-era",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["earth", "life", "evolution", "cells"],
+      "composite_of": ["late-heavy-bombardment", "first-oceans", "first-life", "photosynthesis", "great-oxidation", "complex-cells", "multicellular-life"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "era-complex-life",
+      "name": "Complex Life — From Worms to Wondering",
+      "sort_order": 35,
+      "category": "by-era",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["evolution", "diversity", "animals", "humans"],
+      "composite_of": ["cambrian-explosion", "life-on-land", "age-of-dinosaurs", "asteroid-impact", "rise-of-mammals", "humans-arrive", "the-present-moment"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "theme-scale",
+      "name": "Scales of Time and Space",
+      "sort_order": 36,
+      "category": "by-theme",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["scale", "time", "perspective", "humility"],
+      "composite_of": ["big-bang", "first-light", "first-stars", "solar-nebula", "first-life", "humans-arrive", "the-present-moment"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "theme-creation-destruction",
+      "name": "Creation Through Destruction",
+      "sort_order": 37,
+      "category": "by-theme",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["destruction", "creation", "supernovae", "extinction", "renewal"],
+      "composite_of": ["supernovae", "moon-forming-impact", "late-heavy-bombardment", "great-oxidation", "asteroid-impact"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "theme-cooperation",
+      "name": "The Power of Coming Together",
+      "sort_order": 38,
+      "category": "by-theme",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["cooperation", "symbiosis", "complexity", "emergence"],
+      "composite_of": ["quarks-to-protons", "first-atoms", "galaxies-form", "complex-cells", "multicellular-life"],
+      "relationship_type": "emergence"
+    },
+
+    {
+      "id": "cosmic-timeline",
+      "name": "The Cosmic Timeline — 13.8 Billion Years in 30 Steps",
+      "sort_order": 39,
+      "category": "meta",
+      "level": 3,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["timeline", "overview", "cosmic-calendar"],
+      "composite_of": ["era-first-moments", "era-stars-galaxies", "era-solar-system", "era-earth-life", "era-complex-life"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "cosmic-themes",
+      "name": "Cosmic Themes — Patterns in the Unfolding",
+      "sort_order": 40,
+      "category": "meta",
+      "level": 3,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["themes", "patterns", "meaning", "wonder"],
+      "composite_of": ["theme-scale", "theme-creation-destruction", "theme-cooperation"],
+      "relationship_type": "emergence"
+    }
+  ]
+}
