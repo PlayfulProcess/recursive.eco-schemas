@@ -1,0 +1,616 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "date": "2026-03-06",
+        "note": "Original from-memory grammar based on current paleontological consensus"
+      }
+    ]
+  },
+  "name": "Dinosaur Tree",
+  "description": "A journey through the age of dinosaurs — from the first tiny hunters of the Triassic to the mighty giants of the Cretaceous. Thirty species organized by the three great periods of the Mesozoic Era, with tiered content for young children (Story) and older readers (Science).\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Charles R. Knight (1874–1953), whose paintings for the American Museum of Natural History defined how generations imagined dinosaurs. Heinrich Harder (1858–1935), German artist known for his prehistoric animal paintings. Zdeněk Burian (1905–1981), Czech paleoartist whose reconstructions shaped European understanding of prehistory.",
+  "grammar_type": "custom",
+  "creator_name": "PlayfulProcess",
+  "tags": ["dinosaurs", "paleontology", "natural-history", "kids", "science", "mesozoic", "extinction"],
+  "roots": ["natural-philosophy"],
+  "shelves": ["wonder", "children"],
+  "lineages": ["Kelty"],
+  "worldview": "rationalist",
+  "items": [
+    {
+      "id": "eoraptor",
+      "name": "Eoraptor",
+      "sort_order": 1,
+      "category": "triassic",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["triassic", "early-dinosaur", "omnivore", "small"],
+      "metadata": {"period": "Late Triassic", "diet": "omnivore", "length_m": 1}
+    },
+    {
+      "id": "coelophysis",
+      "name": "Coelophysis",
+      "sort_order": 2,
+      "category": "triassic",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["triassic", "carnivore", "pack-hunter", "theropod"],
+      "metadata": {"period": "Late Triassic", "diet": "carnivore", "length_m": 3}
+    },
+    {
+      "id": "herrerasaurus",
+      "name": "Herrerasaurus",
+      "sort_order": 3,
+      "category": "triassic",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["triassic", "carnivore", "early-dinosaur", "predator"],
+      "metadata": {"period": "Late Triassic", "diet": "carnivore", "length_m": 6}
+    },
+    {
+      "id": "plateosaurus",
+      "name": "Plateosaurus",
+      "sort_order": 4,
+      "category": "triassic",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["triassic", "herbivore", "prosauropod", "large"],
+      "metadata": {"period": "Late Triassic", "diet": "herbivore", "length_m": 8}
+    },
+    {
+      "id": "liliensternus",
+      "name": "Liliensternus",
+      "sort_order": 5,
+      "category": "triassic",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["triassic", "carnivore", "theropod", "fast"],
+      "metadata": {"period": "Late Triassic", "diet": "carnivore", "length_m": 5}
+    },
+    {
+      "id": "allosaurus",
+      "name": "Allosaurus",
+      "sort_order": 6,
+      "category": "jurassic",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["jurassic", "carnivore", "apex-predator", "theropod"],
+      "metadata": {"period": "Late Jurassic", "diet": "carnivore", "length_m": 12}
+    },
+    {
+      "id": "brachiosaurus",
+      "name": "Brachiosaurus",
+      "sort_order": 7,
+      "category": "jurassic",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["jurassic", "herbivore", "sauropod", "giant", "tall"],
+      "metadata": {"period": "Late Jurassic", "diet": "herbivore", "length_m": 26}
+    },
+    {
+      "id": "stegosaurus",
+      "name": "Stegosaurus",
+      "sort_order": 8,
+      "category": "jurassic",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["jurassic", "herbivore", "plates", "thagomizer", "armored"],
+      "metadata": {"period": "Late Jurassic", "diet": "herbivore", "length_m": 9}
+    },
+    {
+      "id": "diplodocus",
+      "name": "Diplodocus",
+      "sort_order": 9,
+      "category": "jurassic",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["jurassic", "herbivore", "sauropod", "long", "whip-tail"],
+      "metadata": {"period": "Late Jurassic", "diet": "herbivore", "length_m": 27}
+    },
+    {
+      "id": "archaeopteryx",
+      "name": "Archaeopteryx",
+      "sort_order": 10,
+      "category": "jurassic",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["jurassic", "feathered", "bird-ancestor", "transitional", "flight"],
+      "metadata": {"period": "Late Jurassic", "diet": "carnivore", "length_m": 0.5}
+    },
+    {
+      "id": "compsognathus",
+      "name": "Compsognathus",
+      "sort_order": 11,
+      "category": "jurassic",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["jurassic", "carnivore", "tiny", "fast", "theropod"],
+      "metadata": {"period": "Late Jurassic", "diet": "carnivore", "length_m": 1}
+    },
+    {
+      "id": "ceratosaurus",
+      "name": "Ceratosaurus",
+      "sort_order": 12,
+      "category": "jurassic",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["jurassic", "carnivore", "horned", "theropod"],
+      "metadata": {"period": "Late Jurassic", "diet": "carnivore", "length_m": 6}
+    },
+    {
+      "id": "kentrosaurus",
+      "name": "Kentrosaurus",
+      "sort_order": 13,
+      "category": "jurassic",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["jurassic", "herbivore", "spiky", "stegosaur"],
+      "metadata": {"period": "Late Jurassic", "diet": "herbivore", "length_m": 5}
+    },
+    {
+      "id": "tyrannosaurus-rex",
+      "name": "Tyrannosaurus Rex",
+      "sort_order": 14,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["cretaceous", "carnivore", "apex-predator", "theropod", "king"],
+      "metadata": {"period": "Late Cretaceous", "diet": "carnivore", "length_m": 12}
+    },
+    {
+      "id": "triceratops",
+      "name": "Triceratops",
+      "sort_order": 15,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["cretaceous", "herbivore", "horned", "ceratopsian", "frill"],
+      "metadata": {"period": "Late Cretaceous", "diet": "herbivore", "length_m": 9}
+    },
+    {
+      "id": "velociraptor",
+      "name": "Velociraptor",
+      "sort_order": 16,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["cretaceous", "carnivore", "feathered", "dromaeosaur", "clever"],
+      "metadata": {"period": "Late Cretaceous", "diet": "carnivore", "length_m": 2}
+    },
+    {
+      "id": "spinosaurus",
+      "name": "Spinosaurus",
+      "sort_order": 17,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["cretaceous", "carnivore", "aquatic", "sail", "largest-predator"],
+      "metadata": {"period": "Late Cretaceous", "diet": "piscivore", "length_m": 15}
+    },
+    {
+      "id": "ankylosaurus",
+      "name": "Ankylosaurus",
+      "sort_order": 18,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["cretaceous", "herbivore", "armored", "club-tail", "tank"],
+      "metadata": {"period": "Late Cretaceous", "diet": "herbivore", "length_m": 7}
+    },
+    {
+      "id": "parasaurolophus",
+      "name": "Parasaurolophus",
+      "sort_order": 19,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["cretaceous", "herbivore", "hadrosaur", "crest", "trumpeter"],
+      "metadata": {"period": "Late Cretaceous", "diet": "herbivore", "length_m": 10}
+    },
+    {
+      "id": "pachycephalosaurus",
+      "name": "Pachycephalosaurus",
+      "sort_order": 20,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["cretaceous", "herbivore", "dome-head", "head-butter"],
+      "metadata": {"period": "Late Cretaceous", "diet": "herbivore", "length_m": 5}
+    },
+    {
+      "id": "pteranodon",
+      "name": "Pteranodon",
+      "sort_order": 21,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["cretaceous", "flying-reptile", "pterosaur", "not-a-dinosaur"],
+      "metadata": {"period": "Late Cretaceous", "diet": "piscivore", "length_m": 1.8, "wingspan_m": 7}
+    },
+    {
+      "id": "quetzalcoatlus",
+      "name": "Quetzalcoatlus",
+      "sort_order": 22,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["cretaceous", "flying-reptile", "pterosaur", "giant", "not-a-dinosaur"],
+      "metadata": {"period": "Late Cretaceous", "diet": "carnivore", "length_m": 3, "wingspan_m": 11}
+    },
+    {
+      "id": "therizinosaurus",
+      "name": "Therizinosaurus",
+      "sort_order": 23,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["cretaceous", "herbivore", "giant-claws", "theropod", "weird"],
+      "metadata": {"period": "Late Cretaceous", "diet": "herbivore", "length_m": 10}
+    },
+    {
+      "id": "giganotosaurus",
+      "name": "Giganotosaurus",
+      "sort_order": 24,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["cretaceous", "carnivore", "apex-predator", "south-america"],
+      "metadata": {"period": "Late Cretaceous", "diet": "carnivore", "length_m": 13}
+    },
+    {
+      "id": "protoceratops",
+      "name": "Protoceratops",
+      "sort_order": 25,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["cretaceous", "herbivore", "ceratopsian", "small", "frill"],
+      "metadata": {"period": "Late Cretaceous", "diet": "herbivore", "length_m": 2}
+    },
+    {
+      "id": "dreadnoughtus",
+      "name": "Dreadnoughtus",
+      "sort_order": 26,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["cretaceous", "herbivore", "sauropod", "titanosaur", "heaviest"],
+      "metadata": {"period": "Late Cretaceous", "diet": "herbivore", "length_m": 26}
+    },
+    {
+      "id": "microraptor",
+      "name": "Microraptor",
+      "sort_order": 27,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["cretaceous", "carnivore", "feathered", "four-wings", "glider"],
+      "metadata": {"period": "Early Cretaceous", "diet": "carnivore", "length_m": 0.8}
+    },
+    {
+      "id": "iguanodon",
+      "name": "Iguanodon",
+      "sort_order": 28,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["cretaceous", "herbivore", "thumb-spike", "first-discovered"],
+      "metadata": {"period": "Early Cretaceous", "diet": "herbivore", "length_m": 10}
+    },
+    {
+      "id": "carnotaurus",
+      "name": "Carnotaurus",
+      "sort_order": 29,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["cretaceous", "carnivore", "horned", "tiny-arms", "fast"],
+      "metadata": {"period": "Late Cretaceous", "diet": "carnivore", "length_m": 8}
+    },
+    {
+      "id": "mosasaurus",
+      "name": "Mosasaurus",
+      "sort_order": 30,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Placeholder.",
+        "Science": "Placeholder.",
+        "Fun Fact": "Placeholder.",
+        "Reflection": "Placeholder."
+      },
+      "keywords": ["cretaceous", "marine-reptile", "ocean", "not-a-dinosaur", "apex-predator"],
+      "metadata": {"period": "Late Cretaceous", "diet": "carnivore", "length_m": 13}
+    },
+
+    {
+      "id": "triassic-period",
+      "name": "The Triassic Period — Dawn of the Dinosaurs",
+      "sort_order": 31,
+      "category": "by-period",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["triassic", "period", "pangaea", "origins"],
+      "composite_of": ["eoraptor", "coelophysis", "herrerasaurus", "plateosaurus", "liliensternus"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "jurassic-period",
+      "name": "The Jurassic Period — Age of Giants",
+      "sort_order": 32,
+      "category": "by-period",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["jurassic", "period", "sauropods", "golden-age"],
+      "composite_of": ["allosaurus", "brachiosaurus", "stegosaurus", "diplodocus", "archaeopteryx", "compsognathus", "ceratosaurus", "kentrosaurus"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "cretaceous-period",
+      "name": "The Cretaceous Period — Last and Greatest",
+      "sort_order": 33,
+      "category": "by-period",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["cretaceous", "period", "diversity", "extinction"],
+      "composite_of": ["tyrannosaurus-rex", "triceratops", "velociraptor", "spinosaurus", "ankylosaurus", "parasaurolophus", "pachycephalosaurus", "pteranodon", "quetzalcoatlus", "therizinosaurus", "giganotosaurus", "protoceratops", "dreadnoughtus", "microraptor", "iguanodon", "carnotaurus", "mosasaurus"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "mighty-hunters",
+      "name": "The Mighty Hunters — Carnivores",
+      "sort_order": 34,
+      "category": "by-diet",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["carnivore", "predator", "theropod"],
+      "composite_of": ["coelophysis", "herrerasaurus", "liliensternus", "allosaurus", "compsognathus", "ceratosaurus", "tyrannosaurus-rex", "velociraptor", "spinosaurus", "giganotosaurus", "microraptor", "carnotaurus", "mosasaurus"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "gentle-giants",
+      "name": "The Gentle Giants — Herbivores",
+      "sort_order": 35,
+      "category": "by-diet",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["herbivore", "plant-eater", "gentle"],
+      "composite_of": ["plateosaurus", "brachiosaurus", "stegosaurus", "diplodocus", "kentrosaurus", "triceratops", "ankylosaurus", "parasaurolophus", "pachycephalosaurus", "therizinosaurus", "protoceratops", "dreadnoughtus", "iguanodon"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "sky-and-sea",
+      "name": "Sky and Sea — Not Dinosaurs!",
+      "sort_order": 36,
+      "category": "by-type",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["pterosaur", "marine-reptile", "flying", "swimming"],
+      "composite_of": ["pteranodon", "quetzalcoatlus", "mosasaurus"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "feathered-wonders",
+      "name": "Feathered Wonders — Dinosaurs with Feathers",
+      "sort_order": 37,
+      "category": "by-feature",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["feathered", "bird-evolution", "flight"],
+      "composite_of": ["archaeopteryx", "velociraptor", "microraptor", "therizinosaurus"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "armored-defenders",
+      "name": "Armored Defenders — Built-in Protection",
+      "sort_order": 38,
+      "category": "by-feature",
+      "level": 2,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["armor", "defense", "plates", "horns", "clubs"],
+      "composite_of": ["stegosaurus", "kentrosaurus", "ankylosaurus", "triceratops", "pachycephalosaurus"],
+      "relationship_type": "emergence"
+    },
+
+    {
+      "id": "mesozoic-era",
+      "name": "The Mesozoic Era — When Reptiles Ruled the Earth",
+      "sort_order": 39,
+      "category": "meta",
+      "level": 3,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["mesozoic", "overview", "timeline"],
+      "composite_of": ["triassic-period", "jurassic-period", "cretaceous-period"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "ways-of-life",
+      "name": "Ways of Life — How Dinosaurs Survived",
+      "sort_order": 40,
+      "category": "meta",
+      "level": 3,
+      "sections": {
+        "About": "Placeholder.",
+        "For Parents": "Placeholder."
+      },
+      "keywords": ["ecology", "diet", "adaptation", "survival"],
+      "composite_of": ["mighty-hunters", "gentle-giants", "sky-and-sea", "feathered-wonders", "armored-defenders"],
+      "relationship_type": "emergence"
+    }
+  ]
+}
