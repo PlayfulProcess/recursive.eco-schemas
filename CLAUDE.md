@@ -58,7 +58,7 @@ Every `grammar.json` follows this structure:
 These fields connect each grammar to the library's many perspectives:
 
 - `roots` — Intellectual roots (e.g., `["eastern-wisdom", "mysticism"]`). See `plan/SEED_100.md` for the 10 roots.
-- `shelves` — Library shelves: `wisdom`, `earth`, `wonder`, `resilience`, `mirror`, `children`, `contested`
+- `shelves` — Library shelves: `wisdom`, `earth`, `wonder`, `resilience`, `mirror`, `children`, `contested`, `composting`
 - `lineages` — Modern thinkers this feeds: `Linehan`, `Akomolafe`, `Shrei`, `Andreotti`, `Gottman`, `Johnson`, `Kelty`
 - `worldview` — Epistemic stance: `animist`, `rationalist`, `devotional`, `dialectical`, `non-dual`, etc.
 
