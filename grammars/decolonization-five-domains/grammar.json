@@ -11,34 +11,82 @@
     ]
   },
   "name": "Decolonization: Five Domains",
-  "description": "A contemplative grammar mapping decolonization across five domains of human experience — Body, Mind, Spirit, Collective, and Planet. Not a checklist or a destination, but an ongoing practice of noticing: who told you how to eat, think, pray, organize, and relate to the earth? Each item traces a colonial pattern, names what it costs, honors what persists despite centuries of erasure, and extends an invitation to sit with complexity rather than rush toward resolution.\n\nThis grammar follows Vanessa Andreotti's insight that modernity is dying and needs hospicing — not with triumphalism or despair, but with the wisdom of grandmothers who know that composting is not the same as destroying.",
+  "description": "A contemplative grammar mapping decolonization across five domains of human experience — Body, Mind, Spirit, Collective, and Planet. Not a checklist or a destination, but an ongoing practice of noticing: who told you how to eat, think, pray, organize, and relate to the earth? Each item traces a colonial pattern, names what it costs, honors what persists despite centuries of erasure, and extends an invitation to sit with complexity rather than rush toward resolution.\n\nThis grammar is trauma-informed: colonial violence is not merely historical but lives in the nervous system — intergenerational, somatic, ongoing. Following Resmaa Menakem (My Grandmother's Hands), we recognize that white-body supremacy is stored in bodies, not just minds. Following Bessel van der Kolk, we know the body keeps the score. Following Rachel Yehuda, we know trauma alters gene expression across generations. Decolonization that ignores the body recolonizes the mind.\n\nThis grammar follows Vanessa Andreotti's insight that modernity is dying and needs hospicing — not with triumphalism or despair, but with the wisdom of grandmothers who know that composting is not the same as destroying.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Käthe Kollwitz's charcoal drawings of suffering, resistance, and maternal grief (1900s-1930s). Diego Rivera's murals of indigenous life and colonial encounter (1920s-1940s). Hokusai's studies of human relationship to nature (1830s). William Blake's visionary illustrations of oppression and liberation from Songs of Innocence and Experience (1789-1794). Albrecht Dürer's woodcuts of Apocalypse (1498) — systems ending, worlds composting.",
   "grammar_type": "custom",
   "creator_name": "PlayfulProcess",
-  "tags": ["decolonization", "decolonial", "indigenous-knowledge", "embodiment", "ecology", "epistemic-justice", "land-back", "hospicing-modernity", "commons", "sovereignty", "animism", "resistance", "resilience", "contemplative"],
-  "roots": ["indigenous-knowledge", "african-cosmology", "eastern-wisdom", "western-philosophy"],
-  "shelves": ["contested", "wisdom"],
-  "lineages": ["Andreotti", "Akomolafe", "Shrei", "Kelty"],
+  "tags": [
+    "decolonization",
+    "decolonial",
+    "indigenous-knowledge",
+    "embodiment",
+    "ecology",
+    "epistemic-justice",
+    "land-back",
+    "hospicing-modernity",
+    "commons",
+    "sovereignty",
+    "animism",
+    "resistance",
+    "resilience",
+    "contemplative"
+  ],
+  "roots": [
+    "indigenous-knowledge",
+    "african-cosmology",
+    "eastern-wisdom",
+    "western-philosophy"
+  ],
+  "shelves": [
+    "contested",
+    "wisdom"
+  ],
+  "lineages": [
+    "Andreotti",
+    "Akomolafe",
+    "Shrei",
+    "Kelty"
+  ],
   "worldview": "decolonial",
   "items": [
     {
       "id": "body-domain",
       "name": "The Body: Who Told You How to Live in Your Skin?",
-      "sort_order": 0,
+      "sort_order": 1,
       "category": "domains",
       "level": 2,
-      "composite_of": ["body-food-systems", "body-traditional-medicine", "body-sovereignty", "body-dance-resistance", "body-hair-politics", "body-reclaiming-rest", "body-colonized-labor", "body-birth-death", "body-disability-productivity"],
+      "composite_of": [
+        "body-food-systems",
+        "body-traditional-medicine",
+        "body-sovereignty",
+        "body-dance-resistance",
+        "body-hair-politics",
+        "body-reclaiming-rest",
+        "body-colonized-labor",
+        "body-birth-death",
+        "body-disability-productivity"
+      ],
       "sections": {
         "About": "Colonization begins in the body. It reshapes what you eat, how you heal, when you rest, how you move, what you consider beautiful, and how you are born and die. The colonial body is a body optimized for production — disciplined, standardized, measured against norms invented in European capitals and exported as universal truth. Decolonizing the body means noticing whose rhythms you move to, whose medicine you trust, whose beauty standards live in your mirror.",
         "The Colonial Logic": "The body as machine. The body as labor unit. The body as something to be civilized, corrected, covered, controlled. Colonial medicine replaces grandmother knowledge with pharmaceutical patents. Colonial agriculture replaces milpa with monoculture. Colonial beauty replaces a thousand forms of beauty with one.",
         "The Invitation": "Before you try to reclaim anything, notice what lives in your body that isn't yours. Not to purge it — you can't — but to know it's there. The body remembers what the mind forgets."
       },
-      "keywords": ["body", "embodiment", "somatics", "food", "medicine", "labor", "beauty", "birth", "death"],
+      "keywords": [
+        "body",
+        "embodiment",
+        "somatics",
+        "food",
+        "medicine",
+        "labor",
+        "beauty",
+        "birth",
+        "death"
+      ],
       "metadata": {}
     },
     {
       "id": "body-food-systems",
       "name": "Reclaiming Indigenous Food Systems",
-      "sort_order": 1,
+      "sort_order": 2,
       "category": "body",
       "level": 1,
       "sections": {
@@ -47,13 +95,21 @@
         "What Persists": "The Three Sisters still grow. Seed libraries and indigenous seed keepers maintain varieties that industrial agriculture abandoned. Food sovereignty movements from the Zapatistas to Standing Rock center food as political and spiritual practice. Urban indigenous gardens. Community kitchens. The return of bison to the plains. Ancestral grain revival — amaranth, teff, quinoa (though quinoa's global popularity created its own extractive dynamic).",
         "The Invitation": "What did your great-grandparents eat? Not as nostalgia, but as inquiry. What food relationships were broken in your lineage? What would it mean to eat in relationship — to soil, to season, to the beings who become your body?"
       },
-      "keywords": ["food sovereignty", "milpa", "three sisters", "monoculture", "seed saving", "indigenous agriculture", "nutrition colonialism"],
+      "keywords": [
+        "food sovereignty",
+        "milpa",
+        "three sisters",
+        "monoculture",
+        "seed saving",
+        "indigenous agriculture",
+        "nutrition colonialism"
+      ],
       "metadata": {}
     },
     {
       "id": "body-traditional-medicine",
       "name": "Traditional Medicine vs. Biomedical Hegemony",
-      "sort_order": 2,
+      "sort_order": 3,
       "category": "body",
       "level": 1,
       "sections": {
@@ -62,13 +118,21 @@
         "What Persists": "Curanderas still practice. Ayurvedic and Chinese medicine serve billions. Indigenous plant knowledge is increasingly recognized — not by being validated by Western science, but by communities who never stopped using it. Ethnobotanists and indigenous knowledge keepers collaborate on protocols that protect intellectual sovereignty. Some hospitals now integrate traditional healing. The WHO recognizes traditional medicine, however imperfectly.",
         "The Invitation": "Notice which healing practices you consider legitimate and which you consider alternative. Who taught you that hierarchy? What would medicine look like if the question wasn't 'does it work by our standards?' but 'what does this community know about being well?'"
       },
-      "keywords": ["traditional medicine", "ayurveda", "curanderismo", "biopiracy", "pharmaceutical colonialism", "ethnobotany", "healing"],
+      "keywords": [
+        "traditional medicine",
+        "ayurveda",
+        "curanderismo",
+        "biopiracy",
+        "pharmaceutical colonialism",
+        "ethnobotany",
+        "healing"
+      ],
       "metadata": {}
     },
     {
       "id": "body-sovereignty",
       "name": "Body Sovereignty and Bodily Autonomy",
-      "sort_order": 3,
+      "sort_order": 4,
       "category": "body",
       "level": 1,
       "sections": {
@@ -77,13 +141,20 @@
         "What Persists": "Reproductive justice movements led by women of color who insist that bodily autonomy includes the right to have children, not have children, and parent children in safe environments. Disability justice that refuses the medical model and insists disabled bodies are not broken. Trans and Two-Spirit people reclaiming identities that predate colonization. The simple, radical act of existing in your body without apology.",
         "The Invitation": "Where in your body do you carry the sense that you need permission? Permission to rest, to take up space, to look the way you look, to feel what you feel? That sense has a history. It was put there."
       },
-      "keywords": ["bodily autonomy", "reproductive justice", "forced sterilization", "medical experimentation", "disability justice", "body sovereignty"],
+      "keywords": [
+        "bodily autonomy",
+        "reproductive justice",
+        "forced sterilization",
+        "medical experimentation",
+        "disability justice",
+        "body sovereignty"
+      ],
       "metadata": {}
     },
     {
       "id": "body-dance-resistance",
       "name": "Dance as Resistance and Remembering",
-      "sort_order": 4,
+      "sort_order": 5,
       "category": "body",
       "level": 1,
       "sections": {
@@ -92,13 +163,22 @@
         "What Persists": "Capoeira survived disguised as play. Hula was revived and is now central to Hawaiian sovereignty movements. Powwow dance carries prayer and identity across North America. Afro-Brazilian sacred dance — candomblé, umbanda — persisted through syncretism and secrecy. Hip-hop emerged from colonized bodies in colonized urban spaces and became global. The body remembers what was forbidden.",
         "The Invitation": "How do you move when no one is watching? What dances live in your lineage? The embodied grammars in this library — Indian classical dance, ballet, modern dance, anthropological dance — each carries a story of power, resistance, and the body's refusal to forget."
       },
-      "keywords": ["dance", "sun dance", "capoeira", "hula", "ghost dance", "hip-hop", "embodied resistance", "cultural suppression"],
+      "keywords": [
+        "dance",
+        "sun dance",
+        "capoeira",
+        "hula",
+        "ghost dance",
+        "hip-hop",
+        "embodied resistance",
+        "cultural suppression"
+      ],
       "metadata": {}
     },
     {
       "id": "body-hair-politics",
       "name": "Hair Politics and Body Presentation",
-      "sort_order": 5,
+      "sort_order": 6,
       "category": "body",
       "level": 1,
       "sections": {
@@ -107,13 +187,21 @@
         "What Persists": "Natural hair movements. Loc culture. Braiding circles that pass technique and story across generations. The CROWN Act. Indigenous hair as prayer — the understanding that hair connects you to spirit, to ancestors, to the earth. The growing refusal to alter your body's truth for colonial comfort.",
         "The Invitation": "Hair seems small until you realize empires took it seriously enough to legislate. What does your hair mean to you? What would it mean if you'd been told your whole life that it was wrong?"
       },
-      "keywords": ["hair politics", "CROWN Act", "residential schools", "natural hair", "body presentation", "professional standards", "beauty norms"],
+      "keywords": [
+        "hair politics",
+        "CROWN Act",
+        "residential schools",
+        "natural hair",
+        "body presentation",
+        "professional standards",
+        "beauty norms"
+      ],
       "metadata": {}
     },
     {
       "id": "body-reclaiming-rest",
       "name": "Reclaiming Rest",
-      "sort_order": 6,
+      "sort_order": 7,
       "category": "body",
       "level": 1,
       "sections": {
@@ -122,13 +210,22 @@
         "What Persists": "The Nap Ministry, founded by Tricia Hersey, frames rest as resistance and reparation. Slow movements — slow food, slow medicine, slow scholarship. Indigenous time, which is not clock time. The Sabbath traditions that survive in multiple faiths. The growing recognition that burnout is not personal failure but systemic design. The radical act of doing nothing.",
         "The Invitation": "Can you rest without producing? Without consuming? Without justifying the rest as making you more productive later? What if rest is not preparation for work but a form of life in itself?"
       },
-      "keywords": ["rest", "nap ministry", "grind culture", "productivity", "burnout", "sabbath", "slow movement", "resistance"],
+      "keywords": [
+        "rest",
+        "nap ministry",
+        "grind culture",
+        "productivity",
+        "burnout",
+        "sabbath",
+        "slow movement",
+        "resistance"
+      ],
       "metadata": {}
     },
     {
       "id": "body-colonized-labor",
       "name": "The Colonized Body at Work",
-      "sort_order": 7,
+      "sort_order": 8,
       "category": "body",
       "level": 1,
       "sections": {
@@ -137,13 +234,21 @@
         "What Persists": "Labor movements led by the most exploited workers — Dolores Huerta and the farmworkers, domestic workers organizing across borders, garment workers demanding accountability. Cooperative economics. Solidarity economy. Worker-owned enterprises. The insistence that labor is not a commodity and the body is not a tool. Mutual aid networks that predate and outlast union structures.",
         "The Invitation": "Who made your clothes? Who picked your food? Who delivered your package? These are not rhetorical questions. They are relationships you're already in, whether or not you acknowledge them."
       },
-      "keywords": ["labor", "exploitation", "supply chain", "sweatshops", "gig economy", "worker movements", "cooperative economics"],
+      "keywords": [
+        "labor",
+        "exploitation",
+        "supply chain",
+        "sweatshops",
+        "gig economy",
+        "worker movements",
+        "cooperative economics"
+      ],
       "metadata": {}
     },
     {
       "id": "body-birth-death",
       "name": "Birth and Death Practices",
-      "sort_order": 8,
+      "sort_order": 9,
       "category": "body",
       "level": 1,
       "sections": {
@@ -152,13 +257,22 @@
         "What Persists": "Midwifery returning — indigenous midwives, doulas, birth workers centering cultural practice. Death doulas and home funeral movements. Green burial. The return to sitting with the dying. Indigenous communities reclaiming birth on the land. The understanding that how we enter and leave this world is not a medical question but a cosmological one.",
         "The Invitation": "How do you want to be born? How do you want to die? These questions were answered for you before you could ask them. The answers came from a system that treats both thresholds as problems to be managed rather than mysteries to be accompanied."
       },
-      "keywords": ["birth", "death", "midwifery", "doula", "maternal mortality", "medicalization", "green burial", "death practices"],
+      "keywords": [
+        "birth",
+        "death",
+        "midwifery",
+        "doula",
+        "maternal mortality",
+        "medicalization",
+        "green burial",
+        "death practices"
+      ],
       "metadata": {}
     },
     {
       "id": "body-disability-productivity",
       "name": "Disability and Colonial Norms of the 'Productive' Body",
-      "sort_order": 9,
+      "sort_order": 10,
       "category": "body",
       "level": 1,
       "sections": {
@@ -167,28 +281,57 @@
         "What Persists": "Disability justice — not disability rights (a legal framework) but disability justice (an intersectional, decolonial framework). Sins Invalid, Mia Mingus, Leah Lakshmi Piepzna-Samarasinha and the insistence that disabled, queer, brown and Black bodies are not broken. Interdependence as value rather than independence. Crip wisdom: the knowledge that comes from navigating a world not built for you. Many indigenous cultures had no concept of disability as deficiency.",
         "The Invitation": "What if the problem was never the body? What if it was always the world that was built too narrow? What forms of intelligence, creativity, and wisdom emerge from bodies that colonial modernity calls broken?"
       },
-      "keywords": ["disability justice", "ableism", "eugenics", "productivity", "normalcy", "Sins Invalid", "interdependence", "crip wisdom"],
+      "keywords": [
+        "disability justice",
+        "ableism",
+        "eugenics",
+        "productivity",
+        "normalcy",
+        "Sins Invalid",
+        "interdependence",
+        "crip wisdom"
+      ],
       "metadata": {}
     },
     {
       "id": "mind-domain",
       "name": "The Mind: Who Told You What Counts as Knowledge?",
-      "sort_order": 10,
+      "sort_order": 11,
       "category": "domains",
       "level": 2,
-      "composite_of": ["mind-epistemic-violence", "mind-language-death", "mind-education-colonization", "mind-cognitive-imperialism", "mind-oral-tradition", "mind-decolonizing-university", "mind-myth-objectivity", "mind-time-conceptions", "mind-research-methodologies", "mind-unlearning"],
+      "composite_of": [
+        "mind-epistemic-violence",
+        "mind-language-death",
+        "mind-education-colonization",
+        "mind-cognitive-imperialism",
+        "mind-oral-tradition",
+        "mind-decolonizing-university",
+        "mind-myth-objectivity",
+        "mind-time-conceptions",
+        "mind-research-methodologies",
+        "mind-unlearning"
+      ],
       "sections": {
         "About": "Colonization of the mind is the most durable form of colonization. Long after the soldiers leave, the categories remain. What counts as rational, what counts as evidence, what counts as a legitimate question, what counts as a real discipline — these are not neutral determinations. They are the residue of a specific European intellectual tradition that universalized itself by declaring all other ways of knowing primitive, pre-scientific, or simply nonexistent.",
         "The Colonial Logic": "One knowledge system to rule them all. The Enlightenment as gift to the world rather than a particular cultural product with particular blind spots. Reason vs. superstition. Written vs. oral. Published vs. lived. Peer-reviewed vs. grandmother-tested. The university as temple of universal knowledge, built on stolen land and funded by colonial wealth.",
         "The Invitation": "Epistemicide — the killing of knowledge systems — may be colonialism's deepest violence. You can rebuild a burned building. How do you rebuild a way of knowing?"
       },
-      "keywords": ["epistemology", "knowledge", "rationality", "science", "education", "language", "oral tradition", "cognitive imperialism"],
+      "keywords": [
+        "epistemology",
+        "knowledge",
+        "rationality",
+        "science",
+        "education",
+        "language",
+        "oral tradition",
+        "cognitive imperialism"
+      ],
       "metadata": {}
     },
     {
       "id": "mind-epistemic-violence",
       "name": "Epistemic Violence: The Killing of Knowledge Systems",
-      "sort_order": 11,
+      "sort_order": 12,
       "category": "mind",
       "level": 1,
       "sections": {
@@ -197,13 +340,21 @@
         "What Persists": "Knowledge systems that survived through practice rather than publication. Aboriginal Australian songlines — the oldest continuously maintained knowledge system on earth. Polynesian navigation. Amazonian ecological knowledge. Andean mathematics. These persist not because they were preserved in archives but because communities kept living them, often in secret, often at great cost.",
         "The Invitation": "What do you know that you don't consider knowledge? What does your body know, your family know, your land know, that you've been taught to discount? Epistemic justice begins with the recognition that knowledge has always been plural."
       },
-      "keywords": ["epistemicide", "epistemic violence", "Santos", "knowledge systems", "classification", "dismissal", "indigenous science"],
+      "keywords": [
+        "epistemicide",
+        "epistemic violence",
+        "Santos",
+        "knowledge systems",
+        "classification",
+        "dismissal",
+        "indigenous science"
+      ],
       "metadata": {}
     },
     {
       "id": "mind-language-death",
       "name": "Language Death and Revival",
-      "sort_order": 12,
+      "sort_order": 13,
       "category": "mind",
       "level": 1,
       "sections": {
@@ -212,13 +363,21 @@
         "What Persists": "Hebrew was revived from a liturgical language to a living one — proof that language death is not always final. Hawaiian immersion schools. Māori language nests (kōhanga reo). Welsh medium education. Indigenous language apps. Master-apprentice programs where the last elderly speakers pass language to young learners one relationship at a time. The insistence that your language is not a hobby but a homeland.",
         "The Invitation": "If you are monolingual in a colonial language, you are living in a house built by empire and thinking it's the whole world. What language did your ancestors dream in?"
       },
-      "keywords": ["language death", "language revival", "residential schools", "linguistic diversity", "Hebrew revival", "immersion schools", "colonial languages"],
+      "keywords": [
+        "language death",
+        "language revival",
+        "residential schools",
+        "linguistic diversity",
+        "Hebrew revival",
+        "immersion schools",
+        "colonial languages"
+      ],
       "metadata": {}
     },
     {
       "id": "mind-education-colonization",
       "name": "Education as Colonization",
-      "sort_order": 13,
+      "sort_order": 14,
       "category": "mind",
       "level": 1,
       "sections": {
@@ -227,13 +386,21 @@
         "What Persists": "Indigenous-run schools. Tribal colleges. Land-based education. Language nests. The growing recognition that education is never neutral — it always teaches you whose knowledge matters and whose doesn't. Decolonial pedagogy that centers community knowledge, elder teaching, land as teacher, story as curriculum. Paulo Freire's insistence that education is either domestication or liberation.",
         "The Invitation": "What did school teach you to forget? Not just content — but ways of learning. Did you learn that knowledge comes from books or from land? From experts or from elders? From competition or from relationship? The answers reveal the colonial architecture of your mind."
       },
-      "keywords": ["residential schools", "Carlisle", "boarding schools", "Stolen Generations", "colonial education", "Freire", "indigenous education"],
+      "keywords": [
+        "residential schools",
+        "Carlisle",
+        "boarding schools",
+        "Stolen Generations",
+        "colonial education",
+        "Freire",
+        "indigenous education"
+      ],
       "metadata": {}
     },
     {
       "id": "mind-cognitive-imperialism",
       "name": "Cognitive Imperialism",
-      "sort_order": 14,
+      "sort_order": 15,
       "category": "mind",
       "level": 1,
       "sections": {
@@ -242,13 +409,22 @@
         "What Persists": "Indigenous languages that structure reality differently. Relational ontologies that refuse the subject/object split. Process philosophies that prioritize becoming over being. Ubuntu — I am because we are. The Lakota phrase 'Mitakuye Oyasin' (all my relatives) that includes stones, rivers, and stars. Every time someone thinks in a way that colonial categories cannot contain, cognitive imperialism loses a little ground.",
         "The Invitation": "The hardest decolonization is the decolonization of your own thinking. Not replacing one set of conclusions with another, but noticing the categories themselves. What binary are you trapped in right now? What if both sides of that binary are colonial?"
       },
-      "keywords": ["cognitive imperialism", "Battiste", "binary thinking", "Western categories", "worldview", "Lorde", "Ubuntu", "relational ontology"],
+      "keywords": [
+        "cognitive imperialism",
+        "Battiste",
+        "binary thinking",
+        "Western categories",
+        "worldview",
+        "Lorde",
+        "Ubuntu",
+        "relational ontology"
+      ],
       "metadata": {}
     },
     {
       "id": "mind-oral-tradition",
       "name": "Reclaiming Oral Tradition",
-      "sort_order": 15,
+      "sort_order": 16,
       "category": "mind",
       "level": 1,
       "sections": {
@@ -257,13 +433,22 @@
         "What Persists": "Griots still sing. Elders still teach. Story circles still carry law, medicine, history, and prayer. Podcasting and digital audio create new forms of oral culture. Hip-hop carries narrative tradition through rhythm and voice. Indigenous communities increasingly assert that their oral traditions constitute legal evidence of sovereignty and land relationship. The voice persists because it lives in bodies, not in buildings that can burn.",
         "The Invitation": "What do you know by heart? Not memorized from a book but carried in your voice, passed to you by a voice? What stories were told to you that you now tell? Oral tradition is not the absence of writing. It's the presence of relationship."
       },
-      "keywords": ["oral tradition", "griots", "songlines", "storytelling", "literacy hierarchy", "voice", "memory", "performance"],
+      "keywords": [
+        "oral tradition",
+        "griots",
+        "songlines",
+        "storytelling",
+        "literacy hierarchy",
+        "voice",
+        "memory",
+        "performance"
+      ],
       "metadata": {}
     },
     {
       "id": "mind-decolonizing-university",
       "name": "Decolonizing the University",
-      "sort_order": 16,
+      "sort_order": 17,
       "category": "mind",
       "level": 1,
       "sections": {
@@ -272,13 +457,21 @@
         "What Persists": "Indigenous universities and tribal colleges. The Intercultural University movement in Latin America. Rhodes Must Fall and its global echoes. Scholars like Linda Tuhiwai Smith whose 'Decolonizing Methodologies' changed how research relates to indigenous communities. The growing insistence on community-based participatory research. The question that won't go away: whose knowledge is this university for?",
         "The Invitation": "If you were educated in a Western university, your thinking was shaped by an institution that was never designed for everyone's knowledge. This doesn't make your education worthless. It makes it partial. What did your education teach you to see? What did it teach you not to see?"
       },
-      "keywords": ["university", "Rhodes Must Fall", "indigenous studies", "area studies", "endowments", "Tuhiwai Smith", "decolonizing methodologies"],
+      "keywords": [
+        "university",
+        "Rhodes Must Fall",
+        "indigenous studies",
+        "area studies",
+        "endowments",
+        "Tuhiwai Smith",
+        "decolonizing methodologies"
+      ],
       "metadata": {}
     },
     {
       "id": "mind-myth-objectivity",
       "name": "The Myth of Objectivity",
-      "sort_order": 17,
+      "sort_order": 18,
       "category": "mind",
       "level": 1,
       "sections": {
@@ -287,13 +480,22 @@
         "What Persists": "Feminist standpoint theory. Indigenous research methodologies that begin with relationship and accountability rather than detachment. Sandra Harding's 'strong objectivity' that includes the observer's position. The growing recognition in physics itself (observer effect, quantum entanglement) that the observer cannot be separated from the observed. Every knowledge tradition that says 'I will tell you where I stand before I tell you what I see.'",
         "The Invitation": "Where are you standing when you think you're being objective? Who taught you that standing there was the same as standing nowhere? The invitation is not to abandon rigor but to practice situated knowledge — to always name where you see from."
       },
-      "keywords": ["objectivity", "Haraway", "god trick", "situated knowledge", "standpoint theory", "bias", "positionality", "Harding"],
+      "keywords": [
+        "objectivity",
+        "Haraway",
+        "god trick",
+        "situated knowledge",
+        "standpoint theory",
+        "bias",
+        "positionality",
+        "Harding"
+      ],
       "metadata": {}
     },
     {
       "id": "mind-time-conceptions",
       "name": "Linear Time vs. Cyclical Time",
-      "sort_order": 18,
+      "sort_order": 19,
       "category": "mind",
       "level": 1,
       "sections": {
@@ -302,13 +504,22 @@
         "What Persists": "Ceremonial time. Dreamtime. The Andean concept of nayra — where the past is in front of you (because you can see it) and the future is behind (because you can't). Hindu and Buddhist concepts of cyclical time. The Jewish Sabbath that breaks the week's productivity. The land itself, which operates in cycles regardless of what the clock says. Ecological time — the time of seasons, tides, migration, decay, renewal — which is reasserting itself through climate crisis.",
         "The Invitation": "What time are you living in? Clock time? Deadline time? Career-arc time? What would it mean to live in seasonal time, or ceremonial time, or the time of your body rather than your calendar? Linear time is not wrong. But it is not the only time."
       },
-      "keywords": ["linear time", "cyclical time", "progress", "clock time", "Dreamtime", "nayra", "ceremonial time", "seasonal"],
+      "keywords": [
+        "linear time",
+        "cyclical time",
+        "progress",
+        "clock time",
+        "Dreamtime",
+        "nayra",
+        "ceremonial time",
+        "seasonal"
+      ],
       "metadata": {}
     },
     {
       "id": "mind-research-methodologies",
       "name": "Decolonizing Research Methodologies",
-      "sort_order": 19,
+      "sort_order": 20,
       "category": "mind",
       "level": 1,
       "sections": {
@@ -317,13 +528,21 @@
         "What Persists": "Community-based participatory research. Indigenous research methodologies that begin with relationship and end with reciprocity. Kaupapa Māori research. The principle of OCAP (Ownership, Control, Access, Possession) for First Nations data in Canada. The growing insistence that communities have the right to own their own knowledge, approve research about themselves, and benefit from findings. Research as relationship rather than extraction.",
         "The Invitation": "If you do research — academic, journalistic, artistic, technological — ask: whose knowledge am I using? What am I giving back? Who benefits from what I find? These questions don't make research impossible. They make it accountable."
       },
-      "keywords": ["research methodologies", "Tuhiwai Smith", "OCAP", "participatory research", "Kaupapa Maori", "extraction", "reciprocity"],
+      "keywords": [
+        "research methodologies",
+        "Tuhiwai Smith",
+        "OCAP",
+        "participatory research",
+        "Kaupapa Maori",
+        "extraction",
+        "reciprocity"
+      ],
       "metadata": {}
     },
     {
       "id": "mind-unlearning",
       "name": "Unlearning: The Work Before Will",
-      "sort_order": 20,
+      "sort_order": 21,
       "category": "mind",
       "level": 1,
       "sections": {
@@ -332,7 +551,16 @@
         "What Persists": "The capacity to unlearn persists because it is not a colonial capacity — it's a human one. Every contemplative tradition knows it: Zen's beginner's mind, the apophatic tradition in Christianity, the via negativa. Andreotti's pedagogy of discomfort. The practice of sitting with not-knowing, which is not ignorance but a deeper kind of intelligence. The grandmother who says 'you don't need to understand everything. You need to be present to everything.'",
         "The Invitation": "What if the point is not to replace your colonial education with a decolonial one — not to find the right answer — but to develop the stamina to hold the question? To sit with not-knowing as practice rather than failure? This is the work before will: making space for something you can't yet imagine."
       },
-      "keywords": ["unlearning", "Andreotti", "before will", "discomfort", "not-knowing", "beginner's mind", "via negativa", "hospicing"],
+      "keywords": [
+        "unlearning",
+        "Andreotti",
+        "before will",
+        "discomfort",
+        "not-knowing",
+        "beginner's mind",
+        "via negativa",
+        "hospicing"
+      ],
       "metadata": {}
     }
   ]
