@@ -1,0 +1,616 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "date": "2026-03-06",
+        "note": "Original from-memory grammar based on current paleontological consensus"
+      }
+    ]
+  },
+  "name": "Dinosaur Tree",
+  "description": "A journey through the age of dinosaurs — from the first tiny hunters of the Triassic to the mighty giants of the Cretaceous. Thirty species organized by the three great periods of the Mesozoic Era, with tiered content for young children (Story) and older readers (Science).\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Charles R. Knight (1874–1953), whose paintings for the American Museum of Natural History defined how generations imagined dinosaurs. Heinrich Harder (1858–1935), German artist known for his prehistoric animal paintings. Zdeněk Burian (1905–1981), Czech paleoartist whose reconstructions shaped European understanding of prehistory.",
+  "grammar_type": "custom",
+  "creator_name": "PlayfulProcess",
+  "tags": ["dinosaurs", "paleontology", "natural-history", "kids", "science", "mesozoic", "extinction"],
+  "roots": ["natural-philosophy"],
+  "shelves": ["wonder", "children"],
+  "lineages": ["Kelty"],
+  "worldview": "rationalist",
+  "items": [
+    {
+      "id": "eoraptor",
+      "name": "Eoraptor",
+      "sort_order": 1,
+      "category": "triassic",
+      "level": 1,
+      "sections": {
+        "Story": "Imagine a little animal no bigger than a dog, running on two legs through a world where dinosaurs had just begun. Eoraptor was one of the very first dinosaurs ever! It lived 230 million years ago, when all the land was stuck together in one giant supercontinent. It ate whatever it could find — bugs, lizards, even plants. It wasn't scary or big, but it was the beginning of something amazing.",
+        "Science": "Eoraptor lunensis was discovered in 1991 in Argentina's Valley of the Moon (Ischigualasto Formation). At just one meter long, it represents one of the most basal dinosaurs known. Its mixed dentition — both leaf-shaped herbivore teeth and sharp carnivore teeth — suggests omnivory. Eoraptor lived during the Late Triassic (~230 Ma) when dinosaurs were minor components of ecosystems dominated by crurotarsans (crocodile-line archosaurs). Its lightweight build and grasping hands hint at the body plan that would later produce both the great theropods and the sauropods.",
+        "Fun Fact": "Eoraptor's name means 'dawn thief' — it was a thief at the dawn of the dinosaur age! Its discovery site, the Valley of the Moon in Argentina, looks so barren and otherworldly that it really does seem like another planet.",
+        "Reflection": "Eoraptor was small and unimpressive compared to later dinosaurs. What does it mean that something so humble could be the ancestor of the mightiest creatures ever to walk the Earth?"
+      },
+      "keywords": ["triassic", "early-dinosaur", "omnivore", "small"],
+      "metadata": {"period": "Late Triassic", "diet": "omnivore", "length_m": 1}
+    },
+    {
+      "id": "coelophysis",
+      "name": "Coelophysis",
+      "sort_order": 2,
+      "category": "triassic",
+      "level": 1,
+      "sections": {
+        "Story": "Coelophysis was a slender, speedy hunter that lived in packs. Picture a group of them dashing through a Triassic forest, chasing lizards and snapping up insects with their long, narrow jaws. They were about as tall as a big dog but much longer, with a long tail for balance. Scientists found thousands of their bones piled together in New Mexico — they may have died together near a drying river.",
+        "Science": "Coelophysis bauri is one of the best-known early dinosaurs thanks to a massive bone bed at Ghost Ranch, New Mexico, where hundreds of individuals were preserved together. This ~210 Ma theropod was lightly built with hollow bones (its name means 'hollow form'), foreshadowing the pneumatized skeletons of later theropods and birds. At ~3 meters long, it was an agile predator. Some specimens appear to contain smaller Coelophysis bones in their gut region, initially interpreted as cannibalism but now debated — they may be crocodylomorph remains.",
+        "Fun Fact": "A Coelophysis skull traveled to space! In 1998, a skull was carried aboard the Space Shuttle Endeavour to the Mir space station, making it one of the first dinosaurs in orbit.",
+        "Reflection": "Coelophysis may have lived in groups. What advantages does living together give an animal? What are the costs?"
+      },
+      "keywords": ["triassic", "carnivore", "pack-hunter", "theropod"],
+      "metadata": {"period": "Late Triassic", "diet": "carnivore", "length_m": 3}
+    },
+    {
+      "id": "herrerasaurus",
+      "name": "Herrerasaurus",
+      "sort_order": 3,
+      "category": "triassic",
+      "level": 1,
+      "sections": {
+        "Story": "Herrerasaurus was one of the oldest and fiercest hunters of the Triassic. About the size of a horse, it had powerful jaws and sharp, curved teeth. While Eoraptor was nibbling on plants and bugs, Herrerasaurus was already a proper predator, chasing down other reptiles. It lived in what is now Argentina, at a time when that land was connected to everywhere else on Earth.",
+        "Science": "Herrerasaurus ischigualastensis lived approximately 231 million years ago in the Ischigualasto Formation of Argentina — the same beds that yielded Eoraptor. At ~6 meters long, it was significantly larger than most contemporaries. Its classification has been debated: it may be a basal theropod or a basal saurischian outside the theropod-sauropod split. Its sliding jaw joint — unique among dinosaurs — allowed its lower jaw to flex while gripping struggling prey, an adaptation convergently evolved by some modern snakes.",
+        "Fun Fact": "Herrerasaurus had a special flexible jaw joint that let it grip struggling prey more tightly — the harder its meal wiggled, the tighter the grip! No other dinosaur had this trick.",
+        "Reflection": "Herrerasaurus was a top predator in its time, but it went extinct while smaller, humbler dinosaurs survived and diversified. Is being the biggest and strongest always the best strategy?"
+      },
+      "keywords": ["triassic", "carnivore", "early-dinosaur", "predator"],
+      "metadata": {"period": "Late Triassic", "diet": "carnivore", "length_m": 6}
+    },
+    {
+      "id": "plateosaurus",
+      "name": "Plateosaurus",
+      "sort_order": 4,
+      "category": "triassic",
+      "level": 1,
+      "sections": {
+        "Story": "Plateosaurus was one of the first big plant-eaters. While most Triassic dinosaurs were small, Plateosaurus grew to be as long as a school bus! It could walk on all fours or rear up on its back legs to reach high branches. Imagine a whole herd of them moving through fern forests, stretching their long necks to munch on treetops. They were a preview of the giant sauropods to come.",
+        "Science": "Plateosaurus engelhardti is the best-known prosauropod, with hundreds of specimens found across Central Europe. At ~8 meters long and up to 4 tonnes, it was among the largest Triassic animals. Bone histology reveals highly variable growth rates — some individuals reached full size in 12 years, others took 20, suggesting a reptilian rather than mammalian growth pattern. This 'developmental plasticity' is unusual and may have helped the species survive variable Triassic environments. Plateosaurus is considered a basal sauropodomorph, showing the evolutionary trajectory toward the giant sauropods.",
+        "Fun Fact": "So many Plateosaurus fossils have been found in Germany and Switzerland that scientists think they got stuck in mud traps — like natural quicksand pits — over and over for millions of years!",
+        "Reflection": "Plateosaurus shows that eating plants, not meat, was the path to growing really big. Why might plant-eaters tend to get bigger than meat-eaters?"
+      },
+      "keywords": ["triassic", "herbivore", "prosauropod", "large"],
+      "metadata": {"period": "Late Triassic", "diet": "herbivore", "length_m": 8}
+    },
+    {
+      "id": "liliensternus",
+      "name": "Liliensternus",
+      "sort_order": 5,
+      "category": "triassic",
+      "level": 1,
+      "sections": {
+        "Story": "Liliensternus was the biggest meat-eater of its time in Europe — about 5 meters long and built for speed. Think of it as the cheetah of the Triassic: lean, fast, and dangerous. It hunted the plant-eaters of ancient Germany, dashing after them on powerful back legs. It had a crest on its head that might have been brightly colored to show off.",
+        "Science": "Liliensternus liliensterni was a coelophysoid theropod from the Late Triassic (~210 Ma) of Germany, reaching about 5 meters in length. It was one of the largest predators in Triassic Europe. Originally classified as a species of Halticosaurus, it was reclassified in 1984 and named after Hugo Rühle von Lilienstern, a German paleontologist. Its double cranial crest is reminiscent of the later Dilophosaurus, though these features evolved independently. Liliensternus represents the radiation of theropods into larger predatory niches before the end-Triassic extinction event.",
+        "Fun Fact": "Liliensternus is named after a real person — Hugo Rühle von Lilienstern, a German doctor who collected fossils as a hobby. Imagine having a dinosaur named after you!",
+        "Reflection": "Liliensternus was the top predator of its world, but its world was about to change. The end-Triassic extinction would wipe out many species. What makes some animals survive big changes while others don't?"
+      },
+      "keywords": ["triassic", "carnivore", "theropod", "fast"],
+      "metadata": {"period": "Late Triassic", "diet": "carnivore", "length_m": 5}
+    },
+    {
+      "id": "allosaurus",
+      "name": "Allosaurus",
+      "sort_order": 6,
+      "category": "jurassic",
+      "level": 1,
+      "sections": {
+        "Story": "Allosaurus was the king of the Jurassic — a massive predator with a huge head, powerful jaws, and sharp claws. It was the most common large predator of its time, and it had to be tough: its prey included giant sauropods like Diplodocus and armored Stegosaurus. Some scientists think Allosaurus hunted in groups, ambushing prey too big for one hunter to take down alone.",
+        "Science": "Allosaurus fragilis was the apex predator of the Late Jurassic Morrison Formation (~155–150 Ma) across western North America. At ~12 meters long and ~2 tonnes, it used a unique 'hatchet attack' — biomechanical analysis shows it could open its jaws extremely wide and strike downward with its upper jaw, using its skull like an axe rather than biting with crushing force. Multiple Allosaurus specimens found at sites like the Cleveland-Lloyd Quarry suggest possible gregarious behavior, though taphonomic bias may explain the concentrations.",
+        "Fun Fact": "Allosaurus didn't bite like a crocodile — it slammed its mouth open and used its upper jaw like a hatchet, slashing at prey. Scientists figured this out by studying its skull with computer models!",
+        "Reflection": "Allosaurus lived alongside many other predators and had to share its world. How do different predators in the same ecosystem avoid competing with each other?"
+      },
+      "keywords": ["jurassic", "carnivore", "apex-predator", "theropod"],
+      "metadata": {"period": "Late Jurassic", "diet": "carnivore", "length_m": 12}
+    },
+    {
+      "id": "brachiosaurus",
+      "name": "Brachiosaurus",
+      "sort_order": 7,
+      "category": "jurassic",
+      "level": 1,
+      "sections": {
+        "Story": "Close your eyes and imagine an animal so tall it could look into a fourth-floor window. That's Brachiosaurus! Unlike most sauropods, its front legs were longer than its back legs (its name means 'arm lizard'), so it stood with its body tilting upward like a giraffe. It spent its days reaching into the highest treetops, munching on leaves that no other dinosaur could reach.",
+        "Science": "Brachiosaurus altithorax was a macronarian sauropod from the Late Jurassic Morrison Formation (~154–150 Ma). At ~26 meters long and perhaps 35–60 tonnes, it was one of the largest land animals of its time. Its unusual proportions — forelimbs longer than hindlimbs, elongated neck held at a steep angle — gave it a feeding envelope up to ~13 meters high. CT scans of related brachiosaur skulls reveal enormous nasal passages, possibly used for thermoregulation or vocalization. Its metabolism is debated: maintaining blood pressure to a brain held 9+ meters above the heart implies sophisticated cardiovascular adaptations.",
+        "Fun Fact": "Brachiosaurus's heart had to pump blood all the way up that enormous neck to reach its brain. Scientists think its heart may have weighed 400 pounds — as heavy as a gorilla!",
+        "Reflection": "Brachiosaurus could reach food no one else could. What's something you can do that gives you a special advantage?"
+      },
+      "keywords": ["jurassic", "herbivore", "sauropod", "giant", "tall"],
+      "metadata": {"period": "Late Jurassic", "diet": "herbivore", "length_m": 26}
+    },
+    {
+      "id": "stegosaurus",
+      "name": "Stegosaurus",
+      "sort_order": 8,
+      "category": "jurassic",
+      "level": 1,
+      "sections": {
+        "Story": "Stegosaurus is the dinosaur with the fancy back — two rows of big diamond-shaped plates running from its neck to its tail. And at the end of its tail? Four sharp spikes called a 'thagomizer' that it could swing at predators like a spiked club. Stegosaurus was a peaceful plant-eater the size of a bus, but no predator wanted to mess with that tail!",
+        "Science": "Stegosaurus stenops (~155–150 Ma) is the most iconic thyreophoran dinosaur. Its 17 bony plates were likely used primarily for thermoregulation and display rather than defense — they contained extensive blood vessel networks for heat exchange. The tail spikes (thagomizer — a term coined by cartoonist Gary Larson and adopted by paleontologists) were genuine weapons: an Allosaurus vertebra with a thagomizer-shaped puncture wound proves they were used defensively. Stegosaurus had a remarkably small brain (~70g, walnut-sized) relative to its ~5-tonne body, giving it one of the lowest encephalization quotients of any dinosaur.",
+        "Fun Fact": "The word 'thagomizer' for the tail spikes was invented by a cartoonist! Gary Larson drew a Far Side cartoon in 1982 showing cave people naming the spikes after 'the late Thag Simmons.' Real scientists liked it so much they started using the word officially.",
+        "Reflection": "Stegosaurus had a tiny brain but survived for millions of years. Does being smart always matter more than being well-protected?"
+      },
+      "keywords": ["jurassic", "herbivore", "plates", "thagomizer", "armored"],
+      "metadata": {"period": "Late Jurassic", "diet": "herbivore", "length_m": 9}
+    },
+    {
+      "id": "diplodocus",
+      "name": "Diplodocus",
+      "sort_order": 9,
+      "category": "jurassic",
+      "level": 1,
+      "sections": {
+        "Story": "Diplodocus was one of the longest animals ever — imagine something as long as three school buses lined up end to end! Most of that length was neck and tail. Its tail was like a giant whip, and some scientists think it could crack its tail faster than the speed of sound, making a thunderous BOOM to scare off predators. Despite its enormous size, its head was tiny — about the size of a horse's head.",
+        "Science": "Diplodocus longus (~154–152 Ma) was a diplodocid sauropod reaching ~27 meters in length, though relatively lightly built at an estimated 12–16 tonnes. Its pencil-shaped teeth were restricted to the front of its jaw, suggesting it stripped vegetation rather than chewing. Computer modeling of its tail suggests the thin, tapering end could indeed have been cracked supersonically, producing a sonic boom — though this remains debated. Growth ring analysis in bones indicates Diplodocus reached near-adult size in about 10 years, an extraordinarily fast growth rate for such a large animal. Casts of 'Dippy' became the most-viewed dinosaur skeleton in the world via museum replicas.",
+        "Fun Fact": "Diplodocus may have been able to crack its tail like a whip — and the 'crack' of a whip is actually a tiny sonic boom! Imagine a dinosaur making sonic booms with its tail.",
+        "Reflection": "Diplodocus was enormous but gentle, eating only plants. Sometimes the biggest creatures are the most peaceful. Can you think of other examples of this?"
+      },
+      "keywords": ["jurassic", "herbivore", "sauropod", "long", "whip-tail"],
+      "metadata": {"period": "Late Jurassic", "diet": "herbivore", "length_m": 27}
+    },
+    {
+      "id": "archaeopteryx",
+      "name": "Archaeopteryx",
+      "sort_order": 10,
+      "category": "jurassic",
+      "level": 1,
+      "sections": {
+        "Story": "Is it a dinosaur? Is it a bird? It's both! Archaeopteryx had feathers and wings like a bird, but also teeth, claws on its wings, and a bony tail like a dinosaur. It's one of the most famous fossils ever found because it shows that birds evolved from dinosaurs. It was about the size of a crow and probably glided between trees in Jurassic island forests.",
+        "Science": "Archaeopteryx lithographica (~150 Ma) was discovered in 1861 in Bavarian limestone quarries, just two years after Darwin published On the Origin of Species — making it a perfect transitional fossil at exactly the right moment in scientific history. It combines derived avian features (asymmetric flight feathers, a wishbone) with ancestral theropod features (teeth, clawed fingers, a long bony tail). Whether it was capable of powered flight or only gliding remains debated; its feather asymmetry suggests some aerodynamic capability. Only about 12 specimens exist, each worth millions. Modern cladistics places it near the base of Avialae, making it a close relative of — but possibly not directly ancestral to — modern birds.",
+        "Fun Fact": "Archaeopteryx was discovered just two years after Charles Darwin predicted that transitional fossils between groups would be found. It was like nature answered his question right on cue!",
+        "Reflection": "Archaeopteryx is neither fully dinosaur nor fully bird — it's in between. Things that don't fit neatly into categories can be the most important discoveries. When have you seen something that didn't fit the usual categories?"
+      },
+      "keywords": ["jurassic", "feathered", "bird-ancestor", "transitional", "flight"],
+      "metadata": {"period": "Late Jurassic", "diet": "carnivore", "length_m": 0.5}
+    },
+    {
+      "id": "compsognathus",
+      "name": "Compsognathus",
+      "sort_order": 11,
+      "category": "jurassic",
+      "level": 1,
+      "sections": {
+        "Story": "Compsognathus was one of the tiniest dinosaurs — about the size of a chicken! But don't let its size fool you. It was incredibly fast and agile, darting after lizards and insects on a tropical island in what is now Germany. Its name means 'elegant jaw,' and it had a delicate, pretty skull. For over a hundred years, it held the record as the smallest known dinosaur.",
+        "Science": "Compsognathus longipes (~150 Ma) was a small coelurosaur theropod from the Solnhofen limestone of Bavaria — the same deposits that preserve Archaeopteryx. At ~1 meter long and perhaps 3 kg, it was one of the smallest non-avian dinosaurs. A preserved lizard (Bavarisaurus) in one specimen's stomach provides direct evidence of diet. For over a century it was considered the smallest dinosaur, until discoveries of Microraptor and other tiny theropods. Its island habitat in the shallow Tethys Sea may have contributed to its small size through insular dwarfism.",
+        "Fun Fact": "One Compsognathus fossil was found with its last meal still inside — a whole lizard! Scientists could see exactly what it ate for dinner 150 million years ago.",
+        "Reflection": "Being small has its advantages: less food needed, faster movement, ability to hide. What are some advantages of being small in your own life?"
+      },
+      "keywords": ["jurassic", "carnivore", "tiny", "fast", "theropod"],
+      "metadata": {"period": "Late Jurassic", "diet": "carnivore", "length_m": 1}
+    },
+    {
+      "id": "ceratosaurus",
+      "name": "Ceratosaurus",
+      "sort_order": 12,
+      "category": "jurassic",
+      "level": 1,
+      "sections": {
+        "Story": "Ceratosaurus had a horn on its nose! It was a medium-sized predator that lived alongside the bigger Allosaurus but probably hunted different prey to avoid competition. Some scientists think it preferred hunting near rivers and lakes, snapping up fish and smaller animals. Its horn was probably too fragile for fighting — it was more likely for showing off to other Ceratosaurus.",
+        "Science": "Ceratosaurus nasicornis (~153–148 Ma) was a ceratosaurid theropod from the Morrison Formation. At ~6 meters long, it was smaller than the contemporary Allosaurus and likely occupied a different ecological niche. Its nasal horn and osteoderms (bony skin nodules along its back) are unusual for theropods. Chemical analysis of its teeth suggests a more aquatic-associated diet than Allosaurus, possibly including fish and crocodylomorphs. Ceratosaurus represents a separate lineage from the tetanuran theropods (which include Allosaurus and eventually T. rex), showing that multiple predatory dinosaur lineages coexisted successfully.",
+        "Fun Fact": "Ceratosaurus had tiny bony bumps embedded in its skin — like built-in armor! Most meat-eating dinosaurs didn't have this feature, making Ceratosaurus extra unusual.",
+        "Reflection": "Ceratosaurus lived in the same world as the bigger, more powerful Allosaurus, but survived by being different rather than trying to compete directly. When is it smarter to find your own path rather than compete head-on?"
+      },
+      "keywords": ["jurassic", "carnivore", "horned", "theropod"],
+      "metadata": {"period": "Late Jurassic", "diet": "carnivore", "length_m": 6}
+    },
+    {
+      "id": "kentrosaurus",
+      "name": "Kentrosaurus",
+      "sort_order": 13,
+      "category": "jurassic",
+      "level": 1,
+      "sections": {
+        "Story": "Think of Stegosaurus's spikier, smaller cousin — that's Kentrosaurus! While Stegosaurus had broad plates, Kentrosaurus had plates on its neck and shoulders that turned into long, sharp spikes along its back and tail. It also had a wicked spike sticking out from each shoulder. It was only about 5 meters long, but no predator wanted to bite into that porcupine of a dinosaur!",
+        "Science": "Kentrosaurus aethiopicus (~152 Ma) was a stegosaurid from the Tendaguru Formation of Tanzania, East Africa. At ~5 meters long and ~1 tonne, it was smaller than Stegosaurus but arguably better-defended, with its paired shoulder spikes (parascapular spines) and the transition from plates to spikes along its dorsal series. Over 900 bones from multiple individuals were excavated between 1909-1912, though many were tragically destroyed in WWII bombing of the Berlin Natural History Museum. Its African location shows that stegosaurs were globally distributed across Laurasia and Gondwana during the Late Jurassic.",
+        "Fun Fact": "Many Kentrosaurus fossils were discovered in Tanzania, Africa, shipped to Berlin, Germany — and then destroyed when bombs hit the museum during World War II. Scientists lost irreplaceable dinosaur bones to human conflict.",
+        "Reflection": "Kentrosaurus fossils were lost to war. What responsibilities do we have to protect irreplaceable things — whether fossils, art, or nature — even during conflicts?"
+      },
+      "keywords": ["jurassic", "herbivore", "spiky", "stegosaur"],
+      "metadata": {"period": "Late Jurassic", "diet": "herbivore", "length_m": 5}
+    },
+    {
+      "id": "tyrannosaurus-rex",
+      "name": "Tyrannosaurus Rex",
+      "sort_order": 14,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "The king of all dinosaurs! Tyrannosaurus Rex had the most powerful bite of any land animal ever — strong enough to crush bone like a cracker. Its teeth were as long as bananas, and each one was serrated like a steak knife. T. rex was as long as a school bus and as tall as a giraffe. But here's something funny: its arms were tiny — shorter than a human's arms on a body the size of a truck!",
+        "Science": "Tyrannosaurus rex (~68–66 Ma) was the apex predator of Late Cretaceous North America. At ~12 meters long and 8–14 tonnes, it possessed a bite force estimated at 35,000–57,000 newtons — the strongest of any terrestrial animal. Its binocular vision was comparable to a hawk's, and its olfactory bulbs suggest an exceptional sense of smell. Recent discoveries include evidence of feathery integument in close relatives (Yutyrannus, Dilong), though adult T. rex likely had mostly scaly skin. The 2005 discovery of soft tissue (including possible blood vessels and collagen) in a T. rex femur by Mary Schweitzer revolutionized our understanding of fossil preservation. Over 50 individuals have been found, making it one of the best-studied dinosaurs.",
+        "Fun Fact": "T. rex could eat 230 kilograms of meat in a single bite — that's like eating a whole pig in one mouthful! And those famous tiny arms? Each one could still bench-press about 200 kilograms. Not so puny after all.",
+        "Reflection": "T. rex is the most famous dinosaur, and it was one of the very last before the asteroid hit. The king of the dinosaurs never saw the end coming. What does that teach us about power and vulnerability?"
+      },
+      "keywords": ["cretaceous", "carnivore", "apex-predator", "theropod", "king"],
+      "metadata": {"period": "Late Cretaceous", "diet": "carnivore", "length_m": 12}
+    },
+    {
+      "id": "triceratops",
+      "name": "Triceratops",
+      "sort_order": 15,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Three horns and a giant frill — Triceratops looked like a rhinoceros crossed with a shield. It was one of the last dinosaurs, living right up until the asteroid struck. Triceratops used its horns to defend against T. rex (we have fossils that show bite marks and healed wounds from these battles!), and probably also to show off and fight each other, like deer with antlers.",
+        "Science": "Triceratops horridus (~68–66 Ma) was the most abundant large herbivore in the Hell Creek Formation. Its three horns (two brow horns up to 1 meter long, one nasal horn) and massive parietal-squamosal frill served multiple functions: defense, species recognition, thermoregulation, and intraspecific combat. Healed bite marks matching T. rex tooth spacing on Triceratops frills, and Triceratops horn marks on T. rex bones, provide dramatic evidence of predator-prey interaction. The debate over whether Torosaurus is actually a mature Triceratops (ontogenetic hypothesis) remains unresolved. Over 50 skulls are known, making it the best-represented ceratopsian.",
+        "Fun Fact": "Scientists have found Triceratops bones with T. rex bite marks that healed — meaning the Triceratops survived the attack and lived to tell the tale! That frill and those horns really worked.",
+        "Reflection": "Triceratops and T. rex were rivals until the very end. Their relationship shaped both species. How do the challenges we face make us stronger?"
+      },
+      "keywords": ["cretaceous", "herbivore", "horned", "ceratopsian", "frill"],
+      "metadata": {"period": "Late Cretaceous", "diet": "herbivore", "length_m": 9}
+    },
+    {
+      "id": "velociraptor",
+      "name": "Velociraptor",
+      "sort_order": 16,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Forget what you saw in the movies — real Velociraptor was only about the size of a turkey and covered in feathers! But it was still a fierce little predator. Each back foot had a large, curved killing claw that it held off the ground while running, then slashed downward at prey. One famous fossil shows a Velociraptor locked in combat with a Protoceratops — they died fighting each other!",
+        "Science": "Velociraptor mongoliensis (~75–71 Ma) was a dromaeosaurid theropod from Mongolia, about 2 meters long and 15 kg. The Jurassic Park raptors were actually modeled on the much larger Deinonychus (and later Utahraptor). Quill knobs on Velociraptor's forearm bones confirm it had well-developed feathers, though it could not fly. The famous 'Fighting Dinosaurs' specimen — a Velociraptor and Protoceratops locked in mortal combat, preserved by a sudden sandstorm — is one of paleontology's most dramatic fossils. Its sickle claw was likely used for pinning prey rather than slashing, based on biomechanical studies.",
+        "Fun Fact": "The 'Fighting Dinosaurs' fossil from Mongolia shows a Velociraptor and a Protoceratops frozen in battle — the raptor's claw is embedded in the Protoceratops' throat while the Protoceratops is biting the raptor's arm. A sandstorm buried them both mid-fight, 75 million years ago!",
+        "Reflection": "The movie version of Velociraptor is very different from the real animal. Why do we sometimes change the truth to make a better story? Is that okay?"
+      },
+      "keywords": ["cretaceous", "carnivore", "feathered", "dromaeosaur", "clever"],
+      "metadata": {"period": "Late Cretaceous", "diet": "carnivore", "length_m": 2}
+    },
+    {
+      "id": "spinosaurus",
+      "name": "Spinosaurus",
+      "sort_order": 17,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "The biggest meat-eating dinosaur ever wasn't T. rex — it was Spinosaurus! This bizarre giant had a sail on its back taller than a person, a crocodile-like snout, and it spent much of its time in water hunting fish. Imagine a 15-meter-long predator wading through rivers, sweeping its long jaws through the water to catch enormous prehistoric fish. It was like a dinosaur trying to be a crocodile!",
+        "Science": "Spinosaurus aegyptiacus (~99–93 Ma) from North Africa is the largest known theropod at ~15 meters long. Recent discoveries have radically changed our understanding: its paddle-like tail, dense bones (for ballast), and retracted nostrils suggest it was semi-aquatic — the first known swimming dinosaur. Its conical teeth and pressure-sensing snout are convergent with crocodilians. The original fossils, collected by Ernst Stromer in Egypt in 1912, were destroyed in a 1944 Allied bombing raid on Munich. New specimens from Morocco since 2014 have driven a revolution in Spinosaurus research, with its ecology now compared to a giant heron or crocodilian rather than a terrestrial predator.",
+        "Fun Fact": "The first Spinosaurus fossils were destroyed in World War II, just like some Kentrosaurus bones. Scientists had to wait 70 years to find new ones and discover that Spinosaurus could actually swim — something no one had imagined!",
+        "Reflection": "Spinosaurus broke the rules — meat-eating dinosaurs were 'supposed' to live on land, but it went into the water. Sometimes breaking the rules opens up a whole new world. What rules might be worth questioning?"
+      },
+      "keywords": ["cretaceous", "carnivore", "aquatic", "sail", "largest-predator"],
+      "metadata": {"period": "Late Cretaceous", "diet": "piscivore", "length_m": 15}
+    },
+    {
+      "id": "ankylosaurus",
+      "name": "Ankylosaurus",
+      "sort_order": 18,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Ankylosaurus was a living tank! Covered head-to-tail in bony armor plates, with a massive club at the end of its tail that could break a T. rex's leg, this dinosaur was nearly impossible to attack. It even had armored eyelids! The only way for a predator to hurt it was to flip it over — good luck with that when it weighed as much as an elephant.",
+        "Science": "Ankylosaurus magniventris (~68–66 Ma) was the largest ankylosaurid at ~7 meters long and 6–8 tonnes. Its osteoderms (bony skin plates) were fused into a nearly impervious dorsal shield, supplemented by ossified tendons that stiffened the tail to swing its club — a mass of fused osteoderms at the tail tip weighing ~30 kg. Biomechanical modeling suggests a tail strike could generate enough force to fracture bone. Its broad body housed an enormous gut for fermenting tough plant material, and its complex nasal passages (visible in CT scans) may have warmed and humidified inhaled air or contributed to vocalization. Ankylosaurus coexisted with T. rex in the Hell Creek Formation.",
+        "Fun Fact": "Ankylosaurus's tail club could swing with enough force to shatter bone. Scientists calculated that a direct hit could break a T. rex's ankle — and a limping T. rex was a doomed T. rex.",
+        "Reflection": "Ankylosaurus survived not by being fast or fierce, but by being tough. Sometimes the best strategy isn't to fight back, but to be so well-protected that nothing can hurt you. When is defense better than offense?"
+      },
+      "keywords": ["cretaceous", "herbivore", "armored", "club-tail", "tank"],
+      "metadata": {"period": "Late Cretaceous", "diet": "herbivore", "length_m": 7}
+    },
+    {
+      "id": "parasaurolophus",
+      "name": "Parasaurolophus",
+      "sort_order": 19,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Parasaurolophus had the most amazing headpiece in the dinosaur world — a long, curved, hollow tube stretching back from its skull. And it wasn't just for show: it was a musical instrument! Air flowing through that hollow crest could produce deep, booming calls that echoed across Cretaceous forests. Imagine a whole herd of these dinosaurs calling to each other — it would have sounded like a dinosaur orchestra!",
+        "Science": "Parasaurolophus walkeri (~76–73 Ma) was a lambeosaurine hadrosaur from North America. Its iconic cranial crest — up to 1.8 meters long — contained complex looping nasal passages. CT scans and acoustic modeling suggest these passages functioned as resonating chambers, producing low-frequency sounds (~30 Hz) that could travel long distances through forests. Different species had differently shaped crests, possibly producing distinct calls for species recognition. Parasaurolophus was a large herbivore (~10 meters long) that could walk on two or four legs, with a dental battery of hundreds of tightly packed teeth for grinding tough vegetation — one of the most sophisticated chewing mechanisms in the animal kingdom.",
+        "Fun Fact": "Scientists used computers to recreate the sound a Parasaurolophus would have made by blowing air through a digital model of its crest. It sounded like a deep, eerie foghorn — you can actually listen to it online!",
+        "Reflection": "Parasaurolophus used sound to communicate across great distances. What ways do you communicate with people who are far away? How might the world be different without long-distance communication?"
+      },
+      "keywords": ["cretaceous", "herbivore", "hadrosaur", "crest", "trumpeter"],
+      "metadata": {"period": "Late Cretaceous", "diet": "herbivore", "length_m": 10}
+    },
+    {
+      "id": "pachycephalosaurus",
+      "name": "Pachycephalosaurus",
+      "sort_order": 20,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Pachycephalosaurus had the thickest skull of any animal ever — a dome of solid bone 25 centimeters thick on top of its head! For a long time, scientists thought these dinosaurs head-butted each other like bighorn sheep. Now they're not so sure — maybe they bonked each other on the sides instead, or maybe that dome was just for looking impressive. Either way, that's one hard head!",
+        "Science": "Pachycephalosaurus wyomingensis (~70–66 Ma) was the largest pachycephalosaur at ~5 meters long. Its frontoparietal dome was up to 25 cm of solid bone. The head-butting hypothesis has been challenged: finite element analysis shows the dome could withstand compression but the neck vertebrae lack the specialized alignment seen in head-butting mammals. Alternative hypotheses include flank-butting (supported by the broad, rounded dome shape) or purely visual display. Histological studies show the dome grew rapidly during ontogeny, with flat-headed juveniles (originally classified as separate genera Stygimoloch and Dracorex) developing domes as they matured — a case of dramatic ontogenetic change confusing taxonomy.",
+        "Fun Fact": "Scientists used to think three different dinosaurs — Pachycephalosaurus, Stygimoloch, and Dracorex (which means 'dragon king'!) — were all separate species. Turns out they were probably the same dinosaur at different ages, like a puppy, a teenager, and a grown-up!",
+        "Reflection": "Sometimes things that look completely different turn out to be the same thing at different stages. What other things in nature look totally different at different ages?"
+      },
+      "keywords": ["cretaceous", "herbivore", "dome-head", "head-butter"],
+      "metadata": {"period": "Late Cretaceous", "diet": "herbivore", "length_m": 5}
+    },
+    {
+      "id": "pteranodon",
+      "name": "Pteranodon",
+      "sort_order": 21,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Pteranodon wasn't actually a dinosaur — it was a flying reptile called a pterosaur! With wings as wide as a small airplane (7 meters tip to tip), it soared over ancient oceans, scooping up fish in its long, toothless beak. It had a distinctive crest on the back of its head that males used to show off. Despite its huge wings, its body was surprisingly light — only about 25 kilograms!",
+        "Science": "Pteranodon longiceps (~86–84 Ma) was a pteranodontid pterosaur from the Western Interior Seaway of North America. With a ~7-meter wingspan but only ~25 kg body mass, it achieved extreme weight reduction through hollow, thin-walled bones. It was toothless (Pteranodon means 'wing without tooth') and likely caught fish by skimming or shallow plunge-diving. Sexual dimorphism is pronounced: males had large cranial crests (up to 1 meter) while females had smaller crests. Over 1,000 specimens are known, mostly from the Niobrara Formation of Kansas — which was an ocean floor 85 million years ago.",
+        "Fun Fact": "Kansas, which is now flat farmland in the middle of America, was once the bottom of a warm ocean where Pteranodon flew overhead. Imagine pterosaurs soaring over what's now a cornfield!",
+        "Reflection": "Pteranodon is often called a dinosaur, but it's not one. Why do you think people mix them up? Does it matter whether we use the correct name for things?"
+      },
+      "keywords": ["cretaceous", "flying-reptile", "pterosaur", "not-a-dinosaur"],
+      "metadata": {"period": "Late Cretaceous", "diet": "piscivore", "length_m": 1.8, "wingspan_m": 7}
+    },
+    {
+      "id": "quetzalcoatlus",
+      "name": "Quetzalcoatlus",
+      "sort_order": 22,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "The largest flying animal ever! Quetzalcoatlus had wings spanning 11 meters — wider than a small airplane. Standing on the ground, it was as tall as a giraffe. It was named after Quetzalcoatl, the feathered serpent god of the Aztecs. Despite its enormous size, it was light enough to fly, soaring on thermal air currents like a living hang glider. On the ground, it walked on all fours and may have stalked small dinosaurs like a giant stork.",
+        "Science": "Quetzalcoatlus northropi (~68–66 Ma) was an azhdarchid pterosaur from Texas with an estimated ~11-meter wingspan — the largest flying animal known. At ~200–250 kg, it pushed the limits of powered flight. Launch models suggest it used a quad-launch mechanism, vaulting itself into the air using its powerful forelimbs like a pole vault. On the ground, azhdarchids were likely terrestrial stalkers, walking on folded wings and picking up small vertebrates — analogous to modern ground hornbills or marabou storks. Its long, stiffened neck and lack of throat pouch argue against fishing. Named after the Aztec feathered serpent deity and aircraft designer Jack Northrop.",
+        "Fun Fact": "Quetzalcoatlus launched itself into the air by pole-vaulting off its wings! It would crouch, then push off with its super-strong arms, rocketing upward like a catapult before spreading its wings to fly.",
+        "Reflection": "Quetzalcoatlus was the largest animal ever to fly. There seems to be a limit to how big a flying creature can get. What other things in nature have limits, and what determines those limits?"
+      },
+      "keywords": ["cretaceous", "flying-reptile", "pterosaur", "giant", "not-a-dinosaur"],
+      "metadata": {"period": "Late Cretaceous", "diet": "carnivore", "length_m": 3, "wingspan_m": 11}
+    },
+    {
+      "id": "therizinosaurus",
+      "name": "Therizinosaurus",
+      "sort_order": 23,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Therizinosaurus is the weirdest dinosaur you've never heard of. Imagine a giant sloth crossed with Edward Scissorhands — a 10-meter-tall creature covered in feathers with claws nearly a meter long! But here's the twist: despite those terrifying claws, it ate plants! Those huge claws were probably used to pull down branches, like a giant ground sloth. It's proof that nature has a wild imagination.",
+        "Science": "Therizinosaurus cheloniformis (~70 Ma) from Mongolia is the type specimen of Therizinosauridae, a bizarre clade of theropod dinosaurs that secondarily became herbivorous. Its manual unguals (hand claws) reached ~1 meter — the longest claws of any known animal. When first discovered in 1948, only the arms were found, and they were so strange that scientists thought they belonged to a giant turtle-like reptile (cheloniformis means 'turtle-formed'). Therizinosaurs are nested within Maniraptora, closely related to oviraptorosaurs, meaning they descended from carnivorous ancestors. Their pot-bellied build, reduced teeth, and enormous gut capacity parallel the evolution of giant ground sloths among mammals.",
+        "Fun Fact": "When scientists first found Therizinosaurus claws, they were so confused they thought they'd found a giant turtle! It took decades and more fossil discoveries to figure out this was actually a feathered dinosaur with the longest claws of any animal ever.",
+        "Reflection": "Therizinosaurus came from meat-eating ancestors but evolved to eat plants. It changed its whole way of life. Is it possible for us to completely change how we live? What would it take?"
+      },
+      "keywords": ["cretaceous", "herbivore", "giant-claws", "theropod", "weird"],
+      "metadata": {"period": "Late Cretaceous", "diet": "herbivore", "length_m": 10}
+    },
+    {
+      "id": "giganotosaurus",
+      "name": "Giganotosaurus",
+      "sort_order": 24,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "South America had its own giant predator — Giganotosaurus! It was actually slightly longer than T. rex, though not as heavily built. This enormous hunter may have worked in groups to bring down the massive titanosaur sauropods that roamed Argentina. Imagine a pack of 13-meter-long predators coordinating an attack — that's a terrifying thought!",
+        "Science": "Giganotosaurus carolinii (~99–95 Ma) was a carcharodontosaurid theropod from Patagonia, Argentina. At ~13 meters long and 6–8 tonnes, it was one of the largest terrestrial predators, though its skull was more lightly built than T. rex's with a weaker bite force. It belonged to a different theropod lineage (Carcharodontosauria vs. Tyrannosauroidea), representing convergent evolution of the giant predator niche on separate continents. Multiple individuals found together suggest possible gregarious behavior. Its prey likely included large titanosaur sauropods like Andesaurus. Despite its name meaning 'giant southern lizard,' it's often mispronounced — it's 'JIG-ah-NOT-oh-SORE-us,' not 'GIGA-noto-saurus.'",
+        "Fun Fact": "Almost everyone says Giganotosaurus wrong! It's not 'Giga-noto-saurus' (giant lizard) — it's 'Gig-a-NOTO-saurus' (giant southern lizard). The 'noto' part means 'southern wind' in Greek, referring to South America.",
+        "Reflection": "Giganotosaurus and T. rex evolved separately on different continents but ended up looking similar. Why does nature sometimes arrive at the same solutions in completely different places?"
+      },
+      "keywords": ["cretaceous", "carnivore", "apex-predator", "south-america"],
+      "metadata": {"period": "Late Cretaceous", "diet": "carnivore", "length_m": 13}
+    },
+    {
+      "id": "protoceratops",
+      "name": "Protoceratops",
+      "sort_order": 25,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Protoceratops was the sheep of the dinosaur world — small, common, and found everywhere in Mongolia. About the size of a large dog, it had a beak and a small frill but no horns (its name means 'first horned face,' even though it didn't really have horns!). It was one of the most common dinosaurs in its ecosystem, and it was the favorite snack of Velociraptor.",
+        "Science": "Protoceratops andrewsi (~75–71 Ma) was a small ceratopsian from Mongolia, about 2 meters long and 180 kg. It's one of the best-understood dinosaurs thanks to abundant specimens across all growth stages — from embryos in eggs to full adults. Sexual dimorphism is evident in frill size. The 'Fighting Dinosaurs' fossil pairs it with Velociraptor in mortal combat. Intriguingly, some researchers have suggested that Protoceratops fossils, with their beaked skulls and four-legged bodies exposed by wind erosion in the Gobi Desert, may have inspired the griffin legends of ancient Scythian peoples who traveled through Central Asia.",
+        "Fun Fact": "Some scientists think that ancient travelers who found Protoceratops skulls in the Gobi Desert — with their beaked faces and bony frills — invented the legend of the griffin, the mythical creature with an eagle's head and a lion's body!",
+        "Reflection": "Could dinosaur fossils have inspired ancient myths and legends? What else from nature might have sparked human imagination long before we had science to explain it?"
+      },
+      "keywords": ["cretaceous", "herbivore", "ceratopsian", "small", "frill"],
+      "metadata": {"period": "Late Cretaceous", "diet": "herbivore", "length_m": 2}
+    },
+    {
+      "id": "dreadnoughtus",
+      "name": "Dreadnoughtus",
+      "sort_order": 26,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Dreadnoughtus might be the heaviest land animal that ever lived. Its name means 'fears nothing' — and when you weigh as much as a dozen elephants, you don't have to be afraid of anything! This titanosaur was so massive that even the largest predators couldn't threaten a healthy adult. It spent its days eating incredible amounts of plants to fuel that enormous body.",
+        "Science": "Dreadnoughtus schrani (~77 Ma) was a titanosaur sauropod from Patagonia, Argentina, described in 2014. The holotype is remarkably complete for a giant sauropod (over 70% of the skeleton), allowing a mass estimate of ~40–65 tonnes — though the individual was still growing when it died, based on bone histology. At ~26 meters long, it was one of the most massive land animals known (though length-wise, Argentinosaurus and Patagotitan may have been comparable). Its name, meaning 'fearing nothing,' references the early 20th-century Dreadnought-class battleships. The completeness of the skeleton is extraordinary — most giant sauropods are known from fragmentary remains.",
+        "Fun Fact": "The Dreadnoughtus they found wasn't even fully grown! Its bones show it was still growing when it died. An adult would have been even bigger. Scientists named it after giant battleships because it feared nothing.",
+        "Reflection": "When you're the biggest animal around, you have no predators — but you need enormous amounts of food. Every advantage comes with a cost. What are some advantages in your life that also have downsides?"
+      },
+      "keywords": ["cretaceous", "herbivore", "sauropod", "titanosaur", "heaviest"],
+      "metadata": {"period": "Late Cretaceous", "diet": "herbivore", "length_m": 26}
+    },
+    {
+      "id": "microraptor",
+      "name": "Microraptor",
+      "sort_order": 27,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "A dinosaur with four wings! Microraptor was a tiny feathered dinosaur — smaller than a cat — that had long flight feathers on both its arms AND its legs. It glided between trees in Chinese forests like a living biplane. Its feathers were even iridescent, shimmering blue-black like a crow's. It proves that the path from dinosaurs to birds was way more creative than anyone expected.",
+        "Science": "Microraptor gui (~125–120 Ma) from the Jehol Biota of China was a dromaeosaurid theropod with asymmetric flight feathers on all four limbs — a body plan unlike any living animal. At ~80 cm long and less than 1 kg, it likely used its four wings for gliding or parachuting between trees. Electron microscope analysis of fossilized melanosomes in its feathers revealed iridescent black coloration, similar to modern starlings — making it the first dinosaur whose color was scientifically determined. Fish remains in its stomach show it was an opportunistic predator. The four-winged body plan, seen in several early Cretaceous maniraptorans, suggests the evolution of flight involved more experimentation than the simple 'ground up' or 'trees down' dichotomy suggests.",
+        "Fun Fact": "Scientists figured out Microraptor's actual color by looking at tiny structures in its fossilized feathers under an electron microscope. It was shiny black with a blue-green shimmer — like a raven! It's the first dinosaur whose true color we actually know.",
+        "Reflection": "Microraptor had four wings, but modern birds only have two. Evolution tried a four-winged design and eventually settled on two wings. Not every experiment lasts forever. What can we learn from trying things that don't end up being permanent?"
+      },
+      "keywords": ["cretaceous", "carnivore", "feathered", "four-wings", "glider"],
+      "metadata": {"period": "Early Cretaceous", "diet": "carnivore", "length_m": 0.8}
+    },
+    {
+      "id": "iguanodon",
+      "name": "Iguanodon",
+      "sort_order": 28,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Iguanodon holds a special place in history — it was one of the very first dinosaurs ever discovered and named, way back in 1825! A doctor's wife found some of its teeth in England, and they looked like giant iguana teeth (that's how it got its name). It had a big spike on each thumb that scientists first thought was a nose horn — they put it on the wrong end! Imagine building a puzzle with no picture on the box.",
+        "Science": "Iguanodon bernissartensis (~126–122 Ma) was among the first dinosaurs described scientifically. Gideon Mantell named it in 1825 based on teeth found by his wife Mary Ann in Sussex, England. Early reconstructions placed it as a quadrupedal, iguana-like reptile with a nasal horn — the famous thumb spike was misidentified as a nose horn until the 1878 discovery of ~38 complete skeletons in a Belgian coal mine at Bernissart. At ~10 meters long and 3–4 tonnes, it was a large ornithopod that could shift between bipedal and quadrupedal locomotion. Its thumb spike was likely used in defense or foraging. Iguanodon was one of the three original animals used by Richard Owen to define the word 'Dinosauria' in 1842.",
+        "Fun Fact": "The word 'dinosaur' was invented partly because of Iguanodon! In 1842, scientist Richard Owen looked at Iguanodon, Megalosaurus, and Hylaeosaurus and realized they were a whole new group of animals. He called them 'Dinosauria' — meaning 'terrible lizards.'",
+        "Reflection": "Early scientists got Iguanodon's appearance totally wrong — they put its thumb spike on its nose! Science is about making mistakes and correcting them. Why is it important to be willing to change your mind when you get new information?"
+      },
+      "keywords": ["cretaceous", "herbivore", "thumb-spike", "first-discovered"],
+      "metadata": {"period": "Early Cretaceous", "diet": "herbivore", "length_m": 10}
+    },
+    {
+      "id": "carnotaurus",
+      "name": "Carnotaurus",
+      "sort_order": 29,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "Carnotaurus was a speed demon — a large predator built to run fast, with strong back legs, a streamlined body, and the tiniest arms of any large meat-eater (even smaller than T. rex's!). It had two bull-like horns above its eyes, which is how it got its name: 'meat-eating bull.' It lived in South America and was one of the top predators of its world.",
+        "Science": "Carnotaurus sastrei (~72–69 Ma) was an abelisaurid theropod from Patagonia. At ~8 meters long and ~1.5 tonnes, it was the apex predator of Late Cretaceous South America. Its forelimbs were extraordinarily reduced — even more vestigial than those of T. rex — with four stubby, immobile fingers. Its skull was unusually short and deep, with prominent supraorbital horns unique among large theropods. Remarkably well-preserved skin impressions show rows of non-overlapping, pebbly scales without any evidence of feathers. Biomechanical analysis of its leg proportions suggests it was one of the fastest large theropods, possibly reaching speeds of 50+ km/h — making it a pursuit predator unlike the ambush-style T. rex.",
+        "Fun Fact": "Carnotaurus's arms were so tiny they couldn't even reach its own mouth — and each arm had four stubby fingers that couldn't move. What were they for? Scientists honestly have no idea. Maybe nothing!",
+        "Reflection": "Carnotaurus had arms so small they were basically useless. Sometimes we carry features — or habits — that no longer serve us. Can you think of something you've outgrown but still carry around?"
+      },
+      "keywords": ["cretaceous", "carnivore", "horned", "tiny-arms", "fast"],
+      "metadata": {"period": "Late Cretaceous", "diet": "carnivore", "length_m": 8}
+    },
+    {
+      "id": "mosasaurus",
+      "name": "Mosasaurus",
+      "sort_order": 30,
+      "category": "cretaceous",
+      "level": 1,
+      "sections": {
+        "Story": "While dinosaurs ruled the land, Mosasaurus ruled the ocean! This giant marine reptile was like a sea dragon — up to 13 meters of pure ocean predator with powerful jaws and a long, flexible body. It wasn't a dinosaur at all; it was actually more closely related to modern lizards and snakes. Mosasaurus was so fierce that sharks, sea turtles, and even other marine reptiles were on its menu.",
+        "Science": "Mosasaurus hoffmannii (~70–66 Ma) was a mosasaurid squamate — a marine reptile more closely related to monitor lizards than to dinosaurs. At ~13 meters long, it was an apex ocean predator in the Western Interior Seaway and Atlantic. Its double-hinged jaw (similar to snakes) allowed it to swallow large prey whole. Mosasaurus was actually one of the first fossil reptiles scientifically described, found in a Maastricht limestone quarry in 1764 — decades before the word 'dinosaur' existed. Its discovery helped establish the concept of extinction, which was controversial at the time. Georges Cuvier used it to argue that species could go extinct, challenging the prevailing view that God's creations were permanent.",
+        "Fun Fact": "Mosasaurus was discovered before the word 'dinosaur' even existed! It was found in a Dutch quarry in 1764, and the French army later captured the fossil as a war prize. It helped prove that animals could go extinct — something people didn't believe back then!",
+        "Reflection": "People once thought it was impossible for any species to go extinct — they believed every creature that ever existed was still alive somewhere. What ideas do we hold today that future generations might find just as surprising?"
+      },
+      "keywords": ["cretaceous", "marine-reptile", "ocean", "not-a-dinosaur", "apex-predator"],
+      "metadata": {"period": "Late Cretaceous", "diet": "carnivore", "length_m": 13}
+    },
+
+    {
+      "id": "triassic-period",
+      "name": "The Triassic Period — Dawn of the Dinosaurs",
+      "sort_order": 31,
+      "category": "by-period",
+      "level": 2,
+      "sections": {
+        "About": "The Triassic Period (252–201 million years ago) was when dinosaurs first appeared — but they weren't the rulers yet. The world was recovering from the worst mass extinction in history (the 'Great Dying' that killed 90% of all species), and all the continents were joined in one supercontinent called Pangaea. The first dinosaurs were small and humble, sharing their world with crocodile ancestors, giant amphibians, and early mammals. It wasn't until the end-Triassic extinction cleared away the competition that dinosaurs got their chance to take over.",
+        "For Parents": "The Triassic dinosaurs in this collection (Eoraptor, Coelophysis, Herrerasaurus, Plateosaurus, Liliensternus) illustrate a powerful theme: the most successful lineages often start small and unimpressive. Use these to discuss perseverance, humble beginnings, and how opportunity (the end-Triassic extinction) can change everything. Good discussion starters: 'What if dinosaurs had never gotten their chance?' and 'Can you think of something that started small and became huge?'"
+      },
+      "keywords": ["triassic", "period", "pangaea", "origins"],
+      "composite_of": ["eoraptor", "coelophysis", "herrerasaurus", "plateosaurus", "liliensternus"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "jurassic-period",
+      "name": "The Jurassic Period — Age of Giants",
+      "sort_order": 32,
+      "category": "by-period",
+      "level": 2,
+      "sections": {
+        "About": "The Jurassic Period (201–145 million years ago) was the golden age of dinosaurs. With their competition gone after the end-Triassic extinction, dinosaurs exploded in size and diversity. Sauropods like Brachiosaurus and Diplodocus became the largest land animals ever, while predators like Allosaurus grew to match. Pangaea began to break apart, creating new coastlines and climates. The first birds appeared (Archaeopteryx), and the forests were full of ferns, conifers, and cycads — but not a single flower.",
+        "For Parents": "The Jurassic species (Allosaurus, Brachiosaurus, Stegosaurus, Diplodocus, Archaeopteryx, Compsognathus, Ceratosaurus, Kentrosaurus) showcase diversity and specialization. Each species found its niche: the tallest feeder, the best-armored, the fastest small hunter, the first flier. Use these to discuss how diversity strengthens ecosystems and how everyone can find their own unique role. The Archaeopteryx story is especially powerful for discussing in-between things and how categories aren't always clear-cut."
+      },
+      "keywords": ["jurassic", "period", "sauropods", "golden-age"],
+      "composite_of": ["allosaurus", "brachiosaurus", "stegosaurus", "diplodocus", "archaeopteryx", "compsognathus", "ceratosaurus", "kentrosaurus"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "cretaceous-period",
+      "name": "The Cretaceous Period — Last and Greatest",
+      "sort_order": 33,
+      "category": "by-period",
+      "level": 2,
+      "sections": {
+        "About": "The Cretaceous Period (145–66 million years ago) was the longest and last age of dinosaurs — and the most spectacular. Dinosaurs reached their greatest diversity ever: horned ceratopsians, duck-billed hadrosaurs, armored ankylosaurs, feathered dromaeosaurs, and the mighty tyrannosaurs. Flowering plants appeared for the first time, transforming ecosystems. The continents continued drifting apart, creating separate evolutionary theaters on each landmass. It all ended 66 million years ago when an asteroid struck what is now Mexico, triggering the mass extinction that ended the age of dinosaurs — but not before their descendants, the birds, had already taken to the skies.",
+        "For Parents": "The Cretaceous collection is the largest (17 species) and includes the most famous dinosaurs — T. rex, Triceratops, Velociraptor — along with surprises like the swimming Spinosaurus and the four-winged Microraptor. Key themes: adaptation and specialization (every possible niche was filled), the relationship between predator and prey (T. rex vs. Triceratops), and the sobering reality of extinction. The asteroid impact is a natural entry point for discussing environmental catastrophe, resilience, and how endings can also be beginnings (mammals, including our ancestors, thrived after the dinosaurs vanished)."
+      },
+      "keywords": ["cretaceous", "period", "diversity", "extinction"],
+      "composite_of": ["tyrannosaurus-rex", "triceratops", "velociraptor", "spinosaurus", "ankylosaurus", "parasaurolophus", "pachycephalosaurus", "pteranodon", "quetzalcoatlus", "therizinosaurus", "giganotosaurus", "protoceratops", "dreadnoughtus", "microraptor", "iguanodon", "carnotaurus", "mosasaurus"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "mighty-hunters",
+      "name": "The Mighty Hunters — Carnivores",
+      "sort_order": 34,
+      "category": "by-diet",
+      "level": 2,
+      "sections": {
+        "About": "The carnivorous dinosaurs — the theropods — were the athletes of the dinosaur world. From tiny Compsognathus to massive T. rex, they evolved every hunting strategy imaginable: speed (Carnotaurus), intelligence (Velociraptor), brute force (T. rex), aquatic ambush (Spinosaurus), and pack hunting (possibly Giganotosaurus). All theropods walked on two legs, and all had hollow bones — the same lightweight design that would eventually allow birds to fly.",
+        "For Parents": "The predator collection naturally fascinates children — use that fascination to explore deeper themes. Niche partitioning (Ceratosaurus and Allosaurus coexisting by hunting different prey) teaches that competition isn't always head-to-head. The bird connection (theropods → birds) is one of science's greatest detective stories. And the range of sizes — from chicken-sized Compsognathus to bus-sized T. rex — shows that 'predator' doesn't mean just one thing."
+      },
+      "keywords": ["carnivore", "predator", "theropod"],
+      "composite_of": ["coelophysis", "herrerasaurus", "liliensternus", "allosaurus", "compsognathus", "ceratosaurus", "tyrannosaurus-rex", "velociraptor", "spinosaurus", "giganotosaurus", "microraptor", "carnotaurus", "mosasaurus"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "gentle-giants",
+      "name": "The Gentle Giants — Herbivores",
+      "sort_order": 35,
+      "category": "by-diet",
+      "level": 2,
+      "sections": {
+        "About": "The herbivorous dinosaurs were some of the most creative engineers in the history of life. They evolved an astonishing array of defenses — plates and spikes (Stegosaurus), full-body armor and tail clubs (Ankylosaurus), horns and frills (Triceratops), head-butting domes (Pachycephalosaurus) — while also developing sophisticated feeding strategies. Sauropods grew to unimaginable sizes, while hadrosaurs evolved hundreds of teeth packed together into dental batteries for grinding tough plants. Being a plant-eater was never boring.",
+        "For Parents": "Herbivores are a wonderful way to challenge the assumption that predators are more interesting than prey. Each herbivore solved the problem of 'how do I not get eaten?' differently — armor, speed, size, herding, horns. These are engineering problems, and kids love engineering. Compare them to modern animals: Ankylosaurus is like an armadillo or turtle, Triceratops like a rhino, Diplodocus like a giraffe. Ask: 'If you were a plant-eater in a world of predators, what defense would you evolve?'"
+      },
+      "keywords": ["herbivore", "plant-eater", "gentle"],
+      "composite_of": ["plateosaurus", "brachiosaurus", "stegosaurus", "diplodocus", "kentrosaurus", "triceratops", "ankylosaurus", "parasaurolophus", "pachycephalosaurus", "therizinosaurus", "protoceratops", "dreadnoughtus", "iguanodon"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "sky-and-sea",
+      "name": "Sky and Sea — Not Dinosaurs!",
+      "sort_order": 36,
+      "category": "by-type",
+      "level": 2,
+      "sections": {
+        "About": "Pteranodon, Quetzalcoatlus, and Mosasaurus are often called dinosaurs, but they're not! Pterosaurs (flying reptiles) and mosasaurs (marine reptiles) were separate groups of reptiles that lived alongside dinosaurs. Pterosaurs were the first vertebrates to achieve powered flight — millions of years before birds. Mosasaurs were ocean predators related to modern monitor lizards. Together with the dinosaurs, they show that the Mesozoic was an age of reptile dominance across every environment: land, sea, and sky.",
+        "For Parents": "This group is perfect for teaching classification and precision in language. Kids naturally call all prehistoric reptiles 'dinosaurs,' and correcting this gently introduces how science classifies living things. The key distinction: dinosaurs are defined by specific hip and leg anatomy — they walked with legs directly beneath their bodies. Pterosaurs flew, mosasaurs swam, and neither had the characteristic dinosaur stance. It's also a great entry to discuss how different groups of animals evolved to fill similar roles in different environments."
+      },
+      "keywords": ["pterosaur", "marine-reptile", "flying", "swimming"],
+      "composite_of": ["pteranodon", "quetzalcoatlus", "mosasaurus"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "feathered-wonders",
+      "name": "Feathered Wonders — Dinosaurs with Feathers",
+      "sort_order": 37,
+      "category": "by-feature",
+      "level": 2,
+      "sections": {
+        "About": "One of the greatest scientific discoveries of the past 30 years: many dinosaurs had feathers! Archaeopteryx showed the link between dinosaurs and birds in the 1860s, but it wasn't until Chinese fossil discoveries in the 1990s–2000s (including Microraptor and Sinosauropteryx) that scientists realized feathers were widespread among theropod dinosaurs. Even Velociraptor had feathers! Feathers first evolved for insulation and display, and only later were co-opted for flight. Today's birds are literally living dinosaurs — dinosaurs never truly went extinct.",
+        "For Parents": "The feathered dinosaur story is one of the best examples of how science changes. For over a century, dinosaurs were depicted as scaly lizards. Now we know many were fluffy or feathered — a revolution driven by new fossil evidence from China. Use this to discuss how science self-corrects, why it's okay (even good!) to change your mind when you learn new things, and the mind-blowing fact that the sparrows at your bird feeder are technically dinosaurs. Ask: 'How does it change the way you think about dinosaurs to know they had feathers?'"
+      },
+      "keywords": ["feathered", "bird-evolution", "flight"],
+      "composite_of": ["archaeopteryx", "velociraptor", "microraptor", "therizinosaurus"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "armored-defenders",
+      "name": "Armored Defenders — Built-in Protection",
+      "sort_order": 38,
+      "category": "by-feature",
+      "level": 2,
+      "sections": {
+        "About": "Some dinosaurs turned their bodies into fortresses. Stegosaurus and Kentrosaurus lined their backs with plates and spikes. Ankylosaurus covered itself in armor and wielded a tail club. Triceratops grew horns and a massive frill. Pachycephalosaurus developed a dome of solid bone on its skull. Each solution to the predator problem was different, but they all worked — these groups survived for tens of millions of years. Nature's arms race between predators and prey drove constant innovation on both sides.",
+        "For Parents": "Armored dinosaurs are natural favorites for kids who love knights, castles, and shields. The evolutionary arms race between predator weapons (jaws, claws, speed) and prey defenses (armor, horns, clubs, spikes) is a compelling narrative. Compare each dinosaur to a modern equivalent: Ankylosaurus = armadillo/tank, Triceratops = rhinoceros, Stegosaurus = porcupine with a mace. Ask: 'Which defense strategy do you think was best? Why?' This naturally leads to discussions about trade-offs — armor is heavy, horns require energy to grow, speed requires staying light."
+      },
+      "keywords": ["armor", "defense", "plates", "horns", "clubs"],
+      "composite_of": ["stegosaurus", "kentrosaurus", "ankylosaurus", "triceratops", "pachycephalosaurus"],
+      "relationship_type": "emergence"
+    },
+
+    {
+      "id": "mesozoic-era",
+      "name": "The Mesozoic Era — When Reptiles Ruled the Earth",
+      "sort_order": 39,
+      "category": "meta",
+      "level": 3,
+      "sections": {
+        "About": "The Mesozoic Era — the 'Age of Reptiles' — lasted 186 million years (252–66 Ma), divided into three periods: Triassic, Jurassic, and Cretaceous. It began after the worst mass extinction in history and ended with the asteroid that killed the non-avian dinosaurs. During this vast span, dinosaurs evolved from dog-sized runners into the most diverse group of large land animals the world has ever seen. Continents drifted, oceans opened, flowering plants appeared, and birds took to the sky. The Mesozoic was bookended by catastrophe — but between those disasters, life flourished in ways almost impossible to imagine.",
+        "For Parents": "This grammar takes children through the full sweep of the Mesozoic Era in 30 species. The three periods show how life responds to crisis (Triassic recovery), how diversity blooms when given opportunity (Jurassic explosion), and how even the most successful dynasties can end (Cretaceous extinction). Key threads to follow: the dinosaur-to-bird transition, the predator-prey arms race, the story of scientific discovery itself (Iguanodon's misplaced thumb spike, the feathered dinosaur revolution). For younger children, focus on the Story and Fun Fact sections; for older readers, the Science sections offer college-level paleontology in accessible language."
+      },
+      "keywords": ["mesozoic", "overview", "timeline"],
+      "composite_of": ["triassic-period", "jurassic-period", "cretaceous-period"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "ways-of-life",
+      "name": "Ways of Life — How Dinosaurs Survived",
+      "sort_order": 40,
+      "category": "meta",
+      "level": 3,
+      "sections": {
+        "About": "Beyond the timeline, dinosaurs can be understood by how they lived — what they ate, how they defended themselves, where they hunted, and what special adaptations they evolved. Carnivores ranged from tiny feathered gliders to bus-sized bone-crushers. Herbivores developed armor, horns, clubs, and sophisticated teeth. Some took to the air, some to the water. Some grew feathers for warmth and display, which eventually became tools for flight. This perspective groups dinosaurs not by when they lived, but by the strategies they used to survive — showing that the same problems (finding food, avoiding predators, attracting mates) produce endlessly creative solutions.",
+        "For Parents": "This axis of organization — by adaptation rather than by time — encourages systems thinking. Instead of memorizing dates, children think about ecological relationships: 'Why did so many different herbivores evolve armor?' (because predators were effective), 'Why did some theropods become herbivores?' (because plants are abundant and predictable food). The feathered dinosaur and sky-and-sea groups challenge assumptions about what 'counts' as a dinosaur and how categories are constructed. Good culminating question: 'If dinosaurs were still alive, which group do you think would be most successful today?'"
+      },
+      "keywords": ["ecology", "diet", "adaptation", "survival"],
+      "composite_of": ["mighty-hunters", "gentle-giants", "sky-and-sea", "feathered-wonders", "armored-defenders"],
+      "relationship_type": "emergence"
+    }
+  ]
+}

@@ -133,23 +133,9 @@ git push origin <branch>
 This is needed because the cloud environment cannot access external URLs directly — the user downloads locally and pushes to the branch.
 
 ### From Memory
-
-**CRITICAL: NEVER delegate from-memory grammar generation to a background agent.** Background agents time out on content-heavy grammars because the combination of content generation + JSON management exceeds their budget. Work inline instead.
-
-**Approach: Skeleton + Edit-per-item (works in a single session for up to ~80 items)**
-
-1. **Write the full skeleton** with the `Write` tool: all IDs, names, levels, categories, sort_orders, composite_of references, keywords, and `"Placeholder."` sections
-2. **Validate immediately** with a Python one-liner (JSON parse, duplicate IDs, bad refs, sort_order)
-3. **Commit the skeleton** (safety checkpoint)
-4. **Fill content system-by-system** using the `Edit` tool: replace one item's placeholder sections at a time with full prose
-5. **Validate again** (check zero placeholders remaining)
-6. Update manifest, commit, push
-
-**Why this works**: The `Edit` tool makes small, surgical replacements — one item's 4 sections per call. No risk of corrupting the file. Working inline avoids background agent context overhead. System-by-system focus keeps domain knowledge coherent.
-
-**When to use multi-session instead**: If the grammar exceeds ~80 items, or if content requires deep per-item research, split across sessions: skeleton in session 1, content fill in sessions 2-N.
-
-**The Edit tool is the MVP for from-memory grammars.** After the skeleton exists, every content addition is an Edit call replacing `"Placeholder."` with real prose. Write is for initial creation only.
+1. Plan the taxonomy (list all items at each level) before writing content
+2. Write content for each item with appropriate sections
+3. Validate referential integrity (`composite_of` references must exist)
 
 ### Key Conventions
 - IDs: lowercase, hyphenated, hierarchical (e.g., `book-4-17`, `hamlet-act1-scene1`)
@@ -165,13 +151,13 @@ The `description` field should include:
 2. **Source attribution**: Translator, date, and Project Gutenberg eBook number with link (e.g., `Source: Project Gutenberg eBook #21 (https://www.gutenberg.org/ebooks/21)`)
 3. **Illustration references** (on a new paragraph, prefixed with `PUBLIC DOMAIN ILLUSTRATION REFERENCES:`): List public domain illustrators and editions whose images would be good visual companions — these help the website agent search for and upload appropriate artwork. Include artist name, date, publisher, and art style.
 
-## Current Grammar Inventory (52+ grammars)
+## Current Grammar Inventory (38 grammars)
 
 All grammars live in `grammars/` — run `python3 scripts/generate_manifest.py` to see the full index, or check `manifest.json` for computed views by type, tag, creator, root, shelf, and lineage.
 
 | Type | Count | Notable |
 |------|-------|---------|
-| custom | 39+ | Confucian Analects (749), Dhammapada (431), Art of War (376), Aesop's Fables (284), Shakespeare (247), Myths Through Many Eyes (73), Russian Folk Tales (61), Hesiod & Homeric Hymns (49), Arabian Nights (44), Myth of the Birth of the Hero (18), Mabinogion (15), Golden Ass (14) |
+| custom | 25 | Confucian Analects (749), Dhammapada (431), Art of War (376), Aesop's Fables (284), Shakespeare (247) |
 | tarot | 6 | Rider-Waite (78), Jungian Archetypes (34), Alice's Tarot |
 | iching | 5 | Chinese original (64), Emergent, Leibniz Binary, HD Meta-Categories |
 | astrology | 1 | Archetypal Astrology (Tarnas) |
@@ -179,124 +165,114 @@ All grammars live in `grammars/` — run `python3 scripts/generate_manifest.py` 
 
 ## Parsing Lessons (from build-logs)
 
-### Gutenberg Text Handling
-- **Always use the Gutenberg start/end markers**: `*** START OF THE PROJECT GUTENBERG EBOOK` and `*** END OF THE PROJECT GUTENBERG EBOOK` to isolate body text. Never assume body starts at a fixed byte offset.
-- **Heading format varies between editions**: Always check the actual heading format in the seed file — don't assume. Build parsers with a fallback chain of patterns (e.g., try `I -- TITLE` first, then bare `I`, then `BOOK I`).
-- **TOC vs body heading conflicts**: When a text has ALL CAPS headings in both Table of Contents and body, skip the TOC region to avoid double-matching. Use the Gutenberg start marker to find the real body.
-- **Unicode apostrophes**: Gutenberg texts mix ASCII `'` and Unicode `'` (U+2019). Always test for both. Example: `HESIOD'S` uses U+2019, not ASCII.
-- **Spelling inconsistencies**: TOC and body sometimes differ (e.g., "Conal" vs "Conall", title case vs ALL CAPS). Always verify against actual body headings.
-- **Accented characters in titles** (FÊTES, Alcántara, Tzŭ): Need careful handling. Use case-insensitive or normalized matching.
-- **Missing section headings**: Some editions skip headings entirely (e.g., Golden Ass missing "FIFTH BOOKE"). Insert synthetic breaks at midpoints when needed.
-- **Footnote markers**: Strip `[21]`-style footnote markers from headings before matching.
-- **verify_seed() pattern**: Add a function to confirm the seed file is the correct book before parsing. Catches wrong-Gutenberg-number downloads early.
-
-### Parser Patterns
-- **Line-based heading search beats byte-position search**: `line.strip() == heading` is far more reliable than `body.find("\n" + spaces + heading)`. Byte positions drift due to encoding and whitespace differences.
-- **Centered headings**: Match with `len(line) - len(line.lstrip()) > 20` for Gutenberg texts with centered ALL CAPS headings.
-- **STORY_DEFS array pattern**: For fairy tales and anthologies, define a list of `(heading_text, id, name, cycle_category, keywords)` tuples. Directly reusable for any collection (Indian, Celtic, Grimm, Arabian Nights, etc.).
-- **Text truncation**: Truncate at ~2800 chars, find last period before cutoff: `bp = text.rfind(".", 0, 2800)`. Append `[Text continues for approximately N more words...]`.
-- **Duplicate title handling**: When multiple items share the same heading (e.g., "A Tale of the Dead" x3), use suffix numbering: `id-1`, `id-2`, `id-3`.
 - **Sacred texts**: Don't assume `\n\n` splits passages. Look for speaker attributions or verse numbering.
 - **Scholarly translations** (like Giles' Art of War): Use character-level bracket removal to strip commentary, not regex.
 - **Roman numerals**: Use `((?:X{0,3})(?:IX|IV|V?I{0,3}))\.` pattern. Handle up to XXXIX.
 - **Multi-part texts** (Grimm): Combine parts into single items.
-- **Internet Archive OCR is much worse than Gutenberg**: Expect garbled text, random characters, broken line wraps. Use KNOWN structure to find section boundaries. Clean aggressively (remove lines < 3 chars, strip garbage). Accept artifacts and note in grammar description.
-
-### Background Agents vs Inline Work
-- **Background agents**: Good for regular-structure seed texts under ~5000 lines with clear heading patterns.
-- **CRITICAL: NEVER use background agents for from-memory grammars**: They time out on content-heavy grammars because content generation + JSON management exceeds their context/time budget. Work inline instead using the Skeleton + Edit pattern.
-- **Complex/commentary-heavy texts**: Use direct Python scripting, not agents.
+- **Background agents**: Good for regular-structure texts under ~5000 lines. Time out on complex/commentary-heavy texts — use direct Python scripting instead.
+- **Large grammar files (40+ items)**: Write in chunks, not one shot. A 32-item grammar with full content WILL time out as a single Write. Split into: create file with first 10 items → edit to append next 10 → repeat.
 - **Always log learnings** in `plan/build-logs/`.
 
-## Cross-Linking and Metadata Patterns
+## Image Matching Lessons (from alice-in-wonderland)
 
-### `grammars[]` Cross-Linking
-Items can reference other grammars using a `grammars[]` array with GitHub direct links:
-```json
-{
-  "id": "myth-psyche-eros",
-  "grammars": ["https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/golden-ass-apuleius"],
-  ...
-}
-```
-When uploaded to Supabase, folder names get swapped for grammar UUIDs. Use this to link a myth item to its full source text grammar.
+Curated public domain illustrations are stored in `z.ignore/manuscript-images/`. Matching logs go in `grammars/<slug>/image-matching-log.json`.
 
-### `metadata.astrology` Pattern
-For mythology and symbolic grammars, add astrological associations:
-```json
-{
-  "metadata": {
-    "astrology": {
-      "planets": ["Venus", "Pluto"],
-      "signs": ["Scorpio", "Libra"],
-      "themes": ["descent", "transformation"]
-    }
-  }
-}
-```
-Every major myth has well-established planetary/zodiacal associations dating back to classical astrology (Inanna=Venus, Odin=Mercury, Prometheus=Uranus, etc.). This enables cross-grammar querying in astrology apps.
+### Filename Convention
+- Triple-underscore `___` separates collection metadata (left) from image metadata (right)
+- Parse RIGHT side: `Artist - Edition Year - Scene Description.ext`
+- Scene description (after last ` - `) is the strongest matching signal (~85% accuracy without vision)
+- Random/ID filenames (Flickr IDs, UUIDs) are unmatchable without vision — always flag
 
-## Tool Usage by Grammar Type
+### L1 vs L2 vs Cover
+- **L1 (scene)**: Protagonist DOING something specific. Action, narrative moment.
+- **L2 (chapter)**: Characters posed, setting shown, cast assembled WITHOUT a specific beat. Key signal: is the protagonist absent or passive?
+- **Cover**: Title pages, frontispieces, textile designs, standalone portraits.
+- **Character portrait without action** → L2 chapter cover
+- **Same character in multiple chapters** (Cheshire Cat in ch06+ch08, Duchess in ch06+ch09): need secondary context (other characters, setting) to disambiguate
 
-### From-Source Grammars (seed text → parser → grammar)
-| Step | Tool | Why |
-|------|------|-----|
-| Inspect seed file | `Read` | Understand heading format, structure, quirks |
-| Write parser | `Write` | Create Python script in `scripts/` (~50-150 lines) |
-| Run parser | `Bash` | Execute parser, generate grammar.json |
-| Fix parser bugs | `Edit` | Adjust regex, fix edge cases |
-| Validate output | `Bash` | Python one-liner: JSON parse, ID checks, ref checks |
-| Add L2/L3 emergence | `Edit` | Add system-level items to existing grammar |
+### Common Ambiguities
+- **Dinah the cat**: outdoors = ch01 (opening), indoors = ch12 (waking up)
+- **Court/trial**: general court = ch11-court-assembles, specific witness = ch11-hatters-evidence or ch11-cooks-evidence, jury = ch12-alice-tips-the-jury
+- **Tea party**: Alice at table = L1 `ch07-no-room`, characters without Alice = L2 `chapter-07`
+- **Playing cards**: painting roses = ch08, procession = ch08, trial = ch11-12, cards flying = ch12-waking-up
 
-### From-Memory Grammars (no seed, all original content)
-| Step | Tool | Why |
-|------|------|-----|
-| Create skeleton | `Write` | One-shot: all items with placeholder sections |
-| Validate skeleton | `Bash` | Python one-liner: JSON, IDs, refs, sort_order |
-| Fill content per item | `Edit` | Replace "Placeholder." with prose, one item at a time |
-| Check completeness | `Bash` | Verify zero placeholders remaining |
-| Update manifest | `Bash` | Run `python3 scripts/generate_manifest.py` |
+### Workflow
+1. Parse filenames → auto-match confident ones
+2. Flag ambiguous (medium confidence) for vision review
+3. Vision-verify a sample of 5-10 to calibrate
+4. Output mapping table in `IMAGE_MAPPING.md` for human review
+5. Log everything to `image-matching-log.json` (matches, failures, ambiguities, heuristics learned)
 
-**Key insight**: `Edit` is the MVP tool for both types. For from-source, it fixes parser output. For from-memory, it fills content surgically. `Write` is for initial file creation only — after that, everything is `Edit`.
+### Storage Convention
+- Images on Cloudflare R2, grammar stores only URLs in `metadata.illustrations[]`
+- R2 path: `grammar-illustrations/{grammar-slug}/{item-id}/{artist-slug}-{year}.ext`
+- `image_url` = primary/thumbnail (backward compat). `metadata.illustrations[]` = full set with attribution
+- See `Illustration` interface in `recursive-eco/apps/flow/src/lib/offer/unified-grammar-types.ts`
 
 ## Pipeline (What's Next)
 
 See `plan/pipeline.md` for planned grammars. The Seed Library (`plan/SEED_100.md`) maps 100 public domain texts to intellectual lineages feeding Bayo Akomolafe, Josh Shrei, Marsha Linehan, John Gottman, Sue Johnson, Vanessa Andreotti, and Christopher Kelty.
 
 Priorities include:
-- From source: Tao Te Ching, Bhagavad Gita, Souls of Black Folk, Walden
+- From source: Tao Te Ching, Bhagavad Gita, Chuang Tzu, Souls of Black Folk, Walden
 - From memory: Human Body, Language Family Trees, Enneagram, Periodic Table
 - See `plan/grammar-ideas.md` for the full wishlist
 
-## Validation
+## Illustration System (POC — Proven March 2026)
 
-Run `python3 scripts/validate.py` to check all grammars, or use this one-liner for a single grammar:
+### Architecture
+- **Inline metadata**: Illustrations stored in `metadata.illustrations[]` on each grammar item (no separate DB table)
+- **Cloudflare R2**: Images stored on R2 (`pub-71ebbc217e6247ecacb85126a6616699.r2.dev`), grammar JSON stores only URLs
+- **`image_url` backward compat**: Existing top-level `image_url` field = primary/thumbnail. `metadata.illustrations[]` = full set. `is_primary: true` syncs to `image_url`
+- **GrammarReader rendering**: Inline illustrations appear after prose sections, before components. Non-primary illustrations render with artist attribution captions + ImageLightbox for fullscreen
 
-```bash
-python3 -c "
-import json
-with open('grammars/GRAMMAR-NAME/grammar.json') as f:
-    g = json.load(f)
-items = g['items']
-ids = [i['id'] for i in items]
-dupes = [x for x in ids if ids.count(x) > 1]
-bad_refs = [(i['id'], r) for i in items for r in i.get('composite_of', []) if r not in ids]
-orders = [i['sort_order'] for i in items]
-placeholders = [(i['id'], k) for i in items for k, v in i.get('sections', {}).items() if v == 'Placeholder.']
-print(f'Items: {len(items)}, L1: {sum(1 for i in items if i[\"level\"]==1)}, L2: {sum(1 for i in items if i[\"level\"]==2)}, L3: {sum(1 for i in items if i[\"level\"]==3)}')
-print(f'Sections: {sum(len(i.get(\"sections\",{})) for i in items)}')
-print(f'Duplicate IDs: {dupes}')
-print(f'Bad refs: {bad_refs}')
-print(f'Sort orders sequential: {orders == list(range(1, len(items)+1))}')
-print(f'Remaining placeholders: {len(placeholders)}')
-"
+### Illustration Interface
+```json
+{
+  "url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/{grammar-slug}/{item-id}/{artist-slug}-{year}.ext",
+  "artist": "Arthur Rackham",
+  "artist_dates": "1867-1939",
+  "edition": "Alice's Adventures in Wonderland, 1907",
+  "scene": "Mad Hatter's tea party",
+  "license": "Public Domain",
+  "is_primary": true
+}
 ```
 
-Checks:
-1. Valid JSON parse
+### R2 Path Convention
+`grammar-illustrations/{grammar-slug}/{item-id}/{artist-slug}-{year}.ext`
+
+### Image Matching Levels
+- **L1 (Scene Match)**: Image depicts a specific narrative moment — protagonist acting in the scene (highest value, ~40% of typical collection)
+- **L2 (Chapter/Cast Match)**: Image shows characters or setting without specific beat — good for chapter/summary cards
+- **Cover**: Title pages, frontispieces — use for grammar-level hero image only
+
+### Image Matching Workflow
+1. **Inventory**: List all curated images in `z.ignore/manuscript-images/`
+2. **Filename parsing**: Triple-underscore `___` separates collection metadata (left) from image metadata (right). Scene description after last ` - ` is strongest signal (~85% accuracy)
+3. **Vision matching**: Use Claude vision to confirm visual content matches scene
+4. **Upload to R2**: Use `scripts/upload-test-illustrations.mjs` (reads env from root `.env.local`)
+5. **Add metadata**: Add `image_url` + `metadata.illustrations[]` to grammar items
+6. **Log**: Per-grammar `image-matching-log.json`, cross-grammar `image-matching-heuristics.md` in memory
+
+### Environment Requirements
+- **R2 upload requires**: `CLOUDFLARE_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET_NAME` — stored in `recursive-eco/.env.local` (root level)
+- **Claude Code desktop (not browser)**: R2 upload + vision matching over local images requires filesystem + S3 API access. Claude Code in browser can do grammar JSON edits but NOT uploads or local image analysis
+- **Grammar JSON edits**: Can be done in browser Claude Code (just JSON editing, no env vars needed)
+
+### Proven Test Items (Alice in Wonderland)
+5 images uploaded to R2, 4 items enriched with `metadata.illustrations[]`:
+- `ch05-who-are-you` — 2 illustrations (Hudson primary, Rackham secondary) — multi-artist test
+- `ch07-no-room` — 1 illustration (Rackham)
+- `chapter-07-a-mad-tea-party` — 1 illustration (Hudson, L2 chapter)
+- `ch08-painting-the-roses-red` — 1 illustration (Hudson)
+
+## Validation
+
+Run `python3 scripts/validate.py` to check all grammars, or validate manually:
+1. Valid JSON (`python3 -c "import json; json.load(open('grammar.json'))"`)
 2. No duplicate IDs
 3. All `composite_of` references point to existing item IDs
-4. `sort_order` is sequential (1, 2, 3, ...)
+4. `sort_order` is sequential
 5. All items have `id`, `name`, `sections`, `level`, `category`
 6. Attribution metadata is present in `_grammar_commons`
-7. Zero remaining `"Placeholder."` sections (for from-memory grammars)

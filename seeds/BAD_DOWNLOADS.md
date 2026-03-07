@@ -9,6 +9,11 @@ These seed files contain the wrong text due to Gutenberg ID reassignments:
 | `buddhist-suttas.txt` | Buddhist Suttas (T.W. Rhys Davids) | The Book of Mormon (Joseph Smith) | #17 | Not on Gutenberg as standalone; available on Internet Archive |
 | `sayings-of-lao-tzu.txt` | The Sayings of Lao Tzu (Lionel Giles) | The Guardian Angel (Oliver Wendell Holmes) | #2697 | Not found on Gutenberg; available on Internet Archive and sacred-texts.com |
 
+| `cloud-of-unknowing.txt` | The Cloud of Unknowing (medieval mysticism) | Como eu atravessei África (Portuguese travel book) | #20508 | Needs research; may not be on Gutenberg |
+| `dark-night-of-the-soul.txt` | Dark Night of the Soul (St. John of the Cross) | Terre-Neuve et les Terre-Neuviennes (French text) | ? | Needs research |
+| `phenomenology-of-spirit.txt` | Phenomenology of Spirit (Hegel) | Numa Roumestan (Alphonse Daudet) | ? | NOT on Gutenberg at all; check archive.org |
+| `interior-castle.txt` | The Interior Castle (St. Teresa of Ávila) | La Comédie humaine Vol. 03 (Balzac) | ? | Needs research |
+
 ## To Fix
 
 Re-download with correct Gutenberg IDs or from Internet Archive:
