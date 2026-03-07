@@ -1,0 +1,12 @@
+{
+  "name": "recursive-eco-schemas",
+  "private": true,
+  "description": "Grammar schemas and build tools for recursive.eco",
+  "scripts": {
+    "match": "node scripts/match-images-claude.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "dotenv": "^16.4.7"
+  }
+}

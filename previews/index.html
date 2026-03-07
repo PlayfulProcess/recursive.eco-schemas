@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grammar Playground — recursive.eco</title>
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #141420;
+      --surface2: #1e1e2e;
+      --border: #2a2a3e;
+      --text: #e0e0e8;
+      --text-dim: #8888a0;
+      --accent: #a78bfa;
+      --accent-dim: #7c5cbf;
+      --yellow: #fbbf24;
+      --green: #34d399;
+      --red: #f87171;
+      --blue: #60a5fa;
+      --orange: #fb923c;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ---- HEADER ---- */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.5px;
+    }
+
+    .logo span { color: var(--text-dim); font-weight: 400; }
+
+    /* ---- INPUT BAR ---- */
+    .input-bar {
+      display: flex;
+      gap: 8px;
+      padding: 16px 20px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .input-bar input {
+      flex: 1;
+      padding: 10px 14px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .input-bar input:focus { border-color: var(--accent); }
+    .input-bar input::placeholder { color: var(--text-dim); }
+
+    .btn {
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-primary:hover { background: var(--accent-dim); }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-dim);
+      border: 1px solid var(--border);
+    }
+
+    .btn-ghost:hover { border-color: var(--text-dim); color: var(--text); }
+
+    /* ---- TOOLBAR ---- */
+    .toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .grammar-title {
+      font-size: 16px;
+      font-weight: 600;
+      max-width: 400px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .grammar-meta {
+      font-size: 12px;
+      color: var(--text-dim);
+    }
+
+    .view-btn {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 10px;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      color: var(--text-dim);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .view-btn:hover { background: var(--surface2); color: var(--text); }
+    .view-btn.active { background: var(--surface2); color: var(--accent); border-color: var(--accent); }
+
+    .view-btn svg { width: 14px; height: 14px; }
+
+    /* ---- SEARCH/FILTER ---- */
+    .filter-bar {
+      display: flex;
+      gap: 8px;
+      padding: 8px 20px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+
+    .filter-bar input {
+      padding: 6px 10px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text);
+      font-size: 12px;
+      outline: none;
+      width: 200px;
+    }
+
+    .filter-bar input:focus { border-color: var(--accent); }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .tag-shelf { background: var(--accent-dim); color: #fff; }
+    .tag-shelf:hover { opacity: 0.8; }
+    .tag-keyword { background: var(--surface2); color: var(--text-dim); border: 1px solid var(--border); }
+    .tag-keyword:hover { color: var(--text); border-color: var(--text-dim); }
+
+    /* ---- MAIN CONTENT ---- */
+    main {
+      padding: 20px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* ---- CARDS VIEW ---- */
+    .view-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 12px;
+    }
+
+    @media (min-width: 768px) { .view-cards { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); } }
+    @media (min-width: 1024px) { .view-cards { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); } }
+
+    .card {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--surface2);
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+      border: 1px solid transparent;
+    }
+
+    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); border-color: var(--border); }
+    .card.selected { border-color: var(--yellow); box-shadow: 0 0 0 2px var(--yellow); }
+
+    .card-visual {
+      aspect-ratio: 2/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--surface);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-visual .symbol {
+      font-size: 3rem;
+    }
+
+    .card-visual .initial {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      color: var(--text-dim);
+    }
+
+    .card-visual .initial span:first-child { font-size: 2rem; }
+    .card-visual .initial span:last-child { font-size: 10px; }
+
+    .card-info {
+      padding: 8px 10px;
+    }
+
+    .card-info .name {
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .card-info .keywords {
+      font-size: 10px;
+      color: var(--text-dim);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 2px;
+    }
+
+    .card .badge {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card .level-badge {
+      position: absolute;
+      bottom: 44px;
+      left: 6px;
+      background: var(--green);
+      color: #000;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 1px 5px;
+      border-radius: 8px;
+    }
+
+    /* ---- LIST VIEW ---- */
+    .view-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .list-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .list-row:hover { background: var(--surface2); }
+    .list-row.selected { background: rgba(251, 191, 36, 0.1); border: 1px solid var(--yellow); }
+
+    .list-row .pos {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .list-row .thumb {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .list-row .thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .list-row .thumb .sym { font-size: 1.2rem; }
+
+    .list-row .info { flex: 1; min-width: 0; }
+    .list-row .info .name { font-size: 13px; font-weight: 600; }
+    .list-row .info .kw { font-size: 11px; color: var(--text-dim); }
+
+    .list-row .level { font-size: 10px; background: var(--green); color: #000; padding: 1px 6px; border-radius: 8px; font-weight: 600; }
+
+    /* ---- STUDY VIEW ---- */
+    .view-study {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .study-item {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .study-item:last-child { border-bottom: none; }
+
+    .study-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .study-header .thumb {
+      flex-shrink: 0;
+      width: 80px;
+      height: 120px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--surface2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .study-header .thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .study-header .thumb .sym { font-size: 2.5rem; }
+
+    .study-header .meta { flex: 1; }
+    .study-header .meta h3 { font-size: 18px; margin-bottom: 4px; }
+    .study-header .meta .cat { font-size: 12px; color: var(--accent); margin-bottom: 6px; }
+
+    .study-keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 10px;
+    }
+
+    .study-keywords .kw-tag {
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      background: var(--surface2);
+      color: var(--text-dim);
+    }
+
+    .study-sections { display: flex; flex-direction: column; gap: 8px; }
+
+    .study-section-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--accent);
+      margin-bottom: 2px;
+    }
+
+    .study-section-text {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text);
+      white-space: pre-wrap;
+    }
+
+    /* ---- SEQUENCE VIEW ---- */
+    .view-sequence {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 60vh;
+      justify-content: center;
+    }
+
+    .seq-visual {
+      width: 100%;
+      max-width: 400px;
+      aspect-ratio: 2/3;
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--surface2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .seq-visual img { width: 100%; height: 100%; object-fit: cover; }
+    .seq-visual .symbol { font-size: 6rem; }
+    .seq-visual .initial { font-size: 4rem; color: var(--text-dim); }
+
+    .seq-title {
+      font-size: 22px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 6px;
+    }
+
+    .seq-category {
+      font-size: 12px;
+      color: var(--accent);
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .seq-keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .seq-keywords .kw-tag {
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      background: var(--surface2);
+      color: var(--text-dim);
+      border: 1px solid var(--border);
+    }
+
+    .seq-sections {
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .seq-section-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--accent);
+    }
+
+    .seq-section-text {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text);
+      white-space: pre-wrap;
+    }
+
+    .seq-nav {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .seq-nav button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--text);
+      font-size: 18px;
+      cursor: pointer;
+      transition: all 0.15s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .seq-nav button:hover { border-color: var(--accent); color: var(--accent); }
+    .seq-nav button:disabled { opacity: 0.3; cursor: default; }
+
+    .seq-nav .counter {
+      font-size: 13px;
+      color: var(--text-dim);
+      min-width: 60px;
+      text-align: center;
+    }
+
+    /* ---- TREE VIEW ---- */
+    .view-tree {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .tree-level {
+      padding: 0;
+    }
+
+    .tree-level-header {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-dim);
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .tree-level-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 10px;
+    }
+
+    /* ---- MODAL ---- */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+    }
+
+    .modal-overlay.open { opacity: 1; pointer-events: auto; }
+
+    .modal {
+      background: var(--surface);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      max-width: 600px;
+      width: 100%;
+      max-height: 80vh;
+      overflow-y: auto;
+      padding: 24px;
+    }
+
+    .modal-close {
+      float: right;
+      background: none;
+      border: none;
+      color: var(--text-dim);
+      font-size: 20px;
+      cursor: pointer;
+      padding: 4px 8px;
+    }
+
+    .modal-close:hover { color: var(--text); }
+
+    /* ---- EMPTY STATE ---- */
+    .empty-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 50vh;
+      color: var(--text-dim);
+      text-align: center;
+      gap: 12px;
+    }
+
+    .empty-state .icon { font-size: 48px; opacity: 0.3; }
+    .empty-state p { max-width: 400px; font-size: 14px; line-height: 1.6; }
+
+    .examples { display: flex; flex-direction: column; gap: 6px; margin-top: 12px; }
+
+    .example-link {
+      color: var(--accent);
+      font-size: 12px;
+      cursor: pointer;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .example-link:hover { color: var(--text); }
+
+    /* ---- LOADING ---- */
+    .loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40vh;
+    }
+
+    .spinner {
+      width: 32px;
+      height: 32px;
+      border: 3px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ---- TOAST ---- */
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 13px;
+      z-index: 300;
+      transition: transform 0.3s;
+    }
+
+    .toast.show { transform: translateX(-50%) translateY(0); }
+    .toast.error { border-color: var(--red); color: var(--red); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">recursive.eco <span>/ grammar playground</span></div>
+  <a href="https://github.com/PlayfulProcess/recursive.eco-schemas" target="_blank"
+     style="color: var(--text-dim); font-size: 12px; text-decoration: none;">
+    GitHub
+  </a>
+</header>
+
+<section class="input-bar">
+  <input
+    type="text"
+    id="urlInput"
+    placeholder="Paste a public GitHub raw URL to a grammar JSON, or a GitHub file URL..."
+    aria-label="Grammar JSON URL"
+  />
+  <button class="btn btn-primary" onclick="loadFromInput()">Load</button>
+  <button class="btn btn-ghost" onclick="loadLocalFile()">Open File</button>
+  <input type="file" id="fileInput" accept=".json" style="display:none" onchange="handleFileUpload(event)" />
+</section>
+
+<div class="toolbar" id="toolbar" style="display:none;">
+  <div class="toolbar-left">
+    <div>
+      <div class="grammar-title" id="grammarTitle"></div>
+      <div class="grammar-meta" id="grammarMeta"></div>
+    </div>
+  </div>
+  <div class="toolbar-right">
+    <!-- Eye icon + view toggles -->
+    <button class="view-btn active" data-view="cards" onclick="setView('cards')" title="Cards">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      Cards
+    </button>
+    <button class="view-btn" data-view="list" onclick="setView('list')" title="List">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/></svg>
+      List
+    </button>
+    <button class="view-btn" data-view="study" onclick="setView('study')" title="Study">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+      Study
+    </button>
+    <button class="view-btn" data-view="sequence" onclick="setView('sequence')" title="Sequence">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+      Sequence
+    </button>
+    <button class="view-btn" data-view="tree" onclick="setView('tree')" title="Tree / Hierarchy">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/><line x1="12" y1="7" x2="12" y2="13"/><line x1="12" y1="13" x2="6" y2="17"/><line x1="12" y1="13" x2="18" y2="17"/></svg>
+      Tree
+    </button>
+  </div>
+</div>
+
+<div class="filter-bar" id="filterBar" style="display:none;">
+  <input type="text" id="searchInput" placeholder="Search items..." oninput="filterItems()" />
+  <div id="shelfTags"></div>
+</div>
+
+<main id="content">
+  <div class="empty-state">
+    <div class="icon">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.4">
+        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+        <circle cx="12" cy="12" r="3"/>
+      </svg>
+    </div>
+    <p>Paste a public GitHub URL to any grammar JSON file and preview it here. No login, no Supabase, no env variables — just raw GitHub.</p>
+    <div class="examples">
+      <span class="example-link" onclick="loadExample('iching')">I Ching grammar</span>
+      <span class="example-link" onclick="loadExample('tarot')">Tarot grammar</span>
+      <span class="example-link" onclick="loadExample('alice')">Alice in Wonderland</span>
+    </div>
+  </div>
+</main>
+
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" id="modal" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModalForce()">&times;</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ============================================================
+// STATE
+// ============================================================
+let grammar = null;
+let filteredItems = [];
+let currentView = 'cards';
+let sequenceIndex = 0;
+let searchQuery = '';
+let activeCategory = null;
+
+// ============================================================
+// EXAMPLES (schemas repo on GitHub)
+// ============================================================
+const EXAMPLES = {
+  iching: 'https://github.com/PlayfulProcess/recursive.eco-schemas/blob/main/iching/iching.json',
+  tarot: 'https://github.com/PlayfulProcess/recursive.eco-schemas/blob/main/tarot/rider-waite-smith.json',
+  alice: 'https://github.com/PlayfulProcess/recursive.eco-schemas/blob/main/literature/alice-in-wonderland.json',
+};
+
+function loadExample(key) {
+  document.getElementById('urlInput').value = EXAMPLES[key];
+  loadFromInput();
+}
+
+// ============================================================
+// URL PARSING — GitHub → raw
+// ============================================================
+function toRawUrl(url) {
+  url = url.trim();
+  // Already raw
+  if (url.includes('raw.githubusercontent.com')) return url;
+  // GitHub blob URL → raw
+  const blobMatch = url.match(/github\.com\/([^/]+)\/([^/]+)\/blob\/(.+)/);
+  if (blobMatch) {
+    return `https://raw.githubusercontent.com/${blobMatch[1]}/${blobMatch[2]}/${blobMatch[3]}`;
+  }
+  // GitHub tree URL (directory) — can't load directly
+  const treeMatch = url.match(/github\.com\/([^/]+)\/([^/]+)\/tree\/(.+)/);
+  if (treeMatch) {
+    showToast('That looks like a directory, not a file. Point to a .json file.', true);
+    return null;
+  }
+  // Assume it's already a direct URL
+  return url;
+}
+
+// ============================================================
+// LOADING
+// ============================================================
+async function loadFromInput() {
+  const url = document.getElementById('urlInput').value;
+  if (!url) return;
+  const rawUrl = toRawUrl(url);
+  if (!rawUrl) return;
+
+  showLoading();
+  try {
+    const res = await fetch(rawUrl);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    loadGrammar(data);
+  } catch (e) {
+    showToast(`Failed to load: ${e.message}`, true);
+    showEmpty();
+  }
+}
+
+function loadLocalFile() {
+  document.getElementById('fileInput').click();
+}
+
+function handleFileUpload(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    try {
+      const data = JSON.parse(e.target.result);
+      loadGrammar(data);
+    } catch (err) {
+      showToast('Invalid JSON file', true);
+    }
+  };
+  reader.readAsText(file);
+}
+
+// ============================================================
+// GRAMMAR LOADING
+// ============================================================
+function loadGrammar(data) {
+  grammar = normalizeGrammar(data);
+  filteredItems = [...grammar.items];
+  sequenceIndex = 0;
+  searchQuery = '';
+  activeCategory = null;
+
+  // Show toolbar
+  document.getElementById('toolbar').style.display = 'flex';
+  document.getElementById('filterBar').style.display = 'flex';
+  document.getElementById('grammarTitle').textContent = grammar.name || 'Untitled Grammar';
+  document.getElementById('grammarMeta').textContent =
+    `${grammar.items.length} items` +
+    (grammar.grammar_type ? ` · ${grammar.grammar_type}` : '') +
+    (grammar.creator_name ? ` · by ${grammar.creator_name}` : '');
+
+  // Build shelf/category tags
+  buildCategoryTags();
+
+  // Render
+  render();
+}
+
+function normalizeGrammar(data) {
+  // Handle various grammar formats
+  let items = [];
+
+  if (Array.isArray(data.items)) {
+    items = data.items.map((item, i) => normalizeItem(item, i));
+  } else if (Array.isArray(data)) {
+    // Bare array of items
+    items = data.map((item, i) => normalizeItem(item, i));
+    return { name: 'Grammar', items, grammar_type: 'custom' };
+  }
+
+  return {
+    name: data.name || data.title || 'Untitled Grammar',
+    description: data.description || '',
+    grammar_type: data.grammar_type || data.type || 'custom',
+    creator_name: data.creator_name || data.creator || data.publish_metadata?.creator_link || '',
+    cover_image_url: data.cover_image_url || '',
+    tags: data.tags || [],
+    items,
+  };
+}
+
+function normalizeItem(item, index) {
+  // Handle legacy sequence items
+  if (item.position !== undefined && (item.type === 'image' || item.type === 'video')) {
+    return {
+      id: item.id || `seq-${index}`,
+      name: item.alt_text || item.title || `Item ${index + 1}`,
+      symbol: null,
+      image_url: item.image_url || item.thumbnail || '',
+      sections: { Narration: item.narration || '' },
+      keywords: [],
+      category: item.type,
+      sort_order: item.position ?? index,
+      level: null,
+      composite_of: [],
+    };
+  }
+
+  return {
+    id: item.id || `item-${index}`,
+    name: item.name || item.title || `Item ${index + 1}`,
+    symbol: item.symbol || item.icon || null,
+    image_url: item.image_url || item.imageUrl || '',
+    sections: item.sections || {},
+    keywords: item.keywords || item.tags || [],
+    questions: item.questions || [],
+    category: item.category || item.grammar_type || null,
+    sort_order: item.sort_order ?? item.number ?? index,
+    level: item.level || null,
+    composite_of: item.composite_of || [],
+    metadata: item.metadata || {},
+  };
+}
+
+// ============================================================
+// CATEGORIES / TAGS
+// ============================================================
+function buildCategoryTags() {
+  const cats = new Set();
+  grammar.items.forEach(item => {
+    if (item.category) cats.add(item.category);
+  });
+  const container = document.getElementById('shelfTags');
+  container.innerHTML = '';
+  if (cats.size > 1) {
+    cats.forEach(cat => {
+      const tag = document.createElement('span');
+      tag.className = 'tag tag-keyword';
+      tag.textContent = cat;
+      tag.onclick = () => toggleCategory(cat);
+      container.appendChild(tag);
+    });
+  }
+}
+
+function toggleCategory(cat) {
+  activeCategory = activeCategory === cat ? null : cat;
+  filterItems();
+  // Highlight active
+  document.querySelectorAll('#shelfTags .tag').forEach(t => {
+    t.classList.toggle('tag-shelf', t.textContent === activeCategory);
+    t.classList.toggle('tag-keyword', t.textContent !== activeCategory);
+  });
+}
+
+function filterItems() {
+  searchQuery = document.getElementById('searchInput').value.toLowerCase();
+  filteredItems = grammar.items.filter(item => {
+    const matchSearch = !searchQuery ||
+      item.name.toLowerCase().includes(searchQuery) ||
+      (item.keywords && item.keywords.some(k => k.toLowerCase().includes(searchQuery))) ||
+      (item.category && item.category.toLowerCase().includes(searchQuery));
+    const matchCat = !activeCategory || item.category === activeCategory;
+    return matchSearch && matchCat;
+  });
+  render();
+}
+
+// ============================================================
+// VIEW MANAGEMENT
+// ============================================================
+function setView(view) {
+  currentView = view;
+  document.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', b.dataset.view === view));
+  if (view === 'sequence') sequenceIndex = 0;
+  render();
+}
+
+// ============================================================
+// RENDERING
+// ============================================================
+function render() {
+  const content = document.getElementById('content');
+  if (!grammar) { showEmpty(); return; }
+
+  switch (currentView) {
+    case 'cards': content.innerHTML = renderCards(); break;
+    case 'list': content.innerHTML = renderList(); break;
+    case 'study': content.innerHTML = renderStudy(); break;
+    case 'sequence': content.innerHTML = renderSequence(); break;
+    case 'tree': content.innerHTML = renderTree(); break;
+  }
+}
+
+function renderVisual(item, size = 'card') {
+  if (item.image_url) {
+    return `<img src="${escapeHtml(item.image_url)}" alt="${escapeHtml(item.name)}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=initial><span>${escapeHtml(item.name.charAt(0))}</span></div>'"/>`;
+  }
+  if (item.symbol) {
+    return `<span class="symbol">${escapeHtml(item.symbol)}</span>`;
+  }
+  return `<div class="initial"><span>${escapeHtml(item.name.charAt(0))}</span><span style="font-size:10px;color:var(--text-dim)">No image</span></div>`;
+}
+
+function renderCards() {
+  return `<div class="view-cards">${filteredItems.map((item, i) => `
+    <div class="card" onclick="openItemModal(${i})" title="${escapeAttr(item.name)}">
+      <div class="card-visual">${renderVisual(item)}</div>
+      ${item.level ? `<span class="level-badge">L${item.level}</span>` : ''}
+      <div class="card-info">
+        <div class="name">${escapeHtml(item.name)}</div>
+        ${item.keywords?.length ? `<div class="keywords">${item.keywords.slice(0, 3).join(' · ')}</div>` : ''}
+      </div>
+    </div>`).join('')}</div>`;
+}
+
+function renderList() {
+  return `<div class="view-list">${filteredItems.map((item, i) => `
+    <div class="list-row" onclick="openItemModal(${i})">
+      <div class="pos">${item.sort_order + 1}</div>
+      <div class="thumb">${item.image_url
+        ? `<img src="${escapeHtml(item.image_url)}" loading="lazy"/>`
+        : item.symbol
+          ? `<span class="sym">${escapeHtml(item.symbol)}</span>`
+          : `<span style="color:var(--text-dim)">${item.name.charAt(0)}</span>`
+      }</div>
+      <div class="info">
+        <div class="name">${escapeHtml(item.name)}</div>
+        <div class="kw">${item.keywords?.slice(0, 4).join(' · ') || ''}</div>
+      </div>
+      ${item.level ? `<span class="level">L${item.level}</span>` : ''}
+    </div>`).join('')}</div>`;
+}
+
+function renderStudy() {
+  return `<div class="view-study">${filteredItems.map((item, i) => `
+    <article class="study-item" id="study-${i}">
+      <div class="study-header">
+        <div class="thumb">${renderVisual(item, 'study')}</div>
+        <div class="meta">
+          <h3>${escapeHtml(item.name)}</h3>
+          ${item.category ? `<div class="cat">${escapeHtml(item.category)}</div>` : ''}
+          ${item.keywords?.length ? `
+            <div class="study-keywords">
+              ${item.keywords.map(k => `<span class="kw-tag">${escapeHtml(k)}</span>`).join('')}
+            </div>` : ''}
+        </div>
+      </div>
+      <div class="study-sections">
+        ${Object.entries(item.sections).filter(([,v]) => v).map(([key, val]) => `
+          <div>
+            <div class="study-section-label">${escapeHtml(key)}</div>
+            <div class="study-section-text">${escapeHtml(val)}</div>
+          </div>`).join('')}
+      </div>
+      ${item.questions?.length ? `
+        <div style="margin-top:10px;">
+          <div class="study-section-label">Reflection Questions</div>
+          ${item.questions.map(q => `<div class="study-section-text" style="color:var(--accent);">— ${escapeHtml(q)}</div>`).join('')}
+        </div>` : ''}
+    </article>`).join('')}</div>`;
+}
+
+function renderSequence() {
+  if (!filteredItems.length) return '<div class="empty-state"><p>No items to display</p></div>';
+  const item = filteredItems[sequenceIndex] || filteredItems[0];
+  const total = filteredItems.length;
+
+  return `<div class="view-sequence">
+    <div class="seq-visual">${renderVisual(item, 'sequence')}</div>
+    <div class="seq-title">${escapeHtml(item.name)}</div>
+    ${item.category ? `<div class="seq-category">${escapeHtml(item.category)}</div>` : ''}
+    ${item.keywords?.length ? `
+      <div class="seq-keywords">
+        ${item.keywords.map(k => `<span class="kw-tag">${escapeHtml(k)}</span>`).join('')}
+      </div>` : ''}
+    <div class="seq-sections">
+      ${Object.entries(item.sections).filter(([,v]) => v).map(([key, val]) => `
+        <div>
+          <div class="seq-section-label">${escapeHtml(key)}</div>
+          <div class="seq-section-text">${escapeHtml(val)}</div>
+        </div>`).join('')}
+    </div>
+    ${item.questions?.length ? `
+      <div class="seq-sections">
+        <div class="seq-section-label">Reflection</div>
+        ${item.questions.map(q => `<div class="seq-section-text" style="color:var(--accent);font-style:italic;">— ${escapeHtml(q)}</div>`).join('')}
+      </div>` : ''}
+    <div class="seq-nav">
+      <button onclick="seqPrev()" ${sequenceIndex <= 0 ? 'disabled' : ''}>&#8592;</button>
+      <span class="counter">${sequenceIndex + 1} / ${total}</span>
+      <button onclick="seqNext()" ${sequenceIndex >= total - 1 ? 'disabled' : ''}>&#8594;</button>
+    </div>
+  </div>`;
+}
+
+function renderTree() {
+  // Group by level (or category if no levels)
+  const hasLevels = filteredItems.some(i => i.level);
+
+  if (hasLevels) {
+    const byLevel = {};
+    const orphans = [];
+    filteredItems.forEach(item => {
+      if (item.level) {
+        if (!byLevel[item.level]) byLevel[item.level] = [];
+        byLevel[item.level].push(item);
+      } else {
+        orphans.push(item);
+      }
+    });
+
+    const levelNames = { 1: 'Foundation', 2: 'Level 2', 3: 'Level 3', 4: 'Level 4', 5: 'Level 5' };
+    let html = '<div class="view-tree">';
+    Object.keys(byLevel).sort((a, b) => a - b).forEach(level => {
+      html += `<div class="tree-level">
+        <div class="tree-level-header">${levelNames[level] || `Level ${level}`} (${byLevel[level].length})</div>
+        <div class="tree-level-grid">${byLevel[level].map((item, i) => `
+          <div class="card" onclick="openItemModal(${filteredItems.indexOf(item)})">
+            <div class="card-visual">${renderVisual(item)}</div>
+            <span class="level-badge">L${item.level}</span>
+            <div class="card-info"><div class="name">${escapeHtml(item.name)}</div></div>
+          </div>`).join('')}</div>
+      </div>`;
+    });
+    if (orphans.length) {
+      html += `<div class="tree-level">
+        <div class="tree-level-header">Standalone (${orphans.length})</div>
+        <div class="tree-level-grid">${orphans.map((item) => `
+          <div class="card" onclick="openItemModal(${filteredItems.indexOf(item)})">
+            <div class="card-visual">${renderVisual(item)}</div>
+            <div class="card-info"><div class="name">${escapeHtml(item.name)}</div></div>
+          </div>`).join('')}</div>
+      </div>`;
+    }
+    return html + '</div>';
+  }
+
+  // Fallback: group by category
+  const byCat = {};
+  filteredItems.forEach(item => {
+    const cat = item.category || 'Uncategorized';
+    if (!byCat[cat]) byCat[cat] = [];
+    byCat[cat].push(item);
+  });
+
+  let html = '<div class="view-tree">';
+  Object.keys(byCat).forEach(cat => {
+    html += `<div class="tree-level">
+      <div class="tree-level-header">${escapeHtml(cat)} (${byCat[cat].length})</div>
+      <div class="tree-level-grid">${byCat[cat].map((item) => `
+        <div class="card" onclick="openItemModal(${filteredItems.indexOf(item)})">
+          <div class="card-visual">${renderVisual(item)}</div>
+          <div class="card-info"><div class="name">${escapeHtml(item.name)}</div></div>
+        </div>`).join('')}</div>
+    </div>`;
+  });
+  return html + '</div>';
+}
+
+// ============================================================
+// SEQUENCE NAV
+// ============================================================
+function seqPrev() {
+  if (sequenceIndex > 0) { sequenceIndex--; render(); }
+}
+
+function seqNext() {
+  if (sequenceIndex < filteredItems.length - 1) { sequenceIndex++; render(); }
+}
+
+// Keyboard nav for sequence
+document.addEventListener('keydown', (e) => {
+  if (currentView !== 'sequence') return;
+  if (e.key === 'ArrowLeft') seqPrev();
+  if (e.key === 'ArrowRight') seqNext();
+});
+
+// ============================================================
+// MODAL
+// ============================================================
+function openItemModal(index) {
+  if (currentView === 'sequence') {
+    sequenceIndex = index;
+    render();
+    return;
+  }
+
+  const item = filteredItems[index];
+  if (!item) return;
+
+  const overlay = document.getElementById('modalOverlay');
+  const content = document.getElementById('modalContent');
+
+  content.innerHTML = `
+    <div style="display:flex;gap:16px;margin-bottom:16px;">
+      <div style="flex-shrink:0;width:100px;height:150px;border-radius:8px;overflow:hidden;background:var(--surface2);display:flex;align-items:center;justify-content:center;">
+        ${renderVisual(item, 'modal')}
+      </div>
+      <div>
+        <h2 style="font-size:20px;margin-bottom:4px;">${escapeHtml(item.name)}</h2>
+        ${item.category ? `<div style="font-size:12px;color:var(--accent);margin-bottom:8px;">${escapeHtml(item.category)}</div>` : ''}
+        ${item.keywords?.length ? `<div style="display:flex;flex-wrap:wrap;gap:4px;">${item.keywords.map(k => `<span class="kw-tag" style="padding:2px 8px;border-radius:4px;font-size:11px;background:var(--surface2);color:var(--text-dim);">${escapeHtml(k)}</span>`).join('')}</div>` : ''}
+      </div>
+    </div>
+    ${Object.entries(item.sections).filter(([,v]) => v).map(([key, val]) => `
+      <div style="margin-bottom:12px;">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--accent);margin-bottom:4px;">${escapeHtml(key)}</div>
+        <div style="font-size:14px;line-height:1.6;white-space:pre-wrap;">${escapeHtml(val)}</div>
+      </div>`).join('')}
+    ${item.questions?.length ? `
+      <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--border);">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--accent);margin-bottom:6px;">Reflection Questions</div>
+        ${item.questions.map(q => `<div style="font-size:14px;color:var(--accent);font-style:italic;margin-bottom:4px;">— ${escapeHtml(q)}</div>`).join('')}
+      </div>` : ''}
+    ${item.level ? `<div style="margin-top:8px;font-size:11px;color:var(--text-dim);">Emergence Level: ${item.level}</div>` : ''}
+    ${item.composite_of?.length ? `<div style="margin-top:4px;font-size:11px;color:var(--text-dim);">Composed of: ${item.composite_of.join(', ')}</div>` : ''}
+  `;
+
+  overlay.classList.add('open');
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById('modalOverlay')) {
+    document.getElementById('modalOverlay').classList.remove('open');
+  }
+}
+
+function closeModalForce() {
+  document.getElementById('modalOverlay').classList.remove('open');
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeModalForce();
+});
+
+// ============================================================
+// HELPERS
+// ============================================================
+function showLoading() {
+  document.getElementById('content').innerHTML = '<div class="loading"><div class="spinner"></div></div>';
+}
+
+function showEmpty() {
+  document.getElementById('content').innerHTML = `
+    <div class="empty-state">
+      <div class="icon">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.4">
+          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+      </div>
+      <p>Paste a public GitHub URL to any grammar JSON file and preview it here.</p>
+    </div>`;
+}
+
+function showToast(msg, isError = false) {
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.className = 'toast show' + (isError ? ' error' : '');
+  setTimeout(() => toast.className = 'toast', 3000);
+}
+
+function escapeHtml(str) {
+  if (!str) return '';
+  return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function escapeAttr(str) {
+  return escapeHtml(str);
+}
+
+// ============================================================
+// AUTO-LOAD FROM URL PARAMS
+// ============================================================
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  const url = params.get('url') || params.get('json');
+  if (url) {
+    document.getElementById('urlInput').value = url;
+    loadFromInput();
+  }
+})();
+</script>
+
+</body>
+</html>
