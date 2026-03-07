@@ -242,10 +242,16 @@ Priorities include:
 ### R2 Path Convention
 `grammar-illustrations/{grammar-slug}/{item-id}/{artist-slug}-{year}.ext`
 
+### Coverage Rules
+- **ALL items must have illustrations** — 100% coverage is the target. No item should be left without `image_url`
+- **Emergences (L2/L3) must have UNIQUE illustrations** — NEVER reuse the primary from an L1 child. Each emergence should have its own distinct image to avoid visual repetition. Use: manuscript chapter-start pages, non-primary illustrations from child L1 items, or a different artist's version of the same scene
+- **Two-round workflow**: Round 1 = upload curated artist images for L1 scene matches. Round 2 = fill ALL remaining gaps (L2 chapters, themes, meta, missed L1s) using manuscript pages, non-primary sibling images, or cross-referenced URLs
+- **Cross-referencing is OK**: An R2 URL uploaded for one item can be referenced by another (e.g., a "White Queen" image uploaded for `ch5-the-white-queens-shawl` can also illustrate `ch5-living-backwards`)
+
 ### Image Matching Levels
 - **L1 (Scene Match)**: Image depicts a specific narrative moment — protagonist acting in the scene (highest value, ~40% of typical collection)
-- **L2 (Chapter/Cast Match)**: Image shows characters or setting without specific beat — good for chapter/summary cards
-- **Cover**: Title pages, frontispieces — use for grammar-level hero image only
+- **L2 (Chapter/Cast Match)**: Image shows characters or setting without specific beat — good for chapter/summary cards. Must use a DIFFERENT image than any child L1 primary
+- **Cover**: Title pages, frontispieces — use for grammar-level `cover_image_url` only
 
 ### Image Matching Workflow
 1. **Inventory**: List all curated images in `z.ignore/manuscript-images/`
@@ -260,12 +266,34 @@ Priorities include:
 - **Claude Code desktop (not browser)**: R2 upload + vision matching over local images requires filesystem + S3 API access. Claude Code in browser can do grammar JSON edits but NOT uploads or local image analysis
 - **Grammar JSON edits**: Can be done in browser Claude Code (just JSON editing, no env vars needed)
 
-### Proven Test Items (Alice in Wonderland)
-5 images uploaded to R2, 4 items enriched with `metadata.illustrations[]`:
-- `ch05-who-are-you` — 2 illustrations (Hudson primary, Rackham secondary) — multi-artist test
-- `ch07-no-room` — 1 illustration (Rackham)
-- `chapter-07-a-mad-tea-party` — 1 illustration (Hudson, L2 chapter)
-- `ch08-painting-the-roses-red` — 1 illustration (Hudson)
+### Completed Grammars (100% Coverage)
+
+**Alice in Wonderland** — 59/59 items, 121 illustration entries
+- Round 1: 84 curated images from 10+ artists (Rackham, Hudson, Woodward, Walker, Le Fanu, Tenniel/Theaker, Rountree, Pease, Nursery Alice/Tenniel, Overnell)
+- Round 2: 32 additional images — Carroll manuscript pen-and-ink drawings (15 L1 scenes, 4 chapter-start pages for L2), unused curated images (5), variety additions
+- L2 chapters use Carroll's original 1864 manuscript chapter-opening pages (unique and beautiful)
+- Upload scripts: `upload-alice-batch.mjs` + `upload-remaining-alice.mjs`
+
+**Through the Looking-Glass** — 57/57 items, 77 illustration entries
+- Round 1: 48 curated images from Peter Newell (1902) and Tenniel/Theaker (1911) → 28 items
+- Round 2: 29 items filled by cross-referencing existing URLs (no new uploads)
+  - L2 chapters: non-primary illustrations from child L1 items (each unique)
+  - Missing L1: sibling illustrations from same chapter
+  - Themes: thematically chosen (Jabberwocky for wordplay, Chessmen for chess, Red King for identity)
+  - Meta: representative illustrations (crown for journey, fawn for themes)
+- Upload script: `upload-looking-glass-batch.mjs`
+
+### Carroll Manuscript Pages (Alice Under Ground, 1864)
+42 pages in `z.ignore/manuscript-images/Lewis-Carroll-Alice-Under-Ground-*.webp`:
+- Pages 1-2: Title page + dedication ("A Christmas Gift to a Dear Child")
+- Page 3: Chapter I opening (Alice with sister by river)
+- Pages 4-8: Down the rabbit hole, DRINK ME, EAT ME, Pool of Tears
+- Page 12: The Mouse's Tale (text shaped like a tail — iconic!)
+- Pages 21-29: Caterpillar, Father William, mushroom magic, Serpent, Cheshire Cat
+- Pages 31-42: Roses, croquet, Mock Turtle, Lobster, trial, waking
+- Chapter-start pages (CHapter 1-4.webp): High-quality chapter openings with ornate "Chapter" headers and inline illustrations
+- 4 manuscript chapters map to 12 published chapters (Under Ground was shorter)
+- **Best use**: L2 chapter items (each chapter-start is visually unique)
 
 ## Validation
 
