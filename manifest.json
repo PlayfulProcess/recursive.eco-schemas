@@ -1,6 +1,6 @@
 {
   "generated": true,
-  "grammar_count": 142,
+  "grammar_count": 144,
   "grammars": {
     "a-little-princess": {
       "id": "a-little-princess",
@@ -2671,6 +2671,54 @@
       ],
       "worldview": "devotional"
     },
+    "inner-triangle": {
+      "id": "inner-triangle",
+      "name": "The Inner Triangle — Emotion, Cognition & Behavior in Relation",
+      "description": "A 68-card oracle deck mapping the CBT triangle — Feel, Think, Do — placed in the relational field. Every emotion asks: what does your partner see? Every thought asks: what would their version be? Every behavior asks: what does it trigger across from you? 3 suits (Emotions, Cognitions, Behaviors), 14 L2 named triangles mapping specific loops (The Anxious Triangle, The Avoidant Triangle, The Shame-Hide Triangle, The Vulnerability-Connection Triangle), and 4 L3 meta-patterns. Companion grammar to Relationship Cards.\n\nGrounded in CBT (Beck), DBT (Linehan), EFT (Johnson), attachment theory (Bowlby), affect theory (Tomkins), schema therapy (Young), polyvagal theory (Porges), and mentalization (Fonagy).\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Edvard Munch's expressionist paintings of emotion — 'The Scream' (1893), 'Anxiety' (1894), 'Melancholy' (1894-96), 'Jealousy' (1895). Käthe Kollwitz's charcoal drawings of grief, tenderness, and maternal emotion (1900s-1930s). Francisco Goya's 'Black Paintings' (1819-1823) — Saturn, the dog, the witches' sabbath. William Blake's illustrations of states of being from 'Songs of Innocence and Experience' (1789-1794). Honoré Daumier's lithographs of human expression and social emotion (1830s-1870s). Charles Le Brun's 'Conference on Expression' (1668) — systematic drawings of facial expressions mapping emotion to physiology.",
+      "grammar_type": "tarot",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "psychology",
+        "cbt",
+        "dbt",
+        "emotions",
+        "cognition",
+        "behavior",
+        "attachment",
+        "oracle",
+        "triangle",
+        "relationships",
+        "therapy"
+      ],
+      "item_count": 68,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "behavior",
+        "cognition",
+        "emotion",
+        "meta",
+        "triangle"
+      ],
+      "roots": [
+        "emotion-love",
+        "self-knowledge",
+        "process-philosophy"
+      ],
+      "shelves": [
+        "mirror",
+        "wisdom"
+      ],
+      "lineages": [
+        "Linehan",
+        "Gottman",
+        "Johnson"
+      ],
+      "worldview": "dialectical"
+    },
     "japanese-fairy-tales": {
       "id": "japanese-fairy-tales",
       "name": "Japanese Fairy Tales",
@@ -4324,6 +4372,54 @@
         "Shrei"
       ],
       "worldview": "animist"
+    },
+    "relationship-cards": {
+      "id": "relationship-cards",
+      "name": "Relationship Cards — A Couples Oracle",
+      "description": "A 54-card oracle deck for couples based on relationship science. Draw three cards together — The Pattern (what's showing up), The Need (what's underneath), The Move (what you could try) — and use them as a mirror for your relationship. Grounded in Gottman's research on the masters and disasters of love, Sue Johnson's Emotionally Focused Therapy, Bowlby's attachment theory, and Linehan's dialectical thinking. No card is bad. Even contempt is pointing toward what the relationship is starving for.\n\n5 suits: Patterns (the big dynamics), Needs (what's underneath), Repairs (moves you can make), Strengths (what's already alive), and Shadows (the hard truths). Designed to be played weekly as a couple's ritual — draw, discuss, journal, repeat.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Gustav Klimt's 'The Kiss' (1907-1908) and other Secessionist works depicting intimacy and embrace. Edvard Munch's relationship paintings — 'The Dance of Life' (1899-1900), 'Separation' (1896), 'Attraction' (1896). Auguste Rodin sculptures — 'The Kiss' (1882), 'The Cathedral' (hands). Egon Schiele's embrace paintings (1910s). Japanese ukiyo-e depicting couples — Utamaro's bijin-ga. Indian Mughal miniatures of Radha-Krishna embraces. William Blake's illustrations of marriage from 'Songs of Innocence and Experience' (1789-1794).",
+      "grammar_type": "tarot",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "relationships",
+        "couples",
+        "gottman",
+        "eft",
+        "attachment",
+        "oracle",
+        "therapy",
+        "love",
+        "repair",
+        "connection"
+      ],
+      "item_count": 68,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "dynamics",
+        "meta",
+        "need",
+        "pattern",
+        "repair",
+        "shadow",
+        "strength"
+      ],
+      "roots": [
+        "emotion-love",
+        "self-knowledge"
+      ],
+      "shelves": [
+        "mirror",
+        "resilience"
+      ],
+      "lineages": [
+        "Gottman",
+        "Johnson",
+        "Linehan"
+      ],
+      "worldview": "dialectical"
     },
     "revelations-divine-love": {
       "id": "revelations-divine-love",
@@ -6013,9 +6109,11 @@
         "alice-s-tarot-my-5-years-old",
         "i-ching-hd-meta-categories-three-lenses-for-viewing-the-64-hexagrams-my-version",
         "i-ching-hd-meta-categories-three-lenses-for-viewing-the-64-hexagrams-my-version-copy",
+        "inner-triangle",
         "jungian-archetypes",
         "luiza-lian",
         "playfulprocess-my-version-20260127220715",
+        "relationship-cards",
         "rider-waite-smith-tarot"
       ]
     },
@@ -6233,6 +6331,10 @@
       "atoms": [
         "consciousness-of-the-atom"
       ],
+      "attachment": [
+        "inner-triangle",
+        "relationship-cards"
+      ],
       "attention": [
         "principles-of-psychology"
       ],
@@ -6258,6 +6360,9 @@
       ],
       "bees": [
         "life-of-the-bee"
+      ],
+      "behavior": [
+        "inner-triangle"
       ],
       "behavioral-economics": [
         "economic-ideas"
@@ -6342,6 +6447,9 @@
       ],
       "cats": [
         "anon-shiryo-cat-stories"
+      ],
+      "cbt": [
+        "inner-triangle"
       ],
       "celtic": [
         "celtic-fairy-tales",
@@ -6445,6 +6553,9 @@
       "classics": [
         "meditations-marcus-aurelius"
       ],
+      "cognition": [
+        "inner-triangle"
+      ],
       "collection": [
         "meister-eckhart-sermons"
       ],
@@ -6492,6 +6603,9 @@
       "confucianism": [
         "confucian-analects"
       ],
+      "connection": [
+        "relationship-cards"
+      ],
       "consciousness": [
         "consciousness-of-the-atom",
         "principles-of-psychology",
@@ -6525,6 +6639,9 @@
       "cosmos-and-psyche": [
         "archetypal-astrology-tarnas"
       ],
+      "couples": [
+        "relationship-cards"
+      ],
       "creation": [
         "myths-legends-great-plains",
         "myths-north-american-indians"
@@ -6553,6 +6670,9 @@
       ],
       "darwin": [
         "expression-of-emotions"
+      ],
+      "dbt": [
+        "inner-triangle"
       ],
       "death": [
         "emerald-death-card-no-one-here-gets-out-alive",
@@ -6635,6 +6755,9 @@
         "up-from-slavery",
         "vindication-rights-woman"
       ],
+      "eft": [
+        "relationship-cards"
+      ],
       "egypt": [
         "egyptian-mythology"
       ],
@@ -6659,7 +6782,8 @@
         "expression-of-emotions"
       ],
       "emotions": [
-        "ethics-spinoza"
+        "ethics-spinoza",
+        "inner-triangle"
       ],
       "empiricism": [
         "pragmatism"
@@ -6923,6 +7047,9 @@
       "golden-ass": [
         "golden-ass-apuleius"
       ],
+      "gottman": [
+        "relationship-cards"
+      ],
       "grail": [
         "mabinogion"
       ],
@@ -7167,6 +7294,7 @@
         "leaves-of-grass",
         "metamorphoses-ovid",
         "phaedrus-plato",
+        "relationship-cards",
         "revelations-divine-love",
         "song-of-songs",
         "sonnets-from-portuguese",
@@ -7418,12 +7546,14 @@
         "folklore-north-american-indian",
         "grimms-fairy-tales",
         "indian-fairy-tales",
+        "inner-triangle",
         "japanese-fairy-tales",
         "jungian-archetypes",
         "leaves-of-grass",
         "metamorphoses-ovid",
         "myths-legends-great-plains",
         "myths-north-american-indians",
+        "relationship-cards",
         "thus-spoke-zarathustra",
         "west-african-folk-tales"
       ],
@@ -7597,6 +7727,7 @@
       ],
       "psychology": [
         "expression-of-emotions",
+        "inner-triangle",
         "jungian-archetypes",
         "myth-birth-hero-rank",
         "principles-of-psychology",
@@ -7722,11 +7853,16 @@
       ],
       "relationships": [
         "art-of-love-ovid",
-        "i-ching-leibniz-binary"
+        "i-ching-leibniz-binary",
+        "inner-triangle",
+        "relationship-cards"
       ],
       "religion": [
         "golden-bough",
         "varieties-religious-experience"
+      ],
+      "repair": [
+        "relationship-cards"
       ],
       "resilience": [
         "a-little-princess",
@@ -8006,6 +8142,10 @@
       "theosophy": [
         "seven-rays-ancient-roots"
       ],
+      "therapy": [
+        "inner-triangle",
+        "relationship-cards"
+      ],
       "tibetan": [
         "emerald-death-card-no-one-here-gets-out-alive",
         "emerald-death-card-visuals"
@@ -8040,6 +8180,9 @@
       ],
       "travel-writing": [
         "legends-alhambra"
+      ],
+      "triangle": [
+        "inner-triangle"
       ],
       "trickster": [
         "folk-stories-southern-nigeria",
@@ -8251,6 +8394,7 @@
         "imitation-of-christ",
         "indian-fairy-tales",
         "indian-myth-legend",
+        "inner-triangle",
         "japanese-fairy-tales",
         "jungian-archetypes",
         "jungle-book",
@@ -8289,6 +8433,7 @@
         "pragmatism",
         "principles-of-psychology",
         "prose-edda",
+        "relationship-cards",
         "revelations-divine-love",
         "rights-of-man",
         "royal-ballet-and-opera",
@@ -8400,8 +8545,10 @@
         "art-of-love-ovid",
         "emma-austen",
         "expression-of-emotions",
+        "inner-triangle",
         "middlemarch",
         "phaedrus-plato",
+        "relationship-cards",
         "song-of-songs",
         "sonnets-from-portuguese",
         "vindication-rights-woman"
@@ -8491,6 +8638,7 @@
       "process-philosophy": [
         "creative-evolution",
         "critique-pure-reason",
+        "inner-triangle",
         "pragmatism",
         "principles-of-psychology",
         "varieties-religious-experience"
@@ -8508,7 +8656,9 @@
         "myth-birth-hero-rank"
       ],
       "self-knowledge": [
-        "essays-emerson"
+        "essays-emerson",
+        "inner-triangle",
+        "relationship-cards"
       ],
       "social-justice": [
         "frederick-douglass"
@@ -8609,6 +8759,7 @@
         "frederick-douglass",
         "golden-bough",
         "hidden-symbolism-alchemy",
+        "inner-triangle",
         "leaves-of-grass",
         "middlemarch",
         "myth-birth-hero-rank",
@@ -8616,6 +8767,7 @@
         "on-liberty",
         "pragmatism",
         "principles-of-psychology",
+        "relationship-cards",
         "seven-rays-bailey-expressions",
         "souls-of-black-folk",
         "the-negro",
@@ -8632,6 +8784,7 @@
         "frederick-douglass",
         "mutual-aid",
         "olaudah-equiano",
+        "relationship-cards",
         "rights-of-man",
         "sojourner-truth",
         "souls-of-black-folk",
@@ -8655,6 +8808,7 @@
         "imitation-of-christ",
         "indian-fairy-tales",
         "indian-myth-legend",
+        "inner-triangle",
         "japanese-fairy-tales",
         "leaves-of-grass",
         "mabinogion",
@@ -8783,14 +8937,18 @@
         "art-of-love-ovid",
         "emma-austen",
         "expression-of-emotions",
+        "inner-triangle",
         "middlemarch",
         "principles-of-psychology",
+        "relationship-cards",
         "vindication-rights-woman"
       ],
       "Johnson": [
         "emma-austen",
         "expression-of-emotions",
+        "inner-triangle",
         "phaedrus-plato",
+        "relationship-cards",
         "song-of-songs",
         "sonnets-from-portuguese"
       ],
@@ -8819,9 +8977,11 @@
         "essentials-of-mysticism",
         "gospel-of-buddha",
         "imitation-of-christ",
+        "inner-triangle",
         "meister-eckhart-sermons",
         "practice-presence-of-god",
         "principles-of-psychology",
+        "relationship-cards",
         "revelations-divine-love",
         "sadhana",
         "tao-te-ching",
