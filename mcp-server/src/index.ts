@@ -8,6 +8,7 @@ import { registerPaperSearchTools } from "./tools/search-papers.js";
 import { registerPreviewTools } from "./tools/preview.js";
 import { registerUploadTools } from "./tools/upload.js";
 import { registerUsageTools } from "./tools/usage.js";
+import { registerGrammarTools } from "./tools/grammar.js";
 
 const server = new McpServer({
   name: "recursive-eco",
@@ -21,6 +22,7 @@ registerPaperSearchTools(server);
 registerPreviewTools(server);
 registerUploadTools(server);
 registerUsageTools(server);
+registerGrammarTools(server);
 
 // Start server
 const transport = new StdioServerTransport();
