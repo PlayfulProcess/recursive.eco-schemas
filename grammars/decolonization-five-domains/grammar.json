@@ -11,82 +11,34 @@
     ]
   },
   "name": "Decolonization: Five Domains",
-  "description": "A contemplative grammar mapping decolonization across five domains of human experience — Body, Mind, Spirit, Collective, and Planet. Not a checklist or a destination, but an ongoing practice of noticing: who told you how to eat, think, pray, organize, and relate to the earth? Each item traces a colonial pattern, names what it costs, honors what persists despite centuries of erasure, and extends an invitation to sit with complexity rather than rush toward resolution.\n\nThis grammar is trauma-informed: colonial violence is not merely historical but lives in the nervous system — intergenerational, somatic, ongoing. Following Resmaa Menakem (My Grandmother's Hands), we recognize that white-body supremacy is stored in bodies, not just minds. Following Bessel van der Kolk, we know the body keeps the score. Following Rachel Yehuda, we know trauma alters gene expression across generations. Decolonization that ignores the body recolonizes the mind.\n\nThis grammar follows Vanessa Andreotti's insight that modernity is dying and needs hospicing — not with triumphalism or despair, but with the wisdom of grandmothers who know that composting is not the same as destroying.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Käthe Kollwitz's charcoal drawings of suffering, resistance, and maternal grief (1900s-1930s). Diego Rivera's murals of indigenous life and colonial encounter (1920s-1940s). Hokusai's studies of human relationship to nature (1830s). William Blake's visionary illustrations of oppression and liberation from Songs of Innocence and Experience (1789-1794). Albrecht Dürer's woodcuts of Apocalypse (1498) — systems ending, worlds composting.",
+  "description": "A contemplative grammar mapping decolonization across five domains of human experience — Body, Mind, Spirit, Collective, and Planet. Not a checklist or a destination, but an ongoing practice of noticing: who told you how to eat, think, pray, organize, and relate to the earth? Each item traces a colonial pattern, names what it costs, honors what persists despite centuries of erasure, and extends an invitation to sit with complexity rather than rush toward resolution.\n\nThis grammar follows Vanessa Andreotti's insight that modernity is dying and needs hospicing — not with triumphalism or despair, but with the wisdom of grandmothers who know that composting is not the same as destroying.",
   "grammar_type": "custom",
   "creator_name": "PlayfulProcess",
-  "tags": [
-    "decolonization",
-    "decolonial",
-    "indigenous-knowledge",
-    "embodiment",
-    "ecology",
-    "epistemic-justice",
-    "land-back",
-    "hospicing-modernity",
-    "commons",
-    "sovereignty",
-    "animism",
-    "resistance",
-    "resilience",
-    "contemplative"
-  ],
-  "roots": [
-    "indigenous-knowledge",
-    "african-cosmology",
-    "eastern-wisdom",
-    "western-philosophy"
-  ],
-  "shelves": [
-    "contested",
-    "wisdom"
-  ],
-  "lineages": [
-    "Andreotti",
-    "Akomolafe",
-    "Shrei",
-    "Kelty"
-  ],
+  "tags": ["decolonization", "decolonial", "indigenous-knowledge", "embodiment", "ecology", "epistemic-justice", "land-back", "hospicing-modernity", "commons", "sovereignty", "animism", "resistance", "resilience", "contemplative"],
+  "roots": ["indigenous-knowledge", "african-cosmology", "eastern-wisdom", "western-philosophy"],
+  "shelves": ["contested", "wisdom"],
+  "lineages": ["Andreotti", "Akomolafe", "Shrei", "Kelty"],
   "worldview": "decolonial",
   "items": [
     {
       "id": "body-domain",
       "name": "The Body: Who Told You How to Live in Your Skin?",
-      "sort_order": 1,
+      "sort_order": 0,
       "category": "domains",
       "level": 2,
-      "composite_of": [
-        "body-food-systems",
-        "body-traditional-medicine",
-        "body-sovereignty",
-        "body-dance-resistance",
-        "body-hair-politics",
-        "body-reclaiming-rest",
-        "body-colonized-labor",
-        "body-birth-death",
-        "body-disability-productivity"
-      ],
+      "composite_of": ["body-food-systems", "body-traditional-medicine", "body-sovereignty", "body-dance-resistance", "body-hair-politics", "body-reclaiming-rest", "body-colonized-labor", "body-birth-death", "body-disability-productivity"],
       "sections": {
         "About": "Colonization begins in the body. It reshapes what you eat, how you heal, when you rest, how you move, what you consider beautiful, and how you are born and die. The colonial body is a body optimized for production — disciplined, standardized, measured against norms invented in European capitals and exported as universal truth. Decolonizing the body means noticing whose rhythms you move to, whose medicine you trust, whose beauty standards live in your mirror.",
         "The Colonial Logic": "The body as machine. The body as labor unit. The body as something to be civilized, corrected, covered, controlled. Colonial medicine replaces grandmother knowledge with pharmaceutical patents. Colonial agriculture replaces milpa with monoculture. Colonial beauty replaces a thousand forms of beauty with one.",
         "The Invitation": "Before you try to reclaim anything, notice what lives in your body that isn't yours. Not to purge it — you can't — but to know it's there. The body remembers what the mind forgets."
       },
-      "keywords": [
-        "body",
-        "embodiment",
-        "somatics",
-        "food",
-        "medicine",
-        "labor",
-        "beauty",
-        "birth",
-        "death"
-      ],
+      "keywords": ["body", "embodiment", "somatics", "food", "medicine", "labor", "beauty", "birth", "death"],
       "metadata": {}
     },
     {
       "id": "body-food-systems",
       "name": "Reclaiming Indigenous Food Systems",
-      "sort_order": 2,
+      "sort_order": 1,
       "category": "body",
       "level": 1,
       "sections": {
@@ -95,21 +47,13 @@
         "What Persists": "The Three Sisters still grow. Seed libraries and indigenous seed keepers maintain varieties that industrial agriculture abandoned. Food sovereignty movements from the Zapatistas to Standing Rock center food as political and spiritual practice. Urban indigenous gardens. Community kitchens. The return of bison to the plains. Ancestral grain revival — amaranth, teff, quinoa (though quinoa's global popularity created its own extractive dynamic).",
         "The Invitation": "What did your great-grandparents eat? Not as nostalgia, but as inquiry. What food relationships were broken in your lineage? What would it mean to eat in relationship — to soil, to season, to the beings who become your body?"
       },
-      "keywords": [
-        "food sovereignty",
-        "milpa",
-        "three sisters",
-        "monoculture",
-        "seed saving",
-        "indigenous agriculture",
-        "nutrition colonialism"
-      ],
+      "keywords": ["food sovereignty", "milpa", "three sisters", "monoculture", "seed saving", "indigenous agriculture", "nutrition colonialism"],
       "metadata": {}
     },
     {
       "id": "body-traditional-medicine",
       "name": "Traditional Medicine vs. Biomedical Hegemony",
-      "sort_order": 3,
+      "sort_order": 2,
       "category": "body",
       "level": 1,
       "sections": {
@@ -118,21 +62,13 @@
         "What Persists": "Curanderas still practice. Ayurvedic and Chinese medicine serve billions. Indigenous plant knowledge is increasingly recognized — not by being validated by Western science, but by communities who never stopped using it. Ethnobotanists and indigenous knowledge keepers collaborate on protocols that protect intellectual sovereignty. Some hospitals now integrate traditional healing. The WHO recognizes traditional medicine, however imperfectly.",
         "The Invitation": "Notice which healing practices you consider legitimate and which you consider alternative. Who taught you that hierarchy? What would medicine look like if the question wasn't 'does it work by our standards?' but 'what does this community know about being well?'"
       },
-      "keywords": [
-        "traditional medicine",
-        "ayurveda",
-        "curanderismo",
-        "biopiracy",
-        "pharmaceutical colonialism",
-        "ethnobotany",
-        "healing"
-      ],
+      "keywords": ["traditional medicine", "ayurveda", "curanderismo", "biopiracy", "pharmaceutical colonialism", "ethnobotany", "healing"],
       "metadata": {}
     },
     {
       "id": "body-sovereignty",
       "name": "Body Sovereignty and Bodily Autonomy",
-      "sort_order": 4,
+      "sort_order": 3,
       "category": "body",
       "level": 1,
       "sections": {
@@ -141,20 +77,13 @@
         "What Persists": "Reproductive justice movements led by women of color who insist that bodily autonomy includes the right to have children, not have children, and parent children in safe environments. Disability justice that refuses the medical model and insists disabled bodies are not broken. Trans and Two-Spirit people reclaiming identities that predate colonization. The simple, radical act of existing in your body without apology.",
         "The Invitation": "Where in your body do you carry the sense that you need permission? Permission to rest, to take up space, to look the way you look, to feel what you feel? That sense has a history. It was put there."
       },
-      "keywords": [
-        "bodily autonomy",
-        "reproductive justice",
-        "forced sterilization",
-        "medical experimentation",
-        "disability justice",
-        "body sovereignty"
-      ],
+      "keywords": ["bodily autonomy", "reproductive justice", "forced sterilization", "medical experimentation", "disability justice", "body sovereignty"],
       "metadata": {}
     },
     {
       "id": "body-dance-resistance",
       "name": "Dance as Resistance and Remembering",
-      "sort_order": 5,
+      "sort_order": 4,
       "category": "body",
       "level": 1,
       "sections": {
@@ -163,22 +92,13 @@
         "What Persists": "Capoeira survived disguised as play. Hula was revived and is now central to Hawaiian sovereignty movements. Powwow dance carries prayer and identity across North America. Afro-Brazilian sacred dance — candomblé, umbanda — persisted through syncretism and secrecy. Hip-hop emerged from colonized bodies in colonized urban spaces and became global. The body remembers what was forbidden.",
         "The Invitation": "How do you move when no one is watching? What dances live in your lineage? The embodied grammars in this library — Indian classical dance, ballet, modern dance, anthropological dance — each carries a story of power, resistance, and the body's refusal to forget."
       },
-      "keywords": [
-        "dance",
-        "sun dance",
-        "capoeira",
-        "hula",
-        "ghost dance",
-        "hip-hop",
-        "embodied resistance",
-        "cultural suppression"
-      ],
+      "keywords": ["dance", "sun dance", "capoeira", "hula", "ghost dance", "hip-hop", "embodied resistance", "cultural suppression"],
       "metadata": {}
     },
     {
       "id": "body-hair-politics",
       "name": "Hair Politics and Body Presentation",
-      "sort_order": 6,
+      "sort_order": 5,
       "category": "body",
       "level": 1,
       "sections": {
@@ -187,21 +107,13 @@
         "What Persists": "Natural hair movements. Loc culture. Braiding circles that pass technique and story across generations. The CROWN Act. Indigenous hair as prayer — the understanding that hair connects you to spirit, to ancestors, to the earth. The growing refusal to alter your body's truth for colonial comfort.",
         "The Invitation": "Hair seems small until you realize empires took it seriously enough to legislate. What does your hair mean to you? What would it mean if you'd been told your whole life that it was wrong?"
       },
-      "keywords": [
-        "hair politics",
-        "CROWN Act",
-        "residential schools",
-        "natural hair",
-        "body presentation",
-        "professional standards",
-        "beauty norms"
-      ],
+      "keywords": ["hair politics", "CROWN Act", "residential schools", "natural hair", "body presentation", "professional standards", "beauty norms"],
       "metadata": {}
     },
     {
       "id": "body-reclaiming-rest",
       "name": "Reclaiming Rest",
-      "sort_order": 7,
+      "sort_order": 6,
       "category": "body",
       "level": 1,
       "sections": {
@@ -210,22 +122,13 @@
         "What Persists": "The Nap Ministry, founded by Tricia Hersey, frames rest as resistance and reparation. Slow movements — slow food, slow medicine, slow scholarship. Indigenous time, which is not clock time. The Sabbath traditions that survive in multiple faiths. The growing recognition that burnout is not personal failure but systemic design. The radical act of doing nothing.",
         "The Invitation": "Can you rest without producing? Without consuming? Without justifying the rest as making you more productive later? What if rest is not preparation for work but a form of life in itself?"
       },
-      "keywords": [
-        "rest",
-        "nap ministry",
-        "grind culture",
-        "productivity",
-        "burnout",
-        "sabbath",
-        "slow movement",
-        "resistance"
-      ],
+      "keywords": ["rest", "nap ministry", "grind culture", "productivity", "burnout", "sabbath", "slow movement", "resistance"],
       "metadata": {}
     },
     {
       "id": "body-colonized-labor",
       "name": "The Colonized Body at Work",
-      "sort_order": 8,
+      "sort_order": 7,
       "category": "body",
       "level": 1,
       "sections": {
@@ -234,21 +137,13 @@
         "What Persists": "Labor movements led by the most exploited workers — Dolores Huerta and the farmworkers, domestic workers organizing across borders, garment workers demanding accountability. Cooperative economics. Solidarity economy. Worker-owned enterprises. The insistence that labor is not a commodity and the body is not a tool. Mutual aid networks that predate and outlast union structures.",
         "The Invitation": "Who made your clothes? Who picked your food? Who delivered your package? These are not rhetorical questions. They are relationships you're already in, whether or not you acknowledge them."
       },
-      "keywords": [
-        "labor",
-        "exploitation",
-        "supply chain",
-        "sweatshops",
-        "gig economy",
-        "worker movements",
-        "cooperative economics"
-      ],
+      "keywords": ["labor", "exploitation", "supply chain", "sweatshops", "gig economy", "worker movements", "cooperative economics"],
       "metadata": {}
     },
     {
       "id": "body-birth-death",
       "name": "Birth and Death Practices",
-      "sort_order": 9,
+      "sort_order": 8,
       "category": "body",
       "level": 1,
       "sections": {
@@ -257,22 +152,13 @@
         "What Persists": "Midwifery returning — indigenous midwives, doulas, birth workers centering cultural practice. Death doulas and home funeral movements. Green burial. The return to sitting with the dying. Indigenous communities reclaiming birth on the land. The understanding that how we enter and leave this world is not a medical question but a cosmological one.",
         "The Invitation": "How do you want to be born? How do you want to die? These questions were answered for you before you could ask them. The answers came from a system that treats both thresholds as problems to be managed rather than mysteries to be accompanied."
       },
-      "keywords": [
-        "birth",
-        "death",
-        "midwifery",
-        "doula",
-        "maternal mortality",
-        "medicalization",
-        "green burial",
-        "death practices"
-      ],
+      "keywords": ["birth", "death", "midwifery", "doula", "maternal mortality", "medicalization", "green burial", "death practices"],
       "metadata": {}
     },
     {
       "id": "body-disability-productivity",
       "name": "Disability and Colonial Norms of the 'Productive' Body",
-      "sort_order": 10,
+      "sort_order": 9,
       "category": "body",
       "level": 1,
       "sections": {
@@ -281,57 +167,28 @@
         "What Persists": "Disability justice — not disability rights (a legal framework) but disability justice (an intersectional, decolonial framework). Sins Invalid, Mia Mingus, Leah Lakshmi Piepzna-Samarasinha and the insistence that disabled, queer, brown and Black bodies are not broken. Interdependence as value rather than independence. Crip wisdom: the knowledge that comes from navigating a world not built for you. Many indigenous cultures had no concept of disability as deficiency.",
         "The Invitation": "What if the problem was never the body? What if it was always the world that was built too narrow? What forms of intelligence, creativity, and wisdom emerge from bodies that colonial modernity calls broken?"
       },
-      "keywords": [
-        "disability justice",
-        "ableism",
-        "eugenics",
-        "productivity",
-        "normalcy",
-        "Sins Invalid",
-        "interdependence",
-        "crip wisdom"
-      ],
+      "keywords": ["disability justice", "ableism", "eugenics", "productivity", "normalcy", "Sins Invalid", "interdependence", "crip wisdom"],
       "metadata": {}
     },
     {
       "id": "mind-domain",
       "name": "The Mind: Who Told You What Counts as Knowledge?",
-      "sort_order": 11,
+      "sort_order": 10,
       "category": "domains",
       "level": 2,
-      "composite_of": [
-        "mind-epistemic-violence",
-        "mind-language-death",
-        "mind-education-colonization",
-        "mind-cognitive-imperialism",
-        "mind-oral-tradition",
-        "mind-decolonizing-university",
-        "mind-myth-objectivity",
-        "mind-time-conceptions",
-        "mind-research-methodologies",
-        "mind-unlearning"
-      ],
+      "composite_of": ["mind-epistemic-violence", "mind-language-death", "mind-education-colonization", "mind-cognitive-imperialism", "mind-oral-tradition", "mind-decolonizing-university", "mind-myth-objectivity", "mind-time-conceptions", "mind-research-methodologies", "mind-unlearning"],
       "sections": {
         "About": "Colonization of the mind is the most durable form of colonization. Long after the soldiers leave, the categories remain. What counts as rational, what counts as evidence, what counts as a legitimate question, what counts as a real discipline — these are not neutral determinations. They are the residue of a specific European intellectual tradition that universalized itself by declaring all other ways of knowing primitive, pre-scientific, or simply nonexistent.",
         "The Colonial Logic": "One knowledge system to rule them all. The Enlightenment as gift to the world rather than a particular cultural product with particular blind spots. Reason vs. superstition. Written vs. oral. Published vs. lived. Peer-reviewed vs. grandmother-tested. The university as temple of universal knowledge, built on stolen land and funded by colonial wealth.",
         "The Invitation": "Epistemicide — the killing of knowledge systems — may be colonialism's deepest violence. You can rebuild a burned building. How do you rebuild a way of knowing?"
       },
-      "keywords": [
-        "epistemology",
-        "knowledge",
-        "rationality",
-        "science",
-        "education",
-        "language",
-        "oral tradition",
-        "cognitive imperialism"
-      ],
+      "keywords": ["epistemology", "knowledge", "rationality", "science", "education", "language", "oral tradition", "cognitive imperialism"],
       "metadata": {}
     },
     {
       "id": "mind-epistemic-violence",
       "name": "Epistemic Violence: The Killing of Knowledge Systems",
-      "sort_order": 12,
+      "sort_order": 11,
       "category": "mind",
       "level": 1,
       "sections": {
@@ -340,21 +197,13 @@
         "What Persists": "Knowledge systems that survived through practice rather than publication. Aboriginal Australian songlines — the oldest continuously maintained knowledge system on earth. Polynesian navigation. Amazonian ecological knowledge. Andean mathematics. These persist not because they were preserved in archives but because communities kept living them, often in secret, often at great cost.",
         "The Invitation": "What do you know that you don't consider knowledge? What does your body know, your family know, your land know, that you've been taught to discount? Epistemic justice begins with the recognition that knowledge has always been plural."
       },
-      "keywords": [
-        "epistemicide",
-        "epistemic violence",
-        "Santos",
-        "knowledge systems",
-        "classification",
-        "dismissal",
-        "indigenous science"
-      ],
+      "keywords": ["epistemicide", "epistemic violence", "Santos", "knowledge systems", "classification", "dismissal", "indigenous science"],
       "metadata": {}
     },
     {
       "id": "mind-language-death",
       "name": "Language Death and Revival",
-      "sort_order": 13,
+      "sort_order": 12,
       "category": "mind",
       "level": 1,
       "sections": {
@@ -363,21 +212,13 @@
         "What Persists": "Hebrew was revived from a liturgical language to a living one — proof that language death is not always final. Hawaiian immersion schools. Māori language nests (kōhanga reo). Welsh medium education. Indigenous language apps. Master-apprentice programs where the last elderly speakers pass language to young learners one relationship at a time. The insistence that your language is not a hobby but a homeland.",
         "The Invitation": "If you are monolingual in a colonial language, you are living in a house built by empire and thinking it's the whole world. What language did your ancestors dream in?"
       },
-      "keywords": [
-        "language death",
-        "language revival",
-        "residential schools",
-        "linguistic diversity",
-        "Hebrew revival",
-        "immersion schools",
-        "colonial languages"
-      ],
+      "keywords": ["language death", "language revival", "residential schools", "linguistic diversity", "Hebrew revival", "immersion schools", "colonial languages"],
       "metadata": {}
     },
     {
       "id": "mind-education-colonization",
       "name": "Education as Colonization",
-      "sort_order": 14,
+      "sort_order": 13,
       "category": "mind",
       "level": 1,
       "sections": {
@@ -386,21 +227,13 @@
         "What Persists": "Indigenous-run schools. Tribal colleges. Land-based education. Language nests. The growing recognition that education is never neutral — it always teaches you whose knowledge matters and whose doesn't. Decolonial pedagogy that centers community knowledge, elder teaching, land as teacher, story as curriculum. Paulo Freire's insistence that education is either domestication or liberation.",
         "The Invitation": "What did school teach you to forget? Not just content — but ways of learning. Did you learn that knowledge comes from books or from land? From experts or from elders? From competition or from relationship? The answers reveal the colonial architecture of your mind."
       },
-      "keywords": [
-        "residential schools",
-        "Carlisle",
-        "boarding schools",
-        "Stolen Generations",
-        "colonial education",
-        "Freire",
-        "indigenous education"
-      ],
+      "keywords": ["residential schools", "Carlisle", "boarding schools", "Stolen Generations", "colonial education", "Freire", "indigenous education"],
       "metadata": {}
     },
     {
       "id": "mind-cognitive-imperialism",
       "name": "Cognitive Imperialism",
-      "sort_order": 15,
+      "sort_order": 14,
       "category": "mind",
       "level": 1,
       "sections": {
@@ -409,22 +242,13 @@
         "What Persists": "Indigenous languages that structure reality differently. Relational ontologies that refuse the subject/object split. Process philosophies that prioritize becoming over being. Ubuntu — I am because we are. The Lakota phrase 'Mitakuye Oyasin' (all my relatives) that includes stones, rivers, and stars. Every time someone thinks in a way that colonial categories cannot contain, cognitive imperialism loses a little ground.",
         "The Invitation": "The hardest decolonization is the decolonization of your own thinking. Not replacing one set of conclusions with another, but noticing the categories themselves. What binary are you trapped in right now? What if both sides of that binary are colonial?"
       },
-      "keywords": [
-        "cognitive imperialism",
-        "Battiste",
-        "binary thinking",
-        "Western categories",
-        "worldview",
-        "Lorde",
-        "Ubuntu",
-        "relational ontology"
-      ],
+      "keywords": ["cognitive imperialism", "Battiste", "binary thinking", "Western categories", "worldview", "Lorde", "Ubuntu", "relational ontology"],
       "metadata": {}
     },
     {
       "id": "mind-oral-tradition",
       "name": "Reclaiming Oral Tradition",
-      "sort_order": 16,
+      "sort_order": 15,
       "category": "mind",
       "level": 1,
       "sections": {
@@ -433,22 +257,13 @@
         "What Persists": "Griots still sing. Elders still teach. Story circles still carry law, medicine, history, and prayer. Podcasting and digital audio create new forms of oral culture. Hip-hop carries narrative tradition through rhythm and voice. Indigenous communities increasingly assert that their oral traditions constitute legal evidence of sovereignty and land relationship. The voice persists because it lives in bodies, not in buildings that can burn.",
         "The Invitation": "What do you know by heart? Not memorized from a book but carried in your voice, passed to you by a voice? What stories were told to you that you now tell? Oral tradition is not the absence of writing. It's the presence of relationship."
       },
-      "keywords": [
-        "oral tradition",
-        "griots",
-        "songlines",
-        "storytelling",
-        "literacy hierarchy",
-        "voice",
-        "memory",
-        "performance"
-      ],
+      "keywords": ["oral tradition", "griots", "songlines", "storytelling", "literacy hierarchy", "voice", "memory", "performance"],
       "metadata": {}
     },
     {
       "id": "mind-decolonizing-university",
       "name": "Decolonizing the University",
-      "sort_order": 17,
+      "sort_order": 16,
       "category": "mind",
       "level": 1,
       "sections": {
@@ -457,21 +272,13 @@
         "What Persists": "Indigenous universities and tribal colleges. The Intercultural University movement in Latin America. Rhodes Must Fall and its global echoes. Scholars like Linda Tuhiwai Smith whose 'Decolonizing Methodologies' changed how research relates to indigenous communities. The growing insistence on community-based participatory research. The question that won't go away: whose knowledge is this university for?",
         "The Invitation": "If you were educated in a Western university, your thinking was shaped by an institution that was never designed for everyone's knowledge. This doesn't make your education worthless. It makes it partial. What did your education teach you to see? What did it teach you not to see?"
       },
-      "keywords": [
-        "university",
-        "Rhodes Must Fall",
-        "indigenous studies",
-        "area studies",
-        "endowments",
-        "Tuhiwai Smith",
-        "decolonizing methodologies"
-      ],
+      "keywords": ["university", "Rhodes Must Fall", "indigenous studies", "area studies", "endowments", "Tuhiwai Smith", "decolonizing methodologies"],
       "metadata": {}
     },
     {
       "id": "mind-myth-objectivity",
       "name": "The Myth of Objectivity",
-      "sort_order": 18,
+      "sort_order": 17,
       "category": "mind",
       "level": 1,
       "sections": {
@@ -480,22 +287,13 @@
         "What Persists": "Feminist standpoint theory. Indigenous research methodologies that begin with relationship and accountability rather than detachment. Sandra Harding's 'strong objectivity' that includes the observer's position. The growing recognition in physics itself (observer effect, quantum entanglement) that the observer cannot be separated from the observed. Every knowledge tradition that says 'I will tell you where I stand before I tell you what I see.'",
         "The Invitation": "Where are you standing when you think you're being objective? Who taught you that standing there was the same as standing nowhere? The invitation is not to abandon rigor but to practice situated knowledge — to always name where you see from."
       },
-      "keywords": [
-        "objectivity",
-        "Haraway",
-        "god trick",
-        "situated knowledge",
-        "standpoint theory",
-        "bias",
-        "positionality",
-        "Harding"
-      ],
+      "keywords": ["objectivity", "Haraway", "god trick", "situated knowledge", "standpoint theory", "bias", "positionality", "Harding"],
       "metadata": {}
     },
     {
       "id": "mind-time-conceptions",
       "name": "Linear Time vs. Cyclical Time",
-      "sort_order": 19,
+      "sort_order": 18,
       "category": "mind",
       "level": 1,
       "sections": {
@@ -504,22 +302,13 @@
         "What Persists": "Ceremonial time. Dreamtime. The Andean concept of nayra — where the past is in front of you (because you can see it) and the future is behind (because you can't). Hindu and Buddhist concepts of cyclical time. The Jewish Sabbath that breaks the week's productivity. The land itself, which operates in cycles regardless of what the clock says. Ecological time — the time of seasons, tides, migration, decay, renewal — which is reasserting itself through climate crisis.",
         "The Invitation": "What time are you living in? Clock time? Deadline time? Career-arc time? What would it mean to live in seasonal time, or ceremonial time, or the time of your body rather than your calendar? Linear time is not wrong. But it is not the only time."
       },
-      "keywords": [
-        "linear time",
-        "cyclical time",
-        "progress",
-        "clock time",
-        "Dreamtime",
-        "nayra",
-        "ceremonial time",
-        "seasonal"
-      ],
+      "keywords": ["linear time", "cyclical time", "progress", "clock time", "Dreamtime", "nayra", "ceremonial time", "seasonal"],
       "metadata": {}
     },
     {
       "id": "mind-research-methodologies",
       "name": "Decolonizing Research Methodologies",
-      "sort_order": 20,
+      "sort_order": 19,
       "category": "mind",
       "level": 1,
       "sections": {
@@ -528,21 +317,13 @@
         "What Persists": "Community-based participatory research. Indigenous research methodologies that begin with relationship and end with reciprocity. Kaupapa Māori research. The principle of OCAP (Ownership, Control, Access, Possession) for First Nations data in Canada. The growing insistence that communities have the right to own their own knowledge, approve research about themselves, and benefit from findings. Research as relationship rather than extraction.",
         "The Invitation": "If you do research — academic, journalistic, artistic, technological — ask: whose knowledge am I using? What am I giving back? Who benefits from what I find? These questions don't make research impossible. They make it accountable."
       },
-      "keywords": [
-        "research methodologies",
-        "Tuhiwai Smith",
-        "OCAP",
-        "participatory research",
-        "Kaupapa Maori",
-        "extraction",
-        "reciprocity"
-      ],
+      "keywords": ["research methodologies", "Tuhiwai Smith", "OCAP", "participatory research", "Kaupapa Maori", "extraction", "reciprocity"],
       "metadata": {}
     },
     {
       "id": "mind-unlearning",
       "name": "Unlearning: The Work Before Will",
-      "sort_order": 21,
+      "sort_order": 20,
       "category": "mind",
       "level": 1,
       "sections": {
@@ -551,598 +332,352 @@
         "What Persists": "The capacity to unlearn persists because it is not a colonial capacity — it's a human one. Every contemplative tradition knows it: Zen's beginner's mind, the apophatic tradition in Christianity, the via negativa. Andreotti's pedagogy of discomfort. The practice of sitting with not-knowing, which is not ignorance but a deeper kind of intelligence. The grandmother who says 'you don't need to understand everything. You need to be present to everything.'",
         "The Invitation": "What if the point is not to replace your colonial education with a decolonial one — not to find the right answer — but to develop the stamina to hold the question? To sit with not-knowing as practice rather than failure? This is the work before will: making space for something you can't yet imagine."
       },
-      "keywords": [
-        "unlearning",
-        "Andreotti",
-        "before will",
-        "discomfort",
-        "not-knowing",
-        "beginner's mind",
-        "via negativa",
-        "hospicing"
-      ],
+      "keywords": ["unlearning", "Andreotti", "before will", "discomfort", "not-knowing", "beginner's mind", "via negativa", "hospicing"],
       "metadata": {}
     },
     {
       "id": "spirit-domain",
       "name": "The Spirit: Who Told You How to Pray?",
-      "sort_order": 22,
+      "sort_order": 21,
       "category": "domains",
       "level": 2,
-      "composite_of": [
-        "spirit-sacred-land",
-        "spirit-extraction",
-        "spirit-animism",
-        "spirit-ancestor",
-        "spirit-ceremony",
-        "spirit-doctrine-discovery",
-        "spirit-conversion",
-        "spirit-grief",
-        "spirit-plant-medicine",
-        "spirit-nonhuman"
-      ],
+      "composite_of": ["spirit-sacred-land", "spirit-spiritual-extraction", "spirit-animism", "spirit-ancestor-practices", "spirit-ceremony-permission", "spirit-doctrine-discovery", "spirit-conversion", "spirit-grief-practice", "spirit-plant-medicine", "spirit-nonhuman-relations"],
       "sections": {
-        "About": "Colonization of the spirit may be the deepest wound — the severing of a people's relationship with the sacred. Every colonial project began or was justified by religious conversion: the Doctrine of Discovery, the mission system, the boarding school chapel. The colonial message was consistent across centuries and continents: your gods are demons, your ceremonies are superstition, your sacred lands are real estate. When you colonize a people's relationship with the sacred, you colonize the meaning-making system that holds everything else together. Trauma-informed insight: the spiritual wound is an attachment injury at civilizational scale — the severing of the primary bond between a people and their source of meaning, comfort, and identity.",
-        "The Colonial Logic": "One God, one truth, one path. The sacred as monopoly. Animism reclassified as primitive. The land stripped of personhood. Ceremony criminalized. Prayer standardized. The spiritual relationship between a people and their place — built over millennia — dissolved by decree and replaced with a portable, extractable, individual salvation. The colonial church provided the moral framework; the colonial state provided the guns.",
-        "The Invitation": "Who told you how to pray? Who told you what counts as sacred? If your spiritual life was shaped by a tradition that arrived with colonizers, this doesn't make it false — but it means it has a history that includes violence. Can you hold that? Can you grieve it without abandoning it, or grieve what was lost without romanticizing it?"
+        "About": "The colonization of spirit may be the oldest colonial project. Before borders, before schools, before plantations, there was the mission. The insistence that one relationship with the sacred is universal and all others are primitive, demonic, or imaginary. Colonial spirituality severs the human from the land, the ancestors from the living, the sacred from the everyday. It replaces a thousand ways of praying with one God who, conveniently, speaks the colonizer's language.",
+        "The Colonial Logic": "One God. One book. One way. The conversion mandate — the assumption that indigenous spiritual practices are not just different but wrong, not just wrong but dangerous. The secular version is equally colonial: the assumption that spiritual practice itself is pre-rational, that enlightened people outgrow it, that the disenchantment of the world is progress rather than amputation.",
+        "The Invitation": "What is your relationship with the sacred? Not what you believe — what you practice. What you turn to in grief, in wonder, in darkness? And where did that practice come from? Was it chosen, inherited, imposed, or recovered?"
       },
-      "keywords": [
-        "spirit",
-        "sacred",
-        "prayer",
-        "ceremony",
-        "animism",
-        "conversion",
-        "grief",
-        "ancestors",
-        "plant medicine"
-      ],
+      "keywords": ["spirit", "sacred", "prayer", "religion", "animism", "ancestors", "ceremony", "conversion", "grief"],
       "metadata": {}
     },
     {
       "id": "spirit-sacred-land",
       "name": "Sacred Land as Commodity",
+      "sort_order": 22,
+      "category": "spirit",
+      "level": 1,
+      "sections": {
+        "The Pattern": "For colonial economics, land is property — a resource to be owned, developed, extracted from, and sold. For most indigenous cosmologies, land is relative — a living being with whom you have reciprocal obligations. These are not two perspectives on the same thing. They are two entirely different realities. The colonial conversion of sacred land into real estate is not a change of use — it's an ontological violence. You're not just taking someone's home. You're killing a relative.",
+        "What It Costs": "Mauna Kea, where telescopes stand on a Hawaiian sacred site. Standing Rock, where a pipeline crosses Lakota sacred water. Uluru, where tourists climbed a sacred being until 2019. Oak Flat, where copper mining threatens Apache sacred ground. The Black Hills, still legally Lakota territory by treaty. The pattern is consistent: colonial law recognizes property rights and religious freedom in the abstract while overriding both whenever extraction is profitable.",
+        "What Persists": "Land defenders. Water protectors. The legal recognition — slowly, inadequately — of sacred sites. Indigenous-led conservation that protects land not as wilderness (a colonial concept: land without people) but as homeland. The growing land back movement. The river people who still pray to the rivers even when the rivers are dammed. The mountain people who still greet the mountains even when the mountains are mined.",
+        "The Invitation": "Is there a place that is sacred to you? Not historically significant or aesthetically beautiful, but sacred — a place that would wound you to see destroyed? That feeling is not nostalgia. It's relationship. Now imagine your entire cosmology is built on that feeling, and the law calls it superstition."
+      },
+      "keywords": ["sacred sites", "Mauna Kea", "Standing Rock", "land back", "property", "extraction", "Oak Flat", "Black Hills"],
+      "metadata": {}
+    },
+    {
+      "id": "spirit-spiritual-extraction",
+      "name": "Spiritual Extraction and Cultural Appropriation",
       "sort_order": 23,
       "category": "spirit",
       "level": 1,
       "sections": {
-        "The Pattern": "For most of human history, in most of the world, land was not property — it was relative, ancestor, teacher, sacred being. The colonial transformation of land into commodity required first stripping it of personhood. You cannot sell your grandmother. You can sell a 'resource.' The Enclosure Acts in England, the Doctrine of Discovery globally, the Dawes Act in the US — each converted living, sacred relationship into dead, tradeable property. The land didn't change. The ontology imposed on it changed.",
-        "What It Costs": "Sacred sites turned into mines, dams, pipelines, parking lots. Standing Rock — where the Missouri and Cannonball Rivers meet — is both a sacred site and an oil pipeline route, and that collision tells the whole story. Uluru. Mauna Kea. The Black Hills. Oak Flat. Each is simultaneously a sacred being (to indigenous peoples) and a resource opportunity (to colonial economies). The cost is not just environmental — it's ontological. When sacred land becomes property, the relationship between humans and earth breaks at its foundation.",
-        "What Persists": "Land protection movements that are simultaneously spiritual movements. Standing Rock was prayer as much as protest. Mauna Kea protectors (not protesters) conducted ceremony while blocking telescope construction. The legal personhood of rivers — the Whanganui in New Zealand, the Ganges and Yamuna in India — represents the legal system slowly catching up to what indigenous people always knew: the land is a person. Land back movements that insist return is not just political but cosmological.",
-        "The Invitation": "What is your relationship with the land you live on? Not the property you own or rent — the LAND. Who lived here before you? What do they call this place? What was sacred here before it was zoned? These are not nostalgic questions. They are questions about reality."
+        "The Pattern": "First colonialism takes the land. Then it takes the labor. Then — when the colonized culture becomes exotic rather than threatening — it takes the spirituality. Yoga without caste politics. Ayahuasca without Shipibo elders. Sweat lodges run by white entrepreneurs. Mindfulness without Buddhism. The pattern extracts the practice from its context, strips it of obligation, repackages it as personal growth, and sells it back as commodity.",
+        "What It Costs": "Sacred practices reduced to wellness products. Ceremony without accountability, lineage, or reciprocity. The spiritual teacher who downloads a tradition in a weekend workshop and teaches it on Monday. Indigenous communities watching their most sacred practices performed incorrectly, out of context, for profit, by people who would not recognize them on the street. The deeper cost: appropriation teaches that all knowledge is available to all people at all times — denying that some knowledge requires relationship, time, initiation, and permission.",
+        "What Persists": "Indigenous communities setting boundaries: 'This ceremony is not for sale.' The Lakota Declaration of War against exploiters of Lakota spirituality (1993). Communities distinguishing between sharing and theft, between cultural exchange and cultural extraction. The growing conversation about spiritual accountability. The understanding that respect means accepting limits — that some doors are not yours to open.",
+        "The Invitation": "If you practice yoga, meditation, or any tradition that originates outside your culture: what is your relationship with the source community? Not just intellectual acknowledgment but actual relationship? Are you a student or a consumer? The difference matters."
       },
-      "keywords": [
-        "sacred land",
-        "land as commodity",
-        "Standing Rock",
-        "Mauna Kea",
-        "Doctrine of Discovery",
-        "legal personhood",
-        "land back"
-      ],
-      "metadata": {},
-      "grammars": [
-        "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/walden"
-      ]
-    },
-    {
-      "id": "spirit-extraction",
-      "name": "Spiritual Extraction and Appropriation",
-      "sort_order": 24,
-      "category": "spirit",
-      "level": 1,
-      "sections": {
-        "The Pattern": "First they ban your ceremonies. Then they commodify them. Spiritual appropriation follows the same extractive logic as resource extraction: take what is valuable, strip it of context, repackage it for consumption. Yoga without Hinduism. Mindfulness without Buddhism. Ayahuasca without indigenous cosmology. Sweat lodges run by weekend warriors. The smudging kits sold at Urban Outfitters. The pattern: suppress the people, extract the practice, sell the product.",
-        "What It Costs": "The trivialization of practices that carry centuries of meaning, relationship, and responsibility. A sweat lodge led by an untrained non-indigenous person killed three people in Sedona in 2009. Ayahuasca tourism in the Amazon has created economic distortions, sexual abuse, and ecological damage. The deeper cost: when a sacred practice becomes a consumer product, the RELATIONSHIP it was embedded in — with land, community, lineage, spirit — is severed. What remains is aesthetics without ethics.",
-        "What Persists": "Indigenous communities setting boundaries: 'This ceremony is not for you.' The distinction between sharing and theft — some practices are shared freely, others are held closely, and the community decides. Indigenous-led yoga and meditation programs that honor lineage. The growing conversation about cultural protocol — not as political correctness but as spiritual respect. The grandmother's question: 'Were you invited? Did you ask permission? Do you know the cost?'",
-        "The Invitation": "If you practice yoga, meditation, or any contemplative tradition that originated outside your culture: what is your relationship with the lineage? Do you know the tradition's history, including its history of being suppressed? Are you in relationship with practitioners from the tradition, or are you consuming a product? These questions are not meant to stop you. They are meant to deepen you."
-      },
-      "keywords": [
-        "spiritual appropriation",
-        "cultural extraction",
-        "yoga",
-        "ayahuasca",
-        "ceremony",
-        "commodification",
-        "protocol",
-        "lineage"
-      ],
+      "keywords": ["cultural appropriation", "spiritual extraction", "yoga", "ayahuasca", "sweat lodge", "mindfulness", "commodification", "wellness industry"],
       "metadata": {}
     },
     {
       "id": "spirit-animism",
       "name": "Animism vs. Materialism",
+      "sort_order": 24,
+      "category": "spirit",
+      "level": 1,
+      "sections": {
+        "The Pattern": "The colonial division: subjects and objects. Humans have souls, agency, rights. Everything else — animals, plants, rivers, mountains, stones — is matter. Resource. Property. This ontological cleaving made colonialism possible. You cannot enslave a person you recognize as fully human. You cannot clearcut a forest you experience as a community of beings. Descartes' animal-as-machine and Bacon's nature-as-object-of-domination are not philosophy — they are permission slips.",
+        "What It Costs": "An ecological crisis that is, at its root, a spiritual crisis. When the river is a resource, you dam it. When the forest is timber, you cut it. When the animal is protein, you factory-farm it. Materialism didn't just disenchant the world — it made the world available for unlimited exploitation. The loneliness epidemic is partly this: living in a world drained of aliveness, surrounded by objects rather than relatives.",
+        "What Persists": "Animism never left. Most of the world's cultures maintain some form of relational ontology — the understanding that human beings exist within, not above, a community of living beings. Shintoism. Aboriginal Dreamtime. Andean Pachamama. West African Vodun. Even within Western culture, the stubborn intuition that the dog is not a machine, the tree is not lumber, the river is not a water delivery system. Science itself — through ecology, complexity theory, and quantum physics — keeps rediscovering interconnection.",
+        "The Invitation": "What if the world is alive? Not metaphorically. Not as a nice thought. But as an ontological reality that indigenous people have always known and Western science is beginning to confirm? What changes in how you live if you take this seriously?"
+      },
+      "keywords": ["animism", "materialism", "Descartes", "enchantment", "relational ontology", "Pachamama", "Dreamtime", "more-than-human"],
+      "metadata": {}
+    },
+    {
+      "id": "spirit-ancestor-practices",
+      "name": "Ancestor Practices and the Severed Lineage",
       "sort_order": 25,
       "category": "spirit",
       "level": 1,
       "sections": {
-        "The Pattern": "The colonial worldview divides the world into two categories: subjects (humans, possessing consciousness) and objects (everything else, inert matter). This is materialism in its ontological sense — the belief that matter is all there is, and that consciousness is a rare exception rather than a pervasive quality. Animism — the understanding that rivers, mountains, forests, animals, and stones possess their own forms of awareness, agency, and personhood — was the dominant human worldview for most of history. Colonialism didn't just replace animism with materialism. It made animism literally unthinkable — a category error, a childish projection, a primitive mistake.",
-        "What It Costs": "When the world is made of objects, everything is available for extraction. You cannot mine a mountain if the mountain is a person. You cannot dam a river if the river has rights. Materialism made the ecological crisis not just possible but inevitable — once the world is dead matter, using it up is not violence but efficiency. The cost is also psychological: living in a world of objects is lonely in a way that living in a world of relatives is not. The mental health crisis and the ecological crisis share a root: the desacralization of the world.",
-        "What Persists": "Animist worldviews persist wherever indigenous cultures persist — and they are re-emerging in unexpected places. New materialism (Barad, Bennett) in Western philosophy is slowly rediscovering what animist cultures never forgot: matter is active, not inert. The rights of nature movement gives legal standing to rivers and ecosystems. Even quantum physics suggests that consciousness and matter may not be as separable as Descartes thought. The rocks are patient. They have been waiting for us to remember.",
-        "The Invitation": "What if the tree outside your window is not an object but a being? Not metaphorically — actually. What changes in your body when you consider that possibility? The tightening or the softening you feel is the colonial/decolonial boundary, live in your nervous system."
+        "The Pattern": "Most human cultures maintain active relationship with ancestors — through altar, prayer, offering, festival, naming, dream. Colonialism severed these relationships in multiple ways: by physically displacing people from ancestral lands and burial sites, by declaring ancestor veneration demonic or primitive, by breaking family structures through slavery and boarding schools, by replacing ancestral identity with national identity. The colonized person is a person cut off from their dead.",
+        "What It Costs": "Rootlessness. The sense that you come from nowhere, that history began with your birth, that the dead are gone rather than present. For enslaved peoples, the severing was literal — names taken, languages forbidden, families separated, burial practices denied. For colonized indigenous peoples, the connection to ancestral land — where the bones are, where the stories live — was broken by removal, relocation, and reservation. For settlers, a different loss: the slow forgetting of the old country's practices, replaced by consumer identity.",
+        "What Persists": "Día de los Muertos. Qingming Festival. Obon. Samhain. Ancestor altars in Vodun, Candomblé, and Shinto traditions. The African American practice of pouring libation. DNA testing as secular ancestor search. The growing movement to build ancestor practices even — especially — when the lineage is broken. The understanding that you don't need to know their names to honor their existence.",
+        "The Invitation": "Who are your dead? Not famous dead — your dead. The ones whose choices, suffering, love, and survival put you here. What do you owe them? Not guilt — relationship. The dead are not past. They are the ground you stand on."
       },
-      "keywords": [
-        "animism",
-        "materialism",
-        "desacralization",
-        "new materialism",
-        "rights of nature",
-        "consciousness",
-        "ontology",
-        "Descartes"
-      ],
-      "metadata": {},
-      "grammars": [
-        "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/creative-evolution"
-      ]
+      "keywords": ["ancestors", "ancestor veneration", "Día de los Muertos", "lineage", "rootlessness", "ancestral land", "burial practices", "severed connection"],
+      "metadata": {}
     },
     {
-      "id": "spirit-ancestor",
-      "name": "Ancestor Practices and Intergenerational Connection",
+      "id": "spirit-ceremony-permission",
+      "name": "Ceremony and Permission",
       "sort_order": 26,
       "category": "spirit",
       "level": 1,
       "sections": {
-        "The Pattern": "Colonial Christianity replaced ancestor veneration with a singular God and an afterlife that severed connection with the dead. In most indigenous and African cosmologies, the dead are not gone — they are present, advisors, part of the ongoing community. The ancestor altar, the Day of the Dead, the pouring of libations, the consultation with those who came before — these practices maintain a living relationship across the boundary that colonial religion sealed shut. When you cut people off from their ancestors, you cut them off from identity, guidance, and continuity.",
-        "What It Costs": "Rachel Yehuda's research on intergenerational trauma shows that trauma alters gene expression across generations — the body carries what the ancestors experienced. But if the ancestor relationship is severed, the trauma travels without the medicine. Indigenous ancestor practices provided frameworks for processing collective grief, honoring what was survived, and receiving wisdom from those who went before. Without these frameworks, intergenerational trauma becomes intergenerational haunting — present but unmetabolized, felt but unnamed.",
-        "What Persists": "Ancestor veneration in African diaspora traditions — Ifá, Vodou, Candomblé, Santería. Day of the Dead in Mexican culture. Obon in Japan. Ancestor altars in Vietnamese and Chinese homes. The growing ancestor practices movement among people of all backgrounds seeking reconnection with lineage. Trauma-informed ancestor work that acknowledges: some of our ancestors were harmed, some caused harm, and we are called to metabolize both.",
-        "The Invitation": "Who are your ancestors? Not the famous ones — the unnamed ones. The ones who survived what should have killed them so that you could exist. What did they carry? What did they want for you? If you could listen to them, what would they say? Ancestor connection is not nostalgia. It is accountability and resource."
+        "The Pattern": "Colonial spirituality is universally available — anyone can walk into a church, pick up a Bible, claim salvation. Indigenous ceremony is relationally mediated — you don't just attend, you are invited. You don't just learn, you are taught by someone authorized to teach. You don't just practice, you practice within a community that holds you accountable. The colonial impulse is to make all spiritual knowledge open-access. The indigenous response is that some knowledge requires preparation, relationship, and the right to receive it.",
+        "What It Costs": "When ceremony loses its gatekeepers, it loses its integrity. Ayahuasca drunk without a curandero. Sun Dance performed without Lakota elders. Pipe ceremony led by someone who bought a pipe online. The harm is not just cultural — it's spiritual (people entering powerful states without containers) and physical (ayahuasca tourism has produced injuries and deaths). The deeper loss: the understanding that not all knowledge is yours to have, and that limitation is not oppression but structure.",
+        "What Persists": "Communities that still hold ceremony with integrity. The elder who says 'you're not ready' and means it as a gift. The teacher who says 'this is not mine to give you' and models the difference between generosity and extraction. The growing conversation about spiritual accountability — not gatekeeping as exclusion, but gatekeeping as care.",
+        "The Invitation": "In a culture that treats access as a right, what does it mean to be told 'not yet' or 'not you' or 'not this way'? Can you receive a boundary as an invitation to deepen rather than a wall to climb?"
       },
-      "keywords": [
-        "ancestors",
-        "intergenerational",
-        "Yehuda",
-        "epigenetics",
-        "veneration",
-        "Day of the Dead",
-        "Ifa",
-        "lineage",
-        "intergenerational trauma"
-      ],
-      "metadata": {}
-    },
-    {
-      "id": "spirit-ceremony",
-      "name": "Ceremony and Permission",
-      "sort_order": 27,
-      "category": "spirit",
-      "level": 1,
-      "sections": {
-        "The Pattern": "Ceremony is the technology of relationship — between humans, between humans and the more-than-human world, between the living and the dead, between the visible and the invisible. Colonial powers understood this, which is why ceremony was the first target. The Sun Dance banned (1883-1978). The potlatch outlawed (1884-1951). Peyote ceremonies criminalized. Aboriginal ceremonies disrupted by missions. Ceremony was not banned because it was primitive. It was banned because it was powerful — it maintained the social, spiritual, and political bonds that colonialism needed to break.",
-        "What It Costs": "Generations who don't know how to mark a threshold — a birth, a death, a transition, a harvest, a grief — because the ceremonies were stolen. Porges would say: ceremony is collective co-regulation. It brings nervous systems into synchrony through rhythm, voice, movement, shared attention. Without ceremony, communities lose their primary tool for processing collective emotion. The individual therapy session is a poor substitute for what ceremony once did communally. Menakem: racialized trauma lives in the body and requires body-level, communal processing. Ceremony is that processing.",
-        "What Persists": "Ceremonies that survived in secret. The Native American Church. The revival of Sun Dance and sweat lodge within indigenous communities. The growing creation of new ceremonies for transitions that colonial culture left unmarked. Death cafes. Grief rituals. Full moon circles. Coming-of-age ceremonies crafted by families who know the default culture offers none. The understanding that ceremony is not superstition but psycho-spiritual technology — and that we are ceremony-starved.",
-        "The Invitation": "What transitions in your life went unmarked? What grief was unwitnessed? What joy was uncelebrated? Not by a party — by a ceremony, which is different: a ceremony acknowledges the sacred dimension of the threshold. If you feel the absence, you are feeling the colonial wound in the spirit domain."
-      },
-      "keywords": [
-        "ceremony",
-        "potlatch",
-        "Sun Dance",
-        "ritual",
-        "co-regulation",
-        "threshold",
-        "Menakem",
-        "collective processing"
-      ],
+      "keywords": ["ceremony", "permission", "gatekeeping", "initiation", "spiritual accountability", "elders", "preparation", "sacred boundaries"],
       "metadata": {}
     },
     {
       "id": "spirit-doctrine-discovery",
       "name": "The Doctrine of Discovery",
-      "sort_order": 28,
+      "sort_order": 27,
       "category": "spirit",
       "level": 1,
       "sections": {
-        "The Pattern": "In 1452 and 1493, papal bulls authorized European nations to claim any lands not inhabited by Christians. This became the Doctrine of Discovery — the legal and spiritual foundation of global colonization. It is still cited in US law (Johnson v. M'Intosh, 1823). The doctrine declared that non-Christian peoples had no sovereign rights to their land. Five hundred years of dispossession rest on a religious document that declared most of humanity spiritually subhuman. The church provided the moral permission. The state provided the military force. Together they built the modern world.",
-        "What It Costs": "The entire Western hemisphere was 'discovered' by people who found it already inhabited by millions. The Doctrine of Discovery legalized this absurdity by defining the inhabitants as less-than-fully-human. Its echoes persist in land law, in the concept of terra nullius (empty land) applied to Australia, in the assumption that colonial sovereignty supersedes indigenous sovereignty. The cost is not historical — the legal framework is still active.",
-        "What Persists": "Pope Francis formally repudiated the Doctrine of Discovery in 2023 — five centuries late, but significant. Indigenous legal scholars have challenged its application in courts across the Americas, Australia, and New Zealand. The growing recognition that modern property law rests on a theological claim about the relative humanity of different peoples. Land back movements that refuse the legal fiction. The insistence that discovery is not a thing that happens to inhabited places.",
-        "The Invitation": "The land you live on was likely 'discovered' under this doctrine. What does it mean to inhabit a legal fiction? Not to leave — you can't uncolonize by moving — but to know that the ground under your feet carries a contested story, and that the contest is not over."
+        "The Pattern": "In 1493, Pope Alexander VI issued the papal bull Inter Caetera, granting Spain sovereignty over lands 'discovered' in the Americas. This Doctrine of Discovery — the theological claim that Christian nations had the right to claim lands inhabited by non-Christians — became the legal foundation for European colonialism worldwide. It was cited by the US Supreme Court as recently as 2005 (City of Sherrill v. Oneida Indian Nation). Colonial law rests on colonial theology.",
+        "What It Costs": "The entire legal framework of settler-colonial land ownership traces back to a papal decree declaring that non-Christian peoples had no sovereignty. Treaties, constitutions, property law — all built on the theological assumption that some peoples are fully human and others are not. The Vatican formally repudiated the Doctrine of Discovery in 2023, five centuries too late and without material reparation. The legal structures it created remain fully operational.",
+        "What Persists": "Indigenous legal scholars and activists who name the Doctrine of Discovery as the root of dispossession and demand its formal repudiation in law, not just theology. The UN Permanent Forum on Indigenous Issues. The movement to replace discovery doctrine with indigenous sovereignty. The growing recognition that secular law is not as secular as it claims — that theological assumptions are embedded in the legal foundations of colonial states.",
+        "The Invitation": "If you own property in the Americas, Australia, New Zealand, or any settler-colonial state, your title traces back — through however many transactions — to a claim based on the Doctrine of Discovery. This is not guilt. It's geography. What do you do with this knowledge?"
       },
-      "keywords": [
-        "Doctrine of Discovery",
-        "papal bulls",
-        "terra nullius",
-        "land law",
-        "sovereignty",
-        "Pope Francis",
-        "Johnson v McIntosh"
-      ],
-      "metadata": {},
-      "grammars": [
-        "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/architecture-of-nations"
-      ]
+      "keywords": ["Doctrine of Discovery", "papal bulls", "Inter Caetera", "sovereignty", "settler colonialism", "land ownership", "indigenous law", "terra nullius"],
+      "metadata": {}
     },
     {
       "id": "spirit-conversion",
       "name": "Religious Conversion as Colonial Tool",
+      "sort_order": 28,
+      "category": "spirit",
+      "level": 1,
+      "sections": {
+        "The Pattern": "The mission preceded the fort. Missionaries arrived before soldiers because spiritual conquest was more efficient than military conquest. Convert the soul, and the body follows. Colonial Christianity offered salvation and literacy in exchange for language, ceremony, cosmology, and identity. The conversion was never just religious — it was civilizational. To accept the Christian God was to accept Christian time (linear), Christian space (sacred/profane), Christian hierarchy (God/man/nature), and Christian economics (stewardship as dominion).",
+        "What It Costs": "Cosmologies destroyed. Ceremony criminalized. Sacred objects burned as idols. Children taken to mission schools. Syncretism — the secret survival strategy of encoding indigenous practice within Christian forms — is both testament to resilience and evidence of the violence that made it necessary. The Virgen de Guadalupe carries Tonantzin. The orixás wear Catholic saints' faces. Survival required disguise.",
+        "What Persists": "Indigenous Christianity that has transformed the tradition from within. Liberation theology born in Latin America. Black church traditions that made Christianity a vehicle for liberation rather than submission. Syncretic traditions — Candomblé, Santería, Vodou — that maintained African cosmologies within Christian structures. The ongoing reclamation of pre-Christian indigenous practices. The recognition that Christianity itself contains resources for its own decolonization.",
+        "The Invitation": "If you are Christian: how does your faith relate to the faith of those who lived on this land before Christianity arrived? If you are post-Christian: what spiritual practices did your ancestors have before Christianity? These questions are not attacks on faith. They are invitations to the fullness of its history."
+      },
+      "keywords": ["missionaries", "conversion", "colonialism", "syncretism", "Guadalupe", "liberation theology", "Candomblé", "indigenous Christianity"],
+      "metadata": {}
+    },
+    {
+      "id": "spirit-grief-practice",
+      "name": "Grief as Spiritual Practice",
       "sort_order": 29,
       "category": "spirit",
       "level": 1,
       "sections": {
-        "The Pattern": "The mission system — Spanish missions in California, French Jesuit missions in Quebec, British missions across Africa and Asia — was simultaneously a spiritual and economic project. Conversion meant labor. The baptized indigenous person became a ward of the mission, obligated to work the mission fields, forbidden to practice their own ceremonies. Christianity was not just offered — it was enforced through starvation, punishment, and the withholding of food, medicine, and shelter. The soul was colonized to make the body available.",
-        "What It Costs": "Cosmologies destroyed or driven underground. Sacred objects burned. Healers persecuted as witches. The replacement of complex, place-based, relational spiritual systems with a portable, text-based, hierarchical one. The psychological cost: generations of people taught that their own spiritual impulses are evil, that their ancestors are in hell, that their connection to land and spirit is the work of the devil. Van der Kolk would recognize this: the body keeps the score of spiritual violence too — it shows up as shame, disconnection, the inability to access one's own spiritual authority.",
-        "What Persists": "Syncretism — the brilliant survival strategy of hiding indigenous spirits inside Catholic saints. The Virgen de Guadalupe as Tonantzin. Santeria as Yoruba religion wearing Catholic masks. The indigenous Christians who practice both traditions without contradiction. The growing movement of indigenous Christians reclaiming their pre-colonial spiritual practices alongside Christianity. The refusal to accept that one must choose.",
-        "The Invitation": "If Christianity is your tradition: can you hold that it has been both a source of liberation (abolition, civil rights, liberation theology) and a tool of colonization? Both are true. Holding both is the spiritual maturity this topic demands. If Christianity was imposed on your ancestors: what survived underneath?"
+        "The Pattern": "Colonial modernity has no grammar for collective grief. Individual grief is medicalized (five stages, time-limited, therapist-managed). Collective grief — for genocide, for ecocide, for the ongoing losses of colonialism — has no sanctioned form at all. You are expected to 'move on,' to be 'resilient,' to 'not dwell.' Andreotti's central insight in Hospicing Modernity: modernity is dying, and we need to grieve it. Not celebrate its death or cling to its life, but hospice it — with presence, with honesty, with the willingness to sit in the room where something is ending.",
+        "What It Costs": "Unprocessed grief becomes depression, addiction, rage, numbness. Communities carrying intergenerational trauma without ceremonies adequate to hold it. The expectation that indigenous peoples should be 'over' colonialism. The expectation that Black communities should be 'over' slavery. The absence of national rituals of mourning for what was done — because mourning would require acknowledging what was done, and acknowledgment would require accountability.",
+        "What Persists": "Wailing traditions. Keening. The Irish wake. Jewish shiva. Aboriginal sorry business. The capacity for communal grief that colonial individualism tried to eliminate. The growing understanding that grief is not weakness but a form of love — love for what was lost, love for what might have been, love for what is dying. Joanna Macy's 'Work That Reconnects,' which centers grief for the world as the gateway to action. The emergence of grief rituals in activist communities.",
+        "The Invitation": "What are you grieving that you haven't been allowed to grieve? Not just personal losses — collective ones. The language your great-grandparents spoke. The forest that was here before. The world that should have been possible. Grief is not giving up. It's the body's way of acknowledging what matters."
       },
-      "keywords": [
-        "conversion",
-        "mission system",
-        "syncretism",
-        "Guadalupe",
-        "Santeria",
-        "spiritual violence",
-        "liberation theology"
-      ],
+      "keywords": ["grief", "hospicing modernity", "Andreotti", "collective mourning", "intergenerational trauma", "Macy", "keening", "wailing"],
       "metadata": {}
-    },
-    {
-      "id": "spirit-grief",
-      "name": "Grief as Spiritual Practice: Hospicing Modernity",
-      "sort_order": 30,
-      "category": "spirit",
-      "level": 1,
-      "sections": {
-        "The Pattern": "Andreotti's central metaphor: modernity is dying and needs hospicing. Not triumphalism ('We'll build something better!') and not despair ('Everything is collapsing!') but the wisdom of those who sit with the dying — present, compassionate, honest, willing to stay when it's uncomfortable. Colonial modernity promised infinite growth on a finite planet, universal progress through a particular culture, freedom through domination. These promises are breaking. Grief — not as weakness but as spiritual practice — is the appropriate response. Bayo Akomolafe: 'The times are urgent. Let us slow down.'",
-        "What It Costs": "Grief is the emotion colonial modernity cannot accommodate. There is no productivity metric for mourning. There is no quarterly report on processing collective loss. The colonial response to ecological destruction, cultural loss, and civilizational crisis is to FIX it — new technology, new policy, new initiative. But some things cannot be fixed. They can only be grieved. The inability to grieve collectively is itself a colonial wound — we have lost the ceremonies, the communal practices, the shared containers for metabolizing loss.",
-        "What Persists": "The grief work movements: Joanna Macy's Work That Reconnects. Francis Weller's communal grief rituals. Sobonfu Some's grief practices from the Dagara tradition. The growing understanding that unprocessed collective grief becomes collective depression, anxiety, and rage. Trauma-informed insight: grief requires a container — a safe relationship, a community, a ritual — to be processed without overwhelming. The nervous system cannot grieve alone. Grief is inherently relational, communal, ceremonial.",
-        "The Invitation": "What are you grieving — personally, collectively, civilizationally — that you haven't been given permission to grieve? What would it be like to sit with the dying of a way of life without rushing to build the next one? Andreotti: 'Before you can compost, you have to be willing to be the shit.'"
-      },
-      "keywords": [
-        "grief",
-        "hospicing modernity",
-        "Andreotti",
-        "Akomolafe",
-        "Joanna Macy",
-        "collective grief",
-        "composting",
-        "Francis Weller"
-      ],
-      "metadata": {},
-      "grammars": [
-        "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/emerald-death-card-no-one-here-gets-out-alive"
-      ]
     },
     {
       "id": "spirit-plant-medicine",
       "name": "Plant Medicine Sovereignty",
+      "sort_order": 30,
+      "category": "spirit",
+      "level": 1,
+      "sections": {
+        "The Pattern": "The colonial state classifies peyote, ayahuasca, psilocybin, cannabis, coca — plants used ceremonially for centuries or millennia — as controlled substances. This criminalization serves multiple colonial functions: it disrupts indigenous ceremony, it pathologizes non-Western consciousness, it creates a drug war that disproportionately criminalizes communities of color, and it reserves the right to alter consciousness for pharmaceutical corporations (who sell antidepressants, anxiolytics, and stimulants at scale).",
+        "What It Costs": "Ceremonial use criminalized. Native American Church members arrested for peyote. Amazonian communities disrupted by ayahuasca tourism and law enforcement. Cannabis prohibition used as pretext for mass incarceration of Black communities. The drug war as a continuation of colonialism by other means — Nixon's domestic policy advisor John Ehrlichman admitted the war on drugs was designed to target 'the antiwar left and Black people.' Meanwhile, the psychedelic renaissance profits white entrepreneurs.",
+        "What Persists": "The Native American Church, which secured legal peyote use through decades of advocacy. Indigenous-led movements for plant medicine sovereignty. Decriminalization campaigns led by and centered on communities of color. The insistence that these are not 'drugs' but 'medicines' and 'sacraments' — and that the distinction matters. The growing recognition that criminalization was never about health and always about control.",
+        "The Invitation": "Who gets to decide which plants you can have a relationship with? Who profits from your inability to access certain states of consciousness, and who profits from selling you pharmaceutical alternatives? The politics of plant medicine are the politics of whose consciousness is legitimate."
+      },
+      "keywords": ["plant medicine", "peyote", "ayahuasca", "psilocybin", "drug war", "decriminalization", "Native American Church", "consciousness"],
+      "metadata": {}
+    },
+    {
+      "id": "spirit-nonhuman-relations",
+      "name": "Reconnecting with Non-Human Relations",
       "sort_order": 31,
       "category": "spirit",
       "level": 1,
       "sections": {
-        "The Pattern": "The colonial relationship with plant medicines follows the same pattern as everything else: ban, then extract, then commodify. Peyote, ayahuasca, psilocybin, cannabis, coca — all were sacred medicines within indigenous frameworks, criminalized under colonial drug laws, and now being 'discovered' by Western science and capital. The psychedelic renaissance is celebrated as a breakthrough in mental health treatment. For indigenous peoples, it's the latest iteration of a 500-year-old pattern: they banned our medicine, imprisoned us for using it, and now they're selling it back to us at a markup.",
-        "What It Costs": "Indigenous people still face criminal prosecution for ceremonial use of medicines their ancestors have used for millennia. Meanwhile, psychedelic startups raise venture capital to patent synthetic versions. The Indigenous Reciprocity Initiative was created specifically to address this: if Western institutions profit from indigenous plant medicine knowledge, the communities must benefit. The deeper cost: plant medicines in indigenous contexts are embedded in relationship — with the plant, the community, the land, the spirits. Extracted from this context, they become drugs instead of medicine.",
-        "What Persists": "The Native American Church's protected use of peyote — a hard-won legal victory. Indigenous-led psychedelic therapy programs that center cultural protocol. The growing conversation about psychedelic justice — ensuring that communities of color, who bore the brunt of the war on drugs, benefit from decriminalization. The insistence that the medicine is the relationship, not just the molecule.",
-        "The Invitation": "If you've benefited from psychedelic medicines or therapy: what is your relationship with the indigenous traditions that carried this knowledge? Are you in reciprocity, or in extraction? The question is not meant to create guilt. It's meant to create relationship."
+        "The Pattern": "Colonial ontology draws a hard line between human and non-human. Humans have souls, rights, language, culture. Animals, plants, rivers, mountains are resources, scenery, or at best, objects of conservation. This ontological apartheid is so deep that even well-meaning environmentalism often reproduces it — protecting 'nature' as something separate from human life rather than recognizing humans as participants in ecological community.",
+        "What It Costs": "The sixth mass extinction. Factory farming. Deforestation. Ocean acidification. The inability to grieve the loss of species because grief is reserved for persons, and animals are not persons. The loneliness of a species that has declared itself the only subject in a world of objects. Children who know brand logos but cannot name the birds outside their window. The rupture between human identity and ecological identity.",
+        "What Persists": "Indigenous cosmologies that never made the cut. The Lakota who addresses all beings as relatives. The Māori who recognize rivers as ancestors (the Whanganui River was granted legal personhood in 2017). The Aboriginal Australians whose law is inseparable from land. Animal communicators. Interspecies ethics. The growing field of plant intelligence research. The dog who teaches you about presence. The tree that teaches you about patience. Relationship persists wherever the colonial boundary fails.",
+        "The Invitation": "Go outside. Not to exercise, not to photograph, not to 'be in nature' (as if you were ever outside it). Just go outside and pay attention. What is alive around you? What is looking back? What would it mean to live as if you belonged to an ecological community rather than managed one?"
       },
-      "keywords": [
-        "plant medicine",
-        "psychedelics",
-        "peyote",
-        "ayahuasca",
-        "psilocybin",
-        "drug war",
-        "Indigenous Reciprocity",
-        "sovereignty"
-      ],
+      "keywords": ["more-than-human", "interspecies", "Whanganui River", "legal personhood", "animal rights", "plant intelligence", "ecological community", "kinship"],
       "metadata": {}
-    },
-    {
-      "id": "spirit-nonhuman",
-      "name": "Non-Human Relations: More-Than-Human World",
-      "sort_order": 32,
-      "category": "spirit",
-      "level": 1,
-      "sections": {
-        "The Pattern": "Colonial ontology drew a line between human and everything else — and then drew further lines within the human category to exclude most humans. Sylvia Wynter calls this the 'overrepresentation of Man' — a particular version of the human (European, male, propertied, rational) became the definition of humanity, and everything else was resource. Animals: resources. Forests: resources. Rivers: resources. Indigenous peoples: resources. The more-than-human world was reduced to backdrop, commodity, and raw material for human projects.",
-        "What It Costs": "The sixth mass extinction. The climate crisis. The loneliness of a species that has declared itself separate from all other life. Robin Wall Kimmerer asks: what if the world is made of gifts rather than commodities? The Potawatomi language has no word for 'it' when referring to a living being — everything alive is addressed as a relative. When English makes a river into 'it,' the river becomes available for damming. When Potawatomi grammar makes the river a relative, the river becomes someone you're accountable to.",
-        "What Persists": "Indigenous ecological knowledge that consistently outperforms Western conservation. Aboriginal fire management. Amazonian forest gardening that produces biodiversity instead of depleting it. The growing field of multispecies ethnography. The legal rights of nature. The children who instinctively talk to animals and trees before being told that's silly. The deep recognition — available to any nervous system in a quiet forest — that you are not alone, that the world is full of minds, that relationship extends far beyond the human.",
-        "The Invitation": "Go outside. Find a tree. Sit with it. Not as metaphor, not as meditation technique, not as therapy. Just sit with a being that has been alive longer than you, that breathes in what you breathe out, that has witnessed more than you will ever know. What happens in your body when you do this? That response is your decolonial curriculum."
-      },
-      "keywords": [
-        "more-than-human",
-        "Wynter",
-        "Kimmerer",
-        "multispecies",
-        "non-human relations",
-        "grammar of animacy",
-        "ecology of mind"
-      ],
-      "metadata": {},
-      "grammars": [
-        "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/origin-of-species"
-      ]
     },
     {
       "id": "collective-domain",
-      "name": "The Collective: Who Told You How to Belong?",
-      "sort_order": 33,
+      "name": "The Collective: Who Told You How to Organize?",
+      "sort_order": 32,
       "category": "domains",
       "level": 2,
-      "composite_of": [
-        "collective-commons",
-        "collective-mutual-aid",
-        "collective-nation-state",
-        "collective-reparations",
-        "collective-justice",
-        "collective-development",
-        "collective-infrastructure",
-        "collective-solidarity",
-        "collective-intergenerational"
-      ],
+      "composite_of": ["collective-commons-enclosure", "collective-mutual-aid", "collective-nation-state", "collective-reparations-landback", "collective-restorative-justice", "collective-development-myth", "collective-colonial-infrastructure", "collective-solidarity-saviorism", "collective-intergenerational-memory", "collective-indigenous-governance"],
       "sections": {
-        "About": "Colonization restructured how humans organize: replacing commons with enclosure, mutual obligation with market transaction, distributed governance with centralized state, restorative justice with punitive law. The colonial collective is organized around the individual — the property-owning, rights-bearing, autonomous individual who exists in relationship to the state, not to community, land, or lineage. This is not liberation. It is a particular form of isolation dressed as freedom. Trauma-informed insight: the colonial restructuring of collective life is a mass attachment disruption — severing the bonds between people, between generations, between communities and their sustaining systems. Menakem: white-body supremacy reorganized collective life around a racialized hierarchy that traumatizes ALL bodies — Black, indigenous, and white — in different but interlocking ways.",
-        "The Colonial Logic": "The individual as basic unit. The contract as basic relationship. The nation-state as basic polity. The market as basic organizer. Everything communal, customary, relational, and gift-based is either primitive (to be superseded) or communist (to be destroyed). The commons — the shared resources that sustained communities for millennia — became the first target of colonial economics. Enclosure of land, enclosure of knowledge, enclosure of care.",
-        "The Invitation": "How do you belong? To whom are you accountable? Not contractually — relationally? If the answer is unclear, you are feeling the colonial restructuring of collective life. Belonging was not always this hard. It was made this hard."
+        "About": "Every human community organizes itself — for decision-making, resource sharing, conflict resolution, care of the vulnerable, celebration of the sacred. Colonialism replaced this diversity of organizing with a single model: the nation-state, market capitalism, representative democracy, and the NGO. These are presented as the pinnacle of human social evolution. They are, in fact, one culture's answers to universal questions — answers that have been imposed globally through force, debt, and the quiet violence of 'development.'",
+        "The Colonial Logic": "The state is the only legitimate political form. The market is the only legitimate economic form. Democracy (representative, Western-style) is the only legitimate governance form. Everything else — consensus, commons, gift economy, council of elders, matrilineal authority — is pre-modern. To develop is to adopt Western political and economic forms. To resist is to be backward.",
+        "The Invitation": "What forms of collective life did your ancestors practice before the state told them how to organize? What forms of mutual care exist in your community that have no name in political science?"
       },
-      "keywords": [
-        "collective",
-        "commons",
-        "belonging",
-        "nation-state",
-        "mutual aid",
-        "justice",
-        "solidarity",
-        "intergenerational"
-      ],
+      "keywords": ["governance", "commons", "nation-state", "mutual aid", "development", "justice", "reparations", "indigenous governance"],
       "metadata": {}
     },
     {
-      "id": "collective-commons",
-      "name": "The Commons and Enclosure",
-      "sort_order": 34,
+      "id": "collective-commons-enclosure",
+      "name": "Commons and Enclosure",
+      "sort_order": 33,
       "category": "collective",
       "level": 1,
       "sections": {
-        "The Pattern": "Before colonialism universalized private property, most human communities organized around commons — shared land, water, forests, fisheries, knowledge, and care systems managed collectively. The English Enclosure Acts (1750-1860) were the template: common land fenced off, villagers who had sustained themselves for generations made landless overnight, forced into factories and cities. This pattern replicated globally: indigenous commons converted to colonial property everywhere the flag was planted. The commons didn't fail. They were murdered.",
-        "What It Costs": "Landless peasants becoming industrial workers. Indigenous peoples confined to reservations — the smallest, least valuable fragments of their former commons. The global land grab that continues: 200 million hectares of land in the Global South acquired by foreign investors since 2000. The psychological cost: the loss of the commons is the loss of the experience of shared abundance. In a world of private property, scarcity feels natural. In a world of commons, abundance was the baseline.",
-        "What Persists": "Commons persist everywhere they are defended: community forests in India, ejidos in Mexico, indigenous territories in the Amazon, community land trusts in cities, open-source software, Creative Commons licensing, community gardens. Elinor Ostrom won the Nobel Prize for demonstrating that communities can manage commons sustainably without privatization or state control — disproving the 'tragedy of the commons' myth that justified enclosure. The commons never stopped working. They were just stolen.",
-        "The Invitation": "What in your life is shared? What could be? The commons is not a relic — it's an ongoing practice of refusing to enclose what belongs to all. What would your community look like if the things that matter most were held in common?"
+        "The Pattern": "Before colonialism, most human communities managed shared resources — land, water, forest, fisheries, knowledge — through commons: collectively governed, rule-bound, sustainable. Enclosure — the privatization of commons — began in England and was exported globally through colonialism. Land that communities managed together became property that individuals owned. The commons didn't fail. It was enclosed — fenced, privatized, and sold. This is the original accumulation that made capitalism possible.",
+        "What It Costs": "Landlessness as a global condition. The creation of a class that must sell its labor because it no longer has access to land. The tragedy of the commons — Garrett Hardin's famous argument — is actually the tragedy of enclosure: commons worked for millennia; it's private property that produces overexploitation. Digital enclosure continues the pattern: knowledge, culture, and code that could be shared are fenced by copyright, patents, and paywalls.",
+        "What Persists": "Commons governance still functions — Elinor Ostrom won the Nobel Prize for demonstrating it. Community forests in Nepal. Irrigation commons in Spain and Bali. Open-source software. Creative Commons. Community land trusts. The ancient pattern of shared governance over shared resources refuses to die because it works. Indigenous land management — which is commons governance — is increasingly recognized as superior to both private ownership and state management for ecological outcomes.",
+        "The Invitation": "What do you share? Not as charity but as commons — resources you govern together with others? If the answer is 'not much,' that's not human nature. That's enclosure. What would it look like to rebuild commons in your life?"
       },
-      "keywords": [
-        "commons",
-        "enclosure",
-        "private property",
-        "land grab",
-        "Ostrom",
-        "ejidos",
-        "community land trusts",
-        "shared abundance"
-      ],
-      "metadata": {},
-      "grammars": [
-        "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/economic-ideas"
-      ]
+      "keywords": ["commons", "enclosure", "privatization", "Ostrom", "land trust", "open source", "shared governance", "Hardin"],
+      "metadata": {}
     },
     {
       "id": "collective-mutual-aid",
       "name": "Mutual Aid vs. the NGO Industrial Complex",
-      "sort_order": 35,
+      "sort_order": 34,
       "category": "collective",
       "level": 1,
       "sections": {
-        "The Pattern": "Mutual aid — the practice of communities caring for each other without hierarchy or conditionality — has been the primary survival strategy of marginalized peoples throughout colonial history. But colonial modernity replaced mutual aid with charity: the powerful giving to the powerless, with strings attached, from above. The NGO industrial complex professionalized this pattern — creating organizations that manage poverty without threatening the systems that produce it. The development industry: $150 billion annually, primarily flowing through institutions staffed by the Global North, solving problems named by the Global North.",
-        "What It Costs": "Communities that once solved their own problems now wait for projects. Local knowledge replaced by consultant expertise. Accountability flows upward to funders, not outward to communities. The NGO that arrives, implements, reports, and leaves — a hit-and-run model of help. Haiti after the earthquake: billions raised, communities still struggling, NGO workers living well. The deeper cost: the message that you cannot help yourself, that help comes from outside, that your own knowledge and networks are insufficient.",
-        "What Persists": "Mutual aid networks that predate and outlast every NGO: Black mutual aid societies from the 1700s forward, indigenous potlatch and reciprocal systems, Mexican tandas, Somali hawala, South Asian chit funds. The mutual aid explosion during COVID-19 proved that communities can self-organize rapidly and effectively. Dean Spade's work reframing mutual aid as political solidarity, not charity. The insistence that help is horizontal, not vertical.",
-        "The Invitation": "When you need help, who do you call — an institution or a person? When your community needs help, does it organize or does it wait for outside intervention? Mutual aid is not nostalgia. It is the oldest and most resilient form of human organization. It persists because it works."
+        "The Pattern": "Colonial charity flows downward: from those who have to those who lack, with conditions attached. The NGO industrial complex professionalizes this flow — creating careers, bureaucracies, and metrics around the management of poverty. Mutual aid flows sideways: from those who have this to those who need this, and back again when needs shift. The colonial pattern is help. The decolonial pattern is solidarity. The difference is directionality, reciprocity, and who defines the problem.",
+        "What It Costs": "Communities made dependent on external aid that comes with external conditions. The professionalization of care — you need a degree to feed people, a nonprofit to house people, a grant to love people. The extraction of community capacity: when an NGO enters, it often replaces rather than strengthens existing mutual aid networks. The savior narrative that positions the helper as subject and the helped as object. Billions spent on development that maintains the structures producing poverty.",
+        "What Persists": "Mutual aid networks — from Black mutual aid societies in the 19th century to pandemic mutual aid in 2020. The Zapatistas' autonomous governance. Kurdish cooperatives. Landless Workers Movement (MST) in Brazil. Rotating savings circles (tandas, susus, chit funds) across the Global South. The understanding that the community already has what it needs — the task is removing obstacles, not delivering solutions.",
+        "The Invitation": "Do you help or do you show up? Helping creates hierarchy: you have, they lack. Showing up creates relationship: we're in this together. What mutual aid networks exist around you? What would you offer? What would you receive? Can you receive?"
       },
-      "keywords": [
-        "mutual aid",
-        "NGO",
-        "charity",
-        "development",
-        "Dean Spade",
-        "solidarity",
-        "community organizing",
-        "horizontal"
-      ],
-      "metadata": {},
-      "grammars": [
-        "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/social-working"
-      ]
+      "keywords": ["mutual aid", "NGO industrial complex", "solidarity", "charity", "Zapatistas", "cooperatives", "savings circles", "reciprocity"],
+      "metadata": {}
     },
     {
       "id": "collective-nation-state",
       "name": "The Nation-State as Colonial Technology",
+      "sort_order": 35,
+      "category": "collective",
+      "level": 1,
+      "sections": {
+        "The Pattern": "The nation-state — borders, passports, national identity, sovereign territory — is not a natural form of human organization. It's a European invention, exported globally through colonialism and maintained by the international system that colonialism created. The Berlin Conference of 1884 drew lines through Africa with no regard for existing political forms. Decolonization created new nation-states within colonial borders — inheriting the colonial form while rejecting colonial rule. The Architecture of Nations grammar in this library maps this machinery in detail.",
+        "What It Costs": "Peoples divided by borders that cut through their homelands. The Kurdish nation split across four states. The Maasai divided between Kenya and Tanzania. The entire map of Africa drawn by Europeans. Statelessness — the condition of millions who don't fit the nation-state's categories. The passport as a document of belonging that determines who lives and who dies at borders. The nation-state demands singular identity (you are French OR Algerian) when lived reality is multiple.",
+        "What Persists": "Indigenous nations that predate and refuse the colonial state. Haudenosaunee (Iroquois) who carry their own passports. Kurdish autonomy in Rojava that experiments with democratic confederalism beyond the state. Zapatista autonomous municipalities. The European Union's partial transcendence of the nation-state (however imperfect). Nomadic peoples who maintain identity without territory. The growing recognition that the nation-state may be a transitional form, not an endpoint.",
+        "The Invitation": "If your identity is bound to a nation-state, ask: who drew those borders? When? For whose benefit? This doesn't mean nations are meaningless — it means they are historical, constructed, and changeable. What form of collective life might exist beyond the nation?"
+      },
+      "keywords": ["nation-state", "borders", "Berlin Conference", "sovereignty", "statelessness", "passports", "Haudenosaunee", "Rojava"],
+      "metadata": {}
+    },
+    {
+      "id": "collective-reparations-landback",
+      "name": "Reparations and Land Back",
       "sort_order": 36,
       "category": "collective",
       "level": 1,
       "sections": {
-        "The Pattern": "The nation-state — the dominant form of political organization on earth — is a European invention exported globally through colonization. Before the nation-state: kinship networks, confederacies, city-states, nomadic territories, empires with permeable borders, and countless other forms of political organization that colonialism flattened into a single model. The map of Africa drawn at the Berlin Conference (1884) imposed nation-state borders that cut through ethnic territories, merged rival peoples, and created the conditions for a century of conflict — not because Africans couldn't govern themselves, but because the governance form imposed on them was foreign to their political traditions.",
-        "What It Costs": "The Sykes-Picot Agreement drawing Iraq and Syria. The Partition of India. The borders of every African and most Asian nations. Each line drawn by colonial powers, often deliberately dividing communities to prevent unified resistance. The ongoing cost: indigenous nations that predate and span colonial borders (the Lakota nation spans the US-Canada border; the Kurdish nation spans four countries) treated as minorities within states rather than as political entities in their own right.",
-        "What Persists": "Indigenous governance systems that never accepted the nation-state framework: the Haudenosaunee Confederacy, which influenced the US Constitution but was never recognized as a peer. Aboriginal Australian law that maintained continental-scale governance for 65,000 years without a state. Zapatista autonomous zones. Rojava. The growing recognition among political theorists that the nation-state is not the endpoint of political evolution — it's one option among many, and it may not be the best one.",
-        "The Invitation": "The nation-state feels natural because you were born into one. But it is younger than most of the world's spiritual traditions, younger than most indigenous governance systems, and increasingly unable to address planetary-scale problems. What comes after the nation-state? The answer will come from the places that remember what came before."
+        "The Pattern": "Colonial wealth didn't appear from nowhere. It was extracted — through enslaved labor, through stolen land, through resource extraction, through unequal trade enforced by military power. The wealth of the Global North is the poverty of the Global South, converted through centuries of organized theft. Reparations and Land Back are not demands for charity. They are demands for restitution — the return of what was taken.",
+        "What It Costs": "The refusal of reparations is the continuation of theft by other means. The US promised formerly enslaved people '40 acres and a mule' and never delivered. The racial wealth gap — white families holding roughly ten times the wealth of Black families — is the arithmetic of unpaid labor. Indigenous peoples hold a fraction of their original territories while their land generates wealth for others. The cost of not paying reparations is paid every day in poverty, incarceration, health disparities, and early death.",
+        "What Persists": "The Movement for Black Lives and its comprehensive reparations platform. Land Back as both metaphor and literal demand. The Landless Workers Movement (MST) in Brazil, occupying unused land for farming. Caribbean nations demanding reparations from former colonial powers. Germany's reparations to Holocaust survivors as precedent (however imperfect). Georgetown University's reckoning with its slave-sale history. The mathematics of justice: what was taken can be returned.",
+        "The Invitation": "Reparations are not about guilt. They're about math. Wealth was taken. It can be returned. Land was stolen. It can be returned. The question is not whether reparations are justified but whether you're willing to live in a world that acknowledges its debts."
       },
-      "keywords": [
-        "nation-state",
-        "Berlin Conference",
-        "Sykes-Picot",
-        "borders",
-        "Haudenosaunee",
-        "indigenous governance",
-        "sovereignty"
-      ],
-      "metadata": {},
-      "grammars": [
-        "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/architecture-of-nations"
-      ]
+      "keywords": ["reparations", "Land Back", "restitution", "racial wealth gap", "40 acres", "MST", "colonial debt", "justice"],
+      "metadata": {}
     },
     {
-      "id": "collective-reparations",
-      "name": "Reparations and Land Back",
+      "id": "collective-restorative-justice",
+      "name": "Restorative vs. Punitive Justice",
       "sort_order": 37,
       "category": "collective",
       "level": 1,
       "sections": {
-        "The Pattern": "Colonialism extracted wealth on a scale that is difficult to comprehend. The transatlantic slave trade alone: 12.5 million people enslaved, generating wealth that built the modern economies of Britain, France, Spain, Portugal, the Netherlands, and the United States. When slavery was abolished in Britain, the government paid £20 million in reparations — to the slaveholders, not the enslaved. The pattern: extraction without return, damage without repair, wealth built on violence without accountability. Land Back is the indigenous corollary: not just financial reparation but the return of relationship with stolen land.",
-        "What It Costs": "The racial wealth gap in the United States: the median white family holds roughly ten times the wealth of the median Black family. This is not failure — it is the predictable result of 400 years of extraction followed by exclusion (redlining, GI Bill discrimination, predatory lending). Globally: the wealth of former colonial powers is inseparable from the poverty of former colonies. The climate crisis is a reparations question: the Global North produced the emissions; the Global South bears the consequences.",
-        "What Persists": "The reparations movement gaining mainstream traction: HR 40 in the US Congress, Caribbean CARICOM reparations demands, Evanston IL's local reparations program. Land Back movements across Turtle Island. The Landback.org platform. The growing recognition that repair is not charity but accountability. In the Inner Triangle framework: the guilt-repair triangle — feeling the guilt, owning the story, doing the repair work. Collective guilt requires collective repair.",
-        "The Invitation": "Reparations is not about blame. It's about accounting. Something was taken. The taking created wealth for some and poverty for others. The effects persist. What does repair look like? This question requires sitting with discomfort, which is the work before will."
+        "The Pattern": "Colonial justice is punitive: crime is an offense against the state, justice is punishment, the goal is deterrence. Indigenous justice systems across the world tended toward restoration: harm is a rupture in relationship, justice is repair, the goal is reintegration. The colonial prison — invented in its modern form in the 18th century — replaced banishment, restitution, mediation, and community accountability with cages. The US now imprisons more people than any nation in history.",
+        "What It Costs": "Mass incarceration as the continuation of slavery (the 13th Amendment explicitly allows involuntary servitude as punishment for crime). 2.3 million people in US prisons, disproportionately Black, Brown, indigenous, and poor. The destruction of communities through the removal of their members. Children growing up with incarcerated parents. The prison-industrial complex as an economic engine that profits from caging human beings. Recidivism rates that prove punishment doesn't work even by its own standards.",
+        "What Persists": "Restorative justice circles in schools, courts, and communities. South Africa's Truth and Reconciliation Commission. Navajo peacemaking courts. Rwanda's gacaca courts after the genocide. The growing abolition movement that asks not 'how do we reform prisons?' but 'what do we build instead?' Transformative justice practices in queer and activist communities. The ancient understanding that justice is not punishment but the repair of relationship.",
+        "The Invitation": "When someone harms you, what do you actually need? Punishment of the person who harmed you? Or acknowledgment, accountability, and the repair of what was broken? These are different needs. Colonial justice answers only the first. What would it look like to build systems that answer the second?"
       },
-      "keywords": [
-        "reparations",
-        "land back",
-        "racial wealth gap",
-        "slavery",
-        "extraction",
-        "repair",
-        "CARICOM",
-        "accountability"
-      ],
+      "keywords": ["restorative justice", "punitive justice", "mass incarceration", "abolition", "TRC", "peacemaking", "gacaca", "transformative justice"],
       "metadata": {}
     },
     {
-      "id": "collective-justice",
-      "name": "Restorative vs. Punitive Justice",
+      "id": "collective-development-myth",
+      "name": "The Development Myth",
       "sort_order": 38,
       "category": "collective",
       "level": 1,
       "sections": {
-        "The Pattern": "Colonial justice asks: what law was broken, who did it, and how should they be punished? Restorative justice asks: what harm was done, who was affected, and what does repair look like? The shift is fundamental — from law-centered to relationship-centered, from punishment to healing, from the state as primary agent to the community as primary agent. Most indigenous justice systems were restorative: the Navajo Peacemaking process, the Māori practice of hui, Ubuntu-based justice in southern Africa. Colonial law replaced these with adversarial courts, prisons, and the ideology that pain prevents harm.",
-        "What It Costs": "The United States incarcerates more people than any nation on earth — 2 million, disproportionately Black and brown. Mass incarceration is the current expression of a colonial logic that began with slavery and continued through convict leasing, Jim Crow, and the war on drugs. Michelle Alexander: the New Jim Crow. The cost: destroyed families, broken communities, traumatized bodies, children growing up with incarcerated parents, the intergenerational transmission of carceral trauma. Van der Kolk: trauma begets trauma. The punitive system creates the very harm it claims to address.",
-        "What Persists": "Restorative justice programs in schools, communities, and some courts. Navajo Peacemaking. Rwanda's gacaca courts after the genocide — community-based, truth-focused, repair-oriented. The abolition movement that insists the question is not 'how do we reform prisons?' but 'what would safety look like without cages?' Transformative justice: addressing harm at the root, in community, without relying on the state. The growing recognition that punishment doesn't heal — for the harmed or the harmer.",
-        "The Invitation": "When someone harms you, what do you want — punishment or repair? For most people, the honest answer is: I want to be heard, I want acknowledgment, I want to know it won't happen again. None of these require a prison. What would justice look like if it centered healing?"
+        "The Pattern": "In 1949, Harry Truman inaugurated the age of 'development' by dividing the world into developed and underdeveloped nations. With one speech, two-thirds of the world's peoples were reclassified as lacking — not colonized, not exploited, but 'underdeveloped.' The solution: become like us. Development replaces the explicit racism of colonialism with the soft paternalism of expertise. The World Bank and IMF replaced colonial administrators. Structural adjustment replaced direct rule. The result is the same: Global South resources flow north, and the explanation is that the south hasn't developed enough yet.",
+        "What It Costs": "Structural adjustment programs that gutted public health and education across Africa and Latin America to service debts incurred by dictators the Global North installed. Cash crops replacing food crops. Privatization of water. The destruction of local economies to integrate them into global markets controlled from elsewhere. The psychological cost: entire peoples defined by what they lack rather than what they have. The category 'developing nation' is not a description. It's a judgment.",
+        "What Persists": "Post-development thought — Arturo Escobar, Gustavo Esteva, Vandana Shiva — that rejects the development framework entirely. Buen vivir (good living) from Andean traditions as an alternative to GDP growth. Degrowth movements in the Global North. Bhutan's Gross National Happiness. Ubuntu economics. The insistence that a community that feeds itself, governs itself, and lives in balance with its land is not underdeveloped — it's a community that refused enclosure.",
+        "The Invitation": "What does a good life look like? Not GDP per capita — a good life. Does your answer require the poverty of others? If not, you may already be thinking beyond development."
       },
-      "keywords": [
-        "restorative justice",
-        "punitive justice",
-        "mass incarceration",
-        "abolition",
-        "Navajo Peacemaking",
-        "Ubuntu",
-        "transformative justice",
-        "repair"
-      ],
+      "keywords": ["development", "underdevelopment", "IMF", "World Bank", "structural adjustment", "buen vivir", "degrowth", "Escobar"],
       "metadata": {}
     },
     {
-      "id": "collective-development",
-      "name": "The Development Myth",
+      "id": "collective-colonial-infrastructure",
+      "name": "Colonial Infrastructure: Borders, Passports, Debt",
       "sort_order": 39,
       "category": "collective",
       "level": 1,
       "sections": {
-        "The Pattern": "In 1949, Harry Truman invented the 'developing world' — and with it, the idea that most of humanity was behind and needed to catch up. Development became colonialism's postcolonial name: the same logic of transformation (traditional → modern), the same direction (South → North), the same metrics (GDP, infrastructure, industrialization), the same agents (experts from the North helping the South). Arturo Escobar: development is the way the West continued to manage the rest after formal colonialism ended.",
-        "What It Costs": "Structural adjustment programs that gutted public services across the Global South. Debt traps that transferred wealth from poor countries to rich creditors. Mega-dams that displaced millions. Green Revolutions that destroyed seed sovereignty. The development industry itself: an architecture of consultants, reports, metrics, and conferences that maintains the knowledge hierarchy (the North knows, the South receives) while producing negligible lasting change. The psychic cost: entire peoples defined by their distance from a Western finish line.",
-        "What Persists": "Buen Vivir — the Andean concept of 'good living' that refuses GDP as a measure of wellbeing. Bhutan's Gross National Happiness. Degrowth movements in the Global North that question whether 'more' is always 'better.' The growing South-South solidarity that bypasses Northern institutions. The simple observation: many 'undeveloped' communities had lower inequality, stronger social bonds, better health outcomes, and more sustainable ecologies than their 'developed' counterparts. Development solved problems it created.",
-        "The Invitation": "What does a good life look like — not a developed life, not a productive life, not a GDP-maximizing life, but a GOOD life? If your answer includes community, meaning, relationship with land, time for rest, and connection with the sacred, then you are describing what 'development' destroyed in the name of progress."
+        "The Pattern": "Colonial power operates through infrastructure — physical and administrative systems that organize life according to colonial logic long after formal colonialism ends. Borders drawn by colonial powers. Passport systems that determine who moves freely and who is detained. National debt incurred by colonial or post-colonial regimes and enforced on populations who never consented. Railways built to extract resources from interior to port. Languages of administration. Legal systems. Currency. These are not neutral tools. They are colonial architectures that continue to function as designed.",
+        "What It Costs": "Haiti paid France reparations for its own liberation from slavery — from 1825 to 1947 — a debt that crippled the world's first Black republic. African nations still pay colonial debts. CFA franc zones in West and Central Africa maintain French monetary control over former colonies. Border violence kills thousands annually. Passport privilege determines whose life is mobile and whose is caged. The infrastructure of colonialism is the water we swim in — so pervasive it seems like reality itself.",
+        "What Persists": "Debt cancellation movements — Jubilee campaigns that echo the ancient tradition of periodic debt forgiveness. The African Union's push for continental free movement. Alternative currencies and community banking. The Zapatistas' autonomous infrastructure — their own schools, hospitals, governance, built outside and against the colonial state. Every community that builds its own infrastructure rather than waiting for the state to provide it (and attach conditions).",
+        "The Invitation": "What infrastructure shapes your daily life? Roads, laws, currencies, borders, languages — who built them, for whose benefit, and at whose cost? Infrastructure is political. It just doesn't look political because it's been there longer than you have."
       },
-      "keywords": [
-        "development",
-        "Escobar",
-        "structural adjustment",
-        "Buen Vivir",
-        "degrowth",
-        "GDP",
-        "progress myth",
-        "Truman"
-      ],
+      "keywords": ["infrastructure", "borders", "debt", "CFA franc", "Haiti", "passports", "railways", "colonial architecture"],
       "metadata": {}
     },
     {
-      "id": "collective-infrastructure",
-      "name": "Colonial Infrastructure: Borders, Passports, Debt",
+      "id": "collective-solidarity-saviorism",
+      "name": "Solidarity vs. Saviorism",
       "sort_order": 40,
       "category": "collective",
       "level": 1,
       "sections": {
-        "The Pattern": "The infrastructure of modern life is colonial infrastructure. Borders drawn by colonial powers. Passports that determine whose movement is free and whose is restricted (a German passport opens 190 countries; a Somali passport opens 35). International debt structured to ensure wealth flows from former colonies to former colonizers. The Bretton Woods institutions (IMF, World Bank) designed by the victors of WWII to manage the global economy in their interest. These are not neutral systems. They are colonial architecture maintained by administrative inertia.",
-        "What It Costs": "The Mediterranean as a mass grave for African migrants denied the mobility that European migrants once claimed as a right. Debt repayments that exceed aid and investment — Sub-Saharan Africa pays more to creditors than it receives in development assistance. Borders that divide families, communities, and ecosystems. The passport hierarchy that values some humans' mobility over others based on nothing more than the accident of birthplace. Colonial infrastructure doesn't need colonial administrators — it runs itself.",
-        "What Persists": "Border abolition movements. Debt jubilee campaigns. South-South financial institutions (BRICS New Development Bank, Asian Infrastructure Investment Bank) that bypass Bretton Woods. Remittance networks that move more money to the Global South than all development aid combined. The migrants themselves — whose movement, despite every barrier, is the most powerful decolonial act: the refusal to stay where colonialism put you.",
-        "The Invitation": "Your passport, your bank account, your ability to move freely — these are not personal achievements. They are colonial inheritances. Not to create guilt, but to see clearly: the infrastructure of your freedom is built on the restriction of others' freedom. What would a post-colonial infrastructure look like?"
+        "The Pattern": "The savior arrives from above: educated, resourced, well-intentioned, and certain about what the community needs. The volunteer abroad. The nonprofit founder. The celebrity advocate. The tech entrepreneur solving Africa's problems. Saviorism reproduces colonial dynamics even when — especially when — it means well. The savior is the subject; the community is the object. The savior defines the problem; the community receives the solution. Power flows one way, and gratitude is the expected return.",
+        "What It Costs": "Communities disempowered by help. Local organizations undermined by international NGOs with bigger budgets and louder voices. Solutions that don't fit because they were designed elsewhere. Voluntourism that centers the volunteer's growth over the community's needs. The white savior industrial complex that Teju Cole named: 'The white savior supports brutal policies in the morning, founds charities in the afternoon, and receives awards in the evening.' The cost is not just inefficiency — it's the reinforcement of the colonial relationship in the language of love.",
+        "What Persists": "Solidarity — the practice of showing up alongside rather than arriving from above. Lilla Watson's formulation: 'If you have come here to help me, you are wasting your time. But if you have come because your liberation is bound up with mine, then let us work together.' Mutual aid networks led by affected communities. The decolonial turn in humanitarian practice. The growing insistence that communities are not problems to be solved but peoples to be accompanied.",
+        "The Invitation": "When you help, who benefits most — them or you? If your helping maintains your sense of yourself as good, generous, and needed, it may be saviorism wearing solidarity's clothes. Real solidarity is uncomfortable. It requires following rather than leading, listening rather than solving, and accepting that your role may be to get out of the way."
       },
-      "keywords": [
-        "borders",
-        "passports",
-        "debt",
-        "IMF",
-        "World Bank",
-        "migration",
-        "Bretton Woods",
-        "colonial infrastructure"
-      ],
+      "keywords": ["solidarity", "saviorism", "white savior", "Teju Cole", "voluntourism", "Lilla Watson", "allyship", "accompaniment"],
       "metadata": {}
     },
     {
-      "id": "collective-solidarity",
-      "name": "Solidarity vs. Saviorism",
+      "id": "collective-intergenerational-memory",
+      "name": "Intergenerational Memory and Transmission",
       "sort_order": 41,
       "category": "collective",
       "level": 1,
       "sections": {
-        "The Pattern": "Saviorism is the colonial form of help: the powerful helping the powerless, from above, on the helper's terms, reinforcing the hierarchy it claims to address. The white savior. The development expert. The voluntourist. The pattern: I know what you need better than you do, my resources give me the right to direct your life, my help comes with conditions that serve my worldview. Solidarity is the decolonial alternative: standing alongside, following indigenous leadership, showing up when asked, doing the uncomfortable internal work rather than the comfortable external project.",
-        "What It Costs": "Billions spent on saviorist projects that serve the savior more than the saved. Orphanage tourism that creates demand for orphans. Volunteer missions that take jobs from local workers. The entire Kony 2012 phenomenon: performative concern that disappeared when the performance ended. The psychic cost to the 'saved': being perpetually positioned as helpless, unable, in need of rescue. Fanon: the colonized subject internalized through the act of being helped.",
-        "What Persists": "Solidarity movements that center indigenous and Global South leadership. The Zapatista principle: 'Everything for everyone, nothing for ourselves.' Mutual aid (horizontal, not vertical). Accompaniment models that follow rather than lead. The growing white anti-racist movement that focuses on internal transformation rather than external rescue. Lilla Watson: 'If you have come here to help me, you are wasting your time. But if you have come because your liberation is bound up with mine, then let us work together.'",
-        "The Invitation": "When you want to help, ask: is this solidarity or saviorism? Am I following the leadership of those most affected, or am I leading? Am I doing the internal work (unlearning, accountability, discomfort) or the external work (projects, donations, performances)? Both are needed. But the internal work must come first, or the external work reproduces the pattern."
+        "The Pattern": "Colonial modernity tells you that you are an individual — a self-contained unit beginning at birth and ending at death. Indigenous and traditional cultures know otherwise: you are a node in a web of relationships that extends forward and backward through time. Intergenerational trauma is now recognized by Western psychology (epigenetics, ACE studies), but intergenerational memory — the positive transmission of knowledge, identity, resilience, and belonging — is less discussed. Colonialism disrupted both: it inflicted trauma across generations while severing the transmission of memory that could heal it.",
+        "What It Costs": "Communities carrying trauma without the stories, ceremonies, and practices that would metabolize it. The boarding school survivor who cannot teach their children the language that was beaten out of them. The descendant of enslaved people who carries stress responses in their biology but not the ancestor practices that would address them. The settler descendant who inherits privilege without history — unable to account for what their ancestors did because the family narrative is silence.",
+        "What Persists": "Story. Song. Recipe. Craft. Naming practices. The grandmother who tells you where you come from. The uncle who teaches you the old way of doing things. Oral history projects that record elder knowledge before it's lost. Intergenerational healing circles. The growing field of historical trauma research that validates what indigenous communities have always known: what happened to your grandparents lives in your body. And: what your grandparents knew can still reach you.",
+        "The Invitation": "What did your grandparents carry that they couldn't speak about? What did they carry that they could? Both of these transmissions live in you. Intergenerational memory is not nostalgia — it's the infrastructure of belonging."
       },
-      "keywords": [
-        "solidarity",
-        "saviorism",
-        "white savior",
-        "voluntourism",
-        "accompaniment",
-        "Lilla Watson",
-        "Zapatistas",
-        "mutual liberation"
-      ],
+      "keywords": ["intergenerational trauma", "epigenetics", "memory", "transmission", "oral history", "elders", "historical trauma", "belonging"],
       "metadata": {}
     },
     {
-      "id": "collective-intergenerational",
-      "name": "Intergenerational Memory and Trauma",
+      "id": "collective-indigenous-governance",
+      "name": "Indigenous Governance and Radical Democracy",
       "sort_order": 42,
       "category": "collective",
       "level": 1,
       "sections": {
-        "The Pattern": "Rachel Yehuda's research on Holocaust survivors and their children demonstrated that trauma alters gene expression across generations — PTSD markers in the children who never experienced the original event. This is not metaphor. It is epigenetics. Indigenous communities have known this for centuries: what happened to the grandparents lives in the grandchildren's bodies. The residential school survivor who cannot parent because their model of parenting was institutional violence. The descendant of enslaved people who carries a cortisol profile shaped by generational stress they never personally experienced. Menakem: racialized trauma is stored in the bodies of ALL races — not just the traumatized but the traumatizers. White bodies carry the trauma of what was done in their name too.",
-        "What It Costs": "Indigenous communities with disproportionate rates of addiction, suicide, domestic violence, and chronic disease — not because of cultural deficiency but because of centuries of cumulative, unprocessed, intergenerational trauma. The Missing and Murdered Indigenous Women crisis. The school-to-prison pipeline for Black youth. These are not individual failures. They are the predictable outcomes of centuries of collective trauma without adequate collective healing. Van der Kolk: trauma that is not processed is transmitted. The body keeps the score across generations.",
-        "What Persists": "Intergenerational healing practices: ceremony, storytelling, land connection, elder-youth mentoring, traditional parenting recovery. The growing integration of indigenous healing with trauma-informed clinical work. Programs like the Indian Residential Schools Resolution Health Support Program. Yehuda's own finding: intergenerational resilience is as real as intergenerational trauma — something in the survivors' biology also confers strength. The grandmother's love is also epigenetic.",
-        "The Invitation": "What did your grandparents survive? What do you carry in your body that you didn't put there? Not to pathologize, but to understand: you are not just an individual. You are a link in a chain. What was passed to you — trauma AND resilience — and what will you pass on? This question is itself the beginning of metabolizing what was transmitted."
+        "The Pattern": "Colonial governance presents itself as the invention of democracy. In reality, the Haudenosaunee Confederacy practiced participatory governance for centuries before European contact — and directly influenced the US Constitution (a debt rarely acknowledged). Indigenous governance systems worldwide developed sophisticated decision-making: consensus processes, council systems, matrilineal authority, seasonal rotation of leadership, governance embedded in ceremony rather than separated into a secular sphere.",
+        "What It Costs": "The erasure of indigenous political sophistication. The assumption that pre-colonial peoples had no governance — that colonialism brought 'order' to 'chaos.' The imposition of band council systems in Canada that replaced traditional governance with colonial structures. The destruction of matrilineal authority by patriarchal colonial systems. The loss of governance models that integrated ecological sustainability, spiritual accountability, and intergenerational thinking — models that Western democracy desperately needs.",
+        "What Persists": "The Haudenosaunee Confederacy still operates. The Zapatista juntas de buen gobierno (councils of good government) demonstrate indigenous-inspired direct democracy. The Kurdish experiment in Rojava draws on council-based governance. Indigenous women's leadership — which colonialism targeted specifically — reasserts itself from Idle No More to water protection movements. The recognition that the world's oldest continuous democracies are indigenous.",
+        "The Invitation": "What if democracy didn't begin in Athens? What if the most sophisticated governance experiments in human history were destroyed by the people who claimed to have invented governance? What governance wisdom exists in communities near you that political science doesn't recognize?"
       },
-      "keywords": [
-        "intergenerational trauma",
-        "Yehuda",
-        "epigenetics",
-        "Menakem",
-        "van der Kolk",
-        "residential schools",
-        "collective healing",
-        "resilience"
-      ],
-      "metadata": {},
-      "grammars": [
-        "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/inner-triangle"
-      ]
+      "keywords": ["indigenous governance", "Haudenosaunee", "consensus", "matrilineal", "Zapatistas", "Rojava", "council systems", "radical democracy"],
+      "metadata": {}
     },
     {
       "id": "planet-domain",
-      "name": "Planet: The Living World",
+      "name": "The Planet: Who Told You the Land Is a Resource?",
       "sort_order": 43,
       "category": "domains",
       "level": 2,
-      "composite_of": [
-        "planet-extractivism",
-        "planet-climate-colonialism",
-        "planet-rights-of-nature",
-        "planet-monoculture",
-        "planet-land-management",
-        "planet-water",
-        "planet-sacrifice-zones",
-        "planet-conservation",
-        "planet-deep-ecology"
-      ],
-      "relationship_type": "emergence",
+      "composite_of": ["planet-extractivism", "planet-climate-colonialism", "planet-rights-of-nature", "planet-monoculture", "planet-indigenous-land-mgmt", "planet-water-sovereignty", "planet-sacrifice-zones", "planet-conservation-colonialism", "planet-deep-vs-indigenous-ecology"],
       "sections": {
-        "About": "[SESSION-5: PLANET DOMAIN] The fifth domain — the living world itself as subject, not resource. Colonialism's deepest move: reclassifying the earth from relative to commodity. Traces the line from the Doctrine of Terra Nullius through the Enclosure Acts to carbon trading. Drawing on Kimmerer's grammar of animacy, Akomolafe's notion of 'the earth is not waiting for us to save it,' and Andreotti's critique of green solutionism. The planet domain asks: what if the earth is not broken and needing our fixing, but composting and inviting our participation?",
-        "The Colonial Logic": "[SESSION-5: PLANET DOMAIN] The colonial logic of the Planet domain is the logic of extraction as relation — treating the living world as standing reserve (Heidegger's Bestand), as raw material awaiting human purpose. This logic requires the prior move of de-animating the world: killing the gods in the rivers so you can dam them, silencing the spirits in the mountains so you can mine them. Maps how this logic produces climate colonialism (those who extracted least suffer most), conservation colonialism (fortress conservation displacing indigenous peoples to 'protect' nature from the very people who sustained it), and the green growth paradox (solving extraction with more extraction, just renewable this time).",
-        "The Invitation": "[SESSION-5: PLANET DOMAIN] To practice being a guest in a living world rather than a manager of natural resources. To notice how even our environmentalism can reproduce colonial patterns — the white savior in a Patagonia jacket. To sit with the grief of ecological loss without rushing to solutionism. To learn from indigenous land management practices not as 'traditional ecological knowledge' to be extracted, but as living relationships to be witnessed and supported. To ask: what does the land where I live want?"
+        "About": "The ecological crisis is a colonial crisis. Not because colonialism caused pollution (though it did) but because colonialism installed the ontology that makes ecological destruction logical. If the earth is a resource, you extract it. If the forest is timber, you cut it. If the river is water supply, you dam it. If the mountain is ore, you mine it. Decolonizing our relationship with the planet means recognizing that the ecological emergency is not a failure of management but the success of a worldview that treats the living earth as dead matter.",
+        "The Colonial Logic": "Nature as standing reserve. The earth as raw material awaiting human purpose. Progress measured in GDP — the metric that counts the cutting of a forest as growth and the standing forest as nothing. The carbon economy as the planetary-scale expression of enclosure: privatize the atmosphere, commodify the climate, trade the right to pollute. The ultimate colonial extraction: not just taking from the land but changing the chemical composition of the sky.",
+        "The Invitation": "The planet doesn't need saving. It needs to be listened to. What is the land where you live telling you? Not the data — the land itself. What is dying? What is being born? What does it ask of you?"
       },
-      "keywords": [
-        "ecology",
-        "extractivism",
-        "climate",
-        "land",
-        "animism",
-        "nature-rights"
-      ],
+      "keywords": ["ecology", "earth", "extraction", "climate", "land", "water", "nature", "biodiversity", "indigenous ecology"],
       "metadata": {}
     },
     {
@@ -1152,18 +687,12 @@
       "category": "planet",
       "level": 1,
       "sections": {
-        "The Pattern": "[SESSION-5: EXTRACTIVISM] The logic of taking without reciprocity — from mining to data harvesting, from monoculture farming to attention economies. Eduardo Galeano's Open Veins of Latin America: 500 years of resource extraction flowing from South to North. Naomi Klein's 'sacrifice zone' logic: some places and peoples are designated as disposable so others can consume. The pattern extends beyond material resources — extractivism of knowledge (biopiracy), of culture (appropriation), of labor (global supply chains), of attention (surveillance capitalism). Menakem: extractivism is stored in the body as entitlement — the felt sense that the world owes you its resources.",
-        "What It Costs": "[SESSION-5: EXTRACTIVISM] Ecological: soil depletion, biodiversity collapse, water contamination, climate destabilization. Somatic: communities living near extraction sites carry the toxins in their bodies — cancer clusters, respiratory disease, reproductive harm. The body of the earth and the body of the marginalized become the same sacrifice zone. Psychic: extractive logic colonizes relationships — treating people as resources to be mined for value. Van der Kolk: when the environment is experienced as perpetually threatening (toxic air, poisoned water), the nervous system never returns to ventral vagal safety.",
-        "What Persists": "[SESSION-5: EXTRACTIVISM] Gift economies. Potlatch traditions. Reciprocity protocols with the more-than-human world — Kimmerer's Honorable Harvest (never take more than half, always give thanks, always give back). Andean ayni (reciprocal labor). Aboriginal fire-stick farming as giving back to country. Subsistence cultures that treat surplus as a sign of imbalance, not success. The mycorrhizal network as biological model — nutrients flow to where they're needed, not where they're hoarded.",
-        "The Invitation": "[SESSION-5: EXTRACTIVISM] Notice where extractive logic lives in your daily life — in how you consume, relate, work. Ask: what am I taking without giving back? Can you practice Kimmerer's Honorable Harvest with one resource this week? Can you trace one object in your home back to its extraction site and sit with what you find? Not to paralyze with guilt, but to restore the broken feedback loop between consumption and consequence."
+        "The Pattern": "Extractivism is the logic of colonialism distilled to its essence: take, transform, discard. Take silver from Potosí, sugar from the Caribbean, rubber from the Congo, oil from the Niger Delta, lithium from Bolivia, coltan from the DRC. The pattern is five centuries old and accelerating. The extractive frontier moves but the structure stays: resources flow from colonized lands to metropolitan markets, profits accumulate in imperial centers, waste and devastation remain where the resources were.",
+        "What It Costs": "Potosí: 8 million indigenous and enslaved African people died in the silver mines. The Congo: King Leopold's rubber terror killed an estimated 10 million Congolese. The Niger Delta: half a century of oil extraction has destroyed the ecosystem and poisoned the water. Bolivia: lithium mining for 'green' technology threatens indigenous water sources. The cost is always borne by the people living on top of what the market wants below.",
+        "What Persists": "Communities that say no. The Ogoni people's resistance to Shell in Nigeria. The Waorani nation's legal victory against oil drilling in Ecuador. Water protectors at Standing Rock. Anti-mining movements across Latin America. The concept of 'leaving it in the ground' — the recognition that not all resources should be extracted, that some wealth is worth more underground, as the earth's body rather than the market's commodity.",
+        "The Invitation": "Everything you own was extracted from somewhere. This is not guilt — it's physics. But physics without ethics is extractivism. What would an economy look like that took only what the earth offered rather than what the market demanded?"
       },
-      "keywords": [
-        "extraction",
-        "mining",
-        "reciprocity",
-        "resources",
-        "consumption"
-      ],
+      "keywords": ["extractivism", "mining", "Potosí", "Niger Delta", "lithium", "oil", "Standing Rock", "resource curse"],
       "metadata": {}
     },
     {
@@ -1173,48 +702,28 @@
       "category": "planet",
       "level": 1,
       "sections": {
-        "The Pattern": "[SESSION-5: CLIMATE COLONIALISM] The pattern where those who benefited most from carbon-intensive industrialization are least affected by climate change, while those who contributed least suffer most — Pacific Island nations drowning from emissions they never produced, Sahel farmers facing desertification from carbon they never burned. Extends to climate 'solutions': lithium mining in Bolivia and Congo for electric cars in Berlin and San Francisco. Carbon offset schemes where Northern corporations pay Southern communities to not develop. Green colonialism: wind farms on Sámi reindeer land, solar farms displacing pastoralists, conservation displacing indigenous peoples.",
-        "What It Costs": "[SESSION-5: CLIMATE COLONIALISM] Climate refugees (250 million projected by 2050) overwhelmingly from the Global South. Loss of island nations — entire cultures, languages, cosmologies drowned. Food sovereignty destroyed as monoculture cash crops replace diverse subsistence farming. Climate anxiety in the Global North as psychic cost — but this anxiety itself can be a form of colonial narcissism (centering Northern feelings about a Southern catastrophe). Yehuda's epigenetics: climate trauma will be inherited. The children of Tuvalu will carry the grief of a drowned homeland in their gene expression.",
-        "What Persists": "[SESSION-5: CLIMATE COLONIALISM] Indigenous climate knowledge — reading weather patterns, managing fire, rotating crops, reading animal behavior — thousands of years of climate adaptation expertise. Pacific Islander wayfinding: navigating vast oceans by reading currents, stars, and wave patterns. Inuit ice knowledge. Aboriginal seasonal calendars. These are not 'traditional' (implying outdated) but contemporary, dynamic, and often more accurate than satellite data for local conditions. Climate justice movements led by frontline communities — not waiting for Northern saviors but demanding sovereignty.",
-        "The Invitation": "[SESSION-5: CLIMATE COLONIALISM] Ask whose climate solutions you're investing in — and whether those solutions reproduce or interrupt colonial patterns. Notice if your environmentalism centers your own anxiety over frontline communities' sovereignty. Learn about climate debt (not as abstract concept but as embodied obligation). Support indigenous-led climate initiatives that prioritize sovereignty over efficiency. Sit with the possibility that the planet doesn't need 'saving' — it needs us to stop."
+        "The Pattern": "The nations most responsible for climate change are least affected by it. The nations least responsible are most affected. This is not irony — it's structure. The Global North industrialized using fossil fuels, accumulated wealth through carbon-intensive development, and now the Global South drowns, burns, and starves from the consequences. Carbon colonialism adds insult: carbon offset schemes where Northern polluters pay Southern communities to plant trees or not develop — essentially paying the colonized to absorb the colonizer's pollution.",
+        "What It Costs": "Small island nations disappearing. Bangladesh flooding. Sub-Saharan drought. Climate refugees who will never be called refugees. The Loss and Damage framework, fought for by the Global South at COP negotiations, perpetually resisted by the Global North. The obscenity of climate adaptation: asking the poorest nations to adapt to a crisis created by the richest. Climate change is not an equal-opportunity disaster. It is colonialism's atmosphere.",
+        "What Persists": "Climate justice movements that center the most affected. The Alliance of Small Island States (AOSIS) demanding accountability. Indigenous climate leadership — indigenous peoples protect 80% of the world's remaining biodiversity while comprising 5% of the population. The Loss and Damage fund finally established at COP27 (2022), however inadequately funded. The framing shift from 'climate change' to 'climate justice' — insisting that the crisis cannot be addressed without addressing its colonial structure.",
+        "The Invitation": "What is your carbon footprint? Now ask: what is your nation's historical carbon debt? The personal and the structural are not the same question, and answering only the personal is a way of avoiding the structural. Climate justice is not about your individual choices. It's about the system those choices exist within."
       },
-      "keywords": [
-        "climate",
-        "justice",
-        "carbon",
-        "refugees",
-        "global-south",
-        "green-colonialism"
-      ],
+      "keywords": ["climate justice", "climate colonialism", "carbon colonialism", "loss and damage", "AOSIS", "carbon offsets", "Global South", "climate refugees"],
       "metadata": {}
     },
     {
       "id": "planet-rights-of-nature",
-      "name": "Rights of Nature",
+      "name": "Rights of Nature and Legal Personhood of Rivers",
       "sort_order": 46,
       "category": "planet",
       "level": 1,
       "sections": {
-        "The Pattern": "[SESSION-5: RIGHTS OF NATURE] The legal and philosophical movement to grant rivers, forests, mountains, and ecosystems legal personhood — shifting nature from property to subject. Ecuador's 2008 constitution (Pachamama's rights). New Zealand's Te Awa Tupua Act (2017) granting the Whanganui River legal personhood. Bolivia's Law of Mother Earth. India's Ganges and Yamuna rivers granted personhood (2017). These legal innovations draw directly on indigenous cosmologies where rivers ARE persons, mountains ARE ancestors, and the idea that they need 'rights' would be absurd because they already have standing in the community of life.",
-        "What It Costs": "[SESSION-5: RIGHTS OF NATURE] The Western legal framework that requires nature to be 'granted' personhood reveals the depth of the colonial wound — the fact that rivers need lawyers to protect them shows how far the relational rupture extends. Risk of tokenism: granting legal personhood without changing the economic logic that treats nature as commodity. Risk of appropriation: codifying indigenous cosmologies into Western legal frameworks that may strip them of their ceremonial and spiritual dimensions. The Whanganui River doesn't need 'rights' — it needs its people to be able to care for it as they always have.",
-        "What Persists": "[SESSION-5: RIGHTS OF NATURE] Indigenous legal systems that never separated nature from personhood — Haudenosaunee Great Law of Peace includes the natural world in governance. Māori whakapapa (genealogy) traces kinship to mountains, rivers, and seas. Aboriginal songlines as land law — the law IS the land. Andean Pachamama cosmology where earth is not metaphorically but literally mother. These are not 'alternative' legal systems but older and often more sophisticated ones that manage common resources without the tragedy of the commons (which is itself a colonial fiction — Hardin's 'tragedy' assumed no social norms, which is a colonial projection).",
-        "The Invitation": "[SESSION-5: RIGHTS OF NATURE] Learn the indigenous name for the waterway nearest to your home. Research its legal status — who 'owns' it? Who is responsible for its health? Practice Kimmerer's grammar of animacy: say 'the river who flows' instead of 'the river that flows.' Notice how the pronoun shift changes your felt relationship to the water. Ask: if this river could speak in court, what would it say about how we've treated it? What would it ask for?"
+        "The Pattern": "In colonial law, nature is property. It has no standing in court, no rights, no voice. You can sue someone for damaging your property (including 'your' land), but the land itself cannot sue. This legal framework makes ecological destruction not just possible but rational — the legal system literally cannot see harm to nature as harm. Rights of Nature reverses this: what if rivers, forests, and ecosystems were legal persons with rights that could be defended in court?",
+        "What It Costs": "Centuries of ecological destruction enabled by nature's legal invisibility. Rivers poisoned with impunity. Forests clearcut legally. Species driven to extinction within the law. Environmental law, even at its strongest, protects nature instrumentally (for human use) rather than intrinsically (for its own sake). The legal framework inherited from colonialism treats the earth as a thing, and things have no rights.",
+        "What Persists": "Ecuador's 2008 constitution — the first to enshrine Rights of Nature. Bolivia's Law of Mother Earth. New Zealand granting legal personhood to the Whanganui River (Te Awa Tupua) in 2017 — recognizing the Māori understanding that the river is an ancestor, not a resource. India's courts recognizing the Ganges and Yamuna as legal persons. Colombia granting rights to the Atrato River. The legal revolution is small but growing: nature as subject, not object.",
+        "The Invitation": "If the river near your home had legal standing, what would it say in court? What harm would it name? What repair would it demand? The fact that this feels like a thought experiment rather than a legal reality tells you everything about the colonial legal imagination."
       },
-      "keywords": [
-        "legal-personhood",
-        "rivers",
-        "ecosystems",
-        "indigenous-law",
-        "pachamama"
-      ],
-      "metadata": {},
-      "grammars": [
-        {
-          "grammar_name": "Creative Evolution",
-          "grammar_url": "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/creative-evolution",
-          "note": "Bergson's élan vital — life as creative force, not mechanism. Philosophical precursor to recognizing nature's agency."
-        }
-      ]
+      "keywords": ["rights of nature", "legal personhood", "Whanganui", "Te Awa Tupua", "Ecuador constitution", "Pachamama", "environmental law", "river rights"],
+      "metadata": {}
     },
     {
       "id": "planet-monoculture",
@@ -1223,180 +732,105 @@
       "category": "planet",
       "level": 1,
       "sections": {
-        "The Pattern": "[SESSION-5: MONOCULTURE] The colonial logic of monoculture — replacing diverse ecosystems with single-crop plantations, and by extension, replacing diverse cultures with a single 'universal' civilization. Sugar plantations in the Caribbean, rubber in the Congo, palm oil in Indonesia — each monoculture required the destruction of existing ecosystems and the enslavement or displacement of existing peoples. Vandana Shiva: monocultures of the mind precede monocultures of the land. The same logic that plants one crop everywhere plants one language, one religion, one economic system everywhere. Standardization as colonial technology.",
-        "What It Costs": "[SESSION-5: MONOCULTURE] Ecological: 75% of crop diversity lost in the 20th century. Topsoil depletion. Pollinator collapse. Pest vulnerability (Irish Potato Famine as monoculture catastrophe). Cultural: language death (one language dies every two weeks), knowledge loss, cosmological flattening. Somatic: monoculture diets produce monoculture guts — the microbiome as site of colonization. Industrial food produces bodies adapted to industrial food, dependent on industrial medicine. The feedback loop of standardization: standardized land produces standardized food produces standardized bodies produces standardized minds.",
-        "What Persists": "[SESSION-5: MONOCULTURE] Seed keepers — indigenous women who maintain diverse seed varieties outside the corporate seed system. Navdanya (Vandana Shiva's seed sovereignty movement). Milpa farming (corn, beans, squash — the Three Sisters). Forest gardens. Polyculture traditions that produce more food per acre than monoculture while building soil rather than depleting it. Linguistic diversity preservation — immersion schools, language nests, digital archives. The gut as site of resistance: fermented foods, diverse diets, traditional food preparation as cultural practice and microbial diversity maintenance.",
-        "The Invitation": "[SESSION-5: MONOCULTURE] Grow something. Anything. Even herbs on a windowsill reconnect you to the cycle of planting, tending, harvesting, composting. If possible, grow heirloom or indigenous varieties. Eat diversely — different grains, different ferments, different preparations. Learn what grew on the land where you live before it was colonized. Ask: what monocultures of the mind am I participating in? Where do I assume there's only one right way to do something? Where is my thinking a plantation?"
+        "The Pattern": "Colonial agriculture is monoculture: one crop, one field, maximum yield, chemical inputs, export orientation. It replaced polyculture — diverse crops growing in relationship, adapted to local ecology, sustaining local communities. The Green Revolution of the 1960s-70s intensified this pattern globally: high-yield varieties, irrigation, fertilizers, pesticides — all dependent on industrial inputs that created dependency on global markets. Monoculture is not just an agricultural practice. It's a metaphor for colonialism itself: one way, one crop, one knowledge, one future.",
+        "What It Costs": "75% of crop genetic diversity lost in the 20th century. Soil depletion from single-crop farming. Pesticide poisoning — 385 million cases annually. Farmer suicides in India linked to debt from purchased seeds and inputs. The destruction of local food systems that were diverse, resilient, and sustainable. Pollinator collapse. The vulnerability of monocultures to disease — the Irish Potato Famine as paradigm: a single variety, a single pathogen, a million dead.",
+        "What Persists": "Seed savers. Agrobiodiversity hotspots maintained by indigenous and smallholder farmers. The Svalbard Global Seed Vault — though its existence admits the crisis. Agroecology — the scientific and political movement to farm with ecology rather than against it. Permaculture. Forest gardens. The Slow Food movement. Navdanya, Vandana Shiva's seed-saving network. The stubborn, radical practice of growing diverse food in a world that demands monoculture.",
+        "The Invitation": "How many varieties of apple existed a century ago? Over 15,000 in the US alone. How many are in your supermarket? Five or six. That loss — applied to every crop, every ecosystem, every culture — is the cost of monoculture. What diversity are you cultivating, in your garden and in your life?"
       },
-      "keywords": [
-        "biodiversity",
-        "agriculture",
-        "seeds",
-        "monoculture",
-        "food-sovereignty"
-      ],
-      "metadata": {},
-      "grammars": [
-        {
-          "grammar_name": "Origin of Species",
-          "grammar_url": "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/origin-of-species",
-          "note": "Darwin's biodiversity observations — the strength of variation, the danger of uniformity."
-        }
-      ]
+      "keywords": ["monoculture", "biodiversity", "Green Revolution", "seed saving", "agroecology", "Navdanya", "permaculture", "crop diversity"],
+      "metadata": {}
     },
     {
-      "id": "planet-land-management",
+      "id": "planet-indigenous-land-mgmt",
       "name": "Indigenous Land Management",
       "sort_order": 48,
       "category": "planet",
       "level": 1,
       "sections": {
-        "The Pattern": "[SESSION-5: INDIGENOUS LAND MANAGEMENT] The recognition that landscapes colonizers encountered as 'wilderness' were in fact carefully managed cultural landscapes — Aboriginal fire-stick farming shaping Australian ecology for 65,000 years, Amazonian terra preta (dark earth) created by pre-Columbian peoples, Pacific Northwest forest gardens, Great Plains fire management creating the vast grasslands Europeans mistook for 'natural.' Charles Mann (1491): the Americas were more densely populated and more extensively managed than Europe. The 'pristine wilderness' myth is colonial propaganda that erases indigenous labor and legitimizes dispossession — you can't steal what nobody was using.",
-        "What It Costs": "[SESSION-5: INDIGENOUS LAND MANAGEMENT] When indigenous land management is removed, ecosystems collapse — catastrophic wildfires in Australia and California after suppressing indigenous burning practices. Amazon deforestation accelerates where indigenous territories are not legally protected. Colonial conservation (removing indigenous people to 'protect' nature) produces worse ecological outcomes than indigenous management. The cost is also epistemic: indigenous land management knowledge, accumulated over millennia, is lost when communities are displaced. You can't replant knowledge that took 10,000 years to grow.",
-        "What Persists": "[SESSION-5: INDIGENOUS LAND MANAGEMENT] Cultural burning returning to California, Australia, and Brazil — indigenous fire practitioners invited back to manage land they were expelled from. Aboriginal ranger programs in Australia. Indigenous Protected Areas (IPAs) — indigenous-led conservation that outperforms government-managed parks. Traditional Ecological Knowledge (TEK) increasingly recognized in climate science. The key tension: TEK must be supported without being extracted. The knowledge belongs to the people, not to the journals that publish it.",
-        "The Invitation": "[SESSION-5: INDIGENOUS LAND MANAGEMENT] Learn the land management history of where you live. Who tended this land before colonization? What practices shaped the ecology you see? If indigenous burning or management programs exist in your region, learn about and support them. Notice the word 'wilderness' and what it erases. Ask: am I looking at an unmanaged landscape, or a landscape whose managers were removed?"
+        "The Pattern": "The colonial myth of wilderness — pristine, untouched nature — erases tens of thousands of years of indigenous land management. The Amazon 'rainforest' was partly cultivated by indigenous peoples over millennia. Australian Aboriginal fire management shaped the entire continent's ecology. The Great Plains' grasslands were maintained by indigenous burning and bison management. 'Wilderness' is a colonial concept that requires the removal of indigenous people to exist — which is exactly what happened in the creation of national parks.",
+        "What It Costs": "Yosemite was created by removing the Ahwahneechee people. Yellowstone by removing the Crow, Shoshone, and Bannock. This pattern — conservation through dispossession — continues globally. 'Fortress conservation' has displaced an estimated 14 million indigenous people worldwide. The land then degrades because the people who knew how to tend it are gone. Forest fires intensify because indigenous burning was suppressed. Ecosystems collapse because management was mistaken for wilderness.",
+        "What Persists": "Cultural burning returning to California, Australia, and the Pacific Northwest. Indigenous-led conservation — indigenous territories account for 80% of the world's remaining biodiversity. IPBES (the biodiversity equivalent of the IPCC) recognizing indigenous knowledge as essential. Co-management agreements that return stewardship to indigenous peoples. The growing scientific recognition that the 'pristine wilderness' never existed — that what colonists found was not untouched nature but the product of sophisticated, millennia-old land management.",
+        "The Invitation": "The land you live on was managed by someone before you. Their management made it what it was when your ancestors arrived. What did they know about this land that you don't? What would it mean to learn from them — not extractively, but in relationship?"
       },
-      "keywords": [
-        "fire",
-        "wilderness",
-        "terra-preta",
-        "cultural-burning",
-        "land-management"
-      ],
-      "metadata": {},
-      "grammars": [
-        {
-          "grammar_name": "Walden",
-          "grammar_url": "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/walden",
-          "note": "Thoreau's Walden — the 'wilderness' ideal that both honors and obscures indigenous presence. A text to read with decolonial eyes."
-        }
-      ]
+      "keywords": ["indigenous land management", "cultural burning", "wilderness myth", "national parks", "fortress conservation", "fire management", "IPBES", "stewardship"],
+      "metadata": {}
     },
     {
-      "id": "planet-water",
+      "id": "planet-water-sovereignty",
       "name": "Water Sovereignty",
       "sort_order": 49,
       "category": "planet",
       "level": 1,
       "sections": {
-        "The Pattern": "[SESSION-5: WATER] Water as the clearest site of colonial logic: the privatization of a commons essential to all life. From Cochabamba (Bolivia's water war, 2000) to Flint (Michigan's poisoned water, 2014-present) to Standing Rock (DAPL pipeline, 2016) — water reveals who counts as human and who doesn't. The colonial pattern: dam rivers to power industry, divert water to irrigate monoculture, privatize water systems to generate profit, contaminate aquifers with extraction waste, then sell bottled water back to the people whose water you poisoned. Mní Wičhóni — Water is Life (Lakota).",
-        "What It Costs": "[SESSION-5: WATER] 2 billion people lack access to safe drinking water globally. Waterborne disease kills more children than war. Dams have displaced 40-80 million people worldwide, overwhelmingly indigenous and rural poor. The Aral Sea — once the world's fourth-largest lake, now a toxic desert from Soviet irrigation projects. Somatic: water contamination is stored in the body — Flint's children carry lead in their bones, their cognitive development permanently altered. The body literally carries the colonial wound in its water content (60% of the human body is water — contaminated water becomes contaminated bodies).",
-        "What Persists": "[SESSION-5: WATER] Water protectors (not protesters — the language matters). Cochabamba's successful fight to re-municipalize water. Māori water sovereignty frameworks. Indigenous water monitoring programs using both scientific instruments and traditional knowledge. Water ceremonies that maintain relational accountability to watersheds. The Standing Rock camps as ceremony: people gathered not to fight a pipeline but to pray with the water. The insight that water protection is not environmental activism but spiritual practice — because water is not a resource but a relative.",
-        "The Invitation": "[SESSION-5: WATER] Learn where your water comes from. Not the tap — before the tap. What watershed do you live in? What is its indigenous name? Who manages it, and whose land was it taken from? Practice gratitude for water — not as spiritual bypass but as relational practice. Support water sovereignty movements in your region. Ask: if water is life, what does it mean that we've made it a commodity?"
+        "The Pattern": "Water privatization is enclosure applied to the most essential commons. From Cochabamba to Detroit, from Flint to the Niger Delta, the pattern repeats: public water systems are defunded, privatized, or poisoned, and the communities affected are always the most colonized. The World Bank conditions loans on water privatization. Nestlé extracts billions of gallons from aquifers for pennies. Water becomes commodity in a world where 2 billion people lack safe drinking water.",
+        "What It Costs": "Flint, Michigan: majority-Black city poisoned by lead in the water for years while officials denied it. Cochabamba, Bolivia: water privatized until rain collection was illegal, provoking a popular uprising. Detroit: water shutoffs in a majority-Black city while corporations owed more and paid less. Standing Rock: the pipeline that oil companies wouldn't route through white communities was routed through Lakota water. The pattern is always the same: colonial and racial capitalism determines whose water is protected and whose is sacrificed.",
+        "What Persists": "The Cochabamba Water War (2000) that reversed privatization through popular uprising. The UN recognition of water as a human right (2010). Water protectors — Autumn Peltier, the movement at Standing Rock — who insist that water is not a commodity but a relative. 'Mni Wiconi' — Water is Life — as both Lakota prayer and political demand. Community water systems. Watershed councils. The ancient understanding that water belongs to no one and sustains everyone.",
+        "The Invitation": "Where does your water come from? Not the tap — the source. What watershed do you live in? Who else — human and non-human — depends on it? Water sovereignty begins with knowing your water, which begins with knowing your land."
       },
-      "keywords": [
-        "water",
-        "sovereignty",
-        "privatization",
-        "standing-rock",
-        "watersheds"
-      ],
+      "keywords": ["water sovereignty", "Mni Wiconi", "Flint", "Cochabamba", "water privatization", "Standing Rock", "Nestle", "watershed"],
       "metadata": {}
     },
     {
       "id": "planet-sacrifice-zones",
-      "name": "Sacrifice Zones",
+      "name": "Sacrifice Zones and Environmental Racism",
       "sort_order": 50,
       "category": "planet",
       "level": 1,
       "sections": {
-        "The Pattern": "[SESSION-5: SACRIFICE ZONES] The designation of certain places and peoples as expendable for the benefit of others — originally a Cold War military term for areas expected to be destroyed in nuclear war, now describing communities subjected to toxic dumping, resource extraction, and environmental devastation. Cancer Alley (Louisiana), Niger Delta (Nigeria), Bhopal (India), Chernobyl/Fukushima. Environmental racism: in the US, race is the strongest predictor of proximity to hazardous waste — stronger than income. The colonial logic: someone's body, someone's land must absorb the cost of someone else's comfort. The someone is never random.",
-        "What It Costs": "[SESSION-5: SACRIFICE ZONES] Bodies: elevated cancer rates, respiratory disease, reproductive harm, shortened lifespans. Communities: forced relocation, loss of traditional lifeways, economic dependency on the very industries poisoning them. Psychology: the knowledge that your government considers your community expendable — what van der Kolk calls 'developmental trauma' at the community level. Yehuda's epigenetics: toxic exposure alters gene expression across generations. The children of sacrifice zones inherit not just poverty but biological vulnerability. The nervous system of a sacrifice zone community is perpetually in sympathetic (fight/flight) or dorsal vagal (collapse) — never ventral vagal safety.",
-        "What Persists": "[SESSION-5: SACRIFICE ZONES] Environmental justice movement — Robert Bullard's foundational work showing that environmental racism is not accidental but structural. Community-based health monitoring. Citizen science — communities documenting their own exposure when governments won't. Legal victories: compensation for radiation exposure in Marshall Islands, cleanup mandates in Superfund sites. Mutual aid networks in contaminated communities. The refusal to move: some communities stay not because they can't leave but because the land is theirs and leaving would complete the dispossession.",
-        "The Invitation": "[SESSION-5: SACRIFICE ZONES] Map the sacrifice zones in your region — where are the waste facilities, the chemical plants, the pipelines? Who lives there? What is the demographic composition? Notice the pattern. Research whether your consumption is connected to a sacrifice zone somewhere else (your phone's cobalt comes from Congolese mines, your clothes from Bangladeshi factories). Ask: whose body is absorbing the cost of my comfort? Not to paralyze with guilt but to restore the severed feedback loop between consumption and consequence."
+        "The Pattern": "A sacrifice zone is a place deemed expendable — where pollution, extraction, and waste are concentrated because the people living there are considered less valuable than the resources beneath them or the waste dumped on them. Cancer Alley in Louisiana. The Navajo Nation's uranium mines. The Niger Delta's oil fields. Chevron's toxic legacy in Ecuador. Sacrifice zones are never wealthy, never white, never politically powerful. Environmental racism is not a side effect of colonialism — it is colonialism's spatial logic made visible.",
+        "What It Costs": "Communities with cancer rates orders of magnitude above national averages. Children with asthma from living near refineries. Water tables poisoned by fracking. Navajo communities still dealing with uranium contamination from Cold War mining — the US government knew the risks and mined anyway because the people were indigenous. The EPA's own research confirms that communities of color bear disproportionate pollution burdens. The sacrifice zone is colonialism's ongoing cartography: who is worth protecting and who is worth sacrificing.",
+        "What Persists": "Environmental justice movements born in Warren County, North Carolina (1982), when a Black community fought a toxic waste dump. Robert Bullard's foundational research documenting environmental racism. Frontline communities organizing — from the Ogoni Nine to Cancer Alley residents to indigenous resistance to pipelines. The insistence that no community is a sacrifice zone. The demand that those who pollute be held accountable, and that the communities most affected lead the response.",
+        "The Invitation": "Where is the nearest sacrifice zone to where you live? How far is it? The distance between your home and the nearest sacrifice zone is a measure of your privilege. Environmental justice is not about recycling. It's about who breathes poison so that others can breathe clean air."
       },
-      "keywords": [
-        "environmental-racism",
-        "toxic-waste",
-        "cancer-alley",
-        "environmental-justice"
-      ],
+      "keywords": ["sacrifice zones", "environmental racism", "Cancer Alley", "Bullard", "environmental justice", "frontline communities", "toxic waste", "pollution"],
       "metadata": {}
     },
     {
-      "id": "planet-conservation",
+      "id": "planet-conservation-colonialism",
       "name": "Conservation Colonialism",
       "sort_order": 51,
       "category": "planet",
       "level": 1,
       "sections": {
-        "The Pattern": "[SESSION-5: CONSERVATION COLONIALISM] Fortress conservation — the model of 'protecting' nature by removing the indigenous peoples who lived with it for millennia. Yellowstone (1872) as template: the Shoshone, Crow, Blackfeet, and Bannock were expelled to create 'uninhabited wilderness.' Repeated worldwide: Maasai expelled from Serengeti, Batwa expelled from Bwindi (gorilla conservation), Ogiek expelled from Mau Forest in Kenya. The cruel irony: indigenous-managed lands have higher biodiversity than 'protected' areas from which indigenous peoples were removed. Conservation colonialism reproduces the colonial logic it claims to oppose — saving nature FROM the people who were saving it.",
-        "What It Costs": "[SESSION-5: CONSERVATION COLONIALISM] Displaced communities (estimated 14 million indigenous people displaced by conservation worldwide). Loss of indigenous land management knowledge. Often worse ecological outcomes — without indigenous burning, grazing management, and selective harvesting, 'protected' ecosystems degrade. Human rights violations in the name of nature: shoot-on-sight anti-poaching policies, violent evictions, sexual violence by park rangers against indigenous women. The psychic cost: being told you are the enemy of the land that is your ancestor.",
-        "What Persists": "[SESSION-5: CONSERVATION COLONIALISM] Indigenous-led conservation movements. Indigenous Protected Areas (IPAs) in Australia covering 74 million hectares. Indigenous Community Conserved Areas (ICCAs) worldwide. The paradigm shift from 'fortress conservation' to 'biocultural diversity' — recognizing that cultural diversity and biological diversity are interdependent. Co-management agreements where indigenous peoples lead conservation on their own territories. The growing scientific consensus: indigenous peoples are the best guardians of biodiversity. Not because they're 'noble savages' (another colonial trope) but because their land management systems work.",
-        "The Invitation": "[SESSION-5: CONSERVATION COLONIALISM] Examine your conservation donations — do they support fortress conservation or indigenous-led stewardship? Learn about the colonial history of 'protected areas' near you. When you visit national parks, learn whose homeland you're walking through. Support organizations that center indigenous land sovereignty in conservation: Cultural Survival, Amazon Watch, First Peoples Worldwide. Ask: can nature be 'protected' by the same logic that endangered it?"
+        "The Pattern": "Fortress conservation — the model of protecting nature by removing people — is colonialism wearing green. National parks created by dispossessing indigenous communities. Conservation NGOs buying land and evicting residents. The assumption that humans and nature are separate and that nature requires protection from humans (rather than from particular economic systems). This model of conservation reproduces the colonial myth of wilderness: pristine nature exists only where indigenous people have been removed.",
+        "What It Costs": "An estimated 14 million indigenous and traditional people displaced by conservation projects worldwide. Maasai evicted from the Serengeti. Batwa expelled from Bwindi Impenetrable Forest. San people removed from the Central Kalahari Game Reserve. The cruel irony: the communities displaced were often the ones whose practices maintained the biodiversity that conservation now seeks to protect. Remove the people, and the ecosystem degrades.",
+        "What Persists": "Indigenous and Community Conserved Areas (ICCAs) — conservation led by communities rather than imposed on them. The recognition that indigenous territories are the most biodiverse precisely because of, not despite, indigenous management. The shift from fortress conservation to community-based conservation. The 30x30 target (protecting 30% of earth by 2030) increasingly recognizing that indigenous-led conservation is not an alternative to 'real' conservation — it is the most effective conservation.",
+        "The Invitation": "Who was removed so that your favorite national park could exist? This is not an argument against parks. It's an argument for a different kind of conservation — one that includes the people who know the land best."
       },
-      "keywords": [
-        "fortress-conservation",
-        "displacement",
-        "national-parks",
-        "wilderness-myth",
-        "indigenous-conservation"
-      ],
+      "keywords": ["fortress conservation", "national parks", "conservation refugees", "ICCAs", "30x30", "Serengeti", "community conservation", "green colonialism"],
       "metadata": {}
     },
     {
-      "id": "planet-deep-ecology",
+      "id": "planet-deep-vs-indigenous-ecology",
       "name": "Deep Ecology vs. Indigenous Ecology",
       "sort_order": 52,
       "category": "planet",
       "level": 1,
       "sections": {
-        "The Pattern": "[SESSION-5: DEEP VS INDIGENOUS ECOLOGY] Deep ecology (Arne Naess, 1973) calls for recognizing nature's intrinsic value beyond human use — a radical position within Western philosophy but a basic assumption in most indigenous cosmologies. The tension: deep ecology often arrives at indigenous conclusions (kinship with nature, intrinsic value of all beings) without acknowledging indigenous sources, and sometimes reproduces colonial patterns — misanthropy that doesn't distinguish between indigenous subsistence and industrial extraction, biocentrism that can be used to justify removing humans (indigenous humans) from 'natural' areas. Kimmerer's critique: 'Saying that nature has intrinsic value is a step forward for Western thought. For indigenous peoples, it's where we started.'",
-        "What It Costs": "[SESSION-5: DEEP VS INDIGENOUS ECOLOGY] When deep ecology doesn't engage with colonialism, it can reproduce it: the idea that 'humans are the problem' erases the fact that some humans have lived sustainably for millennia while others have not. Population control arguments (ecofascism) disproportionately target Global South communities. 'Back to nature' movements often romanticize an imagined pre-human wilderness that never existed — and in doing so, erase indigenous presence. The cost is also epistemic: deep ecology reinvents indigenous philosophy without citation, a form of intellectual extractivism.",
-        "What Persists": "[SESSION-5: DEEP VS INDIGENOUS ECOLOGY] Indigenous ecological philosophy — not as 'traditional knowledge' to be extracted by Western ecology but as living, evolving, sophisticated systems of relational accountability. Kimmerer's grammar of animacy: English reduces nature to 'it' while Potawatomi has pronouns for living beings. Amazonian perspectivism (Viveiros de Castro): animals see themselves as people, shamans can shift perspectives. Aboriginal Law of the Land: the law doesn't govern the land — the land IS the law. These are not 'alternative' ecologies but the original ecologies, and they persist because they work.",
-        "The Invitation": "[SESSION-5: DEEP VS INDIGENOUS ECOLOGY] If you're drawn to deep ecology, environmental philosophy, or nature spirituality, trace the lineage — where did these ideas originate? Whose indigenous philosophy is being reformulated in Western terms? Read Kimmerer alongside Naess, Viveiros de Castro alongside Haraway, Deloria alongside Leopold. Practice Kimmerer's grammar of animacy: refer to beings as 'who' not 'that.' Notice how this shift in language shifts your relationship to the living world. Ask: am I learning FROM indigenous ecology or learning ABOUT it? The preposition matters."
+        "The Pattern": "Deep ecology, founded by Arne Næss, calls for recognizing nature's intrinsic value beyond human use. This is an important corrective to purely instrumental environmentalism. But deep ecology often reinvents what indigenous peoples have practiced for millennia — without acknowledgment, relationship, or reciprocity. Worse, deep ecology's emphasis on wilderness and population reduction can reproduce colonial logics: 'too many people' has always meant 'too many of those people,' and wilderness preservation has always meant indigenous removal.",
+        "What It Costs": "The appropriation of indigenous ontology by Western environmentalism without credit or accountability. The 'population bomb' discourse that targets Global South reproduction while ignoring Global North consumption. The misanthropy that sees humans as the problem rather than colonial capitalism as the problem. The missed opportunity for genuine partnership between Western environmental movements and indigenous ecological knowledge holders.",
+        "What Persists": "Indigenous ecology — not as a category within environmentalism but as a distinct tradition with its own ontology, ethics, and practices. Robin Wall Kimmerer's 'Braiding Sweetgrass' bridging indigenous and scientific ecological knowledge. The Rights of Nature movement grounded in indigenous legal traditions. Political ecology that insists the environmental crisis is inseparable from colonial capitalism. The refusal to choose between human justice and ecological justice — because they are the same justice.",
+        "The Invitation": "When you feel love for the earth, where does that love come from? If it comes from a tradition that erased the people who practiced it first, it's worth asking: how do you love the earth without appropriating the love of those who were here first? The answer is relationship, not ideology."
       },
-      "keywords": [
-        "deep-ecology",
-        "animism",
-        "biocentrism",
-        "grammar-of-animacy",
-        "perspectivism"
-      ],
-      "metadata": {},
-      "grammars": [
-        {
-          "grammar_name": "Creative Evolution",
-          "grammar_url": "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/creative-evolution",
-          "note": "Bergson's critique of mechanistic thinking — an early Western attempt to re-animate matter that indigenous cosmologies never de-animated."
-        }
-      ]
+      "keywords": ["deep ecology", "indigenous ecology", "Næss", "Kimmerer", "Braiding Sweetgrass", "political ecology", "environmentalism", "ecofeminism"],
+      "metadata": {}
     },
     {
       "id": "hospicing-modernity",
-      "name": "Hospicing Modernity",
+      "name": "Hospicing Modernity: The Five Domains as One Wound",
       "sort_order": 53,
-      "category": "meta",
+      "category": "synthesis",
       "level": 3,
-      "composite_of": [
-        "body-domain",
-        "mind-domain",
-        "spirit-domain",
-        "collective-domain",
-        "planet-domain"
-      ],
-      "relationship_type": "emergence",
+      "composite_of": ["body-domain", "mind-domain", "spirit-domain", "collective-domain", "planet-domain"],
       "sections": {
-        "About": "[SESSION-6: HOSPICING MODERNITY] The meta-pattern that emerges when all five domains are held together: modernity itself as a system that is dying — not being killed, not being defeated, but completing its life cycle and needing hospicing. Andreotti's central metaphor: we are not activists fighting a system but hospice workers accompanying a dying one. The body stores colonial trauma (Body domain). The mind reproduces colonial epistemology (Mind domain). The spirit was severed from its animist roots (Spirit domain). The collective was reorganized around property and nation-state (Collective domain). The planet was reclassified from relative to resource (Planet domain). These five wounds are one wound seen from five angles — the wound of separation. Modernity's core promise (that separation leads to freedom) is its core pathology. Hospicing modernity means sitting with the dying of that promise without rushing to replace it with another grand narrative.\n\nThis is NOT a call to return to pre-colonial life (impossible and romanticizing). It is NOT a call to reform modernity (too late and too shallow). It is NOT a call to accelerate modernity's death (too violent and too certain). It IS an invitation to be present at the deathbed — to grieve what was lost, to compost what is dying, to notice what is already growing in the cracks. Akomolafe: 'The times are urgent; let us slow down.' The urgency is real. The slowing down is also real. Both at once.\n\nTrauma-informed framing: hospicing is the opposite of the trauma response. Trauma says: fight, flee, freeze. Hospicing says: stay, witness, breathe. The nervous system that can hospice is a nervous system that has enough ventral vagal capacity (Porges) to be present with unbearable truth without dissociating (dorsal vagal collapse) or rage-attacking (sympathetic activation). This is why somatic work (Menakem, van der Kolk, Levine) is not separate from decolonial work but foundational to it. You cannot hospice modernity from a dysregulated nervous system.",
-        "How to Use": "[SESSION-6: HOSPICING MODERNITY] This grammar is not a curriculum to complete but a contemplative practice to return to. Draw one card (item) at a time. Sit with it. Notice what it activates in your body (somatic awareness from Body domain). Notice what stories your mind tells about it (epistemic awareness from Mind domain). Notice what grief or longing it surfaces (spiritual awareness from Spirit domain). Notice who you want to talk to about it (relational awareness from Collective domain). Notice what land you're sitting on as you read it (ecological awareness from Planet domain).\n\nThe four sections of each card are a practice sequence:\n1. THE PATTERN — See the water you're swimming in\n2. WHAT IT COSTS — Let yourself feel the weight\n3. WHAT PERSISTS — Let yourself feel the hope (not optimism — hope is different)\n4. THE INVITATION — Take one small step (not a solution — a step)\n\nFor couples/groups using this with the Inner Triangle grammar: draw one decolonization card and one Inner Triangle card together. Ask: how does this colonial pattern show up in our relationship? How do our personal feel-think-do triangles reproduce or resist this pattern? This is where decolonial theory meets embodied practice — in the relational field between two people trying to love each other inside a system that teaches them to consume each other.\n\nFor therapists: this grammar can support cultural humility work — not as a checklist but as ongoing self-inquiry. Draw a card before each session. Ask: how might this pattern be present in the therapeutic relationship? In the power dynamic between therapist and client? In the epistemology of the therapeutic modality I'm using?\n\nAndreotti's warning: 'Don't look for the answer. Sit with the question long enough for it to change you.' This grammar is designed to change the question, not answer it."
+        "About": "The five domains are not five separate problems. They are one pattern — colonial modernity — expressing itself through body, mind, spirit, collective, and planet. Vanessa Andreotti's metaphor of hospicing modernity names the integrated response: we are living in a system that is dying. Not because someone killed it but because its own contradictions are consuming it. The question is not how to fix it or how to replace it. The question is how to be present as it dies — without clinging, without triumphalism, without despair — and how to compost its remains into something that can feed what comes next.",
+        "The Pattern Across Domains": "In the body: the demand for productivity that breaks bodies. In the mind: the demand for one knowledge that kills others. In the spirit: the demand for one God (or no God) that severs relationship with the sacred. In the collective: the demand for one political form that eliminates alternatives. On the planet: the demand for infinite growth on a finite earth. One pattern. Five expressions. Each reinforcing the others. You cannot decolonize the mind while the body is colonized. You cannot decolonize the collective while the planet is treated as property.",
+        "What Hospicing Means": "Hospicing is not fixing. It's accompanying. Sitting with someone — or something — as it dies. Modernity is dying: ecologically (it cannot sustain itself), socially (inequality is reaching breaking points), psychologically (mental health crises signal systemic failure), spiritually (the disenchantment of the world produces despair). The hospice worker doesn't try to cure the patient or hasten death. They provide presence, comfort, and honest companionship. This is what decolonization asks of us: not a triumphant replacement of one system with another, but the willingness to sit with complexity, grief, uncertainty, and not-knowing.",
+        "Composting, Not Destroying": "What dies feeds what grows. Compost is not trash — it's transformation. The invitation is not to burn modernity down (the master's tools) or to reform it (rearranging chairs on the Titanic) but to compost it — to transform what was harmful into nutrients for what comes next. This requires the grandmother's wisdom: patience, attention to cycles, trust that decomposition is part of creation, and the knowledge that you may not live to see what grows from the compost you tend.",
+        "The Invitation": "Decolonization is not a destination. It's not a checklist. It's not something you complete. It's an ongoing practice of noticing — noticing the colonial patterns in your body, your thinking, your prayer, your community, your relationship with the earth. And then: not rushing to fix what you notice, but sitting with it. Feeling the grief. Allowing the compost. Making space for what you can't yet imagine. The grandmothers knew this. Maybe that's what decolonization is: learning to listen to grandmothers again."
       },
-      "keywords": [
-        "hospicing",
-        "modernity",
-        "composting",
-        "meta-pattern",
-        "integration",
-        "andreotti",
-        "akomolafe"
-      ],
-      "metadata": {},
-      "grammars": [
-        {
-          "grammar_name": "The Inner Triangle",
-          "grammar_url": "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/inner-triangle",
-          "note": "Companion grammar — the CBT triangle (Feel-Think-Do) as the internal mechanism through which colonial patterns reproduce in intimate relationships."
-        }
-      ]
+      "keywords": ["hospicing modernity", "Andreotti", "composting", "non-dual", "five domains", "systemic", "integration", "grandmothers", "not-knowing"],
+      "metadata": {}
     }
   ]
 }
