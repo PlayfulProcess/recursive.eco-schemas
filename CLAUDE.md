@@ -9,6 +9,7 @@ A public repository of **grammars** — structured JSON files that represent sym
 ```
 grammars/       — ALL grammars, flat by name (one folder per grammar, no categories)
 seeds/          — Raw source texts (public domain downloads, awaiting grammar construction)
+compost/        — Texts that can further colonialism, held here for decomposition (see compost/WHAT_IS_COMPOST.md)
 schemas/        — Reference structures: tarot deck templates, astrology tables, I Ching mappings
   tarot/        — Tarot deck schemas and reference data
   iching/       — I Ching reference mappings
@@ -28,6 +29,7 @@ The folder structure is the simplest possible grid. The metadata carries the mea
 - **Each grammar.json is a monad**: Self-contained, with all metadata needed to place it in any view (by type, by tag, by root, by shelf, by lineage).
 - **manifest.json is the computed index**: Generated from grammar metadata. One formal structure, infinite perspectives. Run `python3 scripts/generate_manifest.py` to rebuild.
 - **seeds/ is the compost heap**: Raw texts in the process of becoming grammars. Flat, named by the work.
+- **compost/ is the conscious pile**: Texts that can be used to further colonialism — not because everything in them is bad, but because their unexamined assumptions can be weaponized. Compost is not cancellation: it's decomposition. The original goes in, decomposer voices break it down, and new growth (grammars that recenter marginalized voices) emerges. See `compost/WHAT_IS_COMPOST.md` for the full philosophy.
 
 ## Grammar JSON Format
 
@@ -58,7 +60,7 @@ Every `grammar.json` follows this structure:
 These fields connect each grammar to the library's many perspectives:
 
 - `roots` — Intellectual roots (e.g., `["eastern-wisdom", "mysticism"]`). See `plan/SEED_100.md` for the 10 roots.
-- `shelves` — Library shelves: `wisdom`, `earth`, `wonder`, `resilience`, `mirror`, `children`, `contested`, `composting`
+- `shelves` — Library shelves: `wisdom`, `earth`, `wonder`, `resilience`, `mirror`, `children`, `contested`, `composting`. The `composting` shelf is for grammars that decompose colonial material — texts whose unexamined assumptions can further colonialism. This doesn't mean everything in them is bad; it means they need to be composted. See `compost/WHAT_IS_COMPOST.md`.
 - `lineages` — Modern thinkers this feeds: `Linehan`, `Akomolafe`, `Shrei`, `Andreotti`, `Gottman`, `Johnson`, `Kelty`
 - `worldview` — Epistemic stance: `animist`, `rationalist`, `devotional`, `dialectical`, `non-dual`, etc.
 
