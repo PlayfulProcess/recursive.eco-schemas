@@ -1,6 +1,6 @@
 {
   "generated": true,
-  "grammar_count": 202,
+  "grammar_count": 203,
   "grammars": {
     "a-little-princess": {
       "id": "a-little-princess",
@@ -6511,9 +6511,12 @@
         "tarot-spine",
         "vocation",
         "animism",
-        "prayer"
+        "prayer",
+        "iching",
+        "book-of-changes",
+        "contemplation"
       ],
-      "item_count": 14,
+      "item_count": 16,
       "levels": [
         1,
         2,
@@ -6546,6 +6549,57 @@
         "Shrei"
       ],
       "worldview": "relational-animist"
+    },
+    "repair-iching": {
+      "id": "repair-iching",
+      "name": "The Repair I Ching: A Contemplative Practice",
+      "description": "A meta-grammar that weaves the I Ching into the Repair framework. Twelve hexagrams — one for each chapter of 'Repair: An Open Source Book' — chosen not to predict but to reperceive. Each hexagram illuminates a repair theme: the perpetual problem, the attachment cry, the amends, the fire, the practice. This is not a divination grammar. It is a contemplative grammar. Each item invites illustration: find or create an image that embodies the hexagram's repair teaching. The practice of searching for that image IS the practice.\n\nCompanion grammars: 'Repair: An Open Source Book' (the full book), 'I Ching — Chinese Original With Brief Translation' (the 64 hexagrams), '易經 · Emergent Structure' (cosmological architecture).\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Chinese landscape painting from the Metropolitan Museum CC0 collection. Smithsonian Open Access botanical and geological images. Biodiversity Heritage Library nature illustrations. NASA planetary imagery. Hokusai woodcuts (Thirty-six Views of Mount Fuji). Traditional Chinese ink wash painting reproductions.",
+      "grammar_type": "iching",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "iching",
+        "repair",
+        "contemplation",
+        "illustration-practice",
+        "change",
+        "yin-yang",
+        "hexagrams",
+        "nature",
+        "open-source-book",
+        "practice-grammar"
+      ],
+      "item_count": 14,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "emergence",
+        "meta",
+        "repair-hexagram"
+      ],
+      "roots": [
+        "eastern-wisdom",
+        "indigenous-knowledge",
+        "psychology",
+        "mysticism"
+      ],
+      "shelves": [
+        "wisdom",
+        "resilience",
+        "mirror"
+      ],
+      "lineages": [
+        "Akomolafe",
+        "Andreotti",
+        "Shrei",
+        "Gottman",
+        "Johnson",
+        "Linehan",
+        "Kelty"
+      ],
+      "worldview": "non-dual"
     },
     "republic-plato": {
       "id": "republic-plato",
@@ -8797,7 +8851,8 @@
       ],
       "iching": [
         "i-ching-chinese-emergent",
-        "i-ching-leibniz-binary"
+        "i-ching-leibniz-binary",
+        "repair-iching"
       ],
       "sequence": [
         "art-with-mati-and-dada",
@@ -9231,6 +9286,9 @@
       "bogatyr": [
         "russian-folk-tales"
       ],
+      "book-of-changes": [
+        "repair-an-open-source-book"
+      ],
       "borders": [
         "architecture-of-nations"
       ],
@@ -9329,6 +9387,9 @@
       ],
       "chakra": [
         "bus-grammar-system-prompts"
+      ],
+      "change": [
+        "repair-iching"
       ],
       "chapter-book": [
         "alice-in-wonderland-chapter-book",
@@ -9528,6 +9589,10 @@
       ],
       "constellation": [
         "embodied-grammars-constellation"
+      ],
+      "contemplation": [
+        "repair-an-open-source-book",
+        "repair-iching"
       ],
       "contemplative": [
         "decolonization-five-domains",
@@ -10283,7 +10348,8 @@
       ],
       "hexagrams": [
         "i-ching-chinese-emergent",
-        "i-ching-leibniz-binary"
+        "i-ching-leibniz-binary",
+        "repair-iching"
       ],
       "higher-expression": [
         "seven-rays-bailey-expressions"
@@ -10325,6 +10391,10 @@
       "hypercube": [
         "i-ching-leibniz-binary"
       ],
+      "iching": [
+        "repair-an-open-source-book",
+        "repair-iching"
+      ],
       "identity": [
         "jungle-book",
         "leaves-of-grass"
@@ -10343,6 +10413,9 @@
         "anon-shiryo-cat-stories",
         "story-01-asking-not-complaining",
         "story-02-gratitude-not-praise"
+      ],
+      "illustration-practice": [
+        "repair-iching"
       ],
       "imagination": [
         "a-little-princess",
@@ -10806,6 +10879,7 @@
         "life-of-the-bee",
         "metamorphoses-ovid",
         "my-first-summer-in-sierra",
+        "repair-iching",
         "secret-garden",
         "story-02-gratitude-not-praise",
         "walden",
@@ -10880,7 +10954,8 @@
         "decolonizing-childhood"
       ],
       "open-source-book": [
-        "repair-an-open-source-book"
+        "repair-an-open-source-book",
+        "repair-iching"
       ],
       "oracle": [
         "aesops-fables",
@@ -11138,6 +11213,9 @@
         "movement-culture",
         "practice-presence-of-god"
       ],
+      "practice-grammar": [
+        "repair-iching"
+      ],
       "pragmatism": [
         "pragmatism",
         "varieties-religious-experience"
@@ -11331,7 +11409,8 @@
       ],
       "repair": [
         "relationship-cards",
-        "repair-an-open-source-book"
+        "repair-an-open-source-book",
+        "repair-iching"
       ],
       "resilience": [
         "a-little-princess",
@@ -11978,6 +12057,9 @@
       "wu-wei": [
         "tao-te-ching"
       ],
+      "yin-yang": [
+        "repair-iching"
+      ],
       "yoga": [
         "bhagavad-gita",
         "embodied-grammars-constellation",
@@ -12153,6 +12235,7 @@
         "prose-edda",
         "relationship-cards",
         "repair-an-open-source-book",
+        "repair-iching",
         "republic-plato",
         "revelations-divine-love",
         "rights-of-man",
@@ -12305,6 +12388,7 @@
         "myths-legends-egypt-spence",
         "myths-through-many-eyes",
         "repair-an-open-source-book",
+        "repair-iching",
         "sacred-books-east",
         "sadhana",
         "seven-rays-ancient-roots",
@@ -12381,7 +12465,8 @@
         "children-story-tree",
         "decolonization-five-domains",
         "gestures-towards-balanced-future",
-        "repair-an-open-source-book"
+        "repair-an-open-source-book",
+        "repair-iching"
       ],
       "indigenous-mythology": [
         "celtic-fairy-tales",
@@ -12455,6 +12540,7 @@
         "plotinus-enneads",
         "practice-presence-of-god",
         "repair-an-open-source-book",
+        "repair-iching",
         "rosicrucian-mysteries",
         "russian-folk-tales",
         "sacred-books-east",
@@ -12501,7 +12587,8 @@
       "psychology": [
         "bus-grammar-system-prompts",
         "interpretation-of-dreams",
-        "repair-an-open-source-book"
+        "repair-an-open-source-book",
+        "repair-iching"
       ],
       "romanticism": [
         "andersens-fairy-tales",
@@ -12700,6 +12787,7 @@
         "principles-of-psychology",
         "relationship-cards",
         "repair-an-open-source-book",
+        "repair-iching",
         "seven-rays-bailey-expressions",
         "souls-of-black-folk",
         "tarot-rws-etteilla",
@@ -12728,6 +12816,7 @@
         "olaudah-equiano",
         "relationship-cards",
         "repair-an-open-source-book",
+        "repair-iching",
         "rights-of-man",
         "sojourner-truth",
         "souls-of-black-folk",
@@ -12791,6 +12880,7 @@
         "plutarchs-morals",
         "practice-presence-of-god",
         "repair-an-open-source-book",
+        "repair-iching",
         "republic-plato",
         "revelations-divine-love",
         "rosicrucian-mysteries",
@@ -12902,6 +12992,7 @@
         "origin-of-species",
         "pragmatism",
         "repair-an-open-source-book",
+        "repair-iching",
         "russian-folk-tales",
         "sacred-books-east",
         "seven-rays-ancient-roots",
@@ -12956,6 +13047,7 @@
         "peter-pan",
         "popol-vuh",
         "repair-an-open-source-book",
+        "repair-iching",
         "rights-of-man",
         "sojourner-truth",
         "songs-of-kabir",
@@ -12982,6 +13074,7 @@
         "principles-of-psychology",
         "relationship-cards",
         "repair-an-open-source-book",
+        "repair-iching",
         "vindication-rights-woman"
       ],
       "Johnson": [
@@ -12992,6 +13085,7 @@
         "plutarchs-morals",
         "relationship-cards",
         "repair-an-open-source-book",
+        "repair-iching",
         "song-of-songs",
         "sonnets-from-portuguese"
       ],
@@ -13016,6 +13110,7 @@
         "movement-culture",
         "mutual-aid",
         "on-liberty",
+        "repair-iching",
         "rights-of-man",
         "wildflowers-of-california"
       ],
@@ -13045,6 +13140,7 @@
         "principles-of-psychology",
         "relationship-cards",
         "repair-an-open-source-book",
+        "repair-iching",
         "republic-plato",
         "revelations-divine-love",
         "sadhana",
@@ -13128,6 +13224,7 @@
         "popol-vuh",
         "prose-edda",
         "repair-an-open-source-book",
+        "repair-iching",
         "rosicrucian-mysteries",
         "russian-folk-tales",
         "sacred-books-east",
