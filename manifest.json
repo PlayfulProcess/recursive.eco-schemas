@@ -1,6 +1,6 @@
 {
   "generated": true,
-  "grammar_count": 199,
+  "grammar_count": 200,
   "grammars": {
     "a-little-princess": {
       "id": "a-little-princess",
@@ -1903,17 +1903,40 @@
         "rites-of-passage",
         "erê",
         "preto-velho",
-        "caboclo"
+        "caboclo",
+        "sexual-education",
+        "body",
+        "sexuality",
+        "cross-cultural",
+        "DBT",
+        "somatic",
+        "habit-formation",
+        "commons",
+        "open-source",
+        "Linehan",
+        "Andreotti",
+        "skills"
       ],
-      "item_count": 17,
+      "item_count": 64,
       "levels": [
         1,
         2,
         3
       ],
       "categories": [
+        "commons",
+        "commons-emergence",
+        "dbt-distress-tolerance",
+        "dbt-emergence",
+        "dbt-emotion-regulation",
+        "dbt-interpersonal",
+        "dbt-mindfulness",
         "learning",
         "meta",
+        "sexual-education",
+        "sexual-education-emergence",
+        "soma",
+        "soma-emergence",
         "spirit-lines",
         "thresholds"
       ],
@@ -1930,7 +1953,9 @@
       "lineages": [
         "Akomolafe",
         "Andreotti",
-        "Shrei"
+        "Shrei",
+        "Linehan",
+        "Kelty"
       ],
       "worldview": "animist"
     },
@@ -6513,7 +6538,7 @@
     "rider-waite-smith-tarot": {
       "id": "rider-waite-smith-tarot",
       "name": "Rider–Waite–Smith Archetypal Tarot Deck",
-      "description": "A 78-card tarot deck with archetypal, therapeutic interpretations for each card. This deck presents the classic Rider–Waite–Smith imagery with a focus on personal insight, reflection, and growth instead of fortune-telling predictions.\n\nSource: Public domain - Wikimedia Commons",
+      "description": "A 78-card tarot deck with archetypal interpretations for each card. This deck presents the classic Rider–Waite–Smith imagery with a focus on insight, reflection, and symbolic meaning instead of fortune-telling predictions.\n\nSource: Public domain - Wikimedia Commons",
       "grammar_type": "tarot",
       "creator_name": "Julia Alves / Community Synthesis",
       "tags": [
@@ -7474,6 +7499,52 @@
       "lineages": [
         "Linehan",
         "Akomolafe",
+        "Shrei"
+      ],
+      "worldview": "non-dual"
+    },
+    "tarot-rws-etteilla": {
+      "id": "tarot-rws-etteilla",
+      "name": "The Tarot — Rider-Waite-Smith with Etteilla",
+      "description": "A complete 78-card tarot grammar holding two traditions in dialogue. The Rider-Waite-Smith deck (1909) provides the primary structure — 22 Major Arcana and 56 Minor Arcana with upright and reversed interpretations. Inlined alongside each card is its Etteilla correspondence (1788) — the first dedicated cartomancy system, which orders the Major Arcana by the seven days of Genesis rather than the Fool's Journey, and adds Etymology, Historical Context, Hermetic Correspondence, and Genesis Connection sections.\n\nWhere RWS asks 'what archetype is active in your life?', Etteilla asks 'what is the cosmos doing?' Both are valid maps of the same territory. This grammar lets you read either or both.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Pamela Colman Smith's original 1909 RWS illustrations (public domain as of 2021 in most jurisdictions), Etteilla's Grand Jeu deck illustrations (1788-1791, public domain), Marseille Tarot woodcuts (17th-18th century, public domain).",
+      "grammar_type": "tarot",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "tarot",
+        "divination",
+        "RWS",
+        "Etteilla",
+        "cartomancy",
+        "major-arcana",
+        "minor-arcana",
+        "hermetic",
+        "genesis"
+      ],
+      "item_count": 84,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "arcana-emergence",
+        "cups",
+        "major-arcana",
+        "meta",
+        "pentacles",
+        "suit-emergence",
+        "swords",
+        "wands"
+      ],
+      "roots": [
+        "mysticism",
+        "western-esoteric"
+      ],
+      "shelves": [
+        "wisdom",
+        "mirror"
+      ],
+      "lineages": [
         "Shrei"
       ],
       "worldview": "non-dual"
@@ -8631,6 +8702,7 @@
         "playfulprocess-my-version-20260127220715",
         "relationship-cards",
         "rider-waite-smith-tarot",
+        "tarot-rws-etteilla",
         "voices-of-the-unwritten"
       ]
     },
@@ -8641,14 +8713,23 @@
       "American-philosophy": [
         "pragmatism"
       ],
+      "Andreotti": [
+        "decolonizing-childhood"
+      ],
       "Chapman Withers": [
         "social-working"
+      ],
+      "DBT": [
+        "decolonizing-childhood"
       ],
       "Eisler": [
         "social-working"
       ],
       "Enlightenment": [
         "critique-pure-reason"
+      ],
+      "Etteilla": [
+        "tarot-rws-etteilla"
       ],
       "Granada": [
         "legends-alhambra"
@@ -8665,8 +8746,14 @@
       "Lebanese": [
         "the-prophet"
       ],
+      "Linehan": [
+        "decolonizing-childhood"
+      ],
       "Moorish": [
         "legends-alhambra"
+      ],
+      "RWS": [
+        "tarot-rws-etteilla"
       ],
       "Spain": [
         "legends-alhambra"
@@ -9012,6 +9099,7 @@
         "myth-birth-hero-rank"
       ],
       "body": [
+        "decolonizing-childhood",
         "embodied-grammars-constellation",
         "expression-of-emotions",
         "leaves-of-grass",
@@ -9090,6 +9178,9 @@
       ],
       "cartography": [
         "architecture-of-nations"
+      ],
+      "cartomancy": [
+        "tarot-rws-etteilla"
       ],
       "cat": [
         "story-01-asking-not-complaining",
@@ -9269,6 +9360,7 @@
       ],
       "commons": [
         "decolonization-five-domains",
+        "decolonizing-childhood",
         "economic-ideas"
       ],
       "community": [
@@ -9380,7 +9472,8 @@
         "economic-ideas"
       ],
       "cross-cultural": [
-        "alice-in-the-mythlands"
+        "alice-in-the-mythlands",
+        "decolonizing-childhood"
       ],
       "crucifixion": [
         "gnostic-crucifixion"
@@ -9487,6 +9580,9 @@
       ],
       "disney": [
         "kids-workouts-gvo-kids-youtube-playlist"
+      ],
+      "divination": [
+        "tarot-rws-etteilla"
       ],
       "divine-feminine": [
         "pistis-sophia"
@@ -9908,6 +10004,9 @@
       "generalist": [
         "movement-culture"
       ],
+      "genesis": [
+        "tarot-rws-etteilla"
+      ],
       "geology": [
         "voyage-of-the-beagle"
       ],
@@ -9987,6 +10086,9 @@
       "habit": [
         "principles-of-psychology"
       ],
+      "habit-formation": [
+        "decolonizing-childhood"
+      ],
       "hawaiian": [
         "hawaiian-legends"
       ],
@@ -10005,6 +10107,9 @@
       ],
       "herbs": [
         "nastacia-conta"
+      ],
+      "hermetic": [
+        "tarot-rws-etteilla"
       ],
       "hermeticism": [
         "hidden-symbolism-alchemy",
@@ -10315,7 +10420,8 @@
         "indian-myth-legend"
       ],
       "major-arcana": [
-        "playful-process-the-path-of-the-ontoject"
+        "playful-process-the-path-of-the-ontoject",
+        "tarot-rws-etteilla"
       ],
       "marcus-aurelius": [
         "meditations-marcus-aurelius"
@@ -10398,6 +10504,9 @@
       ],
       "mindfulness": [
         "practice-presence-of-god"
+      ],
+      "minor-arcana": [
+        "tarot-rws-etteilla"
       ],
       "mirror": [
         "through-the-looking-glass"
@@ -10611,6 +10720,9 @@
       ],
       "ontological": [
         "playful-process-the-path-of-the-ontoject"
+      ],
+      "open-source": [
+        "decolonizing-childhood"
       ],
       "oracle": [
         "aesops-fables",
@@ -11223,6 +11335,12 @@
         "seven-rays-ancient-roots",
         "seven-rays-bailey-expressions"
       ],
+      "sexual-education": [
+        "decolonizing-childhood"
+      ],
+      "sexuality": [
+        "decolonizing-childhood"
+      ],
       "shadow": [
         "jungian-archetypes"
       ],
@@ -11251,6 +11369,9 @@
       "skeptics": [
         "diogenes-laertius"
       ],
+      "skills": [
+        "decolonizing-childhood"
+      ],
       "slavery": [
         "frederick-douglass",
         "olaudah-equiano",
@@ -11278,6 +11399,9 @@
       "socrates": [
         "phaedo-plato",
         "phaedrus-plato"
+      ],
+      "somatic": [
+        "decolonizing-childhood"
       ],
       "songs": [
         "colonial-tongues"
@@ -11402,6 +11526,7 @@
       "tarot": [
         "emerald-death-card-visuals",
         "rider-waite-smith-tarot",
+        "tarot-rws-etteilla",
         "voices-of-the-unwritten"
       ],
       "tea": [
@@ -11872,6 +11997,7 @@
         "swedenborg-heaven-hell",
         "symposium-plato",
         "tao-te-ching",
+        "tarot-rws-etteilla",
         "the-negro",
         "the-prophet",
         "theater-tree",
@@ -12153,6 +12279,7 @@
         "songs-of-kabir",
         "spirits-book-kardec",
         "swedenborg-heaven-hell",
+        "tarot-rws-etteilla",
         "the-prophet",
         "thus-spoke-zarathustra",
         "upanishads",
@@ -12219,6 +12346,9 @@
       ],
       "western-canon": [
         "children-story-tree"
+      ],
+      "western-esoteric": [
+        "tarot-rws-etteilla"
       ],
       "western-esotericism": [
         "alchemy-ancient-modern",
@@ -12382,6 +12512,7 @@
         "relationship-cards",
         "seven-rays-bailey-expressions",
         "souls-of-black-folk",
+        "tarot-rws-etteilla",
         "the-negro",
         "thus-spoke-zarathustra",
         "varieties-religious-experience",
@@ -12482,6 +12613,7 @@
         "swedenborg-heaven-hell",
         "symposium-plato",
         "tao-te-ching",
+        "tarot-rws-etteilla",
         "the-prophet",
         "thus-spoke-zarathustra",
         "timaeus-plato",
@@ -12674,6 +12806,7 @@
         "communist-manifesto",
         "cosmic-unfolding",
         "decolonization-five-domains",
+        "decolonizing-childhood",
         "dinosaur-tree",
         "economic-ideas",
         "embodied-grammars-constellation",
@@ -12694,6 +12827,7 @@
         "book-of-tea",
         "bus-grammar-system-prompts",
         "chinese-literature-anthology",
+        "decolonizing-childhood",
         "diogenes-laertius",
         "discourses-epictetus",
         "embodied-grammars-constellation",
@@ -12806,6 +12940,7 @@
         "swedenborg-heaven-hell",
         "symposium-plato",
         "tao-te-ching",
+        "tarot-rws-etteilla",
         "the-prophet",
         "through-the-looking-glass",
         "thus-spoke-zarathustra",
