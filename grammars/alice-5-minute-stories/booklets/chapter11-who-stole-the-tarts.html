@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 11: Who Stole the Tarts? — Alice in Wonderland</title>
+  <style>
+    @page {
+      size: landscape;
+      margin: 0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      background: white;
+      color: #1a1a1a;
+    }
+
+    .spread {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+    }
+
+    .spread:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* Left page = illustration */
+    .page-left {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8f5f0;
+      padding: 16px;
+      overflow: hidden;
+    }
+
+    .page-left img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Right page = text */
+    .page-right {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 40px;
+      background: white;
+      position: relative;
+    }
+
+    .text-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      width: 100%;
+      overflow-y: auto;
+    }
+
+    .text-block p {
+      font-size: clamp(14px, 2.2vw, 24px);
+      line-height: 1.7;
+      font-weight: 700;
+      text-align: left;
+      letter-spacing: 0.3px;
+      max-width: 95%;
+    }
+
+    /* For longer text passages */
+    .text-block.text-medium p {
+      font-size: clamp(12px, 1.8vw, 19px);
+      line-height: 1.6;
+    }
+
+    .text-block.text-small p {
+      font-size: clamp(10px, 1.5vw, 16px);
+      line-height: 1.5;
+    }
+
+    .page-number {
+      font-size: 12px;
+      color: #bbb;
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+    }
+
+    /* Cover page styles */
+    .cover-title {
+      background: #2c1810;
+      color: white;
+    }
+
+    .title-block {
+      text-align: center;
+    }
+
+    .series-name {
+      font-size: clamp(11px, 1.5vw, 16px);
+      letter-spacing: 4px;
+      color: #d4a76a;
+      margin-bottom: 12px;
+    }
+
+    .book-number {
+      font-size: clamp(13px, 1.8vw, 20px);
+      letter-spacing: 3px;
+      color: #d4a76a;
+      margin-bottom: 20px;
+    }
+
+    .title-block h1 {
+      font-size: clamp(20px, 3.8vw, 42px);
+      line-height: 1.2;
+      margin-bottom: 25px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .author {
+      font-size: clamp(11px, 1.3vw, 14px);
+      letter-spacing: 3px;
+      color: #d4a76a;
+      margin-bottom: 8px;
+    }
+
+    .page-info {
+      font-size: clamp(10px, 1.1vw, 12px);
+      letter-spacing: 2px;
+      color: #a08060;
+      margin-top: 5px;
+    }
+
+    .cover-image {
+      background: #2c1810;
+    }
+
+    .cover-image img {
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+
+    /* Back cover */
+    .back-text {
+      background: #2c1810;
+      color: white;
+    }
+
+    .back-block {
+      text-align: center;
+    }
+
+    .the-end {
+      font-size: clamp(24px, 4vw, 44px);
+      font-weight: 800;
+      letter-spacing: 6px;
+      margin-bottom: 30px;
+      color: #d4a76a;
+    }
+
+    .back-info p {
+      font-size: clamp(10px, 1.2vw, 13px);
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+      color: #d4a76a;
+    }
+
+    .back-info .small {
+      font-size: clamp(8px, 0.9vw, 10px);
+      color: #a08060;
+    }
+
+    .back-image {
+      background: #2c1810;
+    }
+
+    .back-image img {
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+
+    /* Print styles */
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .spread { height: 100vh; }
+      .page-left img { box-shadow: none; }
+      .cover-image img, .back-image img { box-shadow: none; }
+      .text-block { overflow: hidden; }
+    }
+
+    /* Screen: show page dividers */
+    @media screen {
+      .spread {
+        border-bottom: 3px dashed #ccc;
+        min-height: 100vh;
+      }
+      .spread:last-child {
+        border-bottom: none;
+      }
+      body {
+        background: #e8e8e8;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <div class="spread cover-spread">
+      <div class="page-left cover-image">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-court-assembles/arthur-rackham-1907.jpg" alt="Cover">
+      </div>
+      <div class="page-right cover-title">
+        <div class="title-block">
+          <div class="series-name">ALICE IN WONDERLAND</div>
+          <div class="book-number">CHAPTER 11</div>
+          <h1>WHO STOLE THE TARTS?</h1>
+          <div class="author">BY LEWIS CARROLL</div>
+          <div class="page-info">5 PAGES</div>
+        </div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-court-assembles/arthur-rackham-1907.jpg" alt="The Court Assembles">
+      </div>
+      <div class="page-right">
+        <div class="text-block text-small">
+          <p>THE KING AND QUEEN OF HEARTS WERE SEATED ON THEIR THRONE WHEN THEY<br>ARRIVED, WITH A GREAT CROWD ASSEMBLED ABOUT THEM—ALL SORTS OF LITTLE<br>BIRDS AND BEASTS, AS WELL AS THE WHOLE PACK OF CARDS: THE KNAVE WAS<br>STANDING BEFORE THEM, IN CHAINS, WITH A SOLDIER ON EACH SIDE TO GUARD<br>HIM; AND NEAR THE KING WAS THE WHITE RABBIT, WITH A TRUMPET IN ONE<br>HAND, AND A SCROLL OF PARCHMENT IN THE OTHER. IN THE VERY MIDDLE OF THE<br>COURT WAS A TABLE, WITH A LARGE DISH OF TARTS UPON IT: THEY LOOKED SO<br>GOOD, THAT IT MADE ALICE QUITE HUNGRY TO LOOK AT THEM—“I WISH THEY’D<br>GET THE TRIAL DONE,” SHE THOUGHT, “AND HAND ROUND THE REFRESHMENTS!”<br>BUT THERE SEEMED TO BE NO CHANCE OF THIS, SO SHE BEGAN LOOKING AT<br>EVERYTHING ABOUT HER, TO PASS AWAY THE TIME.<br><br>ALICE HAD NEVER BEEN IN A COURT OF JUSTICE BEFORE, BUT SHE HAD READ<br>ABOUT THEM IN BOOKS, AND SHE WAS QUITE PLEASED TO FIND THAT SHE KNEW<br>THE NAME OF NEARLY EVERYTHING THERE. “THAT’S THE JUDGE,” SHE SAID TO<br>HERSELF, “BECAUSE OF HIS GREAT WIG.”<br><br>THE JUDGE, BY THE WAY, WAS THE KING; AND AS HE WORE HIS CROWN OVER THE<br>WIG, (LOOK AT THE FRONTISPIECE IF YOU WANT TO SEE HOW HE DID IT,) HE<br>DID NOT LOOK AT ALL COMFORTABLE, AND IT WAS CERTAINLY NOT BECOMING.<br><br>“AND THAT’S THE JURY-BOX,” THOUGHT ALICE, “AND THOSE TWELVE CREATURES,”<br>(SHE WAS OBLIGED TO SAY “CREATURES,” YOU SEE, BECAUSE SOME OF THEM WERE<br>ANIMALS, AND SOME WERE BIRDS,) “I SUPPOSE THEY ARE THE JURORS.” SHE<br>SAID THIS LAST WORD TWO OR THREE TIMES OVER TO HERSELF, BEING RATHER<br>PROUD OF IT: FOR SHE THOUGHT, AND RIGHTLY TOO, THAT VERY FEW LITTLE<br>GIRLS OF HER AGE KNEW THE MEANING OF IT AT ALL. HOWEVER, “JURY-MEN”<br>WOULD HAVE DONE JUST AS WELL.<br><br>THE TWELVE JURORS WERE ALL WRITING VERY BUSILY ON SLATES. “WHAT ARE<br>THEY DOING?” ALICE WHISPERED TO THE GRYPHON. “THEY CAN’T HAVE ANYTHING<br>TO PUT DOWN YET, BEFORE THE TRIAL’S BEGUN.”</p>
+        </div>
+        <div class="page-number">1</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-court-assembles/arthur-rackham-1907.jpg" alt="The Court Assembles">
+      </div>
+      <div class="page-right">
+        <div class="text-block text-small">
+          <p>“THEY’RE PUTTING DOWN THEIR NAMES,” THE GRYPHON WHISPERED IN REPLY,<br>“FOR FEAR THEY SHOULD FORGET THEM BEFORE THE END OF THE TRIAL.”<br><br>“STUPID THINGS!” ALICE BEGAN IN A LOUD, INDIGNANT VOICE, BUT SHE<br>STOPPED HASTILY, FOR THE WHITE RABBIT CRIED OUT, “SILENCE IN THE<br>COURT!” AND THE KING PUT ON HIS SPECTACLES AND LOOKED ANXIOUSLY ROUND,<br>TO MAKE OUT WHO WAS TALKING.<br><br>ALICE COULD SEE, AS WELL AS IF SHE WERE LOOKING OVER THEIR SHOULDERS,<br>THAT ALL THE JURORS WERE WRITING DOWN “STUPID THINGS!” ON THEIR SLATES,<br>AND SHE COULD EVEN MAKE OUT THAT ONE OF THEM DIDN’T KNOW HOW TO SPELL<br>“STUPID,” AND THAT HE HAD TO ASK HIS NEIGHBOUR TO TELL HIM. “A NICE<br>MUDDLE THEIR SLATES’LL BE IN BEFORE THE TRIAL’S OVER!” THOUGHT ALICE.<br><br>ONE OF THE JURORS HAD A PENCIL THAT SQUEAKED. THIS OF COURSE, ALICE<br>COULD NOT STAND, AND SHE WENT ROUND THE COURT AND GOT BEHIND HIM, AND<br>VERY SOON FOUND AN OPPORTUNITY OF TAKING IT AWAY. SHE DID IT SO QUICKLY<br>THAT THE POOR LITTLE JUROR (IT WAS BILL, THE LIZARD) COULD NOT MAKE OUT<br>AT ALL WHAT HAD BECOME OF IT; SO, AFTER HUNTING ALL ABOUT FOR IT, HE<br>WAS OBLIGED TO WRITE WITH ONE FINGER FOR THE REST OF THE DAY; AND THIS<br>WAS OF VERY LITTLE USE, AS IT LEFT NO MARK ON THE SLATE.<br><br>“HERALD, READ THE ACCUSATION!” SAID THE KING.</p>
+        </div>
+        <div class="page-number">2</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-court-assembles/william-h-walker-1907.jpg" alt="The Court Assembles">
+      </div>
+      <div class="page-right">
+        <div class="text-block ">
+          <p>ON THIS THE WHITE RABBIT BLEW THREE BLASTS ON THE TRUMPET, AND THEN<br>UNROLLED THE PARCHMENT SCROLL, AND READ AS FOLLOWS:—<br><br>“THE QUEEN OF HEARTS, SHE MADE SOME TARTS,<br>    ALL ON A SUMMER DAY:<br>THE KNAVE OF HEARTS, HE STOLE THOSE TARTS,<br>    AND TOOK THEM QUITE AWAY!”<br><br>“CONSIDER YOUR VERDICT,” THE KING SAID TO THE JURY.<br><br>“NOT YET, NOT YET!” THE RABBIT HASTILY INTERRUPTED. “THERE’S A GREAT<br>DEAL TO COME BEFORE THAT!”</p>
+        </div>
+        <div class="page-number">3</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-hatters-evidence/lewis-carroll-1864-manuscript.webp" alt="The Hatter's Evidence">
+      </div>
+      <div class="page-right">
+        <div class="text-block text-small">
+          <p>“CALL THE FIRST WITNESS,” SAID THE KING; AND THE WHITE RABBIT BLEW<br>THREE BLASTS ON THE TRUMPET, AND CALLED OUT, “FIRST WITNESS!”<br><br>THE FIRST WITNESS WAS THE HATTER. HE CAME IN WITH A TEACUP IN ONE HAND<br>AND A PIECE OF BREAD-AND-BUTTER IN THE OTHER. “I BEG PARDON, YOUR<br>MAJESTY,” HE BEGAN, “FOR BRINGING THESE IN: BUT I HADN’T QUITE FINISHED<br>MY TEA WHEN I WAS SENT FOR.”<br><br>“YOU OUGHT TO HAVE FINISHED,” SAID THE KING. “WHEN DID YOU BEGIN?”<br><br>THE HATTER LOOKED AT THE MARCH HARE, WHO HAD FOLLOWED HIM INTO THE<br>COURT, ARM-IN-ARM WITH THE DORMOUSE. “FOURTEENTH OF MARCH, I THINK IT<br>WAS,” HE SAID.<br><br>“FIFTEENTH,” SAID THE MARCH HARE.<br><br>“SIXTEENTH,” ADDED THE DORMOUSE.<br><br>“WRITE THAT DOWN,” THE KING SAID TO THE JURY, AND THE JURY EAGERLY<br>WROTE DOWN ALL THREE DATES ON THEIR SLATES, AND THEN ADDED THEM UP, AND<br>REDUCED THE ANSWER TO SHILLINGS AND PENCE.<br><br>“TAKE OFF YOUR HAT,” THE KING SAID TO THE HATTER.<br><br>“IT ISN’T MINE,” SAID THE HATTER.<br><br>“STOLEN!” THE KING EXCLAIMED, TURNING TO THE JURY, WHO INSTANTLY MADE<br>A MEMORANDUM OF THE FACT.<br><br>“I KEEP THEM TO SELL,” THE HATTER ADDED AS AN EXPLANATION; “I’VE NONE<br>OF MY OWN. I’M A HATTER.”<br><br>HERE THE QUEEN PUT ON HER SPECTACLES, AND BEGAN STARING AT THE HATTER,<br>WHO TURNED PALE AND FIDGETED.<br><br>“GIVE YOUR EVIDENCE,” SAID THE KING; “AND DON’T BE NERVOUS, OR I’LL<br>HAVE YOU EXECUTED ON THE SPOT.”<br><br>THIS DID NOT SEEM TO ENCOURAGE THE WITNESS AT ALL: HE KEPT SHIFTING<br>FROM ONE FOOT TO THE OTHER, LOOKING UNEASILY AT THE QUEEN, AND IN HIS<br>CONFUSION HE BIT A LARGE PIECE OUT OF HIS TEACUP INSTEAD OF THE<br>BREAD-AND-BUTTER.<br><br>JUST AT THIS MOMENT ALICE FELT A VERY CURIOUS SENSATION, WHICH PUZZLED<br>HER A GOOD DEAL UNTIL SHE MADE OUT WHAT IT WAS: SHE WAS BEGINNING TO<br>GROW LARGER AGAIN, AND SHE THOUGHT AT FIRST SHE WOULD GET UP AND LEAVE<br>THE COURT; BUT ON SECOND THOUGHTS SHE DECIDED TO REMAIN WHERE SHE WAS<br>AS LONG AS THERE WAS ROOM FOR HER.<br><br>“I WISH YOU WOULDN’T SQUEEZE SO,” SAID THE DORMOUSE, WHO WAS SITTING<br>NEXT TO HER. “I CAN HARDLY BREATHE.”<br><br>“I CAN’T HELP IT,” SAID ALICE VERY MEEKLY: “I’M GROWING.”<br><br>“YOU’VE NO RIGHT TO GROW HERE,” SAID THE DORMOUSE.<br><br>“DON’T TALK NONSENSE,” SAID ALICE MORE BOLDLY: “YOU KNOW YOU’RE GROWING<br>TOO.”<br><br>“YES, BUT I GROW AT A REASONABLE PACE,” SAID THE DORMOUSE: “NOT IN<br>THAT RIDICULOUS FASHION.” AND HE GOT UP VERY SULKILY AND CROSSED OVER<br>TO THE OTHER SIDE OF THE COURT.<br><br>ALL THIS TIME THE QUEEN HAD NEVER LEFT OFF STARING AT THE HATTER, AND,<br>JUST AS THE DORMOUSE CROSSED THE COURT, SHE SAID TO ONE OF THE OFFICERS<br>OF THE COURT, “BRING ME THE LIST OF THE SINGERS IN THE LAST CONCERT!”<br>ON WHICH THE WRETCHED HATTER TREMBLED SO, THAT HE SHOOK BOTH HIS SHOES<br>OFF.<br><br>“GIVE YOUR EVIDENCE,” THE KING REPEATED ANGRILY, “OR I’LL HAVE YOU<br>EXECUTED, WHETHER YOU’RE NERVOUS OR NOT.”<br><br>“I’M A POOR MAN, YOUR MAJESTY,” THE HATTER BEGAN, IN A TREMBLING VOICE,<br>“—AND I HADN’T BEGUN MY TEA—NOT ABOVE A WEEK OR SO—AND WHAT WITH THE<br>BREAD-AND-BUTTER GETTING SO THIN—AND THE TWINKLING OF THE TEA—”<br><br>“THE TWINKLING OF THE WHAT?” SAID THE KING.<br><br>“IT BEGAN WITH THE TEA,” THE HATTER REPLIED.<br><br>“OF COURSE TWINKLING BEGINS WITH A T!” SAID THE KING SHARPLY. “DO YOU<br>TAKE ME FOR A DUNCE? GO ON!”<br><br>“I’M A POOR MAN,” THE HATTER WENT ON, “AND MOST THINGS TWINKLED AFTER<br>THAT—ONLY THE MARCH HARE SAID—”<br><br>“I DIDN’T!” THE MARCH HARE INTERRUPTED IN A GREAT HURRY.<br><br>“YOU DID!” SAID THE HATTER.<br><br>“I DENY IT!” SAID THE MARCH HARE.<br><br>“HE DENIES IT,” SAID THE KING: “LEAVE OUT THAT PART.”<br><br>“WELL, AT ANY RATE, THE DORMOUSE SAID—” THE HATTER WENT ON, LOOKING<br>ANXIOUSLY ROUND TO SEE IF HE WOULD DENY IT TOO: BUT THE DORMOUSE DENIED<br>NOTHING, BEING FAST ASLEEP.<br><br>“AFTER THAT,” CONTINUED THE HATTER, “I CUT SOME MORE BREAD-AND-BUTTER—”<br><br>“BUT WHAT DID THE DORMOUSE SAY?” ONE OF THE JURY ASKED.<br><br>“THAT I CAN’T REMEMBER,” SAID THE HATTER.<br><br>“YOU MUST REMEMBER,” REMARKED THE KING, “OR I’LL HAVE YOU EXECUTED.”<br><br>THE MISERABLE HATTER DROPPED HIS TEACUP AND BREAD-AND-BUTTER, AND WENT<br>DOWN ON ONE KNEE. “I’M A POOR MAN, YOUR MAJESTY,” HE BEGAN.<br><br>“YOU’RE A VERY POOR SPEAKER,” SAID THE KING.<br><br>HERE ONE OF THE GUINEA-PIGS CHEERED, AND WAS IMMEDIATELY SUPPRESSED BY<br>THE OFFICERS OF THE COURT. (AS THAT IS RATHER A HARD WORD, I WILL JUST<br>EXPLAIN TO YOU HOW IT WAS DONE. THEY HAD A LARGE CANVAS BAG, WHICH TIED<br>UP AT THE MOUTH WITH STRINGS: INTO THIS THEY SLIPPED THE GUINEA-PIG,<br>HEAD FIRST, AND THEN SAT UPON IT.)<br><br>“I’M GLAD I’VE SEEN THAT DONE,” THOUGHT ALICE. “I’VE SO OFTEN READ IN<br>THE NEWSPAPERS, AT THE END OF TRIALS, “THERE WAS SOME ATTEMPTS AT<br>APPLAUSE, WHICH WAS IMMEDIATELY SUPPRESSED BY THE OFFICERS OF THE<br>COURT,” AND I NEVER UNDERSTOOD WHAT IT MEANT TILL NOW.”<br><br>“IF THAT’S ALL YOU KNOW ABOUT IT, YOU MAY STAND DOWN,” CONTINUED THE<br>KING.<br><br>“I CAN’T GO NO LOWER,” SAID THE HATTER: “I’M ON THE FLOOR, AS IT IS.”<br><br>“THEN YOU MAY SIT DOWN,” THE KING REPLIED.<br><br>HERE THE OTHER GUINEA-PIG CHEERED, AND WAS SUPPRESSED.<br><br>“COME, THAT FINISHED THE GUINEA-PIGS!” THOUGHT ALICE. “NOW WE SHALL GET<br>ON BETTER.”<br><br>“I’D RATHER FINISH MY TEA,” SAID THE HATTER, WITH AN ANXIOUS LOOK AT<br>THE QUEEN, WHO WAS READING THE LIST OF SINGERS.<br><br>“YOU MAY GO,” SAID THE KING, AND THE HATTER HURRIEDLY LEFT THE COURT,<br>WITHOUT EVEN WAITING TO PUT HIS SHOES ON.<br><br>“—AND JUST TAKE HIS HEAD OFF OUTSIDE,” THE QUEEN ADDED TO ONE OF THE<br>OFFICERS: BUT THE HATTER WAS OUT OF SIGHT BEFORE THE OFFICER COULD GET<br>TO THE DOOR.</p>
+        </div>
+        <div class="page-number">4</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-cooks-evidence/brinsley-le-fanu-1910.jpg" alt="The Cook's Evidence">
+      </div>
+      <div class="page-right">
+        <div class="text-block text-small">
+          <p>“CALL THE NEXT WITNESS!” SAID THE KING.<br><br>THE NEXT WITNESS WAS THE DUCHESS’S COOK. SHE CARRIED THE PEPPER-BOX IN<br>HER HAND, AND ALICE GUESSED WHO IT WAS, EVEN BEFORE SHE GOT INTO THE<br>COURT, BY THE WAY THE PEOPLE NEAR THE DOOR BEGAN SNEEZING ALL AT ONCE.<br><br>“GIVE YOUR EVIDENCE,” SAID THE KING.<br><br>“SHAN’T,” SAID THE COOK.<br><br>THE KING LOOKED ANXIOUSLY AT THE WHITE RABBIT, WHO SAID IN A LOW VOICE,<br>“YOUR MAJESTY MUST CROSS-EXAMINE THIS WITNESS.”<br><br>“WELL, IF I MUST, I MUST,” THE KING SAID, WITH A MELANCHOLY AIR, AND,<br>AFTER FOLDING HIS ARMS AND FROWNING AT THE COOK TILL HIS EYES WERE<br>NEARLY OUT OF SIGHT, HE SAID IN A DEEP VOICE, “WHAT ARE TARTS MADE OF?”<br><br>“PEPPER, MOSTLY,” SAID THE COOK.<br><br>“TREACLE,” SAID A SLEEPY VOICE BEHIND HER.<br><br>“COLLAR THAT DORMOUSE,” THE QUEEN SHRIEKED OUT. “BEHEAD THAT DORMOUSE!<br>TURN THAT DORMOUSE OUT OF COURT! SUPPRESS HIM! PINCH HIM! OFF WITH HIS<br>WHISKERS!”<br><br>FOR SOME MINUTES THE WHOLE COURT WAS IN CONFUSION, GETTING THE DORMOUSE<br>TURNED OUT, AND, BY THE TIME THEY HAD SETTLED DOWN AGAIN, THE COOK HAD<br>DISAPPEARED.<br><br>“NEVER MIND!” SAID THE KING, WITH AN AIR OF GREAT RELIEF. “CALL THE<br>NEXT WITNESS.” AND HE ADDED IN AN UNDERTONE TO THE QUEEN, “REALLY, MY<br>DEAR, YOU MUST CROSS-EXAMINE THE NEXT WITNESS. IT QUITE MAKES MY<br>FOREHEAD ACHE!”<br><br>ALICE WATCHED THE WHITE RABBIT AS HE FUMBLED OVER THE LIST, FEELING<br>VERY CURIOUS TO SEE WHAT THE NEXT WITNESS WOULD BE LIKE, “—FOR THEY<br>HAVEN’T GOT MUCH EVIDENCE YET,” SHE SAID TO HERSELF. IMAGINE HER<br>SURPRISE, WHEN THE WHITE RABBIT READ OUT, AT THE TOP OF HIS SHRILL<br>LITTLE VOICE, THE NAME “ALICE!”</p>
+        </div>
+        <div class="page-number">5</div>
+      </div>
+    </div>
+    <div class="spread back-cover">
+      <div class="page-left back-image">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-cooks-evidence/brinsley-le-fanu-1910.jpg" alt="Back cover">
+      </div>
+      <div class="page-right back-text">
+        <div class="back-block">
+          <div class="the-end">THE END</div>
+          <div class="back-info">
+            <p>CHAPTER 11: WHO STOLE THE TARTS?</p>
+            <p class="small">ALICE'S ADVENTURES IN WONDERLAND (1865)</p>
+            <p class="small">WORDS BY LEWIS CARROLL</p>
+            <p class="small">ALL ILLUSTRATIONS ARE PUBLIC DOMAIN</p>
+            <p class="small">MADE WITH LOVE AT RECURSIVE.ECO</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

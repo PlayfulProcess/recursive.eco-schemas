@@ -3,32 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alice in Wonderland — 5-Minute Stories</title>
+  <title>Alice in Wonderland — Illustrated Chapter Books</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
       background: #f8f5f0;
       color: #2c1810;
-      padding: 40px;
+      padding: 40px 20px;
     }
     h1 {
       text-align: center;
-      font-size: 32px;
-      margin-bottom: 8px;
+      font-size: 28px;
+      margin-bottom: 6px;
       letter-spacing: 2px;
     }
     .subtitle {
       text-align: center;
-      font-size: 14px;
+      font-size: 13px;
       color: #888;
-      margin-bottom: 40px;
+      margin-bottom: 10px;
       letter-spacing: 1px;
+    }
+    .description {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
       max-width: 1100px;
       margin: 0 auto;
     }
@@ -48,160 +58,174 @@
     }
     .card img {
       width: 100%;
-      height: 200px;
+      height: 180px;
       object-fit: cover;
     }
     .card-body {
-      padding: 16px 20px 20px;
+      padding: 14px 18px 18px;
     }
     .card-number {
-      font-size: 11px;
+      font-size: 10px;
       letter-spacing: 2px;
       color: #d4a76a;
       margin-bottom: 4px;
     }
     .card-title {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 700;
       margin-bottom: 6px;
+      line-height: 1.2;
     }
-    .card-pages {
-      font-size: 12px;
+    .card-meta {
+      font-size: 11px;
       color: #999;
     }
     .instructions {
-      max-width: 700px;
-      margin: 40px auto 0;
-      padding: 24px;
+      max-width: 600px;
+      margin: 30px auto 0;
+      padding: 20px;
       background: white;
       border-radius: 12px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     }
     .instructions h2 {
-      font-size: 16px;
-      margin-bottom: 12px;
+      font-size: 14px;
+      margin-bottom: 10px;
       letter-spacing: 1px;
     }
     .instructions ol {
-      padding-left: 20px;
-      line-height: 1.8;
-      font-size: 14px;
+      padding-left: 18px;
+      line-height: 1.7;
+      font-size: 13px;
     }
-    .instructions li { margin-bottom: 4px; }
+    .instructions li { margin-bottom: 3px; }
+    .total {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 12px;
+      color: #aaa;
+      letter-spacing: 1px;
+    }
   </style>
 </head>
 <body>
   <h1>ALICE IN WONDERLAND</h1>
-  <div class="subtitle">12 FIVE-MINUTE STORIES FOR BEGINNING READERS</div>
+  <div class="subtitle">ILLUSTRATED CHAPTER BOOKS — ALL CAPS EDITION</div>
+  <div class="description">
+    Lewis Carroll's complete original text with 105 public domain illustrations
+    by Tenniel, Rackham, Carroll, Hudson, Gutmann, Le Fanu, Walker, Rountree & more.
+    Print landscape, fold in half!
+  </div>
   <div class="grid">
-    <a class="card" href="book01-down-the-rabbit-hole.html">
-      <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-the-white-rabbit-appears/arthur-rackham-1907.jpg" alt="DOWN THE RABBIT HOLE">
+    <a class="card" href="chapter01-down-the-rabbit-hole.html">
+      <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-bored-by-the-river/lewis-carroll-1864-manuscript.webp" alt="Down the Rabbit-Hole">
       <div class="card-body">
-        <div class="card-number">BOOK 1</div>
-        <div class="card-title">DOWN THE RABBIT HOLE</div>
-        <div class="card-pages">6 pages</div>
+        <div class="card-number">CHAPTER 1</div>
+        <div class="card-title">Down the Rabbit-Hole</div>
+        <div class="card-meta">14 pages · 6 scenes</div>
       </div>
     </a>
-    <a class="card" href="book02-the-pool-of-tears.html">
-      <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-the-pool-of-tears/arthur-rackham-1907.jpg" alt="THE POOL OF TEARS">
+    <a class="card" href="chapter02-the-pool-of-tears.html">
+      <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-curiouser-and-curiouser/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="The Pool of Tears">
       <div class="card-body">
-        <div class="card-number">BOOK 2</div>
-        <div class="card-title">THE POOL OF TEARS</div>
-        <div class="card-pages">4 pages</div>
+        <div class="card-number">CHAPTER 2</div>
+        <div class="card-title">The Pool of Tears</div>
+        <div class="card-meta">7 pages · 4 scenes</div>
       </div>
     </a>
-    <a class="card" href="book03-the-race.html">
-      <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/arthur-rackham-1907.jpg" alt="THE RACE">
+    <a class="card" href="chapter03-a-caucus-race-and-a-long-tale.html">
+      <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-driest-thing/lewis-carroll-1864-manuscript.webp" alt="A Caucus-Race and a Long Tale">
       <div class="card-body">
-        <div class="card-number">BOOK 3</div>
-        <div class="card-title">THE RACE</div>
-        <div class="card-pages">4 pages</div>
+        <div class="card-number">CHAPTER 3</div>
+        <div class="card-title">A Caucus-Race and a Long Tale</div>
+        <div class="card-meta">9 pages · 3 scenes</div>
       </div>
     </a>
-    <a class="card" href="book04-the-rabbits-house.html">
-      <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-stuck-in-the-house/bessie-pease-gutmann-1933.jpg" alt="THE RABBIT'S HOUSE">
+    <a class="card" href="chapter04-the-rabbit-sends-in-a-little-bill.html">
+      <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-mistaken-for-mary-ann/john-tenniel-harry-theaker-1911.jpg" alt="The Rabbit Sends in a Little Bill">
       <div class="card-body">
-        <div class="card-number">BOOK 4</div>
-        <div class="card-title">THE RABBIT'S HOUSE</div>
-        <div class="card-pages">4 pages</div>
+        <div class="card-number">CHAPTER 4</div>
+        <div class="card-title">The Rabbit Sends in a Little Bill</div>
+        <div class="card-meta">9 pages · 4 scenes</div>
       </div>
     </a>
-    <a class="card" href="book05-the-caterpillar.html">
-      <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch05-who-are-you/gwynedd-hudson-1922.jpg" alt="THE CATERPILLAR">
+    <a class="card" href="chapter05-advice-from-a-caterpillar.html">
+      <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch05-who-are-you/gwynedd-hudson-1922.jpg" alt="Advice from a Caterpillar">
       <div class="card-body">
-        <div class="card-number">BOOK 5</div>
-        <div class="card-title">THE CATERPILLAR</div>
-        <div class="card-pages">4 pages</div>
+        <div class="card-number">CHAPTER 5</div>
+        <div class="card-title">Advice from a Caterpillar</div>
+        <div class="card-meta">8 pages · 4 scenes</div>
       </div>
     </a>
-    <a class="card" href="book06-the-cheshire-cat.html">
-      <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-cheshire-cat/john-tenniel-harry-theaker-1911.jpg" alt="THE CHESHIRE CAT">
+    <a class="card" href="chapter06-pig-and-pepper.html">
+      <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-fish-footman/lewis-carroll-1864-manuscript.webp" alt="Pig and Pepper">
       <div class="card-body">
-        <div class="card-number">BOOK 6</div>
-        <div class="card-title">THE CHESHIRE CAT</div>
-        <div class="card-pages">4 pages</div>
+        <div class="card-number">CHAPTER 6</div>
+        <div class="card-title">Pig and Pepper</div>
+        <div class="card-meta">13 pages · 4 scenes</div>
       </div>
     </a>
-    <a class="card" href="book07-the-mad-tea-party.html">
-      <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-no-room/arthur-rackham-1907.jpg" alt="THE MAD TEA PARTY">
+    <a class="card" href="chapter07-a-mad-tea-party.html">
+      <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-no-room/arthur-rackham-1907.jpg" alt="A Mad Tea-Party">
       <div class="card-body">
-        <div class="card-number">BOOK 7</div>
-        <div class="card-title">THE MAD TEA PARTY</div>
-        <div class="card-pages">5 pages</div>
+        <div class="card-number">CHAPTER 7</div>
+        <div class="card-title">A Mad Tea-Party</div>
+        <div class="card-meta">9 pages · 5 scenes</div>
       </div>
     </a>
-    <a class="card" href="book08-the-queens-garden.html">
-      <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-painting-the-roses-red/gwynedd-hudson-1922.jpg" alt="THE QUEEN'S GARDEN">
+    <a class="card" href="chapter08-the-queen-s-croquet-ground.html">
+      <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-painting-the-roses-red/gwynedd-hudson-1922.jpg" alt="The Queen's Croquet-Ground">
       <div class="card-body">
-        <div class="card-number">BOOK 8</div>
-        <div class="card-title">THE QUEEN'S GARDEN</div>
-        <div class="card-pages">4 pages</div>
+        <div class="card-number">CHAPTER 8</div>
+        <div class="card-title">The Queen's Croquet-Ground</div>
+        <div class="card-meta">13 pages · 4 scenes</div>
       </div>
     </a>
-    <a class="card" href="book09-the-mock-turtle.html">
-      <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-meeting-the-gryphon/arthur-rackham-1907.jpg" alt="THE MOCK TURTLE">
+    <a class="card" href="chapter09-the-mock-turtle-s-story.html">
+      <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-the-duchess-and-her-morals/gwynedd-hudson-1922.jpg" alt="The Mock Turtle's Story">
       <div class="card-body">
-        <div class="card-number">BOOK 9</div>
-        <div class="card-title">THE MOCK TURTLE</div>
-        <div class="card-pages">3 pages</div>
+        <div class="card-number">CHAPTER 9</div>
+        <div class="card-title">The Mock Turtle's Story</div>
+        <div class="card-meta">8 pages · 3 scenes</div>
       </div>
     </a>
-    <a class="card" href="book10-the-lobster-dance.html">
-      <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch10-the-lobster-quadrille/harry-rountree-1928.jpg" alt="THE LOBSTER DANCE">
+    <a class="card" href="chapter10-the-lobster-quadrille.html">
+      <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch10-the-lobster-quadrille/harry-rountree-1928.jpg" alt="The Lobster Quadrille">
       <div class="card-body">
-        <div class="card-number">BOOK 10</div>
-        <div class="card-title">THE LOBSTER DANCE</div>
-        <div class="card-pages">3 pages</div>
+        <div class="card-number">CHAPTER 10</div>
+        <div class="card-title">The Lobster Quadrille</div>
+        <div class="card-meta">3 pages · 3 scenes</div>
       </div>
     </a>
-    <a class="card" href="book11-the-trial.html">
-      <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-court-assembles/arthur-rackham-1907.jpg" alt="THE TRIAL">
+    <a class="card" href="chapter11-who-stole-the-tarts.html">
+      <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-court-assembles/arthur-rackham-1907.jpg" alt="Who Stole the Tarts?">
       <div class="card-body">
-        <div class="card-number">BOOK 11</div>
-        <div class="card-title">THE TRIAL</div>
-        <div class="card-pages">3 pages</div>
+        <div class="card-number">CHAPTER 11</div>
+        <div class="card-title">Who Stole the Tarts?</div>
+        <div class="card-meta">5 pages · 3 scenes</div>
       </div>
     </a>
-    <a class="card" href="book12-waking-up.html">
-      <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-waking-up/lewis-carroll-1864-manuscript.webp" alt="WAKING UP">
+    <a class="card" href="chapter12-alice-s-evidence.html">
+      <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-alice-tips-the-jury/john-tenniel-harry-theaker-1911.jpg" alt="Alice's Evidence">
       <div class="card-body">
-        <div class="card-number">BOOK 12</div>
-        <div class="card-title">WAKING UP</div>
-        <div class="card-pages">4 pages</div>
+        <div class="card-number">CHAPTER 12</div>
+        <div class="card-title">Alice's Evidence</div>
+        <div class="card-meta">7 pages · 4 scenes</div>
       </div>
     </a>
   </div>
   <div class="instructions">
     <h2>HOW TO PRINT</h2>
     <ol>
-      <li>Click on a book above to open it</li>
-      <li>Press Ctrl+P (or Cmd+P on Mac) to print</li>
+      <li>Click a chapter above to open it</li>
+      <li>Press <strong>Ctrl+P</strong> (or <strong>Cmd+P</strong> on Mac)</li>
       <li>Set orientation to <strong>Landscape</strong></li>
       <li>Set margins to <strong>None</strong></li>
       <li>Turn on <strong>Background graphics</strong></li>
-      <li>Print on both sides (flip on short edge) if your printer supports it</li>
-      <li>Fold each sheet in half — you have a booklet!</li>
+      <li>Print double-sided (flip on short edge) if available</li>
+      <li>Fold each sheet in half — you have a picture book!</li>
     </ol>
   </div>
+  <div class="total">105 ILLUSTRATIONS · 12 CHAPTERS · ALL PUBLIC DOMAIN</div>
 </body>
 </html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 10: The Lobster Quadrille — Alice in Wonderland</title>
+  <style>
+    @page {
+      size: landscape;
+      margin: 0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      background: white;
+      color: #1a1a1a;
+    }
+
+    .spread {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+    }
+
+    .spread:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* Left page = illustration */
+    .page-left {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8f5f0;
+      padding: 16px;
+      overflow: hidden;
+    }
+
+    .page-left img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Right page = text */
+    .page-right {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 40px;
+      background: white;
+      position: relative;
+    }
+
+    .text-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      width: 100%;
+      overflow-y: auto;
+    }
+
+    .text-block p {
+      font-size: clamp(14px, 2.2vw, 24px);
+      line-height: 1.7;
+      font-weight: 700;
+      text-align: left;
+      letter-spacing: 0.3px;
+      max-width: 95%;
+    }
+
+    /* For longer text passages */
+    .text-block.text-medium p {
+      font-size: clamp(12px, 1.8vw, 19px);
+      line-height: 1.6;
+    }
+
+    .text-block.text-small p {
+      font-size: clamp(10px, 1.5vw, 16px);
+      line-height: 1.5;
+    }
+
+    .page-number {
+      font-size: 12px;
+      color: #bbb;
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+    }
+
+    /* Cover page styles */
+    .cover-title {
+      background: #2c1810;
+      color: white;
+    }
+
+    .title-block {
+      text-align: center;
+    }
+
+    .series-name {
+      font-size: clamp(11px, 1.5vw, 16px);
+      letter-spacing: 4px;
+      color: #d4a76a;
+      margin-bottom: 12px;
+    }
+
+    .book-number {
+      font-size: clamp(13px, 1.8vw, 20px);
+      letter-spacing: 3px;
+      color: #d4a76a;
+      margin-bottom: 20px;
+    }
+
+    .title-block h1 {
+      font-size: clamp(20px, 3.8vw, 42px);
+      line-height: 1.2;
+      margin-bottom: 25px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .author {
+      font-size: clamp(11px, 1.3vw, 14px);
+      letter-spacing: 3px;
+      color: #d4a76a;
+      margin-bottom: 8px;
+    }
+
+    .page-info {
+      font-size: clamp(10px, 1.1vw, 12px);
+      letter-spacing: 2px;
+      color: #a08060;
+      margin-top: 5px;
+    }
+
+    .cover-image {
+      background: #2c1810;
+    }
+
+    .cover-image img {
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+
+    /* Back cover */
+    .back-text {
+      background: #2c1810;
+      color: white;
+    }
+
+    .back-block {
+      text-align: center;
+    }
+
+    .the-end {
+      font-size: clamp(24px, 4vw, 44px);
+      font-weight: 800;
+      letter-spacing: 6px;
+      margin-bottom: 30px;
+      color: #d4a76a;
+    }
+
+    .back-info p {
+      font-size: clamp(10px, 1.2vw, 13px);
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+      color: #d4a76a;
+    }
+
+    .back-info .small {
+      font-size: clamp(8px, 0.9vw, 10px);
+      color: #a08060;
+    }
+
+    .back-image {
+      background: #2c1810;
+    }
+
+    .back-image img {
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+
+    /* Print styles */
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .spread { height: 100vh; }
+      .page-left img { box-shadow: none; }
+      .cover-image img, .back-image img { box-shadow: none; }
+      .text-block { overflow: hidden; }
+    }
+
+    /* Screen: show page dividers */
+    @media screen {
+      .spread {
+        border-bottom: 3px dashed #ccc;
+        min-height: 100vh;
+      }
+      .spread:last-child {
+        border-bottom: none;
+      }
+      body {
+        background: #e8e8e8;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <div class="spread cover-spread">
+      <div class="page-left cover-image">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch10-the-lobster-quadrille/harry-rountree-1928.jpg" alt="Cover">
+      </div>
+      <div class="page-right cover-title">
+        <div class="title-block">
+          <div class="series-name">ALICE IN WONDERLAND</div>
+          <div class="book-number">CHAPTER 10</div>
+          <h1>THE LOBSTER QUADRILLE</h1>
+          <div class="author">BY LEWIS CARROLL</div>
+          <div class="page-info">3 PAGES</div>
+        </div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch10-the-lobster-quadrille/harry-rountree-1928.jpg" alt="The Lobster Quadrille">
+      </div>
+      <div class="page-right">
+        <div class="text-block text-small">
+          <p>THE MOCK TURTLE SIGHED DEEPLY, AND DREW THE BACK OF ONE FLAPPER ACROSS<br>HIS EYES. HE LOOKED AT ALICE, AND TRIED TO SPEAK, BUT FOR A MINUTE OR<br>TWO SOBS CHOKED HIS VOICE. “SAME AS IF HE HAD A BONE IN HIS THROAT,”<br>SAID THE GRYPHON: AND IT SET TO WORK SHAKING HIM AND PUNCHING HIM IN<br>THE BACK. AT LAST THE MOCK TURTLE RECOVERED HIS VOICE, AND, WITH TEARS<br>RUNNING DOWN HIS CHEEKS, HE WENT ON AGAIN:—<br><br>“YOU MAY NOT HAVE LIVED MUCH UNDER THE SEA—” (“I HAVEN’T,” SAID<br>ALICE)—“AND PERHAPS YOU WERE NEVER EVEN INTRODUCED TO A LOBSTER—”<br>(ALICE BEGAN TO SAY “I ONCE TASTED—” BUT CHECKED HERSELF HASTILY, AND<br>SAID “NO, NEVER”) “—SO YOU CAN HAVE NO IDEA WHAT A DELIGHTFUL THING A<br>LOBSTER QUADRILLE IS!”<br><br>“NO, INDEED,” SAID ALICE. “WHAT SORT OF A DANCE IS IT?”<br><br>“WHY,” SAID THE GRYPHON, “YOU FIRST FORM INTO A LINE ALONG THE<br>SEA-SHORE—”<br><br>“TWO LINES!” CRIED THE MOCK TURTLE. “SEALS, TURTLES, SALMON, AND SO ON;<br>THEN, WHEN YOU’VE CLEARED ALL THE JELLY-FISH OUT OF THE WAY—”<br><br>“THAT GENERALLY TAKES SOME TIME,” INTERRUPTED THE GRYPHON.<br><br>“—YOU ADVANCE TWICE—”<br><br>“EACH WITH A LOBSTER AS A PARTNER!” CRIED THE GRYPHON.<br><br>“OF COURSE,” THE MOCK TURTLE SAID: “ADVANCE TWICE, SET TO PARTNERS—”<br><br>“—CHANGE LOBSTERS, AND RETIRE IN SAME ORDER,” CONTINUED THE GRYPHON.<br><br>“THEN, YOU KNOW,” THE MOCK TURTLE WENT ON, “YOU THROW THE—”<br><br>“THE LOBSTERS!” SHOUTED THE GRYPHON, WITH A BOUND INTO THE AIR.<br><br>“—AS FAR OUT TO SEA AS YOU CAN—”<br><br>“SWIM AFTER THEM!” SCREAMED THE GRYPHON.<br><br>“TURN A SOMERSAULT IN THE SEA!” CRIED THE MOCK TURTLE, CAPERING WILDLY<br>ABOUT.<br><br>“CHANGE LOBSTERS AGAIN!” YELLED THE GRYPHON AT THE TOP OF ITS VOICE.<br><br>“BACK TO LAND AGAIN, AND THAT’S ALL THE FIRST FIGURE,” SAID THE MOCK<br>TURTLE, SUDDENLY DROPPING HIS VOICE; AND THE TWO CREATURES, WHO HAD<br>BEEN JUMPING ABOUT LIKE MAD THINGS ALL THIS TIME, SAT DOWN AGAIN VERY<br>SADLY AND QUIETLY, AND LOOKED AT ALICE.<br><br>“IT MUST BE A VERY PRETTY DANCE,” SAID ALICE TIMIDLY.<br><br>“WOULD YOU LIKE TO SEE A LITTLE OF IT?” SAID THE MOCK TURTLE.<br><br>“VERY MUCH INDEED,” SAID ALICE.<br><br>“COME, LET’S TRY THE FIRST FIGURE!” SAID THE MOCK TURTLE TO THE<br>GRYPHON. “WE CAN DO WITHOUT LOBSTERS, YOU KNOW. WHICH SHALL SING?”<br><br>“OH, YOU SING,” SAID THE GRYPHON. “I’VE FORGOTTEN THE WORDS.”<br><br>SO THEY BEGAN SOLEMNLY DANCING ROUND AND ROUND ALICE, EVERY NOW AND<br>THEN TREADING ON HER TOES WHEN THEY PASSED TOO CLOSE, AND WAVING THEIR<br>FOREPAWS TO MARK THE TIME, WHILE THE MOCK TURTLE SANG THIS, VERY SLOWLY<br>AND SADLY:—<br><br>“WILL YOU WALK A LITTLE FASTER?” SAID A WHITING TO A SNAIL.<br>“THERE’S A PORPOISE CLOSE BEHIND US, AND HE’S TREADING ON MY TAIL.<br>SEE HOW EAGERLY THE LOBSTERS AND THE TURTLES ALL ADVANCE!<br>THEY ARE WAITING ON THE SHINGLE—WILL YOU COME AND JOIN THE DANCE?<br>WILL YOU, WON’T YOU, WILL YOU, WON’T YOU, WILL YOU JOIN THE DANCE?<br>WILL YOU, WON’T YOU, WILL YOU, WON’T YOU, WON’T YOU JOIN THE DANCE?<br><br>“YOU CAN REALLY HAVE NO NOTION HOW DELIGHTFUL IT WILL BE<br>WHEN THEY TAKE US UP AND THROW US, WITH THE LOBSTERS, OUT TO SEA!”<br>BUT THE SNAIL REPLIED “TOO FAR, TOO FAR!” AND GAVE A LOOK ASKANCE—<br>SAID HE THANKED THE WHITING KINDLY, BUT HE WOULD NOT JOIN THE DANCE.<br>WOULD NOT, COULD NOT, WOULD NOT, COULD NOT, WOULD NOT JOIN THE DANCE.<br>WOULD NOT, COULD NOT, WOULD NOT, COULD NOT, COULD NOT JOIN THE DANCE.<br><br>“WHAT MATTERS IT HOW FAR WE GO?” HIS SCALY FRIEND REPLIED.<br>“THERE IS ANOTHER SHORE, YOU KNOW, UPON THE OTHER SIDE.<br>THE FURTHER OFF FROM ENGLAND THE NEARER IS TO FRANCE—<br>THEN TURN NOT PALE, BELOVED SNAIL, BUT COME AND JOIN THE DANCE.<br>WILL YOU, WON’T YOU, WILL YOU, WON’T YOU, WILL YOU JOIN THE DANCE?<br>WILL YOU, WON’T YOU, WILL YOU, WON’T YOU, WON’T YOU JOIN THE DANCE?”<br><br>“THANK YOU, IT’S A VERY INTERESTING DANCE TO WATCH,” SAID ALICE,<br>FEELING VERY GLAD THAT IT WAS OVER AT LAST: “AND I DO SO LIKE THAT<br>CURIOUS SONG ABOUT THE WHITING!”<br><br>“OH, AS TO THE WHITING,” SAID THE MOCK TURTLE, “THEY—YOU’VE SEEN THEM,<br>OF COURSE?”<br><br>“YES,” SAID ALICE, “I’VE OFTEN SEEN THEM AT DINN—” SHE CHECKED HERSELF<br>HASTILY.<br><br>“I DON’T KNOW WHERE DINN MAY BE,” SAID THE MOCK TURTLE, “BUT IF YOU’VE<br>SEEN THEM SO OFTEN, OF COURSE YOU KNOW WHAT THEY’RE LIKE.”<br><br>“I BELIEVE SO,” ALICE REPLIED THOUGHTFULLY. “THEY HAVE THEIR TAILS IN<br>THEIR MOUTHS—AND THEY’RE ALL OVER CRUMBS.”<br><br>“YOU’RE WRONG ABOUT THE CRUMBS,” SAID THE MOCK TURTLE: “CRUMBS WOULD<br>ALL WASH OFF IN THE SEA. BUT THEY HAVE THEIR TAILS IN THEIR MOUTHS;<br>AND THE REASON IS—” HERE THE MOCK TURTLE YAWNED AND SHUT HIS<br>EYES.—“TELL HER ABOUT THE REASON AND ALL THAT,” HE SAID TO THE GRYPHON.<br><br>“THE REASON IS,” SAID THE GRYPHON, “THAT THEY WOULD GO WITH THE<br>LOBSTERS TO THE DANCE. SO THEY GOT THROWN OUT TO SEA. SO THEY HAD TO<br>FALL A LONG WAY. SO THEY GOT THEIR TAILS FAST IN THEIR MOUTHS. SO THEY<br>COULDN’T GET THEM OUT AGAIN. THAT’S ALL.”<br><br>“THANK YOU,” SAID ALICE, “IT’S VERY INTERESTING. I NEVER KNEW SO MUCH<br>ABOUT A WHITING BEFORE.”<br><br>“I CAN TELL YOU MORE THAN THAT, IF YOU LIKE,” SAID THE GRYPHON. “DO YOU<br>KNOW WHY IT’S CALLED A WHITING?”<br><br>“I NEVER THOUGHT ABOUT IT,” SAID ALICE. “WHY?”<br><br>“IT DOES THE BOOTS AND SHOES,” THE GRYPHON REPLIED VERY SOLEMNLY.<br><br>ALICE WAS THOROUGHLY PUZZLED. “DOES THE BOOTS AND SHOES!” SHE REPEATED<br>IN A WONDERING TONE.<br><br>“WHY, WHAT ARE YOUR SHOES DONE WITH?” SAID THE GRYPHON. “I MEAN, WHAT<br>MAKES THEM SO SHINY?”<br><br>ALICE LOOKED DOWN AT THEM, AND CONSIDERED A LITTLE BEFORE SHE GAVE HER<br>ANSWER. “THEY’RE DONE WITH BLACKING, I BELIEVE.”<br><br>“BOOTS AND SHOES UNDER THE SEA,” THE GRYPHON WENT ON IN A DEEP VOICE,<br>“ARE DONE WITH A WHITING. NOW YOU KNOW.”<br><br>“AND WHAT ARE THEY MADE OF?” ALICE ASKED IN A TONE OF GREAT CURIOSITY.<br><br>“SOLES AND EELS, OF COURSE,” THE GRYPHON REPLIED RATHER IMPATIENTLY:<br>“ANY SHRIMP COULD HAVE TOLD YOU THAT.”<br><br>“IF I’D BEEN THE WHITING,” SAID ALICE, WHOSE THOUGHTS WERE STILL<br>RUNNING ON THE SONG, “I’D HAVE SAID TO THE PORPOISE, ‘KEEP BACK,<br>PLEASE: WE DON’T WANT YOU WITH US!’”<br><br>“THEY WERE OBLIGED TO HAVE HIM WITH THEM,” THE MOCK TURTLE SAID: “NO<br>WISE FISH WOULD GO ANYWHERE WITHOUT A PORPOISE.”<br><br>“WOULDN’T IT REALLY?” SAID ALICE IN A TONE OF GREAT SURPRISE.<br><br>“OF COURSE NOT,” SAID THE MOCK TURTLE: “WHY, IF A FISH CAME TO ME,<br>AND TOLD ME HE WAS GOING A JOURNEY, I SHOULD SAY ‘WITH WHAT PORPOISE?’”<br><br>“DON’T YOU MEAN ‘PURPOSE’?” SAID ALICE.<br><br>“I MEAN WHAT I SAY,” THE MOCK TURTLE REPLIED IN AN OFFENDED TONE. AND<br>THE GRYPHON ADDED “COME, LET’S HEAR SOME OF YOUR ADVENTURES.”</p>
+        </div>
+        <div class="page-number">1</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch10-the-lobster-and-the-owl/lewis-carroll-1864-manuscript.webp" alt="The Voice of the Lobster">
+      </div>
+      <div class="page-right">
+        <div class="text-block text-small">
+          <p>“I COULD TELL YOU MY ADVENTURES—BEGINNING FROM THIS MORNING,” SAID<br>ALICE A LITTLE TIMIDLY: “BUT IT’S NO USE GOING BACK TO YESTERDAY,<br>BECAUSE I WAS A DIFFERENT PERSON THEN.”<br><br>“EXPLAIN ALL THAT,” SAID THE MOCK TURTLE.<br><br>“NO, NO! THE ADVENTURES FIRST,” SAID THE GRYPHON IN AN IMPATIENT TONE:<br>“EXPLANATIONS TAKE SUCH A DREADFUL TIME.”<br><br>SO ALICE BEGAN TELLING THEM HER ADVENTURES FROM THE TIME WHEN SHE FIRST<br>SAW THE WHITE RABBIT. SHE WAS A LITTLE NERVOUS ABOUT IT JUST AT FIRST,<br>THE TWO CREATURES GOT SO CLOSE TO HER, ONE ON EACH SIDE, AND OPENED<br>THEIR EYES AND MOUTHS SO VERY WIDE, BUT SHE GAINED COURAGE AS SHE<br>WENT ON. HER LISTENERS WERE PERFECTLY QUIET TILL SHE GOT TO THE PART<br>ABOUT HER REPEATING “YOU ARE OLD, FATHER WILLIAM,” TO THE<br>CATERPILLAR, AND THE WORDS ALL COMING DIFFERENT, AND THEN THE MOCK<br>TURTLE DREW A LONG BREATH, AND SAID “THAT’S VERY CURIOUS.”<br><br>“IT’S ALL ABOUT AS CURIOUS AS IT CAN BE,” SAID THE GRYPHON.<br><br>“IT ALL CAME DIFFERENT!” THE MOCK TURTLE REPEATED THOUGHTFULLY. “I<br>SHOULD LIKE TO HEAR HER TRY AND REPEAT SOMETHING NOW. TELL HER TO<br>BEGIN.” HE LOOKED AT THE GRYPHON AS IF HE THOUGHT IT HAD SOME KIND OF<br>AUTHORITY OVER ALICE.<br><br>“STAND UP AND REPEAT ‘’TIS THE VOICE OF THE SLUGGARD,’” SAID THE<br>GRYPHON.<br><br>“HOW THE CREATURES ORDER ONE ABOUT, AND MAKE ONE REPEAT LESSONS!”<br>THOUGHT ALICE; “I MIGHT AS WELL BE AT SCHOOL AT ONCE.” HOWEVER, SHE GOT<br>UP, AND BEGAN TO REPEAT IT, BUT HER HEAD WAS SO FULL OF THE LOBSTER<br>QUADRILLE, THAT SHE HARDLY KNEW WHAT SHE WAS SAYING, AND THE WORDS CAME<br>VERY QUEER INDEED:—<br><br>“’TIS THE VOICE OF THE LOBSTER; I HEARD HIM DECLARE,<br>“YOU HAVE BAKED ME TOO BROWN, I MUST SUGAR MY HAIR.”<br>AS A DUCK WITH ITS EYELIDS, SO HE WITH HIS NOSE<br>TRIMS HIS BELT AND HIS BUTTONS, AND TURNS OUT HIS TOES.”<br><br>[LATER EDITIONS CONTINUED AS FOLLOWS<br>WHEN THE SANDS ARE ALL DRY, HE IS GAY AS A LARK,<br>AND WILL TALK IN CONTEMPTUOUS TONES OF THE SHARK,<br>BUT, WHEN THE TIDE RISES AND SHARKS ARE AROUND,<br>HIS VOICE HAS A TIMID AND TREMULOUS SOUND.]<br><br>“THAT’S DIFFERENT FROM WHAT I USED TO SAY WHEN I WAS A CHILD,” SAID<br>THE GRYPHON.<br><br>“WELL, I NEVER HEARD IT BEFORE,” SAID THE MOCK TURTLE; “BUT IT SOUNDS<br>UNCOMMON NONSENSE.”<br><br>ALICE SAID NOTHING; SHE HAD SAT DOWN WITH HER FACE IN HER HANDS,<br>WONDERING IF ANYTHING WOULD EVER HAPPEN IN A NATURAL WAY AGAIN.<br><br>“I SHOULD LIKE TO HAVE IT EXPLAINED,” SAID THE MOCK TURTLE.<br><br>“SHE CAN’T EXPLAIN IT,” SAID THE GRYPHON HASTILY. “GO ON WITH THE NEXT<br>VERSE.”<br><br>“BUT ABOUT HIS TOES?” THE MOCK TURTLE PERSISTED. “HOW COULD HE TURN<br>THEM OUT WITH HIS NOSE, YOU KNOW?”<br><br>“IT’S THE FIRST POSITION IN DANCING.” ALICE SAID; BUT WAS DREADFULLY<br>PUZZLED BY THE WHOLE THING, AND LONGED TO CHANGE THE SUBJECT.<br><br>“GO ON WITH THE NEXT VERSE,” THE GRYPHON REPEATED IMPATIENTLY: “IT<br>BEGINS ‘I PASSED BY HIS GARDEN.’”<br><br>ALICE DID NOT DARE TO DISOBEY, THOUGH SHE FELT SURE IT WOULD ALL COME<br>WRONG, AND SHE WENT ON IN A TREMBLING VOICE:—<br><br>“I PASSED BY HIS GARDEN, AND MARKED, WITH ONE EYE,<br>HOW THE OWL AND THE PANTHER WERE SHARING A PIE—”<br><br>[LATER EDITIONS CONTINUED AS FOLLOWS<br>THE PANTHER TOOK PIE-CRUST, AND GRAVY, AND MEAT,<br>WHILE THE OWL HAD THE DISH AS ITS SHARE OF THE TREAT.<br>WHEN THE PIE WAS ALL FINISHED, THE OWL, AS A BOON,<br>WAS KINDLY PERMITTED TO POCKET THE SPOON:<br>WHILE THE PANTHER RECEIVED KNIFE AND FORK WITH A GROWL,<br>AND CONCLUDED THE BANQUET—]<br><br>“WHAT IS THE USE OF REPEATING ALL THAT STUFF,” THE MOCK TURTLE<br>INTERRUPTED, “IF YOU DON’T EXPLAIN IT AS YOU GO ON? IT’S BY FAR THE<br>MOST CONFUSING THING I EVER HEARD!”<br><br>“YES, I THINK YOU’D BETTER LEAVE OFF,” SAID THE GRYPHON: AND ALICE WAS<br>ONLY TOO GLAD TO DO SO.</p>
+        </div>
+        <div class="page-number">2</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch10-beautiful-soup/lewis-carroll-1864-manuscript.webp" alt="Beautiful Soup">
+      </div>
+      <div class="page-right">
+        <div class="text-block text-small">
+          <p>“SHALL WE TRY ANOTHER FIGURE OF THE LOBSTER QUADRILLE?” THE GRYPHON<br>WENT ON. “OR WOULD YOU LIKE THE MOCK TURTLE TO SING YOU A SONG?”<br><br>“OH, A SONG, PLEASE, IF THE MOCK TURTLE WOULD BE SO KIND,” ALICE<br>REPLIED, SO EAGERLY THAT THE GRYPHON SAID, IN A RATHER OFFENDED TONE,<br>“HM! NO ACCOUNTING FOR TASTES! SING HER ‘TURTLE SOUP,’ WILL YOU, OLD<br>FELLOW?”<br><br>THE MOCK TURTLE SIGHED DEEPLY, AND BEGAN, IN A VOICE SOMETIMES CHOKED<br>WITH SOBS, TO SING THIS:—<br><br>“BEAUTIFUL SOUP, SO RICH AND GREEN,<br>WAITING IN A HOT TUREEN!<br>WHO FOR SUCH DAINTIES WOULD NOT STOOP?<br>SOUP OF THE EVENING, BEAUTIFUL SOUP!<br>SOUP OF THE EVENING, BEAUTIFUL SOUP!<br>    BEAU—OOTIFUL SOO—OOP!<br>    BEAU—OOTIFUL SOO—OOP!<br>SOO—OOP OF THE E—E—EVENING,<br>    BEAUTIFUL, BEAUTIFUL SOUP!<br><br>“BEAUTIFUL SOUP! WHO CARES FOR FISH,<br>GAME, OR ANY OTHER DISH?<br>WHO WOULD NOT GIVE ALL ELSE FOR TWO P<br>ENNYWORTH ONLY OF BEAUTIFUL SOUP?<br>PENNYWORTH ONLY OF BEAUTIFUL SOUP?<br>    BEAU—OOTIFUL SOO—OOP!<br>    BEAU—OOTIFUL SOO—OOP!<br>SOO—OOP OF THE E—E—EVENING,<br>    BEAUTIFUL, BEAUTI—FUL SOUP!”<br><br>“CHORUS AGAIN!” CRIED THE GRYPHON, AND THE MOCK TURTLE HAD JUST BEGUN<br>TO REPEAT IT, WHEN A CRY OF “THE TRIAL’S BEGINNING!” WAS HEARD IN THE<br>DISTANCE.<br><br>“COME ON!” CRIED THE GRYPHON, AND, TAKING ALICE BY THE HAND, IT HURRIED<br>OFF, WITHOUT WAITING FOR THE END OF THE SONG.<br><br>“WHAT TRIAL IS IT?” ALICE PANTED AS SHE RAN; BUT THE GRYPHON ONLY<br>ANSWERED “COME ON!” AND RAN THE FASTER, WHILE MORE AND MORE FAINTLY<br>CAME, CARRIED ON THE BREEZE THAT FOLLOWED THEM, THE MELANCHOLY WORDS:—<br><br>“SOO—OOP OF THE E—E—EVENING,<br>    BEAUTIFUL, BEAUTIFUL SOUP!”</p>
+        </div>
+        <div class="page-number">3</div>
+      </div>
+    </div>
+    <div class="spread back-cover">
+      <div class="page-left back-image">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch10-beautiful-soup/lewis-carroll-1864-manuscript.webp" alt="Back cover">
+      </div>
+      <div class="page-right back-text">
+        <div class="back-block">
+          <div class="the-end">THE END</div>
+          <div class="back-info">
+            <p>CHAPTER 10: THE LOBSTER QUADRILLE</p>
+            <p class="small">ALICE'S ADVENTURES IN WONDERLAND (1865)</p>
+            <p class="small">WORDS BY LEWIS CARROLL</p>
+            <p class="small">ALL ILLUSTRATIONS ARE PUBLIC DOMAIN</p>
+            <p class="small">MADE WITH LOVE AT RECURSIVE.ECO</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

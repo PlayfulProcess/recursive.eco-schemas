@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 6: Pig and Pepper — Alice in Wonderland</title>
+  <style>
+    @page {
+      size: landscape;
+      margin: 0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      background: white;
+      color: #1a1a1a;
+    }
+
+    .spread {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+    }
+
+    .spread:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* Left page = illustration */
+    .page-left {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8f5f0;
+      padding: 16px;
+      overflow: hidden;
+    }
+
+    .page-left img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Right page = text */
+    .page-right {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 40px;
+      background: white;
+      position: relative;
+    }
+
+    .text-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      width: 100%;
+      overflow-y: auto;
+    }
+
+    .text-block p {
+      font-size: clamp(14px, 2.2vw, 24px);
+      line-height: 1.7;
+      font-weight: 700;
+      text-align: left;
+      letter-spacing: 0.3px;
+      max-width: 95%;
+    }
+
+    /* For longer text passages */
+    .text-block.text-medium p {
+      font-size: clamp(12px, 1.8vw, 19px);
+      line-height: 1.6;
+    }
+
+    .text-block.text-small p {
+      font-size: clamp(10px, 1.5vw, 16px);
+      line-height: 1.5;
+    }
+
+    .page-number {
+      font-size: 12px;
+      color: #bbb;
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+    }
+
+    /* Cover page styles */
+    .cover-title {
+      background: #2c1810;
+      color: white;
+    }
+
+    .title-block {
+      text-align: center;
+    }
+
+    .series-name {
+      font-size: clamp(11px, 1.5vw, 16px);
+      letter-spacing: 4px;
+      color: #d4a76a;
+      margin-bottom: 12px;
+    }
+
+    .book-number {
+      font-size: clamp(13px, 1.8vw, 20px);
+      letter-spacing: 3px;
+      color: #d4a76a;
+      margin-bottom: 20px;
+    }
+
+    .title-block h1 {
+      font-size: clamp(20px, 3.8vw, 42px);
+      line-height: 1.2;
+      margin-bottom: 25px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .author {
+      font-size: clamp(11px, 1.3vw, 14px);
+      letter-spacing: 3px;
+      color: #d4a76a;
+      margin-bottom: 8px;
+    }
+
+    .page-info {
+      font-size: clamp(10px, 1.1vw, 12px);
+      letter-spacing: 2px;
+      color: #a08060;
+      margin-top: 5px;
+    }
+
+    .cover-image {
+      background: #2c1810;
+    }
+
+    .cover-image img {
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+
+    /* Back cover */
+    .back-text {
+      background: #2c1810;
+      color: white;
+    }
+
+    .back-block {
+      text-align: center;
+    }
+
+    .the-end {
+      font-size: clamp(24px, 4vw, 44px);
+      font-weight: 800;
+      letter-spacing: 6px;
+      margin-bottom: 30px;
+      color: #d4a76a;
+    }
+
+    .back-info p {
+      font-size: clamp(10px, 1.2vw, 13px);
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+      color: #d4a76a;
+    }
+
+    .back-info .small {
+      font-size: clamp(8px, 0.9vw, 10px);
+      color: #a08060;
+    }
+
+    .back-image {
+      background: #2c1810;
+    }
+
+    .back-image img {
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+
+    /* Print styles */
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .spread { height: 100vh; }
+      .page-left img { box-shadow: none; }
+      .cover-image img, .back-image img { box-shadow: none; }
+      .text-block { overflow: hidden; }
+    }
+
+    /* Screen: show page dividers */
+    @media screen {
+      .spread {
+        border-bottom: 3px dashed #ccc;
+        min-height: 100vh;
+      }
+      .spread:last-child {
+        border-bottom: none;
+      }
+      body {
+        background: #e8e8e8;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <div class="spread cover-spread">
+      <div class="page-left cover-image">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-fish-footman/lewis-carroll-1864-manuscript.webp" alt="Cover">
+      </div>
+      <div class="page-right cover-title">
+        <div class="title-block">
+          <div class="series-name">ALICE IN WONDERLAND</div>
+          <div class="book-number">CHAPTER 6</div>
+          <h1>PIG AND PEPPER</h1>
+          <div class="author">BY LEWIS CARROLL</div>
+          <div class="page-info">13 PAGES</div>
+        </div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-fish-footman/lewis-carroll-1864-manuscript.webp" alt="The Fish-Footman">
+      </div>
+      <div class="page-right">
+        <div class="text-block text-small">
+          <p>FOR A MINUTE OR TWO SHE STOOD LOOKING AT THE HOUSE, AND WONDERING WHAT<br>TO DO NEXT, WHEN SUDDENLY A FOOTMAN IN LIVERY CAME RUNNING OUT OF THE<br>WOOD—(SHE CONSIDERED HIM TO BE A FOOTMAN BECAUSE HE WAS IN LIVERY:<br>OTHERWISE, JUDGING BY HIS FACE ONLY, SHE WOULD HAVE CALLED HIM A<br>FISH)—AND RAPPED LOUDLY AT THE DOOR WITH HIS KNUCKLES. IT WAS OPENED BY<br>ANOTHER FOOTMAN IN LIVERY, WITH A ROUND FACE, AND LARGE EYES LIKE A<br>FROG; AND BOTH FOOTMEN, ALICE NOTICED, HAD POWDERED HAIR THAT CURLED<br>ALL OVER THEIR HEADS. SHE FELT VERY CURIOUS TO KNOW WHAT IT WAS ALL<br>ABOUT, AND CREPT A LITTLE WAY OUT OF THE WOOD TO LISTEN.<br><br>THE FISH-FOOTMAN BEGAN BY PRODUCING FROM UNDER HIS ARM A GREAT LETTER,<br>NEARLY AS LARGE AS HIMSELF, AND THIS HE HANDED OVER TO THE OTHER,<br>SAYING, IN A SOLEMN TONE, “FOR THE DUCHESS. AN INVITATION FROM THE<br>QUEEN TO PLAY CROQUET.” THE FROG-FOOTMAN REPEATED, IN THE SAME SOLEMN<br>TONE, ONLY CHANGING THE ORDER OF THE WORDS A LITTLE, “FROM THE QUEEN.<br>AN INVITATION FOR THE DUCHESS TO PLAY CROQUET.”<br><br>THEN THEY BOTH BOWED LOW, AND THEIR CURLS GOT ENTANGLED TOGETHER.<br><br>ALICE LAUGHED SO MUCH AT THIS, THAT SHE HAD TO RUN BACK INTO THE WOOD<br>FOR FEAR OF THEIR HEARING HER; AND WHEN SHE NEXT PEEPED OUT THE<br>FISH-FOOTMAN WAS GONE, AND THE OTHER WAS SITTING ON THE GROUND NEAR THE<br>DOOR, STARING STUPIDLY UP INTO THE SKY.<br><br>ALICE WENT TIMIDLY UP TO THE DOOR, AND KNOCKED.<br><br>“THERE’S NO SORT OF USE IN KNOCKING,” SAID THE FOOTMAN, “AND THAT FOR<br>TWO REASONS. FIRST, BECAUSE I’M ON THE SAME SIDE OF THE DOOR AS YOU<br>ARE; SECONDLY, BECAUSE THEY’RE MAKING SUCH A NOISE INSIDE, NO ONE COULD<br>POSSIBLY HEAR YOU.” AND CERTAINLY THERE WAS A MOST EXTRAORDINARY<br>NOISE GOING ON WITHIN—A CONSTANT HOWLING AND SNEEZING, AND EVERY NOW<br>AND THEN A GREAT CRASH, AS IF A DISH OR KETTLE HAD BEEN BROKEN TO<br>PIECES.<br><br>“PLEASE, THEN,” SAID ALICE, “HOW AM I TO GET IN?”<br><br>“THERE MIGHT BE SOME SENSE IN YOUR KNOCKING,” THE FOOTMAN WENT ON<br>WITHOUT ATTENDING TO HER, “IF WE HAD THE DOOR BETWEEN US. FOR INSTANCE,<br>IF YOU WERE INSIDE, YOU MIGHT KNOCK, AND I COULD LET YOU OUT, YOU<br>KNOW.” HE WAS LOOKING UP INTO THE SKY ALL THE TIME HE WAS SPEAKING, AND<br>THIS ALICE THOUGHT DECIDEDLY UNCIVIL. “BUT PERHAPS HE CAN’T HELP IT,”<br>SHE SAID TO HERSELF; “HIS EYES ARE SO VERY NEARLY AT THE TOP OF HIS<br>HEAD. BUT AT ANY RATE HE MIGHT ANSWER QUESTIONS.—HOW AM I TO GET IN?”<br>SHE REPEATED, ALOUD.<br><br>“I SHALL SIT HERE,” THE FOOTMAN REMARKED, “TILL TOMORROW—”</p>
+        </div>
+        <div class="page-number">1</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-fish-footman/alice-b-woodward-1913.jpg" alt="The Fish-Footman">
+      </div>
+      <div class="page-right">
+        <div class="text-block text-small">
+          <p>AT THIS MOMENT THE DOOR OF THE HOUSE OPENED, AND A LARGE PLATE CAME<br>SKIMMING OUT, STRAIGHT AT THE FOOTMAN’S HEAD: IT JUST GRAZED HIS NOSE,<br>AND BROKE TO PIECES AGAINST ONE OF THE TREES BEHIND HIM.<br><br>“—OR NEXT DAY, MAYBE,” THE FOOTMAN CONTINUED IN THE SAME TONE, EXACTLY<br>AS IF NOTHING HAD HAPPENED.<br><br>“HOW AM I TO GET IN?” ASKED ALICE AGAIN, IN A LOUDER TONE.<br><br>“ARE YOU TO GET IN AT ALL?” SAID THE FOOTMAN. “THAT’S THE FIRST<br>QUESTION, YOU KNOW.”<br><br>IT WAS, NO DOUBT: ONLY ALICE DID NOT LIKE TO BE TOLD SO. “IT’S REALLY<br>DREADFUL,” SHE MUTTERED TO HERSELF, “THE WAY ALL THE CREATURES ARGUE.<br>IT’S ENOUGH TO DRIVE ONE CRAZY!”<br><br>THE FOOTMAN SEEMED TO THINK THIS A GOOD OPPORTUNITY FOR REPEATING HIS<br>REMARK, WITH VARIATIONS. “I SHALL SIT HERE,” HE SAID, “ON AND OFF, FOR<br>DAYS AND DAYS.”<br><br>“BUT WHAT AM I TO DO?” SAID ALICE.<br><br>“ANYTHING YOU LIKE,” SAID THE FOOTMAN, AND BEGAN WHISTLING.<br><br>“OH, THERE’S NO USE IN TALKING TO HIM,” SAID ALICE DESPERATELY: “HE’S<br>PERFECTLY IDIOTIC!” AND SHE OPENED THE DOOR AND WENT IN.</p>
+        </div>
+        <div class="page-number">2</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-duchesss-kitchen/arthur-rackham-1907.jpg" alt="The Duchess's Kitchen">
+      </div>
+      <div class="page-right">
+        <div class="text-block text-small">
+          <p>THE DOOR LED RIGHT INTO A LARGE KITCHEN, WHICH WAS FULL OF SMOKE FROM<br>ONE END TO THE OTHER: THE DUCHESS WAS SITTING ON A THREE-LEGGED STOOL<br>IN THE MIDDLE, NURSING A BABY; THE COOK WAS LEANING OVER THE FIRE,<br>STIRRING A LARGE CAULDRON WHICH SEEMED TO BE FULL OF SOUP.<br><br>“THERE’S CERTAINLY TOO MUCH PEPPER IN THAT SOUP!” ALICE SAID TO<br>HERSELF, AS WELL AS SHE COULD FOR SNEEZING.<br><br>THERE WAS CERTAINLY TOO MUCH OF IT IN THE AIR. EVEN THE DUCHESS SNEEZED<br>OCCASIONALLY; AND AS FOR THE BABY, IT WAS SNEEZING AND HOWLING<br>ALTERNATELY WITHOUT A MOMENT’S PAUSE. THE ONLY THINGS IN THE KITCHEN<br>THAT DID NOT SNEEZE, WERE THE COOK, AND A LARGE CAT WHICH WAS SITTING<br>ON THE HEARTH AND GRINNING FROM EAR TO EAR.<br><br>“PLEASE WOULD YOU TELL ME,” SAID ALICE, A LITTLE TIMIDLY, FOR SHE WAS<br>NOT QUITE SURE WHETHER IT WAS GOOD MANNERS FOR HER TO SPEAK FIRST, “WHY<br>YOUR CAT GRINS LIKE THAT?”<br><br>“IT’S A CHESHIRE CAT,” SAID THE DUCHESS, “AND THAT’S WHY. PIG!”<br><br>SHE SAID THE LAST WORD WITH SUCH SUDDEN VIOLENCE THAT ALICE QUITE<br>JUMPED; BUT SHE SAW IN ANOTHER MOMENT THAT IT WAS ADDRESSED TO THE<br>BABY, AND NOT TO HER, SO SHE TOOK COURAGE, AND WENT ON AGAIN:—<br><br>“I DIDN’T KNOW THAT CHESHIRE CATS ALWAYS GRINNED; IN FACT, I DIDN’T<br>KNOW THAT CATS COULD GRIN.”<br><br>“THEY ALL CAN,” SAID THE DUCHESS; “AND MOST OF ’EM DO.”</p>
+        </div>
+        <div class="page-number">3</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-duchesss-kitchen/alice-b-woodward-1913.jpg" alt="The Duchess's Kitchen">
+      </div>
+      <div class="page-right">
+        <div class="text-block text-small">
+          <p>“I DON’T KNOW OF ANY THAT DO,” ALICE SAID VERY POLITELY, FEELING QUITE<br>PLEASED TO HAVE GOT INTO A CONVERSATION.<br><br>“YOU DON’T KNOW MUCH,” SAID THE DUCHESS; “AND THAT’S A FACT.”<br><br>ALICE DID NOT AT ALL LIKE THE TONE OF THIS REMARK, AND THOUGHT IT WOULD<br>BE AS WELL TO INTRODUCE SOME OTHER SUBJECT OF CONVERSATION. WHILE SHE<br>WAS TRYING TO FIX ON ONE, THE COOK TOOK THE CAULDRON OF SOUP OFF THE<br>FIRE, AND AT ONCE SET TO WORK THROWING EVERYTHING WITHIN HER REACH AT<br>THE DUCHESS AND THE BABY—THE FIRE-IRONS CAME FIRST; THEN FOLLOWED A<br>SHOWER OF SAUCEPANS, PLATES, AND DISHES. THE DUCHESS TOOK NO NOTICE OF<br>THEM EVEN WHEN THEY HIT HER; AND THE BABY WAS HOWLING SO MUCH ALREADY,<br>THAT IT WAS QUITE IMPOSSIBLE TO SAY WHETHER THE BLOWS HURT IT OR NOT.<br><br>“OH, PLEASE MIND WHAT YOU’RE DOING!” CRIED ALICE, JUMPING UP AND DOWN<br>IN AN AGONY OF TERROR. “OH, THERE GOES HIS PRECIOUS NOSE!” AS AN<br>UNUSUALLY LARGE SAUCEPAN FLEW CLOSE BY IT, AND VERY NEARLY CARRIED IT<br>OFF.<br><br>“IF EVERYBODY MINDED THEIR OWN BUSINESS,” THE DUCHESS SAID IN A HOARSE<br>GROWL, “THE WORLD WOULD GO ROUND A DEAL FASTER THAN IT DOES.”<br><br>“WHICH WOULD NOT BE AN ADVANTAGE,” SAID ALICE, WHO FELT VERY GLAD TO<br>GET AN OPPORTUNITY OF SHOWING OFF A LITTLE OF HER KNOWLEDGE. “JUST<br>THINK OF WHAT WORK IT WOULD MAKE WITH THE DAY AND NIGHT! YOU SEE THE<br>EARTH TAKES TWENTY-FOUR HOURS TO TURN ROUND ON ITS AXIS—”<br><br>“TALKING OF AXES,” SAID THE DUCHESS, “CHOP OFF HER HEAD!”<br><br>ALICE GLANCED RATHER ANXIOUSLY AT THE COOK, TO SEE IF SHE MEANT TO TAKE<br>THE HINT; BUT THE COOK WAS BUSILY STIRRING THE SOUP, AND SEEMED NOT TO<br>BE LISTENING, SO SHE WENT ON AGAIN: “TWENTY-FOUR HOURS, I THINK; OR<br>IS IT TWELVE? I—”</p>
+        </div>
+        <div class="page-number">4</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-duchesss-kitchen/brinsley-le-fanu-1910.jpg" alt="The Duchess's Kitchen">
+      </div>
+      <div class="page-right">
+        <div class="text-block text-medium">
+          <p>“OH, DON’T BOTHER ME,” SAID THE DUCHESS; “I NEVER COULD ABIDE<br>FIGURES!” AND WITH THAT SHE BEGAN NURSING HER CHILD AGAIN, SINGING A<br>SORT OF LULLABY TO IT AS SHE DID SO, AND GIVING IT A VIOLENT SHAKE AT<br>THE END OF EVERY LINE:<br><br>“SPEAK ROUGHLY TO YOUR LITTLE BOY,<br>    AND BEAT HIM WHEN HE SNEEZES:<br>HE ONLY DOES IT TO ANNOY,<br>    BECAUSE HE KNOWS IT TEASES.”<br><br>CHORUS.<br>(IN WHICH THE COOK AND THE BABY JOINED):<br><br>“WOW! WOW! WOW!”<br><br>WHILE THE DUCHESS SANG THE SECOND VERSE OF THE SONG, SHE KEPT TOSSING<br>THE BABY VIOLENTLY UP AND DOWN, AND THE POOR LITTLE THING HOWLED SO,<br>THAT ALICE COULD HARDLY HEAR THE WORDS:—<br><br>“I SPEAK SEVERELY TO MY BOY,<br>    I BEAT HIM WHEN HE SNEEZES;<br>FOR HE CAN THOROUGHLY ENJOY<br>    THE PEPPER WHEN HE PLEASES!”<br><br>CHORUS.<br><br>“WOW! WOW! WOW!”</p>
+        </div>
+        <div class="page-number">5</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-baby-turns-into-a-pig/arthur-rackham-1907.jpg" alt="The Baby Turns into a Pig">
+      </div>
+      <div class="page-right">
+        <div class="text-block text-medium">
+          <p>“HERE! YOU MAY NURSE IT A BIT, IF YOU LIKE!” THE DUCHESS SAID TO ALICE,<br>FLINGING THE BABY AT HER AS SHE SPOKE. “I MUST GO AND GET READY TO PLAY<br>CROQUET WITH THE QUEEN,” AND SHE HURRIED OUT OF THE ROOM. THE COOK<br>THREW A FRYING-PAN AFTER HER AS SHE WENT OUT, BUT IT JUST MISSED HER.<br><br>ALICE CAUGHT THE BABY WITH SOME DIFFICULTY, AS IT WAS A QUEER-SHAPED<br>LITTLE CREATURE, AND HELD OUT ITS ARMS AND LEGS IN ALL DIRECTIONS,<br>“JUST LIKE A STAR-FISH,” THOUGHT ALICE. THE POOR LITTLE THING WAS<br>SNORTING LIKE A STEAM-ENGINE WHEN SHE CAUGHT IT, AND KEPT DOUBLING<br>ITSELF UP AND STRAIGHTENING ITSELF OUT AGAIN, SO THAT ALTOGETHER, FOR<br>THE FIRST MINUTE OR TWO, IT WAS AS MUCH AS SHE COULD DO TO HOLD IT.</p>
+        </div>
+        <div class="page-number">6</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-baby-turns-into-a-pig/gwynedd-hudson-1922.jpg" alt="The Baby Turns into a Pig">
+      </div>
+      <div class="page-right">
+        <div class="text-block text-small">
+          <p>AS SOON AS SHE HAD MADE OUT THE PROPER WAY OF NURSING IT, (WHICH WAS TO<br>TWIST IT UP INTO A SORT OF KNOT, AND THEN KEEP TIGHT HOLD OF ITS RIGHT<br>EAR AND LEFT FOOT, SO AS TO PREVENT ITS UNDOING ITSELF,) SHE CARRIED IT<br>OUT INTO THE OPEN AIR. “IF I DON’T TAKE THIS CHILD AWAY WITH ME,”<br>THOUGHT ALICE, “THEY’RE SURE TO KILL IT IN A DAY OR TWO: WOULDN’T IT BE<br>MURDER TO LEAVE IT BEHIND?” SHE SAID THE LAST WORDS OUT LOUD, AND THE<br>LITTLE THING GRUNTED IN REPLY (IT HAD LEFT OFF SNEEZING BY THIS TIME).<br>“DON’T GRUNT,” SAID ALICE; “THAT’S NOT AT ALL A PROPER WAY OF<br>EXPRESSING YOURSELF.”<br><br>THE BABY GRUNTED AGAIN, AND ALICE LOOKED VERY ANXIOUSLY INTO ITS FACE<br>TO SEE WHAT WAS THE MATTER WITH IT. THERE COULD BE NO DOUBT THAT IT HAD<br>A VERY TURN-UP NOSE, MUCH MORE LIKE A SNOUT THAN A REAL NOSE; ALSO<br>ITS EYES WERE GETTING EXTREMELY SMALL FOR A BABY: ALTOGETHER ALICE DID<br>NOT LIKE THE LOOK OF THE THING AT ALL. “BUT PERHAPS IT WAS ONLY<br>SOBBING,” SHE THOUGHT, AND LOOKED INTO ITS EYES AGAIN, TO SEE IF THERE<br>WERE ANY TEARS.</p>
+        </div>
+        <div class="page-number">7</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-baby-turns-into-a-pig/alice-b-woodward-1913.jpg" alt="The Baby Turns into a Pig">
+      </div>
+      <div class="page-right">
+        <div class="text-block text-medium">
+          <p>NO, THERE WERE NO TEARS. “IF YOU’RE GOING TO TURN INTO A PIG, MY DEAR,”<br>SAID ALICE, SERIOUSLY, “I’LL HAVE NOTHING MORE TO DO WITH YOU. MIND<br>NOW!” THE POOR LITTLE THING SOBBED AGAIN (OR GRUNTED, IT WAS IMPOSSIBLE<br>TO SAY WHICH), AND THEY WENT ON FOR SOME WHILE IN SILENCE.<br><br>ALICE WAS JUST BEGINNING TO THINK TO HERSELF, “NOW, WHAT AM I TO DO<br>WITH THIS CREATURE WHEN I GET IT HOME?” WHEN IT GRUNTED AGAIN, SO<br>VIOLENTLY, THAT SHE LOOKED DOWN INTO ITS FACE IN SOME ALARM. THIS TIME<br>THERE COULD BE NO MISTAKE ABOUT IT: IT WAS NEITHER MORE NOR LESS THAN<br>A PIG, AND SHE FELT THAT IT WOULD BE QUITE ABSURD FOR HER TO CARRY IT<br>FURTHER.</p>
+        </div>
+        <div class="page-number">8</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-baby-turns-into-a-pig/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="The Baby Turns into a Pig">
+      </div>
+      <div class="page-right">
+        <div class="text-block text-medium">
+          <p>SO SHE SET THE LITTLE CREATURE DOWN, AND FELT QUITE RELIEVED TO SEE IT<br>TROT AWAY QUIETLY INTO THE WOOD. “IF IT HAD GROWN UP,” SHE SAID TO<br>HERSELF, “IT WOULD HAVE MADE A DREADFULLY UGLY CHILD: BUT IT MAKES<br>RATHER A HANDSOME PIG, I THINK.” AND SHE BEGAN THINKING OVER OTHER<br>CHILDREN SHE KNEW, WHO MIGHT DO VERY WELL AS PIGS, AND WAS JUST SAYING<br>TO HERSELF, “IF ONE ONLY KNEW THE RIGHT WAY TO CHANGE THEM—” WHEN SHE<br>WAS A LITTLE STARTLED BY SEEING THE CHESHIRE CAT SITTING ON A BOUGH OF<br>A TREE A FEW YARDS OFF.</p>
+        </div>
+        <div class="page-number">9</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-baby-turns-into-a-pig/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="The Baby Turns into a Pig">
+      </div>
+      <div class="page-right">
+        <div class="text-block text-medium">
+          <p>SO SHE SET THE LITTLE CREATURE DOWN, AND FELT QUITE RELIEVED TO SEE IT<br>TROT AWAY QUIETLY INTO THE WOOD. “IF IT HAD GROWN UP,” SHE SAID TO<br>HERSELF, “IT WOULD HAVE MADE A DREADFULLY UGLY CHILD: BUT IT MAKES<br>RATHER A HANDSOME PIG, I THINK.” AND SHE BEGAN THINKING OVER OTHER<br>CHILDREN SHE KNEW, WHO MIGHT DO VERY WELL AS PIGS, AND WAS JUST SAYING<br>TO HERSELF, “IF ONE ONLY KNEW THE RIGHT WAY TO CHANGE THEM—” WHEN SHE<br>WAS A LITTLE STARTLED BY SEEING THE CHESHIRE CAT SITTING ON A BOUGH OF<br>A TREE A FEW YARDS OFF.</p>
+        </div>
+        <div class="page-number">10</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-cheshire-cat/john-tenniel-harry-theaker-1911.jpg" alt="The Cheshire Cat">
+      </div>
+      <div class="page-right">
+        <div class="text-block text-small">
+          <p>THE CAT ONLY GRINNED WHEN IT SAW ALICE. IT LOOKED GOOD-NATURED, SHE<br>THOUGHT: STILL IT HAD VERY LONG CLAWS AND A GREAT MANY TEETH, SO SHE<br>FELT THAT IT OUGHT TO BE TREATED WITH RESPECT.<br><br>“CHESHIRE PUSS,” SHE BEGAN, RATHER TIMIDLY, AS SHE DID NOT AT ALL KNOW<br>WHETHER IT WOULD LIKE THE NAME: HOWEVER, IT ONLY GRINNED A LITTLE<br>WIDER. “COME, IT’S PLEASED SO FAR,” THOUGHT ALICE, AND SHE WENT ON.<br>“WOULD YOU TELL ME, PLEASE, WHICH WAY I OUGHT TO GO FROM HERE?”<br><br>“THAT DEPENDS A GOOD DEAL ON WHERE YOU WANT TO GET TO,” SAID THE CAT.<br><br>“I DON’T MUCH CARE WHERE—” SAID ALICE.<br><br>“THEN IT DOESN’T MATTER WHICH WAY YOU GO,” SAID THE CAT.<br><br>“—SO LONG AS I GET SOMEWHERE,” ALICE ADDED AS AN EXPLANATION.<br><br>“OH, YOU’RE SURE TO DO THAT,” SAID THE CAT, “IF YOU ONLY WALK LONG<br>ENOUGH.”<br><br>ALICE FELT THAT THIS COULD NOT BE DENIED, SO SHE TRIED ANOTHER<br>QUESTION. “WHAT SORT OF PEOPLE LIVE ABOUT HERE?”<br><br>“IN THAT DIRECTION,” THE CAT SAID, WAVING ITS RIGHT PAW ROUND, “LIVES<br>A HATTER: AND IN THAT DIRECTION,” WAVING THE OTHER PAW, “LIVES A<br>MARCH HARE. VISIT EITHER YOU LIKE: THEY’RE BOTH MAD.”<br><br>“BUT I DON’T WANT TO GO AMONG MAD PEOPLE,” ALICE REMARKED.<br><br>“OH, YOU CAN’T HELP THAT,” SAID THE CAT: “WE’RE ALL MAD HERE. I’M MAD.<br>YOU’RE MAD.”</p>
+        </div>
+        <div class="page-number">11</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-cheshire-cat/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="The Cheshire Cat">
+      </div>
+      <div class="page-right">
+        <div class="text-block text-small">
+          <p>“HOW DO YOU KNOW I’M MAD?” SAID ALICE.<br><br>“YOU MUST BE,” SAID THE CAT, “OR YOU WOULDN’T HAVE COME HERE.”<br><br>ALICE DIDN’T THINK THAT PROVED IT AT ALL; HOWEVER, SHE WENT ON “AND HOW<br>DO YOU KNOW THAT YOU’RE MAD?”<br><br>“TO BEGIN WITH,” SAID THE CAT, “A DOG’S NOT MAD. YOU GRANT THAT?”<br><br>“I SUPPOSE SO,” SAID ALICE.<br><br>“WELL, THEN,” THE CAT WENT ON, “YOU SEE, A DOG GROWLS WHEN IT’S ANGRY,<br>AND WAGS ITS TAIL WHEN IT’S PLEASED. NOW I GROWL WHEN I’M PLEASED,<br>AND WAG MY TAIL WHEN I’M ANGRY. THEREFORE I’M MAD.”<br><br>“I CALL IT PURRING, NOT GROWLING,” SAID ALICE.<br><br>“CALL IT WHAT YOU LIKE,” SAID THE CAT. “DO YOU PLAY CROQUET WITH THE<br>QUEEN TO-DAY?”<br><br>“I SHOULD LIKE IT VERY MUCH,” SAID ALICE, “BUT I HAVEN’T BEEN INVITED<br>YET.”<br><br>“YOU’LL SEE ME THERE,” SAID THE CAT, AND VANISHED.<br><br>ALICE WAS NOT MUCH SURPRISED AT THIS, SHE WAS GETTING SO USED TO QUEER<br>THINGS HAPPENING. WHILE SHE WAS LOOKING AT THE PLACE WHERE IT HAD BEEN,<br>IT SUDDENLY APPEARED AGAIN.</p>
+        </div>
+        <div class="page-number">12</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-cheshire-cat/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="The Cheshire Cat">
+      </div>
+      <div class="page-right">
+        <div class="text-block text-small">
+          <p>“BY-THE-BYE, WHAT BECAME OF THE BABY?” SAID THE CAT. “I’D NEARLY<br>FORGOTTEN TO ASK.”<br><br>“IT TURNED INTO A PIG,” ALICE QUIETLY SAID, JUST AS IF IT HAD COME BACK<br>IN A NATURAL WAY.<br><br>“I THOUGHT IT WOULD,” SAID THE CAT, AND VANISHED AGAIN.<br><br>ALICE WAITED A LITTLE, HALF EXPECTING TO SEE IT AGAIN, BUT IT DID NOT<br>APPEAR, AND AFTER A MINUTE OR TWO SHE WALKED ON IN THE DIRECTION IN<br>WHICH THE MARCH HARE WAS SAID TO LIVE. “I’VE SEEN HATTERS BEFORE,” SHE<br>SAID TO HERSELF; “THE MARCH HARE WILL BE MUCH THE MOST INTERESTING, AND<br>PERHAPS AS THIS IS MAY IT WON’T BE RAVING MAD—AT LEAST NOT SO MAD AS IT<br>WAS IN MARCH.” AS SHE SAID THIS, SHE LOOKED UP, AND THERE WAS THE CAT<br>AGAIN, SITTING ON A BRANCH OF A TREE.<br><br>“DID YOU SAY PIG, OR FIG?” SAID THE CAT.<br><br>“I SAID PIG,” REPLIED ALICE; “AND I WISH YOU WOULDN’T KEEP APPEARING<br>AND VANISHING SO SUDDENLY: YOU MAKE ONE QUITE GIDDY.”<br><br>“ALL RIGHT,” SAID THE CAT; AND THIS TIME IT VANISHED QUITE SLOWLY,<br>BEGINNING WITH THE END OF THE TAIL, AND ENDING WITH THE GRIN, WHICH<br>REMAINED SOME TIME AFTER THE REST OF IT HAD GONE.<br><br>“WELL! I’VE OFTEN SEEN A CAT WITHOUT A GRIN,” THOUGHT ALICE; “BUT A<br>GRIN WITHOUT A CAT! IT’S THE MOST CURIOUS THING I EVER SAW IN MY LIFE!”<br><br>SHE HAD NOT GONE MUCH FARTHER BEFORE SHE CAME IN SIGHT OF THE HOUSE OF<br>THE MARCH HARE: SHE THOUGHT IT MUST BE THE RIGHT HOUSE, BECAUSE THE<br>CHIMNEYS WERE SHAPED LIKE EARS AND THE ROOF WAS THATCHED WITH FUR. IT<br>WAS SO LARGE A HOUSE, THAT SHE DID NOT LIKE TO GO NEARER TILL SHE HAD<br>NIBBLED SOME MORE OF THE LEFTHAND BIT OF MUSHROOM, AND RAISED HERSELF<br>TO ABOUT TWO FEET HIGH: EVEN THEN SHE WALKED UP TOWARDS IT RATHER<br>TIMIDLY, SAYING TO HERSELF “SUPPOSE IT SHOULD BE RAVING MAD AFTER ALL!<br>I ALMOST WISH I’D GONE TO SEE THE HATTER INSTEAD!”</p>
+        </div>
+        <div class="page-number">13</div>
+      </div>
+    </div>
+    <div class="spread back-cover">
+      <div class="page-left back-image">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-cheshire-cat/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="Back cover">
+      </div>
+      <div class="page-right back-text">
+        <div class="back-block">
+          <div class="the-end">THE END</div>
+          <div class="back-info">
+            <p>CHAPTER 6: PIG AND PEPPER</p>
+            <p class="small">ALICE'S ADVENTURES IN WONDERLAND (1865)</p>
+            <p class="small">WORDS BY LEWIS CARROLL</p>
+            <p class="small">ALL ILLUSTRATIONS ARE PUBLIC DOMAIN</p>
+            <p class="small">MADE WITH LOVE AT RECURSIVE.ECO</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
