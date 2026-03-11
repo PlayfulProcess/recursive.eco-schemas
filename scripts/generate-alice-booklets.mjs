@@ -1,15 +1,19 @@
 /**
  * Generate printable HTML booklets from the alice-in-wonderland-chapter-book grammar.
  *
- * One booklet per chapter. Original Carroll text in ALL CAPS.
- * Global reflow: entire chapter text split at sentence boundaries,
- * evenly distributed across ALL available illustrations (L1 + L2).
+ * One booklet per chapter. Scene-aware illustration assignment ensures
+ * each illustration appears next to its matching text passage.
  *
- * Cover = L2 chapter illustration (not wasted on story).
- * Back cover = text-only "THE END" (no illustration wasted).
- * Text-only pages with decorative panels for illustration-sparse chapters.
+ * Features:
+ *   --lowercase  Generate in normal case (default is ALL CAPS)
+ *   Dialogue formatted on separate lines for readability
+ *   Carroll's original paragraph breaks preserved
+ *   5-tier font sizing, never scrollable
  *
- * Usage: node scripts/generate-alice-booklets.mjs
+ * Usage:
+ *   node scripts/generate-alice-booklets.mjs              # ALL CAPS
+ *   node scripts/generate-alice-booklets.mjs --lowercase   # Normal case
+ *
  * Output: grammars/alice-5-minute-stories/booklets/
  */
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
@@ -24,6 +28,8 @@ mkdirSync(outputDir, { recursive: true });
 
 const grammar = JSON.parse(readFileSync(grammarPath, 'utf8'));
 
+// CLI flags
+const USE_CAPS = !process.argv.includes('--lowercase');
 const MAX_CHARS_PER_PAGE = 1200;
 
 // ── Helpers ──────────────────────────────────────────────────────────
@@ -36,25 +42,49 @@ function escapeHtml(text) {
     .replace(/"/g, '&quot;');
 }
 
-function toAllCaps(text) {
-  return text
+/**
+ * Transform text case. In CAPS mode, uppercase everything and strip markdown emphasis.
+ * In lowercase mode, just strip markdown emphasis and clean whitespace.
+ */
+function transformCase(text) {
+  let t = text
     .replace(/_([^_]+)_/g, '$1')
     .replace(/\*([^*]+)\*/g, '$1')
-    .toUpperCase()
     .replace(/\n{3,}/g, '\n\n')
     .trim();
+  return USE_CAPS ? t.toUpperCase() : t;
 }
 
 /**
- * Format ALL CAPS text as proper HTML paragraphs.
- * Split on double newlines → <p> elements with margin.
- * Single newlines within paragraphs → spaces.
+ * Format text as HTML with:
+ * - Carroll's original paragraph breaks preserved (\n\n → separate <p>)
+ * - Dialogue on separate lines (opening quote gets a line break before it)
+ * - Single \n within paragraphs → spaces
  */
 function formatTextAsHtml(text) {
+  // Split on original paragraph breaks
   const paragraphs = text.split(/\n\n+/).filter(p => p.trim());
+
   return paragraphs.map(p => {
-    const cleaned = p.replace(/\n/g, ' ').replace(/\s+/g, ' ').trim();
-    return `<p>${escapeHtml(cleaned)}</p>`;
+    // Collapse single newlines to spaces (Gutenberg line wrapping)
+    let cleaned = p.replace(/\n/g, ' ').replace(/\s+/g, ' ').trim();
+
+    // Format dialogue on separate lines:
+    // When a quote starts after narration, put it on a new line
+    // Match: [lowercase/punctuation] [space] [opening quote]
+    // Opening quotes: \u201c (") or regular "
+    cleaned = cleaned.replace(
+      /([.!?;:,\)\]])\s+([\u201c\u201e"])/g,
+      '$1<br><br>$2'
+    );
+
+    // Also break before dialogue that starts with a dash (em dash dialogue)
+    cleaned = cleaned.replace(
+      /([.!?])\s+(\u2014|\u2013|—)/g,
+      '$1<br><br>$2'
+    );
+
+    return `<p>${escapeHtml(cleaned).replace(/&lt;br&gt;&lt;br&gt;/g, '<br><br>')}</p>`;
   }).join('\n          ');
 }
 
@@ -73,12 +103,22 @@ function fontSizeClass(charCount) {
 
 const ABBREVIATIONS = new Set([
   'mr', 'mrs', 'ms', 'dr', 'st', 'sr', 'jr', 'vs', 'etc', 'vol',
-  'i.e', 'e.g', 'fig', 'no', 'p', 'pp', 'ch',
+  'fig', 'no', 'ch',
+]);
+
+// Dialogue attribution verbs — don't break between a closing quote and these
+const ATTRIBUTION_VERBS = new Set([
+  'said', 'thought', 'cried', 'asked', 'replied', 'exclaimed', 'remarked',
+  'whispered', 'shouted', 'continued', 'added', 'muttered', 'began',
+  'answered', 'observed', 'repeated', 'returned', 'suggested', 'grumbled',
+  'growled', 'sighed', 'sobbed', 'shrieked', 'screamed', 'panted',
+  'interrupted', 'went', 'called', 'sang', 'recited', 'read', 'roared',
 ]);
 
 /**
  * Split text into sentences. Breaks only at sentence-ending punctuation
  * followed by whitespace + uppercase letter or paragraph boundary.
+ * Keeps dialogue attributions with their quotes ("Well!" thought Alice).
  */
 function splitIntoSentences(text) {
   const normalized = text.replace(/\r\n/g, '\n').trim();
@@ -90,16 +130,14 @@ function splitIntoSentences(text) {
     current += normalized[i];
 
     if ('.!?'.includes(normalized[i])) {
-      // Look ahead past optional closing quotes
       let j = i + 1;
-      while (j < normalized.length && '"\u201d\u201c\')\u2019'.includes(normalized[j])) {
+      // Consume closing quotes/parens after punctuation
+      while (j < normalized.length && '"\u201d\u201c\'\u2019)'.includes(normalized[j])) {
         current += normalized[j];
         j++;
       }
 
-      // Check for whitespace/newline after punctuation
       if (j >= normalized.length) {
-        // End of text — this is a sentence end
         sentences.push(current.trim());
         current = '';
         i = j;
@@ -107,19 +145,25 @@ function splitIntoSentences(text) {
       }
 
       if (/[\s\n]/.test(normalized[j])) {
-        // Find next non-whitespace character
         let k = j;
         while (k < normalized.length && /[\s\n]/.test(normalized[k])) k++;
 
-        if (k >= normalized.length || /[A-Z\u201c"(]/.test(normalized[k])) {
-          // Check not an abbreviation
-          const match = current.match(/\b(\w+)[.!?][\u201d"']*$/);
+        // Check if next char signals new sentence (uppercase, opening quote, paragraph break)
+        const hasParaBreak = normalized.slice(j, k).includes('\n\n');
+        if (k >= normalized.length || hasParaBreak || /[A-Z\u201c"(]/.test(normalized[k])) {
+          const match = current.match(/\b(\w+)[.!?][\u201d"'\u2019)]*$/);
           const word = match ? match[1].toLowerCase() : '';
           if (!ABBREVIATIONS.has(word)) {
-            sentences.push(current.trim());
-            current = '';
-            i = j;
-            continue;
+            // Check if next word is a dialogue attribution verb
+            // e.g. "Well!" THOUGHT Alice → don't break here
+            const nextWordMatch = normalized.slice(k).match(/^([a-zA-Z]+)/);
+            const nextWord = nextWordMatch ? nextWordMatch[1].toLowerCase() : '';
+            if (!ATTRIBUTION_VERBS.has(nextWord)) {
+              sentences.push(current.trim());
+              current = '';
+              i = j;
+              continue;
+            }
           }
         }
       }
@@ -134,24 +178,42 @@ function splitIntoSentences(text) {
 
 /**
  * Split text into pages at sentence boundaries, targeting ~targetChars per page.
- * Returns array of text strings, each ending at a sentence boundary.
+ * Preserves Carroll's original paragraph breaks (\n\n) so formatTextAsHtml can
+ * correctly create separate <p> elements.
  */
 function splitTextIntoPages(text, targetChars) {
   const sentences = splitIntoSentences(text);
   if (sentences.length === 0) return [''];
 
+  // Detect which sentences start a new paragraph in the original text
+  const paraStarts = new Set();
+  let searchPos = 0;
+  for (let si = 0; si < sentences.length; si++) {
+    // Find this sentence in the original text
+    const snippet = sentences[si].substring(0, Math.min(30, sentences[si].length));
+    const idx = text.indexOf(snippet, searchPos);
+    if (idx > searchPos && si > 0) {
+      const between = text.slice(searchPos, idx);
+      if (/\n\s*\n/.test(between)) {
+        paraStarts.add(si);
+      }
+    }
+    if (idx >= 0) searchPos = idx + sentences[si].length;
+  }
+
   const pages = [];
   let currentPage = '';
 
-  for (const sentence of sentences) {
-    const wouldBe = currentPage ? currentPage.length + 1 + sentence.length : sentence.length;
+  for (let si = 0; si < sentences.length; si++) {
+    const sentence = sentences[si];
+    const joiner = currentPage ? (paraStarts.has(si) ? '\n\n' : ' ') : '';
+    const wouldBe = currentPage.length + joiner.length + sentence.length;
 
-    // If adding this sentence would go over 1.3x target AND we already have enough content
     if (wouldBe > targetChars * 1.3 && currentPage.length > targetChars * 0.4) {
       pages.push(currentPage.trim());
       currentPage = sentence;
     } else {
-      currentPage = currentPage ? currentPage + ' ' + sentence : sentence;
+      currentPage = currentPage + joiner + sentence;
     }
   }
   if (currentPage.trim()) pages.push(currentPage.trim());
@@ -160,7 +222,6 @@ function splitTextIntoPages(text, targetChars) {
 
 // ── Grammar Processing ───────────────────────────────────────────────
 
-// Group L1 scenes and L2 chapters
 const l1Items = grammar.items.filter(item => item.level === 1);
 const l2Items = grammar.items.filter(item => item.level === 2);
 
@@ -174,112 +235,131 @@ for (const ch of l2Items) {
   const chNum = ch.metadata.chapter_number;
   if (chapterMap[chNum]) chapterMap[chNum].l2 = ch;
 }
-// Sort scenes within each chapter
 for (const ch of Object.values(chapterMap)) {
   ch.scenes.sort((a, b) => a.metadata.scene_number - b.metadata.scene_number);
 }
 
 /**
- * Build illustration pool for a chapter.
- * Returns { coverImage, storyPool: [{url, artist, scene}] }
+ * Get unique illustrations for a scene (excluding already-used URLs).
  */
-function buildIllustrationPool(chapter) {
-  const l2 = chapter.l2;
-  const coverImage = l2?.image_url || chapter.scenes[0]?.image_url || '';
-  const coverUrl = coverImage; // Track to exclude from story pool
-
-  const storyPool = [];
-  const usedUrls = new Set([coverUrl]);
-
-  // Add all L1 illustrations (in scene order, primary first)
-  for (const scene of chapter.scenes) {
-    const ills = scene.metadata?.illustrations || [];
-    for (const ill of ills) {
-      if (!usedUrls.has(ill.url)) {
-        storyPool.push({
-          url: ill.url,
-          artist: ill.artist || '',
-          scene: ill.scene || scene.name,
-        });
-        usedUrls.add(ill.url);
-      }
+function getSceneIllustrations(scene, usedUrls) {
+  const ills = [];
+  for (const ill of (scene.metadata?.illustrations || [])) {
+    if (!usedUrls.has(ill.url)) {
+      ills.push(ill);
+      usedUrls.add(ill.url);
     }
   }
-
-  // Add L2 non-primary illustrations as bonus
-  if (l2?.metadata?.illustrations) {
-    for (const ill of l2.metadata.illustrations) {
-      if (!ill.is_primary && !usedUrls.has(ill.url)) {
-        storyPool.push({
-          url: ill.url,
-          artist: ill.artist || '',
-          scene: ill.scene || '',
-        });
-        usedUrls.add(ill.url);
-      }
-    }
-  }
-
-  return { coverImage, storyPool };
+  return ills;
 }
 
 /**
- * Concatenate all "Story (Original Text)" from a chapter's scenes.
+ * Build all pages for a chapter using SCENE-AWARE illustration assignment.
+ *
+ * Each scene's illustrations stay matched to that scene's text.
+ * Text is split at sentence boundaries targeting the global chars/page.
+ * Illustrations are placed at the CENTER of their zone (not forced to page 0)
+ * so images appear where the key action happens, not at the scene setup.
+ * Leftover illustrations from short scenes go to a bonus pool for text-only pages.
  */
-function concatenateChapterText(scenes) {
-  const parts = [];
-  for (const scene of scenes) {
+function buildChapterPages(chapter) {
+  const l2 = chapter.l2;
+  const coverImage = l2?.image_url || chapter.scenes[0]?.image_url || '';
+  const usedUrls = new Set([coverImage]);
+
+  // Calculate total text and total illustrations to find target chars/page
+  let totalChars = 0;
+  let totalIlls = 0;
+  for (const scene of chapter.scenes) {
     const text = scene.sections['Story (Original Text)'] || '';
-    if (text.trim()) parts.push(text.trim());
+    totalChars += text.length;
+    const ills = (scene.metadata?.illustrations || []).filter(ill => ill.url !== coverImage);
+    totalIlls += ills.length;
   }
-  return parts.join('\n\n');
+  // Add L2 non-primary illustrations
+  const l2Extras = (l2?.metadata?.illustrations || []).filter(ill => !ill.is_primary && ill.url !== coverImage);
+  totalIlls += l2Extras.length;
+
+  let targetChars = totalIlls > 0 ? Math.ceil(totalChars / totalIlls) : totalChars;
+  if (targetChars > MAX_CHARS_PER_PAGE) targetChars = MAX_CHARS_PER_PAGE;
+
+  // Process each scene: split text, assign that scene's illustrations
+  const pages = [];
+  const bonusPool = []; // leftover illustrations from scenes with more ills than pages
+
+  for (const scene of chapter.scenes) {
+    const rawText = scene.sections['Story (Original Text)'] || '';
+    if (!rawText.trim()) continue;
+
+    const text = transformCase(rawText);
+    const sceneIlls = getSceneIllustrations(scene, usedUrls);
+
+    // Split scene text into pages
+    const textPages = splitTextIntoPages(text, targetChars);
+
+    if (sceneIlls.length >= textPages.length) {
+      // More illustrations than text pages — use one per page, save extras to bonus pool
+      for (let i = 0; i < textPages.length; i++) {
+        pages.push({ text: textPages[i], illustration: sceneIlls[i] });
+      }
+      // Save extra illustrations for text-only pages elsewhere in the chapter
+      for (let i = textPages.length; i < sceneIlls.length; i++) {
+        bonusPool.push(sceneIlls[i]);
+      }
+    } else {
+      // More text pages than illustrations — place ills at CENTER of each zone
+      // This ensures illustrations appear where the action peaks, not at scene setup
+      const stride = textPages.length / sceneIlls.length;
+      const illPositions = [];
+      for (let j = 0; j < sceneIlls.length; j++) {
+        const zoneStart = Math.round(j * stride);
+        const zoneEnd = Math.round((j + 1) * stride) - 1;
+        illPositions.push(Math.round((zoneStart + zoneEnd) / 2));
+      }
+
+      let illIdx = 0;
+      for (let i = 0; i < textPages.length; i++) {
+        if (illIdx < illPositions.length && i === illPositions[illIdx]) {
+          pages.push({ text: textPages[i], illustration: sceneIlls[illIdx] });
+          illIdx++;
+        } else {
+          pages.push({ text: textPages[i], illustration: null });
+        }
+      }
+    }
+  }
+
+  // Add L2 non-primary illustrations to the bonus pool
+  for (const ill of l2Extras) {
+    if (!usedUrls.has(ill.url)) {
+      bonusPool.push(ill);
+      usedUrls.add(ill.url);
+    }
+  }
+
+  // Distribute bonus pool illustrations to text-only pages
+  let bonusIdx = 0;
+  for (let i = 0; i < pages.length && bonusIdx < bonusPool.length; i++) {
+    if (!pages[i].illustration && pages[i].text) {
+      pages[i].illustration = bonusPool[bonusIdx];
+      bonusIdx++;
+    }
+  }
+
+  return {
+    coverImage,
+    pages,
+    illCount: pages.filter(p => p.illustration).length,
+    textOnlyCount: pages.filter(p => !p.illustration).length,
+  };
 }
 
 // ── HTML Generation ──────────────────────────────────────────────────
 
 function generateBookletHtml(chNum, chapter) {
-  const { coverImage, storyPool } = buildIllustrationPool(chapter);
-  const rawText = concatenateChapterText(chapter.scenes);
-  const capsText = toAllCaps(rawText);
+  const { coverImage, pages, illCount, textOnlyCount } = buildChapterPages(chapter);
   const chName = chapter.l2?.metadata?.original_title || chapter.scenes[0]?.metadata?.chapter_name || `Chapter ${chNum}`;
 
-  // Calculate target chars per page
-  const totalChars = capsText.length;
-  const numIllustrations = storyPool.length;
-  let targetChars = numIllustrations > 0 ? Math.ceil(totalChars / numIllustrations) : totalChars;
-  if (targetChars > MAX_CHARS_PER_PAGE) targetChars = MAX_CHARS_PER_PAGE;
-
-  // Split text into pages at sentence boundaries
-  const textPages = splitTextIntoPages(capsText, targetChars);
-
-  // Assign illustrations to pages
-  // If more pages than illustrations, some pages are text-only
-  // Distribute illustrations evenly
-  const pages = [];
-  if (numIllustrations >= textPages.length) {
-    // More illustrations than text pages — one per page, extras dropped
-    for (let i = 0; i < textPages.length; i++) {
-      pages.push({ text: textPages[i], illustration: storyPool[i] || null });
-    }
-  } else {
-    // More text pages than illustrations — spread illustrations evenly
-    const stride = textPages.length / numIllustrations;
-    const assignedSlots = new Set();
-    for (let i = 0; i < numIllustrations; i++) {
-      assignedSlots.add(Math.round(i * stride));
-    }
-    let illIdx = 0;
-    for (let i = 0; i < textPages.length; i++) {
-      if (assignedSlots.has(i) && illIdx < numIllustrations) {
-        pages.push({ text: textPages[i], illustration: storyPool[illIdx] });
-        illIdx++;
-      } else {
-        pages.push({ text: textPages[i], illustration: null });
-      }
-    }
-  }
-
-  // Build HTML
   let spreadsHtml = '';
 
   // Cover page
@@ -294,7 +374,7 @@ function generateBookletHtml(chNum, chapter) {
           <div class="book-number">CHAPTER ${chNum}</div>
           <h1>${escapeHtml(chName.toUpperCase())}</h1>
           <div class="author">BY LEWIS CARROLL</div>
-          <div class="page-info">${pages.length} PAGES &middot; ${numIllustrations} ILLUSTRATIONS</div>
+          <div class="page-info">${pages.length} PAGES</div>
         </div>
       </div>
     </div>`;
@@ -307,11 +387,10 @@ function generateBookletHtml(chNum, chapter) {
     const pageNum = i + 1;
 
     if (page.illustration) {
-      // Illustrated page
       spreadsHtml += `
     <div class="spread">
       <div class="page-left">
-        <img src="${page.illustration.url}" alt="${escapeHtml(page.illustration.scene)}">
+        <img src="${page.illustration.url}" alt="${escapeHtml(page.illustration.scene || '')}">
       </div>
       <div class="page-right">
         <div class="text-block ${sizeClass}">
@@ -321,7 +400,6 @@ function generateBookletHtml(chNum, chapter) {
       </div>
     </div>`;
     } else {
-      // Text-only page with decorative left panel
       spreadsHtml += `
     <div class="spread text-only">
       <div class="page-left decorative-panel">
@@ -361,7 +439,7 @@ function generateBookletHtml(chNum, chapter) {
       </div>
     </div>`;
 
-  return { html: wrapHtml(chNum, chName, spreadsHtml), pageCount: pages.length, illCount: numIllustrations, textOnlyCount: pages.filter(p => !p.illustration).length };
+  return { html: wrapHtml(chNum, chName, spreadsHtml), pageCount: pages.length, illCount, textOnlyCount };
 }
 
 function wrapHtml(chNum, chName, spreadsHtml) {
@@ -376,7 +454,7 @@ function wrapHtml(chNum, chName, spreadsHtml) {
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      font-family: 'Georgia', 'Cambria', 'Times New Roman', serif;
       background: white;
       color: #1a1a1a;
     }
@@ -419,9 +497,9 @@ function wrapHtml(chNum, chName, spreadsHtml) {
       height: 100%;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
-      padding: 28px 36px;
+      padding: 24px 32px;
       background: white;
       position: relative;
       overflow: hidden;
@@ -436,32 +514,34 @@ function wrapHtml(chNum, chName, spreadsHtml) {
       width: 100%;
       overflow: hidden;
     }
+
+    /* Default text style */
     .text-block p {
-      font-size: clamp(14px, 2.0vw, 22px);
-      line-height: 1.7;
-      font-weight: 700;
+      font-size: clamp(13px, 1.9vw, 20px);
+      line-height: 2.0;
+      font-weight: ${USE_CAPS ? '700' : '400'};
       text-align: left;
-      letter-spacing: 0.3px;
-      margin-bottom: 0.7em;
+      letter-spacing: ${USE_CAPS ? '0.3px' : '0'};
+      margin-bottom: 1em;
     }
     .text-block p:last-child { margin-bottom: 0; }
 
     /* Font size tiers */
     .text-block.text-large p {
-      font-size: clamp(18px, 2.5vw, 28px);
-      line-height: 1.8;
+      font-size: clamp(16px, 2.4vw, 26px);
+      line-height: 2.1;
     }
     .text-block.text-medium p {
-      font-size: clamp(12px, 1.6vw, 18px);
-      line-height: 1.6;
+      font-size: clamp(11px, 1.5vw, 17px);
+      line-height: 1.9;
     }
     .text-block.text-small p {
-      font-size: clamp(11px, 1.4vw, 16px);
-      line-height: 1.5;
+      font-size: clamp(10px, 1.3vw, 15px);
+      line-height: 1.8;
     }
     .text-block.text-xs p {
-      font-size: clamp(10px, 1.2vw, 14px);
-      line-height: 1.4;
+      font-size: clamp(9px, 1.1vw, 13px);
+      line-height: 1.7;
     }
 
     .page-number {
@@ -485,6 +565,7 @@ function wrapHtml(chNum, chName, spreadsHtml) {
       font-weight: 800;
       letter-spacing: 4px;
       opacity: 0.3;
+      font-family: 'Georgia', serif;
     }
     .ornament-star {
       font-size: clamp(36px, 6vw, 72px);
@@ -496,7 +577,10 @@ function wrapHtml(chNum, chName, spreadsHtml) {
       background: #2c1810;
       color: white;
     }
-    .title-block { text-align: center; }
+    .title-block {
+      text-align: center;
+      font-family: 'Georgia', serif;
+    }
     .series-name {
       font-size: clamp(11px, 1.5vw, 16px);
       letter-spacing: 4px;
@@ -539,7 +623,10 @@ function wrapHtml(chNum, chName, spreadsHtml) {
       background: #2c1810;
       color: white;
     }
-    .back-block { text-align: center; }
+    .back-block {
+      text-align: center;
+      font-family: 'Georgia', serif;
+    }
     .the-end {
       font-size: clamp(24px, 4vw, 44px);
       font-weight: 800;
@@ -589,7 +676,8 @@ const chapterNums = Object.keys(chapterMap).map(Number).sort((a, b) => a - b);
 let grandTotalPages = 0;
 let grandTotalIll = 0;
 
-console.log('Generating Alice in Wonderland chapter booklets...\n');
+const caseLabel = USE_CAPS ? 'ALL CAPS' : 'lowercase';
+console.log(`Generating Alice in Wonderland chapter booklets (${caseLabel})...\n`);
 
 const bookletInfo = [];
 
@@ -607,9 +695,9 @@ for (const chNum of chapterNums) {
   grandTotalIll += illCount;
 
   const textOnly = textOnlyCount > 0 ? ` (${textOnlyCount} text-only)` : '';
-  console.log(`  Ch ${padNum}: ${filename} — ${pageCount} pages, ${illCount} illustrations${textOnly}`);
+  console.log(`  Ch ${padNum}: ${filename} — ${pageCount} pages, ${illCount} ill${textOnly}`);
 
-  bookletInfo.push({ chNum, chName, filename, pageCount, illCount, coverImage: buildIllustrationPool(chapter).coverImage });
+  bookletInfo.push({ chNum, chName, filename, pageCount, illCount, coverImage: buildChapterPages(chapter).coverImage });
 }
 
 // ── Generate Index Page ──────────────────────────────────────────────
@@ -623,16 +711,14 @@ const indexHtml = `<!DOCTYPE html>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-      background: #f8f5f0;
-      color: #2c1810;
-      padding: 40px 20px;
+      font-family: 'Georgia', 'Cambria', serif;
+      background: #f8f5f0; color: #2c1810; padding: 40px 20px;
     }
     h1 { text-align: center; font-size: 28px; margin-bottom: 6px; letter-spacing: 2px; }
     .subtitle { text-align: center; font-size: 13px; color: #888; margin-bottom: 10px; letter-spacing: 1px; }
     .description {
       text-align: center; font-size: 14px; color: #666; margin-bottom: 30px;
-      max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.5;
+      max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;
     }
     .grid {
       display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -661,7 +747,7 @@ const indexHtml = `<!DOCTYPE html>
 </head>
 <body>
   <h1>ALICE IN WONDERLAND</h1>
-  <div class="subtitle">ILLUSTRATED CHAPTER BOOKS — ALL CAPS EDITION</div>
+  <div class="subtitle">ILLUSTRATED CHAPTER BOOKS</div>
   <div class="description">
     Lewis Carroll's complete original text with ${grandTotalIll} public domain illustrations
     by Tenniel, Rackham, Carroll, Hudson, Gutmann, Le Fanu, Walker, Rountree &amp; more.
@@ -696,3 +782,4 @@ ${bookletInfo.map(b => `    <a class="card" href="${b.filename}">
 writeFileSync(resolve(outputDir, 'index.html'), indexHtml);
 console.log(`\n  index.html (library page)`);
 console.log(`\nDone! 12 booklets, ${grandTotalPages} total pages, ${grandTotalIll} illustrations.`);
+console.log(`Mode: ${caseLabel}. Use --lowercase flag for normal case.`);
