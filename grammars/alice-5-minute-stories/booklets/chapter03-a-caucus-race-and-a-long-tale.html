@@ -5,16 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chapter 3: A Caucus-Race and a Long Tale — Alice in Wonderland</title>
   <style>
-    @page {
-      size: landscape;
-      margin: 0;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    @page { size: landscape; margin: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
@@ -30,13 +22,12 @@
       break-after: page;
       overflow: hidden;
     }
-
     .spread:last-child {
       page-break-after: avoid;
       break-after: avoid;
     }
 
-    /* Left page = illustration */
+    /* Left page: illustration */
     .page-left {
       width: 50%;
       height: 100%;
@@ -47,7 +38,6 @@
       padding: 16px;
       overflow: hidden;
     }
-
     .page-left img {
       max-width: 100%;
       max-height: 100%;
@@ -56,7 +46,7 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-    /* Right page = text */
+    /* Right page: text */
     .page-right {
       width: 50%;
       height: 100%;
@@ -64,72 +54,94 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 30px 40px;
+      padding: 28px 36px;
       background: white;
       position: relative;
+      overflow: hidden;
     }
 
+    /* Text block — NEVER scroll */
     .text-block {
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
       flex: 1;
       width: 100%;
-      overflow-y: auto;
+      overflow: hidden;
     }
-
     .text-block p {
-      font-size: clamp(14px, 2.2vw, 24px);
+      font-size: clamp(14px, 2.0vw, 22px);
       line-height: 1.7;
       font-weight: 700;
       text-align: left;
       letter-spacing: 0.3px;
-      max-width: 95%;
+      margin-bottom: 0.7em;
     }
+    .text-block p:last-child { margin-bottom: 0; }
 
-    /* For longer text passages */
+    /* Font size tiers */
+    .text-block.text-large p {
+      font-size: clamp(18px, 2.5vw, 28px);
+      line-height: 1.8;
+    }
     .text-block.text-medium p {
-      font-size: clamp(12px, 1.8vw, 19px);
+      font-size: clamp(12px, 1.6vw, 18px);
       line-height: 1.6;
     }
-
     .text-block.text-small p {
-      font-size: clamp(10px, 1.5vw, 16px);
+      font-size: clamp(11px, 1.4vw, 16px);
       line-height: 1.5;
+    }
+    .text-block.text-xs p {
+      font-size: clamp(10px, 1.2vw, 14px);
+      line-height: 1.4;
     }
 
     .page-number {
-      font-size: 12px;
-      color: #bbb;
+      font-size: 11px;
+      color: #ccc;
       position: absolute;
-      bottom: 10px;
-      right: 20px;
+      bottom: 8px;
+      right: 16px;
     }
 
-    /* Cover page styles */
+    /* Decorative panel (text-only pages) */
+    .decorative-panel {
+      background: #2c1810;
+    }
+    .chapter-ornament {
+      text-align: center;
+      color: #d4a76a;
+    }
+    .ornament-number {
+      font-size: clamp(48px, 8vw, 96px);
+      font-weight: 800;
+      letter-spacing: 4px;
+      opacity: 0.3;
+    }
+    .ornament-star {
+      font-size: clamp(36px, 6vw, 72px);
+      opacity: 0.3;
+    }
+
+    /* Cover */
     .cover-title {
       background: #2c1810;
       color: white;
     }
-
-    .title-block {
-      text-align: center;
-    }
-
+    .title-block { text-align: center; }
     .series-name {
       font-size: clamp(11px, 1.5vw, 16px);
       letter-spacing: 4px;
       color: #d4a76a;
       margin-bottom: 12px;
     }
-
     .book-number {
       font-size: clamp(13px, 1.8vw, 20px);
       letter-spacing: 3px;
       color: #d4a76a;
       margin-bottom: 20px;
     }
-
     .title-block h1 {
       font-size: clamp(20px, 3.8vw, 42px);
       line-height: 1.2;
@@ -137,25 +149,19 @@
       font-weight: 800;
       letter-spacing: 1px;
     }
-
     .author {
       font-size: clamp(11px, 1.3vw, 14px);
       letter-spacing: 3px;
       color: #d4a76a;
       margin-bottom: 8px;
     }
-
     .page-info {
-      font-size: clamp(10px, 1.1vw, 12px);
+      font-size: clamp(9px, 1vw, 11px);
       letter-spacing: 2px;
       color: #a08060;
       margin-top: 5px;
     }
-
-    .cover-image {
-      background: #2c1810;
-    }
-
+    .cover-image { background: #2c1810; }
     .cover-image img {
       border-radius: 8px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.3);
@@ -166,11 +172,7 @@
       background: #2c1810;
       color: white;
     }
-
-    .back-block {
-      text-align: center;
-    }
-
+    .back-block { text-align: center; }
     .the-end {
       font-size: clamp(24px, 4vw, 44px);
       font-weight: 800;
@@ -178,49 +180,33 @@
       margin-bottom: 30px;
       color: #d4a76a;
     }
-
     .back-info p {
       font-size: clamp(10px, 1.2vw, 13px);
       letter-spacing: 2px;
       margin-bottom: 6px;
       color: #d4a76a;
     }
-
     .back-info .small {
       font-size: clamp(8px, 0.9vw, 10px);
       color: #a08060;
     }
 
-    .back-image {
-      background: #2c1810;
-    }
-
-    .back-image img {
-      border-radius: 8px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-    }
-
-    /* Print styles */
+    /* Print */
     @media print {
       body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
       .spread { height: 100vh; }
       .page-left img { box-shadow: none; }
-      .cover-image img, .back-image img { box-shadow: none; }
-      .text-block { overflow: hidden; }
+      .cover-image img { box-shadow: none; }
     }
 
-    /* Screen: show page dividers */
+    /* Screen: page dividers */
     @media screen {
       .spread {
         border-bottom: 3px dashed #ccc;
         min-height: 100vh;
       }
-      .spread:last-child {
-        border-bottom: none;
-      }
-      body {
-        background: #e8e8e8;
-      }
+      .spread:last-child { border-bottom: none; }
+      body { background: #e8e8e8; }
     }
   </style>
 </head>
@@ -228,7 +214,7 @@
 
     <div class="spread cover-spread">
       <div class="page-left cover-image">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-driest-thing/lewis-carroll-1864-manuscript.webp" alt="Cover">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-03-a-caucus-race-and-a-long-tale/lewis-carroll-1864-chapter-II.webp" alt="Cover illustration">
       </div>
       <div class="page-right cover-title">
         <div class="title-block">
@@ -236,112 +222,107 @@
           <div class="book-number">CHAPTER 3</div>
           <h1>A CAUCUS-RACE AND A LONG TALE</h1>
           <div class="author">BY LEWIS CARROLL</div>
-          <div class="page-info">9 PAGES</div>
+          <div class="page-info">8 PAGES &middot; 9 ILLUSTRATIONS</div>
         </div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-driest-thing/lewis-carroll-1864-manuscript.webp" alt="The Driest Thing">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-driest-thing/lewis-carroll-1864-manuscript.webp" alt="Alice alone on the shore after the race">
       </div>
       <div class="page-right">
         <div class="text-block text-small">
-          <p>THEY WERE INDEED A QUEER-LOOKING PARTY THAT ASSEMBLED ON THE BANK—THE<br>BIRDS WITH DRAGGLED FEATHERS, THE ANIMALS WITH THEIR FUR CLINGING CLOSE<br>TO THEM, AND ALL DRIPPING WET, CROSS, AND UNCOMFORTABLE.<br><br>THE FIRST QUESTION OF COURSE WAS, HOW TO GET DRY AGAIN: THEY HAD A<br>CONSULTATION ABOUT THIS, AND AFTER A FEW MINUTES IT SEEMED QUITE<br>NATURAL TO ALICE TO FIND HERSELF TALKING FAMILIARLY WITH THEM, AS IF<br>SHE HAD KNOWN THEM ALL HER LIFE. INDEED, SHE HAD QUITE A LONG ARGUMENT<br>WITH THE LORY, WHO AT LAST TURNED SULKY, AND WOULD ONLY SAY, “I AM<br>OLDER THAN YOU, AND MUST KNOW BETTER;” AND THIS ALICE WOULD NOT ALLOW<br>WITHOUT KNOWING HOW OLD IT WAS, AND, AS THE LORY POSITIVELY REFUSED TO<br>TELL ITS AGE, THERE WAS NO MORE TO BE SAID.<br><br>AT LAST THE MOUSE, WHO SEEMED TO BE A PERSON OF AUTHORITY AMONG THEM,<br>CALLED OUT, “SIT DOWN, ALL OF YOU, AND LISTEN TO ME! I’LL SOON MAKE<br>YOU DRY ENOUGH!” THEY ALL SAT DOWN AT ONCE, IN A LARGE RING, WITH THE<br>MOUSE IN THE MIDDLE. ALICE KEPT HER EYES ANXIOUSLY FIXED ON IT, FOR SHE<br>FELT SURE SHE WOULD CATCH A BAD COLD IF SHE DID NOT GET DRY VERY SOON.<br><br>“AHEM!” SAID THE MOUSE WITH AN IMPORTANT AIR, “ARE YOU ALL READY? THIS<br>IS THE DRIEST THING I KNOW. SILENCE ALL ROUND, IF YOU PLEASE! ‘WILLIAM<br>THE CONQUEROR, WHOSE CAUSE WAS FAVOURED BY THE POPE, WAS SOON SUBMITTED<br>TO BY THE ENGLISH, WHO WANTED LEADERS, AND HAD BEEN OF LATE MUCH<br>ACCUSTOMED TO USURPATION AND CONQUEST. EDWIN AND MORCAR, THE EARLS OF<br>MERCIA AND NORTHUMBRIA—’”<br><br>“UGH!” SAID THE LORY, WITH A SHIVER.<br><br>“I BEG YOUR PARDON!” SAID THE MOUSE, FROWNING, BUT VERY POLITELY: “DID<br>YOU SPEAK?”<br><br>“NOT I!” SAID THE LORY HASTILY.</p>
+          <p>THEY WERE INDEED A QUEER-LOOKING PARTY THAT ASSEMBLED ON THE BANK—THE BIRDS WITH DRAGGLED FEATHERS, THE ANIMALS WITH THEIR FUR CLINGING CLOSE TO THEM, AND ALL DRIPPING WET, CROSS, AND UNCOMFORTABLE. THE FIRST QUESTION OF COURSE WAS, HOW TO GET DRY AGAIN: THEY HAD A CONSULTATION ABOUT THIS, AND AFTER A FEW MINUTES IT SEEMED QUITE NATURAL TO ALICE TO FIND HERSELF TALKING FAMILIARLY WITH THEM, AS IF SHE HAD KNOWN THEM ALL HER LIFE. INDEED, SHE HAD QUITE A LONG ARGUMENT WITH THE LORY, WHO AT LAST TURNED SULKY, AND WOULD ONLY SAY, “I AM OLDER THAN YOU, AND MUST KNOW BETTER;” AND THIS ALICE WOULD NOT ALLOW WITHOUT KNOWING HOW OLD IT WAS, AND, AS THE LORY POSITIVELY REFUSED TO TELL ITS AGE, THERE WAS NO MORE TO BE SAID. AT LAST THE MOUSE, WHO SEEMED TO BE A PERSON OF AUTHORITY AMONG THEM, CALLED OUT, “SIT DOWN, ALL OF YOU, AND LISTEN TO ME! I’LL SOON MAKE YOU DRY ENOUGH!” THEY ALL SAT DOWN AT ONCE, IN A LARGE RING, WITH THE MOUSE IN THE MIDDLE. ALICE KEPT HER EYES ANXIOUSLY FIXED ON IT, FOR SHE FELT SURE SHE WOULD CATCH A BAD COLD IF SHE DID NOT GET DRY VERY SOON. “AHEM!” SAID THE MOUSE WITH AN IMPORTANT AIR, “ARE YOU ALL READY? THIS IS THE DRIEST THING I KNOW.</p>
         </div>
         <div class="page-number">1</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-driest-thing/john-tenniel-harry-theaker-1911.jpg" alt="The Driest Thing">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-driest-thing/john-tenniel-harry-theaker-1911.jpg" alt="Dodo presents thimble to Alice">
       </div>
       <div class="page-right">
         <div class="text-block text-small">
-          <p>“I THOUGHT YOU DID,” SAID THE MOUSE. “—I PROCEED. ‘EDWIN AND MORCAR,<br>THE EARLS OF MERCIA AND NORTHUMBRIA, DECLARED FOR HIM: AND EVEN<br>STIGAND, THE PATRIOTIC ARCHBISHOP OF CANTERBURY, FOUND IT ADVISABLE—’”<br><br>“FOUND WHAT?” SAID THE DUCK.<br><br>“FOUND IT,” THE MOUSE REPLIED RATHER CROSSLY: “OF COURSE YOU KNOW<br>WHAT ‘IT’ MEANS.”<br><br>“I KNOW WHAT ‘IT’ MEANS WELL ENOUGH, WHEN I FIND A THING,” SAID THE<br>DUCK: “IT’S GENERALLY A FROG OR A WORM. THE QUESTION IS, WHAT DID THE<br>ARCHBISHOP FIND?”<br><br>THE MOUSE DID NOT NOTICE THIS QUESTION, BUT HURRIEDLY WENT ON, “‘—FOUND<br>IT ADVISABLE TO GO WITH EDGAR ATHELING TO MEET WILLIAM AND OFFER HIM<br>THE CROWN. WILLIAM’S CONDUCT AT FIRST WAS MODERATE. BUT THE INSOLENCE<br>OF HIS NORMANS—’ HOW ARE YOU GETTING ON NOW, MY DEAR?” IT CONTINUED,<br>TURNING TO ALICE AS IT SPOKE.<br><br>“AS WET AS EVER,” SAID ALICE IN A MELANCHOLY TONE: “IT DOESN’T SEEM TO<br>DRY ME AT ALL.”</p>
+          <p>SILENCE ALL ROUND, IF YOU PLEASE! ‘WILLIAM THE CONQUEROR, WHOSE CAUSE WAS FAVOURED BY THE POPE, WAS SOON SUBMITTED TO BY THE ENGLISH, WHO WANTED LEADERS, AND HAD BEEN OF LATE MUCH ACCUSTOMED TO USURPATION AND CONQUEST. EDWIN AND MORCAR, THE EARLS OF MERCIA AND NORTHUMBRIA—’”</p>
+          <p>“UGH!” SAID THE LORY, WITH A SHIVER. “I BEG YOUR PARDON!” SAID THE MOUSE, FROWNING, BUT VERY POLITELY: “DID YOU SPEAK?” “NOT I!” SAID THE LORY HASTILY. “I THOUGHT YOU DID,” SAID THE MOUSE. “—I PROCEED. ‘EDWIN AND MORCAR, THE EARLS OF MERCIA AND NORTHUMBRIA, DECLARED FOR HIM: AND EVEN STIGAND, THE PATRIOTIC ARCHBISHOP OF CANTERBURY, FOUND IT ADVISABLE—’”</p>
+          <p>“FOUND WHAT?” SAID THE DUCK. “FOUND IT,” THE MOUSE REPLIED RATHER CROSSLY: “OF COURSE YOU KNOW WHAT ‘IT’ MEANS.” “I KNOW WHAT ‘IT’ MEANS WELL ENOUGH, WHEN I FIND A THING,” SAID THE DUCK: “IT’S GENERALLY A FROG OR A WORM. THE QUESTION IS, WHAT DID THE ARCHBISHOP FIND?” THE MOUSE DID NOT NOTICE THIS QUESTION, BUT HURRIEDLY WENT ON, “‘—FOUND IT ADVISABLE TO GO WITH EDGAR ATHELING TO MEET WILLIAM AND OFFER HIM THE CROWN. WILLIAM’S CONDUCT AT FIRST WAS MODERATE. BUT THE INSOLENCE OF HIS NORMANS—’ HOW ARE YOU GETTING ON NOW, MY DEAR?” IT CONTINUED, TURNING TO ALICE AS IT SPOKE. “AS WET AS EVER,” SAID ALICE IN A MELANCHOLY TONE: “IT DOESN’T SEEM TO DRY ME AT ALL.”</p>
         </div>
         <div class="page-number">2</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/arthur-rackham-1907.jpg" alt="The Caucus-Race">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/arthur-rackham-1907.jpg" alt="Who has won">
       </div>
       <div class="page-right">
-        <div class="text-block text-medium">
-          <p>“IN THAT CASE,” SAID THE DODO SOLEMNLY, RISING TO ITS FEET, “I MOVE<br>THAT THE MEETING ADJOURN, FOR THE IMMEDIATE ADOPTION OF MORE ENERGETIC<br>REMEDIES—”<br><br>“SPEAK ENGLISH!” SAID THE EAGLET. “I DON’T KNOW THE MEANING OF HALF<br>THOSE LONG WORDS, AND, WHAT’S MORE, I DON’T BELIEVE YOU DO EITHER!” AND<br>THE EAGLET BENT DOWN ITS HEAD TO HIDE A SMILE: SOME OF THE OTHER BIRDS<br>TITTERED AUDIBLY.<br><br>“WHAT I WAS GOING TO SAY,” SAID THE DODO IN AN OFFENDED TONE, “WAS,<br>THAT THE BEST THING TO GET US DRY WOULD BE A CAUCUS-RACE.”</p>
+        <div class="text-block text-small">
+          <p>“IN THAT CASE,” SAID THE DODO SOLEMNLY, RISING TO ITS FEET, “I MOVE THAT THE MEETING ADJOURN, FOR THE IMMEDIATE ADOPTION OF MORE ENERGETIC REMEDIES—”</p>
+          <p>“SPEAK ENGLISH!” SAID THE EAGLET. “I DON’T KNOW THE MEANING OF HALF THOSE LONG WORDS, AND, WHAT’S MORE, I DON’T BELIEVE YOU DO EITHER!” AND THE EAGLET BENT DOWN ITS HEAD TO HIDE A SMILE: SOME OF THE OTHER BIRDS TITTERED AUDIBLY. “WHAT I WAS GOING TO SAY,” SAID THE DODO IN AN OFFENDED TONE, “WAS, THAT THE BEST THING TO GET US DRY WOULD BE A CAUCUS-RACE.” “WHAT IS A CAUCUS-RACE?” SAID ALICE; NOT THAT SHE WANTED MUCH TO KNOW, BUT THE DODO HAD PAUSED AS IF IT THOUGHT THAT SOMEBODY OUGHT TO SPEAK, AND NO ONE ELSE SEEMED INCLINED TO SAY ANYTHING. “WHY,” SAID THE DODO, “THE BEST WAY TO EXPLAIN IT IS TO DO IT.” (AND, AS YOU MIGHT LIKE TO TRY THE THING YOURSELF, SOME WINTER DAY, I WILL TELL YOU HOW THE DODO MANAGED IT.) FIRST IT MARKED OUT A RACE-COURSE, IN A SORT OF CIRCLE, (“THE EXACT SHAPE DOESN’T MATTER,” IT SAID,) AND THEN ALL THE PARTY WERE PLACED ALONG THE COURSE, HERE AND THERE. THERE WAS NO “ONE, TWO, THREE, AND AWAY,” BUT THEY BEGAN RUNNING WHEN THEY LIKED, AND LEFT OFF WHEN THEY LIKED, SO THAT IT WAS NOT EASY TO KNOW WHEN THE RACE WAS OVER.</p>
         </div>
         <div class="page-number">3</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/william-h-walker-1907.jpg" alt="The Caucus-Race">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/william-h-walker-1907.jpg" alt="Dodo">
       </div>
       <div class="page-right">
         <div class="text-block text-small">
-          <p>“WHAT IS A CAUCUS-RACE?” SAID ALICE; NOT THAT SHE WANTED MUCH TO<br>KNOW, BUT THE DODO HAD PAUSED AS IF IT THOUGHT THAT SOMEBODY OUGHT TO<br>SPEAK, AND NO ONE ELSE SEEMED INCLINED TO SAY ANYTHING.<br><br>“WHY,” SAID THE DODO, “THE BEST WAY TO EXPLAIN IT IS TO DO IT.” (AND,<br>AS YOU MIGHT LIKE TO TRY THE THING YOURSELF, SOME WINTER DAY, I WILL<br>TELL YOU HOW THE DODO MANAGED IT.)<br><br>FIRST IT MARKED OUT A RACE-COURSE, IN A SORT OF CIRCLE, (“THE EXACT<br>SHAPE DOESN’T MATTER,” IT SAID,) AND THEN ALL THE PARTY WERE PLACED<br>ALONG THE COURSE, HERE AND THERE. THERE WAS NO “ONE, TWO, THREE, AND<br>AWAY,” BUT THEY BEGAN RUNNING WHEN THEY LIKED, AND LEFT OFF WHEN THEY<br>LIKED, SO THAT IT WAS NOT EASY TO KNOW WHEN THE RACE WAS OVER. HOWEVER,<br>WHEN THEY HAD BEEN RUNNING HALF AN HOUR OR SO, AND WERE QUITE DRY<br>AGAIN, THE DODO SUDDENLY CALLED OUT “THE RACE IS OVER!” AND THEY ALL<br>CROWDED ROUND IT, PANTING, AND ASKING, “BUT WHO HAS WON?”</p>
+          <p>HOWEVER, WHEN THEY HAD BEEN RUNNING HALF AN HOUR OR SO, AND WERE QUITE DRY AGAIN, THE DODO SUDDENLY CALLED OUT “THE RACE IS OVER!” AND THEY ALL CROWDED ROUND IT, PANTING, AND ASKING, “BUT WHO HAS WON?” THIS QUESTION THE DODO COULD NOT ANSWER WITHOUT A GREAT DEAL OF THOUGHT, AND IT SAT FOR A LONG TIME WITH ONE FINGER PRESSED UPON ITS FOREHEAD (THE POSITION IN WHICH YOU USUALLY SEE SHAKESPEARE, IN THE PICTURES OF HIM), WHILE THE REST WAITED IN SILENCE. AT LAST THE DODO SAID, “EVERYBODY HAS WON, AND ALL MUST HAVE PRIZES.” “BUT WHO IS TO GIVE THE PRIZES?” QUITE A CHORUS OF VOICES ASKED. “WHY, SHE, OF COURSE,” SAID THE DODO, POINTING TO ALICE WITH ONE FINGER; AND THE WHOLE PARTY AT ONCE CROWDED ROUND HER, CALLING OUT IN A CONFUSED WAY, “PRIZES! PRIZES!” ALICE HAD NO IDEA WHAT TO DO, AND IN DESPAIR SHE PUT HER HAND IN HER POCKET, AND PULLED OUT A BOX OF COMFITS, (LUCKILY THE SALT WATER HAD NOT GOT INTO IT), AND HANDED THEM ROUND AS PRIZES. THERE WAS EXACTLY ONE A-PIECE, ALL ROUND. “BUT SHE MUST HAVE A PRIZE HERSELF, YOU KNOW,” SAID THE MOUSE. “OF COURSE,” THE DODO REPLIED VERY GRAVELY. “WHAT ELSE HAVE YOU GOT IN YOUR POCKET?” HE WENT ON, TURNING TO ALICE. “ONLY A THIMBLE,” SAID ALICE SADLY. “HAND IT OVER HERE,” SAID THE DODO.</p>
         </div>
         <div class="page-number">4</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/brinsley-le-fanu-1910.jpg" alt="The Caucus-Race">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/brinsley-le-fanu-1910.jpg" alt="Dodo presents Alice with her fingernail">
       </div>
       <div class="page-right">
-        <div class="text-block text-medium">
-          <p>THIS QUESTION THE DODO COULD NOT ANSWER WITHOUT A GREAT DEAL OF<br>THOUGHT, AND IT SAT FOR A LONG TIME WITH ONE FINGER PRESSED UPON ITS<br>FOREHEAD (THE POSITION IN WHICH YOU USUALLY SEE SHAKESPEARE, IN THE<br>PICTURES OF HIM), WHILE THE REST WAITED IN SILENCE. AT LAST THE DODO<br>SAID, “EVERYBODY HAS WON, AND ALL MUST HAVE PRIZES.”<br><br>“BUT WHO IS TO GIVE THE PRIZES?” QUITE A CHORUS OF VOICES ASKED.<br><br>“WHY, SHE, OF COURSE,” SAID THE DODO, POINTING TO ALICE WITH ONE<br>FINGER; AND THE WHOLE PARTY AT ONCE CROWDED ROUND HER, CALLING OUT IN A<br>CONFUSED WAY, “PRIZES! PRIZES!”</p>
+        <div class="text-block text-small">
+          <p>THEN THEY ALL CROWDED ROUND HER ONCE MORE, WHILE THE DODO SOLEMNLY PRESENTED THE THIMBLE, SAYING “WE BEG YOUR ACCEPTANCE OF THIS ELEGANT THIMBLE;” AND, WHEN IT HAD FINISHED THIS SHORT SPEECH, THEY ALL CHEERED. ALICE THOUGHT THE WHOLE THING VERY ABSURD, BUT THEY ALL LOOKED SO GRAVE THAT SHE DID NOT DARE TO LAUGH; AND, AS SHE COULD NOT THINK OF ANYTHING TO SAY, SHE SIMPLY BOWED, AND TOOK THE THIMBLE, LOOKING AS SOLEMN AS SHE COULD. THE NEXT THING WAS TO EAT THE COMFITS: THIS CAUSED SOME NOISE AND CONFUSION, AS THE LARGE BIRDS COMPLAINED THAT THEY COULD NOT TASTE THEIRS, AND THE SMALL ONES CHOKED AND HAD TO BE PATTED ON THE BACK. HOWEVER, IT WAS OVER AT LAST, AND THEY SAT DOWN AGAIN IN A RING, AND BEGGED THE MOUSE TO TELL THEM SOMETHING MORE. “YOU PROMISED TO TELL ME YOUR HISTORY, YOU KNOW,” SAID ALICE, “AND WHY IT IS YOU HATE—C AND D,” SHE ADDED IN A WHISPER, HALF AFRAID THAT IT WOULD BE OFFENDED AGAIN. “MINE IS A LONG AND A SAD TALE!” SAID THE MOUSE, TURNING TO ALICE, AND SIGHING. “IT IS A LONG TAIL, CERTAINLY,” SAID ALICE, LOOKING DOWN WITH WONDER AT THE MOUSE’S TAIL; “BUT WHY DO YOU CALL IT SAD?”</p>
         </div>
         <div class="page-number">5</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/bessie-pease-gutmann-1933.jpg" alt="The Caucus-Race">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/bessie-pease-gutmann-1933.jpg" alt="Beg your acceptance">
       </div>
       <div class="page-right">
-        <div class="text-block ">
-          <p>ALICE HAD NO IDEA WHAT TO DO, AND IN DESPAIR SHE PUT HER HAND IN HER<br>POCKET, AND PULLED OUT A BOX OF COMFITS, (LUCKILY THE SALT WATER HAD<br>NOT GOT INTO IT), AND HANDED THEM ROUND AS PRIZES. THERE WAS EXACTLY<br>ONE A-PIECE, ALL ROUND.<br><br>“BUT SHE MUST HAVE A PRIZE HERSELF, YOU KNOW,” SAID THE MOUSE.<br><br>“OF COURSE,” THE DODO REPLIED VERY GRAVELY. “WHAT ELSE HAVE YOU GOT IN<br>YOUR POCKET?” HE WENT ON, TURNING TO ALICE.</p>
+        <div class="text-block text-small">
+          <p>AND SHE KEPT ON PUZZLING ABOUT IT WHILE THE MOUSE WAS SPEAKING, SO THAT HER IDEA OF THE TALE WAS SOMETHING LIKE THIS:—</p>
+          <p>“FURY SAID TO A MOUSE, THAT HE MET IN THE HOUSE, ‘LET US BOTH GO TO LAW: I WILL PROSECUTE YOU.—COME, I’LL TAKE NO DENIAL; WE MUST HAVE A TRIAL: FOR REALLY THIS MORNING I’VE NOTHING TO DO.’ SAID THE MOUSE TO THE CUR, ‘SUCH A TRIAL, DEAR SIR, WITH NO JURY OR JUDGE, WOULD BE WASTING OUR BREATH.’ ‘I’LL BE JUDGE, I’LL BE JURY,’ SAID CUNNING OLD FURY: ‘I’LL TRY THE WHOLE CAUSE, AND CONDEMN YOU TO DEATH.’” “YOU ARE NOT ATTENDING!” SAID THE MOUSE TO ALICE SEVERELY. “WHAT ARE YOU THINKING OF?” “I BEG YOUR PARDON,” SAID ALICE VERY HUMBLY: “YOU HAD GOT TO THE FIFTH BEND, I THINK?” “I HAD NOT!” CRIED THE MOUSE, SHARPLY AND VERY ANGRILY. “A KNOT!” SAID ALICE, ALWAYS READY TO MAKE HERSELF USEFUL, AND LOOKING ANXIOUSLY ABOUT HER. “OH, DO LET ME HELP TO UNDO IT!” “I SHALL DO NOTHING OF THE SORT,” SAID THE MOUSE, GETTING UP AND WALKING AWAY. “YOU INSULT ME BY TALKING SUCH NONSENSE!” “I DIDN’T MEAN IT!” PLEADED POOR ALICE. “BUT YOU’RE SO EASILY OFFENDED, YOU KNOW!” THE MOUSE ONLY GROWLED IN REPLY. “PLEASE COME BACK AND FINISH YOUR STORY!” ALICE CALLED AFTER IT; AND THE OTHERS ALL JOINED IN CHORUS, “YES, PLEASE DO!”</p>
         </div>
         <div class="page-number">6</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="The Caucus-Race">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="Hand it over said Dodo">
       </div>
       <div class="page-right">
-        <div class="text-block ">
-          <p>“ONLY A THIMBLE,” SAID ALICE SADLY.<br><br>“HAND IT OVER HERE,” SAID THE DODO.<br><br>THEN THEY ALL CROWDED ROUND HER ONCE MORE, WHILE THE DODO SOLEMNLY<br>PRESENTED THE THIMBLE, SAYING “WE BEG YOUR ACCEPTANCE OF THIS ELEGANT<br>THIMBLE;” AND, WHEN IT HAD FINISHED THIS SHORT SPEECH, THEY ALL<br>CHEERED.</p>
+        <div class="text-block text-small">
+          <p>BUT THE MOUSE ONLY SHOOK ITS HEAD IMPATIENTLY, AND WALKED A LITTLE QUICKER. “WHAT A PITY IT WOULDN’T STAY!” SIGHED THE LORY, AS SOON AS IT WAS QUITE OUT OF SIGHT; AND AN OLD CRAB TOOK THE OPPORTUNITY OF SAYING TO HER DAUGHTER “AH, MY DEAR! LET THIS BE A LESSON TO YOU NEVER TO LOSE YOUR TEMPER!” “HOLD YOUR TONGUE, MA!” SAID THE YOUNG CRAB, A LITTLE SNAPPISHLY. “YOU’RE ENOUGH TO TRY THE PATIENCE OF AN OYSTER!” “I WISH I HAD OUR DINAH HERE, I KNOW I DO!” SAID ALICE ALOUD, ADDRESSING NOBODY IN PARTICULAR. “SHE’D SOON FETCH IT BACK!” “AND WHO IS DINAH, IF I MIGHT VENTURE TO ASK THE QUESTION?” SAID THE LORY. ALICE REPLIED EAGERLY, FOR SHE WAS ALWAYS READY TO TALK ABOUT HER PET: “DINAH’S OUR CAT. AND SHE’S SUCH A CAPITAL ONE FOR CATCHING MICE YOU CAN’T THINK! AND OH, I WISH YOU COULD SEE HER AFTER THE BIRDS! WHY, SHE’LL EAT A LITTLE BIRD AS SOON AS LOOK AT IT!” THIS SPEECH CAUSED A REMARKABLE SENSATION AMONG THE PARTY. SOME OF THE BIRDS HURRIED OFF AT ONCE: ONE OLD MAGPIE BEGAN WRAPPING ITSELF UP VERY CAREFULLY, REMARKING, “I REALLY MUST BE GETTING HOME; THE NIGHT-AIR DOESN’T SUIT MY THROAT!” AND A CANARY CALLED OUT IN A TREMBLING VOICE TO ITS CHILDREN, “COME AWAY, MY DEARS! IT’S HIGH TIME YOU WERE ALL IN BED!” ON VARIOUS PRETEXTS THEY ALL MOVED OFF, AND ALICE WAS SOON LEFT ALONE.</p>
         </div>
         <div class="page-number">7</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/emily-overnell-1912.jpg" alt="The Caucus-Race">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/emily-overnell-1912.jpg" alt="Got up in disgust">
       </div>
       <div class="page-right">
-        <div class="text-block text-medium">
-          <p>ALICE THOUGHT THE WHOLE THING VERY ABSURD, BUT THEY ALL LOOKED SO GRAVE<br>THAT SHE DID NOT DARE TO LAUGH; AND, AS SHE COULD NOT THINK OF ANYTHING<br>TO SAY, SHE SIMPLY BOWED, AND TOOK THE THIMBLE, LOOKING AS SOLEMN AS<br>SHE COULD.<br><br>THE NEXT THING WAS TO EAT THE COMFITS: THIS CAUSED SOME NOISE AND<br>CONFUSION, AS THE LARGE BIRDS COMPLAINED THAT THEY COULD NOT TASTE<br>THEIRS, AND THE SMALL ONES CHOKED AND HAD TO BE PATTED ON THE BACK.<br>HOWEVER, IT WAS OVER AT LAST, AND THEY SAT DOWN AGAIN IN A RING, AND<br>BEGGED THE MOUSE TO TELL THEM SOMETHING MORE.</p>
+        <div class="text-block ">
+          <p>“I WISH I HADN’T MENTIONED DINAH!” SHE SAID TO HERSELF IN A MELANCHOLY TONE. “NOBODY SEEMS TO LIKE HER, DOWN HERE, AND I’M SURE SHE’S THE BEST CAT IN THE WORLD! OH, MY DEAR DINAH! I WONDER IF I SHALL EVER SEE YOU ANY MORE!” AND HERE POOR ALICE BEGAN TO CRY AGAIN, FOR SHE FELT VERY LONELY AND LOW-SPIRITED. IN A LITTLE WHILE, HOWEVER, SHE AGAIN HEARD A LITTLE PATTERING OF FOOTSTEPS IN THE DISTANCE, AND SHE LOOKED UP EAGERLY, HALF HOPING THAT THE MOUSE HAD CHANGED HIS MIND, AND WAS COMING BACK TO FINISH HIS STORY.</p>
         </div>
         <div class="page-number">8</div>
       </div>
     </div>
-    <div class="spread">
-      <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-a-long-sad-tale/lewis-carroll-1864-manuscript.webp" alt="A Long Sad Tale">
-      </div>
-      <div class="page-right">
-        <div class="text-block text-small">
-          <p>“YOU PROMISED TO TELL ME YOUR HISTORY, YOU KNOW,” SAID ALICE, “AND WHY<br>IT IS YOU HATE—C AND D,” SHE ADDED IN A WHISPER, HALF AFRAID THAT IT<br>WOULD BE OFFENDED AGAIN.<br><br>“MINE IS A LONG AND A SAD TALE!” SAID THE MOUSE, TURNING TO ALICE, AND<br>SIGHING.<br><br>“IT IS A LONG TAIL, CERTAINLY,” SAID ALICE, LOOKING DOWN WITH WONDER<br>AT THE MOUSE’S TAIL; “BUT WHY DO YOU CALL IT SAD?” AND SHE KEPT ON<br>PUZZLING ABOUT IT WHILE THE MOUSE WAS SPEAKING, SO THAT HER IDEA OF THE<br>TALE WAS SOMETHING LIKE THIS:—<br><br>         “FURY SAID TO A MOUSE, THAT HE MET IN THE HOUSE, ‘LET US BOTH<br>         GO TO LAW: I WILL PROSECUTE YOU.—COME, I’LL TAKE NO<br>         DENIAL; WE MUST HAVE A TRIAL: FOR REALLY THIS MORNING I’VE<br>         NOTHING TO DO.’ SAID THE MOUSE TO THE CUR, ‘SUCH A TRIAL, DEAR<br>         SIR, WITH NO JURY OR JUDGE, WOULD BE WASTING OUR BREATH.’<br>         ‘I’LL BE JUDGE, I’LL BE JURY,’ SAID CUNNING OLD FURY: ‘I’LL<br>         TRY THE WHOLE CAUSE, AND CONDEMN YOU TO DEATH.’”<br><br>“YOU ARE NOT ATTENDING!” SAID THE MOUSE TO ALICE SEVERELY. “WHAT ARE<br>YOU THINKING OF?”<br><br>“I BEG YOUR PARDON,” SAID ALICE VERY HUMBLY: “YOU HAD GOT TO THE FIFTH<br>BEND, I THINK?”<br><br>“I HAD NOT!” CRIED THE MOUSE, SHARPLY AND VERY ANGRILY.<br><br>“A KNOT!” SAID ALICE, ALWAYS READY TO MAKE HERSELF USEFUL, AND LOOKING<br>ANXIOUSLY ABOUT HER. “OH, DO LET ME HELP TO UNDO IT!”<br><br>“I SHALL DO NOTHING OF THE SORT,” SAID THE MOUSE, GETTING UP AND<br>WALKING AWAY. “YOU INSULT ME BY TALKING SUCH NONSENSE!”<br><br>“I DIDN’T MEAN IT!” PLEADED POOR ALICE. “BUT YOU’RE SO EASILY OFFENDED,<br>YOU KNOW!”<br><br>THE MOUSE ONLY GROWLED IN REPLY.<br><br>“PLEASE COME BACK AND FINISH YOUR STORY!” ALICE CALLED AFTER IT; AND<br>THE OTHERS ALL JOINED IN CHORUS, “YES, PLEASE DO!” BUT THE MOUSE ONLY<br>SHOOK ITS HEAD IMPATIENTLY, AND WALKED A LITTLE QUICKER.<br><br>“WHAT A PITY IT WOULDN’T STAY!” SIGHED THE LORY, AS SOON AS IT WAS<br>QUITE OUT OF SIGHT; AND AN OLD CRAB TOOK THE OPPORTUNITY OF SAYING TO<br>HER DAUGHTER “AH, MY DEAR! LET THIS BE A LESSON TO YOU NEVER TO LOSE<br>YOUR TEMPER!” “HOLD YOUR TONGUE, MA!” SAID THE YOUNG CRAB, A LITTLE<br>SNAPPISHLY. “YOU’RE ENOUGH TO TRY THE PATIENCE OF AN OYSTER!”<br><br>“I WISH I HAD OUR DINAH HERE, I KNOW I DO!” SAID ALICE ALOUD,<br>ADDRESSING NOBODY IN PARTICULAR. “SHE’D SOON FETCH IT BACK!”<br><br>“AND WHO IS DINAH, IF I MIGHT VENTURE TO ASK THE QUESTION?” SAID THE<br>LORY.<br><br>ALICE REPLIED EAGERLY, FOR SHE WAS ALWAYS READY TO TALK ABOUT HER PET:<br>“DINAH’S OUR CAT. AND SHE’S SUCH A CAPITAL ONE FOR CATCHING MICE YOU<br>CAN’T THINK! AND OH, I WISH YOU COULD SEE HER AFTER THE BIRDS! WHY,<br>SHE’LL EAT A LITTLE BIRD AS SOON AS LOOK AT IT!”<br><br>THIS SPEECH CAUSED A REMARKABLE SENSATION AMONG THE PARTY. SOME OF THE<br>BIRDS HURRIED OFF AT ONCE: ONE OLD MAGPIE BEGAN WRAPPING ITSELF UP VERY<br>CAREFULLY, REMARKING, “I REALLY MUST BE GETTING HOME; THE NIGHT-AIR<br>DOESN’T SUIT MY THROAT!” AND A CANARY CALLED OUT IN A TREMBLING VOICE<br>TO ITS CHILDREN, “COME AWAY, MY DEARS! IT’S HIGH TIME YOU WERE ALL IN<br>BED!” ON VARIOUS PRETEXTS THEY ALL MOVED OFF, AND ALICE WAS SOON LEFT<br>ALONE.<br><br>“I WISH I HADN’T MENTIONED DINAH!” SHE SAID TO HERSELF IN A MELANCHOLY<br>TONE. “NOBODY SEEMS TO LIKE HER, DOWN HERE, AND I’M SURE SHE’S THE BEST<br>CAT IN THE WORLD! OH, MY DEAR DINAH! I WONDER IF I SHALL EVER SEE YOU<br>ANY MORE!” AND HERE POOR ALICE BEGAN TO CRY AGAIN, FOR SHE FELT VERY<br>LONELY AND LOW-SPIRITED. IN A LITTLE WHILE, HOWEVER, SHE AGAIN HEARD A<br>LITTLE PATTERING OF FOOTSTEPS IN THE DISTANCE, AND SHE LOOKED UP<br>EAGERLY, HALF HOPING THAT THE MOUSE HAD CHANGED HIS MIND, AND WAS<br>COMING BACK TO FINISH HIS STORY.</p>
-        </div>
-        <div class="page-number">9</div>
-      </div>
-    </div>
     <div class="spread back-cover">
-      <div class="page-left back-image">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-a-long-sad-tale/lewis-carroll-1864-manuscript.webp" alt="Back cover">
+      <div class="page-left decorative-panel">
+        <div class="chapter-ornament">
+          <div class="ornament-star">&#10038;</div>
+        </div>
       </div>
       <div class="page-right back-text">
         <div class="back-block">

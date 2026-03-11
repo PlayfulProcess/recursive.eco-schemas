@@ -5,16 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chapter 1: Down the Rabbit-Hole — Alice in Wonderland</title>
   <style>
-    @page {
-      size: landscape;
-      margin: 0;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    @page { size: landscape; margin: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
@@ -30,13 +22,12 @@
       break-after: page;
       overflow: hidden;
     }
-
     .spread:last-child {
       page-break-after: avoid;
       break-after: avoid;
     }
 
-    /* Left page = illustration */
+    /* Left page: illustration */
     .page-left {
       width: 50%;
       height: 100%;
@@ -47,7 +38,6 @@
       padding: 16px;
       overflow: hidden;
     }
-
     .page-left img {
       max-width: 100%;
       max-height: 100%;
@@ -56,7 +46,7 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-    /* Right page = text */
+    /* Right page: text */
     .page-right {
       width: 50%;
       height: 100%;
@@ -64,72 +54,94 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 30px 40px;
+      padding: 28px 36px;
       background: white;
       position: relative;
+      overflow: hidden;
     }
 
+    /* Text block — NEVER scroll */
     .text-block {
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
       flex: 1;
       width: 100%;
-      overflow-y: auto;
+      overflow: hidden;
     }
-
     .text-block p {
-      font-size: clamp(14px, 2.2vw, 24px);
+      font-size: clamp(14px, 2.0vw, 22px);
       line-height: 1.7;
       font-weight: 700;
       text-align: left;
       letter-spacing: 0.3px;
-      max-width: 95%;
+      margin-bottom: 0.7em;
     }
+    .text-block p:last-child { margin-bottom: 0; }
 
-    /* For longer text passages */
+    /* Font size tiers */
+    .text-block.text-large p {
+      font-size: clamp(18px, 2.5vw, 28px);
+      line-height: 1.8;
+    }
     .text-block.text-medium p {
-      font-size: clamp(12px, 1.8vw, 19px);
+      font-size: clamp(12px, 1.6vw, 18px);
       line-height: 1.6;
     }
-
     .text-block.text-small p {
-      font-size: clamp(10px, 1.5vw, 16px);
+      font-size: clamp(11px, 1.4vw, 16px);
       line-height: 1.5;
+    }
+    .text-block.text-xs p {
+      font-size: clamp(10px, 1.2vw, 14px);
+      line-height: 1.4;
     }
 
     .page-number {
-      font-size: 12px;
-      color: #bbb;
+      font-size: 11px;
+      color: #ccc;
       position: absolute;
-      bottom: 10px;
-      right: 20px;
+      bottom: 8px;
+      right: 16px;
     }
 
-    /* Cover page styles */
+    /* Decorative panel (text-only pages) */
+    .decorative-panel {
+      background: #2c1810;
+    }
+    .chapter-ornament {
+      text-align: center;
+      color: #d4a76a;
+    }
+    .ornament-number {
+      font-size: clamp(48px, 8vw, 96px);
+      font-weight: 800;
+      letter-spacing: 4px;
+      opacity: 0.3;
+    }
+    .ornament-star {
+      font-size: clamp(36px, 6vw, 72px);
+      opacity: 0.3;
+    }
+
+    /* Cover */
     .cover-title {
       background: #2c1810;
       color: white;
     }
-
-    .title-block {
-      text-align: center;
-    }
-
+    .title-block { text-align: center; }
     .series-name {
       font-size: clamp(11px, 1.5vw, 16px);
       letter-spacing: 4px;
       color: #d4a76a;
       margin-bottom: 12px;
     }
-
     .book-number {
       font-size: clamp(13px, 1.8vw, 20px);
       letter-spacing: 3px;
       color: #d4a76a;
       margin-bottom: 20px;
     }
-
     .title-block h1 {
       font-size: clamp(20px, 3.8vw, 42px);
       line-height: 1.2;
@@ -137,25 +149,19 @@
       font-weight: 800;
       letter-spacing: 1px;
     }
-
     .author {
       font-size: clamp(11px, 1.3vw, 14px);
       letter-spacing: 3px;
       color: #d4a76a;
       margin-bottom: 8px;
     }
-
     .page-info {
-      font-size: clamp(10px, 1.1vw, 12px);
+      font-size: clamp(9px, 1vw, 11px);
       letter-spacing: 2px;
       color: #a08060;
       margin-top: 5px;
     }
-
-    .cover-image {
-      background: #2c1810;
-    }
-
+    .cover-image { background: #2c1810; }
     .cover-image img {
       border-radius: 8px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.3);
@@ -166,11 +172,7 @@
       background: #2c1810;
       color: white;
     }
-
-    .back-block {
-      text-align: center;
-    }
-
+    .back-block { text-align: center; }
     .the-end {
       font-size: clamp(24px, 4vw, 44px);
       font-weight: 800;
@@ -178,49 +180,33 @@
       margin-bottom: 30px;
       color: #d4a76a;
     }
-
     .back-info p {
       font-size: clamp(10px, 1.2vw, 13px);
       letter-spacing: 2px;
       margin-bottom: 6px;
       color: #d4a76a;
     }
-
     .back-info .small {
       font-size: clamp(8px, 0.9vw, 10px);
       color: #a08060;
     }
 
-    .back-image {
-      background: #2c1810;
-    }
-
-    .back-image img {
-      border-radius: 8px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-    }
-
-    /* Print styles */
+    /* Print */
     @media print {
       body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
       .spread { height: 100vh; }
       .page-left img { box-shadow: none; }
-      .cover-image img, .back-image img { box-shadow: none; }
-      .text-block { overflow: hidden; }
+      .cover-image img { box-shadow: none; }
     }
 
-    /* Screen: show page dividers */
+    /* Screen: page dividers */
     @media screen {
       .spread {
         border-bottom: 3px dashed #ccc;
         min-height: 100vh;
       }
-      .spread:last-child {
-        border-bottom: none;
-      }
-      body {
-        background: #e8e8e8;
-      }
+      .spread:last-child { border-bottom: none; }
+      body { background: #e8e8e8; }
     }
   </style>
 </head>
@@ -228,7 +214,7 @@
 
     <div class="spread cover-spread">
       <div class="page-left cover-image">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-bored-by-the-river/lewis-carroll-1864-manuscript.webp" alt="Cover">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-01-down-the-rabbit-hole/arthur-rackham-1907.jpg" alt="Cover illustration">
       </div>
       <div class="page-right cover-title">
         <div class="title-block">
@@ -236,167 +222,170 @@
           <div class="book-number">CHAPTER 1</div>
           <h1>DOWN THE RABBIT-HOLE</h1>
           <div class="author">BY LEWIS CARROLL</div>
-          <div class="page-info">14 PAGES</div>
+          <div class="page-info">14 PAGES &middot; 15 ILLUSTRATIONS</div>
         </div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-bored-by-the-river/lewis-carroll-1864-manuscript.webp" alt="Bored by the River">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-bored-by-the-river/lewis-carroll-1864-manuscript.webp" alt="Alice with sister by the river">
       </div>
       <div class="page-right">
-        <div class="text-block ">
-          <p>ALICE WAS BEGINNING TO GET VERY TIRED OF SITTING BY HER SISTER ON THE<br><br>BANK, AND OF HAVING NOTHING TO DO: ONCE OR TWICE SHE HAD PEEPED INTO<br><br>THE BOOK HER SISTER WAS READING, BUT IT HAD NO PICTURES OR<br><br>CONVERSATIONS IN IT, “AND WHAT IS THE USE OF A BOOK,” THOUGHT ALICE</p>
+        <div class="text-block text-medium">
+          <p>ALICE WAS BEGINNING TO GET VERY TIRED OF SITTING BY HER SISTER ON THE BANK, AND OF HAVING NOTHING TO DO: ONCE OR TWICE SHE HAD PEEPED INTO THE BOOK HER SISTER WAS READING, BUT IT HAD NO PICTURES OR CONVERSATIONS IN IT, “AND WHAT IS THE USE OF A BOOK,” THOUGHT ALICE “WITHOUT PICTURES OR CONVERSATIONS?” SO SHE WAS CONSIDERING IN HER OWN MIND (AS WELL AS SHE COULD, FOR THE HOT DAY MADE HER FEEL VERY SLEEPY AND STUPID), WHETHER THE PLEASURE OF MAKING A DAISY-CHAIN WOULD BE WORTH THE TROUBLE OF GETTING UP AND PICKING THE DAISIES, WHEN SUDDENLY A WHITE RABBIT WITH PINK EYES RAN CLOSE BY HER. THERE WAS NOTHING SO VERY REMARKABLE IN THAT; NOR DID ALICE THINK IT SO VERY MUCH OUT OF THE WAY TO HEAR THE RABBIT SAY TO ITSELF, “OH DEAR! OH DEAR! I SHALL BE LATE!”</p>
         </div>
         <div class="page-number">1</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-bored-by-the-river/brinsley-le-fanu-1910.jpg" alt="Bored by the River">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-bored-by-the-river/brinsley-le-fanu-1910.jpg" alt="Alice took marmalade as she fell">
       </div>
       <div class="page-right">
-        <div class="text-block ">
-          <p>“WITHOUT PICTURES OR CONVERSATIONS?”<br><br>SO SHE WAS CONSIDERING IN HER OWN MIND (AS WELL AS SHE COULD, FOR THE<br><br>HOT DAY MADE HER FEEL VERY SLEEPY AND STUPID), WHETHER THE PLEASURE OF<br><br>MAKING A DAISY-CHAIN WOULD BE WORTH THE TROUBLE OF GETTING UP AND</p>
+        <div class="text-block text-medium">
+          <p>(WHEN SHE THOUGHT IT OVER AFTERWARDS, IT OCCURRED TO HER THAT SHE OUGHT TO HAVE WONDERED AT THIS, BUT AT THE TIME IT ALL SEEMED QUITE NATURAL); BUT WHEN THE RABBIT ACTUALLY TOOK A WATCH OUT OF ITS WAISTCOAT-POCKET, AND LOOKED AT IT, AND THEN HURRIED ON, ALICE STARTED TO HER FEET, FOR IT FLASHED ACROSS HER MIND THAT SHE HAD NEVER BEFORE SEEN A RABBIT WITH EITHER A WAISTCOAT-POCKET, OR A WATCH TO TAKE OUT OF IT, AND BURNING WITH CURIOSITY, SHE RAN ACROSS THE FIELD AFTER IT, AND FORTUNATELY WAS JUST IN TIME TO SEE IT POP DOWN A LARGE RABBIT-HOLE UNDER THE HEDGE. IN ANOTHER MOMENT DOWN WENT ALICE AFTER IT, NEVER ONCE CONSIDERING HOW IN THE WORLD SHE WAS TO GET OUT AGAIN. THE RABBIT-HOLE WENT STRAIGHT ON LIKE A TUNNEL FOR SOME WAY, AND THEN DIPPED SUDDENLY DOWN, SO SUDDENLY THAT ALICE HAD NOT A MOMENT TO THINK ABOUT STOPPING HERSELF BEFORE SHE FOUND HERSELF FALLING DOWN A VERY DEEP WELL.</p>
         </div>
         <div class="page-number">2</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-bored-by-the-river/lewis-carroll-1864-dedication.webp" alt="Bored by the River">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-bored-by-the-river/lewis-carroll-1864-dedication.webp" alt="A Christmas Gift to a Dear Child">
       </div>
       <div class="page-right">
-        <div class="text-block ">
-          <p>PICKING THE DAISIES, WHEN SUDDENLY A WHITE RABBIT WITH PINK EYES RAN<br><br>CLOSE BY HER.</p>
+        <div class="text-block text-medium">
+          <p>EITHER THE WELL WAS VERY DEEP, OR SHE FELL VERY SLOWLY, FOR SHE HAD PLENTY OF TIME AS SHE WENT DOWN TO LOOK ABOUT HER AND TO WONDER WHAT WAS GOING TO HAPPEN NEXT. FIRST, SHE TRIED TO LOOK DOWN AND MAKE OUT WHAT SHE WAS COMING TO, BUT IT WAS TOO DARK TO SEE ANYTHING; THEN SHE LOOKED AT THE SIDES OF THE WELL, AND NOTICED THAT THEY WERE FILLED WITH CUPBOARDS AND BOOK-SHELVES; HERE AND THERE SHE SAW MAPS AND PICTURES HUNG UPON PEGS. SHE TOOK DOWN A JAR FROM ONE OF THE SHELVES AS SHE PASSED; IT WAS LABELLED “ORANGE MARMALADE”, BUT TO HER GREAT DISAPPOINTMENT IT WAS EMPTY: SHE DID NOT LIKE TO DROP THE JAR FOR FEAR OF KILLING SOMEBODY UNDERNEATH, SO MANAGED TO PUT IT INTO ONE OF THE CUPBOARDS AS SHE FELL PAST IT. “WELL!” THOUGHT ALICE TO HERSELF, “AFTER SUCH A FALL AS THIS, I SHALL THINK NOTHING OF TUMBLING DOWN STAIRS! HOW BRAVE THEY’LL ALL THINK ME AT HOME! WHY, I WOULDN’T SAY ANYTHING ABOUT IT, EVEN IF I FELL OFF THE TOP OF THE HOUSE!” (WHICH WAS VERY LIKELY TRUE.)</p>
         </div>
         <div class="page-number">3</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-the-white-rabbit-appears/arthur-rackham-1907.jpg" alt="The White Rabbit Appears">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-the-white-rabbit-appears/arthur-rackham-1907.jpg" alt="White Rabbit">
       </div>
       <div class="page-right">
-        <div class="text-block ">
-          <p>THERE WAS NOTHING SO VERY REMARKABLE IN THAT; NOR DID ALICE THINK IT<br><br>SO VERY MUCH OUT OF THE WAY TO HEAR THE RABBIT SAY TO ITSELF, “OH<br><br>DEAR! OH DEAR! I SHALL BE LATE!” (WHEN SHE THOUGHT IT OVER AFTERWARDS,<br><br>IT OCCURRED TO HER THAT SHE OUGHT TO HAVE WONDERED AT THIS, BUT AT THE</p>
+        <div class="text-block text-medium">
+          <p>DOWN, DOWN, DOWN. WOULD THE FALL NEVER COME TO AN END? “I WONDER HOW MANY MILES I’VE FALLEN BY THIS TIME?” SHE SAID ALOUD. “I MUST BE GETTING SOMEWHERE NEAR THE CENTRE OF THE EARTH. LET ME SEE: THAT WOULD BE FOUR THOUSAND MILES DOWN, I THINK—” (FOR, YOU SEE, ALICE HAD LEARNT SEVERAL THINGS OF THIS SORT IN HER LESSONS IN THE SCHOOLROOM, AND THOUGH THIS WAS NOT A VERY GOOD OPPORTUNITY FOR SHOWING OFF HER KNOWLEDGE, AS THERE WAS NO ONE TO LISTEN TO HER, STILL IT WAS GOOD PRACTICE TO SAY IT OVER) “—YES, THAT’S ABOUT THE RIGHT DISTANCE—BUT THEN I WONDER WHAT LATITUDE OR LONGITUDE I’VE GOT TO?” (ALICE HAD NO IDEA WHAT LATITUDE WAS, OR LONGITUDE EITHER, BUT THOUGHT THEY WERE NICE GRAND WORDS TO SAY.) PRESENTLY SHE BEGAN AGAIN. “I WONDER IF I SHALL FALL RIGHT THROUGH THE EARTH! HOW FUNNY IT’LL SEEM TO COME OUT AMONG THE PEOPLE THAT WALK WITH THEIR HEADS DOWNWARD!</p>
         </div>
         <div class="page-number">4</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-the-white-rabbit-appears/gwynedd-hudson-1922.jpg" alt="The White Rabbit Appears">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-the-white-rabbit-appears/gwynedd-hudson-1922.jpg" alt="White Rabbit">
       </div>
       <div class="page-right">
-        <div class="text-block ">
-          <p>TIME IT ALL SEEMED QUITE NATURAL); BUT WHEN THE RABBIT ACTUALLY TOOK A<br><br>WATCH OUT OF ITS WAISTCOAT-POCKET, AND LOOKED AT IT, AND THEN HURRIED<br><br>ON, ALICE STARTED TO HER FEET, FOR IT FLASHED ACROSS HER MIND THAT SHE<br><br>HAD NEVER BEFORE SEEN A RABBIT WITH EITHER A WAISTCOAT-POCKET, OR A</p>
+        <div class="text-block text-medium">
+          <p>THE ANTIPATHIES, I THINK—” (SHE WAS RATHER GLAD THERE WAS NO ONE LISTENING, THIS TIME, AS IT DIDN’T SOUND AT ALL THE RIGHT WORD) “—BUT I SHALL HAVE TO ASK THEM WHAT THE NAME OF THE COUNTRY IS, YOU KNOW. PLEASE, MA’AM, IS THIS NEW ZEALAND OR AUSTRALIA?” (AND SHE TRIED TO CURTSEY AS SHE SPOKE—FANCY CURTSEYING AS YOU’RE FALLING THROUGH THE AIR! DO YOU THINK YOU COULD MANAGE IT?) “AND WHAT AN IGNORANT LITTLE GIRL SHE’LL THINK ME FOR ASKING! NO, IT’LL NEVER DO TO ASK: PERHAPS I SHALL SEE IT WRITTEN UP SOMEWHERE.” DOWN, DOWN, DOWN. THERE WAS NOTHING ELSE TO DO, SO ALICE SOON BEGAN TALKING AGAIN. “DINAH’LL MISS ME VERY MUCH TO-NIGHT, I SHOULD THINK!” (DINAH WAS THE CAT.) “I HOPE THEY’LL REMEMBER HER SAUCER OF MILK AT TEA-TIME. DINAH MY DEAR! I WISH YOU WERE DOWN HERE WITH ME! THERE ARE NO MICE IN THE AIR, I’M AFRAID, BUT YOU MIGHT CATCH A BAT, AND THAT’S VERY LIKE A MOUSE, YOU KNOW. BUT DO CATS EAT BATS, I WONDER?”</p>
         </div>
         <div class="page-number">5</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-the-white-rabbit-appears/alice-b-woodward-1913.jpg" alt="The White Rabbit Appears">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-the-white-rabbit-appears/alice-b-woodward-1913.jpg" alt="Suddenly a white rabbit ran by">
       </div>
       <div class="page-right">
-        <div class="text-block ">
-          <p>WATCH TO TAKE OUT OF IT, AND BURNING WITH CURIOSITY, SHE RAN ACROSS THE<br><br>FIELD AFTER IT, AND FORTUNATELY WAS JUST IN TIME TO SEE IT POP DOWN A<br><br>LARGE RABBIT-HOLE UNDER THE HEDGE.<br><br>IN ANOTHER MOMENT DOWN WENT ALICE AFTER IT, NEVER ONCE CONSIDERING HOW</p>
+        <div class="text-block text-medium">
+          <p>AND HERE ALICE BEGAN TO GET RATHER SLEEPY, AND WENT ON SAYING TO HERSELF, IN A DREAMY SORT OF WAY, “DO CATS EAT BATS? DO CATS EAT BATS?” AND SOMETIMES, “DO BATS EAT CATS?” FOR, YOU SEE, AS SHE COULDN’T ANSWER EITHER QUESTION, IT DIDN’T MUCH MATTER WHICH WAY SHE PUT IT. SHE FELT THAT SHE WAS DOZING OFF, AND HAD JUST BEGUN TO DREAM THAT SHE WAS WALKING HAND IN HAND WITH DINAH, AND SAYING TO HER VERY EARNESTLY, “NOW, DINAH, TELL ME THE TRUTH: DID YOU EVER EAT A BAT?” WHEN SUDDENLY, THUMP! THUMP! DOWN SHE CAME UPON A HEAP OF STICKS AND DRY LEAVES, AND THE FALL WAS OVER. ALICE WAS NOT A BIT HURT, AND SHE JUMPED UP ON TO HER FEET IN A MOMENT: SHE LOOKED UP, BUT IT WAS ALL DARK OVERHEAD; BEFORE HER WAS ANOTHER LONG PASSAGE, AND THE WHITE RABBIT WAS STILL IN SIGHT, HURRYING DOWN IT. THERE WAS NOT A MOMENT TO BE LOST: AWAY WENT ALICE LIKE THE WIND, AND WAS JUST IN TIME TO HEAR IT SAY, AS IT TURNED A CORNER, “OH MY EARS AND WHISKERS, HOW LATE IT’S GETTING!”</p>
         </div>
         <div class="page-number">6</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-the-white-rabbit-appears/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="The White Rabbit Appears">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-the-white-rabbit-appears/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="The White Rabbit">
       </div>
       <div class="page-right">
-        <div class="text-block ">
-          <p>IN THE WORLD SHE WAS TO GET OUT AGAIN.</p>
+        <div class="text-block text-medium">
+          <p>SHE WAS CLOSE BEHIND IT WHEN SHE TURNED THE CORNER, BUT THE RABBIT WAS NO LONGER TO BE SEEN: SHE FOUND HERSELF IN A LONG, LOW HALL, WHICH WAS LIT UP BY A ROW OF LAMPS HANGING FROM THE ROOF. THERE WERE DOORS ALL ROUND THE HALL, BUT THEY WERE ALL LOCKED; AND WHEN ALICE HAD BEEN ALL THE WAY DOWN ONE SIDE AND UP THE OTHER, TRYING EVERY DOOR, SHE WALKED SADLY DOWN THE MIDDLE, WONDERING HOW SHE WAS EVER TO GET OUT AGAIN. SUDDENLY SHE CAME UPON A LITTLE THREE-LEGGED TABLE, ALL MADE OF SOLID GLASS; THERE WAS NOTHING ON IT EXCEPT A TINY GOLDEN KEY, AND ALICE’S FIRST THOUGHT WAS THAT IT MIGHT BELONG TO ONE OF THE DOORS OF THE HALL; BUT, ALAS! EITHER THE LOCKS WERE TOO LARGE, OR THE KEY WAS TOO SMALL, BUT AT ANY RATE IT WOULD NOT OPEN ANY OF THEM.</p>
         </div>
         <div class="page-number">7</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-falling-down/william-h-walker-1907.jpg" alt="Falling Down the Rabbit-Hole">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-falling-down/william-h-walker-1907.jpg" alt="Alice falling">
       </div>
       <div class="page-right">
-        <div class="text-block text-small">
-          <p>THE RABBIT-HOLE WENT STRAIGHT ON LIKE A TUNNEL FOR SOME WAY, AND THEN<br>DIPPED SUDDENLY DOWN, SO SUDDENLY THAT ALICE HAD NOT A MOMENT TO THINK<br>ABOUT STOPPING HERSELF BEFORE SHE FOUND HERSELF FALLING DOWN A VERY<br>DEEP WELL.<br><br>EITHER THE WELL WAS VERY DEEP, OR SHE FELL VERY SLOWLY, FOR SHE HAD<br>PLENTY OF TIME AS SHE WENT DOWN TO LOOK ABOUT HER AND TO WONDER WHAT<br>WAS GOING TO HAPPEN NEXT. FIRST, SHE TRIED TO LOOK DOWN AND MAKE OUT<br>WHAT SHE WAS COMING TO, BUT IT WAS TOO DARK TO SEE ANYTHING; THEN SHE<br>LOOKED AT THE SIDES OF THE WELL, AND NOTICED THAT THEY WERE FILLED WITH<br>CUPBOARDS AND BOOK-SHELVES; HERE AND THERE SHE SAW MAPS AND PICTURES<br>HUNG UPON PEGS. SHE TOOK DOWN A JAR FROM ONE OF THE SHELVES AS SHE<br>PASSED; IT WAS LABELLED “ORANGE MARMALADE”, BUT TO HER GREAT<br>DISAPPOINTMENT IT WAS EMPTY: SHE DID NOT LIKE TO DROP THE JAR FOR FEAR<br>OF KILLING SOMEBODY UNDERNEATH, SO MANAGED TO PUT IT INTO ONE OF THE<br>CUPBOARDS AS SHE FELL PAST IT.<br><br>“WELL!” THOUGHT ALICE TO HERSELF, “AFTER SUCH A FALL AS THIS, I SHALL<br>THINK NOTHING OF TUMBLING DOWN STAIRS! HOW BRAVE THEY’LL ALL THINK ME<br>AT HOME! WHY, I WOULDN’T SAY ANYTHING ABOUT IT, EVEN IF I FELL OFF THE<br>TOP OF THE HOUSE!” (WHICH WAS VERY LIKELY TRUE.)</p>
+        <div class="text-block text-medium">
+          <p>HOWEVER, ON THE SECOND TIME ROUND, SHE CAME UPON A LOW CURTAIN SHE HAD NOT NOTICED BEFORE, AND BEHIND IT WAS A LITTLE DOOR ABOUT FIFTEEN INCHES HIGH: SHE TRIED THE LITTLE GOLDEN KEY IN THE LOCK, AND TO HER GREAT DELIGHT IT FITTED! ALICE OPENED THE DOOR AND FOUND THAT IT LED INTO A SMALL PASSAGE, NOT MUCH LARGER THAN A RAT-HOLE: SHE KNELT DOWN AND LOOKED ALONG THE PASSAGE INTO THE LOVELIEST GARDEN YOU EVER SAW. HOW SHE LONGED TO GET OUT OF THAT DARK HALL, AND WANDER ABOUT AMONG THOSE BEDS OF BRIGHT FLOWERS AND THOSE COOL FOUNTAINS, BUT SHE COULD NOT EVEN GET HER HEAD THROUGH THE DOORWAY; “AND EVEN IF MY HEAD WOULD GO THROUGH,” THOUGHT POOR ALICE, “IT WOULD BE OF VERY LITTLE USE WITHOUT MY SHOULDERS. OH, HOW I WISH I COULD SHUT UP LIKE A TELESCOPE! I THINK I COULD, IF I ONLY KNEW HOW TO BEGIN.” FOR, YOU SEE, SO MANY OUT-OF-THE-WAY THINGS HAD HAPPENED LATELY, THAT ALICE HAD BEGUN TO THINK THAT VERY FEW THINGS INDEED WERE REALLY IMPOSSIBLE.</p>
         </div>
         <div class="page-number">8</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-falling-down/brinsley-le-fanu-1910.jpg" alt="Falling Down the Rabbit-Hole">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-falling-down/brinsley-le-fanu-1910.jpg" alt="Alice took marmalade as she fell">
       </div>
       <div class="page-right">
-        <div class="text-block text-small">
-          <p>DOWN, DOWN, DOWN. WOULD THE FALL NEVER COME TO AN END? “I WONDER HOW<br>MANY MILES I’VE FALLEN BY THIS TIME?” SHE SAID ALOUD. “I MUST BE<br>GETTING SOMEWHERE NEAR THE CENTRE OF THE EARTH. LET ME SEE: THAT WOULD<br>BE FOUR THOUSAND MILES DOWN, I THINK—” (FOR, YOU SEE, ALICE HAD LEARNT<br>SEVERAL THINGS OF THIS SORT IN HER LESSONS IN THE SCHOOLROOM, AND<br>THOUGH THIS WAS NOT A VERY GOOD OPPORTUNITY FOR SHOWING OFF HER<br>KNOWLEDGE, AS THERE WAS NO ONE TO LISTEN TO HER, STILL IT WAS GOOD<br>PRACTICE TO SAY IT OVER) “—YES, THAT’S ABOUT THE RIGHT DISTANCE—BUT<br>THEN I WONDER WHAT LATITUDE OR LONGITUDE I’VE GOT TO?” (ALICE HAD NO<br>IDEA WHAT LATITUDE WAS, OR LONGITUDE EITHER, BUT THOUGHT THEY WERE NICE<br>GRAND WORDS TO SAY.)<br><br>PRESENTLY SHE BEGAN AGAIN. “I WONDER IF I SHALL FALL RIGHT THROUGH<br>THE EARTH! HOW FUNNY IT’LL SEEM TO COME OUT AMONG THE PEOPLE THAT WALK<br>WITH THEIR HEADS DOWNWARD! THE ANTIPATHIES, I THINK—” (SHE WAS RATHER<br>GLAD THERE WAS NO ONE LISTENING, THIS TIME, AS IT DIDN’T SOUND AT ALL<br>THE RIGHT WORD) “—BUT I SHALL HAVE TO ASK THEM WHAT THE NAME OF THE<br>COUNTRY IS, YOU KNOW. PLEASE, MA’AM, IS THIS NEW ZEALAND OR AUSTRALIA?”<br>(AND SHE TRIED TO CURTSEY AS SHE SPOKE—FANCY CURTSEYING AS YOU’RE<br>FALLING THROUGH THE AIR! DO YOU THINK YOU COULD MANAGE IT?) “AND WHAT<br>AN IGNORANT LITTLE GIRL SHE’LL THINK ME FOR ASKING! NO, IT’LL NEVER DO<br>TO ASK: PERHAPS I SHALL SEE IT WRITTEN UP SOMEWHERE.”<br><br>DOWN, DOWN, DOWN. THERE WAS NOTHING ELSE TO DO, SO ALICE SOON BEGAN<br>TALKING AGAIN. “DINAH’LL MISS ME VERY MUCH TO-NIGHT, I SHOULD THINK!”<br>(DINAH WAS THE CAT.) “I HOPE THEY’LL REMEMBER HER SAUCER OF MILK AT<br>TEA-TIME. DINAH MY DEAR! I WISH YOU WERE DOWN HERE WITH ME! THERE ARE<br>NO MICE IN THE AIR, I’M AFRAID, BUT YOU MIGHT CATCH A BAT, AND THAT’S<br>VERY LIKE A MOUSE, YOU KNOW. BUT DO CATS EAT BATS, I WONDER?” AND HERE<br>ALICE BEGAN TO GET RATHER SLEEPY, AND WENT ON SAYING TO HERSELF, IN A<br>DREAMY SORT OF WAY, “DO CATS EAT BATS? DO CATS EAT BATS?” AND<br>SOMETIMES, “DO BATS EAT CATS?” FOR, YOU SEE, AS SHE COULDN’T ANSWER<br>EITHER QUESTION, IT DIDN’T MUCH MATTER WHICH WAY SHE PUT IT. SHE FELT<br>THAT SHE WAS DOZING OFF, AND HAD JUST BEGUN TO DREAM THAT SHE WAS<br>WALKING HAND IN HAND WITH DINAH, AND SAYING TO HER VERY EARNESTLY,<br>“NOW, DINAH, TELL ME THE TRUTH: DID YOU EVER EAT A BAT?” WHEN SUDDENLY,<br>THUMP! THUMP! DOWN SHE CAME UPON A HEAP OF STICKS AND DRY LEAVES, AND<br>THE FALL WAS OVER.</p>
+        <div class="text-block ">
+          <p>THERE SEEMED TO BE NO USE IN WAITING BY THE LITTLE DOOR, SO SHE WENT BACK TO THE TABLE, HALF HOPING SHE MIGHT FIND ANOTHER KEY ON IT, OR AT ANY RATE A BOOK OF RULES FOR SHUTTING PEOPLE UP LIKE TELESCOPES: THIS TIME SHE FOUND A LITTLE BOTTLE ON IT, (“WHICH CERTAINLY WAS NOT HERE BEFORE,” SAID ALICE,) AND ROUND THE NECK OF THE BOTTLE WAS A PAPER LABEL, WITH THE WORDS “DRINK ME,” BEAUTIFULLY PRINTED ON IT IN LARGE LETTERS. IT WAS ALL VERY WELL TO SAY “DRINK ME,” BUT THE WISE LITTLE ALICE WAS NOT GOING TO DO THAT IN A HURRY.</p>
         </div>
         <div class="page-number">9</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-the-hall-of-doors/brinsley-le-fanu-1910.jpg" alt="The Hall of Doors">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-the-hall-of-doors/brinsley-le-fanu-1910.jpg" alt="Glass table">
       </div>
       <div class="page-right">
-        <div class="text-block text-small">
-          <p>ALICE WAS NOT A BIT HURT, AND SHE JUMPED UP ON TO HER FEET IN A MOMENT:<br>SHE LOOKED UP, BUT IT WAS ALL DARK OVERHEAD; BEFORE HER WAS ANOTHER<br>LONG PASSAGE, AND THE WHITE RABBIT WAS STILL IN SIGHT, HURRYING DOWN<br>IT. THERE WAS NOT A MOMENT TO BE LOST: AWAY WENT ALICE LIKE THE WIND,<br>AND WAS JUST IN TIME TO HEAR IT SAY, AS IT TURNED A CORNER, “OH MY EARS<br>AND WHISKERS, HOW LATE IT’S GETTING!” SHE WAS CLOSE BEHIND IT WHEN SHE<br>TURNED THE CORNER, BUT THE RABBIT WAS NO LONGER TO BE SEEN: SHE FOUND<br>HERSELF IN A LONG, LOW HALL, WHICH WAS LIT UP BY A ROW OF LAMPS HANGING<br>FROM THE ROOF.<br><br>THERE WERE DOORS ALL ROUND THE HALL, BUT THEY WERE ALL LOCKED; AND WHEN<br>ALICE HAD BEEN ALL THE WAY DOWN ONE SIDE AND UP THE OTHER, TRYING EVERY<br>DOOR, SHE WALKED SADLY DOWN THE MIDDLE, WONDERING HOW SHE WAS EVER TO<br>GET OUT AGAIN.<br><br>SUDDENLY SHE CAME UPON A LITTLE THREE-LEGGED TABLE, ALL MADE OF SOLID<br>GLASS; THERE WAS NOTHING ON IT EXCEPT A TINY GOLDEN KEY, AND ALICE’S<br>FIRST THOUGHT WAS THAT IT MIGHT BELONG TO ONE OF THE DOORS OF THE HALL;<br>BUT, ALAS! EITHER THE LOCKS WERE TOO LARGE, OR THE KEY WAS TOO SMALL,<br>BUT AT ANY RATE IT WOULD NOT OPEN ANY OF THEM. HOWEVER, ON THE SECOND<br>TIME ROUND, SHE CAME UPON A LOW CURTAIN SHE HAD NOT NOTICED BEFORE, AND<br>BEHIND IT WAS A LITTLE DOOR ABOUT FIFTEEN INCHES HIGH: SHE TRIED THE<br>LITTLE GOLDEN KEY IN THE LOCK, AND TO HER GREAT DELIGHT IT FITTED!<br><br>ALICE OPENED THE DOOR AND FOUND THAT IT LED INTO A SMALL PASSAGE, NOT<br>MUCH LARGER THAN A RAT-HOLE: SHE KNELT DOWN AND LOOKED ALONG THE<br>PASSAGE INTO THE LOVELIEST GARDEN YOU EVER SAW. HOW SHE LONGED TO GET<br>OUT OF THAT DARK HALL, AND WANDER ABOUT AMONG THOSE BEDS OF BRIGHT<br>FLOWERS AND THOSE COOL FOUNTAINS, BUT SHE COULD NOT EVEN GET HER HEAD<br>THROUGH THE DOORWAY; “AND EVEN IF MY HEAD WOULD GO THROUGH,” THOUGHT<br>POOR ALICE, “IT WOULD BE OF VERY LITTLE USE WITHOUT MY SHOULDERS. OH,<br>HOW I WISH I COULD SHUT UP LIKE A TELESCOPE! I THINK I COULD, IF I ONLY<br>KNEW HOW TO BEGIN.” FOR, YOU SEE, SO MANY OUT-OF-THE-WAY THINGS HAD<br>HAPPENED LATELY, THAT ALICE HAD BEGUN TO THINK THAT VERY FEW THINGS<br>INDEED WERE REALLY IMPOSSIBLE.</p>
+        <div class="text-block text-medium">
+          <p>“NO, I’LL LOOK FIRST,” SHE SAID, “AND SEE WHETHER IT’S MARKED ‘POISON’ OR NOT”; FOR SHE HAD READ SEVERAL NICE LITTLE HISTORIES ABOUT CHILDREN WHO HAD GOT BURNT, AND EATEN UP BY WILD BEASTS AND OTHER UNPLEASANT THINGS, ALL BECAUSE THEY WOULD NOT REMEMBER THE SIMPLE RULES THEIR FRIENDS HAD TAUGHT THEM: SUCH AS, THAT A RED-HOT POKER WILL BURN YOU IF YOU HOLD IT TOO LONG; AND THAT IF YOU CUT YOUR FINGER VERY DEEPLY WITH A KNIFE, IT USUALLY BLEEDS; AND SHE HAD NEVER FORGOTTEN THAT, IF YOU DRINK MUCH FROM A BOTTLE MARKED “POISON,” IT IS ALMOST CERTAIN TO DISAGREE WITH YOU, SOONER OR LATER. HOWEVER, THIS BOTTLE WAS NOT MARKED “POISON,” SO ALICE VENTURED TO TASTE IT, AND FINDING IT VERY NICE, (IT HAD, IN FACT, A SORT OF MIXED FLAVOUR OF CHERRY-TART, CUSTARD, PINE-APPLE, ROAST TURKEY, TOFFEE, AND HOT BUTTERED TOAST,) SHE VERY SOON FINISHED IT OFF. “WHAT A CURIOUS FEELING!” SAID ALICE; “I MUST BE SHUTTING UP LIKE A TELESCOPE.”</p>
         </div>
         <div class="page-number">10</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-drink-me/lewis-carroll-1864-manuscript.webp" alt="DRINK ME">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-drink-me/lewis-carroll-1864-manuscript.webp" alt="Alice at the golden key and little door">
       </div>
       <div class="page-right">
-        <div class="text-block text-small">
-          <p>THERE SEEMED TO BE NO USE IN WAITING BY THE LITTLE DOOR, SO SHE WENT<br>BACK TO THE TABLE, HALF HOPING SHE MIGHT FIND ANOTHER KEY ON IT, OR AT<br>ANY RATE A BOOK OF RULES FOR SHUTTING PEOPLE UP LIKE TELESCOPES: THIS<br>TIME SHE FOUND A LITTLE BOTTLE ON IT, (“WHICH CERTAINLY WAS NOT HERE<br>BEFORE,” SAID ALICE,) AND ROUND THE NECK OF THE BOTTLE WAS A PAPER<br>LABEL, WITH THE WORDS “DRINK ME,” BEAUTIFULLY PRINTED ON IT IN LARGE<br>LETTERS.<br><br>IT WAS ALL VERY WELL TO SAY “DRINK ME,” BUT THE WISE LITTLE ALICE WAS<br>NOT GOING TO DO THAT IN A HURRY. “NO, I’LL LOOK FIRST,” SHE SAID,<br>“AND SEE WHETHER IT’S MARKED ‘POISON’ OR NOT”; FOR SHE HAD READ<br>SEVERAL NICE LITTLE HISTORIES ABOUT CHILDREN WHO HAD GOT BURNT, AND<br>EATEN UP BY WILD BEASTS AND OTHER UNPLEASANT THINGS, ALL BECAUSE THEY<br>WOULD NOT REMEMBER THE SIMPLE RULES THEIR FRIENDS HAD TAUGHT THEM:<br>SUCH AS, THAT A RED-HOT POKER WILL BURN YOU IF YOU HOLD IT TOO LONG;<br>AND THAT IF YOU CUT YOUR FINGER VERY DEEPLY WITH A KNIFE, IT USUALLY<br>BLEEDS; AND SHE HAD NEVER FORGOTTEN THAT, IF YOU DRINK MUCH FROM A<br>BOTTLE MARKED “POISON,” IT IS ALMOST CERTAIN TO DISAGREE WITH YOU,<br>SOONER OR LATER.<br><br>HOWEVER, THIS BOTTLE WAS NOT MARKED “POISON,” SO ALICE VENTURED TO<br>TASTE IT, AND FINDING IT VERY NICE, (IT HAD, IN FACT, A SORT OF MIXED<br>FLAVOUR OF CHERRY-TART, CUSTARD, PINE-APPLE, ROAST TURKEY, TOFFEE, AND<br>HOT BUTTERED TOAST,) SHE VERY SOON FINISHED IT OFF.</p>
+        <div class="text-block text-medium">
+          <p>AND SO IT WAS INDEED: SHE WAS NOW ONLY TEN INCHES HIGH, AND HER FACE BRIGHTENED UP AT THE THOUGHT THAT SHE WAS NOW THE RIGHT SIZE FOR GOING THROUGH THE LITTLE DOOR INTO THAT LOVELY GARDEN. FIRST, HOWEVER, SHE WAITED FOR A FEW MINUTES TO SEE IF SHE WAS GOING TO SHRINK ANY FURTHER: SHE FELT A LITTLE NERVOUS ABOUT THIS; “FOR IT MIGHT END, YOU KNOW,” SAID ALICE TO HERSELF, “IN MY GOING OUT ALTOGETHER, LIKE A CANDLE. I WONDER WHAT I SHOULD BE LIKE THEN?” AND SHE TRIED TO FANCY WHAT THE FLAME OF A CANDLE IS LIKE AFTER THE CANDLE IS BLOWN OUT, FOR SHE COULD NOT REMEMBER EVER HAVING SEEN SUCH A THING. AFTER A WHILE, FINDING THAT NOTHING MORE HAPPENED, SHE DECIDED ON GOING INTO THE GARDEN AT ONCE; BUT, ALAS FOR POOR ALICE!</p>
         </div>
         <div class="page-number">11</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-drink-me/lewis-carroll-1864-title-page.webp" alt="DRINK ME">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-drink-me/lewis-carroll-1864-title-page.webp" alt="Alice's Adventures Under Ground title page">
       </div>
       <div class="page-right">
         <div class="text-block text-medium">
-          <p>“WHAT A CURIOUS FEELING!” SAID ALICE; “I MUST BE SHUTTING UP LIKE A<br>TELESCOPE.”<br><br>AND SO IT WAS INDEED: SHE WAS NOW ONLY TEN INCHES HIGH, AND HER FACE<br>BRIGHTENED UP AT THE THOUGHT THAT SHE WAS NOW THE RIGHT SIZE FOR GOING<br>THROUGH THE LITTLE DOOR INTO THAT LOVELY GARDEN. FIRST, HOWEVER, SHE<br>WAITED FOR A FEW MINUTES TO SEE IF SHE WAS GOING TO SHRINK ANY FURTHER:<br>SHE FELT A LITTLE NERVOUS ABOUT THIS; “FOR IT MIGHT END, YOU KNOW,”<br>SAID ALICE TO HERSELF, “IN MY GOING OUT ALTOGETHER, LIKE A CANDLE. I<br>WONDER WHAT I SHOULD BE LIKE THEN?” AND SHE TRIED TO FANCY WHAT THE<br>FLAME OF A CANDLE IS LIKE AFTER THE CANDLE IS BLOWN OUT, FOR SHE COULD<br>NOT REMEMBER EVER HAVING SEEN SUCH A THING.</p>
+          <p>WHEN SHE GOT TO THE DOOR, SHE FOUND SHE HAD FORGOTTEN THE LITTLE GOLDEN KEY, AND WHEN SHE WENT BACK TO THE TABLE FOR IT, SHE FOUND SHE COULD NOT POSSIBLY REACH IT: SHE COULD SEE IT QUITE PLAINLY THROUGH THE GLASS, AND SHE TRIED HER BEST TO CLIMB UP ONE OF THE LEGS OF THE TABLE, BUT IT WAS TOO SLIPPERY; AND WHEN SHE HAD TIRED HERSELF OUT WITH TRYING, THE POOR LITTLE THING SAT DOWN AND CRIED. “COME, THERE’S NO USE IN CRYING LIKE THAT!” SAID ALICE TO HERSELF, RATHER SHARPLY; “I ADVISE YOU TO LEAVE OFF THIS MINUTE!” SHE GENERALLY GAVE HERSELF VERY GOOD ADVICE, (THOUGH SHE VERY SELDOM FOLLOWED IT), AND SOMETIMES SHE SCOLDED HERSELF SO SEVERELY AS TO BRING TEARS INTO HER EYES; AND ONCE SHE REMEMBERED TRYING TO BOX HER OWN EARS FOR HAVING CHEATED HERSELF IN A GAME OF CROQUET SHE WAS PLAYING AGAINST HERSELF, FOR THIS CURIOUS CHILD WAS VERY FOND OF PRETENDING TO BE TWO PEOPLE. “BUT IT’S NO USE NOW,” THOUGHT POOR ALICE, “TO PRETEND TO BE TWO PEOPLE!</p>
         </div>
         <div class="page-number">12</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-eat-me/lewis-carroll-1864-manuscript.webp" alt="EAT ME">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-eat-me/lewis-carroll-1864-manuscript.webp" alt="Curiouser and curiouser - Alice growing tall">
       </div>
       <div class="page-right">
-        <div class="text-block text-small">
-          <p>AFTER A WHILE, FINDING THAT NOTHING MORE HAPPENED, SHE DECIDED ON GOING<br>INTO THE GARDEN AT ONCE; BUT, ALAS FOR POOR ALICE! WHEN SHE GOT TO THE<br>DOOR, SHE FOUND SHE HAD FORGOTTEN THE LITTLE GOLDEN KEY, AND WHEN SHE<br>WENT BACK TO THE TABLE FOR IT, SHE FOUND SHE COULD NOT POSSIBLY REACH<br>IT: SHE COULD SEE IT QUITE PLAINLY THROUGH THE GLASS, AND SHE TRIED HER<br>BEST TO CLIMB UP ONE OF THE LEGS OF THE TABLE, BUT IT WAS TOO SLIPPERY;<br>AND WHEN SHE HAD TIRED HERSELF OUT WITH TRYING, THE POOR LITTLE THING<br>SAT DOWN AND CRIED.<br><br>“COME, THERE’S NO USE IN CRYING LIKE THAT!” SAID ALICE TO HERSELF,<br>RATHER SHARPLY; “I ADVISE YOU TO LEAVE OFF THIS MINUTE!” SHE GENERALLY<br>GAVE HERSELF VERY GOOD ADVICE, (THOUGH SHE VERY SELDOM FOLLOWED IT),<br>AND SOMETIMES SHE SCOLDED HERSELF SO SEVERELY AS TO BRING TEARS INTO<br>HER EYES; AND ONCE SHE REMEMBERED TRYING TO BOX HER OWN EARS FOR HAVING<br>CHEATED HERSELF IN A GAME OF CROQUET SHE WAS PLAYING AGAINST HERSELF,<br>FOR THIS CURIOUS CHILD WAS VERY FOND OF PRETENDING TO BE TWO PEOPLE.<br>“BUT IT’S NO USE NOW,” THOUGHT POOR ALICE, “TO PRETEND TO BE TWO<br>PEOPLE! WHY, THERE’S HARDLY ENOUGH OF ME LEFT TO MAKE ONE RESPECTABLE<br>PERSON!”<br><br>SOON HER EYE FELL ON A LITTLE GLASS BOX THAT WAS LYING UNDER THE TABLE:<br>SHE OPENED IT, AND FOUND IN IT A VERY SMALL CAKE, ON WHICH THE WORDS<br>“EAT ME” WERE BEAUTIFULLY MARKED IN CURRANTS. “WELL, I’LL EAT IT,” SAID<br>ALICE, “AND IF IT MAKES ME GROW LARGER, I CAN REACH THE KEY; AND IF IT<br>MAKES ME GROW SMALLER, I CAN CREEP UNDER THE DOOR; SO EITHER WAY I’LL<br>GET INTO THE GARDEN, AND I DON’T CARE WHICH HAPPENS!”</p>
+        <div class="text-block text-medium">
+          <p>WHY, THERE’S HARDLY ENOUGH OF ME LEFT TO MAKE ONE RESPECTABLE PERSON!” SOON HER EYE FELL ON A LITTLE GLASS BOX THAT WAS LYING UNDER THE TABLE: SHE OPENED IT, AND FOUND IN IT A VERY SMALL CAKE, ON WHICH THE WORDS “EAT ME” WERE BEAUTIFULLY MARKED IN CURRANTS. “WELL, I’LL EAT IT,” SAID ALICE, “AND IF IT MAKES ME GROW LARGER, I CAN REACH THE KEY; AND IF IT MAKES ME GROW SMALLER, I CAN CREEP UNDER THE DOOR; SO EITHER WAY I’LL GET INTO THE GARDEN, AND I DON’T CARE WHICH HAPPENS!” SHE ATE A LITTLE BIT, AND SAID ANXIOUSLY TO HERSELF, “WHICH WAY? WHICH WAY?”, HOLDING HER HAND ON THE TOP OF HER HEAD TO FEEL WHICH WAY IT WAS GROWING, AND SHE WAS QUITE SURPRISED TO FIND THAT SHE REMAINED THE SAME SIZE: TO BE SURE, THIS GENERALLY HAPPENS WHEN ONE EATS CAKE, BUT ALICE HAD GOT SO MUCH INTO THE WAY OF EXPECTING NOTHING BUT OUT-OF-THE-WAY THINGS TO HAPPEN, THAT IT SEEMED QUITE DULL AND STUPID FOR LIFE TO GO ON IN THE COMMON WAY.</p>
         </div>
         <div class="page-number">13</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-eat-me/nursery-alice-1890-cover.jpg" alt="EAT ME">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-eat-me/nursery-alice-1890-cover.jpg" alt="The Nursery Alice front cover">
       </div>
       <div class="page-right">
-        <div class="text-block text-medium">
-          <p>SHE ATE A LITTLE BIT, AND SAID ANXIOUSLY TO HERSELF, “WHICH WAY? WHICH<br>WAY?”, HOLDING HER HAND ON THE TOP OF HER HEAD TO FEEL WHICH WAY IT WAS<br>GROWING, AND SHE WAS QUITE SURPRISED TO FIND THAT SHE REMAINED THE SAME<br>SIZE: TO BE SURE, THIS GENERALLY HAPPENS WHEN ONE EATS CAKE, BUT ALICE<br>HAD GOT SO MUCH INTO THE WAY OF EXPECTING NOTHING BUT OUT-OF-THE-WAY<br>THINGS TO HAPPEN, THAT IT SEEMED QUITE DULL AND STUPID FOR LIFE TO GO<br>ON IN THE COMMON WAY.<br><br>SO SHE SET TO WORK, AND VERY SOON FINISHED OFF THE CAKE.<br><br>                                    *</p>
+        <div class="text-block text-large">
+          <p>SO SHE SET TO WORK, AND VERY SOON FINISHED OFF THE CAKE.</p>
+          <p>*</p>
         </div>
         <div class="page-number">14</div>
       </div>
     </div>
     <div class="spread back-cover">
-      <div class="page-left back-image">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-eat-me/nursery-alice-1890-cover.jpg" alt="Back cover">
+      <div class="page-left decorative-panel">
+        <div class="chapter-ornament">
+          <div class="ornament-star">&#10038;</div>
+        </div>
       </div>
       <div class="page-right back-text">
         <div class="back-block">
