@@ -5,16 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chapter 12: Alice's Evidence — Alice in Wonderland</title>
   <style>
-    @page {
-      size: landscape;
-      margin: 0;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    @page { size: landscape; margin: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
@@ -30,13 +22,12 @@
       break-after: page;
       overflow: hidden;
     }
-
     .spread:last-child {
       page-break-after: avoid;
       break-after: avoid;
     }
 
-    /* Left page = illustration */
+    /* Left page: illustration */
     .page-left {
       width: 50%;
       height: 100%;
@@ -47,7 +38,6 @@
       padding: 16px;
       overflow: hidden;
     }
-
     .page-left img {
       max-width: 100%;
       max-height: 100%;
@@ -56,7 +46,7 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-    /* Right page = text */
+    /* Right page: text */
     .page-right {
       width: 50%;
       height: 100%;
@@ -64,72 +54,94 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 30px 40px;
+      padding: 28px 36px;
       background: white;
       position: relative;
+      overflow: hidden;
     }
 
+    /* Text block — NEVER scroll */
     .text-block {
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
       flex: 1;
       width: 100%;
-      overflow-y: auto;
+      overflow: hidden;
     }
-
     .text-block p {
-      font-size: clamp(14px, 2.2vw, 24px);
+      font-size: clamp(14px, 2.0vw, 22px);
       line-height: 1.7;
       font-weight: 700;
       text-align: left;
       letter-spacing: 0.3px;
-      max-width: 95%;
+      margin-bottom: 0.7em;
     }
+    .text-block p:last-child { margin-bottom: 0; }
 
-    /* For longer text passages */
+    /* Font size tiers */
+    .text-block.text-large p {
+      font-size: clamp(18px, 2.5vw, 28px);
+      line-height: 1.8;
+    }
     .text-block.text-medium p {
-      font-size: clamp(12px, 1.8vw, 19px);
+      font-size: clamp(12px, 1.6vw, 18px);
       line-height: 1.6;
     }
-
     .text-block.text-small p {
-      font-size: clamp(10px, 1.5vw, 16px);
+      font-size: clamp(11px, 1.4vw, 16px);
       line-height: 1.5;
+    }
+    .text-block.text-xs p {
+      font-size: clamp(10px, 1.2vw, 14px);
+      line-height: 1.4;
     }
 
     .page-number {
-      font-size: 12px;
-      color: #bbb;
+      font-size: 11px;
+      color: #ccc;
       position: absolute;
-      bottom: 10px;
-      right: 20px;
+      bottom: 8px;
+      right: 16px;
     }
 
-    /* Cover page styles */
+    /* Decorative panel (text-only pages) */
+    .decorative-panel {
+      background: #2c1810;
+    }
+    .chapter-ornament {
+      text-align: center;
+      color: #d4a76a;
+    }
+    .ornament-number {
+      font-size: clamp(48px, 8vw, 96px);
+      font-weight: 800;
+      letter-spacing: 4px;
+      opacity: 0.3;
+    }
+    .ornament-star {
+      font-size: clamp(36px, 6vw, 72px);
+      opacity: 0.3;
+    }
+
+    /* Cover */
     .cover-title {
       background: #2c1810;
       color: white;
     }
-
-    .title-block {
-      text-align: center;
-    }
-
+    .title-block { text-align: center; }
     .series-name {
       font-size: clamp(11px, 1.5vw, 16px);
       letter-spacing: 4px;
       color: #d4a76a;
       margin-bottom: 12px;
     }
-
     .book-number {
       font-size: clamp(13px, 1.8vw, 20px);
       letter-spacing: 3px;
       color: #d4a76a;
       margin-bottom: 20px;
     }
-
     .title-block h1 {
       font-size: clamp(20px, 3.8vw, 42px);
       line-height: 1.2;
@@ -137,25 +149,19 @@
       font-weight: 800;
       letter-spacing: 1px;
     }
-
     .author {
       font-size: clamp(11px, 1.3vw, 14px);
       letter-spacing: 3px;
       color: #d4a76a;
       margin-bottom: 8px;
     }
-
     .page-info {
-      font-size: clamp(10px, 1.1vw, 12px);
+      font-size: clamp(9px, 1vw, 11px);
       letter-spacing: 2px;
       color: #a08060;
       margin-top: 5px;
     }
-
-    .cover-image {
-      background: #2c1810;
-    }
-
+    .cover-image { background: #2c1810; }
     .cover-image img {
       border-radius: 8px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.3);
@@ -166,11 +172,7 @@
       background: #2c1810;
       color: white;
     }
-
-    .back-block {
-      text-align: center;
-    }
-
+    .back-block { text-align: center; }
     .the-end {
       font-size: clamp(24px, 4vw, 44px);
       font-weight: 800;
@@ -178,49 +180,33 @@
       margin-bottom: 30px;
       color: #d4a76a;
     }
-
     .back-info p {
       font-size: clamp(10px, 1.2vw, 13px);
       letter-spacing: 2px;
       margin-bottom: 6px;
       color: #d4a76a;
     }
-
     .back-info .small {
       font-size: clamp(8px, 0.9vw, 10px);
       color: #a08060;
     }
 
-    .back-image {
-      background: #2c1810;
-    }
-
-    .back-image img {
-      border-radius: 8px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-    }
-
-    /* Print styles */
+    /* Print */
     @media print {
       body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
       .spread { height: 100vh; }
       .page-left img { box-shadow: none; }
-      .cover-image img, .back-image img { box-shadow: none; }
-      .text-block { overflow: hidden; }
+      .cover-image img { box-shadow: none; }
     }
 
-    /* Screen: show page dividers */
+    /* Screen: page dividers */
     @media screen {
       .spread {
         border-bottom: 3px dashed #ccc;
         min-height: 100vh;
       }
-      .spread:last-child {
-        border-bottom: none;
-      }
-      body {
-        background: #e8e8e8;
-      }
+      .spread:last-child { border-bottom: none; }
+      body { background: #e8e8e8; }
     }
   </style>
 </head>
@@ -228,7 +214,7 @@
 
     <div class="spread cover-spread">
       <div class="page-left cover-image">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-alice-tips-the-jury/john-tenniel-harry-theaker-1911.jpg" alt="Cover">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-12-alices-evidence/lewis-carroll-1864-croquet-chaos.webp" alt="Cover illustration">
       </div>
       <div class="page-right cover-title">
         <div class="title-block">
@@ -236,90 +222,123 @@
           <div class="book-number">CHAPTER 12</div>
           <h1>ALICE'S EVIDENCE</h1>
           <div class="author">BY LEWIS CARROLL</div>
-          <div class="page-info">7 PAGES</div>
+          <div class="page-info">9 PAGES &middot; 7 ILLUSTRATIONS</div>
         </div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-alice-tips-the-jury/john-tenniel-harry-theaker-1911.jpg" alt="Alice Tips Over the Jury">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-alice-tips-the-jury/john-tenniel-harry-theaker-1911.jpg" alt="Tipped over jury box">
       </div>
       <div class="page-right">
         <div class="text-block text-small">
-          <p>“HERE!” CRIED ALICE, QUITE FORGETTING IN THE FLURRY OF THE MOMENT HOW<br>LARGE SHE HAD GROWN IN THE LAST FEW MINUTES, AND SHE JUMPED UP IN SUCH<br>A HURRY THAT SHE TIPPED OVER THE JURY-BOX WITH THE EDGE OF HER SKIRT,<br>UPSETTING ALL THE JURYMEN ON TO THE HEADS OF THE CROWD BELOW, AND THERE<br>THEY LAY SPRAWLING ABOUT, REMINDING HER VERY MUCH OF A GLOBE OF<br>GOLDFISH SHE HAD ACCIDENTALLY UPSET THE WEEK BEFORE.<br><br>“OH, I BEG YOUR PARDON!” SHE EXCLAIMED IN A TONE OF GREAT DISMAY, AND<br>BEGAN PICKING THEM UP AGAIN AS QUICKLY AS SHE COULD, FOR THE ACCIDENT<br>OF THE GOLDFISH KEPT RUNNING IN HER HEAD, AND SHE HAD A VAGUE SORT OF<br>IDEA THAT THEY MUST BE COLLECTED AT ONCE AND PUT BACK INTO THE<br>JURY-BOX, OR THEY WOULD DIE.<br><br>“THE TRIAL CANNOT PROCEED,” SAID THE KING IN A VERY GRAVE VOICE, “UNTIL<br>ALL THE JURYMEN ARE BACK IN THEIR PROPER PLACES—ALL,” HE REPEATED<br>WITH GREAT EMPHASIS, LOOKING HARD AT ALICE AS HE SAID SO.<br><br>ALICE LOOKED AT THE JURY-BOX, AND SAW THAT, IN HER HASTE, SHE HAD PUT<br>THE LIZARD IN HEAD DOWNWARDS, AND THE POOR LITTLE THING WAS WAVING ITS<br>TAIL ABOUT IN A MELANCHOLY WAY, BEING QUITE UNABLE TO MOVE. SHE SOON<br>GOT IT OUT AGAIN, AND PUT IT RIGHT; “NOT THAT IT SIGNIFIES MUCH,” SHE<br>SAID TO HERSELF; “I SHOULD THINK IT WOULD BE QUITE AS MUCH USE IN THE<br>TRIAL ONE WAY UP AS THE OTHER.”<br><br>AS SOON AS THE JURY HAD A LITTLE RECOVERED FROM THE SHOCK OF BEING<br>UPSET, AND THEIR SLATES AND PENCILS HAD BEEN FOUND AND HANDED BACK TO<br>THEM, THEY SET TO WORK VERY DILIGENTLY TO WRITE OUT A HISTORY OF THE<br>ACCIDENT, ALL EXCEPT THE LIZARD, WHO SEEMED TOO MUCH OVERCOME TO DO<br>ANYTHING BUT SIT WITH ITS MOUTH OPEN, GAZING UP INTO THE ROOF OF THE<br>COURT.<br><br>“WHAT DO YOU KNOW ABOUT THIS BUSINESS?” THE KING SAID TO ALICE.<br><br>“NOTHING,” SAID ALICE.</p>
+          <p>“HERE!” CRIED ALICE, QUITE FORGETTING IN THE FLURRY OF THE MOMENT HOW LARGE SHE HAD GROWN IN THE LAST FEW MINUTES, AND SHE JUMPED UP IN SUCH A HURRY THAT SHE TIPPED OVER THE JURY-BOX WITH THE EDGE OF HER SKIRT, UPSETTING ALL THE JURYMEN ON TO THE HEADS OF THE CROWD BELOW, AND THERE THEY LAY SPRAWLING ABOUT, REMINDING HER VERY MUCH OF A GLOBE OF GOLDFISH SHE HAD ACCIDENTALLY UPSET THE WEEK BEFORE. “OH, I BEG YOUR PARDON!” SHE EXCLAIMED IN A TONE OF GREAT DISMAY, AND BEGAN PICKING THEM UP AGAIN AS QUICKLY AS SHE COULD, FOR THE ACCIDENT OF THE GOLDFISH KEPT RUNNING IN HER HEAD, AND SHE HAD A VAGUE SORT OF IDEA THAT THEY MUST BE COLLECTED AT ONCE AND PUT BACK INTO THE JURY-BOX, OR THEY WOULD DIE. “THE TRIAL CANNOT PROCEED,” SAID THE KING IN A VERY GRAVE VOICE, “UNTIL ALL THE JURYMEN ARE BACK IN THEIR PROPER PLACES—ALL,” HE REPEATED WITH GREAT EMPHASIS, LOOKING HARD AT ALICE AS HE SAID SO. ALICE LOOKED AT THE JURY-BOX, AND SAW THAT, IN HER HASTE, SHE HAD PUT THE LIZARD IN HEAD DOWNWARDS, AND THE POOR LITTLE THING WAS WAVING ITS TAIL ABOUT IN A MELANCHOLY WAY, BEING QUITE UNABLE TO MOVE. SHE SOON GOT IT OUT AGAIN, AND PUT IT RIGHT; “NOT THAT IT SIGNIFIES MUCH,” SHE SAID TO HERSELF; “I SHOULD THINK IT WOULD BE QUITE AS MUCH USE IN THE TRIAL ONE WAY UP AS THE OTHER.”</p>
         </div>
         <div class="page-number">1</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-alice-tips-the-jury/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="Alice Tips Over the Jury">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-alice-tips-the-jury/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="Alice &amp; the Jurors">
       </div>
       <div class="page-right">
-        <div class="text-block text-medium">
-          <p>“NOTHING WHATEVER?” PERSISTED THE KING.<br><br>“NOTHING WHATEVER,” SAID ALICE.<br><br>“THAT’S VERY IMPORTANT,” THE KING SAID, TURNING TO THE JURY. THEY WERE<br>JUST BEGINNING TO WRITE THIS DOWN ON THEIR SLATES, WHEN THE WHITE<br>RABBIT INTERRUPTED: “UNIMPORTANT, YOUR MAJESTY MEANS, OF COURSE,” HE<br>SAID IN A VERY RESPECTFUL TONE, BUT FROWNING AND MAKING FACES AT HIM AS<br>HE SPOKE.<br><br>“UNIMPORTANT, OF COURSE, I MEANT,” THE KING HASTILY SAID, AND WENT ON<br>TO HIMSELF IN AN UNDERTONE,<br><br>“IMPORTANT—UNIMPORTANT—UNIMPORTANT—IMPORTANT—” AS IF HE WERE TRYING<br>WHICH WORD SOUNDED BEST.<br><br>SOME OF THE JURY WROTE IT DOWN “IMPORTANT,” AND SOME “UNIMPORTANT.”<br>ALICE COULD SEE THIS, AS SHE WAS NEAR ENOUGH TO LOOK OVER THEIR SLATES;<br>“BUT IT DOESN’T MATTER A BIT,” SHE THOUGHT TO HERSELF.</p>
+        <div class="text-block text-xs">
+          <p>AS SOON AS THE JURY HAD A LITTLE RECOVERED FROM THE SHOCK OF BEING UPSET, AND THEIR SLATES AND PENCILS HAD BEEN FOUND AND HANDED BACK TO THEM, THEY SET TO WORK VERY DILIGENTLY TO WRITE OUT A HISTORY OF THE ACCIDENT, ALL EXCEPT THE LIZARD, WHO SEEMED TOO MUCH OVERCOME TO DO ANYTHING BUT SIT WITH ITS MOUTH OPEN, GAZING UP INTO THE ROOF OF THE COURT. “WHAT DO YOU KNOW ABOUT THIS BUSINESS?” THE KING SAID TO ALICE. “NOTHING,” SAID ALICE. “NOTHING WHATEVER?” PERSISTED THE KING. “NOTHING WHATEVER,” SAID ALICE. “THAT’S VERY IMPORTANT,” THE KING SAID, TURNING TO THE JURY. THEY WERE JUST BEGINNING TO WRITE THIS DOWN ON THEIR SLATES, WHEN THE WHITE RABBIT INTERRUPTED: “UNIMPORTANT, YOUR MAJESTY MEANS, OF COURSE,” HE SAID IN A VERY RESPECTFUL TONE, BUT FROWNING AND MAKING FACES AT HIM AS HE SPOKE. “UNIMPORTANT, OF COURSE, I MEANT,” THE KING HASTILY SAID, AND WENT ON TO HIMSELF IN AN UNDERTONE,</p>
+          <p>“IMPORTANT—UNIMPORTANT—UNIMPORTANT—IMPORTANT—” AS IF HE WERE TRYING WHICH WORD SOUNDED BEST. SOME OF THE JURY WROTE IT DOWN “IMPORTANT,” AND SOME “UNIMPORTANT.” ALICE COULD SEE THIS, AS SHE WAS NEAR ENOUGH TO LOOK OVER THEIR SLATES; “BUT IT DOESN’T MATTER A BIT,” SHE THOUGHT TO HERSELF. AT THIS MOMENT THE KING, WHO HAD BEEN FOR SOME TIME BUSILY WRITING IN HIS NOTE-BOOK, CACKLED OUT “SILENCE!” AND READ OUT FROM HIS BOOK, “RULE FORTY-TWO. ALL PERSONS MORE THAN A MILE HIGH TO LEAVE THE COURT.” EVERYBODY LOOKED AT ALICE. “I’M NOT A MILE HIGH,” SAID ALICE. “YOU ARE,” SAID THE KING. “NEARLY TWO MILES HIGH,” ADDED THE QUEEN.</p>
         </div>
         <div class="page-number">2</div>
       </div>
     </div>
-    <div class="spread">
-      <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-the-mysterious-letter/lewis-carroll-1864-manuscript.webp" alt="The Mysterious Letter">
+    <div class="spread text-only">
+      <div class="page-left decorative-panel">
+        <div class="chapter-ornament">
+          <div class="ornament-number">12</div>
+        </div>
       </div>
       <div class="page-right">
-        <div class="text-block text-small">
-          <p>AT THIS MOMENT THE KING, WHO HAD BEEN FOR SOME TIME BUSILY WRITING IN<br>HIS NOTE-BOOK, CACKLED OUT “SILENCE!” AND READ OUT FROM HIS BOOK, “RULE<br>FORTY-TWO. ALL PERSONS MORE THAN A MILE HIGH TO LEAVE THE COURT.”<br><br>EVERYBODY LOOKED AT ALICE.<br><br>“I’M NOT A MILE HIGH,” SAID ALICE.<br><br>“YOU ARE,” SAID THE KING.<br><br>“NEARLY TWO MILES HIGH,” ADDED THE QUEEN.<br><br>“WELL, I SHAN’T GO, AT ANY RATE,” SAID ALICE: “BESIDES, THAT’S NOT A<br>REGULAR RULE: YOU INVENTED IT JUST NOW.”<br><br>“IT’S THE OLDEST RULE IN THE BOOK,” SAID THE KING.<br><br>“THEN IT OUGHT TO BE NUMBER ONE,” SAID ALICE.<br><br>THE KING TURNED PALE, AND SHUT HIS NOTE-BOOK HASTILY. “CONSIDER YOUR<br>VERDICT,” HE SAID TO THE JURY, IN A LOW, TREMBLING VOICE.<br><br>“THERE’S MORE EVIDENCE TO COME YET, PLEASE YOUR MAJESTY,” SAID THE<br>WHITE RABBIT, JUMPING UP IN A GREAT HURRY; “THIS PAPER HAS JUST BEEN<br>PICKED UP.”<br><br>“WHAT’S IN IT?” SAID THE QUEEN.<br><br>“I HAVEN’T OPENED IT YET,” SAID THE WHITE RABBIT, “BUT IT SEEMS TO BE A<br>LETTER, WRITTEN BY THE PRISONER TO—TO SOMEBODY.”<br><br>“IT MUST HAVE BEEN THAT,” SAID THE KING, “UNLESS IT WAS WRITTEN TO<br>NOBODY, WHICH ISN’T USUAL, YOU KNOW.”<br><br>“WHO IS IT DIRECTED TO?” SAID ONE OF THE JURYMEN.<br><br>“IT ISN’T DIRECTED AT ALL,” SAID THE WHITE RABBIT; “IN FACT, THERE’S<br>NOTHING WRITTEN ON THE OUTSIDE.” HE UNFOLDED THE PAPER AS HE SPOKE,<br>AND ADDED “IT ISN’T A LETTER, AFTER ALL: IT’S A SET OF VERSES.”<br><br>“ARE THEY IN THE PRISONER’S HANDWRITING?” ASKED ANOTHER OF THE JURYMEN.<br><br>“NO, THEY’RE NOT,” SAID THE WHITE RABBIT, “AND THAT’S THE QUEEREST<br>THING ABOUT IT.” (THE JURY ALL LOOKED PUZZLED.)<br><br>“HE MUST HAVE IMITATED SOMEBODY ELSE’S HAND,” SAID THE KING. (THE JURY<br>ALL BRIGHTENED UP AGAIN.)<br><br>“PLEASE YOUR MAJESTY,” SAID THE KNAVE, “I DIDN’T WRITE IT, AND THEY<br>CAN’T PROVE I DID: THERE’S NO NAME SIGNED AT THE END.”<br><br>“IF YOU DIDN’T SIGN IT,” SAID THE KING, “THAT ONLY MAKES THE MATTER<br>WORSE. YOU MUST HAVE MEANT SOME MISCHIEF, OR ELSE YOU’D HAVE SIGNED<br>YOUR NAME LIKE AN HONEST MAN.”<br><br>THERE WAS A GENERAL CLAPPING OF HANDS AT THIS: IT WAS THE FIRST REALLY<br>CLEVER THING THE KING HAD SAID THAT DAY.<br><br>“THAT PROVES HIS GUILT,” SAID THE QUEEN.<br><br>“IT PROVES NOTHING OF THE SORT!” SAID ALICE. “WHY, YOU DON’T EVEN KNOW<br>WHAT THEY’RE ABOUT!”<br><br>“READ THEM,” SAID THE KING.<br><br>THE WHITE RABBIT PUT ON HIS SPECTACLES. “WHERE SHALL I BEGIN, PLEASE<br>YOUR MAJESTY?” HE ASKED.<br><br>“BEGIN AT THE BEGINNING,” THE KING SAID GRAVELY, “AND GO ON TILL YOU<br>COME TO THE END: THEN STOP.”<br><br>THESE WERE THE VERSES THE WHITE RABBIT READ:—<br><br>“THEY TOLD ME YOU HAD BEEN TO HER,<br>    AND MENTIONED ME TO HIM:<br>SHE GAVE ME A GOOD CHARACTER,<br>    BUT SAID I COULD NOT SWIM.<br><br>HE SENT THEM WORD I HAD NOT GONE<br>    (WE KNOW IT TO BE TRUE):<br>IF SHE SHOULD PUSH THE MATTER ON,<br>    WHAT WOULD BECOME OF YOU?<br><br>I GAVE HER ONE, THEY GAVE HIM TWO,<br>    YOU GAVE US THREE OR MORE;<br>THEY ALL RETURNED FROM HIM TO YOU,<br>    THOUGH THEY WERE MINE BEFORE.<br><br>IF I OR SHE SHOULD CHANCE TO BE<br>    INVOLVED IN THIS AFFAIR,<br>HE TRUSTS TO YOU TO SET THEM FREE,<br>    EXACTLY AS WE WERE.<br><br>MY NOTION WAS THAT YOU HAD BEEN<br>    (BEFORE SHE HAD THIS FIT)<br>AN OBSTACLE THAT CAME BETWEEN<br>    HIM, AND OURSELVES, AND IT.<br><br>DON’T LET HIM KNOW SHE LIKED THEM BEST,<br>    FOR THIS MUST EVER BE<br>A SECRET, KEPT FROM ALL THE REST,<br>    BETWEEN YOURSELF AND ME.”</p>
+        <div class="text-block text-xs">
+          <p>“WELL, I SHAN’T GO, AT ANY RATE,” SAID ALICE: “BESIDES, THAT’S NOT A REGULAR RULE: YOU INVENTED IT JUST NOW.” “IT’S THE OLDEST RULE IN THE BOOK,” SAID THE KING. “THEN IT OUGHT TO BE NUMBER ONE,” SAID ALICE. THE KING TURNED PALE, AND SHUT HIS NOTE-BOOK HASTILY. “CONSIDER YOUR VERDICT,” HE SAID TO THE JURY, IN A LOW, TREMBLING VOICE. “THERE’S MORE EVIDENCE TO COME YET, PLEASE YOUR MAJESTY,” SAID THE WHITE RABBIT, JUMPING UP IN A GREAT HURRY; “THIS PAPER HAS JUST BEEN PICKED UP.” “WHAT’S IN IT?” SAID THE QUEEN. “I HAVEN’T OPENED IT YET,” SAID THE WHITE RABBIT, “BUT IT SEEMS TO BE A LETTER, WRITTEN BY THE PRISONER TO—TO SOMEBODY.” “IT MUST HAVE BEEN THAT,” SAID THE KING, “UNLESS IT WAS WRITTEN TO NOBODY, WHICH ISN’T USUAL, YOU KNOW.” “WHO IS IT DIRECTED TO?” SAID ONE OF THE JURYMEN. “IT ISN’T DIRECTED AT ALL,” SAID THE WHITE RABBIT; “IN FACT, THERE’S NOTHING WRITTEN ON THE OUTSIDE.” HE UNFOLDED THE PAPER AS HE SPOKE, AND ADDED “IT ISN’T A LETTER, AFTER ALL: IT’S A SET OF VERSES.” “ARE THEY IN THE PRISONER’S HANDWRITING?” ASKED ANOTHER OF THE JURYMEN. “NO, THEY’RE NOT,” SAID THE WHITE RABBIT, “AND THAT’S THE QUEEREST THING ABOUT IT.” (THE JURY ALL LOOKED PUZZLED.) “HE MUST HAVE IMITATED SOMEBODY ELSE’S HAND,” SAID THE KING. (THE JURY ALL BRIGHTENED UP AGAIN.) “PLEASE YOUR MAJESTY,” SAID THE KNAVE, “I DIDN’T WRITE IT, AND THEY CAN’T PROVE I DID: THERE’S NO NAME SIGNED AT THE END.” “IF YOU DIDN’T SIGN IT,” SAID THE KING, “THAT ONLY MAKES THE MATTER WORSE.</p>
         </div>
         <div class="page-number">3</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-sentence-first/arthur-rackham-1907.jpg" alt="Sentence First — Verdict Afterwards!">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-the-mysterious-letter/lewis-carroll-1864-manuscript.webp" alt="Alice growing in court, Off with her head">
       </div>
       <div class="page-right">
         <div class="text-block text-small">
-          <p>“THAT’S THE MOST IMPORTANT PIECE OF EVIDENCE WE’VE HEARD YET,” SAID THE<br>KING, RUBBING HIS HANDS; “SO NOW LET THE JURY—”<br><br>“IF ANY ONE OF THEM CAN EXPLAIN IT,” SAID ALICE, (SHE HAD GROWN SO<br>LARGE IN THE LAST FEW MINUTES THAT SHE WASN’T A BIT AFRAID OF<br>INTERRUPTING HIM,) “I’LL GIVE HIM SIXPENCE. I DON’T BELIEVE THERE’S<br>AN ATOM OF MEANING IN IT.”<br><br>THE JURY ALL WROTE DOWN ON THEIR SLATES, “SHE DOESN’T BELIEVE THERE’S<br>AN ATOM OF MEANING IN IT,” BUT NONE OF THEM ATTEMPTED TO EXPLAIN THE<br>PAPER.<br><br>“IF THERE’S NO MEANING IN IT,” SAID THE KING, “THAT SAVES A WORLD OF<br>TROUBLE, YOU KNOW, AS WE NEEDN’T TRY TO FIND ANY. AND YET I DON’T<br>KNOW,” HE WENT ON, SPREADING OUT THE VERSES ON HIS KNEE, AND LOOKING AT<br>THEM WITH ONE EYE; “I SEEM TO SEE SOME MEANING IN THEM, AFTER ALL.<br>“—SAID I COULD NOT SWIM—” YOU CAN’T SWIM, CAN YOU?” HE ADDED, TURNING<br>TO THE KNAVE.<br><br>THE KNAVE SHOOK HIS HEAD SADLY. “DO I LOOK LIKE IT?” HE SAID. (WHICH HE<br>CERTAINLY DID NOT, BEING MADE ENTIRELY OF CARDBOARD.)<br><br>“ALL RIGHT, SO FAR,” SAID THE KING, AND HE WENT ON MUTTERING OVER THE<br>VERSES TO HIMSELF: “‘WE KNOW IT TO BE TRUE—’ THAT’S THE JURY, OF<br>COURSE—‘I GAVE HER ONE, THEY GAVE HIM TWO—’ WHY, THAT MUST BE WHAT HE<br>DID WITH THE TARTS, YOU KNOW—”</p>
+          <p>YOU MUST HAVE MEANT SOME MISCHIEF, OR ELSE YOU’D HAVE SIGNED YOUR NAME LIKE AN HONEST MAN.” THERE WAS A GENERAL CLAPPING OF HANDS AT THIS: IT WAS THE FIRST REALLY CLEVER THING THE KING HAD SAID THAT DAY. “THAT PROVES HIS GUILT,” SAID THE QUEEN. “IT PROVES NOTHING OF THE SORT!” SAID ALICE. “WHY, YOU DON’T EVEN KNOW WHAT THEY’RE ABOUT!” “READ THEM,” SAID THE KING. THE WHITE RABBIT PUT ON HIS SPECTACLES. “WHERE SHALL I BEGIN, PLEASE YOUR MAJESTY?” HE ASKED. “BEGIN AT THE BEGINNING,” THE KING SAID GRAVELY, “AND GO ON TILL YOU COME TO THE END: THEN STOP.” THESE WERE THE VERSES THE WHITE RABBIT READ:—</p>
+          <p>“THEY TOLD ME YOU HAD BEEN TO HER, AND MENTIONED ME TO HIM: SHE GAVE ME A GOOD CHARACTER, BUT SAID I COULD NOT SWIM. HE SENT THEM WORD I HAD NOT GONE (WE KNOW IT TO BE TRUE): IF SHE SHOULD PUSH THE MATTER ON, WHAT WOULD BECOME OF YOU? I GAVE HER ONE, THEY GAVE HIM TWO, YOU GAVE US THREE OR MORE; THEY ALL RETURNED FROM HIM TO YOU, THOUGH THEY WERE MINE BEFORE. IF I OR SHE SHOULD CHANCE TO BE INVOLVED IN THIS AFFAIR, HE TRUSTS TO YOU TO SET THEM FREE, EXACTLY AS WE WERE. MY NOTION WAS THAT YOU HAD BEEN (BEFORE SHE HAD THIS FIT) AN OBSTACLE THAT CAME BETWEEN HIM, AND OURSELVES, AND IT. DON’T LET HIM KNOW SHE LIKED THEM BEST, FOR THIS MUST EVER BE A SECRET, KEPT FROM ALL THE REST, BETWEEN YOURSELF AND ME.”</p>
         </div>
         <div class="page-number">4</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-sentence-first/gwynedd-hudson-1922.jpg" alt="Sentence First — Verdict Afterwards!">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-sentence-first/arthur-rackham-1907.jpg" alt="Pack rose in the air">
       </div>
       <div class="page-right">
-        <div class="text-block text-small">
-          <p>“BUT, IT GOES ON ‘THEY ALL RETURNED FROM HIM TO YOU,’” SAID ALICE.<br><br>“WHY, THERE THEY ARE!” SAID THE KING TRIUMPHANTLY, POINTING TO THE<br>TARTS ON THE TABLE. “NOTHING CAN BE CLEARER THAN THAT. THEN<br>AGAIN—‘BEFORE SHE HAD THIS FIT—’ YOU NEVER HAD FITS, MY DEAR, I<br>THINK?” HE SAID TO THE QUEEN.<br><br>“NEVER!” SAID THE QUEEN FURIOUSLY, THROWING AN INKSTAND AT THE LIZARD<br>AS SHE SPOKE. (THE UNFORTUNATE LITTLE BILL HAD LEFT OFF WRITING ON HIS<br>SLATE WITH ONE FINGER, AS HE FOUND IT MADE NO MARK; BUT HE NOW HASTILY<br>BEGAN AGAIN, USING THE INK, THAT WAS TRICKLING DOWN HIS FACE, AS LONG<br>AS IT LASTED.)<br><br>“THEN THE WORDS DON’T FIT YOU,” SAID THE KING, LOOKING ROUND THE<br>COURT WITH A SMILE. THERE WAS A DEAD SILENCE.<br><br>“IT’S A PUN!” THE KING ADDED IN AN OFFENDED TONE, AND EVERYBODY<br>LAUGHED, “LET THE JURY CONSIDER THEIR VERDICT,” THE KING SAID, FOR<br>ABOUT THE TWENTIETH TIME THAT DAY.<br><br>“NO, NO!” SAID THE QUEEN. “SENTENCE FIRST—VERDICT AFTERWARDS.”</p>
+        <div class="text-block text-xs">
+          <p>“THAT’S THE MOST IMPORTANT PIECE OF EVIDENCE WE’VE HEARD YET,” SAID THE KING, RUBBING HIS HANDS; “SO NOW LET THE JURY—”</p>
+          <p>“IF ANY ONE OF THEM CAN EXPLAIN IT,” SAID ALICE, (SHE HAD GROWN SO LARGE IN THE LAST FEW MINUTES THAT SHE WASN’T A BIT AFRAID OF INTERRUPTING HIM,) “I’LL GIVE HIM SIXPENCE. I DON’T BELIEVE THERE’S AN ATOM OF MEANING IN IT.” THE JURY ALL WROTE DOWN ON THEIR SLATES, “SHE DOESN’T BELIEVE THERE’S AN ATOM OF MEANING IN IT,” BUT NONE OF THEM ATTEMPTED TO EXPLAIN THE PAPER. “IF THERE’S NO MEANING IN IT,” SAID THE KING, “THAT SAVES A WORLD OF TROUBLE, YOU KNOW, AS WE NEEDN’T TRY TO FIND ANY. AND YET I DON’T KNOW,” HE WENT ON, SPREADING OUT THE VERSES ON HIS KNEE, AND LOOKING AT THEM WITH ONE EYE; “I SEEM TO SEE SOME MEANING IN THEM, AFTER ALL. “—SAID I COULD NOT SWIM—” YOU CAN’T SWIM, CAN YOU?” HE ADDED, TURNING TO THE KNAVE. THE KNAVE SHOOK HIS HEAD SADLY. “DO I LOOK LIKE IT?” HE SAID. (WHICH HE CERTAINLY DID NOT, BEING MADE ENTIRELY OF CARDBOARD.) “ALL RIGHT, SO FAR,” SAID THE KING, AND HE WENT ON MUTTERING OVER THE VERSES TO HIMSELF: “‘WE KNOW IT TO BE TRUE—’ THAT’S THE JURY, OF COURSE—‘I GAVE HER ONE, THEY GAVE HIM TWO—’ WHY, THAT MUST BE WHAT HE DID WITH THE TARTS, YOU KNOW—”</p>
+          <p>“BUT, IT GOES ON ‘THEY ALL RETURNED FROM HIM TO YOU,’” SAID ALICE. “WHY, THERE THEY ARE!” SAID THE KING TRIUMPHANTLY, POINTING TO THE TARTS ON THE TABLE. “NOTHING CAN BE CLEARER THAN THAT. THEN AGAIN—‘BEFORE SHE HAD THIS FIT—’ YOU NEVER HAD FITS, MY DEAR, I THINK?” HE SAID TO THE QUEEN. “NEVER!”</p>
         </div>
         <div class="page-number">5</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-sentence-first/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="Sentence First — Verdict Afterwards!">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-sentence-first/gwynedd-hudson-1922.jpg" alt="Cards rose into the air">
       </div>
       <div class="page-right">
-        <div class="text-block ">
-          <p>“STUFF AND NONSENSE!” SAID ALICE LOUDLY. “THE IDEA OF HAVING THE<br>SENTENCE FIRST!”<br><br>“HOLD YOUR TONGUE!” SAID THE QUEEN, TURNING PURPLE.<br><br>“I WON’T!” SAID ALICE.<br><br>“OFF WITH HER HEAD!” THE QUEEN SHOUTED AT THE TOP OF HER VOICE. NOBODY<br>MOVED.<br><br>“WHO CARES FOR YOU?” SAID ALICE, (SHE HAD GROWN TO HER FULL SIZE BY<br>THIS TIME.) “YOU’RE NOTHING BUT A PACK OF CARDS!”</p>
+        <div class="text-block text-xs">
+          <p>SAID THE QUEEN FURIOUSLY, THROWING AN INKSTAND AT THE LIZARD AS SHE SPOKE. (THE UNFORTUNATE LITTLE BILL HAD LEFT OFF WRITING ON HIS SLATE WITH ONE FINGER, AS HE FOUND IT MADE NO MARK; BUT HE NOW HASTILY BEGAN AGAIN, USING THE INK, THAT WAS TRICKLING DOWN HIS FACE, AS LONG AS IT LASTED.) “THEN THE WORDS DON’T FIT YOU,” SAID THE KING, LOOKING ROUND THE COURT WITH A SMILE. THERE WAS A DEAD SILENCE. “IT’S A PUN!” THE KING ADDED IN AN OFFENDED TONE, AND EVERYBODY LAUGHED, “LET THE JURY CONSIDER THEIR VERDICT,” THE KING SAID, FOR ABOUT THE TWENTIETH TIME THAT DAY. “NO, NO!” SAID THE QUEEN. “SENTENCE FIRST—VERDICT AFTERWARDS.” “STUFF AND NONSENSE!” SAID ALICE LOUDLY. “THE IDEA OF HAVING THE SENTENCE FIRST!” “HOLD YOUR TONGUE!” SAID THE QUEEN, TURNING PURPLE. “I WON’T!” SAID ALICE. “OFF WITH HER HEAD!” THE QUEEN SHOUTED AT THE TOP OF HER VOICE. NOBODY MOVED. “WHO CARES FOR YOU?” SAID ALICE, (SHE HAD GROWN TO HER FULL SIZE BY THIS TIME.) “YOU’RE NOTHING BUT A PACK OF CARDS!” AT THIS THE WHOLE PACK ROSE UP INTO THE AIR, AND CAME FLYING DOWN UPON HER: SHE GAVE A LITTLE SCREAM, HALF OF FRIGHT AND HALF OF ANGER, AND TRIED TO BEAT THEM OFF, AND FOUND HERSELF LYING ON THE BANK, WITH HER HEAD IN THE LAP OF HER SISTER, WHO WAS GENTLY BRUSHING AWAY SOME DEAD LEAVES THAT HAD FLUTTERED DOWN FROM THE TREES UPON HER FACE. “WAKE UP, ALICE DEAR!” SAID HER SISTER; “WHY, WHAT A LONG SLEEP YOU’VE HAD!” “OH, I’VE HAD SUCH A CURIOUS DREAM!”</p>
         </div>
         <div class="page-number">6</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-waking-up/lewis-carroll-1864-manuscript.webp" alt="Waking Up">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-sentence-first/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="The Shower of Cards">
       </div>
       <div class="page-right">
         <div class="text-block text-small">
-          <p>AT THIS THE WHOLE PACK ROSE UP INTO THE AIR, AND CAME FLYING DOWN UPON<br>HER: SHE GAVE A LITTLE SCREAM, HALF OF FRIGHT AND HALF OF ANGER, AND<br>TRIED TO BEAT THEM OFF, AND FOUND HERSELF LYING ON THE BANK, WITH HER<br>HEAD IN THE LAP OF HER SISTER, WHO WAS GENTLY BRUSHING AWAY SOME DEAD<br>LEAVES THAT HAD FLUTTERED DOWN FROM THE TREES UPON HER FACE.<br><br>“WAKE UP, ALICE DEAR!” SAID HER SISTER; “WHY, WHAT A LONG SLEEP YOU’VE<br>HAD!”<br><br>“OH, I’VE HAD SUCH A CURIOUS DREAM!” SAID ALICE, AND SHE TOLD HER<br>SISTER, AS WELL AS SHE COULD REMEMBER THEM, ALL THESE STRANGE<br>ADVENTURES OF HERS THAT YOU HAVE JUST BEEN READING ABOUT; AND WHEN SHE<br>HAD FINISHED, HER SISTER KISSED HER, AND SAID, “IT WAS A CURIOUS<br>DREAM, DEAR, CERTAINLY: BUT NOW RUN IN TO YOUR TEA; IT’S GETTING LATE.”<br>SO ALICE GOT UP AND RAN OFF, THINKING WHILE SHE RAN, AS WELL SHE MIGHT,<br>WHAT A WONDERFUL DREAM IT HAD BEEN.<br><br>BUT HER SISTER SAT STILL JUST AS SHE LEFT HER, LEANING HER HEAD ON HER<br>HAND, WATCHING THE SETTING SUN, AND THINKING OF LITTLE ALICE AND ALL<br>HER WONDERFUL ADVENTURES, TILL SHE TOO BEGAN DREAMING AFTER A FASHION,<br>AND THIS WAS HER DREAM:—<br><br>FIRST, SHE DREAMED OF LITTLE ALICE HERSELF, AND ONCE AGAIN THE TINY<br>HANDS WERE CLASPED UPON HER KNEE, AND THE BRIGHT EAGER EYES WERE<br>LOOKING UP INTO HERS—SHE COULD HEAR THE VERY TONES OF HER VOICE, AND<br>SEE THAT QUEER LITTLE TOSS OF HER HEAD TO KEEP BACK THE WANDERING HAIR<br>THAT WOULD ALWAYS GET INTO HER EYES—AND STILL AS SHE LISTENED, OR<br>SEEMED TO LISTEN, THE WHOLE PLACE AROUND HER BECAME ALIVE WITH THE<br>STRANGE CREATURES OF HER LITTLE SISTER’S DREAM.<br><br>THE LONG GRASS RUSTLED AT HER FEET AS THE WHITE RABBIT HURRIED BY—THE<br>FRIGHTENED MOUSE SPLASHED HIS WAY THROUGH THE NEIGHBOURING POOL—SHE<br>COULD HEAR THE RATTLE OF THE TEACUPS AS THE MARCH HARE AND HIS FRIENDS<br>SHARED THEIR NEVER-ENDING MEAL, AND THE SHRILL VOICE OF THE QUEEN<br>ORDERING OFF HER UNFORTUNATE GUESTS TO EXECUTION—ONCE MORE THE PIG-BABY<br>WAS SNEEZING ON THE DUCHESS’S KNEE, WHILE PLATES AND DISHES CRASHED<br>AROUND IT—ONCE MORE THE SHRIEK OF THE GRYPHON, THE SQUEAKING OF THE<br>LIZARD’S SLATE-PENCIL, AND THE CHOKING OF THE SUPPRESSED GUINEA-PIGS,<br>FILLED THE AIR, MIXED UP WITH THE DISTANT SOBS OF THE MISERABLE MOCK<br>TURTLE.<br><br>SO SHE SAT ON, WITH CLOSED EYES, AND HALF BELIEVED HERSELF IN<br>WONDERLAND, THOUGH SHE KNEW SHE HAD BUT TO OPEN THEM AGAIN, AND ALL<br>WOULD CHANGE TO DULL REALITY—THE GRASS WOULD BE ONLY RUSTLING IN THE<br>WIND, AND THE POOL RIPPLING TO THE WAVING OF THE REEDS—THE RATTLING<br>TEACUPS WOULD CHANGE TO TINKLING SHEEP-BELLS, AND THE QUEEN’S SHRILL<br>CRIES TO THE VOICE OF THE SHEPHERD BOY—AND THE SNEEZE OF THE BABY, THE<br>SHRIEK OF THE GRYPHON, AND ALL THE OTHER QUEER NOISES, WOULD CHANGE<br>(SHE KNEW) TO THE CONFUSED CLAMOUR OF THE BUSY FARM-YARD—WHILE THE<br>LOWING OF THE CATTLE IN THE DISTANCE WOULD TAKE THE PLACE OF THE MOCK<br>TURTLE’S HEAVY SOBS.<br><br>LASTLY, SHE PICTURED TO HERSELF HOW THIS SAME LITTLE SISTER OF HERS<br>WOULD, IN THE AFTER-TIME, BE HERSELF A GROWN WOMAN; AND HOW SHE WOULD<br>KEEP, THROUGH ALL HER RIPER YEARS, THE SIMPLE AND LOVING HEART OF HER<br>CHILDHOOD: AND HOW SHE WOULD GATHER ABOUT HER OTHER LITTLE CHILDREN,<br>AND MAKE THEIR EYES BRIGHT AND EAGER WITH MANY A STRANGE TALE,<br>PERHAPS EVEN WITH THE DREAM OF WONDERLAND OF LONG AGO: AND HOW SHE<br>WOULD FEEL WITH ALL THEIR SIMPLE SORROWS, AND FIND A PLEASURE IN ALL<br>THEIR SIMPLE JOYS, REMEMBERING HER OWN CHILD-LIFE, AND THE HAPPY SUMMER<br>DAYS.</p>
+          <p>SAID ALICE, AND SHE TOLD HER SISTER, AS WELL AS SHE COULD REMEMBER THEM, ALL THESE STRANGE ADVENTURES OF HERS THAT YOU HAVE JUST BEEN READING ABOUT; AND WHEN SHE HAD FINISHED, HER SISTER KISSED HER, AND SAID, “IT WAS A CURIOUS DREAM, DEAR, CERTAINLY: BUT NOW RUN IN TO YOUR TEA; IT’S GETTING LATE.” SO ALICE GOT UP AND RAN OFF, THINKING WHILE SHE RAN, AS WELL SHE MIGHT, WHAT A WONDERFUL DREAM IT HAD BEEN. BUT HER SISTER SAT STILL JUST AS SHE LEFT HER, LEANING HER HEAD ON HER HAND, WATCHING THE SETTING SUN, AND THINKING OF LITTLE ALICE AND ALL HER WONDERFUL ADVENTURES, TILL SHE TOO BEGAN DREAMING AFTER A FASHION, AND THIS WAS HER DREAM:—</p>
+          <p>FIRST, SHE DREAMED OF LITTLE ALICE HERSELF, AND ONCE AGAIN THE TINY HANDS WERE CLASPED UPON HER KNEE, AND THE BRIGHT EAGER EYES WERE LOOKING UP INTO HERS—SHE COULD HEAR THE VERY TONES OF HER VOICE, AND SEE THAT QUEER LITTLE TOSS OF HER HEAD TO KEEP BACK THE WANDERING HAIR THAT WOULD ALWAYS GET INTO HER EYES—AND STILL AS SHE LISTENED, OR SEEMED TO LISTEN, THE WHOLE PLACE AROUND HER BECAME ALIVE WITH THE STRANGE CREATURES OF HER LITTLE SISTER’S DREAM.</p>
         </div>
         <div class="page-number">7</div>
       </div>
     </div>
+    <div class="spread text-only">
+      <div class="page-left decorative-panel">
+        <div class="chapter-ornament">
+          <div class="ornament-number">12</div>
+        </div>
+      </div>
+      <div class="page-right">
+        <div class="text-block text-small">
+          <p>THE LONG GRASS RUSTLED AT HER FEET AS THE WHITE RABBIT HURRIED BY—THE FRIGHTENED MOUSE SPLASHED HIS WAY THROUGH THE NEIGHBOURING POOL—SHE COULD HEAR THE RATTLE OF THE TEACUPS AS THE MARCH HARE AND HIS FRIENDS SHARED THEIR NEVER-ENDING MEAL, AND THE SHRILL VOICE OF THE QUEEN ORDERING OFF HER UNFORTUNATE GUESTS TO EXECUTION—ONCE MORE THE PIG-BABY WAS SNEEZING ON THE DUCHESS’S KNEE, WHILE PLATES AND DISHES CRASHED AROUND IT—ONCE MORE THE SHRIEK OF THE GRYPHON, THE SQUEAKING OF THE LIZARD’S SLATE-PENCIL, AND THE CHOKING OF THE SUPPRESSED GUINEA-PIGS, FILLED THE AIR, MIXED UP WITH THE DISTANT SOBS OF THE MISERABLE MOCK TURTLE. SO SHE SAT ON, WITH CLOSED EYES, AND HALF BELIEVED HERSELF IN WONDERLAND, THOUGH SHE KNEW SHE HAD BUT TO OPEN THEM AGAIN, AND ALL WOULD CHANGE TO DULL REALITY—THE GRASS WOULD BE ONLY RUSTLING IN THE WIND, AND THE POOL RIPPLING TO THE WAVING OF THE REEDS—THE RATTLING TEACUPS WOULD CHANGE TO TINKLING SHEEP-BELLS, AND THE QUEEN’S SHRILL CRIES TO THE VOICE OF THE SHEPHERD BOY—AND THE SNEEZE OF THE BABY, THE SHRIEK OF THE GRYPHON, AND ALL THE OTHER QUEER NOISES, WOULD CHANGE (SHE KNEW) TO THE CONFUSED CLAMOUR OF THE BUSY FARM-YARD—WHILE THE LOWING OF THE CATTLE IN THE DISTANCE WOULD TAKE THE PLACE OF THE MOCK TURTLE’S HEAVY SOBS.</p>
+        </div>
+        <div class="page-number">8</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-waking-up/lewis-carroll-1864-manuscript.webp" alt="The end - Alice waking up">
+      </div>
+      <div class="page-right">
+        <div class="text-block ">
+          <p>LASTLY, SHE PICTURED TO HERSELF HOW THIS SAME LITTLE SISTER OF HERS WOULD, IN THE AFTER-TIME, BE HERSELF A GROWN WOMAN; AND HOW SHE WOULD KEEP, THROUGH ALL HER RIPER YEARS, THE SIMPLE AND LOVING HEART OF HER CHILDHOOD: AND HOW SHE WOULD GATHER ABOUT HER OTHER LITTLE CHILDREN, AND MAKE THEIR EYES BRIGHT AND EAGER WITH MANY A STRANGE TALE, PERHAPS EVEN WITH THE DREAM OF WONDERLAND OF LONG AGO: AND HOW SHE WOULD FEEL WITH ALL THEIR SIMPLE SORROWS, AND FIND A PLEASURE IN ALL THEIR SIMPLE JOYS, REMEMBERING HER OWN CHILD-LIFE, AND THE HAPPY SUMMER DAYS.</p>
+        </div>
+        <div class="page-number">9</div>
+      </div>
+    </div>
     <div class="spread back-cover">
-      <div class="page-left back-image">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-waking-up/lewis-carroll-1864-manuscript.webp" alt="Back cover">
+      <div class="page-left decorative-panel">
+        <div class="chapter-ornament">
+          <div class="ornament-star">&#10038;</div>
+        </div>
       </div>
       <div class="page-right back-text">
         <div class="back-block">

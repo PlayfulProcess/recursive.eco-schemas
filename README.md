@@ -4,6 +4,28 @@ A commons for symbolic systems — tarot decks, I Ching interpretations, astrolo
 
 These grammars work with [recursive.eco](https://recursive.eco). Anyone can create, fork, and share them.
 
+## Printable Alice in Wonderland Chapter Books
+
+Twelve illustrated chapter books of Lewis Carroll's complete original text in ALL CAPS, with 105 public domain illustrations from 10+ artists (1864-1933). Print at home, fold in half, read to your kids.
+
+**Browse the booklets:** open [`grammars/alice-5-minute-stories/booklets/index.html`](grammars/alice-5-minute-stories/booklets/index.html) in your browser.
+
+**How to print:**
+1. Open a chapter booklet from the index
+2. Press **Ctrl+P** (or **Cmd+P** on Mac)
+3. Set orientation to **Landscape**
+4. Set margins to **None**
+5. Turn on **Background graphics**
+6. Print double-sided (flip on short edge) if available
+7. Fold each sheet in half — you have a picture book!
+
+**How to regenerate** (requires Node.js):
+```bash
+node scripts/generate-alice-booklets.mjs
+```
+
+Reads from `grammars/alice-in-wonderland-chapter-book/grammar.json` and generates HTML booklets in `grammars/alice-5-minute-stories/booklets/`.
+
 ## Quick Start
 
 The fastest way to create a grammar:
