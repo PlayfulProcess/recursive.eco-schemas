@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE LOBSTER DANCE — Alice in Wonderland Book 10</title>
+  <style>
+    @page {
+      size: landscape;
+      margin: 0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      background: white;
+      color: #1a1a1a;
+    }
+
+    .spread {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+    }
+
+    .spread:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* Left page = illustration */
+    .page-left {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8f5f0;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .page-left img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Right page = text */
+    .page-right {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 50px;
+      background: white;
+      position: relative;
+    }
+
+    .text-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      width: 100%;
+    }
+
+    .text-block p {
+      font-size: clamp(18px, 3vw, 32px);
+      line-height: 1.6;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 0.5px;
+      max-width: 90%;
+    }
+
+    .page-number {
+      font-size: 14px;
+      color: #999;
+      position: absolute;
+      bottom: 15px;
+      right: 25px;
+    }
+
+    /* Cover page styles */
+    .cover-title {
+      background: #2c1810;
+      color: white;
+    }
+
+    .title-block {
+      text-align: center;
+    }
+
+    .series-name {
+      font-size: clamp(12px, 1.8vw, 18px);
+      letter-spacing: 4px;
+      color: #d4a76a;
+      margin-bottom: 15px;
+    }
+
+    .book-number {
+      font-size: clamp(14px, 2vw, 22px);
+      letter-spacing: 3px;
+      color: #d4a76a;
+      margin-bottom: 25px;
+    }
+
+    .title-block h1 {
+      font-size: clamp(24px, 4.5vw, 48px);
+      line-height: 1.2;
+      margin-bottom: 30px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .author {
+      font-size: clamp(12px, 1.5vw, 16px);
+      letter-spacing: 3px;
+      color: #d4a76a;
+      margin-bottom: 10px;
+    }
+
+    .reading-time {
+      font-size: clamp(11px, 1.3vw, 14px);
+      letter-spacing: 2px;
+      color: #a08060;
+      margin-top: 5px;
+    }
+
+    .cover-image {
+      background: #2c1810;
+    }
+
+    .cover-image img {
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+
+    /* Back cover */
+    .back-text {
+      background: #2c1810;
+      color: white;
+    }
+
+    .back-block {
+      text-align: center;
+    }
+
+    .the-end {
+      font-size: clamp(28px, 5vw, 52px);
+      font-weight: 800;
+      letter-spacing: 6px;
+      margin-bottom: 40px;
+      color: #d4a76a;
+    }
+
+    .back-info p {
+      font-size: clamp(11px, 1.3vw, 14px);
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+      color: #d4a76a;
+    }
+
+    .back-info .small {
+      font-size: clamp(9px, 1vw, 11px);
+      color: #a08060;
+    }
+
+    .back-image {
+      background: #2c1810;
+    }
+
+    .back-image img {
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+
+    /* Print styles */
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .spread { height: 100vh; }
+      .page-left img { box-shadow: none; }
+      .cover-image img, .back-image img { box-shadow: none; }
+    }
+
+    /* Screen-only: show page dividers */
+    @media screen {
+      .spread {
+        border-bottom: 3px dashed #ccc;
+        min-height: 100vh;
+      }
+      .spread:last-child {
+        border-bottom: none;
+      }
+      body {
+        background: #e8e8e8;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <div class="spread cover-spread">
+      <div class="page-left cover-image">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch10-the-lobster-quadrille/harry-rountree-1928.jpg" alt="Cover illustration">
+      </div>
+      <div class="page-right cover-title">
+        <div class="title-block">
+          <div class="series-name">ALICE IN WONDERLAND</div>
+          <div class="book-number">BOOK 10</div>
+          <h1>THE LOBSTER DANCE</h1>
+          <div class="author">BY LEWIS CARROLL</div>
+          <div class="reading-time">A 5-MINUTE STORY</div>
+        </div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch10-the-lobster-quadrille/harry-rountree-1928.jpg" alt="Page 1">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>&quot;LET ME SHOW YOU THE LOBSTER DANCE!&quot;<br>SAID THE MOCK TURTLE.<br>THEY ALL DANCED ON THE BEACH.<br>&quot;WILL YOU WALK A LITTLE FASTER?&quot;<br>SANG THE MOCK TURTLE.</p>
+        </div>
+        <div class="page-number">1</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch10-beautiful-soup/lewis-carroll-1864-manuscript.webp" alt="Page 2">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>THE MOCK TURTLE SANG A SONG:<br>&quot;BEAUTIFUL SOUP, SO RICH AND GREEN,<br>WAITING IN A HOT TUREEN!&quot;<br>HE LOVED SOUP VERY MUCH.</p>
+        </div>
+        <div class="page-number">2</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch10-the-lobster-and-the-owl/lewis-carroll-1864-manuscript.webp" alt="Page 3">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>THEN SOMEONE SHOUTED:<br>&quot;THE TRIAL IS STARTING!&quot;<br>THE GRYPHON GRABBED ALICE'S HAND.<br>&quot;COME ON!&quot; HE SAID. &quot;LET US GO!&quot;</p>
+        </div>
+        <div class="page-number">3</div>
+      </div>
+    </div>
+    <div class="spread back-cover">
+      <div class="page-left back-image">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch10-the-lobster-and-the-owl/lewis-carroll-1864-manuscript.webp" alt="Back cover">
+      </div>
+      <div class="page-right back-text">
+        <div class="back-block">
+          <div class="the-end">THE END</div>
+          <div class="back-info">
+            <p>ALICE IN WONDERLAND — BOOK 10</p>
+            <p class="small">STORY BY LEWIS CARROLL (1865)</p>
+            <p class="small">ALL ILLUSTRATIONS ARE PUBLIC DOMAIN</p>
+            <p class="small">FROM RECURSIVE.ECO</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
