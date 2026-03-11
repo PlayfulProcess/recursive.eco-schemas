@@ -5,16 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chapter 2: The Pool of Tears — Alice in Wonderland</title>
   <style>
-    @page {
-      size: landscape;
-      margin: 0;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    @page { size: landscape; margin: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
@@ -30,13 +22,12 @@
       break-after: page;
       overflow: hidden;
     }
-
     .spread:last-child {
       page-break-after: avoid;
       break-after: avoid;
     }
 
-    /* Left page = illustration */
+    /* Left page: illustration */
     .page-left {
       width: 50%;
       height: 100%;
@@ -47,7 +38,6 @@
       padding: 16px;
       overflow: hidden;
     }
-
     .page-left img {
       max-width: 100%;
       max-height: 100%;
@@ -56,7 +46,7 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-    /* Right page = text */
+    /* Right page: text */
     .page-right {
       width: 50%;
       height: 100%;
@@ -64,72 +54,94 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 30px 40px;
+      padding: 28px 36px;
       background: white;
       position: relative;
+      overflow: hidden;
     }
 
+    /* Text block — NEVER scroll */
     .text-block {
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
       flex: 1;
       width: 100%;
-      overflow-y: auto;
+      overflow: hidden;
     }
-
     .text-block p {
-      font-size: clamp(14px, 2.2vw, 24px);
+      font-size: clamp(14px, 2.0vw, 22px);
       line-height: 1.7;
       font-weight: 700;
       text-align: left;
       letter-spacing: 0.3px;
-      max-width: 95%;
+      margin-bottom: 0.7em;
     }
+    .text-block p:last-child { margin-bottom: 0; }
 
-    /* For longer text passages */
+    /* Font size tiers */
+    .text-block.text-large p {
+      font-size: clamp(18px, 2.5vw, 28px);
+      line-height: 1.8;
+    }
     .text-block.text-medium p {
-      font-size: clamp(12px, 1.8vw, 19px);
+      font-size: clamp(12px, 1.6vw, 18px);
       line-height: 1.6;
     }
-
     .text-block.text-small p {
-      font-size: clamp(10px, 1.5vw, 16px);
+      font-size: clamp(11px, 1.4vw, 16px);
       line-height: 1.5;
+    }
+    .text-block.text-xs p {
+      font-size: clamp(10px, 1.2vw, 14px);
+      line-height: 1.4;
     }
 
     .page-number {
-      font-size: 12px;
-      color: #bbb;
+      font-size: 11px;
+      color: #ccc;
       position: absolute;
-      bottom: 10px;
-      right: 20px;
+      bottom: 8px;
+      right: 16px;
     }
 
-    /* Cover page styles */
+    /* Decorative panel (text-only pages) */
+    .decorative-panel {
+      background: #2c1810;
+    }
+    .chapter-ornament {
+      text-align: center;
+      color: #d4a76a;
+    }
+    .ornament-number {
+      font-size: clamp(48px, 8vw, 96px);
+      font-weight: 800;
+      letter-spacing: 4px;
+      opacity: 0.3;
+    }
+    .ornament-star {
+      font-size: clamp(36px, 6vw, 72px);
+      opacity: 0.3;
+    }
+
+    /* Cover */
     .cover-title {
       background: #2c1810;
       color: white;
     }
-
-    .title-block {
-      text-align: center;
-    }
-
+    .title-block { text-align: center; }
     .series-name {
       font-size: clamp(11px, 1.5vw, 16px);
       letter-spacing: 4px;
       color: #d4a76a;
       margin-bottom: 12px;
     }
-
     .book-number {
       font-size: clamp(13px, 1.8vw, 20px);
       letter-spacing: 3px;
       color: #d4a76a;
       margin-bottom: 20px;
     }
-
     .title-block h1 {
       font-size: clamp(20px, 3.8vw, 42px);
       line-height: 1.2;
@@ -137,25 +149,19 @@
       font-weight: 800;
       letter-spacing: 1px;
     }
-
     .author {
       font-size: clamp(11px, 1.3vw, 14px);
       letter-spacing: 3px;
       color: #d4a76a;
       margin-bottom: 8px;
     }
-
     .page-info {
-      font-size: clamp(10px, 1.1vw, 12px);
+      font-size: clamp(9px, 1vw, 11px);
       letter-spacing: 2px;
       color: #a08060;
       margin-top: 5px;
     }
-
-    .cover-image {
-      background: #2c1810;
-    }
-
+    .cover-image { background: #2c1810; }
     .cover-image img {
       border-radius: 8px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.3);
@@ -166,11 +172,7 @@
       background: #2c1810;
       color: white;
     }
-
-    .back-block {
-      text-align: center;
-    }
-
+    .back-block { text-align: center; }
     .the-end {
       font-size: clamp(24px, 4vw, 44px);
       font-weight: 800;
@@ -178,49 +180,33 @@
       margin-bottom: 30px;
       color: #d4a76a;
     }
-
     .back-info p {
       font-size: clamp(10px, 1.2vw, 13px);
       letter-spacing: 2px;
       margin-bottom: 6px;
       color: #d4a76a;
     }
-
     .back-info .small {
       font-size: clamp(8px, 0.9vw, 10px);
       color: #a08060;
     }
 
-    .back-image {
-      background: #2c1810;
-    }
-
-    .back-image img {
-      border-radius: 8px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-    }
-
-    /* Print styles */
+    /* Print */
     @media print {
       body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
       .spread { height: 100vh; }
       .page-left img { box-shadow: none; }
-      .cover-image img, .back-image img { box-shadow: none; }
-      .text-block { overflow: hidden; }
+      .cover-image img { box-shadow: none; }
     }
 
-    /* Screen: show page dividers */
+    /* Screen: page dividers */
     @media screen {
       .spread {
         border-bottom: 3px dashed #ccc;
         min-height: 100vh;
       }
-      .spread:last-child {
-        border-bottom: none;
-      }
-      body {
-        background: #e8e8e8;
-      }
+      .spread:last-child { border-bottom: none; }
+      body { background: #e8e8e8; }
     }
   </style>
 </head>
@@ -228,7 +214,7 @@
 
     <div class="spread cover-spread">
       <div class="page-left cover-image">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-curiouser-and-curiouser/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="Cover">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-02-the-pool-of-tears/lewis-carroll-1864-chapter-I.webp" alt="Cover illustration">
       </div>
       <div class="page-right cover-title">
         <div class="title-block">
@@ -236,90 +222,106 @@
           <div class="book-number">CHAPTER 2</div>
           <h1>THE POOL OF TEARS</h1>
           <div class="author">BY LEWIS CARROLL</div>
-          <div class="page-info">7 PAGES</div>
+          <div class="page-info">8 PAGES &middot; 7 ILLUSTRATIONS</div>
         </div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-curiouser-and-curiouser/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="Curiouser and Curiouser">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-curiouser-and-curiouser/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="How Alice grew tall">
       </div>
       <div class="page-right">
-        <div class="text-block text-small">
-          <p>“CURIOUSER AND CURIOUSER!” CRIED ALICE (SHE WAS SO MUCH SURPRISED, THAT<br>FOR THE MOMENT SHE QUITE FORGOT HOW TO SPEAK GOOD ENGLISH); “NOW I’M<br>OPENING OUT LIKE THE LARGEST TELESCOPE THAT EVER WAS! GOOD-BYE, FEET!”<br>(FOR WHEN SHE LOOKED DOWN AT HER FEET, THEY SEEMED TO BE ALMOST OUT OF<br>SIGHT, THEY WERE GETTING SO FAR OFF). “OH, MY POOR LITTLE FEET, I<br>WONDER WHO WILL PUT ON YOUR SHOES AND STOCKINGS FOR YOU NOW, DEARS? I’M<br>SURE I SHAN’T BE ABLE! I SHALL BE A GREAT DEAL TOO FAR OFF TO TROUBLE<br>MYSELF ABOUT YOU: YOU MUST MANAGE THE BEST WAY YOU CAN;—BUT I MUST BE<br>KIND TO THEM,” THOUGHT ALICE, “OR PERHAPS THEY WON’T WALK THE WAY I<br>WANT TO GO! LET ME SEE: I’LL GIVE THEM A NEW PAIR OF BOOTS EVERY<br>CHRISTMAS.”<br><br>AND SHE WENT ON PLANNING TO HERSELF HOW SHE WOULD MANAGE IT. “THEY MUST<br>GO BY THE CARRIER,” SHE THOUGHT; “AND HOW FUNNY IT’LL SEEM, SENDING<br>PRESENTS TO ONE’S OWN FEET! AND HOW ODD THE DIRECTIONS WILL LOOK!<br><br>     ALICE’S RIGHT FOOT, ESQ., HEARTHRUG, NEAR THE FENDER, (WITH<br>     ALICE’S LOVE).<br><br>OH DEAR, WHAT NONSENSE I’M TALKING!”<br><br>JUST THEN HER HEAD STRUCK AGAINST THE ROOF OF THE HALL: IN FACT SHE WAS<br>NOW MORE THAN NINE FEET HIGH, AND SHE AT ONCE TOOK UP THE LITTLE GOLDEN<br>KEY AND HURRIED OFF TO THE GARDEN DOOR.<br><br>POOR ALICE! IT WAS AS MUCH AS SHE COULD DO, LYING DOWN ON ONE SIDE, TO<br>LOOK THROUGH INTO THE GARDEN WITH ONE EYE; BUT TO GET THROUGH WAS MORE<br>HOPELESS THAN EVER: SHE SAT DOWN AND BEGAN TO CRY AGAIN.<br><br>“YOU OUGHT TO BE ASHAMED OF YOURSELF,” SAID ALICE, “A GREAT GIRL LIKE<br>YOU,” (SHE MIGHT WELL SAY THIS), “TO GO ON CRYING IN THIS WAY! STOP<br>THIS MOMENT, I TELL YOU!” BUT SHE WENT ON ALL THE SAME, SHEDDING<br>GALLONS OF TEARS, UNTIL THERE WAS A LARGE POOL ALL ROUND HER, ABOUT<br>FOUR INCHES DEEP AND REACHING HALF DOWN THE HALL.</p>
+        <div class="text-block text-xs">
+          <p>“CURIOUSER AND CURIOUSER!” CRIED ALICE (SHE WAS SO MUCH SURPRISED, THAT FOR THE MOMENT SHE QUITE FORGOT HOW TO SPEAK GOOD ENGLISH); “NOW I’M OPENING OUT LIKE THE LARGEST TELESCOPE THAT EVER WAS! GOOD-BYE, FEET!” (FOR WHEN SHE LOOKED DOWN AT HER FEET, THEY SEEMED TO BE ALMOST OUT OF SIGHT, THEY WERE GETTING SO FAR OFF). “OH, MY POOR LITTLE FEET, I WONDER WHO WILL PUT ON YOUR SHOES AND STOCKINGS FOR YOU NOW, DEARS? I’M SURE I SHAN’T BE ABLE! I SHALL BE A GREAT DEAL TOO FAR OFF TO TROUBLE MYSELF ABOUT YOU: YOU MUST MANAGE THE BEST WAY YOU CAN;—BUT I MUST BE KIND TO THEM,” THOUGHT ALICE, “OR PERHAPS THEY WON’T WALK THE WAY I WANT TO GO! LET ME SEE: I’LL GIVE THEM A NEW PAIR OF BOOTS EVERY CHRISTMAS.” AND SHE WENT ON PLANNING TO HERSELF HOW SHE WOULD MANAGE IT. “THEY MUST GO BY THE CARRIER,” SHE THOUGHT; “AND HOW FUNNY IT’LL SEEM, SENDING PRESENTS TO ONE’S OWN FEET! AND HOW ODD THE DIRECTIONS WILL LOOK! ALICE’S RIGHT FOOT, ESQ., HEARTHRUG, NEAR THE FENDER, (WITH ALICE’S LOVE). OH DEAR, WHAT NONSENSE I’M TALKING!” JUST THEN HER HEAD STRUCK AGAINST THE ROOF OF THE HALL: IN FACT SHE WAS NOW MORE THAN NINE FEET HIGH, AND SHE AT ONCE TOOK UP THE LITTLE GOLDEN KEY AND HURRIED OFF TO THE GARDEN DOOR. POOR ALICE! IT WAS AS MUCH AS SHE COULD DO, LYING DOWN ON ONE SIDE, TO LOOK THROUGH INTO THE GARDEN WITH ONE EYE; BUT TO GET THROUGH WAS MORE HOPELESS THAN EVER: SHE SAT DOWN AND BEGAN TO CRY AGAIN. “YOU OUGHT TO BE ASHAMED OF YOURSELF,” SAID ALICE, “A GREAT GIRL LIKE YOU,” (SHE MIGHT WELL SAY THIS), “TO GO ON CRYING IN THIS WAY!</p>
         </div>
         <div class="page-number">1</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-the-white-rabbit-returns/lewis-carroll-1864-manuscript.webp" alt="The White Rabbit Returns">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-the-white-rabbit-returns/lewis-carroll-1864-manuscript.webp" alt="White Rabbit ordering Alice about">
       </div>
       <div class="page-right">
-        <div class="text-block text-small">
-          <p>AFTER A TIME SHE HEARD A LITTLE PATTERING OF FEET IN THE DISTANCE, AND<br>SHE HASTILY DRIED HER EYES TO SEE WHAT WAS COMING. IT WAS THE WHITE<br>RABBIT RETURNING, SPLENDIDLY DRESSED, WITH A PAIR OF WHITE KID GLOVES<br>IN ONE HAND AND A LARGE FAN IN THE OTHER: HE CAME TROTTING ALONG IN A<br>GREAT HURRY, MUTTERING TO HIMSELF AS HE CAME, “OH! THE DUCHESS, THE<br>DUCHESS! OH! WON’T SHE BE SAVAGE IF I’VE KEPT HER WAITING!” ALICE FELT<br>SO DESPERATE THAT SHE WAS READY TO ASK HELP OF ANY ONE; SO, WHEN THE<br>RABBIT CAME NEAR HER, SHE BEGAN, IN A LOW, TIMID VOICE, “IF YOU PLEASE,<br>SIR—” THE RABBIT STARTED VIOLENTLY, DROPPED THE WHITE KID GLOVES AND<br>THE FAN, AND SKURRIED AWAY INTO THE DARKNESS AS HARD AS HE COULD GO.<br><br>ALICE TOOK UP THE FAN AND GLOVES, AND, AS THE HALL WAS VERY HOT, SHE<br>KEPT FANNING HERSELF ALL THE TIME SHE WENT ON TALKING: “DEAR, DEAR! HOW<br>QUEER EVERYTHING IS TO-DAY! AND YESTERDAY THINGS WENT ON JUST AS USUAL.<br>I WONDER IF I’VE BEEN CHANGED IN THE NIGHT? LET ME THINK: WAS I THE<br>SAME WHEN I GOT UP THIS MORNING? I ALMOST THINK I CAN REMEMBER FEELING<br>A LITTLE DIFFERENT. BUT IF I’M NOT THE SAME, THE NEXT QUESTION IS, WHO<br>IN THE WORLD AM I? AH, THAT’S THE GREAT PUZZLE!” AND SHE BEGAN<br>THINKING OVER ALL THE CHILDREN SHE KNEW THAT WERE OF THE SAME AGE AS<br>HERSELF, TO SEE IF SHE COULD HAVE BEEN CHANGED FOR ANY OF THEM.<br><br>“I’M SURE I’M NOT ADA,” SHE SAID, “FOR HER HAIR GOES IN SUCH LONG<br>RINGLETS, AND MINE DOESN’T GO IN RINGLETS AT ALL; AND I’M SURE I CAN’T<br>BE MABEL, FOR I KNOW ALL SORTS OF THINGS, AND SHE, OH! SHE KNOWS SUCH A<br>VERY LITTLE! BESIDES, SHE’S SHE, AND I’M I, AND—OH DEAR, HOW<br>PUZZLING IT ALL IS! I’LL TRY IF I KNOW ALL THE THINGS I USED TO KNOW.<br>LET ME SEE: FOUR TIMES FIVE IS TWELVE, AND FOUR TIMES SIX IS THIRTEEN,<br>AND FOUR TIMES SEVEN IS—OH DEAR! I SHALL NEVER GET TO TWENTY AT THAT<br>RATE! HOWEVER, THE MULTIPLICATION TABLE DOESN’T SIGNIFY: LET’S TRY<br>GEOGRAPHY. LONDON IS THE CAPITAL OF PARIS, AND PARIS IS THE CAPITAL OF<br>ROME, AND ROME—NO, THAT’S ALL WRONG, I’M CERTAIN! I MUST HAVE BEEN<br>CHANGED FOR MABEL! I’LL TRY AND SAY ‘HOW DOTH THE LITTLE—’” AND SHE<br>CROSSED HER HANDS ON HER LAP AS IF SHE WERE SAYING LESSONS, AND BEGAN<br>TO REPEAT IT, BUT HER VOICE SOUNDED HOARSE AND STRANGE, AND THE WORDS<br>DID NOT COME THE SAME AS THEY USED TO DO:—<br><br>“HOW DOTH THE LITTLE CROCODILE<br>    IMPROVE HIS SHINING TAIL,<br>AND POUR THE WATERS OF THE NILE<br>    ON EVERY GOLDEN SCALE!<br><br>“HOW CHEERFULLY HE SEEMS TO GRIN,<br>    HOW NEATLY SPREAD HIS CLAWS,<br>AND WELCOME LITTLE FISHES IN<br>    WITH GENTLY SMILING JAWS!”<br><br>“I’M SURE THOSE ARE NOT THE RIGHT WORDS,” SAID POOR ALICE, AND HER EYES<br>FILLED WITH TEARS AGAIN AS SHE WENT ON, “I MUST BE MABEL AFTER ALL, AND<br>I SHALL HAVE TO GO AND LIVE IN THAT POKY LITTLE HOUSE, AND HAVE NEXT TO<br>NO TOYS TO PLAY WITH, AND OH! EVER SO MANY LESSONS TO LEARN! NO, I’VE<br>MADE UP MY MIND ABOUT IT; IF I’M MABEL, I’LL STAY DOWN HERE! IT’LL BE<br>NO USE THEIR PUTTING THEIR HEADS DOWN AND SAYING ‘COME UP AGAIN, DEAR!’<br>I SHALL ONLY LOOK UP AND SAY ‘WHO AM I THEN? TELL ME THAT FIRST, AND<br>THEN, IF I LIKE BEING THAT PERSON, I’LL COME UP: IF NOT, I’LL STAY DOWN<br>HERE TILL I’M SOMEBODY ELSE’—BUT, OH DEAR!” CRIED ALICE, WITH A SUDDEN<br>BURST OF TEARS, “I DO WISH THEY WOULD PUT THEIR HEADS DOWN! I AM SO<br>VERY TIRED OF BEING ALL ALONE HERE!”<br><br>AS SHE SAID THIS SHE LOOKED DOWN AT HER HANDS, AND WAS SURPRISED TO SEE<br>THAT SHE HAD PUT ON ONE OF THE RABBIT’S LITTLE WHITE KID GLOVES WHILE<br>SHE WAS TALKING. “HOW CAN I HAVE DONE THAT?” SHE THOUGHT. “I MUST BE<br>GROWING SMALL AGAIN.” SHE GOT UP AND WENT TO THE TABLE TO MEASURE<br>HERSELF BY IT, AND FOUND THAT, AS NEARLY AS SHE COULD GUESS, SHE WAS<br>NOW ABOUT TWO FEET HIGH, AND WAS GOING ON SHRINKING RAPIDLY: SHE SOON<br>FOUND OUT THAT THE CAUSE OF THIS WAS THE FAN SHE WAS HOLDING, AND SHE<br>DROPPED IT HASTILY, JUST IN TIME TO AVOID SHRINKING AWAY ALTOGETHER.</p>
+        <div class="text-block text-xs">
+          <p>STOP THIS MOMENT, I TELL YOU!” BUT SHE WENT ON ALL THE SAME, SHEDDING GALLONS OF TEARS, UNTIL THERE WAS A LARGE POOL ALL ROUND HER, ABOUT FOUR INCHES DEEP AND REACHING HALF DOWN THE HALL. AFTER A TIME SHE HEARD A LITTLE PATTERING OF FEET IN THE DISTANCE, AND SHE HASTILY DRIED HER EYES TO SEE WHAT WAS COMING. IT WAS THE WHITE RABBIT RETURNING, SPLENDIDLY DRESSED, WITH A PAIR OF WHITE KID GLOVES IN ONE HAND AND A LARGE FAN IN THE OTHER: HE CAME TROTTING ALONG IN A GREAT HURRY, MUTTERING TO HIMSELF AS HE CAME, “OH! THE DUCHESS, THE DUCHESS! OH! WON’T SHE BE SAVAGE IF I’VE KEPT HER WAITING!” ALICE FELT SO DESPERATE THAT SHE WAS READY TO ASK HELP OF ANY ONE; SO, WHEN THE RABBIT CAME NEAR HER, SHE BEGAN, IN A LOW, TIMID VOICE, “IF YOU PLEASE, SIR—” THE RABBIT STARTED VIOLENTLY, DROPPED THE WHITE KID GLOVES AND THE FAN, AND SKURRIED AWAY INTO THE DARKNESS AS HARD AS HE COULD GO. ALICE TOOK UP THE FAN AND GLOVES, AND, AS THE HALL WAS VERY HOT, SHE KEPT FANNING HERSELF ALL THE TIME SHE WENT ON TALKING: “DEAR, DEAR! HOW QUEER EVERYTHING IS TO-DAY! AND YESTERDAY THINGS WENT ON JUST AS USUAL. I WONDER IF I’VE BEEN CHANGED IN THE NIGHT? LET ME THINK: WAS I THE SAME WHEN I GOT UP THIS MORNING? I ALMOST THINK I CAN REMEMBER FEELING A LITTLE DIFFERENT. BUT IF I’M NOT THE SAME, THE NEXT QUESTION IS, WHO IN THE WORLD AM I? AH, THAT’S THE GREAT PUZZLE!” AND SHE BEGAN THINKING OVER ALL THE CHILDREN SHE KNEW THAT WERE OF THE SAME AGE AS HERSELF, TO SEE IF SHE COULD HAVE BEEN CHANGED FOR ANY OF THEM.</p>
         </div>
         <div class="page-number">2</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-the-pool-of-tears/arthur-rackham-1907.jpg" alt="The Pool of Tears">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-the-pool-of-tears/arthur-rackham-1907.jpg" alt="Pool of tears">
       </div>
       <div class="page-right">
-        <div class="text-block ">
-          <p>“THAT WAS A NARROW ESCAPE!” SAID ALICE, A GOOD DEAL FRIGHTENED AT THE<br>SUDDEN CHANGE, BUT VERY GLAD TO FIND HERSELF STILL IN EXISTENCE; “AND<br>NOW FOR THE GARDEN!” AND SHE RAN WITH ALL SPEED BACK TO THE LITTLE<br>DOOR: BUT, ALAS! THE LITTLE DOOR WAS SHUT AGAIN, AND THE LITTLE GOLDEN<br>KEY WAS LYING ON THE GLASS TABLE AS BEFORE, “AND THINGS ARE WORSE THAN<br>EVER,” THOUGHT THE POOR CHILD, “FOR I NEVER WAS SO SMALL AS THIS<br>BEFORE, NEVER! AND I DECLARE IT’S TOO BAD, THAT IT IS!”</p>
+        <div class="text-block text-xs">
+          <p>“I’M SURE I’M NOT ADA,” SHE SAID, “FOR HER HAIR GOES IN SUCH LONG RINGLETS, AND MINE DOESN’T GO IN RINGLETS AT ALL; AND I’M SURE I CAN’T BE MABEL, FOR I KNOW ALL SORTS OF THINGS, AND SHE, OH! SHE KNOWS SUCH A VERY LITTLE! BESIDES, SHE’S SHE, AND I’M I, AND—OH DEAR, HOW PUZZLING IT ALL IS! I’LL TRY IF I KNOW ALL THE THINGS I USED TO KNOW. LET ME SEE: FOUR TIMES FIVE IS TWELVE, AND FOUR TIMES SIX IS THIRTEEN, AND FOUR TIMES SEVEN IS—OH DEAR! I SHALL NEVER GET TO TWENTY AT THAT RATE! HOWEVER, THE MULTIPLICATION TABLE DOESN’T SIGNIFY: LET’S TRY GEOGRAPHY. LONDON IS THE CAPITAL OF PARIS, AND PARIS IS THE CAPITAL OF ROME, AND ROME—NO, THAT’S ALL WRONG, I’M CERTAIN! I MUST HAVE BEEN CHANGED FOR MABEL! I’LL TRY AND SAY ‘HOW DOTH THE LITTLE—’” AND SHE CROSSED HER HANDS ON HER LAP AS IF SHE WERE SAYING LESSONS, AND BEGAN TO REPEAT IT, BUT HER VOICE SOUNDED HOARSE AND STRANGE, AND THE WORDS DID NOT COME THE SAME AS THEY USED TO DO:—</p>
+          <p>“HOW DOTH THE LITTLE CROCODILE IMPROVE HIS SHINING TAIL, AND POUR THE WATERS OF THE NILE ON EVERY GOLDEN SCALE! “HOW CHEERFULLY HE SEEMS TO GRIN, HOW NEATLY SPREAD HIS CLAWS, AND WELCOME LITTLE FISHES IN WITH GENTLY SMILING JAWS!” “I’M SURE THOSE ARE NOT THE RIGHT WORDS,” SAID POOR ALICE, AND HER EYES FILLED WITH TEARS AGAIN AS SHE WENT ON, “I MUST BE MABEL AFTER ALL, AND I SHALL HAVE TO GO AND LIVE IN THAT POKY LITTLE HOUSE, AND HAVE NEXT TO NO TOYS TO PLAY WITH, AND OH! EVER SO MANY LESSONS TO LEARN! NO, I’VE MADE UP MY MIND ABOUT IT; IF I’M MABEL, I’LL STAY DOWN HERE!</p>
         </div>
         <div class="page-number">3</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-the-pool-of-tears/alice-b-woodward-1913.jpg" alt="The Pool of Tears">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-the-pool-of-tears/alice-b-woodward-1913.jpg" alt="They all swam to the shore">
       </div>
       <div class="page-right">
-        <div class="text-block text-medium">
-          <p>AS SHE SAID THESE WORDS HER FOOT SLIPPED, AND IN ANOTHER MOMENT,<br>SPLASH! SHE WAS UP TO HER CHIN IN SALT WATER. HER FIRST IDEA WAS THAT<br>SHE HAD SOMEHOW FALLEN INTO THE SEA, “AND IN THAT CASE I CAN GO BACK BY<br>RAILWAY,” SHE SAID TO HERSELF. (ALICE HAD BEEN TO THE SEASIDE ONCE IN<br>HER LIFE, AND HAD COME TO THE GENERAL CONCLUSION, THAT WHEREVER YOU GO<br>TO ON THE ENGLISH COAST YOU FIND A NUMBER OF BATHING MACHINES IN THE<br>SEA, SOME CHILDREN DIGGING IN THE SAND WITH WOODEN SPADES, THEN A ROW<br>OF LODGING HOUSES, AND BEHIND THEM A RAILWAY STATION.) HOWEVER, SHE<br>SOON MADE OUT THAT SHE WAS IN THE POOL OF TEARS WHICH SHE HAD WEPT WHEN<br>SHE WAS NINE FEET HIGH.</p>
+        <div class="text-block text-xs">
+          <p>IT’LL BE NO USE THEIR PUTTING THEIR HEADS DOWN AND SAYING ‘COME UP AGAIN, DEAR!’ I SHALL ONLY LOOK UP AND SAY ‘WHO AM I THEN? TELL ME THAT FIRST, AND THEN, IF I LIKE BEING THAT PERSON, I’LL COME UP: IF NOT, I’LL STAY DOWN HERE TILL I’M SOMEBODY ELSE’—BUT, OH DEAR!” CRIED ALICE, WITH A SUDDEN BURST OF TEARS, “I DO WISH THEY WOULD PUT THEIR HEADS DOWN! I AM SO VERY TIRED OF BEING ALL ALONE HERE!” AS SHE SAID THIS SHE LOOKED DOWN AT HER HANDS, AND WAS SURPRISED TO SEE THAT SHE HAD PUT ON ONE OF THE RABBIT’S LITTLE WHITE KID GLOVES WHILE SHE WAS TALKING. “HOW CAN I HAVE DONE THAT?” SHE THOUGHT. “I MUST BE GROWING SMALL AGAIN.” SHE GOT UP AND WENT TO THE TABLE TO MEASURE HERSELF BY IT, AND FOUND THAT, AS NEARLY AS SHE COULD GUESS, SHE WAS NOW ABOUT TWO FEET HIGH, AND WAS GOING ON SHRINKING RAPIDLY: SHE SOON FOUND OUT THAT THE CAUSE OF THIS WAS THE FAN SHE WAS HOLDING, AND SHE DROPPED IT HASTILY, JUST IN TIME TO AVOID SHRINKING AWAY ALTOGETHER. “THAT WAS A NARROW ESCAPE!” SAID ALICE, A GOOD DEAL FRIGHTENED AT THE SUDDEN CHANGE, BUT VERY GLAD TO FIND HERSELF STILL IN EXISTENCE; “AND NOW FOR THE GARDEN!” AND SHE RAN WITH ALL SPEED BACK TO THE LITTLE DOOR: BUT, ALAS! THE LITTLE DOOR WAS SHUT AGAIN, AND THE LITTLE GOLDEN KEY WAS LYING ON THE GLASS TABLE AS BEFORE, “AND THINGS ARE WORSE THAN EVER,” THOUGHT THE POOR CHILD, “FOR I NEVER WAS SO SMALL AS THIS BEFORE, NEVER! AND I DECLARE IT’S TOO BAD, THAT IT IS!” AS SHE SAID THESE WORDS HER FOOT SLIPPED, AND IN ANOTHER MOMENT, SPLASH! SHE WAS UP TO HER CHIN IN SALT WATER.</p>
         </div>
         <div class="page-number">4</div>
       </div>
     </div>
-    <div class="spread">
-      <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-the-pool-of-tears/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="The Pool of Tears">
+    <div class="spread text-only">
+      <div class="page-left decorative-panel">
+        <div class="chapter-ornament">
+          <div class="ornament-number">2</div>
+        </div>
       </div>
       <div class="page-right">
-        <div class="text-block ">
-          <p>“I WISH I HADN’T CRIED SO MUCH!” SAID ALICE, AS SHE SWAM ABOUT, TRYING<br>TO FIND HER WAY OUT. “I SHALL BE PUNISHED FOR IT NOW, I SUPPOSE, BY<br>BEING DROWNED IN MY OWN TEARS! THAT WILL BE A QUEER THING, TO BE<br>SURE! HOWEVER, EVERYTHING IS QUEER TO-DAY.”</p>
+        <div class="text-block text-xs">
+          <p>HER FIRST IDEA WAS THAT SHE HAD SOMEHOW FALLEN INTO THE SEA, “AND IN THAT CASE I CAN GO BACK BY RAILWAY,” SHE SAID TO HERSELF. (ALICE HAD BEEN TO THE SEASIDE ONCE IN HER LIFE, AND HAD COME TO THE GENERAL CONCLUSION, THAT WHEREVER YOU GO TO ON THE ENGLISH COAST YOU FIND A NUMBER OF BATHING MACHINES IN THE SEA, SOME CHILDREN DIGGING IN THE SAND WITH WOODEN SPADES, THEN A ROW OF LODGING HOUSES, AND BEHIND THEM A RAILWAY STATION.) HOWEVER, SHE SOON MADE OUT THAT SHE WAS IN THE POOL OF TEARS WHICH SHE HAD WEPT WHEN SHE WAS NINE FEET HIGH. “I WISH I HADN’T CRIED SO MUCH!” SAID ALICE, AS SHE SWAM ABOUT, TRYING TO FIND HER WAY OUT. “I SHALL BE PUNISHED FOR IT NOW, I SUPPOSE, BY BEING DROWNED IN MY OWN TEARS! THAT WILL BE A QUEER THING, TO BE SURE! HOWEVER, EVERYTHING IS QUEER TO-DAY.” JUST THEN SHE HEARD SOMETHING SPLASHING ABOUT IN THE POOL A LITTLE WAY OFF, AND SHE SWAM NEARER TO MAKE OUT WHAT IT WAS: AT FIRST SHE THOUGHT IT MUST BE A WALRUS OR HIPPOPOTAMUS, BUT THEN SHE REMEMBERED HOW SMALL SHE WAS NOW, AND SHE SOON MADE OUT THAT IT WAS ONLY A MOUSE THAT HAD SLIPPED IN LIKE HERSELF. “WOULD IT BE OF ANY USE, NOW,” THOUGHT ALICE, “TO SPEAK TO THIS MOUSE? EVERYTHING IS SO OUT-OF-THE-WAY DOWN HERE, THAT I SHOULD THINK VERY LIKELY IT CAN TALK: AT ANY RATE, THERE’S NO HARM IN TRYING.” SO SHE BEGAN: “O MOUSE, DO YOU KNOW THE WAY OUT OF THIS POOL? I AM VERY TIRED OF SWIMMING ABOUT HERE, O MOUSE!”</p>
         </div>
         <div class="page-number">5</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-meeting-the-mouse/lewis-carroll-1864-manuscript.webp" alt="Meeting the Mouse">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-the-pool-of-tears/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="Alice &amp; Mouse in Pool of Tears">
       </div>
       <div class="page-right">
-        <div class="text-block text-small">
-          <p>JUST THEN SHE HEARD SOMETHING SPLASHING ABOUT IN THE POOL A LITTLE WAY<br>OFF, AND SHE SWAM NEARER TO MAKE OUT WHAT IT WAS: AT FIRST SHE THOUGHT<br>IT MUST BE A WALRUS OR HIPPOPOTAMUS, BUT THEN SHE REMEMBERED HOW SMALL<br>SHE WAS NOW, AND SHE SOON MADE OUT THAT IT WAS ONLY A MOUSE THAT HAD<br>SLIPPED IN LIKE HERSELF.<br><br>“WOULD IT BE OF ANY USE, NOW,” THOUGHT ALICE, “TO SPEAK TO THIS MOUSE?<br>EVERYTHING IS SO OUT-OF-THE-WAY DOWN HERE, THAT I SHOULD THINK VERY<br>LIKELY IT CAN TALK: AT ANY RATE, THERE’S NO HARM IN TRYING.” SO SHE<br>BEGAN: “O MOUSE, DO YOU KNOW THE WAY OUT OF THIS POOL? I AM VERY TIRED<br>OF SWIMMING ABOUT HERE, O MOUSE!” (ALICE THOUGHT THIS MUST BE THE RIGHT<br>WAY OF SPEAKING TO A MOUSE: SHE HAD NEVER DONE SUCH A THING BEFORE, BUT<br>SHE REMEMBERED HAVING SEEN IN HER BROTHER’S LATIN GRAMMAR, “A MOUSE—OF<br>A MOUSE—TO A MOUSE—A MOUSE—O MOUSE!”) THE MOUSE LOOKED AT HER RATHER<br>INQUISITIVELY, AND SEEMED TO HER TO WINK WITH ONE OF ITS LITTLE EYES,<br>BUT IT SAID NOTHING.<br><br>“PERHAPS IT DOESN’T UNDERSTAND ENGLISH,” THOUGHT ALICE; “I DARESAY IT’S<br>A FRENCH MOUSE, COME OVER WITH WILLIAM THE CONQUEROR.” (FOR, WITH ALL<br>HER KNOWLEDGE OF HISTORY, ALICE HAD NO VERY CLEAR NOTION HOW LONG AGO<br>ANYTHING HAD HAPPENED.) SO SHE BEGAN AGAIN: “OÙ EST MA CHATTE?” WHICH<br>WAS THE FIRST SENTENCE IN HER FRENCH LESSON-BOOK. THE MOUSE GAVE A<br>SUDDEN LEAP OUT OF THE WATER, AND SEEMED TO QUIVER ALL OVER WITH<br>FRIGHT. “OH, I BEG YOUR PARDON!” CRIED ALICE HASTILY, AFRAID THAT SHE<br>HAD HURT THE POOR ANIMAL’S FEELINGS. “I QUITE FORGOT YOU DIDN’T LIKE<br>CATS.”<br><br>“NOT LIKE CATS!” CRIED THE MOUSE, IN A SHRILL, PASSIONATE VOICE. “WOULD<br>YOU LIKE CATS IF YOU WERE ME?”<br><br>“WELL, PERHAPS NOT,” SAID ALICE IN A SOOTHING TONE: “DON’T BE ANGRY<br>ABOUT IT. AND YET I WISH I COULD SHOW YOU OUR CAT DINAH: I THINK YOU’D<br>TAKE A FANCY TO CATS IF YOU COULD ONLY SEE HER. SHE IS SUCH A DEAR<br>QUIET THING,” ALICE WENT ON, HALF TO HERSELF, AS SHE SWAM LAZILY ABOUT<br>IN THE POOL, “AND SHE SITS PURRING SO NICELY BY THE FIRE, LICKING HER<br>PAWS AND WASHING HER FACE—AND SHE IS SUCH A NICE SOFT THING TO<br>NURSE—AND SHE’S SUCH A CAPITAL ONE FOR CATCHING MICE—OH, I BEG YOUR<br>PARDON!” CRIED ALICE AGAIN, FOR THIS TIME THE MOUSE WAS BRISTLING ALL<br>OVER, AND SHE FELT CERTAIN IT MUST BE REALLY OFFENDED. “WE WON’T TALK<br>ABOUT HER ANY MORE IF YOU’D RATHER NOT.”</p>
+        <div class="text-block text-xs">
+          <p>(ALICE THOUGHT THIS MUST BE THE RIGHT WAY OF SPEAKING TO A MOUSE: SHE HAD NEVER DONE SUCH A THING BEFORE, BUT SHE REMEMBERED HAVING SEEN IN HER BROTHER’S LATIN GRAMMAR, “A MOUSE—OF A MOUSE—TO A MOUSE—A MOUSE—O MOUSE!”) THE MOUSE LOOKED AT HER RATHER INQUISITIVELY, AND SEEMED TO HER TO WINK WITH ONE OF ITS LITTLE EYES, BUT IT SAID NOTHING. “PERHAPS IT DOESN’T UNDERSTAND ENGLISH,” THOUGHT ALICE; “I DARESAY IT’S A FRENCH MOUSE, COME OVER WITH WILLIAM THE CONQUEROR.” (FOR, WITH ALL HER KNOWLEDGE OF HISTORY, ALICE HAD NO VERY CLEAR NOTION HOW LONG AGO ANYTHING HAD HAPPENED.) SO SHE BEGAN AGAIN: “OÙ EST MA CHATTE?” WHICH WAS THE FIRST SENTENCE IN HER FRENCH LESSON-BOOK. THE MOUSE GAVE A SUDDEN LEAP OUT OF THE WATER, AND SEEMED TO QUIVER ALL OVER WITH FRIGHT. “OH, I BEG YOUR PARDON!” CRIED ALICE HASTILY, AFRAID THAT SHE HAD HURT THE POOR ANIMAL’S FEELINGS. “I QUITE FORGOT YOU DIDN’T LIKE CATS.” “NOT LIKE CATS!” CRIED THE MOUSE, IN A SHRILL, PASSIONATE VOICE. “WOULD YOU LIKE CATS IF YOU WERE ME?” “WELL, PERHAPS NOT,” SAID ALICE IN A SOOTHING TONE: “DON’T BE ANGRY ABOUT IT. AND YET I WISH I COULD SHOW YOU OUR CAT DINAH: I THINK YOU’D TAKE A FANCY TO CATS IF YOU COULD ONLY SEE HER. SHE IS SUCH A DEAR QUIET THING,” ALICE WENT ON, HALF TO HERSELF, AS SHE SWAM LAZILY ABOUT IN THE POOL, “AND SHE SITS PURRING SO NICELY BY THE FIRE, LICKING HER PAWS AND WASHING HER FACE—AND SHE IS SUCH A NICE SOFT THING TO NURSE—AND SHE’S SUCH A CAPITAL ONE FOR CATCHING MICE—OH, I BEG YOUR PARDON!”</p>
         </div>
         <div class="page-number">6</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-meeting-the-mouse/emily-overnell-1912.jpg" alt="Meeting the Mouse">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-meeting-the-mouse/lewis-carroll-1864-manuscript.webp" alt="Alice swimming with the Mouse">
       </div>
       <div class="page-right">
         <div class="text-block text-small">
-          <p>“WE INDEED!” CRIED THE MOUSE, WHO WAS TREMBLING DOWN TO THE END OF HIS<br>TAIL. “AS IF I WOULD TALK ON SUCH A SUBJECT! OUR FAMILY ALWAYS<br>HATED CATS: NASTY, LOW, VULGAR THINGS! DON’T LET ME HEAR THE NAME<br>AGAIN!”<br><br>“I WON’T INDEED!” SAID ALICE, IN A GREAT HURRY TO CHANGE THE SUBJECT OF<br>CONVERSATION. “ARE YOU—ARE YOU FOND—OF—OF DOGS?” THE MOUSE DID NOT<br>ANSWER, SO ALICE WENT ON EAGERLY: “THERE IS SUCH A NICE LITTLE DOG NEAR<br>OUR HOUSE I SHOULD LIKE TO SHOW YOU! A LITTLE BRIGHT-EYED TERRIER, YOU<br>KNOW, WITH OH, SUCH LONG CURLY BROWN HAIR! AND IT’LL FETCH THINGS WHEN<br>YOU THROW THEM, AND IT’LL SIT UP AND BEG FOR ITS DINNER, AND ALL SORTS<br>OF THINGS—I CAN’T REMEMBER HALF OF THEM—AND IT BELONGS TO A FARMER, YOU<br>KNOW, AND HE SAYS IT’S SO USEFUL, IT’S WORTH A HUNDRED POUNDS! HE SAYS<br>IT KILLS ALL THE RATS AND—OH DEAR!” CRIED ALICE IN A SORROWFUL TONE,<br>“I’M AFRAID I’VE OFFENDED IT AGAIN!” FOR THE MOUSE WAS SWIMMING AWAY<br>FROM HER AS HARD AS IT COULD GO, AND MAKING QUITE A COMMOTION IN THE<br>POOL AS IT WENT.<br><br>SO SHE CALLED SOFTLY AFTER IT, “MOUSE DEAR! DO COME BACK AGAIN, AND WE<br>WON’T TALK ABOUT CATS OR DOGS EITHER, IF YOU DON’T LIKE THEM!” WHEN THE<br>MOUSE HEARD THIS, IT TURNED ROUND AND SWAM SLOWLY BACK TO HER: ITS FACE<br>WAS QUITE PALE (WITH PASSION, ALICE THOUGHT), AND IT SAID IN A LOW<br>TREMBLING VOICE, “LET US GET TO THE SHORE, AND THEN I’LL TELL YOU MY<br>HISTORY, AND YOU’LL UNDERSTAND WHY IT IS I HATE CATS AND DOGS.”<br><br>IT WAS HIGH TIME TO GO, FOR THE POOL WAS GETTING QUITE CROWDED WITH THE<br>BIRDS AND ANIMALS THAT HAD FALLEN INTO IT: THERE WERE A DUCK AND A<br>DODO, A LORY AND AN EAGLET, AND SEVERAL OTHER CURIOUS CREATURES. ALICE<br>LED THE WAY, AND THE WHOLE PARTY SWAM TO THE SHORE.</p>
+          <p>CRIED ALICE AGAIN, FOR THIS TIME THE MOUSE WAS BRISTLING ALL OVER, AND SHE FELT CERTAIN IT MUST BE REALLY OFFENDED. “WE WON’T TALK ABOUT HER ANY MORE IF YOU’D RATHER NOT.” “WE INDEED!” CRIED THE MOUSE, WHO WAS TREMBLING DOWN TO THE END OF HIS TAIL. “AS IF I WOULD TALK ON SUCH A SUBJECT! OUR FAMILY ALWAYS HATED CATS: NASTY, LOW, VULGAR THINGS! DON’T LET ME HEAR THE NAME AGAIN!” “I WON’T INDEED!” SAID ALICE, IN A GREAT HURRY TO CHANGE THE SUBJECT OF CONVERSATION. “ARE YOU—ARE YOU FOND—OF—OF DOGS?” THE MOUSE DID NOT ANSWER, SO ALICE WENT ON EAGERLY: “THERE IS SUCH A NICE LITTLE DOG NEAR OUR HOUSE I SHOULD LIKE TO SHOW YOU! A LITTLE BRIGHT-EYED TERRIER, YOU KNOW, WITH OH, SUCH LONG CURLY BROWN HAIR! AND IT’LL FETCH THINGS WHEN YOU THROW THEM, AND IT’LL SIT UP AND BEG FOR ITS DINNER, AND ALL SORTS OF THINGS—I CAN’T REMEMBER HALF OF THEM—AND IT BELONGS TO A FARMER, YOU KNOW, AND HE SAYS IT’S SO USEFUL, IT’S WORTH A HUNDRED POUNDS! HE SAYS IT KILLS ALL THE RATS AND—OH DEAR!” CRIED ALICE IN A SORROWFUL TONE, “I’M AFRAID I’VE OFFENDED IT AGAIN!” FOR THE MOUSE WAS SWIMMING AWAY FROM HER AS HARD AS IT COULD GO, AND MAKING QUITE A COMMOTION IN THE POOL AS IT WENT. SO SHE CALLED SOFTLY AFTER IT, “MOUSE DEAR! DO COME BACK AGAIN, AND WE WON’T TALK ABOUT CATS OR DOGS EITHER, IF YOU DON’T LIKE THEM!”</p>
         </div>
         <div class="page-number">7</div>
       </div>
     </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-meeting-the-mouse/emily-overnell-1912.jpg" alt="Alice in Wonderland frontispiece">
+      </div>
+      <div class="page-right">
+        <div class="text-block ">
+          <p>WHEN THE MOUSE HEARD THIS, IT TURNED ROUND AND SWAM SLOWLY BACK TO HER: ITS FACE WAS QUITE PALE (WITH PASSION, ALICE THOUGHT), AND IT SAID IN A LOW TREMBLING VOICE, “LET US GET TO THE SHORE, AND THEN I’LL TELL YOU MY HISTORY, AND YOU’LL UNDERSTAND WHY IT IS I HATE CATS AND DOGS.” IT WAS HIGH TIME TO GO, FOR THE POOL WAS GETTING QUITE CROWDED WITH THE BIRDS AND ANIMALS THAT HAD FALLEN INTO IT: THERE WERE A DUCK AND A DODO, A LORY AND AN EAGLET, AND SEVERAL OTHER CURIOUS CREATURES. ALICE LED THE WAY, AND THE WHOLE PARTY SWAM TO THE SHORE.</p>
+        </div>
+        <div class="page-number">8</div>
+      </div>
+    </div>
     <div class="spread back-cover">
-      <div class="page-left back-image">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-meeting-the-mouse/emily-overnell-1912.jpg" alt="Back cover">
+      <div class="page-left decorative-panel">
+        <div class="chapter-ornament">
+          <div class="ornament-star">&#10038;</div>
+        </div>
       </div>
       <div class="page-right back-text">
         <div class="back-block">

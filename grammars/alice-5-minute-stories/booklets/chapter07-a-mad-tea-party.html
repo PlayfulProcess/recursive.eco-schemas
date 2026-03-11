@@ -5,16 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chapter 7: A Mad Tea-Party — Alice in Wonderland</title>
   <style>
-    @page {
-      size: landscape;
-      margin: 0;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    @page { size: landscape; margin: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
@@ -30,13 +22,12 @@
       break-after: page;
       overflow: hidden;
     }
-
     .spread:last-child {
       page-break-after: avoid;
       break-after: avoid;
     }
 
-    /* Left page = illustration */
+    /* Left page: illustration */
     .page-left {
       width: 50%;
       height: 100%;
@@ -47,7 +38,6 @@
       padding: 16px;
       overflow: hidden;
     }
-
     .page-left img {
       max-width: 100%;
       max-height: 100%;
@@ -56,7 +46,7 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-    /* Right page = text */
+    /* Right page: text */
     .page-right {
       width: 50%;
       height: 100%;
@@ -64,72 +54,94 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 30px 40px;
+      padding: 28px 36px;
       background: white;
       position: relative;
+      overflow: hidden;
     }
 
+    /* Text block — NEVER scroll */
     .text-block {
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
       flex: 1;
       width: 100%;
-      overflow-y: auto;
+      overflow: hidden;
     }
-
     .text-block p {
-      font-size: clamp(14px, 2.2vw, 24px);
+      font-size: clamp(14px, 2.0vw, 22px);
       line-height: 1.7;
       font-weight: 700;
       text-align: left;
       letter-spacing: 0.3px;
-      max-width: 95%;
+      margin-bottom: 0.7em;
     }
+    .text-block p:last-child { margin-bottom: 0; }
 
-    /* For longer text passages */
+    /* Font size tiers */
+    .text-block.text-large p {
+      font-size: clamp(18px, 2.5vw, 28px);
+      line-height: 1.8;
+    }
     .text-block.text-medium p {
-      font-size: clamp(12px, 1.8vw, 19px);
+      font-size: clamp(12px, 1.6vw, 18px);
       line-height: 1.6;
     }
-
     .text-block.text-small p {
-      font-size: clamp(10px, 1.5vw, 16px);
+      font-size: clamp(11px, 1.4vw, 16px);
       line-height: 1.5;
+    }
+    .text-block.text-xs p {
+      font-size: clamp(10px, 1.2vw, 14px);
+      line-height: 1.4;
     }
 
     .page-number {
-      font-size: 12px;
-      color: #bbb;
+      font-size: 11px;
+      color: #ccc;
       position: absolute;
-      bottom: 10px;
-      right: 20px;
+      bottom: 8px;
+      right: 16px;
     }
 
-    /* Cover page styles */
+    /* Decorative panel (text-only pages) */
+    .decorative-panel {
+      background: #2c1810;
+    }
+    .chapter-ornament {
+      text-align: center;
+      color: #d4a76a;
+    }
+    .ornament-number {
+      font-size: clamp(48px, 8vw, 96px);
+      font-weight: 800;
+      letter-spacing: 4px;
+      opacity: 0.3;
+    }
+    .ornament-star {
+      font-size: clamp(36px, 6vw, 72px);
+      opacity: 0.3;
+    }
+
+    /* Cover */
     .cover-title {
       background: #2c1810;
       color: white;
     }
-
-    .title-block {
-      text-align: center;
-    }
-
+    .title-block { text-align: center; }
     .series-name {
       font-size: clamp(11px, 1.5vw, 16px);
       letter-spacing: 4px;
       color: #d4a76a;
       margin-bottom: 12px;
     }
-
     .book-number {
       font-size: clamp(13px, 1.8vw, 20px);
       letter-spacing: 3px;
       color: #d4a76a;
       margin-bottom: 20px;
     }
-
     .title-block h1 {
       font-size: clamp(20px, 3.8vw, 42px);
       line-height: 1.2;
@@ -137,25 +149,19 @@
       font-weight: 800;
       letter-spacing: 1px;
     }
-
     .author {
       font-size: clamp(11px, 1.3vw, 14px);
       letter-spacing: 3px;
       color: #d4a76a;
       margin-bottom: 8px;
     }
-
     .page-info {
-      font-size: clamp(10px, 1.1vw, 12px);
+      font-size: clamp(9px, 1vw, 11px);
       letter-spacing: 2px;
       color: #a08060;
       margin-top: 5px;
     }
-
-    .cover-image {
-      background: #2c1810;
-    }
-
+    .cover-image { background: #2c1810; }
     .cover-image img {
       border-radius: 8px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.3);
@@ -166,11 +172,7 @@
       background: #2c1810;
       color: white;
     }
-
-    .back-block {
-      text-align: center;
-    }
-
+    .back-block { text-align: center; }
     .the-end {
       font-size: clamp(24px, 4vw, 44px);
       font-weight: 800;
@@ -178,49 +180,33 @@
       margin-bottom: 30px;
       color: #d4a76a;
     }
-
     .back-info p {
       font-size: clamp(10px, 1.2vw, 13px);
       letter-spacing: 2px;
       margin-bottom: 6px;
       color: #d4a76a;
     }
-
     .back-info .small {
       font-size: clamp(8px, 0.9vw, 10px);
       color: #a08060;
     }
 
-    .back-image {
-      background: #2c1810;
-    }
-
-    .back-image img {
-      border-radius: 8px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-    }
-
-    /* Print styles */
+    /* Print */
     @media print {
       body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
       .spread { height: 100vh; }
       .page-left img { box-shadow: none; }
-      .cover-image img, .back-image img { box-shadow: none; }
-      .text-block { overflow: hidden; }
+      .cover-image img { box-shadow: none; }
     }
 
-    /* Screen: show page dividers */
+    /* Screen: page dividers */
     @media screen {
       .spread {
         border-bottom: 3px dashed #ccc;
         min-height: 100vh;
       }
-      .spread:last-child {
-        border-bottom: none;
-      }
-      body {
-        background: #e8e8e8;
-      }
+      .spread:last-child { border-bottom: none; }
+      body { background: #e8e8e8; }
     }
   </style>
 </head>
@@ -228,7 +214,7 @@
 
     <div class="spread cover-spread">
       <div class="page-left cover-image">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-no-room/arthur-rackham-1907.jpg" alt="Cover">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-07-a-mad-tea-party/gwynedd-hudson-1922.jpg" alt="Cover illustration">
       </div>
       <div class="page-right cover-title">
         <div class="title-block">
@@ -236,112 +222,121 @@
           <div class="book-number">CHAPTER 7</div>
           <h1>A MAD TEA-PARTY</h1>
           <div class="author">BY LEWIS CARROLL</div>
-          <div class="page-info">9 PAGES</div>
+          <div class="page-info">9 PAGES &middot; 11 ILLUSTRATIONS</div>
         </div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-no-room/arthur-rackham-1907.jpg" alt="No Room! No Room!">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-no-room/arthur-rackham-1907.jpg" alt="Mad Hatter's tea party">
       </div>
       <div class="page-right">
-        <div class="text-block text-small">
-          <p>THERE WAS A TABLE SET OUT UNDER A TREE IN FRONT OF THE HOUSE, AND THE<br>MARCH HARE AND THE HATTER WERE HAVING TEA AT IT: A DORMOUSE WAS SITTING<br>BETWEEN THEM, FAST ASLEEP, AND THE OTHER TWO WERE USING IT AS A<br>CUSHION, RESTING THEIR ELBOWS ON IT, AND TALKING OVER ITS HEAD. “VERY<br>UNCOMFORTABLE FOR THE DORMOUSE,” THOUGHT ALICE; “ONLY, AS IT’S ASLEEP,<br>I SUPPOSE IT DOESN’T MIND.”<br><br>THE TABLE WAS A LARGE ONE, BUT THE THREE WERE ALL CROWDED TOGETHER AT<br>ONE CORNER OF IT: “NO ROOM! NO ROOM!” THEY CRIED OUT WHEN THEY SAW<br>ALICE COMING. “THERE’S PLENTY OF ROOM!” SAID ALICE INDIGNANTLY, AND<br>SHE SAT DOWN IN A LARGE ARM-CHAIR AT ONE END OF THE TABLE.<br><br>“HAVE SOME WINE,” THE MARCH HARE SAID IN AN ENCOURAGING TONE.<br><br>ALICE LOOKED ALL ROUND THE TABLE, BUT THERE WAS NOTHING ON IT BUT TEA.<br>“I DON’T SEE ANY WINE,” SHE REMARKED.<br><br>“THERE ISN’T ANY,” SAID THE MARCH HARE.</p>
+        <div class="text-block text-xs">
+          <p>THERE WAS A TABLE SET OUT UNDER A TREE IN FRONT OF THE HOUSE, AND THE MARCH HARE AND THE HATTER WERE HAVING TEA AT IT: A DORMOUSE WAS SITTING BETWEEN THEM, FAST ASLEEP, AND THE OTHER TWO WERE USING IT AS A CUSHION, RESTING THEIR ELBOWS ON IT, AND TALKING OVER ITS HEAD. “VERY UNCOMFORTABLE FOR THE DORMOUSE,” THOUGHT ALICE; “ONLY, AS IT’S ASLEEP, I SUPPOSE IT DOESN’T MIND.” THE TABLE WAS A LARGE ONE, BUT THE THREE WERE ALL CROWDED TOGETHER AT ONE CORNER OF IT: “NO ROOM! NO ROOM!” THEY CRIED OUT WHEN THEY SAW ALICE COMING. “THERE’S PLENTY OF ROOM!” SAID ALICE INDIGNANTLY, AND SHE SAT DOWN IN A LARGE ARM-CHAIR AT ONE END OF THE TABLE. “HAVE SOME WINE,” THE MARCH HARE SAID IN AN ENCOURAGING TONE. ALICE LOOKED ALL ROUND THE TABLE, BUT THERE WAS NOTHING ON IT BUT TEA. “I DON’T SEE ANY WINE,” SHE REMARKED. “THERE ISN’T ANY,” SAID THE MARCH HARE. “THEN IT WASN’T VERY CIVIL OF YOU TO OFFER IT,” SAID ALICE ANGRILY. “IT WASN’T VERY CIVIL OF YOU TO SIT DOWN WITHOUT BEING INVITED,” SAID THE MARCH HARE. “I DIDN’T KNOW IT WAS YOUR TABLE,” SAID ALICE; “IT’S LAID FOR A GREAT MANY MORE THAN THREE.” “YOUR HAIR WANTS CUTTING,” SAID THE HATTER. HE HAD BEEN LOOKING AT ALICE FOR SOME TIME WITH GREAT CURIOSITY, AND THIS WAS HIS FIRST SPEECH. “YOU SHOULD LEARN NOT TO MAKE PERSONAL REMARKS,” ALICE SAID WITH SOME SEVERITY; “IT’S VERY RUDE.” THE HATTER OPENED HIS EYES VERY WIDE ON HEARING THIS; BUT ALL HE SAID WAS, “WHY IS A RAVEN LIKE A WRITING-DESK?” “COME, WE SHALL HAVE SOME FUN NOW!”</p>
         </div>
         <div class="page-number">1</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-no-room/alice-b-woodward-1913.jpg" alt="No Room! No Room!">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-no-room/alice-b-woodward-1913.jpg" alt="No room they cried">
       </div>
       <div class="page-right">
-        <div class="text-block ">
-          <p>“THEN IT WASN’T VERY CIVIL OF YOU TO OFFER IT,” SAID ALICE ANGRILY.<br><br>“IT WASN’T VERY CIVIL OF YOU TO SIT DOWN WITHOUT BEING INVITED,” SAID<br>THE MARCH HARE.<br><br>“I DIDN’T KNOW IT WAS YOUR TABLE,” SAID ALICE; “IT’S LAID FOR A GREAT<br>MANY MORE THAN THREE.”<br><br>“YOUR HAIR WANTS CUTTING,” SAID THE HATTER. HE HAD BEEN LOOKING AT<br>ALICE FOR SOME TIME WITH GREAT CURIOSITY, AND THIS WAS HIS FIRST<br>SPEECH.<br><br>“YOU SHOULD LEARN NOT TO MAKE PERSONAL REMARKS,” ALICE SAID WITH SOME<br>SEVERITY; “IT’S VERY RUDE.”</p>
+        <div class="text-block text-xs">
+          <p>THOUGHT ALICE. “I’M GLAD THEY’VE BEGUN ASKING RIDDLES.—I BELIEVE I CAN GUESS THAT,” SHE ADDED ALOUD. “DO YOU MEAN THAT YOU THINK YOU CAN FIND OUT THE ANSWER TO IT?” SAID THE MARCH HARE. “EXACTLY SO,” SAID ALICE. “THEN YOU SHOULD SAY WHAT YOU MEAN,” THE MARCH HARE WENT ON. “I DO,” ALICE HASTILY REPLIED; “AT LEAST—AT LEAST I MEAN WHAT I SAY—THAT’S THE SAME THING, YOU KNOW.” “NOT THE SAME THING A BIT!” SAID THE HATTER. “YOU MIGHT JUST AS WELL SAY THAT ‘I SEE WHAT I EAT’ IS THE SAME THING AS ‘I EAT WHAT I SEE’!” “YOU MIGHT JUST AS WELL SAY,” ADDED THE MARCH HARE, “THAT ‘I LIKE WHAT I GET’ IS THE SAME THING AS ‘I GET WHAT I LIKE’!” “YOU MIGHT JUST AS WELL SAY,” ADDED THE DORMOUSE, WHO SEEMED TO BE TALKING IN HIS SLEEP, “THAT ‘I BREATHE WHEN I SLEEP’ IS THE SAME THING AS ‘I SLEEP WHEN I BREATHE’!” “IT IS THE SAME THING WITH YOU,” SAID THE HATTER, AND HERE THE CONVERSATION DROPPED, AND THE PARTY SAT SILENT FOR A MINUTE, WHILE ALICE THOUGHT OVER ALL SHE COULD REMEMBER ABOUT RAVENS AND WRITING-DESKS, WHICH WASN’T MUCH. THE HATTER WAS THE FIRST TO BREAK THE SILENCE. “WHAT DAY OF THE MONTH IS IT?” HE SAID, TURNING TO ALICE: HE HAD TAKEN HIS WATCH OUT OF HIS POCKET, AND WAS LOOKING AT IT UNEASILY, SHAKING IT EVERY NOW AND THEN, AND HOLDING IT TO HIS EAR. ALICE CONSIDERED A LITTLE, AND THEN SAID “THE FOURTH.” “TWO DAYS WRONG!” SIGHED THE HATTER. “I TOLD YOU BUTTER WOULDN’T SUIT THE WORKS!” HE ADDED LOOKING ANGRILY AT THE MARCH HARE.</p>
         </div>
         <div class="page-number">2</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-no-room/brinsley-le-fanu-1910.jpg" alt="No Room! No Room!">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-no-room/brinsley-le-fanu-1910.jpg" alt="March Hare's house">
       </div>
       <div class="page-right">
-        <div class="text-block ">
-          <p>THE HATTER OPENED HIS EYES VERY WIDE ON HEARING THIS; BUT ALL HE SAID<br>WAS, “WHY IS A RAVEN LIKE A WRITING-DESK?”<br><br>“COME, WE SHALL HAVE SOME FUN NOW!” THOUGHT ALICE. “I’M GLAD THEY’VE<br>BEGUN ASKING RIDDLES.—I BELIEVE I CAN GUESS THAT,” SHE ADDED ALOUD.<br><br>“DO YOU MEAN THAT YOU THINK YOU CAN FIND OUT THE ANSWER TO IT?” SAID<br>THE MARCH HARE.<br><br>“EXACTLY SO,” SAID ALICE.<br><br>“THEN YOU SHOULD SAY WHAT YOU MEAN,” THE MARCH HARE WENT ON.</p>
+        <div class="text-block text-xs">
+          <p>“IT WAS THE BEST BUTTER,” THE MARCH HARE MEEKLY REPLIED. “YES, BUT SOME CRUMBS MUST HAVE GOT IN AS WELL,” THE HATTER GRUMBLED: “YOU SHOULDN’T HAVE PUT IT IN WITH THE BREAD-KNIFE.” THE MARCH HARE TOOK THE WATCH AND LOOKED AT IT GLOOMILY: THEN HE DIPPED IT INTO HIS CUP OF TEA, AND LOOKED AT IT AGAIN: BUT HE COULD THINK OF NOTHING BETTER TO SAY THAN HIS FIRST REMARK, “IT WAS THE BEST BUTTER, YOU KNOW.” ALICE HAD BEEN LOOKING OVER HIS SHOULDER WITH SOME CURIOSITY. “WHAT A FUNNY WATCH!” SHE REMARKED. “IT TELLS THE DAY OF THE MONTH, AND DOESN’T TELL WHAT O’CLOCK IT IS!” “WHY SHOULD IT?” MUTTERED THE HATTER. “DOES YOUR WATCH TELL YOU WHAT YEAR IT IS?” “OF COURSE NOT,” ALICE REPLIED VERY READILY: “BUT THAT’S BECAUSE IT STAYS THE SAME YEAR FOR SUCH A LONG TIME TOGETHER.” “WHICH IS JUST THE CASE WITH MINE,” SAID THE HATTER. ALICE FELT DREADFULLY PUZZLED, THE HATTER’S REMARK SEEMED TO HAVE NO SORT OF MEANING IN IT, AND YET IT WAS CERTAINLY ENGLISH. “I DON’T QUITE UNDERSTAND YOU,” SHE SAID, AS POLITELY AS SHE COULD. “THE DORMOUSE IS ASLEEP AGAIN,” SAID THE HATTER, AND HE POURED A LITTLE HOT TEA UPON ITS NOSE. THE DORMOUSE SHOOK ITS HEAD IMPATIENTLY, AND SAID, WITHOUT OPENING ITS EYES, “OF COURSE, OF COURSE; JUST WHAT I WAS GOING TO REMARK MYSELF.” “HAVE YOU GUESSED THE RIDDLE YET?” THE HATTER SAID, TURNING TO ALICE AGAIN. “NO, I GIVE IT UP,” ALICE REPLIED: “WHAT’S THE ANSWER?” “I HAVEN’T THE SLIGHTEST IDEA,” SAID THE HATTER. “NOR I,” SAID THE MARCH HARE. ALICE SIGHED WEARILY.</p>
         </div>
         <div class="page-number">3</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-no-room/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="No Room! No Room!">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-no-room/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="Mad Hatter's Tea Party">
       </div>
       <div class="page-right">
-        <div class="text-block text-medium">
-          <p>“I DO,” ALICE HASTILY REPLIED; “AT LEAST—AT LEAST I MEAN WHAT I<br>SAY—THAT’S THE SAME THING, YOU KNOW.”<br><br>“NOT THE SAME THING A BIT!” SAID THE HATTER. “YOU MIGHT JUST AS WELL<br>SAY THAT ‘I SEE WHAT I EAT’ IS THE SAME THING AS ‘I EAT WHAT I SEE’!”<br><br>“YOU MIGHT JUST AS WELL SAY,” ADDED THE MARCH HARE, “THAT ‘I LIKE WHAT<br>I GET’ IS THE SAME THING AS ‘I GET WHAT I LIKE’!”<br><br>“YOU MIGHT JUST AS WELL SAY,” ADDED THE DORMOUSE, WHO SEEMED TO BE<br>TALKING IN HIS SLEEP, “THAT ‘I BREATHE WHEN I SLEEP’ IS THE SAME THING<br>AS ‘I SLEEP WHEN I BREATHE’!”<br><br>“IT IS THE SAME THING WITH YOU,” SAID THE HATTER, AND HERE THE<br>CONVERSATION DROPPED, AND THE PARTY SAT SILENT FOR A MINUTE, WHILE<br>ALICE THOUGHT OVER ALL SHE COULD REMEMBER ABOUT RAVENS AND<br>WRITING-DESKS, WHICH WASN’T MUCH.</p>
+        <div class="text-block text-xs">
+          <p>“I THINK YOU MIGHT DO SOMETHING BETTER WITH THE TIME,” SHE SAID, “THAN WASTE IT IN ASKING RIDDLES THAT HAVE NO ANSWERS.” “IF YOU KNEW TIME AS WELL AS I DO,” SAID THE HATTER, “YOU WOULDN’T TALK ABOUT WASTING IT. IT’S HIM.” “I DON’T KNOW WHAT YOU MEAN,” SAID ALICE. “OF COURSE YOU DON’T!” THE HATTER SAID, TOSSING HIS HEAD CONTEMPTUOUSLY. “I DARE SAY YOU NEVER EVEN SPOKE TO TIME!” “PERHAPS NOT,” ALICE CAUTIOUSLY REPLIED: “BUT I KNOW I HAVE TO BEAT TIME WHEN I LEARN MUSIC.” “AH! THAT ACCOUNTS FOR IT,” SAID THE HATTER. “HE WON’T STAND BEATING. NOW, IF YOU ONLY KEPT ON GOOD TERMS WITH HIM, HE’D DO ALMOST ANYTHING YOU LIKED WITH THE CLOCK. FOR INSTANCE, SUPPOSE IT WERE NINE O’CLOCK IN THE MORNING, JUST TIME TO BEGIN LESSONS: YOU’D ONLY HAVE TO WHISPER A HINT TO TIME, AND ROUND GOES THE CLOCK IN A TWINKLING! HALF-PAST ONE, TIME FOR DINNER!” (“I ONLY WISH IT WAS,” THE MARCH HARE SAID TO ITSELF IN A WHISPER.) “THAT WOULD BE GRAND, CERTAINLY,” SAID ALICE THOUGHTFULLY: “BUT THEN—I SHOULDN’T BE HUNGRY FOR IT, YOU KNOW.” “NOT AT FIRST, PERHAPS,” SAID THE HATTER: “BUT YOU COULD KEEP IT TO HALF-PAST ONE AS LONG AS YOU LIKED.” “IS THAT THE WAY YOU MANAGE?” ALICE ASKED. THE HATTER SHOOK HIS HEAD MOURNFULLY. “NOT I!” HE REPLIED. “WE QUARRELLED LAST MARCH—JUST BEFORE HE WENT MAD, YOU KNOW—” (POINTING WITH HIS TEA SPOON AT THE MARCH HARE,) “—IT WAS AT THE GREAT CONCERT GIVEN BY THE QUEEN OF HEARTS, AND I HAD TO SING</p>
+          <p>‘TWINKLE, TWINKLE, LITTLE BAT! HOW I WONDER WHAT YOU’RE AT!’</p>
         </div>
         <div class="page-number">4</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-the-hatters-watch/lewis-carroll-1864-duchess-kitchen.webp" alt="The Hatter's Watch">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-the-hatters-watch/lewis-carroll-1864-duchess-kitchen.webp" alt="The Duchess's chaotic kitchen">
       </div>
       <div class="page-right">
-        <div class="text-block text-small">
-          <p>THE HATTER WAS THE FIRST TO BREAK THE SILENCE. “WHAT DAY OF THE MONTH<br>IS IT?” HE SAID, TURNING TO ALICE: HE HAD TAKEN HIS WATCH OUT OF HIS<br>POCKET, AND WAS LOOKING AT IT UNEASILY, SHAKING IT EVERY NOW AND THEN,<br>AND HOLDING IT TO HIS EAR.<br><br>ALICE CONSIDERED A LITTLE, AND THEN SAID “THE FOURTH.”<br><br>“TWO DAYS WRONG!” SIGHED THE HATTER. “I TOLD YOU BUTTER WOULDN’T SUIT<br>THE WORKS!” HE ADDED LOOKING ANGRILY AT THE MARCH HARE.<br><br>“IT WAS THE BEST BUTTER,” THE MARCH HARE MEEKLY REPLIED.<br><br>“YES, BUT SOME CRUMBS MUST HAVE GOT IN AS WELL,” THE HATTER GRUMBLED:<br>“YOU SHOULDN’T HAVE PUT IT IN WITH THE BREAD-KNIFE.”<br><br>THE MARCH HARE TOOK THE WATCH AND LOOKED AT IT GLOOMILY: THEN HE DIPPED<br>IT INTO HIS CUP OF TEA, AND LOOKED AT IT AGAIN: BUT HE COULD THINK OF<br>NOTHING BETTER TO SAY THAN HIS FIRST REMARK, “IT WAS THE BEST BUTTER,<br>YOU KNOW.”<br><br>ALICE HAD BEEN LOOKING OVER HIS SHOULDER WITH SOME CURIOSITY. “WHAT A<br>FUNNY WATCH!” SHE REMARKED. “IT TELLS THE DAY OF THE MONTH, AND DOESN’T<br>TELL WHAT O’CLOCK IT IS!”<br><br>“WHY SHOULD IT?” MUTTERED THE HATTER. “DOES YOUR WATCH TELL YOU WHAT<br>YEAR IT IS?”<br><br>“OF COURSE NOT,” ALICE REPLIED VERY READILY: “BUT THAT’S BECAUSE IT<br>STAYS THE SAME YEAR FOR SUCH A LONG TIME TOGETHER.”<br><br>“WHICH IS JUST THE CASE WITH MINE,” SAID THE HATTER.<br><br>ALICE FELT DREADFULLY PUZZLED, THE HATTER’S REMARK SEEMED TO HAVE NO<br>SORT OF MEANING IN IT, AND YET IT WAS CERTAINLY ENGLISH. “I DON’T QUITE<br>UNDERSTAND YOU,” SHE SAID, AS POLITELY AS SHE COULD.<br><br>“THE DORMOUSE IS ASLEEP AGAIN,” SAID THE HATTER, AND HE POURED A LITTLE<br>HOT TEA UPON ITS NOSE.<br><br>THE DORMOUSE SHOOK ITS HEAD IMPATIENTLY, AND SAID, WITHOUT OPENING ITS<br>EYES, “OF COURSE, OF COURSE; JUST WHAT I WAS GOING TO REMARK MYSELF.”<br><br>“HAVE YOU GUESSED THE RIDDLE YET?” THE HATTER SAID, TURNING TO ALICE<br>AGAIN.<br><br>“NO, I GIVE IT UP,” ALICE REPLIED: “WHAT’S THE ANSWER?”<br><br>“I HAVEN’T THE SLIGHTEST IDEA,” SAID THE HATTER.<br><br>“NOR I,” SAID THE MARCH HARE.</p>
+        <div class="text-block text-xs">
+          <p>YOU KNOW THE SONG, PERHAPS?” “I’VE HEARD SOMETHING LIKE IT,” SAID ALICE. “IT GOES ON, YOU KNOW,” THE HATTER CONTINUED, “IN THIS WAY:—</p>
+          <p>‘UP ABOVE THE WORLD YOU FLY, LIKE A TEA-TRAY IN THE SKY. TWINKLE, TWINKLE—’”</p>
+          <p>HERE THE DORMOUSE SHOOK ITSELF, AND BEGAN SINGING IN ITS SLEEP “TWINKLE, TWINKLE, TWINKLE, TWINKLE—” AND WENT ON SO LONG THAT THEY HAD TO PINCH IT TO MAKE IT STOP. “WELL, I’D HARDLY FINISHED THE FIRST VERSE,” SAID THE HATTER, “WHEN THE QUEEN JUMPED UP AND BAWLED OUT, ‘HE’S MURDERING THE TIME! OFF WITH HIS HEAD!’” “HOW DREADFULLY SAVAGE!” EXCLAIMED ALICE. “AND EVER SINCE THAT,” THE HATTER WENT ON IN A MOURNFUL TONE, “HE WON’T DO A THING I ASK! IT’S ALWAYS SIX O’CLOCK NOW.” A BRIGHT IDEA CAME INTO ALICE’S HEAD. “IS THAT THE REASON SO MANY TEA-THINGS ARE PUT OUT HERE?” SHE ASKED. “YES, THAT’S IT,” SAID THE HATTER WITH A SIGH: “IT’S ALWAYS TEA-TIME, AND WE’VE NO TIME TO WASH THE THINGS BETWEEN WHILES.” “THEN YOU KEEP MOVING ROUND, I SUPPOSE?” SAID ALICE. “EXACTLY SO,” SAID THE HATTER: “AS THE THINGS GET USED UP.” “BUT WHAT HAPPENS WHEN YOU COME TO THE BEGINNING AGAIN?” ALICE VENTURED TO ASK. “SUPPOSE WE CHANGE THE SUBJECT,” THE MARCH HARE INTERRUPTED, YAWNING. “I’M GETTING TIRED OF THIS. I VOTE THE YOUNG LADY TELLS US A STORY.” “I’M AFRAID I DON’T KNOW ONE,” SAID ALICE, RATHER ALARMED AT THE PROPOSAL. “THEN THE DORMOUSE SHALL!” THEY BOTH CRIED. “WAKE UP, DORMOUSE!” AND THEY PINCHED IT ON BOTH SIDES AT ONCE. THE DORMOUSE SLOWLY OPENED HIS EYES.</p>
         </div>
         <div class="page-number">5</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-time-is-frozen/lewis-carroll-1864-animals-concert.webp" alt="Time is Frozen">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-time-is-frozen/lewis-carroll-1864-animals-concert.webp" alt="Animals gathered for a concert">
       </div>
       <div class="page-right">
-        <div class="text-block text-small">
-          <p>ALICE SIGHED WEARILY. “I THINK YOU MIGHT DO SOMETHING BETTER WITH THE<br>TIME,” SHE SAID, “THAN WASTE IT IN ASKING RIDDLES THAT HAVE NO<br>ANSWERS.”<br><br>“IF YOU KNEW TIME AS WELL AS I DO,” SAID THE HATTER, “YOU WOULDN’T TALK<br>ABOUT WASTING IT. IT’S HIM.”<br><br>“I DON’T KNOW WHAT YOU MEAN,” SAID ALICE.<br><br>“OF COURSE YOU DON’T!” THE HATTER SAID, TOSSING HIS HEAD<br>CONTEMPTUOUSLY. “I DARE SAY YOU NEVER EVEN SPOKE TO TIME!”<br><br>“PERHAPS NOT,” ALICE CAUTIOUSLY REPLIED: “BUT I KNOW I HAVE TO BEAT<br>TIME WHEN I LEARN MUSIC.”<br><br>“AH! THAT ACCOUNTS FOR IT,” SAID THE HATTER. “HE WON’T STAND BEATING.<br>NOW, IF YOU ONLY KEPT ON GOOD TERMS WITH HIM, HE’D DO ALMOST ANYTHING<br>YOU LIKED WITH THE CLOCK. FOR INSTANCE, SUPPOSE IT WERE NINE O’CLOCK IN<br>THE MORNING, JUST TIME TO BEGIN LESSONS: YOU’D ONLY HAVE TO WHISPER A<br>HINT TO TIME, AND ROUND GOES THE CLOCK IN A TWINKLING! HALF-PAST ONE,<br>TIME FOR DINNER!”<br><br>(“I ONLY WISH IT WAS,” THE MARCH HARE SAID TO ITSELF IN A WHISPER.)<br><br>“THAT WOULD BE GRAND, CERTAINLY,” SAID ALICE THOUGHTFULLY: “BUT THEN—I<br>SHOULDN’T BE HUNGRY FOR IT, YOU KNOW.”<br><br>“NOT AT FIRST, PERHAPS,” SAID THE HATTER: “BUT YOU COULD KEEP IT TO<br>HALF-PAST ONE AS LONG AS YOU LIKED.”<br><br>“IS THAT THE WAY YOU MANAGE?” ALICE ASKED.<br><br>THE HATTER SHOOK HIS HEAD MOURNFULLY. “NOT I!” HE REPLIED. “WE<br>QUARRELLED LAST MARCH—JUST BEFORE HE WENT MAD, YOU KNOW—” (POINTING<br>WITH HIS TEA SPOON AT THE MARCH HARE,) “—IT WAS AT THE GREAT CONCERT<br>GIVEN BY THE QUEEN OF HEARTS, AND I HAD TO SING<br><br>‘TWINKLE, TWINKLE, LITTLE BAT!<br>HOW I WONDER WHAT YOU’RE AT!’<br><br>YOU KNOW THE SONG, PERHAPS?”<br><br>“I’VE HEARD SOMETHING LIKE IT,” SAID ALICE.<br><br>“IT GOES ON, YOU KNOW,” THE HATTER CONTINUED, “IN THIS WAY:—<br><br>‘UP ABOVE THE WORLD YOU FLY,<br>LIKE A TEA-TRAY IN THE SKY.<br>                    TWINKLE, TWINKLE—’”<br><br>HERE THE DORMOUSE SHOOK ITSELF, AND BEGAN SINGING IN ITS SLEEP<br>“TWINKLE, TWINKLE, TWINKLE, TWINKLE—” AND WENT ON SO LONG THAT THEY<br>HAD TO PINCH IT TO MAKE IT STOP.<br><br>“WELL, I’D HARDLY FINISHED THE FIRST VERSE,” SAID THE HATTER, “WHEN THE<br>QUEEN JUMPED UP AND BAWLED OUT, ‘HE’S MURDERING THE TIME! OFF WITH HIS<br>HEAD!’”<br><br>“HOW DREADFULLY SAVAGE!” EXCLAIMED ALICE.<br><br>“AND EVER SINCE THAT,” THE HATTER WENT ON IN A MOURNFUL TONE, “HE WON’T<br>DO A THING I ASK! IT’S ALWAYS SIX O’CLOCK NOW.”<br><br>A BRIGHT IDEA CAME INTO ALICE’S HEAD. “IS THAT THE REASON SO MANY<br>TEA-THINGS ARE PUT OUT HERE?” SHE ASKED.<br><br>“YES, THAT’S IT,” SAID THE HATTER WITH A SIGH: “IT’S ALWAYS TEA-TIME,<br>AND WE’VE NO TIME TO WASH THE THINGS BETWEEN WHILES.”<br><br>“THEN YOU KEEP MOVING ROUND, I SUPPOSE?” SAID ALICE.<br><br>“EXACTLY SO,” SAID THE HATTER: “AS THE THINGS GET USED UP.”<br><br>“BUT WHAT HAPPENS WHEN YOU COME TO THE BEGINNING AGAIN?” ALICE VENTURED<br>TO ASK.<br><br>“SUPPOSE WE CHANGE THE SUBJECT,” THE MARCH HARE INTERRUPTED, YAWNING.<br>“I’M GETTING TIRED OF THIS. I VOTE THE YOUNG LADY TELLS US A STORY.”<br><br>“I’M AFRAID I DON’T KNOW ONE,” SAID ALICE, RATHER ALARMED AT THE<br>PROPOSAL.<br><br>“THEN THE DORMOUSE SHALL!” THEY BOTH CRIED. “WAKE UP, DORMOUSE!” AND<br>THEY PINCHED IT ON BOTH SIDES AT ONCE.</p>
+        <div class="text-block text-xs">
+          <p>“I WASN’T ASLEEP,” HE SAID IN A HOARSE, FEEBLE VOICE: “I HEARD EVERY WORD YOU FELLOWS WERE SAYING.” “TELL US A STORY!” SAID THE MARCH HARE. “YES, PLEASE DO!” PLEADED ALICE. “AND BE QUICK ABOUT IT,” ADDED THE HATTER, “OR YOU’LL BE ASLEEP AGAIN BEFORE IT’S DONE.” “ONCE UPON A TIME THERE WERE THREE LITTLE SISTERS,” THE DORMOUSE BEGAN IN A GREAT HURRY; “AND THEIR NAMES WERE ELSIE, LACIE, AND TILLIE; AND THEY LIVED AT THE BOTTOM OF A WELL—”</p>
+          <p>“WHAT DID THEY LIVE ON?” SAID ALICE, WHO ALWAYS TOOK A GREAT INTEREST IN QUESTIONS OF EATING AND DRINKING. “THEY LIVED ON TREACLE,” SAID THE DORMOUSE, AFTER THINKING A MINUTE OR TWO. “THEY COULDN’T HAVE DONE THAT, YOU KNOW,” ALICE GENTLY REMARKED; “THEY’D HAVE BEEN ILL.” “SO THEY WERE,” SAID THE DORMOUSE; “VERY ILL.” ALICE TRIED TO FANCY TO HERSELF WHAT SUCH AN EXTRAORDINARY WAY OF LIVING WOULD BE LIKE, BUT IT PUZZLED HER TOO MUCH, SO SHE WENT ON: “BUT WHY DID THEY LIVE AT THE BOTTOM OF A WELL?” “TAKE SOME MORE TEA,” THE MARCH HARE SAID TO ALICE, VERY EARNESTLY. “I’VE HAD NOTHING YET,” ALICE REPLIED IN AN OFFENDED TONE, “SO I CAN’T TAKE MORE.” “YOU MEAN YOU CAN’T TAKE LESS,” SAID THE HATTER: “IT’S VERY EASY TO TAKE MORE THAN NOTHING.” “NOBODY ASKED YOUR OPINION,” SAID ALICE. “WHO’S MAKING PERSONAL REMARKS NOW?” THE HATTER ASKED TRIUMPHANTLY. ALICE DID NOT QUITE KNOW WHAT TO SAY TO THIS: SO SHE HELPED HERSELF TO SOME TEA AND BREAD-AND-BUTTER, AND THEN TURNED TO THE DORMOUSE, AND REPEATED HER QUESTION.</p>
         </div>
         <div class="page-number">6</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-the-dormouses-story/brinsley-le-fanu-1910.jpg" alt="The Dormouse's Story">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-the-dormouses-story/brinsley-le-fanu-1910.jpg" alt="Dormouse put in teapot">
       </div>
       <div class="page-right">
-        <div class="text-block text-small">
-          <p>THE DORMOUSE SLOWLY OPENED HIS EYES. “I WASN’T ASLEEP,” HE SAID IN A<br>HOARSE, FEEBLE VOICE: “I HEARD EVERY WORD YOU FELLOWS WERE SAYING.”<br><br>“TELL US A STORY!” SAID THE MARCH HARE.<br><br>“YES, PLEASE DO!” PLEADED ALICE.<br><br>“AND BE QUICK ABOUT IT,” ADDED THE HATTER, “OR YOU’LL BE ASLEEP AGAIN<br>BEFORE IT’S DONE.”<br><br>“ONCE UPON A TIME THERE WERE THREE LITTLE SISTERS,” THE DORMOUSE BEGAN<br>IN A GREAT HURRY; “AND THEIR NAMES WERE ELSIE, LACIE, AND TILLIE; AND<br>THEY LIVED AT THE BOTTOM OF A WELL—”<br><br>“WHAT DID THEY LIVE ON?” SAID ALICE, WHO ALWAYS TOOK A GREAT INTEREST<br>IN QUESTIONS OF EATING AND DRINKING.<br><br>“THEY LIVED ON TREACLE,” SAID THE DORMOUSE, AFTER THINKING A MINUTE OR<br>TWO.<br><br>“THEY COULDN’T HAVE DONE THAT, YOU KNOW,” ALICE GENTLY REMARKED;<br>“THEY’D HAVE BEEN ILL.”<br><br>“SO THEY WERE,” SAID THE DORMOUSE; “VERY ILL.”<br><br>ALICE TRIED TO FANCY TO HERSELF WHAT SUCH AN EXTRAORDINARY WAY OF<br>LIVING WOULD BE LIKE, BUT IT PUZZLED HER TOO MUCH, SO SHE WENT ON: “BUT<br>WHY DID THEY LIVE AT THE BOTTOM OF A WELL?”<br><br>“TAKE SOME MORE TEA,” THE MARCH HARE SAID TO ALICE, VERY EARNESTLY.<br><br>“I’VE HAD NOTHING YET,” ALICE REPLIED IN AN OFFENDED TONE, “SO I CAN’T<br>TAKE MORE.”<br><br>“YOU MEAN YOU CAN’T TAKE LESS,” SAID THE HATTER: “IT’S VERY EASY TO<br>TAKE MORE THAN NOTHING.”<br><br>“NOBODY ASKED YOUR OPINION,” SAID ALICE.<br><br>“WHO’S MAKING PERSONAL REMARKS NOW?” THE HATTER ASKED TRIUMPHANTLY.<br><br>ALICE DID NOT QUITE KNOW WHAT TO SAY TO THIS: SO SHE HELPED HERSELF TO<br>SOME TEA AND BREAD-AND-BUTTER, AND THEN TURNED TO THE DORMOUSE, AND<br>REPEATED HER QUESTION. “WHY DID THEY LIVE AT THE BOTTOM OF A WELL?”<br><br>THE DORMOUSE AGAIN TOOK A MINUTE OR TWO TO THINK ABOUT IT, AND THEN<br>SAID, “IT WAS A TREACLE-WELL.”</p>
+        <div class="text-block text-xs">
+          <p>“WHY DID THEY LIVE AT THE BOTTOM OF A WELL?” THE DORMOUSE AGAIN TOOK A MINUTE OR TWO TO THINK ABOUT IT, AND THEN SAID, “IT WAS A TREACLE-WELL.” “THERE’S NO SUCH THING!” ALICE WAS BEGINNING VERY ANGRILY, BUT THE HATTER AND THE MARCH HARE WENT “SH! SH!” AND THE DORMOUSE SULKILY REMARKED, “IF YOU CAN’T BE CIVIL, YOU’D BETTER FINISH THE STORY FOR YOURSELF.” “NO, PLEASE GO ON!” ALICE SAID VERY HUMBLY; “I WON’T INTERRUPT AGAIN. I DARE SAY THERE MAY BE ONE.” “ONE, INDEED!” SAID THE DORMOUSE INDIGNANTLY. HOWEVER, HE CONSENTED TO GO ON. “AND SO THESE THREE LITTLE SISTERS—THEY WERE LEARNING TO DRAW, YOU KNOW—”</p>
+          <p>“WHAT DID THEY DRAW?” SAID ALICE, QUITE FORGETTING HER PROMISE. “TREACLE,” SAID THE DORMOUSE, WITHOUT CONSIDERING AT ALL THIS TIME. “I WANT A CLEAN CUP,” INTERRUPTED THE HATTER: “LET’S ALL MOVE ONE PLACE ON.” HE MOVED ON AS HE SPOKE, AND THE DORMOUSE FOLLOWED HIM: THE MARCH HARE MOVED INTO THE DORMOUSE’S PLACE, AND ALICE RATHER UNWILLINGLY TOOK THE PLACE OF THE MARCH HARE. THE HATTER WAS THE ONLY ONE WHO GOT ANY ADVANTAGE FROM THE CHANGE: AND ALICE WAS A GOOD DEAL WORSE OFF THAN BEFORE, AS THE MARCH HARE HAD JUST UPSET THE MILK-JUG INTO HIS PLATE. ALICE DID NOT WISH TO OFFEND THE DORMOUSE AGAIN, SO SHE BEGAN VERY CAUTIOUSLY: “BUT I DON’T UNDERSTAND. WHERE DID THEY DRAW THE TREACLE FROM?” “YOU CAN DRAW WATER OUT OF A WATER-WELL,” SAID THE HATTER; “SO I SHOULD THINK YOU COULD DRAW TREACLE OUT OF A TREACLE-WELL—EH, STUPID?”</p>
         </div>
         <div class="page-number">7</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-the-dormouses-story/harry-rountree-1928.jpg" alt="The Dormouse's Story">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-the-dormouses-story/harry-rountree-1928.jpg" alt="Dormouse is asleep">
       </div>
       <div class="page-right">
-        <div class="text-block text-small">
-          <p>“THERE’S NO SUCH THING!” ALICE WAS BEGINNING VERY ANGRILY, BUT THE<br>HATTER AND THE MARCH HARE WENT “SH! SH!” AND THE DORMOUSE SULKILY<br>REMARKED, “IF YOU CAN’T BE CIVIL, YOU’D BETTER FINISH THE STORY FOR<br>YOURSELF.”<br><br>“NO, PLEASE GO ON!” ALICE SAID VERY HUMBLY; “I WON’T INTERRUPT AGAIN. I<br>DARE SAY THERE MAY BE ONE.”<br><br>“ONE, INDEED!” SAID THE DORMOUSE INDIGNANTLY. HOWEVER, HE CONSENTED TO<br>GO ON. “AND SO THESE THREE LITTLE SISTERS—THEY WERE LEARNING TO DRAW,<br>YOU KNOW—”<br><br>“WHAT DID THEY DRAW?” SAID ALICE, QUITE FORGETTING HER PROMISE.<br><br>“TREACLE,” SAID THE DORMOUSE, WITHOUT CONSIDERING AT ALL THIS TIME.<br><br>“I WANT A CLEAN CUP,” INTERRUPTED THE HATTER: “LET’S ALL MOVE ONE PLACE<br>ON.”<br><br>HE MOVED ON AS HE SPOKE, AND THE DORMOUSE FOLLOWED HIM: THE MARCH HARE<br>MOVED INTO THE DORMOUSE’S PLACE, AND ALICE RATHER UNWILLINGLY TOOK THE<br>PLACE OF THE MARCH HARE. THE HATTER WAS THE ONLY ONE WHO GOT ANY<br>ADVANTAGE FROM THE CHANGE: AND ALICE WAS A GOOD DEAL WORSE OFF THAN<br>BEFORE, AS THE MARCH HARE HAD JUST UPSET THE MILK-JUG INTO HIS PLATE.<br><br>ALICE DID NOT WISH TO OFFEND THE DORMOUSE AGAIN, SO SHE BEGAN VERY<br>CAUTIOUSLY: “BUT I DON’T UNDERSTAND. WHERE DID THEY DRAW THE TREACLE<br>FROM?”<br><br>“YOU CAN DRAW WATER OUT OF A WATER-WELL,” SAID THE HATTER; “SO I SHOULD<br>THINK YOU COULD DRAW TREACLE OUT OF A TREACLE-WELL—EH, STUPID?”<br><br>“BUT THEY WERE IN THE WELL,” ALICE SAID TO THE DORMOUSE, NOT CHOOSING<br>TO NOTICE THIS LAST REMARK.<br><br>“OF COURSE THEY WERE,” SAID THE DORMOUSE; “—WELL IN.”<br><br>THIS ANSWER SO CONFUSED POOR ALICE, THAT SHE LET THE DORMOUSE GO ON FOR<br>SOME TIME WITHOUT INTERRUPTING IT.<br><br>“THEY WERE LEARNING TO DRAW,” THE DORMOUSE WENT ON, YAWNING AND RUBBING<br>ITS EYES, FOR IT WAS GETTING VERY SLEEPY; “AND THEY DREW ALL MANNER OF<br>THINGS—EVERYTHING THAT BEGINS WITH AN M—”<br><br>“WHY WITH AN M?” SAID ALICE.<br><br>“WHY NOT?” SAID THE MARCH HARE.<br><br>ALICE WAS SILENT.</p>
+        <div class="text-block text-xs">
+          <p>“BUT THEY WERE IN THE WELL,” ALICE SAID TO THE DORMOUSE, NOT CHOOSING TO NOTICE THIS LAST REMARK. “OF COURSE THEY WERE,” SAID THE DORMOUSE; “—WELL IN.” THIS ANSWER SO CONFUSED POOR ALICE, THAT SHE LET THE DORMOUSE GO ON FOR SOME TIME WITHOUT INTERRUPTING IT. “THEY WERE LEARNING TO DRAW,” THE DORMOUSE WENT ON, YAWNING AND RUBBING ITS EYES, FOR IT WAS GETTING VERY SLEEPY; “AND THEY DREW ALL MANNER OF THINGS—EVERYTHING THAT BEGINS WITH AN M—”</p>
+          <p>“WHY WITH AN M?” SAID ALICE. “WHY NOT?” SAID THE MARCH HARE. ALICE WAS SILENT. THE DORMOUSE HAD CLOSED ITS EYES BY THIS TIME, AND WAS GOING OFF INTO A DOZE; BUT, ON BEING PINCHED BY THE HATTER, IT WOKE UP AGAIN WITH A LITTLE SHRIEK, AND WENT ON: “—THAT BEGINS WITH AN M, SUCH AS MOUSE-TRAPS, AND THE MOON, AND MEMORY, AND MUCHNESS—YOU KNOW YOU SAY THINGS ARE “MUCH OF A MUCHNESS”—DID YOU EVER SEE SUCH A THING AS A DRAWING OF A MUCHNESS?” “REALLY, NOW YOU ASK ME,” SAID ALICE, VERY MUCH CONFUSED, “I DON’T THINK—”</p>
+          <p>“THEN YOU SHOULDN’T TALK,” SAID THE HATTER. THIS PIECE OF RUDENESS WAS MORE THAN ALICE COULD BEAR: SHE GOT UP IN GREAT DISGUST, AND WALKED OFF; THE DORMOUSE FELL ASLEEP INSTANTLY, AND NEITHER OF THE OTHERS TOOK THE LEAST NOTICE OF HER GOING, THOUGH SHE LOOKED BACK ONCE OR TWICE, HALF HOPING THAT THEY WOULD CALL AFTER HER: THE LAST TIME SHE SAW THEM, THEY WERE TRYING TO PUT THE DORMOUSE INTO THE TEAPOT. “AT ANY RATE I’LL NEVER GO THERE AGAIN!” SAID ALICE AS SHE PICKED HER WAY THROUGH THE WOOD.</p>
         </div>
         <div class="page-number">8</div>
       </div>
     </div>
     <div class="spread">
       <div class="page-left">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-alice-leaves-the-tea-party/lewis-carroll-1864-cheshire-cat-tree.webp" alt="Alice Leaves the Tea-Party">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-alice-leaves-the-tea-party/lewis-carroll-1864-cheshire-cat-tree.webp" alt="Alice under a tree with the Cheshire Cat">
       </div>
       <div class="page-right">
-        <div class="text-block text-small">
-          <p>THE DORMOUSE HAD CLOSED ITS EYES BY THIS TIME, AND WAS GOING OFF INTO A<br>DOZE; BUT, ON BEING PINCHED BY THE HATTER, IT WOKE UP AGAIN WITH A<br>LITTLE SHRIEK, AND WENT ON: “—THAT BEGINS WITH AN M, SUCH AS<br>MOUSE-TRAPS, AND THE MOON, AND MEMORY, AND MUCHNESS—YOU KNOW YOU SAY<br>THINGS ARE “MUCH OF A MUCHNESS”—DID YOU EVER SEE SUCH A THING AS A<br>DRAWING OF A MUCHNESS?”<br><br>“REALLY, NOW YOU ASK ME,” SAID ALICE, VERY MUCH CONFUSED, “I DON’T<br>THINK—”<br><br>“THEN YOU SHOULDN’T TALK,” SAID THE HATTER.<br><br>THIS PIECE OF RUDENESS WAS MORE THAN ALICE COULD BEAR: SHE GOT UP IN<br>GREAT DISGUST, AND WALKED OFF; THE DORMOUSE FELL ASLEEP INSTANTLY, AND<br>NEITHER OF THE OTHERS TOOK THE LEAST NOTICE OF HER GOING, THOUGH SHE<br>LOOKED BACK ONCE OR TWICE, HALF HOPING THAT THEY WOULD CALL AFTER HER:<br>THE LAST TIME SHE SAW THEM, THEY WERE TRYING TO PUT THE DORMOUSE INTO<br>THE TEAPOT.<br><br>“AT ANY RATE I’LL NEVER GO THERE AGAIN!” SAID ALICE AS SHE PICKED HER<br>WAY THROUGH THE WOOD. “IT’S THE STUPIDEST TEA-PARTY I EVER WAS AT IN<br>ALL MY LIFE!”<br><br>JUST AS SHE SAID THIS, SHE NOTICED THAT ONE OF THE TREES HAD A DOOR<br>LEADING RIGHT INTO IT. “THAT’S VERY CURIOUS!” SHE THOUGHT. “BUT<br>EVERYTHING’S CURIOUS TODAY. I THINK I MAY AS WELL GO IN AT ONCE.” AND<br>IN SHE WENT.<br><br>ONCE MORE SHE FOUND HERSELF IN THE LONG HALL, AND CLOSE TO THE LITTLE<br>GLASS TABLE. “NOW, I’LL MANAGE BETTER THIS TIME,” SHE SAID TO HERSELF,<br>AND BEGAN BY TAKING THE LITTLE GOLDEN KEY, AND UNLOCKING THE DOOR THAT<br>LED INTO THE GARDEN. THEN SHE WENT TO WORK NIBBLING AT THE MUSHROOM<br>(SHE HAD KEPT A PIECE OF IT IN HER POCKET) TILL SHE WAS ABOUT A FOOT<br>HIGH: THEN SHE WALKED DOWN THE LITTLE PASSAGE: AND THEN—SHE FOUND<br>HERSELF AT LAST IN THE BEAUTIFUL GARDEN, AMONG THE BRIGHT FLOWER-BEDS<br>AND THE COOL FOUNTAINS.</p>
+        <div class="text-block text-medium">
+          <p>“IT’S THE STUPIDEST TEA-PARTY I EVER WAS AT IN ALL MY LIFE!” JUST AS SHE SAID THIS, SHE NOTICED THAT ONE OF THE TREES HAD A DOOR LEADING RIGHT INTO IT. “THAT’S VERY CURIOUS!” SHE THOUGHT. “BUT EVERYTHING’S CURIOUS TODAY. I THINK I MAY AS WELL GO IN AT ONCE.” AND IN SHE WENT. ONCE MORE SHE FOUND HERSELF IN THE LONG HALL, AND CLOSE TO THE LITTLE GLASS TABLE. “NOW, I’LL MANAGE BETTER THIS TIME,” SHE SAID TO HERSELF, AND BEGAN BY TAKING THE LITTLE GOLDEN KEY, AND UNLOCKING THE DOOR THAT LED INTO THE GARDEN. THEN SHE WENT TO WORK NIBBLING AT THE MUSHROOM (SHE HAD KEPT A PIECE OF IT IN HER POCKET) TILL SHE WAS ABOUT A FOOT HIGH: THEN SHE WALKED DOWN THE LITTLE PASSAGE: AND THEN—SHE FOUND HERSELF AT LAST IN THE BEAUTIFUL GARDEN, AMONG THE BRIGHT FLOWER-BEDS AND THE COOL FOUNTAINS.</p>
         </div>
         <div class="page-number">9</div>
       </div>
     </div>
     <div class="spread back-cover">
-      <div class="page-left back-image">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-alice-leaves-the-tea-party/lewis-carroll-1864-cheshire-cat-tree.webp" alt="Back cover">
+      <div class="page-left decorative-panel">
+        <div class="chapter-ornament">
+          <div class="ornament-star">&#10038;</div>
+        </div>
       </div>
       <div class="page-right back-text">
         <div class="back-block">
