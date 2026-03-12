@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 11: Who Stole the Tarts? — Alice in Wonderland</title>
+  <style>
+    @page { size: landscape; margin: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Georgia', 'Cambria', 'Times New Roman', serif;
+      background: white;
+      color: #1a1a1a;
+    }
+
+    .spread {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+    }
+    .spread:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* Left page: illustration */
+    .page-left {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8f5f0;
+      padding: 16px;
+      overflow: hidden;
+    }
+    .page-left img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Right page: text */
+    .page-right {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 32px 5% 32px 5%;
+      background: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Text block — NEVER scroll */
+    .text-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* Default text style — JS auto-fit adjusts font-size to fill container */
+    .text-block p {
+      font-size: 18px;
+      line-height: 1.7;
+      font-weight: 700;
+      text-align: left;
+      letter-spacing: 0.3px;
+      margin-bottom: 1em;
+    }
+    .text-block p:last-child { margin-bottom: 0; }
+
+    .page-number {
+      font-size: 11px;
+      color: #ccc;
+      position: absolute;
+      bottom: 8px;
+      right: 16px;
+    }
+
+    /* Decorative panel (text-only pages) */
+    .decorative-panel {
+      background: #2c1810;
+    }
+    .chapter-ornament {
+      text-align: center;
+      color: #d4a76a;
+    }
+    .ornament-number {
+      font-size: clamp(48px, 8vw, 96px);
+      font-weight: 800;
+      letter-spacing: 4px;
+      opacity: 0.3;
+      font-family: 'Georgia', serif;
+    }
+    .ornament-star {
+      font-size: clamp(36px, 6vw, 72px);
+      opacity: 0.3;
+    }
+
+    /* Cover */
+    .cover-title {
+      background: #2c1810;
+      color: white;
+    }
+    .title-block {
+      text-align: center;
+      font-family: 'Georgia', serif;
+    }
+    .series-name {
+      font-size: clamp(11px, 1.5vw, 16px);
+      letter-spacing: 4px;
+      color: #d4a76a;
+      margin-bottom: 12px;
+    }
+    .book-number {
+      font-size: clamp(13px, 1.8vw, 20px);
+      letter-spacing: 3px;
+      color: #d4a76a;
+      margin-bottom: 20px;
+    }
+    .title-block h1 {
+      font-size: clamp(20px, 3.8vw, 42px);
+      line-height: 1.2;
+      margin-bottom: 25px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    .author {
+      font-size: clamp(11px, 1.3vw, 14px);
+      letter-spacing: 3px;
+      color: #d4a76a;
+      margin-bottom: 8px;
+    }
+    .page-info {
+      font-size: clamp(9px, 1vw, 11px);
+      letter-spacing: 2px;
+      color: #a08060;
+      margin-top: 5px;
+    }
+    .cover-image { background: #2c1810; }
+    .cover-image img {
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+
+    /* Back cover */
+    .back-text {
+      background: #2c1810;
+      color: white;
+    }
+    .back-block {
+      text-align: center;
+      font-family: 'Georgia', serif;
+    }
+    .the-end {
+      font-size: clamp(24px, 4vw, 44px);
+      font-weight: 800;
+      letter-spacing: 6px;
+      margin-bottom: 30px;
+      color: #d4a76a;
+    }
+    .back-info p {
+      font-size: clamp(10px, 1.2vw, 13px);
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+      color: #d4a76a;
+    }
+    .back-info .small {
+      font-size: clamp(8px, 0.9vw, 10px);
+      color: #a08060;
+    }
+
+    /* Print */
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .spread { height: 100vh; }
+      .page-left img { box-shadow: none; }
+      .cover-image img { box-shadow: none; }
+    }
+
+    /* ── Toolbar (hidden in print) ── */
+    .toolbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      background: #2c1810;
+      color: #d4a76a;
+      font-family: 'Georgia', serif;
+      font-size: 13px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .toolbar input[type="text"] {
+      padding: 5px 10px;
+      border: 1px solid #d4a76a;
+      border-radius: 4px;
+      background: #1a0f08;
+      color: #f0e6d6;
+      font-size: 13px;
+      font-family: 'Georgia', serif;
+      width: 180px;
+    }
+    .toolbar input::placeholder { color: #8a7060; }
+    .toolbar button {
+      padding: 5px 12px;
+      border: 1px solid #d4a76a;
+      border-radius: 4px;
+      background: #1a0f08;
+      color: #d4a76a;
+      font-size: 12px;
+      cursor: pointer;
+      font-family: 'Georgia', serif;
+    }
+    .toolbar button:hover { background: #3c2820; }
+    .toolbar button.active { background: #d4a76a; color: #2c1810; }
+    .toolbar .match-count { font-size: 11px; color: #a08060; min-width: 60px; }
+    .toolbar .spacer { flex: 1; }
+    .toolbar .ch-title { font-size: 12px; letter-spacing: 1px; }
+
+    /* Search highlight */
+    mark.search-match { background: #ffd700; color: #1a1a1a; border-radius: 2px; padding: 0 1px; }
+
+    /* Screen: page dividers */
+    @media screen {
+      .spread {
+        border-bottom: 3px dashed #ccc;
+        min-height: 100vh;
+      }
+      .spread:last-child { border-bottom: none; }
+      body { background: #e8e8e8; padding-top: 44px; }
+    }
+
+    /* Print: hide toolbar and search highlights */
+    @media print {
+      .toolbar { display: none !important; }
+      mark.search-match { background: transparent; color: inherit; }
+      body { padding-top: 0; }
+    }
+
+    /* Booklet imposition mode */
+    body.booklet-mode .spread {
+      width: 50vw;
+      height: 50vh;
+      display: inline-flex;
+    }
+    body.booklet-mode .page-left,
+    body.booklet-mode .page-right {
+      padding: 12px 3%;
+    }
+    body.booklet-mode .page-left img {
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+<div class="toolbar">
+  <span class="ch-title">CH 11</span>
+  <input type="text" id="searchInput" placeholder="Search words..." autocomplete="off">
+  <span class="match-count" id="matchCount"></span>
+  <span class="spacer"></span>
+  <button id="toggleMode">📖 Booklet Print</button>
+</div>
+
+    <div class="spread cover-spread">
+      <div class="page-left cover-image">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-11-who-stole-the-tarts/lewis-carroll-1864-royal-court.webp" alt="Cover illustration">
+      </div>
+      <div class="page-right cover-title">
+        <div class="title-block">
+          <div class="series-name">ALICE IN WONDERLAND</div>
+          <div class="book-number">CHAPTER 11</div>
+          <h1>WHO STOLE THE TARTS?</h1>
+          <div class="author">BY LEWIS CARROLL</div>
+          <div class="page-info">8 PAGES</div>
+        </div>
+      </div>
+    </div>
+    <div class="spread text-only">
+      <div class="page-left decorative-panel">
+        <div class="chapter-ornament">
+          <div class="ornament-number">11</div>
+        </div>
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>THE KING AND QUEEN OF HEARTS WERE SEATED ON THEIR THRONE WHEN THEY ARRIVED, WITH A GREAT CROWD ASSEMBLED ABOUT THEM—ALL SORTS OF LITTLE BIRDS AND BEASTS, AS WELL AS THE WHOLE PACK OF CARDS: THE KNAVE WAS STANDING BEFORE THEM, IN CHAINS, WITH A SOLDIER ON EACH SIDE TO GUARD HIM; AND NEAR THE KING WAS THE WHITE RABBIT, WITH A TRUMPET IN ONE HAND, AND A SCROLL OF PARCHMENT IN THE OTHER. IN THE VERY MIDDLE OF THE COURT WAS A TABLE, WITH A LARGE DISH OF TARTS UPON IT: THEY LOOKED SO GOOD, THAT IT MADE ALICE QUITE HUNGRY TO LOOK AT THEM—“I WISH THEY’D GET THE TRIAL DONE,” SHE THOUGHT,<br>“AND HAND ROUND THE REFRESHMENTS!” BUT THERE SEEMED TO BE NO CHANCE OF THIS, SO SHE BEGAN LOOKING AT EVERYTHING ABOUT HER, TO PASS AWAY THE TIME.</p>
+          <p>ALICE HAD NEVER BEEN IN A COURT OF JUSTICE BEFORE, BUT SHE HAD READ ABOUT THEM IN BOOKS, AND SHE WAS QUITE PLEASED TO FIND THAT SHE KNEW THE NAME OF NEARLY EVERYTHING THERE.<br>“THAT’S THE JUDGE,” SHE SAID TO HERSELF,<br>“BECAUSE OF HIS GREAT WIG.”</p>
+          <p>THE JUDGE, BY THE WAY, WAS THE KING; AND AS HE WORE HIS CROWN OVER THE WIG, (LOOK AT THE FRONTISPIECE IF YOU WANT TO SEE HOW HE DID IT,) HE DID NOT LOOK AT ALL COMFORTABLE, AND IT WAS CERTAINLY NOT BECOMING.</p>
+          <p>“AND THAT’S THE JURY-BOX,” THOUGHT ALICE,<br>“AND THOSE TWELVE CREATURES,” (SHE WAS OBLIGED TO SAY “CREATURES,” YOU SEE, BECAUSE SOME OF THEM WERE ANIMALS, AND SOME WERE BIRDS,)<br>“I SUPPOSE THEY ARE THE JURORS.”</p>
+        </div>
+        <div class="page-number">1</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-court-assembles/arthur-rackham-1907.jpg" alt="Knave of Spades">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>SHE SAID THIS LAST WORD TWO OR THREE TIMES OVER TO HERSELF, BEING RATHER PROUD OF IT: FOR SHE THOUGHT, AND RIGHTLY TOO, THAT VERY FEW LITTLE GIRLS OF HER AGE KNEW THE MEANING OF IT AT ALL. HOWEVER,<br>“JURY-MEN” WOULD HAVE DONE JUST AS WELL.</p>
+          <p>THE TWELVE JURORS WERE ALL WRITING VERY BUSILY ON SLATES.<br>“WHAT ARE THEY DOING?” ALICE WHISPERED TO THE GRYPHON.<br>“THEY CAN’T HAVE ANYTHING TO PUT DOWN YET, BEFORE THE TRIAL’S BEGUN.”</p>
+          <p>“THEY’RE PUTTING DOWN THEIR NAMES,” THE GRYPHON WHISPERED IN REPLY,<br>“FOR FEAR THEY SHOULD FORGET THEM BEFORE THE END OF THE TRIAL.”</p>
+          <p>“STUPID THINGS!” ALICE BEGAN IN A LOUD, INDIGNANT VOICE, BUT SHE STOPPED HASTILY, FOR THE WHITE RABBIT CRIED OUT,<br>“SILENCE IN THE COURT!” AND THE KING PUT ON HIS SPECTACLES AND LOOKED ANXIOUSLY ROUND, TO MAKE OUT WHO WAS TALKING.</p>
+          <p>ALICE COULD SEE, AS WELL AS IF SHE WERE LOOKING OVER THEIR SHOULDERS, THAT ALL THE JURORS WERE WRITING DOWN “STUPID THINGS!” ON THEIR SLATES, AND SHE COULD EVEN MAKE OUT THAT ONE OF THEM DIDN’T KNOW HOW TO SPELL “STUPID,” AND THAT HE HAD TO ASK HIS NEIGHBOUR TO TELL HIM.<br>“A NICE MUDDLE THEIR SLATES’LL BE IN BEFORE THE TRIAL’S OVER!” THOUGHT ALICE.</p>
+          <p>ONE OF THE JURORS HAD A PENCIL THAT SQUEAKED. THIS OF COURSE, ALICE COULD NOT STAND, AND SHE WENT ROUND THE COURT AND GOT BEHIND HIM, AND VERY SOON FOUND AN OPPORTUNITY OF TAKING IT AWAY.</p>
+        </div>
+        <div class="page-number">2</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-court-assembles/william-h-walker-1907.jpg" alt="In court">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>SHE DID IT SO QUICKLY THAT THE POOR LITTLE JUROR (IT WAS BILL, THE LIZARD) COULD NOT MAKE OUT AT ALL WHAT HAD BECOME OF IT; SO, AFTER HUNTING ALL ABOUT FOR IT, HE WAS OBLIGED TO WRITE WITH ONE FINGER FOR THE REST OF THE DAY; AND THIS WAS OF VERY LITTLE USE, AS IT LEFT NO MARK ON THE SLATE.</p>
+          <p>“HERALD, READ THE ACCUSATION!” SAID THE KING.</p>
+          <p>ON THIS THE WHITE RABBIT BLEW THREE BLASTS ON THE TRUMPET, AND THEN UNROLLED THE PARCHMENT SCROLL, AND READ AS FOLLOWS:—</p>
+          <p>“THE QUEEN OF HEARTS, SHE MADE SOME TARTS, ALL ON A SUMMER DAY: THE KNAVE OF HEARTS, HE STOLE THOSE TARTS, AND TOOK THEM QUITE AWAY!”</p>
+          <p>“CONSIDER YOUR VERDICT,” THE KING SAID TO THE JURY.</p>
+          <p>“NOT YET, NOT YET!” THE RABBIT HASTILY INTERRUPTED.<br>“THERE’S A GREAT DEAL TO COME BEFORE THAT!”</p>
+        </div>
+        <div class="page-number">3</div>
+      </div>
+    </div>
+    <div class="spread text-only">
+      <div class="page-left decorative-panel">
+        <div class="chapter-ornament">
+          <div class="ornament-number">11</div>
+        </div>
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>“CALL THE FIRST WITNESS,” SAID THE KING; AND THE WHITE RABBIT BLEW THREE BLASTS ON THE TRUMPET, AND CALLED OUT,<br>“FIRST WITNESS!”</p>
+          <p>THE FIRST WITNESS WAS THE HATTER. HE CAME IN WITH A TEACUP IN ONE HAND AND A PIECE OF BREAD-AND-BUTTER IN THE OTHER.<br>“I BEG PARDON, YOUR MAJESTY,” HE BEGAN,<br>“FOR BRINGING THESE IN: BUT I HADN’T QUITE FINISHED MY TEA WHEN I WAS SENT FOR.”</p>
+          <p>“YOU OUGHT TO HAVE FINISHED,” SAID THE KING.<br>“WHEN DID YOU BEGIN?”</p>
+          <p>THE HATTER LOOKED AT THE MARCH HARE, WHO HAD FOLLOWED HIM INTO THE COURT, ARM-IN-ARM WITH THE DORMOUSE.<br>“FOURTEENTH OF MARCH, I THINK IT WAS,” HE SAID.</p>
+          <p>“FIFTEENTH,” SAID THE MARCH HARE.</p>
+          <p>“SIXTEENTH,” ADDED THE DORMOUSE.</p>
+          <p>“WRITE THAT DOWN,” THE KING SAID TO THE JURY, AND THE JURY EAGERLY WROTE DOWN ALL THREE DATES ON THEIR SLATES, AND THEN ADDED THEM UP, AND REDUCED THE ANSWER TO SHILLINGS AND PENCE.</p>
+          <p>“TAKE OFF YOUR HAT,” THE KING SAID TO THE HATTER.</p>
+          <p>“IT ISN’T MINE,” SAID THE HATTER.</p>
+          <p>“STOLEN!” THE KING EXCLAIMED, TURNING TO THE JURY, WHO INSTANTLY MADE A MEMORANDUM OF THE FACT.</p>
+          <p>“I KEEP THEM TO SELL,” THE HATTER ADDED AS AN EXPLANATION;<br>“I’VE NONE OF MY OWN. I’M A HATTER.”</p>
+          <p>HERE THE QUEEN PUT ON HER SPECTACLES, AND BEGAN STARING AT THE HATTER, WHO TURNED PALE AND FIDGETED.</p>
+          <p>“GIVE YOUR EVIDENCE,” SAID THE KING;<br>“AND DON’T BE NERVOUS, OR I’LL HAVE YOU EXECUTED ON THE SPOT.”</p>
+          <p>THIS DID NOT SEEM TO ENCOURAGE THE WITNESS AT ALL: HE KEPT SHIFTING FROM ONE FOOT TO THE OTHER, LOOKING UNEASILY AT THE QUEEN, AND IN HIS CONFUSION HE BIT A LARGE PIECE OUT OF HIS TEACUP INSTEAD OF THE BREAD-AND-BUTTER.</p>
+        </div>
+        <div class="page-number">4</div>
+      </div>
+    </div>
+    <div class="spread text-only">
+      <div class="page-left decorative-panel">
+        <div class="chapter-ornament">
+          <div class="ornament-number">11</div>
+        </div>
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>JUST AT THIS MOMENT ALICE FELT A VERY CURIOUS SENSATION, WHICH PUZZLED HER A GOOD DEAL UNTIL SHE MADE OUT WHAT IT WAS: SHE WAS BEGINNING TO GROW LARGER AGAIN, AND SHE THOUGHT AT FIRST SHE WOULD GET UP AND LEAVE THE COURT; BUT ON SECOND THOUGHTS SHE DECIDED TO REMAIN WHERE SHE WAS AS LONG AS THERE WAS ROOM FOR HER.</p>
+          <p>“I WISH YOU WOULDN’T SQUEEZE SO,” SAID THE DORMOUSE, WHO WAS SITTING NEXT TO HER.<br>“I CAN HARDLY BREATHE.”</p>
+          <p>“I CAN’T HELP IT,” SAID ALICE VERY MEEKLY:<br>“I’M GROWING.”</p>
+          <p>“YOU’VE NO RIGHT TO GROW HERE,” SAID THE DORMOUSE.</p>
+          <p>“DON’T TALK NONSENSE,” SAID ALICE MORE BOLDLY:<br>“YOU KNOW YOU’RE GROWING TOO.”</p>
+          <p>“YES, BUT I GROW AT A REASONABLE PACE,” SAID THE DORMOUSE:<br>“NOT IN THAT RIDICULOUS FASHION.” AND HE GOT UP VERY SULKILY AND CROSSED OVER TO THE OTHER SIDE OF THE COURT.</p>
+          <p>ALL THIS TIME THE QUEEN HAD NEVER LEFT OFF STARING AT THE HATTER, AND, JUST AS THE DORMOUSE CROSSED THE COURT, SHE SAID TO ONE OF THE OFFICERS OF THE COURT,<br>“BRING ME THE LIST OF THE SINGERS IN THE LAST CONCERT!” ON WHICH THE WRETCHED HATTER TREMBLED SO, THAT HE SHOOK BOTH HIS SHOES OFF.</p>
+          <p>“GIVE YOUR EVIDENCE,” THE KING REPEATED ANGRILY,<br>“OR I’LL HAVE YOU EXECUTED, WHETHER YOU’RE NERVOUS OR NOT.”</p>
+          <p>“I’M A POOR MAN, YOUR MAJESTY,” THE HATTER BEGAN, IN A TREMBLING VOICE,<br>“—AND I HADN’T BEGUN MY TEA—NOT ABOVE A WEEK OR SO—AND WHAT WITH THE BREAD-AND-BUTTER GETTING SO THIN—AND THE TWINKLING OF THE TEA—”</p>
+          <p>“THE TWINKLING OF THE WHAT?” SAID THE KING.</p>
+          <p>“IT BEGAN WITH THE TEA,” THE HATTER REPLIED.</p>
+          <p>“OF COURSE TWINKLING BEGINS WITH A T!” SAID THE KING SHARPLY.</p>
+        </div>
+        <div class="page-number">5</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-hatters-evidence/lewis-carroll-1864-manuscript.webp" alt="The trial of the Knave of Hearts">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>“DO YOU TAKE ME FOR A DUNCE? GO ON!”</p>
+          <p>“I’M A POOR MAN,” THE HATTER WENT ON,<br>“AND MOST THINGS TWINKLED AFTER THAT—ONLY THE MARCH HARE SAID—”</p>
+          <p>“I DIDN’T!” THE MARCH HARE INTERRUPTED IN A GREAT HURRY.</p>
+          <p>“YOU DID!” SAID THE HATTER.</p>
+          <p>“I DENY IT!” SAID THE MARCH HARE.</p>
+          <p>“HE DENIES IT,” SAID THE KING:<br>“LEAVE OUT THAT PART.”</p>
+          <p>“WELL, AT ANY RATE, THE DORMOUSE SAID—” THE HATTER WENT ON, LOOKING ANXIOUSLY ROUND TO SEE IF HE WOULD DENY IT TOO: BUT THE DORMOUSE DENIED NOTHING, BEING FAST ASLEEP.</p>
+          <p>“AFTER THAT,” CONTINUED THE HATTER,<br>“I CUT SOME MORE BREAD-AND-BUTTER—”</p>
+          <p>“BUT WHAT DID THE DORMOUSE SAY?” ONE OF THE JURY ASKED.</p>
+          <p>“THAT I CAN’T REMEMBER,” SAID THE HATTER.</p>
+          <p>“YOU MUST REMEMBER,” REMARKED THE KING,<br>“OR I’LL HAVE YOU EXECUTED.”</p>
+          <p>THE MISERABLE HATTER DROPPED HIS TEACUP AND BREAD-AND-BUTTER, AND WENT DOWN ON ONE KNEE.<br>“I’M A POOR MAN, YOUR MAJESTY,” HE BEGAN.</p>
+          <p>“YOU’RE A VERY POOR SPEAKER,” SAID THE KING.</p>
+          <p>HERE ONE OF THE GUINEA-PIGS CHEERED, AND WAS IMMEDIATELY SUPPRESSED BY THE OFFICERS OF THE COURT. (AS THAT IS RATHER A HARD WORD, I WILL JUST EXPLAIN TO YOU HOW IT WAS DONE. THEY HAD A LARGE CANVAS BAG, WHICH TIED UP AT THE MOUTH WITH STRINGS: INTO THIS THEY SLIPPED THE GUINEA-PIG, HEAD FIRST, AND THEN SAT UPON IT.)</p>
+          <p>“I’M GLAD I’VE SEEN THAT DONE,” THOUGHT ALICE.<br>“I’VE SO OFTEN READ IN THE NEWSPAPERS, AT THE END OF TRIALS,<br>“THERE WAS SOME ATTEMPTS AT APPLAUSE, WHICH WAS IMMEDIATELY SUPPRESSED BY THE OFFICERS OF THE COURT,” AND I NEVER UNDERSTOOD WHAT IT MEANT TILL NOW.”</p>
+          <p>“IF THAT’S ALL YOU KNOW ABOUT IT, YOU MAY STAND DOWN,” CONTINUED THE KING.</p>
+        </div>
+        <div class="page-number">6</div>
+      </div>
+    </div>
+    <div class="spread text-only">
+      <div class="page-left decorative-panel">
+        <div class="chapter-ornament">
+          <div class="ornament-number">11</div>
+        </div>
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>“I CAN’T GO NO LOWER,” SAID THE HATTER:<br>“I’M ON THE FLOOR, AS IT IS.”</p>
+          <p>“THEN YOU MAY SIT DOWN,” THE KING REPLIED.</p>
+          <p>HERE THE OTHER GUINEA-PIG CHEERED, AND WAS SUPPRESSED.</p>
+          <p>“COME, THAT FINISHED THE GUINEA-PIGS!” THOUGHT ALICE.<br>“NOW WE SHALL GET ON BETTER.”</p>
+          <p>“I’D RATHER FINISH MY TEA,” SAID THE HATTER, WITH AN ANXIOUS LOOK AT THE QUEEN, WHO WAS READING THE LIST OF SINGERS.</p>
+          <p>“YOU MAY GO,” SAID THE KING, AND THE HATTER HURRIEDLY LEFT THE COURT, WITHOUT EVEN WAITING TO PUT HIS SHOES ON.</p>
+          <p>“—AND JUST TAKE HIS HEAD OFF OUTSIDE,” THE QUEEN ADDED TO ONE OF THE OFFICERS: BUT THE HATTER WAS OUT OF SIGHT BEFORE THE OFFICER COULD GET TO THE DOOR.</p>
+        </div>
+        <div class="page-number">7</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-cooks-evidence/brinsley-le-fanu-1910.jpg" alt="The cook refuses to testify">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>“CALL THE NEXT WITNESS!” SAID THE KING.</p>
+          <p>THE NEXT WITNESS WAS THE DUCHESS’S COOK. SHE CARRIED THE PEPPER-BOX IN HER HAND, AND ALICE GUESSED WHO IT WAS, EVEN BEFORE SHE GOT INTO THE COURT, BY THE WAY THE PEOPLE NEAR THE DOOR BEGAN SNEEZING ALL AT ONCE.</p>
+          <p>“GIVE YOUR EVIDENCE,” SAID THE KING.</p>
+          <p>“SHAN’T,” SAID THE COOK.</p>
+          <p>THE KING LOOKED ANXIOUSLY AT THE WHITE RABBIT, WHO SAID IN A LOW VOICE,<br>“YOUR MAJESTY MUST CROSS-EXAMINE THIS WITNESS.”</p>
+          <p>“WELL, IF I MUST, I MUST,” THE KING SAID, WITH A MELANCHOLY AIR, AND, AFTER FOLDING HIS ARMS AND FROWNING AT THE COOK TILL HIS EYES WERE NEARLY OUT OF SIGHT, HE SAID IN A DEEP VOICE,<br>“WHAT ARE TARTS MADE OF?”</p>
+          <p>“PEPPER, MOSTLY,” SAID THE COOK.</p>
+          <p>“TREACLE,” SAID A SLEEPY VOICE BEHIND HER.</p>
+          <p>“COLLAR THAT DORMOUSE,” THE QUEEN SHRIEKED OUT.<br>“BEHEAD THAT DORMOUSE! TURN THAT DORMOUSE OUT OF COURT! SUPPRESS HIM! PINCH HIM! OFF WITH HIS WHISKERS!”</p>
+          <p>FOR SOME MINUTES THE WHOLE COURT WAS IN CONFUSION, GETTING THE DORMOUSE TURNED OUT, AND, BY THE TIME THEY HAD SETTLED DOWN AGAIN, THE COOK HAD DISAPPEARED.</p>
+          <p>“NEVER MIND!” SAID THE KING, WITH AN AIR OF GREAT RELIEF.<br>“CALL THE NEXT WITNESS.” AND HE ADDED IN AN UNDERTONE TO THE QUEEN,<br>“REALLY, MY DEAR, YOU MUST CROSS-EXAMINE THE NEXT WITNESS. IT QUITE MAKES MY FOREHEAD ACHE!”</p>
+          <p>ALICE WATCHED THE WHITE RABBIT AS HE FUMBLED OVER THE LIST, FEELING VERY CURIOUS TO SEE WHAT THE NEXT WITNESS WOULD BE LIKE,<br>“—FOR THEY HAVEN’T GOT MUCH EVIDENCE YET,” SHE SAID TO HERSELF. IMAGINE HER SURPRISE, WHEN THE WHITE RABBIT READ OUT, AT THE TOP OF HIS SHRILL LITTLE VOICE, THE NAME “ALICE!”</p>
+        </div>
+        <div class="page-number">8</div>
+      </div>
+    </div>
+    <div class="spread back-cover">
+      <div class="page-left decorative-panel">
+        <div class="chapter-ornament">
+          <div class="ornament-star">&#10038;</div>
+        </div>
+      </div>
+      <div class="page-right back-text">
+        <div class="back-block">
+          <div class="the-end">THE END</div>
+          <div class="back-info">
+            <p>CHAPTER 11: WHO STOLE THE TARTS?</p>
+            <p class="small">ALICE'S ADVENTURES IN WONDERLAND (1865)</p>
+            <p class="small">WORDS BY LEWIS CARROLL</p>
+            <p class="small">ALL ILLUSTRATIONS ARE PUBLIC DOMAIN</p>
+            <p class="small">MADE WITH LOVE AT RECURSIVE.ECO</p>
+          </div>
+        </div>
+      </div>
+    </div>
+<script>
+// Auto-fit: measure each text block's rendered height and scale font down until it fits.
+// Runs on load so text is correctly sized before printing.
+(function() {
+  const MAX_FONT = 22;
+  const MIN_FONT = 9;
+  const STEP = 0.5;
+
+  function fitAll() {
+    document.querySelectorAll('.text-block').forEach(function(block) {
+      var container = block.parentElement;
+      // Available height = container height minus page-number space
+      var maxH = container.clientHeight - 32;
+      var ps = block.querySelectorAll('p');
+      if (!ps.length) return;
+
+      // Start at max font and shrink until it fits
+      var size = MAX_FONT;
+      function applySize(s) {
+        ps.forEach(function(p) { p.style.fontSize = s + 'px'; });
+      }
+      applySize(size);
+
+      // Shrink until content fits or we hit minimum
+      while (block.scrollHeight > maxH && size > MIN_FONT) {
+        size -= STEP;
+        applySize(size);
+      }
+    });
+  }
+
+  // Run on load and before print
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fitAll);
+  } else {
+    fitAll();
+  }
+  window.addEventListener('beforeprint', fitAll);
+  window.addEventListener('resize', fitAll);
+})();
+
+// ── Word Search Highlighting ──
+(function() {
+  var input = document.getElementById('searchInput');
+  var countEl = document.getElementById('matchCount');
+  if (!input) return;
+
+  function clearMarks() {
+    document.querySelectorAll('mark.search-match').forEach(function(m) {
+      var parent = m.parentNode;
+      parent.replaceChild(document.createTextNode(m.textContent), m);
+      parent.normalize();
+    });
+    countEl.textContent = '';
+  }
+
+  function highlightText(node, regex) {
+    var count = 0;
+    if (node.nodeType === 3) { // Text node
+      var match = node.textContent.match(regex);
+      if (match) {
+        var span = document.createElement('mark');
+        span.className = 'search-match';
+        var parts = node.textContent.split(regex);
+        var frag = document.createDocumentFragment();
+        parts.forEach(function(part, i) {
+          frag.appendChild(document.createTextNode(part));
+          if (i < parts.length - 1) {
+            var m = span.cloneNode(false);
+            m.textContent = node.textContent.match(new RegExp(regex.source, 'gi'))[count] || match[0];
+            frag.appendChild(m);
+            count++;
+          }
+        });
+        node.parentNode.replaceChild(frag, node);
+      }
+      return count;
+    }
+    if (node.nodeType === 1 && node.tagName !== 'MARK' && node.tagName !== 'SCRIPT') {
+      var children = Array.from(node.childNodes);
+      children.forEach(function(child) { count += highlightText(child, regex); });
+    }
+    return count;
+  }
+
+  var debounceTimer;
+  input.addEventListener('input', function() {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(function() {
+      clearMarks();
+      var query = input.value.trim();
+      if (query.length < 2) return;
+      try {
+        var regex = new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$$&') + ')', 'gi');
+        var total = 0;
+        document.querySelectorAll('.text-block').forEach(function(block) {
+          total += highlightText(block, regex);
+        });
+        countEl.textContent = total > 0 ? total + ' found' : 'no matches';
+      } catch(e) {}
+    }, 300);
+  });
+
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') { input.value = ''; clearMarks(); }
+  });
+})();
+
+// ── Booklet Imposition Toggle ──
+(function() {
+  var btn = document.getElementById('toggleMode');
+  if (!btn) return;
+  var isBooklet = false;
+  var originalOrder = [];
+
+  btn.addEventListener('click', function() {
+    isBooklet = !isBooklet;
+    btn.classList.toggle('active', isBooklet);
+    btn.textContent = isBooklet ? '📱 App Mode' : '📖 Booklet Print';
+    document.body.classList.toggle('booklet-mode', isBooklet);
+
+    var spreads = Array.from(document.querySelectorAll('.spread'));
+    if (!originalOrder.length) originalOrder = spreads.map(function(s) { return s; });
+
+    if (isBooklet) {
+      // Saddle-stitch imposition: reorder for double-sided folded printing
+      var N = spreads.length;
+      // Pad to multiple of 4
+      while (N % 4 !== 0) N++;
+      var order = [];
+      var sheets = N / 2;
+      for (var i = 0; i < sheets / 2; i++) {
+        // Front of sheet: pages [N-1-2i, 2i]
+        order.push(N - 1 - 2 * i, 2 * i);
+        // Back of sheet: pages [2i+1, N-2-2i]
+        order.push(2 * i + 1, N - 2 - 2 * i);
+      }
+      var container = spreads[0].parentNode;
+      order.forEach(function(idx) {
+        if (idx < originalOrder.length) {
+          container.appendChild(originalOrder[idx]);
+        }
+      });
+    } else {
+      // Restore original order
+      var container = originalOrder[0].parentNode;
+      originalOrder.forEach(function(s) { container.appendChild(s); });
+    }
+
+    // Re-run auto-fit after reorder
+    window.dispatchEvent(new Event('resize'));
+  });
+})();
+</script>
+</body>
+</html>

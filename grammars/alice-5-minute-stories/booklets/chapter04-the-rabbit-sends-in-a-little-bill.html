@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 4: The Rabbit Sends in a Little Bill — Alice in Wonderland</title>
+  <style>
+    @page { size: landscape; margin: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Georgia', 'Cambria', 'Times New Roman', serif;
+      background: white;
+      color: #1a1a1a;
+    }
+
+    .spread {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+    }
+    .spread:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* Left page: illustration */
+    .page-left {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8f5f0;
+      padding: 16px;
+      overflow: hidden;
+    }
+    .page-left img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Right page: text */
+    .page-right {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 32px 5% 32px 5%;
+      background: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Text block — NEVER scroll */
+    .text-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* Default text style — JS auto-fit adjusts font-size to fill container */
+    .text-block p {
+      font-size: 18px;
+      line-height: 1.7;
+      font-weight: 700;
+      text-align: left;
+      letter-spacing: 0.3px;
+      margin-bottom: 1em;
+    }
+    .text-block p:last-child { margin-bottom: 0; }
+
+    .page-number {
+      font-size: 11px;
+      color: #ccc;
+      position: absolute;
+      bottom: 8px;
+      right: 16px;
+    }
+
+    /* Decorative panel (text-only pages) */
+    .decorative-panel {
+      background: #2c1810;
+    }
+    .chapter-ornament {
+      text-align: center;
+      color: #d4a76a;
+    }
+    .ornament-number {
+      font-size: clamp(48px, 8vw, 96px);
+      font-weight: 800;
+      letter-spacing: 4px;
+      opacity: 0.3;
+      font-family: 'Georgia', serif;
+    }
+    .ornament-star {
+      font-size: clamp(36px, 6vw, 72px);
+      opacity: 0.3;
+    }
+
+    /* Cover */
+    .cover-title {
+      background: #2c1810;
+      color: white;
+    }
+    .title-block {
+      text-align: center;
+      font-family: 'Georgia', serif;
+    }
+    .series-name {
+      font-size: clamp(11px, 1.5vw, 16px);
+      letter-spacing: 4px;
+      color: #d4a76a;
+      margin-bottom: 12px;
+    }
+    .book-number {
+      font-size: clamp(13px, 1.8vw, 20px);
+      letter-spacing: 3px;
+      color: #d4a76a;
+      margin-bottom: 20px;
+    }
+    .title-block h1 {
+      font-size: clamp(20px, 3.8vw, 42px);
+      line-height: 1.2;
+      margin-bottom: 25px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    .author {
+      font-size: clamp(11px, 1.3vw, 14px);
+      letter-spacing: 3px;
+      color: #d4a76a;
+      margin-bottom: 8px;
+    }
+    .page-info {
+      font-size: clamp(9px, 1vw, 11px);
+      letter-spacing: 2px;
+      color: #a08060;
+      margin-top: 5px;
+    }
+    .cover-image { background: #2c1810; }
+    .cover-image img {
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+
+    /* Back cover */
+    .back-text {
+      background: #2c1810;
+      color: white;
+    }
+    .back-block {
+      text-align: center;
+      font-family: 'Georgia', serif;
+    }
+    .the-end {
+      font-size: clamp(24px, 4vw, 44px);
+      font-weight: 800;
+      letter-spacing: 6px;
+      margin-bottom: 30px;
+      color: #d4a76a;
+    }
+    .back-info p {
+      font-size: clamp(10px, 1.2vw, 13px);
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+      color: #d4a76a;
+    }
+    .back-info .small {
+      font-size: clamp(8px, 0.9vw, 10px);
+      color: #a08060;
+    }
+
+    /* Print */
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .spread { height: 100vh; }
+      .page-left img { box-shadow: none; }
+      .cover-image img { box-shadow: none; }
+    }
+
+    /* ── Toolbar (hidden in print) ── */
+    .toolbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      background: #2c1810;
+      color: #d4a76a;
+      font-family: 'Georgia', serif;
+      font-size: 13px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .toolbar input[type="text"] {
+      padding: 5px 10px;
+      border: 1px solid #d4a76a;
+      border-radius: 4px;
+      background: #1a0f08;
+      color: #f0e6d6;
+      font-size: 13px;
+      font-family: 'Georgia', serif;
+      width: 180px;
+    }
+    .toolbar input::placeholder { color: #8a7060; }
+    .toolbar button {
+      padding: 5px 12px;
+      border: 1px solid #d4a76a;
+      border-radius: 4px;
+      background: #1a0f08;
+      color: #d4a76a;
+      font-size: 12px;
+      cursor: pointer;
+      font-family: 'Georgia', serif;
+    }
+    .toolbar button:hover { background: #3c2820; }
+    .toolbar button.active { background: #d4a76a; color: #2c1810; }
+    .toolbar .match-count { font-size: 11px; color: #a08060; min-width: 60px; }
+    .toolbar .spacer { flex: 1; }
+    .toolbar .ch-title { font-size: 12px; letter-spacing: 1px; }
+
+    /* Search highlight */
+    mark.search-match { background: #ffd700; color: #1a1a1a; border-radius: 2px; padding: 0 1px; }
+
+    /* Screen: page dividers */
+    @media screen {
+      .spread {
+        border-bottom: 3px dashed #ccc;
+        min-height: 100vh;
+      }
+      .spread:last-child { border-bottom: none; }
+      body { background: #e8e8e8; padding-top: 44px; }
+    }
+
+    /* Print: hide toolbar and search highlights */
+    @media print {
+      .toolbar { display: none !important; }
+      mark.search-match { background: transparent; color: inherit; }
+      body { padding-top: 0; }
+    }
+
+    /* Booklet imposition mode */
+    body.booklet-mode .spread {
+      width: 50vw;
+      height: 50vh;
+      display: inline-flex;
+    }
+    body.booklet-mode .page-left,
+    body.booklet-mode .page-right {
+      padding: 12px 3%;
+    }
+    body.booklet-mode .page-left img {
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+<div class="toolbar">
+  <span class="ch-title">CH 4</span>
+  <input type="text" id="searchInput" placeholder="Search words..." autocomplete="off">
+  <span class="match-count" id="matchCount"></span>
+  <span class="spacer"></span>
+  <button id="toggleMode">📖 Booklet Print</button>
+</div>
+
+    <div class="spread cover-spread">
+      <div class="page-left cover-image">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-04-the-rabbit-sends-in-a-little-bill/lewis-carroll-1864-chapter-III.webp" alt="Cover illustration">
+      </div>
+      <div class="page-right cover-title">
+        <div class="title-block">
+          <div class="series-name">ALICE IN WONDERLAND</div>
+          <div class="book-number">CHAPTER 4</div>
+          <h1>THE RABBIT SENDS IN A LITTLE BILL</h1>
+          <div class="author">BY LEWIS CARROLL</div>
+          <div class="page-info">11 PAGES</div>
+        </div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-stuck-in-the-house/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="She grew and grew">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>IT WAS THE WHITE RABBIT, TROTTING SLOWLY BACK AGAIN, AND LOOKING ANXIOUSLY ABOUT AS IT WENT, AS IF IT HAD LOST SOMETHING; AND SHE HEARD IT MUTTERING TO ITSELF “THE DUCHESS! THE DUCHESS! OH MY DEAR PAWS! OH MY FUR AND WHISKERS! SHE’LL GET ME EXECUTED, AS SURE AS FERRETS ARE FERRETS! WHERE CAN I HAVE DROPPED THEM, I WONDER?” ALICE GUESSED IN A MOMENT THAT IT WAS LOOKING FOR THE FAN AND THE PAIR OF WHITE KID GLOVES, AND SHE VERY GOOD-NATUREDLY BEGAN HUNTING ABOUT FOR THEM, BUT THEY WERE NOWHERE TO BE SEEN—EVERYTHING SEEMED TO HAVE CHANGED SINCE HER SWIM IN THE POOL, AND THE GREAT HALL, WITH THE GLASS TABLE AND THE LITTLE DOOR, HAD VANISHED COMPLETELY.</p>
+          <p>VERY SOON THE RABBIT NOTICED ALICE, AS SHE WENT HUNTING ABOUT, AND CALLED OUT TO HER IN AN ANGRY TONE,<br>“WHY, MARY ANN, WHAT ARE YOU DOING OUT HERE? RUN HOME THIS MOMENT, AND FETCH ME A PAIR OF GLOVES AND A FAN! QUICK, NOW!” AND ALICE WAS SO MUCH FRIGHTENED THAT SHE RAN OFF AT ONCE IN THE DIRECTION IT POINTED TO, WITHOUT TRYING TO EXPLAIN THE MISTAKE IT HAD MADE.</p>
+          <p>“HE TOOK ME FOR HIS HOUSEMAID,” SHE SAID TO HERSELF AS SHE RAN.<br>“HOW SURPRISED HE’LL BE WHEN HE FINDS OUT WHO I AM! BUT I’D BETTER TAKE HIM HIS FAN AND GLOVES—THAT IS, IF I CAN FIND THEM.” AS SHE SAID THIS, SHE CAME UPON A NEAT LITTLE HOUSE, ON THE DOOR OF WHICH WAS A BRIGHT BRASS PLATE WITH THE NAME “W. RABBIT,” ENGRAVED UPON IT. SHE WENT IN WITHOUT KNOCKING, AND HURRIED UPSTAIRS, IN GREAT FEAR LEST SHE SHOULD MEET THE REAL MARY ANN, AND BE TURNED OUT OF THE HOUSE BEFORE SHE HAD FOUND THE FAN AND GLOVES.</p>
+        </div>
+        <div class="page-number">1</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-mistaken-for-mary-ann/john-tenniel-harry-theaker-1911.jpg" alt="Rabbit started violently">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>“HOW QUEER IT SEEMS,” ALICE SAID TO HERSELF,<br>“TO BE GOING MESSAGES FOR A RABBIT! I SUPPOSE DINAH’LL BE SENDING ME ON MESSAGES NEXT!” AND SHE BEGAN FANCYING THE SORT OF THING THAT WOULD HAPPEN:<br>“‘MISS ALICE! COME HERE DIRECTLY, AND GET READY FOR YOUR WALK!’ ‘COMING IN A MINUTE, NURSE! BUT I’VE GOT TO SEE THAT THE MOUSE DOESN’T GET OUT.’ ONLY I DON’T THINK,” ALICE WENT ON,<br>“THAT THEY’D LET DINAH STOP IN THE HOUSE IF IT BEGAN ORDERING PEOPLE ABOUT LIKE THAT!”</p>
+          <p>BY THIS TIME SHE HAD FOUND HER WAY INTO A TIDY LITTLE ROOM WITH A TABLE IN THE WINDOW, AND ON IT (AS SHE HAD HOPED) A FAN AND TWO OR THREE PAIRS OF TINY WHITE KID GLOVES: SHE TOOK UP THE FAN AND A PAIR OF THE GLOVES, AND WAS JUST GOING TO LEAVE THE ROOM, WHEN HER EYE FELL UPON A LITTLE BOTTLE THAT STOOD NEAR THE LOOKING-GLASS. THERE WAS NO LABEL THIS TIME WITH THE WORDS “DRINK ME,” BUT NEVERTHELESS SHE UNCORKED IT AND PUT IT TO HER LIPS.<br>“I KNOW SOMETHING INTERESTING IS SURE TO HAPPEN,” SHE SAID TO HERSELF,<br>“WHENEVER I EAT OR DRINK ANYTHING; SO I’LL JUST SEE WHAT THIS BOTTLE DOES. I DO HOPE IT’LL MAKE ME GROW LARGE AGAIN, FOR REALLY I’M QUITE TIRED OF BEING SUCH A TINY LITTLE THING!”</p>
+          <p>IT DID SO INDEED, AND MUCH SOONER THAN SHE HAD EXPECTED: BEFORE SHE HAD DRUNK HALF THE BOTTLE, SHE FOUND HER HEAD PRESSING AGAINST THE CEILING, AND HAD TO STOOP TO SAVE HER NECK FROM BEING BROKEN. SHE HASTILY PUT DOWN THE BOTTLE, SAYING TO HERSELF “THAT’S QUITE ENOUGH—I HOPE I SHAN’T GROW ANY MORE—AS IT IS, I CAN’T GET OUT AT THE DOOR—I DO WISH I HADN’T DRUNK QUITE SO MUCH!”</p>
+          <p>ALAS!</p>
+        </div>
+        <div class="page-number">2</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-mistaken-for-mary-ann/harry-rountree-1928.jpg" alt="Why, Mary Ann">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>IT WAS TOO LATE TO WISH THAT! SHE WENT ON GROWING, AND GROWING, AND VERY SOON HAD TO KNEEL DOWN ON THE FLOOR: IN ANOTHER MINUTE THERE WAS NOT EVEN ROOM FOR THIS, AND SHE TRIED THE EFFECT OF LYING DOWN WITH ONE ELBOW AGAINST THE DOOR, AND THE OTHER ARM CURLED ROUND HER HEAD. STILL SHE WENT ON GROWING, AND, AS A LAST RESOURCE, SHE PUT ONE ARM OUT OF THE WINDOW, AND ONE FOOT UP THE CHIMNEY, AND SAID TO HERSELF “NOW I CAN DO NO MORE, WHATEVER HAPPENS. WHAT WILL BECOME OF ME?”</p>
+        </div>
+        <div class="page-number">3</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-stuck-in-the-house/bessie-pease-gutmann-1933.jpg" alt="Hope I shan't grow more">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>LUCKILY FOR ALICE, THE LITTLE MAGIC BOTTLE HAD NOW HAD ITS FULL EFFECT, AND SHE GREW NO LARGER: STILL IT WAS VERY UNCOMFORTABLE, AND, AS THERE SEEMED TO BE NO SORT OF CHANCE OF HER EVER GETTING OUT OF THE ROOM AGAIN, NO WONDER SHE FELT UNHAPPY.</p>
+          <p>“IT WAS MUCH PLEASANTER AT HOME,” THOUGHT POOR ALICE,<br>“WHEN ONE WASN’T ALWAYS GROWING LARGER AND SMALLER, AND BEING ORDERED ABOUT BY MICE AND RABBITS. I ALMOST WISH I HADN’T GONE DOWN THAT RABBIT-HOLE—AND YET—AND YET—IT’S RATHER CURIOUS, YOU KNOW, THIS SORT OF LIFE! I DO WONDER WHAT CAN HAVE HAPPENED TO ME! WHEN I USED TO READ FAIRY-TALES, I FANCIED THAT KIND OF THING NEVER HAPPENED, AND NOW HERE I AM IN THE MIDDLE OF ONE! THERE OUGHT TO BE A BOOK WRITTEN ABOUT ME, THAT THERE OUGHT! AND WHEN I GROW UP, I’LL WRITE ONE—BUT I’M GROWN UP NOW,” SHE ADDED IN A SORROWFUL TONE;<br>“AT LEAST THERE’S NO ROOM TO GROW UP ANY MORE HERE.”</p>
+          <p>“BUT THEN,” THOUGHT ALICE,<br>“SHALL I NEVER GET ANY OLDER THAN I AM NOW? THAT’LL BE A COMFORT, ONE WAY—NEVER TO BE AN OLD WOMAN—BUT THEN—ALWAYS TO HAVE LESSONS TO LEARN! OH, I SHOULDN’T LIKE THAT!”</p>
+          <p>“OH, YOU FOOLISH ALICE!” SHE ANSWERED HERSELF.<br>“HOW CAN YOU LEARN LESSONS IN HERE? WHY, THERE’S HARDLY ROOM FOR YOU, AND NO ROOM AT ALL FOR ANY LESSON-BOOKS!”</p>
+          <p>AND SO SHE WENT ON, TAKING FIRST ONE SIDE AND THEN THE OTHER, AND MAKING QUITE A CONVERSATION OF IT ALTOGETHER; BUT AFTER A FEW MINUTES SHE HEARD A VOICE OUTSIDE, AND STOPPED TO LISTEN.</p>
+        </div>
+        <div class="page-number">4</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-bill-the-lizard/gwynedd-hudson-1922.jpg" alt="Poor little lizard">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>“MARY ANN! MARY ANN!” SAID THE VOICE.<br>“FETCH ME MY GLOVES THIS MOMENT!” THEN CAME A LITTLE PATTERING OF FEET ON THE STAIRS. ALICE KNEW IT WAS THE RABBIT COMING TO LOOK FOR HER, AND SHE TREMBLED TILL SHE SHOOK THE HOUSE, QUITE FORGETTING THAT SHE WAS NOW ABOUT A THOUSAND TIMES AS LARGE AS THE RABBIT, AND HAD NO REASON TO BE AFRAID OF IT.</p>
+          <p>PRESENTLY THE RABBIT CAME UP TO THE DOOR, AND TRIED TO OPEN IT; BUT, AS THE DOOR OPENED INWARDS, AND ALICE’S ELBOW WAS PRESSED HARD AGAINST IT, THAT ATTEMPT PROVED A FAILURE. ALICE HEARD IT SAY TO ITSELF “THEN I’LL GO ROUND AND GET IN AT THE WINDOW.”</p>
+          <p>“THAT YOU WON’T!” THOUGHT ALICE, AND, AFTER WAITING TILL SHE FANCIED SHE HEARD THE RABBIT JUST UNDER THE WINDOW, SHE SUDDENLY SPREAD OUT HER HAND, AND MADE A SNATCH IN THE AIR. SHE DID NOT GET HOLD OF ANYTHING, BUT SHE HEARD A LITTLE SHRIEK AND A FALL, AND A CRASH OF BROKEN GLASS, FROM WHICH SHE CONCLUDED THAT IT WAS JUST POSSIBLE IT HAD FALLEN INTO A CUCUMBER-FRAME, OR SOMETHING OF THE SORT.</p>
+          <p>NEXT CAME AN ANGRY VOICE—THE RABBIT’S—“PAT! PAT! WHERE ARE YOU?” AND THEN A VOICE SHE HAD NEVER HEARD BEFORE,<br>“SURE THEN I’M HERE! DIGGING FOR APPLES, YER HONOUR!”</p>
+          <p>“DIGGING FOR APPLES, INDEED!” SAID THE RABBIT ANGRILY.<br>“HERE! COME AND HELP ME OUT OF THIS!” (SOUNDS OF MORE BROKEN GLASS.)</p>
+          <p>“NOW TELL ME, PAT, WHAT’S THAT IN THE WINDOW?”</p>
+          <p>“SURE, IT’S AN ARM, YER HONOUR!” (HE PRONOUNCED IT “ARRUM.”)</p>
+          <p>“AN ARM, YOU GOOSE! WHO EVER SAW ONE THAT SIZE? WHY, IT FILLS THE WHOLE WINDOW!”</p>
+          <p>“SURE, IT DOES, YER HONOUR: BUT IT’S AN ARM FOR ALL THAT.”</p>
+        </div>
+        <div class="page-number">5</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-bill-the-lizard/brinsley-le-fanu-1910.jpg" alt="White rabbit falls">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>“WELL, IT’S GOT NO BUSINESS THERE, AT ANY RATE: GO AND TAKE IT AWAY!”</p>
+          <p>THERE WAS A LONG SILENCE AFTER THIS, AND ALICE COULD ONLY HEAR WHISPERS NOW AND THEN; SUCH AS,<br>“SURE, I DON’T LIKE IT, YER HONOUR, AT ALL, AT ALL!” “DO AS I TELL YOU, YOU COWARD!” AND AT LAST SHE SPREAD OUT HER HAND AGAIN, AND MADE ANOTHER SNATCH IN THE AIR. THIS TIME THERE WERE TWO LITTLE SHRIEKS, AND MORE SOUNDS OF BROKEN GLASS.<br>“WHAT A NUMBER OF CUCUMBER-FRAMES THERE MUST BE!” THOUGHT ALICE.<br>“I WONDER WHAT THEY’LL DO NEXT! AS FOR PULLING ME OUT OF THE WINDOW, I ONLY WISH THEY COULD! I’M SURE I DON’T WANT TO STAY IN HERE ANY LONGER!”</p>
+          <p>SHE WAITED FOR SOME TIME WITHOUT HEARING ANYTHING MORE: AT LAST CAME A RUMBLING OF LITTLE CARTWHEELS, AND THE SOUND OF A GOOD MANY VOICES ALL TALKING TOGETHER: SHE MADE OUT THE WORDS:<br>“WHERE’S THE OTHER LADDER?—WHY, I HADN’T TO BRING BUT ONE; BILL’S GOT THE OTHER—BILL! FETCH IT HERE, LAD!—HERE, PUT ’EM UP AT THIS CORNER—NO, TIE ’EM TOGETHER FIRST—THEY DON’T REACH HALF HIGH ENOUGH YET—OH! THEY’LL DO WELL ENOUGH; DON’T BE PARTICULAR—HERE, BILL! CATCH HOLD OF THIS ROPE—WILL THE ROOF BEAR?—MIND THAT LOOSE SLATE—OH, IT’S COMING DOWN! HEADS BELOW!” (A LOUD CRASH)—“NOW, WHO DID THAT?—IT WAS BILL, I FANCY—WHO’S TO GO DOWN THE CHIMNEY?—NAY, I SHAN’T! YOU DO IT!—THAT I WON’T, THEN!—BILL’S TO GO DOWN—HERE, BILL! THE MASTER SAYS YOU’RE TO GO DOWN THE CHIMNEY!”</p>
+          <p>“OH! SO BILL’S GOT TO COME DOWN THE CHIMNEY, HAS HE?” SAID ALICE TO HERSELF.<br>“SHY, THEY SEEM TO PUT EVERYTHING UPON BILL!</p>
+        </div>
+        <div class="page-number">6</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-bill-the-lizard/harry-rountree-1928.jpg" alt="Poor Lizard Bill">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>I WOULDN’T BE IN BILL’S PLACE FOR A GOOD DEAL: THIS FIREPLACE IS NARROW, TO BE SURE; BUT I THINK I CAN KICK A LITTLE!”</p>
+          <p>SHE DREW HER FOOT AS FAR DOWN THE CHIMNEY AS SHE COULD, AND WAITED TILL SHE HEARD A LITTLE ANIMAL (SHE COULDN’T GUESS OF WHAT SORT IT WAS) SCRATCHING AND SCRAMBLING ABOUT IN THE CHIMNEY CLOSE ABOVE HER: THEN, SAYING TO HERSELF “THIS IS BILL,” SHE GAVE ONE SHARP KICK, AND WAITED TO SEE WHAT WOULD HAPPEN NEXT.</p>
+          <p>THE FIRST THING SHE HEARD WAS A GENERAL CHORUS OF “THERE GOES BILL!” THEN THE RABBIT’S VOICE ALONG—“CATCH HIM, YOU BY THE HEDGE!” THEN SILENCE, AND THEN ANOTHER CONFUSION OF VOICES—“HOLD UP HIS HEAD—BRANDY NOW—DON’T CHOKE HIM—HOW WAS IT, OLD FELLOW? WHAT HAPPENED TO YOU? TELL US ALL ABOUT IT!”</p>
+          <p>LAST CAME A LITTLE FEEBLE, SQUEAKING VOICE, (“THAT’S BILL,” THOUGHT ALICE,)<br>“WELL, I HARDLY KNOW—NO MORE, THANK YE; I’M BETTER NOW—BUT I’M A DEAL TOO FLUSTERED TO TELL YOU—ALL I KNOW IS, SOMETHING COMES AT ME LIKE A JACK-IN-THE-BOX, AND UP I GOES LIKE A SKY-ROCKET!”</p>
+          <p>“SO YOU DID, OLD FELLOW!” SAID THE OTHERS.</p>
+          <p>“WE MUST BURN THE HOUSE DOWN!” SAID THE RABBIT’S VOICE; AND ALICE CALLED OUT AS LOUD AS SHE COULD,<br>“IF YOU DO, I’LL SET DINAH AT YOU!”</p>
+          <p>THERE WAS A DEAD SILENCE INSTANTLY, AND ALICE THOUGHT TO HERSELF,<br>“I WONDER WHAT THEY WILL DO NEXT! IF THEY HAD ANY SENSE, THEY’D TAKE THE ROOF OFF.” AFTER A MINUTE OR TWO, THEY BEGAN MOVING ABOUT AGAIN, AND ALICE HEARD THE RABBIT SAY,<br>“A BARROWFUL WILL DO, TO BEGIN WITH.”</p>
+        </div>
+        <div class="page-number">7</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-bill-the-lizard/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="Bill the Lizard">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>“A BARROWFUL OF WHAT?” THOUGHT ALICE; BUT SHE HAD NOT LONG TO DOUBT, FOR THE NEXT MOMENT A SHOWER OF LITTLE PEBBLES CAME RATTLING IN AT THE WINDOW, AND SOME OF THEM HIT HER IN THE FACE.<br>“I’LL PUT A STOP TO THIS,” SHE SAID TO HERSELF, AND SHOUTED OUT,<br>“YOU’D BETTER NOT DO THAT AGAIN!” WHICH PRODUCED ANOTHER DEAD SILENCE.</p>
+          <p>ALICE NOTICED WITH SOME SURPRISE THAT THE PEBBLES WERE ALL TURNING INTO LITTLE CAKES AS THEY LAY ON THE FLOOR, AND A BRIGHT IDEA CAME INTO HER HEAD.<br>“IF I EAT ONE OF THESE CAKES,” SHE THOUGHT,<br>“IT’S SURE TO MAKE SOME CHANGE IN MY SIZE; AND AS IT CAN’T POSSIBLY MAKE ME LARGER, IT MUST MAKE ME SMALLER, I SUPPOSE.”</p>
+          <p>SO SHE SWALLOWED ONE OF THE CAKES, AND WAS DELIGHTED TO FIND THAT SHE BEGAN SHRINKING DIRECTLY. AS SOON AS SHE WAS SMALL ENOUGH TO GET THROUGH THE DOOR, SHE RAN OUT OF THE HOUSE, AND FOUND QUITE A CROWD OF LITTLE ANIMALS AND BIRDS WAITING OUTSIDE. THE POOR LITTLE LIZARD, BILL, WAS IN THE MIDDLE, BEING HELD UP BY TWO GUINEA-PIGS, WHO WERE GIVING IT SOMETHING OUT OF A BOTTLE. THEY ALL MADE A RUSH AT ALICE THE MOMENT SHE APPEARED; BUT SHE RAN OFF AS HARD AS SHE COULD, AND SOON FOUND HERSELF SAFE IN A THICK WOOD.</p>
+        </div>
+        <div class="page-number">8</div>
+      </div>
+    </div>
+    <div class="spread text-only">
+      <div class="page-left decorative-panel">
+        <div class="chapter-ornament">
+          <div class="ornament-number">4</div>
+        </div>
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>“THE FIRST THING I’VE GOT TO DO,” SAID ALICE TO HERSELF, AS SHE WANDERED ABOUT IN THE WOOD,<br>“IS TO GROW TO MY RIGHT SIZE AGAIN; AND THE SECOND THING IS TO FIND MY WAY INTO THAT LOVELY GARDEN. I THINK THAT WILL BE THE BEST PLAN.”</p>
+          <p>IT SOUNDED AN EXCELLENT PLAN, NO DOUBT, AND VERY NEATLY AND SIMPLY ARRANGED; THE ONLY DIFFICULTY WAS, THAT SHE HAD NOT THE SMALLEST IDEA HOW TO SET ABOUT IT; AND WHILE SHE WAS PEERING ABOUT ANXIOUSLY AMONG THE TREES, A LITTLE SHARP BARK JUST OVER HER HEAD MADE HER LOOK UP IN A GREAT HURRY.</p>
+          <p>AN ENORMOUS PUPPY WAS LOOKING DOWN AT HER WITH LARGE ROUND EYES, AND FEEBLY STRETCHING OUT ONE PAW, TRYING TO TOUCH HER.<br>“POOR LITTLE THING!” SAID ALICE, IN A COAXING TONE, AND SHE TRIED HARD TO WHISTLE TO IT; BUT SHE WAS TERRIBLY FRIGHTENED ALL THE TIME AT THE THOUGHT THAT IT MIGHT BE HUNGRY, IN WHICH CASE IT WOULD BE VERY LIKELY TO EAT HER UP IN SPITE OF ALL HER COAXING.</p>
+        </div>
+        <div class="page-number">9</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-the-great-puppy/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="Dash the Puppy">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>HARDLY KNOWING WHAT SHE DID, SHE PICKED UP A LITTLE BIT OF STICK, AND HELD IT OUT TO THE PUPPY; WHEREUPON THE PUPPY JUMPED INTO THE AIR OFF ALL ITS FEET AT ONCE, WITH A YELP OF DELIGHT, AND RUSHED AT THE STICK, AND MADE BELIEVE TO WORRY IT; THEN ALICE DODGED BEHIND A GREAT THISTLE, TO KEEP HERSELF FROM BEING RUN OVER; AND THE MOMENT SHE APPEARED ON THE OTHER SIDE, THE PUPPY MADE ANOTHER RUSH AT THE STICK, AND TUMBLED HEAD OVER HEELS IN ITS HURRY TO GET HOLD OF IT; THEN ALICE, THINKING IT WAS VERY LIKE HAVING A GAME OF PLAY WITH A CART-HORSE, AND EXPECTING EVERY MOMENT TO BE TRAMPLED UNDER ITS FEET, RAN ROUND THE THISTLE AGAIN; THEN THE PUPPY BEGAN A SERIES OF SHORT CHARGES AT THE STICK, RUNNING A VERY LITTLE WAY FORWARDS EACH TIME AND A LONG WAY BACK, AND BARKING HOARSELY ALL THE WHILE, TILL AT LAST IT SAT DOWN A GOOD WAY OFF, PANTING, WITH ITS TONGUE HANGING OUT OF ITS MOUTH, AND ITS GREAT EYES HALF SHUT.</p>
+          <p>THIS SEEMED TO ALICE A GOOD OPPORTUNITY FOR MAKING HER ESCAPE; SO SHE SET OFF AT ONCE, AND RAN TILL SHE WAS QUITE TIRED AND OUT OF BREATH, AND TILL THE PUPPY’S BARK SOUNDED QUITE FAINT IN THE DISTANCE.</p>
+          <p>“AND YET WHAT A DEAR LITTLE PUPPY IT WAS!” SAID ALICE, AS SHE LEANT AGAINST A BUTTERCUP TO REST HERSELF, AND FANNED HERSELF WITH ONE OF THE LEAVES:<br>“I SHOULD HAVE LIKED TEACHING IT TRICKS VERY MUCH, IF—IF I’D ONLY BEEN THE RIGHT SIZE TO DO IT! OH DEAR! I’D NEARLY FORGOTTEN THAT I’VE GOT TO GROW UP AGAIN! LET ME SEE—HOW IS IT TO BE MANAGED? I SUPPOSE I OUGHT TO EAT OR DRINK SOMETHING OR OTHER; BUT THE GREAT QUESTION IS, WHAT?”</p>
+        </div>
+        <div class="page-number">10</div>
+      </div>
+    </div>
+    <div class="spread text-only">
+      <div class="page-left decorative-panel">
+        <div class="chapter-ornament">
+          <div class="ornament-number">4</div>
+        </div>
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>THE GREAT QUESTION CERTAINLY WAS, WHAT? ALICE LOOKED ALL ROUND HER AT THE FLOWERS AND THE BLADES OF GRASS, BUT SHE DID NOT SEE ANYTHING THAT LOOKED LIKE THE RIGHT THING TO EAT OR DRINK UNDER THE CIRCUMSTANCES. THERE WAS A LARGE MUSHROOM GROWING NEAR HER, ABOUT THE SAME HEIGHT AS HERSELF; AND WHEN SHE HAD LOOKED UNDER IT, AND ON BOTH SIDES OF IT, AND BEHIND IT, IT OCCURRED TO HER THAT SHE MIGHT AS WELL LOOK AND SEE WHAT WAS ON THE TOP OF IT.</p>
+          <p>SHE STRETCHED HERSELF UP ON TIPTOE, AND PEEPED OVER THE EDGE OF THE MUSHROOM, AND HER EYES IMMEDIATELY MET THOSE OF A LARGE BLUE CATERPILLAR, THAT WAS SITTING ON THE TOP WITH ITS ARMS FOLDED, QUIETLY SMOKING A LONG HOOKAH, AND TAKING NOT THE SMALLEST NOTICE OF HER OR OF ANYTHING ELSE.</p>
+        </div>
+        <div class="page-number">11</div>
+      </div>
+    </div>
+    <div class="spread back-cover">
+      <div class="page-left decorative-panel">
+        <div class="chapter-ornament">
+          <div class="ornament-star">&#10038;</div>
+        </div>
+      </div>
+      <div class="page-right back-text">
+        <div class="back-block">
+          <div class="the-end">THE END</div>
+          <div class="back-info">
+            <p>CHAPTER 4: THE RABBIT SENDS IN A LITTLE BILL</p>
+            <p class="small">ALICE'S ADVENTURES IN WONDERLAND (1865)</p>
+            <p class="small">WORDS BY LEWIS CARROLL</p>
+            <p class="small">ALL ILLUSTRATIONS ARE PUBLIC DOMAIN</p>
+            <p class="small">MADE WITH LOVE AT RECURSIVE.ECO</p>
+          </div>
+        </div>
+      </div>
+    </div>
+<script>
+// Auto-fit: measure each text block's rendered height and scale font down until it fits.
+// Runs on load so text is correctly sized before printing.
+(function() {
+  const MAX_FONT = 22;
+  const MIN_FONT = 9;
+  const STEP = 0.5;
+
+  function fitAll() {
+    document.querySelectorAll('.text-block').forEach(function(block) {
+      var container = block.parentElement;
+      // Available height = container height minus page-number space
+      var maxH = container.clientHeight - 32;
+      var ps = block.querySelectorAll('p');
+      if (!ps.length) return;
+
+      // Start at max font and shrink until it fits
+      var size = MAX_FONT;
+      function applySize(s) {
+        ps.forEach(function(p) { p.style.fontSize = s + 'px'; });
+      }
+      applySize(size);
+
+      // Shrink until content fits or we hit minimum
+      while (block.scrollHeight > maxH && size > MIN_FONT) {
+        size -= STEP;
+        applySize(size);
+      }
+    });
+  }
+
+  // Run on load and before print
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fitAll);
+  } else {
+    fitAll();
+  }
+  window.addEventListener('beforeprint', fitAll);
+  window.addEventListener('resize', fitAll);
+})();
+
+// ── Word Search Highlighting ──
+(function() {
+  var input = document.getElementById('searchInput');
+  var countEl = document.getElementById('matchCount');
+  if (!input) return;
+
+  function clearMarks() {
+    document.querySelectorAll('mark.search-match').forEach(function(m) {
+      var parent = m.parentNode;
+      parent.replaceChild(document.createTextNode(m.textContent), m);
+      parent.normalize();
+    });
+    countEl.textContent = '';
+  }
+
+  function highlightText(node, regex) {
+    var count = 0;
+    if (node.nodeType === 3) { // Text node
+      var match = node.textContent.match(regex);
+      if (match) {
+        var span = document.createElement('mark');
+        span.className = 'search-match';
+        var parts = node.textContent.split(regex);
+        var frag = document.createDocumentFragment();
+        parts.forEach(function(part, i) {
+          frag.appendChild(document.createTextNode(part));
+          if (i < parts.length - 1) {
+            var m = span.cloneNode(false);
+            m.textContent = node.textContent.match(new RegExp(regex.source, 'gi'))[count] || match[0];
+            frag.appendChild(m);
+            count++;
+          }
+        });
+        node.parentNode.replaceChild(frag, node);
+      }
+      return count;
+    }
+    if (node.nodeType === 1 && node.tagName !== 'MARK' && node.tagName !== 'SCRIPT') {
+      var children = Array.from(node.childNodes);
+      children.forEach(function(child) { count += highlightText(child, regex); });
+    }
+    return count;
+  }
+
+  var debounceTimer;
+  input.addEventListener('input', function() {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(function() {
+      clearMarks();
+      var query = input.value.trim();
+      if (query.length < 2) return;
+      try {
+        var regex = new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$$&') + ')', 'gi');
+        var total = 0;
+        document.querySelectorAll('.text-block').forEach(function(block) {
+          total += highlightText(block, regex);
+        });
+        countEl.textContent = total > 0 ? total + ' found' : 'no matches';
+      } catch(e) {}
+    }, 300);
+  });
+
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') { input.value = ''; clearMarks(); }
+  });
+})();
+
+// ── Booklet Imposition Toggle ──
+(function() {
+  var btn = document.getElementById('toggleMode');
+  if (!btn) return;
+  var isBooklet = false;
+  var originalOrder = [];
+
+  btn.addEventListener('click', function() {
+    isBooklet = !isBooklet;
+    btn.classList.toggle('active', isBooklet);
+    btn.textContent = isBooklet ? '📱 App Mode' : '📖 Booklet Print';
+    document.body.classList.toggle('booklet-mode', isBooklet);
+
+    var spreads = Array.from(document.querySelectorAll('.spread'));
+    if (!originalOrder.length) originalOrder = spreads.map(function(s) { return s; });
+
+    if (isBooklet) {
+      // Saddle-stitch imposition: reorder for double-sided folded printing
+      var N = spreads.length;
+      // Pad to multiple of 4
+      while (N % 4 !== 0) N++;
+      var order = [];
+      var sheets = N / 2;
+      for (var i = 0; i < sheets / 2; i++) {
+        // Front of sheet: pages [N-1-2i, 2i]
+        order.push(N - 1 - 2 * i, 2 * i);
+        // Back of sheet: pages [2i+1, N-2-2i]
+        order.push(2 * i + 1, N - 2 - 2 * i);
+      }
+      var container = spreads[0].parentNode;
+      order.forEach(function(idx) {
+        if (idx < originalOrder.length) {
+          container.appendChild(originalOrder[idx]);
+        }
+      });
+    } else {
+      // Restore original order
+      var container = originalOrder[0].parentNode;
+      originalOrder.forEach(function(s) { container.appendChild(s); });
+    }
+
+    // Re-run auto-fit after reorder
+    window.dispatchEvent(new Event('resize'));
+  });
+})();
+</script>
+</body>
+</html>

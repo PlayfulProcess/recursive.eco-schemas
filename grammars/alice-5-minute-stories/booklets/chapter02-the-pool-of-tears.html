@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 2: The Pool of Tears — Alice in Wonderland</title>
+  <style>
+    @page { size: landscape; margin: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Georgia', 'Cambria', 'Times New Roman', serif;
+      background: white;
+      color: #1a1a1a;
+    }
+
+    .spread {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+    }
+    .spread:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* Left page: illustration */
+    .page-left {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8f5f0;
+      padding: 16px;
+      overflow: hidden;
+    }
+    .page-left img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Right page: text */
+    .page-right {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 32px 5% 32px 5%;
+      background: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Text block — NEVER scroll */
+    .text-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* Default text style — JS auto-fit adjusts font-size to fill container */
+    .text-block p {
+      font-size: 18px;
+      line-height: 1.7;
+      font-weight: 700;
+      text-align: left;
+      letter-spacing: 0.3px;
+      margin-bottom: 1em;
+    }
+    .text-block p:last-child { margin-bottom: 0; }
+
+    .page-number {
+      font-size: 11px;
+      color: #ccc;
+      position: absolute;
+      bottom: 8px;
+      right: 16px;
+    }
+
+    /* Decorative panel (text-only pages) */
+    .decorative-panel {
+      background: #2c1810;
+    }
+    .chapter-ornament {
+      text-align: center;
+      color: #d4a76a;
+    }
+    .ornament-number {
+      font-size: clamp(48px, 8vw, 96px);
+      font-weight: 800;
+      letter-spacing: 4px;
+      opacity: 0.3;
+      font-family: 'Georgia', serif;
+    }
+    .ornament-star {
+      font-size: clamp(36px, 6vw, 72px);
+      opacity: 0.3;
+    }
+
+    /* Cover */
+    .cover-title {
+      background: #2c1810;
+      color: white;
+    }
+    .title-block {
+      text-align: center;
+      font-family: 'Georgia', serif;
+    }
+    .series-name {
+      font-size: clamp(11px, 1.5vw, 16px);
+      letter-spacing: 4px;
+      color: #d4a76a;
+      margin-bottom: 12px;
+    }
+    .book-number {
+      font-size: clamp(13px, 1.8vw, 20px);
+      letter-spacing: 3px;
+      color: #d4a76a;
+      margin-bottom: 20px;
+    }
+    .title-block h1 {
+      font-size: clamp(20px, 3.8vw, 42px);
+      line-height: 1.2;
+      margin-bottom: 25px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    .author {
+      font-size: clamp(11px, 1.3vw, 14px);
+      letter-spacing: 3px;
+      color: #d4a76a;
+      margin-bottom: 8px;
+    }
+    .page-info {
+      font-size: clamp(9px, 1vw, 11px);
+      letter-spacing: 2px;
+      color: #a08060;
+      margin-top: 5px;
+    }
+    .cover-image { background: #2c1810; }
+    .cover-image img {
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+
+    /* Back cover */
+    .back-text {
+      background: #2c1810;
+      color: white;
+    }
+    .back-block {
+      text-align: center;
+      font-family: 'Georgia', serif;
+    }
+    .the-end {
+      font-size: clamp(24px, 4vw, 44px);
+      font-weight: 800;
+      letter-spacing: 6px;
+      margin-bottom: 30px;
+      color: #d4a76a;
+    }
+    .back-info p {
+      font-size: clamp(10px, 1.2vw, 13px);
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+      color: #d4a76a;
+    }
+    .back-info .small {
+      font-size: clamp(8px, 0.9vw, 10px);
+      color: #a08060;
+    }
+
+    /* Print */
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .spread { height: 100vh; }
+      .page-left img { box-shadow: none; }
+      .cover-image img { box-shadow: none; }
+    }
+
+    /* ── Toolbar (hidden in print) ── */
+    .toolbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      background: #2c1810;
+      color: #d4a76a;
+      font-family: 'Georgia', serif;
+      font-size: 13px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .toolbar input[type="text"] {
+      padding: 5px 10px;
+      border: 1px solid #d4a76a;
+      border-radius: 4px;
+      background: #1a0f08;
+      color: #f0e6d6;
+      font-size: 13px;
+      font-family: 'Georgia', serif;
+      width: 180px;
+    }
+    .toolbar input::placeholder { color: #8a7060; }
+    .toolbar button {
+      padding: 5px 12px;
+      border: 1px solid #d4a76a;
+      border-radius: 4px;
+      background: #1a0f08;
+      color: #d4a76a;
+      font-size: 12px;
+      cursor: pointer;
+      font-family: 'Georgia', serif;
+    }
+    .toolbar button:hover { background: #3c2820; }
+    .toolbar button.active { background: #d4a76a; color: #2c1810; }
+    .toolbar .match-count { font-size: 11px; color: #a08060; min-width: 60px; }
+    .toolbar .spacer { flex: 1; }
+    .toolbar .ch-title { font-size: 12px; letter-spacing: 1px; }
+
+    /* Search highlight */
+    mark.search-match { background: #ffd700; color: #1a1a1a; border-radius: 2px; padding: 0 1px; }
+
+    /* Screen: page dividers */
+    @media screen {
+      .spread {
+        border-bottom: 3px dashed #ccc;
+        min-height: 100vh;
+      }
+      .spread:last-child { border-bottom: none; }
+      body { background: #e8e8e8; padding-top: 44px; }
+    }
+
+    /* Print: hide toolbar and search highlights */
+    @media print {
+      .toolbar { display: none !important; }
+      mark.search-match { background: transparent; color: inherit; }
+      body { padding-top: 0; }
+    }
+
+    /* Booklet imposition mode */
+    body.booklet-mode .spread {
+      width: 50vw;
+      height: 50vh;
+      display: inline-flex;
+    }
+    body.booklet-mode .page-left,
+    body.booklet-mode .page-right {
+      padding: 12px 3%;
+    }
+    body.booklet-mode .page-left img {
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+<div class="toolbar">
+  <span class="ch-title">CH 2</span>
+  <input type="text" id="searchInput" placeholder="Search words..." autocomplete="off">
+  <span class="match-count" id="matchCount"></span>
+  <span class="spacer"></span>
+  <button id="toggleMode">📖 Booklet Print</button>
+</div>
+
+    <div class="spread cover-spread">
+      <div class="page-left cover-image">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-02-the-pool-of-tears/lewis-carroll-1864-chapter-I.webp" alt="Cover illustration">
+      </div>
+      <div class="page-right cover-title">
+        <div class="title-block">
+          <div class="series-name">ALICE IN WONDERLAND</div>
+          <div class="book-number">CHAPTER 2</div>
+          <h1>THE POOL OF TEARS</h1>
+          <div class="author">BY LEWIS CARROLL</div>
+          <div class="page-info">9 PAGES</div>
+        </div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-the-pool-of-tears/alice-b-woodward-1913.jpg" alt="They all swam to the shore">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>“CURIOUSER AND CURIOUSER!” CRIED ALICE (SHE WAS SO MUCH SURPRISED, THAT FOR THE MOMENT SHE QUITE FORGOT HOW TO SPEAK GOOD ENGLISH);<br>“NOW I’M OPENING OUT LIKE THE LARGEST TELESCOPE THAT EVER WAS! GOOD-BYE, FEET!” (FOR WHEN SHE LOOKED DOWN AT HER FEET, THEY SEEMED TO BE ALMOST OUT OF SIGHT, THEY WERE GETTING SO FAR OFF).<br>“OH, MY POOR LITTLE FEET, I WONDER WHO WILL PUT ON YOUR SHOES AND STOCKINGS FOR YOU NOW, DEARS? I’M SURE I SHAN’T BE ABLE! I SHALL BE A GREAT DEAL TOO FAR OFF TO TROUBLE MYSELF ABOUT YOU: YOU MUST MANAGE THE BEST WAY YOU CAN;—BUT I MUST BE KIND TO THEM,” THOUGHT ALICE,<br>“OR PERHAPS THEY WON’T WALK THE WAY I WANT TO GO! LET ME SEE: I’LL GIVE THEM A NEW PAIR OF BOOTS EVERY CHRISTMAS.”</p>
+          <p>AND SHE WENT ON PLANNING TO HERSELF HOW SHE WOULD MANAGE IT.<br>“THEY MUST GO BY THE CARRIER,” SHE THOUGHT;<br>“AND HOW FUNNY IT’LL SEEM, SENDING PRESENTS TO ONE’S OWN FEET! AND HOW ODD THE DIRECTIONS WILL LOOK!</p>
+          <p>ALICE’S RIGHT FOOT, ESQ., HEARTHRUG, NEAR THE FENDER, (WITH ALICE’S LOVE).</p>
+          <p>OH DEAR, WHAT NONSENSE I’M TALKING!”</p>
+          <p>JUST THEN HER HEAD STRUCK AGAINST THE ROOF OF THE HALL: IN FACT SHE WAS NOW MORE THAN NINE FEET HIGH, AND SHE AT ONCE TOOK UP THE LITTLE GOLDEN KEY AND HURRIED OFF TO THE GARDEN DOOR.</p>
+          <p>POOR ALICE! IT WAS AS MUCH AS SHE COULD DO, LYING DOWN ON ONE SIDE, TO LOOK THROUGH INTO THE GARDEN WITH ONE EYE; BUT TO GET THROUGH WAS MORE HOPELESS THAN EVER: SHE SAT DOWN AND BEGAN TO CRY AGAIN.</p>
+          <p>“YOU OUGHT TO BE ASHAMED OF YOURSELF,” SAID ALICE,<br>“A GREAT GIRL LIKE YOU,” (SHE MIGHT WELL SAY THIS),<br>“TO GO ON CRYING IN THIS WAY!</p>
+        </div>
+        <div class="page-number">1</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-curiouser-and-curiouser/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="How Alice grew tall">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>STOP THIS MOMENT, I TELL YOU!” BUT SHE WENT ON ALL THE SAME, SHEDDING GALLONS OF TEARS, UNTIL THERE WAS A LARGE POOL ALL ROUND HER, ABOUT FOUR INCHES DEEP AND REACHING HALF DOWN THE HALL.</p>
+        </div>
+        <div class="page-number">2</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-the-pool-of-tears/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="Alice &amp; Mouse in Pool of Tears">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>AFTER A TIME SHE HEARD A LITTLE PATTERING OF FEET IN THE DISTANCE, AND SHE HASTILY DRIED HER EYES TO SEE WHAT WAS COMING. IT WAS THE WHITE RABBIT RETURNING, SPLENDIDLY DRESSED, WITH A PAIR OF WHITE KID GLOVES IN ONE HAND AND A LARGE FAN IN THE OTHER: HE CAME TROTTING ALONG IN A GREAT HURRY, MUTTERING TO HIMSELF AS HE CAME,<br>“OH! THE DUCHESS, THE DUCHESS! OH! WON’T SHE BE SAVAGE IF I’VE KEPT HER WAITING!” ALICE FELT SO DESPERATE THAT SHE WAS READY TO ASK HELP OF ANY ONE; SO, WHEN THE RABBIT CAME NEAR HER, SHE BEGAN, IN A LOW, TIMID VOICE,<br>“IF YOU PLEASE, SIR—” THE RABBIT STARTED VIOLENTLY, DROPPED THE WHITE KID GLOVES AND THE FAN, AND SKURRIED AWAY INTO THE DARKNESS AS HARD AS HE COULD GO.</p>
+          <p>ALICE TOOK UP THE FAN AND GLOVES, AND, AS THE HALL WAS VERY HOT, SHE KEPT FANNING HERSELF ALL THE TIME SHE WENT ON TALKING:<br>“DEAR, DEAR! HOW QUEER EVERYTHING IS TO-DAY! AND YESTERDAY THINGS WENT ON JUST AS USUAL. I WONDER IF I’VE BEEN CHANGED IN THE NIGHT? LET ME THINK: WAS I THE SAME WHEN I GOT UP THIS MORNING? I ALMOST THINK I CAN REMEMBER FEELING A LITTLE DIFFERENT. BUT IF I’M NOT THE SAME, THE NEXT QUESTION IS, WHO IN THE WORLD AM I? AH, THAT’S THE GREAT PUZZLE!” AND SHE BEGAN THINKING OVER ALL THE CHILDREN SHE KNEW THAT WERE OF THE SAME AGE AS HERSELF, TO SEE IF SHE COULD HAVE BEEN CHANGED FOR ANY OF THEM.</p>
+          <p>“I’M SURE I’M NOT ADA,” SHE SAID,<br>“FOR HER HAIR GOES IN SUCH LONG RINGLETS, AND MINE DOESN’T GO IN RINGLETS AT ALL; AND I’M SURE I CAN’T BE MABEL, FOR I KNOW ALL SORTS OF THINGS, AND SHE, OH! SHE KNOWS SUCH A VERY LITTLE!</p>
+        </div>
+        <div class="page-number">3</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-the-white-rabbit-returns/lewis-carroll-1864-manuscript.webp" alt="White Rabbit ordering Alice about">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>BESIDES, SHE’S SHE, AND I’M I, AND—OH DEAR, HOW PUZZLING IT ALL IS! I’LL TRY IF I KNOW ALL THE THINGS I USED TO KNOW. LET ME SEE: FOUR TIMES FIVE IS TWELVE, AND FOUR TIMES SIX IS THIRTEEN, AND FOUR TIMES SEVEN IS—OH DEAR! I SHALL NEVER GET TO TWENTY AT THAT RATE! HOWEVER, THE MULTIPLICATION TABLE DOESN’T SIGNIFY: LET’S TRY GEOGRAPHY. LONDON IS THE CAPITAL OF PARIS, AND PARIS IS THE CAPITAL OF ROME, AND ROME—NO, THAT’S ALL WRONG, I’M CERTAIN! I MUST HAVE BEEN CHANGED FOR MABEL! I’LL TRY AND SAY ‘HOW DOTH THE LITTLE—’” AND SHE CROSSED HER HANDS ON HER LAP AS IF SHE WERE SAYING LESSONS, AND BEGAN TO REPEAT IT, BUT HER VOICE SOUNDED HOARSE AND STRANGE, AND THE WORDS DID NOT COME THE SAME AS THEY USED TO DO:—</p>
+          <p>“HOW DOTH THE LITTLE CROCODILE IMPROVE HIS SHINING TAIL, AND POUR THE WATERS OF THE NILE ON EVERY GOLDEN SCALE!</p>
+          <p>“HOW CHEERFULLY HE SEEMS TO GRIN, HOW NEATLY SPREAD HIS CLAWS, AND WELCOME LITTLE FISHES IN WITH GENTLY SMILING JAWS!”</p>
+          <p>“I’M SURE THOSE ARE NOT THE RIGHT WORDS,” SAID POOR ALICE, AND HER EYES FILLED WITH TEARS AGAIN AS SHE WENT ON,<br>“I MUST BE MABEL AFTER ALL, AND I SHALL HAVE TO GO AND LIVE IN THAT POKY LITTLE HOUSE, AND HAVE NEXT TO NO TOYS TO PLAY WITH, AND OH! EVER SO MANY LESSONS TO LEARN! NO, I’VE MADE UP MY MIND ABOUT IT; IF I’M MABEL, I’LL STAY DOWN HERE! IT’LL BE NO USE THEIR PUTTING THEIR HEADS DOWN AND SAYING ‘COME UP AGAIN, DEAR!’ I SHALL ONLY LOOK UP AND SAY ‘WHO AM I THEN?</p>
+        </div>
+        <div class="page-number">4</div>
+      </div>
+    </div>
+    <div class="spread text-only">
+      <div class="page-left decorative-panel">
+        <div class="chapter-ornament">
+          <div class="ornament-number">2</div>
+        </div>
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>TELL ME THAT FIRST, AND THEN, IF I LIKE BEING THAT PERSON, I’LL COME UP: IF NOT, I’LL STAY DOWN HERE TILL I’M SOMEBODY ELSE’—BUT, OH DEAR!” CRIED ALICE, WITH A SUDDEN BURST OF TEARS,<br>“I DO WISH THEY WOULD PUT THEIR HEADS DOWN! I AM SO VERY TIRED OF BEING ALL ALONE HERE!”</p>
+          <p>AS SHE SAID THIS SHE LOOKED DOWN AT HER HANDS, AND WAS SURPRISED TO SEE THAT SHE HAD PUT ON ONE OF THE RABBIT’S LITTLE WHITE KID GLOVES WHILE SHE WAS TALKING.<br>“HOW CAN I HAVE DONE THAT?” SHE THOUGHT.<br>“I MUST BE GROWING SMALL AGAIN.” SHE GOT UP AND WENT TO THE TABLE TO MEASURE HERSELF BY IT, AND FOUND THAT, AS NEARLY AS SHE COULD GUESS, SHE WAS NOW ABOUT TWO FEET HIGH, AND WAS GOING ON SHRINKING RAPIDLY: SHE SOON FOUND OUT THAT THE CAUSE OF THIS WAS THE FAN SHE WAS HOLDING, AND SHE DROPPED IT HASTILY, JUST IN TIME TO AVOID SHRINKING AWAY ALTOGETHER.</p>
+        </div>
+        <div class="page-number">5</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-the-pool-of-tears/arthur-rackham-1907.jpg" alt="Pool of tears">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>“THAT WAS A NARROW ESCAPE!” SAID ALICE, A GOOD DEAL FRIGHTENED AT THE SUDDEN CHANGE, BUT VERY GLAD TO FIND HERSELF STILL IN EXISTENCE;<br>“AND NOW FOR THE GARDEN!” AND SHE RAN WITH ALL SPEED BACK TO THE LITTLE DOOR: BUT, ALAS! THE LITTLE DOOR WAS SHUT AGAIN, AND THE LITTLE GOLDEN KEY WAS LYING ON THE GLASS TABLE AS BEFORE,<br>“AND THINGS ARE WORSE THAN EVER,” THOUGHT THE POOR CHILD,<br>“FOR I NEVER WAS SO SMALL AS THIS BEFORE, NEVER! AND I DECLARE IT’S TOO BAD, THAT IT IS!”</p>
+          <p>AS SHE SAID THESE WORDS HER FOOT SLIPPED, AND IN ANOTHER MOMENT, SPLASH! SHE WAS UP TO HER CHIN IN SALT WATER. HER FIRST IDEA WAS THAT SHE HAD SOMEHOW FALLEN INTO THE SEA,<br>“AND IN THAT CASE I CAN GO BACK BY RAILWAY,” SHE SAID TO HERSELF. (ALICE HAD BEEN TO THE SEASIDE ONCE IN HER LIFE, AND HAD COME TO THE GENERAL CONCLUSION, THAT WHEREVER YOU GO TO ON THE ENGLISH COAST YOU FIND A NUMBER OF BATHING MACHINES IN THE SEA, SOME CHILDREN DIGGING IN THE SAND WITH WOODEN SPADES, THEN A ROW OF LODGING HOUSES, AND BEHIND THEM A RAILWAY STATION.) HOWEVER, SHE SOON MADE OUT THAT SHE WAS IN THE POOL OF TEARS WHICH SHE HAD WEPT WHEN SHE WAS NINE FEET HIGH.</p>
+          <p>“I WISH I HADN’T CRIED SO MUCH!” SAID ALICE, AS SHE SWAM ABOUT, TRYING TO FIND HER WAY OUT.<br>“I SHALL BE PUNISHED FOR IT NOW, I SUPPOSE, BY BEING DROWNED IN MY OWN TEARS! THAT WILL BE A QUEER THING, TO BE SURE! HOWEVER, EVERYTHING IS QUEER TO-DAY.”</p>
+        </div>
+        <div class="page-number">6</div>
+      </div>
+    </div>
+    <div class="spread text-only">
+      <div class="page-left decorative-panel">
+        <div class="chapter-ornament">
+          <div class="ornament-number">2</div>
+        </div>
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>JUST THEN SHE HEARD SOMETHING SPLASHING ABOUT IN THE POOL A LITTLE WAY OFF, AND SHE SWAM NEARER TO MAKE OUT WHAT IT WAS: AT FIRST SHE THOUGHT IT MUST BE A WALRUS OR HIPPOPOTAMUS, BUT THEN SHE REMEMBERED HOW SMALL SHE WAS NOW, AND SHE SOON MADE OUT THAT IT WAS ONLY A MOUSE THAT HAD SLIPPED IN LIKE HERSELF.</p>
+          <p>“WOULD IT BE OF ANY USE, NOW,” THOUGHT ALICE,<br>“TO SPEAK TO THIS MOUSE? EVERYTHING IS SO OUT-OF-THE-WAY DOWN HERE, THAT I SHOULD THINK VERY LIKELY IT CAN TALK: AT ANY RATE, THERE’S NO HARM IN TRYING.” SO SHE BEGAN:<br>“O MOUSE, DO YOU KNOW THE WAY OUT OF THIS POOL? I AM VERY TIRED OF SWIMMING ABOUT HERE, O MOUSE!” (ALICE THOUGHT THIS MUST BE THE RIGHT WAY OF SPEAKING TO A MOUSE: SHE HAD NEVER DONE SUCH A THING BEFORE, BUT SHE REMEMBERED HAVING SEEN IN HER BROTHER’S LATIN GRAMMAR,<br>“A MOUSE—OF A MOUSE—TO A MOUSE—A MOUSE—O MOUSE!”) THE MOUSE LOOKED AT HER RATHER INQUISITIVELY, AND SEEMED TO HER TO WINK WITH ONE OF ITS LITTLE EYES, BUT IT SAID NOTHING.</p>
+          <p>“PERHAPS IT DOESN’T UNDERSTAND ENGLISH,” THOUGHT ALICE;<br>“I DARESAY IT’S A FRENCH MOUSE, COME OVER WITH WILLIAM THE CONQUEROR.” (FOR, WITH ALL HER KNOWLEDGE OF HISTORY, ALICE HAD NO VERY CLEAR NOTION HOW LONG AGO ANYTHING HAD HAPPENED.) SO SHE BEGAN AGAIN:<br>“OÙ EST MA CHATTE?” WHICH WAS THE FIRST SENTENCE IN HER FRENCH LESSON-BOOK. THE MOUSE GAVE A SUDDEN LEAP OUT OF THE WATER, AND SEEMED TO QUIVER ALL OVER WITH FRIGHT.<br>“OH, I BEG YOUR PARDON!” CRIED ALICE HASTILY, AFRAID THAT SHE HAD HURT THE POOR ANIMAL’S FEELINGS.<br>“I QUITE FORGOT YOU DIDN’T LIKE CATS.”</p>
+        </div>
+        <div class="page-number">7</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-meeting-the-mouse/lewis-carroll-1864-manuscript.webp" alt="Alice swimming with the Mouse">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>“NOT LIKE CATS!” CRIED THE MOUSE, IN A SHRILL, PASSIONATE VOICE.<br>“WOULD YOU LIKE CATS IF YOU WERE ME?”</p>
+          <p>“WELL, PERHAPS NOT,” SAID ALICE IN A SOOTHING TONE:<br>“DON’T BE ANGRY ABOUT IT. AND YET I WISH I COULD SHOW YOU OUR CAT DINAH: I THINK YOU’D TAKE A FANCY TO CATS IF YOU COULD ONLY SEE HER. SHE IS SUCH A DEAR QUIET THING,” ALICE WENT ON, HALF TO HERSELF, AS SHE SWAM LAZILY ABOUT IN THE POOL,<br>“AND SHE SITS PURRING SO NICELY BY THE FIRE, LICKING HER PAWS AND WASHING HER FACE—AND SHE IS SUCH A NICE SOFT THING TO NURSE—AND SHE’S SUCH A CAPITAL ONE FOR CATCHING MICE—OH, I BEG YOUR PARDON!” CRIED ALICE AGAIN, FOR THIS TIME THE MOUSE WAS BRISTLING ALL OVER, AND SHE FELT CERTAIN IT MUST BE REALLY OFFENDED.<br>“WE WON’T TALK ABOUT HER ANY MORE IF YOU’D RATHER NOT.”</p>
+          <p>“WE INDEED!” CRIED THE MOUSE, WHO WAS TREMBLING DOWN TO THE END OF HIS TAIL.<br>“AS IF I WOULD TALK ON SUCH A SUBJECT! OUR FAMILY ALWAYS HATED CATS: NASTY, LOW, VULGAR THINGS! DON’T LET ME HEAR THE NAME AGAIN!”</p>
+          <p>“I WON’T INDEED!” SAID ALICE, IN A GREAT HURRY TO CHANGE THE SUBJECT OF CONVERSATION.<br>“ARE YOU—ARE YOU FOND—OF—OF DOGS?” THE MOUSE DID NOT ANSWER, SO ALICE WENT ON EAGERLY:<br>“THERE IS SUCH A NICE LITTLE DOG NEAR OUR HOUSE I SHOULD LIKE TO SHOW YOU! A LITTLE BRIGHT-EYED TERRIER, YOU KNOW, WITH OH, SUCH LONG CURLY BROWN HAIR! AND IT’LL FETCH THINGS WHEN YOU THROW THEM, AND IT’LL SIT UP AND BEG FOR ITS DINNER, AND ALL SORTS OF THINGS—I CAN’T REMEMBER HALF OF THEM—AND IT BELONGS TO A FARMER, YOU KNOW, AND HE SAYS IT’S SO USEFUL, IT’S WORTH A HUNDRED POUNDS!</p>
+        </div>
+        <div class="page-number">8</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-meeting-the-mouse/emily-overnell-1912.jpg" alt="Alice in Wonderland frontispiece">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>HE SAYS IT KILLS ALL THE RATS AND—OH DEAR!” CRIED ALICE IN A SORROWFUL TONE,<br>“I’M AFRAID I’VE OFFENDED IT AGAIN!” FOR THE MOUSE WAS SWIMMING AWAY FROM HER AS HARD AS IT COULD GO, AND MAKING QUITE A COMMOTION IN THE POOL AS IT WENT.</p>
+          <p>SO SHE CALLED SOFTLY AFTER IT,<br>“MOUSE DEAR! DO COME BACK AGAIN, AND WE WON’T TALK ABOUT CATS OR DOGS EITHER, IF YOU DON’T LIKE THEM!” WHEN THE MOUSE HEARD THIS, IT TURNED ROUND AND SWAM SLOWLY BACK TO HER: ITS FACE WAS QUITE PALE (WITH PASSION, ALICE THOUGHT), AND IT SAID IN A LOW TREMBLING VOICE,<br>“LET US GET TO THE SHORE, AND THEN I’LL TELL YOU MY HISTORY, AND YOU’LL UNDERSTAND WHY IT IS I HATE CATS AND DOGS.”</p>
+          <p>IT WAS HIGH TIME TO GO, FOR THE POOL WAS GETTING QUITE CROWDED WITH THE BIRDS AND ANIMALS THAT HAD FALLEN INTO IT: THERE WERE A DUCK AND A DODO, A LORY AND AN EAGLET, AND SEVERAL OTHER CURIOUS CREATURES. ALICE LED THE WAY, AND THE WHOLE PARTY SWAM TO THE SHORE.</p>
+        </div>
+        <div class="page-number">9</div>
+      </div>
+    </div>
+    <div class="spread back-cover">
+      <div class="page-left decorative-panel">
+        <div class="chapter-ornament">
+          <div class="ornament-star">&#10038;</div>
+        </div>
+      </div>
+      <div class="page-right back-text">
+        <div class="back-block">
+          <div class="the-end">THE END</div>
+          <div class="back-info">
+            <p>CHAPTER 2: THE POOL OF TEARS</p>
+            <p class="small">ALICE'S ADVENTURES IN WONDERLAND (1865)</p>
+            <p class="small">WORDS BY LEWIS CARROLL</p>
+            <p class="small">ALL ILLUSTRATIONS ARE PUBLIC DOMAIN</p>
+            <p class="small">MADE WITH LOVE AT RECURSIVE.ECO</p>
+          </div>
+        </div>
+      </div>
+    </div>
+<script>
+// Auto-fit: measure each text block's rendered height and scale font down until it fits.
+// Runs on load so text is correctly sized before printing.
+(function() {
+  const MAX_FONT = 22;
+  const MIN_FONT = 9;
+  const STEP = 0.5;
+
+  function fitAll() {
+    document.querySelectorAll('.text-block').forEach(function(block) {
+      var container = block.parentElement;
+      // Available height = container height minus page-number space
+      var maxH = container.clientHeight - 32;
+      var ps = block.querySelectorAll('p');
+      if (!ps.length) return;
+
+      // Start at max font and shrink until it fits
+      var size = MAX_FONT;
+      function applySize(s) {
+        ps.forEach(function(p) { p.style.fontSize = s + 'px'; });
+      }
+      applySize(size);
+
+      // Shrink until content fits or we hit minimum
+      while (block.scrollHeight > maxH && size > MIN_FONT) {
+        size -= STEP;
+        applySize(size);
+      }
+    });
+  }
+
+  // Run on load and before print
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fitAll);
+  } else {
+    fitAll();
+  }
+  window.addEventListener('beforeprint', fitAll);
+  window.addEventListener('resize', fitAll);
+})();
+
+// ── Word Search Highlighting ──
+(function() {
+  var input = document.getElementById('searchInput');
+  var countEl = document.getElementById('matchCount');
+  if (!input) return;
+
+  function clearMarks() {
+    document.querySelectorAll('mark.search-match').forEach(function(m) {
+      var parent = m.parentNode;
+      parent.replaceChild(document.createTextNode(m.textContent), m);
+      parent.normalize();
+    });
+    countEl.textContent = '';
+  }
+
+  function highlightText(node, regex) {
+    var count = 0;
+    if (node.nodeType === 3) { // Text node
+      var match = node.textContent.match(regex);
+      if (match) {
+        var span = document.createElement('mark');
+        span.className = 'search-match';
+        var parts = node.textContent.split(regex);
+        var frag = document.createDocumentFragment();
+        parts.forEach(function(part, i) {
+          frag.appendChild(document.createTextNode(part));
+          if (i < parts.length - 1) {
+            var m = span.cloneNode(false);
+            m.textContent = node.textContent.match(new RegExp(regex.source, 'gi'))[count] || match[0];
+            frag.appendChild(m);
+            count++;
+          }
+        });
+        node.parentNode.replaceChild(frag, node);
+      }
+      return count;
+    }
+    if (node.nodeType === 1 && node.tagName !== 'MARK' && node.tagName !== 'SCRIPT') {
+      var children = Array.from(node.childNodes);
+      children.forEach(function(child) { count += highlightText(child, regex); });
+    }
+    return count;
+  }
+
+  var debounceTimer;
+  input.addEventListener('input', function() {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(function() {
+      clearMarks();
+      var query = input.value.trim();
+      if (query.length < 2) return;
+      try {
+        var regex = new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$$&') + ')', 'gi');
+        var total = 0;
+        document.querySelectorAll('.text-block').forEach(function(block) {
+          total += highlightText(block, regex);
+        });
+        countEl.textContent = total > 0 ? total + ' found' : 'no matches';
+      } catch(e) {}
+    }, 300);
+  });
+
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') { input.value = ''; clearMarks(); }
+  });
+})();
+
+// ── Booklet Imposition Toggle ──
+(function() {
+  var btn = document.getElementById('toggleMode');
+  if (!btn) return;
+  var isBooklet = false;
+  var originalOrder = [];
+
+  btn.addEventListener('click', function() {
+    isBooklet = !isBooklet;
+    btn.classList.toggle('active', isBooklet);
+    btn.textContent = isBooklet ? '📱 App Mode' : '📖 Booklet Print';
+    document.body.classList.toggle('booklet-mode', isBooklet);
+
+    var spreads = Array.from(document.querySelectorAll('.spread'));
+    if (!originalOrder.length) originalOrder = spreads.map(function(s) { return s; });
+
+    if (isBooklet) {
+      // Saddle-stitch imposition: reorder for double-sided folded printing
+      var N = spreads.length;
+      // Pad to multiple of 4
+      while (N % 4 !== 0) N++;
+      var order = [];
+      var sheets = N / 2;
+      for (var i = 0; i < sheets / 2; i++) {
+        // Front of sheet: pages [N-1-2i, 2i]
+        order.push(N - 1 - 2 * i, 2 * i);
+        // Back of sheet: pages [2i+1, N-2-2i]
+        order.push(2 * i + 1, N - 2 - 2 * i);
+      }
+      var container = spreads[0].parentNode;
+      order.forEach(function(idx) {
+        if (idx < originalOrder.length) {
+          container.appendChild(originalOrder[idx]);
+        }
+      });
+    } else {
+      // Restore original order
+      var container = originalOrder[0].parentNode;
+      originalOrder.forEach(function(s) { container.appendChild(s); });
+    }
+
+    // Re-run auto-fit after reorder
+    window.dispatchEvent(new Event('resize'));
+  });
+})();
+</script>
+</body>
+</html>
