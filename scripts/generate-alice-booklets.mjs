@@ -499,7 +499,7 @@ function wrapHtml(chNum, chName, spreadsHtml) {
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
-      padding: 24px 32px;
+      padding: 32px 5% 32px 5%;
       background: white;
       position: relative;
       overflow: hidden;
