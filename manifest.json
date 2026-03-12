@@ -1,6 +1,6 @@
 {
   "generated": true,
-  "grammar_count": 203,
+  "grammar_count": 205,
   "grammars": {
     "a-little-princess": {
       "id": "a-little-princess",
@@ -219,6 +219,39 @@
         "Shrei"
       ],
       "worldview": "animist"
+    },
+    "alice-5-minute-stories": {
+      "id": "alice-5-minute-stories",
+      "name": "Alice in Wonderland — Illustrated Chapter Books",
+      "description": "Lewis Carroll's complete original text in ALL CAPS with 121 public domain illustrations. 12 printable landscape booklets (one per chapter). Each page has one illustration and a passage of text. Print landscape, fold in half for a picture book! Illustrated by Tenniel, Rackham, Carroll (manuscript), Hudson, Gutmann, Le Fanu, Walker, Rountree and more.",
+      "grammar_type": "custom",
+      "creator_name": "",
+      "tags": [
+        "children",
+        "picture-book",
+        "printable",
+        "all-caps",
+        "beginning-readers",
+        "alice",
+        "public-domain",
+        "illustrated",
+        "original-text"
+      ],
+      "item_count": 16,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "chapter",
+        "collection",
+        "group"
+      ],
+      "roots": [],
+      "shelves": [],
+      "lineages": [],
+      "worldview": ""
     },
     "alice-in-the-amazon": {
       "id": "alice-in-the-amazon",
@@ -455,6 +488,57 @@
         "Andreotti"
       ],
       "worldview": "devotional"
+    },
+    "animal-fables": {
+      "id": "animal-fables",
+      "name": "Animal Fables: The Stories Nobody Finished",
+      "description": "Twenty-five one-minute fables with no morals. Each story: one animal, one impossible situation, one silence at the end. Structurally lifted from the world's great epics — Mahabharata, Ramayana, Odyssey, Gilgamesh, Norse myth, Greek tragedy, Jataka tales — but completely standalone. A kid never needs to know it's the Mahabharata. Pull one card at breakfast. Talk about it or don't.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Arthur Rackham's animal illustrations from Aesop's Fables (1912, Heinemann) — ink and watercolor, expressive animal faces with human weight behind the eyes. Walter Crane's picture book animals (1887, Routledge) — bold outlines, decorative borders, animals that feel like they're thinking. Milo Winter's Aesop illustrations (1919, Rand McNally) — naturalistic animals in fable situations, warm palette. Gustave Doré's La Fontaine Fables (1868, Hachette) — dramatic chiaroscuro engravings, animals with gravity.",
+      "grammar_type": "tarot",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "anti-fable",
+        "oracle",
+        "children",
+        "ethics",
+        "animals",
+        "mythology",
+        "mahabharata",
+        "ramayana",
+        "odyssey",
+        "gilgamesh",
+        "norse",
+        "greek",
+        "jataka",
+        "one-minute",
+        "no-moral"
+      ],
+      "item_count": 31,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "fable",
+        "meta",
+        "theme"
+      ],
+      "roots": [
+        "eastern-wisdom",
+        "western-philosophy",
+        "mythopoetic"
+      ],
+      "shelves": [
+        "wonder",
+        "children",
+        "wisdom"
+      ],
+      "lineages": [
+        "Akomolafe",
+        "Andreotti",
+        "Shrei"
+      ],
+      "worldview": "non-dual"
     },
     "anne-of-green-gables": {
       "id": "anne-of-green-gables",
@@ -6516,7 +6600,7 @@
         "book-of-changes",
         "contemplation"
       ],
-      "item_count": 16,
+      "item_count": 17,
       "levels": [
         1,
         2,
@@ -8670,6 +8754,7 @@
         "adventures-of-pinocchio",
         "aesops-fables",
         "alchemy-ancient-modern",
+        "alice-5-minute-stories",
         "alice-in-the-amazon",
         "alice-in-the-mythlands",
         "alice-in-wonderland-chapter-book",
@@ -8863,6 +8948,7 @@
       ],
       "tarot": [
         "alice-s-tarot-my-5-years-old",
+        "animal-fables",
         "i-ching-hd-meta-categories-three-lenses-for-viewing-the-64-hexagrams-my-version",
         "i-ching-hd-meta-categories-three-lenses-for-viewing-the-64-hexagrams-my-version-copy",
         "inner-triangle",
@@ -9024,10 +9110,14 @@
         "new-light-alchymie"
       ],
       "alice": [
+        "alice-5-minute-stories",
         "alice-in-the-amazon",
         "alice-in-the-mythlands",
         "alice-in-wonderland-chapter-book",
         "through-the-looking-glass"
+      ],
+      "all-caps": [
+        "alice-5-minute-stories"
       ],
       "amazon": [
         "alice-in-the-amazon"
@@ -9106,6 +9196,7 @@
       ],
       "animals": [
         "aesops-fables",
+        "animal-fables",
         "expression-of-emotions",
         "fairy-tales-south-africa",
         "folk-stories-southern-nigeria",
@@ -9137,6 +9228,9 @@
         "ancient-art-ritual",
         "anthropological-dance",
         "golden-bough"
+      ],
+      "anti-fable": [
+        "animal-fables"
       ],
       "antisemitism": [
         "colonial-tongues"
@@ -9235,6 +9329,9 @@
       ],
       "bees": [
         "life-of-the-bee"
+      ],
+      "beginning-readers": [
+        "alice-5-minute-stories"
       ],
       "behavior": [
         "inner-triangle"
@@ -9415,8 +9512,10 @@
       "children": [
         "a-little-princess",
         "adventures-of-pinocchio",
+        "alice-5-minute-stories",
         "alice-in-the-mythlands",
         "alice-in-wonderland-chapter-book",
+        "animal-fables",
         "anne-of-green-gables",
         "anon-shiryo-cat-stories",
         "children-story-tree",
@@ -9966,6 +10065,7 @@
         "thus-spoke-zarathustra"
       ],
       "ethics": [
+        "animal-fables",
         "discourses-epictetus",
         "enchiridion",
         "ethics-spinoza",
@@ -10231,6 +10331,9 @@
       "ghanaian": [
         "west-african-folk-tales"
       ],
+      "gilgamesh": [
+        "animal-fables"
+      ],
       "gira": [
         "giras-do-sitio"
       ],
@@ -10273,6 +10376,7 @@
       ],
       "greek": [
         "aesops-fables",
+        "animal-fables",
         "discourses-epictetus",
         "greek-mythology",
         "hesiod-homeric-hymns",
@@ -10409,6 +10513,7 @@
         "olaudah-equiano"
       ],
       "illustrated": [
+        "alice-5-minute-stories",
         "alice-in-wonderland-chapter-book",
         "anon-shiryo-cat-stories",
         "story-01-asking-not-complaining",
@@ -10499,6 +10604,7 @@
         "japanese-fairy-tales"
       ],
       "jataka": [
+        "animal-fables",
         "indian-fairy-tales"
       ],
       "jing-fang": [
@@ -10642,6 +10748,7 @@
         "indian-fairy-tales"
       ],
       "mahabharata": [
+        "animal-fables",
         "indian-myth-legend"
       ],
       "major-arcana": [
@@ -10819,6 +10926,7 @@
         "voices-of-the-unwritten"
       ],
       "mythology": [
+        "animal-fables",
         "archetypal-astrology-tarnas",
         "egyptian-mythology",
         "emerald-death-card-no-one-here-gets-out-alive",
@@ -10909,6 +11017,9 @@
       "nihilism": [
         "beyond-good-and-evil"
       ],
+      "no-moral": [
+        "animal-fables"
+      ],
       "nobel-prize": [
         "gitanjali"
       ],
@@ -10925,6 +11036,7 @@
         "civil-disobedience"
       ],
       "norse": [
+        "animal-fables",
         "prose-edda"
       ],
       "nous": [
@@ -10944,8 +11056,14 @@
         "history-of-magic-levi",
         "rosicrucian-mysteries"
       ],
+      "odyssey": [
+        "animal-fables"
+      ],
       "olympian": [
         "hesiod-homeric-hymns"
+      ],
+      "one-minute": [
+        "animal-fables"
       ],
       "ontological": [
         "playful-process-the-path-of-the-ontoject"
@@ -10960,6 +11078,7 @@
       "oracle": [
         "aesops-fables",
         "andersens-fairy-tales",
+        "animal-fables",
         "art-of-war",
         "fairy-tales-south-africa",
         "folk-stories-southern-nigeria",
@@ -10995,6 +11114,9 @@
         "i-ching-chinese-emergent",
         "i-ching-chinese-original-with-brief-translation",
         "i-ching-leibniz-binary"
+      ],
+      "original-text": [
+        "alice-5-minute-stories"
       ],
       "origins-of-art": [
         "ancient-art-ritual"
@@ -11120,6 +11242,9 @@
       "physics": [
         "timaeus-plato"
       ],
+      "picture-book": [
+        "alice-5-minute-stories"
+      ],
       "pinocchio": [
         "adventures-of-pinocchio"
       ],
@@ -11234,6 +11359,9 @@
       "princesses": [
         "fairy-tales-south-africa"
       ],
+      "printable": [
+        "alice-5-minute-stories"
+      ],
       "probability": [
         "instituto-canoa-math-6"
       ],
@@ -11267,6 +11395,7 @@
       "public-domain": [
         "a-little-princess",
         "adventures-of-pinocchio",
+        "alice-5-minute-stories",
         "alice-in-wonderland-chapter-book",
         "anne-of-green-gables",
         "areopagitica",
@@ -11360,6 +11489,7 @@
         "indian-myth-legend"
       ],
       "ramayana": [
+        "animal-fables",
         "indian-myth-legend"
       ],
       "rank": [
@@ -12102,6 +12232,7 @@
         "alice-s-tarot-my-5-years-old",
         "ancient-art-ritual",
         "andersens-fairy-tales",
+        "animal-fables",
         "anne-of-green-gables",
         "anon-shiryo-cat-stories",
         "anthropological-dance",
@@ -12361,6 +12492,7 @@
       "eastern-wisdom": [
         "alice-in-the-amazon",
         "alice-in-the-mythlands",
+        "animal-fables",
         "arabian-nights",
         "bhagavad-gita",
         "book-of-tea",
@@ -12565,6 +12697,9 @@
       "mythology": [
         "metamorphoses-ovid"
       ],
+      "mythopoetic": [
+        "animal-fables"
+      ],
       "natural-philosophy": [
         "cosmic-unfolding",
         "dinosaur-tree",
@@ -12647,6 +12782,7 @@
       ],
       "western-philosophy": [
         "ancient-art-ritual",
+        "animal-fables",
         "architecture-of-nations",
         "ballet-living-architecture",
         "beyond-good-and-evil",
@@ -12693,6 +12829,7 @@
         "adventures-of-pinocchio",
         "alice-in-the-mythlands",
         "andersens-fairy-tales",
+        "animal-fables",
         "anne-of-green-gables",
         "celtic-fairy-tales",
         "children-story-tree",
@@ -12827,6 +12964,7 @@
         "alchemy-ancient-modern",
         "alice-in-the-mythlands",
         "ancient-art-ritual",
+        "animal-fables",
         "arabian-nights",
         "bhagavad-gita",
         "book-of-tea",
@@ -12908,6 +13046,7 @@
         "alice-in-the-amazon",
         "alice-in-the-mythlands",
         "andersens-fairy-tales",
+        "animal-fables",
         "anthropological-dance",
         "arabian-nights",
         "ballet-living-architecture",
@@ -12954,6 +13093,7 @@
       "Akomolafe": [
         "alice-in-the-amazon",
         "alice-in-the-mythlands",
+        "animal-fables",
         "anthropological-dance",
         "architecture-of-nations",
         "beyond-good-and-evil",
@@ -13012,6 +13152,7 @@
         "alice-in-the-amazon",
         "alice-in-the-mythlands",
         "andersens-fairy-tales",
+        "animal-fables",
         "anne-of-green-gables",
         "anthropological-dance",
         "architecture-of-nations",
@@ -13156,6 +13297,7 @@
         "alice-in-the-mythlands",
         "ancient-art-ritual",
         "andersens-fairy-tales",
+        "animal-fables",
         "arabian-nights",
         "bhagavad-gita",
         "book-of-tea",
