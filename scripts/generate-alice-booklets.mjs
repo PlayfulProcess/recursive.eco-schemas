@@ -75,27 +75,37 @@ function formatTextAsHtml(text) {
     // Opening quotes: \u201c (") or regular "
     cleaned = cleaned.replace(
       /([.!?;:,\)\]])\s+([\u201c\u201e"])/g,
-      '$1<br><br>$2'
+      '$1<br>$2'
     );
 
     // Also break before dialogue that starts with a dash (em dash dialogue)
     cleaned = cleaned.replace(
       /([.!?])\s+(\u2014|\u2013|—)/g,
-      '$1<br><br>$2'
+      '$1<br>$2'
     );
 
-    return `<p>${escapeHtml(cleaned).replace(/&lt;br&gt;&lt;br&gt;/g, '<br><br>')}</p>`;
+    return `<p>${escapeHtml(cleaned).replace(/&lt;br&gt;/g, '<br>')}</p>`;
   }).join('\n          ');
 }
 
 /**
- * Get CSS class for font sizing based on character count.
+ * Get CSS class for font sizing based on text content.
+ * Accounts for dialogue breaks and paragraphs which consume vertical space
+ * beyond what raw character count suggests.
  */
-function fontSizeClass(charCount) {
-  if (charCount < 400) return 'text-large';
-  if (charCount < 700) return '';
-  if (charCount < 1000) return 'text-medium';
-  if (charCount < 1400) return 'text-small';
+function fontSizeClass(text) {
+  // Count vertical-space-consuming elements
+  const paragraphs = text.split(/\n\n+/).filter(p => p.trim()).length;
+  const dialogueBreaks = (text.match(/[.!?;:,\)\]]\s+[\u201c\u201e"]/g) || []).length;
+
+  // Each paragraph gap ≈ 40 chars worth of vertical space
+  // Each dialogue break ≈ 25 chars worth of vertical space
+  const effectiveChars = text.length + (paragraphs - 1) * 40 + dialogueBreaks * 25;
+
+  if (effectiveChars < 350) return 'text-large';
+  if (effectiveChars < 600) return '';
+  if (effectiveChars < 900) return 'text-medium';
+  if (effectiveChars < 1300) return 'text-small';
   return 'text-xs';
 }
 
@@ -383,7 +393,6 @@ function generateBookletHtml(chNum, chapter) {
   for (let i = 0; i < pages.length; i++) {
     const page = pages[i];
     const textHtml = formatTextAsHtml(page.text);
-    const sizeClass = fontSizeClass(page.text.length);
     const pageNum = i + 1;
 
     if (page.illustration) {
@@ -393,7 +402,7 @@ function generateBookletHtml(chNum, chapter) {
         <img src="${page.illustration.url}" alt="${escapeHtml(page.illustration.scene || '')}">
       </div>
       <div class="page-right">
-        <div class="text-block ${sizeClass}">
+        <div class="text-block">
           ${textHtml}
         </div>
         <div class="page-number">${pageNum}</div>
@@ -408,7 +417,7 @@ function generateBookletHtml(chNum, chapter) {
         </div>
       </div>
       <div class="page-right">
-        <div class="text-block ${sizeClass}">
+        <div class="text-block">
           ${textHtml}
         </div>
         <div class="page-number">${pageNum}</div>
@@ -515,34 +524,16 @@ function wrapHtml(chNum, chName, spreadsHtml) {
       overflow: hidden;
     }
 
-    /* Default text style */
+    /* Default text style — JS auto-fit adjusts font-size to fill container */
     .text-block p {
-      font-size: clamp(13px, 1.9vw, 20px);
-      line-height: 2.0;
+      font-size: 18px;
+      line-height: 1.7;
       font-weight: ${USE_CAPS ? '700' : '400'};
       text-align: left;
       letter-spacing: ${USE_CAPS ? '0.3px' : '0'};
-      margin-bottom: 1em;
+      margin-bottom: 0.6em;
     }
     .text-block p:last-child { margin-bottom: 0; }
-
-    /* Font size tiers */
-    .text-block.text-large p {
-      font-size: clamp(16px, 2.4vw, 26px);
-      line-height: 2.1;
-    }
-    .text-block.text-medium p {
-      font-size: clamp(11px, 1.5vw, 17px);
-      line-height: 1.9;
-    }
-    .text-block.text-small p {
-      font-size: clamp(10px, 1.3vw, 15px);
-      line-height: 1.8;
-    }
-    .text-block.text-xs p {
-      font-size: clamp(9px, 1.1vw, 13px);
-      line-height: 1.7;
-    }
 
     .page-number {
       font-size: 11px;
@@ -666,6 +657,47 @@ function wrapHtml(chNum, chName, spreadsHtml) {
 </head>
 <body>
 ${spreadsHtml}
+<script>
+// Auto-fit: measure each text block's rendered height and scale font down until it fits.
+// Runs on load so text is correctly sized before printing.
+(function() {
+  const MAX_FONT = 22;
+  const MIN_FONT = 9;
+  const STEP = 0.5;
+
+  function fitAll() {
+    document.querySelectorAll('.text-block').forEach(function(block) {
+      var container = block.parentElement;
+      // Available height = container height minus page-number space
+      var maxH = container.clientHeight - 32;
+      var ps = block.querySelectorAll('p');
+      if (!ps.length) return;
+
+      // Start at max font and shrink until it fits
+      var size = MAX_FONT;
+      function applySize(s) {
+        ps.forEach(function(p) { p.style.fontSize = s + 'px'; });
+      }
+      applySize(size);
+
+      // Shrink until content fits or we hit minimum
+      while (block.scrollHeight > maxH && size > MIN_FONT) {
+        size -= STEP;
+        applySize(size);
+      }
+    });
+  }
+
+  // Run on load and before print
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fitAll);
+  } else {
+    fitAll();
+  }
+  window.addEventListener('beforeprint', fitAll);
+  window.addEventListener('resize', fitAll);
+})();
+</script>
 </body>
 </html>`;
 }
