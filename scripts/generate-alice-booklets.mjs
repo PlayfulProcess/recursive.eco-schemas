@@ -88,27 +88,6 @@ function formatTextAsHtml(text) {
   }).join('\n          ');
 }
 
-/**
- * Get CSS class for font sizing based on text content.
- * Accounts for dialogue breaks and paragraphs which consume vertical space
- * beyond what raw character count suggests.
- */
-function fontSizeClass(text) {
-  // Count vertical-space-consuming elements
-  const paragraphs = text.split(/\n\n+/).filter(p => p.trim()).length;
-  const dialogueBreaks = (text.match(/[.!?;:,\)\]]\s+[\u201c\u201e"]/g) || []).length;
-
-  // Each paragraph gap ≈ 40 chars worth of vertical space
-  // Each dialogue break ≈ 25 chars worth of vertical space
-  const effectiveChars = text.length + (paragraphs - 1) * 40 + dialogueBreaks * 25;
-
-  if (effectiveChars < 350) return 'text-large';
-  if (effectiveChars < 600) return '';
-  if (effectiveChars < 900) return 'text-medium';
-  if (effectiveChars < 1300) return 'text-small';
-  return 'text-xs';
-}
-
 // ── Sentence Splitter ────────────────────────────────────────────────
 
 const ABBREVIATIONS = new Set([
@@ -531,7 +510,7 @@ function wrapHtml(chNum, chName, spreadsHtml) {
       font-weight: ${USE_CAPS ? '700' : '400'};
       text-align: left;
       letter-spacing: ${USE_CAPS ? '0.3px' : '0'};
-      margin-bottom: 0.6em;
+      margin-bottom: 1em;
     }
     .text-block p:last-child { margin-bottom: 0; }
 
@@ -644,6 +623,51 @@ function wrapHtml(chNum, chName, spreadsHtml) {
       .cover-image img { box-shadow: none; }
     }
 
+    /* ── Toolbar (hidden in print) ── */
+    .toolbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      background: #2c1810;
+      color: #d4a76a;
+      font-family: 'Georgia', serif;
+      font-size: 13px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .toolbar input[type="text"] {
+      padding: 5px 10px;
+      border: 1px solid #d4a76a;
+      border-radius: 4px;
+      background: #1a0f08;
+      color: #f0e6d6;
+      font-size: 13px;
+      font-family: 'Georgia', serif;
+      width: 180px;
+    }
+    .toolbar input::placeholder { color: #8a7060; }
+    .toolbar button {
+      padding: 5px 12px;
+      border: 1px solid #d4a76a;
+      border-radius: 4px;
+      background: #1a0f08;
+      color: #d4a76a;
+      font-size: 12px;
+      cursor: pointer;
+      font-family: 'Georgia', serif;
+    }
+    .toolbar button:hover { background: #3c2820; }
+    .toolbar button.active { background: #d4a76a; color: #2c1810; }
+    .toolbar .match-count { font-size: 11px; color: #a08060; min-width: 60px; }
+    .toolbar .spacer { flex: 1; }
+    .toolbar .ch-title { font-size: 12px; letter-spacing: 1px; }
+
+    /* Search highlight */
+    mark.search-match { background: #ffd700; color: #1a1a1a; border-radius: 2px; padding: 0 1px; }
+
     /* Screen: page dividers */
     @media screen {
       .spread {
@@ -651,11 +675,39 @@ function wrapHtml(chNum, chName, spreadsHtml) {
         min-height: 100vh;
       }
       .spread:last-child { border-bottom: none; }
-      body { background: #e8e8e8; }
+      body { background: #e8e8e8; padding-top: 44px; }
+    }
+
+    /* Print: hide toolbar and search highlights */
+    @media print {
+      .toolbar { display: none !important; }
+      mark.search-match { background: transparent; color: inherit; }
+      body { padding-top: 0; }
+    }
+
+    /* Booklet imposition mode */
+    body.booklet-mode .spread {
+      width: 50vw;
+      height: 50vh;
+      display: inline-flex;
+    }
+    body.booklet-mode .page-left,
+    body.booklet-mode .page-right {
+      padding: 12px 3%;
+    }
+    body.booklet-mode .page-left img {
+      border-radius: 2px;
     }
   </style>
 </head>
 <body>
+<div class="toolbar">
+  <span class="ch-title">CH ${chNum}</span>
+  <input type="text" id="searchInput" placeholder="Search words..." autocomplete="off">
+  <span class="match-count" id="matchCount"></span>
+  <span class="spacer"></span>
+  <button id="toggleMode">📖 Booklet Print</button>
+</div>
 ${spreadsHtml}
 <script>
 // Auto-fit: measure each text block's rendered height and scale font down until it fits.
@@ -696,6 +748,119 @@ ${spreadsHtml}
   }
   window.addEventListener('beforeprint', fitAll);
   window.addEventListener('resize', fitAll);
+})();
+
+// ── Word Search Highlighting ──
+(function() {
+  var input = document.getElementById('searchInput');
+  var countEl = document.getElementById('matchCount');
+  if (!input) return;
+
+  function clearMarks() {
+    document.querySelectorAll('mark.search-match').forEach(function(m) {
+      var parent = m.parentNode;
+      parent.replaceChild(document.createTextNode(m.textContent), m);
+      parent.normalize();
+    });
+    countEl.textContent = '';
+  }
+
+  function highlightText(node, regex) {
+    var count = 0;
+    if (node.nodeType === 3) { // Text node
+      var match = node.textContent.match(regex);
+      if (match) {
+        var span = document.createElement('mark');
+        span.className = 'search-match';
+        var parts = node.textContent.split(regex);
+        var frag = document.createDocumentFragment();
+        parts.forEach(function(part, i) {
+          frag.appendChild(document.createTextNode(part));
+          if (i < parts.length - 1) {
+            var m = span.cloneNode(false);
+            m.textContent = node.textContent.match(new RegExp(regex.source, 'gi'))[count] || match[0];
+            frag.appendChild(m);
+            count++;
+          }
+        });
+        node.parentNode.replaceChild(frag, node);
+      }
+      return count;
+    }
+    if (node.nodeType === 1 && node.tagName !== 'MARK' && node.tagName !== 'SCRIPT') {
+      var children = Array.from(node.childNodes);
+      children.forEach(function(child) { count += highlightText(child, regex); });
+    }
+    return count;
+  }
+
+  var debounceTimer;
+  input.addEventListener('input', function() {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(function() {
+      clearMarks();
+      var query = input.value.trim();
+      if (query.length < 2) return;
+      try {
+        var regex = new RegExp('(' + query.replace(/[.*+?^\${}()|[\\]\\\\]/g, '\\\\$$&') + ')', 'gi');
+        var total = 0;
+        document.querySelectorAll('.text-block').forEach(function(block) {
+          total += highlightText(block, regex);
+        });
+        countEl.textContent = total > 0 ? total + ' found' : 'no matches';
+      } catch(e) {}
+    }, 300);
+  });
+
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') { input.value = ''; clearMarks(); }
+  });
+})();
+
+// ── Booklet Imposition Toggle ──
+(function() {
+  var btn = document.getElementById('toggleMode');
+  if (!btn) return;
+  var isBooklet = false;
+  var originalOrder = [];
+
+  btn.addEventListener('click', function() {
+    isBooklet = !isBooklet;
+    btn.classList.toggle('active', isBooklet);
+    btn.textContent = isBooklet ? '📱 App Mode' : '📖 Booklet Print';
+    document.body.classList.toggle('booklet-mode', isBooklet);
+
+    var spreads = Array.from(document.querySelectorAll('.spread'));
+    if (!originalOrder.length) originalOrder = spreads.map(function(s) { return s; });
+
+    if (isBooklet) {
+      // Saddle-stitch imposition: reorder for double-sided folded printing
+      var N = spreads.length;
+      // Pad to multiple of 4
+      while (N % 4 !== 0) N++;
+      var order = [];
+      var sheets = N / 2;
+      for (var i = 0; i < sheets / 2; i++) {
+        // Front of sheet: pages [N-1-2i, 2i]
+        order.push(N - 1 - 2 * i, 2 * i);
+        // Back of sheet: pages [2i+1, N-2-2i]
+        order.push(2 * i + 1, N - 2 - 2 * i);
+      }
+      var container = spreads[0].parentNode;
+      order.forEach(function(idx) {
+        if (idx < originalOrder.length) {
+          container.appendChild(originalOrder[idx]);
+        }
+      });
+    } else {
+      // Restore original order
+      var container = originalOrder[0].parentNode;
+      originalOrder.forEach(function(s) { container.appendChild(s); });
+    }
+
+    // Re-run auto-fit after reorder
+    window.dispatchEvent(new Event('resize'));
+  });
 })();
 </script>
 </body>
@@ -813,5 +978,41 @@ ${bookletInfo.map(b => `    <a class="card" href="${b.filename}">
 
 writeFileSync(resolve(outputDir, 'index.html'), indexHtml);
 console.log(`\n  index.html (library page)`);
+
+// ── Generate Illustration Assignment JSON (for reordering tool) ──
+
+const illustrationMap = [];
+for (const chNum of chapterNums) {
+  const chapter = chapterMap[chNum];
+  const { coverImage, pages } = buildChapterPages(chapter);
+  const chName = chapter.l2?.metadata?.original_title || chapter.scenes[0]?.metadata?.chapter_name || `Chapter ${chNum}`;
+
+  illustrationMap.push({
+    chapter: chNum,
+    page: 0,
+    label: `Ch${chNum} Cover`,
+    text_preview: chName,
+    image_url: coverImage,
+    image_info: 'chapter cover',
+  });
+
+  for (let i = 0; i < pages.length; i++) {
+    const p = pages[i];
+    const preview = p.text.substring(0, 60).replace(/\n/g, ' ').trim();
+    illustrationMap.push({
+      chapter: chNum,
+      page: i + 1,
+      label: `Ch${chNum} p${i + 1}`,
+      text_preview: preview + (p.text.length > 60 ? '...' : ''),
+      image_url: p.illustration ? p.illustration.url : '',
+      image_info: p.illustration ? `${p.illustration.artist || ''} — ${p.illustration.scene || ''}`.trim() : 'text-only',
+    });
+  }
+}
+
+const mapPath = resolve(__dirname, '../grammars/alice-5-minute-stories/illustration-assignments.json');
+writeFileSync(mapPath, JSON.stringify(illustrationMap, null, 2));
+console.log(`  illustration-assignments.json (${illustrationMap.length} entries)`);
+
 console.log(`\nDone! 12 booklets, ${grandTotalPages} total pages, ${grandTotalIll} illustrations.`);
 console.log(`Mode: ${caseLabel}. Use --lowercase flag for normal case.`);
