@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 9: The Mock Turtle's Story — Alice in Wonderland</title>
+  <style>
+    @page { size: landscape; margin: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Georgia', 'Cambria', 'Times New Roman', serif;
+      background: white;
+      color: #1a1a1a;
+    }
+
+    .spread {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+    }
+    .spread:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* Left page: illustration */
+    .page-left {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8f5f0;
+      padding: 16px;
+      overflow: hidden;
+    }
+    .page-left img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Right page: text */
+    .page-right {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 32px 5% 32px 5%;
+      background: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Text block — NEVER scroll */
+    .text-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* Default text style — JS auto-fit adjusts font-size to fill container */
+    .text-block p {
+      font-size: 18px;
+      line-height: 1.7;
+      font-weight: 700;
+      text-align: left;
+      letter-spacing: 0.3px;
+      margin-bottom: 1em;
+    }
+    .text-block p:last-child { margin-bottom: 0; }
+
+    .page-number {
+      font-size: 11px;
+      color: #ccc;
+      position: absolute;
+      bottom: 8px;
+      right: 16px;
+    }
+
+    /* Decorative panel (text-only pages) */
+    .decorative-panel {
+      background: #2c1810;
+    }
+    .chapter-ornament {
+      text-align: center;
+      color: #d4a76a;
+    }
+    .ornament-number {
+      font-size: clamp(48px, 8vw, 96px);
+      font-weight: 800;
+      letter-spacing: 4px;
+      opacity: 0.3;
+      font-family: 'Georgia', serif;
+    }
+    .ornament-star {
+      font-size: clamp(36px, 6vw, 72px);
+      opacity: 0.3;
+    }
+
+    /* Cover */
+    .cover-title {
+      background: #2c1810;
+      color: white;
+    }
+    .title-block {
+      text-align: center;
+      font-family: 'Georgia', serif;
+    }
+    .series-name {
+      font-size: clamp(11px, 1.5vw, 16px);
+      letter-spacing: 4px;
+      color: #d4a76a;
+      margin-bottom: 12px;
+    }
+    .book-number {
+      font-size: clamp(13px, 1.8vw, 20px);
+      letter-spacing: 3px;
+      color: #d4a76a;
+      margin-bottom: 20px;
+    }
+    .title-block h1 {
+      font-size: clamp(20px, 3.8vw, 42px);
+      line-height: 1.2;
+      margin-bottom: 25px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    .author {
+      font-size: clamp(11px, 1.3vw, 14px);
+      letter-spacing: 3px;
+      color: #d4a76a;
+      margin-bottom: 8px;
+    }
+    .page-info {
+      font-size: clamp(9px, 1vw, 11px);
+      letter-spacing: 2px;
+      color: #a08060;
+      margin-top: 5px;
+    }
+    .cover-image { background: #2c1810; }
+    .cover-image img {
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+
+    /* Back cover */
+    .back-text {
+      background: #2c1810;
+      color: white;
+    }
+    .back-block {
+      text-align: center;
+      font-family: 'Georgia', serif;
+    }
+    .the-end {
+      font-size: clamp(24px, 4vw, 44px);
+      font-weight: 800;
+      letter-spacing: 6px;
+      margin-bottom: 30px;
+      color: #d4a76a;
+    }
+    .back-info p {
+      font-size: clamp(10px, 1.2vw, 13px);
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+      color: #d4a76a;
+    }
+    .back-info .small {
+      font-size: clamp(8px, 0.9vw, 10px);
+      color: #a08060;
+    }
+
+    /* Print */
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .spread { height: 100vh; }
+      .page-left img { box-shadow: none; }
+      .cover-image img { box-shadow: none; }
+    }
+
+    /* ── Toolbar (hidden in print) ── */
+    .toolbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      background: #2c1810;
+      color: #d4a76a;
+      font-family: 'Georgia', serif;
+      font-size: 13px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .toolbar input[type="text"] {
+      padding: 5px 10px;
+      border: 1px solid #d4a76a;
+      border-radius: 4px;
+      background: #1a0f08;
+      color: #f0e6d6;
+      font-size: 13px;
+      font-family: 'Georgia', serif;
+      width: 180px;
+    }
+    .toolbar input::placeholder { color: #8a7060; }
+    .toolbar button {
+      padding: 5px 12px;
+      border: 1px solid #d4a76a;
+      border-radius: 4px;
+      background: #1a0f08;
+      color: #d4a76a;
+      font-size: 12px;
+      cursor: pointer;
+      font-family: 'Georgia', serif;
+    }
+    .toolbar button:hover { background: #3c2820; }
+    .toolbar button.active { background: #d4a76a; color: #2c1810; }
+    .toolbar .match-count { font-size: 11px; color: #a08060; min-width: 60px; }
+    .toolbar .spacer { flex: 1; }
+    .toolbar .ch-title { font-size: 12px; letter-spacing: 1px; }
+
+    /* Search highlight */
+    mark.search-match { background: #ffd700; color: #1a1a1a; border-radius: 2px; padding: 0 1px; }
+
+    /* Screen: page dividers */
+    @media screen {
+      .spread {
+        border-bottom: 3px dashed #ccc;
+        min-height: 100vh;
+      }
+      .spread:last-child { border-bottom: none; }
+      body { background: #e8e8e8; padding-top: 44px; }
+    }
+
+    /* Print: hide toolbar and search highlights */
+    @media print {
+      .toolbar { display: none !important; }
+      mark.search-match { background: transparent; color: inherit; }
+      body { padding-top: 0; }
+    }
+
+    /* Booklet imposition mode */
+    body.booklet-mode .spread {
+      width: 50vw;
+      height: 50vh;
+      display: inline-flex;
+    }
+    body.booklet-mode .page-left,
+    body.booklet-mode .page-right {
+      padding: 12px 3%;
+    }
+    body.booklet-mode .page-left img {
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+<div class="toolbar">
+  <span class="ch-title">CH 9</span>
+  <input type="text" id="searchInput" placeholder="Search words..." autocomplete="off">
+  <span class="match-count" id="matchCount"></span>
+  <span class="spacer"></span>
+  <button id="toggleMode">📖 Booklet Print</button>
+</div>
+
+    <div class="spread cover-spread">
+      <div class="page-left cover-image">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-09-the-mock-turtles-story/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="Cover illustration">
+      </div>
+      <div class="page-right cover-title">
+        <div class="title-block">
+          <div class="series-name">ALICE IN WONDERLAND</div>
+          <div class="book-number">CHAPTER 9</div>
+          <h1>THE MOCK TURTLE'S STORY</h1>
+          <div class="author">BY LEWIS CARROLL</div>
+          <div class="page-info">10 PAGES</div>
+        </div>
+      </div>
+    </div>
+    <div class="spread text-only">
+      <div class="page-left decorative-panel">
+        <div class="chapter-ornament">
+          <div class="ornament-number">9</div>
+        </div>
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>“YOU CAN’T THINK HOW GLAD I AM TO SEE YOU AGAIN, YOU DEAR OLD THING!” SAID THE DUCHESS, AS SHE TUCKED HER ARM AFFECTIONATELY INTO ALICE’S, AND THEY WALKED OFF TOGETHER.</p>
+          <p>ALICE WAS VERY GLAD TO FIND HER IN SUCH A PLEASANT TEMPER, AND THOUGHT TO HERSELF THAT PERHAPS IT WAS ONLY THE PEPPER THAT HAD MADE HER SO SAVAGE WHEN THEY MET IN THE KITCHEN.</p>
+          <p>“WHEN I’M A DUCHESS,” SHE SAID TO HERSELF, (NOT IN A VERY HOPEFUL TONE THOUGH),<br>“I WON’T HAVE ANY PEPPER IN MY KITCHEN AT ALL. SOUP DOES VERY WELL WITHOUT—MAYBE IT’S ALWAYS PEPPER THAT MAKES PEOPLE HOT-TEMPERED,” SHE WENT ON, VERY MUCH PLEASED AT HAVING FOUND OUT A NEW KIND OF RULE,<br>“AND VINEGAR THAT MAKES THEM SOUR—AND CAMOMILE THAT MAKES THEM BITTER—AND—AND BARLEY-SUGAR AND SUCH THINGS THAT MAKE CHILDREN SWEET-TEMPERED. I ONLY WISH PEOPLE KNEW THAT: THEN THEY WOULDN’T BE SO STINGY ABOUT IT, YOU KNOW—”</p>
+          <p>SHE HAD QUITE FORGOTTEN THE DUCHESS BY THIS TIME, AND WAS A LITTLE STARTLED WHEN SHE HEARD HER VOICE CLOSE TO HER EAR.<br>“YOU’RE THINKING ABOUT SOMETHING, MY DEAR, AND THAT MAKES YOU FORGET TO TALK. I CAN’T TELL YOU JUST NOW WHAT THE MORAL OF THAT IS, BUT I SHALL REMEMBER IT IN A BIT.”</p>
+          <p>“PERHAPS IT HASN’T ONE,” ALICE VENTURED TO REMARK.</p>
+          <p>“TUT, TUT, CHILD!” SAID THE DUCHESS.<br>“EVERYTHING’S GOT A MORAL, IF ONLY YOU CAN FIND IT.” AND SHE SQUEEZED HERSELF UP CLOSER TO ALICE’S SIDE AS SHE SPOKE.</p>
+        </div>
+        <div class="page-number">1</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-the-duchess-and-her-morals/gwynedd-hudson-1922.jpg" alt="Alice &amp; the Duchess">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>ALICE DID NOT MUCH LIKE KEEPING SO CLOSE TO HER: FIRST, BECAUSE THE DUCHESS WAS VERY UGLY; AND SECONDLY, BECAUSE SHE WAS EXACTLY THE RIGHT HEIGHT TO REST HER CHIN UPON ALICE’S SHOULDER, AND IT WAS AN UNCOMFORTABLY SHARP CHIN. HOWEVER, SHE DID NOT LIKE TO BE RUDE, SO SHE BORE IT AS WELL AS SHE COULD.</p>
+          <p>“THE GAME’S GOING ON RATHER BETTER NOW,” SHE SAID, BY WAY OF KEEPING UP THE CONVERSATION A LITTLE.</p>
+          <p>“’TIS SO,” SAID THE DUCHESS:<br>“AND THE MORAL OF THAT IS—‘OH, ’TIS LOVE, ’TIS LOVE, THAT MAKES THE WORLD GO ROUND!’”</p>
+          <p>“SOMEBODY SAID,” ALICE WHISPERED,<br>“THAT IT’S DONE BY EVERYBODY MINDING THEIR OWN BUSINESS!”</p>
+          <p>“AH, WELL! IT MEANS MUCH THE SAME THING,” SAID THE DUCHESS, DIGGING HER SHARP LITTLE CHIN INTO ALICE’S SHOULDER AS SHE ADDED,<br>“AND THE MORAL OF THAT IS—‘TAKE CARE OF THE SENSE, AND THE SOUNDS WILL TAKE CARE OF THEMSELVES.’”</p>
+          <p>“HOW FOND SHE IS OF FINDING MORALS IN THINGS!” ALICE THOUGHT TO HERSELF.</p>
+          <p>“I DARE SAY YOU’RE WONDERING WHY I DON’T PUT MY ARM ROUND YOUR WAIST,” THE DUCHESS SAID AFTER A PAUSE:<br>“THE REASON IS, THAT I’M DOUBTFUL ABOUT THE TEMPER OF YOUR FLAMINGO. SHALL I TRY THE EXPERIMENT?”</p>
+          <p>“HE MIGHT BITE,” ALICE CAUTIOUSLY REPLIED, NOT FEELING AT ALL ANXIOUS TO HAVE THE EXPERIMENT TRIED.</p>
+          <p>“VERY TRUE,” SAID THE DUCHESS:<br>“FLAMINGOES AND MUSTARD BOTH BITE. AND THE MORAL OF THAT IS—‘BIRDS OF A FEATHER FLOCK TOGETHER.’”</p>
+          <p>“ONLY MUSTARD ISN’T A BIRD,” ALICE REMARKED.</p>
+          <p>“RIGHT, AS USUAL,” SAID THE DUCHESS:<br>“WHAT A CLEAR WAY YOU HAVE OF PUTTING THINGS!”</p>
+          <p>“IT’S A MINERAL, I THINK,” SAID ALICE.</p>
+        </div>
+        <div class="page-number">2</div>
+      </div>
+    </div>
+    <div class="spread text-only">
+      <div class="page-left decorative-panel">
+        <div class="chapter-ornament">
+          <div class="ornament-number">9</div>
+        </div>
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>“OF COURSE IT IS,” SAID THE DUCHESS, WHO SEEMED READY TO AGREE TO EVERYTHING THAT ALICE SAID;<br>“THERE’S A LARGE MUSTARD-MINE NEAR HERE. AND THE MORAL OF THAT IS—‘THE MORE THERE IS OF MINE, THE LESS THERE IS OF YOURS.’”</p>
+          <p>“OH, I KNOW!” EXCLAIMED ALICE, WHO HAD NOT ATTENDED TO THIS LAST REMARK,<br>“IT’S A VEGETABLE. IT DOESN’T LOOK LIKE ONE, BUT IT IS.”</p>
+          <p>“I QUITE AGREE WITH YOU,” SAID THE DUCHESS;<br>“AND THE MORAL OF THAT IS—‘BE WHAT YOU WOULD SEEM TO BE’—OR IF YOU’D LIKE IT PUT MORE SIMPLY—‘NEVER IMAGINE YOURSELF NOT TO BE OTHERWISE THAN WHAT IT MIGHT APPEAR TO OTHERS THAT WHAT YOU WERE OR MIGHT HAVE BEEN WAS NOT OTHERWISE THAN WHAT YOU HAD BEEN WOULD HAVE APPEARED TO THEM TO BE OTHERWISE.’”</p>
+          <p>“I THINK I SHOULD UNDERSTAND THAT BETTER,” ALICE SAID VERY POLITELY,<br>“IF I HAD IT WRITTEN DOWN: BUT I CAN’T QUITE FOLLOW IT AS YOU SAY IT.”</p>
+          <p>“THAT’S NOTHING TO WHAT I COULD SAY IF I CHOSE,” THE DUCHESS REPLIED, IN A PLEASED TONE.</p>
+          <p>“PRAY DON’T TROUBLE YOURSELF TO SAY IT ANY LONGER THAN THAT,” SAID ALICE.</p>
+          <p>“OH, DON’T TALK ABOUT TROUBLE!” SAID THE DUCHESS.<br>“I MAKE YOU A PRESENT OF EVERYTHING I’VE SAID AS YET.”</p>
+          <p>“A CHEAP SORT OF PRESENT!” THOUGHT ALICE.<br>“I’M GLAD THEY DON’T GIVE BIRTHDAY PRESENTS LIKE THAT!” BUT SHE DID NOT VENTURE TO SAY IT OUT LOUD.</p>
+          <p>“THINKING AGAIN?” THE DUCHESS ASKED, WITH ANOTHER DIG OF HER SHARP LITTLE CHIN.</p>
+          <p>“I’VE A RIGHT TO THINK,” SAID ALICE SHARPLY, FOR SHE WAS BEGINNING TO FEEL A LITTLE WORRIED.</p>
+        </div>
+        <div class="page-number">3</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-the-duchess-and-her-morals/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="Duchess">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>“JUST ABOUT AS MUCH RIGHT,” SAID THE DUCHESS,<br>“AS PIGS HAVE TO FLY; AND THE M—”</p>
+          <p>BUT HERE, TO ALICE’S GREAT SURPRISE, THE DUCHESS’S VOICE DIED AWAY, EVEN IN THE MIDDLE OF HER FAVOURITE WORD ‘MORAL,’ AND THE ARM THAT WAS LINKED INTO HERS BEGAN TO TREMBLE. ALICE LOOKED UP, AND THERE STOOD THE QUEEN IN FRONT OF THEM, WITH HER ARMS FOLDED, FROWNING LIKE A THUNDERSTORM.</p>
+          <p>“A FINE DAY, YOUR MAJESTY!” THE DUCHESS BEGAN IN A LOW, WEAK VOICE.</p>
+          <p>“NOW, I GIVE YOU FAIR WARNING,” SHOUTED THE QUEEN, STAMPING ON THE GROUND AS SHE SPOKE;<br>“EITHER YOU OR YOUR HEAD MUST BE OFF, AND THAT IN ABOUT HALF NO TIME! TAKE YOUR CHOICE!”</p>
+          <p>THE DUCHESS TOOK HER CHOICE, AND WAS GONE IN A MOMENT.</p>
+        </div>
+        <div class="page-number">4</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-meeting-the-gryphon/arthur-rackham-1907.jpg" alt="Gryphon &amp; Mock Turtle">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>“LET’S GO ON WITH THE GAME,” THE QUEEN SAID TO ALICE; AND ALICE WAS TOO MUCH FRIGHTENED TO SAY A WORD, BUT SLOWLY FOLLOWED HER BACK TO THE CROQUET-GROUND.</p>
+          <p>THE OTHER GUESTS HAD TAKEN ADVANTAGE OF THE QUEEN’S ABSENCE, AND WERE RESTING IN THE SHADE: HOWEVER, THE MOMENT THEY SAW HER, THEY HURRIED BACK TO THE GAME, THE QUEEN MERELY REMARKING THAT A MOMENT’S DELAY WOULD COST THEM THEIR LIVES.</p>
+          <p>ALL THE TIME THEY WERE PLAYING THE QUEEN NEVER LEFT OFF QUARRELLING WITH THE OTHER PLAYERS, AND SHOUTING “OFF WITH HIS HEAD!” OR “OFF WITH HER HEAD!” THOSE WHOM SHE SENTENCED WERE TAKEN INTO CUSTODY BY THE SOLDIERS, WHO OF COURSE HAD TO LEAVE OFF BEING ARCHES TO DO THIS, SO THAT BY THE END OF HALF AN HOUR OR SO THERE WERE NO ARCHES LEFT, AND ALL THE PLAYERS, EXCEPT THE KING, THE QUEEN, AND ALICE, WERE IN CUSTODY AND UNDER SENTENCE OF EXECUTION.</p>
+          <p>THEN THE QUEEN LEFT OFF, QUITE OUT OF BREATH, AND SAID TO ALICE,<br>“HAVE YOU SEEN THE MOCK TURTLE YET?”</p>
+          <p>“NO,” SAID ALICE.<br>“I DON’T EVEN KNOW WHAT A MOCK TURTLE IS.”</p>
+          <p>“IT’S THE THING MOCK TURTLE SOUP IS MADE FROM,” SAID THE QUEEN.</p>
+          <p>“I NEVER SAW ONE, OR HEARD OF ONE,” SAID ALICE.</p>
+          <p>“COME ON, THEN,” SAID THE QUEEN,<br>“AND HE SHALL TELL YOU HIS HISTORY.”</p>
+          <p>AS THEY WALKED OFF TOGETHER, ALICE HEARD THE KING SAY IN A LOW VOICE, TO THE COMPANY GENERALLY,<br>“YOU ARE ALL PARDONED.” “COME, THAT’S A GOOD THING!” SHE SAID TO HERSELF, FOR SHE HAD FELT QUITE UNHAPPY AT THE NUMBER OF EXECUTIONS THE QUEEN HAD ORDERED.</p>
+          <p>THEY VERY SOON CAME UPON A GRYPHON, LYING FAST ASLEEP IN THE SUN.</p>
+        </div>
+        <div class="page-number">5</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-meeting-the-gryphon/brinsley-le-fanu-1910.jpg" alt="The griffin sleeps deeply">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>(IF YOU DON’T KNOW WHAT A GRYPHON IS, LOOK AT THE PICTURE.)<br>“UP, LAZY THING!” SAID THE QUEEN,<br>“AND TAKE THIS YOUNG LADY TO SEE THE MOCK TURTLE, AND TO HEAR HIS HISTORY. I MUST GO BACK AND SEE AFTER SOME EXECUTIONS I HAVE ORDERED;” AND SHE WALKED OFF, LEAVING ALICE ALONE WITH THE GRYPHON. ALICE DID NOT QUITE LIKE THE LOOK OF THE CREATURE, BUT ON THE WHOLE SHE THOUGHT IT WOULD BE QUITE AS SAFE TO STAY WITH IT AS TO GO AFTER THAT SAVAGE QUEEN: SO SHE WAITED.</p>
+          <p>THE GRYPHON SAT UP AND RUBBED ITS EYES: THEN IT WATCHED THE QUEEN TILL SHE WAS OUT OF SIGHT: THEN IT CHUCKLED.<br>“WHAT FUN!” SAID THE GRYPHON, HALF TO ITSELF, HALF TO ALICE.</p>
+          <p>“WHAT IS THE FUN?” SAID ALICE.</p>
+          <p>“WHY, SHE,” SAID THE GRYPHON.<br>“IT’S ALL HER FANCY, THAT: THEY NEVER EXECUTES NOBODY, YOU KNOW. COME ON!”</p>
+          <p>“EVERYBODY SAYS ‘COME ON!’ HERE,” THOUGHT ALICE, AS SHE WENT SLOWLY AFTER IT:<br>“I NEVER WAS SO ORDERED ABOUT IN ALL MY LIFE, NEVER!”</p>
+          <p>THEY HAD NOT GONE FAR BEFORE THEY SAW THE MOCK TURTLE IN THE DISTANCE, SITTING SAD AND LONELY ON A LITTLE LEDGE OF ROCK, AND, AS THEY CAME NEARER, ALICE COULD HEAR HIM SIGHING AS IF HIS HEART WOULD BREAK. SHE PITIED HIM DEEPLY.<br>“WHAT IS HIS SORROW?” SHE ASKED THE GRYPHON, AND THE GRYPHON ANSWERED, VERY NEARLY IN THE SAME WORDS AS BEFORE,<br>“IT’S ALL HIS FANCY, THAT: HE HASN’T GOT NO SORROW, YOU KNOW. COME ON!”</p>
+          <p>SO THEY WENT UP TO THE MOCK TURTLE, WHO LOOKED AT THEM WITH LARGE EYES FULL OF TEARS, BUT SAID NOTHING.</p>
+          <p>“THIS HERE YOUNG LADY,” SAID THE GRYPHON,<br>“SHE WANTS FOR TO KNOW YOUR HISTORY, SHE DO.”</p>
+        </div>
+        <div class="page-number">6</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-meeting-the-gryphon/bessie-pease-gutmann-1933.jpg" alt="Gryphon">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>“I’LL TELL IT HER,” SAID THE MOCK TURTLE IN A DEEP, HOLLOW TONE:<br>“SIT DOWN, BOTH OF YOU, AND DON’T SPEAK A WORD TILL I’VE FINISHED.”</p>
+          <p>SO THEY SAT DOWN, AND NOBODY SPOKE FOR SOME MINUTES. ALICE THOUGHT TO HERSELF,<br>“I DON’T SEE HOW HE CAN EVER FINISH, IF HE DOESN’T BEGIN.” BUT SHE WAITED PATIENTLY.</p>
+        </div>
+        <div class="page-number">7</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-the-mock-turtles-school/gwynedd-hudson-1922.jpg" alt="Alice &amp; Mock-turtle">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>“ONCE,” SAID THE MOCK TURTLE AT LAST, WITH A DEEP SIGH,<br>“I WAS A REAL TURTLE.”</p>
+          <p>THESE WORDS WERE FOLLOWED BY A VERY LONG SILENCE, BROKEN ONLY BY AN OCCASIONAL EXCLAMATION OF “HJCKRRH!” FROM THE GRYPHON, AND THE CONSTANT HEAVY SOBBING OF THE MOCK TURTLE. ALICE WAS VERY NEARLY GETTING UP AND SAYING,<br>“THANK YOU, SIR, FOR YOUR INTERESTING STORY,” BUT SHE COULD NOT HELP THINKING THERE MUST BE MORE TO COME, SO SHE SAT STILL AND SAID NOTHING.</p>
+          <p>“WHEN WE WERE LITTLE,” THE MOCK TURTLE WENT ON AT LAST, MORE CALMLY, THOUGH STILL SOBBING A LITTLE NOW AND THEN,<br>“WE WENT TO SCHOOL IN THE SEA. THE MASTER WAS AN OLD TURTLE—WE USED TO CALL HIM TORTOISE—”</p>
+          <p>“WHY DID YOU CALL HIM TORTOISE, IF HE WASN’T ONE?” ALICE ASKED.</p>
+          <p>“WE CALLED HIM TORTOISE BECAUSE HE TAUGHT US,” SAID THE MOCK TURTLE ANGRILY:<br>“REALLY YOU ARE VERY DULL!”</p>
+          <p>“YOU OUGHT TO BE ASHAMED OF YOURSELF FOR ASKING SUCH A SIMPLE QUESTION,” ADDED THE GRYPHON; AND THEN THEY BOTH SAT SILENT AND LOOKED AT POOR ALICE, WHO FELT READY TO SINK INTO THE EARTH. AT LAST THE GRYPHON SAID TO THE MOCK TURTLE,<br>“DRIVE ON, OLD FELLOW! DON’T BE ALL DAY ABOUT IT!” AND HE WENT ON IN THESE WORDS:</p>
+          <p>“YES, WE WENT TO SCHOOL IN THE SEA, THOUGH YOU MAYN’T BELIEVE IT—”</p>
+          <p>“I NEVER SAID I DIDN’T!” INTERRUPTED ALICE.</p>
+          <p>“YOU DID,” SAID THE MOCK TURTLE.</p>
+          <p>“HOLD YOUR TONGUE!” ADDED THE GRYPHON, BEFORE ALICE COULD SPEAK AGAIN. THE MOCK TURTLE WENT ON.</p>
+          <p>“WE HAD THE BEST OF EDUCATIONS—IN FACT, WE WENT TO SCHOOL EVERY DAY—”</p>
+          <p>“I’VE BEEN TO A DAY-SCHOOL, TOO,” SAID ALICE;<br>“YOU NEEDN’T BE SO PROUD AS ALL THAT.”</p>
+        </div>
+        <div class="page-number">8</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-the-mock-turtles-school/william-h-walker-1907.jpg" alt="Turtle &amp; Gryphon">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>“WITH EXTRAS?” ASKED THE MOCK TURTLE A LITTLE ANXIOUSLY.</p>
+          <p>“YES,” SAID ALICE,<br>“WE LEARNED FRENCH AND MUSIC.”</p>
+          <p>“AND WASHING?” SAID THE MOCK TURTLE.</p>
+          <p>“CERTAINLY NOT!” SAID ALICE INDIGNANTLY.</p>
+          <p>“AH! THEN YOURS WASN’T A REALLY GOOD SCHOOL,” SAID THE MOCK TURTLE IN A TONE OF GREAT RELIEF.<br>“NOW AT OURS THEY HAD AT THE END OF THE BILL, ‘FRENCH, MUSIC, AND WASHING—EXTRA.’”</p>
+          <p>“YOU COULDN’T HAVE WANTED IT MUCH,” SAID ALICE;<br>“LIVING AT THE BOTTOM OF THE SEA.”</p>
+          <p>“I COULDN’T AFFORD TO LEARN IT.” SAID THE MOCK TURTLE WITH A SIGH.<br>“I ONLY TOOK THE REGULAR COURSE.”</p>
+          <p>“WHAT WAS THAT?” INQUIRED ALICE.</p>
+          <p>“REELING AND WRITHING, OF COURSE, TO BEGIN WITH,” THE MOCK TURTLE REPLIED;<br>“AND THEN THE DIFFERENT BRANCHES OF ARITHMETIC—AMBITION, DISTRACTION, UGLIFICATION, AND DERISION.”</p>
+          <p>“I NEVER HEARD OF ‘UGLIFICATION,’” ALICE VENTURED TO SAY.<br>“WHAT IS IT?”</p>
+          <p>THE GRYPHON LIFTED UP BOTH ITS PAWS IN SURPRISE.<br>“WHAT! NEVER HEARD OF UGLIFYING!” IT EXCLAIMED.<br>“YOU KNOW WHAT TO BEAUTIFY IS, I SUPPOSE?”</p>
+          <p>“YES,” SAID ALICE DOUBTFULLY:<br>“IT MEANS—TO—MAKE—ANYTHING—PRETTIER.”</p>
+          <p>“WELL, THEN,” THE GRYPHON WENT ON,<br>“IF YOU DON’T KNOW WHAT TO UGLIFY IS, YOU ARE A SIMPLETON.”</p>
+          <p>ALICE DID NOT FEEL ENCOURAGED TO ASK ANY MORE QUESTIONS ABOUT IT, SO SHE TURNED TO THE MOCK TURTLE, AND SAID “WHAT ELSE HAD YOU TO LEARN?”</p>
+        </div>
+        <div class="page-number">9</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-the-mock-turtles-school/john-tenniel-harry-theaker-1911.jpg" alt="The Mock Turtle">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>“WELL, THERE WAS MYSTERY,” THE MOCK TURTLE REPLIED, COUNTING OFF THE SUBJECTS ON HIS FLAPPERS,<br>“—MYSTERY, ANCIENT AND MODERN, WITH SEAOGRAPHY: THEN DRAWLING—THE DRAWLING-MASTER WAS AN OLD CONGER-EEL, THAT USED TO COME ONCE A WEEK: HE TAUGHT US DRAWLING, STRETCHING, AND FAINTING IN COILS.”</p>
+          <p>“WHAT WAS THAT LIKE?” SAID ALICE.</p>
+          <p>“WELL, I CAN’T SHOW IT YOU MYSELF,” THE MOCK TURTLE SAID:<br>“I’M TOO STIFF. AND THE GRYPHON NEVER LEARNT IT.”</p>
+          <p>“HADN’T TIME,” SAID THE GRYPHON:<br>“I WENT TO THE CLASSICS MASTER, THOUGH. HE WAS AN OLD CRAB, HE WAS.”</p>
+          <p>“I NEVER WENT TO HIM,” THE MOCK TURTLE SAID WITH A SIGH:<br>“HE TAUGHT LAUGHING AND GRIEF, THEY USED TO SAY.”</p>
+          <p>“SO HE DID, SO HE DID,” SAID THE GRYPHON, SIGHING IN HIS TURN; AND BOTH CREATURES HID THEIR FACES IN THEIR PAWS.</p>
+          <p>“AND HOW MANY HOURS A DAY DID YOU DO LESSONS?” SAID ALICE, IN A HURRY TO CHANGE THE SUBJECT.</p>
+          <p>“TEN HOURS THE FIRST DAY,” SAID THE MOCK TURTLE:<br>“NINE THE NEXT, AND SO ON.”</p>
+          <p>“WHAT A CURIOUS PLAN!” EXCLAIMED ALICE.</p>
+          <p>“THAT’S THE REASON THEY’RE CALLED LESSONS,” THE GRYPHON REMARKED:<br>“BECAUSE THEY LESSEN FROM DAY TO DAY.”</p>
+          <p>THIS WAS QUITE A NEW IDEA TO ALICE, AND SHE THOUGHT IT OVER A LITTLE BEFORE SHE MADE HER NEXT REMARK.<br>“THEN THE ELEVENTH DAY MUST HAVE BEEN A HOLIDAY?”</p>
+          <p>“OF COURSE IT WAS,” SAID THE MOCK TURTLE.</p>
+          <p>“AND HOW DID YOU MANAGE ON THE TWELFTH?” ALICE WENT ON EAGERLY.</p>
+          <p>“THAT’S ENOUGH ABOUT LESSONS,” THE GRYPHON INTERRUPTED IN A VERY DECIDED TONE:<br>“TELL HER SOMETHING ABOUT THE GAMES NOW.”</p>
+        </div>
+        <div class="page-number">10</div>
+      </div>
+    </div>
+    <div class="spread back-cover">
+      <div class="page-left decorative-panel">
+        <div class="chapter-ornament">
+          <div class="ornament-star">&#10038;</div>
+        </div>
+      </div>
+      <div class="page-right back-text">
+        <div class="back-block">
+          <div class="the-end">THE END</div>
+          <div class="back-info">
+            <p>CHAPTER 9: THE MOCK TURTLE'S STORY</p>
+            <p class="small">ALICE'S ADVENTURES IN WONDERLAND (1865)</p>
+            <p class="small">WORDS BY LEWIS CARROLL</p>
+            <p class="small">ALL ILLUSTRATIONS ARE PUBLIC DOMAIN</p>
+            <p class="small">MADE WITH LOVE AT RECURSIVE.ECO</p>
+          </div>
+        </div>
+      </div>
+    </div>
+<script>
+// Auto-fit: measure each text block's rendered height and scale font down until it fits.
+// Runs on load so text is correctly sized before printing.
+(function() {
+  const MAX_FONT = 22;
+  const MIN_FONT = 9;
+  const STEP = 0.5;
+
+  function fitAll() {
+    document.querySelectorAll('.text-block').forEach(function(block) {
+      var container = block.parentElement;
+      // Available height = container height minus page-number space
+      var maxH = container.clientHeight - 32;
+      var ps = block.querySelectorAll('p');
+      if (!ps.length) return;
+
+      // Start at max font and shrink until it fits
+      var size = MAX_FONT;
+      function applySize(s) {
+        ps.forEach(function(p) { p.style.fontSize = s + 'px'; });
+      }
+      applySize(size);
+
+      // Shrink until content fits or we hit minimum
+      while (block.scrollHeight > maxH && size > MIN_FONT) {
+        size -= STEP;
+        applySize(size);
+      }
+    });
+  }
+
+  // Run on load and before print
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fitAll);
+  } else {
+    fitAll();
+  }
+  window.addEventListener('beforeprint', fitAll);
+  window.addEventListener('resize', fitAll);
+})();
+
+// ── Word Search Highlighting ──
+(function() {
+  var input = document.getElementById('searchInput');
+  var countEl = document.getElementById('matchCount');
+  if (!input) return;
+
+  function clearMarks() {
+    document.querySelectorAll('mark.search-match').forEach(function(m) {
+      var parent = m.parentNode;
+      parent.replaceChild(document.createTextNode(m.textContent), m);
+      parent.normalize();
+    });
+    countEl.textContent = '';
+  }
+
+  function highlightText(node, regex) {
+    var count = 0;
+    if (node.nodeType === 3) { // Text node
+      var match = node.textContent.match(regex);
+      if (match) {
+        var span = document.createElement('mark');
+        span.className = 'search-match';
+        var parts = node.textContent.split(regex);
+        var frag = document.createDocumentFragment();
+        parts.forEach(function(part, i) {
+          frag.appendChild(document.createTextNode(part));
+          if (i < parts.length - 1) {
+            var m = span.cloneNode(false);
+            m.textContent = node.textContent.match(new RegExp(regex.source, 'gi'))[count] || match[0];
+            frag.appendChild(m);
+            count++;
+          }
+        });
+        node.parentNode.replaceChild(frag, node);
+      }
+      return count;
+    }
+    if (node.nodeType === 1 && node.tagName !== 'MARK' && node.tagName !== 'SCRIPT') {
+      var children = Array.from(node.childNodes);
+      children.forEach(function(child) { count += highlightText(child, regex); });
+    }
+    return count;
+  }
+
+  var debounceTimer;
+  input.addEventListener('input', function() {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(function() {
+      clearMarks();
+      var query = input.value.trim();
+      if (query.length < 2) return;
+      try {
+        var regex = new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$$&') + ')', 'gi');
+        var total = 0;
+        document.querySelectorAll('.text-block').forEach(function(block) {
+          total += highlightText(block, regex);
+        });
+        countEl.textContent = total > 0 ? total + ' found' : 'no matches';
+      } catch(e) {}
+    }, 300);
+  });
+
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') { input.value = ''; clearMarks(); }
+  });
+})();
+
+// ── Booklet Imposition Toggle ──
+(function() {
+  var btn = document.getElementById('toggleMode');
+  if (!btn) return;
+  var isBooklet = false;
+  var originalOrder = [];
+
+  btn.addEventListener('click', function() {
+    isBooklet = !isBooklet;
+    btn.classList.toggle('active', isBooklet);
+    btn.textContent = isBooklet ? '📱 App Mode' : '📖 Booklet Print';
+    document.body.classList.toggle('booklet-mode', isBooklet);
+
+    var spreads = Array.from(document.querySelectorAll('.spread'));
+    if (!originalOrder.length) originalOrder = spreads.map(function(s) { return s; });
+
+    if (isBooklet) {
+      // Saddle-stitch imposition: reorder for double-sided folded printing
+      var N = spreads.length;
+      // Pad to multiple of 4
+      while (N % 4 !== 0) N++;
+      var order = [];
+      var sheets = N / 2;
+      for (var i = 0; i < sheets / 2; i++) {
+        // Front of sheet: pages [N-1-2i, 2i]
+        order.push(N - 1 - 2 * i, 2 * i);
+        // Back of sheet: pages [2i+1, N-2-2i]
+        order.push(2 * i + 1, N - 2 - 2 * i);
+      }
+      var container = spreads[0].parentNode;
+      order.forEach(function(idx) {
+        if (idx < originalOrder.length) {
+          container.appendChild(originalOrder[idx]);
+        }
+      });
+    } else {
+      // Restore original order
+      var container = originalOrder[0].parentNode;
+      originalOrder.forEach(function(s) { container.appendChild(s); });
+    }
+
+    // Re-run auto-fit after reorder
+    window.dispatchEvent(new Event('resize'));
+  });
+})();
+</script>
+</body>
+</html>

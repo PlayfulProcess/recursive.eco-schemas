@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 8: The Queen's Croquet-Ground — Alice in Wonderland</title>
+  <style>
+    @page { size: landscape; margin: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Georgia', 'Cambria', 'Times New Roman', serif;
+      background: white;
+      color: #1a1a1a;
+    }
+
+    .spread {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+    }
+    .spread:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* Left page: illustration */
+    .page-left {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8f5f0;
+      padding: 16px;
+      overflow: hidden;
+    }
+    .page-left img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Right page: text */
+    .page-right {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 32px 5% 32px 5%;
+      background: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Text block — NEVER scroll */
+    .text-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* Default text style — JS auto-fit adjusts font-size to fill container */
+    .text-block p {
+      font-size: 18px;
+      line-height: 1.7;
+      font-weight: 700;
+      text-align: left;
+      letter-spacing: 0.3px;
+      margin-bottom: 1em;
+    }
+    .text-block p:last-child { margin-bottom: 0; }
+
+    .page-number {
+      font-size: 11px;
+      color: #ccc;
+      position: absolute;
+      bottom: 8px;
+      right: 16px;
+    }
+
+    /* Decorative panel (text-only pages) */
+    .decorative-panel {
+      background: #2c1810;
+    }
+    .chapter-ornament {
+      text-align: center;
+      color: #d4a76a;
+    }
+    .ornament-number {
+      font-size: clamp(48px, 8vw, 96px);
+      font-weight: 800;
+      letter-spacing: 4px;
+      opacity: 0.3;
+      font-family: 'Georgia', serif;
+    }
+    .ornament-star {
+      font-size: clamp(36px, 6vw, 72px);
+      opacity: 0.3;
+    }
+
+    /* Cover */
+    .cover-title {
+      background: #2c1810;
+      color: white;
+    }
+    .title-block {
+      text-align: center;
+      font-family: 'Georgia', serif;
+    }
+    .series-name {
+      font-size: clamp(11px, 1.5vw, 16px);
+      letter-spacing: 4px;
+      color: #d4a76a;
+      margin-bottom: 12px;
+    }
+    .book-number {
+      font-size: clamp(13px, 1.8vw, 20px);
+      letter-spacing: 3px;
+      color: #d4a76a;
+      margin-bottom: 20px;
+    }
+    .title-block h1 {
+      font-size: clamp(20px, 3.8vw, 42px);
+      line-height: 1.2;
+      margin-bottom: 25px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    .author {
+      font-size: clamp(11px, 1.3vw, 14px);
+      letter-spacing: 3px;
+      color: #d4a76a;
+      margin-bottom: 8px;
+    }
+    .page-info {
+      font-size: clamp(9px, 1vw, 11px);
+      letter-spacing: 2px;
+      color: #a08060;
+      margin-top: 5px;
+    }
+    .cover-image { background: #2c1810; }
+    .cover-image img {
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+
+    /* Back cover */
+    .back-text {
+      background: #2c1810;
+      color: white;
+    }
+    .back-block {
+      text-align: center;
+      font-family: 'Georgia', serif;
+    }
+    .the-end {
+      font-size: clamp(24px, 4vw, 44px);
+      font-weight: 800;
+      letter-spacing: 6px;
+      margin-bottom: 30px;
+      color: #d4a76a;
+    }
+    .back-info p {
+      font-size: clamp(10px, 1.2vw, 13px);
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+      color: #d4a76a;
+    }
+    .back-info .small {
+      font-size: clamp(8px, 0.9vw, 10px);
+      color: #a08060;
+    }
+
+    /* Print */
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .spread { height: 100vh; }
+      .page-left img { box-shadow: none; }
+      .cover-image img { box-shadow: none; }
+    }
+
+    /* ── Toolbar (hidden in print) ── */
+    .toolbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      background: #2c1810;
+      color: #d4a76a;
+      font-family: 'Georgia', serif;
+      font-size: 13px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .toolbar input[type="text"] {
+      padding: 5px 10px;
+      border: 1px solid #d4a76a;
+      border-radius: 4px;
+      background: #1a0f08;
+      color: #f0e6d6;
+      font-size: 13px;
+      font-family: 'Georgia', serif;
+      width: 180px;
+    }
+    .toolbar input::placeholder { color: #8a7060; }
+    .toolbar button {
+      padding: 5px 12px;
+      border: 1px solid #d4a76a;
+      border-radius: 4px;
+      background: #1a0f08;
+      color: #d4a76a;
+      font-size: 12px;
+      cursor: pointer;
+      font-family: 'Georgia', serif;
+    }
+    .toolbar button:hover { background: #3c2820; }
+    .toolbar button.active { background: #d4a76a; color: #2c1810; }
+    .toolbar .match-count { font-size: 11px; color: #a08060; min-width: 60px; }
+    .toolbar .spacer { flex: 1; }
+    .toolbar .ch-title { font-size: 12px; letter-spacing: 1px; }
+
+    /* Search highlight */
+    mark.search-match { background: #ffd700; color: #1a1a1a; border-radius: 2px; padding: 0 1px; }
+
+    /* Screen: page dividers */
+    @media screen {
+      .spread {
+        border-bottom: 3px dashed #ccc;
+        min-height: 100vh;
+      }
+      .spread:last-child { border-bottom: none; }
+      body { background: #e8e8e8; padding-top: 44px; }
+    }
+
+    /* Print: hide toolbar and search highlights */
+    @media print {
+      .toolbar { display: none !important; }
+      mark.search-match { background: transparent; color: inherit; }
+      body { padding-top: 0; }
+    }
+
+    /* Booklet imposition mode */
+    body.booklet-mode .spread {
+      width: 50vw;
+      height: 50vh;
+      display: inline-flex;
+    }
+    body.booklet-mode .page-left,
+    body.booklet-mode .page-right {
+      padding: 12px 3%;
+    }
+    body.booklet-mode .page-left img {
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+<div class="toolbar">
+  <span class="ch-title">CH 8</span>
+  <input type="text" id="searchInput" placeholder="Search words..." autocomplete="off">
+  <span class="match-count" id="matchCount"></span>
+  <span class="spacer"></span>
+  <button id="toggleMode">📖 Booklet Print</button>
+</div>
+
+    <div class="spread cover-spread">
+      <div class="page-left cover-image">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-08-the-queens-croquet-ground/alice-b-woodward-1913.jpg" alt="Cover illustration">
+      </div>
+      <div class="page-right cover-title">
+        <div class="title-block">
+          <div class="series-name">ALICE IN WONDERLAND</div>
+          <div class="book-number">CHAPTER 8</div>
+          <h1>THE QUEEN'S CROQUET-GROUND</h1>
+          <div class="author">BY LEWIS CARROLL</div>
+          <div class="page-info">14 PAGES</div>
+        </div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-painting-the-roses-red/gwynedd-hudson-1922.jpg" alt="Gardeners painting roses red">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>A LARGE ROSE-TREE STOOD NEAR THE ENTRANCE OF THE GARDEN: THE ROSES GROWING ON IT WERE WHITE, BUT THERE WERE THREE GARDENERS AT IT, BUSILY PAINTING THEM RED. ALICE THOUGHT THIS A VERY CURIOUS THING, AND SHE WENT NEARER TO WATCH THEM, AND JUST AS SHE CAME UP TO THEM SHE HEARD ONE OF THEM SAY,<br>“LOOK OUT NOW, FIVE! DON’T GO SPLASHING PAINT OVER ME LIKE THAT!”</p>
+          <p>“I COULDN’T HELP IT,” SAID FIVE, IN A SULKY TONE;<br>“SEVEN JOGGED MY ELBOW.”</p>
+          <p>ON WHICH SEVEN LOOKED UP AND SAID,<br>“THAT’S RIGHT, FIVE! ALWAYS LAY THE BLAME ON OTHERS!”</p>
+          <p>“YOU’D BETTER NOT TALK!” SAID FIVE.<br>“I HEARD THE QUEEN SAY ONLY YESTERDAY YOU DESERVED TO BE BEHEADED!”</p>
+          <p>“WHAT FOR?” SAID THE ONE WHO HAD SPOKEN FIRST.</p>
+          <p>“THAT’S NONE OF YOUR BUSINESS, TWO!” SAID SEVEN.</p>
+          <p>“YES, IT IS HIS BUSINESS!” SAID FIVE,<br>“AND I’LL TELL HIM—IT WAS FOR BRINGING THE COOK TULIP-ROOTS INSTEAD OF ONIONS.”</p>
+          <p>SEVEN FLUNG DOWN HIS BRUSH, AND HAD JUST BEGUN “WELL, OF ALL THE UNJUST THINGS—” WHEN HIS EYE CHANCED TO FALL UPON ALICE, AS SHE STOOD WATCHING THEM, AND HE CHECKED HIMSELF SUDDENLY: THE OTHERS LOOKED ROUND ALSO, AND ALL OF THEM BOWED LOW.</p>
+          <p>“WOULD YOU TELL ME,” SAID ALICE, A LITTLE TIMIDLY,<br>“WHY YOU ARE PAINTING THOSE ROSES?”</p>
+          <p>FIVE AND SEVEN SAID NOTHING, BUT LOOKED AT TWO.</p>
+        </div>
+        <div class="page-number">1</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-painting-the-roses-red/william-h-walker-1907.jpg" alt="Playing cards">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>TWO BEGAN IN A LOW VOICE,<br>“WHY THE FACT IS, YOU SEE, MISS, THIS HERE OUGHT TO HAVE BEEN A RED ROSE-TREE, AND WE PUT A WHITE ONE IN BY MISTAKE; AND IF THE QUEEN WAS TO FIND IT OUT, WE SHOULD ALL HAVE OUR HEADS CUT OFF, YOU KNOW. SO YOU SEE, MISS, WE’RE DOING OUR BEST, AFORE SHE COMES, TO—” AT THIS MOMENT FIVE, WHO HAD BEEN ANXIOUSLY LOOKING ACROSS THE GARDEN, CALLED OUT “THE QUEEN! THE QUEEN!” AND THE THREE GARDENERS INSTANTLY THREW THEMSELVES FLAT UPON THEIR FACES. THERE WAS A SOUND OF MANY FOOTSTEPS, AND ALICE LOOKED ROUND, EAGER TO SEE THE QUEEN.</p>
+        </div>
+        <div class="page-number">2</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-the-royal-procession/arthur-rackham-1907.jpg" alt="Queen of Hearts">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>FIRST CAME TEN SOLDIERS CARRYING CLUBS; THESE WERE ALL SHAPED LIKE THE THREE GARDENERS, OBLONG AND FLAT, WITH THEIR HANDS AND FEET AT THE CORNERS: NEXT THE TEN COURTIERS; THESE WERE ORNAMENTED ALL OVER WITH DIAMONDS, AND WALKED TWO AND TWO, AS THE SOLDIERS DID. AFTER THESE CAME THE ROYAL CHILDREN; THERE WERE TEN OF THEM, AND THE LITTLE DEARS CAME JUMPING MERRILY ALONG HAND IN HAND, IN COUPLES: THEY WERE ALL ORNAMENTED WITH HEARTS. NEXT CAME THE GUESTS, MOSTLY KINGS AND QUEENS, AND AMONG THEM ALICE RECOGNISED THE WHITE RABBIT: IT WAS TALKING IN A HURRIED NERVOUS MANNER, SMILING AT EVERYTHING THAT WAS SAID, AND WENT BY WITHOUT NOTICING HER. THEN FOLLOWED THE KNAVE OF HEARTS, CARRYING THE KING’S CROWN ON A CRIMSON VELVET CUSHION; AND, LAST OF ALL THIS GRAND PROCESSION, CAME THE KING AND QUEEN OF HEARTS.</p>
+          <p>ALICE WAS RATHER DOUBTFUL WHETHER SHE OUGHT NOT TO LIE DOWN ON HER FACE LIKE THE THREE GARDENERS, BUT SHE COULD NOT REMEMBER EVER HAVING HEARD OF SUCH A RULE AT PROCESSIONS;<br>“AND BESIDES, WHAT WOULD BE THE USE OF A PROCESSION,” THOUGHT SHE,<br>“IF PEOPLE HAD ALL TO LIE DOWN UPON THEIR FACES, SO THAT THEY COULDN’T SEE IT?” SO SHE STOOD STILL WHERE SHE WAS, AND WAITED.</p>
+        </div>
+        <div class="page-number">3</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-the-royal-procession/gwynedd-hudson-1922.jpg" alt="King &amp; Queen of Hearts">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>WHEN THE PROCESSION CAME OPPOSITE TO ALICE, THEY ALL STOPPED AND LOOKED AT HER, AND THE QUEEN SAID SEVERELY “WHO IS THIS?” SHE SAID IT TO THE KNAVE OF HEARTS, WHO ONLY BOWED AND SMILED IN REPLY.</p>
+          <p>“IDIOT!” SAID THE QUEEN, TOSSING HER HEAD IMPATIENTLY; AND, TURNING TO ALICE, SHE WENT ON,<br>“WHAT’S YOUR NAME, CHILD?”</p>
+          <p>“MY NAME IS ALICE, SO PLEASE YOUR MAJESTY,” SAID ALICE VERY POLITELY; BUT SHE ADDED, TO HERSELF,<br>“WHY, THEY’RE ONLY A PACK OF CARDS, AFTER ALL. I NEEDN’T BE AFRAID OF THEM!”</p>
+          <p>“AND WHO ARE THESE?” SAID THE QUEEN, POINTING TO THE THREE GARDENERS WHO WERE LYING ROUND THE ROSE-TREE; FOR, YOU SEE, AS THEY WERE LYING ON THEIR FACES, AND THE PATTERN ON THEIR BACKS WAS THE SAME AS THE REST OF THE PACK, SHE COULD NOT TELL WHETHER THEY WERE GARDENERS, OR SOLDIERS, OR COURTIERS, OR THREE OF HER OWN CHILDREN.</p>
+          <p>“HOW SHOULD I KNOW?” SAID ALICE, SURPRISED AT HER OWN COURAGE.<br>“IT’S NO BUSINESS OF MINE.”</p>
+          <p>THE QUEEN TURNED CRIMSON WITH FURY, AND, AFTER GLARING AT HER FOR A MOMENT LIKE A WILD BEAST, SCREAMED “OFF WITH HER HEAD! OFF—”</p>
+          <p>“NONSENSE!” SAID ALICE, VERY LOUDLY AND DECIDEDLY, AND THE QUEEN WAS SILENT.</p>
+          <p>THE KING LAID HIS HAND UPON HER ARM, AND TIMIDLY SAID “CONSIDER, MY DEAR: SHE IS ONLY A CHILD!”</p>
+        </div>
+        <div class="page-number">4</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-the-royal-procession/john-tenniel-harry-theaker-1911.jpg" alt="Off with her head">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>THE QUEEN TURNED ANGRILY AWAY FROM HIM, AND SAID TO THE KNAVE “TURN THEM OVER!”</p>
+          <p>THE KNAVE DID SO, VERY CAREFULLY, WITH ONE FOOT.</p>
+          <p>“GET UP!” SAID THE QUEEN, IN A SHRILL, LOUD VOICE, AND THE THREE GARDENERS INSTANTLY JUMPED UP, AND BEGAN BOWING TO THE KING, THE QUEEN, THE ROYAL CHILDREN, AND EVERYBODY ELSE.</p>
+          <p>“LEAVE OFF THAT!” SCREAMED THE QUEEN.<br>“YOU MAKE ME GIDDY.” AND THEN, TURNING TO THE ROSE-TREE, SHE WENT ON,<br>“WHAT HAVE YOU BEEN DOING HERE?”</p>
+          <p>“MAY IT PLEASE YOUR MAJESTY,” SAID TWO, IN A VERY HUMBLE TONE, GOING DOWN ON ONE KNEE AS HE SPOKE,<br>“WE WERE TRYING—”</p>
+          <p>“I SEE!” SAID THE QUEEN, WHO HAD MEANWHILE BEEN EXAMINING THE ROSES.<br>“OFF WITH THEIR HEADS!” AND THE PROCESSION MOVED ON, THREE OF THE SOLDIERS REMAINING BEHIND TO EXECUTE THE UNFORTUNATE GARDENERS, WHO RAN TO ALICE FOR PROTECTION.</p>
+          <p>“YOU SHAN’T BE BEHEADED!” SAID ALICE, AND SHE PUT THEM INTO A LARGE FLOWER-POT THAT STOOD NEAR. THE THREE SOLDIERS WANDERED ABOUT FOR A MINUTE OR TWO, LOOKING FOR THEM, AND THEN QUIETLY MARCHED OFF AFTER THE OTHERS.</p>
+          <p>“ARE THEIR HEADS OFF?” SHOUTED THE QUEEN.</p>
+          <p>“THEIR HEADS ARE GONE, IF IT PLEASE YOUR MAJESTY!” THE SOLDIERS SHOUTED IN REPLY.</p>
+          <p>“THAT’S RIGHT!” SHOUTED THE QUEEN.<br>“CAN YOU PLAY CROQUET?”</p>
+        </div>
+        <div class="page-number">5</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-the-royal-procession/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="The Queen has come">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>THE SOLDIERS WERE SILENT, AND LOOKED AT ALICE, AS THE QUESTION WAS EVIDENTLY MEANT FOR HER.</p>
+          <p>“YES!” SHOUTED ALICE.</p>
+          <p>“COME ON, THEN!” ROARED THE QUEEN, AND ALICE JOINED THE PROCESSION, WONDERING VERY MUCH WHAT WOULD HAPPEN NEXT.</p>
+        </div>
+        <div class="page-number">6</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-painting-the-roses-red/bessie-pease-gutmann-1933.jpg" alt="Shan't be beheaded">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>“IT’S—IT’S A VERY FINE DAY!” SAID A TIMID VOICE AT HER SIDE. SHE WAS WALKING BY THE WHITE RABBIT, WHO WAS PEEPING ANXIOUSLY INTO HER FACE.</p>
+          <p>“VERY,” SAID ALICE:<br>“—WHERE’S THE DUCHESS?”</p>
+          <p>“HUSH! HUSH!” SAID THE RABBIT IN A LOW, HURRIED TONE. HE LOOKED ANXIOUSLY OVER HIS SHOULDER AS HE SPOKE, AND THEN RAISED HIMSELF UPON TIPTOE, PUT HIS MOUTH CLOSE TO HER EAR, AND WHISPERED “SHE’S UNDER SENTENCE OF EXECUTION.”</p>
+          <p>“WHAT FOR?” SAID ALICE.</p>
+          <p>“DID YOU SAY ‘WHAT A PITY!’?” THE RABBIT ASKED.</p>
+          <p>“NO, I DIDN’T,” SAID ALICE:<br>“I DON’T THINK IT’S AT ALL A PITY. I SAID ‘WHAT FOR?’”</p>
+          <p>“SHE BOXED THE QUEEN’S EARS—” THE RABBIT BEGAN. ALICE GAVE A LITTLE SCREAM OF LAUGHTER.<br>“OH, HUSH!” THE RABBIT WHISPERED IN A FRIGHTENED TONE.<br>“THE QUEEN WILL HEAR YOU! YOU SEE, SHE CAME RATHER LATE, AND THE QUEEN SAID—”</p>
+          <p>“GET TO YOUR PLACES!” SHOUTED THE QUEEN IN A VOICE OF THUNDER, AND PEOPLE BEGAN RUNNING ABOUT IN ALL DIRECTIONS, TUMBLING UP AGAINST EACH OTHER; HOWEVER, THEY GOT SETTLED DOWN IN A MINUTE OR TWO, AND THE GAME BEGAN.</p>
+        </div>
+        <div class="page-number">7</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-croquet-with-flamingos/john-tenniel-harry-theaker-1911.jpg" alt="Invitation to play croquet">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>ALICE THOUGHT SHE HAD NEVER SEEN SUCH A CURIOUS CROQUET-GROUND IN HER LIFE; IT WAS ALL RIDGES AND FURROWS; THE BALLS WERE LIVE HEDGEHOGS, THE MALLETS LIVE FLAMINGOES, AND THE SOLDIERS HAD TO DOUBLE THEMSELVES UP AND TO STAND ON THEIR HANDS AND FEET, TO MAKE THE ARCHES.</p>
+          <p>THE CHIEF DIFFICULTY ALICE FOUND AT FIRST WAS IN MANAGING HER FLAMINGO: SHE SUCCEEDED IN GETTING ITS BODY TUCKED AWAY, COMFORTABLY ENOUGH, UNDER HER ARM, WITH ITS LEGS HANGING DOWN, BUT GENERALLY, JUST AS SHE HAD GOT ITS NECK NICELY STRAIGHTENED OUT, AND WAS GOING TO GIVE THE HEDGEHOG A BLOW WITH ITS HEAD, IT WOULD TWIST ITSELF ROUND AND LOOK UP IN HER FACE, WITH SUCH A PUZZLED EXPRESSION THAT SHE COULD NOT HELP BURSTING OUT LAUGHING: AND WHEN SHE HAD GOT ITS HEAD DOWN, AND WAS GOING TO BEGIN AGAIN, IT WAS VERY PROVOKING TO FIND THAT THE HEDGEHOG HAD UNROLLED ITSELF, AND WAS IN THE ACT OF CRAWLING AWAY: BESIDES ALL THIS, THERE WAS GENERALLY A RIDGE OR FURROW IN THE WAY WHEREVER SHE WANTED TO SEND THE HEDGEHOG TO, AND, AS THE DOUBLED-UP SOLDIERS WERE ALWAYS GETTING UP AND WALKING OFF TO OTHER PARTS OF THE GROUND, ALICE SOON CAME TO THE CONCLUSION THAT IT WAS A VERY DIFFICULT GAME INDEED.</p>
+        </div>
+        <div class="page-number">8</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-croquet-with-flamingos/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="Alice, the Duchess &amp; the Flamingo">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>THE PLAYERS ALL PLAYED AT ONCE WITHOUT WAITING FOR TURNS, QUARRELLING ALL THE WHILE, AND FIGHTING FOR THE HEDGEHOGS; AND IN A VERY SHORT TIME THE QUEEN WAS IN A FURIOUS PASSION, AND WENT STAMPING ABOUT, AND SHOUTING “OFF WITH HIS HEAD!” OR “OFF WITH HER HEAD!” ABOUT ONCE IN A MINUTE.</p>
+          <p>ALICE BEGAN TO FEEL VERY UNEASY: TO BE SURE, SHE HAD NOT AS YET HAD ANY DISPUTE WITH THE QUEEN, BUT SHE KNEW THAT IT MIGHT HAPPEN ANY MINUTE,<br>“AND THEN,” THOUGHT SHE,<br>“WHAT WOULD BECOME OF ME? THEY’RE DREADFULLY FOND OF BEHEADING PEOPLE HERE; THE GREAT WONDER IS, THAT THERE’S ANY ONE LEFT ALIVE!”</p>
+        </div>
+        <div class="page-number">9</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-painting-the-roses-red/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="Live cards with red rose-tree">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>SHE WAS LOOKING ABOUT FOR SOME WAY OF ESCAPE, AND WONDERING WHETHER SHE COULD GET AWAY WITHOUT BEING SEEN, WHEN SHE NOTICED A CURIOUS APPEARANCE IN THE AIR: IT PUZZLED HER VERY MUCH AT FIRST, BUT, AFTER WATCHING IT A MINUTE OR TWO, SHE MADE IT OUT TO BE A GRIN, AND SHE SAID TO HERSELF “IT’S THE CHESHIRE CAT: NOW I SHALL HAVE SOMEBODY TO TALK TO.”</p>
+          <p>“HOW ARE YOU GETTING ON?” SAID THE CAT, AS SOON AS THERE WAS MOUTH ENOUGH FOR IT TO SPEAK WITH.</p>
+          <p>ALICE WAITED TILL THE EYES APPEARED, AND THEN NODDED.<br>“IT’S NO USE SPEAKING TO IT,” SHE THOUGHT,<br>“TILL ITS EARS HAVE COME, OR AT LEAST ONE OF THEM.” IN ANOTHER MINUTE THE WHOLE HEAD APPEARED, AND THEN ALICE PUT DOWN HER FLAMINGO, AND BEGAN AN ACCOUNT OF THE GAME, FEELING VERY GLAD SHE HAD SOMEONE TO LISTEN TO HER. THE CAT SEEMED TO THINK THAT THERE WAS ENOUGH OF IT NOW IN SIGHT, AND NO MORE OF IT APPEARED.</p>
+        </div>
+        <div class="page-number">10</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-the-cheshire-cats-head/gwynedd-hudson-1922.jpg" alt="King Queen Executioner">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>“I DON’T THINK THEY PLAY AT ALL FAIRLY,” ALICE BEGAN, IN RATHER A COMPLAINING TONE,<br>“AND THEY ALL QUARREL SO DREADFULLY ONE CAN’T HEAR ONESELF SPEAK—AND THEY DON’T SEEM TO HAVE ANY RULES IN PARTICULAR; AT LEAST, IF THERE ARE, NOBODY ATTENDS TO THEM—AND YOU’VE NO IDEA HOW CONFUSING IT IS ALL THE THINGS BEING ALIVE; FOR INSTANCE, THERE’S THE ARCH I’VE GOT TO GO THROUGH NEXT WALKING ABOUT AT THE OTHER END OF THE GROUND—AND I SHOULD HAVE CROQUETED THE QUEEN’S HEDGEHOG JUST NOW, ONLY IT RAN AWAY WHEN IT SAW MINE COMING!”</p>
+          <p>“HOW DO YOU LIKE THE QUEEN?” SAID THE CAT IN A LOW VOICE.</p>
+          <p>“NOT AT ALL,” SAID ALICE:<br>“SHE’S SO EXTREMELY—” JUST THEN SHE NOTICED THAT THE QUEEN WAS CLOSE BEHIND HER, LISTENING: SO SHE WENT ON,<br>“—LIKELY TO WIN, THAT IT’S HARDLY WORTH WHILE FINISHING THE GAME.”</p>
+          <p>THE QUEEN SMILED AND PASSED ON.</p>
+          <p>“WHO ARE YOU TALKING TO?” SAID THE KING, GOING UP TO ALICE, AND LOOKING AT THE CAT’S HEAD WITH GREAT CURIOSITY.</p>
+          <p>“IT’S A FRIEND OF MINE—A CHESHIRE CAT,” SAID ALICE:<br>“ALLOW ME TO INTRODUCE IT.”</p>
+          <p>“I DON’T LIKE THE LOOK OF IT AT ALL,” SAID THE KING:<br>“HOWEVER, IT MAY KISS MY HAND IF IT LIKES.”</p>
+          <p>“I’D RATHER NOT,” THE CAT REMARKED.</p>
+          <p>“DON’T BE IMPERTINENT,” SAID THE KING,<br>“AND DON’T LOOK AT ME LIKE THAT!” HE GOT BEHIND ALICE AS HE SPOKE.</p>
+        </div>
+        <div class="page-number">11</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-the-cheshire-cats-head/alice-b-woodward-1913.jpg" alt="Executioner came back with Duchess">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>“A CAT MAY LOOK AT A KING,” SAID ALICE.<br>“I’VE READ THAT IN SOME BOOK, BUT I DON’T REMEMBER WHERE.”</p>
+          <p>“WELL, IT MUST BE REMOVED,” SAID THE KING VERY DECIDEDLY, AND HE CALLED THE QUEEN, WHO WAS PASSING AT THE MOMENT,<br>“MY DEAR! I WISH YOU WOULD HAVE THIS CAT REMOVED!”</p>
+          <p>THE QUEEN HAD ONLY ONE WAY OF SETTLING ALL DIFFICULTIES, GREAT OR SMALL.<br>“OFF WITH HIS HEAD!” SHE SAID, WITHOUT EVEN LOOKING ROUND.</p>
+          <p>“I’LL FETCH THE EXECUTIONER MYSELF,” SAID THE KING EAGERLY, AND HE HURRIED OFF.</p>
+          <p>ALICE THOUGHT SHE MIGHT AS WELL GO BACK, AND SEE HOW THE GAME WAS GOING ON, AS SHE HEARD THE QUEEN’S VOICE IN THE DISTANCE, SCREAMING WITH PASSION. SHE HAD ALREADY HEARD HER SENTENCE THREE OF THE PLAYERS TO BE EXECUTED FOR HAVING MISSED THEIR TURNS, AND SHE DID NOT LIKE THE LOOK OF THINGS AT ALL, AS THE GAME WAS IN SUCH CONFUSION THAT SHE NEVER KNEW WHETHER IT WAS HER TURN OR NOT. SO SHE WENT IN SEARCH OF HER HEDGEHOG.</p>
+          <p>THE HEDGEHOG WAS ENGAGED IN A FIGHT WITH ANOTHER HEDGEHOG, WHICH SEEMED TO ALICE AN EXCELLENT OPPORTUNITY FOR CROQUETING ONE OF THEM WITH THE OTHER: THE ONLY DIFFICULTY WAS, THAT HER FLAMINGO WAS GONE ACROSS TO THE OTHER SIDE OF THE GARDEN, WHERE ALICE COULD SEE IT TRYING IN A HELPLESS SORT OF WAY TO FLY UP INTO A TREE.</p>
+        </div>
+        <div class="page-number">12</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-08-the-queens-croquet-ground/john-tenniel-harry-theaker-1911.jpg" alt="King &amp; Queen of Hearts">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>BY THE TIME SHE HAD CAUGHT THE FLAMINGO AND BROUGHT IT BACK, THE FIGHT WAS OVER, AND BOTH THE HEDGEHOGS WERE OUT OF SIGHT:<br>“BUT IT DOESN’T MATTER MUCH,” THOUGHT ALICE,<br>“AS ALL THE ARCHES ARE GONE FROM THIS SIDE OF THE GROUND.” SO SHE TUCKED IT AWAY UNDER HER ARM, THAT IT MIGHT NOT ESCAPE AGAIN, AND WENT BACK FOR A LITTLE MORE CONVERSATION WITH HER FRIEND.</p>
+          <p>WHEN SHE GOT BACK TO THE CHESHIRE CAT, SHE WAS SURPRISED TO FIND QUITE A LARGE CROWD COLLECTED ROUND IT: THERE WAS A DISPUTE GOING ON BETWEEN THE EXECUTIONER, THE KING, AND THE QUEEN, WHO WERE ALL TALKING AT ONCE, WHILE ALL THE REST WERE QUITE SILENT, AND LOOKED VERY UNCOMFORTABLE.</p>
+          <p>THE MOMENT ALICE APPEARED, SHE WAS APPEALED TO BY ALL THREE TO SETTLE THE QUESTION, AND THEY REPEATED THEIR ARGUMENTS TO HER, THOUGH, AS THEY ALL SPOKE AT ONCE, SHE FOUND IT VERY HARD INDEED TO MAKE OUT EXACTLY WHAT THEY SAID.</p>
+          <p>THE EXECUTIONER’S ARGUMENT WAS, THAT YOU COULDN’T CUT OFF A HEAD UNLESS THERE WAS A BODY TO CUT IT OFF FROM: THAT HE HAD NEVER HAD TO DO SUCH A THING BEFORE, AND HE WASN’T GOING TO BEGIN AT HIS TIME OF LIFE.</p>
+          <p>THE KING’S ARGUMENT WAS, THAT ANYTHING THAT HAD A HEAD COULD BE BEHEADED, AND THAT YOU WEREN’T TO TALK NONSENSE.</p>
+        </div>
+        <div class="page-number">13</div>
+      </div>
+    </div>
+    <div class="spread">
+      <div class="page-left">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-the-cheshire-cats-head/brinsley-le-fanu-1910.jpg" alt="Dispute over Cheshire cat's head">
+      </div>
+      <div class="page-right">
+        <div class="text-block">
+          <p>THE QUEEN’S ARGUMENT WAS, THAT IF SOMETHING WASN’T DONE ABOUT IT IN LESS THAN NO TIME SHE’D HAVE EVERYBODY EXECUTED, ALL ROUND. (IT WAS THIS LAST REMARK THAT HAD MADE THE WHOLE PARTY LOOK SO GRAVE AND ANXIOUS.)</p>
+          <p>ALICE COULD THINK OF NOTHING ELSE TO SAY BUT “IT BELONGS TO THE DUCHESS: YOU’D BETTER ASK HER ABOUT IT.”</p>
+          <p>“SHE’S IN PRISON,” THE QUEEN SAID TO THE EXECUTIONER:<br>“FETCH HER HERE.” AND THE EXECUTIONER WENT OFF LIKE AN ARROW.</p>
+          <p>THE CAT’S HEAD BEGAN FADING AWAY THE MOMENT HE WAS GONE, AND, BY THE TIME HE HAD COME BACK WITH THE DUCHESS, IT HAD ENTIRELY DISAPPEARED; SO THE KING AND THE EXECUTIONER RAN WILDLY UP AND DOWN LOOKING FOR IT, WHILE THE REST OF THE PARTY WENT BACK TO THE GAME.</p>
+        </div>
+        <div class="page-number">14</div>
+      </div>
+    </div>
+    <div class="spread back-cover">
+      <div class="page-left decorative-panel">
+        <div class="chapter-ornament">
+          <div class="ornament-star">&#10038;</div>
+        </div>
+      </div>
+      <div class="page-right back-text">
+        <div class="back-block">
+          <div class="the-end">THE END</div>
+          <div class="back-info">
+            <p>CHAPTER 8: THE QUEEN'S CROQUET-GROUND</p>
+            <p class="small">ALICE'S ADVENTURES IN WONDERLAND (1865)</p>
+            <p class="small">WORDS BY LEWIS CARROLL</p>
+            <p class="small">ALL ILLUSTRATIONS ARE PUBLIC DOMAIN</p>
+            <p class="small">MADE WITH LOVE AT RECURSIVE.ECO</p>
+          </div>
+        </div>
+      </div>
+    </div>
+<script>
+// Auto-fit: measure each text block's rendered height and scale font down until it fits.
+// Runs on load so text is correctly sized before printing.
+(function() {
+  const MAX_FONT = 22;
+  const MIN_FONT = 9;
+  const STEP = 0.5;
+
+  function fitAll() {
+    document.querySelectorAll('.text-block').forEach(function(block) {
+      var container = block.parentElement;
+      // Available height = container height minus page-number space
+      var maxH = container.clientHeight - 32;
+      var ps = block.querySelectorAll('p');
+      if (!ps.length) return;
+
+      // Start at max font and shrink until it fits
+      var size = MAX_FONT;
+      function applySize(s) {
+        ps.forEach(function(p) { p.style.fontSize = s + 'px'; });
+      }
+      applySize(size);
+
+      // Shrink until content fits or we hit minimum
+      while (block.scrollHeight > maxH && size > MIN_FONT) {
+        size -= STEP;
+        applySize(size);
+      }
+    });
+  }
+
+  // Run on load and before print
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fitAll);
+  } else {
+    fitAll();
+  }
+  window.addEventListener('beforeprint', fitAll);
+  window.addEventListener('resize', fitAll);
+})();
+
+// ── Word Search Highlighting ──
+(function() {
+  var input = document.getElementById('searchInput');
+  var countEl = document.getElementById('matchCount');
+  if (!input) return;
+
+  function clearMarks() {
+    document.querySelectorAll('mark.search-match').forEach(function(m) {
+      var parent = m.parentNode;
+      parent.replaceChild(document.createTextNode(m.textContent), m);
+      parent.normalize();
+    });
+    countEl.textContent = '';
+  }
+
+  function highlightText(node, regex) {
+    var count = 0;
+    if (node.nodeType === 3) { // Text node
+      var match = node.textContent.match(regex);
+      if (match) {
+        var span = document.createElement('mark');
+        span.className = 'search-match';
+        var parts = node.textContent.split(regex);
+        var frag = document.createDocumentFragment();
+        parts.forEach(function(part, i) {
+          frag.appendChild(document.createTextNode(part));
+          if (i < parts.length - 1) {
+            var m = span.cloneNode(false);
+            m.textContent = node.textContent.match(new RegExp(regex.source, 'gi'))[count] || match[0];
+            frag.appendChild(m);
+            count++;
+          }
+        });
+        node.parentNode.replaceChild(frag, node);
+      }
+      return count;
+    }
+    if (node.nodeType === 1 && node.tagName !== 'MARK' && node.tagName !== 'SCRIPT') {
+      var children = Array.from(node.childNodes);
+      children.forEach(function(child) { count += highlightText(child, regex); });
+    }
+    return count;
+  }
+
+  var debounceTimer;
+  input.addEventListener('input', function() {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(function() {
+      clearMarks();
+      var query = input.value.trim();
+      if (query.length < 2) return;
+      try {
+        var regex = new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$$&') + ')', 'gi');
+        var total = 0;
+        document.querySelectorAll('.text-block').forEach(function(block) {
+          total += highlightText(block, regex);
+        });
+        countEl.textContent = total > 0 ? total + ' found' : 'no matches';
+      } catch(e) {}
+    }, 300);
+  });
+
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') { input.value = ''; clearMarks(); }
+  });
+})();
+
+// ── Booklet Imposition Toggle ──
+(function() {
+  var btn = document.getElementById('toggleMode');
+  if (!btn) return;
+  var isBooklet = false;
+  var originalOrder = [];
+
+  btn.addEventListener('click', function() {
+    isBooklet = !isBooklet;
+    btn.classList.toggle('active', isBooklet);
+    btn.textContent = isBooklet ? '📱 App Mode' : '📖 Booklet Print';
+    document.body.classList.toggle('booklet-mode', isBooklet);
+
+    var spreads = Array.from(document.querySelectorAll('.spread'));
+    if (!originalOrder.length) originalOrder = spreads.map(function(s) { return s; });
+
+    if (isBooklet) {
+      // Saddle-stitch imposition: reorder for double-sided folded printing
+      var N = spreads.length;
+      // Pad to multiple of 4
+      while (N % 4 !== 0) N++;
+      var order = [];
+      var sheets = N / 2;
+      for (var i = 0; i < sheets / 2; i++) {
+        // Front of sheet: pages [N-1-2i, 2i]
+        order.push(N - 1 - 2 * i, 2 * i);
+        // Back of sheet: pages [2i+1, N-2-2i]
+        order.push(2 * i + 1, N - 2 - 2 * i);
+      }
+      var container = spreads[0].parentNode;
+      order.forEach(function(idx) {
+        if (idx < originalOrder.length) {
+          container.appendChild(originalOrder[idx]);
+        }
+      });
+    } else {
+      // Restore original order
+      var container = originalOrder[0].parentNode;
+      originalOrder.forEach(function(s) { container.appendChild(s); });
+    }
+
+    // Re-run auto-fit after reorder
+    window.dispatchEvent(new Event('resize'));
+  });
+})();
+</script>
+</body>
+</html>
