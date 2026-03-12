@@ -1,6 +1,6 @@
 {
   "generated": true,
-  "grammar_count": 203,
+  "grammar_count": 205,
   "grammars": {
     "a-little-princess": {
       "id": "a-little-princess",
@@ -219,6 +219,39 @@
         "Shrei"
       ],
       "worldview": "animist"
+    },
+    "alice-5-minute-stories": {
+      "id": "alice-5-minute-stories",
+      "name": "Alice in Wonderland — Illustrated Chapter Books",
+      "description": "Lewis Carroll's complete original text in ALL CAPS with 121 public domain illustrations. 12 printable landscape booklets (one per chapter). Each page has one illustration and a passage of text. Print landscape, fold in half for a picture book! Illustrated by Tenniel, Rackham, Carroll (manuscript), Hudson, Gutmann, Le Fanu, Walker, Rountree and more.",
+      "grammar_type": "custom",
+      "creator_name": "",
+      "tags": [
+        "children",
+        "picture-book",
+        "printable",
+        "all-caps",
+        "beginning-readers",
+        "alice",
+        "public-domain",
+        "illustrated",
+        "original-text"
+      ],
+      "item_count": 16,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "chapter",
+        "collection",
+        "group"
+      ],
+      "roots": [],
+      "shelves": [],
+      "lineages": [],
+      "worldview": ""
     },
     "alice-in-the-amazon": {
       "id": "alice-in-the-amazon",
@@ -1006,6 +1039,59 @@
         "Akomolafe"
       ],
       "worldview": "non-dual"
+    },
+    "biblical-stories-kids": {
+      "id": "biblical-stories-kids",
+      "name": "Stories from the Living Stars",
+      "description": "Biblical tales retold as cosmic mythology for bedtime. 48 stories in rhyming verse with an esoteric, animist lens — Jesus as shaman for the Cosmic Christ, angels as star-beings, nature as conscious participant. Designed for 5-minute bedtime reading with karaoke-style TTS and full-bleed illustrations.\n\nSource: Original retellings from memory, with story details cross-referenced against the World English Bible (Project Gutenberg eBook #8294, https://www.gutenberg.org/ebooks/8294).\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Gustave Doré's Bible illustrations (La Grande Bible de Tours, 1866) — 241 dramatic engravings with cosmic scale and chiaroscuro lighting, ideal primary illustrations. Julius Schnorr von Carolsfeld's Die Bibel in Bildern (1860) — 240 clear woodcuts for supplementary coverage. James Tissot's watercolors (Brooklyn Museum, 1886-1902) — full color biblical scenes for variety. William Blake's visionary paintings (1795-1827) — perfect for cosmic/esoteric items (seraphim, Ezekiel's wheels, Jacob's ladder).",
+      "grammar_type": "custom",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "bible",
+        "kids",
+        "bedtime",
+        "rhyming",
+        "esoteric",
+        "animist",
+        "cosmic-christ",
+        "steiner",
+        "campbell",
+        "hero-journey",
+        "karaoke",
+        "tts",
+        "illustrated",
+        "five-minute-stories"
+      ],
+      "item_count": 84,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "dreamers-seers",
+        "kings-queens-hidden-princesses",
+        "meta-arcs",
+        "shaman-from-nazareth",
+        "star-messengers",
+        "the-living-world",
+        "tricksters-unlikely-heroes",
+        "warriors-giants"
+      ],
+      "roots": [
+        "mythopoetic-enchantment",
+        "eastern-wisdom"
+      ],
+      "shelves": [
+        "children",
+        "wonder",
+        "wisdom"
+      ],
+      "lineages": [
+        "Shrei",
+        "Andreotti"
+      ],
+      "worldview": "animist"
     },
     "book-of-tea": {
       "id": "book-of-tea",
@@ -6516,7 +6602,7 @@
         "book-of-changes",
         "contemplation"
       ],
-      "item_count": 16,
+      "item_count": 17,
       "levels": [
         1,
         2,
@@ -8670,6 +8756,7 @@
         "adventures-of-pinocchio",
         "aesops-fables",
         "alchemy-ancient-modern",
+        "alice-5-minute-stories",
         "alice-in-the-amazon",
         "alice-in-the-mythlands",
         "alice-in-wonderland-chapter-book",
@@ -8686,6 +8773,7 @@
         "ballet-living-architecture",
         "beyond-good-and-evil",
         "bhagavad-gita",
+        "biblical-stories-kids",
         "book-of-tea",
         "book-of-the-dead-egyptian",
         "bulfinch-s-classical-mythology",
@@ -9024,10 +9112,14 @@
         "new-light-alchymie"
       ],
       "alice": [
+        "alice-5-minute-stories",
         "alice-in-the-amazon",
         "alice-in-the-mythlands",
         "alice-in-wonderland-chapter-book",
         "through-the-looking-glass"
+      ],
+      "all-caps": [
+        "alice-5-minute-stories"
       ],
       "amazon": [
         "alice-in-the-amazon"
@@ -9128,6 +9220,7 @@
         "repair-an-open-source-book"
       ],
       "animist": [
+        "biblical-stories-kids",
         "luiza-lian"
       ],
       "anthology": [
@@ -9233,8 +9326,14 @@
         "song-of-songs",
         "symposium-plato"
       ],
+      "bedtime": [
+        "biblical-stories-kids"
+      ],
       "bees": [
         "life-of-the-bee"
+      ],
+      "beginning-readers": [
+        "alice-5-minute-stories"
       ],
       "behavior": [
         "inner-triangle"
@@ -9252,6 +9351,7 @@
         "bhagavad-gita"
       ],
       "bible": [
+        "biblical-stories-kids",
         "song-of-songs"
       ],
       "big-bang": [
@@ -9340,6 +9440,7 @@
         "wildflowers-of-california"
       ],
       "campbell": [
+        "biblical-stories-kids",
         "myths-through-many-eyes"
       ],
       "canada": [
@@ -9415,6 +9516,7 @@
       "children": [
         "a-little-princess",
         "adventures-of-pinocchio",
+        "alice-5-minute-stories",
         "alice-in-the-mythlands",
         "alice-in-wonderland-chapter-book",
         "anne-of-green-gables",
@@ -9621,6 +9723,9 @@
       ],
       "coptic": [
         "pistis-sophia"
+      ],
+      "cosmic-christ": [
+        "biblical-stories-kids"
       ],
       "cosmology": [
         "alice-in-the-amazon",
@@ -9942,6 +10047,7 @@
       ],
       "esoteric": [
         "alchemy-ancient-modern",
+        "biblical-stories-kids",
         "eleusinian-mysteries",
         "gnosis-of-light",
         "gnostic-crucifixion",
@@ -10060,6 +10166,9 @@
       ],
       "finnish": [
         "kalevala"
+      ],
+      "five-minute-stories": [
+        "biblical-stories-kids"
       ],
       "folk-songs": [
         "shih-king"
@@ -10330,6 +10439,7 @@
         "kybalion"
       ],
       "hero-journey": [
+        "biblical-stories-kids",
         "myths-through-many-eyes",
         "voices-of-the-unwritten"
       ],
@@ -10409,8 +10519,10 @@
         "olaudah-equiano"
       ],
       "illustrated": [
+        "alice-5-minute-stories",
         "alice-in-wonderland-chapter-book",
         "anon-shiryo-cat-stories",
+        "biblical-stories-kids",
         "story-01-asking-not-complaining",
         "story-02-gratitude-not-praise"
       ],
@@ -10530,10 +10642,14 @@
         "history-of-magic-levi",
         "seven-rays-ancient-roots"
       ],
+      "karaoke": [
+        "biblical-stories-kids"
+      ],
       "kids": [
         "aesops-fables",
         "andersens-fairy-tales",
         "anon-shiryo-cat-stories",
+        "biblical-stories-kids",
         "cosmic-unfolding",
         "dinosaur-tree",
         "emerald-kids-folk-tales",
@@ -10996,6 +11112,9 @@
         "i-ching-chinese-original-with-brief-translation",
         "i-ching-leibniz-binary"
       ],
+      "original-text": [
+        "alice-5-minute-stories"
+      ],
       "origins-of-art": [
         "ancient-art-ritual"
       ],
@@ -11120,6 +11239,9 @@
       "physics": [
         "timaeus-plato"
       ],
+      "picture-book": [
+        "alice-5-minute-stories"
+      ],
       "pinocchio": [
         "adventures-of-pinocchio"
       ],
@@ -11234,6 +11356,9 @@
       "princesses": [
         "fairy-tales-south-africa"
       ],
+      "printable": [
+        "alice-5-minute-stories"
+      ],
       "probability": [
         "instituto-canoa-math-6"
       ],
@@ -11267,6 +11392,7 @@
       "public-domain": [
         "a-little-princess",
         "adventures-of-pinocchio",
+        "alice-5-minute-stories",
         "alice-in-wonderland-chapter-book",
         "anne-of-green-gables",
         "areopagitica",
@@ -11442,7 +11568,8 @@
         "phaedrus-plato"
       ],
       "rhyming": [
-        "alice-in-the-mythlands"
+        "alice-in-the-mythlands",
+        "biblical-stories-kids"
       ],
       "rider-waite": [
         "rider-waite-smith-tarot"
@@ -11706,6 +11833,9 @@
       "statistics": [
         "instituto-canoa-math-6"
       ],
+      "steiner": [
+        "biblical-stories-kids"
+      ],
       "stoicism": [
         "discourses-epictetus",
         "enchiridion",
@@ -11900,6 +12030,9 @@
       ],
       "truth": [
         "pragmatism"
+      ],
+      "tts": [
+        "biblical-stories-kids"
       ],
       "tuskegee": [
         "up-from-slavery"
@@ -12114,6 +12247,7 @@
         "ballet-living-architecture",
         "beyond-good-and-evil",
         "bhagavad-gita",
+        "biblical-stories-kids",
         "book-of-tea",
         "book-of-the-dead-egyptian",
         "bus-grammar-system-prompts",
@@ -12363,6 +12497,7 @@
         "alice-in-the-mythlands",
         "arabian-nights",
         "bhagavad-gita",
+        "biblical-stories-kids",
         "book-of-tea",
         "book-of-the-dead-egyptian",
         "bus-grammar-system-prompts",
@@ -12565,6 +12700,9 @@
       "mythology": [
         "metamorphoses-ovid"
       ],
+      "mythopoetic-enchantment": [
+        "biblical-stories-kids"
+      ],
       "natural-philosophy": [
         "cosmic-unfolding",
         "dinosaur-tree",
@@ -12694,6 +12832,7 @@
         "alice-in-the-mythlands",
         "andersens-fairy-tales",
         "anne-of-green-gables",
+        "biblical-stories-kids",
         "celtic-fairy-tales",
         "children-story-tree",
         "cosmic-unfolding",
@@ -12829,6 +12968,7 @@
         "ancient-art-ritual",
         "arabian-nights",
         "bhagavad-gita",
+        "biblical-stories-kids",
         "book-of-tea",
         "book-of-the-dead-egyptian",
         "bus-grammar-system-prompts",
@@ -12911,6 +13051,7 @@
         "anthropological-dance",
         "arabian-nights",
         "ballet-living-architecture",
+        "biblical-stories-kids",
         "celtic-fairy-tales",
         "children-story-tree",
         "cosmic-unfolding",
@@ -13015,6 +13156,7 @@
         "anne-of-green-gables",
         "anthropological-dance",
         "architecture-of-nations",
+        "biblical-stories-kids",
         "bus-grammar-system-prompts",
         "celtic-fairy-tales",
         "colonial-decolonial-music-spiral",
@@ -13158,6 +13300,7 @@
         "andersens-fairy-tales",
         "arabian-nights",
         "bhagavad-gita",
+        "biblical-stories-kids",
         "book-of-tea",
         "book-of-the-dead-egyptian",
         "bus-grammar-system-prompts",
