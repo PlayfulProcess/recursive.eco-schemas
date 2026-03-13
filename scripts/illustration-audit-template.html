@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alice in Wonderland — Illustration Audit</title>
+<style>
+:root {
+  --bg: #1a1a2e;
+  --card: #16213e;
+  --accent: #e94560;
+  --ok: #4ecca3;
+  --warn: #f5a623;
+  --text: #eee;
+  --muted: #888;
+  --border: #333;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Georgia', serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding-bottom: 80px;
+}
+.header {
+  background: var(--card);
+  padding: 20px 30px;
+  border-bottom: 2px solid var(--accent);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header h1 { font-size: 1.4em; margin-bottom: 5px; }
+.stats { display: flex; gap: 20px; font-size: 0.9em; color: var(--muted); flex-wrap: wrap; }
+.stats .flagged { color: var(--warn); font-weight: bold; }
+.stats .confirmed { color: var(--ok); }
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.controls button {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.controls button:hover { border-color: var(--accent); }
+.controls button.active { background: var(--accent); border-color: var(--accent); }
+
+.container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+
+.entry {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 20px;
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  padding: 16px;
+  transition: border-color 0.2s;
+}
+.entry.flagged { border-color: var(--warn); }
+.entry.confirmed { border-color: var(--ok); opacity: 0.7; }
+.entry.reassigned { border-color: #9b59b6; }
+.entry.removed { border-color: var(--accent); opacity: 0.4; }
+
+.entry-img {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.entry-img img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 4px;
+  background: #111;
+  cursor: pointer;
+}
+.entry-img img.zoomed {
+  max-height: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  object-fit: contain;
+  background: rgba(0,0,0,0.95);
+  border-radius: 0;
+  padding: 20px;
+}
+.img-meta {
+  font-size: 0.8em;
+  color: var(--muted);
+}
+.img-meta .artist { color: var(--text); font-weight: bold; }
+.img-meta .primary { color: var(--ok); font-weight: bold; }
+
+.entry-content { display: flex; flex-direction: column; gap: 12px; }
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+.item-badge {
+  background: var(--bg);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  font-family: monospace;
+  white-space: nowrap;
+}
+.level-badge {
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+.level-badge.l1 { background: #2d5a27; }
+.level-badge.l2 { background: #5a2d27; }
+
+.scene-label {
+  font-style: italic;
+  color: var(--warn);
+  font-size: 0.9em;
+  padding: 4px 8px;
+  background: rgba(245, 166, 35, 0.1);
+  border-radius: 4px;
+}
+.text-passage {
+  background: var(--bg);
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  line-height: 1.7;
+  max-height: 200px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  border-left: 3px solid var(--accent);
+}
+.vision-desc {
+  background: rgba(78, 204, 163, 0.05);
+  border-left: 3px solid var(--ok);
+  padding: 8px 12px;
+  font-size: 0.85em;
+  border-radius: 4px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+.vision-desc summary {
+  cursor: pointer;
+  color: var(--ok);
+  font-weight: bold;
+  font-size: 0.85em;
+}
+.mismatch-reasons {
+  background: rgba(233, 69, 96, 0.1);
+  border-left: 3px solid var(--accent);
+  padding: 8px 12px;
+  font-size: 0.85em;
+  border-radius: 4px;
+  color: var(--warn);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.actions button {
+  padding: 5px 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.8em;
+}
+.actions button:hover { opacity: 0.8; }
+.actions .btn-ok { border-color: var(--ok); color: var(--ok); }
+.actions .btn-ok.active { background: var(--ok); color: #000; }
+.actions .btn-wrong { border-color: var(--accent); color: var(--accent); }
+.actions .btn-wrong.active { background: var(--accent); color: #fff; }
+.actions .btn-reassign { border-color: #9b59b6; color: #9b59b6; }
+.actions .btn-reassign.active { background: #9b59b6; color: #fff; }
+
+.reassign-select {
+  padding: 4px 8px;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 0.8em;
+  max-width: 300px;
+}
+.notes-input {
+  padding: 4px 8px;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 0.8em;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.chapter-divider {
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 20px;
+  margin: 24px 0 12px;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.export-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--card);
+  border-top: 2px solid var(--accent);
+  padding: 12px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.export-bar button {
+  padding: 8px 20px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+}
+.export-bar button:hover { opacity: 0.9; }
+
+.hidden { display: none !important; }
+
+@media (max-width: 900px) {
+  .entry { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Alice in Wonderland — Illustration Audit</h1>
+  <p style="color:var(--muted);font-size:0.85em;margin-bottom:8px;">
+    Review each illustration against its paired text passage. Click images to zoom. Mark as correct, wrong, or reassign to a different item.
+    When done, click "Export Corrections Only" to save a JSON file that Claude Code can use to rebuild the grammar.
+  </p>
+  <div class="stats">
+    <span>Total: <strong id="stat-total">%%TOTAL%%</strong> illustrations</span>
+    <span>Primary: <strong>%%PRIMARY%%</strong></span>
+    <span class="flagged">Flagged: <strong id="stat-flagged">%%FLAGGED%%</strong></span>
+    <span class="confirmed">Confirmed: <strong id="stat-confirmed">0</strong></span>
+    <span>Reassigned: <strong id="stat-reassigned">0</strong></span>
+    <span>Removed: <strong id="stat-removed">0</strong></span>
+  </div>
+  <div class="controls">
+    <button onclick="filterView('all')" class="active" id="btn-all">Show All</button>
+    <button onclick="filterView('flagged')" id="btn-flagged">Flagged Only</button>
+    <button onclick="filterView('primary')" id="btn-primary">Primary Only</button>
+    <button onclick="filterView('pending')" id="btn-pending">Pending</button>
+    <button onclick="filterView('confirmed')" id="btn-confirmed">Confirmed</button>
+    <button onclick="filterView('reassigned')" id="btn-reassigned">Reassigned</button>
+    <button onclick="filterView('removed')" id="btn-removed">Removed</button>
+  </div>
+</div>
+
+<div class="container" id="entries-container">
+</div>
+
+<div class="export-bar">
+  <span id="progress-text">Click images to zoom. Mark each illustration as correct or wrong.</span>
+  <div style="display:flex;gap:10px;">
+    <button onclick="exportJSON()">Export Full Audit JSON</button>
+    <button onclick="exportCorrectionsOnly()">Export Corrections Only</button>
+  </div>
+</div>
+
+<script>
+const catalog = %%CATALOG_JSON%%;
+const allItemIds = %%ITEM_IDS_JSON%%;
+
+let currentFilter = 'all';
+
+function escapeHtml(str) {
+  if (!str) return '';
+  const div = document.createElement('div');
+  div.textContent = String(str);
+  return div.innerHTML;
+}
+
+function getItemOptions() {
+  return allItemIds.map(function(id) {
+    return '<option value="' + id + '">' + id + '</option>';
+  }).join('');
+}
+
+function renderEntry(entry) {
+  var levelClass = entry.current_item_level === 2 ? 'l2' : 'l1';
+  var levelLabel = entry.current_item_level === 2 ? 'L2 Chapter' : 'L1 Scene';
+
+  var classes = ['entry'];
+  if (entry.mismatch_flag) classes.push('flagged');
+  if (entry.status !== 'pending') classes.push(entry.status);
+
+  var mismatchHtml = '';
+  if (entry.mismatch_reasons && entry.mismatch_reasons.length > 0) {
+    var items = entry.mismatch_reasons.map(function(r) { return '&bull; ' + escapeHtml(r); }).join('<br>');
+    mismatchHtml = '<div class="mismatch-reasons"><strong>Potential mismatch:</strong><br>' + items + '</div>';
+  }
+
+  var visionHtml = '';
+  if (entry.vision_description) {
+    visionHtml = '<details class="vision-desc"><summary>Vision Description</summary><p>' +
+      escapeHtml(entry.vision_description) + '</p></details>';
+  }
+
+  var primaryBadge = entry.is_primary ? '<br><span class="primary">PRIMARY</span>' : '';
+  var artistDates = entry.artist_dates ? ' <span>(' + escapeHtml(entry.artist_dates) + ')</span>' : '';
+
+  var html = '<div class="' + classes.join(' ') + '" id="entry-' + entry.entry_id + '"' +
+    ' data-status="' + entry.status + '"' +
+    ' data-flagged="' + entry.mismatch_flag + '"' +
+    ' data-primary="' + entry.is_primary + '"' +
+    ' data-chapter="' + entry.chapter_number + '">' +
+    '<div class="entry-img">' +
+      '<img src="' + entry.illustration_url + '" alt="' + escapeHtml(entry.scene_label) + '"' +
+      ' loading="lazy" onclick="toggleZoom(this)"' +
+      ' onerror="this.style.border=\'2px dashed red\'; this.alt=\'FAILED TO LOAD\'">' +
+      '<div class="img-meta">' +
+        '<span class="artist">' + escapeHtml(entry.artist) + '</span>' + artistDates +
+        '<br>' + escapeHtml(entry.edition) + primaryBadge +
+      '</div>' +
+    '</div>' +
+    '<div class="entry-content">' +
+      '<div class="entry-header">' +
+        '<div>' +
+          '<span class="item-badge">' + escapeHtml(entry.current_item_id) + '</span> ' +
+          '<span class="level-badge ' + levelClass + '">' + levelLabel + '</span>' +
+          '<br><strong>' + escapeHtml(entry.current_item_name) + '</strong>' +
+          ' <span style="color:var(--muted);font-size:0.85em">(Ch. ' + entry.chapter_number + ')</span>' +
+        '</div>' +
+        '<span style="color:var(--muted);font-size:0.8em">#' + entry.entry_id + '</span>' +
+      '</div>' +
+      '<div class="scene-label">Scene label: &ldquo;' + escapeHtml(entry.scene_label) + '&rdquo;</div>' +
+      '<div class="text-passage">' + escapeHtml(entry.text_excerpt) + '</div>' +
+      visionHtml +
+      mismatchHtml +
+      '<div class="actions">' +
+        '<button class="btn-ok' + (entry.status === 'confirmed' ? ' active' : '') + '"' +
+        ' onclick="setStatus(' + entry.entry_id + ', \'confirmed\')">Correct</button>' +
+        '<button class="btn-wrong' + (entry.status === 'removed' ? ' active' : '') + '"' +
+        ' onclick="setStatus(' + entry.entry_id + ', \'removed\')">Wrong</button>' +
+        '<button class="btn-reassign' + (entry.status === 'reassigned' ? ' active' : '') + '"' +
+        ' onclick="showReassign(' + entry.entry_id + ')">Reassign</button>' +
+        '<select class="reassign-select hidden" id="reassign-' + entry.entry_id + '"' +
+        ' onchange="reassignEntry(' + entry.entry_id + ', this.value)">' +
+          '<option value="">-- Move to item --</option>' + getItemOptions() +
+        '</select>' +
+        '<input class="notes-input" placeholder="Notes..."' +
+        ' value="' + escapeHtml(entry.notes || '') + '"' +
+        ' onchange="setNotes(' + entry.entry_id + ', this.value)">' +
+      '</div>' +
+    '</div>' +
+  '</div>';
+
+  return html;
+}
+
+function renderAll() {
+  var container = document.getElementById('entries-container');
+  var html = '';
+  var lastChapter = -1;
+
+  for (var i = 0; i < catalog.length; i++) {
+    var entry = catalog[i];
+    if (entry.chapter_number !== lastChapter) {
+      lastChapter = entry.chapter_number;
+      html += '<div class="chapter-divider">Chapter ' + lastChapter + '</div>';
+    }
+    html += renderEntry(entry);
+  }
+  container.innerHTML = html;
+  applyFilter();
+}
+
+function toggleZoom(img) {
+  if (img.classList.contains('zoomed')) {
+    img.classList.remove('zoomed');
+  } else {
+    // Close any other zoomed images first
+    document.querySelectorAll('.zoomed').forEach(function(el) { el.classList.remove('zoomed'); });
+    img.classList.add('zoomed');
+  }
+}
+
+function setStatus(entryId, status) {
+  var entry = catalog.find(function(e) { return e.entry_id === entryId; });
+  if (!entry) return;
+  entry.status = (entry.status === status) ? 'pending' : status;
+  var el = document.getElementById('entry-' + entryId);
+  el.className = 'entry' +
+    (entry.mismatch_flag ? ' flagged' : '') +
+    (entry.status !== 'pending' ? ' ' + entry.status : '');
+  el.dataset.status = entry.status;
+  el.querySelector('.btn-ok').classList.toggle('active', entry.status === 'confirmed');
+  el.querySelector('.btn-wrong').classList.toggle('active', entry.status === 'removed');
+  el.querySelector('.btn-reassign').classList.toggle('active', entry.status === 'reassigned');
+  updateStats();
+  saveToLocalStorage();
+}
+
+function showReassign(entryId) {
+  var select = document.getElementById('reassign-' + entryId);
+  select.classList.toggle('hidden');
+  if (!select.classList.contains('hidden')) {
+    setStatus(entryId, 'reassigned');
+  }
+}
+
+function reassignEntry(entryId, newItemId) {
+  var entry = catalog.find(function(e) { return e.entry_id === entryId; });
+  if (entry) {
+    entry.reassign_to = newItemId || null;
+    entry.status = newItemId ? 'reassigned' : 'pending';
+  }
+  updateStats();
+  saveToLocalStorage();
+}
+
+function setNotes(entryId, notes) {
+  var entry = catalog.find(function(e) { return e.entry_id === entryId; });
+  if (entry) entry.notes = notes;
+  saveToLocalStorage();
+}
+
+function filterView(filter) {
+  currentFilter = filter;
+  document.querySelectorAll('.controls button').forEach(function(b) { b.classList.remove('active'); });
+  var btn = document.getElementById('btn-' + filter);
+  if (btn) btn.classList.add('active');
+  applyFilter();
+}
+
+function applyFilter() {
+  document.querySelectorAll('.entry').forEach(function(el) {
+    var status = el.dataset.status;
+    var flagged = el.dataset.flagged === 'true';
+    var primary = el.dataset.primary === 'true';
+    var show = true;
+    switch(currentFilter) {
+      case 'flagged': show = flagged; break;
+      case 'primary': show = primary; break;
+      case 'pending': show = (status === 'pending'); break;
+      case 'confirmed': show = (status === 'confirmed'); break;
+      case 'reassigned': show = (status === 'reassigned'); break;
+      case 'removed': show = (status === 'removed'); break;
+    }
+    el.style.display = show ? '' : 'none';
+  });
+}
+
+function updateStats() {
+  var confirmed = 0, reassigned = 0, removed = 0, flaggedPending = 0;
+  for (var i = 0; i < catalog.length; i++) {
+    var e = catalog[i];
+    if (e.status === 'confirmed') confirmed++;
+    if (e.status === 'reassigned') reassigned++;
+    if (e.status === 'removed') removed++;
+    if (e.mismatch_flag && e.status === 'pending') flaggedPending++;
+  }
+  document.getElementById('stat-confirmed').textContent = confirmed;
+  document.getElementById('stat-reassigned').textContent = reassigned;
+  document.getElementById('stat-removed').textContent = removed;
+  document.getElementById('stat-flagged').textContent = flaggedPending;
+  document.getElementById('progress-text').textContent =
+    (confirmed + reassigned + removed) + ' / ' + catalog.length + ' reviewed';
+}
+
+function saveToLocalStorage() {
+  try {
+    var state = catalog.map(function(e) {
+      return { id: e.entry_id, status: e.status, reassign_to: e.reassign_to, notes: e.notes };
+    });
+    localStorage.setItem('alice-illustration-audit', JSON.stringify(state));
+  } catch(ex) { /* ignore */ }
+}
+
+function loadFromLocalStorage() {
+  try {
+    var saved = localStorage.getItem('alice-illustration-audit');
+    if (!saved) return;
+    var state = JSON.parse(saved);
+    for (var i = 0; i < state.length; i++) {
+      var s = state[i];
+      var entry = catalog.find(function(e) { return e.entry_id === s.id; });
+      if (entry) {
+        entry.status = s.status || 'pending';
+        entry.reassign_to = s.reassign_to || null;
+        entry.notes = s.notes || '';
+      }
+    }
+  } catch(ex) { /* ignore */ }
+}
+
+function exportJSON() {
+  var blob = new Blob([JSON.stringify(catalog, null, 2)], {type: 'application/json'});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = 'illustration-audit-results.json';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function exportCorrectionsOnly() {
+  var corrections = catalog.filter(function(e) { return e.status !== 'pending'; });
+  var blob = new Blob([JSON.stringify(corrections, null, 2)], {type: 'application/json'});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = 'illustration-corrections.json';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+// Init
+document.addEventListener('DOMContentLoaded', function() {
+  loadFromLocalStorage();
+  renderAll();
+  updateStats();
+});
+
+// Escape to close zoomed images
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.zoomed').forEach(function(img) { img.classList.remove('zoomed'); });
+  }
+});
+</script>
+
+</body>
+</html>
