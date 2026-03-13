@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alice Chapter 1 - Audio Comparison</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Georgia, serif;
+      background: #1a1a2e;
+      color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    h1 { font-size: 28px; color: #e6c76b; margin-bottom: 8px; }
+    h2 { font-size: 18px; color: #8a8aad; font-weight: normal; margin-bottom: 30px; }
+    .player-box {
+      background: #16213e;
+      border-radius: 16px;
+      padding: 30px;
+      width: 100%;
+      max-width: 700px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      margin-bottom: 24px;
+    }
+    .player-box h3 { color: #e6c76b; margin-bottom: 12px; font-size: 18px; }
+    .player-box .subtitle { color: #8a8aad; font-size: 14px; margin-bottom: 16px; }
+    audio { width: 100%; margin-bottom: 12px; }
+    .stats {
+      display: flex; gap: 12px; flex-wrap: wrap;
+      font-size: 13px; color: #8a8aad;
+    }
+    .stats span { background: #1a1a2e; padding: 4px 10px; border-radius: 8px; }
+    .pick-label {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 6px 16px;
+      background: #2a4a2a;
+      border: 1px solid #4a8a4a;
+      border-radius: 8px;
+      color: #8adc8a;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .pick-label:hover { background: #3a6a3a; }
+    .info {
+      background: #16213e;
+      border-radius: 16px;
+      padding: 24px 30px;
+      width: 100%;
+      max-width: 700px;
+      margin-bottom: 24px;
+    }
+    .info p { font-size: 14px; line-height: 1.8; color: #aaa; }
+  </style>
+</head>
+<body>
+  <h1>Alice in Wonderland</h1>
+  <h2>Chapter 1: Down the Rabbit-Hole - Pick Your Audio</h2>
+
+  <div class="player-box">
+    <h3>Option A: LibriVox Dramatic Reading (Full Cast)</h3>
+    <p class="subtitle">Public domain, real actors, multiple characters. ~10 min.</p>
+    <audio controls preload="auto" src="audio/librivox/chapter-01.mp3"></audio>
+    <div class="stats">
+      <span>~10 min 29 sec</span>
+      <span>Full cast</span>
+      <span>Public domain</span>
+      <span>Free</span>
+    </div>
+  </div>
+
+  <div class="player-box">
+    <h3>Option B: ElevenLabs TTS (AI Generated)</h3>
+    <p class="subtitle">Matilda (narrator) + Gigi (Alice). Missing 5 segments at end (quota).</p>
+    <audio controls preload="auto" src="audio/chapter-01.mp3"></audio>
+    <div class="stats">
+      <span>~11 min 24 sec</span>
+      <span>2 AI voices</span>
+      <span>~90% complete</span>
+      <span>$42 for full book</span>
+    </div>
+  </div>
+
+  <div class="info">
+    <p>
+      <strong>Option C:</strong> You record yourself reading, and ElevenLabs Speech-to-Speech
+      converts your voice while keeping your emotion, pacing, and drama. Best for your kid!
+    </p>
+    <p style="margin-top: 12px;">
+      Listen to both options above and let me know which direction you prefer.
+      We can also browse more LibriVox versions — there are 8+ different recordings.
+    </p>
+  </div>
+</body>
+</html>
