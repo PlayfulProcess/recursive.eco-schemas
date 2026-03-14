@@ -4,6 +4,28 @@ A commons for symbolic systems — tarot decks, I Ching interpretations, astrolo
 
 These grammars work with [recursive.eco](https://recursive.eco). Anyone can create, fork, and share them.
 
+## Printable Alice in Wonderland Chapter Books
+
+Twelve illustrated chapter books of Lewis Carroll's complete original text in ALL CAPS, with 105 public domain illustrations from 10+ artists (1864-1933). Print at home, fold in half, read to your kids.
+
+**Browse the booklets:** open [`grammars/alice-5-minute-stories/booklets/index.html`](grammars/alice-5-minute-stories/booklets/index.html) in your browser.
+
+**How to print:**
+1. Open a chapter booklet from the index
+2. Press **Ctrl+P** (or **Cmd+P** on Mac)
+3. Set orientation to **Landscape**
+4. Set margins to **None**
+5. Turn on **Background graphics**
+6. Print double-sided (flip on short edge) if available
+7. Fold each sheet in half — you have a picture book!
+
+**How to regenerate** (requires Node.js):
+```bash
+node scripts/generate-alice-booklets.mjs
+```
+
+Reads from `grammars/alice-in-wonderland-chapter-book/grammar.json` and generates HTML booklets in `grammars/alice-5-minute-stories/booklets/`.
+
 ## Quick Start
 
 The fastest way to create a grammar:
@@ -18,17 +40,15 @@ Or, to create from scratch or from a source text, see the [AI-assisted creation 
 ## Repository Structure
 
 ```
-schemas/
-├── tarot/              # Tarot decks
-├── iching/             # I Ching interpretation books
-├── astrology/          # Astrology interpretation sets
-└── other/              # Everything else
-
-sequences/              # Ordered video/image collections
-custom/                 # User-created grammars of any type
-creators/               # UUID-based user folders
-sources/                # Public domain source materials & attribution
+grammars/       # ALL grammars — flat, one folder per grammar (no categories)
+seeds/          # Raw source texts (public domain downloads, the compost heap)
+schemas/        # Reference structures (tarot templates, I Ching mappings, astrology tables)
+scripts/        # Build tools (download, validate, generate manifest)
+plan/           # Vision, pipeline, build logs, grammar ideas
+manifest.json   # Computed index of all grammars (run: python3 scripts/generate_manifest.py)
 ```
+
+Grammars aren't sorted into categories — the Dhammapada isn't a "classic" and Aesop isn't "for kids." Each grammar is a self-contained monad; metadata inside it determines how the library surfaces it.
 
 ## Grammar JSON Format — The Unified Items Standard
 
@@ -333,7 +353,7 @@ For each card include:
 - keywords array
 
 Start with the Major Arcana (22 cards).
-Follow the format in schemas/tarot/rider-waite-recursive/grammar.json.
+Follow the format in grammars/rider-waite-smith-tarot/grammar.json.
 ```
 
 **Example prompt for I Ching:**
@@ -371,7 +391,7 @@ recursive.eco/pages/grammar-viewer.html?github=YOUR-USERNAME/recursive.eco-schem
 
 Short path (this repo):
 ```
-recursive.eco/pages/grammar-viewer.html?github=tarot/rider-waite
+recursive.eco/pages/grammar-viewer.html?github=grammars/rider-waite-smith-tarot
 ```
 
 ### Import to Your Account
@@ -384,7 +404,7 @@ recursive.eco/pages/grammar-viewer.html?github=tarot/rider-waite
 ## Contributing
 
 1. Fork this repository
-2. Create your grammar in the appropriate folder
+2. Create your grammar in `grammars/<your-grammar-name>/grammar.json`
 3. Test with the viewer URL above
 4. Submit a pull request
 

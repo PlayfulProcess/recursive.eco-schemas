@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 11: Who Stole the Tarts? — Alice in Wonderland</title>
+  <style>
+    @page { size: landscape; margin: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Georgia', 'Cambria', 'Times New Roman', serif;
+      background: white;
+      color: #1a1a1a;
+    }
+
+    .spread {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+    }
+    .spread:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* Left page: illustration */
+    .page-left {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8f5f0;
+      padding: 16px;
+      overflow: hidden;
+      position: relative;
+      border-right: 2px solid #d0c8b8;
+    }
+    .page-left img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Right page: text */
+    .page-right {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 32px 5% 32px 5%;
+      background: white;
+      position: relative;
+      overflow: hidden;
+      border-left: 2px solid #d0c8b8;
+    }
+
+    /* Text block — NEVER scroll */
+    .text-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      flex: 1;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* Default text style — JS auto-fit adjusts font-size to fill container */
+    .text-block p {
+      font-size: 18px;
+      line-height: 1.7;
+      font-weight: 700;
+      text-align: justify;
+      text-align-last: left;
+      text-transform: uppercase;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      word-break: break-word;
+      letter-spacing: 0.3px;
+      margin-bottom: 0.8em;
+      text-indent: 1.5em;
+    }
+    /* All paragraphs indented uniformly */
+    .text-block p:last-child { margin-bottom: 0; }
+
+    .page-number {
+      font-size: 11px;
+      color: #999;
+      position: absolute;
+      bottom: 8px;
+    }
+    .page-number-left { left: 16px; }
+    .page-number-right { right: 16px; }
+
+    /* Blank pages (padding to multiple of 4) */
+    .blank-page {
+      background: #faf8f5;
+    }
+
+    /* Decorative panel (text-only pages) */
+    .decorative-panel {
+      background: #2c1810;
+      border-right-color: #5a4030;
+    }
+    .decorative-panel .page-number { color: #5a4030; }
+    .chapter-ornament {
+      text-align: center;
+      color: #d4a76a;
+    }
+    .ornament-number {
+      font-size: clamp(48px, 8vw, 96px);
+      font-weight: 800;
+      letter-spacing: 4px;
+      opacity: 0.3;
+      font-family: 'Georgia', serif;
+    }
+    .ornament-star {
+      font-size: clamp(36px, 6vw, 72px);
+      opacity: 0.3;
+    }
+
+    /* Cover */
+    .cover-title {
+      background: #2c1810;
+      color: white;
+    }
+    .title-block {
+      text-align: center;
+      font-family: 'Georgia', serif;
+    }
+    .series-name {
+      font-size: clamp(11px, 1.5vw, 16px);
+      letter-spacing: 4px;
+      color: #d4a76a;
+      margin-bottom: 12px;
+    }
+    .book-number {
+      font-size: clamp(13px, 1.8vw, 20px);
+      letter-spacing: 3px;
+      color: #d4a76a;
+      margin-bottom: 20px;
+    }
+    .title-block h1 {
+      font-size: clamp(20px, 3.8vw, 42px);
+      line-height: 1.2;
+      margin-bottom: 25px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    .author {
+      font-size: clamp(11px, 1.3vw, 14px);
+      letter-spacing: 3px;
+      color: #d4a76a;
+      margin-bottom: 8px;
+    }
+    .page-info {
+      font-size: clamp(9px, 1vw, 11px);
+      letter-spacing: 2px;
+      color: #a08060;
+      margin-top: 5px;
+    }
+    .cover-image { background: #2c1810; border-right-color: #5a4030; }
+    .cover-image img {
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+    .cover-title { border-left-color: #5a4030; }
+    .cover-title .page-number { color: #5a4030; }
+    .cover-image .page-number { color: #5a4030; }
+
+    /* Back cover */
+    .back-text {
+      background: #2c1810;
+      color: white;
+      border-left-color: #5a4030;
+    }
+    .back-text .page-number { color: #5a4030; }
+    .back-block {
+      text-align: center;
+      font-family: 'Georgia', serif;
+    }
+    .the-end {
+      font-size: clamp(24px, 4vw, 44px);
+      font-weight: 800;
+      letter-spacing: 6px;
+      margin-bottom: 30px;
+      color: #d4a76a;
+    }
+    .back-info p {
+      font-size: clamp(10px, 1.2vw, 13px);
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+      color: #d4a76a;
+    }
+    .back-info .small {
+      font-size: clamp(8px, 0.9vw, 10px);
+      color: #a08060;
+    }
+
+    /* Print */
+    @media print {
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        padding-top: 0 !important;
+        background: white !important;
+      }
+      .spread {
+        height: 100vh;
+        border-bottom: none !important;
+        min-height: auto !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .page-left img { box-shadow: none; }
+      .cover-image img { box-shadow: none; }
+      .toolbar { display: none !important; }
+      #tapOverlay { display: none !important; }
+      #singBall { display: none !important; }
+      .audio-progress { display: none !important; }
+      mark.search-match { background: transparent !important; color: inherit !important; }
+      .sheet-label { background: white; }
+    }
+
+    /* ── Toolbar (hidden in print) ── */
+    .toolbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      background: #2c1810;
+      color: #d4a76a;
+      font-family: 'Georgia', serif;
+      font-size: 13px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .toolbar.toolbar-hidden {
+      opacity: 0;
+      transform: translateY(-100%);
+      pointer-events: none;
+    }
+    .toolbar input[type="text"] {
+      padding: 5px 10px;
+      border: 1px solid #d4a76a;
+      border-radius: 4px;
+      background: #1a0f08;
+      color: #f0e6d6;
+      font-size: 13px;
+      font-family: 'Georgia', serif;
+      width: 180px;
+    }
+    .toolbar input::placeholder { color: #8a7060; }
+    .toolbar button {
+      padding: 5px 12px;
+      border: 1px solid #d4a76a;
+      border-radius: 4px;
+      background: #1a0f08;
+      color: #d4a76a;
+      font-size: 12px;
+      cursor: pointer;
+      font-family: 'Georgia', serif;
+    }
+    .toolbar button:hover { background: #3c2820; }
+    .toolbar button.active { background: #d4a76a; color: #2c1810; }
+    .toolbar select {
+      padding: 4px 6px;
+      border: 1px solid #d4a76a;
+      border-radius: 4px;
+      background: #1a0f08;
+      color: #d4a76a;
+      font-size: 11px;
+      font-family: 'Georgia', serif;
+      cursor: pointer;
+    }
+    .toolbar .match-count { font-size: 11px; color: #a08060; min-width: 60px; }
+    .toolbar .spacer { flex: 1; }
+    .toolbar .ch-title { font-size: 12px; letter-spacing: 1px; }
+
+    /* Search highlight (works on k-word spans) */
+    .search-match { background: #ffd700 !important; color: #1a1a1a !important; border-radius: 2px; padding: 0 1px; }
+
+    /* Karaoke word highlighting — very slow gradient sweep */
+    .k-word {
+      transition: color 2.5s ease;
+      border-radius: 2px;
+      padding: 0 1px;
+    }
+    /* Words already spoken — subtle dim, slow fade */
+    .k-word.k-spoken { color: #9a8a7a; transition: color 3s ease; }
+    /* Current word — gentle warm, barely noticeable bump */
+    .k-word.k-active { color: #b89060; transition: color 1.5s ease; }
+    /* Nearby words — soft gradient between spoken and unspoken */
+    .k-word.k-near { color: #8a7560; transition: color 2s ease; }
+
+    /* Tap-to-pause overlay (YouTube-style, invisible) */
+    #tapOverlay {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      background: transparent;
+      cursor: pointer;
+      display: none;
+    }
+    #tapOverlay.active { display: block; }
+
+    /* Ball removed — gradient-only karaoke */
+    #singBall { display: none; }
+
+    /* Audio progress bar (inside toolbar) */
+    .audio-progress {
+      flex: 1;
+      min-width: 80px;
+      height: 6px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 3px;
+      cursor: pointer;
+      position: relative;
+      cursor: pointer;
+    }
+    .audio-progress-bar {
+      height: 100%;
+      background: #d4a76a;
+      width: 0%;
+      transition: width 0.3s linear;
+      border-radius: 3px;
+    }
+    .audio-progress:hover {
+      height: 8px;
+    }
+
+    /* Audio controls hidden in print via consolidated @media print block above */
+
+    /* Screen: page dividers */
+    @media screen {
+      .spread {
+        border-bottom: 3px dashed #ccc;
+        min-height: 100vh;
+      }
+      .spread:last-child { border-bottom: none; }
+      body { background: #e8e8e8; padding-top: 44px; }
+    }
+
+    /* Toolbar + search highlights hidden in print via consolidated @media print block above */
+
+    /* Booklet imposition mode — pages rearranged for saddle-stitch printing */
+    body.booklet-mode .spread {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      display: flex;
+    }
+    /* In booklet mode, all pages get uniform styling regardless of original role */
+    body.booklet-mode .page-left {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8f5f0;
+      padding: 12px 3%;
+      overflow: hidden;
+      position: relative;
+      border-right: 1px solid #d0c8b8;
+      border-left: none;
+    }
+    body.booklet-mode .page-right {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8f5f0;
+      padding: 12px 3%;
+      overflow: hidden;
+      position: relative;
+      border-left: 1px solid #d0c8b8;
+      border-right: none;
+    }
+    /* In booklet mode, text blocks should adapt to available space */
+    body.booklet-mode .text-block {
+      width: 100%;
+      align-self: flex-start;
+    }
+    body.booklet-mode .text-block p {
+      font-size: 11px;
+      line-height: 1.4;
+    }
+    body.booklet-mode .page-left img,
+    body.booklet-mode .page-right img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 2px;
+      box-shadow: none;
+    }
+    /* Title block and back-block adapt to any position */
+    body.booklet-mode .title-block,
+    body.booklet-mode .back-block {
+      text-align: center;
+      width: 100%;
+    }
+    body.booklet-mode .title-block h1 { font-size: clamp(14px, 2vw, 22px); }
+    body.booklet-mode .chapter-ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+    /* Page numbers in booklet mode */
+    body.booklet-mode .page-number {
+      position: absolute;
+      bottom: 4px;
+      font-size: 8px;
+      color: #999;
+    }
+    body.booklet-mode .page-number-left { left: 8px; }
+    body.booklet-mode .page-number-right { right: 8px; }
+    .sheet-label {
+      position: absolute;
+      top: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: #999;
+      background: rgba(255,255,255,0.8);
+      padding: 2px 12px;
+      border-radius: 4px;
+      z-index: 10;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+<div class="toolbar">
+  <span class="ch-title">CH 11</span>
+  <button id="playBtn">&#9654; Play</button>
+  <select id="speedCtrl" title="Playback speed">
+    <option value="0.5">0.5x</option>
+    <option value="0.75">0.75x</option>
+    <option value="1" selected>1x</option>
+    <option value="1.25">1.25x</option>
+    <option value="1.5">1.5x</option>
+    <option value="2">2x</option>
+  </select>
+  <div class="audio-progress" id="progressTrack">
+    <div class="audio-progress-bar" id="progressBar"></div>
+  </div>
+  <span class="ch-title" style="color:#a08060" id="audioTime"></span>
+  <input type="text" id="searchInput" placeholder="Search..." autocomplete="off" style="width:120px">
+  <span class="match-count" id="matchCount"></span>
+  <button id="caseToggle" title="Toggle uppercase/lowercase">Aa</button>
+  <button id="fullscreenBtn">&#x26F6; Fullscreen</button>
+  <button id="toggleMode">📖 Print</button>
+</div>
+<div id="singBall"></div>
+<div id="tapOverlay"></div>
+
+    <div class="spread cover-spread" data-spread="1">
+      <div class="page-left cover-image" data-page="1">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-11-who-stole-the-tarts/lewis-carroll-1864-royal-court.webp" alt="Cover illustration">
+        <div class="page-number page-number-left">1</div>
+      </div>
+      <div class="page-right cover-title" data-page="2">
+        <div class="title-block">
+          <div class="series-name">ALICE IN WONDERLAND</div>
+          <div class="book-number">CHAPTER 11</div>
+          <h1>WHO STOLE THE TARTS?</h1>
+          <div class="author">BY LEWIS CARROLL</div>
+          <div class="page-info">8 CONTENT PAGES</div>
+        </div>
+        <div class="page-number page-number-right">2</div>
+      </div>
+    </div>
+    <div class="spread text-only" data-spread="2">
+      <div class="page-left decorative-panel" data-page="3">
+        <div class="chapter-ornament">
+          <div class="ornament-number">11</div>
+        </div>
+        <div class="page-number page-number-left">3</div>
+      </div>
+      <div class="page-right" data-page="4">
+        <div class="text-block">
+          <p>The King and Queen of Hearts were seated on their throne when they arrived, with a great crowd assembled about them—all sorts of little birds and beasts, as well as the whole pack of cards: the Knave was standing before them, in chains, with a soldier on each side to guard him; and near the King was the White Rabbit, with a trumpet in one hand, and a scroll of parchment in the other. In the very middle of the court was a table, with a large dish of tarts upon it: they looked so good, that it made Alice quite hungry to look at them—“I wish they’d get the trial done,” she thought, “and hand round the refreshments!” But there seemed to be no chance of this, so she began looking at everything about her, to pass away the time.</p>
+          <p>Alice had never been in a court of justice before, but she had read about them in books, and she was quite pleased to find that she knew the name of nearly everything there. “That’s the judge,” she said to herself, “because of his great wig.”</p>
+          <p>The judge, by the way, was the King; and as he wore his crown over the wig, (look at the frontispiece if you want to see how he did it,) he did not look at all comfortable, and it was certainly not becoming.</p>
+          <p>“And that’s the jury-box,” thought Alice, “and those twelve creatures,” (she was obliged to say “creatures,” you see, because some of them were animals, and some were birds,) “I suppose they are the jurors.”</p>
+        </div>
+        <div class="page-number page-number-right">4</div>
+      </div>
+    </div>
+    <div class="spread" data-spread="3">
+      <div class="page-left" data-page="5">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-court-assembles/arthur-rackham-1907.jpg" alt="Arthur Rackham — Knave of Spades">
+        <div class="page-number page-number-left">5</div>
+      </div>
+      <div class="page-right" data-page="6">
+        <div class="text-block">
+          <p>She said this last word two or three times over to herself, being rather proud of it: for she thought, and rightly too, that very few little girls of her age knew the meaning of it at all. However, “jury-men” would have done just as well.</p>
+          <p>The twelve jurors were all writing very busily on slates. “What are they doing?” Alice whispered to the Gryphon. “They can’t have anything to put down yet, before the trial’s begun.”</p>
+          <p>“They’re putting down their names,” the Gryphon whispered in reply, “for fear they should forget them before the end of the trial.”</p>
+          <p>“Stupid things!” Alice began in a loud, indignant voice, but she stopped hastily, for the White Rabbit cried out, “Silence in the court!” and the King put on his spectacles and looked anxiously round, to make out who was talking.</p>
+          <p>Alice could see, as well as if she were looking over their shoulders, that all the jurors were writing down “stupid things!” on their slates, and she could even make out that one of them didn’t know how to spell “stupid,” and that he had to ask his neighbour to tell him. “A nice muddle their slates’ll be in before the trial’s over!” thought Alice.</p>
+          <p>One of the jurors had a pencil that squeaked. This of course, Alice could not stand, and she went round the court and got behind him, and very soon found an opportunity of taking it away.</p>
+        </div>
+        <div class="page-number page-number-right">6</div>
+      </div>
+    </div>
+    <div class="spread" data-spread="4">
+      <div class="page-left" data-page="7">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-court-assembles/william-h-walker-1907.jpg" alt="William H. Walker — In court">
+        <div class="page-number page-number-left">7</div>
+      </div>
+      <div class="page-right" data-page="8">
+        <div class="text-block">
+          <p>She did it so quickly that the poor little juror (it was Bill, the Lizard) could not make out at all what had become of it; so, after hunting all about for it, he was obliged to write with one finger for the rest of the day; and this was of very little use, as it left no mark on the slate.</p>
+          <p>“Herald, read the accusation!” said the King.</p>
+          <p>On this the White Rabbit blew three blasts on the trumpet, and then unrolled the parchment scroll, and read as follows:—</p>
+          <p>“The Queen of Hearts, she made some tarts, All on a summer day: The Knave of Hearts, he stole those tarts, And took them quite away!”</p>
+          <p>“Consider your verdict,” the King said to the jury.</p>
+          <p>“Not yet, not yet!” the Rabbit hastily interrupted. “There’s a great deal to come before that!”</p>
+        </div>
+        <div class="page-number page-number-right">8</div>
+      </div>
+    </div>
+    <div class="spread text-only" data-spread="5">
+      <div class="page-left decorative-panel" data-page="9">
+        <div class="chapter-ornament">
+          <div class="ornament-number">11</div>
+        </div>
+        <div class="page-number page-number-left">9</div>
+      </div>
+      <div class="page-right" data-page="10">
+        <div class="text-block">
+          <p>“Call the first witness,” said the King; and the White Rabbit blew three blasts on the trumpet, and called out, “First witness!”</p>
+          <p>The first witness was the Hatter. He came in with a teacup in one hand and a piece of bread-and-butter in the other. “I beg pardon, your Majesty,” he began, “for bringing these in: but I hadn’t quite finished my tea when I was sent for.”</p>
+          <p>“You ought to have finished,” said the King. “When did you begin?”</p>
+          <p>The Hatter looked at the March Hare, who had followed him into the court, arm-in-arm with the Dormouse. “Fourteenth of March, I think it was,” he said.</p>
+          <p>“Fifteenth,” said the March Hare.</p>
+          <p>“Sixteenth,” added the Dormouse.</p>
+          <p>“Write that down,” the King said to the jury, and the jury eagerly wrote down all three dates on their slates, and then added them up, and reduced the answer to shillings and pence.</p>
+          <p>“Take off your hat,” the King said to the Hatter.</p>
+          <p>“It isn’t mine,” said the Hatter.</p>
+          <p>“Stolen!” the King exclaimed, turning to the jury, who instantly made a memorandum of the fact.</p>
+          <p>“I keep them to sell,” the Hatter added as an explanation; “I’ve none of my own. I’m a hatter.”</p>
+          <p>Here the Queen put on her spectacles, and began staring at the Hatter, who turned pale and fidgeted.</p>
+          <p>“Give your evidence,” said the King; “and don’t be nervous, or I’ll have you executed on the spot.”</p>
+          <p>This did not seem to encourage the witness at all: he kept shifting from one foot to the other, looking uneasily at the Queen, and in his confusion he bit a large piece out of his teacup instead of the bread-and-butter.</p>
+        </div>
+        <div class="page-number page-number-right">10</div>
+      </div>
+    </div>
+    <div class="spread text-only" data-spread="6">
+      <div class="page-left decorative-panel" data-page="11">
+        <div class="chapter-ornament">
+          <div class="ornament-number">11</div>
+        </div>
+        <div class="page-number page-number-left">11</div>
+      </div>
+      <div class="page-right" data-page="12">
+        <div class="text-block">
+          <p>Just at this moment Alice felt a very curious sensation, which puzzled her a good deal until she made out what it was: she was beginning to grow larger again, and she thought at first she would get up and leave the court; but on second thoughts she decided to remain where she was as long as there was room for her.</p>
+          <p>“I wish you wouldn’t squeeze so,” said the Dormouse, who was sitting next to her. “I can hardly breathe.”</p>
+          <p>“I can’t help it,” said Alice very meekly: “I’m growing.”</p>
+          <p>“You’ve no right to grow here,” said the Dormouse.</p>
+          <p>“Don’t talk nonsense,” said Alice more boldly: “you know you’re growing too.”</p>
+          <p>“Yes, but I grow at a reasonable pace,” said the Dormouse: “not in that ridiculous fashion.” And he got up very sulkily and crossed over to the other side of the court.</p>
+          <p>All this time the Queen had never left off staring at the Hatter, and, just as the Dormouse crossed the court, she said to one of the officers of the court, “Bring me the list of the singers in the last concert!” on which the wretched Hatter trembled so, that he shook both his shoes off.</p>
+          <p>“Give your evidence,” the King repeated angrily, “or I’ll have you executed, whether you’re nervous or not.”</p>
+          <p>“I’m a poor man, your Majesty,” the Hatter began, in a trembling voice, “—and I hadn’t begun my tea—not above a week or so—and what with the bread-and-butter getting so thin—and the twinkling of the tea—”</p>
+          <p>“The twinkling of the what?” said the King.</p>
+          <p>“It began with the tea,” the Hatter replied.</p>
+          <p>“Of course twinkling begins with a T!” said the King sharply.</p>
+        </div>
+        <div class="page-number page-number-right">12</div>
+      </div>
+    </div>
+    <div class="spread" data-spread="7">
+      <div class="page-left" data-page="13">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-hatters-evidence/lewis-carroll-1864-manuscript.webp" alt="Lewis Carroll — The trial of the Knave of Hearts">
+        <div class="page-number page-number-left">13</div>
+      </div>
+      <div class="page-right" data-page="14">
+        <div class="text-block">
+          <p>“Do you take me for a dunce? Go on!”</p>
+          <p>“I’m a poor man,” the Hatter went on, “and most things twinkled after that—only the March Hare said—”</p>
+          <p>“I didn’t!” the March Hare interrupted in a great hurry.</p>
+          <p>“You did!” said the Hatter.</p>
+          <p>“I deny it!” said the March Hare.</p>
+          <p>“He denies it,” said the King: “leave out that part.”</p>
+          <p>“Well, at any rate, the Dormouse said—” the Hatter went on, looking anxiously round to see if he would deny it too: but the Dormouse denied nothing, being fast asleep.</p>
+          <p>“After that,” continued the Hatter, “I cut some more bread-and-butter—”</p>
+          <p>“But what did the Dormouse say?” one of the jury asked.</p>
+          <p>“That I can’t remember,” said the Hatter.</p>
+          <p>“You must remember,” remarked the King, “or I’ll have you executed.”</p>
+          <p>The miserable Hatter dropped his teacup and bread-and-butter, and went down on one knee. “I’m a poor man, your Majesty,” he began.</p>
+          <p>“You’re a very poor speaker,” said the King.</p>
+          <p>Here one of the guinea-pigs cheered, and was immediately suppressed by the officers of the court. (As that is rather a hard word, I will just explain to you how it was done. They had a large canvas bag, which tied up at the mouth with strings: into this they slipped the guinea-pig, head first, and then sat upon it.)</p>
+          <p>“I’m glad I’ve seen that done,” thought Alice. “I’ve so often read in the newspapers, at the end of trials, “There was some attempts at applause, which was immediately suppressed by the officers of the court,” and I never understood what it meant till now.”</p>
+          <p>“If that’s all you know about it, you may stand down,” continued the King.</p>
+        </div>
+        <div class="page-number page-number-right">14</div>
+      </div>
+    </div>
+    <div class="spread text-only" data-spread="8">
+      <div class="page-left decorative-panel" data-page="15">
+        <div class="chapter-ornament">
+          <div class="ornament-number">11</div>
+        </div>
+        <div class="page-number page-number-left">15</div>
+      </div>
+      <div class="page-right" data-page="16">
+        <div class="text-block">
+          <p>“I can’t go no lower,” said the Hatter: “I’m on the floor, as it is.”</p>
+          <p>“Then you may sit down,” the King replied.</p>
+          <p>Here the other guinea-pig cheered, and was suppressed.</p>
+          <p>“Come, that finished the guinea-pigs!” thought Alice. “Now we shall get on better.”</p>
+          <p>“I’d rather finish my tea,” said the Hatter, with an anxious look at the Queen, who was reading the list of singers.</p>
+          <p>“You may go,” said the King, and the Hatter hurriedly left the court, without even waiting to put his shoes on.</p>
+          <p>“—and just take his head off outside,” the Queen added to one of the officers: but the Hatter was out of sight before the officer could get to the door.</p>
+        </div>
+        <div class="page-number page-number-right">16</div>
+      </div>
+    </div>
+    <div class="spread" data-spread="9">
+      <div class="page-left" data-page="17">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-cooks-evidence/brinsley-le-fanu-1910.jpg" alt="Brinsley Le Fanu — The cook refuses to testify">
+        <div class="page-number page-number-left">17</div>
+      </div>
+      <div class="page-right" data-page="18">
+        <div class="text-block">
+          <p>“Call the next witness!” said the King.</p>
+          <p>The next witness was the Duchess’s cook. She carried the pepper-box in her hand, and Alice guessed who it was, even before she got into the court, by the way the people near the door began sneezing all at once.</p>
+          <p>“Give your evidence,” said the King.</p>
+          <p>“Shan’t,” said the cook.</p>
+          <p>The King looked anxiously at the White Rabbit, who said in a low voice, “Your Majesty must cross-examine this witness.”</p>
+          <p>“Well, if I must, I must,” the King said, with a melancholy air, and, after folding his arms and frowning at the cook till his eyes were nearly out of sight, he said in a deep voice, “What are tarts made of?”</p>
+          <p>“Pepper, mostly,” said the cook.</p>
+          <p>“Treacle,” said a sleepy voice behind her.</p>
+          <p>“Collar that Dormouse,” the Queen shrieked out. “Behead that Dormouse! Turn that Dormouse out of court! Suppress him! Pinch him! Off with his whiskers!”</p>
+          <p>For some minutes the whole court was in confusion, getting the Dormouse turned out, and, by the time they had settled down again, the cook had disappeared.</p>
+          <p>“Never mind!” said the King, with an air of great relief. “Call the next witness.” And he added in an undertone to the Queen, “Really, my dear, you must cross-examine the next witness. It quite makes my forehead ache!”</p>
+          <p>Alice watched the White Rabbit as he fumbled over the list, feeling very curious to see what the next witness would be like, “—for they haven’t got much evidence yet,” she said to herself. Imagine her surprise, when the White Rabbit read out, at the top of his shrill little voice, the name “Alice!”</p>
+        </div>
+        <div class="page-number page-number-right">18</div>
+      </div>
+    </div>
+    <div class="spread back-cover" data-spread="10">
+      <div class="page-left decorative-panel" data-page="19">
+        <div class="chapter-ornament">
+          <div class="ornament-star">&#10038;</div>
+        </div>
+        <div class="page-number page-number-left">19</div>
+      </div>
+      <div class="page-right back-text" data-page="20">
+        <div class="back-block">
+          <div class="the-end">THE END</div>
+          <div class="back-info">
+            <p>CHAPTER 11: WHO STOLE THE TARTS?</p>
+            <p class="small">ALICE'S ADVENTURES IN WONDERLAND (1865)</p>
+            <p class="small">WORDS BY LEWIS CARROLL</p>
+            <p class="small">ALL ILLUSTRATIONS ARE PUBLIC DOMAIN</p>
+            <p class="small">MADE WITH LOVE AT RECURSIVE.ECO</p>
+          </div>
+        </div>
+        <div class="page-number page-number-right">20</div>
+      </div>
+    </div>
+<script>
+// Show total page count
+(function() {
+  var total = document.querySelectorAll('.page-left[data-page], .page-right[data-page]').length;
+  var el = document.getElementById('pageTotal');
+  if (el) el.textContent = total + ' pages (x' + Math.ceil(total / 4) + ' sheets)';
+})();
+
+// ── Toolbar auto-hide on mouse inactivity ──
+(function() {
+  var toolbar = document.querySelector('.toolbar');
+  var hideTimer = null;
+  var HIDE_DELAY = 3000; // 3 seconds
+
+  function showToolbar() {
+    toolbar.classList.remove('toolbar-hidden');
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(function() {
+      toolbar.classList.add('toolbar-hidden');
+    }, HIDE_DELAY);
+  }
+
+  document.addEventListener('mousemove', showToolbar);
+  document.addEventListener('click', showToolbar);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') showToolbar();
+  });
+
+  // Start the initial hide timer
+  hideTimer = setTimeout(function() {
+    toolbar.classList.add('toolbar-hidden');
+  }, HIDE_DELAY);
+})();
+
+// Auto-fit: measure each text block's rendered height and scale font down until it fits.
+// Runs on load so text is correctly sized before printing.
+(function() {
+  const MAX_FONT = 22;
+  const MIN_FONT = 9;
+  const STEP = 0.5;
+
+  function fitAll() {
+    document.querySelectorAll('.text-block').forEach(function(block) {
+      var container = block.parentElement;
+      // Available height = container height minus page-number space
+      var maxH = container.clientHeight - 32;
+      var ps = block.querySelectorAll('p');
+      if (!ps.length) return;
+
+      // Start at max font and shrink until it fits
+      var size = MAX_FONT;
+      function applySize(s) {
+        ps.forEach(function(p) { p.style.fontSize = s + 'px'; });
+      }
+      applySize(size);
+
+      // Shrink until content fits or we hit minimum
+      while (block.scrollHeight > maxH && size > MIN_FONT) {
+        size -= STEP;
+        applySize(size);
+      }
+    });
+  }
+
+  // Run on load and before print
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fitAll);
+  } else {
+    fitAll();
+  }
+  window.addEventListener('beforeprint', fitAll);
+  window.addEventListener('resize', fitAll);
+})();
+
+// ── Word Search Highlighting (karaoke-safe) ──
+// Works by adding a CSS class to k-word spans that match, instead of
+// restructuring the DOM with <mark> elements (which breaks karaoke).
+(function() {
+  var input = document.getElementById('searchInput');
+  var countEl = document.getElementById('matchCount');
+  if (!input) return;
+
+  function clearSearch() {
+    document.querySelectorAll('.k-word.search-match, .search-match').forEach(function(el) {
+      el.classList.remove('search-match');
+    });
+    countEl.textContent = '';
+  }
+
+  var debounceTimer;
+  input.addEventListener('input', function() {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(function() {
+      clearSearch();
+      var query = input.value.trim();
+      if (query.length < 2) return;
+      try {
+        var regex = new RegExp(query.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'i');
+        var total = 0;
+        // Search through k-word spans (karaoke mode)
+        var kWords = document.querySelectorAll('.k-word');
+        if (kWords.length > 0) {
+          kWords.forEach(function(span) {
+            if (regex.test(span.textContent)) {
+              span.classList.add('search-match');
+              total++;
+            }
+          });
+        } else {
+          // Fallback: search plain text blocks
+          document.querySelectorAll('.text-block p').forEach(function(p) {
+            var text = p.textContent;
+            var matches = text.match(new RegExp(regex.source, 'gi'));
+            if (matches) total += matches.length;
+          });
+        }
+        countEl.textContent = total > 0 ? total + ' found' : 'no matches';
+      } catch(e) {}
+    }, 300);
+  });
+
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') { input.value = ''; clearSearch(); }
+  });
+})();
+
+// ── Booklet Imposition Toggle ──
+// Saddle-stitch booklet: rearranges individual pages (not spreads) into
+// print-ready sheet order. Total pages already padded to multiple of 4.
+(function() {
+  var btn = document.getElementById('toggleMode');
+  if (!btn) return;
+  var isBooklet = false;
+  var originalHTML = '';
+
+  // Preserved elements that should not be removed during toggle
+  var KEEP_IDS = ['toggleMode', 'singBall', 'tapOverlay'];
+
+  function isPreserved(el) {
+    if (el.classList && el.classList.contains('toolbar')) return true;
+    if (KEEP_IDS.indexOf(el.id) !== -1) return true;
+    return false;
+  }
+
+  // Fix page class: swap page-left/page-right based on actual position
+  // Strip special spread-level classes (cover-image, cover-title, back-text, etc.)
+  function setPagePosition(pageEl, position) {
+    // Remove all position/type classes, keep content
+    var cl = pageEl.classList;
+    cl.remove('page-left', 'page-right', 'cover-image', 'cover-title',
+              'back-text', 'decorative-panel', 'blank-page');
+    if (position === 'left') {
+      cl.add('page-left');
+    } else {
+      cl.add('page-right');
+    }
+  }
+
+  btn.addEventListener('click', function() {
+    isBooklet = !isBooklet;
+    btn.classList.toggle('active', isBooklet);
+    btn.textContent = isBooklet ? 'Reading Mode' : 'Print';
+    document.body.classList.toggle('booklet-mode', isBooklet);
+
+    // Get all individual page elements (NOT k-word spans which also have data-page)
+    var allPages = Array.from(document.querySelectorAll('.page-left[data-page], .page-right[data-page]'));
+    var N = allPages.length; // already multiple of 4
+
+    if (!originalHTML) {
+      // Save original body content (excluding preserved elements)
+      originalHTML = '';
+      Array.from(document.body.children).forEach(function(child) {
+        if (!isPreserved(child)) originalHTML += child.outerHTML;
+      });
+    }
+
+    if (isBooklet) {
+      // Collect pages by their number
+      var pageMap = {};
+      allPages.forEach(function(el) {
+        pageMap[parseInt(el.dataset.page)] = el.cloneNode(true);
+      });
+
+      // Saddle-stitch imposition for N pages (N is multiple of 4)
+      // Each printed sheet has 4 page positions:
+      //   Front: left=N-2i, right=2i+1  (page numbers 1-indexed)
+      //   Back:  left=2i+2, right=N-1-2i
+      var container = document.createElement('div');
+      container.id = 'booklet-pages';
+      var sheets = N / 4;
+
+      for (var i = 0; i < sheets; i++) {
+        var frontLeft  = N - 2 * i;     // e.g. sheet 0: page N
+        var frontRight = 2 * i + 1;     // e.g. sheet 0: page 1
+        var backLeft   = 2 * i + 2;     // e.g. sheet 0: page 2
+        var backRight  = N - 1 - 2 * i; // e.g. sheet 0: page N-1
+
+        // Sheet front
+        var frontSpread = document.createElement('div');
+        frontSpread.className = 'spread sheet-spread';
+        frontSpread.innerHTML = '<div class="sheet-label">SHEET ' + (i+1) + ' FRONT</div>';
+        var fl = pageMap[frontLeft];
+        var fr = pageMap[frontRight];
+        if (fl) { setPagePosition(fl, 'left'); frontSpread.appendChild(fl); }
+        if (fr) { setPagePosition(fr, 'right'); frontSpread.appendChild(fr); }
+        container.appendChild(frontSpread);
+
+        // Sheet back
+        var backSpread = document.createElement('div');
+        backSpread.className = 'spread sheet-spread';
+        backSpread.innerHTML = '<div class="sheet-label">SHEET ' + (i+1) + ' BACK</div>';
+        var bl = pageMap[backLeft];
+        var br = pageMap[backRight];
+        if (bl) { setPagePosition(bl, 'left'); backSpread.appendChild(bl); }
+        if (br) { setPagePosition(br, 'right'); backSpread.appendChild(br); }
+        container.appendChild(backSpread);
+      }
+
+      // Replace body content (keep preserved elements)
+      var toRemove = [];
+      Array.from(document.body.children).forEach(function(child) {
+        if (!isPreserved(child)) toRemove.push(child);
+      });
+      toRemove.forEach(function(el) { el.remove(); });
+      document.body.appendChild(container);
+    } else {
+      // Restore original (keep preserved elements)
+      var toRemove = [];
+      Array.from(document.body.children).forEach(function(child) {
+        if (!isPreserved(child)) toRemove.push(child);
+      });
+      toRemove.forEach(function(el) { el.remove(); });
+      document.body.insertAdjacentHTML('beforeend', originalHTML);
+    }
+
+    // Re-run auto-fit
+    window.dispatchEvent(new Event('resize'));
+  });
+})();
+
+// ── Karaoke Audio Player ──
+(function() {
+  var KARAOKE_PAGES = [{"pageNum":4,"words":[{"display":"The","start":22.219999313354492,"end":22.739999771118164},{"display":"King","start":24.420000076293945,"end":24.940000534057617},{"display":"and","start":24.940000534057617,"end":25.15999984741211},{"display":"Queen","start":25.15999984741211,"end":25.360000610351562},{"display":"of","start":25.360000610351562,"end":25.760000228881836},{"display":"Hearts","start":25.760000228881836,"end":25.860000610351562},{"display":"were","start":25.860000610351562,"end":26.1200008392334},{"display":"seated","start":26.1200008392334,"end":26.260000228881836},{"display":"on","start":26.260000228881836,"end":26.540000915527344},{"display":"their","start":26.540000915527344,"end":26.799999237060547},{"display":"throne","start":26.799999237060547,"end":27.020000457763672},{"display":"when","start":27.020000457763672,"end":27.280000686645508},{"display":"they","start":27.280000686645508,"end":27.520000457763672},{"display":"arrived,","start":27.520000457763672,"end":27.959999084472656},{"display":"with","start":28.139999389648438,"end":28.239999771118164},{"display":"a","start":28.239999771118164,"end":28.399999618530273},{"display":"great","start":28.399999618530273,"end":28.68000030517578},{"display":"crowd","start":28.68000030517578,"end":29.020000457763672},{"display":"assembled","start":29.020000457763672,"end":29.399999618530273},{"display":"about","start":29.399999618530273,"end":29.780000686645508},{"display":"them—all","start":29.780000686645508,"end":30.040000915527344},{"display":"sorts","start":30.719999313354492,"end":30.920000076293945},{"display":"of","start":30.920000076293945,"end":31.139999389648438},{"display":"little","start":31.139999389648438,"end":31.399999618530273},{"display":"birds","start":31.399999618530273,"end":31.68000030517578},{"display":"and","start":31.68000030517578,"end":31.920000076293945},{"display":"beasts,","start":31.920000076293945,"end":32.2599983215332},{"display":"as","start":32.5,"end":32.81999969482422},{"display":"well","start":32.81999969482422,"end":32.84000015258789},{"display":"as","start":32.84000015258789,"end":33.099998474121094},{"display":"the","start":33.099998474121094,"end":33.24999847412109},{"display":"whole","start":33.269998474121095,"end":33.439998626708984},{"display":"pack","start":33.439998626708984,"end":33.599998474121094},{"display":"of","start":33.720001220703125,"end":34.2400016784668},{"display":"cards:","start":34.2400016784668,"end":34.390001678466795},{"display":"the","start":34.400001525878906,"end":34.900001525878906},{"display":"Knave","start":34.900001525878906,"end":35.060001373291016},{"display":"was","start":35.060001373291016,"end":35.31999969482422},{"display":"standing","start":35.31999969482422,"end":35.560001373291016},{"display":"before","start":35.560001373291016,"end":35.939998626708984},{"display":"them,","start":35.939998626708984,"end":36.119998931884766},{"display":"in","start":36.119998931884766,"end":36.380001068115234},{"display":"chains,","start":36.380001068115234,"end":36.720001220703125},{"display":"with","start":36.84000015258789,"end":36.959999084472656},{"display":"a","start":36.959999084472656,"end":37.400001525878906},{"display":"soldier","start":37.400001525878906,"end":37.550001525878905},{"display":"on","start":37.57000152587891,"end":37.65999984741211},{"display":"each","start":37.65999984741211,"end":37.939998626708984},{"display":"side","start":37.939998626708984,"end":38.220001220703125},{"display":"to","start":38.220001220703125,"end":38.459999084472656},{"display":"guard","start":38.459999084472656,"end":38.619998931884766},{"display":"him;","start":38.619998931884766,"end":38.959999084472656},{"display":"and","start":39.040000915527344,"end":39.599998474121094},{"display":"near","start":39.599998474121094,"end":39.720001220703125},{"display":"the","start":39.720001220703125,"end":39.939998626708984},{"display":"King","start":39.939998626708984,"end":40.220001220703125},{"display":"was","start":40.220001220703125,"end":40.5},{"display":"the","start":40.5,"end":40.70000076293945},{"display":"White","start":40.70000076293945,"end":40.959999084472656},{"display":"Rabbit,","start":40.959999084472656,"end":41.20000076293945},{"display":"with","start":41.439998626708984,"end":41.52000045776367},{"display":"a","start":41.52000045776367,"end":41.959999084472656},{"display":"trumpet","start":41.959999084472656,"end":42.109999084472655},{"display":"in","start":42.12999908447266,"end":42.13999938964844},{"display":"one","start":42.13999938964844,"end":42.459999084472656},{"display":"hand,","start":42.459999084472656,"end":42.7400016784668},{"display":"and","start":42.7400016784668,"end":43.15999984741211},{"display":"a","start":43.15999984741211,"end":43.540000915527344},{"display":"scroll","start":43.540000915527344,"end":43.560001373291016},{"display":"of","start":43.560001373291016,"end":44.08000183105469},{"display":"parchment","start":44.08000183105469,"end":44.230001831054686},{"display":"in","start":44.25000183105469,"end":44.380001068115234},{"display":"the","start":44.380001068115234,"end":44.540000915527344},{"display":"other.","start":44.540000915527344,"end":44.81999969482422},{"display":"In","start":45.2400016784668,"end":45.65999984741211},{"display":"the","start":45.65999984741211,"end":45.7599983215332},{"display":"very","start":45.7599983215332,"end":46.220001220703125},{"display":"middle","start":46.220001220703125,"end":46.29999923706055},{"display":"of","start":46.29999923706055,"end":46.5},{"display":"the","start":46.5,"end":46.86000061035156},{"display":"court","start":46.86000061035156,"end":46.880001068115234},{"display":"was","start":46.880001068115234,"end":47.099998474121094},{"display":"a","start":47.099998474121094,"end":47.58000183105469},{"display":"table,","start":47.58000183105469,"end":47.730001831054686},{"display":"with","start":47.900001525878906,"end":48.119998931884766},{"display":"a","start":48.119998931884766,"end":48.279998779296875},{"display":"large","start":48.279998779296875,"end":48.63999938964844},{"display":"dish","start":48.63999938964844,"end":48.959999084472656},{"display":"of","start":48.97999954223633,"end":49.5},{"display":"tarts","start":49.5,"end":49.65},{"display":"upon","start":49.67,"end":49.79999923706055},{"display":"it:","start":49.79999923706055,"end":50.040000915527344},{"display":"they","start":50.36000061035156,"end":50.5},{"display":"looked","start":50.5,"end":50.65999984741211},{"display":"so","start":50.65999984741211,"end":50.97999954223633},{"display":"good,","start":50.97999954223633,"end":51.18000030517578},{"display":"that","start":51.18000030517578,"end":51.34000015258789},{"display":"it","start":51.34000015258789,"end":51.47999954223633},{"display":"made","start":51.47999954223633,"end":51.65999984741211},{"display":"Alice","start":51.65999984741211,"end":52.040000915527344},{"display":"quite","start":52.040000915527344,"end":52.439998626708984},{"display":"hungry","start":52.439998626708984,"end":52.68000030517578},{"display":"to","start":52.68000030517578,"end":52.939998626708984},{"display":"look","start":52.939998626708984,"end":53.08000183105469},{"display":"at","start":53.08000183105469,"end":53.2400016784668},{"display":"them—“I","start":53.2400016784668,"end":53.439998626708984},{"display":"wish","start":54.099998474121094,"end":54.439998626708984},{"display":"they’d","start":54.54999923706055,"end":54.65999984741211},{"display":"get","start":54.65999984741211,"end":54.79999923706055},{"display":"the","start":54.79999923706055,"end":55.279998779296875},{"display":"trial","start":55.279998779296875,"end":55.429998779296874},{"display":"done,”","start":55.44999877929688,"end":55.540000915527344},{"display":"she","start":55.68000030517578,"end":55.880001068115234},{"display":"thought,","start":55.880001068115234,"end":56.119998931884766},{"display":"“and","start":56.15999984741211,"end":56.439998626708984},{"display":"hand","start":56.439998626708984,"end":56.779998779296875},{"display":"round","start":56.779998779296875,"end":56.91999816894531},{"display":"the","start":56.91999816894531,"end":57.119998931884766},{"display":"refreshments!”","start":57.119998931884766,"end":57.63999938964844},{"display":"But","start":58.599998474121094,"end":58.939998626708984},{"display":"there","start":58.939998626708984,"end":59.13999938964844},{"display":"seemed","start":59.13999938964844,"end":59.41999816894531},{"display":"to","start":59.41999816894531,"end":59.599998474121094},{"display":"be","start":59.599998474121094,"end":59.68000030517578},{"display":"no","start":59.68000030517578,"end":59.900001525878906},{"display":"chance","start":59.900001525878906,"end":60.13999938964844},{"display":"of","start":60.13999938964844,"end":60.279998779296875},{"display":"this,","start":60.279998779296875,"end":60.58000183105469},{"display":"so","start":60.91999816894531,"end":61.18000030517578},{"display":"she","start":61.18000030517578,"end":61.36000061035156},{"display":"began","start":61.36000061035156,"end":61.619998931884766},{"display":"looking","start":61.619998931884766,"end":61.97999954223633},{"display":"at","start":61.97999954223633,"end":62.29999923706055},{"display":"everything","start":62.29999923706055,"end":62.540000915527344},{"display":"about","start":62.540000915527344,"end":62.91999816894531},{"display":"her,","start":62.91999816894531,"end":63.08000183105469},{"display":"to","start":63.08000183105469,"end":63.29999923706055},{"display":"pass","start":63.29999923706055,"end":63.5},{"display":"away","start":63.5,"end":63.70000076293945},{"display":"the","start":63.70000076293945,"end":63.86000061035156},{"display":"time.","start":63.86000061035156,"end":64.31999969482422},{"display":"Alice","start":65.66000366210938,"end":66.04000091552734},{"display":"had","start":66.04000091552734,"end":66.23999786376953},{"display":"never","start":66.23999786376953,"end":66.44000244140625},{"display":"been","start":66.44000244140625,"end":66.69999694824219},{"display":"in","start":66.69999694824219,"end":66.87999725341797},{"display":"a","start":66.87999725341797,"end":67.19999694824219},{"display":"court","start":67.19999694824219,"end":67.3499969482422},{"display":"of","start":67.36999694824219,"end":67.4000015258789},{"display":"justice","start":67.4000015258789,"end":67.66000366210938},{"display":"before,","start":67.66000366210938,"end":68.18000030517578},{"display":"but","start":68.19999694824219,"end":68.44000244140625},{"display":"she","start":68.44000244140625,"end":68.5999984741211},{"display":"had","start":68.5999984741211,"end":68.80000305175781},{"display":"read","start":68.80000305175781,"end":68.87999725341797},{"display":"about","start":68.87999725341797,"end":69.22000122070312},{"display":"them","start":69.22000122070312,"end":69.27999877929688},{"display":"in","start":69.27999877929688,"end":69.81999969482422},{"display":"books,","start":69.81999969482422,"end":69.96999969482422},{"display":"and","start":69.98999969482422,"end":70.33999633789062},{"display":"she","start":70.33999633789062,"end":70.4800033569336},{"display":"was","start":70.4800033569336,"end":70.63999938964844},{"display":"quite","start":70.63999938964844,"end":70.95999908447266},{"display":"pleased","start":70.95999908447266,"end":71.18000030517578},{"display":"to","start":71.18000030517578,"end":71.58000183105469},{"display":"find","start":71.58000183105469,"end":71.62000274658203},{"display":"that","start":71.62000274658203,"end":71.83999633789062},{"display":"she","start":71.83999633789062,"end":72.0199966430664},{"display":"knew","start":72.0199966430664,"end":72.08000183105469},{"display":"the","start":72.08000183105469,"end":72.44000244140625},{"display":"name","start":72.44000244140625,"end":72.5},{"display":"of","start":72.5,"end":72.72000122070312},{"display":"nearly","start":72.72000122070312,"end":72.91999816894531},{"display":"everything","start":72.91999816894531,"end":73.4000015258789},{"display":"there.","start":73.4200015258789,"end":73.81999969482422},{"display":"“That’s","start":74.34000015258789,"end":74.86000061035156},{"display":"the","start":74.86000061035156,"end":75.26000213623047},{"display":"judge,”","start":75.26000213623047,"end":75.30000305175781},{"display":"she","start":75.37999725341797,"end":75.54000091552734},{"display":"said","start":75.54000091552734,"end":75.72000122070312},{"display":"to","start":75.72000122070312,"end":75.95999908447266},{"display":"herself,","start":75.95999908447266,"end":76.23999786376953},{"display":"“because","start":76.37999725341797,"end":76.63999938964844},{"display":"of","start":76.63999938964844,"end":76.77999877929688},{"display":"his","start":76.77999877929688,"end":76.94000244140625},{"display":"great","start":76.94000244140625,"end":77.30000305175781},{"display":"wig.”","start":77.30000305175781,"end":77.5999984741211},{"display":"The","start":79.0999984741211,"end":79.58000183105469},{"display":"judge,","start":79.58000183105469,"end":79.91999816894531},{"display":"by","start":80,"end":80.16000366210938},{"display":"the","start":80.16000366210938,"end":80.22000122070312},{"display":"way,","start":80.22000122070312,"end":80.44000244140625},{"display":"was","start":80.4800033569336,"end":80.68000030517578},{"display":"the","start":80.68000030517578,"end":80.94000244140625},{"display":"King;","start":80.94000244140625,"end":81.19999694824219},{"display":"and","start":81.4800033569336,"end":81.58000183105469},{"display":"as","start":81.58000183105469,"end":81.76000213623047},{"display":"he","start":81.76000213623047,"end":81.95999908447266},{"display":"wore","start":81.95999908447266,"end":82.05999755859375},{"display":"his","start":82.05999755859375,"end":82.4000015258789},{"display":"crown","start":82.4000015258789,"end":82.63999938964844},{"display":"over","start":82.63999938964844,"end":82.9000015258789},{"display":"the","start":82.9000015258789,"end":83.37999725341797},{"display":"wig,","start":83.37999725341797,"end":83.52999725341797},{"display":"(look","start":83.54999725341797,"end":83.69999725341798},{"display":"at","start":83.71999725341797,"end":83.86999725341798},{"display":"the","start":83.88999725341797,"end":84.03999725341798},{"display":"frontispiece","start":84.05999725341798,"end":84.20999725341798},{"display":"if","start":84.22999725341798,"end":84.37999725341798},{"display":"you","start":84.39999725341798,"end":84.54999725341798},{"display":"want","start":84.56999725341798,"end":84.71999725341799},{"display":"to","start":84.73999725341798,"end":84.88999725341799},{"display":"see","start":84.90999725341798,"end":85.05999725341799},{"display":"how","start":85.07999725341799,"end":85.22999725341799},{"display":"he","start":85.24999725341799,"end":85.399997253418},{"display":"did","start":85.41999725341799,"end":85.569997253418},{"display":"it,)","start":85.58999725341799,"end":85.739997253418},{"display":"he","start":85.75999725341799,"end":85.909997253418},{"display":"did","start":85.929997253418,"end":86.079997253418},{"display":"not","start":86.099997253418,"end":86.249997253418},{"display":"look","start":86.269997253418,"end":86.419997253418},{"display":"at","start":86.439997253418,"end":86.589997253418},{"display":"all","start":86.609997253418,"end":86.759997253418},{"display":"comfortable,","start":86.779997253418,"end":86.92999725341801},{"display":"and","start":86.949997253418,"end":87.09999725341801},{"display":"it","start":87.119997253418,"end":87.26999725341801},{"display":"was","start":87.28999725341801,"end":87.43999725341801},{"display":"certainly","start":87.45999725341801,"end":87.60999725341802},{"display":"not","start":87.62999725341801,"end":87.77999725341802},{"display":"becoming.","start":87.79999725341801,"end":87.94999725341802},{"display":"“And","start":87.96999725341801,"end":88.11999725341802},{"display":"that’s","start":88.13999725341802,"end":88.28999725341802},{"display":"the","start":88.30999725341802,"end":88.41999816894531},{"display":"jury-box,”","start":88.41999816894531,"end":88.55999755859375},{"display":"thought","start":88.9000015258789,"end":89.22000122070312},{"display":"Alice,","start":89.22000122070312,"end":89.5999984741211},{"display":"“and","start":89.68000030517578,"end":90.16000366210938},{"display":"those","start":90.16000366210938,"end":90.37999725341797},{"display":"twelve","start":90.37999725341797,"end":90.72000122070312},{"display":"creatures,”","start":90.72000122070312,"end":91.27999877929688},{"display":"(she","start":91.27999877929688,"end":91.54000091552734},{"display":"was","start":91.54000091552734,"end":91.76000213623047},{"display":"obliged","start":91.76000213623047,"end":92.05999755859375},{"display":"to","start":92.05999755859375,"end":92.27999877929688},{"display":"say","start":92.27999877929688,"end":92.37999725341797},{"display":"“creatures,”","start":92.37999725341797,"end":92.87999725341797},{"display":"you","start":92.9800033569336,"end":93.18000030517578},{"display":"see,","start":93.18000030517578,"end":93.45999908447266},{"display":"because","start":93.66000366210938,"end":93.95999908447266},{"display":"some","start":93.95999908447266,"end":94.19999694824219},{"display":"of","start":94.19999694824219,"end":94.44000244140625},{"display":"them","start":94.44000244140625,"end":94.59000244140626},{"display":"were","start":94.61000244140625,"end":94.66000366210938},{"display":"animals,","start":94.66000366210938,"end":95.0999984741211},{"display":"and","start":95.0999984741211,"end":95.31999969482422},{"display":"some","start":95.31999969482422,"end":95.55999755859375},{"display":"were","start":95.55999755859375,"end":96.16000366210938},{"display":"birds,)","start":96.16000366210938,"end":96.5199966430664},{"display":"“I","start":96.5199966430664,"end":96.87999725341797},{"display":"suppose","start":96.87999725341797,"end":97.22000122070312},{"display":"they","start":97.22000122070312,"end":97.45999908447266},{"display":"are","start":97.45999908447266,"end":97.5999984741211},{"display":"the","start":97.5999984741211,"end":98.0199966430664},{"display":"jurors.”","start":98.0199966430664,"end":98.76000213623047}],"startTime":22.219999313354492,"endTime":98.76000213623047},{"pageNum":6,"words":[{"display":"She","start":98.76000213623047,"end":99.13999938964844},{"display":"said","start":99.13999938964844,"end":99.27999877929688},{"display":"this","start":99.27999877929688,"end":99.41999816894531},{"display":"last","start":99.41999816894531,"end":99.80000305175781},{"display":"word","start":99.80000305175781,"end":99.9000015258789},{"display":"two","start":99.9000015258789,"end":100.12000274658203},{"display":"or","start":100.12000274658203,"end":100.26000213623047},{"display":"three","start":100.26000213623047,"end":100.44000244140625},{"display":"times","start":100.44000244140625,"end":100.76000213623047},{"display":"over","start":100.76000213623047,"end":101.0999984741211},{"display":"to","start":101.0999984741211,"end":101.26000213623047},{"display":"herself,","start":101.26000213623047,"end":101.63999938964844},{"display":"being","start":101.83999633789062,"end":102.0199966430664},{"display":"rather","start":102.0199966430664,"end":102.27999877929688},{"display":"proud","start":102.27999877929688,"end":102.5199966430664},{"display":"of","start":102.5199966430664,"end":102.66000366210938},{"display":"it:","start":102.66000366210938,"end":102.94000244140625},{"display":"for","start":103.16000366210938,"end":103.36000061035156},{"display":"she","start":103.36000061035156,"end":103.55999755859375},{"display":"thought,","start":103.55999755859375,"end":103.81999969482422},{"display":"and","start":103.94000244140625,"end":104.23999786376953},{"display":"rightly","start":104.23999786376953,"end":104.36000061035156},{"display":"too,","start":104.36000061035156,"end":104.83999633789062},{"display":"that","start":105.16000366210938,"end":105.36000061035156},{"display":"very","start":105.36000061035156,"end":105.66000366210938},{"display":"few","start":105.66000366210938,"end":105.94000244140625},{"display":"little","start":105.94000244140625,"end":106.22000122070312},{"display":"girls","start":106.22000122070312,"end":106.54000091552734},{"display":"of","start":106.54000091552734,"end":106.69999694824219},{"display":"her","start":106.69999694824219,"end":106.87999725341797},{"display":"age","start":106.87999725341797,"end":107.23999786376953},{"display":"knew","start":107.23999786376953,"end":107.44000244140625},{"display":"the","start":107.44000244140625,"end":107.69999694824219},{"display":"meaning","start":107.69999694824219,"end":107.9000015258789},{"display":"of","start":107.9000015258789,"end":108.13999938964844},{"display":"it","start":108.13999938964844,"end":108.22000122070312},{"display":"at","start":108.22000122070312,"end":108.54000091552734},{"display":"all.","start":108.54000091552734,"end":108.76000213623047},{"display":"However,","start":109.37999725341797,"end":109.9000015258789},{"display":"“jury-men”","start":110.18000030517578,"end":110.58000183105469},{"display":"would","start":110.58000183105469,"end":110.77999877929688},{"display":"have","start":110.77999877929688,"end":110.9000015258789},{"display":"done","start":110.9000015258789,"end":111.08000183105469},{"display":"just","start":111.08000183105469,"end":111.4000015258789},{"display":"as","start":111.4000015258789,"end":111.72000122070312},{"display":"well.","start":111.72000122070312,"end":111.95999908447266},{"display":"The","start":113.05999755859375,"end":113.30000305175781},{"display":"twelve","start":113.30000305175781,"end":113.68000030517578},{"display":"jurors","start":113.68000030517578,"end":114.05999755859375},{"display":"were","start":114.05999755859375,"end":114.26000213623047},{"display":"all","start":114.26000213623047,"end":114.68000030517578},{"display":"writing","start":114.68000030517578,"end":114.86000061035156},{"display":"very","start":114.86000061035156,"end":115.22000122070312},{"display":"busily","start":115.22000122070312,"end":115.55999755859375},{"display":"on","start":115.55999755859375,"end":116.30000305175781},{"display":"slates.","start":116.30000305175781,"end":116.45000305175782},{"display":"“What","start":116.5999984741211,"end":117.12000274658203},{"display":"are","start":117.12000274658203,"end":117.27999877929688},{"display":"they","start":117.27999877929688,"end":117.44000244140625},{"display":"doing?”","start":117.44000244140625,"end":118.0199966430664},{"display":"Alice","start":118.0199966430664,"end":118.44000244140625},{"display":"whispered","start":118.44000244140625,"end":118.80000305175781},{"display":"to","start":118.80000305175781,"end":118.94000244140625},{"display":"the","start":118.94000244140625,"end":119.19999694824219},{"display":"Gryphon.","start":119.44999694824219,"end":119.69999694824219},{"display":"“They","start":119.69999694824219,"end":120.22000122070312},{"display":"can’t","start":120.36999893188477,"end":120.5199966430664},{"display":"have","start":120.5199966430664,"end":120.73999786376953},{"display":"anything","start":120.73999786376953,"end":121.08000183105469},{"display":"to","start":121.08000183105469,"end":121.44000244140625},{"display":"put","start":121.44000244140625,"end":121.59000244140626},{"display":"down","start":121.61000244140625,"end":121.68000030517578},{"display":"yet,","start":121.68000030517578,"end":122},{"display":"before","start":122.27999877929688,"end":122.44000244140625},{"display":"the","start":122.44000244140625,"end":122.68000030517578},{"display":"trial’s","start":122.88000106811523,"end":123.08000183105469},{"display":"begun.”","start":123.08000183105469,"end":123.5199966430664},{"display":"“They’re","start":124.32999801635742,"end":125.13999938964844},{"display":"putting","start":125.13999938964844,"end":125.28999938964844},{"display":"down","start":125.30999938964844,"end":125.37999725341797},{"display":"their","start":125.37999725341797,"end":126},{"display":"names,”","start":126,"end":126.04000091552734},{"display":"the","start":126.04000091552734,"end":126.4000015258789},{"display":"Gryphon","start":126.47999954223633,"end":126.55999755859375},{"display":"whispered","start":126.55999755859375,"end":127},{"display":"in","start":127,"end":127.19999694824219},{"display":"reply,","start":127.19999694824219,"end":127.5999984741211},{"display":"“for","start":128.02000427246094,"end":128.44000244140625},{"display":"fear","start":128.44000244140625,"end":128.6199951171875},{"display":"they","start":128.82000732421875,"end":128.97999572753906},{"display":"should","start":128.97999572753906,"end":129.17999267578125},{"display":"forget","start":129.17999267578125,"end":129.47999572753906},{"display":"them","start":129.47999572753906,"end":129.74000549316406},{"display":"before","start":129.74000549316406,"end":129.9600067138672},{"display":"the","start":129.9600067138672,"end":130.24000549316406},{"display":"end","start":130.24000549316406,"end":130.36000061035156},{"display":"of","start":130.36000061035156,"end":130.47999572753906},{"display":"the","start":130.47999572753906,"end":130.9600067138672},{"display":"trial.”","start":130.9600067138672,"end":130.97999572753906},{"display":"“Stupid","start":132.5399932861328,"end":132.97999572753906},{"display":"things!”","start":132.97999572753906,"end":133.4199981689453},{"display":"Alice","start":133.4199981689453,"end":133.9199981689453},{"display":"began","start":133.9199981689453,"end":134.33999633789062},{"display":"in","start":134.44000244140625,"end":134.5399932861328},{"display":"a","start":134.5399932861328,"end":134.75999450683594},{"display":"loud,","start":134.75999450683594,"end":134.97999572753906},{"display":"indignant","start":135.44000244140625,"end":135.59000244140626},{"display":"voice,","start":135.61000244140627,"end":135.89999389648438},{"display":"but","start":135.9199981689453,"end":136.17999267578125},{"display":"she","start":136.17999267578125,"end":136.39999389648438},{"display":"stopped","start":136.39999389648438,"end":136.63999938964844},{"display":"hastily,","start":136.63999938964844,"end":137.0399932861328},{"display":"for","start":137.27999877929688,"end":137.4199981689453},{"display":"the","start":137.4199981689453,"end":137.60000610351562},{"display":"White","start":137.60000610351562,"end":137.82000732421875},{"display":"Rabbit","start":137.82000732421875,"end":138.02000427246094},{"display":"cried","start":138.02000427246094,"end":138.25999450683594},{"display":"out,","start":138.25999450683594,"end":138.55999755859375},{"display":"“Silence","start":138.55999755859375,"end":139.1199951171875},{"display":"in","start":139.1199951171875,"end":139.22000122070312},{"display":"the","start":139.22000122070312,"end":139.6199951171875},{"display":"court!”","start":139.6199951171875,"end":139.66000366210938},{"display":"and","start":139.66000366210938,"end":140.05999755859375},{"display":"the","start":140.05999755859375,"end":140.44000244140625},{"display":"King","start":140.44000244140625,"end":140.59000244140626},{"display":"put","start":140.61000244140627,"end":140.6199951171875},{"display":"on","start":140.6199951171875,"end":140.77999877929688},{"display":"his","start":140.77999877929688,"end":140.9199981689453},{"display":"spectacles","start":140.9199981689453,"end":141.33999633789062},{"display":"and","start":141.33999633789062,"end":141.5800018310547},{"display":"looked","start":141.5800018310547,"end":141.74000549316406},{"display":"anxiously","start":141.74000549316406,"end":142.24000549316406},{"display":"round,","start":142.24000549316406,"end":142.67999267578125},{"display":"to","start":142.67999267578125,"end":142.83999633789062},{"display":"make","start":142.83999633789062,"end":143.02000427246094},{"display":"out","start":143.02000427246094,"end":143.17999267578125},{"display":"who","start":143.17999267578125,"end":143.39999389648438},{"display":"was","start":143.39999389648438,"end":143.63999938964844},{"display":"talking.","start":143.63999938964844,"end":144.02000427246094},{"display":"Alice","start":145.47999572753906,"end":145.9199981689453},{"display":"could","start":145.9199981689453,"end":146.10000610351562},{"display":"see,","start":146.10000610351562,"end":146.4600067138672},{"display":"as","start":146.67999267578125,"end":146.86000061035156},{"display":"well","start":146.86000061035156,"end":147},{"display":"as","start":147,"end":147.1199951171875},{"display":"if","start":147.1199951171875,"end":147.25999450683594},{"display":"she","start":147.25999450683594,"end":147.39999389648438},{"display":"were","start":147.39999389648438,"end":147.52000427246094},{"display":"looking","start":147.52000427246094,"end":147.77999877929688},{"display":"over","start":147.77999877929688,"end":148.0399932861328},{"display":"their","start":148.0399932861328,"end":148.3000030517578},{"display":"shoulders,","start":148.3000030517578,"end":148.6999969482422},{"display":"that","start":148.86000061035156,"end":149.0399932861328},{"display":"all","start":149.0399932861328,"end":149.25999450683594},{"display":"the","start":149.25999450683594,"end":149.55999755859375},{"display":"jurors","start":149.55999755859375,"end":149.74000549316406},{"display":"were","start":149.74000549316406,"end":149.94000244140625},{"display":"writing","start":149.94000244140625,"end":150.13999938964844},{"display":"down","start":150.13999938964844,"end":150.75999450683594},{"display":"“stupid","start":150.75999450683594,"end":151.0399932861328},{"display":"things!”","start":151.0399932861328,"end":151.5399932861328},{"display":"on","start":151.5399932861328,"end":151.75999450683594},{"display":"their","start":151.75999450683594,"end":151.97999572753906},{"display":"slates,","start":151.97999572753906,"end":152.27999877929688},{"display":"and","start":152.33999633789062,"end":152.86000061035156},{"display":"she","start":152.86000061035156,"end":153},{"display":"could","start":153,"end":153.1199951171875},{"display":"even","start":153.1199951171875,"end":153.47999572753906},{"display":"make","start":153.47999572753906,"end":153.63999938964844},{"display":"out","start":153.63999938964844,"end":153.82000732421875},{"display":"that","start":153.82000732421875,"end":154.05999755859375},{"display":"one","start":154.05999755859375,"end":154.22000122070312},{"display":"of","start":154.22000122070312,"end":154.5},{"display":"them","start":154.5,"end":154.65},{"display":"didn’t","start":154.66000366210938,"end":154.82000732421875},{"display":"know","start":154.82000732421875,"end":155.10000610351562},{"display":"how","start":155.10000610351562,"end":155.27999877929688},{"display":"to","start":155.27999877929688,"end":155.63999938964844},{"display":"spell","start":155.63999938964844,"end":155.78999938964844},{"display":"“stupid,”","start":155.80999938964845,"end":156.17999267578125},{"display":"and","start":156.27999877929688,"end":156.6199951171875},{"display":"that","start":156.6199951171875,"end":156.75999450683594},{"display":"he","start":156.75999450683594,"end":156.89999389648438},{"display":"had","start":156.89999389648438,"end":157.0800018310547},{"display":"to","start":157.0800018310547,"end":157.4600067138672},{"display":"ask","start":157.4600067138672,"end":157.47999572753906},{"display":"his","start":157.47999572753906,"end":157.74000549316406},{"display":"neighbour","start":157.85000610351562,"end":157.9600067138672},{"display":"to","start":157.9600067138672,"end":158.22000122070312},{"display":"tell","start":158.22000122070312,"end":158.39999389648438},{"display":"him.","start":158.39999389648438,"end":158.66000366210938},{"display":"“A","start":158.66000366210938,"end":159.6199951171875},{"display":"nice","start":159.6199951171875,"end":160.05999755859375},{"display":"muddle","start":160.05999755859375,"end":160.33999633789062},{"display":"their","start":160.33999633789062,"end":160.67999267578125},{"display":"slates’ll","start":160.8699951171875,"end":161.05999755859375},{"display":"be","start":161.05999755859375,"end":161.22000122070312},{"display":"in","start":161.22000122070312,"end":161.39999389648438},{"display":"before","start":161.39999389648438,"end":161.6199951171875},{"display":"the","start":161.6199951171875,"end":161.86000061035156},{"display":"trial’s","start":162.09000396728516,"end":162.32000732421875},{"display":"over!”","start":162.32000732421875,"end":162.52000427246094},{"display":"thought","start":162.52000427246094,"end":162.86000061035156},{"display":"Alice.","start":162.86000061035156,"end":163.1999969482422},{"display":"One","start":164.82000732421875,"end":165.3000030517578},{"display":"of","start":165.3000030517578,"end":165.39999389648438},{"display":"the","start":165.39999389648438,"end":165.82000732421875},{"display":"jurors","start":165.82000732421875,"end":165.8800048828125},{"display":"had","start":165.8800048828125,"end":166.0399932861328},{"display":"a","start":166.0399932861328,"end":166.4600067138672},{"display":"pencil","start":166.4600067138672,"end":166.6100067138672},{"display":"that","start":166.6300067138672,"end":166.77999877929688},{"display":"squeaked.","start":166.77999877929688,"end":167.0399932861328},{"display":"This","start":167.4600067138672,"end":167.86000061035156},{"display":"of","start":167.9199981689453,"end":168.32000732421875},{"display":"course,","start":168.32000732421875,"end":168.47000732421876},{"display":"Alice","start":168.5399932861328,"end":168.68999328613282},{"display":"could","start":168.70999328613283,"end":168.77999877929688},{"display":"not","start":168.77999877929688,"end":169.05999755859375},{"display":"stand,","start":169.05999755859375,"end":169.52000427246094},{"display":"and","start":169.6199951171875,"end":169.97999572753906},{"display":"she","start":169.97999572753906,"end":170.16000366210938},{"display":"went","start":170.16000366210938,"end":170.25999450683594},{"display":"round","start":170.25999450683594,"end":170.5},{"display":"the","start":170.5,"end":170.89999389648438},{"display":"court","start":170.89999389648438,"end":171.04999389648438},{"display":"and","start":171.0699938964844,"end":171.0800018310547},{"display":"got","start":171.0800018310547,"end":171.27999877929688},{"display":"behind","start":171.27999877929688,"end":171.5800018310547},{"display":"him,","start":171.5800018310547,"end":171.82000732421875},{"display":"and","start":171.94000244140625,"end":172.10000610351562},{"display":"very","start":172.10000610351562,"end":172.3800048828125},{"display":"soon","start":172.3800048828125,"end":172.63999938964844},{"display":"found","start":172.63999938964844,"end":172.8800048828125},{"display":"an","start":172.8800048828125,"end":173.13999938964844},{"display":"opportunity","start":173.13999938964844,"end":173.55999755859375},{"display":"of","start":173.55999755859375,"end":173.89999389648438},{"display":"taking","start":173.89999389648438,"end":174.10000610351562},{"display":"it","start":174.10000610351562,"end":174.36000061035156},{"display":"away.","start":174.36000061035156,"end":174.66000366210938}],"startTime":98.76000213623047,"endTime":174.66000366210938},{"pageNum":8,"words":[{"display":"She","start":175,"end":175.47999572753906},{"display":"did","start":175.47999572753906,"end":175.6199951171875},{"display":"it","start":175.6199951171875,"end":175.77999877929688},{"display":"so","start":175.77999877929688,"end":176.0399932861328},{"display":"quickly","start":176.0399932861328,"end":176.3000030517578},{"display":"that","start":176.3000030517578,"end":176.55999755859375},{"display":"the","start":176.55999755859375,"end":176.6999969482422},{"display":"poor","start":176.6999969482422,"end":176.9600067138672},{"display":"little","start":176.9600067138672,"end":177.36000061035156},{"display":"juror","start":177.36000061035156,"end":177.94000244140625},{"display":"(it","start":177.94000244140625,"end":178.09000244140626},{"display":"was","start":178.11000244140627,"end":178.13999938964844},{"display":"Bill,","start":178.13999938964844,"end":178.36000061035156},{"display":"the","start":178.5,"end":178.8800048828125},{"display":"Lizard)","start":178.8800048828125,"end":179.52000427246094},{"display":"could","start":179.52000427246094,"end":179.67000427246094},{"display":"not","start":179.69000427246095,"end":179.75999450683594},{"display":"make","start":179.75999450683594,"end":179.9600067138672},{"display":"out","start":179.9600067138672,"end":180.1199951171875},{"display":"at","start":180.1199951171875,"end":180.4199981689453},{"display":"all","start":180.4199981689453,"end":180.5399932861328},{"display":"what","start":180.5399932861328,"end":180.72000122070312},{"display":"had","start":180.72000122070312,"end":180.9199981689453},{"display":"become","start":180.9199981689453,"end":181.1199951171875},{"display":"of","start":181.1199951171875,"end":181.3000030517578},{"display":"it;","start":181.3000030517578,"end":181.52000427246094},{"display":"so,","start":181.55999755859375,"end":182.0399932861328},{"display":"after","start":182.0399932861328,"end":182.32000732421875},{"display":"hunting","start":182.32000732421875,"end":182.60000610351562},{"display":"all","start":182.60000610351562,"end":182.97999572753906},{"display":"about","start":182.97999572753906,"end":183.16000366210938},{"display":"for","start":183.16000366210938,"end":183.44000244140625},{"display":"it,","start":183.44000244140625,"end":183.66000366210938},{"display":"he","start":183.94000244140625,"end":184.05999755859375},{"display":"was","start":184.05999755859375,"end":184.22000122070312},{"display":"obliged","start":184.22000122070312,"end":184.52000427246094},{"display":"to","start":184.52000427246094,"end":184.8800048828125},{"display":"write","start":184.8800048828125,"end":184.89999389648438},{"display":"with","start":184.89999389648438,"end":185.13999938964844},{"display":"one","start":185.13999938964844,"end":185.4199981689453},{"display":"finger","start":185.4199981689453,"end":185.6999969482422},{"display":"for","start":185.6999969482422,"end":185.94000244140625},{"display":"the","start":185.94000244140625,"end":186.02000427246094},{"display":"rest","start":186.02000427246094,"end":186.1999969482422},{"display":"of","start":186.1999969482422,"end":186.39999389648438},{"display":"the","start":186.39999389648438,"end":186.47999572753906},{"display":"day;","start":186.47999572753906,"end":186.75999450683594},{"display":"and","start":186.82000732421875,"end":187.0399932861328},{"display":"this","start":187.0399932861328,"end":187.1999969482422},{"display":"was","start":187.1999969482422,"end":187.36000061035156},{"display":"of","start":187.36000061035156,"end":187.52000427246094},{"display":"very","start":187.52000427246094,"end":187.8000030517578},{"display":"little","start":187.8000030517578,"end":188},{"display":"use,","start":188,"end":188.3800048828125},{"display":"as","start":188.3800048828125,"end":188.5800018310547},{"display":"it","start":188.5800018310547,"end":188.74000549316406},{"display":"left","start":188.74000549316406,"end":188.9600067138672},{"display":"no","start":188.9600067138672,"end":189.32000732421875},{"display":"mark","start":189.32000732421875,"end":189.5399932861328},{"display":"on","start":189.5399932861328,"end":189.74000549316406},{"display":"the","start":189.74000549316406,"end":189.86000061035156},{"display":"slate.","start":189.86000061035156,"end":190.1199951171875},{"display":"“Herald,","start":191.4499969482422,"end":192.77999877929688},{"display":"read","start":192.77999877929688,"end":192.8000030517578},{"display":"the","start":192.8000030517578,"end":193.02000427246094},{"display":"accusation!”","start":193.02000427246094,"end":193.75999450683594},{"display":"said","start":193.75999450683594,"end":194.0800018310547},{"display":"the","start":194.0800018310547,"end":194.24000549316406},{"display":"King.","start":194.24000549316406,"end":194.4600067138672},{"display":"On","start":195.5,"end":195.74000549316406},{"display":"this","start":195.74000549316406,"end":195.97999572753906},{"display":"the","start":195.97999572753906,"end":196.1999969482422},{"display":"White","start":196.1999969482422,"end":196.47999572753906},{"display":"Rabbit","start":196.47999572753906,"end":196.60000610351562},{"display":"blew","start":196.60000610351562,"end":196.86000061035156},{"display":"three","start":196.86000061035156,"end":197.17999267578125},{"display":"blasts","start":197.17999267578125,"end":197.6199951171875},{"display":"on","start":197.6199951171875,"end":197.75999450683594},{"display":"the","start":197.75999450683594,"end":198.02000427246094},{"display":"trumpet,","start":198.02000427246094,"end":198.13999938964844},{"display":"and","start":198.52000427246094,"end":198.8000030517578},{"display":"then","start":198.8000030517578,"end":198.94000244140625},{"display":"unrolled","start":199.09000396728516,"end":199.24000549316406},{"display":"the","start":199.24000549316406,"end":199.4600067138672},{"display":"parchment","start":199.4600067138672,"end":199.8000030517578},{"display":"scroll,","start":199.8000030517578,"end":200.13999938964844},{"display":"and","start":200.13999938964844,"end":200.5},{"display":"read","start":200.5,"end":200.66000366210938},{"display":"as","start":200.66000366210938,"end":201},{"display":"follows:—","start":201,"end":201.47999572753906},{"display":"“The","start":202.10000610351562,"end":202.6199951171875},{"display":"Queen","start":202.6199951171875,"end":202.86000061035156},{"display":"of","start":202.86000061035156,"end":203.32000732421875},{"display":"Hearts,","start":203.32000732421875,"end":203.47000732421876},{"display":"she","start":203.66000366210938,"end":203.81000366210938},{"display":"made","start":203.8300036621094,"end":203.86000061035156},{"display":"some","start":203.86000061035156,"end":204.4600067138672},{"display":"tarts,","start":204.4600067138672,"end":204.6100067138672},{"display":"All","start":204.89999389648438,"end":204.9600067138672},{"display":"on","start":204.9600067138672,"end":205.1199951171875},{"display":"a","start":205.1199951171875,"end":205.33999633789062},{"display":"summer","start":205.33999633789062,"end":205.4600067138672},{"display":"day:","start":205.4600067138672,"end":205.9600067138672},{"display":"The","start":206.17999267578125,"end":206.6199951171875},{"display":"Knave","start":206.6199951171875,"end":206.72000122070312},{"display":"of","start":206.72000122070312,"end":207.0399932861328},{"display":"Hearts,","start":207.0399932861328,"end":207.13999938964844},{"display":"he","start":207.47999572753906,"end":207.62999572753907},{"display":"stole","start":207.64999572753908,"end":207.72000122070312},{"display":"those","start":207.72000122070312,"end":208.4199981689453},{"display":"tarts,","start":208.4199981689453,"end":208.56999816894532},{"display":"And","start":208.58999816894533,"end":208.72000122070312},{"display":"took","start":208.72000122070312,"end":208.83999633789062},{"display":"them","start":208.83999633789062,"end":209.0800018310547},{"display":"quite","start":209.0800018310547,"end":209.44000244140625},{"display":"away!”","start":209.44000244140625,"end":210.39999389648438},{"display":"“Consider","start":211.1199951171875,"end":211.63999938964844},{"display":"your","start":211.63999938964844,"end":211.9199981689453},{"display":"verdict,”","start":211.9199981689453,"end":212.33999633789062},{"display":"the","start":212.33999633789062,"end":212.8000030517578},{"display":"King","start":212.8000030517578,"end":212.95000305175782},{"display":"said","start":212.97000305175783,"end":213},{"display":"to","start":213,"end":213.1199951171875},{"display":"the","start":213.1199951171875,"end":213.5800018310547},{"display":"jury.","start":213.5800018310547,"end":213.7300018310547},{"display":"“Not","start":213.7500018310547,"end":214.33999633789062},{"display":"yet,","start":214.33999633789062,"end":214.6199951171875},{"display":"not","start":214.66000366210938,"end":214.8800048828125},{"display":"yet!”","start":214.8800048828125,"end":215.1999969482422},{"display":"the","start":215.1999969482422,"end":215.75999450683594},{"display":"Rabbit","start":215.75999450683594,"end":215.90999450683594},{"display":"hastily","start":215.92999450683595,"end":216.1999969482422},{"display":"interrupted.","start":216.1999969482422,"end":216.74000549316406},{"display":"“There’s","start":217.0300064086914,"end":217.32000732421875},{"display":"a","start":217.32000732421875,"end":217.44000244140625},{"display":"great","start":217.44000244140625,"end":217.63999938964844},{"display":"deal","start":217.63999938964844,"end":217.86000061035156},{"display":"to","start":217.86000061035156,"end":218.02000427246094},{"display":"come","start":218.02000427246094,"end":218.22000122070312},{"display":"before","start":218.22000122070312,"end":218.44000244140625},{"display":"that!”","start":218.44000244140625,"end":218.77999877929688}],"startTime":175,"endTime":218.77999877929688},{"pageNum":10,"words":[{"display":"“Call","start":219.89999389648438,"end":220.4199981689453},{"display":"the","start":220.4199981689453,"end":220.60000610351562},{"display":"first","start":220.60000610351562,"end":220.86000061035156},{"display":"witness,”","start":220.86000061035156,"end":221.39999389648438},{"display":"said","start":221.39999389648438,"end":221.72000122070312},{"display":"the","start":221.72000122070312,"end":222.16000366210938},{"display":"King;","start":222.16000366210938,"end":222.17999267578125},{"display":"and","start":222.3000030517578,"end":222.47999572753906},{"display":"the","start":222.47999572753906,"end":222.67999267578125},{"display":"White","start":222.67999267578125,"end":222.94000244140625},{"display":"Rabbit","start":222.94000244140625,"end":223.0800018310547},{"display":"blew","start":223.0800018310547,"end":223.3000030517578},{"display":"three","start":223.3000030517578,"end":223.60000610351562},{"display":"blasts","start":223.60000610351562,"end":224},{"display":"on","start":224,"end":224.13999938964844},{"display":"the","start":224.13999938964844,"end":224.55999755859375},{"display":"trumpet,","start":224.55999755859375,"end":224.70999755859376},{"display":"and","start":224.72999755859377,"end":224.9600067138672},{"display":"called","start":224.9600067138672,"end":225},{"display":"out,","start":225,"end":225.5},{"display":"“First","start":225.5,"end":225.9199981689453},{"display":"witness!”","start":225.9199981689453,"end":227.0399932861328},{"display":"The","start":227.25999450683594,"end":227.77999877929688},{"display":"first","start":227.77999877929688,"end":228.1199951171875},{"display":"witness","start":228.1199951171875,"end":228.4199981689453},{"display":"was","start":228.4199981689453,"end":228.82000732421875},{"display":"the","start":228.82000732421875,"end":229.17999267578125},{"display":"Hatter.","start":229.17999267578125,"end":229.3000030517578},{"display":"He","start":229.89999389648438,"end":230.33999633789062},{"display":"came","start":230.33999633789062,"end":230.60000610351562},{"display":"in","start":230.60000610351562,"end":230.86000061035156},{"display":"with","start":230.86000061035156,"end":230.9600067138672},{"display":"a","start":230.9600067138672,"end":231.13999938964844},{"display":"teacup","start":231.31999969482422,"end":231.5},{"display":"in","start":231.5,"end":231.63999938964844},{"display":"one","start":231.63999938964844,"end":231.9199981689453},{"display":"hand","start":231.9199981689453,"end":232.3000030517578},{"display":"and","start":232.36000061035156,"end":232.55999755859375},{"display":"a","start":232.55999755859375,"end":232.82000732421875},{"display":"piece","start":232.82000732421875,"end":232.97000732421876},{"display":"of","start":232.99000732421877,"end":233.1999969482422},{"display":"bread-and-butter","start":233.1999969482422,"end":233.3499969482422},{"display":"in","start":233.55999755859375,"end":233.83999633789062},{"display":"the","start":233.83999633789062,"end":234.02000427246094},{"display":"other.","start":234.02000427246094,"end":234.25999450683594},{"display":"“I","start":234.77999877929688,"end":235.3000030517578},{"display":"beg","start":235.3000030517578,"end":235.5},{"display":"pardon,","start":235.5,"end":235.8000030517578},{"display":"your","start":235.94000244140625,"end":236.0399932861328},{"display":"Majesty,”","start":236.0399932861328,"end":236.60000610351562},{"display":"he","start":236.60000610351562,"end":236.86000061035156},{"display":"began,","start":236.86000061035156,"end":237.1999969482422},{"display":"“for","start":237.33999633789062,"end":237.5},{"display":"bringing","start":237.5,"end":237.74000549316406},{"display":"these","start":237.74000549316406,"end":238.0800018310547},{"display":"in:","start":238.0800018310547,"end":238.5},{"display":"but","start":238.5,"end":239},{"display":"I","start":239,"end":239.17999267578125},{"display":"hadn’t","start":239.25,"end":239.32000732421875},{"display":"quite","start":239.32000732421875,"end":239.6999969482422},{"display":"finished","start":239.6999969482422,"end":239.8800048828125},{"display":"my","start":239.8800048828125,"end":240.1999969482422},{"display":"tea","start":240.1999969482422,"end":240.36000061035156},{"display":"when","start":240.36000061035156,"end":240.5800018310547},{"display":"I","start":240.5800018310547,"end":240.6999969482422},{"display":"was","start":240.6999969482422,"end":240.8800048828125},{"display":"sent","start":240.8800048828125,"end":241.05999755859375},{"display":"for.”","start":241.05999755859375,"end":241.72000122070312},{"display":"“You","start":242.32000732421875,"end":242.8000030517578},{"display":"ought","start":242.8000030517578,"end":243.05999755859375},{"display":"to","start":243.05999755859375,"end":243.17999267578125},{"display":"have","start":243.17999267578125,"end":243.32000732421875},{"display":"finished,”","start":243.32000732421875,"end":243.74000549316406},{"display":"said","start":243.74000549316406,"end":243.97999572753906},{"display":"the","start":243.97999572753906,"end":244.33999633789062},{"display":"King.","start":244.33999633789062,"end":244.3800048828125},{"display":"“When","start":244.67999267578125,"end":245.16000366210938},{"display":"did","start":245.16000366210938,"end":245.36000061035156},{"display":"you","start":245.36000061035156,"end":245.5},{"display":"begin?”","start":245.5,"end":246.1199951171875},{"display":"The","start":246.47999572753906,"end":246.9600067138672},{"display":"Hatter","start":246.9600067138672,"end":246.97999572753906},{"display":"looked","start":246.97999572753906,"end":247.27999877929688},{"display":"at","start":247.27999877929688,"end":247.44000244140625},{"display":"the","start":247.44000244140625,"end":247.5399932861328},{"display":"March","start":247.5399932861328,"end":247.82000732421875},{"display":"Hare,","start":247.82000732421875,"end":248.02000427246094},{"display":"who","start":248.24000549316406,"end":248.33999633789062},{"display":"had","start":248.33999633789062,"end":248.63999938964844},{"display":"followed","start":248.63999938964844,"end":248.75999450683594},{"display":"him","start":248.75999450683594,"end":248.94000244140625},{"display":"into","start":248.94000244140625,"end":249.1199951171875},{"display":"the","start":249.1199951171875,"end":249.5399932861328},{"display":"court,","start":249.5399932861328,"end":249.68999328613282},{"display":"arm-in-arm","start":249.8499984741211,"end":250.16000366210938},{"display":"with","start":250.16000366210938,"end":250.3000030517578},{"display":"the","start":250.3000030517578,"end":250.55999755859375},{"display":"Dormouse.","start":250.55999755859375,"end":250.89999389648438},{"display":"“Fourteenth","start":251.97999572753906,"end":252.4600067138672},{"display":"of","start":252.4600067138672,"end":252.74000549316406},{"display":"March,","start":252.74000549316406,"end":252.94000244140625},{"display":"I","start":253.02000427246094,"end":253.13999938964844},{"display":"think","start":253.13999938964844,"end":253.27999877929688},{"display":"it","start":253.27999877929688,"end":253.4199981689453},{"display":"was,”","start":253.4199981689453,"end":253.83999633789062},{"display":"he","start":253.83999633789062,"end":254.0399932861328},{"display":"said.","start":254.0399932861328,"end":254.33999633789062},{"display":"“Fifteenth,”","start":254.75999450683594,"end":255.24000549316406},{"display":"said","start":255.24000549316406,"end":255.52000427246094},{"display":"the","start":255.52000427246094,"end":255.8800048828125},{"display":"March","start":255.8800048828125,"end":256.0300048828125},{"display":"Hare.","start":256.05000488281246,"end":256.20000488281244},{"display":"“Sixteenth,”","start":256.67999267578125,"end":257.1600036621094},{"display":"added","start":257.1600036621094,"end":257.3399963378906},{"display":"the","start":257.3399963378906,"end":257.9800109863281},{"display":"Dormouse.","start":257.9800109863281,"end":258.1300109863281},{"display":"“Write","start":258.6400146484375,"end":259.1199951171875},{"display":"that","start":259.1199951171875,"end":259.3599853515625},{"display":"down,”","start":259.3599853515625,"end":259.7200012207031},{"display":"the","start":259.7200012207031,"end":260.20001220703125},{"display":"King","start":260.20001220703125,"end":260.3500122070312},{"display":"said","start":260.3700122070312,"end":260.5200122070312},{"display":"to","start":260.54001220703117,"end":260.69001220703115},{"display":"the","start":260.7100122070311,"end":261.05999755859375},{"display":"jury,","start":261.05999755859375,"end":261.2099975585937},{"display":"and","start":261.2299975585937,"end":261.4599914550781},{"display":"the","start":261.4599914550781,"end":261.79998779296875},{"display":"jury","start":261.79998779296875,"end":261.9499877929687},{"display":"eagerly","start":261.9699877929687,"end":262.4599914550781},{"display":"wrote","start":262.4599914550781,"end":262.6099914550781},{"display":"down","start":262.6299914550781,"end":262.7799987792969},{"display":"all","start":262.7799987792969,"end":263.0199890136719},{"display":"three","start":263.0199890136719,"end":263.2799987792969},{"display":"dates","start":263.2799987792969,"end":263.55999755859375},{"display":"on","start":263.55999755859375,"end":263.7200012207031},{"display":"their","start":263.7200012207031,"end":263.8999938964844},{"display":"slates,","start":263.8999938964844,"end":264.239990234375},{"display":"and","start":264.44000244140625,"end":264.82000732421875},{"display":"then","start":264.82000732421875,"end":265.0400085449219},{"display":"added","start":265.0400085449219,"end":265.17999267578125},{"display":"them","start":265.17999267578125,"end":265.3800048828125},{"display":"up,","start":265.3800048828125,"end":265.6000061035156},{"display":"and","start":265.6000061035156,"end":265.79998779296875},{"display":"reduced","start":265.79998779296875,"end":266.0799865722656},{"display":"the","start":266.0799865722656,"end":266.32000732421875},{"display":"answer","start":266.32000732421875,"end":266.5},{"display":"to","start":266.5,"end":266.7799987792969},{"display":"shillings","start":266.7799987792969,"end":267.0199890136719},{"display":"and","start":267.0199890136719,"end":267.55999755859375},{"display":"pence.","start":268.0699920654297,"end":268.5799865722656},{"display":"“Take","start":268.5799865722656,"end":269.0199890136719},{"display":"off","start":269.0199890136719,"end":269.2200012207031},{"display":"your","start":269.2200012207031,"end":269.6600036621094},{"display":"hat,”","start":269.6600036621094,"end":269.67999267578125},{"display":"the","start":269.67999267578125,"end":270.0799865722656},{"display":"King","start":270.0799865722656,"end":270.2299865722656},{"display":"said","start":270.2499865722656,"end":270.29998779296875},{"display":"to","start":270.29998779296875,"end":270.4200134277344},{"display":"the","start":270.4200134277344,"end":270.739990234375},{"display":"Hatter.","start":270.739990234375,"end":270.889990234375},{"display":"“It","start":270.9599914550781,"end":271.3999938964844},{"display":"isn’t","start":271.5299987792969,"end":271.6600036621094},{"display":"mine,”","start":271.6600036621094,"end":272.1600036621094},{"display":"said","start":272.1600036621094,"end":272.32000732421875},{"display":"the","start":272.32000732421875,"end":272.6600036621094},{"display":"Hatter.","start":272.6600036621094,"end":272.67999267578125},{"display":"“Stolen!”","start":273.260009765625,"end":273.70001220703125},{"display":"the","start":273.70001220703125,"end":274.1199951171875},{"display":"King","start":274.1199951171875,"end":274.2699951171875},{"display":"exclaimed,","start":274.28999511718746,"end":274.6600036621094},{"display":"turning","start":274.82000732421875,"end":275},{"display":"to","start":275,"end":275.1600036621094},{"display":"the","start":275.1600036621094,"end":275.6400146484375},{"display":"jury,","start":275.6400146484375,"end":275.7900146484375},{"display":"who","start":275.79998779296875,"end":275.94000244140625},{"display":"instantly","start":275.94000244140625,"end":276.3800048828125},{"display":"made","start":276.3800048828125,"end":276.6600036621094},{"display":"a","start":276.6600036621094,"end":276.9200134277344},{"display":"memorandum","start":276.9200134277344,"end":277.3599853515625},{"display":"of","start":277.3599853515625,"end":277.55999755859375},{"display":"the","start":277.55999755859375,"end":277.8599853515625},{"display":"fact.","start":277.8599853515625,"end":277.9200134277344},{"display":"“I","start":278.55999755859375,"end":279},{"display":"keep","start":279,"end":279.2200012207031},{"display":"them","start":279.2200012207031,"end":279.3800048828125},{"display":"to","start":279.3800048828125,"end":279.94000244140625},{"display":"sell,”","start":279.94000244140625,"end":280.0400085449219},{"display":"the","start":280.0400085449219,"end":280.4200134277344},{"display":"Hatter","start":280.4200134277344,"end":280.57001342773435},{"display":"added","start":280.59001342773433,"end":280.82000732421875},{"display":"as","start":280.9200134277344,"end":281.1199951171875},{"display":"an","start":281.1199951171875,"end":281.4200134277344},{"display":"explanation;","start":281.4200134277344,"end":281.760009765625},{"display":"“I’ve","start":282.0500030517578,"end":282.3399963378906},{"display":"none","start":282.3399963378906,"end":282.4800109863281},{"display":"of","start":282.4800109863281,"end":282.6000061035156},{"display":"my","start":282.6000061035156,"end":282.9200134277344},{"display":"own.","start":282.9200134277344,"end":283.1199951171875},{"display":"I’m","start":283.3399963378906,"end":283.55999755859375},{"display":"a","start":283.55999755859375,"end":283.8800048828125},{"display":"hatter.”","start":283.8800048828125,"end":284.67999267578125},{"display":"Here","start":284.9200134277344,"end":285.3599853515625},{"display":"the","start":285.3599853515625,"end":285.760009765625},{"display":"Queen","start":285.760009765625,"end":285.910009765625},{"display":"put","start":285.93000976562496,"end":285.9599914550781},{"display":"on","start":285.9599914550781,"end":286.1600036621094},{"display":"her","start":286.1600036621094,"end":286.3399963378906},{"display":"spectacles,","start":286.3399963378906,"end":286.8800048828125},{"display":"and","start":287.0199890136719,"end":287.2200012207031},{"display":"began","start":287.2200012207031,"end":287.4599914550781},{"display":"staring","start":287.4599914550781,"end":287.82000732421875},{"display":"at","start":287.82000732421875,"end":287.9800109863281},{"display":"the","start":287.9800109863281,"end":288.3399963378906},{"display":"Hatter,","start":288.3399963378906,"end":288.4899963378906},{"display":"who","start":288.5199890136719,"end":288.7200012207031},{"display":"turned","start":288.7200012207031,"end":288.9200134277344},{"display":"pale","start":288.9200134277344,"end":289.239990234375},{"display":"and","start":289.239990234375,"end":289.4599914550781},{"display":"fidgeted.","start":289.4599914550781,"end":289.9200134277344},{"display":"“Give","start":291.0400085449219,"end":291.4800109863281},{"display":"your","start":291.4800109863281,"end":291.7200012207031},{"display":"evidence,”","start":291.7200012207031,"end":292.3599853515625},{"display":"said","start":292.3599853515625,"end":292.4800109863281},{"display":"the","start":292.4800109863281,"end":292.8399963378906},{"display":"King;","start":292.8399963378906,"end":292.8599853515625},{"display":"“and","start":292.9800109863281,"end":293.1000061035156},{"display":"don’t","start":293.2200012207031,"end":293.3399963378906},{"display":"be","start":293.3399963378906,"end":293.5400085449219},{"display":"nervous,","start":293.5400085449219,"end":293.8999938964844},{"display":"or","start":293.9599914550781,"end":294.1199951171875},{"display":"I’ll","start":294.17999267578125,"end":294.239990234375},{"display":"have","start":294.239990234375,"end":294.3999938964844},{"display":"you","start":294.3999938964844,"end":294.760009765625},{"display":"executed","start":294.760009765625,"end":295},{"display":"on","start":295,"end":295.29998779296875},{"display":"the","start":295.29998779296875,"end":295.4200134277344},{"display":"spot.”","start":295.4200134277344,"end":296.2799987792969},{"display":"This","start":296.6600036621094,"end":296.9200134277344},{"display":"did","start":296.9200134277344,"end":297.1199951171875},{"display":"not","start":297.1199951171875,"end":297.4200134277344},{"display":"seem","start":297.4200134277344,"end":297.67999267578125},{"display":"to","start":297.67999267578125,"end":297.9599914550781},{"display":"encourage","start":297.9599914550781,"end":298.29998779296875},{"display":"the","start":298.29998779296875,"end":298.5},{"display":"witness","start":298.5,"end":298.79998779296875},{"display":"at","start":298.79998779296875,"end":299.05999755859375},{"display":"all:","start":299.05999755859375,"end":299.3599853515625},{"display":"he","start":299.8999938964844,"end":300.0400085449219},{"display":"kept","start":300.0400085449219,"end":300.260009765625},{"display":"shifting","start":300.260009765625,"end":300.6000061035156},{"display":"from","start":300.6000061035156,"end":300.8800048828125},{"display":"one","start":300.8800048828125,"end":301.17999267578125},{"display":"foot","start":301.17999267578125,"end":301.260009765625},{"display":"to","start":301.260009765625,"end":301.3999938964844},{"display":"the","start":301.3999938964844,"end":301.6199951171875},{"display":"other,","start":301.6199951171875,"end":301.8599853515625},{"display":"looking","start":302.0799865722656,"end":302.260009765625},{"display":"uneasily","start":302.260009765625,"end":302.7799987792969},{"display":"at","start":302.7799987792969,"end":303.0199890136719},{"display":"the","start":303.0199890136719,"end":303.2200012207031},{"display":"Queen,","start":303.2200012207031,"end":303.5400085449219},{"display":"and","start":303.94000244140625,"end":304.1400146484375},{"display":"in","start":304.1400146484375,"end":304.260009765625},{"display":"his","start":304.260009765625,"end":304.6000061035156},{"display":"confusion","start":304.6000061035156,"end":304.9599914550781},{"display":"he","start":304.9599914550781,"end":305.3999938964844},{"display":"bit","start":305.3999938964844,"end":305.54999389648435},{"display":"a","start":305.56999389648433,"end":305.6000061035156},{"display":"large","start":305.6000061035156,"end":305.8800048828125},{"display":"piece","start":305.8800048828125,"end":306.1600036621094},{"display":"out","start":306.1600036621094,"end":306.32000732421875},{"display":"of","start":306.32000732421875,"end":306.4200134277344},{"display":"his","start":306.4200134277344,"end":306.5799865722656},{"display":"teacup","start":306.5799865722656,"end":306.9599914550781},{"display":"instead","start":306.9599914550781,"end":307.5},{"display":"of","start":307.5,"end":307.6600036621094},{"display":"the","start":307.6600036621094,"end":307.8800048828125},{"display":"bread-and-butter.","start":307.8800048828125,"end":308.0199890136719}],"startTime":219.89999389648438,"endTime":308.0199890136719},{"pageNum":12,"words":[{"display":"Just","start":310.20001220703125,"end":310.7200012207031},{"display":"at","start":310.7200012207031,"end":310.8599853515625},{"display":"this","start":310.8599853515625,"end":311.1199951171875},{"display":"moment","start":311.1199951171875,"end":311.4800109863281},{"display":"Alice","start":311.4800109863281,"end":311.8599853515625},{"display":"felt","start":311.8599853515625,"end":312.0799865722656},{"display":"a","start":312.0799865722656,"end":312.260009765625},{"display":"very","start":312.260009765625,"end":312.67999267578125},{"display":"curious","start":312.67999267578125,"end":312.94000244140625},{"display":"sensation,","start":312.94000244140625,"end":313.5},{"display":"which","start":313.7799987792969,"end":313.9800109863281},{"display":"puzzled","start":313.9800109863281,"end":314.260009765625},{"display":"her","start":314.260009765625,"end":314.4800109863281},{"display":"a","start":314.4800109863281,"end":314.6000061035156},{"display":"good","start":314.6000061035156,"end":314.8999938964844},{"display":"deal","start":314.8999938964844,"end":315.17999267578125},{"display":"until","start":315.17999267578125,"end":315.4200134277344},{"display":"she","start":315.4200134277344,"end":315.67999267578125},{"display":"made","start":315.67999267578125,"end":315.8599853515625},{"display":"out","start":315.8599853515625,"end":316.1199951171875},{"display":"what","start":316.1199951171875,"end":316.2799987792969},{"display":"it","start":316.2799987792969,"end":316.4200134277344},{"display":"was:","start":316.4200134277344,"end":316.82000732421875},{"display":"she","start":317.239990234375,"end":317.44000244140625},{"display":"was","start":317.44000244140625,"end":317.6600036621094},{"display":"beginning","start":317.6600036621094,"end":317.9800109863281},{"display":"to","start":317.9800109863281,"end":318.4200134277344},{"display":"grow","start":318.4200134277344,"end":318.57001342773435},{"display":"larger","start":318.59001342773433,"end":318.82000732421875},{"display":"again,","start":318.82000732421875,"end":319.32000732421875},{"display":"and","start":319.32000732421875,"end":319.8599853515625},{"display":"she","start":319.8599853515625,"end":320.1000061035156},{"display":"thought","start":320.1000061035156,"end":320.17999267578125},{"display":"at","start":320.17999267578125,"end":320.55999755859375},{"display":"first","start":320.55999755859375,"end":320.7099975585937},{"display":"she","start":320.7299975585937,"end":320.760009765625},{"display":"would","start":320.760009765625,"end":320.8800048828125},{"display":"get","start":320.8800048828125,"end":321.05999755859375},{"display":"up","start":321.05999755859375,"end":321.17999267578125},{"display":"and","start":321.17999267578125,"end":321.3999938964844},{"display":"leave","start":321.3999938964844,"end":321.4800109863281},{"display":"the","start":321.4800109863281,"end":321.9599914550781},{"display":"court;","start":321.9599914550781,"end":322.1099914550781},{"display":"but","start":322.1299914550781,"end":322.29998779296875},{"display":"on","start":322.29998779296875,"end":322.6000061035156},{"display":"second","start":322.6000061035156,"end":322.79998779296875},{"display":"thoughts","start":322.79998779296875,"end":323.1400146484375},{"display":"she","start":323.1400146484375,"end":323.70001220703125},{"display":"decided","start":323.70001220703125,"end":324},{"display":"to","start":324,"end":324.2799987792969},{"display":"remain","start":324.2799987792969,"end":324.5199890136719},{"display":"where","start":324.5199890136719,"end":324.760009765625},{"display":"she","start":324.760009765625,"end":324.94000244140625},{"display":"was","start":324.94000244140625,"end":325.260009765625},{"display":"as","start":325.260009765625,"end":325.5},{"display":"long","start":325.5,"end":325.7200012207031},{"display":"as","start":325.7200012207031,"end":325.8999938964844},{"display":"there","start":325.8999938964844,"end":325.9800109863281},{"display":"was","start":325.9800109863281,"end":326.1600036621094},{"display":"room","start":326.1600036621094,"end":326.3800048828125},{"display":"for","start":326.3800048828125,"end":326.6000061035156},{"display":"her.","start":326.6000061035156,"end":326.8999938964844},{"display":"“I","start":327.79998779296875,"end":328.2799987792969},{"display":"wish","start":328.2799987792969,"end":328.5},{"display":"you","start":328.5,"end":328.67999267578125},{"display":"wouldn’t","start":328.7899932861328,"end":328.8999938964844},{"display":"squeeze","start":328.8999938964844,"end":329.260009765625},{"display":"so,”","start":329.260009765625,"end":329.6000061035156},{"display":"said","start":329.6000061035156,"end":329.8399963378906},{"display":"the","start":329.8399963378906,"end":330.1199951171875},{"display":"Dormouse,","start":330.1199951171875,"end":330.3999938964844},{"display":"who","start":330.5,"end":330.6199951171875},{"display":"was","start":330.6199951171875,"end":330.7799987792969},{"display":"sitting","start":330.7799987792969,"end":331},{"display":"next","start":331,"end":331.2799987792969},{"display":"to","start":331.2799987792969,"end":331.5799865722656},{"display":"her.","start":331.5799865722656,"end":331.7299865722656},{"display":"“I","start":331.94000244140625,"end":332.0199890136719},{"display":"can","start":332.0199890136719,"end":332.4800109863281},{"display":"hardly","start":332.4800109863281,"end":332.5799865722656},{"display":"breathe.”","start":332.5799865722656,"end":333.17999267578125},{"display":"“I","start":333.79998779296875,"end":334.2799987792969},{"display":"can’t","start":334.4199981689453,"end":334.55999755859375},{"display":"help","start":334.55999755859375,"end":334.760009765625},{"display":"it,”","start":334.760009765625,"end":335},{"display":"said","start":335,"end":335.239990234375},{"display":"Alice","start":335.239990234375,"end":335.5199890136719},{"display":"very","start":335.5799865722656,"end":335.8800048828125},{"display":"meekly:","start":335.8800048828125,"end":336.17999267578125},{"display":"“I’m","start":336.4100036621094,"end":336.6400146484375},{"display":"growing.”","start":336.6400146484375,"end":337.4200134277344},{"display":"“You’ve","start":337.74000549316406,"end":338.05999755859375},{"display":"no","start":338.05999755859375,"end":338.29998779296875},{"display":"right","start":338.29998779296875,"end":338.3999938964844},{"display":"to","start":338.3999938964844,"end":338.739990234375},{"display":"grow","start":338.739990234375,"end":338.889990234375},{"display":"here,”","start":338.90999023437496,"end":339.0799865722656},{"display":"said","start":339.0799865722656,"end":339.2799987792969},{"display":"the","start":339.2799987792969,"end":339.67999267578125},{"display":"Dormouse.","start":339.67999267578125,"end":339.8599853515625},{"display":"“Don’t","start":340.3299865722656,"end":340.79998779296875},{"display":"talk","start":340.79998779296875,"end":341.1000061035156},{"display":"nonsense,”","start":341.1000061035156,"end":341.8800048828125},{"display":"said","start":341.8800048828125,"end":342.1199951171875},{"display":"Alice","start":342.1199951171875,"end":342.4200134277344},{"display":"more","start":342.4800109863281,"end":342.79998779296875},{"display":"boldly:","start":342.79998779296875,"end":343.1400146484375},{"display":"“you","start":343.4800109863281,"end":343.5799865722656},{"display":"know","start":343.5799865722656,"end":343.82000732421875},{"display":"you’re","start":343.9600067138672,"end":344.1000061035156},{"display":"growing","start":344.1000061035156,"end":344.32000732421875},{"display":"too.”","start":344.67999267578125,"end":344.8800048828125},{"display":"“Yes,","start":345.760009765625,"end":346.239990234375},{"display":"but","start":346.239990234375,"end":346.4800109863281},{"display":"I","start":346.4800109863281,"end":346.82000732421875},{"display":"grow","start":346.82000732421875,"end":346.9700073242187},{"display":"at","start":346.9900073242187,"end":347.1400073242187},{"display":"a","start":347.16000732421867,"end":347.31000732421865},{"display":"reasonable","start":347.3300073242186,"end":347.4200134277344},{"display":"pace,”","start":347.4200134277344,"end":348.05999755859375},{"display":"said","start":348.05999755859375,"end":348.1600036621094},{"display":"the","start":348.1600036621094,"end":348.44000244140625},{"display":"Dormouse:","start":348.44000244140625,"end":348.67999267578125},{"display":"“not","start":348.760009765625,"end":349.05999755859375},{"display":"in","start":349.05999755859375,"end":349.1600036621094},{"display":"that","start":349.1600036621094,"end":349.44000244140625},{"display":"ridiculous","start":349.44000244140625,"end":349.8599853515625},{"display":"fashion.”","start":349.8599853515625,"end":350.29998779296875},{"display":"And","start":350.29998779296875,"end":351.1600036621094},{"display":"he","start":351.1600036621094,"end":351.260009765625},{"display":"got","start":351.260009765625,"end":351.44000244140625},{"display":"up","start":351.44000244140625,"end":351.55999755859375},{"display":"very","start":351.55999755859375,"end":352.0199890136719},{"display":"sulkily","start":352.0199890136719,"end":352.2799987792969},{"display":"and","start":352.4800109863281,"end":352.8599853515625},{"display":"crossed","start":352.8599853515625,"end":353.0099853515625},{"display":"over","start":353.02998535156246,"end":353.1600036621094},{"display":"to","start":353.1600036621094,"end":353.32000732421875},{"display":"the","start":353.32000732421875,"end":353.4800109863281},{"display":"other","start":353.4800109863281,"end":353.739990234375},{"display":"side","start":353.739990234375,"end":354},{"display":"of","start":354,"end":354.17999267578125},{"display":"the","start":354.17999267578125,"end":354.3800048828125},{"display":"court.","start":354.3800048828125,"end":354.44000244140625},{"display":"All","start":356.05999755859375,"end":356.3399963378906},{"display":"this","start":356.3399963378906,"end":356.5799865722656},{"display":"time","start":356.5799865722656,"end":356.8800048828125},{"display":"the","start":356.8800048828125,"end":357.0199890136719},{"display":"Queen","start":357.0199890136719,"end":357.2200012207031},{"display":"had","start":357.2200012207031,"end":357.5},{"display":"never","start":357.5,"end":357.739990234375},{"display":"left","start":357.739990234375,"end":358},{"display":"off","start":358,"end":358.4200134277344},{"display":"staring","start":358.4200134277344,"end":358.5799865722656},{"display":"at","start":358.5799865722656,"end":358.79998779296875},{"display":"the","start":358.79998779296875,"end":359.17999267578125},{"display":"Hatter,","start":359.17999267578125,"end":359.3299926757812},{"display":"and,","start":359.3399963378906,"end":359.8399963378906},{"display":"just","start":359.8399963378906,"end":360.1000061035156},{"display":"as","start":360.1000061035156,"end":360.2200012207031},{"display":"the","start":360.2200012207031,"end":360.5},{"display":"Dormouse","start":360.5,"end":360.8399963378906},{"display":"crossed","start":360.8399963378906,"end":361.17999267578125},{"display":"the","start":361.17999267578125,"end":361.6600036621094},{"display":"court,","start":361.6600036621094,"end":361.81000366210935},{"display":"she","start":361.83000366210933,"end":362.20001220703125},{"display":"said","start":362.20001220703125,"end":362.3800048828125},{"display":"to","start":362.3800048828125,"end":362.55999755859375},{"display":"one","start":362.55999755859375,"end":362.70001220703125},{"display":"of","start":362.70001220703125,"end":362.79998779296875},{"display":"the","start":362.79998779296875,"end":363.3599853515625},{"display":"officers","start":363.3599853515625,"end":363.5099853515625},{"display":"of","start":363.52998535156246,"end":363.6400146484375},{"display":"the","start":363.6400146484375,"end":363.9200134277344},{"display":"court,","start":363.9200134277344,"end":364.4599914550781},{"display":"“Bring","start":364.4599914550781,"end":364.8999938964844},{"display":"me","start":364.8999938964844,"end":365.1000061035156},{"display":"the","start":365.1000061035156,"end":365.3999938964844},{"display":"list","start":365.3999938964844,"end":365.4800109863281},{"display":"of","start":365.4800109863281,"end":365.6199951171875},{"display":"the","start":365.6199951171875,"end":365.8399963378906},{"display":"singers","start":365.8399963378906,"end":366.0400085449219},{"display":"in","start":366.0400085449219,"end":366.2200012207031},{"display":"the","start":366.2200012207031,"end":366.3800048828125},{"display":"last","start":366.3800048828125,"end":366.6400146484375},{"display":"concert!”","start":366.6400146484375,"end":367.3599853515625},{"display":"on","start":367.3599853515625,"end":367.7200012207031},{"display":"which","start":367.7200012207031,"end":367.9200134277344},{"display":"the","start":367.9200134277344,"end":368.4200134277344},{"display":"wretched","start":368.4200134277344,"end":368.57001342773435},{"display":"Hatter","start":368.59001342773433,"end":368.6000061035156},{"display":"trembled","start":368.6000061035156,"end":368.9800109863281},{"display":"so,","start":368.9800109863281,"end":369.3599853515625},{"display":"that","start":369.3599853515625,"end":369.5},{"display":"he","start":369.5,"end":369.8800048828125},{"display":"shook","start":369.8800048828125,"end":369.9200134277344},{"display":"both","start":369.9200134277344,"end":370.2799987792969},{"display":"his","start":370.2799987792969,"end":370.6600036621094},{"display":"shoes","start":370.6600036621094,"end":370.70001220703125},{"display":"off.","start":370.70001220703125,"end":371.1000061035156},{"display":"“Give","start":371.7799987792969,"end":372.29998779296875},{"display":"your","start":372.4599914550781,"end":372.67999267578125},{"display":"evidence,”","start":372.67999267578125,"end":373.0400085449219},{"display":"the","start":373.0400085449219,"end":373.44000244140625},{"display":"King","start":373.44000244140625,"end":373.5900024414062},{"display":"repeated","start":373.6100024414062,"end":373.8599853515625},{"display":"angrily,","start":373.8599853515625,"end":374.3399963378906},{"display":"“or","start":374.6400146484375,"end":374.7900146484375},{"display":"I’ll","start":374.81001464843746,"end":374.8599853515625},{"display":"have","start":374.8599853515625,"end":375.0799865722656},{"display":"you","start":375.0799865722656,"end":375.7799987792969},{"display":"executed,","start":375.7799987792969,"end":375.92999877929685},{"display":"whether","start":375.9599914550781,"end":376.0799865722656},{"display":"you’re","start":376.2799987792969,"end":376.4800109863281},{"display":"nervous","start":376.4800109863281,"end":376.67999267578125},{"display":"or","start":376.67999267578125,"end":376.8800048828125},{"display":"not.”","start":376.8800048828125,"end":377.3999938964844},{"display":"“I’m","start":378.17999267578125,"end":378.9599914550781},{"display":"a","start":378.9599914550781,"end":379.0799865722656},{"display":"poor","start":379.0799865722656,"end":379.3599853515625},{"display":"man,","start":379.3599853515625,"end":379.6600036621094},{"display":"your","start":379.7200012207031,"end":379.8399963378906},{"display":"Majesty,”","start":379.8399963378906,"end":380.44000244140625},{"display":"the","start":380.44000244140625,"end":380.82000732421875},{"display":"Hatter","start":380.82000732421875,"end":380.9700073242187},{"display":"began,","start":380.9900073242187,"end":381.32000732421875},{"display":"in","start":381.3999938964844,"end":381.5},{"display":"a","start":381.5,"end":381.70001220703125},{"display":"trembling","start":381.70001220703125,"end":381.8800048828125},{"display":"voice,","start":381.8800048828125,"end":382.20001220703125},{"display":"“—and","start":382.760009765625,"end":382.9599914550781},{"display":"I","start":382.9599914550781,"end":383.239990234375},{"display":"hadn’t","start":383.34999084472656,"end":383.4599914550781},{"display":"begun","start":383.4599914550781,"end":383.79998779296875},{"display":"my","start":383.79998779296875,"end":384.4200134277344},{"display":"tea—not","start":384.77000427246094,"end":385.1199951171875},{"display":"above","start":385.1199951171875,"end":385.3399963378906},{"display":"a","start":385.3399963378906,"end":385.6600036621094},{"display":"week","start":385.6600036621094,"end":385.81000366210935},{"display":"or","start":385.83000366210933,"end":385.8599853515625},{"display":"so—and","start":386.55999755859375,"end":387.260009765625},{"display":"what","start":387.260009765625,"end":387.44000244140625},{"display":"with","start":387.50999450683594,"end":387.5799865722656},{"display":"the","start":387.5799865722656,"end":387.8800048828125},{"display":"bread-and-butter","start":387.8800048828125,"end":387.8999938964844},{"display":"getting","start":388.239990234375,"end":388.55999755859375},{"display":"so","start":388.55999755859375,"end":388.8800048828125},{"display":"thin—and","start":388.8800048828125,"end":389.1400146484375},{"display":"the","start":389.4200134277344,"end":389.760009765625},{"display":"twinkling","start":389.760009765625,"end":389.8800048828125},{"display":"of","start":389.8800048828125,"end":390.1600036621094},{"display":"the","start":390.1600036621094,"end":390.4200134277344},{"display":"tea—”","start":390.4200134277344,"end":390.760009765625},{"display":"“The","start":391.2200012207031,"end":391.7799987792969},{"display":"twinkling","start":391.7799987792969,"end":392.0400085449219},{"display":"of","start":392.0400085449219,"end":392.2200012207031},{"display":"the","start":392.2200012207031,"end":392.44000244140625},{"display":"what?”","start":392.44000244140625,"end":392.739990234375},{"display":"said","start":392.739990234375,"end":393.0199890136719},{"display":"the","start":393.0199890136719,"end":393.3800048828125},{"display":"King.","start":393.3800048828125,"end":393.5300048828125},{"display":"“It","start":393.5799865722656,"end":394.1400146484375},{"display":"began","start":394.3300018310547,"end":394.5199890136719},{"display":"with","start":394.5199890136719,"end":394.70001220703125},{"display":"the","start":394.70001220703125,"end":395.05999755859375},{"display":"tea,”","start":395.05999755859375,"end":395.260009765625},{"display":"the","start":395.260009765625,"end":395.6600036621094},{"display":"Hatter","start":395.6600036621094,"end":395.81000366210935},{"display":"replied.","start":395.83000366210933,"end":396.1600036621094},{"display":"“Of","start":396.70001220703125,"end":397.260009765625},{"display":"course","start":397.260009765625,"end":397.55999755859375},{"display":"twinkling","start":397.55999755859375,"end":397.9200134277344},{"display":"begins","start":397.9200134277344,"end":398.2799987792969},{"display":"with","start":398.2799987792969,"end":398.44000244140625},{"display":"a","start":398.6266682942708,"end":398.81333414713544},{"display":"T!”","start":398.90666707356775,"end":399},{"display":"said","start":399,"end":399.1600036621094},{"display":"the","start":399.1600036621094,"end":399.5},{"display":"King","start":399.5,"end":399.65},{"display":"sharply.","start":399.66999999999996,"end":400.0199890136719}],"startTime":310.20001220703125,"endTime":400.0199890136719},{"pageNum":14,"words":[{"display":"“Do","start":400.1199951171875,"end":400.6400146484375},{"display":"you","start":400.6400146484375,"end":400.7900146484375},{"display":"take","start":400.81001464843746,"end":400.8599853515625},{"display":"me","start":400.8599853515625,"end":401.0799865722656},{"display":"for","start":401.0799865722656,"end":401.260009765625},{"display":"a","start":401.260009765625,"end":401.4200134277344},{"display":"dunce?","start":401.4200134277344,"end":401.70001220703125},{"display":"Go","start":401.82000732421875,"end":402.0400085449219},{"display":"on!”","start":402.0400085449219,"end":402.8599853515625},{"display":"“I’m","start":403.3199920654297,"end":403.7799987792969},{"display":"a","start":403.7799987792969,"end":403.94000244140625},{"display":"poor","start":403.94000244140625,"end":404.17999267578125},{"display":"man,”","start":404.17999267578125,"end":404.5799865722656},{"display":"the","start":404.5799865722656,"end":404.9800109863281},{"display":"Hatter","start":404.9800109863281,"end":405.1300109863281},{"display":"went","start":405.1500109863281,"end":405.260009765625},{"display":"on,","start":405.260009765625,"end":405.4800109863281},{"display":"“and","start":405.6600036621094,"end":406.17999267578125},{"display":"most","start":406.17999267578125,"end":406.5},{"display":"things","start":406.5,"end":406.79998779296875},{"display":"twinkled","start":406.79998779296875,"end":407.1199951171875},{"display":"after","start":407.1199951171875,"end":407.3999938964844},{"display":"that—only","start":407.3999938964844,"end":407.7799987792969},{"display":"the","start":408.1400146484375,"end":408.6199951171875},{"display":"March","start":408.6199951171875,"end":408.8599853515625},{"display":"Hare","start":408.8599853515625,"end":409.0400085449219},{"display":"said—”","start":409.0400085449219,"end":409.55999755859375},{"display":"“I","start":409.55999755859375,"end":410.0799865722656},{"display":"didn’t!”","start":410.36000061035156,"end":410.6400146484375},{"display":"the","start":410.6400146484375,"end":411.0199890136719},{"display":"March","start":411.0199890136719,"end":411.16998901367185},{"display":"Hare","start":411.18998901367183,"end":411.3399890136718},{"display":"interrupted","start":411.3599890136718,"end":411.6199951171875},{"display":"in","start":411.6199951171875,"end":411.7799987792969},{"display":"a","start":411.7799987792969,"end":411.9599914550781},{"display":"great","start":411.9599914550781,"end":412.1400146484375},{"display":"hurry.","start":412.1400146484375,"end":412.3999938964844},{"display":"“You","start":412.44000244140625,"end":412.8599853515625},{"display":"did!”","start":412.8599853515625,"end":413.2200012207031},{"display":"said","start":413.2200012207031,"end":413.4800109863281},{"display":"the","start":413.4800109863281,"end":413.8399963378906},{"display":"Hatter.","start":413.8399963378906,"end":413.9899963378906},{"display":"“I","start":414.0099963378906,"end":414.3599853515625},{"display":"deny","start":414.3599853515625,"end":414.6000061035156},{"display":"it!”","start":414.6000061035156,"end":414.8800048828125},{"display":"said","start":414.8800048828125,"end":415.1000061035156},{"display":"the","start":415.1000061035156,"end":415.44000244140625},{"display":"March","start":415.44000244140625,"end":415.4800109863281},{"display":"Hare.","start":415.4800109863281,"end":415.760009765625},{"display":"“He","start":416.239990234375,"end":416.7200012207031},{"display":"denies","start":416.7200012207031,"end":417.05999755859375},{"display":"it,”","start":417.05999755859375,"end":417.4200134277344},{"display":"said","start":417.4200134277344,"end":417.5199890136719},{"display":"the","start":417.5199890136719,"end":417.8800048828125},{"display":"King:","start":417.8800048828125,"end":417.8999938964844},{"display":"“leave","start":417.9599914550781,"end":418.2200012207031},{"display":"out","start":418.2200012207031,"end":418.3800048828125},{"display":"that","start":418.3800048828125,"end":418.6199951171875},{"display":"part.”","start":418.6199951171875,"end":418.8999938964844},{"display":"“Well,","start":419.9800109863281,"end":420.5400085449219},{"display":"at","start":420.6000061035156,"end":420.760009765625},{"display":"any","start":420.760009765625,"end":421.0199890136719},{"display":"rate,","start":421.0199890136719,"end":421.2799987792969},{"display":"the","start":421.2799987792969,"end":421.5199890136719},{"display":"Dormouse","start":421.5199890136719,"end":421.79998779296875},{"display":"said—”","start":421.79998779296875,"end":422.29998779296875},{"display":"the","start":422.29998779296875,"end":422.67999267578125},{"display":"Hatter","start":422.67999267578125,"end":422.8299926757812},{"display":"went","start":422.8499926757812,"end":422.8800048828125},{"display":"on,","start":422.8800048828125,"end":423.2200012207031},{"display":"looking","start":423.32000732421875,"end":423.5799865722656},{"display":"anxiously","start":423.5799865722656,"end":423.9800109863281},{"display":"round","start":423.9800109863281,"end":424.3599853515625},{"display":"to","start":424.3599853515625,"end":424.5199890136719},{"display":"see","start":424.5199890136719,"end":424.6400146484375},{"display":"if","start":424.6400146484375,"end":424.79998779296875},{"display":"he","start":424.79998779296875,"end":424.8800048828125},{"display":"would","start":424.8800048828125,"end":425.05999755859375},{"display":"deny","start":425.05999755859375,"end":425.3599853515625},{"display":"it","start":425.3599853515625,"end":425.5400085449219},{"display":"too:","start":425.5400085449219,"end":425.8999938964844},{"display":"but","start":426,"end":426.55999755859375},{"display":"the","start":426.55999755859375,"end":426.7200012207031},{"display":"Dormouse","start":426.7200012207031,"end":427},{"display":"denied","start":427,"end":427.3800048828125},{"display":"nothing,","start":427.3800048828125,"end":427.79998779296875},{"display":"being","start":428.0400085449219,"end":428.20001220703125},{"display":"fast","start":428.20001220703125,"end":428.5199890136719},{"display":"asleep.","start":428.5199890136719,"end":428.9800109863281},{"display":"“After","start":429.760009765625,"end":430.260009765625},{"display":"that,”","start":430.260009765625,"end":430.67999267578125},{"display":"continued","start":430.67999267578125,"end":431.1400146484375},{"display":"the","start":431.1400146484375,"end":431.4800109863281},{"display":"Hatter,","start":431.4800109863281,"end":431.6300109863281},{"display":"“I","start":431.94000244140625,"end":432.1000061035156},{"display":"cut","start":432.1000061035156,"end":432.32000732421875},{"display":"some","start":432.32000732421875,"end":432.5400085449219},{"display":"more","start":432.5400085449219,"end":432.7799987792969},{"display":"bread-and-butter—”","start":432.7799987792969,"end":432.8999938964844},{"display":"“But","start":433.9200134277344,"end":434.4200134277344},{"display":"what","start":434.4200134277344,"end":434.6000061035156},{"display":"did","start":434.6000061035156,"end":434.739990234375},{"display":"the","start":434.739990234375,"end":434.9800109863281},{"display":"Dormouse","start":434.9800109863281,"end":435.3599853515625},{"display":"say?”","start":435.3599853515625,"end":435.7200012207031},{"display":"one","start":435.7200012207031,"end":436.0400085449219},{"display":"of","start":436.0400085449219,"end":436.260009765625},{"display":"the","start":436.260009765625,"end":436.410009765625},{"display":"jury","start":436.43000976562496,"end":436.4599914550781},{"display":"asked.","start":436.4599914550781,"end":436.82000732421875},{"display":"“That","start":436.94000244140625,"end":437.44000244140625},{"display":"I","start":437.44000244140625,"end":437.6400146484375},{"display":"can’t","start":437.77000427246094,"end":437.8999938964844},{"display":"remember,”","start":437.8999938964844,"end":438.44000244140625},{"display":"said","start":438.44000244140625,"end":438.67999267578125},{"display":"the","start":438.67999267578125,"end":439.1199951171875},{"display":"Hatter.","start":439.1199951171875,"end":439.2699951171875},{"display":"“You","start":439.9800109863281,"end":440.4800109863281},{"display":"must","start":440.4800109863281,"end":440.82000732421875},{"display":"remember,”","start":440.82000732421875,"end":441.5400085449219},{"display":"remarked","start":441.5400085449219,"end":441.8800048828125},{"display":"the","start":441.8800048828125,"end":442.260009765625},{"display":"King,","start":442.260009765625,"end":442.410009765625},{"display":"“or","start":442.43000976562496,"end":442.4599914550781},{"display":"I’ll","start":442.5500030517578,"end":442.6400146484375},{"display":"have","start":442.6400146484375,"end":442.8399963378906},{"display":"you","start":442.8399963378906,"end":443.1600036621094},{"display":"executed.”","start":443.1600036621094,"end":444.0199890136719},{"display":"The","start":444.239990234375,"end":444.739990234375},{"display":"miserable","start":444.739990234375,"end":445.2200012207031},{"display":"Hatter","start":445.2200012207031,"end":445.4599914550781},{"display":"dropped","start":445.4599914550781,"end":445.79998779296875},{"display":"his","start":445.79998779296875,"end":446},{"display":"teacup","start":446,"end":446.3999938964844},{"display":"and","start":446.3999938964844,"end":446.6600036621094},{"display":"bread-and-butter,","start":446.6600036621094,"end":446.82000732421875},{"display":"and","start":447.29998779296875,"end":447.5199890136719},{"display":"went","start":447.5199890136719,"end":447.5799865722656},{"display":"down","start":447.5799865722656,"end":447.79998779296875},{"display":"on","start":447.79998779296875,"end":448.0199890136719},{"display":"one","start":448.0199890136719,"end":448.17999267578125},{"display":"knee.","start":448.17999267578125,"end":448.3999938964844},{"display":"“I’m","start":448.8000030517578,"end":449.20001220703125},{"display":"a","start":449.20001220703125,"end":449.44000244140625},{"display":"poor","start":449.44000244140625,"end":449.5400085449219},{"display":"man,","start":449.5400085449219,"end":449.8399963378906},{"display":"your","start":449.9800109863281,"end":450.0799865722656},{"display":"Majesty,”","start":450.0799865722656,"end":450.6600036621094},{"display":"he","start":450.6600036621094,"end":450.94000244140625},{"display":"began.","start":450.94000244140625,"end":451.2799987792969},{"display":"“You’re","start":451.6300048828125,"end":451.9800109863281},{"display":"a","start":451.9800109863281,"end":452.1600036621094},{"display":"very","start":452.1600036621094,"end":452.5799865722656},{"display":"poor","start":452.5799865722656,"end":452.67999267578125},{"display":"speaker,”","start":452.67999267578125,"end":453.2799987792969},{"display":"said","start":453.2799987792969,"end":453.5},{"display":"the","start":453.5,"end":453.8599853515625},{"display":"King.","start":453.8599853515625,"end":453.8999938964844},{"display":"Here","start":454.55999755859375,"end":455},{"display":"one","start":455,"end":455.2200012207031},{"display":"of","start":455.2200012207031,"end":455.32000732421875},{"display":"the","start":455.32000732421875,"end":455.7200012207031},{"display":"guinea-pigs","start":455.7200012207031,"end":455.8700012207031},{"display":"cheered,","start":455.94000244140625,"end":456.32000732421875},{"display":"and","start":456.44000244140625,"end":456.70001220703125},{"display":"was","start":456.70001220703125,"end":456.8599853515625},{"display":"immediately","start":456.8599853515625,"end":457.32000732421875},{"display":"suppressed","start":457.32000732421875,"end":457.760009765625},{"display":"by","start":457.760009765625,"end":457.9599914550781},{"display":"the","start":457.9599914550781,"end":458.29998779296875},{"display":"officers","start":458.29998779296875,"end":458.5},{"display":"of","start":458.5,"end":458.739990234375},{"display":"the","start":458.739990234375,"end":459},{"display":"court.","start":459,"end":459.0400085449219},{"display":"(As","start":459.70001220703125,"end":460.1400146484375},{"display":"that","start":460.1400146484375,"end":460.32000732421875},{"display":"is","start":460.32000732421875,"end":460.4800109863281},{"display":"rather","start":460.4800109863281,"end":460.67999267578125},{"display":"a","start":460.67999267578125,"end":460.8599853515625},{"display":"hard","start":460.8599853515625,"end":461.1400146484375},{"display":"word,","start":461.1400146484375,"end":461.4200134277344},{"display":"I","start":461.4599914550781,"end":461.6400146484375},{"display":"will","start":461.6400146484375,"end":461.7799987792969},{"display":"just","start":461.7799987792969,"end":462.1000061035156},{"display":"explain","start":462.1000061035156,"end":462.3599853515625},{"display":"to","start":462.3599853515625,"end":462.5400085449219},{"display":"you","start":462.5400085449219,"end":462.6600036621094},{"display":"how","start":462.6600036621094,"end":462.79998779296875},{"display":"it","start":462.79998779296875,"end":462.94000244140625},{"display":"was","start":462.94000244140625,"end":463.1600036621094},{"display":"done.","start":463.1600036621094,"end":463.3599853515625},{"display":"They","start":463.5400085449219,"end":463.739990234375},{"display":"had","start":463.739990234375,"end":463.8599853515625},{"display":"a","start":463.8599853515625,"end":464.0199890136719},{"display":"large","start":464.0199890136719,"end":464.2799987792969},{"display":"canvas","start":464.2799987792969,"end":464.6199951171875},{"display":"bag,","start":464.6199951171875,"end":464.94000244140625},{"display":"which","start":465.1000061035156,"end":465.260009765625},{"display":"tied","start":465.260009765625,"end":465.44000244140625},{"display":"up","start":465.44000244140625,"end":465.6199951171875},{"display":"at","start":465.6199951171875,"end":465.739990234375},{"display":"the","start":465.739990234375,"end":465.9200134277344},{"display":"mouth","start":465.9200134277344,"end":465.9800109863281},{"display":"with","start":465.9800109863281,"end":466.2799987792969},{"display":"strings:","start":466.2799987792969,"end":466.55999755859375},{"display":"into","start":467.05999755859375,"end":467.2799987792969},{"display":"this","start":467.2799987792969,"end":467.5199890136719},{"display":"they","start":467.5199890136719,"end":467.7799987792969},{"display":"slipped","start":467.7799987792969,"end":467.94000244140625},{"display":"the","start":467.94000244140625,"end":468.29998779296875},{"display":"guinea-pig,","start":468.29998779296875,"end":468.4499877929687},{"display":"head","start":468.67999267578125,"end":469.0199890136719},{"display":"first,","start":469.0199890136719,"end":469.1000061035156},{"display":"and","start":469.17999267578125,"end":469.29998779296875},{"display":"then","start":469.29998779296875,"end":469.5799865722656},{"display":"sat","start":469.5799865722656,"end":469.6600036621094},{"display":"upon","start":469.6600036621094,"end":469.8999938964844},{"display":"it.)","start":469.8999938964844,"end":470.739990234375},{"display":"“I’m","start":471.3199920654297,"end":471.8999938964844},{"display":"glad","start":471.8999938964844,"end":472.05999755859375},{"display":"I’ve","start":472.1699981689453,"end":472.2799987792969},{"display":"seen","start":472.2799987792969,"end":472.44000244140625},{"display":"that","start":472.44000244140625,"end":472.7200012207031},{"display":"done,”","start":472.7200012207031,"end":473},{"display":"thought","start":473,"end":473.260009765625},{"display":"Alice.","start":473.260009765625,"end":473.6400146484375},{"display":"“I’ve","start":473.9300079345703,"end":474.2200012207031},{"display":"so","start":474.2200012207031,"end":474.5199890136719},{"display":"often","start":474.5199890136719,"end":474.6600036621094},{"display":"read","start":474.6600036621094,"end":474.8800048828125},{"display":"in","start":474.8800048828125,"end":475},{"display":"the","start":475,"end":475.239990234375},{"display":"newspapers,","start":475.239990234375,"end":475.6000061035156},{"display":"at","start":475.82000732421875,"end":475.8800048828125},{"display":"the","start":475.8800048828125,"end":476.0799865722656},{"display":"end","start":476.0799865722656,"end":476.1600036621094},{"display":"of","start":476.1600036621094,"end":476.70001220703125},{"display":"trials,","start":476.70001220703125,"end":476.8500122070312},{"display":"“There","start":476.8700122070312,"end":477.2799987792969},{"display":"was","start":477.3399963378906,"end":477.3999938964844},{"display":"some","start":477.3999938964844,"end":477.6600036621094},{"display":"attempts","start":477.6600036621094,"end":477.8800048828125},{"display":"at","start":477.8800048828125,"end":478.0799865722656},{"display":"applause,","start":478.0799865722656,"end":478.5199890136719},{"display":"which","start":478.5199890136719,"end":478.7200012207031},{"display":"was","start":478.7200012207031,"end":478.9200134277344},{"display":"immediately","start":478.9200134277344,"end":479.3800048828125},{"display":"suppressed","start":479.3800048828125,"end":479.760009765625},{"display":"by","start":479.760009765625,"end":479.9800109863281},{"display":"the","start":479.9800109863281,"end":480.4200134277344},{"display":"officers","start":480.4200134277344,"end":480.4800109863281},{"display":"of","start":480.4800109863281,"end":480.760009765625},{"display":"the","start":480.760009765625,"end":481.05999755859375},{"display":"court,”","start":481.05999755859375,"end":481.1000061035156},{"display":"and","start":481.32000732421875,"end":481.5400085449219},{"display":"I","start":481.5400085449219,"end":481.760009765625},{"display":"never","start":481.760009765625,"end":481.9599914550781},{"display":"understood","start":481.9599914550781,"end":482.3399963378906},{"display":"what","start":482.3399963378906,"end":482.5400085449219},{"display":"it","start":482.5400085449219,"end":482.6600036621094},{"display":"meant","start":482.6600036621094,"end":482.7799987792969},{"display":"till","start":482.7799987792969,"end":483.05999755859375},{"display":"now.”","start":483.05999755859375,"end":483.3999938964844},{"display":"“If","start":484.8599853515625,"end":485.29998779296875},{"display":"that’s","start":485.4199981689453,"end":485.5400085449219},{"display":"all","start":485.5400085449219,"end":485.70001220703125},{"display":"you","start":485.70001220703125,"end":485.8399963378906},{"display":"know","start":485.8399963378906,"end":486.0199890136719},{"display":"about","start":486.0199890136719,"end":486.2799987792969},{"display":"it,","start":486.2799987792969,"end":486.4200134277344},{"display":"you","start":486.4599914550781,"end":486.55999755859375},{"display":"may","start":486.55999755859375,"end":486.70001220703125},{"display":"stand","start":486.70001220703125,"end":487},{"display":"down,”","start":487,"end":487.3800048828125},{"display":"continued","start":487.3800048828125,"end":487.8399963378906},{"display":"the","start":487.8399963378906,"end":488.2200012207031},{"display":"King.","start":488.2200012207031,"end":488.260009765625}],"startTime":400.1199951171875,"endTime":488.260009765625},{"pageNum":16,"words":[{"display":"“I","start":488.8800048828125,"end":489.32000732421875},{"display":"can’t","start":489.4499969482422,"end":489.5799865722656},{"display":"go","start":489.5799865722656,"end":489.739990234375},{"display":"no","start":489.739990234375,"end":489.9800109863281},{"display":"lower,”","start":489.9800109863281,"end":490.3999938964844},{"display":"said","start":490.3999938964844,"end":490.6000061035156},{"display":"the","start":490.6000061035156,"end":490.9200134277344},{"display":"Hatter:","start":490.9200134277344,"end":491.07001342773435},{"display":"“I’m","start":491.12001037597656,"end":491.32000732421875},{"display":"on","start":491.32000732421875,"end":491.5},{"display":"the","start":491.5,"end":491.7200012207031},{"display":"floor,","start":491.7200012207031,"end":491.79998779296875},{"display":"as","start":491.79998779296875,"end":491.9800109863281},{"display":"it","start":491.9800109863281,"end":492.1400146484375},{"display":"is.”","start":492.1400146484375,"end":492.5400085449219},{"display":"“Then","start":492.8999938964844,"end":493.3399963378906},{"display":"you","start":493.3399963378906,"end":493.5},{"display":"may","start":493.5,"end":493.70001220703125},{"display":"sit","start":493.70001220703125,"end":494.0400085449219},{"display":"down,”","start":494.0400085449219,"end":494.3999938964844},{"display":"the","start":494.3999938964844,"end":494.7799987792969},{"display":"King","start":494.7799987792969,"end":494.92999877929685},{"display":"replied.","start":494.94999877929683,"end":495.2200012207031},{"display":"Here","start":495.5199890136719,"end":495.739990234375},{"display":"the","start":495.739990234375,"end":495.8800048828125},{"display":"other","start":495.8800048828125,"end":496.32000732421875},{"display":"guinea-pig","start":496.32000732421875,"end":496.4700073242187},{"display":"cheered,","start":496.55999755859375,"end":496.8999938964844},{"display":"and","start":497,"end":497.239990234375},{"display":"was","start":497.239990234375,"end":497.3999938964844},{"display":"suppressed.","start":497.3999938964844,"end":497.8399963378906},{"display":"“Come,","start":498.9200134277344,"end":499.3599853515625},{"display":"that","start":499.3599853515625,"end":499.5799865722656},{"display":"finished","start":499.5799865722656,"end":499.82000732421875},{"display":"the","start":499.82000732421875,"end":500.0199890136719},{"display":"guinea-pigs!”","start":500.0199890136719,"end":500.20001220703125},{"display":"thought","start":500.5199890136719,"end":500.760009765625},{"display":"Alice.","start":500.760009765625,"end":501.05999755859375},{"display":"“Now","start":501.260009765625,"end":501.3599853515625},{"display":"we","start":501.3599853515625,"end":501.5199890136719},{"display":"shall","start":501.5199890136719,"end":501.6400146484375},{"display":"get","start":501.6400146484375,"end":501.82000732421875},{"display":"on","start":501.82000732421875,"end":502.0199890136719},{"display":"better.”","start":502.0199890136719,"end":502.3599853515625},{"display":"“I’d","start":503.2099914550781,"end":504.05999755859375},{"display":"rather","start":504.05999755859375,"end":504.239990234375},{"display":"finish","start":504.239990234375,"end":504.5199890136719},{"display":"my","start":504.5199890136719,"end":504.8399963378906},{"display":"tea,”","start":504.8399963378906,"end":505.0799865722656},{"display":"said","start":505.0799865722656,"end":505.239990234375},{"display":"the","start":505.239990234375,"end":505.5400085449219},{"display":"Hatter,","start":505.5400085449219,"end":505.5799865722656},{"display":"with","start":505.70001220703125,"end":505.8599853515625},{"display":"an","start":505.8599853515625,"end":506.1000061035156},{"display":"anxious","start":506.1000061035156,"end":506.2799987792969},{"display":"look","start":506.2799987792969,"end":506.4800109863281},{"display":"at","start":506.4800109863281,"end":506.5799865722656},{"display":"the","start":506.5799865722656,"end":506.760009765625},{"display":"Queen,","start":506.760009765625,"end":507},{"display":"who","start":507.17999267578125,"end":507.2799987792969},{"display":"was","start":507.2799987792969,"end":507.5},{"display":"reading","start":507.5,"end":507.70001220703125},{"display":"the","start":507.70001220703125,"end":507.94000244140625},{"display":"list","start":507.94000244140625,"end":508.05999755859375},{"display":"of","start":508.05999755859375,"end":508.6600036621094},{"display":"singers.","start":508.6600036621094,"end":508.81000366210935},{"display":"“You","start":508.83000366210933,"end":509.32000732421875},{"display":"may","start":509.32000732421875,"end":509.5400085449219},{"display":"go,”","start":509.5400085449219,"end":509.82000732421875},{"display":"said","start":509.82000732421875,"end":510.1199951171875},{"display":"the","start":510.1199951171875,"end":510.260009765625},{"display":"King,","start":510.260009765625,"end":510.5400085449219},{"display":"and","start":510.6600036621094,"end":510.8399963378906},{"display":"the","start":510.8399963378906,"end":511.17999267578125},{"display":"Hatter","start":511.17999267578125,"end":511.3299926757812},{"display":"hurriedly","start":511.3499926757812,"end":511.760009765625},{"display":"left","start":511.760009765625,"end":511.8399963378906},{"display":"the","start":511.8399963378906,"end":512.260009765625},{"display":"court,","start":512.260009765625,"end":512.410009765625},{"display":"without","start":512.430009765625,"end":512.5800170898438},{"display":"even","start":512.5800170898438,"end":512.9400024414062},{"display":"waiting","start":512.9400024414062,"end":513.1400146484375},{"display":"to","start":513.1400146484375,"end":513.3200073242188},{"display":"put","start":513.3200073242188,"end":513.4199829101562},{"display":"his","start":513.4199829101562,"end":513.6599731445312},{"display":"shoes","start":513.6599731445312,"end":513.8200073242188},{"display":"on.","start":513.8200073242188,"end":514.219970703125},{"display":"“—and","start":514.8400268554688,"end":515.3200073242188},{"display":"just","start":515.3200073242188,"end":515.6799926757812},{"display":"take","start":515.6799926757812,"end":515.9000244140625},{"display":"his","start":515.9000244140625,"end":516.1199951171875},{"display":"head","start":516.1199951171875,"end":516.260009765625},{"display":"off","start":516.260009765625,"end":516.4600219726562},{"display":"outside,”","start":516.4600219726562,"end":517.0599975585938},{"display":"the","start":517.0599975585938,"end":517.5399780273438},{"display":"Queen","start":517.5399780273438,"end":517.6899780273437},{"display":"added","start":517.7099780273437,"end":517.780029296875},{"display":"to","start":517.780029296875,"end":517.9199829101562},{"display":"one","start":517.9199829101562,"end":518.0800170898438},{"display":"of","start":518.0800170898438,"end":518.1599731445312},{"display":"the","start":518.1599731445312,"end":518.780029296875},{"display":"officers:","start":518.780029296875,"end":518.930029296875},{"display":"but","start":519.0999755859375,"end":519.3200073242188},{"display":"the","start":519.3200073242188,"end":519.6199951171875},{"display":"Hatter","start":519.6199951171875,"end":519.7699951171875},{"display":"was","start":519.7899951171875,"end":519.8200073242188},{"display":"out","start":519.8200073242188,"end":519.97998046875},{"display":"of","start":519.97998046875,"end":520.3800048828125},{"display":"sight","start":520.3800048828125,"end":520.5300048828125},{"display":"before","start":520.5500048828125,"end":520.6199951171875},{"display":"the","start":520.6199951171875,"end":521.0800170898438},{"display":"officer","start":521.0800170898438,"end":521.2300170898437},{"display":"could","start":521.2500170898437,"end":521.2999877929688},{"display":"get","start":521.2999877929688,"end":521.4400024414062},{"display":"to","start":521.4400024414062,"end":521.5999755859375},{"display":"the","start":521.5999755859375,"end":521.9400024414062},{"display":"door.","start":521.9400024414062,"end":522.0900024414062}],"startTime":488.8800048828125,"endTime":522.0900024414062},{"pageNum":18,"words":[{"display":"“Call","start":523,"end":523.47998046875},{"display":"the","start":523.47998046875,"end":523.6199951171875},{"display":"next","start":523.6199951171875,"end":523.8800048828125},{"display":"witness!”","start":523.8800048828125,"end":524.4000244140625},{"display":"said","start":524.4000244140625,"end":524.6799926757812},{"display":"the","start":524.6799926757812,"end":525.0599975585938},{"display":"King.","start":525.0599975585938,"end":525.1199951171875},{"display":"The","start":525.7999877929688,"end":526.280029296875},{"display":"next","start":526.280029296875,"end":526.5800170898438},{"display":"witness","start":526.5800170898438,"end":526.9000244140625},{"display":"was","start":526.9000244140625,"end":527.1799926757812},{"display":"the","start":527.1799926757812,"end":527.4600219726562},{"display":"Duchess’s","start":527.7799987792969,"end":528.0999755859375},{"display":"cook.","start":528.0999755859375,"end":528.1599731445312},{"display":"She","start":528.6599731445312,"end":528.9000244140625},{"display":"carried","start":528.9000244140625,"end":529.1400146484375},{"display":"the","start":529.1400146484375,"end":529.2999877929688},{"display":"pepper-box","start":529.2999877929688,"end":529.5599975585938},{"display":"in","start":529.7999877929688,"end":529.9400024414062},{"display":"her","start":529.9400024414062,"end":530.0999755859375},{"display":"hand,","start":530.0999755859375,"end":530.4400024414062},{"display":"and","start":530.47998046875,"end":530.719970703125},{"display":"Alice","start":530.719970703125,"end":530.9000244140625},{"display":"guessed","start":530.9000244140625,"end":531.1400146484375},{"display":"who","start":531.1400146484375,"end":531.3400268554688},{"display":"it","start":531.3400268554688,"end":531.47998046875},{"display":"was,","start":531.47998046875,"end":531.8400268554688},{"display":"even","start":531.97998046875,"end":532.1400146484375},{"display":"before","start":532.1400146484375,"end":532.5},{"display":"she","start":532.5,"end":532.719970703125},{"display":"got","start":532.719970703125,"end":532.8599853515625},{"display":"into","start":532.8599853515625,"end":533.0999755859375},{"display":"the","start":533.0999755859375,"end":533.5399780273438},{"display":"court,","start":533.5399780273438,"end":533.6899780273437},{"display":"by","start":533.9600219726562,"end":534.0999755859375},{"display":"the","start":534.0999755859375,"end":534.2000122070312},{"display":"way","start":534.2000122070312,"end":534.3200073242188},{"display":"the","start":534.3200073242188,"end":534.4600219726562},{"display":"people","start":534.4600219726562,"end":534.739990234375},{"display":"near","start":534.739990234375,"end":534.9000244140625},{"display":"the","start":534.9000244140625,"end":535.260009765625},{"display":"door","start":535.260009765625,"end":535.410009765625},{"display":"began","start":535.430009765625,"end":535.6400146484375},{"display":"sneezing","start":535.6400146484375,"end":536.0800170898438},{"display":"all","start":536.0800170898438,"end":536.280029296875},{"display":"at","start":536.280029296875,"end":536.4400024414062},{"display":"once.","start":536.4400024414062,"end":536.780029296875},{"display":"“Give","start":537.5999755859375,"end":538.1199951171875},{"display":"your","start":538.1199951171875,"end":538.4000244140625},{"display":"evidence,”","start":538.4000244140625,"end":538.8599853515625},{"display":"said","start":538.8599853515625,"end":539.0399780273438},{"display":"the","start":539.0399780273438,"end":539.3400268554688},{"display":"King.","start":539.3400268554688,"end":539.3599853515625},{"display":"“Shan’t,”","start":540.1699829101562,"end":540.97998046875},{"display":"said","start":540.97998046875,"end":541.2999877929688},{"display":"the","start":541.2999877929688,"end":541.5999755859375},{"display":"cook.","start":541.5999755859375,"end":541.7499755859375},{"display":"The","start":542.5999755859375,"end":543.1199951171875},{"display":"King","start":543.1199951171875,"end":543.2999877929688},{"display":"looked","start":543.2999877929688,"end":543.5399780273438},{"display":"anxiously","start":543.5399780273438,"end":544.02001953125},{"display":"at","start":544.02001953125,"end":544.2000122070312},{"display":"the","start":544.2000122070312,"end":544.4000244140625},{"display":"White","start":544.4000244140625,"end":544.5800170898438},{"display":"Rabbit,","start":544.5800170898438,"end":544.8400268554688},{"display":"who","start":544.9600219726562,"end":545.1400146484375},{"display":"said","start":545.1400146484375,"end":545.3800048828125},{"display":"in","start":545.5,"end":545.5800170898438},{"display":"a","start":545.5800170898438,"end":545.760009765625},{"display":"low","start":545.760009765625,"end":545.9000244140625},{"display":"voice,","start":545.9000244140625,"end":546.3200073242188},{"display":"“Your","start":546.8599853515625,"end":547.3800048828125},{"display":"Majesty","start":547.3800048828125,"end":547.8400268554688},{"display":"must","start":547.8400268554688,"end":548.1400146484375},{"display":"cross-examine","start":548.1400146484375,"end":548.52001953125},{"display":"this","start":548.8599853515625,"end":549.280029296875},{"display":"witness.”","start":549.280029296875,"end":550.02001953125},{"display":"“Well,","start":550.6400146484375,"end":551.1599731445312},{"display":"if","start":551.1599731445312,"end":551.260009765625},{"display":"I","start":551.260009765625,"end":551.6799926757812},{"display":"must,","start":551.6799926757812,"end":551.8299926757812},{"display":"I","start":551.8499926757812,"end":551.9600219726562},{"display":"must,”","start":551.9600219726562,"end":552.2000122070312},{"display":"the","start":552.2000122070312,"end":552.719970703125},{"display":"King","start":552.719970703125,"end":552.869970703125},{"display":"said,","start":552.889970703125,"end":553.0399780273438},{"display":"with","start":553.1199951171875,"end":553.239990234375},{"display":"a","start":553.239990234375,"end":553.3800048828125},{"display":"melancholy","start":553.3800048828125,"end":553.8599853515625},{"display":"air,","start":553.8599853515625,"end":554.239990234375},{"display":"and,","start":554.2999877929688,"end":554.8200073242188},{"display":"after","start":554.8200073242188,"end":555.0800170898438},{"display":"folding","start":555.0800170898438,"end":555.3800048828125},{"display":"his","start":555.3800048828125,"end":555.760009765625},{"display":"arms","start":555.760009765625,"end":555.9600219726562},{"display":"and","start":555.9600219726562,"end":556.219970703125},{"display":"frowning","start":556.219970703125,"end":556.47998046875},{"display":"at","start":556.47998046875,"end":556.6599731445312},{"display":"the","start":556.6599731445312,"end":556.9199829101562},{"display":"cook","start":556.9199829101562,"end":557.0699829101562},{"display":"till","start":557.0899829101562,"end":557.1400146484375},{"display":"his","start":557.1400146484375,"end":557.4400024414062},{"display":"eyes","start":557.4400024414062,"end":557.5599975585938},{"display":"were","start":557.5599975585938,"end":557.780029296875},{"display":"nearly","start":557.780029296875,"end":558.0599975585938},{"display":"out","start":558.0599975585938,"end":558.260009765625},{"display":"of","start":558.260009765625,"end":558.6599731445312},{"display":"sight,","start":558.6599731445312,"end":558.8099731445312},{"display":"he","start":558.8400268554688,"end":559.0800170898438},{"display":"said","start":559.0800170898438,"end":559.1799926757812},{"display":"in","start":559.280029296875,"end":559.2999877929688},{"display":"a","start":559.2999877929688,"end":559.47998046875},{"display":"deep","start":559.47998046875,"end":559.6400146484375},{"display":"voice,","start":560.0599975585938,"end":560.5800170898438},{"display":"“What","start":560.5800170898438,"end":561.0999755859375},{"display":"are","start":561.2599894205729,"end":561.4200032552084},{"display":"tarts","start":561.5000101725261,"end":561.5800170898438},{"display":"made","start":561.5800170898438,"end":561.8599853515625},{"display":"of?”","start":561.8599853515625,"end":562.47998046875},{"display":"“Pepper,","start":563.5,"end":564.02001953125},{"display":"mostly,”","start":564.02001953125,"end":564.5399780273438},{"display":"said","start":564.5399780273438,"end":564.760009765625},{"display":"the","start":564.760009765625,"end":565.1199951171875},{"display":"cook.","start":565.1199951171875,"end":565.2699951171875},{"display":"“Treacle,”","start":565.6699829101562,"end":566.219970703125},{"display":"said","start":566.219970703125,"end":566.4600219726562},{"display":"a","start":566.4600219726562,"end":566.6400146484375},{"display":"sleepy","start":566.6400146484375,"end":566.9199829101562},{"display":"voice","start":566.9199829101562,"end":567.1599731445312},{"display":"behind","start":567.1599731445312,"end":567.5599975585938},{"display":"her.","start":567.5599975585938,"end":568.239990234375},{"display":"“Collar","start":568.6799926757812,"end":569.1199951171875},{"display":"that","start":569.1199951171875,"end":569.4199829101562},{"display":"Dormouse,”","start":569.7099914550781,"end":570},{"display":"the","start":570,"end":570.2999877929688},{"display":"Queen","start":570.2999877929688,"end":570.52001953125},{"display":"shrieked","start":570.52001953125,"end":570.8400268554688},{"display":"out.","start":570.8400268554688,"end":571.219970703125},{"display":"“Behead","start":571.4199829101562,"end":571.739990234375},{"display":"that","start":571.739990234375,"end":572},{"display":"Dormouse!","start":572.5199890136719,"end":573.0399780273438},{"display":"Turn","start":573.0399780273438,"end":573.3400268554688},{"display":"that","start":573.3400268554688,"end":573.5599975585938},{"display":"Dormouse","start":573.7699890136719,"end":573.97998046875},{"display":"out","start":573.97998046875,"end":574.219970703125},{"display":"of","start":574.219970703125,"end":574.6400146484375},{"display":"court!","start":574.6400146484375,"end":574.7900146484375},{"display":"Suppress","start":574.97998046875,"end":575.4000244140625},{"display":"him!","start":575.4000244140625,"end":575.719970703125},{"display":"Pinch","start":576.1599731445312,"end":576.219970703125},{"display":"him!","start":576.219970703125,"end":576.4600219726562},{"display":"Off","start":577,"end":577.0599975585938},{"display":"with","start":577.0599975585938,"end":577.260009765625},{"display":"his","start":577.260009765625,"end":577.52001953125},{"display":"whiskers!”","start":577.52001953125,"end":579.02001953125},{"display":"For","start":579.3200073242188,"end":579.8400268554688},{"display":"some","start":579.8400268554688,"end":580.1599731445312},{"display":"minutes","start":580.1599731445312,"end":580.3800048828125},{"display":"the","start":580.3800048828125,"end":580.5399780273438},{"display":"whole","start":580.5399780273438,"end":580.9600219726562},{"display":"court","start":580.9600219726562,"end":580.97998046875},{"display":"was","start":580.97998046875,"end":581.1400146484375},{"display":"in","start":581.1400146484375,"end":581.5399780273438},{"display":"confusion,","start":581.5399780273438,"end":581.8200073242188},{"display":"getting","start":582.0800170898438,"end":582.239990234375},{"display":"the","start":582.239990234375,"end":582.3599853515625},{"display":"Dormouse","start":582.5399780273438,"end":582.719970703125},{"display":"turned","start":582.719970703125,"end":582.9600219726562},{"display":"out,","start":582.9600219726562,"end":583.2999877929688},{"display":"and,","start":583.3599853515625,"end":583.8200073242188},{"display":"by","start":583.8200073242188,"end":583.97998046875},{"display":"the","start":583.97998046875,"end":584.1400146484375},{"display":"time","start":584.1400146484375,"end":584.3400268554688},{"display":"they","start":584.3400268554688,"end":584.4600219726562},{"display":"had","start":584.4600219726562,"end":584.7000122070312},{"display":"settled","start":584.7000122070312,"end":584.8200073242188},{"display":"down","start":584.8200073242188,"end":585.1199951171875},{"display":"again,","start":585.1199951171875,"end":585.4000244140625},{"display":"the","start":585.4400024414062,"end":585.6400146484375},{"display":"cook","start":585.6400146484375,"end":585.760009765625},{"display":"had","start":585.760009765625,"end":586.1199951171875},{"display":"disappeared.","start":586.1199951171875,"end":586.5800170898438},{"display":"“Never","start":587.5599975585938,"end":588.0800170898438},{"display":"mind!”","start":588.0800170898438,"end":588.5599975585938},{"display":"said","start":588.5599975585938,"end":588.760009765625},{"display":"the","start":588.760009765625,"end":588.9199829101562},{"display":"King,","start":588.9199829101562,"end":589.1400146484375},{"display":"with","start":589.2000122070312,"end":589.3200073242188},{"display":"an","start":589.3200073242188,"end":589.5999755859375},{"display":"air","start":589.5999755859375,"end":589.7499755859375},{"display":"of","start":589.7699755859375,"end":589.7999877929688},{"display":"great","start":589.7999877929688,"end":590.0999755859375},{"display":"relief.","start":590.0999755859375,"end":590.4199829101562},{"display":"“Call","start":590.6799926757812,"end":590.9400024414062},{"display":"the","start":591.1133422851562,"end":591.2866821289062},{"display":"next","start":591.3733520507812,"end":591.4600219726562},{"display":"witness.”","start":591.4600219726562,"end":591.9400024414062},{"display":"And","start":591.9400024414062,"end":592.4199829101562},{"display":"he","start":592.4199829101562,"end":592.5999755859375},{"display":"added","start":592.5999755859375,"end":592.8599853515625},{"display":"in","start":592.97998046875,"end":593.12998046875},{"display":"an","start":593.14998046875,"end":593.260009765625},{"display":"undertone","start":593.260009765625,"end":593.6400146484375},{"display":"to","start":593.7000122070312,"end":593.8599853515625},{"display":"the","start":593.8599853515625,"end":593.97998046875},{"display":"Queen,","start":593.97998046875,"end":594.2999877929688},{"display":"“Really,","start":594.6199951171875,"end":595.2000122070312},{"display":"my","start":595.260009765625,"end":595.47998046875},{"display":"dear,","start":595.47998046875,"end":595.6599731445312},{"display":"you","start":595.8599853515625,"end":596.1599731445312},{"display":"must","start":596.1599731445312,"end":596.3800048828125},{"display":"cross-examine","start":596.3800048828125,"end":596.6599731445312},{"display":"the","start":596.97998046875,"end":597.1400146484375},{"display":"next","start":597.1400146484375,"end":597.3800048828125},{"display":"witness.","start":597.3800048828125,"end":597.6799926757812},{"display":"It","start":597.7999877929688,"end":597.9600219726562},{"display":"quite","start":597.9600219726562,"end":598.239990234375},{"display":"makes","start":598.239990234375,"end":598.3800048828125},{"display":"my","start":598.3800048828125,"end":598.6400146484375},{"display":"forehead","start":598.6400146484375,"end":599.02001953125},{"display":"ache!”","start":599.02001953125,"end":600.1599731445312},{"display":"Alice","start":600.719970703125,"end":601.2000122070312},{"display":"watched","start":601.2000122070312,"end":601.47998046875},{"display":"the","start":601.47998046875,"end":601.7000122070312},{"display":"White","start":601.7000122070312,"end":601.97998046875},{"display":"Rabbit","start":601.97998046875,"end":602.0999755859375},{"display":"as","start":602.0999755859375,"end":602.3599853515625},{"display":"he","start":602.3599853515625,"end":602.5999755859375},{"display":"fumbled","start":602.5999755859375,"end":602.739990234375},{"display":"over","start":602.739990234375,"end":603.0399780273438},{"display":"the","start":603.0399780273438,"end":603.4600219726562},{"display":"list,","start":603.4600219726562,"end":603.52001953125},{"display":"feeling","start":603.9199829101562,"end":604.0699829101562},{"display":"very","start":604.0899829101562,"end":604.3400268554688},{"display":"curious","start":604.3400268554688,"end":604.5399780273438},{"display":"to","start":604.5399780273438,"end":604.8200073242188},{"display":"see","start":604.8200073242188,"end":604.9600219726562},{"display":"what","start":604.9600219726562,"end":605.1199951171875},{"display":"the","start":605.1199951171875,"end":605.2999877929688},{"display":"next","start":605.2999877929688,"end":605.5800170898438},{"display":"witness","start":605.5800170898438,"end":605.739990234375},{"display":"would","start":605.739990234375,"end":605.9600219726562},{"display":"be","start":605.9600219726562,"end":606.1400146484375},{"display":"like,","start":606.1400146484375,"end":606.4400024414062},{"display":"“—for","start":606.780029296875,"end":607.260009765625},{"display":"they","start":607.260009765625,"end":607.4000244140625},{"display":"haven’t","start":607.5800170898438,"end":607.760009765625},{"display":"got","start":607.8500061035156,"end":607.9400024414062},{"display":"much","start":607.9400024414062,"end":608.280029296875},{"display":"evidence","start":608.280029296875,"end":608.6599731445312},{"display":"yet,”","start":608.6599731445312,"end":609.0399780273438},{"display":"she","start":609.0399780273438,"end":609.3599853515625},{"display":"said","start":609.3599853515625,"end":609.5},{"display":"to","start":609.5,"end":609.739990234375},{"display":"herself.","start":609.739990234375,"end":610.0999755859375},{"display":"Imagine","start":610.9000244140625,"end":611.280029296875},{"display":"her","start":611.280029296875,"end":611.47998046875},{"display":"surprise,","start":611.47998046875,"end":611.97998046875},{"display":"when","start":611.97998046875,"end":612.1799926757812},{"display":"the","start":612.1799926757812,"end":612.4600219726562},{"display":"White","start":612.4600219726562,"end":612.5999755859375},{"display":"Rabbit","start":612.5999755859375,"end":612.719970703125},{"display":"read","start":612.719970703125,"end":612.9600219726562},{"display":"out,","start":612.9600219726562,"end":613.239990234375},{"display":"at","start":613.4000244140625,"end":613.4600219726562},{"display":"the","start":613.4600219726562,"end":613.6599731445312},{"display":"top","start":613.6599731445312,"end":613.719970703125},{"display":"of","start":613.719970703125,"end":613.8400268554688},{"display":"his","start":613.8400268554688,"end":614.0399780273438},{"display":"shrill","start":614.0399780273438,"end":614.239990234375},{"display":"little","start":614.239990234375,"end":614.47998046875},{"display":"voice,","start":614.47998046875,"end":614.719970703125},{"display":"the","start":614.7999877929688,"end":614.8800048828125},{"display":"name","start":614.8800048828125,"end":616.6400146484375},{"display":"“Alice!”","start":616.6400146484375,"end":617.97998046875}],"startTime":523,"endTime":617.97998046875}];
+  var AUDIO_FILE = '../audio/librivox/wonderland_ch_11_64kb.mp3';
+
+  if (!KARAOKE_PAGES || !AUDIO_FILE) {
+    // No karaoke data — hide play button
+    var playBtn = document.getElementById('playBtn');
+    if (playBtn) playBtn.style.display = 'none';
+    return;
+  }
+
+  // Create audio element
+  var audio = document.createElement('audio');
+  audio.src = AUDIO_FILE;
+  audio.preload = 'auto';
+  document.body.appendChild(audio);
+
+  var playBtn = document.getElementById('playBtn');
+  var timeEl = document.getElementById('audioTime');
+  var progEl = document.getElementById('progressBar');
+  var progressTrack = document.getElementById('progressTrack');
+  var isPlaying = false;
+
+  // Wrap words in text blocks with karaoke spans
+  var allKWords = [];
+  KARAOKE_PAGES.forEach(function(pageData) {
+    var pageEl = document.querySelector('[data-page="' + pageData.pageNum + '"]');
+    if (!pageEl) return;
+    var textBlock = pageEl.querySelector('.text-block');
+    if (!textBlock) return;
+
+    // Collect all text nodes
+    var walker = document.createTreeWalker(textBlock, NodeFilter.SHOW_TEXT, null, false);
+    var textNodes = [];
+    var node;
+    while (node = walker.nextNode()) {
+      if (node.textContent.trim()) textNodes.push(node);
+    }
+
+    // Walk through page words and match to text nodes
+    var wordIdx = 0;
+    textNodes.forEach(function(textNode) {
+      var text = textNode.textContent;
+      var parts = text.split(/(\s+)/);
+      var frag = document.createDocumentFragment();
+
+      parts.forEach(function(part) {
+        if (/^\s+$/.test(part) || !part) {
+          frag.appendChild(document.createTextNode(part));
+          return;
+        }
+        if (wordIdx < pageData.words.length) {
+          var w = pageData.words[wordIdx];
+          var span = document.createElement('span');
+          span.className = 'k-word';
+          span.dataset.start = w.start;
+          span.dataset.end = w.end;
+          span.dataset.page = pageData.pageNum;
+          span.textContent = part;
+          allKWords.push(span);
+          frag.appendChild(span);
+          wordIdx++;
+        } else {
+          frag.appendChild(document.createTextNode(part));
+        }
+      });
+
+      textNode.parentNode.replaceChild(frag, textNode);
+    });
+  });
+
+  // Format time as m:ss
+  function formatTime(s) {
+    var m = Math.floor(s / 60);
+    var sec = Math.floor(s % 60);
+    return m + ':' + (sec < 10 ? '0' : '') + sec;
+  }
+
+  // Play/pause toggle (shared function for button + tap overlay)
+  var tapOverlay = document.getElementById('tapOverlay');
+
+  function togglePlayPause() {
+    if (isPlaying) {
+      audio.pause();
+      isPlaying = false;
+      playBtn.innerHTML = '&#9654; Play';
+      playBtn.classList.remove('active');
+      if (singBall) singBall.classList.remove('visible');
+      if (tapOverlay) tapOverlay.classList.remove('active');
+    } else {
+      audio.play();
+      isPlaying = true;
+      playBtn.innerHTML = '&#9646;&#9646; Pause';
+      playBtn.classList.add('active');
+      if (singBall) singBall.classList.add('visible');
+      if (tapOverlay) tapOverlay.classList.add('active');
+    }
+  }
+
+  playBtn.addEventListener('click', togglePlayPause);
+
+  // Tap-to-pause overlay (click anywhere on page to pause/play)
+  if (tapOverlay) {
+    tapOverlay.addEventListener('click', function(e) {
+      e.stopPropagation();
+      togglePlayPause();
+    });
+  }
+
+  // Spacebar also toggles play/pause
+  document.addEventListener('keydown', function(e) {
+    if (e.code === 'Space' && document.activeElement.tagName !== 'INPUT') {
+      e.preventDefault();
+      togglePlayPause();
+    }
+  });
+
+  audio.addEventListener('ended', function() {
+    isPlaying = false;
+    playBtn.innerHTML = '&#9654; Play';
+    playBtn.classList.remove('active');
+    if (singBall) singBall.classList.remove('visible');
+    if (tapOverlay) tapOverlay.classList.remove('active');
+    allKWords.forEach(function(el) {
+      el.classList.remove('k-active', 'k-spoken', 'k-near');
+    });
+  });
+
+  // Pre-parse timestamps into arrays for fast binary search
+  var starts = allKWords.map(function(el) { return parseFloat(el.dataset.start); });
+  var ends = allKWords.map(function(el) { return parseFloat(el.dataset.end); });
+  var NEAR_RANGE = 8; // highlight ±8 words — wide gradient zone
+
+  // Binary search: find the word whose time range contains t
+  function findWordAt(t) {
+    var lo = 0, hi = allKWords.length - 1;
+    while (lo <= hi) {
+      var mid = (lo + hi) >> 1;
+      if (t < starts[mid]) { hi = mid - 1; }
+      else if (t > ends[mid] + 0.3) { lo = mid + 1; }
+      else { return mid; }
+    }
+    // Between words — find closest upcoming word
+    if (lo < allKWords.length && t < starts[lo]) return lo;
+    return lo > 0 ? lo - 1 : 0;
+  }
+
+  var lastActiveIdx = -1;
+  var lastScrollPage = -1;
+  var lastUpdateTime = 0;
+  var singBall = document.getElementById('singBall');
+
+  // Move the bouncing ball above the active word
+  function moveBallToWord(wordEl) {
+    if (!singBall || !wordEl) return;
+    var rect = wordEl.getBoundingClientRect();
+    var scrollX = window.pageXOffset || document.documentElement.scrollLeft;
+    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    singBall.style.left = (rect.left + scrollX + rect.width / 2 - 5) + 'px';
+    singBall.style.top = (rect.top + scrollY - 14) + 'px';
+  }
+
+  function updateKaraoke() {
+    if (!isPlaying) return;
+    var t = audio.currentTime;
+
+    // Throttle updates to ~10fps for calm feel (every 100ms)
+    var now = Date.now();
+    if (now - lastUpdateTime < 100) {
+      requestAnimationFrame(updateKaraoke);
+      return;
+    }
+    lastUpdateTime = now;
+
+    // Update progress bar
+    if (audio.duration) {
+      progEl.style.width = ((t / audio.duration) * 100) + '%';
+      timeEl.textContent = formatTime(t) + ' / ' + formatTime(audio.duration);
+    }
+
+    // Don't start karaoke until narration actually begins (skip LibriVox intro)
+    if (allKWords.length === 0 || t < starts[0] - 0.1) {
+      requestAnimationFrame(updateKaraoke);
+      return;
+    }
+
+    // Find current word via binary search
+    var idx = findWordAt(t);
+
+    if (idx !== lastActiveIdx) {
+      // Clear old highlights in a range around the old position
+      if (lastActiveIdx >= 0) {
+        var clearFrom = Math.max(0, lastActiveIdx - NEAR_RANGE - 1);
+        var clearTo = Math.min(allKWords.length - 1, lastActiveIdx + NEAR_RANGE + 1);
+        for (var c = clearFrom; c <= clearTo; c++) {
+          allKWords[c].classList.remove('k-active', 'k-near');
+        }
+      }
+
+      // Mark spoken words (only newly spoken ones, don't re-scan all)
+      if (lastActiveIdx >= 0 && lastActiveIdx < idx) {
+        for (var s = lastActiveIdx; s < idx; s++) {
+          allKWords[s].classList.add('k-spoken');
+          allKWords[s].classList.remove('k-active', 'k-near');
+        }
+      }
+
+      // Apply new highlights
+      allKWords[idx].classList.add('k-active');
+      allKWords[idx].classList.remove('k-spoken', 'k-near');
+
+      // Move bouncing ball
+      moveBallToWord(allKWords[idx]);
+
+      // Nearby words get soft highlight
+      for (var n = 1; n <= NEAR_RANGE; n++) {
+        if (idx + n < allKWords.length) {
+          allKWords[idx + n].classList.add('k-near');
+          allKWords[idx + n].classList.remove('k-spoken', 'k-active');
+        }
+      }
+
+      lastActiveIdx = idx;
+
+      // Auto-scroll to spread (only when page changes)
+      var pageNum = parseInt(allKWords[idx].dataset.page);
+      if (pageNum !== lastScrollPage) {
+        lastScrollPage = pageNum;
+        var pageEl = document.querySelector('[data-page="' + pageNum + '"]');
+        if (pageEl) {
+          var spread = pageEl.closest('.spread');
+          if (spread) {
+            spread.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      }
+    }
+
+    requestAnimationFrame(updateKaraoke);
+  }
+
+  audio.addEventListener('play', function() {
+    lastUpdateTime = 0;
+    if (singBall) singBall.classList.add('visible');
+    requestAnimationFrame(updateKaraoke);
+  });
+
+  // Click on progress track to seek — immediately update bar + animation
+  progressTrack.addEventListener('click', function(e) {
+    if (!audio.duration) return;
+    var rect = progressTrack.getBoundingClientRect();
+    var pct = (e.clientX - rect.left) / rect.width;
+    // Immediately update progress bar visually
+    progressBar.style.width = (pct * 100) + '%';
+    audio.currentTime = pct * audio.duration;
+    // Force immediate karaoke update
+    lastUpdateTime = 0;
+    if (isPlaying) requestAnimationFrame(updateKaraoke);
+  });
+
+  // Handle any audio seek (progress bar click, or native controls)
+  audio.addEventListener('seeked', function() {
+    // Reset all karaoke highlights
+    allKWords.forEach(function(el) {
+      el.classList.remove('k-active', 'k-spoken', 'k-near');
+    });
+    // Mark words before current position as spoken
+    var t = audio.currentTime;
+    if (allKWords.length > 0 && t >= starts[0]) {
+      var seekIdx = findWordAt(t);
+      for (var i = 0; i < seekIdx; i++) {
+        allKWords[i].classList.add('k-spoken');
+      }
+    }
+    lastActiveIdx = -1;
+    lastScrollPage = -1;
+    lastUpdateTime = 0; // force immediate update on next frame
+    // Move ball to new position
+    if (singBall && allKWords.length > 0 && t >= starts[0]) {
+      var bIdx = findWordAt(t);
+      moveBallToWord(allKWords[bIdx]);
+    }
+    // Re-trigger animation loop (it may have stopped)
+    if (isPlaying) {
+      requestAnimationFrame(updateKaraoke);
+    }
+  });
+
+  // Safety net: if audio is playing but animation loop stopped, re-trigger every 2s
+  setInterval(function() {
+    if (isPlaying && !audio.paused) {
+      lastUpdateTime = 0;
+      requestAnimationFrame(updateKaraoke);
+    }
+  }, 2000);
+
+  // ── Speed controls ──
+  var speedCtrl = document.getElementById('speedCtrl');
+  if (speedCtrl) {
+    speedCtrl.addEventListener('change', function() {
+      audio.playbackRate = parseFloat(speedCtrl.value);
+    });
+  }
+})();
+
+// ── Fullscreen toggle ──
+(function() {
+  var fsBtn = document.getElementById('fullscreenBtn');
+  if (!fsBtn) return;
+  fsBtn.addEventListener('click', function() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(function() {});
+      fsBtn.textContent = '✕ Exit FS';
+    } else {
+      document.exitFullscreen();
+      fsBtn.textContent = '⛶ Fullscreen';
+    }
+  });
+  document.addEventListener('fullscreenchange', function() {
+    if (!document.fullscreenElement) {
+      fsBtn.textContent = '⛶ Fullscreen';
+    }
+  });
+})();
+
+// ── Autoplay mode (for continuous recording) ──
+// URL param ?autoplay — auto-enters fullscreen, starts playing
+// When chapter ends, navigates to next chapter with ?autoplay
+(function() {
+  var NEXT_CHAPTER = '/booklets/chapter12-alice-s-evidence.html';
+  var params = new URLSearchParams(window.location.search);
+  var isAutoplay = params.has('autoplay');
+
+  if (isAutoplay) {
+    // Small delay to let page render, then start
+    setTimeout(function() {
+      // Enter fullscreen
+      document.documentElement.requestFullscreen().catch(function() {});
+      // Start playing
+      var playBtn = document.getElementById('playBtn');
+      if (playBtn) playBtn.click();
+    }, 1500);
+  }
+
+  // When audio ends, navigate to next chapter if autoplay
+  var audio = document.querySelector('audio');
+  if (audio && NEXT_CHAPTER) {
+    audio.addEventListener('ended', function() {
+      if (isAutoplay || params.has('continuous')) {
+        // Brief pause then navigate to next chapter
+        setTimeout(function() {
+          window.location.href = NEXT_CHAPTER + '?' + window.location.search.slice(1);
+        }, 2000);
+      }
+    });
+  }
+})();
+
+// ── Chapter title animation during intro ──
+// During the LibriVox intro (before narration starts), gently animate the cover title
+(function() {
+  var titleBlock = document.querySelector('.title-block');
+  if (!titleBlock) return;
+
+  var audio = document.querySelector('audio');
+  if (!audio) return;
+
+  // Add fade-in animation to title elements
+  var style = document.createElement('style');
+  style.textContent = [
+    '@keyframes titleGlow { 0%,100% { text-shadow: 0 0 0 transparent; } 50% { text-shadow: 0 0 20px rgba(212,167,106,0.4); } }',
+    '.title-animating h1 { animation: titleGlow 3s ease-in-out infinite; }',
+    '.title-animating .series-name, .title-animating .book-number, .title-animating .author { animation: titleGlow 4s ease-in-out infinite; animation-delay: 1s; }'
+  ].join('\n');
+  document.head.appendChild(style);
+
+  audio.addEventListener('play', function() {
+    titleBlock.classList.add('title-animating');
+  });
+
+  audio.addEventListener('pause', function() {
+    titleBlock.classList.remove('title-animating');
+  });
+
+  audio.addEventListener('ended', function() {
+    titleBlock.classList.remove('title-animating');
+  });
+})();
+
+// ── Aa Case Toggle ──
+(function() {
+  var btn = document.getElementById('caseToggle');
+  if (!btn) return;
+  var isUpper = true;
+
+  btn.addEventListener('click', function() {
+    isUpper = !isUpper;
+    btn.textContent = isUpper ? 'Aa' : 'AA';
+    // Toggle all text blocks between uppercase and original case
+    document.querySelectorAll('.text-block p').forEach(function(p) {
+      p.style.textTransform = isUpper ? 'uppercase' : 'none';
+      p.style.fontWeight = isUpper ? '700' : '400';
+      p.style.letterSpacing = isUpper ? '0.3px' : '0';
+    });
+    // Also toggle title and UI text
+    document.querySelectorAll('.title-block h1, .series-name, .book-number, .author, .page-info, .back-block, .the-end, .back-info').forEach(function(el) {
+      el.style.textTransform = isUpper ? 'uppercase' : 'none';
+    });
+  });
+})();
+</script>
+</body>
+</html>
