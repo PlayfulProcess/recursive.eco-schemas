@@ -823,7 +823,7 @@ function wrapHtml(chNum, chName, spreadsHtml, karaokeData, nextChapterUrl) {
     /* Nearby words — soft gradient between spoken and unspoken */
     .k-word.k-near { color: #8a7560; transition: color 2s ease; }
 
-    /* Tap-to-pause overlay (YouTube-style, invisible) */
+    /* Tap-to-pause overlay — always clickable once audio has started */
     #tapOverlay {
       position: fixed;
       inset: 0;
@@ -832,7 +832,7 @@ function wrapHtml(chNum, chName, spreadsHtml, karaokeData, nextChapterUrl) {
       cursor: pointer;
       display: none;
     }
-    #tapOverlay.active { display: block; }
+    #tapOverlay.ready { display: block; }
 
     /* Ball removed — gradient-only karaoke */
     #singBall { display: none; }
@@ -1317,14 +1317,20 @@ ${spreadsHtml}
       playBtn.innerHTML = '&#9654; Play';
       playBtn.classList.remove('active');
       if (singBall) singBall.classList.remove('visible');
-      if (tapOverlay) tapOverlay.classList.remove('active');
     } else {
       audio.play();
       isPlaying = true;
       playBtn.innerHTML = '&#9646;&#9646; Pause';
       playBtn.classList.add('active');
       if (singBall) singBall.classList.add('visible');
-      if (tapOverlay) tapOverlay.classList.add('active');
+      // Make tap overlay always clickable once audio has started
+      if (tapOverlay) tapOverlay.classList.add('ready');
+      // Auto-scroll to first text page so user sees narrated content
+      var firstText = document.querySelector('.text-block');
+      if (firstText) {
+        var spread = firstText.closest('.spread');
+        if (spread) spread.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   }
 
@@ -1351,7 +1357,7 @@ ${spreadsHtml}
     playBtn.innerHTML = '&#9654; Play';
     playBtn.classList.remove('active');
     if (singBall) singBall.classList.remove('visible');
-    if (tapOverlay) tapOverlay.classList.remove('active');
+    if (tapOverlay) tapOverlay.classList.remove('ready');
     allKWords.forEach(function(el) {
       el.classList.remove('k-active', 'k-spoken', 'k-near');
     });
@@ -1555,7 +1561,7 @@ ${spreadsHtml}
 })();
 
 // ── Autoplay mode (for continuous recording) ──
-// URL param ?autoplay — auto-enters fullscreen, starts playing
+// URL param ?autoplay — shows "tap to start" overlay, then fullscreen + play
 // When chapter ends, navigates to next chapter with ?autoplay
 (function() {
   var NEXT_CHAPTER = ${nextChapterUrl ? `'${nextChapterUrl}'` : 'null'};
@@ -1563,14 +1569,24 @@ ${spreadsHtml}
   var isAutoplay = params.has('autoplay');
 
   if (isAutoplay) {
-    // Small delay to let page render, then start
-    setTimeout(function() {
-      // Enter fullscreen
+    // Create a "tap to start" overlay — browser requires user gesture for audio+fullscreen
+    var startOverlay = document.createElement('div');
+    startOverlay.id = 'autoplayStart';
+    startOverlay.style.cssText = 'position:fixed;inset:0;z-index:9999;background:rgba(44,24,16,0.92);display:flex;align-items:center;justify-content:center;cursor:pointer;';
+    startOverlay.innerHTML = '<div style="text-align:center;color:white;font-family:Georgia,serif;">'
+      + '<div style="font-size:72px;margin-bottom:20px;">&#9654;</div>'
+      + '<div style="font-size:20px;letter-spacing:3px;color:#d4a76a;">TAP TO START READING</div>'
+      + '<div style="font-size:12px;margin-top:12px;color:#a08060;letter-spacing:1px;">${escapeHtml(chName.toUpperCase())}</div>'
+      + '</div>';
+    document.body.appendChild(startOverlay);
+
+    startOverlay.addEventListener('click', function() {
+      startOverlay.remove();
+      // This click IS a user gesture — fullscreen + audio will work
       document.documentElement.requestFullscreen().catch(function() {});
-      // Start playing
       var playBtn = document.getElementById('playBtn');
       if (playBtn) playBtn.click();
-    }, 1500);
+    });
   }
 
   // When audio ends, navigate to next chapter if autoplay
@@ -1750,7 +1766,7 @@ const indexHtml = `<!DOCTYPE html>
     Print landscape, fold in half!
   </div>
   <div style="text-align:center; margin-bottom: 24px;">
-    <a href="/booklets/${bookletInfo[0].filename}?autoplay=all" style="
+    <a href="/booklets/cover.html?autoplay=all" style="
       display: inline-block; padding: 14px 36px; background: #2c1810; color: #d4a76a;
       font-family: Georgia, serif; font-size: 16px; letter-spacing: 2px; text-decoration: none;
       border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.2); transition: transform 0.2s, box-shadow 0.2s;
@@ -1785,6 +1801,152 @@ ${bookletInfo.map(b => `    <a class="card" href="/booklets/${b.filename}">
 
 writeFileSync(resolve(outputDir, 'index.html'), indexHtml);
 console.log(`\n  index.html (library page)`);
+
+// ── Generate Book Cover page (for Play All flow) ──
+// A standalone cover.html with book title + author, auto-advances to chapter 1
+const coverImage = 'https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-01-down-the-rabbit-hole/arthur-rackham-1907.jpg';
+const firstChapterUrl = `/booklets/${bookletInfo[0].filename}`;
+
+const coverHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alice's Adventures in Wonderland — Book Cover</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; overflow: hidden; }
+    body {
+      font-family: 'Georgia', 'Cambria', serif;
+      background: #2c1810; color: white;
+      display: flex; height: 100vh;
+    }
+    .cover-left {
+      width: 50%; height: 100%; display: flex;
+      align-items: center; justify-content: center;
+      padding: 24px; background: #1a0e08;
+    }
+    .cover-left img {
+      max-width: 100%; max-height: 90vh;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+      object-fit: contain;
+    }
+    .cover-right {
+      width: 50%; height: 100%; display: flex;
+      align-items: center; justify-content: center;
+      padding: 40px 40px 60px; background: #2c1810;
+      border-left: 1px solid #5a4030;
+    }
+    .title-block { text-align: center; }
+    .ornament {
+      font-size: 24px; color: #d4a76a; margin-bottom: 30px;
+      letter-spacing: 8px;
+    }
+    .book-title {
+      font-size: clamp(28px, 5vw, 52px);
+      line-height: 1.15; margin-bottom: 30px;
+      font-weight: 800; letter-spacing: 1px;
+    }
+    .author {
+      font-size: clamp(14px, 2vw, 22px);
+      letter-spacing: 4px; color: #d4a76a;
+      margin-bottom: 40px;
+    }
+    .edition {
+      font-size: clamp(10px, 1.2vw, 14px);
+      letter-spacing: 2px; color: #a08060;
+      line-height: 1.8;
+    }
+    .play-hint {
+      margin-top: 50px; font-size: 13px;
+      color: #7a6050; letter-spacing: 1px;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
+    }
+    .progress-bar {
+      position: fixed; bottom: 0; left: 0;
+      height: 3px; background: #d4a76a;
+      width: 0%; transition: width 0.1s linear;
+    }
+    /* Clickable overlay */
+    .click-overlay {
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%;
+      cursor: pointer; z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div class="cover-left">
+    <img src="${coverImage}" alt="Alice in Wonderland — Arthur Rackham illustration">
+  </div>
+  <div class="cover-right">
+    <div class="title-block">
+      <div class="ornament">&#10048; &#10048; &#10048;</div>
+      <h1 class="book-title">ALICE'S<br>ADVENTURES<br>IN WONDERLAND</h1>
+      <div class="author">LEWIS CARROLL</div>
+      <div class="edition">
+        ILLUSTRATED CHAPTER BOOKS<br>
+        ${grandTotalIll} PUBLIC DOMAIN ILLUSTRATIONS<br>
+        TENNIEL &middot; RACKHAM &middot; CARROLL &middot; HUDSON &amp; MORE
+      </div>
+      <div class="play-hint" id="hint">CLICK ANYWHERE TO BEGIN</div>
+    </div>
+  </div>
+  <div class="progress-bar" id="progressBar"></div>
+  <div class="click-overlay" id="clickOverlay"></div>
+  <script>
+    var AUTO_ADVANCE_SECONDS = 5;
+    var params = new URLSearchParams(window.location.search);
+    var isAutoplay = params.has('autoplay');
+    var progressBar = document.getElementById('progressBar');
+    var hint = document.getElementById('hint');
+    var overlay = document.getElementById('clickOverlay');
+    var timer = null;
+    var startTime = null;
+
+    function goToChapter1() {
+      var qs = window.location.search.slice(1);
+      window.location.href = '${firstChapterUrl}' + (qs ? '?' + qs : '');
+    }
+
+    // Click anywhere to advance immediately
+    overlay.addEventListener('click', function() {
+      if (timer) clearInterval(timer);
+      goToChapter1();
+    });
+
+    if (isAutoplay) {
+      // Enter fullscreen
+      document.documentElement.requestFullscreen().catch(function() {});
+      hint.textContent = 'STARTING IN ' + AUTO_ADVANCE_SECONDS + ' SECONDS...';
+
+      // Progress bar + countdown
+      startTime = Date.now();
+      timer = setInterval(function() {
+        var elapsed = (Date.now() - startTime) / 1000;
+        var pct = Math.min(100, (elapsed / AUTO_ADVANCE_SECONDS) * 100);
+        progressBar.style.width = pct + '%';
+        var remaining = Math.ceil(AUTO_ADVANCE_SECONDS - elapsed);
+        if (remaining > 0) {
+          hint.textContent = 'STARTING IN ' + remaining + '...';
+        }
+        if (elapsed >= AUTO_ADVANCE_SECONDS) {
+          clearInterval(timer);
+          goToChapter1();
+        }
+      }, 100);
+    }
+  </script>
+</body>
+</html>`;
+
+writeFileSync(resolve(outputDir, 'cover.html'), coverHtml);
+console.log(`  cover.html (book cover for Play All)`);
 
 // ── Generate Illustration Assignment JSON (for reordering tool) ──
 // Skip when --remap is active to preserve user's edits
