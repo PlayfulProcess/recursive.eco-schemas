@@ -14,6 +14,13 @@
     "original-text"
   ],
   "grammar_type": "custom",
+  "preview": {
+    "type": "html-booklet",
+    "path": "booklets/book.html",
+    "server": "npx serve grammars/alice-5-minute-stories -l 3456",
+    "url": "http://localhost:3456/booklets/book.html",
+    "features": ["karaoke-audio", "illustration-carousel", "touch-gestures", "csv-export"]
+  },
   "attribution": {
     "source_name": "Alice's Adventures in Wonderland",
     "source_author": "Lewis Carroll (Charles Lutwidge Dodgson)",
