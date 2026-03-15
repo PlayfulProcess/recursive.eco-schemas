@@ -1,6 +1,6 @@
 {
   "generated": true,
-  "grammar_count": 218,
+  "grammar_count": 219,
   "grammars": {
     "a-little-princess": {
       "id": "a-little-princess",
@@ -6805,6 +6805,58 @@
       ],
       "worldview": "dialectical"
     },
+    "plutchik-wheel-of-emotions": {
+      "id": "plutchik-wheel-of-emotions",
+      "name": "Plutchik's Wheel of Emotions: Myths for Every Feeling",
+      "description": "Robert Plutchik's Wheel of Emotions rendered as a mythic journey. Eight primary emotions — each at three intensities (petal, core, deep) — plus eight composite 'dyad' emotions formed by adjacent pairs. Every emotion is a world myth or folktale that Alice, Shiryo, and Bishisheshi jump into and live through. The wheel becomes a map: each petal is a story, each story is a feeling, each feeling has a body, a color, and a song.\n\nDesigned as a companion to The Wise Heart (DBT grammar) — while DBT teaches skills for handling emotions, this grammar teaches the emotions themselves. You need to know what you're feeling before you can do anything about it.",
+      "grammar_type": "custom",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "emotions",
+        "plutchik",
+        "psychology",
+        "children",
+        "kids",
+        "myths",
+        "folktales",
+        "emotional-literacy",
+        "feelings",
+        "wheel-of-emotions",
+        "affective-science"
+      ],
+      "item_count": 42,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "anger",
+        "anticipation",
+        "disgust",
+        "dyad",
+        "dyad-group",
+        "fear",
+        "joy",
+        "meta",
+        "petal",
+        "sadness",
+        "surprise",
+        "trust"
+      ],
+      "roots": [
+        "mythopoetic"
+      ],
+      "shelves": [
+        "wisdom",
+        "children"
+      ],
+      "lineages": [
+        "Linehan",
+        "Gottman"
+      ],
+      "worldview": "dialectical"
+    },
     "polynesian-kids": {
       "id": "polynesian-kids",
       "name": "The Ocean's Children: Stories from the Pacific",
@@ -7163,9 +7215,9 @@
     },
     "repair-an-open-source-book": {
       "id": "repair-an-open-source-book",
-      "name": "Repair: An Open Source Book",
-      "description": "A book-as-grammar on repair at every scale — couples, communities, cultures, species. Starting in Gottman's lab (where 69% of couple problems are perpetual and repair attempts are the single most important thing), moving through attachment theory, EFT vulnerability requests, AA amends, DBT radical acceptance, and arriving at the question: what makes a culture adaptive? Not extraction. Not domination. Reciprocity. This grammar weaves clinical research, spiritual practice, popular culture, children's stories, science fiction, and public domain art into a living document that repairs the idea of what a book can be. Each chapter maps to a Major Arcana card. Each chapter has ten lenses. Every section has cracks.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Tarot de Marseille woodcuts (Nicolas Conver, 1760). Rider-Waite-Smith illustrations by Pamela Colman Smith (1909, US public domain). William Blake's illuminated prints. Hokusai's Thirty-six Views of Mount Fuji. Aboriginal Australian rock art reproductions. Medieval manuscript marginalia from the British Library's digitized collections.",
-      "grammar_type": "custom",
+      "name": "The Repair Deck: A Major Arcana for Mending",
+      "description": "A complete 22-card Major Arcana tarot deck on repair at every scale — couples, communities, cultures, species. Each card maps a therapeutic, spiritual, or cultural voice to a traditional Major Arcana archetype. The Lovers hold Gottman's perpetual problems. The Moon holds Bowlby's attachment cry. Temperance holds Linehan's dialectics. The Devil holds colonial extraction. Draw a card: it reframes your thinking (CBT), invites archetypal dialogue (depth psychology), cracks your certainty (Akomolafean practice), and offers ten lenses — Research, Clinical, Spiritual, Practices, Rituals, Songs, Kids Version, Sci-Fi, Open Source, and Cracks. Designed for use with journaling, expressive writing, and card design on recursive.eco.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Rider-Waite-Smith illustrations by Pamela Colman Smith (1909, US public domain). Tarot de Marseille woodcuts (Nicolas Conver, 1760). William Blake's illuminated prints. Medieval manuscript marginalia from the British Library's digitized collections.",
+      "grammar_type": "tarot",
       "creator_name": "PlayfulProcess",
       "tags": [
         "repair",
@@ -7177,8 +7229,9 @@
         "twelve-steps",
         "decolonial",
         "popular-culture",
-        "open-source-book",
-        "tarot-spine",
+        "open-source-deck",
+        "major-arcana",
+        "tarot",
         "vocation",
         "animism",
         "prayer",
@@ -7193,8 +7246,8 @@
         3
       ],
       "categories": [
-        "chapter",
         "emergence",
+        "major",
         "meta"
       ],
       "roots": [
@@ -9585,6 +9638,7 @@
         "playful-process-the-path-of-the-ontoject",
         "plotinus-enneads",
         "plutarchs-morals",
+        "plutchik-wheel-of-emotions",
         "polynesian-kids",
         "popol-vuh",
         "practice-presence-of-god",
@@ -9592,7 +9646,6 @@
         "principles-of-psychology",
         "prose-edda",
         "ramayana-kids",
-        "repair-an-open-source-book",
         "republic-plato",
         "revelations-divine-love",
         "rights-of-man",
@@ -9660,6 +9713,7 @@
         "luiza-lian",
         "playfulprocess-my-version-20260127220715",
         "relationship-cards",
+        "repair-an-open-source-book",
         "rider-waite-smith-tarot",
         "tarot-rws-etteilla",
         "voices-of-the-unwritten"
@@ -9767,6 +9821,9 @@
       ],
       "afanasyev": [
         "russian-folk-tales"
+      ],
+      "affective-science": [
+        "plutchik-wheel-of-emotions"
       ],
       "africa": [
         "olaudah-equiano"
@@ -10304,6 +10361,7 @@
         "just-so-stories",
         "nastacia-conta",
         "peter-pan",
+        "plutchik-wheel-of-emotions",
         "secret-garden",
         "through-the-looking-glass",
         "tom-sawyer",
@@ -10807,12 +10865,16 @@
       "emotion": [
         "expression-of-emotions"
       ],
+      "emotional-literacy": [
+        "plutchik-wheel-of-emotions"
+      ],
       "emotional-regulation": [
         "dbt-wise-heart"
       ],
       "emotions": [
         "ethics-spinoza",
-        "inner-triangle"
+        "inner-triangle",
+        "plutchik-wheel-of-emotions"
       ],
       "empiricism": [
         "pragmatism"
@@ -10971,6 +11033,9 @@
         "through-the-looking-glass",
         "wonderful-wizard-of-oz"
       ],
+      "feelings": [
+        "plutchik-wheel-of-emotions"
+      ],
       "feminine-divine": [
         "luiza-lian"
       ],
@@ -11022,7 +11087,8 @@
         "west-african-folk-tales"
       ],
       "folktales": [
-        "dbt-wise-heart"
+        "dbt-wise-heart",
+        "plutchik-wheel-of-emotions"
       ],
       "forest": [
         "alice-in-the-amazon"
@@ -11536,6 +11602,7 @@
         "maya-kids",
         "norse-kids",
         "one-story-kids",
+        "plutchik-wheel-of-emotions",
         "polynesian-kids",
         "ramayana-kids",
         "story-01-asking-not-complaining",
@@ -11660,6 +11727,7 @@
       ],
       "major-arcana": [
         "playful-process-the-path-of-the-ontoject",
+        "repair-an-open-source-book",
         "tarot-rws-etteilla"
       ],
       "maori": [
@@ -11888,7 +11956,8 @@
       "myths": [
         "alice-in-the-mythlands",
         "children-story-tree",
-        "dbt-wise-heart"
+        "dbt-wise-heart",
+        "plutchik-wheel-of-emotions"
       ],
       "nation-state": [
         "architecture-of-nations"
@@ -12021,8 +12090,10 @@
         "decolonizing-childhood"
       ],
       "open-source-book": [
-        "repair-an-open-source-book",
         "repair-iching"
+      ],
+      "open-source-deck": [
+        "repair-an-open-source-book"
       ],
       "oracle": [
         "aesops-fables",
@@ -12244,6 +12315,9 @@
       "plutarch": [
         "plutarchs-morals"
       ],
+      "plutchik": [
+        "plutchik-wheel-of-emotions"
+      ],
       "poetic": [
         "playful-process-the-path-of-the-ontoject"
       ],
@@ -12360,6 +12434,7 @@
         "interpretation-of-dreams",
         "jungian-archetypes",
         "myth-birth-hero-rank",
+        "plutchik-wheel-of-emotions",
         "principles-of-psychology",
         "seven-rays-bailey-expressions",
         "varieties-religious-experience"
@@ -12922,12 +12997,10 @@
       ],
       "tarot": [
         "emerald-death-card-visuals",
+        "repair-an-open-source-book",
         "rider-waite-smith-tarot",
         "tarot-rws-etteilla",
         "voices-of-the-unwritten"
-      ],
-      "tarot-spine": [
-        "repair-an-open-source-book"
       ],
       "tea": [
         "book-of-tea"
@@ -13158,6 +13231,9 @@
       ],
       "west-african": [
         "west-african-kids"
+      ],
+      "wheel-of-emotions": [
+        "plutchik-wheel-of-emotions"
       ],
       "whiteness": [
         "darkwater"
@@ -13419,6 +13495,7 @@
         "playful-process-the-path-of-the-ontoject",
         "plotinus-enneads",
         "plutarchs-morals",
+        "plutchik-wheel-of-emotions",
         "polynesian-kids",
         "popol-vuh",
         "practice-presence-of-god",
@@ -13778,7 +13855,8 @@
       ],
       "mythopoetic": [
         "animal-fables",
-        "dbt-wise-heart"
+        "dbt-wise-heart",
+        "plutchik-wheel-of-emotions"
       ],
       "mythopoetic-enchantment": [
         "biblical-stories-kids",
@@ -13947,6 +14025,7 @@
         "norse-kids",
         "one-story-kids",
         "peter-pan",
+        "plutchik-wheel-of-emotions",
         "polynesian-kids",
         "ramayana-kids",
         "secret-garden",
@@ -14132,6 +14211,7 @@
         "pistis-sophia",
         "plotinus-enneads",
         "plutarchs-morals",
+        "plutchik-wheel-of-emotions",
         "polynesian-kids",
         "practice-presence-of-god",
         "repair-an-open-source-book",
@@ -14357,6 +14437,7 @@
         "inner-triangle",
         "middlemarch",
         "plutarchs-morals",
+        "plutchik-wheel-of-emotions",
         "principles-of-psychology",
         "relationship-cards",
         "repair-an-open-source-book",
@@ -14423,6 +14504,7 @@
         "phaedo-plato",
         "plotinus-enneads",
         "plutarchs-morals",
+        "plutchik-wheel-of-emotions",
         "practice-presence-of-god",
         "principles-of-psychology",
         "relationship-cards",
