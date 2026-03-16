@@ -62,6 +62,7 @@ This folder exists in that spirit.
 | Arthur de Gobineau — Essay on Inequality of Races | Foundational race science | Du Bois, every Black intellectual since |
 | Madison Grant / Lothrop Stoddard | American eugenics | The Harlem Renaissance, in its entirety |
 | Alice Bailey / Blavatsky | Spiritual racism, root races | Andreotti's "hospicing modernity" |
+| Brothers Grimm — Kinder- und Hausmärchen | Not folklore but a nationalist editorial project: collected from literate families (not peasants), rewrote across 7 editions to Germanify pan-European stories, erased (mostly female) storytellers, weaponized by Nazi propaganda as proof of 'German spirit,' laundered through Disney into 'universal' children's culture | Jack Zipes, Ruth Bottigheimer, Maria Tatar, the unnamed women storytellers (Viehmann, Wild, Hassenpflug); new growth: Roots of Moana, Roots of Frozen II |
 
 ## For the Children
 

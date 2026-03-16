@@ -263,3 +263,67 @@ Package related grammars together:
 ```
 
 This would install all three grammars and enable deep linking between them.
+
+---
+
+## 8. DBT Skills Through Myth — "The Wise Heart" Grammar
+
+### The Vision
+Teach all four DBT skill modules to children through world myths and folktales, using the Daniel Tiger pattern: **name the skill → embed it in a story → give it a song/mantra → no shame**.
+
+Daniel Tiger works because:
+1. The skill is named ("When you feel so mad that you want to roar, take a deep breath and count to four")
+2. The story embeds the skill in a relatable emotional situation
+3. The repetition makes it a mantra the child can retrieve under stress
+4. No shame — Daniel gets mad. The skill isn't "don't feel." It's "here's what to do when you feel."
+
+This is Linehan's model exactly — she built DBT from Zen, behavioral science, and lived experience.
+
+### Structure
+
+| Level | What | Example |
+|-------|------|---------|
+| **L3** | Meta: "The Wise Heart" | The whole system |
+| **L2** | DBT Modules | Distress Tolerance, Emotional Regulation, Interpersonal Effectiveness, Mindfulness |
+| **L2** | Skill Groups | "Riding the Wave" (distress tolerance skills), "The Feeling Thermometer" (emotion regulation) |
+| **L1** | Individual stories | Each myth/tale, tagged to a specific skill |
+
+### DBT Modules Mapped to Myth
+
+| DBT Module | Core Teaching | Myth Examples | The Song (Daniel Tiger-style mantra) |
+|------------|--------------|---------------|--------------------------------------|
+| **Distress Tolerance** | Enduring pain without making it worse | Inanna's descent, Jonah in the whale, Orpheus in the underworld, Psyche's tasks | "When the dark feels too deep and too wide / breathe and ride, breathe and ride" |
+| **Emotional Regulation** | Naming and modulating emotions | The fox in The Golden Bird ("take the shabby cage"), Aesop's "The Dog and the Shadow" | "Name what you feel, say it out loud / feelings are visitors, not a crowd" |
+| **Interpersonal Effectiveness** | Asking for what you need, saying no | Anansi the Spider (negotiation), Nasreddin (boundaries with humor), Scheherazade (narrative as survival) | "Use your words, say what you need / kind and clear, like planting a seed" |
+| **Mindfulness** | Paying attention to what's actually here | The youngest son who listens to the fox, Zen koans, "The Blind Men and the Elephant" | "Stop and look with quiet eyes / what is here? what is wise?" |
+
+### Sections Per Item
+
+Each L1 story item would include:
+- **"The Story"** — The myth/folktale retold for children (age-adapted)
+- **"The Song"** — The Daniel Tiger-style mantra (repeatable, singable, retrievable under stress)
+- **"The Skill"** — Named DBT skill in plain language ("This story teaches: riding the wave of big feelings")
+- **"For Parents"** — The DBT skill name, what it teaches, how to practice it after reading
+- **"Try This"** — A concrete practice or game related to the skill
+- **"Reflection"** — A question for older children
+
+### Source Material (Public Domain Myths to Draw From)
+
+The beauty is that existing grammars already contain many of these stories:
+- **Aesop's Fables** (Gutenberg #11339) — impulse control, consequences, perspective-taking
+- **Jataka Tales** (Gutenberg #20564) — compassion, patience, generosity (Buddhist birth stories)
+- **Italian Popular Tales** (Gutenberg #23634) — wit, negotiation, cleverness as survival
+- **Panchatantra** (Gutenberg #25545) — practical wisdom through animal fables
+- **Grimm's Fairy Tales** (already in grammars/) — transformation, endurance, trust
+- **Greek Mythology** (from memory) — hubris, catharsis, the underworld journey
+- **Anansi stories** (from memory / African Folk Tales) — trickster wisdom, negotiation
+- **Nasreddin** (from memory) — Sufi humor as emotional regulation
+
+### Phase 1: First Draft
+Build from existing public domain myths mapped to DBT skills. Each story is a standalone L1 item within the skill module structure.
+
+### Phase 2: Character Frame
+Develop a recurring character (or characters) who visit each myth/skill — a frame narrative like Scheherazade or Phileas Fogg. The character encounters each story as part of their own journey, giving children a through-line and a protagonist to identify with.
+
+### Design Note
+This grammar is NOT the compost shelf. It's new growth — the kind of thing that *emerges* from honest framing. Instead of inheriting the Grimms' nationalist editorial choices uncritically, we consciously choose stories from world traditions that teach specific emotional skills. The editorial stance is explicit: we are building the society we want to live in.
