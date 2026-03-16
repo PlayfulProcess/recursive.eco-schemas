@@ -1,6 +1,6 @@
 {
   "generated": true,
-  "grammar_count": 219,
+  "grammar_count": 237,
   "grammars": {
     "a-little-princess": {
       "id": "a-little-princess",
@@ -177,6 +177,56 @@
       "lineages": [],
       "worldview": ""
     },
+    "aesops-fables-storyboard": {
+      "id": "aesops-fables-storyboard",
+      "name": "Aesop's Fables for Little Ones — Storyboard",
+      "description": "Production storyboard for animated series based on 30 of Aesop's most beloved fables. Each fable is a 5-minute episode split into 3 scenes with rhyming narration, AI image prompts, and camera directions. Designed for AI-animated episodes in the style of Mati and Dada. Source: Project Gutenberg eBook #21 (https://www.gutenberg.org/ebooks/21).\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Arthur Rackham's 1912 illustrations for 'Aesop's Fables' (Heinemann) — pen-and-ink drawings with watercolor. Milo Winter's 1919 illustrations for 'The Aesop for Children' (Rand McNally) — full-color. Walter Crane's 1887 'The Baby's Own Aesop' — woodcut-style. Ernest Griset's 1869 illustrations (Cassell) — detailed pen-and-ink.",
+      "grammar_type": "sequence",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "aesop",
+        "fables",
+        "animals",
+        "morals",
+        "greek",
+        "wisdom",
+        "kids",
+        "bedtime",
+        "rhyming",
+        "storyboard",
+        "animation",
+        "ai-cartoon",
+        "5-minute-episodes"
+      ],
+      "item_count": 120,
+      "levels": [
+        1,
+        2
+      ],
+      "categories": [
+        "episodes",
+        "greed-and-contentment",
+        "honesty-and-truth",
+        "kindness-and-friendship",
+        "patience-and-perseverance",
+        "pride-and-pretending",
+        "wisdom-and-cleverness"
+      ],
+      "roots": [
+        "european-philosophy",
+        "mythopoetic-enchantment"
+      ],
+      "shelves": [
+        "children",
+        "wisdom",
+        "wonder"
+      ],
+      "lineages": [
+        "Andreotti",
+        "Kelty"
+      ],
+      "worldview": "dialectical"
+    },
     "alchemy-ancient-modern": {
       "id": "alchemy-ancient-modern",
       "name": "Alchemy: Ancient and Modern",
@@ -334,6 +384,57 @@
         "emergence-region",
         "emergence-theme",
         "meta",
+        "the-americas",
+        "the-ancient-world",
+        "the-frame"
+      ],
+      "roots": [
+        "animism",
+        "eastern-wisdom",
+        "liberation"
+      ],
+      "shelves": [
+        "wonder",
+        "children",
+        "wisdom"
+      ],
+      "lineages": [
+        "Akomolafe",
+        "Shrei",
+        "Andreotti"
+      ],
+      "worldview": "animist"
+    },
+    "alice-in-the-mythlands-storyboard": {
+      "id": "alice-in-the-mythlands-storyboard",
+      "name": "Alice in the Mythlands: Where the Stories Begin — Storyboard",
+      "description": "Production storyboard for animated series based on Alice in the Mythlands: Where the Stories Begin. Each story is split into 4-8 scenes with narration arcs, AI image generation prompts, camera directions, and public domain illustration references. Designed for 5-minute AI-animated episodes in the style of Mati and Dada.",
+      "grammar_type": "sequence",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "poetry",
+        "rhyming",
+        "alice",
+        "myths",
+        "children",
+        "origin-stories",
+        "indigenous",
+        "creation",
+        "trickster",
+        "cross-cultural",
+        "wonder",
+        "storyboard",
+        "animation",
+        "ai-cartoon",
+        "5-minute-episodes"
+      ],
+      "item_count": 75,
+      "levels": [
+        1,
+        2
+      ],
+      "categories": [
+        "episodes",
         "the-americas",
         "the-ancient-world",
         "the-frame"
@@ -973,6 +1074,54 @@
       "lineages": [],
       "worldview": ""
     },
+    "ballet-history-tree": {
+      "id": "ballet-history-tree",
+      "name": "Ballet History Tree",
+      "description": "A decolonial map of classical ballet — 13 landmark ballets traced from the sanitized stage back to their original stories, the traditions they silenced or borrowed from, and the movements they birthed. Each ballet is a node in a tree with three root systems: the choreographic innovation it brought to dance, the darker or richer original narrative it softened, and the living traditions it caricatured or could be in dialogue with. For every classic, a kid-friendly countercultural dance or theater piece is offered as a companion — something that breaks the frame while keeping the wonder.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Edgar Degas ballet paintings and pastels (1870s-1890s) — rehearsal rooms, stage scenes, dancers at the barre, public domain. Henri de Toulouse-Lautrec dance lithographs (1890s) — theatrical posters and backstage scenes, public domain. Léon Bakst costume and set designs for Ballets Russes (1909-1921) — vivid orientalist designs for Firebird, Scheherazade, and others, public domain. Alexandre Benois set designs for Petrouchka and other Diaghilev productions (1910s), public domain. Valentin Serov's portrait of Ida Rubinstein and Anna Pavlova sketches, public domain.",
+      "grammar_type": "custom",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "ballet",
+        "dance",
+        "history",
+        "colonialism",
+        "decolonial",
+        "fairy-tales",
+        "european-canon",
+        "kids",
+        "movement",
+        "theater"
+      ],
+      "item_count": 25,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "by-colonial-pattern",
+        "by-decolonial-lineage",
+        "by-era",
+        "imperial-russian",
+        "meta",
+        "modernist-rupture",
+        "romantic-ballet"
+      ],
+      "roots": [
+        "western-canon",
+        "decolonial-thought"
+      ],
+      "shelves": [
+        "mirror",
+        "contested",
+        "wonder"
+      ],
+      "lineages": [
+        "Andreotti",
+        "Shrei"
+      ],
+      "worldview": "dialectical"
+    },
     "ballet-living-architecture": {
       "id": "ballet-living-architecture",
       "name": "Ballet: A Living Architecture",
@@ -1123,6 +1272,62 @@
         "dreamers-seers",
         "kings-queens-hidden-princesses",
         "meta-arcs",
+        "shaman-from-nazareth",
+        "star-messengers",
+        "the-living-world",
+        "tricksters-unlikely-heroes",
+        "warriors-giants"
+      ],
+      "roots": [
+        "mythopoetic-enchantment",
+        "eastern-wisdom"
+      ],
+      "shelves": [
+        "children",
+        "wonder",
+        "wisdom"
+      ],
+      "lineages": [
+        "Shrei",
+        "Andreotti"
+      ],
+      "worldview": "animist"
+    },
+    "biblical-stories-kids-storyboard": {
+      "id": "biblical-stories-kids-storyboard",
+      "name": "Stories from the Living Stars — Storyboard",
+      "description": "Production storyboard for animated series based on Stories from the Living Stars. Each story is split into 4-8 scenes with narration arcs, AI image generation prompts, camera directions, and public domain illustration references. Designed for 5-minute AI-animated episodes in the style of Mati and Dada.",
+      "grammar_type": "sequence",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "bible",
+        "kids",
+        "bedtime",
+        "rhyming",
+        "esoteric",
+        "animist",
+        "cosmic-christ",
+        "steiner",
+        "campbell",
+        "hero-journey",
+        "karaoke",
+        "tts",
+        "illustrated",
+        "five-minute-stories",
+        "storyboard",
+        "animation",
+        "ai-cartoon",
+        "5-minute-episodes"
+      ],
+      "item_count": 192,
+      "levels": [
+        1,
+        2
+      ],
+      "categories": [
+        "dreamers-seers",
+        "episodes",
+        "kings-queens-hidden-princesses",
         "shaman-from-nazareth",
         "star-messengers",
         "the-living-world",
@@ -2316,6 +2521,99 @@
       ],
       "worldview": "rationalist"
     },
+    "disney-decolonial-tree": {
+      "id": "disney-decolonial-tree",
+      "name": "Disney Decolonial Tree",
+      "description": "A living map of Disney's animated canon split into two root systems: the composting pile (films, scenes, and myths that encode colonial logic and are dying — or need to die — with honesty) and the thriving canopy (films where something genuinely new is growing from indigenous, diasporic, or non-Western soil). Each film is traced back to its original mythos — the real Pocahontas, the actual Polynesian wayfinding tradition, the Sámi reindeer herders Frozen 2 quietly honored — and forward to what Disney did with it. The Romantic Myth of True Love gets its own composting ceremony. Not a cancellation list. A forest inventory: what's rotting, what's sprouting, and what nutrients the rot is releasing into the soil.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Kay Nielsen's illustrations for 'East of the Sun, West of the Moon' (1914) and his Disney concept art (much now in public domain). Edmund Dulac's fairy tale illustrations (1910s) — orientalist but extraordinarily beautiful. Arthur Rackham's fairy tale work. Warwick Goble's Indian fairy tale illustrations (1912). Gustave Doré's fairy tale engravings. John Bauer's Scandinavian troll and forest illustrations (1907-1915) — directly relevant to Frozen's Nordic roots.",
+      "grammar_type": "custom",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "disney",
+        "decolonial",
+        "kids",
+        "fairy-tales",
+        "colonialism",
+        "indigenous",
+        "myth",
+        "true-love",
+        "composting",
+        "animation",
+        "film"
+      ],
+      "item_count": 24,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "by-pattern",
+        "composting",
+        "composting-myth",
+        "meta",
+        "thriving",
+        "transitional"
+      ],
+      "roots": [
+        "western-canon",
+        "decolonial-thought"
+      ],
+      "shelves": [
+        "contested",
+        "children",
+        "composting",
+        "wonder"
+      ],
+      "lineages": [
+        "Andreotti",
+        "Shrei",
+        "Akomolafe"
+      ],
+      "worldview": "dialectical"
+    },
+    "disney-dreams-the-original-selves": {
+      "id": "disney-dreams-the-original-selves",
+      "name": "Disney Dreams: The Original Selves",
+      "description": "What happens when Disney characters fall asleep and meet the REAL people they were based on? Eight silly, respectful, rhyming dream-stories for five-year-olds in which Ariel meets the girl who became sea foam, Pocahontas meets the real Amonute who was only twelve, Sleeping Beauty meets a Viking warrior woman, and Aladdin meets the Syrian man who actually made up his story. Each dream is a gentle introduction to the richer, stranger, older versions of the stories kids already love — told in verse, with proper attribution to the original sources, and just enough silliness to keep a kindergartener giggling.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Vilhelm Pedersen's original illustrations for Hans Christian Andersen's fairy tales (1849) — the first and most authentic visual interpretations, public domain. Kay Nielsen's 'East of the Sun, West of the Moon' (1914) — luminous art nouveau fairy tale illustrations. Arthur Rackham's fairy tale work (1900s-1930s). Edmund Dulac's Arabian Nights illustrations (1907). Warwick Goble's 'Indian Myth and Legend' illustrations (1913). John Bauer's Scandinavian troll and forest illustrations (1907-1915).",
+      "grammar_type": "custom",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "disney",
+        "kids",
+        "dreams",
+        "fairy-tales",
+        "rhyme",
+        "decolonial",
+        "original-stories",
+        "five-year-olds",
+        "characters",
+        "silly"
+      ],
+      "item_count": 27,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "disney-version",
+        "dream-encounter",
+        "meta",
+        "original-version"
+      ],
+      "roots": [
+        "western-canon",
+        "decolonial-thought"
+      ],
+      "shelves": [
+        "children",
+        "wonder"
+      ],
+      "lineages": [
+        "Andreotti"
+      ],
+      "worldview": "animist"
+    },
     "dreamtime-kids": {
       "id": "dreamtime-kids",
       "name": "The Songlines: Stories from the Dreaming",
@@ -2345,6 +2643,62 @@
         3
       ],
       "categories": [
+        "the-animal-teachers",
+        "the-dreaming",
+        "the-law",
+        "the-rainbow-serpent",
+        "the-sky-stories",
+        "the-songlines"
+      ],
+      "roots": [
+        "mythopoetic-enchantment",
+        "contested-roots"
+      ],
+      "shelves": [
+        "children",
+        "wonder",
+        "earth"
+      ],
+      "lineages": [
+        "Shrei",
+        "Akomolafe",
+        "Andreotti"
+      ],
+      "worldview": "animist"
+    },
+    "dreamtime-kids-storyboard": {
+      "id": "dreamtime-kids-storyboard",
+      "name": "The Songlines: Stories from the Dreaming — Storyboard",
+      "description": "Production storyboard for animated series based on The Songlines: Stories from the Dreaming. Each story is split into 4-8 scenes with narration arcs, AI image generation prompts, camera directions, and public domain illustration references. Designed for 5-minute AI-animated episodes in the style of Mati and Dada.",
+      "grammar_type": "sequence",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "aboriginal",
+        "australian",
+        "dreaming",
+        "dreamtime",
+        "songlines",
+        "rainbow-serpent",
+        "country",
+        "law",
+        "animist",
+        "indigenous",
+        "kids",
+        "bedtime",
+        "rhyming",
+        "esoteric",
+        "storyboard",
+        "animation",
+        "ai-cartoon",
+        "5-minute-episodes"
+      ],
+      "item_count": 168,
+      "levels": [
+        1,
+        2
+      ],
+      "categories": [
+        "episodes",
         "the-animal-teachers",
         "the-dreaming",
         "the-law",
@@ -2486,6 +2840,61 @@
       "categories": [
         "horus-the-avenger",
         "meta-arcs",
+        "osiris-and-isis",
+        "the-animal-gods",
+        "the-first-sunrise",
+        "the-journey-through-night",
+        "the-weighing-of-the-heart"
+      ],
+      "roots": [
+        "mythopoetic-enchantment",
+        "eastern-wisdom"
+      ],
+      "shelves": [
+        "children",
+        "wonder",
+        "wisdom"
+      ],
+      "lineages": [
+        "Shrei",
+        "Andreotti"
+      ],
+      "worldview": "animist"
+    },
+    "egyptian-kids-storyboard": {
+      "id": "egyptian-kids-storyboard",
+      "name": "The Sun's Children: Stories from the Nile — Storyboard",
+      "description": "Production storyboard for animated series based on The Sun's Children: Stories from the Nile. Each story is split into 4-8 scenes with narration arcs, AI image generation prompts, camera directions, and public domain illustration references. Designed for 5-minute AI-animated episodes in the style of Mati and Dada.",
+      "grammar_type": "sequence",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "egyptian",
+        "ancient-egypt",
+        "pharaoh",
+        "ra",
+        "isis",
+        "osiris",
+        "horus",
+        "anubis",
+        "nile",
+        "kids",
+        "bedtime",
+        "rhyming",
+        "esoteric",
+        "animist",
+        "storyboard",
+        "animation",
+        "ai-cartoon",
+        "5-minute-episodes"
+      ],
+      "item_count": 168,
+      "levels": [
+        1,
+        2
+      ],
+      "categories": [
+        "episodes",
+        "horus-the-avenger",
         "osiris-and-isis",
         "the-animal-gods",
         "the-first-sunrise",
@@ -4015,6 +4424,63 @@
       ],
       "worldview": "animist"
     },
+    "homer-kids-storyboard": {
+      "id": "homer-kids-storyboard",
+      "name": "The Wine-Dark Sea: Homer for Bedtime — Storyboard",
+      "description": "Production storyboard for animated series based on The Wine-Dark Sea: Homer for Bedtime. Each story is split into 4-8 scenes with narration arcs, AI image generation prompts, camera directions, and public domain illustration references. Designed for 5-minute AI-animated episodes in the style of Mati and Dada.",
+      "grammar_type": "sequence",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "homer",
+        "iliad",
+        "odyssey",
+        "greek",
+        "mythology",
+        "kids",
+        "bedtime",
+        "rhyming",
+        "esoteric",
+        "animist",
+        "campbell",
+        "hero-journey",
+        "trickster",
+        "karaoke",
+        "tts",
+        "illustrated",
+        "five-minute-stories",
+        "trojan-war",
+        "storyboard",
+        "animation",
+        "ai-cartoon",
+        "5-minute-episodes"
+      ],
+      "item_count": 169,
+      "levels": [
+        1,
+        2
+      ],
+      "categories": [
+        "episodes",
+        "the-echo",
+        "the-gods",
+        "the-heroes",
+        "the-homecoming",
+        "the-voyage",
+        "the-wrath"
+      ],
+      "roots": [
+        "mythopoetic-enchantment"
+      ],
+      "shelves": [
+        "children",
+        "wonder"
+      ],
+      "lineages": [
+        "Shrei",
+        "Andreotti"
+      ],
+      "worldview": "animist"
+    },
     "human-body": {
       "id": "human-body",
       "name": "The Human Body: An Emergent Symphony",
@@ -4824,6 +5290,62 @@
       ],
       "worldview": "animist"
     },
+    "king-arthur-kids-storyboard": {
+      "id": "king-arthur-kids-storyboard",
+      "name": "Sword and Grail: King Arthur for Bedtime — Storyboard",
+      "description": "Production storyboard for animated series based on Sword and Grail: King Arthur for Bedtime. Each story is split into 4-8 scenes with narration arcs, AI image generation prompts, camera directions, and public domain illustration references. Designed for 5-minute AI-animated episodes in the style of Mati and Dada.",
+      "grammar_type": "sequence",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "arthurian",
+        "kids",
+        "bedtime",
+        "rhyming",
+        "esoteric",
+        "celtic",
+        "grail",
+        "merlin",
+        "camelot",
+        "round-table",
+        "campbell",
+        "hero-journey",
+        "karaoke",
+        "tts",
+        "illustrated",
+        "five-minute-stories",
+        "shamanism",
+        "storyboard",
+        "animation",
+        "ai-cartoon",
+        "5-minute-episodes"
+      ],
+      "item_count": 170,
+      "levels": [
+        1,
+        2
+      ],
+      "categories": [
+        "episodes",
+        "the-fall",
+        "the-fellowship",
+        "the-grail",
+        "the-quests",
+        "the-return",
+        "the-sword"
+      ],
+      "roots": [
+        "mythopoetic-enchantment"
+      ],
+      "shelves": [
+        "children",
+        "wonder"
+      ],
+      "lineages": [
+        "Shrei",
+        "Andreotti"
+      ],
+      "worldview": "animist"
+    },
     "kybalion": {
       "id": "kybalion",
       "name": "The Kybalion",
@@ -5227,6 +5749,61 @@
       ],
       "categories": [
         "meta-arcs",
+        "seven-macaw",
+        "the-ballcourt",
+        "the-corn",
+        "the-fathers",
+        "the-silence",
+        "the-twins"
+      ],
+      "roots": [
+        "mythopoetic-enchantment",
+        "contested-roots"
+      ],
+      "shelves": [
+        "children",
+        "wonder",
+        "wisdom"
+      ],
+      "lineages": [
+        "Shrei",
+        "Andreotti"
+      ],
+      "worldview": "animist"
+    },
+    "maya-kids-storyboard": {
+      "id": "maya-kids-storyboard",
+      "name": "The Ballcourt of the Gods: Stories from the Maya — Storyboard",
+      "description": "Production storyboard for animated series based on The Ballcourt of the Gods: Stories from the Maya. Each story is split into 4-8 scenes with narration arcs, AI image generation prompts, camera directions, and public domain illustration references. Designed for 5-minute AI-animated episodes in the style of Mati and Dada.",
+      "grammar_type": "sequence",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "maya",
+        "kiche",
+        "popol-vuh",
+        "hero-twins",
+        "xibalba",
+        "quetzalcoatl",
+        "corn",
+        "mesoamerican",
+        "ballgame",
+        "kids",
+        "bedtime",
+        "rhyming",
+        "esoteric",
+        "animist",
+        "storyboard",
+        "animation",
+        "ai-cartoon",
+        "5-minute-episodes"
+      ],
+      "item_count": 168,
+      "levels": [
+        1,
+        2
+      ],
+      "categories": [
+        "episodes",
         "seven-macaw",
         "the-ballcourt",
         "the-corn",
@@ -6215,6 +6792,61 @@
       ],
       "worldview": "animist"
     },
+    "norse-kids-storyboard": {
+      "id": "norse-kids-storyboard",
+      "name": "The World Tree: Stories from the North — Storyboard",
+      "description": "Production storyboard for animated series based on The World Tree: Stories from the North. Each story is split into 4-8 scenes with narration arcs, AI image generation prompts, camera directions, and public domain illustration references. Designed for 5-minute AI-animated episodes in the style of Mati and Dada.",
+      "grammar_type": "sequence",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "norse",
+        "viking",
+        "odin",
+        "thor",
+        "loki",
+        "ragnarok",
+        "yggdrasil",
+        "runes",
+        "eddas",
+        "kids",
+        "bedtime",
+        "rhyming",
+        "esoteric",
+        "animist",
+        "storyboard",
+        "animation",
+        "ai-cartoon",
+        "5-minute-episodes"
+      ],
+      "item_count": 168,
+      "levels": [
+        1,
+        2
+      ],
+      "categories": [
+        "episodes",
+        "the-allfather",
+        "the-green",
+        "the-thunder",
+        "the-trickster",
+        "the-twilight",
+        "the-void"
+      ],
+      "roots": [
+        "mythopoetic-enchantment",
+        "european-philosophy"
+      ],
+      "shelves": [
+        "children",
+        "wonder",
+        "wisdom"
+      ],
+      "lineages": [
+        "Shrei",
+        "Andreotti"
+      ],
+      "worldview": "animist"
+    },
     "olaudah-equiano": {
       "id": "olaudah-equiano",
       "name": "The Interesting Narrative of the Life of Olaudah Equiano",
@@ -6909,6 +7541,61 @@
       ],
       "worldview": "animist"
     },
+    "polynesian-kids-storyboard": {
+      "id": "polynesian-kids-storyboard",
+      "name": "The Ocean's Children: Stories from the Pacific — Storyboard",
+      "description": "Production storyboard for animated series based on The Ocean's Children: Stories from the Pacific. Each story is split into 4-8 scenes with narration arcs, AI image generation prompts, camera directions, and public domain illustration references. Designed for 5-minute AI-animated episodes in the style of Mati and Dada.",
+      "grammar_type": "sequence",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "polynesian",
+        "maori",
+        "hawaiian",
+        "samoan",
+        "pacific",
+        "ocean",
+        "maui",
+        "pele",
+        "navigation",
+        "kids",
+        "bedtime",
+        "rhyming",
+        "esoteric",
+        "animist",
+        "storyboard",
+        "animation",
+        "ai-cartoon",
+        "5-minute-episodes"
+      ],
+      "item_count": 168,
+      "levels": [
+        1,
+        2
+      ],
+      "categories": [
+        "episodes",
+        "maui-the-trickster",
+        "pele-and-the-volcano",
+        "the-ancestors",
+        "the-navigators",
+        "the-separation",
+        "the-waka"
+      ],
+      "roots": [
+        "mythopoetic-enchantment",
+        "eastern-wisdom"
+      ],
+      "shelves": [
+        "children",
+        "wonder",
+        "wisdom"
+      ],
+      "lineages": [
+        "Shrei",
+        "Andreotti"
+      ],
+      "worldview": "animist"
+    },
     "popol-vuh": {
       "id": "popol-vuh",
       "name": "The Popol Vuh",
@@ -7145,6 +7832,67 @@
       ],
       "categories": [
         "meta-arc",
+        "the-exile",
+        "the-leap",
+        "the-prince",
+        "the-return",
+        "the-theft",
+        "the-war"
+      ],
+      "roots": [
+        "mythopoetic-enchantment"
+      ],
+      "shelves": [
+        "children",
+        "wonder"
+      ],
+      "lineages": [
+        "Shrei",
+        "Andreotti"
+      ],
+      "worldview": "animist"
+    },
+    "ramayana-kids-storyboard": {
+      "id": "ramayana-kids-storyboard",
+      "name": "Rama's Bow: The Ramayana for Bedtime — Storyboard",
+      "description": "Production storyboard for animated series based on Rama's Bow: The Ramayana for Bedtime. Each story is split into 4-8 scenes with narration arcs, AI image generation prompts, camera directions, and public domain illustration references. Designed for 5-minute AI-animated episodes in the style of Mati and Dada.",
+      "grammar_type": "sequence",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "ramayana",
+        "rama",
+        "sita",
+        "hanuman",
+        "hindu",
+        "mythology",
+        "kids",
+        "bedtime",
+        "rhyming",
+        "esoteric",
+        "animist",
+        "campbell",
+        "hero-journey",
+        "bhakti",
+        "devotion",
+        "karaoke",
+        "tts",
+        "illustrated",
+        "five-minute-stories",
+        "diwali",
+        "vishnu",
+        "avatar",
+        "storyboard",
+        "animation",
+        "ai-cartoon",
+        "5-minute-episodes"
+      ],
+      "item_count": 230,
+      "levels": [
+        1,
+        2
+      ],
+      "categories": [
+        "episodes",
         "the-exile",
         "the-leap",
         "the-prince",
@@ -7498,6 +8246,124 @@
         "Andreotti"
       ],
       "worldview": "rationalist"
+    },
+    "roots-of-frozen-ii": {
+      "id": "roots-of-frozen-ii",
+      "name": "Roots of Frozen II — Nordic Mythology, Sámi Culture & Elemental Spirits for Kids",
+      "description": "The real mythic, cultural, and musical traditions behind Disney's Frozen II — told for children. Explore the Sámi people's reindeer culture and sacred joik singing, Norse elemental spirits and frost giants, Scandinavian folk magic, the Northern Lights as ancestor spirits, and the deep forest traditions of northern Europe. Each card connects a real cultural tradition to the film moment it inspired.\n\nSources: Snorri Sturluson's 'Prose Edda' (c. 1220); Asbjørnsen & Moe's 'Norwegian Folktales' (1841-44); Elias Lönnrot's 'Kalevala' (1835/1849); Sámi cultural consultants and oral tradition. All written source texts are public domain.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Theodor Kittelsen's Norwegian fairy tale paintings (1880s-1900s) — haunting trolls, forests, and northern landscapes. John Bauer's Swedish fairy tale illustrations (1907-1915) — ethereal forests, trolls, and princesses. Kay Nielsen's 'East of the Sun and West of the Moon' illustrations (1914) — Art Nouveau Nordic fairy tales. W.G. Collingwood's Norse mythology illustrations (1908) — dramatic depictions of Edda scenes.",
+      "grammar_type": "custom",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "sami",
+        "nordic",
+        "norse",
+        "mythology",
+        "folklore",
+        "scandinavia",
+        "joik",
+        "reindeer",
+        "northern-lights",
+        "spirits",
+        "kids",
+        "cultural-roots",
+        "frozen-inspired",
+        "elements",
+        "norway",
+        "sweden",
+        "finland",
+        "ice",
+        "forest",
+        "shamanism"
+      ],
+      "item_count": 24,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "meta",
+        "music-and-arts",
+        "norse-elements",
+        "norse-mythology",
+        "sami-culture",
+        "scandinavian-folklore",
+        "theme-collections"
+      ],
+      "roots": [
+        "indigenous-knowledge",
+        "mythopoetic-enchantment"
+      ],
+      "shelves": [
+        "children",
+        "wonder",
+        "wisdom"
+      ],
+      "lineages": [
+        "Akomolafe",
+        "Shrei",
+        "Andreotti"
+      ],
+      "worldview": "animist"
+    },
+    "roots-of-moana": {
+      "id": "roots-of-moana",
+      "name": "Roots of Moana — Polynesian Mythology & Wayfinding for Kids",
+      "description": "The real mythic, cultural, and musical traditions behind Disney's Moana — told for children. Explore the demigod Māui's legendary feats, Polynesian star navigation, oceanic animism where every wave and wind has spirit, the sacred art of voyaging canoes, and the music traditions from hula to log drums. Each card connects a real cultural tradition to the film moment it inspired.\n\nSources: Polynesian oral tradition; George Grey's 'Polynesian Mythology' (1855); Martha Beckwith's 'Hawaiian Mythology' (1940); Johannes C. Andersen's 'Myths and Legends of the Polynesians' (1928). All source texts are public domain.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: John La Farge's Samoan and Tahitian paintings (1890s) — luminous tropical landscapes and Pacific Islander portraits. Arman Manookian's Hawaiian paintings (1920s) — bold figurative work of island life. Jacques Arago's voyage illustrations (1817-1820) — early European depictions of Pacific navigation and culture. Illustrations from 'Polynesian Mythology' by George Grey (1855 edition) — line engravings of Māui legends.",
+      "grammar_type": "custom",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "polynesian",
+        "mythology",
+        "maui",
+        "wayfinding",
+        "navigation",
+        "pacific-islands",
+        "animism",
+        "ocean",
+        "voyaging",
+        "hula",
+        "kids",
+        "cultural-roots",
+        "moana-inspired",
+        "demigod",
+        "hawaii",
+        "samoa",
+        "tonga",
+        "new-zealand",
+        "music",
+        "oral-tradition"
+      ],
+      "item_count": 25,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "ecology-and-relationship",
+        "maui-legends",
+        "meta",
+        "music-and-performance",
+        "oceanic-animism",
+        "theme-collections",
+        "wayfinding"
+      ],
+      "roots": [
+        "indigenous-knowledge",
+        "mythopoetic-enchantment"
+      ],
+      "shelves": [
+        "children",
+        "wonder",
+        "wisdom"
+      ],
+      "lineages": [
+        "Akomolafe",
+        "Shrei",
+        "Andreotti"
+      ],
+      "worldview": "animist"
     },
     "rosicrucian-mysteries": {
       "id": "rosicrucian-mysteries",
@@ -8735,6 +9601,60 @@
       ],
       "worldview": "non-dual"
     },
+    "tibetan-dream-kids-storyboard": {
+      "id": "tibetan-dream-kids-storyboard",
+      "name": "The Lands of Sleep: A Dream Guide for Bedtime — Storyboard",
+      "description": "Production storyboard for animated series based on The Lands of Sleep: A Dream Guide for Bedtime. Each story is split into 4-8 scenes with narration arcs, AI image generation prompts, camera directions, and public domain illustration references. Designed for 5-minute AI-animated episodes in the style of Mati and Dada.",
+      "grammar_type": "sequence",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "tibetan",
+        "buddhist",
+        "bardo",
+        "dreams",
+        "lucid-dreaming",
+        "sleep",
+        "nightmares",
+        "bedtime-ritual",
+        "kids",
+        "bedtime",
+        "rhyming",
+        "esoteric",
+        "non-dual",
+        "storyboard",
+        "animation",
+        "ai-cartoon",
+        "5-minute-episodes"
+      ],
+      "item_count": 144,
+      "levels": [
+        1,
+        2
+      ],
+      "categories": [
+        "episodes",
+        "the-dawn",
+        "the-deep",
+        "the-mirror",
+        "the-peaceful-lands",
+        "the-threshold",
+        "the-wrathful-guardians"
+      ],
+      "roots": [
+        "eastern-wisdom",
+        "mythopoetic-enchantment"
+      ],
+      "shelves": [
+        "children",
+        "wonder",
+        "wisdom"
+      ],
+      "lineages": [
+        "Shrei",
+        "Andreotti"
+      ],
+      "worldview": "non-dual"
+    },
     "tibetan-tales": {
       "id": "tibetan-tales",
       "name": "Tibetan Tales, Derived from Indian Sources",
@@ -9292,6 +10212,63 @@
       ],
       "worldview": "animist"
     },
+    "west-african-kids-storyboard": {
+      "id": "west-african-kids-storyboard",
+      "name": "Spider's Thread: Stories from West Africa — Storyboard",
+      "description": "Production storyboard for animated series based on Spider's Thread: Stories from West Africa. Each story is split into 4-8 scenes with narration arcs, AI image generation prompts, camera directions, and public domain illustration references. Designed for 5-minute AI-animated episodes in the style of Mati and Dada.",
+      "grammar_type": "sequence",
+      "creator_name": "PlayfulProcess",
+      "tags": [
+        "west-african",
+        "akan",
+        "ashanti",
+        "yoruba",
+        "igbo",
+        "anansi",
+        "orishas",
+        "trickster",
+        "griot",
+        "call-and-response",
+        "diaspora",
+        "kids",
+        "bedtime",
+        "rhyming",
+        "esoteric",
+        "animist",
+        "storyboard",
+        "animation",
+        "ai-cartoon",
+        "5-minute-episodes"
+      ],
+      "item_count": 168,
+      "levels": [
+        1,
+        2
+      ],
+      "categories": [
+        "anansis-bargain",
+        "episodes",
+        "the-ancestors-speak",
+        "the-crossing",
+        "the-orishas",
+        "the-return",
+        "the-tricksters-web"
+      ],
+      "roots": [
+        "mythopoetic-enchantment",
+        "contested-roots"
+      ],
+      "shelves": [
+        "children",
+        "wonder",
+        "resilience"
+      ],
+      "lineages": [
+        "Shrei",
+        "Akomolafe"
+      ],
+      "worldview": "animist"
+    },
     "wildflowers-of-california": {
       "id": "wildflowers-of-california",
       "name": "Wildflowers of California",
@@ -9512,6 +10489,7 @@
         "areopagitica",
         "art-of-love-ovid",
         "art-of-war",
+        "ballet-history-tree",
         "ballet-living-architecture",
         "beyond-good-and-evil",
         "bhagavad-gita",
@@ -9543,6 +10521,8 @@
         "dinosaur-tree",
         "diogenes-laertius",
         "discourses-epictetus",
+        "disney-decolonial-tree",
+        "disney-dreams-the-original-selves",
         "dreamtime-kids",
         "economic-ideas",
         "egyptian-ideas-future-life",
@@ -9649,6 +10629,8 @@
         "republic-plato",
         "revelations-divine-love",
         "rights-of-man",
+        "roots-of-frozen-ii",
+        "roots-of-moana",
         "rosicrucian-mysteries",
         "royal-ballet-and-opera",
         "russian-folk-tales",
@@ -9697,11 +10679,24 @@
         "repair-iching"
       ],
       "sequence": [
+        "aesops-fables-storyboard",
+        "alice-in-the-mythlands-storyboard",
         "art-with-mati-and-dada",
+        "biblical-stories-kids-storyboard",
+        "dreamtime-kids-storyboard",
+        "egyptian-kids-storyboard",
         "emerald-death-card-visuals",
+        "homer-kids-storyboard",
         "kids-workouts-gvo-kids-youtube-playlist",
+        "king-arthur-kids-storyboard",
+        "maya-kids-storyboard",
+        "norse-kids-storyboard",
+        "polynesian-kids-storyboard",
+        "ramayana-kids-storyboard",
         "story-01-asking-not-complaining",
-        "story-02-gratitude-not-praise"
+        "story-02-gratitude-not-praise",
+        "tibetan-dream-kids-storyboard",
+        "west-african-kids-storyboard"
       ],
       "tarot": [
         "alice-s-tarot-my-5-years-old",
@@ -9722,6 +10717,21 @@
     "by_tag": {
       "1001-nights": [
         "arabian-nights"
+      ],
+      "5-minute-episodes": [
+        "aesops-fables-storyboard",
+        "alice-in-the-mythlands-storyboard",
+        "biblical-stories-kids-storyboard",
+        "dreamtime-kids-storyboard",
+        "egyptian-kids-storyboard",
+        "homer-kids-storyboard",
+        "king-arthur-kids-storyboard",
+        "maya-kids-storyboard",
+        "norse-kids-storyboard",
+        "polynesian-kids-storyboard",
+        "ramayana-kids-storyboard",
+        "tibetan-dream-kids-storyboard",
+        "west-african-kids-storyboard"
       ],
       "American-philosophy": [
         "pragmatism"
@@ -9798,7 +10808,8 @@
         "sojourner-truth"
       ],
       "aboriginal": [
-        "dreamtime-kids"
+        "dreamtime-kids",
+        "dreamtime-kids-storyboard"
       ],
       "acting": [
         "theater-tree"
@@ -9815,6 +10826,9 @@
         "peter-pan",
         "tom-sawyer",
         "wonderful-wizard-of-oz"
+      ],
+      "aesop": [
+        "aesops-fables-storyboard"
       ],
       "aesthetics": [
         "book-of-tea"
@@ -9861,11 +10875,27 @@
         "story-01-asking-not-complaining",
         "story-02-gratitude-not-praise"
       ],
+      "ai-cartoon": [
+        "aesops-fables-storyboard",
+        "alice-in-the-mythlands-storyboard",
+        "biblical-stories-kids-storyboard",
+        "dreamtime-kids-storyboard",
+        "egyptian-kids-storyboard",
+        "homer-kids-storyboard",
+        "king-arthur-kids-storyboard",
+        "maya-kids-storyboard",
+        "norse-kids-storyboard",
+        "polynesian-kids-storyboard",
+        "ramayana-kids-storyboard",
+        "tibetan-dream-kids-storyboard",
+        "west-african-kids-storyboard"
+      ],
       "ai-voices": [
         "bus-grammar-system-prompts"
       ],
       "akan": [
-        "west-african-kids"
+        "west-african-kids",
+        "west-african-kids-storyboard"
       ],
       "alchemy": [
         "alchemy-ancient-modern",
@@ -9880,6 +10910,7 @@
         "alice-5-minute-stories",
         "alice-in-the-amazon",
         "alice-in-the-mythlands",
+        "alice-in-the-mythlands-storyboard",
         "alice-in-wonderland-chapter-book",
         "through-the-looking-glass"
       ],
@@ -9903,7 +10934,8 @@
       ],
       "anansi": [
         "west-african-folk-tales",
-        "west-african-kids"
+        "west-african-kids",
+        "west-african-kids-storyboard"
       ],
       "anarchism": [
         "economic-ideas",
@@ -9928,7 +10960,8 @@
         "shih-king"
       ],
       "ancient-egypt": [
-        "egyptian-kids"
+        "egyptian-kids",
+        "egyptian-kids-storyboard"
       ],
       "ancient-greece": [
         "diogenes-laertius",
@@ -9967,6 +11000,7 @@
       ],
       "animals": [
         "aesops-fables",
+        "aesops-fables-storyboard",
         "animal-fables",
         "expression-of-emotions",
         "fairy-tales-south-africa",
@@ -9981,25 +11015,51 @@
       "animated": [
         "emerald-kids-folk-tales"
       ],
+      "animation": [
+        "aesops-fables-storyboard",
+        "alice-in-the-mythlands-storyboard",
+        "biblical-stories-kids-storyboard",
+        "disney-decolonial-tree",
+        "dreamtime-kids-storyboard",
+        "egyptian-kids-storyboard",
+        "homer-kids-storyboard",
+        "king-arthur-kids-storyboard",
+        "maya-kids-storyboard",
+        "norse-kids-storyboard",
+        "polynesian-kids-storyboard",
+        "ramayana-kids-storyboard",
+        "tibetan-dream-kids-storyboard",
+        "west-african-kids-storyboard"
+      ],
       "animism": [
         "decolonization-five-domains",
         "folklore-north-american-indian",
         "myths-legends-great-plains",
         "myths-north-american-indians",
         "nastacia-conta",
-        "repair-an-open-source-book"
+        "repair-an-open-source-book",
+        "roots-of-moana"
       ],
       "animist": [
         "biblical-stories-kids",
+        "biblical-stories-kids-storyboard",
         "dreamtime-kids",
+        "dreamtime-kids-storyboard",
         "egyptian-kids",
+        "egyptian-kids-storyboard",
         "homer-kids",
+        "homer-kids-storyboard",
         "luiza-lian",
         "maya-kids",
+        "maya-kids-storyboard",
         "norse-kids",
+        "norse-kids-storyboard",
         "polynesian-kids",
+        "polynesian-kids-storyboard",
         "ramayana-kids",
-        "west-african-kids"
+        "ramayana-kids-storyboard",
+        "west-african-kids",
+        "west-african-kids-storyboard"
       ],
       "anthology": [
         "chinese-literature-anthology"
@@ -10016,7 +11076,8 @@
         "colonial-tongues"
       ],
       "anubis": [
-        "egyptian-kids"
+        "egyptian-kids",
+        "egyptian-kids-storyboard"
       ],
       "aphorism": [
         "beyond-good-and-evil"
@@ -10051,13 +11112,15 @@
       ],
       "arthurian": [
         "king-arthur-kids",
+        "king-arthur-kids-storyboard",
         "mabinogion"
       ],
       "asana": [
         "yoga-body-as-temple"
       ],
       "ashanti": [
-        "west-african-kids"
+        "west-african-kids",
+        "west-african-kids-storyboard"
       ],
       "asking": [
         "story-01-asking-not-complaining"
@@ -10089,7 +11152,8 @@
         "principles-of-psychology"
       ],
       "australian": [
-        "dreamtime-kids"
+        "dreamtime-kids",
+        "dreamtime-kids-storyboard"
       ],
       "autobiography": [
         "frederick-douglass",
@@ -10098,7 +11162,8 @@
         "up-from-slavery"
       ],
       "avatar": [
-        "ramayana-kids"
+        "ramayana-kids",
+        "ramayana-kids-storyboard"
       ],
       "baba-yaga": [
         "russian-folk-tales"
@@ -10110,13 +11175,16 @@
         "seven-rays-bailey-expressions"
       ],
       "ballet": [
+        "ballet-history-tree",
         "ballet-living-architecture"
       ],
       "ballgame": [
-        "maya-kids"
+        "maya-kids",
+        "maya-kids-storyboard"
       ],
       "bardo": [
-        "tibetan-dream-kids"
+        "tibetan-dream-kids",
+        "tibetan-dream-kids-storyboard"
       ],
       "basilius-valentinus": [
         "natural-supernatural-things"
@@ -10128,21 +11196,34 @@
         "symposium-plato"
       ],
       "bedtime": [
+        "aesops-fables-storyboard",
         "biblical-stories-kids",
+        "biblical-stories-kids-storyboard",
         "dreamtime-kids",
+        "dreamtime-kids-storyboard",
         "egyptian-kids",
+        "egyptian-kids-storyboard",
         "homer-kids",
+        "homer-kids-storyboard",
         "king-arthur-kids",
+        "king-arthur-kids-storyboard",
         "maya-kids",
+        "maya-kids-storyboard",
         "norse-kids",
+        "norse-kids-storyboard",
         "one-story-kids",
         "polynesian-kids",
+        "polynesian-kids-storyboard",
         "ramayana-kids",
+        "ramayana-kids-storyboard",
         "tibetan-dream-kids",
-        "west-african-kids"
+        "tibetan-dream-kids-storyboard",
+        "west-african-kids",
+        "west-african-kids-storyboard"
       ],
       "bedtime-ritual": [
-        "tibetan-dream-kids"
+        "tibetan-dream-kids",
+        "tibetan-dream-kids-storyboard"
       ],
       "bees": [
         "life-of-the-bee"
@@ -10164,10 +11245,12 @@
       ],
       "bhakti": [
         "bhagavad-gita",
-        "ramayana-kids"
+        "ramayana-kids",
+        "ramayana-kids-storyboard"
       ],
       "bible": [
         "biblical-stories-kids",
+        "biblical-stories-kids-storyboard",
         "song-of-songs"
       ],
       "big-bang": [
@@ -10240,7 +11323,8 @@
       ],
       "buddhist": [
         "indian-fairy-tales",
-        "tibetan-dream-kids"
+        "tibetan-dream-kids",
+        "tibetan-dream-kids-storyboard"
       ],
       "buffalo": [
         "myths-legends-great-plains"
@@ -10257,18 +11341,24 @@
         "wildflowers-of-california"
       ],
       "call-and-response": [
-        "west-african-kids"
+        "west-african-kids",
+        "west-african-kids-storyboard"
       ],
       "camelot": [
-        "king-arthur-kids"
+        "king-arthur-kids",
+        "king-arthur-kids-storyboard"
       ],
       "campbell": [
         "biblical-stories-kids",
+        "biblical-stories-kids-storyboard",
         "homer-kids",
+        "homer-kids-storyboard",
         "king-arthur-kids",
+        "king-arthur-kids-storyboard",
         "myths-through-many-eyes",
         "one-story-kids",
-        "ramayana-kids"
+        "ramayana-kids",
+        "ramayana-kids-storyboard"
       ],
       "canada": [
         "anne-of-green-gables"
@@ -10305,6 +11395,7 @@
         "celtic-fairy-tales",
         "hero-myths-british",
         "king-arthur-kids",
+        "king-arthur-kids-storyboard",
         "mabinogion"
       ],
       "censorship": [
@@ -10332,6 +11423,9 @@
         "tom-sawyer",
         "wonderful-wizard-of-oz"
       ],
+      "characters": [
+        "disney-dreams-the-original-selves"
+      ],
       "chemistry": [
         "alchemy-ancient-modern"
       ],
@@ -10346,6 +11440,7 @@
         "adventures-of-pinocchio",
         "alice-5-minute-stories",
         "alice-in-the-mythlands",
+        "alice-in-the-mythlands-storyboard",
         "alice-in-wonderland-chapter-book",
         "animal-fables",
         "anne-of-green-gables",
@@ -10460,7 +11555,9 @@
         "colonial-tongues"
       ],
       "colonialism": [
+        "ballet-history-tree",
         "darkwater",
+        "disney-decolonial-tree",
         "the-negro"
       ],
       "coloniality": [
@@ -10505,6 +11602,7 @@
         "economic-ideas"
       ],
       "composting": [
+        "disney-decolonial-tree",
         "giras-do-sitio",
         "grimms-fairy-tales",
         "nastacia-conta"
@@ -10558,10 +11656,12 @@
         "pistis-sophia"
       ],
       "corn": [
-        "maya-kids"
+        "maya-kids",
+        "maya-kids-storyboard"
       ],
       "cosmic-christ": [
-        "biblical-stories-kids"
+        "biblical-stories-kids",
+        "biblical-stories-kids-storyboard"
       ],
       "cosmology": [
         "alice-in-the-amazon",
@@ -10578,7 +11678,8 @@
         "archetypal-astrology-tarnas"
       ],
       "country": [
-        "dreamtime-kids"
+        "dreamtime-kids",
+        "dreamtime-kids-storyboard"
       ],
       "couples": [
         "relationship-cards"
@@ -10588,6 +11689,7 @@
       ],
       "creation": [
         "alice-in-the-mythlands",
+        "alice-in-the-mythlands-storyboard",
         "myths-legends-great-plains",
         "myths-north-american-indians",
         "timaeus-plato"
@@ -10609,6 +11711,7 @@
       ],
       "cross-cultural": [
         "alice-in-the-mythlands",
+        "alice-in-the-mythlands-storyboard",
         "decolonizing-childhood"
       ],
       "cross-references": [
@@ -10616,6 +11719,10 @@
       ],
       "crucifixion": [
         "gnostic-crucifixion"
+      ],
+      "cultural-roots": [
+        "roots-of-frozen-ii",
+        "roots-of-moana"
       ],
       "cultural-translation": [
         "luiza-lian"
@@ -10634,6 +11741,7 @@
       ],
       "dance": [
         "anthropological-dance",
+        "ballet-history-tree",
         "ballet-living-architecture",
         "embodied-grammars-constellation",
         "indian-classical-dance",
@@ -10663,9 +11771,12 @@
       ],
       "decolonial": [
         "alice-in-the-amazon",
+        "ballet-history-tree",
         "colonial-decolonial-music-spiral",
         "colonial-tongues",
         "decolonization-five-domains",
+        "disney-decolonial-tree",
+        "disney-dreams-the-original-selves",
         "gestures-towards-balanced-future",
         "giras-do-sitio",
         "nastacia-conta",
@@ -10675,6 +11786,9 @@
       "decolonization": [
         "decolonization-five-domains",
         "decolonizing-childhood"
+      ],
+      "demigod": [
+        "roots-of-moana"
       ],
       "democracy": [
         "common-sense",
@@ -10698,7 +11812,8 @@
       ],
       "devotion": [
         "indian-classical-dance",
-        "ramayana-kids"
+        "ramayana-kids",
+        "ramayana-kids-storyboard"
       ],
       "devotional": [
         "gitanjali",
@@ -10716,7 +11831,8 @@
         "symposium-plato"
       ],
       "diaspora": [
-        "west-african-kids"
+        "west-african-kids",
+        "west-african-kids-storyboard"
       ],
       "dinosaurs": [
         "dinosaur-tree"
@@ -10731,6 +11847,8 @@
         "ballet-living-architecture"
       ],
       "disney": [
+        "disney-decolonial-tree",
+        "disney-dreams-the-original-selves",
         "kids-workouts-gvo-kids-youtube-playlist"
       ],
       "distress-tolerance": [
@@ -10749,7 +11867,8 @@
         "voices-of-the-unwritten"
       ],
       "diwali": [
-        "ramayana-kids"
+        "ramayana-kids",
+        "ramayana-kids-storyboard"
       ],
       "double-consciousness": [
         "souls-of-black-folk"
@@ -10761,14 +11880,18 @@
         "shakespeare-ten-greatest"
       ],
       "dreaming": [
-        "dreamtime-kids"
+        "dreamtime-kids",
+        "dreamtime-kids-storyboard"
       ],
       "dreams": [
+        "disney-dreams-the-original-selves",
         "interpretation-of-dreams",
-        "tibetan-dream-kids"
+        "tibetan-dream-kids",
+        "tibetan-dream-kids-storyboard"
       ],
       "dreamtime": [
-        "dreamtime-kids"
+        "dreamtime-kids",
+        "dreamtime-kids-storyboard"
       ],
       "duration": [
         "creative-evolution"
@@ -10797,7 +11920,8 @@
         "economic-ideas"
       ],
       "eddas": [
-        "norse-kids"
+        "norse-kids",
+        "norse-kids-storyboard"
       ],
       "education": [
         "human-body",
@@ -10820,6 +11944,7 @@
       ],
       "egyptian": [
         "egyptian-kids",
+        "egyptian-kids-storyboard",
         "emerald-death-card-no-one-here-gets-out-alive",
         "emerald-death-card-visuals"
       ],
@@ -10828,6 +11953,9 @@
       ],
       "electronic": [
         "luiza-lian"
+      ],
+      "elements": [
+        "roots-of-frozen-ii"
       ],
       "eliphas-levi": [
         "history-of-magic-levi"
@@ -10922,27 +12050,38 @@
       "esoteric": [
         "alchemy-ancient-modern",
         "biblical-stories-kids",
+        "biblical-stories-kids-storyboard",
         "dreamtime-kids",
+        "dreamtime-kids-storyboard",
         "egyptian-kids",
+        "egyptian-kids-storyboard",
         "eleusinian-mysteries",
         "gnosis-of-light",
         "gnostic-crucifixion",
         "homer-kids",
+        "homer-kids-storyboard",
         "king-arthur-kids",
+        "king-arthur-kids-storyboard",
         "kybalion",
         "maya-kids",
+        "maya-kids-storyboard",
         "mirror-of-alchimy",
         "natural-supernatural-things",
         "new-light-alchymie",
         "norse-kids",
+        "norse-kids-storyboard",
         "pistis-sophia",
         "polynesian-kids",
+        "polynesian-kids-storyboard",
         "ramayana-kids",
+        "ramayana-kids-storyboard",
         "rosicrucian-mysteries",
         "seven-rays-ancient-roots",
         "seven-rays-bailey-expressions",
         "tibetan-dream-kids",
-        "west-african-kids"
+        "tibetan-dream-kids-storyboard",
+        "west-african-kids",
+        "west-african-kids-storyboard"
       ],
       "essay": [
         "book-of-tea",
@@ -10966,6 +12105,9 @@
       ],
       "european": [
         "ballet-living-architecture"
+      ],
+      "european-canon": [
+        "ballet-history-tree"
       ],
       "everyday": [
         "colonial-tongues"
@@ -10997,6 +12139,7 @@
       ],
       "fables": [
         "aesops-fables",
+        "aesops-fables-storyboard",
         "children-story-tree",
         "jungle-book",
         "just-so-stories",
@@ -11009,8 +12152,11 @@
       "fairy-tales": [
         "andersens-fairy-tales",
         "arabian-nights",
+        "ballet-history-tree",
         "celtic-fairy-tales",
         "children-story-tree",
+        "disney-decolonial-tree",
+        "disney-dreams-the-original-selves",
         "fairy-tales-south-africa",
         "grimms-fairy-tales",
         "indian-fairy-tales",
@@ -11052,14 +12198,27 @@
       "field-guide": [
         "wildflowers-of-california"
       ],
+      "film": [
+        "disney-decolonial-tree"
+      ],
+      "finland": [
+        "roots-of-frozen-ii"
+      ],
       "finnish": [
         "kalevala"
       ],
       "five-minute-stories": [
         "biblical-stories-kids",
+        "biblical-stories-kids-storyboard",
         "homer-kids",
+        "homer-kids-storyboard",
         "king-arthur-kids",
-        "ramayana-kids"
+        "king-arthur-kids-storyboard",
+        "ramayana-kids",
+        "ramayana-kids-storyboard"
+      ],
+      "five-year-olds": [
+        "disney-dreams-the-original-selves"
       ],
       "folk-songs": [
         "shih-king"
@@ -11084,6 +12243,7 @@
         "japanese-fairy-tales",
         "nastacia-conta",
         "philippine-folk-tales",
+        "roots-of-frozen-ii",
         "west-african-folk-tales"
       ],
       "folktales": [
@@ -11091,7 +12251,8 @@
         "plutchik-wheel-of-emotions"
       ],
       "forest": [
-        "alice-in-the-amazon"
+        "alice-in-the-amazon",
+        "roots-of-frozen-ii"
       ],
       "fractions": [
         "instituto-canoa-math-6"
@@ -11124,6 +12285,9 @@
       ],
       "friendship": [
         "plutarchs-morals"
+      ],
+      "frozen-inspired": [
+        "roots-of-frozen-ii"
       ],
       "fu-xi": [
         "i-ching-leibniz-binary"
@@ -11271,6 +12435,7 @@
       ],
       "grail": [
         "king-arthur-kids",
+        "king-arthur-kids-storyboard",
         "mabinogion"
       ],
       "gratitude": [
@@ -11281,11 +12446,13 @@
       ],
       "greek": [
         "aesops-fables",
+        "aesops-fables-storyboard",
         "animal-fables",
         "discourses-epictetus",
         "greek-mythology",
         "hesiod-homeric-hymns",
         "homer-kids",
+        "homer-kids-storyboard",
         "metamorphoses-ovid",
         "symposium-plato"
       ],
@@ -11301,7 +12468,8 @@
         "grimms-fairy-tales"
       ],
       "griot": [
-        "west-african-kids"
+        "west-african-kids",
+        "west-african-kids-storyboard"
       ],
       "group-work": [
         "instituto-canoa-math-6"
@@ -11316,11 +12484,16 @@
         "decolonizing-childhood"
       ],
       "hanuman": [
-        "ramayana-kids"
+        "ramayana-kids",
+        "ramayana-kids-storyboard"
+      ],
+      "hawaii": [
+        "roots-of-moana"
       ],
       "hawaiian": [
         "hawaiian-legends",
-        "polynesian-kids"
+        "polynesian-kids",
+        "polynesian-kids-storyboard"
       ],
       "healing": [
         "anon-shiryo-cat-stories",
@@ -11349,17 +12522,22 @@
       ],
       "hero-journey": [
         "biblical-stories-kids",
+        "biblical-stories-kids-storyboard",
         "homer-kids",
+        "homer-kids-storyboard",
         "king-arthur-kids",
+        "king-arthur-kids-storyboard",
         "myths-through-many-eyes",
         "ramayana-kids",
+        "ramayana-kids-storyboard",
         "voices-of-the-unwritten"
       ],
       "hero-myth": [
         "myth-birth-hero-rank"
       ],
       "hero-twins": [
-        "maya-kids"
+        "maya-kids",
+        "maya-kids-storyboard"
       ],
       "heroes": [
         "greek-mythology",
@@ -11382,6 +12560,7 @@
       "hindu": [
         "indian-myth-legend",
         "ramayana-kids",
+        "ramayana-kids-storyboard",
         "upanishads"
       ],
       "hinduism": [
@@ -11390,6 +12569,7 @@
         "seven-rays-ancient-roots"
       ],
       "history": [
+        "ballet-history-tree",
         "history-of-magic-levi",
         "legends-alhambra",
         "the-negro"
@@ -11402,15 +12582,20 @@
       ],
       "homer": [
         "hesiod-homeric-hymns",
-        "homer-kids"
+        "homer-kids",
+        "homer-kids-storyboard"
       ],
       "horus": [
-        "egyptian-kids"
+        "egyptian-kids",
+        "egyptian-kids-storyboard"
       ],
       "hospicing-modernity": [
         "bus-grammar-system-prompts",
         "decolonization-five-domains",
         "gestures-towards-balanced-future"
+      ],
+      "hula": [
+        "roots-of-moana"
       ],
       "human-body": [
         "human-body"
@@ -11420,6 +12605,9 @@
       ],
       "hypercube": [
         "i-ching-leibniz-binary"
+      ],
+      "ice": [
+        "roots-of-frozen-ii"
       ],
       "iching": [
         "repair-an-open-source-book",
@@ -11437,19 +12625,25 @@
       ],
       "igbo": [
         "olaudah-equiano",
-        "west-african-kids"
+        "west-african-kids",
+        "west-african-kids-storyboard"
       ],
       "iliad": [
-        "homer-kids"
+        "homer-kids",
+        "homer-kids-storyboard"
       ],
       "illustrated": [
         "alice-5-minute-stories",
         "alice-in-wonderland-chapter-book",
         "anon-shiryo-cat-stories",
         "biblical-stories-kids",
+        "biblical-stories-kids-storyboard",
         "homer-kids",
+        "homer-kids-storyboard",
         "king-arthur-kids",
+        "king-arthur-kids-storyboard",
         "ramayana-kids",
+        "ramayana-kids-storyboard",
         "story-01-asking-not-complaining",
         "story-02-gratitude-not-praise"
       ],
@@ -11478,9 +12672,12 @@
       "indigenous": [
         "alice-in-the-amazon",
         "alice-in-the-mythlands",
+        "alice-in-the-mythlands-storyboard",
         "architecture-of-nations",
         "decolonizing-childhood",
+        "disney-decolonial-tree",
         "dreamtime-kids",
+        "dreamtime-kids-storyboard",
         "instituto-canoa-math-6",
         "nastacia-conta",
         "philippine-folk-tales",
@@ -11524,6 +12721,7 @@
       ],
       "isis": [
         "egyptian-kids",
+        "egyptian-kids-storyboard",
         "golden-ass-apuleius",
         "legends-of-gods-egyptian"
       ],
@@ -11548,6 +12746,9 @@
       ],
       "jing-fang": [
         "i-ching-leibniz-binary"
+      ],
+      "joik": [
+        "roots-of-frozen-ii"
       ],
       "journal": [
         "my-first-summer-in-sierra"
@@ -11577,38 +12778,60 @@
       ],
       "karaoke": [
         "biblical-stories-kids",
+        "biblical-stories-kids-storyboard",
         "homer-kids",
+        "homer-kids-storyboard",
         "king-arthur-kids",
-        "ramayana-kids"
+        "king-arthur-kids-storyboard",
+        "ramayana-kids",
+        "ramayana-kids-storyboard"
       ],
       "kiche": [
-        "maya-kids"
+        "maya-kids",
+        "maya-kids-storyboard"
       ],
       "kids": [
         "aesops-fables",
+        "aesops-fables-storyboard",
         "andersens-fairy-tales",
         "anon-shiryo-cat-stories",
+        "ballet-history-tree",
         "biblical-stories-kids",
+        "biblical-stories-kids-storyboard",
         "cosmic-unfolding",
         "dbt-wise-heart",
         "dinosaur-tree",
+        "disney-decolonial-tree",
+        "disney-dreams-the-original-selves",
         "dreamtime-kids",
+        "dreamtime-kids-storyboard",
         "egyptian-kids",
+        "egyptian-kids-storyboard",
         "emerald-kids-folk-tales",
         "evolution-tree",
         "homer-kids",
+        "homer-kids-storyboard",
         "japanese-fairy-tales",
         "king-arthur-kids",
+        "king-arthur-kids-storyboard",
         "maya-kids",
+        "maya-kids-storyboard",
         "norse-kids",
+        "norse-kids-storyboard",
         "one-story-kids",
         "plutchik-wheel-of-emotions",
         "polynesian-kids",
+        "polynesian-kids-storyboard",
         "ramayana-kids",
+        "ramayana-kids-storyboard",
+        "roots-of-frozen-ii",
+        "roots-of-moana",
         "story-01-asking-not-complaining",
         "story-02-gratitude-not-praise",
         "tibetan-dream-kids",
+        "tibetan-dream-kids-storyboard",
         "west-african-kids",
+        "west-african-kids-storyboard",
         "wildflowers-of-california"
       ],
       "king-wen": [
@@ -11640,7 +12863,8 @@
         "colonial-tongues"
       ],
       "law": [
-        "dreamtime-kids"
+        "dreamtime-kids",
+        "dreamtime-kids-storyboard"
       ],
       "leadership": [
         "art-of-war"
@@ -11690,7 +12914,8 @@
         "nastacia-conta"
       ],
       "loki": [
-        "norse-kids"
+        "norse-kids",
+        "norse-kids-storyboard"
       ],
       "love": [
         "art-of-love-ovid",
@@ -11707,7 +12932,8 @@
         "seven-rays-bailey-expressions"
       ],
       "lucid-dreaming": [
-        "tibetan-dream-kids"
+        "tibetan-dream-kids",
+        "tibetan-dream-kids-storyboard"
       ],
       "luiza-lian": [
         "luiza-lian"
@@ -11731,7 +12957,8 @@
         "tarot-rws-etteilla"
       ],
       "maori": [
-        "polynesian-kids"
+        "polynesian-kids",
+        "polynesian-kids-storyboard"
       ],
       "marcus-aurelius": [
         "meditations-marcus-aurelius"
@@ -11760,13 +12987,16 @@
         "timaeus-plato"
       ],
       "maui": [
-        "polynesian-kids"
+        "polynesian-kids",
+        "polynesian-kids-storyboard",
+        "roots-of-moana"
       ],
       "mawangdui": [
         "i-ching-leibniz-binary"
       ],
       "maya": [
         "maya-kids",
+        "maya-kids-storyboard",
         "popol-vuh"
       ],
       "meaning-making": [
@@ -11793,13 +13023,15 @@
         "dbt-wise-heart"
       ],
       "merlin": [
-        "king-arthur-kids"
+        "king-arthur-kids",
+        "king-arthur-kids-storyboard"
       ],
       "mesoamerica": [
         "popol-vuh"
       ],
       "mesoamerican": [
-        "maya-kids"
+        "maya-kids",
+        "maya-kids-storyboard"
       ],
       "mesopotamia": [
         "myths-babylonia-assyria"
@@ -11842,6 +13074,9 @@
       "mississippi": [
         "tom-sawyer"
       ],
+      "moana-inspired": [
+        "roots-of-moana"
+      ],
       "mocement": [
         "kids-workouts-gvo-kids-youtube-playlist"
       ],
@@ -11865,6 +13100,7 @@
       ],
       "morals": [
         "aesops-fables",
+        "aesops-fables-storyboard",
         "andersens-fairy-tales",
         "japanese-fairy-tales"
       ],
@@ -11872,6 +13108,7 @@
         "my-first-summer-in-sierra"
       ],
       "movement": [
+        "ballet-history-tree",
         "embodied-grammars-constellation",
         "movement-culture"
       ],
@@ -11898,6 +13135,7 @@
       "music": [
         "colonial-decolonial-music-spiral",
         "luiza-lian",
+        "roots-of-moana",
         "souls-of-black-folk"
       ],
       "mysteries": [
@@ -11921,6 +13159,9 @@
         "varieties-religious-experience",
         "voices-of-the-unwritten"
       ],
+      "myth": [
+        "disney-decolonial-tree"
+      ],
       "mythology": [
         "animal-fables",
         "archetypal-astrology-tarnas",
@@ -11936,6 +13177,7 @@
         "hero-myths-british",
         "hesiod-homeric-hymns",
         "homer-kids",
+        "homer-kids-storyboard",
         "indian-myth-legend",
         "japanese-fairy-tales",
         "kalevala",
@@ -11951,10 +13193,14 @@
         "myths-through-many-eyes",
         "popol-vuh",
         "prose-edda",
-        "ramayana-kids"
+        "ramayana-kids",
+        "ramayana-kids-storyboard",
+        "roots-of-frozen-ii",
+        "roots-of-moana"
       ],
       "myths": [
         "alice-in-the-mythlands",
+        "alice-in-the-mythlands-storyboard",
         "children-story-tree",
         "dbt-wise-heart",
         "plutchik-wheel-of-emotions"
@@ -12000,7 +13246,9 @@
         "indian-classical-dance"
       ],
       "navigation": [
-        "polynesian-kids"
+        "polynesian-kids",
+        "polynesian-kids-storyboard",
+        "roots-of-moana"
       ],
       "neoplatonism": [
         "plotinus-enneads"
@@ -12011,6 +13259,9 @@
       "neverland": [
         "peter-pan"
       ],
+      "new-zealand": [
+        "roots-of-moana"
+      ],
       "nietzsche": [
         "thus-spoke-zarathustra"
       ],
@@ -12018,13 +13269,15 @@
         "folk-stories-southern-nigeria"
       ],
       "nightmares": [
-        "tibetan-dream-kids"
+        "tibetan-dream-kids",
+        "tibetan-dream-kids-storyboard"
       ],
       "nihilism": [
         "beyond-good-and-evil"
       ],
       "nile": [
-        "egyptian-kids"
+        "egyptian-kids",
+        "egyptian-kids-storyboard"
       ],
       "no-moral": [
         "animal-fables"
@@ -12037,7 +13290,8 @@
         "sadhana",
         "tao-te-ching",
         "the-prophet",
-        "tibetan-dream-kids"
+        "tibetan-dream-kids",
+        "tibetan-dream-kids-storyboard"
       ],
       "nonsense": [
         "through-the-looking-glass"
@@ -12045,10 +13299,21 @@
       "nonviolence": [
         "civil-disobedience"
       ],
+      "nordic": [
+        "roots-of-frozen-ii"
+      ],
       "norse": [
         "animal-fables",
         "norse-kids",
-        "prose-edda"
+        "norse-kids-storyboard",
+        "prose-edda",
+        "roots-of-frozen-ii"
+      ],
+      "northern-lights": [
+        "roots-of-frozen-ii"
+      ],
+      "norway": [
+        "roots-of-frozen-ii"
       ],
       "nous": [
         "plotinus-enneads"
@@ -12068,14 +13333,18 @@
         "rosicrucian-mysteries"
       ],
       "ocean": [
-        "polynesian-kids"
+        "polynesian-kids",
+        "polynesian-kids-storyboard",
+        "roots-of-moana"
       ],
       "odin": [
-        "norse-kids"
+        "norse-kids",
+        "norse-kids-storyboard"
       ],
       "odyssey": [
         "animal-fables",
-        "homer-kids"
+        "homer-kids",
+        "homer-kids-storyboard"
       ],
       "olympian": [
         "hesiod-homeric-hymns"
@@ -12123,10 +13392,12 @@
       "oral-tradition": [
         "children-story-tree",
         "nastacia-conta",
+        "roots-of-moana",
         "voices-of-the-unwritten"
       ],
       "origin-stories": [
         "alice-in-the-mythlands",
+        "alice-in-the-mythlands-storyboard",
         "folk-stories-southern-nigeria",
         "west-african-folk-tales"
       ],
@@ -12135,6 +13406,9 @@
         "i-ching-chinese-original-with-brief-translation",
         "i-ching-leibniz-binary"
       ],
+      "original-stories": [
+        "disney-dreams-the-original-selves"
+      ],
       "original-text": [
         "alice-5-minute-stories"
       ],
@@ -12142,7 +13416,8 @@
         "ancient-art-ritual"
       ],
       "orishas": [
-        "west-african-kids"
+        "west-african-kids",
+        "west-african-kids-storyboard"
       ],
       "orixas": [
         "nastacia-conta"
@@ -12152,6 +13427,7 @@
       ],
       "osiris": [
         "egyptian-kids",
+        "egyptian-kids-storyboard",
         "legends-of-gods-egyptian"
       ],
       "otherworld": [
@@ -12164,7 +13440,11 @@
         "art-of-love-ovid"
       ],
       "pacific": [
-        "polynesian-kids"
+        "polynesian-kids",
+        "polynesian-kids-storyboard"
+      ],
+      "pacific-islands": [
+        "roots-of-moana"
       ],
       "paganism": [
         "five-stages-greek-religion"
@@ -12206,7 +13486,8 @@
         "dbt-wise-heart"
       ],
       "pele": [
-        "polynesian-kids"
+        "polynesian-kids",
+        "polynesian-kids-storyboard"
       ],
       "performance": [
         "theater-tree"
@@ -12221,7 +13502,8 @@
         "peter-pan"
       ],
       "pharaoh": [
-        "egyptian-kids"
+        "egyptian-kids",
+        "egyptian-kids-storyboard"
       ],
       "philippine": [
         "philippine-folk-tales"
@@ -12324,6 +13606,7 @@
       "poetry": [
         "alice-in-the-amazon",
         "alice-in-the-mythlands",
+        "alice-in-the-mythlands-storyboard",
         "art-of-love-ovid",
         "chinese-literature-anthology",
         "darkwater",
@@ -12356,13 +13639,16 @@
       ],
       "polynesian": [
         "hawaiian-legends",
-        "polynesian-kids"
+        "polynesian-kids",
+        "polynesian-kids-storyboard",
+        "roots-of-moana"
       ],
       "pop": [
         "colonial-decolonial-music-spiral"
       ],
       "popol-vuh": [
-        "maya-kids"
+        "maya-kids",
+        "maya-kids-storyboard"
       ],
       "popular-culture": [
         "repair-an-open-source-book"
@@ -12516,13 +13802,15 @@
         "wonderful-wizard-of-oz"
       ],
       "quetzalcoatl": [
-        "maya-kids"
+        "maya-kids",
+        "maya-kids-storyboard"
       ],
       "quran": [
         "sacred-books-east"
       ],
       "ra": [
-        "egyptian-kids"
+        "egyptian-kids",
+        "egyptian-kids-storyboard"
       ],
       "race": [
         "darkwater",
@@ -12537,19 +13825,23 @@
       ],
       "ragnarok": [
         "norse-kids",
+        "norse-kids-storyboard",
         "prose-edda"
       ],
       "rainbow-serpent": [
-        "dreamtime-kids"
+        "dreamtime-kids",
+        "dreamtime-kids-storyboard"
       ],
       "rama": [
         "indian-myth-legend",
-        "ramayana-kids"
+        "ramayana-kids",
+        "ramayana-kids-storyboard"
       ],
       "ramayana": [
         "animal-fables",
         "indian-myth-legend",
-        "ramayana-kids"
+        "ramayana-kids",
+        "ramayana-kids-storyboard"
       ],
       "rank": [
         "myth-birth-hero-rank"
@@ -12582,6 +13874,9 @@
       ],
       "regency": [
         "emma-austen"
+      ],
+      "reindeer": [
+        "roots-of-frozen-ii"
       ],
       "relational-grammar": [
         "anon-shiryo-cat-stories"
@@ -12631,20 +13926,36 @@
         "areopagitica",
         "phaedrus-plato"
       ],
+      "rhyme": [
+        "disney-dreams-the-original-selves"
+      ],
       "rhyming": [
+        "aesops-fables-storyboard",
         "alice-in-the-mythlands",
+        "alice-in-the-mythlands-storyboard",
         "biblical-stories-kids",
+        "biblical-stories-kids-storyboard",
         "dreamtime-kids",
+        "dreamtime-kids-storyboard",
         "egyptian-kids",
+        "egyptian-kids-storyboard",
         "homer-kids",
+        "homer-kids-storyboard",
         "king-arthur-kids",
+        "king-arthur-kids-storyboard",
         "maya-kids",
+        "maya-kids-storyboard",
         "norse-kids",
+        "norse-kids-storyboard",
         "one-story-kids",
         "polynesian-kids",
+        "polynesian-kids-storyboard",
         "ramayana-kids",
+        "ramayana-kids-storyboard",
         "tibetan-dream-kids",
-        "west-african-kids"
+        "tibetan-dream-kids-storyboard",
+        "west-african-kids",
+        "west-african-kids-storyboard"
       ],
       "rider-waite": [
         "rider-waite-smith-tarot"
@@ -12696,13 +14007,15 @@
         "rosicrucian-mysteries"
       ],
       "round-table": [
-        "king-arthur-kids"
+        "king-arthur-kids",
+        "king-arthur-kids-storyboard"
       ],
       "rudyard-kipling": [
         "just-so-stories"
       ],
       "runes": [
-        "norse-kids"
+        "norse-kids",
+        "norse-kids-storyboard"
       ],
       "russian": [
         "russian-folk-tales"
@@ -12741,8 +14054,15 @@
       "sages": [
         "voices-of-the-unwritten"
       ],
+      "sami": [
+        "roots-of-frozen-ii"
+      ],
+      "samoa": [
+        "roots-of-moana"
+      ],
       "samoan": [
-        "polynesian-kids"
+        "polynesian-kids",
+        "polynesian-kids-storyboard"
       ],
       "sanskrit": [
         "yoga-body-as-temple"
@@ -12752,6 +14072,9 @@
       ],
       "sayings": [
         "colonial-tongues"
+      ],
+      "scandinavia": [
+        "roots-of-frozen-ii"
       ],
       "scenes": [
         "alice-in-wonderland-chapter-book",
@@ -12806,7 +14129,9 @@
       "shamanism": [
         "kalevala",
         "king-arthur-kids",
-        "philippine-folk-tales"
+        "king-arthur-kids-storyboard",
+        "philippine-folk-tales",
+        "roots-of-frozen-ii"
       ],
       "shao-yong": [
         "i-ching-leibniz-binary"
@@ -12820,11 +14145,15 @@
       "silence": [
         "voices-of-the-unwritten"
       ],
+      "silly": [
+        "disney-dreams-the-original-selves"
+      ],
       "simplicity": [
         "walden"
       ],
       "sita": [
-        "ramayana-kids"
+        "ramayana-kids",
+        "ramayana-kids-storyboard"
       ],
       "skeptics": [
         "diogenes-laertius"
@@ -12842,7 +14171,8 @@
         "russian-folk-tales"
       ],
       "sleep": [
-        "tibetan-dream-kids"
+        "tibetan-dream-kids",
+        "tibetan-dream-kids-storyboard"
       ],
       "social": [
         "anthropological-dance"
@@ -12867,7 +14197,8 @@
         "decolonizing-childhood"
       ],
       "songlines": [
-        "dreamtime-kids"
+        "dreamtime-kids",
+        "dreamtime-kids-storyboard"
       ],
       "songs": [
         "colonial-tongues"
@@ -12905,7 +14236,8 @@
         "alice-in-the-amazon",
         "folklore-north-american-indian",
         "giras-do-sitio",
-        "myths-north-american-indians"
+        "myths-north-american-indians",
+        "roots-of-frozen-ii"
       ],
       "spiritual": [
         "sojourner-truth"
@@ -12928,7 +14260,8 @@
         "instituto-canoa-math-6"
       ],
       "steiner": [
-        "biblical-stories-kids"
+        "biblical-stories-kids",
+        "biblical-stories-kids-storyboard"
       ],
       "stoicism": [
         "discourses-epictetus",
@@ -12946,6 +14279,21 @@
         "story-01-asking-not-complaining",
         "story-02-gratitude-not-praise"
       ],
+      "storyboard": [
+        "aesops-fables-storyboard",
+        "alice-in-the-mythlands-storyboard",
+        "biblical-stories-kids-storyboard",
+        "dreamtime-kids-storyboard",
+        "egyptian-kids-storyboard",
+        "homer-kids-storyboard",
+        "king-arthur-kids-storyboard",
+        "maya-kids-storyboard",
+        "norse-kids-storyboard",
+        "polynesian-kids-storyboard",
+        "ramayana-kids-storyboard",
+        "tibetan-dream-kids-storyboard",
+        "west-african-kids-storyboard"
+      ],
       "storytelling": [
         "arabian-nights",
         "grimms-fairy-tales"
@@ -12961,6 +14309,9 @@
       ],
       "swazi": [
         "fairy-tales-south-africa"
+      ],
+      "sweden": [
+        "roots-of-frozen-ii"
       ],
       "swedenborg": [
         "swedenborg-heaven-hell"
@@ -13022,6 +14373,7 @@
         "souls-of-black-folk"
       ],
       "theater": [
+        "ballet-history-tree",
         "embodied-grammars-constellation",
         "theater-tree"
       ],
@@ -13045,7 +14397,8 @@
         "relationship-cards"
       ],
       "thor": [
-        "norse-kids"
+        "norse-kids",
+        "norse-kids-storyboard"
       ],
       "tia-nastacia": [
         "giras-do-sitio",
@@ -13058,13 +14411,17 @@
       "tibetan": [
         "emerald-death-card-no-one-here-gets-out-alive",
         "emerald-death-card-visuals",
-        "tibetan-dream-kids"
+        "tibetan-dream-kids",
+        "tibetan-dream-kids-storyboard"
       ],
       "timeline": [
         "cosmic-unfolding"
       ],
       "tom-sawyer": [
         "tom-sawyer"
+      ],
+      "tonga": [
+        "roots-of-moana"
       ],
       "tortoise": [
         "folk-stories-southern-nigeria"
@@ -13114,29 +14471,40 @@
       ],
       "trickster": [
         "alice-in-the-mythlands",
+        "alice-in-the-mythlands-storyboard",
         "folk-stories-southern-nigeria",
         "folklore-north-american-indian",
         "homer-kids",
+        "homer-kids-storyboard",
         "myths-legends-great-plains",
         "myths-north-american-indians",
         "west-african-folk-tales",
-        "west-african-kids"
+        "west-african-kids",
+        "west-african-kids-storyboard"
       ],
       "trigrams": [
         "i-ching-chinese-emergent",
         "i-ching-leibniz-binary"
       ],
       "trojan-war": [
-        "homer-kids"
+        "homer-kids",
+        "homer-kids-storyboard"
+      ],
+      "true-love": [
+        "disney-decolonial-tree"
       ],
       "truth": [
         "pragmatism"
       ],
       "tts": [
         "biblical-stories-kids",
+        "biblical-stories-kids-storyboard",
         "homer-kids",
+        "homer-kids-storyboard",
         "king-arthur-kids",
-        "ramayana-kids"
+        "king-arthur-kids-storyboard",
+        "ramayana-kids",
+        "ramayana-kids-storyboard"
       ],
       "tuskegee": [
         "up-from-slavery"
@@ -13195,6 +14563,7 @@
       ],
       "viking": [
         "norse-kids",
+        "norse-kids-storyboard",
         "prose-edda"
       ],
       "violence": [
@@ -13207,7 +14576,8 @@
         "vindication-rights-woman"
       ],
       "vishnu": [
-        "ramayana-kids"
+        "ramayana-kids",
+        "ramayana-kids-storyboard"
       ],
       "visions": [
         "swedenborg-heaven-hell"
@@ -13218,9 +14588,15 @@
       "vocation": [
         "repair-an-open-source-book"
       ],
+      "voyaging": [
+        "roots-of-moana"
+      ],
       "war": [
         "art-of-war",
         "leaves-of-grass"
+      ],
+      "wayfinding": [
+        "roots-of-moana"
       ],
       "welfare": [
         "rights-of-man"
@@ -13230,7 +14606,8 @@
         "mabinogion"
       ],
       "west-african": [
-        "west-african-kids"
+        "west-african-kids",
+        "west-african-kids-storyboard"
       ],
       "wheel-of-emotions": [
         "plutchik-wheel-of-emotions"
@@ -13252,6 +14629,7 @@
       ],
       "wisdom": [
         "aesops-fables",
+        "aesops-fables-storyboard",
         "art-of-war",
         "confucian-analects",
         "dhammapada",
@@ -13289,6 +14667,7 @@
       ],
       "wonder": [
         "alice-in-the-mythlands",
+        "alice-in-the-mythlands-storyboard",
         "cosmic-unfolding",
         "human-body"
       ],
@@ -13308,10 +14687,12 @@
         "tao-te-ching"
       ],
       "xibalba": [
-        "maya-kids"
+        "maya-kids",
+        "maya-kids-storyboard"
       ],
       "yggdrasil": [
-        "norse-kids"
+        "norse-kids",
+        "norse-kids-storyboard"
       ],
       "yin-yang": [
         "repair-iching"
@@ -13324,7 +14705,8 @@
       "yoruba": [
         "luiza-lian",
         "nastacia-conta",
-        "west-african-kids"
+        "west-african-kids",
+        "west-african-kids-storyboard"
       ],
       "youtube": [
         "patchwork-pawls-filmbilder-friends"
@@ -13353,9 +14735,11 @@
         "a-little-princess",
         "adventures-of-pinocchio",
         "aesops-fables",
+        "aesops-fables-storyboard",
         "alchemy-ancient-modern",
         "alice-in-the-amazon",
         "alice-in-the-mythlands",
+        "alice-in-the-mythlands-storyboard",
         "alice-s-tarot-my-5-years-old",
         "ancient-art-ritual",
         "andersens-fairy-tales",
@@ -13369,10 +14753,12 @@
         "areopagitica",
         "art-of-love-ovid",
         "art-of-war",
+        "ballet-history-tree",
         "ballet-living-architecture",
         "beyond-good-and-evil",
         "bhagavad-gita",
         "biblical-stories-kids",
+        "biblical-stories-kids-storyboard",
         "book-of-tea",
         "book-of-the-dead-egyptian",
         "bus-grammar-system-prompts",
@@ -13396,10 +14782,14 @@
         "dinosaur-tree",
         "diogenes-laertius",
         "discourses-epictetus",
+        "disney-decolonial-tree",
+        "disney-dreams-the-original-selves",
         "dreamtime-kids",
+        "dreamtime-kids-storyboard",
         "economic-ideas",
         "egyptian-ideas-future-life",
         "egyptian-kids",
+        "egyptian-kids-storyboard",
         "egyptian-mythology",
         "eleusinian-mysteries",
         "embodied-grammars-constellation",
@@ -13433,6 +14823,7 @@
         "hidden-symbolism-alchemy",
         "history-of-magic-levi",
         "homer-kids",
+        "homer-kids-storyboard",
         "human-body",
         "i-ching-chinese-emergent",
         "i-ching-chinese-original-with-brief-translation",
@@ -13453,6 +14844,7 @@
         "kalevala",
         "kids-workouts-gvo-kids-youtube-playlist",
         "king-arthur-kids",
+        "king-arthur-kids-storyboard",
         "kybalion",
         "leaves-of-grass",
         "legends-alhambra",
@@ -13461,6 +14853,7 @@
         "mabinogion",
         "mahabharata",
         "maya-kids",
+        "maya-kids-storyboard",
         "meditations-marcus-aurelius",
         "meister-eckhart-sermons",
         "metamorphoses-ovid",
@@ -13482,6 +14875,7 @@
         "natural-supernatural-things",
         "new-light-alchymie",
         "norse-kids",
+        "norse-kids-storyboard",
         "olaudah-equiano",
         "on-liberty",
         "one-story-kids",
@@ -13497,18 +14891,22 @@
         "plutarchs-morals",
         "plutchik-wheel-of-emotions",
         "polynesian-kids",
+        "polynesian-kids-storyboard",
         "popol-vuh",
         "practice-presence-of-god",
         "pragmatism",
         "principles-of-psychology",
         "prose-edda",
         "ramayana-kids",
+        "ramayana-kids-storyboard",
         "relationship-cards",
         "repair-an-open-source-book",
         "repair-iching",
         "republic-plato",
         "revelations-divine-love",
         "rights-of-man",
+        "roots-of-frozen-ii",
+        "roots-of-moana",
         "rosicrucian-mysteries",
         "royal-ballet-and-opera",
         "russian-folk-tales",
@@ -13537,6 +14935,7 @@
         "through-the-looking-glass",
         "thus-spoke-zarathustra",
         "tibetan-dream-kids",
+        "tibetan-dream-kids-storyboard",
         "tibetan-tales",
         "timaeus-plato",
         "tom-sawyer",
@@ -13549,6 +14948,7 @@
         "walden",
         "west-african-folk-tales",
         "west-african-kids",
+        "west-african-kids-storyboard",
         "wildflowers-of-california",
         "wonderful-wizard-of-oz",
         "yoga-body-as-temple"
@@ -13580,6 +14980,7 @@
       "animism": [
         "alice-in-the-amazon",
         "alice-in-the-mythlands",
+        "alice-in-the-mythlands-storyboard",
         "giras-do-sitio",
         "japanese-fairy-tales",
         "nastacia-conta"
@@ -13618,13 +15019,21 @@
       ],
       "contested-roots": [
         "dreamtime-kids",
+        "dreamtime-kids-storyboard",
         "maya-kids",
-        "west-african-kids"
+        "maya-kids-storyboard",
+        "west-african-kids",
+        "west-african-kids-storyboard"
       ],
       "critical-theory": [
         "colonial-decolonial-music-spiral",
         "colonial-tongues",
         "gestures-towards-balanced-future"
+      ],
+      "decolonial-thought": [
+        "ballet-history-tree",
+        "disney-decolonial-tree",
+        "disney-dreams-the-original-selves"
       ],
       "democratic-thought": [
         "leaves-of-grass"
@@ -13638,10 +15047,12 @@
       "eastern-wisdom": [
         "alice-in-the-amazon",
         "alice-in-the-mythlands",
+        "alice-in-the-mythlands-storyboard",
         "animal-fables",
         "arabian-nights",
         "bhagavad-gita",
         "biblical-stories-kids",
+        "biblical-stories-kids-storyboard",
         "book-of-tea",
         "book-of-the-dead-egyptian",
         "bus-grammar-system-prompts",
@@ -13653,6 +15064,7 @@
         "decolonization-five-domains",
         "egyptian-ideas-future-life",
         "egyptian-kids",
+        "egyptian-kids-storyboard",
         "embodied-grammars-constellation",
         "enchiridion",
         "folk-tales-tibet",
@@ -13669,6 +15081,7 @@
         "myths-legends-egypt-spence",
         "myths-through-many-eyes",
         "polynesian-kids",
+        "polynesian-kids-storyboard",
         "repair-an-open-source-book",
         "repair-iching",
         "sacred-books-east",
@@ -13680,6 +15093,7 @@
         "tao-te-ching",
         "the-prophet",
         "tibetan-dream-kids",
+        "tibetan-dream-kids-storyboard",
         "tibetan-tales",
         "upanishads",
         "voices-of-the-unwritten",
@@ -13720,7 +15134,9 @@
         "andersens-fairy-tales"
       ],
       "european-philosophy": [
+        "aesops-fables-storyboard",
         "norse-kids",
+        "norse-kids-storyboard",
         "one-story-kids"
       ],
       "european-tradition": [
@@ -13754,7 +15170,9 @@
         "decolonization-five-domains",
         "gestures-towards-balanced-future",
         "repair-an-open-source-book",
-        "repair-iching"
+        "repair-iching",
+        "roots-of-frozen-ii",
+        "roots-of-moana"
       ],
       "indigenous-mythology": [
         "celtic-fairy-tales",
@@ -13791,6 +15209,7 @@
       "liberation": [
         "alice-in-the-amazon",
         "alice-in-the-mythlands",
+        "alice-in-the-mythlands-storyboard",
         "anthropological-dance",
         "colonial-decolonial-music-spiral",
         "colonial-tongues",
@@ -13859,18 +15278,32 @@
         "plutchik-wheel-of-emotions"
       ],
       "mythopoetic-enchantment": [
+        "aesops-fables-storyboard",
         "biblical-stories-kids",
+        "biblical-stories-kids-storyboard",
         "dreamtime-kids",
+        "dreamtime-kids-storyboard",
         "egyptian-kids",
+        "egyptian-kids-storyboard",
         "homer-kids",
+        "homer-kids-storyboard",
         "king-arthur-kids",
+        "king-arthur-kids-storyboard",
         "maya-kids",
+        "maya-kids-storyboard",
         "norse-kids",
+        "norse-kids-storyboard",
         "one-story-kids",
         "polynesian-kids",
+        "polynesian-kids-storyboard",
         "ramayana-kids",
+        "ramayana-kids-storyboard",
+        "roots-of-frozen-ii",
+        "roots-of-moana",
         "tibetan-dream-kids",
-        "west-african-kids"
+        "tibetan-dream-kids-storyboard",
+        "west-african-kids",
+        "west-african-kids-storyboard"
       ],
       "natural-philosophy": [
         "cosmic-unfolding",
@@ -13925,7 +15358,10 @@
         "leaves-of-grass"
       ],
       "western-canon": [
-        "children-story-tree"
+        "ballet-history-tree",
+        "children-story-tree",
+        "disney-decolonial-tree",
+        "disney-dreams-the-original-selves"
       ],
       "western-esoteric": [
         "tarot-rws-etteilla"
@@ -13999,56 +15435,76 @@
       "children": [
         "a-little-princess",
         "adventures-of-pinocchio",
+        "aesops-fables-storyboard",
         "alice-in-the-mythlands",
+        "alice-in-the-mythlands-storyboard",
         "andersens-fairy-tales",
         "animal-fables",
         "anne-of-green-gables",
         "biblical-stories-kids",
+        "biblical-stories-kids-storyboard",
         "celtic-fairy-tales",
         "children-story-tree",
         "cosmic-unfolding",
         "dbt-wise-heart",
         "decolonizing-childhood",
         "dinosaur-tree",
+        "disney-decolonial-tree",
+        "disney-dreams-the-original-selves",
         "dreamtime-kids",
+        "dreamtime-kids-storyboard",
         "egyptian-kids",
+        "egyptian-kids-storyboard",
         "evolution-tree",
         "giras-do-sitio",
         "homer-kids",
+        "homer-kids-storyboard",
         "instituto-canoa-math-6",
         "japanese-fairy-tales",
         "jungle-book",
         "just-so-stories",
         "king-arthur-kids",
+        "king-arthur-kids-storyboard",
         "maya-kids",
+        "maya-kids-storyboard",
         "nastacia-conta",
         "norse-kids",
+        "norse-kids-storyboard",
         "one-story-kids",
         "peter-pan",
         "plutchik-wheel-of-emotions",
         "polynesian-kids",
+        "polynesian-kids-storyboard",
         "ramayana-kids",
+        "ramayana-kids-storyboard",
+        "roots-of-frozen-ii",
+        "roots-of-moana",
         "secret-garden",
         "through-the-looking-glass",
         "tibetan-dream-kids",
+        "tibetan-dream-kids-storyboard",
         "tom-sawyer",
         "west-african-kids",
+        "west-african-kids-storyboard",
         "wildflowers-of-california",
         "wonderful-wizard-of-oz"
       ],
       "composting": [
         "alice-in-the-amazon",
+        "disney-decolonial-tree",
         "giras-do-sitio",
         "grimms-fairy-tales",
         "nastacia-conta"
       ],
       "contested": [
         "architecture-of-nations",
+        "ballet-history-tree",
         "colonial-decolonial-music-spiral",
         "colonial-tongues",
         "communist-manifesto",
         "decolonization-five-domains",
         "decolonizing-childhood",
+        "disney-decolonial-tree",
         "economic-ideas",
         "gestures-towards-balanced-future",
         "just-so-stories",
@@ -14060,6 +15516,7 @@
       "earth": [
         "anthropological-dance",
         "dreamtime-kids",
+        "dreamtime-kids-storyboard",
         "embodied-grammars-constellation",
         "fairy-tales-south-africa",
         "folk-stories-southern-nigeria",
@@ -14087,6 +15544,7 @@
       "mirror": [
         "architecture-of-nations",
         "art-of-love-ovid",
+        "ballet-history-tree",
         "beyond-good-and-evil",
         "bus-grammar-system-prompts",
         "colonial-decolonial-music-spiral",
@@ -14147,16 +15605,20 @@
         "souls-of-black-folk",
         "theater-tree",
         "up-from-slavery",
-        "west-african-kids"
+        "west-african-kids",
+        "west-african-kids-storyboard"
       ],
       "wisdom": [
+        "aesops-fables-storyboard",
         "alchemy-ancient-modern",
         "alice-in-the-mythlands",
+        "alice-in-the-mythlands-storyboard",
         "ancient-art-ritual",
         "animal-fables",
         "arabian-nights",
         "bhagavad-gita",
         "biblical-stories-kids",
+        "biblical-stories-kids-storyboard",
         "book-of-tea",
         "book-of-the-dead-egyptian",
         "bus-grammar-system-prompts",
@@ -14172,6 +15634,7 @@
         "economic-ideas",
         "egyptian-ideas-future-life",
         "egyptian-kids",
+        "egyptian-kids-storyboard",
         "egyptian-mythology",
         "eleusinian-mysteries",
         "essentials-of-mysticism",
@@ -14196,6 +15659,7 @@
         "legends-of-gods-egyptian",
         "mabinogion",
         "maya-kids",
+        "maya-kids-storyboard",
         "meister-eckhart-sermons",
         "mirror-of-alchimy",
         "myth-birth-hero-rank",
@@ -14206,6 +15670,7 @@
         "natural-supernatural-things",
         "new-light-alchymie",
         "norse-kids",
+        "norse-kids-storyboard",
         "one-story-kids",
         "phaedo-plato",
         "pistis-sophia",
@@ -14213,11 +15678,14 @@
         "plutarchs-morals",
         "plutchik-wheel-of-emotions",
         "polynesian-kids",
+        "polynesian-kids-storyboard",
         "practice-presence-of-god",
         "repair-an-open-source-book",
         "repair-iching",
         "republic-plato",
         "revelations-divine-love",
+        "roots-of-frozen-ii",
+        "roots-of-moana",
         "rosicrucian-mysteries",
         "russian-folk-tales",
         "sacred-books-east",
@@ -14234,6 +15702,7 @@
         "the-prophet",
         "thus-spoke-zarathustra",
         "tibetan-dream-kids",
+        "tibetan-dream-kids-storyboard",
         "timaeus-plato",
         "upanishads",
         "voices-of-the-unwritten",
@@ -14241,20 +15710,28 @@
       ],
       "wonder": [
         "adventures-of-pinocchio",
+        "aesops-fables-storyboard",
         "alice-in-the-amazon",
         "alice-in-the-mythlands",
+        "alice-in-the-mythlands-storyboard",
         "andersens-fairy-tales",
         "animal-fables",
         "anthropological-dance",
         "arabian-nights",
+        "ballet-history-tree",
         "ballet-living-architecture",
         "biblical-stories-kids",
+        "biblical-stories-kids-storyboard",
         "celtic-fairy-tales",
         "children-story-tree",
         "cosmic-unfolding",
         "dinosaur-tree",
+        "disney-decolonial-tree",
+        "disney-dreams-the-original-selves",
         "dreamtime-kids",
+        "dreamtime-kids-storyboard",
         "egyptian-kids",
+        "egyptian-kids-storyboard",
         "egyptian-mythology",
         "embodied-grammars-constellation",
         "evolution-tree",
@@ -14263,6 +15740,7 @@
         "golden-ass-apuleius",
         "hero-myths-british",
         "homer-kids",
+        "homer-kids-storyboard",
         "human-body",
         "indian-classical-dance",
         "indian-fairy-tales",
@@ -14271,9 +15749,11 @@
         "jungle-book",
         "just-so-stories",
         "king-arthur-kids",
+        "king-arthur-kids-storyboard",
         "legends-alhambra",
         "mabinogion",
         "maya-kids",
+        "maya-kids-storyboard",
         "metamorphoses-ovid",
         "modern-dance-breaking-ground",
         "movement-culture",
@@ -14281,20 +15761,27 @@
         "myths-legends-egypt-spence",
         "nastacia-conta",
         "norse-kids",
+        "norse-kids-storyboard",
         "one-story-kids",
         "peter-pan",
         "phaedrus-plato",
         "polynesian-kids",
+        "polynesian-kids-storyboard",
         "ramayana-kids",
+        "ramayana-kids-storyboard",
+        "roots-of-frozen-ii",
+        "roots-of-moana",
         "russian-folk-tales",
         "song-of-songs",
         "sonnets-from-portuguese",
         "theater-tree",
         "through-the-looking-glass",
         "tibetan-dream-kids",
+        "tibetan-dream-kids-storyboard",
         "tibetan-tales",
         "tom-sawyer",
         "west-african-kids",
+        "west-african-kids-storyboard",
         "wildflowers-of-california",
         "wonderful-wizard-of-oz"
       ]
@@ -14303,6 +15790,7 @@
       "Akomolafe": [
         "alice-in-the-amazon",
         "alice-in-the-mythlands",
+        "alice-in-the-mythlands-storyboard",
         "animal-fables",
         "anthropological-dance",
         "architecture-of-nations",
@@ -14316,7 +15804,9 @@
         "darkwater",
         "decolonization-five-domains",
         "decolonizing-childhood",
+        "disney-decolonial-tree",
         "dreamtime-kids",
+        "dreamtime-kids-storyboard",
         "economic-ideas",
         "embodied-grammars-constellation",
         "ethics-spinoza",
@@ -14345,6 +15835,8 @@
         "pragmatism",
         "repair-an-open-source-book",
         "repair-iching",
+        "roots-of-frozen-ii",
+        "roots-of-moana",
         "russian-folk-tales",
         "sacred-books-east",
         "seven-rays-ancient-roots",
@@ -14359,17 +15851,22 @@
         "upanishads",
         "voices-of-the-unwritten",
         "west-african-folk-tales",
-        "west-african-kids"
+        "west-african-kids",
+        "west-african-kids-storyboard"
       ],
       "Andreotti": [
+        "aesops-fables-storyboard",
         "alice-in-the-amazon",
         "alice-in-the-mythlands",
+        "alice-in-the-mythlands-storyboard",
         "andersens-fairy-tales",
         "animal-fables",
         "anne-of-green-gables",
         "anthropological-dance",
         "architecture-of-nations",
+        "ballet-history-tree",
         "biblical-stories-kids",
+        "biblical-stories-kids-storyboard",
         "bus-grammar-system-prompts",
         "celtic-fairy-tales",
         "colonial-decolonial-music-spiral",
@@ -14380,9 +15877,13 @@
         "decolonization-five-domains",
         "decolonizing-childhood",
         "diogenes-laertius",
+        "disney-decolonial-tree",
+        "disney-dreams-the-original-selves",
         "dreamtime-kids",
+        "dreamtime-kids-storyboard",
         "economic-ideas",
         "egyptian-kids",
+        "egyptian-kids-storyboard",
         "embodied-grammars-constellation",
         "fairy-tales-south-africa",
         "folk-stories-southern-nigeria",
@@ -14393,27 +15894,35 @@
         "gitanjali",
         "grimms-fairy-tales",
         "homer-kids",
+        "homer-kids-storyboard",
         "indian-fairy-tales",
         "instituto-canoa-math-6",
         "jungle-book",
         "king-arthur-kids",
+        "king-arthur-kids-storyboard",
         "legends-alhambra",
         "maya-kids",
+        "maya-kids-storyboard",
         "metamorphoses-ovid",
         "modern-dance-breaking-ground",
         "myths-legends-great-plains",
         "myths-north-american-indians",
         "nastacia-conta",
         "norse-kids",
+        "norse-kids-storyboard",
         "olaudah-equiano",
         "one-story-kids",
         "peter-pan",
         "polynesian-kids",
+        "polynesian-kids-storyboard",
         "popol-vuh",
         "ramayana-kids",
+        "ramayana-kids-storyboard",
         "repair-an-open-source-book",
         "repair-iching",
         "rights-of-man",
+        "roots-of-frozen-ii",
+        "roots-of-moana",
         "sojourner-truth",
         "songs-of-kabir",
         "souls-of-black-folk",
@@ -14423,6 +15932,7 @@
         "through-the-looking-glass",
         "thus-spoke-zarathustra",
         "tibetan-dream-kids",
+        "tibetan-dream-kids-storyboard",
         "up-from-slavery",
         "vindication-rights-woman",
         "voices-of-the-unwritten",
@@ -14457,6 +15967,7 @@
         "sonnets-from-portuguese"
       ],
       "Kelty": [
+        "aesops-fables-storyboard",
         "architecture-of-nations",
         "areopagitica",
         "ballet-living-architecture",
@@ -14523,12 +16034,15 @@
         "alchemy-ancient-modern",
         "alice-in-the-amazon",
         "alice-in-the-mythlands",
+        "alice-in-the-mythlands-storyboard",
         "ancient-art-ritual",
         "andersens-fairy-tales",
         "animal-fables",
         "arabian-nights",
+        "ballet-history-tree",
         "bhagavad-gita",
         "biblical-stories-kids",
+        "biblical-stories-kids-storyboard",
         "book-of-tea",
         "book-of-the-dead-egyptian",
         "bus-grammar-system-prompts",
@@ -14540,9 +16054,12 @@
         "dbt-wise-heart",
         "decolonization-five-domains",
         "decolonizing-childhood",
+        "disney-decolonial-tree",
         "dreamtime-kids",
+        "dreamtime-kids-storyboard",
         "egyptian-ideas-future-life",
         "egyptian-kids",
+        "egyptian-kids-storyboard",
         "egyptian-mythology",
         "eleusinian-mysteries",
         "embodied-grammars-constellation",
@@ -14564,6 +16081,7 @@
         "hidden-symbolism-alchemy",
         "history-of-magic-levi",
         "homer-kids",
+        "homer-kids-storyboard",
         "imitation-of-christ",
         "indian-classical-dance",
         "indian-fairy-tales",
@@ -14571,12 +16089,14 @@
         "japanese-fairy-tales",
         "kalevala",
         "king-arthur-kids",
+        "king-arthur-kids-storyboard",
         "kybalion",
         "leaves-of-grass",
         "legends-of-gods-egyptian",
         "mabinogion",
         "mahabharata",
         "maya-kids",
+        "maya-kids-storyboard",
         "meister-eckhart-sermons",
         "metamorphoses-ovid",
         "mirror-of-alchimy",
@@ -14594,6 +16114,7 @@
         "natural-supernatural-things",
         "new-light-alchymie",
         "norse-kids",
+        "norse-kids-storyboard",
         "one-story-kids",
         "peter-pan",
         "phaedrus-plato",
@@ -14601,11 +16122,15 @@
         "pistis-sophia",
         "plotinus-enneads",
         "polynesian-kids",
+        "polynesian-kids-storyboard",
         "popol-vuh",
         "prose-edda",
         "ramayana-kids",
+        "ramayana-kids-storyboard",
         "repair-an-open-source-book",
         "repair-iching",
+        "roots-of-frozen-ii",
+        "roots-of-moana",
         "rosicrucian-mysteries",
         "russian-folk-tales",
         "sacred-books-east",
@@ -14624,6 +16149,7 @@
         "through-the-looking-glass",
         "thus-spoke-zarathustra",
         "tibetan-dream-kids",
+        "tibetan-dream-kids-storyboard",
         "tibetan-tales",
         "timaeus-plato",
         "upanishads",
@@ -14631,6 +16157,7 @@
         "voices-of-the-unwritten",
         "voyage-of-the-beagle",
         "west-african-kids",
+        "west-african-kids-storyboard",
         "yoga-body-as-temple"
       ],
       "Warner": [
