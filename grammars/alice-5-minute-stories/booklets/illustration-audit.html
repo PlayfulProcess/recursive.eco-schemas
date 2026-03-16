@@ -1,0 +1,4037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alice in Wonderland — Illustration Audit</title>
+<style>
+:root {
+  --bg: #1a1a2e;
+  --card: #16213e;
+  --accent: #e94560;
+  --ok: #4ecca3;
+  --warn: #f5a623;
+  --text: #eee;
+  --muted: #888;
+  --border: #333;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Georgia', serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding-bottom: 80px;
+}
+.header {
+  background: var(--card);
+  padding: 20px 30px;
+  border-bottom: 2px solid var(--accent);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header h1 { font-size: 1.4em; margin-bottom: 5px; }
+.stats { display: flex; gap: 20px; font-size: 0.9em; color: var(--muted); flex-wrap: wrap; }
+.stats .warn { color: var(--warn); font-weight: bold; }
+.stats .ok { color: var(--ok); }
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.controls button {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.controls button:hover { border-color: var(--accent); }
+.controls button.active { background: var(--accent); border-color: var(--accent); }
+
+.container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+
+.entry {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 20px;
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  padding: 16px;
+  transition: border-color 0.3s, opacity 0.3s;
+}
+.entry[data-status="confirmed"] { border-color: var(--ok); opacity: 0.6; }
+.entry[data-status="wrong"] { border-color: var(--accent); }
+
+.entry-img { display: flex; flex-direction: column; gap: 8px; }
+.entry-img img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 4px;
+  background: #111;
+  cursor: pointer;
+}
+.entry-img img.zoomed {
+  max-height: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 1000;
+  object-fit: contain;
+  background: rgba(0,0,0,0.95);
+  border-radius: 0;
+  padding: 20px;
+}
+.img-meta { font-size: 0.8em; color: var(--muted); }
+.img-meta .artist { color: var(--text); font-weight: bold; }
+
+.entry-content { display: flex; flex-direction: column; gap: 12px; }
+.entry-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.item-badge {
+  background: var(--bg); padding: 4px 10px; border-radius: 4px;
+  font-size: 0.85em; font-family: monospace; white-space: nowrap;
+}
+.scene-label {
+  font-style: italic; color: var(--warn); font-size: 0.9em;
+  padding: 4px 8px; background: rgba(245,166,35,0.1); border-radius: 4px;
+}
+.text-passage {
+  background: var(--bg); padding: 12px 16px; border-radius: 6px;
+  font-size: 0.9em; line-height: 1.7; max-height: 200px;
+  overflow-y: auto; white-space: pre-wrap;
+  border-left: 3px solid var(--accent);
+}
+.actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.actions button {
+  padding: 5px 12px; border: 1px solid var(--border);
+  background: var(--bg); color: var(--text);
+  cursor: pointer; border-radius: 4px; font-size: 0.8em;
+}
+.actions button:hover { opacity: 0.8; }
+.actions .btn-ok { border-color: var(--ok); color: var(--ok); }
+.actions .btn-ok.active { background: var(--ok); color: #000; }
+.actions .btn-wrong { border-color: var(--accent); color: var(--accent); }
+.actions .btn-wrong.active { background: var(--accent); color: #fff; }
+.notes-input {
+  padding: 4px 8px; background: var(--bg); color: var(--text);
+  border: 1px solid var(--border); border-radius: 4px;
+  font-size: 0.8em; flex: 1; min-width: 200px;
+}
+.chapter-divider {
+  background: var(--accent); color: #fff;
+  padding: 10px 20px; margin: 24px 0 12px;
+  border-radius: 6px; font-size: 1.1em; font-weight: bold;
+}
+.export-bar {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: var(--card); border-top: 2px solid var(--accent);
+  padding: 12px 30px; display: flex;
+  justify-content: space-between; align-items: center; z-index: 100;
+}
+.export-bar button {
+  padding: 8px 20px; background: var(--accent); color: #fff;
+  border: none; border-radius: 4px; cursor: pointer;
+  font-size: 1em; font-weight: bold;
+}
+.export-bar button:hover { opacity: 0.9; }
+.hidden { display: none !important; }
+@media (max-width: 900px) { .entry { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Alice in Wonderland &mdash; Illustration-to-Page Audit</h1>
+  <p style="color:var(--muted);font-size:0.85em;margin-bottom:8px;">
+    Review each illustration against its matched page text. Click images to zoom.
+    Mark as OK or Wrong. Add notes for swaps. Export corrections when done.
+  </p>
+  <div class="stats">
+    <span>Total: <strong>117</strong> entries</span>
+    <span>With illustration: <strong>116</strong></span>
+    <span>Text-only: <strong>1</strong></span>
+    <span class="ok">Confirmed: <strong id="stat-ok">0</strong></span>
+    <span class="warn">Wrong: <strong id="stat-wrong">0</strong></span>
+    <span>Pending: <strong id="stat-pending">117</strong></span>
+  </div>
+  <div class="controls">
+    <button onclick="filterView('all')" class="active" id="btn-all">Show All</button>
+    <button onclick="filterView('pending')" id="btn-pending">Pending Only</button>
+    <button onclick="filterView('wrong')" id="btn-wrong">Wrong Only</button>
+    <button onclick="filterView('confirmed')" id="btn-confirmed">Confirmed Only</button>
+    <button onclick="filterView('has-image')" id="btn-has-image">With Images</button>
+  </div>
+</div>
+
+<div class="container">
+<div class="chapter-divider">Chapter 1: DOWN THE RABBIT-HOLE</div>
+
+<div class="entry" data-idx="0" data-chapter="1" data-page="0" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-the-white-rabbit-appears/gwynedd-hudson-1922.jpg" alt="Gwynedd Hudson — White Rabbit" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Gwynedd Hudson — White Rabbit</div>
+      <div>Ch1 Cover &mdash; Cover</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 1, Cover</strong>
+        
+      </div>
+      <span class="item-badge">Ch1 Cover</span>
+    </div>
+    <div class="scene-label">Scene: Gwynedd Hudson — White Rabbit</div>
+    <div class="text-passage">[COVER PAGE]</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(0,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(0,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(0, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="1" data-chapter="1" data-page="1" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-bored-by-the-river/lewis-carroll-1864-manuscript.webp" alt="Lewis Carroll — Alice with sister by the river" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — Alice with sister by the river</div>
+      <div>Ch1 p1 &mdash; Page 1</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 1, Page 1</strong>
+        
+      </div>
+      <span class="item-badge">Ch1 p1</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — Alice with sister by the river</div>
+    <div class="text-passage">ALICE WAS BEGINNING TO GET VERY TIRED OF SITTING BY HER SISTER ON THE
+
+BANK, AND OF HAVING NOTHING TO DO: ONCE OR TWICE SHE HAD PEEPED INTO
+
+THE BOOK HER SISTER WAS READING, BUT IT HAD NO PICTURES OR
+
+CONVERSATIONS IN IT, “AND WHAT IS THE USE OF A BOOK,” THOUGHT ALICE</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(1,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(1,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(1, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="2" data-chapter="1" data-page="2" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-bored-by-the-river/lewis-carroll-1864-dedication.webp" alt="Lewis Carroll — A Christmas Gift to a Dear Child" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — A Christmas Gift to a Dear Child</div>
+      <div>Ch1 p2 &mdash; Page 2</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 1, Page 2</strong>
+        
+      </div>
+      <span class="item-badge">Ch1 p2</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — A Christmas Gift to a Dear Child</div>
+    <div class="text-passage">“WITHOUT PICTURES OR CONVERSATIONS?”
+
+SO SHE WAS CONSIDERING IN HER OWN MIND (AS WELL AS SHE COULD, FOR THE
+
+HOT DAY MADE HER FEEL VERY SLEEPY AND STUPID), WHETHER THE PLEASURE OF
+
+MAKING A DAISY-CHAIN WOULD BE WORTH THE TROUBLE OF GETTING UP AND</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(2,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(2,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(2, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="3" data-chapter="1" data-page="3" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-the-white-rabbit-appears/alice-b-woodward-1913.jpg" alt="Alice B. Woodward — Suddenly a white rabbit ran by" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Alice B. Woodward — Suddenly a white rabbit ran by</div>
+      <div>Ch1 p3 &mdash; Page 3</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 1, Page 3</strong>
+        
+      </div>
+      <span class="item-badge">Ch1 p3</span>
+    </div>
+    <div class="scene-label">Scene: Alice B. Woodward — Suddenly a white rabbit ran by</div>
+    <div class="text-passage">PICKING THE DAISIES, WHEN SUDDENLY A WHITE RABBIT WITH PINK EYES RAN
+
+CLOSE BY HER.</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(3,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(3,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(3, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="4" data-chapter="1" data-page="4" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-01-down-the-rabbit-hole/gwynedd-hudson-1922.jpg" alt="Gwynedd Hudson — Alice &amp; Dinah" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Gwynedd Hudson — Alice &amp; Dinah</div>
+      <div>Ch1 p4 &mdash; Page 4</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 1, Page 4</strong>
+        
+      </div>
+      <span class="item-badge">Ch1 p4</span>
+    </div>
+    <div class="scene-label">Scene: Gwynedd Hudson — Alice &amp; Dinah</div>
+    <div class="text-passage">THERE WAS NOTHING SO VERY REMARKABLE IN THAT; NOR DID ALICE THINK IT
+
+SO VERY MUCH OUT OF THE WAY TO HEAR THE RABBIT SAY TO ITSELF, “OH
+
+DEAR! OH DEAR! I SHALL BE LATE!” (WHEN SHE THOUGHT IT OVER AFTERWARDS,
+
+IT OCCURRED TO HER THAT SHE OUGHT TO HAVE WONDERED AT THIS, BUT AT THE</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(4,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(4,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(4, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="5" data-chapter="1" data-page="5" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-falling-down/brinsley-le-fanu-1910.jpg" alt="Brinsley Le Fanu — Alice took marmalade as she fell" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Brinsley Le Fanu — Alice took marmalade as she fell</div>
+      <div>Ch1 p5 &mdash; Page 5</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 1, Page 5</strong>
+        
+      </div>
+      <span class="item-badge">Ch1 p5</span>
+    </div>
+    <div class="scene-label">Scene: Brinsley Le Fanu — Alice took marmalade as she fell</div>
+    <div class="text-passage">TIME IT ALL SEEMED QUITE NATURAL); BUT WHEN THE RABBIT ACTUALLY TOOK A
+
+WATCH OUT OF ITS WAISTCOAT-POCKET, AND LOOKED AT IT, AND THEN HURRIED
+
+ON, ALICE STARTED TO HER FEET, FOR IT FLASHED ACROSS HER MIND THAT SHE
+
+HAD NEVER BEFORE SEEN A RABBIT WITH EITHER A WAISTCOAT-POCKET, OR A</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(5,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(5,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(5, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="6" data-chapter="1" data-page="6" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-01-down-the-rabbit-hole/arthur-rackham-1907.jpg" alt="Arthur Rackham — Alice portrait" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Arthur Rackham — Alice portrait</div>
+      <div>Ch1 p6 &mdash; Page 6</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 1, Page 6</strong>
+        
+      </div>
+      <span class="item-badge">Ch1 p6</span>
+    </div>
+    <div class="scene-label">Scene: Arthur Rackham — Alice portrait</div>
+    <div class="text-passage">WATCH TO TAKE OUT OF IT, AND BURNING WITH CURIOSITY, SHE RAN ACROSS THE
+
+FIELD AFTER IT, AND FORTUNATELY WAS JUST IN TIME TO SEE IT POP DOWN A
+
+LARGE RABBIT-HOLE UNDER THE HEDGE.
+
+IN ANOTHER MOMENT DOWN WENT ALICE AFTER IT, NEVER ONCE CONSIDERING HOW</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(6,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(6,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(6, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="7" data-chapter="1" data-page="7" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-drink-me/lewis-carroll-1864-title-page.webp" alt="Lewis Carroll — Alice's Adventures Under Ground title page" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — Alice's Adventures Under Ground title page</div>
+      <div>Ch1 p7 &mdash; Page 7</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 1, Page 7</strong>
+        
+      </div>
+      <span class="item-badge">Ch1 p7</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — Alice's Adventures Under Ground title page</div>
+    <div class="text-passage">IN THE WORLD SHE WAS TO GET OUT AGAIN.</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(7,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(7,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(7, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="8" data-chapter="1" data-page="8" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-falling-down/william-h-walker-1907.jpg" alt="William H. Walker — Alice falling" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">William H. Walker — Alice falling</div>
+      <div>Ch1 p8 &mdash; Page 8</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 1, Page 8</strong>
+        
+      </div>
+      <span class="item-badge">Ch1 p8</span>
+    </div>
+    <div class="scene-label">Scene: William H. Walker — Alice falling</div>
+    <div class="text-passage">THE RABBIT-HOLE WENT STRAIGHT ON LIKE A TUNNEL FOR SOME WAY, AND THEN
+DIPPED SUDDENLY DOWN, SO SUDDENLY THAT ALICE HAD NOT A MOMENT TO THINK
+ABOUT STOPPING HERSELF BEFORE SHE FOUND HERSELF FALLING DOWN A VERY
+DEEP WELL.
+
+EITHER THE WELL WAS VERY DEEP, OR SHE FELL VERY SLOWLY, FOR SHE HAD
+PLENTY OF TIME AS SHE WENT DOWN TO LOOK ABOUT HER AND TO WONDER WHAT
+WAS GOING TO HAPPEN NEXT. FIRST, SHE TRIED</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(8,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(8,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(8, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="9" data-chapter="1" data-page="9" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-bored-by-the-river/brinsley-le-fanu-1910.jpg" alt="Brinsley Le Fanu — Alice took marmalade as she fell" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Brinsley Le Fanu — Alice took marmalade as she fell</div>
+      <div>Ch1 p9 &mdash; Page 9</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 1, Page 9</strong>
+        
+      </div>
+      <span class="item-badge">Ch1 p9</span>
+    </div>
+    <div class="scene-label">Scene: Brinsley Le Fanu — Alice took marmalade as she fell</div>
+    <div class="text-passage">DOWN, DOWN, DOWN. WOULD THE FALL NEVER COME TO AN END? “I WONDER HOW
+MANY MILES I’VE FALLEN BY THIS TIME?” SHE SAID ALOUD. “I MUST BE
+GETTING SOMEWHERE NEAR THE CENTRE OF THE EARTH. LET ME SEE: THAT WOULD
+BE FOUR THOUSAND MILES DOWN, I THINK—” (FOR, YOU SEE, ALICE HAD LEARNT
+SEVERAL THINGS OF THIS SORT IN HER LESSONS IN THE SCHOOLROOM, AND
+THOUGH THIS WAS NOT A VERY GOOD OPPORTUNITY FOR SHOWING OF</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(9,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(9,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(9, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="10" data-chapter="1" data-page="10" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-the-white-rabbit-appears/arthur-rackham-1907.jpg" alt="Arthur Rackham — White Rabbit" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Arthur Rackham — White Rabbit</div>
+      <div>Ch1 p10 &mdash; Page 10</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 1, Page 10</strong>
+        
+      </div>
+      <span class="item-badge">Ch1 p10</span>
+    </div>
+    <div class="scene-label">Scene: Arthur Rackham — White Rabbit</div>
+    <div class="text-passage">ALICE WAS NOT A BIT HURT, AND SHE JUMPED UP ON TO HER FEET IN A MOMENT:
+SHE LOOKED UP, BUT IT WAS ALL DARK OVERHEAD; BEFORE HER WAS ANOTHER
+LONG PASSAGE, AND THE WHITE RABBIT WAS STILL IN SIGHT, HURRYING DOWN
+IT. THERE WAS NOT A MOMENT TO BE LOST: AWAY WENT ALICE LIKE THE WIND,
+AND WAS JUST IN TIME TO HEAR IT SAY, AS IT TURNED A CORNER, “OH MY EARS
+AND WHISKERS, HOW LATE IT’S GETTING!” SHE WAS CLO</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(10,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(10,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(10, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="11" data-chapter="1" data-page="11" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-drink-me/lewis-carroll-1864-manuscript.webp" alt="Lewis Carroll — Alice at the golden key and little door" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — Alice at the golden key and little door</div>
+      <div>Ch1 p11 &mdash; Page 11</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 1, Page 11</strong>
+        
+      </div>
+      <span class="item-badge">Ch1 p11</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — Alice at the golden key and little door</div>
+    <div class="text-passage">THERE SEEMED TO BE NO USE IN WAITING BY THE LITTLE DOOR, SO SHE WENT
+BACK TO THE TABLE, HALF HOPING SHE MIGHT FIND ANOTHER KEY ON IT, OR AT
+ANY RATE A BOOK OF RULES FOR SHUTTING PEOPLE UP LIKE TELESCOPES: THIS
+TIME SHE FOUND A LITTLE BOTTLE ON IT, (“WHICH CERTAINLY WAS NOT HERE
+BEFORE,” SAID ALICE,) AND ROUND THE NECK OF THE BOTTLE WAS A PAPER
+LABEL, WITH THE WORDS “DRINK ME,” BEAUTIFULLY PRINTED </div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(11,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(11,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(11, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="12" data-chapter="1" data-page="12" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-eat-me/nursery-alice-1890-cover.jpg" alt="E. Gertrude Thomson &amp; John Tenniel — The Nursery Alice front cover" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">E. Gertrude Thomson &amp; John Tenniel — The Nursery Alice front cover</div>
+      <div>Ch1 p12 &mdash; Page 12</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 1, Page 12</strong>
+        
+      </div>
+      <span class="item-badge">Ch1 p12</span>
+    </div>
+    <div class="scene-label">Scene: E. Gertrude Thomson &amp; John Tenniel — The Nursery Alice front cover</div>
+    <div class="text-passage">“WHAT A CURIOUS FEELING!” SAID ALICE; “I MUST BE SHUTTING UP LIKE A
+TELESCOPE.”
+
+AND SO IT WAS INDEED: SHE WAS NOW ONLY TEN INCHES HIGH, AND HER FACE
+BRIGHTENED UP AT THE THOUGHT THAT SHE WAS NOW THE RIGHT SIZE FOR GOING
+THROUGH THE LITTLE DOOR INTO THAT LOVELY GARDEN. FIRST, HOWEVER, SHE
+WAITED FOR A FEW MINUTES TO SEE IF SHE WAS GOING TO SHRINK ANY FURTHER:
+SHE FELT A LITTLE NERVOUS ABOUT THIS; </div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(12,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(12,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(12, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="13" data-chapter="1" data-page="13" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-the-hall-of-doors/brinsley-le-fanu-1910.jpg" alt="Brinsley Le Fanu — Glass table" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Brinsley Le Fanu — Glass table</div>
+      <div>Ch1 p13 &mdash; Page 13</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 1, Page 13</strong>
+        
+      </div>
+      <span class="item-badge">Ch1 p13</span>
+    </div>
+    <div class="scene-label">Scene: Brinsley Le Fanu — Glass table</div>
+    <div class="text-passage">AFTER A WHILE, FINDING THAT NOTHING MORE HAPPENED, SHE DECIDED ON GOING
+INTO THE GARDEN AT ONCE; BUT, ALAS FOR POOR ALICE! WHEN SHE GOT TO THE
+DOOR, SHE FOUND SHE HAD FORGOTTEN THE LITTLE GOLDEN KEY, AND WHEN SHE
+WENT BACK TO THE TABLE FOR IT, SHE FOUND SHE COULD NOT POSSIBLY REACH
+IT: SHE COULD SEE IT QUITE PLAINLY THROUGH THE GLASS, AND SHE TRIED HER
+BEST TO CLIMB UP ONE OF THE LEGS OF THE TABLE</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(13,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(13,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(13, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="14" data-chapter="1" data-page="14" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-eat-me/lewis-carroll-1864-manuscript.webp" alt="Lewis Carroll — Curiouser and curiouser - Alice growing tall" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — Curiouser and curiouser - Alice growing tall</div>
+      <div>Ch1 p14 &mdash; Page 14</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 1, Page 14</strong>
+        
+      </div>
+      <span class="item-badge">Ch1 p14</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — Curiouser and curiouser - Alice growing tall</div>
+    <div class="text-passage">SHE ATE A LITTLE BIT, AND SAID ANXIOUSLY TO HERSELF, “WHICH WAY? WHICH
+WAY?”, HOLDING HER HAND ON THE TOP OF HER HEAD TO FEEL WHICH WAY IT WAS
+GROWING, AND SHE WAS QUITE SURPRISED TO FIND THAT SHE REMAINED THE SAME
+SIZE: TO BE SURE, THIS GENERALLY HAPPENS WHEN ONE EATS CAKE, BUT ALICE
+HAD GOT SO MUCH INTO THE WAY OF EXPECTING NOTHING BUT OUT-OF-THE-WAY
+THINGS TO HAPPEN, THAT IT SEEMED QUITE DULL A</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(14,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(14,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(14, this.value)">
+    </div>
+  </div>
+</div><div class="chapter-divider">Chapter 2: THE POOL OF TEARS</div>
+
+<div class="entry" data-idx="15" data-chapter="2" data-page="0" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-02-the-pool-of-tears/lewis-carroll-1864-chapter-I.webp" alt="Lewis Carroll — Carroll manuscript Chapter I opening" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — Carroll manuscript Chapter I opening</div>
+      <div>Ch2 Cover &mdash; Cover</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 2, Cover</strong>
+        
+      </div>
+      <span class="item-badge">Ch2 Cover</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — Carroll manuscript Chapter I opening</div>
+    <div class="text-passage">[COVER PAGE]</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(15,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(15,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(15, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="16" data-chapter="2" data-page="1" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-curiouser-and-curiouser/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — How Alice grew tall" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">John Tenniel (colorized E.G. Thomson) — How Alice grew tall</div>
+      <div>Ch2 p1 &mdash; Page 1</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 2, Page 1</strong>
+        
+      </div>
+      <span class="item-badge">Ch2 p1</span>
+    </div>
+    <div class="scene-label">Scene: John Tenniel (colorized E.G. Thomson) — How Alice grew tall</div>
+    <div class="text-passage">“CURIOUSER AND CURIOUSER!” CRIED ALICE (SHE WAS SO MUCH SURPRISED, THAT
+FOR THE MOMENT SHE QUITE FORGOT HOW TO SPEAK GOOD ENGLISH); “NOW I’M
+OPENING OUT LIKE THE LARGEST TELESCOPE THAT EVER WAS! GOOD-BYE, FEET!”
+(FOR WHEN SHE LOOKED DOWN AT HER FEET, THEY SEEMED TO BE ALMOST OUT OF
+SIGHT, THEY WERE GETTING SO FAR OFF). “OH, MY POOR LITTLE FEET, I
+WONDER WHO WILL PUT ON YOUR SHOES AND STOCKINGS FOR</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(16,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(16,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(16, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="17" data-chapter="2" data-page="2" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-the-white-rabbit-returns/lewis-carroll-1864-manuscript.webp" alt="Lewis Carroll — White Rabbit ordering Alice about" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — White Rabbit ordering Alice about</div>
+      <div>Ch2 p2 &mdash; Page 2</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 2, Page 2</strong>
+        
+      </div>
+      <span class="item-badge">Ch2 p2</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — White Rabbit ordering Alice about</div>
+    <div class="text-passage">AFTER A TIME SHE HEARD A LITTLE PATTERING OF FEET IN THE DISTANCE, AND
+SHE HASTILY DRIED HER EYES TO SEE WHAT WAS COMING. IT WAS THE WHITE
+RABBIT RETURNING, SPLENDIDLY DRESSED, WITH A PAIR OF WHITE KID GLOVES
+IN ONE HAND AND A LARGE FAN IN THE OTHER: HE CAME TROTTING ALONG IN A
+GREAT HURRY, MUTTERING TO HIMSELF AS HE CAME, “OH! THE DUCHESS, THE
+DUCHESS! OH! WON’T SHE BE SAVAGE IF I’VE KEPT HER WAI</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(17,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(17,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(17, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="18" data-chapter="2" data-page="3" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-meeting-the-mouse/emily-overnell-1912.jpg" alt="Emily Overnell — Alice in Wonderland frontispiece" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Emily Overnell — Alice in Wonderland frontispiece</div>
+      <div>Ch2 p3 &mdash; Page 3</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 2, Page 3</strong>
+        
+      </div>
+      <span class="item-badge">Ch2 p3</span>
+    </div>
+    <div class="scene-label">Scene: Emily Overnell — Alice in Wonderland frontispiece</div>
+    <div class="text-passage">“THAT WAS A NARROW ESCAPE!” SAID ALICE, A GOOD DEAL FRIGHTENED AT THE
+SUDDEN CHANGE, BUT VERY GLAD TO FIND HERSELF STILL IN EXISTENCE; “AND
+NOW FOR THE GARDEN!” AND SHE RAN WITH ALL SPEED BACK TO THE LITTLE
+DOOR: BUT, ALAS! THE LITTLE DOOR WAS SHUT AGAIN, AND THE LITTLE GOLDEN
+KEY WAS LYING ON THE GLASS TABLE AS BEFORE, “AND THINGS ARE WORSE THAN
+EVER,” THOUGHT THE POOR CHILD, “FOR I NEVER WAS SO </div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(18,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(18,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(18, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="19" data-chapter="2" data-page="4" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-the-pool-of-tears/alice-b-woodward-1913.jpg" alt="Alice B. Woodward — They all swam to the shore" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Alice B. Woodward — They all swam to the shore</div>
+      <div>Ch2 p4 &mdash; Page 4</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 2, Page 4</strong>
+        
+      </div>
+      <span class="item-badge">Ch2 p4</span>
+    </div>
+    <div class="scene-label">Scene: Alice B. Woodward — They all swam to the shore</div>
+    <div class="text-passage">AS SHE SAID THESE WORDS HER FOOT SLIPPED, AND IN ANOTHER MOMENT,
+SPLASH! SHE WAS UP TO HER CHIN IN SALT WATER. HER FIRST IDEA WAS THAT
+SHE HAD SOMEHOW FALLEN INTO THE SEA, “AND IN THAT CASE I CAN GO BACK BY
+RAILWAY,” SHE SAID TO HERSELF. (ALICE HAD BEEN TO THE SEASIDE ONCE IN
+HER LIFE, AND HAD COME TO THE GENERAL CONCLUSION, THAT WHEREVER YOU GO
+TO ON THE ENGLISH COAST YOU FIND A NUMBER OF BATHING</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(19,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(19,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(19, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="20" data-chapter="2" data-page="5" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-the-pool-of-tears/arthur-rackham-1907.jpg" alt="Arthur Rackham — Pool of tears" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Arthur Rackham — Pool of tears</div>
+      <div>Ch2 p5 &mdash; Page 5</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 2, Page 5</strong>
+        
+      </div>
+      <span class="item-badge">Ch2 p5</span>
+    </div>
+    <div class="scene-label">Scene: Arthur Rackham — Pool of tears</div>
+    <div class="text-passage">“I WISH I HADN’T CRIED SO MUCH!” SAID ALICE, AS SHE SWAM ABOUT, TRYING
+TO FIND HER WAY OUT. “I SHALL BE PUNISHED FOR IT NOW, I SUPPOSE, BY
+BEING DROWNED IN MY OWN TEARS! THAT WILL BE A QUEER THING, TO BE
+SURE! HOWEVER, EVERYTHING IS QUEER TO-DAY.”</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(20,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(20,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(20, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="21" data-chapter="2" data-page="6" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-the-pool-of-tears/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — Alice &amp; Mouse in Pool of Tears" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">John Tenniel (colorized E.G. Thomson) — Alice &amp; Mouse in Pool of Tears</div>
+      <div>Ch2 p6 &mdash; Page 6</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 2, Page 6</strong>
+        
+      </div>
+      <span class="item-badge">Ch2 p6</span>
+    </div>
+    <div class="scene-label">Scene: John Tenniel (colorized E.G. Thomson) — Alice &amp; Mouse in Pool of Tears</div>
+    <div class="text-passage">JUST THEN SHE HEARD SOMETHING SPLASHING ABOUT IN THE POOL A LITTLE WAY
+OFF, AND SHE SWAM NEARER TO MAKE OUT WHAT IT WAS: AT FIRST SHE THOUGHT
+IT MUST BE A WALRUS OR HIPPOPOTAMUS, BUT THEN SHE REMEMBERED HOW SMALL
+SHE WAS NOW, AND SHE SOON MADE OUT THAT IT WAS ONLY A MOUSE THAT HAD
+SLIPPED IN LIKE HERSELF.
+
+“WOULD IT BE OF ANY USE, NOW,” THOUGHT ALICE, “TO SPEAK TO THIS MOUSE?
+EVERYTHING IS SO OUT-</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(21,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(21,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(21, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="22" data-chapter="2" data-page="7" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-meeting-the-mouse/lewis-carroll-1864-manuscript.webp" alt="Lewis Carroll — Alice swimming with the Mouse" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — Alice swimming with the Mouse</div>
+      <div>Ch2 p7 &mdash; Page 7</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 2, Page 7</strong>
+        
+      </div>
+      <span class="item-badge">Ch2 p7</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — Alice swimming with the Mouse</div>
+    <div class="text-passage">“WE INDEED!” CRIED THE MOUSE, WHO WAS TREMBLING DOWN TO THE END OF HIS
+TAIL. “AS IF I WOULD TALK ON SUCH A SUBJECT! OUR FAMILY ALWAYS
+HATED CATS: NASTY, LOW, VULGAR THINGS! DON’T LET ME HEAR THE NAME
+AGAIN!”
+
+“I WON’T INDEED!” SAID ALICE, IN A GREAT HURRY TO CHANGE THE SUBJECT OF
+CONVERSATION. “ARE YOU—ARE YOU FOND—OF—OF DOGS?” THE MOUSE DID NOT
+ANSWER, SO ALICE WENT ON EAGERLY: “THERE IS SUCH A N</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(22,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(22,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(22, this.value)">
+    </div>
+  </div>
+</div><div class="chapter-divider">Chapter 3: A CAUCUS-RACE AND A LONG TALE</div>
+
+<div class="entry" data-idx="23" data-chapter="3" data-page="0" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/emily-overnell-1912.jpg" alt="Emily Overnell — Got up in disgust" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Emily Overnell — Got up in disgust</div>
+      <div>Ch3 Cover &mdash; Cover</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 3, Cover</strong>
+        
+      </div>
+      <span class="item-badge">Ch3 Cover</span>
+    </div>
+    <div class="scene-label">Scene: Emily Overnell — Got up in disgust</div>
+    <div class="text-passage">[COVER PAGE]</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(23,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(23,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(23, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="24" data-chapter="3" data-page="1" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/bessie-pease-gutmann-1933.jpg" alt="Bessie Pease Gutmann — Beg your acceptance" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Bessie Pease Gutmann — Beg your acceptance</div>
+      <div>Ch3 p1 &mdash; Page 1</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 3, Page 1</strong>
+        
+      </div>
+      <span class="item-badge">Ch3 p1</span>
+    </div>
+    <div class="scene-label">Scene: Bessie Pease Gutmann — Beg your acceptance</div>
+    <div class="text-passage">THEY WERE INDEED A QUEER-LOOKING PARTY THAT ASSEMBLED ON THE BANK—THE
+BIRDS WITH DRAGGLED FEATHERS, THE ANIMALS WITH THEIR FUR CLINGING CLOSE
+TO THEM, AND ALL DRIPPING WET, CROSS, AND UNCOMFORTABLE.
+
+THE FIRST QUESTION OF COURSE WAS, HOW TO GET DRY AGAIN: THEY HAD A
+CONSULTATION ABOUT THIS, AND AFTER A FEW MINUTES IT SEEMED QUITE
+NATURAL TO ALICE TO FIND HERSELF TALKING FAMILIARLY WITH THEM, AS IF</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(24,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(24,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(24, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="25" data-chapter="3" data-page="2" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-03-a-caucus-race-and-a-long-tale/lewis-carroll-1864-chapter-II.webp" alt="Lewis Carroll — Carroll manuscript Chapter II - Caucus Race party" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — Carroll manuscript Chapter II - Caucus Race party</div>
+      <div>Ch3 p2 &mdash; Page 2</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 3, Page 2</strong>
+        
+      </div>
+      <span class="item-badge">Ch3 p2</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — Carroll manuscript Chapter II - Caucus Race party</div>
+    <div class="text-passage">“I THOUGHT YOU DID,” SAID THE MOUSE. “—I PROCEED. ‘EDWIN AND MORCAR,
+THE EARLS OF MERCIA AND NORTHUMBRIA, DECLARED FOR HIM: AND EVEN
+STIGAND, THE PATRIOTIC ARCHBISHOP OF CANTERBURY, FOUND IT ADVISABLE—’”
+
+“FOUND WHAT?” SAID THE DUCK.
+
+“FOUND IT,” THE MOUSE REPLIED RATHER CROSSLY: “OF COURSE YOU KNOW
+WHAT ‘IT’ MEANS.”
+
+“I KNOW WHAT ‘IT’ MEANS WELL ENOUGH, WHEN I FIND A THING,” SAID THE
+DUCK: “IT’S </div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(25,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(25,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(25, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="26" data-chapter="3" data-page="3" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — Hand it over said Dodo" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">John Tenniel (colorized E.G. Thomson) — Hand it over said Dodo</div>
+      <div>Ch3 p3 &mdash; Page 3</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 3, Page 3</strong>
+        
+      </div>
+      <span class="item-badge">Ch3 p3</span>
+    </div>
+    <div class="scene-label">Scene: John Tenniel (colorized E.G. Thomson) — Hand it over said Dodo</div>
+    <div class="text-passage">“IN THAT CASE,” SAID THE DODO SOLEMNLY, RISING TO ITS FEET, “I MOVE
+THAT THE MEETING ADJOURN, FOR THE IMMEDIATE ADOPTION OF MORE ENERGETIC
+REMEDIES—”
+
+“SPEAK ENGLISH!” SAID THE EAGLET. “I DON’T KNOW THE MEANING OF HALF
+THOSE LONG WORDS, AND, WHAT’S MORE, I DON’T BELIEVE YOU DO EITHER!” AND
+THE EAGLET BENT DOWN ITS HEAD TO HIDE A SMILE: SOME OF THE OTHER BIRDS
+TITTERED AUDIBLY.
+
+“WHAT I WAS GOING T</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(26,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(26,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(26, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="27" data-chapter="3" data-page="4" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/william-h-walker-1907.jpg" alt="William H. Walker — Dodo" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">William H. Walker — Dodo</div>
+      <div>Ch3 p4 &mdash; Page 4</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 3, Page 4</strong>
+        
+      </div>
+      <span class="item-badge">Ch3 p4</span>
+    </div>
+    <div class="scene-label">Scene: William H. Walker — Dodo</div>
+    <div class="text-passage">“WHAT IS A CAUCUS-RACE?” SAID ALICE; NOT THAT SHE WANTED MUCH TO
+KNOW, BUT THE DODO HAD PAUSED AS IF IT THOUGHT THAT SOMEBODY OUGHT TO
+SPEAK, AND NO ONE ELSE SEEMED INCLINED TO SAY ANYTHING.
+
+“WHY,” SAID THE DODO, “THE BEST WAY TO EXPLAIN IT IS TO DO IT.” (AND,
+AS YOU MIGHT LIKE TO TRY THE THING YOURSELF, SOME WINTER DAY, I WILL
+TELL YOU HOW THE DODO MANAGED IT.)
+
+FIRST IT MARKED OUT A RACE-COURSE</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(27,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(27,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(27, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="28" data-chapter="3" data-page="5" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/brinsley-le-fanu-1910.jpg" alt="Brinsley Le Fanu — Dodo presents Alice with her fingernail" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Brinsley Le Fanu — Dodo presents Alice with her fingernail</div>
+      <div>Ch3 p5 &mdash; Page 5</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 3, Page 5</strong>
+        
+      </div>
+      <span class="item-badge">Ch3 p5</span>
+    </div>
+    <div class="scene-label">Scene: Brinsley Le Fanu — Dodo presents Alice with her fingernail</div>
+    <div class="text-passage">THIS QUESTION THE DODO COULD NOT ANSWER WITHOUT A GREAT DEAL OF
+THOUGHT, AND IT SAT FOR A LONG TIME WITH ONE FINGER PRESSED UPON ITS
+FOREHEAD (THE POSITION IN WHICH YOU USUALLY SEE SHAKESPEARE, IN THE
+PICTURES OF HIM), WHILE THE REST WAITED IN SILENCE. AT LAST THE DODO
+SAID, “EVERYBODY HAS WON, AND ALL MUST HAVE PRIZES.”
+
+“BUT WHO IS TO GIVE THE PRIZES?” QUITE A CHORUS OF VOICES ASKED.
+
+“WHY, SHE,</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(28,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(28,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(28, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="29" data-chapter="3" data-page="6" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-driest-thing/lewis-carroll-1864-manuscript.webp" alt="Lewis Carroll — Alice alone on the shore after the race" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — Alice alone on the shore after the race</div>
+      <div>Ch3 p6 &mdash; Page 6</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 3, Page 6</strong>
+        
+      </div>
+      <span class="item-badge">Ch3 p6</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — Alice alone on the shore after the race</div>
+    <div class="text-passage">ALICE HAD NO IDEA WHAT TO DO, AND IN DESPAIR SHE PUT HER HAND IN HER
+POCKET, AND PULLED OUT A BOX OF COMFITS, (LUCKILY THE SALT WATER HAD
+NOT GOT INTO IT), AND HANDED THEM ROUND AS PRIZES. THERE WAS EXACTLY
+ONE A-PIECE, ALL ROUND.
+
+“BUT SHE MUST HAVE A PRIZE HERSELF, YOU KNOW,” SAID THE MOUSE.
+
+“OF COURSE,” THE DODO REPLIED VERY GRAVELY. “WHAT ELSE HAVE YOU GOT IN
+YOUR POCKET?” HE WENT ON, TURNING</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(29,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(29,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(29, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="30" data-chapter="3" data-page="7" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-driest-thing/john-tenniel-harry-theaker-1911.jpg" alt="John Tenniel &amp; Harry Theaker — Dodo presents thimble to Alice" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">John Tenniel &amp; Harry Theaker — Dodo presents thimble to Alice</div>
+      <div>Ch3 p7 &mdash; Page 7</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 3, Page 7</strong>
+        
+      </div>
+      <span class="item-badge">Ch3 p7</span>
+    </div>
+    <div class="scene-label">Scene: John Tenniel &amp; Harry Theaker — Dodo presents thimble to Alice</div>
+    <div class="text-passage">“ONLY A THIMBLE,” SAID ALICE SADLY.
+
+“HAND IT OVER HERE,” SAID THE DODO.
+
+THEN THEY ALL CROWDED ROUND HER ONCE MORE, WHILE THE DODO SOLEMNLY
+PRESENTED THE THIMBLE, SAYING “WE BEG YOUR ACCEPTANCE OF THIS ELEGANT
+THIMBLE;” AND, WHEN IT HAD FINISHED THIS SHORT SPEECH, THEY ALL
+CHEERED.</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(30,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(30,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(30, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="31" data-chapter="3" data-page="8" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/arthur-rackham-1907.jpg" alt="Arthur Rackham — Who has won" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Arthur Rackham — Who has won</div>
+      <div>Ch3 p8 &mdash; Page 8</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 3, Page 8</strong>
+        
+      </div>
+      <span class="item-badge">Ch3 p8</span>
+    </div>
+    <div class="scene-label">Scene: Arthur Rackham — Who has won</div>
+    <div class="text-passage">ALICE THOUGHT THE WHOLE THING VERY ABSURD, BUT THEY ALL LOOKED SO GRAVE
+THAT SHE DID NOT DARE TO LAUGH; AND, AS SHE COULD NOT THINK OF ANYTHING
+TO SAY, SHE SIMPLY BOWED, AND TOOK THE THIMBLE, LOOKING AS SOLEMN AS
+SHE COULD.
+
+THE NEXT THING WAS TO EAT THE COMFITS: THIS CAUSED SOME NOISE AND
+CONFUSION, AS THE LARGE BIRDS COMPLAINED THAT THEY COULD NOT TASTE
+THEIRS, AND THE SMALL ONES CHOKED AND HAD </div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(31,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(31,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(31, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="32" data-chapter="3" data-page="9" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-a-long-sad-tale/lewis-carroll-1864-manuscript.webp" alt="Lewis Carroll — The Mouse's Tale in tail shape" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — The Mouse's Tale in tail shape</div>
+      <div>Ch3 p9 &mdash; Page 9</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 3, Page 9</strong>
+        
+      </div>
+      <span class="item-badge">Ch3 p9</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — The Mouse's Tale in tail shape</div>
+    <div class="text-passage">“YOU PROMISED TO TELL ME YOUR HISTORY, YOU KNOW,” SAID ALICE, “AND WHY
+IT IS YOU HATE—C AND D,” SHE ADDED IN A WHISPER, HALF AFRAID THAT IT
+WOULD BE OFFENDED AGAIN.
+
+“MINE IS A LONG AND A SAD TALE!” SAID THE MOUSE, TURNING TO ALICE, AND
+SIGHING.
+
+“IT IS A LONG TAIL, CERTAINLY,” SAID ALICE, LOOKING DOWN WITH WONDER
+AT THE MOUSE’S TAIL; “BUT WHY DO YOU CALL IT SAD?” AND SHE KEPT ON
+PUZZLING ABOUT IT</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(32,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(32,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(32, this.value)">
+    </div>
+  </div>
+</div><div class="chapter-divider">Chapter 4: THE RABBIT SENDS IN A LITTLE BILL</div>
+
+<div class="entry" data-idx="33" data-chapter="4" data-page="0" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-bill-the-lizard/harry-rountree-1928.jpg" alt="Harry Rountree — Poor Lizard Bill" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Harry Rountree — Poor Lizard Bill</div>
+      <div>Ch4 Cover &mdash; Cover</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 4, Cover</strong>
+        
+      </div>
+      <span class="item-badge">Ch4 Cover</span>
+    </div>
+    <div class="scene-label">Scene: Harry Rountree — Poor Lizard Bill</div>
+    <div class="text-passage">[COVER PAGE]</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(33,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(33,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(33, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="34" data-chapter="4" data-page="1" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-stuck-in-the-house/bessie-pease-gutmann-1933.jpg" alt="Bessie Pease Gutmann — Hope I shan't grow more" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Bessie Pease Gutmann — Hope I shan't grow more</div>
+      <div>Ch4 p1 &mdash; Page 1</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 4, Page 1</strong>
+        
+      </div>
+      <span class="item-badge">Ch4 p1</span>
+    </div>
+    <div class="scene-label">Scene: Bessie Pease Gutmann — Hope I shan't grow more</div>
+    <div class="text-passage">IT WAS THE WHITE RABBIT, TROTTING SLOWLY BACK AGAIN, AND LOOKING
+ANXIOUSLY ABOUT AS IT WENT, AS IF IT HAD LOST SOMETHING; AND SHE HEARD
+IT MUTTERING TO ITSELF “THE DUCHESS! THE DUCHESS! OH MY DEAR PAWS! OH
+MY FUR AND WHISKERS! SHE’LL GET ME EXECUTED, AS SURE AS FERRETS ARE
+FERRETS! WHERE CAN I HAVE DROPPED THEM, I WONDER?” ALICE GUESSED IN A
+MOMENT THAT IT WAS LOOKING FOR THE FAN AND THE PAIR OF W</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(34,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(34,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(34, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="35" data-chapter="4" data-page="2" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-bill-the-lizard/brinsley-le-fanu-1910.jpg" alt="Brinsley Le Fanu — White rabbit falls" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Brinsley Le Fanu — White rabbit falls</div>
+      <div>Ch4 p2 &mdash; Page 2</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 4, Page 2</strong>
+        
+      </div>
+      <span class="item-badge">Ch4 p2</span>
+    </div>
+    <div class="scene-label">Scene: Brinsley Le Fanu — White rabbit falls</div>
+    <div class="text-passage">BY THIS TIME SHE HAD FOUND HER WAY INTO A TIDY LITTLE ROOM WITH A TABLE
+IN THE WINDOW, AND ON IT (AS SHE HAD HOPED) A FAN AND TWO OR THREE
+PAIRS OF TINY WHITE KID GLOVES: SHE TOOK UP THE FAN AND A PAIR OF THE
+GLOVES, AND WAS JUST GOING TO LEAVE THE ROOM, WHEN HER EYE FELL UPON A
+LITTLE BOTTLE THAT STOOD NEAR THE LOOKING-GLASS. THERE WAS NO LABEL
+THIS TIME WITH THE WORDS “DRINK ME,” BUT NEVERTHELES</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(35,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(35,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(35, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="36" data-chapter="4" data-page="3" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-stuck-in-the-house/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — She grew and grew" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">John Tenniel (colorized E.G. Thomson) — She grew and grew</div>
+      <div>Ch4 p3 &mdash; Page 3</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 4, Page 3</strong>
+        
+      </div>
+      <span class="item-badge">Ch4 p3</span>
+    </div>
+    <div class="scene-label">Scene: John Tenniel (colorized E.G. Thomson) — She grew and grew</div>
+    <div class="text-passage">LUCKILY FOR ALICE, THE LITTLE MAGIC BOTTLE HAD NOW HAD ITS FULL EFFECT,
+AND SHE GREW NO LARGER: STILL IT WAS VERY UNCOMFORTABLE, AND, AS THERE
+SEEMED TO BE NO SORT OF CHANCE OF HER EVER GETTING OUT OF THE ROOM
+AGAIN, NO WONDER SHE FELT UNHAPPY.
+
+“IT WAS MUCH PLEASANTER AT HOME,” THOUGHT POOR ALICE, “WHEN ONE WASN’T
+ALWAYS GROWING LARGER AND SMALLER, AND BEING ORDERED ABOUT BY MICE AND
+RABBITS. I A</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(36,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(36,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(36, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="37" data-chapter="4" data-page="4" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-mistaken-for-mary-ann/harry-rountree-1928.jpg" alt="Harry Rountree — Why, Mary Ann" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Harry Rountree — Why, Mary Ann</div>
+      <div>Ch4 p4 &mdash; Page 4</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 4, Page 4</strong>
+        
+      </div>
+      <span class="item-badge">Ch4 p4</span>
+    </div>
+    <div class="scene-label">Scene: Harry Rountree — Why, Mary Ann</div>
+    <div class="text-passage">“OH, YOU FOOLISH ALICE!” SHE ANSWERED HERSELF. “HOW CAN YOU LEARN
+LESSONS IN HERE? WHY, THERE’S HARDLY ROOM FOR YOU, AND NO ROOM AT ALL
+FOR ANY LESSON-BOOKS!”
+
+AND SO SHE WENT ON, TAKING FIRST ONE SIDE AND THEN THE OTHER, AND
+MAKING QUITE A CONVERSATION OF IT ALTOGETHER; BUT AFTER A FEW MINUTES
+SHE HEARD A VOICE OUTSIDE, AND STOPPED TO LISTEN.</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(37,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(37,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(37, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="38" data-chapter="4" data-page="5" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-mistaken-for-mary-ann/john-tenniel-harry-theaker-1911.jpg" alt="John Tenniel &amp; Harry Theaker — Rabbit started violently" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">John Tenniel &amp; Harry Theaker — Rabbit started violently</div>
+      <div>Ch4 p5 &mdash; Page 5</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 4, Page 5</strong>
+        
+      </div>
+      <span class="item-badge">Ch4 p5</span>
+    </div>
+    <div class="scene-label">Scene: John Tenniel &amp; Harry Theaker — Rabbit started violently</div>
+    <div class="text-passage">“MARY ANN! MARY ANN!” SAID THE VOICE. “FETCH ME MY GLOVES THIS MOMENT!”
+THEN CAME A LITTLE PATTERING OF FEET ON THE STAIRS. ALICE KNEW IT WAS
+THE RABBIT COMING TO LOOK FOR HER, AND SHE TREMBLED TILL SHE SHOOK THE
+HOUSE, QUITE FORGETTING THAT SHE WAS NOW ABOUT A THOUSAND TIMES AS
+LARGE AS THE RABBIT, AND HAD NO REASON TO BE AFRAID OF IT.
+
+PRESENTLY THE RABBIT CAME UP TO THE DOOR, AND TRIED TO OPEN </div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(38,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(38,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(38, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="39" data-chapter="4" data-page="6" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-bill-the-lizard/gwynedd-hudson-1922.jpg" alt="Gwynedd Hudson — Poor little lizard" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Gwynedd Hudson — Poor little lizard</div>
+      <div>Ch4 p6 &mdash; Page 6</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 4, Page 6</strong>
+        
+      </div>
+      <span class="item-badge">Ch4 p6</span>
+    </div>
+    <div class="scene-label">Scene: Gwynedd Hudson — Poor little lizard</div>
+    <div class="text-passage">“SURE, IT’S AN ARM, YER HONOUR!” (HE PRONOUNCED IT “ARRUM.”)
+
+“AN ARM, YOU GOOSE! WHO EVER SAW ONE THAT SIZE? WHY, IT FILLS THE WHOLE
+WINDOW!”
+
+“SURE, IT DOES, YER HONOUR: BUT IT’S AN ARM FOR ALL THAT.”
+
+“WELL, IT’S GOT NO BUSINESS THERE, AT ANY RATE: GO AND TAKE IT AWAY!”
+
+THERE WAS A LONG SILENCE AFTER THIS, AND ALICE COULD ONLY HEAR WHISPERS
+NOW AND THEN; SUCH AS, “SURE, I DON’T LIKE IT, YER HO</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(39,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(39,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(39, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="40" data-chapter="4" data-page="7" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-bill-the-lizard/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — Bill the Lizard" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">John Tenniel (colorized E.G. Thomson) — Bill the Lizard</div>
+      <div>Ch4 p7 &mdash; Page 7</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 4, Page 7</strong>
+        
+      </div>
+      <span class="item-badge">Ch4 p7</span>
+    </div>
+    <div class="scene-label">Scene: John Tenniel (colorized E.G. Thomson) — Bill the Lizard</div>
+    <div class="text-passage">“OH! SO BILL’S GOT TO COME DOWN THE CHIMNEY, HAS HE?” SAID ALICE TO
+HERSELF. “SHY, THEY SEEM TO PUT EVERYTHING UPON BILL! I WOULDN’T BE IN
+BILL’S PLACE FOR A GOOD DEAL: THIS FIREPLACE IS NARROW, TO BE SURE; BUT
+I THINK I CAN KICK A LITTLE!”
+
+SHE DREW HER FOOT AS FAR DOWN THE CHIMNEY AS SHE COULD, AND WAITED TILL
+SHE HEARD A LITTLE ANIMAL (SHE COULDN’T GUESS OF WHAT SORT IT WAS)
+SCRATCHING AND SCRA</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(40,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(40,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(40, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="41" data-chapter="4" data-page="8" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-04-the-rabbit-sends-in-a-little-bill/lewis-carroll-1864-chapter-III.webp" alt="Lewis Carroll — Carroll manuscript Chapter III - Alice and the puppy" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — Carroll manuscript Chapter III - Alice and the puppy</div>
+      <div>Ch4 p8 &mdash; Page 8</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 4, Page 8</strong>
+        
+      </div>
+      <span class="item-badge">Ch4 p8</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — Carroll manuscript Chapter III - Alice and the puppy</div>
+    <div class="text-passage">THERE WAS A DEAD SILENCE INSTANTLY, AND ALICE THOUGHT TO HERSELF, “I
+WONDER WHAT THEY WILL DO NEXT! IF THEY HAD ANY SENSE, THEY’D TAKE THE
+ROOF OFF.” AFTER A MINUTE OR TWO, THEY BEGAN MOVING ABOUT AGAIN, AND
+ALICE HEARD THE RABBIT SAY, “A BARROWFUL WILL DO, TO BEGIN WITH.”
+
+“A BARROWFUL OF WHAT?” THOUGHT ALICE; BUT SHE HAD NOT LONG TO DOUBT,
+FOR THE NEXT MOMENT A SHOWER OF LITTLE PEBBLES CAME RATT</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(41,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(41,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(41, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="42" data-chapter="4" data-page="9" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-the-great-puppy/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — Dash the Puppy" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">John Tenniel (colorized E.G. Thomson) — Dash the Puppy</div>
+      <div>Ch4 p9 &mdash; Page 9</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 4, Page 9</strong>
+        
+      </div>
+      <span class="item-badge">Ch4 p9</span>
+    </div>
+    <div class="scene-label">Scene: John Tenniel (colorized E.G. Thomson) — Dash the Puppy</div>
+    <div class="text-passage">“THE FIRST THING I’VE GOT TO DO,” SAID ALICE TO HERSELF, AS SHE
+WANDERED ABOUT IN THE WOOD, “IS TO GROW TO MY RIGHT SIZE AGAIN; AND THE
+SECOND THING IS TO FIND MY WAY INTO THAT LOVELY GARDEN. I THINK THAT
+WILL BE THE BEST PLAN.”
+
+IT SOUNDED AN EXCELLENT PLAN, NO DOUBT, AND VERY NEATLY AND SIMPLY
+ARRANGED; THE ONLY DIFFICULTY WAS, THAT SHE HAD NOT THE SMALLEST IDEA
+HOW TO SET ABOUT IT; AND WHILE SH</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(42,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(42,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(42, this.value)">
+    </div>
+  </div>
+</div><div class="chapter-divider">Chapter 5: ADVICE FROM A CATERPILLAR</div>
+
+<div class="entry" data-idx="43" data-chapter="5" data-page="0" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch05-who-are-you/gwynedd-hudson-1922.jpg" alt="Gwynedd Hudson — Advice from a caterpillar" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Gwynedd Hudson — Advice from a caterpillar</div>
+      <div>Ch5 Cover &mdash; Cover</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 5, Cover</strong>
+        
+      </div>
+      <span class="item-badge">Ch5 Cover</span>
+    </div>
+    <div class="scene-label">Scene: Gwynedd Hudson — Advice from a caterpillar</div>
+    <div class="text-passage">[COVER PAGE]</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(43,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(43,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(43, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="44" data-chapter="5" data-page="1" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch05-who-are-you/alice-b-woodward-1913.jpg" alt="Alice B. Woodward — Caterpillar" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Alice B. Woodward — Caterpillar</div>
+      <div>Ch5 p1 &mdash; Page 1</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 5, Page 1</strong>
+        
+      </div>
+      <span class="item-badge">Ch5 p1</span>
+    </div>
+    <div class="scene-label">Scene: Alice B. Woodward — Caterpillar</div>
+    <div class="text-passage">THE CATERPILLAR AND ALICE LOOKED AT EACH OTHER FOR SOME TIME IN
+SILENCE: AT LAST THE CATERPILLAR TOOK THE HOOKAH OUT OF ITS MOUTH, AND
+ADDRESSED HER IN A LANGUID, SLEEPY VOICE.
+
+“WHO ARE YOU?” SAID THE CATERPILLAR.
+
+THIS WAS NOT AN ENCOURAGING OPENING FOR A CONVERSATION. ALICE REPLIED,
+RATHER SHYLY, “I—I HARDLY KNOW, SIR, JUST AT PRESENT—AT LEAST I KNOW
+WHO I WAS WHEN I GOT UP THIS MORNING, BUT I </div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(44,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(44,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(44, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="45" data-chapter="5" data-page="2" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch05-who-are-you/william-h-walker-1907.jpg" alt="William H. Walker — Caterpillar" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">William H. Walker — Caterpillar</div>
+      <div>Ch5 p2 &mdash; Page 2</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 5, Page 2</strong>
+        
+      </div>
+      <span class="item-badge">Ch5 p2</span>
+    </div>
+    <div class="scene-label">Scene: William H. Walker — Caterpillar</div>
+    <div class="text-passage">“I’M AFRAID I CAN’T PUT IT MORE CLEARLY,” ALICE REPLIED VERY POLITELY,
+“FOR I CAN’T UNDERSTAND IT MYSELF TO BEGIN WITH; AND BEING SO MANY
+DIFFERENT SIZES IN A DAY IS VERY CONFUSING.”
+
+“IT ISN’T,” SAID THE CATERPILLAR.
+
+“WELL, PERHAPS YOU HAVEN’T FOUND IT SO YET,” SAID ALICE; “BUT WHEN YOU
+HAVE TO TURN INTO A CHRYSALIS—YOU WILL SOME DAY, YOU KNOW—AND THEN
+AFTER THAT INTO A BUTTERFLY, I SHOULD THINK</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(45,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(45,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(45, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="46" data-chapter="5" data-page="3" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch05-who-are-you/gwynedd-hudson-1922.jpg" alt="Gwynedd Hudson — Advice from a caterpillar" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Gwynedd Hudson — Advice from a caterpillar</div>
+      <div>Ch5 p3 &mdash; Page 3</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 5, Page 3</strong>
+        
+      </div>
+      <span class="item-badge">Ch5 p3</span>
+    </div>
+    <div class="scene-label">Scene: Gwynedd Hudson — Advice from a caterpillar</div>
+    <div class="text-passage">WHICH BROUGHT THEM BACK AGAIN TO THE BEGINNING OF THE CONVERSATION.
+ALICE FELT A LITTLE IRRITATED AT THE CATERPILLAR’S MAKING SUCH VERY
+SHORT REMARKS, AND SHE DREW HERSELF UP AND SAID, VERY GRAVELY, “I
+THINK, YOU OUGHT TO TELL ME WHO YOU ARE, FIRST.”
+
+“WHY?” SAID THE CATERPILLAR.
+
+HERE WAS ANOTHER PUZZLING QUESTION; AND AS ALICE COULD NOT THINK OF ANY
+GOOD REASON, AND AS THE CATERPILLAR SEEMED TO </div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(46,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(46,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(46, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="47" data-chapter="5" data-page="4" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch05-who-are-you/arthur-rackham-1907.jpg" alt="Arthur Rackham — Advice from a Caterpillar" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Arthur Rackham — Advice from a Caterpillar</div>
+      <div>Ch5 p4 &mdash; Page 4</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 5, Page 4</strong>
+        
+      </div>
+      <span class="item-badge">Ch5 p4</span>
+    </div>
+    <div class="scene-label">Scene: Arthur Rackham — Advice from a Caterpillar</div>
+    <div class="text-passage">“IS THAT ALL?” SAID ALICE, SWALLOWING DOWN HER ANGER AS WELL AS SHE
+COULD.
+
+“NO,” SAID THE CATERPILLAR.
+
+ALICE THOUGHT SHE MIGHT AS WELL WAIT, AS SHE HAD NOTHING ELSE TO DO,
+AND PERHAPS AFTER ALL IT MIGHT TELL HER SOMETHING WORTH HEARING. FOR
+SOME MINUTES IT PUFFED AWAY WITHOUT SPEAKING, BUT AT LAST IT UNFOLDED
+ITS ARMS, TOOK THE HOOKAH OUT OF ITS MOUTH AGAIN, AND SAID, “SO YOU
+THINK YOU’RE CHANGE</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(47,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(47,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(47, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="48" data-chapter="5" data-page="5" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch05-father-william/bessie-pease-gutmann-1933.jpg" alt="Bessie Pease Gutmann — Caterpillar" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Bessie Pease Gutmann — Caterpillar</div>
+      <div>Ch5 p5 &mdash; Page 5</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 5, Page 5</strong>
+        
+      </div>
+      <span class="item-badge">Ch5 p5</span>
+    </div>
+    <div class="scene-label">Scene: Bessie Pease Gutmann — Caterpillar</div>
+    <div class="text-passage">“I’M AFRAID I AM, SIR,” SAID ALICE; “I CAN’T REMEMBER THINGS AS I
+USED—AND I DON’T KEEP THE SAME SIZE FOR TEN MINUTES TOGETHER!”
+
+“CAN’T REMEMBER WHAT THINGS?” SAID THE CATERPILLAR.
+
+“WELL, I’VE TRIED TO SAY “HOW DOTH THE LITTLE BUSY BEE,” BUT IT ALL
+CAME DIFFERENT!” ALICE REPLIED IN A VERY MELANCHOLY VOICE.
+
+“REPEAT, ‘YOU ARE OLD, FATHER WILLIAM,’” SAID THE CATERPILLAR.
+
+ALICE FOLDED HER HANDS, A</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(48,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(48,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(48, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="49" data-chapter="5" data-page="6" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch05-the-mushrooms-magic/lewis-carroll-1864-manuscript.webp" alt="Lewis Carroll — Alice pondering the mushroom's effects" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — Alice pondering the mushroom's effects</div>
+      <div>Ch5 p6 &mdash; Page 6</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 5, Page 6</strong>
+        
+      </div>
+      <span class="item-badge">Ch5 p6</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — Alice pondering the mushroom's effects</div>
+    <div class="text-passage">“IN MY YOUTH,” SAID THE SAGE, AS HE SHOOK HIS GREY LOCKS,
+    “I KEPT ALL MY LIMBS VERY SUPPLE
+BY THE USE OF THIS OINTMENT—ONE SHILLING THE BOX—
+    ALLOW ME TO SELL YOU A COUPLE?”
+
+“YOU ARE OLD,” SAID THE YOUTH, “AND YOUR JAWS ARE TOO WEAK
+    FOR ANYTHING TOUGHER THAN SUET;
+YET YOU FINISHED THE GOOSE, WITH THE BONES AND THE BEAK—
+    PRAY, HOW DID YOU MANAGE TO DO IT?”
+
+“IN MY YOUTH,” SAID HIS F</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(49,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(49,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(49, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="50" data-chapter="5" data-page="7" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-05-advice-from-a-caterpillar/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — Caterpillar" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">John Tenniel (colorized E.G. Thomson) — Caterpillar</div>
+      <div>Ch5 p7 &mdash; Page 7</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 5, Page 7</strong>
+        
+      </div>
+      <span class="item-badge">Ch5 p7</span>
+    </div>
+    <div class="scene-label">Scene: John Tenniel (colorized E.G. Thomson) — Caterpillar</div>
+    <div class="text-passage">THE CATERPILLAR WAS THE FIRST TO SPEAK.
+
+“WHAT SIZE DO YOU WANT TO BE?” IT ASKED.
+
+“OH, I’M NOT PARTICULAR AS TO SIZE,” ALICE HASTILY REPLIED; “ONLY ONE
+DOESN’T LIKE CHANGING SO OFTEN, YOU KNOW.”
+
+“I DON’T KNOW,” SAID THE CATERPILLAR.
+
+ALICE SAID NOTHING: SHE HAD NEVER BEEN SO MUCH CONTRADICTED IN HER LIFE
+BEFORE, AND SHE FELT THAT SHE WAS LOSING HER TEMPER.
+
+“ARE YOU CONTENT NOW?” SAID THE CATERP</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(50,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(50,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(50, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="51" data-chapter="5" data-page="8" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch05-serpent/lewis-carroll-1864-manuscript.webp" alt="Lewis Carroll — Alice mistaken for a serpent by pigeon" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — Alice mistaken for a serpent by pigeon</div>
+      <div>Ch5 p8 &mdash; Page 8</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 5, Page 8</strong>
+        
+      </div>
+      <span class="item-badge">Ch5 p8</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — Alice mistaken for a serpent by pigeon</div>
+    <div class="text-passage">AS THERE SEEMED TO BE NO CHANCE OF GETTING HER HANDS UP TO HER HEAD,
+SHE TRIED TO GET HER HEAD DOWN TO THEM, AND WAS DELIGHTED TO FIND THAT
+HER NECK WOULD BEND ABOUT EASILY IN ANY DIRECTION, LIKE A SERPENT. SHE
+HAD JUST SUCCEEDED IN CURVING IT DOWN INTO A GRACEFUL ZIGZAG, AND WAS
+GOING TO DIVE IN AMONG THE LEAVES, WHICH SHE FOUND TO BE NOTHING BUT
+THE TOPS OF THE TREES UNDER WHICH SHE HAD BEEN WAN</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(51,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(51,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(51, this.value)">
+    </div>
+  </div>
+</div><div class="chapter-divider">Chapter 6: PIG AND PEPPER</div>
+
+<div class="entry" data-idx="52" data-chapter="6" data-page="0" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-fish-footman/lewis-carroll-1864-manuscript.webp" alt="Lewis Carroll — Fish-Footman and Frog-Footman at the door" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — Fish-Footman and Frog-Footman at the door</div>
+      <div>Ch6 Cover &mdash; Cover</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 6, Cover</strong>
+        
+      </div>
+      <span class="item-badge">Ch6 Cover</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — Fish-Footman and Frog-Footman at the door</div>
+    <div class="text-passage">[COVER PAGE]</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(52,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(52,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(52, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="53" data-chapter="6" data-page="1" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-fish-footman/lewis-carroll-1864-manuscript.webp" alt="Lewis Carroll — Fish-Footman and Frog-Footman at the door" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — Fish-Footman and Frog-Footman at the door</div>
+      <div>Ch6 p1 &mdash; Page 1</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 6, Page 1</strong>
+        
+      </div>
+      <span class="item-badge">Ch6 p1</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — Fish-Footman and Frog-Footman at the door</div>
+    <div class="text-passage">FOR A MINUTE OR TWO SHE STOOD LOOKING AT THE HOUSE, AND WONDERING WHAT
+TO DO NEXT, WHEN SUDDENLY A FOOTMAN IN LIVERY CAME RUNNING OUT OF THE
+WOOD—(SHE CONSIDERED HIM TO BE A FOOTMAN BECAUSE HE WAS IN LIVERY:
+OTHERWISE, JUDGING BY HIS FACE ONLY, SHE WOULD HAVE CALLED HIM A
+FISH)—AND RAPPED LOUDLY AT THE DOOR WITH HIS KNUCKLES. IT WAS OPENED BY
+ANOTHER FOOTMAN IN LIVERY, WITH A ROUND FACE, AND LARGE</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(53,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(53,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(53, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="54" data-chapter="6" data-page="2" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-duchesss-kitchen/arthur-rackham-1907.jpg" alt="Arthur Rackham — Saucepan flew by" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Arthur Rackham — Saucepan flew by</div>
+      <div>Ch6 p2 &mdash; Page 2</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 6, Page 2</strong>
+        
+      </div>
+      <span class="item-badge">Ch6 p2</span>
+    </div>
+    <div class="scene-label">Scene: Arthur Rackham — Saucepan flew by</div>
+    <div class="text-passage">AT THIS MOMENT THE DOOR OF THE HOUSE OPENED, AND A LARGE PLATE CAME
+SKIMMING OUT, STRAIGHT AT THE FOOTMAN’S HEAD: IT JUST GRAZED HIS NOSE,
+AND BROKE TO PIECES AGAINST ONE OF THE TREES BEHIND HIM.
+
+“—OR NEXT DAY, MAYBE,” THE FOOTMAN CONTINUED IN THE SAME TONE, EXACTLY
+AS IF NOTHING HAD HAPPENED.
+
+“HOW AM I TO GET IN?” ASKED ALICE AGAIN, IN A LOUDER TONE.
+
+“ARE YOU TO GET IN AT ALL?” SAID THE FOOTMA</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(54,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(54,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(54, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="55" data-chapter="6" data-page="3" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-duchesss-kitchen/brinsley-le-fanu-1910.jpg" alt="Brinsley Le Fanu — The Duchess's kitchen" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Brinsley Le Fanu — The Duchess's kitchen</div>
+      <div>Ch6 p3 &mdash; Page 3</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 6, Page 3</strong>
+        
+      </div>
+      <span class="item-badge">Ch6 p3</span>
+    </div>
+    <div class="scene-label">Scene: Brinsley Le Fanu — The Duchess's kitchen</div>
+    <div class="text-passage">THE DOOR LED RIGHT INTO A LARGE KITCHEN, WHICH WAS FULL OF SMOKE FROM
+ONE END TO THE OTHER: THE DUCHESS WAS SITTING ON A THREE-LEGGED STOOL
+IN THE MIDDLE, NURSING A BABY; THE COOK WAS LEANING OVER THE FIRE,
+STIRRING A LARGE CAULDRON WHICH SEEMED TO BE FULL OF SOUP.
+
+“THERE’S CERTAINLY TOO MUCH PEPPER IN THAT SOUP!” ALICE SAID TO
+HERSELF, AS WELL AS SHE COULD FOR SNEEZING.
+
+THERE WAS CERTAINLY TOO </div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(55,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(55,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(55, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="56" data-chapter="6" data-page="4" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-baby-turns-into-a-pig/gwynedd-hudson-1922.jpg" alt="Gwynedd Hudson — Duchess &amp; the Baby" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Gwynedd Hudson — Duchess &amp; the Baby</div>
+      <div>Ch6 p4 &mdash; Page 4</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 6, Page 4</strong>
+        
+      </div>
+      <span class="item-badge">Ch6 p4</span>
+    </div>
+    <div class="scene-label">Scene: Gwynedd Hudson — Duchess &amp; the Baby</div>
+    <div class="text-passage">“I DON’T KNOW OF ANY THAT DO,” ALICE SAID VERY POLITELY, FEELING QUITE
+PLEASED TO HAVE GOT INTO A CONVERSATION.
+
+“YOU DON’T KNOW MUCH,” SAID THE DUCHESS; “AND THAT’S A FACT.”
+
+ALICE DID NOT AT ALL LIKE THE TONE OF THIS REMARK, AND THOUGHT IT WOULD
+BE AS WELL TO INTRODUCE SOME OTHER SUBJECT OF CONVERSATION. WHILE SHE
+WAS TRYING TO FIX ON ONE, THE COOK TOOK THE CAULDRON OF SOUP OFF THE
+FIRE, AND AT </div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(56,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(56,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(56, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="57" data-chapter="6" data-page="5" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-baby-turns-into-a-pig/alice-b-woodward-1913.jpg" alt="Alice B. Woodward — You may nurse the baby said Duchess" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Alice B. Woodward — You may nurse the baby said Duchess</div>
+      <div>Ch6 p5 &mdash; Page 5</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 6, Page 5</strong>
+        
+      </div>
+      <span class="item-badge">Ch6 p5</span>
+    </div>
+    <div class="scene-label">Scene: Alice B. Woodward — You may nurse the baby said Duchess</div>
+    <div class="text-passage">“OH, DON’T BOTHER ME,” SAID THE DUCHESS; “I NEVER COULD ABIDE
+FIGURES!” AND WITH THAT SHE BEGAN NURSING HER CHILD AGAIN, SINGING A
+SORT OF LULLABY TO IT AS SHE DID SO, AND GIVING IT A VIOLENT SHAKE AT
+THE END OF EVERY LINE:
+
+“SPEAK ROUGHLY TO YOUR LITTLE BOY,
+    AND BEAT HIM WHEN HE SNEEZES:
+HE ONLY DOES IT TO ANNOY,
+    BECAUSE HE KNOWS IT TEASES.”
+
+CHORUS.
+(IN WHICH THE COOK AND THE BABY JOINED</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(57,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(57,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(57, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="58" data-chapter="6" data-page="6" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-fish-footman/alice-b-woodward-1913.jpg" alt="Alice B. Woodward — You may nurse the baby, said Duchess" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Alice B. Woodward — You may nurse the baby, said Duchess</div>
+      <div>Ch6 p6 &mdash; Page 6</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 6, Page 6</strong>
+        
+      </div>
+      <span class="item-badge">Ch6 p6</span>
+    </div>
+    <div class="scene-label">Scene: Alice B. Woodward — You may nurse the baby, said Duchess</div>
+    <div class="text-passage">“HERE! YOU MAY NURSE IT A BIT, IF YOU LIKE!” THE DUCHESS SAID TO ALICE,
+FLINGING THE BABY AT HER AS SHE SPOKE. “I MUST GO AND GET READY TO PLAY
+CROQUET WITH THE QUEEN,” AND SHE HURRIED OUT OF THE ROOM. THE COOK
+THREW A FRYING-PAN AFTER HER AS SHE WENT OUT, BUT IT JUST MISSED HER.
+
+ALICE CAUGHT THE BABY WITH SOME DIFFICULTY, AS IT WAS A QUEER-SHAPED
+LITTLE CREATURE, AND HELD OUT ITS ARMS AND LEGS I</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(58,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(58,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(58, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="59" data-chapter="6" data-page="7" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-06-pig-and-pepper/lewis-carroll-1864-chapter-IV.webp" alt="Lewis Carroll — Carroll manuscript Chapter IV - card gardeners" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — Carroll manuscript Chapter IV - card gardeners</div>
+      <div>Ch6 p7 &mdash; Page 7</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 6, Page 7</strong>
+        
+      </div>
+      <span class="item-badge">Ch6 p7</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — Carroll manuscript Chapter IV - card gardeners</div>
+    <div class="text-passage">AS SOON AS SHE HAD MADE OUT THE PROPER WAY OF NURSING IT, (WHICH WAS TO
+TWIST IT UP INTO A SORT OF KNOT, AND THEN KEEP TIGHT HOLD OF ITS RIGHT
+EAR AND LEFT FOOT, SO AS TO PREVENT ITS UNDOING ITSELF,) SHE CARRIED IT
+OUT INTO THE OPEN AIR. “IF I DON’T TAKE THIS CHILD AWAY WITH ME,”
+THOUGHT ALICE, “THEY’RE SURE TO KILL IT IN A DAY OR TWO: WOULDN’T IT BE
+MURDER TO LEAVE IT BEHIND?” SHE SAID THE LAST W</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(59,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(59,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(59, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="60" data-chapter="6" data-page="8" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-baby-turns-into-a-pig/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — The Pig-baby" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">John Tenniel (colorized E.G. Thomson) — The Pig-baby</div>
+      <div>Ch6 p8 &mdash; Page 8</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 6, Page 8</strong>
+        
+      </div>
+      <span class="item-badge">Ch6 p8</span>
+    </div>
+    <div class="scene-label">Scene: John Tenniel (colorized E.G. Thomson) — The Pig-baby</div>
+    <div class="text-passage">NO, THERE WERE NO TEARS. “IF YOU’RE GOING TO TURN INTO A PIG, MY DEAR,”
+SAID ALICE, SERIOUSLY, “I’LL HAVE NOTHING MORE TO DO WITH YOU. MIND
+NOW!” THE POOR LITTLE THING SOBBED AGAIN (OR GRUNTED, IT WAS IMPOSSIBLE
+TO SAY WHICH), AND THEY WENT ON FOR SOME WHILE IN SILENCE.
+
+ALICE WAS JUST BEGINNING TO THINK TO HERSELF, “NOW, WHAT AM I TO DO
+WITH THIS CREATURE WHEN I GET IT HOME?” WHEN IT GRUNTED AGAI</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(60,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(60,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(60, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="61" data-chapter="6" data-page="9" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-cheshire-cat/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — The Cheshire Cat in tree" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">John Tenniel (colorized E.G. Thomson) — The Cheshire Cat in tree</div>
+      <div>Ch6 p9 &mdash; Page 9</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 6, Page 9</strong>
+        
+      </div>
+      <span class="item-badge">Ch6 p9</span>
+    </div>
+    <div class="scene-label">Scene: John Tenniel (colorized E.G. Thomson) — The Cheshire Cat in tree</div>
+    <div class="text-passage">SO SHE SET THE LITTLE CREATURE DOWN, AND FELT QUITE RELIEVED TO SEE IT
+TROT AWAY QUIETLY INTO THE WOOD. “IF IT HAD GROWN UP,” SHE SAID TO
+HERSELF, “IT WOULD HAVE MADE A DREADFULLY UGLY CHILD: BUT IT MAKES
+RATHER A HANDSOME PIG, I THINK.” AND SHE BEGAN THINKING OVER OTHER
+CHILDREN SHE KNEW, WHO MIGHT DO VERY WELL AS PIGS, AND WAS JUST SAYING
+TO HERSELF, “IF ONE ONLY KNEW THE RIGHT WAY TO CHANGE THE</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(61,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(61,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(61, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="62" data-chapter="6" data-page="10" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-cheshire-cat/john-tenniel-harry-theaker-1911.jpg" alt="John Tenniel &amp; Harry Theaker — The Cheshire Cat" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">John Tenniel &amp; Harry Theaker — The Cheshire Cat</div>
+      <div>Ch6 p10 &mdash; Page 10</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 6, Page 10</strong>
+        
+      </div>
+      <span class="item-badge">Ch6 p10</span>
+    </div>
+    <div class="scene-label">Scene: John Tenniel &amp; Harry Theaker — The Cheshire Cat</div>
+    <div class="text-passage">SO SHE SET THE LITTLE CREATURE DOWN, AND FELT QUITE RELIEVED TO SEE IT
+TROT AWAY QUIETLY INTO THE WOOD. “IF IT HAD GROWN UP,” SHE SAID TO
+HERSELF, “IT WOULD HAVE MADE A DREADFULLY UGLY CHILD: BUT IT MAKES
+RATHER A HANDSOME PIG, I THINK.” AND SHE BEGAN THINKING OVER OTHER
+CHILDREN SHE KNEW, WHO MIGHT DO VERY WELL AS PIGS, AND WAS JUST SAYING
+TO HERSELF, “IF ONE ONLY KNEW THE RIGHT WAY TO CHANGE THE</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(62,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(62,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(62, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="63" data-chapter="6" data-page="11" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-duchesss-kitchen/alice-b-woodward-1913.jpg" alt="Alice B. Woodward — Shan't said the Cook" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Alice B. Woodward — Shan't said the Cook</div>
+      <div>Ch6 p11 &mdash; Page 11</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 6, Page 11</strong>
+        
+      </div>
+      <span class="item-badge">Ch6 p11</span>
+    </div>
+    <div class="scene-label">Scene: Alice B. Woodward — Shan't said the Cook</div>
+    <div class="text-passage">THE CAT ONLY GRINNED WHEN IT SAW ALICE. IT LOOKED GOOD-NATURED, SHE
+THOUGHT: STILL IT HAD VERY LONG CLAWS AND A GREAT MANY TEETH, SO SHE
+FELT THAT IT OUGHT TO BE TREATED WITH RESPECT.
+
+“CHESHIRE PUSS,” SHE BEGAN, RATHER TIMIDLY, AS SHE DID NOT AT ALL KNOW
+WHETHER IT WOULD LIKE THE NAME: HOWEVER, IT ONLY GRINNED A LITTLE
+WIDER. “COME, IT’S PLEASED SO FAR,” THOUGHT ALICE, AND SHE WENT ON.
+“WOULD YOU</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(63,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(63,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(63, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="64" data-chapter="6" data-page="12" data-status="pending">
+  <div class="entry-img">
+    <div style="width:100%;height:200px;background:#111;display:flex;align-items:center;justify-content:center;border-radius:4px;color:var(--muted);font-style:italic;">No illustration assigned</div>
+    <div class="img-meta">
+      <div class="artist">text-only</div>
+      <div>Ch6 p12 &mdash; Page 12</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 6, Page 12</strong>
+        <span style="color:var(--warn);margin-left:8px;">[TEXT-ONLY]</span>
+      </div>
+      <span class="item-badge">Ch6 p12</span>
+    </div>
+    
+    <div class="text-passage">“HOW DO YOU KNOW I’M MAD?” SAID ALICE.
+
+“YOU MUST BE,” SAID THE CAT, “OR YOU WOULDN’T HAVE COME HERE.”
+
+ALICE DIDN’T THINK THAT PROVED IT AT ALL; HOWEVER, SHE WENT ON “AND HOW
+DO YOU KNOW THAT YOU’RE MAD?”
+
+“TO BEGIN WITH,” SAID THE CAT, “A DOG’S NOT MAD. YOU GRANT THAT?”
+
+“I SUPPOSE SO,” SAID ALICE.
+
+“WELL, THEN,” THE CAT WENT ON, “YOU SEE, A DOG GROWLS WHEN IT’S ANGRY,
+AND WAGS ITS TAIL WHEN IT’</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(64,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(64,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(64, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="65" data-chapter="6" data-page="13" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-baby-turns-into-a-pig/arthur-rackham-1907.jpg" alt="Arthur Rackham — Pig baby" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Arthur Rackham — Pig baby</div>
+      <div>Ch6 p13 &mdash; Page 13</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 6, Page 13</strong>
+        
+      </div>
+      <span class="item-badge">Ch6 p13</span>
+    </div>
+    <div class="scene-label">Scene: Arthur Rackham — Pig baby</div>
+    <div class="text-passage">“BY-THE-BYE, WHAT BECAME OF THE BABY?” SAID THE CAT. “I’D NEARLY
+FORGOTTEN TO ASK.”
+
+“IT TURNED INTO A PIG,” ALICE QUIETLY SAID, JUST AS IF IT HAD COME BACK
+IN A NATURAL WAY.
+
+“I THOUGHT IT WOULD,” SAID THE CAT, AND VANISHED AGAIN.
+
+ALICE WAITED A LITTLE, HALF EXPECTING TO SEE IT AGAIN, BUT IT DID NOT
+APPEAR, AND AFTER A MINUTE OR TWO SHE WALKED ON IN THE DIRECTION IN
+WHICH THE MARCH HARE WAS SAID</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(65,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(65,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(65, this.value)">
+    </div>
+  </div>
+</div><div class="chapter-divider">Chapter 7: A MAD TEA-PARTY</div>
+
+<div class="entry" data-idx="66" data-chapter="7" data-page="0" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-time-is-frozen/lewis-carroll-1864-animals-concert.webp" alt="Lewis Carroll — Animals gathered for a concert" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — Animals gathered for a concert</div>
+      <div>Ch7 Cover &mdash; Cover</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 7, Cover</strong>
+        
+      </div>
+      <span class="item-badge">Ch7 Cover</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — Animals gathered for a concert</div>
+    <div class="text-passage">[COVER PAGE]</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(66,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(66,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(66, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="67" data-chapter="7" data-page="1" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-no-room/brinsley-le-fanu-1910.jpg" alt="Brinsley Le Fanu — March Hare's house" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Brinsley Le Fanu — March Hare's house</div>
+      <div>Ch7 p1 &mdash; Page 1</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 7, Page 1</strong>
+        
+      </div>
+      <span class="item-badge">Ch7 p1</span>
+    </div>
+    <div class="scene-label">Scene: Brinsley Le Fanu — March Hare's house</div>
+    <div class="text-passage">THERE WAS A TABLE SET OUT UNDER A TREE IN FRONT OF THE HOUSE, AND THE
+MARCH HARE AND THE HATTER WERE HAVING TEA AT IT: A DORMOUSE WAS SITTING
+BETWEEN THEM, FAST ASLEEP, AND THE OTHER TWO WERE USING IT AS A
+CUSHION, RESTING THEIR ELBOWS ON IT, AND TALKING OVER ITS HEAD. “VERY
+UNCOMFORTABLE FOR THE DORMOUSE,” THOUGHT ALICE; “ONLY, AS IT’S ASLEEP,
+I SUPPOSE IT DOESN’T MIND.”
+
+THE TABLE WAS A LARGE ON</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(67,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(67,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(67, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="68" data-chapter="7" data-page="2" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-alice-leaves-the-tea-party/lewis-carroll-1864-cheshire-cat-tree.webp" alt="Lewis Carroll — Alice under a tree with the Cheshire Cat" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — Alice under a tree with the Cheshire Cat</div>
+      <div>Ch7 p2 &mdash; Page 2</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 7, Page 2</strong>
+        
+      </div>
+      <span class="item-badge">Ch7 p2</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — Alice under a tree with the Cheshire Cat</div>
+    <div class="text-passage">“THEN IT WASN’T VERY CIVIL OF YOU TO OFFER IT,” SAID ALICE ANGRILY.
+
+“IT WASN’T VERY CIVIL OF YOU TO SIT DOWN WITHOUT BEING INVITED,” SAID
+THE MARCH HARE.
+
+“I DIDN’T KNOW IT WAS YOUR TABLE,” SAID ALICE; “IT’S LAID FOR A GREAT
+MANY MORE THAN THREE.”
+
+“YOUR HAIR WANTS CUTTING,” SAID THE HATTER. HE HAD BEEN LOOKING AT
+ALICE FOR SOME TIME WITH GREAT CURIOSITY, AND THIS WAS HIS FIRST
+SPEECH.
+
+“YOU SHOU</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(68,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(68,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(68, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="69" data-chapter="7" data-page="3" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-07-a-mad-tea-party/gwynedd-hudson-1922.jpg" alt="Gwynedd Hudson — March Hare &amp; The Hatter" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Gwynedd Hudson — March Hare &amp; The Hatter</div>
+      <div>Ch7 p3 &mdash; Page 3</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 7, Page 3</strong>
+        
+      </div>
+      <span class="item-badge">Ch7 p3</span>
+    </div>
+    <div class="scene-label">Scene: Gwynedd Hudson — March Hare &amp; The Hatter</div>
+    <div class="text-passage">THE HATTER OPENED HIS EYES VERY WIDE ON HEARING THIS; BUT ALL HE SAID
+WAS, “WHY IS A RAVEN LIKE A WRITING-DESK?”
+
+“COME, WE SHALL HAVE SOME FUN NOW!” THOUGHT ALICE. “I’M GLAD THEY’VE
+BEGUN ASKING RIDDLES.—I BELIEVE I CAN GUESS THAT,” SHE ADDED ALOUD.
+
+“DO YOU MEAN THAT YOU THINK YOU CAN FIND OUT THE ANSWER TO IT?” SAID
+THE MARCH HARE.
+
+“EXACTLY SO,” SAID ALICE.
+
+“THEN YOU SHOULD SAY WHAT YOU MEAN,</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(69,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(69,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(69, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="70" data-chapter="7" data-page="4" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-no-room/arthur-rackham-1907.jpg" alt="Arthur Rackham — Mad Hatter's tea party" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Arthur Rackham — Mad Hatter's tea party</div>
+      <div>Ch7 p4 &mdash; Page 4</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 7, Page 4</strong>
+        
+      </div>
+      <span class="item-badge">Ch7 p4</span>
+    </div>
+    <div class="scene-label">Scene: Arthur Rackham — Mad Hatter's tea party</div>
+    <div class="text-passage">“I DO,” ALICE HASTILY REPLIED; “AT LEAST—AT LEAST I MEAN WHAT I
+SAY—THAT’S THE SAME THING, YOU KNOW.”
+
+“NOT THE SAME THING A BIT!” SAID THE HATTER. “YOU MIGHT JUST AS WELL
+SAY THAT ‘I SEE WHAT I EAT’ IS THE SAME THING AS ‘I EAT WHAT I SEE’!”
+
+“YOU MIGHT JUST AS WELL SAY,” ADDED THE MARCH HARE, “THAT ‘I LIKE WHAT
+I GET’ IS THE SAME THING AS ‘I GET WHAT I LIKE’!”
+
+“YOU MIGHT JUST AS WELL SAY,” ADDED</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(70,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(70,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(70, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="71" data-chapter="7" data-page="5" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-the-hatters-watch/lewis-carroll-1864-duchess-kitchen.webp" alt="Lewis Carroll — The Duchess's chaotic kitchen" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — The Duchess's chaotic kitchen</div>
+      <div>Ch7 p5 &mdash; Page 5</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 7, Page 5</strong>
+        
+      </div>
+      <span class="item-badge">Ch7 p5</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — The Duchess's chaotic kitchen</div>
+    <div class="text-passage">THE HATTER WAS THE FIRST TO BREAK THE SILENCE. “WHAT DAY OF THE MONTH
+IS IT?” HE SAID, TURNING TO ALICE: HE HAD TAKEN HIS WATCH OUT OF HIS
+POCKET, AND WAS LOOKING AT IT UNEASILY, SHAKING IT EVERY NOW AND THEN,
+AND HOLDING IT TO HIS EAR.
+
+ALICE CONSIDERED A LITTLE, AND THEN SAID “THE FOURTH.”
+
+“TWO DAYS WRONG!” SIGHED THE HATTER. “I TOLD YOU BUTTER WOULDN’T SUIT
+THE WORKS!” HE ADDED LOOKING ANGRILY</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(71,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(71,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(71, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="72" data-chapter="7" data-page="6" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-no-room/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — Mad Hatter's Tea Party" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">John Tenniel (colorized E.G. Thomson) — Mad Hatter's Tea Party</div>
+      <div>Ch7 p6 &mdash; Page 6</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 7, Page 6</strong>
+        
+      </div>
+      <span class="item-badge">Ch7 p6</span>
+    </div>
+    <div class="scene-label">Scene: John Tenniel (colorized E.G. Thomson) — Mad Hatter's Tea Party</div>
+    <div class="text-passage">ALICE SIGHED WEARILY. “I THINK YOU MIGHT DO SOMETHING BETTER WITH THE
+TIME,” SHE SAID, “THAN WASTE IT IN ASKING RIDDLES THAT HAVE NO
+ANSWERS.”
+
+“IF YOU KNEW TIME AS WELL AS I DO,” SAID THE HATTER, “YOU WOULDN’T TALK
+ABOUT WASTING IT. IT’S HIM.”
+
+“I DON’T KNOW WHAT YOU MEAN,” SAID ALICE.
+
+“OF COURSE YOU DON’T!” THE HATTER SAID, TOSSING HIS HEAD
+CONTEMPTUOUSLY. “I DARE SAY YOU NEVER EVEN SPOKE TO TI</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(72,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(72,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(72, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="73" data-chapter="7" data-page="7" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-the-dormouses-story/harry-rountree-1928.jpg" alt="Harry Rountree — Dormouse is asleep" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Harry Rountree — Dormouse is asleep</div>
+      <div>Ch7 p7 &mdash; Page 7</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 7, Page 7</strong>
+        
+      </div>
+      <span class="item-badge">Ch7 p7</span>
+    </div>
+    <div class="scene-label">Scene: Harry Rountree — Dormouse is asleep</div>
+    <div class="text-passage">THE DORMOUSE SLOWLY OPENED HIS EYES. “I WASN’T ASLEEP,” HE SAID IN A
+HOARSE, FEEBLE VOICE: “I HEARD EVERY WORD YOU FELLOWS WERE SAYING.”
+
+“TELL US A STORY!” SAID THE MARCH HARE.
+
+“YES, PLEASE DO!” PLEADED ALICE.
+
+“AND BE QUICK ABOUT IT,” ADDED THE HATTER, “OR YOU’LL BE ASLEEP AGAIN
+BEFORE IT’S DONE.”
+
+“ONCE UPON A TIME THERE WERE THREE LITTLE SISTERS,” THE DORMOUSE BEGAN
+IN A GREAT HURRY; “AND THE</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(73,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(73,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(73, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="74" data-chapter="7" data-page="8" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-the-dormouses-story/brinsley-le-fanu-1910.jpg" alt="Brinsley Le Fanu — Dormouse put in teapot" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Brinsley Le Fanu — Dormouse put in teapot</div>
+      <div>Ch7 p8 &mdash; Page 8</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 7, Page 8</strong>
+        
+      </div>
+      <span class="item-badge">Ch7 p8</span>
+    </div>
+    <div class="scene-label">Scene: Brinsley Le Fanu — Dormouse put in teapot</div>
+    <div class="text-passage">“THERE’S NO SUCH THING!” ALICE WAS BEGINNING VERY ANGRILY, BUT THE
+HATTER AND THE MARCH HARE WENT “SH! SH!” AND THE DORMOUSE SULKILY
+REMARKED, “IF YOU CAN’T BE CIVIL, YOU’D BETTER FINISH THE STORY FOR
+YOURSELF.”
+
+“NO, PLEASE GO ON!” ALICE SAID VERY HUMBLY; “I WON’T INTERRUPT AGAIN. I
+DARE SAY THERE MAY BE ONE.”
+
+“ONE, INDEED!” SAID THE DORMOUSE INDIGNANTLY. HOWEVER, HE CONSENTED TO
+GO ON. “AND SO </div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(74,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(74,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(74, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="75" data-chapter="7" data-page="9" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-07-a-mad-tea-party/william-h-walker-1907.jpg" alt="William H. Walker — Hatter's Tea Party" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">William H. Walker — Hatter's Tea Party</div>
+      <div>Ch7 p9 &mdash; Page 9</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 7, Page 9</strong>
+        
+      </div>
+      <span class="item-badge">Ch7 p9</span>
+    </div>
+    <div class="scene-label">Scene: William H. Walker — Hatter's Tea Party</div>
+    <div class="text-passage">THE DORMOUSE HAD CLOSED ITS EYES BY THIS TIME, AND WAS GOING OFF INTO A
+DOZE; BUT, ON BEING PINCHED BY THE HATTER, IT WOKE UP AGAIN WITH A
+LITTLE SHRIEK, AND WENT ON: “—THAT BEGINS WITH AN M, SUCH AS
+MOUSE-TRAPS, AND THE MOON, AND MEMORY, AND MUCHNESS—YOU KNOW YOU SAY
+THINGS ARE “MUCH OF A MUCHNESS”—DID YOU EVER SEE SUCH A THING AS A
+DRAWING OF A MUCHNESS?”
+
+“REALLY, NOW YOU ASK ME,” SAID ALICE, V</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(75,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(75,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(75, this.value)">
+    </div>
+  </div>
+</div><div class="chapter-divider">Chapter 8: THE QUEEN'S CROQUET-GROUND</div>
+
+<div class="entry" data-idx="76" data-chapter="8" data-page="0" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-croquet-with-flamingos/john-tenniel-harry-theaker-1911.jpg" alt="John Tenniel &amp; Harry Theaker — Invitation to play croquet" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">John Tenniel &amp; Harry Theaker — Invitation to play croquet</div>
+      <div>Ch8 Cover &mdash; Cover</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 8, Cover</strong>
+        
+      </div>
+      <span class="item-badge">Ch8 Cover</span>
+    </div>
+    <div class="scene-label">Scene: John Tenniel &amp; Harry Theaker — Invitation to play croquet</div>
+    <div class="text-passage">[COVER PAGE]</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(76,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(76,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(76, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="77" data-chapter="8" data-page="1" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-painting-the-roses-red/gwynedd-hudson-1922.jpg" alt="Gwynedd Hudson — Gardeners painting roses red" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Gwynedd Hudson — Gardeners painting roses red</div>
+      <div>Ch8 p1 &mdash; Page 1</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 8, Page 1</strong>
+        
+      </div>
+      <span class="item-badge">Ch8 p1</span>
+    </div>
+    <div class="scene-label">Scene: Gwynedd Hudson — Gardeners painting roses red</div>
+    <div class="text-passage">A LARGE ROSE-TREE STOOD NEAR THE ENTRANCE OF THE GARDEN: THE ROSES
+GROWING ON IT WERE WHITE, BUT THERE WERE THREE GARDENERS AT IT, BUSILY
+PAINTING THEM RED. ALICE THOUGHT THIS A VERY CURIOUS THING, AND SHE
+WENT NEARER TO WATCH THEM, AND JUST AS SHE CAME UP TO THEM SHE HEARD
+ONE OF THEM SAY, “LOOK OUT NOW, FIVE! DON’T GO SPLASHING PAINT OVER ME
+LIKE THAT!”
+
+“I COULDN’T HELP IT,” SAID FIVE, IN A SUL</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(77,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(77,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(77, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="78" data-chapter="8" data-page="2" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-the-royal-procession/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — The Queen has come" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">John Tenniel (colorized E.G. Thomson) — The Queen has come</div>
+      <div>Ch8 p2 &mdash; Page 2</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 8, Page 2</strong>
+        
+      </div>
+      <span class="item-badge">Ch8 p2</span>
+    </div>
+    <div class="scene-label">Scene: John Tenniel (colorized E.G. Thomson) — The Queen has come</div>
+    <div class="text-passage">“YOU’D BETTER NOT TALK!” SAID FIVE. “I HEARD THE QUEEN SAY ONLY
+YESTERDAY YOU DESERVED TO BE BEHEADED!”
+
+“WHAT FOR?” SAID THE ONE WHO HAD SPOKEN FIRST.
+
+“THAT’S NONE OF YOUR BUSINESS, TWO!” SAID SEVEN.</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(78,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(78,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(78, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="79" data-chapter="8" data-page="3" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-painting-the-roses-red/william-h-walker-1907.jpg" alt="William H. Walker — Playing cards" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">William H. Walker — Playing cards</div>
+      <div>Ch8 p3 &mdash; Page 3</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 8, Page 3</strong>
+        
+      </div>
+      <span class="item-badge">Ch8 p3</span>
+    </div>
+    <div class="scene-label">Scene: William H. Walker — Playing cards</div>
+    <div class="text-passage">“YES, IT IS HIS BUSINESS!” SAID FIVE, “AND I’LL TELL HIM—IT WAS FOR
+BRINGING THE COOK TULIP-ROOTS INSTEAD OF ONIONS.”
+
+SEVEN FLUNG DOWN HIS BRUSH, AND HAD JUST BEGUN “WELL, OF ALL THE UNJUST
+THINGS—” WHEN HIS EYE CHANCED TO FALL UPON ALICE, AS SHE STOOD WATCHING
+THEM, AND HE CHECKED HIMSELF SUDDENLY: THE OTHERS LOOKED ROUND ALSO,
+AND ALL OF THEM BOWED LOW.
+
+“WOULD YOU TELL ME,” SAID ALICE, A LITTL</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(79,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(79,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(79, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="80" data-chapter="8" data-page="4" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-painting-the-roses-red/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — Live cards with red rose-tree" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">John Tenniel (colorized E.G. Thomson) — Live cards with red rose-tree</div>
+      <div>Ch8 p4 &mdash; Page 4</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 8, Page 4</strong>
+        
+      </div>
+      <span class="item-badge">Ch8 p4</span>
+    </div>
+    <div class="scene-label">Scene: John Tenniel (colorized E.G. Thomson) — Live cards with red rose-tree</div>
+    <div class="text-passage">FIVE AND SEVEN SAID NOTHING, BUT LOOKED AT TWO. TWO BEGAN IN A LOW
+VOICE, “WHY THE FACT IS, YOU SEE, MISS, THIS HERE OUGHT TO HAVE BEEN A
+RED ROSE-TREE, AND WE PUT A WHITE ONE IN BY MISTAKE; AND IF THE QUEEN
+WAS TO FIND IT OUT, WE SHOULD ALL HAVE OUR HEADS CUT OFF, YOU KNOW. SO
+YOU SEE, MISS, WE’RE DOING OUR BEST, AFORE SHE COMES, TO—” AT THIS
+MOMENT FIVE, WHO HAD BEEN ANXIOUSLY LOOKING ACROSS THE</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(80,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(80,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(80, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="81" data-chapter="8" data-page="5" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-the-royal-procession/arthur-rackham-1907.jpg" alt="Arthur Rackham — Queen of Hearts" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Arthur Rackham — Queen of Hearts</div>
+      <div>Ch8 p5 &mdash; Page 5</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 8, Page 5</strong>
+        
+      </div>
+      <span class="item-badge">Ch8 p5</span>
+    </div>
+    <div class="scene-label">Scene: Arthur Rackham — Queen of Hearts</div>
+    <div class="text-passage">FIRST CAME TEN SOLDIERS CARRYING CLUBS; THESE WERE ALL SHAPED LIKE THE
+THREE GARDENERS, OBLONG AND FLAT, WITH THEIR HANDS AND FEET AT THE
+CORNERS: NEXT THE TEN COURTIERS; THESE WERE ORNAMENTED ALL OVER WITH
+DIAMONDS, AND WALKED TWO AND TWO, AS THE SOLDIERS DID. AFTER THESE CAME
+THE ROYAL CHILDREN; THERE WERE TEN OF THEM, AND THE LITTLE DEARS CAME
+JUMPING MERRILY ALONG HAND IN HAND, IN COUPLES: THE</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(81,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(81,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(81, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="82" data-chapter="8" data-page="6" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-the-cheshire-cats-head/gwynedd-hudson-1922.jpg" alt="Gwynedd Hudson — King Queen Executioner" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Gwynedd Hudson — King Queen Executioner</div>
+      <div>Ch8 p6 &mdash; Page 6</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 8, Page 6</strong>
+        
+      </div>
+      <span class="item-badge">Ch8 p6</span>
+    </div>
+    <div class="scene-label">Scene: Gwynedd Hudson — King Queen Executioner</div>
+    <div class="text-passage">“HOW SHOULD I KNOW?” SAID ALICE, SURPRISED AT HER OWN COURAGE. “IT’S
+NO BUSINESS OF MINE.”
+
+THE QUEEN TURNED CRIMSON WITH FURY, AND, AFTER GLARING AT HER FOR A
+MOMENT LIKE A WILD BEAST, SCREAMED “OFF WITH HER HEAD! OFF—”
+
+“NONSENSE!” SAID ALICE, VERY LOUDLY AND DECIDEDLY, AND THE QUEEN WAS
+SILENT.
+
+THE KING LAID HIS HAND UPON HER ARM, AND TIMIDLY SAID “CONSIDER, MY
+DEAR: SHE IS ONLY A CHILD!”
+
+THE</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(82,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(82,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(82, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="83" data-chapter="8" data-page="7" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-the-royal-procession/gwynedd-hudson-1922.jpg" alt="Gwynedd Hudson — King &amp; Queen of Hearts" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Gwynedd Hudson — King &amp; Queen of Hearts</div>
+      <div>Ch8 p7 &mdash; Page 7</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 8, Page 7</strong>
+        
+      </div>
+      <span class="item-badge">Ch8 p7</span>
+    </div>
+    <div class="scene-label">Scene: Gwynedd Hudson — King &amp; Queen of Hearts</div>
+    <div class="text-passage">“GET UP!” SAID THE QUEEN, IN A SHRILL, LOUD VOICE, AND THE THREE
+GARDENERS INSTANTLY JUMPED UP, AND BEGAN BOWING TO THE KING, THE QUEEN,
+THE ROYAL CHILDREN, AND EVERYBODY ELSE.
+
+“LEAVE OFF THAT!” SCREAMED THE QUEEN. “YOU MAKE ME GIDDY.” AND THEN,
+TURNING TO THE ROSE-TREE, SHE WENT ON, “WHAT HAVE YOU BEEN DOING
+HERE?”
+
+“MAY IT PLEASE YOUR MAJESTY,” SAID TWO, IN A VERY HUMBLE TONE, GOING
+DOWN ON ONE</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(83,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(83,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(83, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="84" data-chapter="8" data-page="8" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-croquet-with-flamingos/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — Alice, the Duchess &amp; the Flamingo" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">John Tenniel (colorized E.G. Thomson) — Alice, the Duchess &amp; the Flamingo</div>
+      <div>Ch8 p8 &mdash; Page 8</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 8, Page 8</strong>
+        
+      </div>
+      <span class="item-badge">Ch8 p8</span>
+    </div>
+    <div class="scene-label">Scene: John Tenniel (colorized E.G. Thomson) — Alice, the Duchess &amp; the Flamingo</div>
+    <div class="text-passage">“THEIR HEADS ARE GONE, IF IT PLEASE YOUR MAJESTY!” THE SOLDIERS SHOUTED
+IN REPLY.
+
+“THAT’S RIGHT!” SHOUTED THE QUEEN. “CAN YOU PLAY CROQUET?”
+
+THE SOLDIERS WERE SILENT, AND LOOKED AT ALICE, AS THE QUESTION WAS
+EVIDENTLY MEANT FOR HER.
+
+“YES!” SHOUTED ALICE.
+
+“COME ON, THEN!” ROARED THE QUEEN, AND ALICE JOINED THE PROCESSION,
+WONDERING VERY MUCH WHAT WOULD HAPPEN NEXT.</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(84,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(84,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(84, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="85" data-chapter="8" data-page="9" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-the-cheshire-cats-head/alice-b-woodward-1913.jpg" alt="Alice B. Woodward — Executioner came back with Duchess" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Alice B. Woodward — Executioner came back with Duchess</div>
+      <div>Ch8 p9 &mdash; Page 9</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 8, Page 9</strong>
+        
+      </div>
+      <span class="item-badge">Ch8 p9</span>
+    </div>
+    <div class="scene-label">Scene: Alice B. Woodward — Executioner came back with Duchess</div>
+    <div class="text-passage">“IT’S—IT’S A VERY FINE DAY!” SAID A TIMID VOICE AT HER SIDE. SHE WAS
+WALKING BY THE WHITE RABBIT, WHO WAS PEEPING ANXIOUSLY INTO HER FACE.
+
+“VERY,” SAID ALICE: “—WHERE’S THE DUCHESS?”
+
+“HUSH! HUSH!” SAID THE RABBIT IN A LOW, HURRIED TONE. HE LOOKED
+ANXIOUSLY OVER HIS SHOULDER AS HE SPOKE, AND THEN RAISED HIMSELF UPON
+TIPTOE, PUT HIS MOUTH CLOSE TO HER EAR, AND WHISPERED “SHE’S UNDER
+SENTENCE OF EX</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(85,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(85,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(85, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="86" data-chapter="8" data-page="10" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-08-the-queens-croquet-ground/john-tenniel-harry-theaker-1911.jpg" alt="John Tenniel &amp; Harry Theaker — King &amp; Queen of Hearts" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">John Tenniel &amp; Harry Theaker — King &amp; Queen of Hearts</div>
+      <div>Ch8 p10 &mdash; Page 10</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 8, Page 10</strong>
+        
+      </div>
+      <span class="item-badge">Ch8 p10</span>
+    </div>
+    <div class="scene-label">Scene: John Tenniel &amp; Harry Theaker — King &amp; Queen of Hearts</div>
+    <div class="text-passage">“SHE BOXED THE QUEEN’S EARS—” THE RABBIT BEGAN. ALICE GAVE A LITTLE
+SCREAM OF LAUGHTER. “OH, HUSH!” THE RABBIT WHISPERED IN A FRIGHTENED
+TONE. “THE QUEEN WILL HEAR YOU! YOU SEE, SHE CAME RATHER LATE, AND THE
+QUEEN SAID—”
+
+“GET TO YOUR PLACES!” SHOUTED THE QUEEN IN A VOICE OF THUNDER, AND
+PEOPLE BEGAN RUNNING ABOUT IN ALL DIRECTIONS, TUMBLING UP AGAINST EACH
+OTHER; HOWEVER, THEY GOT SETTLED DOWN IN</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(86,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(86,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(86, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="87" data-chapter="8" data-page="11" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-painting-the-roses-red/bessie-pease-gutmann-1933.jpg" alt="Bessie Pease Gutmann — Shan't be beheaded" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Bessie Pease Gutmann — Shan't be beheaded</div>
+      <div>Ch8 p11 &mdash; Page 11</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 8, Page 11</strong>
+        
+      </div>
+      <span class="item-badge">Ch8 p11</span>
+    </div>
+    <div class="scene-label">Scene: Bessie Pease Gutmann — Shan't be beheaded</div>
+    <div class="text-passage">SHE WAS LOOKING ABOUT FOR SOME WAY OF ESCAPE, AND WONDERING WHETHER SHE
+COULD GET AWAY WITHOUT BEING SEEN, WHEN SHE NOTICED A CURIOUS
+APPEARANCE IN THE AIR: IT PUZZLED HER VERY MUCH AT FIRST, BUT, AFTER
+WATCHING IT A MINUTE OR TWO, SHE MADE IT OUT TO BE A GRIN, AND SHE SAID
+TO HERSELF “IT’S THE CHESHIRE CAT: NOW I SHALL HAVE SOMEBODY TO TALK
+TO.”
+
+“HOW ARE YOU GETTING ON?” SAID THE CAT, AS SOON AS</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(87,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(87,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(87, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="88" data-chapter="8" data-page="12" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-08-the-queens-croquet-ground/alice-b-woodward-1913.jpg" alt="Alice B. Woodward — King, Queen &amp; Knave of Hearts" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Alice B. Woodward — King, Queen &amp; Knave of Hearts</div>
+      <div>Ch8 p12 &mdash; Page 12</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 8, Page 12</strong>
+        
+      </div>
+      <span class="item-badge">Ch8 p12</span>
+    </div>
+    <div class="scene-label">Scene: Alice B. Woodward — King, Queen &amp; Knave of Hearts</div>
+    <div class="text-passage">“I DON’T LIKE THE LOOK OF IT AT ALL,” SAID THE KING: “HOWEVER, IT MAY
+KISS MY HAND IF IT LIKES.”
+
+“I’D RATHER NOT,” THE CAT REMARKED.
+
+“DON’T BE IMPERTINENT,” SAID THE KING, “AND DON’T LOOK AT ME LIKE
+THAT!” HE GOT BEHIND ALICE AS HE SPOKE.
+
+“A CAT MAY LOOK AT A KING,” SAID ALICE. “I’VE READ THAT IN SOME BOOK,
+BUT I DON’T REMEMBER WHERE.”
+
+“WELL, IT MUST BE REMOVED,” SAID THE KING VERY DECIDEDLY, </div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(88,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(88,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(88, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="89" data-chapter="8" data-page="13" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-the-cheshire-cats-head/brinsley-le-fanu-1910.jpg" alt="Brinsley Le Fanu — Dispute over Cheshire cat's head" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Brinsley Le Fanu — Dispute over Cheshire cat's head</div>
+      <div>Ch8 p13 &mdash; Page 13</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 8, Page 13</strong>
+        
+      </div>
+      <span class="item-badge">Ch8 p13</span>
+    </div>
+    <div class="scene-label">Scene: Brinsley Le Fanu — Dispute over Cheshire cat's head</div>
+    <div class="text-passage">BY THE TIME SHE HAD CAUGHT THE FLAMINGO AND BROUGHT IT BACK, THE FIGHT
+WAS OVER, AND BOTH THE HEDGEHOGS WERE OUT OF SIGHT: “BUT IT DOESN’T
+MATTER MUCH,” THOUGHT ALICE, “AS ALL THE ARCHES ARE GONE FROM THIS SIDE
+OF THE GROUND.” SO SHE TUCKED IT AWAY UNDER HER ARM, THAT IT MIGHT NOT
+ESCAPE AGAIN, AND WENT BACK FOR A LITTLE MORE CONVERSATION WITH HER
+FRIEND.
+
+WHEN SHE GOT BACK TO THE CHESHIRE CAT, SH</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(89,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(89,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(89, this.value)">
+    </div>
+  </div>
+</div><div class="chapter-divider">Chapter 9: THE MOCK TURTLE'S STORY</div>
+
+<div class="entry" data-idx="90" data-chapter="9" data-page="0" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-the-mock-turtles-school/john-tenniel-harry-theaker-1911.jpg" alt="John Tenniel &amp; Harry Theaker — The Mock Turtle" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">John Tenniel &amp; Harry Theaker — The Mock Turtle</div>
+      <div>Ch9 Cover &mdash; Cover</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 9, Cover</strong>
+        
+      </div>
+      <span class="item-badge">Ch9 Cover</span>
+    </div>
+    <div class="scene-label">Scene: John Tenniel &amp; Harry Theaker — The Mock Turtle</div>
+    <div class="text-passage">[COVER PAGE]</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(90,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(90,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(90, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="91" data-chapter="9" data-page="1" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-the-duchess-and-her-morals/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — Duchess" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">John Tenniel (colorized E.G. Thomson) — Duchess</div>
+      <div>Ch9 p1 &mdash; Page 1</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 9, Page 1</strong>
+        
+      </div>
+      <span class="item-badge">Ch9 p1</span>
+    </div>
+    <div class="scene-label">Scene: John Tenniel (colorized E.G. Thomson) — Duchess</div>
+    <div class="text-passage">“YOU CAN’T THINK HOW GLAD I AM TO SEE YOU AGAIN, YOU DEAR OLD THING!”
+SAID THE DUCHESS, AS SHE TUCKED HER ARM AFFECTIONATELY INTO ALICE’S,
+AND THEY WALKED OFF TOGETHER.
+
+ALICE WAS VERY GLAD TO FIND HER IN SUCH A PLEASANT TEMPER, AND THOUGHT
+TO HERSELF THAT PERHAPS IT WAS ONLY THE PEPPER THAT HAD MADE HER SO
+SAVAGE WHEN THEY MET IN THE KITCHEN.
+
+“WHEN I’M A DUCHESS,” SHE SAID TO HERSELF, (NOT IN A </div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(91,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(91,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(91, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="92" data-chapter="9" data-page="2" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-the-duchess-and-her-morals/gwynedd-hudson-1922.jpg" alt="Gwynedd Hudson — Alice &amp; the Duchess" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Gwynedd Hudson — Alice &amp; the Duchess</div>
+      <div>Ch9 p2 &mdash; Page 2</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 9, Page 2</strong>
+        
+      </div>
+      <span class="item-badge">Ch9 p2</span>
+    </div>
+    <div class="scene-label">Scene: Gwynedd Hudson — Alice &amp; the Duchess</div>
+    <div class="text-passage">“IT’S A MINERAL, I THINK,” SAID ALICE.
+
+“OF COURSE IT IS,” SAID THE DUCHESS, WHO SEEMED READY TO AGREE TO
+EVERYTHING THAT ALICE SAID; “THERE’S A LARGE MUSTARD-MINE NEAR HERE.
+AND THE MORAL OF THAT IS—‘THE MORE THERE IS OF MINE, THE LESS THERE IS
+OF YOURS.’”
+
+“OH, I KNOW!” EXCLAIMED ALICE, WHO HAD NOT ATTENDED TO THIS LAST
+REMARK, “IT’S A VEGETABLE. IT DOESN’T LOOK LIKE ONE, BUT IT IS.”
+
+“I QUITE A</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(92,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(92,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(92, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="93" data-chapter="9" data-page="3" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-meeting-the-gryphon/brinsley-le-fanu-1910.jpg" alt="Brinsley Le Fanu — The griffin sleeps deeply" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Brinsley Le Fanu — The griffin sleeps deeply</div>
+      <div>Ch9 p3 &mdash; Page 3</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 9, Page 3</strong>
+        
+      </div>
+      <span class="item-badge">Ch9 p3</span>
+    </div>
+    <div class="scene-label">Scene: Brinsley Le Fanu — The griffin sleeps deeply</div>
+    <div class="text-passage">“LET’S GO ON WITH THE GAME,” THE QUEEN SAID TO ALICE; AND ALICE WAS TOO
+MUCH FRIGHTENED TO SAY A WORD, BUT SLOWLY FOLLOWED HER BACK TO THE
+CROQUET-GROUND.
+
+THE OTHER GUESTS HAD TAKEN ADVANTAGE OF THE QUEEN’S ABSENCE, AND WERE
+RESTING IN THE SHADE: HOWEVER, THE MOMENT THEY SAW HER, THEY HURRIED
+BACK TO THE GAME, THE QUEEN MERELY REMARKING THAT A MOMENT’S DELAY
+WOULD COST THEM THEIR LIVES.
+
+ALL THE </div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(93,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(93,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(93, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="94" data-chapter="9" data-page="4" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-meeting-the-gryphon/bessie-pease-gutmann-1933.jpg" alt="Bessie Pease Gutmann — Gryphon" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Bessie Pease Gutmann — Gryphon</div>
+      <div>Ch9 p4 &mdash; Page 4</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 9, Page 4</strong>
+        
+      </div>
+      <span class="item-badge">Ch9 p4</span>
+    </div>
+    <div class="scene-label">Scene: Bessie Pease Gutmann — Gryphon</div>
+    <div class="text-passage">“COME ON, THEN,” SAID THE QUEEN, “AND HE SHALL TELL YOU HIS HISTORY.”
+
+AS THEY WALKED OFF TOGETHER, ALICE HEARD THE KING SAY IN A LOW VOICE,
+TO THE COMPANY GENERALLY, “YOU ARE ALL PARDONED.” “COME, THAT’S A
+GOOD THING!” SHE SAID TO HERSELF, FOR SHE HAD FELT QUITE UNHAPPY AT THE
+NUMBER OF EXECUTIONS THE QUEEN HAD ORDERED.
+
+THEY VERY SOON CAME UPON A GRYPHON, LYING FAST ASLEEP IN THE SUN. (IF
+YOU DO</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(94,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(94,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(94, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="95" data-chapter="9" data-page="5" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-meeting-the-gryphon/arthur-rackham-1907.jpg" alt="Arthur Rackham — Gryphon &amp; Mock Turtle" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Arthur Rackham — Gryphon &amp; Mock Turtle</div>
+      <div>Ch9 p5 &mdash; Page 5</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 9, Page 5</strong>
+        
+      </div>
+      <span class="item-badge">Ch9 p5</span>
+    </div>
+    <div class="scene-label">Scene: Arthur Rackham — Gryphon &amp; Mock Turtle</div>
+    <div class="text-passage">THEY HAD NOT GONE FAR BEFORE THEY SAW THE MOCK TURTLE IN THE DISTANCE,
+SITTING SAD AND LONELY ON A LITTLE LEDGE OF ROCK, AND, AS THEY CAME
+NEARER, ALICE COULD HEAR HIM SIGHING AS IF HIS HEART WOULD BREAK. SHE
+PITIED HIM DEEPLY. “WHAT IS HIS SORROW?” SHE ASKED THE GRYPHON, AND THE
+GRYPHON ANSWERED, VERY NEARLY IN THE SAME WORDS AS BEFORE, “IT’S ALL
+HIS FANCY, THAT: HE HASN’T GOT NO SORROW, YOU KNOW</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(95,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(95,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(95, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="96" data-chapter="9" data-page="6" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-09-the-mock-turtles-story/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — Alice, Mock Turtle &amp; Gryphon" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">John Tenniel (colorized E.G. Thomson) — Alice, Mock Turtle &amp; Gryphon</div>
+      <div>Ch9 p6 &mdash; Page 6</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 9, Page 6</strong>
+        
+      </div>
+      <span class="item-badge">Ch9 p6</span>
+    </div>
+    <div class="scene-label">Scene: John Tenniel (colorized E.G. Thomson) — Alice, Mock Turtle &amp; Gryphon</div>
+    <div class="text-passage">“ONCE,” SAID THE MOCK TURTLE AT LAST, WITH A DEEP SIGH, “I WAS A REAL
+TURTLE.”
+
+THESE WORDS WERE FOLLOWED BY A VERY LONG SILENCE, BROKEN ONLY BY AN
+OCCASIONAL EXCLAMATION OF “HJCKRRH!” FROM THE GRYPHON, AND THE CONSTANT
+HEAVY SOBBING OF THE MOCK TURTLE. ALICE WAS VERY NEARLY GETTING UP AND
+SAYING, “THANK YOU, SIR, FOR YOUR INTERESTING STORY,” BUT SHE COULD NOT
+HELP THINKING THERE MUST BE MORE TO C</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(96,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(96,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(96, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="97" data-chapter="9" data-page="7" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-the-mock-turtles-school/gwynedd-hudson-1922.jpg" alt="Gwynedd Hudson — Alice &amp; Mock-turtle" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Gwynedd Hudson — Alice &amp; Mock-turtle</div>
+      <div>Ch9 p7 &mdash; Page 7</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 9, Page 7</strong>
+        
+      </div>
+      <span class="item-badge">Ch9 p7</span>
+    </div>
+    <div class="scene-label">Scene: Gwynedd Hudson — Alice &amp; Mock-turtle</div>
+    <div class="text-passage">“AND WASHING?” SAID THE MOCK TURTLE.
+
+“CERTAINLY NOT!” SAID ALICE INDIGNANTLY.
+
+“AH! THEN YOURS WASN’T A REALLY GOOD SCHOOL,” SAID THE MOCK TURTLE IN A
+TONE OF GREAT RELIEF. “NOW AT OURS THEY HAD AT THE END OF THE BILL,
+‘FRENCH, MUSIC, AND WASHING—EXTRA.’”
+
+“YOU COULDN’T HAVE WANTED IT MUCH,” SAID ALICE; “LIVING AT THE BOTTOM
+OF THE SEA.”
+
+“I COULDN’T AFFORD TO LEARN IT.” SAID THE MOCK TURTLE WITH</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(97,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(97,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(97, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="98" data-chapter="9" data-page="8" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-the-mock-turtles-school/william-h-walker-1907.jpg" alt="William H. Walker — Turtle &amp; Gryphon" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">William H. Walker — Turtle &amp; Gryphon</div>
+      <div>Ch9 p8 &mdash; Page 8</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 9, Page 8</strong>
+        
+      </div>
+      <span class="item-badge">Ch9 p8</span>
+    </div>
+    <div class="scene-label">Scene: William H. Walker — Turtle &amp; Gryphon</div>
+    <div class="text-passage">“WELL, I CAN’T SHOW IT YOU MYSELF,” THE MOCK TURTLE SAID: “I’M TOO
+STIFF. AND THE GRYPHON NEVER LEARNT IT.”
+
+“HADN’T TIME,” SAID THE GRYPHON: “I WENT TO THE CLASSICS MASTER,
+THOUGH. HE WAS AN OLD CRAB, HE WAS.”
+
+“I NEVER WENT TO HIM,” THE MOCK TURTLE SAID WITH A SIGH: “HE TAUGHT
+LAUGHING AND GRIEF, THEY USED TO SAY.”
+
+“SO HE DID, SO HE DID,” SAID THE GRYPHON, SIGHING IN HIS TURN; AND BOTH
+CREATURE</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(98,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(98,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(98, this.value)">
+    </div>
+  </div>
+</div><div class="chapter-divider">Chapter 10: THE LOBSTER QUADRILLE</div>
+
+<div class="entry" data-idx="99" data-chapter="10" data-page="0" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch10-the-lobster-and-the-owl/lewis-carroll-1864-manuscript.webp" alt="Lewis Carroll — The Lobster dancing" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — The Lobster dancing</div>
+      <div>Ch10 Cover &mdash; Cover</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 10, Cover</strong>
+        
+      </div>
+      <span class="item-badge">Ch10 Cover</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — The Lobster dancing</div>
+    <div class="text-passage">[COVER PAGE]</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(99,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(99,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(99, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="100" data-chapter="10" data-page="1" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch10-beautiful-soup/lewis-carroll-1864-manuscript.webp" alt="Lewis Carroll — Alice, Mock Turtle and Gryphon singing" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — Alice, Mock Turtle and Gryphon singing</div>
+      <div>Ch10 p1 &mdash; Page 1</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 10, Page 1</strong>
+        
+      </div>
+      <span class="item-badge">Ch10 p1</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — Alice, Mock Turtle and Gryphon singing</div>
+    <div class="text-passage">THE MOCK TURTLE SIGHED DEEPLY, AND DREW THE BACK OF ONE FLAPPER ACROSS
+HIS EYES. HE LOOKED AT ALICE, AND TRIED TO SPEAK, BUT FOR A MINUTE OR
+TWO SOBS CHOKED HIS VOICE. “SAME AS IF HE HAD A BONE IN HIS THROAT,”
+SAID THE GRYPHON: AND IT SET TO WORK SHAKING HIM AND PUNCHING HIM IN
+THE BACK. AT LAST THE MOCK TURTLE RECOVERED HIS VOICE, AND, WITH TEARS
+RUNNING DOWN HIS CHEEKS, HE WENT ON AGAIN:—
+
+“YOU </div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(100,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(100,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(100, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="101" data-chapter="10" data-page="2" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-10-the-lobster-quadrille/lewis-carroll-1864-mock-turtle.webp" alt="Lewis Carroll — The Mock Turtle sitting sadly on a rock" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — The Mock Turtle sitting sadly on a rock</div>
+      <div>Ch10 p2 &mdash; Page 2</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 10, Page 2</strong>
+        
+      </div>
+      <span class="item-badge">Ch10 p2</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — The Mock Turtle sitting sadly on a rock</div>
+    <div class="text-passage">“I COULD TELL YOU MY ADVENTURES—BEGINNING FROM THIS MORNING,” SAID
+ALICE A LITTLE TIMIDLY: “BUT IT’S NO USE GOING BACK TO YESTERDAY,
+BECAUSE I WAS A DIFFERENT PERSON THEN.”
+
+“EXPLAIN ALL THAT,” SAID THE MOCK TURTLE.
+
+“NO, NO! THE ADVENTURES FIRST,” SAID THE GRYPHON IN AN IMPATIENT TONE:
+“EXPLANATIONS TAKE SUCH A DREADFUL TIME.”
+
+SO ALICE BEGAN TELLING THEM HER ADVENTURES FROM THE TIME WHEN SHE FIR</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(101,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(101,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(101, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="102" data-chapter="10" data-page="3" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch10-the-lobster-quadrille/harry-rountree-1928.jpg" alt="Harry Rountree — Lobster Quadrille" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Harry Rountree — Lobster Quadrille</div>
+      <div>Ch10 p3 &mdash; Page 3</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 10, Page 3</strong>
+        
+      </div>
+      <span class="item-badge">Ch10 p3</span>
+    </div>
+    <div class="scene-label">Scene: Harry Rountree — Lobster Quadrille</div>
+    <div class="text-passage">“SHALL WE TRY ANOTHER FIGURE OF THE LOBSTER QUADRILLE?” THE GRYPHON
+WENT ON. “OR WOULD YOU LIKE THE MOCK TURTLE TO SING YOU A SONG?”
+
+“OH, A SONG, PLEASE, IF THE MOCK TURTLE WOULD BE SO KIND,” ALICE
+REPLIED, SO EAGERLY THAT THE GRYPHON SAID, IN A RATHER OFFENDED TONE,
+“HM! NO ACCOUNTING FOR TASTES! SING HER ‘TURTLE SOUP,’ WILL YOU, OLD
+FELLOW?”
+
+THE MOCK TURTLE SIGHED DEEPLY, AND BEGAN, IN A VOICE</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(102,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(102,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(102, this.value)">
+    </div>
+  </div>
+</div><div class="chapter-divider">Chapter 11: WHO STOLE THE TARTS?</div>
+
+<div class="entry" data-idx="103" data-chapter="11" data-page="0" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-court-assembles/arthur-rackham-1907.jpg" alt="Arthur Rackham — Knave of Spades" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Arthur Rackham — Knave of Spades</div>
+      <div>Ch11 Cover &mdash; Cover</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 11, Cover</strong>
+        
+      </div>
+      <span class="item-badge">Ch11 Cover</span>
+    </div>
+    <div class="scene-label">Scene: Arthur Rackham — Knave of Spades</div>
+    <div class="text-passage">[COVER PAGE]</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(103,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(103,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(103, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="104" data-chapter="11" data-page="1" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-court-assembles/arthur-rackham-1907.jpg" alt="Arthur Rackham — Trial of Knave of Hearts" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Arthur Rackham — Trial of Knave of Hearts</div>
+      <div>Ch11 p1 &mdash; Page 1</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 11, Page 1</strong>
+        
+      </div>
+      <span class="item-badge">Ch11 p1</span>
+    </div>
+    <div class="scene-label">Scene: Arthur Rackham — Trial of Knave of Hearts</div>
+    <div class="text-passage">THE KING AND QUEEN OF HEARTS WERE SEATED ON THEIR THRONE WHEN THEY
+ARRIVED, WITH A GREAT CROWD ASSEMBLED ABOUT THEM—ALL SORTS OF LITTLE
+BIRDS AND BEASTS, AS WELL AS THE WHOLE PACK OF CARDS: THE KNAVE WAS
+STANDING BEFORE THEM, IN CHAINS, WITH A SOLDIER ON EACH SIDE TO GUARD
+HIM; AND NEAR THE KING WAS THE WHITE RABBIT, WITH A TRUMPET IN ONE
+HAND, AND A SCROLL OF PARCHMENT IN THE OTHER. IN THE VERY M</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(104,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(104,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(104, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="105" data-chapter="11" data-page="2" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-court-assembles/william-h-walker-1907.jpg" alt="William H. Walker — In court" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">William H. Walker — In court</div>
+      <div>Ch11 p2 &mdash; Page 2</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 11, Page 2</strong>
+        
+      </div>
+      <span class="item-badge">Ch11 p2</span>
+    </div>
+    <div class="scene-label">Scene: William H. Walker — In court</div>
+    <div class="text-passage">“THEY’RE PUTTING DOWN THEIR NAMES,” THE GRYPHON WHISPERED IN REPLY,
+“FOR FEAR THEY SHOULD FORGET THEM BEFORE THE END OF THE TRIAL.”
+
+“STUPID THINGS!” ALICE BEGAN IN A LOUD, INDIGNANT VOICE, BUT SHE
+STOPPED HASTILY, FOR THE WHITE RABBIT CRIED OUT, “SILENCE IN THE
+COURT!” AND THE KING PUT ON HIS SPECTACLES AND LOOKED ANXIOUSLY ROUND,
+TO MAKE OUT WHO WAS TALKING.
+
+ALICE COULD SEE, AS WELL AS IF SHE W</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(105,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(105,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(105, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="106" data-chapter="11" data-page="3" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-11-who-stole-the-tarts/lewis-carroll-1864-royal-court.webp" alt="Lewis Carroll — King and Queen of Hearts on throne" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — King and Queen of Hearts on throne</div>
+      <div>Ch11 p3 &mdash; Page 3</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 11, Page 3</strong>
+        
+      </div>
+      <span class="item-badge">Ch11 p3</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — King and Queen of Hearts on throne</div>
+    <div class="text-passage">ON THIS THE WHITE RABBIT BLEW THREE BLASTS ON THE TRUMPET, AND THEN
+UNROLLED THE PARCHMENT SCROLL, AND READ AS FOLLOWS:—
+
+“THE QUEEN OF HEARTS, SHE MADE SOME TARTS,
+    ALL ON A SUMMER DAY:
+THE KNAVE OF HEARTS, HE STOLE THOSE TARTS,
+    AND TOOK THEM QUITE AWAY!”
+
+“CONSIDER YOUR VERDICT,” THE KING SAID TO THE JURY.
+
+“NOT YET, NOT YET!” THE RABBIT HASTILY INTERRUPTED. “THERE’S A GREAT
+DEAL TO COME </div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(106,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(106,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(106, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="107" data-chapter="11" data-page="4" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-hatters-evidence/lewis-carroll-1864-manuscript.webp" alt="Lewis Carroll — The trial of the Knave of Hearts" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — The trial of the Knave of Hearts</div>
+      <div>Ch11 p4 &mdash; Page 4</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 11, Page 4</strong>
+        
+      </div>
+      <span class="item-badge">Ch11 p4</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — The trial of the Knave of Hearts</div>
+    <div class="text-passage">“CALL THE FIRST WITNESS,” SAID THE KING; AND THE WHITE RABBIT BLEW
+THREE BLASTS ON THE TRUMPET, AND CALLED OUT, “FIRST WITNESS!”
+
+THE FIRST WITNESS WAS THE HATTER. HE CAME IN WITH A TEACUP IN ONE HAND
+AND A PIECE OF BREAD-AND-BUTTER IN THE OTHER. “I BEG PARDON, YOUR
+MAJESTY,” HE BEGAN, “FOR BRINGING THESE IN: BUT I HADN’T QUITE FINISHED
+MY TEA WHEN I WAS SENT FOR.”
+
+“YOU OUGHT TO HAVE FINISHED,” S</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(107,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(107,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(107, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="108" data-chapter="11" data-page="5" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-cooks-evidence/brinsley-le-fanu-1910.jpg" alt="Brinsley Le Fanu — The cook refuses to testify" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Brinsley Le Fanu — The cook refuses to testify</div>
+      <div>Ch11 p5 &mdash; Page 5</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 11, Page 5</strong>
+        
+      </div>
+      <span class="item-badge">Ch11 p5</span>
+    </div>
+    <div class="scene-label">Scene: Brinsley Le Fanu — The cook refuses to testify</div>
+    <div class="text-passage">“CALL THE NEXT WITNESS!” SAID THE KING.
+
+THE NEXT WITNESS WAS THE DUCHESS’S COOK. SHE CARRIED THE PEPPER-BOX IN
+HER HAND, AND ALICE GUESSED WHO IT WAS, EVEN BEFORE SHE GOT INTO THE
+COURT, BY THE WAY THE PEOPLE NEAR THE DOOR BEGAN SNEEZING ALL AT ONCE.
+
+“GIVE YOUR EVIDENCE,” SAID THE KING.
+
+“SHAN’T,” SAID THE COOK.
+
+THE KING LOOKED ANXIOUSLY AT THE WHITE RABBIT, WHO SAID IN A LOW VOICE,
+“YOUR MAJES</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(108,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(108,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(108, this.value)">
+    </div>
+  </div>
+</div><div class="chapter-divider">Chapter 12: ALICE'S EVIDENCE</div>
+
+<div class="entry" data-idx="109" data-chapter="12" data-page="0" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-sentence-first/gwynedd-hudson-1922.jpg" alt="Gwynedd Hudson — Cards rose into the air" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Gwynedd Hudson — Cards rose into the air</div>
+      <div>Ch12 Cover &mdash; Cover</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 12, Cover</strong>
+        
+      </div>
+      <span class="item-badge">Ch12 Cover</span>
+    </div>
+    <div class="scene-label">Scene: Gwynedd Hudson — Cards rose into the air</div>
+    <div class="text-passage">[COVER PAGE]</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(109,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(109,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(109, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="110" data-chapter="12" data-page="1" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-the-mysterious-letter/lewis-carroll-1864-manuscript.webp" alt="Lewis Carroll — Alice growing in court, Off with her head" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — Alice growing in court, Off with her head</div>
+      <div>Ch12 p1 &mdash; Page 1</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 12, Page 1</strong>
+        
+      </div>
+      <span class="item-badge">Ch12 p1</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — Alice growing in court, Off with her head</div>
+    <div class="text-passage">“HERE!” CRIED ALICE, QUITE FORGETTING IN THE FLURRY OF THE MOMENT HOW
+LARGE SHE HAD GROWN IN THE LAST FEW MINUTES, AND SHE JUMPED UP IN SUCH
+A HURRY THAT SHE TIPPED OVER THE JURY-BOX WITH THE EDGE OF HER SKIRT,
+UPSETTING ALL THE JURYMEN ON TO THE HEADS OF THE CROWD BELOW, AND THERE
+THEY LAY SPRAWLING ABOUT, REMINDING HER VERY MUCH OF A GLOBE OF
+GOLDFISH SHE HAD ACCIDENTALLY UPSET THE WEEK BEFORE.
+</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(110,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(110,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(110, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="111" data-chapter="12" data-page="2" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-alice-tips-the-jury/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — Alice &amp; the Jurors" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">John Tenniel (colorized E.G. Thomson) — Alice &amp; the Jurors</div>
+      <div>Ch12 p2 &mdash; Page 2</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 12, Page 2</strong>
+        
+      </div>
+      <span class="item-badge">Ch12 p2</span>
+    </div>
+    <div class="scene-label">Scene: John Tenniel (colorized E.G. Thomson) — Alice &amp; the Jurors</div>
+    <div class="text-passage">“NOTHING WHATEVER?” PERSISTED THE KING.
+
+“NOTHING WHATEVER,” SAID ALICE.
+
+“THAT’S VERY IMPORTANT,” THE KING SAID, TURNING TO THE JURY. THEY WERE
+JUST BEGINNING TO WRITE THIS DOWN ON THEIR SLATES, WHEN THE WHITE
+RABBIT INTERRUPTED: “UNIMPORTANT, YOUR MAJESTY MEANS, OF COURSE,” HE
+SAID IN A VERY RESPECTFUL TONE, BUT FROWNING AND MAKING FACES AT HIM AS
+HE SPOKE.
+
+“UNIMPORTANT, OF COURSE, I MEANT,” TH</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(111,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(111,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(111, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="112" data-chapter="12" data-page="3" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-waking-up/lewis-carroll-1864-manuscript.webp" alt="Lewis Carroll — The end - Alice waking up" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — The end - Alice waking up</div>
+      <div>Ch12 p3 &mdash; Page 3</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 12, Page 3</strong>
+        
+      </div>
+      <span class="item-badge">Ch12 p3</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — The end - Alice waking up</div>
+    <div class="text-passage">AT THIS MOMENT THE KING, WHO HAD BEEN FOR SOME TIME BUSILY WRITING IN
+HIS NOTE-BOOK, CACKLED OUT “SILENCE!” AND READ OUT FROM HIS BOOK, “RULE
+FORTY-TWO. ALL PERSONS MORE THAN A MILE HIGH TO LEAVE THE COURT.”
+
+EVERYBODY LOOKED AT ALICE.
+
+“I’M NOT A MILE HIGH,” SAID ALICE.
+
+“YOU ARE,” SAID THE KING.
+
+“NEARLY TWO MILES HIGH,” ADDED THE QUEEN.
+
+“WELL, I SHAN’T GO, AT ANY RATE,” SAID ALICE: “BESIDES, T</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(112,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(112,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(112, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="113" data-chapter="12" data-page="4" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-alice-tips-the-jury/john-tenniel-harry-theaker-1911.jpg" alt="John Tenniel &amp; Harry Theaker — Tipped over jury box" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">John Tenniel &amp; Harry Theaker — Tipped over jury box</div>
+      <div>Ch12 p4 &mdash; Page 4</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 12, Page 4</strong>
+        
+      </div>
+      <span class="item-badge">Ch12 p4</span>
+    </div>
+    <div class="scene-label">Scene: John Tenniel &amp; Harry Theaker — Tipped over jury box</div>
+    <div class="text-passage">“THAT’S THE MOST IMPORTANT PIECE OF EVIDENCE WE’VE HEARD YET,” SAID THE
+KING, RUBBING HIS HANDS; “SO NOW LET THE JURY—”
+
+“IF ANY ONE OF THEM CAN EXPLAIN IT,” SAID ALICE, (SHE HAD GROWN SO
+LARGE IN THE LAST FEW MINUTES THAT SHE WASN’T A BIT AFRAID OF
+INTERRUPTING HIM,) “I’LL GIVE HIM SIXPENCE. I DON’T BELIEVE THERE’S
+AN ATOM OF MEANING IN IT.”
+
+THE JURY ALL WROTE DOWN ON THEIR SLATES, “SHE DOESN’T </div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(113,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(113,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(113, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="114" data-chapter="12" data-page="5" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-12-alices-evidence/lewis-carroll-1864-croquet-chaos.webp" alt="Lewis Carroll — The great croquet chaos with cards and flamingos" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Lewis Carroll — The great croquet chaos with cards and flamingos</div>
+      <div>Ch12 p5 &mdash; Page 5</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 12, Page 5</strong>
+        
+      </div>
+      <span class="item-badge">Ch12 p5</span>
+    </div>
+    <div class="scene-label">Scene: Lewis Carroll — The great croquet chaos with cards and flamingos</div>
+    <div class="text-passage">“BUT, IT GOES ON ‘THEY ALL RETURNED FROM HIM TO YOU,’” SAID ALICE.
+
+“WHY, THERE THEY ARE!” SAID THE KING TRIUMPHANTLY, POINTING TO THE
+TARTS ON THE TABLE. “NOTHING CAN BE CLEARER THAN THAT. THEN
+AGAIN—‘BEFORE SHE HAD THIS FIT—’ YOU NEVER HAD FITS, MY DEAR, I
+THINK?” HE SAID TO THE QUEEN.
+
+“NEVER!” SAID THE QUEEN FURIOUSLY, THROWING AN INKSTAND AT THE LIZARD
+AS SHE SPOKE. (THE UNFORTUNATE LITTLE BI</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(114,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(114,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(114, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="115" data-chapter="12" data-page="6" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-sentence-first/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — The Shower of Cards" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">John Tenniel (colorized E.G. Thomson) — The Shower of Cards</div>
+      <div>Ch12 p6 &mdash; Page 6</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 12, Page 6</strong>
+        
+      </div>
+      <span class="item-badge">Ch12 p6</span>
+    </div>
+    <div class="scene-label">Scene: John Tenniel (colorized E.G. Thomson) — The Shower of Cards</div>
+    <div class="text-passage">“STUFF AND NONSENSE!” SAID ALICE LOUDLY. “THE IDEA OF HAVING THE
+SENTENCE FIRST!”
+
+“HOLD YOUR TONGUE!” SAID THE QUEEN, TURNING PURPLE.
+
+“I WON’T!” SAID ALICE.
+
+“OFF WITH HER HEAD!” THE QUEEN SHOUTED AT THE TOP OF HER VOICE. NOBODY
+MOVED.
+
+“WHO CARES FOR YOU?” SAID ALICE, (SHE HAD GROWN TO HER FULL SIZE BY
+THIS TIME.) “YOU’RE NOTHING BUT A PACK OF CARDS!”</div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(115,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(115,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(115, this.value)">
+    </div>
+  </div>
+</div>
+<div class="entry" data-idx="116" data-chapter="12" data-page="7" data-status="pending">
+  <div class="entry-img">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-sentence-first/arthur-rackham-1907.jpg" alt="Arthur Rackham — Pack rose in the air" onclick="toggleZoom(this)" loading="lazy">
+    <div class="img-meta">
+      <div class="artist">Arthur Rackham — Pack rose in the air</div>
+      <div>Ch12 p7 &mdash; Page 7</div>
+    </div>
+  </div>
+  <div class="entry-content">
+    <div class="entry-header">
+      <div>
+        <strong>Ch 12, Page 7</strong>
+        
+      </div>
+      <span class="item-badge">Ch12 p7</span>
+    </div>
+    <div class="scene-label">Scene: Arthur Rackham — Pack rose in the air</div>
+    <div class="text-passage">AT THIS THE WHOLE PACK ROSE UP INTO THE AIR, AND CAME FLYING DOWN UPON
+HER: SHE GAVE A LITTLE SCREAM, HALF OF FRIGHT AND HALF OF ANGER, AND
+TRIED TO BEAT THEM OFF, AND FOUND HERSELF LYING ON THE BANK, WITH HER
+HEAD IN THE LAP OF HER SISTER, WHO WAS GENTLY BRUSHING AWAY SOME DEAD
+LEAVES THAT HAD FLUTTERED DOWN FROM THE TREES UPON HER FACE.
+
+“WAKE UP, ALICE DEAR!” SAID HER SISTER; “WHY, WHAT A LONG </div>
+    <div class="actions">
+      <button class="btn-ok" onclick="setStatus(116,'confirmed')">&#10004; OK</button>
+      <button class="btn-wrong" onclick="setStatus(116,'wrong')">&#10008; Wrong</button>
+      <input class="notes-input" placeholder="Notes (optional)..." oninput="setNote(116, this.value)">
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="export-bar">
+  <span id="export-summary">Review illustrations, then export corrections</span>
+  <button onclick="exportCorrections()">Export Corrections JSON</button>
+</div>
+
+<script>
+var entries = document.querySelectorAll('.entry');
+var statuses = {};
+var notes = {};
+
+function toggleZoom(img) {
+  img.classList.toggle('zoomed');
+  if (img.classList.contains('zoomed')) {
+    img.addEventListener('click', function handler() {
+      img.classList.remove('zoomed');
+    }, { once: true });
+  }
+}
+
+function setStatus(idx, status) {
+  var entry = document.querySelector('[data-idx="' + idx + '"]');
+  var current = entry.dataset.status;
+  if (current === status) {
+    entry.dataset.status = 'pending';
+    delete statuses[idx];
+  } else {
+    entry.dataset.status = status;
+    statuses[idx] = status;
+  }
+  // Toggle button active states
+  var btns = entry.querySelectorAll('.actions button');
+  btns.forEach(function(btn) { btn.classList.remove('active'); });
+  if (entry.dataset.status === 'confirmed') btns[0].classList.add('active');
+  if (entry.dataset.status === 'wrong') btns[1].classList.add('active');
+  updateStats();
+}
+
+function setNote(idx, note) {
+  if (note) notes[idx] = note;
+  else delete notes[idx];
+}
+
+function updateStats() {
+  var ok = 0, wrong = 0, pending = 0;
+  entries.forEach(function(e) {
+    var s = e.dataset.status;
+    if (s === 'confirmed') ok++;
+    else if (s === 'wrong') wrong++;
+    else pending++;
+  });
+  document.getElementById('stat-ok').textContent = ok;
+  document.getElementById('stat-wrong').textContent = wrong;
+  document.getElementById('stat-pending').textContent = pending;
+  document.getElementById('export-summary').textContent =
+    ok + ' confirmed, ' + wrong + ' wrong, ' + pending + ' pending';
+}
+
+function filterView(view) {
+  document.querySelectorAll('.controls button').forEach(function(b) { b.classList.remove('active'); });
+  document.getElementById('btn-' + view).classList.add('active');
+  entries.forEach(function(e) {
+    var show = true;
+    if (view === 'pending') show = e.dataset.status === 'pending';
+    else if (view === 'wrong') show = e.dataset.status === 'wrong';
+    else if (view === 'confirmed') show = e.dataset.status === 'confirmed';
+    else if (view === 'has-image') show = !!e.querySelector('img');
+    e.classList.toggle('hidden', !show);
+  });
+  // Also toggle chapter dividers
+  document.querySelectorAll('.chapter-divider').forEach(function(d) {
+    if (view === 'all') { d.classList.remove('hidden'); return; }
+    // Show divider if any sibling entry is visible
+    var next = d.nextElementSibling;
+    var hasVisible = false;
+    while (next && !next.classList.contains('chapter-divider')) {
+      if (next.classList.contains('entry') && !next.classList.contains('hidden')) hasVisible = true;
+      next = next.nextElementSibling;
+    }
+    d.classList.toggle('hidden', !hasVisible);
+  });
+}
+
+function exportCorrections() {
+  var corrections = [];
+  entries.forEach(function(e) {
+    var idx = parseInt(e.dataset.idx);
+    var status = e.dataset.status;
+    if (status === 'wrong' || notes[idx]) {
+      corrections.push({
+        chapter: parseInt(e.dataset.chapter),
+        page: parseInt(e.dataset.page),
+        status: status,
+        note: notes[idx] || '',
+        current_image: e.querySelector('img') ? e.querySelector('img').src : '',
+      });
+    }
+  });
+
+  if (corrections.length === 0) {
+    alert('No corrections to export. Mark items as "Wrong" or add notes first.');
+    return;
+  }
+
+  var json = JSON.stringify(corrections, null, 2);
+  var blob = new Blob([json], { type: 'application/json' });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = 'illustration-corrections.json';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+// Keyboard: Space = OK on focused entry
+document.addEventListener('keydown', function(e) {
+  if (e.target.tagName === 'INPUT') return;
+  if (e.key === 'j' || e.key === 'ArrowDown') {
+    e.preventDefault();
+    scrollToNext(1);
+  }
+  if (e.key === 'k' || e.key === 'ArrowUp') {
+    e.preventDefault();
+    scrollToNext(-1);
+  }
+});
+
+var currentFocusIdx = -1;
+function scrollToNext(dir) {
+  var visible = Array.from(entries).filter(function(e) { return !e.classList.contains('hidden'); });
+  if (visible.length === 0) return;
+  currentFocusIdx = Math.max(0, Math.min(visible.length - 1, currentFocusIdx + dir));
+  visible[currentFocusIdx].scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+</script>
+</body>
+</html>

@@ -304,7 +304,7 @@
     /* Nearby words — soft gradient between spoken and unspoken */
     .k-word.k-near { color: #8a7560; transition: color 2s ease; }
 
-    /* Tap-to-pause overlay (YouTube-style, invisible) */
+    /* Tap-to-pause overlay — always clickable once audio has started */
     #tapOverlay {
       position: fixed;
       inset: 0;
@@ -313,7 +313,7 @@
       cursor: pointer;
       display: none;
     }
-    #tapOverlay.active { display: block; }
+    #tapOverlay.ready { display: block; }
 
     /* Ball removed — gradient-only karaoke */
     #singBall { display: none; }
@@ -471,7 +471,7 @@
 
     <div class="spread cover-spread" data-spread="1">
       <div class="page-left cover-image" data-page="1">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-06-pig-and-pepper/lewis-carroll-1864-chapter-IV.webp" alt="Cover illustration">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-25.jpg" alt="Cover illustration">
         <div class="page-number page-number-left">1</div>
       </div>
       <div class="page-right cover-title" data-page="2">
@@ -487,7 +487,7 @@
     </div>
     <div class="spread" data-spread="2">
       <div class="page-left" data-page="3">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-baby-turns-into-a-pig/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — Duchess &amp; the Pig-baby">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-27.jpg" alt="Lewis Carroll manuscript — Alice holding the baby that turns into a pig">
         <div class="page-number page-number-left">3</div>
       </div>
       <div class="page-right" data-page="4">
@@ -503,7 +503,7 @@
     </div>
     <div class="spread" data-spread="3">
       <div class="page-left" data-page="5">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-fish-footman/lewis-carroll-1864-manuscript.webp" alt="Lewis Carroll — Fish-Footman and Frog-Footman at the door">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-duchesss-kitchen/arthur-rackham-1907.jpg" alt="Arthur Rackham — Saucepan flew by">
         <div class="page-number page-number-left">5</div>
       </div>
       <div class="page-right" data-page="6">
@@ -520,7 +520,7 @@
     </div>
     <div class="spread" data-spread="4">
       <div class="page-left" data-page="7">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-fish-footman/alice-b-woodward-1913.jpg" alt="Alice B. Woodward — You may nurse the baby, said Duchess">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-duchesss-kitchen/brinsley-le-fanu-1910.jpg" alt="Brinsley Le Fanu — The Duchess's kitchen">
         <div class="page-number page-number-left">7</div>
       </div>
       <div class="page-right" data-page="8">
@@ -538,7 +538,7 @@
     </div>
     <div class="spread" data-spread="5">
       <div class="page-left" data-page="9">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-duchesss-kitchen/arthur-rackham-1907.jpg" alt="Arthur Rackham — Saucepan flew by">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-baby-turns-into-a-pig/gwynedd-hudson-1922.jpg" alt="Gwynedd Hudson — Duchess &amp; the Baby">
         <div class="page-number page-number-left">9</div>
       </div>
       <div class="page-right" data-page="10">
@@ -557,7 +557,7 @@
     </div>
     <div class="spread" data-spread="6">
       <div class="page-left" data-page="11">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-duchesss-kitchen/alice-b-woodward-1913.jpg" alt="Alice B. Woodward — Shan't said the Cook">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-baby-turns-into-a-pig/alice-b-woodward-1913.jpg" alt="Alice B. Woodward — You may nurse the baby said Duchess">
         <div class="page-number page-number-left">11</div>
       </div>
       <div class="page-right" data-page="12">
@@ -574,7 +574,7 @@
     </div>
     <div class="spread" data-spread="7">
       <div class="page-left" data-page="13">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-duchesss-kitchen/brinsley-le-fanu-1910.jpg" alt="Brinsley Le Fanu — The Duchess's kitchen">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-fish-footman/alice-b-woodward-1913.jpg" alt="Alice B. Woodward — You may nurse the baby, said Duchess">
         <div class="page-number page-number-left">13</div>
       </div>
       <div class="page-right" data-page="14">
@@ -596,7 +596,7 @@
     </div>
     <div class="spread" data-spread="8">
       <div class="page-left" data-page="15">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-baby-turns-into-a-pig/arthur-rackham-1907.jpg" alt="Arthur Rackham — Pig baby">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-28.jpg" alt="Lewis Carroll manuscript — The Cheshire Cat grin fading, leaving only the smile">
         <div class="page-number page-number-left">15</div>
       </div>
       <div class="page-right" data-page="16">
@@ -611,7 +611,7 @@
     </div>
     <div class="spread" data-spread="9">
       <div class="page-left" data-page="17">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-baby-turns-into-a-pig/gwynedd-hudson-1922.jpg" alt="Gwynedd Hudson — Duchess &amp; the Baby">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-baby-turns-into-a-pig/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — The Pig-baby">
         <div class="page-number page-number-left">17</div>
       </div>
       <div class="page-right" data-page="18">
@@ -626,7 +626,7 @@
     </div>
     <div class="spread" data-spread="10">
       <div class="page-left" data-page="19">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-baby-turns-into-a-pig/alice-b-woodward-1913.jpg" alt="Alice B. Woodward — You may nurse the baby said Duchess">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-cheshire-cat/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — The Cheshire Cat in tree">
         <div class="page-number page-number-left">19</div>
       </div>
       <div class="page-right" data-page="20">
@@ -636,11 +636,9 @@
         <div class="page-number page-number-right">20</div>
       </div>
     </div>
-    <div class="spread text-only" data-spread="11">
-      <div class="page-left decorative-panel" data-page="21">
-        <div class="chapter-ornament">
-          <div class="ornament-number">6</div>
-        </div>
+    <div class="spread" data-spread="11">
+      <div class="page-left" data-page="21">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-cheshire-cat/john-tenniel-harry-theaker-1911.jpg" alt="John Tenniel &amp; Harry Theaker — The Cheshire Cat">
         <div class="page-number page-number-left">21</div>
       </div>
       <div class="page-right" data-page="22">
@@ -664,7 +662,7 @@
     </div>
     <div class="spread" data-spread="12">
       <div class="page-left" data-page="23">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-cheshire-cat/john-tenniel-harry-theaker-1911.jpg" alt="John Tenniel &amp; Harry Theaker — The Cheshire Cat">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-duchesss-kitchen/alice-b-woodward-1913.jpg" alt="Alice B. Woodward — Shan't said the Cook">
         <div class="page-number page-number-left">23</div>
       </div>
       <div class="page-right" data-page="24">
@@ -688,7 +686,7 @@
     </div>
     <div class="spread" data-spread="13">
       <div class="page-left" data-page="25">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-cheshire-cat/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — The Cheshire Cat in tree">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-26.jpg" alt="Lewis Carroll manuscript — The Duchess's kitchen — cook, baby, pepper, and Cheshire Cat">
         <div class="page-number page-number-left">25</div>
       </div>
       <div class="page-right" data-page="26">
@@ -1053,14 +1051,20 @@
       playBtn.innerHTML = '&#9654; Play';
       playBtn.classList.remove('active');
       if (singBall) singBall.classList.remove('visible');
-      if (tapOverlay) tapOverlay.classList.remove('active');
     } else {
       audio.play();
       isPlaying = true;
       playBtn.innerHTML = '&#9646;&#9646; Pause';
       playBtn.classList.add('active');
       if (singBall) singBall.classList.add('visible');
-      if (tapOverlay) tapOverlay.classList.add('active');
+      // Make tap overlay always clickable once audio has started
+      if (tapOverlay) tapOverlay.classList.add('ready');
+      // Auto-scroll to first text page so user sees narrated content
+      var firstText = document.querySelector('.text-block');
+      if (firstText) {
+        var spread = firstText.closest('.spread');
+        if (spread) spread.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   }
 
@@ -1087,7 +1091,7 @@
     playBtn.innerHTML = '&#9654; Play';
     playBtn.classList.remove('active');
     if (singBall) singBall.classList.remove('visible');
-    if (tapOverlay) tapOverlay.classList.remove('active');
+    if (tapOverlay) tapOverlay.classList.remove('ready');
     allKWords.forEach(function(el) {
       el.classList.remove('k-active', 'k-spoken', 'k-near');
     });
@@ -1291,7 +1295,7 @@
 })();
 
 // ── Autoplay mode (for continuous recording) ──
-// URL param ?autoplay — auto-enters fullscreen, starts playing
+// URL param ?autoplay — shows "tap to start" overlay, then fullscreen + play
 // When chapter ends, navigates to next chapter with ?autoplay
 (function() {
   var NEXT_CHAPTER = '/booklets/chapter07-a-mad-tea-party.html';
@@ -1299,14 +1303,24 @@
   var isAutoplay = params.has('autoplay');
 
   if (isAutoplay) {
-    // Small delay to let page render, then start
-    setTimeout(function() {
-      // Enter fullscreen
+    // Create a "tap to start" overlay — browser requires user gesture for audio+fullscreen
+    var startOverlay = document.createElement('div');
+    startOverlay.id = 'autoplayStart';
+    startOverlay.style.cssText = 'position:fixed;inset:0;z-index:9999;background:rgba(44,24,16,0.92);display:flex;align-items:center;justify-content:center;cursor:pointer;';
+    startOverlay.innerHTML = '<div style="text-align:center;color:white;font-family:Georgia,serif;">'
+      + '<div style="font-size:72px;margin-bottom:20px;">&#9654;</div>'
+      + '<div style="font-size:20px;letter-spacing:3px;color:#d4a76a;">TAP TO START READING</div>'
+      + '<div style="font-size:12px;margin-top:12px;color:#a08060;letter-spacing:1px;">PIG AND PEPPER</div>'
+      + '</div>';
+    document.body.appendChild(startOverlay);
+
+    startOverlay.addEventListener('click', function() {
+      startOverlay.remove();
+      // This click IS a user gesture — fullscreen + audio will work
       document.documentElement.requestFullscreen().catch(function() {});
-      // Start playing
       var playBtn = document.getElementById('playBtn');
       if (playBtn) playBtn.click();
-    }, 1500);
+    });
   }
 
   // When audio ends, navigate to next chapter if autoplay

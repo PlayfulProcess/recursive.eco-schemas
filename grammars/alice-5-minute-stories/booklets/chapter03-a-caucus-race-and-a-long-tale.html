@@ -304,7 +304,7 @@
     /* Nearby words — soft gradient between spoken and unspoken */
     .k-word.k-near { color: #8a7560; transition: color 2s ease; }
 
-    /* Tap-to-pause overlay (YouTube-style, invisible) */
+    /* Tap-to-pause overlay — always clickable once audio has started */
     #tapOverlay {
       position: fixed;
       inset: 0;
@@ -313,7 +313,7 @@
       cursor: pointer;
       display: none;
     }
-    #tapOverlay.active { display: block; }
+    #tapOverlay.ready { display: block; }
 
     /* Ball removed — gradient-only karaoke */
     #singBall { display: none; }
@@ -471,7 +471,7 @@
 
     <div class="spread cover-spread" data-spread="1">
       <div class="page-left cover-image" data-page="1">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-03-a-caucus-race-and-a-long-tale/lewis-carroll-1864-chapter-II.webp" alt="Cover illustration">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/emily-overnell-1912.jpg" alt="Cover illustration">
         <div class="page-number page-number-left">1</div>
       </div>
       <div class="page-right cover-title" data-page="2">
@@ -487,7 +487,7 @@
     </div>
     <div class="spread" data-spread="2">
       <div class="page-left" data-page="3">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-driest-thing/lewis-carroll-1864-manuscript.webp" alt="Lewis Carroll — Alice alone on the shore after the race">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/bessie-pease-gutmann-1933.jpg" alt="Bessie Pease Gutmann — Beg your acceptance">
         <div class="page-number page-number-left">3</div>
       </div>
       <div class="page-right" data-page="4">
@@ -502,7 +502,7 @@
     </div>
     <div class="spread" data-spread="3">
       <div class="page-left" data-page="5">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-driest-thing/john-tenniel-harry-theaker-1911.jpg" alt="John Tenniel &amp; Harry Theaker — Dodo presents thimble to Alice">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-16.jpg" alt="Lewis Carroll manuscript — The Dodo presenting Alice with her own thimble as prize">
         <div class="page-number page-number-left">5</div>
       </div>
       <div class="page-right" data-page="6">
@@ -523,7 +523,7 @@
     </div>
     <div class="spread" data-spread="4">
       <div class="page-left" data-page="7">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/arthur-rackham-1907.jpg" alt="Arthur Rackham — Who has won">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — Hand it over said Dodo">
         <div class="page-number page-number-left">7</div>
       </div>
       <div class="page-right" data-page="8">
@@ -574,7 +574,7 @@
     </div>
     <div class="spread" data-spread="7">
       <div class="page-left" data-page="13">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/bessie-pease-gutmann-1933.jpg" alt="Bessie Pease Gutmann — Beg your acceptance">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-18.jpg" alt="Lewis Carroll manuscript — Alice distributing comfits to the animals">
         <div class="page-number page-number-left">13</div>
       </div>
       <div class="page-right" data-page="14">
@@ -593,7 +593,7 @@
     </div>
     <div class="spread" data-spread="8">
       <div class="page-left" data-page="15">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-a-long-sad-tale/lewis-carroll-1864-manuscript.webp" alt="Lewis Carroll — The Mouse's Tale in tail shape">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-driest-thing/john-tenniel-harry-theaker-1911.jpg" alt="John Tenniel &amp; Harry Theaker — Dodo presents thimble to Alice">
         <div class="page-number page-number-left">15</div>
       </div>
       <div class="page-right" data-page="16">
@@ -613,7 +613,7 @@
     </div>
     <div class="spread" data-spread="9">
       <div class="page-left" data-page="17">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — Hand it over said Dodo">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/arthur-rackham-1907.jpg" alt="Arthur Rackham — Who has won">
         <div class="page-number page-number-left">17</div>
       </div>
       <div class="page-right" data-page="18">
@@ -974,14 +974,20 @@
       playBtn.innerHTML = '&#9654; Play';
       playBtn.classList.remove('active');
       if (singBall) singBall.classList.remove('visible');
-      if (tapOverlay) tapOverlay.classList.remove('active');
     } else {
       audio.play();
       isPlaying = true;
       playBtn.innerHTML = '&#9646;&#9646; Pause';
       playBtn.classList.add('active');
       if (singBall) singBall.classList.add('visible');
-      if (tapOverlay) tapOverlay.classList.add('active');
+      // Make tap overlay always clickable once audio has started
+      if (tapOverlay) tapOverlay.classList.add('ready');
+      // Auto-scroll to first text page so user sees narrated content
+      var firstText = document.querySelector('.text-block');
+      if (firstText) {
+        var spread = firstText.closest('.spread');
+        if (spread) spread.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   }
 
@@ -1008,7 +1014,7 @@
     playBtn.innerHTML = '&#9654; Play';
     playBtn.classList.remove('active');
     if (singBall) singBall.classList.remove('visible');
-    if (tapOverlay) tapOverlay.classList.remove('active');
+    if (tapOverlay) tapOverlay.classList.remove('ready');
     allKWords.forEach(function(el) {
       el.classList.remove('k-active', 'k-spoken', 'k-near');
     });
@@ -1212,7 +1218,7 @@
 })();
 
 // ── Autoplay mode (for continuous recording) ──
-// URL param ?autoplay — auto-enters fullscreen, starts playing
+// URL param ?autoplay — shows "tap to start" overlay, then fullscreen + play
 // When chapter ends, navigates to next chapter with ?autoplay
 (function() {
   var NEXT_CHAPTER = '/booklets/chapter04-the-rabbit-sends-in-a-little-bill.html';
@@ -1220,14 +1226,24 @@
   var isAutoplay = params.has('autoplay');
 
   if (isAutoplay) {
-    // Small delay to let page render, then start
-    setTimeout(function() {
-      // Enter fullscreen
+    // Create a "tap to start" overlay — browser requires user gesture for audio+fullscreen
+    var startOverlay = document.createElement('div');
+    startOverlay.id = 'autoplayStart';
+    startOverlay.style.cssText = 'position:fixed;inset:0;z-index:9999;background:rgba(44,24,16,0.92);display:flex;align-items:center;justify-content:center;cursor:pointer;';
+    startOverlay.innerHTML = '<div style="text-align:center;color:white;font-family:Georgia,serif;">'
+      + '<div style="font-size:72px;margin-bottom:20px;">&#9654;</div>'
+      + '<div style="font-size:20px;letter-spacing:3px;color:#d4a76a;">TAP TO START READING</div>'
+      + '<div style="font-size:12px;margin-top:12px;color:#a08060;letter-spacing:1px;">A CAUCUS-RACE AND A LONG TALE</div>'
+      + '</div>';
+    document.body.appendChild(startOverlay);
+
+    startOverlay.addEventListener('click', function() {
+      startOverlay.remove();
+      // This click IS a user gesture — fullscreen + audio will work
       document.documentElement.requestFullscreen().catch(function() {});
-      // Start playing
       var playBtn = document.getElementById('playBtn');
       if (playBtn) playBtn.click();
-    }, 1500);
+    });
   }
 
   // When audio ends, navigate to next chapter if autoplay

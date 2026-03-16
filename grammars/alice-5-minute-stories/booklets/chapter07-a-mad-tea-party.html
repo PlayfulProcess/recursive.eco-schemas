@@ -304,7 +304,7 @@
     /* Nearby words — soft gradient between spoken and unspoken */
     .k-word.k-near { color: #8a7560; transition: color 2s ease; }
 
-    /* Tap-to-pause overlay (YouTube-style, invisible) */
+    /* Tap-to-pause overlay — always clickable once audio has started */
     #tapOverlay {
       position: fixed;
       inset: 0;
@@ -313,7 +313,7 @@
       cursor: pointer;
       display: none;
     }
-    #tapOverlay.active { display: block; }
+    #tapOverlay.ready { display: block; }
 
     /* Ball removed — gradient-only karaoke */
     #singBall { display: none; }
@@ -471,7 +471,7 @@
 
     <div class="spread cover-spread" data-spread="1">
       <div class="page-left cover-image" data-page="1">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-07-a-mad-tea-party/gwynedd-hudson-1922.jpg" alt="Cover illustration">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-29.jpg" alt="Cover illustration">
         <div class="page-number page-number-left">1</div>
       </div>
       <div class="page-right cover-title" data-page="2">
@@ -487,7 +487,7 @@
     </div>
     <div class="spread" data-spread="2">
       <div class="page-left" data-page="3">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-no-room/arthur-rackham-1907.jpg" alt="Arthur Rackham — Mad Hatter's tea party">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-no-room/brinsley-le-fanu-1910.jpg" alt="Brinsley Le Fanu — March Hare's house">
         <div class="page-number page-number-left">3</div>
       </div>
       <div class="page-right" data-page="4">
@@ -509,7 +509,7 @@
     </div>
     <div class="spread" data-spread="3">
       <div class="page-left" data-page="5">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-no-room/alice-b-woodward-1913.jpg" alt="Alice B. Woodward — No room they cried">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-alice-leaves-the-tea-party/lewis-carroll-1864-cheshire-cat-tree.webp" alt="Lewis Carroll — Alice under a tree with the Cheshire Cat">
         <div class="page-number page-number-left">5</div>
       </div>
       <div class="page-right" data-page="6">
@@ -529,7 +529,7 @@
     </div>
     <div class="spread" data-spread="4">
       <div class="page-left" data-page="7">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-no-room/brinsley-le-fanu-1910.jpg" alt="Brinsley Le Fanu — March Hare's house">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-07-a-mad-tea-party/gwynedd-hudson-1922.jpg" alt="Gwynedd Hudson — March Hare &amp; The Hatter">
         <div class="page-number page-number-left">7</div>
       </div>
       <div class="page-right" data-page="8">
@@ -551,7 +551,7 @@
     </div>
     <div class="spread" data-spread="5">
       <div class="page-left" data-page="9">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-the-hatters-watch/lewis-carroll-1864-duchess-kitchen.webp" alt="Lewis Carroll — The Duchess's chaotic kitchen">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-no-room/arthur-rackham-1907.jpg" alt="Arthur Rackham — Mad Hatter's tea party">
         <div class="page-number page-number-left">9</div>
       </div>
       <div class="page-right" data-page="10">
@@ -568,7 +568,7 @@
     </div>
     <div class="spread" data-spread="6">
       <div class="page-left" data-page="11">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-no-room/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — Mad Hatter's Tea Party">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-the-hatters-watch/lewis-carroll-1864-duchess-kitchen.webp" alt="Lewis Carroll — The Duchess's chaotic kitchen">
         <div class="page-number page-number-left">11</div>
       </div>
       <div class="page-right" data-page="12">
@@ -591,7 +591,7 @@
     </div>
     <div class="spread" data-spread="7">
       <div class="page-left" data-page="13">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-time-is-frozen/lewis-carroll-1864-animals-concert.webp" alt="Lewis Carroll — Animals gathered for a concert">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-no-room/john-tenniel-colorized-e-g-thomson-1890.jpg" alt="John Tenniel (colorized E.G. Thomson) — Mad Hatter's Tea Party">
         <div class="page-number page-number-left">13</div>
       </div>
       <div class="page-right" data-page="14">
@@ -619,7 +619,7 @@
     </div>
     <div class="spread" data-spread="8">
       <div class="page-left" data-page="15">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-07-a-mad-tea-party/william-h-walker-1907.jpg" alt="William H. Walker — Hatter's Tea Party">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-the-dormouses-story/harry-rountree-1928.jpg" alt="Harry Rountree — Dormouse is asleep">
         <div class="page-number page-number-left">15</div>
       </div>
       <div class="page-right" data-page="16">
@@ -666,7 +666,7 @@
     </div>
     <div class="spread" data-spread="10">
       <div class="page-left" data-page="19">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-the-dormouses-story/harry-rountree-1928.jpg" alt="Harry Rountree — Dormouse is asleep">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-07-a-mad-tea-party/william-h-walker-1907.jpg" alt="William H. Walker — Hatter's Tea Party">
         <div class="page-number page-number-left">19</div>
       </div>
       <div class="page-right" data-page="20">
@@ -685,7 +685,7 @@
     </div>
     <div class="spread" data-spread="11">
       <div class="page-left" data-page="21">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-07-a-mad-tea-party/john-tenniel-1865.jpg" alt="John Tenniel — Mad Hatter's Tea Party">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-07-a-mad-tea-party/john-tenniel-1865.jpg" alt="Mad Hatter's Tea Party">
         <div class="page-number page-number-left">21</div>
       </div>
       <div class="page-right" data-page="22">
@@ -703,7 +703,7 @@
     </div>
     <div class="spread" data-spread="12">
       <div class="page-left" data-page="23">
-        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-alice-leaves-the-tea-party/lewis-carroll-1864-cheshire-cat-tree.webp" alt="Lewis Carroll — Alice under a tree with the Cheshire Cat">
+        <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-alice-leaves-the-tea-party/lewis-carroll-1864-cheshire-cat-tree.webp" alt="Alice under a tree with the Cheshire Cat">
         <div class="page-number page-number-left">23</div>
       </div>
       <div class="page-right" data-page="24">
@@ -1071,14 +1071,20 @@
       playBtn.innerHTML = '&#9654; Play';
       playBtn.classList.remove('active');
       if (singBall) singBall.classList.remove('visible');
-      if (tapOverlay) tapOverlay.classList.remove('active');
     } else {
       audio.play();
       isPlaying = true;
       playBtn.innerHTML = '&#9646;&#9646; Pause';
       playBtn.classList.add('active');
       if (singBall) singBall.classList.add('visible');
-      if (tapOverlay) tapOverlay.classList.add('active');
+      // Make tap overlay always clickable once audio has started
+      if (tapOverlay) tapOverlay.classList.add('ready');
+      // Auto-scroll to first text page so user sees narrated content
+      var firstText = document.querySelector('.text-block');
+      if (firstText) {
+        var spread = firstText.closest('.spread');
+        if (spread) spread.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   }
 
@@ -1105,7 +1111,7 @@
     playBtn.innerHTML = '&#9654; Play';
     playBtn.classList.remove('active');
     if (singBall) singBall.classList.remove('visible');
-    if (tapOverlay) tapOverlay.classList.remove('active');
+    if (tapOverlay) tapOverlay.classList.remove('ready');
     allKWords.forEach(function(el) {
       el.classList.remove('k-active', 'k-spoken', 'k-near');
     });
@@ -1309,7 +1315,7 @@
 })();
 
 // ── Autoplay mode (for continuous recording) ──
-// URL param ?autoplay — auto-enters fullscreen, starts playing
+// URL param ?autoplay — shows "tap to start" overlay, then fullscreen + play
 // When chapter ends, navigates to next chapter with ?autoplay
 (function() {
   var NEXT_CHAPTER = '/booklets/chapter08-the-queen-s-croquet-ground.html';
@@ -1317,14 +1323,24 @@
   var isAutoplay = params.has('autoplay');
 
   if (isAutoplay) {
-    // Small delay to let page render, then start
-    setTimeout(function() {
-      // Enter fullscreen
+    // Create a "tap to start" overlay — browser requires user gesture for audio+fullscreen
+    var startOverlay = document.createElement('div');
+    startOverlay.id = 'autoplayStart';
+    startOverlay.style.cssText = 'position:fixed;inset:0;z-index:9999;background:rgba(44,24,16,0.92);display:flex;align-items:center;justify-content:center;cursor:pointer;';
+    startOverlay.innerHTML = '<div style="text-align:center;color:white;font-family:Georgia,serif;">'
+      + '<div style="font-size:72px;margin-bottom:20px;">&#9654;</div>'
+      + '<div style="font-size:20px;letter-spacing:3px;color:#d4a76a;">TAP TO START READING</div>'
+      + '<div style="font-size:12px;margin-top:12px;color:#a08060;letter-spacing:1px;">A MAD TEA-PARTY</div>'
+      + '</div>';
+    document.body.appendChild(startOverlay);
+
+    startOverlay.addEventListener('click', function() {
+      startOverlay.remove();
+      // This click IS a user gesture — fullscreen + audio will work
       document.documentElement.requestFullscreen().catch(function() {});
-      // Start playing
       var playBtn = document.getElementById('playBtn');
       if (playBtn) playBtn.click();
-    }, 1500);
+    });
   }
 
   // When audio ends, navigate to next chapter if autoplay
