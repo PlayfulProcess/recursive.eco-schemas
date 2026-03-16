@@ -55,6 +55,54 @@ function stripID3v1(buf) {
   return buf;
 }
 
+/**
+ * Strip Xing/Info/LAME header frame (if present).
+ * This metadata frame declares the duration of a single chapter,
+ * which breaks concatenation (players think the file is only one chapter long).
+ * The Xing/Info tag sits inside the first valid MPEG frame, after the side info.
+ */
+function stripXingFrame(buf) {
+  // Find first MPEG frame sync
+  for (let i = 0; i < Math.min(buf.length, 2000); i++) {
+    if (buf[i] !== 0xFF || (buf[i + 1] & 0xE0) !== 0xE0) continue;
+
+    const version = (buf[i + 1] >> 3) & 3;     // 3=MPEG1, 2=MPEG2
+    const layer = (buf[i + 1] >> 1) & 3;        // 1=Layer3
+    const brIdx = (buf[i + 2] >> 4) & 0xF;
+    const srIdx = (buf[i + 2] >> 2) & 3;
+    const padding = (buf[i + 2] >> 1) & 1;
+    const channelMode = (buf[i + 3] >> 6) & 3;
+
+    if (layer !== 1) continue; // Not Layer3
+
+    // Side info size determines where Xing/Info tag appears
+    const sideInfoSize = version === 3
+      ? (channelMode === 3 ? 17 : 32)  // MPEG1: mono=17, stereo=32
+      : (channelMode === 3 ? 9 : 17);  // MPEG2: mono=9, stereo=17
+
+    const tagOffset = i + 4 + sideInfoSize;
+    if (tagOffset + 4 > buf.length) break;
+
+    const tag = buf.subarray(tagOffset, tagOffset + 4).toString('ascii');
+    if (tag !== 'Xing' && tag !== 'Info') break; // First frame is real audio
+
+    // Calculate frame size to remove
+    const bitrates1 = [0,32,40,48,56,64,80,96,112,128,160,192,224,256,320,0];
+    const bitrates2 = [0,8,16,24,32,40,48,56,64,80,96,112,128,144,160,0];
+    const sampleRates1 = [44100,48000,32000,0];
+    const sampleRates2 = [22050,24000,16000,0];
+
+    const br = (version === 3 ? bitrates1[brIdx] : bitrates2[brIdx]) * 1000;
+    const sr = version === 3 ? sampleRates1[srIdx] : sampleRates2[srIdx];
+    const samplesPerFrame = version === 3 ? 1152 : 576;
+    const frameSize = Math.floor(samplesPerFrame * br / (8 * sr)) + padding;
+
+    console.log(`  Stripped ${tag}/LAME frame: ${frameSize} bytes`);
+    return buf.subarray(i + frameSize);
+  }
+  return buf;
+}
+
 // Concatenate all chapter audio data
 const chunks = [];
 let cumulativeOffset = 0;
@@ -70,6 +118,7 @@ for (const chNum of chapterNums) {
   let buf = readFileSync(filePath);
   buf = stripID3v2(buf);
   buf = stripID3v1(buf);
+  buf = stripXingFrame(buf);
 
   chunks.push(buf);
   chapterOffsets.push({
