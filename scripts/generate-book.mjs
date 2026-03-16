@@ -151,6 +151,47 @@ function formatTextAsHtml(text) {
   }).join('\n          ');
 }
 
+/**
+ * Format text as HTML with pre-baked karaoke word spans.
+ * Each word is matched sequentially to the manifest word list for the chapter.
+ * Returns { html, cursor } so cursor carries across pages.
+ */
+function formatTextAsKaraokeHtml(text, manifestWords, cursor) {
+  const paragraphs = text.split(/\n\n+/).filter(p => p.trim());
+  const htmlParts = [];
+
+  for (const p of paragraphs) {
+    const cleaned = p.replace(/\n/g, ' ').replace(/\s+/g, ' ').trim();
+    const words = cleaned.split(/\s+/).filter(w => w);
+    const wordHtmls = [];
+
+    for (const word of words) {
+      const norm = word.toLowerCase().replace(/[^a-z0-9']/g, '');
+      if (!norm) {
+        // Pure punctuation or empty after normalize — emit as plain text
+        wordHtmls.push(escapeHtml(word));
+        continue;
+      }
+
+      if (cursor < manifestWords.length) {
+        const mw = manifestWords[cursor];
+        // Match: wrap in k-word span with timestamps
+        wordHtmls.push(
+          `<span class="k-word" data-start="${mw.start.toFixed(2)}" data-end="${mw.end.toFixed(2)}">${escapeHtml(word)}</span>`
+        );
+        cursor++;
+      } else {
+        // No more manifest words — emit as plain text
+        wordHtmls.push(escapeHtml(word));
+      }
+    }
+
+    htmlParts.push(`<p>${wordHtmls.join(' ')}</p>`);
+  }
+
+  return { html: htmlParts.join('\n          '), cursor };
+}
+
 // ── Sentence Splitter ───────────────────────────────────────────────
 
 const ABBREVIATIONS = new Set([
@@ -504,6 +545,13 @@ for (const chNum of chapterNums) {
   const chName = chapter.l2?.metadata?.original_title || chapter.scenes[0]?.metadata?.chapter_name || `Chapter ${chNum}`;
   const illCount = pages.filter(p => p.illustration).length;
 
+  // Flatten manifest words for this chapter (for pre-baked karaoke)
+  const chManifest = karaokeManifest?.chapters?.[chNum];
+  const chManifestWords = chManifest
+    ? chManifest.pages.flatMap(p => p.words)
+    : [];
+  let karaokeCursor = 0;
+
   // Chapter divider spread
   globalPageNum++;
   spreadsHtml += `
@@ -526,13 +574,20 @@ for (const chNum of chapterNums) {
       </div>
     </div>`;
 
-  // Content spreads — track page numbers for karaoke
-  const pageNumMap = {};
-
+  // Content spreads
   for (let i = 0; i < pages.length; i++) {
     const page = pages[i];
-    const textHtml = formatTextAsHtml(page.text);
     const spreadIdx = `ch${chNum}-${i + 1}`;
+
+    // Generate text HTML — use karaoke-aware formatter if we have manifest words
+    let textHtml;
+    if (chManifestWords.length > 0) {
+      const result = formatTextAsKaraokeHtml(page.text, chManifestWords, karaokeCursor);
+      textHtml = result.html;
+      karaokeCursor = result.cursor;
+    } else {
+      textHtml = formatTextAsHtml(page.text);
+    }
 
     // Left page: illustration or decorative
     globalPageNum++;
@@ -556,8 +611,6 @@ for (const chNum of chapterNums) {
 
     // Right page: text
     globalPageNum++;
-    const bookletPageNum = 2 * (i + 1) + 2;
-    pageNumMap[bookletPageNum] = globalPageNum;
 
     spreadsHtml += `
       <div class="page-right" data-page="${globalPageNum}" data-ch="${chNum}" data-local-page="${i + 1}">
@@ -569,22 +622,16 @@ for (const chNum of chapterNums) {
     </div>`;
   }
 
+  if (chManifestWords.length > 0 && karaokeCursor < chManifestWords.length) {
+    console.log(`  ⚠ Ch${chNum}: ${chManifestWords.length - karaokeCursor} manifest words unused (${karaokeCursor}/${chManifestWords.length})`);
+  }
+
   totalIll += illCount;
   totalContentPages += pages.length;
-
-  // Get karaoke data and remap page numbers to global
-  let karaokeData = karaokeManifest?.chapters?.[chNum] || null;
-  let remappedKaraokePages = null;
-  if (karaokeData) {
-    remappedKaraokePages = karaokeData.pages
-      .filter(p => pageNumMap[p.pageNum] !== undefined)
-      .map(p => ({ ...p, pageNum: pageNumMap[p.pageNum] }));
-  }
 
   allChaptersData.push({
     chNum, chName, coverImage,
     pageCount: pages.length, illCount, pages,
-    karaokePages: remappedKaraokePages, pageNumMap,
   });
 }
 
@@ -618,7 +665,6 @@ spreadsHtml += `
 let audioDataJson = 'null';
 
 if (karaokeManifest && config.audio?.url) {
-  const allPages = allChaptersData.flatMap(ch => ch.karaokePages || []);
   const chapterOffsets = Object.values(karaokeManifest.chapters).map(ch => ({
     chapter: ch.chapter,
     offset: ch.offset,
@@ -629,7 +675,6 @@ if (karaokeManifest && config.audio?.url) {
     url: config.audio.url,
     totalDuration: karaokeManifest.total_duration_s,
     chapters: chapterOffsets,
-    pages: allPages,
   });
 }
 
@@ -1389,60 +1434,27 @@ document.getElementById('navToggle').addEventListener('click', function() {
   var totalDuration = AUDIO_DATA.totalDuration || 0;
   var chapters = AUDIO_DATA.chapters || [];
 
-  // ── Build karaoke word spans from page data ──
+  // ── Collect pre-baked karaoke word spans ──
+  // k-word spans are embedded in the HTML at generation time (no tree walker needed)
+  var preface = document.querySelector('.preface-spread');
+  var allPrebaked = document.querySelectorAll('.k-word[data-start]');
   var allKWords = [];
   var allStarts = [];
   var allEnds = [];
 
-  var pages = AUDIO_DATA.pages || [];
-  for (var pi = 0; pi < pages.length; pi++) {
-    var pageData = pages[pi];
-    var pageEl = document.querySelector('[data-page="' + pageData.pageNum + '"]');
-    if (!pageEl) continue;
-    var textBlock = pageEl.querySelector('.text-block');
-    if (!textBlock) continue;
-
-    var walker = document.createTreeWalker(textBlock, NodeFilter.SHOW_TEXT, null, false);
-    var textNodes = [];
-    var node;
-    while (node = walker.nextNode()) {
-      if (node.textContent.trim()) textNodes.push(node);
-    }
-
-    var wordIdx = 0;
-    textNodes.forEach(function(textNode) {
-      var text = textNode.textContent;
-      var parts = text.split(/(\\s+)/);
-      var frag = document.createDocumentFragment();
-
-      parts.forEach(function(part) {
-        if (/^\\s+$/.test(part) || !part) {
-          frag.appendChild(document.createTextNode(part));
-          return;
-        }
-        if (wordIdx < pageData.words.length) {
-          var w = pageData.words[wordIdx];
-          var span = document.createElement('span');
-          span.className = 'k-word';
-          span.dataset.start = w.start;
-          span.dataset.end = w.end;
-          span.dataset.page = pageData.pageNum;
-          span.textContent = part;
-          allKWords.push(span);
-          allStarts.push(w.start);
-          allEnds.push(w.end);
-          frag.appendChild(span);
-          wordIdx++;
-        } else {
-          frag.appendChild(document.createTextNode(part));
-        }
-      });
-
-      textNode.parentNode.replaceChild(frag, textNode);
-    });
+  for (var i = 0; i < allPrebaked.length; i++) {
+    var el = allPrebaked[i];
+    // Skip preface poem words (they use separate audio)
+    if (preface && preface.contains(el)) continue;
+    var s = parseFloat(el.dataset.start);
+    var e = parseFloat(el.dataset.end);
+    if (isNaN(s)) continue;
+    allKWords.push(el);
+    allStarts.push(s);
+    allEnds.push(e);
   }
 
-  console.log('Karaoke: ' + allKWords.length + ' words, unified audio (' + (totalDuration / 60).toFixed(0) + ' min)');
+  console.log('Karaoke: ' + allKWords.length + ' pre-baked words, unified audio (' + (totalDuration / 60).toFixed(0) + ' min)');
 
   // ── Helpers ──
   function getChapterAt(t) {
@@ -1592,10 +1604,10 @@ document.getElementById('navToggle').addEventListener('click', function() {
 
       lastActiveIdx = idx;
 
-      var pageNum = parseInt(allKWords[idx].dataset.page);
+      var pageEl = allKWords[idx].closest('[data-page]');
+      var pageNum = pageEl ? pageEl.getAttribute('data-page') : '';
       if (pageNum !== lastScrollPage) {
         lastScrollPage = pageNum;
-        var pageEl = document.querySelector('[data-page="' + pageNum + '"]');
         if (pageEl) {
           var spread = pageEl.closest('.spread');
           if (spread) spread.scrollIntoView({ behavior: 'smooth', block: 'start' });
