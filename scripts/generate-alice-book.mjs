@@ -391,12 +391,20 @@ function applyRemap(chNum, coverImage, pages) {
 }
 
 // ── Load Karaoke Manifest ────────────────────────────────────────────
+// Prefer unified manifest (absolute timestamps for merged audio) over per-chapter
 
-const karaokeManifestPath = resolve(__dirname, '../grammars/alice-5-minute-stories/audio/librivox/karaoke-manifest.json');
+const unifiedManifestPath = resolve(__dirname, '../grammars/alice-5-minute-stories/audio/librivox/karaoke-manifest-unified.json');
+const perChapterManifestPath = resolve(__dirname, '../grammars/alice-5-minute-stories/audio/librivox/karaoke-manifest.json');
 let karaokeManifest = null;
-if (existsSync(karaokeManifestPath)) {
-  karaokeManifest = JSON.parse(readFileSync(karaokeManifestPath, 'utf8'));
-  console.log('Karaoke manifest loaded.\n');
+let isUnifiedAudio = false;
+
+if (existsSync(unifiedManifestPath)) {
+  karaokeManifest = JSON.parse(readFileSync(unifiedManifestPath, 'utf8'));
+  isUnifiedAudio = true;
+  console.log('Unified karaoke manifest loaded (single audio file).\n');
+} else if (existsSync(perChapterManifestPath)) {
+  karaokeManifest = JSON.parse(readFileSync(perChapterManifestPath, 'utf8'));
+  console.log('Per-chapter karaoke manifest loaded.\n');
 }
 
 // ── Build All Chapters ───────────────────────────────────────────────
@@ -749,15 +757,41 @@ spreadsHtml += `
 
 // ── Build Audio Data ─────────────────────────────────────────────────
 
-const audioChapters = allChaptersData
-  .filter(ch => ch.audioFile)
-  .map(ch => ({
-    chapter: ch.chNum,
-    audio_file: `https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/audio/librivox/${ch.audioFile}`,
-    pages: ch.karaokePages || [],
+const R2_AUDIO_BASE = 'https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/audio/librivox';
+
+let audioDataJson;
+
+if (isUnifiedAudio) {
+  // Unified mode: single audio file, absolute timestamps
+  const allPages = allChaptersData.flatMap(ch => ch.karaokePages || []);
+  const chapterOffsets = Object.values(karaokeManifest.chapters).map(ch => ({
+    chapter: ch.chapter,
+    offset: ch.offset,
+    duration: ch.duration,
   }));
 
-const audioChaptersJson = JSON.stringify(audioChapters);
+  const audioData = {
+    url: `${R2_AUDIO_BASE}/${karaokeManifest.audio_file}`,
+    totalDuration: karaokeManifest.total_duration_s,
+    chapters: chapterOffsets,
+    pages: allPages,
+  };
+
+  audioDataJson = JSON.stringify(audioData);
+  console.log(`  Audio: unified (${karaokeManifest.audio_file}, ${(karaokeManifest.total_duration_s / 60).toFixed(1)} min)`);
+} else {
+  // Per-chapter mode (legacy): separate audio files
+  const audioChapters = allChaptersData
+    .filter(ch => ch.audioFile)
+    .map(ch => ({
+      chapter: ch.chNum,
+      audio_file: `${R2_AUDIO_BASE}/${ch.audioFile}`,
+      pages: ch.karaokePages || [],
+    }));
+
+  audioDataJson = JSON.stringify(audioChapters);
+  console.log(`  Audio: per-chapter (${audioChapters.length} files)`);
+}
 
 // ── Build Chapter Nav Data ───────────────────────────────────────────
 
@@ -1644,7 +1678,8 @@ ${spreadsHtml}
 
 <script>
 // ── Data ──
-var AUDIO_CHAPTERS = ${audioChaptersJson};
+var AUDIO_DATA = ${audioDataJson};
+var IS_UNIFIED_AUDIO = ${isUnifiedAudio};
 var CHAPTER_NAV = ${chapterNavJson};
 var ILL_DATA = ${illustrationDataJson};
 var UNUSED_ILLS = ${unusedIllsJson};
@@ -2040,17 +2075,17 @@ if (isTouch) {
   });
 })();
 
-// ── Multi-Chapter Karaoke Audio Player ──
+// ── Unified Karaoke Audio Player (single audio file) ──
 (function() {
-  if (!AUDIO_CHAPTERS || AUDIO_CHAPTERS.length === 0) {
+  if (!AUDIO_DATA || !AUDIO_DATA.url) {
     var playBtn = document.getElementById('playBtn');
     if (playBtn) playBtn.style.display = 'none';
     return;
   }
 
-  var currentChIdx = 0;
   var audio = document.createElement('audio');
   audio.preload = 'auto';
+  audio.src = AUDIO_DATA.url;
   document.body.appendChild(audio);
 
   var playBtn = document.getElementById('playBtn');
@@ -2058,134 +2093,86 @@ if (isTouch) {
   var progEl = document.getElementById('progressBar');
   var progressTrack = document.getElementById('progressTrack');
   var isPlaying = false;
+  var totalDuration = AUDIO_DATA.totalDuration || 0;
+  var chapters = AUDIO_DATA.chapters || [];
 
+  // ── Build karaoke word spans from page data ──
   var allKWords = [];
-  var chapterKWordRanges = []; // { startIdx, endIdx } per chapter
+  var allStarts = [];
+  var allEnds = [];
 
-  // Initialize karaoke words for ALL chapters
-  for (var ci = 0; ci < AUDIO_CHAPTERS.length; ci++) {
-    var chData = AUDIO_CHAPTERS[ci];
-    var startIdx = allKWords.length;
+  var pages = AUDIO_DATA.pages || [];
+  for (var pi = 0; pi < pages.length; pi++) {
+    var pageData = pages[pi];
+    var pageEl = document.querySelector('[data-page="' + pageData.pageNum + '"]');
+    if (!pageEl) continue;
+    var textBlock = pageEl.querySelector('.text-block');
+    if (!textBlock) continue;
 
-    for (var pi = 0; pi < chData.pages.length; pi++) {
-      var pageData = chData.pages[pi];
-      var pageEl = document.querySelector('[data-page="' + pageData.pageNum + '"]');
-      if (!pageEl) continue;
-      var textBlock = pageEl.querySelector('.text-block');
-      if (!textBlock) continue;
-
-      var walker = document.createTreeWalker(textBlock, NodeFilter.SHOW_TEXT, null, false);
-      var textNodes = [];
-      var node;
-      while (node = walker.nextNode()) {
-        if (node.textContent.trim()) textNodes.push(node);
-      }
-
-      var wordIdx = 0;
-      textNodes.forEach(function(textNode) {
-        var text = textNode.textContent;
-        var parts = text.split(/(\\s+)/);
-        var frag = document.createDocumentFragment();
-
-        parts.forEach(function(part) {
-          if (/^\\s+$/.test(part) || !part) {
-            frag.appendChild(document.createTextNode(part));
-            return;
-          }
-          if (wordIdx < pageData.words.length) {
-            var w = pageData.words[wordIdx];
-            var span = document.createElement('span');
-            span.className = 'k-word';
-            span.dataset.start = w.start;
-            span.dataset.end = w.end;
-            span.dataset.page = pageData.pageNum;
-            span.dataset.ch = ci;
-            span.textContent = part;
-            allKWords.push(span);
-            frag.appendChild(span);
-            wordIdx++;
-          } else {
-            frag.appendChild(document.createTextNode(part));
-          }
-        });
-
-        textNode.parentNode.replaceChild(frag, textNode);
-      });
+    var walker = document.createTreeWalker(textBlock, NodeFilter.SHOW_TEXT, null, false);
+    var textNodes = [];
+    var node;
+    while (node = walker.nextNode()) {
+      if (node.textContent.trim()) textNodes.push(node);
     }
 
-    chapterKWordRanges.push({ startIdx: startIdx, endIdx: allKWords.length - 1 });
-  }
+    var wordIdx = 0;
+    textNodes.forEach(function(textNode) {
+      var text = textNode.textContent;
+      var parts = text.split(/(\\s+)/);
+      var frag = document.createDocumentFragment();
 
-  // Pre-parse timestamps per chapter
-  var chapterStarts = [];
-  var chapterEnds = [];
-  for (var ci = 0; ci < AUDIO_CHAPTERS.length; ci++) {
-    var range = chapterKWordRanges[ci];
-    var s = [], e = [];
-    for (var wi = range.startIdx; wi <= range.endIdx; wi++) {
-      s.push(parseFloat(allKWords[wi].dataset.start));
-      e.push(parseFloat(allKWords[wi].dataset.end));
-    }
-    chapterStarts.push(s);
-    chapterEnds.push(e);
-  }
-
-  function loadChapter(idx) {
-    if (idx >= AUDIO_CHAPTERS.length) return false;
-    currentChIdx = idx;
-    audio.src = AUDIO_CHAPTERS[idx].audio_file;
-    audio.load();
-    return true;
-  }
-
-  // Load first chapter
-  loadChapter(0);
-
-  // ── Unified progress bar: preload all chapter durations ──
-  var chapterDurations = new Array(AUDIO_CHAPTERS.length).fill(0);
-  var totalDuration = 0;
-  var durationsLoaded = 0;
-  var cumulativeOffsets = [];
-
-  function recalcDurations() {
-    totalDuration = 0;
-    cumulativeOffsets = [];
-    for (var j = 0; j < chapterDurations.length; j++) {
-      cumulativeOffsets.push(totalDuration);
-      totalDuration += chapterDurations[j];
-    }
-  }
-
-  // Probe each chapter's audio for its duration
-  for (var ci = 0; ci < AUDIO_CHAPTERS.length; ci++) {
-    (function(idx) {
-      var probe = new Audio();
-      probe.preload = 'metadata';
-      probe.src = AUDIO_CHAPTERS[idx].audio_file;
-      probe.addEventListener('loadedmetadata', function() {
-        chapterDurations[idx] = probe.duration;
-        durationsLoaded++;
-        if (durationsLoaded === AUDIO_CHAPTERS.length) {
-          recalcDurations();
-          console.log('All chapter durations loaded. Total: ' + formatTime(totalDuration));
+      parts.forEach(function(part) {
+        if (/^\\s+$/.test(part) || !part) {
+          frag.appendChild(document.createTextNode(part));
+          return;
+        }
+        if (wordIdx < pageData.words.length) {
+          var w = pageData.words[wordIdx];
+          var span = document.createElement('span');
+          span.className = 'k-word';
+          span.dataset.start = w.start;
+          span.dataset.end = w.end;
+          span.dataset.page = pageData.pageNum;
+          span.textContent = part;
+          allKWords.push(span);
+          allStarts.push(w.start);
+          allEnds.push(w.end);
+          frag.appendChild(span);
+          wordIdx++;
+        } else {
+          frag.appendChild(document.createTextNode(part));
         }
       });
-      probe.addEventListener('error', function() {
-        // Estimate from last word timestamp as fallback
-        var pages = AUDIO_CHAPTERS[idx].pages;
-        var lastPage = pages[pages.length - 1];
-        var lastWord = lastPage.words[lastPage.words.length - 1];
-        chapterDurations[idx] = lastWord ? lastWord.end + 2 : 300;
-        durationsLoaded++;
-        if (durationsLoaded === AUDIO_CHAPTERS.length) recalcDurations();
-      });
-    })(ci);
+
+      textNode.parentNode.replaceChild(frag, textNode);
+    });
+  }
+
+  console.log('Karaoke: ' + allKWords.length + ' words, unified audio (' + (totalDuration / 60).toFixed(0) + ' min)');
+
+  // ── Helpers ──
+  function getChapterAt(t) {
+    for (var i = chapters.length - 1; i >= 0; i--) {
+      if (t >= chapters[i].offset) return i;
+    }
+    return 0;
   }
 
   function formatTime(s) {
     var m = Math.floor(s / 60);
     var sec = Math.floor(s % 60);
     return m + ':' + (sec < 10 ? '0' : '') + sec;
+  }
+
+  function updateProgressDisplay(t) {
+    var dur = audio.duration || totalDuration;
+    if (dur > 0) {
+      progEl.style.width = ((t / dur) * 100) + '%';
+      var ci = getChapterAt(t);
+      var localTime = t - chapters[ci].offset;
+      timeEl.textContent = 'Ch' + chapters[ci].chapter + ' ' + formatTime(localTime) + ' — ' + formatTime(t) + '/' + formatTime(dur);
+    }
   }
 
   function togglePlayPause() {
@@ -2195,7 +2182,6 @@ if (isTouch) {
       playBtn.innerHTML = '&#9654; Play';
       playBtn.classList.remove('active');
     } else {
-      // Stop preface song if playing
       try {
         var poemHint = document.getElementById('poemPlayHint');
         if (poemHint && poemHint.classList.contains('playing')) poemHint.click();
@@ -2214,7 +2200,6 @@ if (isTouch) {
       e.preventDefault();
       togglePlayPause();
     }
-    // Enter key also starts playback from current position
     if (e.key === 'Enter' && document.activeElement.tagName !== 'INPUT' && !document.querySelector('.zoom-overlay.active')) {
       e.preventDefault();
       if (!isPlaying) togglePlayPause();
@@ -2222,77 +2207,35 @@ if (isTouch) {
   });
 
   // ── Click-to-seek on text ──
-  // Click any word in the text → seek audio to that position
+  // Click any word → seek to that absolute timestamp. No chapter loading needed!
   document.addEventListener('click', function(e) {
     var wordEl = e.target.closest('.k-word');
     if (!wordEl) return;
-    // Don't interfere with carousel or preface poem words
     if (wordEl.closest('.preface-spread')) return;
     if (document.querySelector('.zoom-overlay.active')) return;
 
-    var targetCh = parseInt(wordEl.dataset.ch);
     var targetStart = parseFloat(wordEl.dataset.start);
-    if (isNaN(targetCh) || isNaN(targetStart)) return;
+    if (isNaN(targetStart)) return;
 
-    // Update unified progress display
-    function updateProgressDisplay(chIdx, localTime) {
-      if (totalDuration > 0 && cumulativeOffsets.length > 0) {
-        var globalPos = cumulativeOffsets[chIdx] + localTime;
-        progEl.style.width = ((globalPos / totalDuration) * 100) + '%';
-        timeEl.textContent = 'Ch' + AUDIO_CHAPTERS[chIdx].chapter + ' ' + formatTime(localTime) + ' — ' + formatTime(globalPos) + '/' + formatTime(totalDuration);
-      } else if (audio.duration) {
-        progEl.style.width = ((localTime / audio.duration) * 100) + '%';
-        timeEl.textContent = 'Ch' + AUDIO_CHAPTERS[chIdx].chapter + ' ' + formatTime(localTime) + '/' + formatTime(audio.duration);
-      }
-    }
+    audio.currentTime = targetStart;
+    updateProgressDisplay(targetStart);
+    if (!isPlaying) togglePlayPause();
 
-    // Load the right chapter if needed
-    if (targetCh !== currentChIdx) {
-      loadChapter(targetCh);
-      audio.addEventListener('loadedmetadata', function onLoad() {
-        audio.removeEventListener('loadedmetadata', onLoad);
-        audio.currentTime = targetStart;
-        updateProgressDisplay(targetCh, targetStart);
-      });
-    } else {
-      audio.currentTime = targetStart;
-      updateProgressDisplay(currentChIdx, targetStart);
-    }
-
-    // Highlight the clicked word briefly
     wordEl.style.background = 'rgba(184, 144, 96, 0.3)';
     wordEl.style.borderRadius = '3px';
     setTimeout(function() { wordEl.style.background = ''; wordEl.style.borderRadius = ''; }, 800);
   });
 
-  // When chapter audio ends → load next chapter
+  // ── Audio ended → book finished ──
   audio.addEventListener('ended', function() {
-    // Clear this chapter's karaoke
-    var range = chapterKWordRanges[currentChIdx];
-    for (var i = range.startIdx; i <= range.endIdx; i++) {
+    for (var i = 0; i < allKWords.length; i++) {
       allKWords[i].classList.add('k-spoken');
       allKWords[i].classList.remove('k-active', 'k-near');
     }
-
-    var nextIdx = currentChIdx + 1;
-    if (nextIdx < AUDIO_CHAPTERS.length) {
-      loadChapter(nextIdx);
-      // Small delay then play next
-      setTimeout(function() {
-        audio.play();
-        // Scroll to next chapter divider
-        var chNum = AUDIO_CHAPTERS[nextIdx].chapter;
-        var divider = document.getElementById('ch' + chNum);
-        if (divider) divider.scrollIntoView({ behavior: 'smooth' });
-      }, 1500);
-    } else {
-      // Book finished
-      isPlaying = false;
-      playBtn.innerHTML = '&#9654; Play';
-      playBtn.classList.remove('active');
-      // Scroll to THE END
-      scrollToId('the-end');
-    }
+    isPlaying = false;
+    playBtn.innerHTML = '&#9654; Play';
+    playBtn.classList.remove('active');
+    scrollToId('the-end');
   });
 
   // ── Karaoke Update Loop ──
@@ -2301,15 +2244,15 @@ if (isTouch) {
   var lastScrollPage = -1;
   var lastUpdateTime = 0;
 
-  function findWordAt(t, starts, ends) {
-    var lo = 0, hi = starts.length - 1;
+  function findWordAt(t) {
+    var lo = 0, hi = allStarts.length - 1;
     while (lo <= hi) {
       var mid = (lo + hi) >> 1;
-      if (t < starts[mid]) { hi = mid - 1; }
-      else if (t > ends[mid] + 0.3) { lo = mid + 1; }
+      if (t < allStarts[mid]) { hi = mid - 1; }
+      else if (t > allEnds[mid] + 0.3) { lo = mid + 1; }
       else { return mid; }
     }
-    if (lo < starts.length && t < starts[lo]) return lo;
+    if (lo < allStarts.length && t < allStarts[lo]) return lo;
     return lo > 0 ? lo - 1 : 0;
   }
 
@@ -2324,68 +2267,50 @@ if (isTouch) {
     }
     lastUpdateTime = now;
 
-    // Unified progress bar across all chapters
-    if (audio.duration) {
-      if (totalDuration > 0 && cumulativeOffsets.length > 0) {
-        // Use accurate duration for current chapter
-        chapterDurations[currentChIdx] = audio.duration;
-        var globalPos = cumulativeOffsets[currentChIdx] + t;
-        progEl.style.width = ((globalPos / totalDuration) * 100) + '%';
-        timeEl.textContent = 'Ch' + AUDIO_CHAPTERS[currentChIdx].chapter + ' ' + formatTime(t) + ' — ' + formatTime(globalPos) + '/' + formatTime(totalDuration);
-      } else {
-        // Fallback until durations loaded
-        progEl.style.width = ((t / audio.duration) * 100) + '%';
-        timeEl.textContent = 'Ch' + AUDIO_CHAPTERS[currentChIdx].chapter + ' ' + formatTime(t) + '/' + formatTime(audio.duration);
-      }
-    }
+    updateProgressDisplay(t);
 
-    var range = chapterKWordRanges[currentChIdx];
-    var starts = chapterStarts[currentChIdx];
-    var ends = chapterEnds[currentChIdx];
-
-    if (!starts || starts.length === 0 || t < starts[0] - 0.1) {
+    if (allStarts.length === 0 || t < allStarts[0] - 0.1) {
       requestAnimationFrame(updateKaraoke);
       return;
     }
 
-    var localIdx = findWordAt(t, starts, ends);
-    var globalIdx = range.startIdx + localIdx;
+    var idx = findWordAt(t);
 
-    if (globalIdx !== lastActiveIdx) {
-      // Clear old highlights
+    if (idx !== lastActiveIdx) {
+      // Clear old highlights in a small window
       if (lastActiveIdx >= 0) {
-        var clearFrom = Math.max(range.startIdx, lastActiveIdx - NEAR_RANGE - 1);
-        var clearTo = Math.min(range.endIdx, lastActiveIdx + NEAR_RANGE + 1);
+        var clearFrom = Math.max(0, lastActiveIdx - NEAR_RANGE - 1);
+        var clearTo = Math.min(allKWords.length - 1, lastActiveIdx + NEAR_RANGE + 1);
         for (var c = clearFrom; c <= clearTo; c++) {
           allKWords[c].classList.remove('k-active', 'k-near');
         }
       }
 
-      // Mark spoken
-      if (lastActiveIdx >= range.startIdx && lastActiveIdx < globalIdx) {
-        for (var s = lastActiveIdx; s < globalIdx; s++) {
+      // Mark spoken (only the gap between old and new position)
+      if (lastActiveIdx >= 0 && lastActiveIdx < idx) {
+        for (var s = lastActiveIdx; s < idx; s++) {
           allKWords[s].classList.add('k-spoken');
           allKWords[s].classList.remove('k-active', 'k-near');
         }
       }
 
       // Active word
-      allKWords[globalIdx].classList.add('k-active');
-      allKWords[globalIdx].classList.remove('k-spoken', 'k-near');
+      allKWords[idx].classList.add('k-active');
+      allKWords[idx].classList.remove('k-spoken', 'k-near');
 
-      // Near words
+      // Near words (upcoming)
       for (var n = 1; n <= NEAR_RANGE; n++) {
-        var ni = globalIdx + n;
-        if (ni <= range.endIdx) {
+        var ni = idx + n;
+        if (ni < allKWords.length) {
           allKWords[ni].classList.add('k-near');
           allKWords[ni].classList.remove('k-spoken', 'k-active');
         }
       }
 
-      lastActiveIdx = globalIdx;
+      lastActiveIdx = idx;
 
       // Auto-scroll to spread
-      var pageNum = parseInt(allKWords[globalIdx].dataset.page);
+      var pageNum = parseInt(allKWords[idx].dataset.page);
       if (pageNum !== lastScrollPage) {
         lastScrollPage = pageNum;
         var pageEl = document.querySelector('[data-page="' + pageNum + '"]');
@@ -2404,67 +2329,31 @@ if (isTouch) {
     requestAnimationFrame(updateKaraoke);
   });
 
-  // Click on progress track to seek (unified across all chapters)
+  // ── Click on progress track to seek ──
   progressTrack.addEventListener('click', function(e) {
     var rect = progressTrack.getBoundingClientRect();
     var pct = (e.clientX - rect.left) / rect.width;
-    progEl.style.width = (pct * 100) + '%';
+    var dur = audio.duration || totalDuration;
+    if (dur <= 0) return;
 
-    if (totalDuration > 0 && cumulativeOffsets.length > 0) {
-      // Unified seek — find the right chapter
-      var globalTarget = pct * totalDuration;
-      var targetCh = 0;
-      for (var i = 0; i < cumulativeOffsets.length; i++) {
-        if (i + 1 < cumulativeOffsets.length && globalTarget >= cumulativeOffsets[i + 1]) {
-          targetCh = i + 1;
-        } else if (globalTarget >= cumulativeOffsets[i]) {
-          targetCh = i;
-          break;
-        }
-      }
-      // Find rightmost chapter whose offset <= globalTarget
-      for (var i = cumulativeOffsets.length - 1; i >= 0; i--) {
-        if (globalTarget >= cumulativeOffsets[i]) { targetCh = i; break; }
-      }
-      var localTime = globalTarget - cumulativeOffsets[targetCh];
-
-      if (targetCh !== currentChIdx) {
-        loadChapter(targetCh);
-        audio.addEventListener('loadedmetadata', function onLoad() {
-          audio.removeEventListener('loadedmetadata', onLoad);
-          audio.currentTime = localTime;
-          chapterDurations[targetCh] = audio.duration;
-          if (isPlaying) { audio.play(); }
-          // Scroll to chapter
-          var chNum = AUDIO_CHAPTERS[targetCh].chapter;
-          var divider = document.getElementById('ch' + chNum);
-          if (divider) divider.scrollIntoView({ behavior: 'smooth' });
-        });
-      } else {
-        audio.currentTime = localTime;
-      }
-    } else {
-      // Fallback: per-chapter seek
-      if (!audio.duration) return;
-      audio.currentTime = pct * audio.duration;
-    }
+    audio.currentTime = pct * dur;
+    updateProgressDisplay(pct * dur);
 
     lastUpdateTime = 0;
     if (isPlaying) requestAnimationFrame(updateKaraoke);
   });
 
-  // Handle seek
+  // ── Handle seek — reset karaoke highlights ──
   audio.addEventListener('seeked', function() {
-    var range = chapterKWordRanges[currentChIdx];
-    var starts = chapterStarts[currentChIdx];
-    // Reset highlights for current chapter
-    for (var i = range.startIdx; i <= range.endIdx; i++) {
+    var t = audio.currentTime;
+    // Reset all highlights
+    for (var i = 0; i < allKWords.length; i++) {
       allKWords[i].classList.remove('k-active', 'k-spoken', 'k-near');
     }
-    var t = audio.currentTime;
-    if (starts.length > 0 && t >= starts[0]) {
-      var seekIdx = findWordAt(t, starts, chapterEnds[currentChIdx]);
-      for (var i = range.startIdx; i < range.startIdx + seekIdx; i++) {
+    // Mark words before seek position as spoken
+    if (allStarts.length > 0 && t >= allStarts[0]) {
+      var seekIdx = findWordAt(t);
+      for (var i = 0; i < seekIdx; i++) {
         allKWords[i].classList.add('k-spoken');
       }
     }
@@ -2474,7 +2363,7 @@ if (isTouch) {
     if (isPlaying) requestAnimationFrame(updateKaraoke);
   });
 
-  // Safety net
+  // Safety net — restart karaoke loop if it stalls
   setInterval(function() {
     if (isPlaying && !audio.paused) {
       lastUpdateTime = 0;
@@ -3462,6 +3351,6 @@ writeFileSync(resolve(outputDir, 'book.html'), bookHtml);
 
 console.log(`\n  book.html — unified book with ${chapterNums.length} chapters`);
 console.log(`  ${globalPageNum} total pages, ${totalContentPages} content pages, ${totalIll} illustrations`);
-console.log(`  Audio chapters: ${audioChapters.length}`);
+console.log(`  Audio: ${isUnifiedAudio ? 'unified (1 file)' : 'per-chapter'}`);
 console.log(`  Mode: ${USE_CAPS ? 'ALL CAPS' : 'lowercase'}${USE_REMAP ? ' + REMAP' : ''}`);
 console.log(`\nDone!`);
