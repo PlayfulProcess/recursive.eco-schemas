@@ -2,7 +2,7 @@
  * Upload Alice audiobook MP3s to Cloudflare R2.
  * LibriVox chapters (public domain) + Suno preface song.
  */
-import { readFileSync, readdirSync } from 'fs';
+import { readFileSync, readdirSync, existsSync } from 'fs';
 import { resolve, dirname, basename } from 'path';
 import { fileURLToPath } from 'url';
 import { S3Client, PutObjectCommand, HeadObjectCommand } from '@aws-sdk/client-s3';
@@ -56,6 +56,16 @@ for (const f of librivoxFiles) {
     localPath: resolve(librivoxDir, f),
     r2Key: `${r2Prefix}/librivox/${f}`,
     label: f
+  });
+}
+
+// Merged complete audiobook (all chapters concatenated)
+const mergedFile = resolve(librivoxDir, 'wonderland-complete.mp3');
+if (existsSync(mergedFile)) {
+  files.push({
+    localPath: mergedFile,
+    r2Key: `${r2Prefix}/librivox/wonderland-complete.mp3`,
+    label: 'wonderland-complete.mp3 (merged audiobook)'
   });
 }
 
