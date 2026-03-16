@@ -110,6 +110,9 @@ curl -sL "https://www.gutenberg.org/cache/epub/${BOOK_NUM}/pg${BOOK_NUM}.txt" \
 | Native American Legends | sacred-texts.com | English | CHECK | Sensitivity review needed — many are sacred, not just "stories" |
 | Japanese Folk Tales | Gutenberg #4018 | English | TODO | "Japanese Fairy Tales" by Yei Theodora Ozaki |
 | Celtic Fairy Tales | Gutenberg #25198 | English | TODO | Joseph Jacobs collection |
+| Italian Popular Tales | Gutenberg #23634 | English | TODO | Thomas Frederick Crane (Cornell, 1885). Drew from the same 19th-century collectors Calvino later used (Pitrè, Comparetti, Nerucci, Imbriani). The closest English-language precursor to Calvino's *Fiabe italiane*. 96+ tales organized by type. |
+| Stories from the Pentamerone | Gutenberg #2198 | English | TODO | Giambattista Basile (1634), trans. John Edward Taylor. The *earliest* European fairy-tale collection — Sleeping Beauty, Cinderella, Rapunzel all appear here 200 years before Grimm claimed them as German. Neapolitan dialect original. The ur-source. |
+| La Novellaja Fiorentina | Gutenberg #46898 | Italian | TODO | Vittorio Imbriani (1871-1877). Florentine folktales stenographed from oral telling. Direct Calvino source. Italian only — no public domain English translation exists. |
 
 #### Download prompt
 ```bash
