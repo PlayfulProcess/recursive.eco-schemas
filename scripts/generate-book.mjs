@@ -342,19 +342,15 @@ function buildChapterPages(chNum, chapter) {
 
   const text = transformText(fullText);
 
-  // Determine how many content pages we'll have from the CSV
-  const maxPage = Math.max(0, ...Object.keys(pageIlls).map(Number));
+  // Text determines page count — CSV illustrations are matched to text pages
   const textPages = splitTextIntoPages(text, MAX_CHARS_PER_PAGE);
 
-  // The number of pages is max(textPages, maxPage from CSV)
-  const pageCount = Math.max(textPages.length, maxPage);
-
   const pages = [];
-  for (let i = 0; i < pageCount; i++) {
+  for (let i = 0; i < textPages.length; i++) {
     const pageNum = i + 1;
     const ill = pageIlls[pageNum] || null;
     pages.push({
-      text: textPages[i] || '',
+      text: textPages[i],
       illustration: ill?.url ? { url: ill.url, description: ill.description } : null,
     });
   }
@@ -541,10 +537,12 @@ for (const chNum of chapterNums) {
     // Left page: illustration or decorative
     globalPageNum++;
     if (page.illustration) {
+      const caption = page.illustration.description ? `<div class="ill-caption">${escapeHtml(page.illustration.description)}</div>` : '';
       spreadsHtml += `
     <div class="spread" data-spread="${spreadIdx}" data-ch="${chNum}">
       <div class="page-left" data-page="${globalPageNum}" data-ch="${chNum}" data-local-page="${i + 1}">
         <img src="${page.illustration.url}" alt="${escapeHtml(page.illustration.description || '')}">
+        ${caption}
         <div class="page-number page-number-left">${globalPageNum}</div>
       </div>`;
     } else {
@@ -578,10 +576,9 @@ for (const chNum of chapterNums) {
   let karaokeData = karaokeManifest?.chapters?.[chNum] || null;
   let remappedKaraokePages = null;
   if (karaokeData) {
-    remappedKaraokePages = karaokeData.pages.map(p => ({
-      ...p,
-      pageNum: pageNumMap[p.pageNum] || p.pageNum,
-    })).filter(p => pageNumMap[p.pageNum] !== undefined || Object.values(pageNumMap).includes(p.pageNum));
+    remappedKaraokePages = karaokeData.pages
+      .filter(p => pageNumMap[p.pageNum] !== undefined)
+      .map(p => ({ ...p, pageNum: pageNumMap[p.pageNum] }));
   }
 
   allChaptersData.push({
@@ -757,6 +754,15 @@ function generateCSS() {
       text-indent: 1.5em;
     }
     .text-block p:last-child { margin-bottom: 0; }
+
+    /* ── Illustration caption ── */
+    .ill-caption {
+      position: absolute; bottom: 20px; left: 16px; right: 16px;
+      font-size: 9px; color: #8a7a6a; text-align: center;
+      letter-spacing: 0.5px; line-height: 1.4;
+      font-family: 'Georgia', serif; font-style: italic;
+      opacity: 0.7;
+    }
 
     /* ── Page numbers ── */
     .page-number {
@@ -999,6 +1005,7 @@ function generateToolbarHTML() {
   <span class="ch-title" style="color:#a08060" id="audioTime"></span>
   <input type="text" id="searchInput" placeholder="Search..." autocomplete="off">
   <span class="match-count" id="matchCount"></span>
+  <button id="caseToggle" title="Toggle uppercase/lowercase">Aa</button>
   <button id="fullscreenBtn">&#x26F6; Fullscreen</button>
   <button id="navToggle" title="Chapter list">&#9776; Chapters</button>
 </div>`;
@@ -1323,6 +1330,23 @@ document.getElementById('navToggle').addEventListener('click', function() {
     if (e.key === 'Escape' && overlay.classList.contains('active')) {
       overlay.classList.remove('active');
     }
+  });
+})();
+
+// ── Aa Case Toggle ──
+(function() {
+  var btn = document.getElementById('caseToggle');
+  if (!btn) return;
+  var isUpper = false;
+
+  btn.addEventListener('click', function() {
+    isUpper = !isUpper;
+    btn.textContent = isUpper ? 'Aa' : 'AA';
+    document.querySelectorAll('.text-block p').forEach(function(p) {
+      p.style.textTransform = isUpper ? 'uppercase' : 'none';
+      p.style.fontWeight = isUpper ? '700' : '400';
+      p.style.letterSpacing = isUpper ? '0.3px' : '0';
+    });
   });
 })();
 
