@@ -40,3 +40,14 @@ personal/
 
 # Local image workspace (large files, not for git)
 z.ignore/
+output/
+
+# Audio files (hosted on R2, too large for git)
+*.mp3
+
+# Temporary/generated files
+NUL
+audit-template-temp.html
+
+# Claude worktrees
+.claude/worktrees/
