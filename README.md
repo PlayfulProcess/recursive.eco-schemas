@@ -26,6 +26,7 @@ node scripts/generate-alice-booklets.mjs
 
 Reads from `grammars/alice-in-wonderland-chapter-book/grammar.json` and generates HTML booklets in `grammars/alice-5-minute-stories/booklets/`.
 
+
 ## Quick Start
 
 The fastest way to create a grammar:
