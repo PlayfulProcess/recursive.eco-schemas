@@ -173,6 +173,8 @@ All grammars live in `grammars/` — run `python3 scripts/generate_manifest.py` 
 - **Multi-part texts** (Grimm): Combine parts into single items.
 - **Background agents**: Good for regular-structure texts under ~5000 lines. Time out on complex/commentary-heavy texts — use direct Python scripting instead.
 - **Large grammar files (40+ items)**: Write in chunks, not one shot. A 32-item grammar with full content WILL time out as a single Write. Split into: create file with first 10 items → edit to append next 10 → repeat.
+- **Content at scale (100+ sections)**: Write a Python generator script FIRST, don't hand-write each section. Use lookup tables that compose combinatorially (e.g., suit × number × court rank = unique per card). The script IS the research — run it, see what's missing, iterate. Don't over-research before coding.
+- **Background agents are expensive for known-structure tasks**: A 4-minute agent reading 8 known files could be 8 direct reads in 30 seconds. Reserve agents for genuinely open-ended exploration.
 - **Always log learnings** in `plan/build-logs/`.
 
 ## Image Matching Lessons (from alice-in-wonderland)
