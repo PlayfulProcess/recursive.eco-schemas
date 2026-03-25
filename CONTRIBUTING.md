@@ -80,6 +80,29 @@ Community data and examples go in `/data/`:
 - Test JSON/YAML validity before committing
 - Keep file sizes reasonable (< 1MB per file)
 
+### Git Identity — use your GitHub noreply address
+
+Commits must be authored with an email that GitHub can attribute to your account. Using a generic or personal email can cause commits to appear under the wrong username.
+
+**Recommended setup** (keeps your personal email private):
+
+```bash
+# Use your GitHub noreply address  — find the exact one at github.com/settings/emails
+git config user.name  "YourGitHubUsername"
+git config user.email "YOUR_NUMERIC_ID+YourGitHubUsername@users.noreply.github.com"
+```
+
+Your numeric ID appears in your GitHub noreply address shown on the
+[Email settings page](https://github.com/settings/emails) under
+"Keep my email addresses private".
+
+If past commits in this repository were written with the wrong email, run:
+
+```bash
+bash scripts/fix-commit-authorship.sh
+# then: git push --force-with-lease origin main
+```
+
 ### Review Process
 
 1. Submit a pull request with your changes
