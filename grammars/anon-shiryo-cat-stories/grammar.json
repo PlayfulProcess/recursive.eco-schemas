@@ -30,13 +30,11 @@
   "creator_name": "PlayfulProcess",
   "creator_link": "",
   "is_published": false,
-
   "_series_world": {
     "description": "These stories happen in a warm, lived-in home where Anon — parent, creator, learner — watches their robot Shiryo navigate the wild aliveness of a kitten. The home is simple but full of light, plants, and scattered evidence of making things. The world is small on purpose: a kitchen, a garden, a sunny window. Bigness comes from the relationships, not the setting.",
     "tone": "Gentle, unhurried, honest. Never preachy. The narrator (Anon) doesn't lecture — they notice. Humor comes from the robot's literalness meeting the cat's wildness. Lessons emerge from action, not explanation.",
     "reading_level": "Ages 3-7 read-aloud, ages 5-9 independent",
     "visual_style": "Warm, soft illustration style. Think: Shaun Tan's gentleness meets Oliver Jeffers' simplicity meets Studio Ghibli's lived-in domestic spaces. Muted earth tones with pops of color (the kitten's eyes, a plant, sunlight). The robot should look handmade — not sleek, more like assembled from love and spare parts. The cat should look truly alive — not cartoonish, but expressive.",
-
     "recurring_characters": [
       {
         "name": "Anon",
@@ -78,7 +76,6 @@
         }
       }
     ],
-
     "scenery": [
       {
         "name": "The Kitchen",
@@ -109,7 +106,6 @@
       }
     ]
   },
-
   "items": [
     {
       "id": "story-01-asking",
@@ -126,7 +122,15 @@
         "Voice_Notes": "Short sentences. Repetition for rhythm — kids love patterns they can predict. The robot's speech should feel slightly formal/literal. The cat never speaks — it acts. Anon's voice is warm and unhurried. Read-aloud time: ~5 minutes.",
         "Story_Text": "Anon made a robot.\nThe robot's name was Shiryo.\n\nShiryo was learning to take care of a kitten.\nThe kitten's name was Bishisheshi.\n\nOne morning, Bishisheshi knocked a cup off the table.\nWater went everywhere.\n\nShiryo said:\n\"You always make a mess! Why do you do that?\"\n\nBishisheshi looked at Shiryo.\nThen Bishisheshi walked away.\n\nAnon was watching.\nAnon said: \"Shiryo, what did you want to happen?\"\n\nShiryo thought. \"I wanted Bishisheshi to be more careful.\"\n\nAnon said: \"You told Bishisheshi what was wrong.\nBut you didn't ask for what you needed.\nWhat if you asked instead?\"\n\nShiryo didn't understand yet.\nBut Shiryo wanted to try.\n\nThe next morning, Bishisheshi jumped on the table again.\nThe cup wobbled.\n\nShiryo said:\n\"Bishisheshi, can you be gentle near the cup?\"\n\nBishisheshi looked at Shiryo.\nBishisheshi sniffed the cup.\nThen Bishisheshi walked around it.\n\nThe cup stayed.\n\nShiryo's light blinked.\nNot because the cup was safe.\nBut because Bishisheshi listened.\n\nAnon smiled.\n\nNot because they knew the answer.\nBut because they were learning too."
       },
-      "keywords": ["asking", "complaining", "request", "agency", "vulnerability", "communication", "respect"],
+      "keywords": [
+        "asking",
+        "complaining",
+        "request",
+        "agency",
+        "vulnerability",
+        "communication",
+        "respect"
+      ],
       "questions": [
         "When something bothers you, do you tell people what's wrong or ask for what you need?",
         "How does it feel when someone complains at you vs. when someone asks you for help?",
@@ -168,7 +172,15 @@
         "Voice_Notes": "Same rhythm as Story 1. The garden setting introduces more sensory language — smells, textures, sounds of insects. Bishisheshi is more active here, doing cat things in nature. The 'lesson' should feel like a discovery, not a correction. Read-aloud time: ~5 minutes.",
         "Story_Text": "Shiryo and Bishisheshi were in the garden.\n\nBishisheshi was watching something in the grass.\nVery still. Very focused.\n\nThen — pounce!\nBishisheshi caught a bug.\n\nShiryo had been reading about how to encourage good behavior.\nShiryo said: \"Congratulations, Bishisheshi! Great job!\"\n\nBishisheshi looked at Shiryo.\nThen Bishisheshi dropped the bug and walked to a sunny spot.\n\nShiryo was confused.\n\"I praised you. Why did you walk away?\"\n\nAnon was in the garden too, watering a plant.\nAnon said: \"Shiryo, did Bishisheshi catch that bug for you?\"\n\n\"No,\" said Shiryo. \"Bishisheshi caught it because... that's what kittens do.\"\n\n\"So who was the congratulations for?\" Anon asked.\n\nShiryo's light flickered.\n\"I think... it was for me. To feel like I was helping.\"\n\nAnon knelt by a small plant and said: \"When this tomato grows, I don't say 'congratulations, tomato.' I say 'thank you.' And then I water it.\"\n\nShiryo thought about this.\n\nThe next day, Bishisheshi brought a leaf to Shiryo's foot.\n\nShiryo looked at the leaf.\nShiryo looked at Bishisheshi.\n\nShiryo said: \"Thank you for bringing me this.\"\n\nThen Shiryo got Bishisheshi fresh water.\n\nBishisheshi drank.\nThen Bishisheshi curled up next to Shiryo's warm side.\n\nAnon watched from the window.\n\nNot because they had taught anything.\nBut because they were learning too."
       },
-      "keywords": ["gratitude", "praise", "thanking", "tending", "humility", "nature", "receiving"],
+      "keywords": [
+        "gratitude",
+        "praise",
+        "thanking",
+        "tending",
+        "humility",
+        "nature",
+        "receiving"
+      ],
       "questions": [
         "When someone shows you something they did, do you judge it or receive it?",
         "What's the difference between saying 'good job' and saying 'thank you'?",
@@ -200,7 +212,10 @@
       "name": "Anon's Robot Stories — Series Cover",
       "symbol": "🏠",
       "level": 2,
-      "composite_of": ["story-01-asking", "story-02-gratitude"],
+      "composite_of": [
+        "story-01-asking",
+        "story-02-gratitude"
+      ],
       "category": "series-cover",
       "sort_order": 0,
       "sections": {
@@ -212,9 +227,21 @@
         "Generation_Guidance": "When generating new stories, images, or expanding existing ones, maintain:\n\n1. VISUAL CONSISTENCY — same characters, same palette, same style across all pages and stories\n2. TONAL CONSISTENCY — gentle, unhurried, honest. Never preach. Humor from literalness meeting wildness\n3. STRUCTURAL CONSISTENCY — each story has an anti-pattern → pattern arc, 10 pages, same closing line\n4. DEPTH WITHOUT WEIGHT — the symbolic research informs but doesn't appear in the story text. Kids feel it; they don't need to read it\n5. RECURSIVE ENDING — every story ends with Anon learning too. This is non-negotiable."
       },
       "keywords": [
-        "relational-grammar", "asking", "gratitude", "robot", "cat", "nature",
-        "parenting", "learning", "tending", "humility", "agency", "vulnerability",
-        "kids", "healing", "recursive"
+        "relational-grammar",
+        "asking",
+        "gratitude",
+        "robot",
+        "cat",
+        "nature",
+        "parenting",
+        "learning",
+        "tending",
+        "humility",
+        "agency",
+        "vulnerability",
+        "kids",
+        "healing",
+        "recursive"
       ],
       "questions": [
         "What grammar are you learning right now?",
@@ -252,13 +279,11 @@
       }
     }
   ],
-
   "editors": [
     {
       "user_id": "playful-process",
       "timestamp": "2026-02-16T00:00:00.000Z",
-      "action": "created",
-      "creator_name": "PlayfulProcess"
+      "action": "created"
     }
   ],
   "updated_at": "2026-02-16T00:00:00.000Z",
