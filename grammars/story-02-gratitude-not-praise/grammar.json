@@ -14,19 +14,44 @@
   "name": "Shiryo Learns to Say Thank You — Full Story",
   "description": "The complete page-by-page sequence for Story 2: Shiryo learns that gratitude is better than praise. Nature wants to be thanked and tended to, not congratulated. Each page includes narrative text and generation prompts for AI image creation (Midjourney, DALL-E, Gemini Imagen).",
   "cover_image_url": "",
-  "tags": ["kids", "story-sequence", "illustrated", "ai-assisted", "robot", "cat", "gratitude", "nature"],
+  "tags": [
+    "kids",
+    "story-sequence",
+    "illustrated",
+    "ai-assisted",
+    "robot",
+    "cat",
+    "gratitude",
+    "nature"
+  ],
   "grammar_type": "sequence",
   "creator_name": "PlayfulProcess",
-
   "_generation_context": {
     "parent_grammar": "custom/anon-shiryo-cat-stories/grammar.json",
     "story_id": "story-02-gratitude",
     "visual_style": "Same series style as Story 1, but this story is set partly in the garden. More greens, dappled light, living textures. The garden should feel slightly wild — tended but not controlled. Insects, leaves, soil visible.",
-    "color_palette": ["#C4956A", "#E8D5B7", "#7A9E7E", "#4A7C59", "#5C4033", "#D4A574", "#8B7355", "#B8860B"],
-    "palette_names": ["warm copper (Shiryo)", "soft cream (light)", "sage green (garden)", "deep green (leaves)", "dark earth (soil)", "warm sand (paths)", "bark brown (fence)", "deep gold (sunlight through leaves)"],
+    "color_palette": [
+      "#C4956A",
+      "#E8D5B7",
+      "#7A9E7E",
+      "#4A7C59",
+      "#5C4033",
+      "#D4A574",
+      "#8B7355",
+      "#B8860B"
+    ],
+    "palette_names": [
+      "warm copper (Shiryo)",
+      "soft cream (light)",
+      "sage green (garden)",
+      "deep green (leaves)",
+      "dark earth (soil)",
+      "warm sand (paths)",
+      "bark brown (fence)",
+      "deep gold (sunlight through leaves)"
+    ],
     "consistency_notes": "Same characters as Story 1 — Shiryo, Bishisheshi, Anon must look identical. New setting: the garden. Anon is more active here — watering plants, kneeling in soil. Bishisheshi is in full kitten-hunter mode in the garden. Shiryo is more confident than in Story 1 (it has learned something) but still making new mistakes."
   },
-
   "items": [
     {
       "id": "page-01",
@@ -41,7 +66,10 @@
       "metadata": {
         "image_status": "needs_generation",
         "page_type": "spread",
-        "characters_present": ["Shiryo", "Bishisheshi"],
+        "characters_present": [
+          "Shiryo",
+          "Bishisheshi"
+        ],
         "setting": "garden"
       },
       "image_generation_prompt": {
@@ -64,7 +92,10 @@
       "metadata": {
         "image_status": "needs_generation",
         "page_type": "spread",
-        "characters_present": ["Bishisheshi", "Shiryo"],
+        "characters_present": [
+          "Bishisheshi",
+          "Shiryo"
+        ],
         "setting": "garden, grass level"
       },
       "image_generation_prompt": {
@@ -87,7 +118,9 @@
       "metadata": {
         "image_status": "needs_generation",
         "page_type": "spread",
-        "characters_present": ["Bishisheshi"],
+        "characters_present": [
+          "Bishisheshi"
+        ],
         "setting": "garden, grass level"
       },
       "image_generation_prompt": {
@@ -110,7 +143,10 @@
       "metadata": {
         "image_status": "needs_generation",
         "page_type": "spread",
-        "characters_present": ["Shiryo", "Bishisheshi"],
+        "characters_present": [
+          "Shiryo",
+          "Bishisheshi"
+        ],
         "setting": "garden"
       },
       "image_generation_prompt": {
@@ -133,7 +169,10 @@
       "metadata": {
         "image_status": "needs_generation",
         "page_type": "spread",
-        "characters_present": ["Shiryo", "Bishisheshi"],
+        "characters_present": [
+          "Shiryo",
+          "Bishisheshi"
+        ],
         "setting": "garden"
       },
       "image_generation_prompt": {
@@ -156,7 +195,11 @@
       "metadata": {
         "image_status": "needs_generation",
         "page_type": "spread",
-        "characters_present": ["Anon", "Shiryo", "Bishisheshi"],
+        "characters_present": [
+          "Anon",
+          "Shiryo",
+          "Bishisheshi"
+        ],
         "setting": "garden"
       },
       "image_generation_prompt": {
@@ -179,7 +222,10 @@
       "metadata": {
         "image_status": "needs_generation",
         "page_type": "spread",
-        "characters_present": ["Anon", "Shiryo"],
+        "characters_present": [
+          "Anon",
+          "Shiryo"
+        ],
         "setting": "garden, by the tomato plant"
       },
       "image_generation_prompt": {
@@ -202,7 +248,9 @@
       "metadata": {
         "image_status": "needs_generation",
         "page_type": "spread",
-        "characters_present": ["Shiryo"],
+        "characters_present": [
+          "Shiryo"
+        ],
         "setting": "garden"
       },
       "image_generation_prompt": {
@@ -225,7 +273,10 @@
       "metadata": {
         "image_status": "needs_generation",
         "page_type": "spread",
-        "characters_present": ["Shiryo", "Bishisheshi"],
+        "characters_present": [
+          "Shiryo",
+          "Bishisheshi"
+        ],
         "setting": "kitchen / doorway between garden and home"
       },
       "image_generation_prompt": {
@@ -248,7 +299,11 @@
       "metadata": {
         "image_status": "needs_generation",
         "page_type": "spread",
-        "characters_present": ["Anon", "Shiryo", "Bishisheshi"],
+        "characters_present": [
+          "Anon",
+          "Shiryo",
+          "Bishisheshi"
+        ],
         "setting": "kitchen, by the window"
       },
       "image_generation_prompt": {
@@ -259,13 +314,11 @@
       }
     }
   ],
-
   "editors": [
     {
       "user_id": "playful-process",
       "timestamp": "2026-02-16T00:00:00.000Z",
-      "action": "created",
-      "creator_name": "PlayfulProcess"
+      "action": "created"
     }
   ],
   "updated_at": "2026-02-16T00:00:00.000Z",
