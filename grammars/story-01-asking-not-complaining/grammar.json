@@ -14,19 +14,43 @@
   "name": "Shiryo Learns to Ask — Full Story",
   "description": "The complete page-by-page sequence for Story 1: Shiryo learns that asking is better than complaining. Each page includes narrative text, image status, and generation prompts for AI image creation (Midjourney, DALL-E, Gemini Imagen). Pages without images are marked for generation. The prompts maintain visual consistency with the series style guide defined in the parent grammar.",
   "cover_image_url": "",
-  "tags": ["kids", "story-sequence", "illustrated", "ai-assisted", "robot", "cat", "asking"],
+  "tags": [
+    "kids",
+    "story-sequence",
+    "illustrated",
+    "ai-assisted",
+    "robot",
+    "cat",
+    "asking"
+  ],
   "grammar_type": "sequence",
   "creator_name": "PlayfulProcess",
-
   "_generation_context": {
     "parent_grammar": "custom/anon-shiryo-cat-stories/grammar.json",
     "story_id": "story-01-asking",
     "visual_style": "Warm watercolor, muted earth tones with golden light accents. Shaun Tan gentleness meets Oliver Jeffers simplicity meets Studio Ghibli domestic warmth. Consistent characters across all pages.",
-    "color_palette": ["#C4956A", "#E8D5B7", "#8B6914", "#5C4033", "#D4A574", "#F5E6D3", "#7A9E7E", "#B8860B"],
-    "palette_names": ["warm copper (Shiryo)", "soft cream (light)", "golden brown (wood)", "dark earth (shadows)", "warm sand (walls)", "soft white (paper/steam)", "sage green (plants)", "deep gold (sunlight)"],
+    "color_palette": [
+      "#C4956A",
+      "#E8D5B7",
+      "#8B6914",
+      "#5C4033",
+      "#D4A574",
+      "#F5E6D3",
+      "#7A9E7E",
+      "#B8860B"
+    ],
+    "palette_names": [
+      "warm copper (Shiryo)",
+      "soft cream (light)",
+      "golden brown (wood)",
+      "dark earth (shadows)",
+      "warm sand (walls)",
+      "soft white (paper/steam)",
+      "sage green (plants)",
+      "deep gold (sunlight)"
+    ],
     "consistency_notes": "Shiryo must look the same on every page — small copper robot, one round eye-light, mismatched panels, gentle hands. Bishisheshi must be consistent — small orange/cream/brown kitten, big expressive eyes. Anon appears partially — warm hands, earth-toned clothes, face partially hidden or soft. The kitchen is the same kitchen throughout."
   },
-
   "items": [
     {
       "id": "page-01",
@@ -41,7 +65,10 @@
       "metadata": {
         "image_status": "needs_generation",
         "page_type": "spread",
-        "characters_present": ["Anon", "Shiryo"],
+        "characters_present": [
+          "Anon",
+          "Shiryo"
+        ],
         "setting": "kitchen / workshop"
       },
       "image_generation_prompt": {
@@ -64,7 +91,10 @@
       "metadata": {
         "image_status": "needs_generation",
         "page_type": "spread",
-        "characters_present": ["Shiryo", "Bishisheshi"],
+        "characters_present": [
+          "Shiryo",
+          "Bishisheshi"
+        ],
         "setting": "kitchen"
       },
       "image_generation_prompt": {
@@ -87,7 +117,9 @@
       "metadata": {
         "image_status": "needs_generation",
         "page_type": "spread",
-        "characters_present": ["Bishisheshi"],
+        "characters_present": [
+          "Bishisheshi"
+        ],
         "setting": "kitchen table"
       },
       "image_generation_prompt": {
@@ -110,7 +142,10 @@
       "metadata": {
         "image_status": "needs_generation",
         "page_type": "spread",
-        "characters_present": ["Shiryo", "Bishisheshi"],
+        "characters_present": [
+          "Shiryo",
+          "Bishisheshi"
+        ],
         "setting": "kitchen"
       },
       "image_generation_prompt": {
@@ -133,7 +168,10 @@
       "metadata": {
         "image_status": "needs_generation",
         "page_type": "spread",
-        "characters_present": ["Shiryo", "Bishisheshi"],
+        "characters_present": [
+          "Shiryo",
+          "Bishisheshi"
+        ],
         "setting": "kitchen"
       },
       "image_generation_prompt": {
@@ -156,7 +194,10 @@
       "metadata": {
         "image_status": "needs_generation",
         "page_type": "spread",
-        "characters_present": ["Anon", "Shiryo"],
+        "characters_present": [
+          "Anon",
+          "Shiryo"
+        ],
         "setting": "kitchen"
       },
       "image_generation_prompt": {
@@ -179,7 +220,9 @@
       "metadata": {
         "image_status": "needs_generation",
         "page_type": "spread",
-        "characters_present": ["Shiryo"],
+        "characters_present": [
+          "Shiryo"
+        ],
         "setting": "kitchen"
       },
       "image_generation_prompt": {
@@ -202,7 +245,10 @@
       "metadata": {
         "image_status": "needs_generation",
         "page_type": "spread",
-        "characters_present": ["Shiryo", "Bishisheshi"],
+        "characters_present": [
+          "Shiryo",
+          "Bishisheshi"
+        ],
         "setting": "kitchen table"
       },
       "image_generation_prompt": {
@@ -225,7 +271,9 @@
       "metadata": {
         "image_status": "needs_generation",
         "page_type": "spread",
-        "characters_present": ["Bishisheshi"],
+        "characters_present": [
+          "Bishisheshi"
+        ],
         "setting": "kitchen table"
       },
       "image_generation_prompt": {
@@ -248,7 +296,11 @@
       "metadata": {
         "image_status": "needs_generation",
         "page_type": "spread",
-        "characters_present": ["Anon", "Shiryo", "Bishisheshi"],
+        "characters_present": [
+          "Anon",
+          "Shiryo",
+          "Bishisheshi"
+        ],
         "setting": "kitchen"
       },
       "image_generation_prompt": {
@@ -259,13 +311,11 @@
       }
     }
   ],
-
   "editors": [
     {
       "user_id": "playful-process",
       "timestamp": "2026-02-16T00:00:00.000Z",
-      "action": "created",
-      "creator_name": "PlayfulProcess"
+      "action": "created"
     }
   ],
   "updated_at": "2026-02-16T00:00:00.000Z",
