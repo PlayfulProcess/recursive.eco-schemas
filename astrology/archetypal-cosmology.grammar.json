@@ -1,0 +1,412 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "recursive.eco community",
+        "role": "author",
+        "url": "https://recursive.eco"
+      },
+      {
+        "name": "Richard Tarnas",
+        "role": "source",
+        "note": "Archetypal framework drawn from Cosmos and Psyche (2006) and The Passion of the Western Mind (1991)"
+      }
+    ]
+  },
+  "name": "Archetypal Cosmology — World Transits",
+  "description": "A grammar of planetary cycles and their archetypal meanings for world events and personal transformation, based on the work of Richard Tarnas. Not prediction — pattern recognition across history, culture, and psyche.",
+  "grammar_type": "astrology",
+  "tags": ["astrology", "archetypal", "cosmology", "tarnas", "world-transits", "cycles"],
+  "items": [
+    {
+      "id": "archetype-saturn",
+      "name": "Saturn",
+      "symbol": "♄",
+      "category": "archetype",
+      "sections": {
+        "Core Meaning": "The principle of contraction, limitation, structure, and time. Saturn is the boundary-maker — the force that says 'no,' that demands form, that insists on consequences. Where Saturn operates, things become real through constraint.",
+        "Light": "Discipline, maturation, responsibility, endurance, mastery through effort. The wisdom that comes from having met limitation honestly. The elder, the craftsman, the keeper of tradition.",
+        "Shadow": "Rigidity, authoritarianism, depression, excessive control. Fear disguised as order. The tyrant who mistakes structure for meaning.",
+        "Archetype": "Kronos / The Senex / The Old King. Saturn is both the devouring father and the wise elder — the one who holds the line until you are ready to cross it.",
+        "In World Events": "Saturn correlates with periods of conservatism, contraction, institutional hardening, economic austerity, and the weight of history pressing down. Saturn transits mark times when structures are tested and either solidified or broken."
+      },
+      "keywords": ["structure", "limitation", "time", "authority", "maturation", "discipline", "contraction", "consequence"],
+      "metadata": { "planet": "Saturn", "english_name": "Saturn", "orbital_period": "29.5 years", "scope": "societal" }
+    },
+    {
+      "id": "archetype-uranus",
+      "name": "Uranus",
+      "symbol": "⛢",
+      "category": "archetype",
+      "sections": {
+        "Core Meaning": "The principle of sudden awakening, rebellion, liberation, and radical innovation. Uranus is the lightning bolt — the force that shatters what Saturn built when it has become a prison rather than a home.",
+        "Light": "Freedom, originality, breakthrough, progressive vision, technological innovation. The genius who sees what no one else can see. The liberator who frees what was trapped.",
+        "Shadow": "Chaos for its own sake, recklessness, instability, contrarianism without purpose. Revolution that destroys without building. The rebel without a cause.",
+        "Archetype": "Prometheus / The Awakener / The Rebel. Uranus brings the fire of consciousness — the sudden insight that changes everything, whether you are ready or not.",
+        "In World Events": "Uranus correlates with revolutions, technological breakthroughs, countercultural movements, sudden upheavals, and periods of radical social experimentation. Uranus transits mark times when the status quo becomes unbearable."
+      },
+      "keywords": ["revolution", "liberation", "awakening", "innovation", "rebellion", "breakthrough", "suddenness", "genius"],
+      "metadata": { "planet": "Uranus", "english_name": "Uranus", "orbital_period": "84 years", "scope": "generational" }
+    },
+    {
+      "id": "archetype-neptune",
+      "name": "Neptune",
+      "symbol": "♆",
+      "category": "archetype",
+      "sections": {
+        "Core Meaning": "The principle of dissolution, transcendence, imagination, and the longing for union with something greater. Neptune is the ocean — the force that dissolves all boundaries, all certainties, all separations between self and other.",
+        "Light": "Compassion, mystical experience, artistic inspiration, spiritual awakening, universal love. The visionary, the poet, the healer who works through empathy and surrender.",
+        "Shadow": "Deception, addiction, delusion, escapism, loss of self in fantasy. The fog that makes everything seem beautiful while obscuring what is real. Spiritual bypassing.",
+        "Archetype": "Poseidon / The Mystic / The Dreamer. Neptune is the call of the deep — the current beneath all surfaces that draws you toward dissolution and renewal.",
+        "In World Events": "Neptune correlates with spiritual movements, artistic golden ages, mass idealism, collective disillusionment, epidemics, and the blurring of boundaries between nations, classes, and realities. Neptune transits dissolve what seemed solid."
+      },
+      "keywords": ["dissolution", "transcendence", "imagination", "spirituality", "illusion", "compassion", "longing", "the unconscious"],
+      "metadata": { "planet": "Neptune", "english_name": "Neptune", "orbital_period": "165 years", "scope": "generational" }
+    },
+    {
+      "id": "archetype-pluto",
+      "name": "Pluto",
+      "symbol": "♇",
+      "category": "archetype",
+      "sections": {
+        "Core Meaning": "The principle of elemental power, death-and-rebirth, transformation, and the evolutionary imperative. Pluto is the underworld — the force that destroys in order to regenerate, that strips away everything that is not essential.",
+        "Light": "Profound transformation, empowerment, regeneration, depth psychology, the courage to face what is hidden. The phoenix rising. The capacity to be reborn.",
+        "Shadow": "Obsession, totalitarianism, compulsive power dynamics, destruction, manipulation. The forces that consume from within. The tyrant who cannot release control.",
+        "Archetype": "Hades-Dionysus / The Destroyer-Renewer / The Lord of the Underworld. Pluto presides over the great cycles of death and rebirth — personal, cultural, civilizational.",
+        "In World Events": "Pluto correlates with world wars, mass movements, nuclear power, depth psychology, evolutionary crises, the rise and fall of empires, and any period where the foundations of civilization are being fundamentally transformed."
+      },
+      "keywords": ["transformation", "power", "death-rebirth", "underworld", "evolution", "intensity", "destruction", "regeneration"],
+      "metadata": { "planet": "Pluto", "english_name": "Pluto", "orbital_period": "248 years", "scope": "civilizational" }
+    },
+    {
+      "id": "archetype-jupiter",
+      "name": "Jupiter",
+      "symbol": "♃",
+      "category": "archetype",
+      "sections": {
+        "Core Meaning": "The principle of expansion, meaning, faith, and the drive toward greater understanding. Jupiter is the horizon — the force that says 'more,' that seeks to grow, explore, and find a larger context for everything.",
+        "Light": "Generosity, wisdom, philosophical breadth, good fortune, the capacity to see the bigger picture. The teacher, the traveler, the one who carries hope.",
+        "Shadow": "Excess, inflation, overconfidence, moral superiority, the refusal to accept limits. Growth that becomes bloat. Faith that becomes dogma.",
+        "Archetype": "Zeus / The King of the Gods / The Great Benefic. Jupiter amplifies whatever it touches — for good or ill, it makes things bigger.",
+        "In World Events": "Jupiter correlates with economic expansion, cultural flourishing, religious movements, geopolitical ambition, and periods of collective optimism. Jupiter transits amplify the themes of whatever other planets are involved."
+      },
+      "keywords": ["expansion", "meaning", "faith", "abundance", "wisdom", "optimism", "excess", "horizon"],
+      "metadata": { "planet": "Jupiter", "english_name": "Jupiter", "orbital_period": "12 years", "scope": "societal" }
+    },
+    {
+      "id": "aspect-conjunction",
+      "name": "Conjunction",
+      "symbol": "☌",
+      "category": "aspect_type",
+      "sections": {
+        "Core Meaning": "Two planetary archetypes merge into a single complex. A conjunction is a new beginning — the seed moment of a cycle. The two principles fuse, and something new is born from their union. This is the most powerful aspect: total interpenetration of archetypal energies.",
+        "In Cycles": "The conjunction marks the start (0°) of a synodic cycle between two planets. It is the 'New Moon' phase — potent, concentrated, often experienced as a crisis of initiation. The old cycle has ended; the new one begins in darkness, gathering force.",
+        "Historical Pattern": "Conjunctions between outer planets consistently correlate with watershed moments in history — the beginning of new eras, the emergence of movements that define the coming decades."
+      },
+      "keywords": ["fusion", "new beginning", "seed", "initiation", "intensity", "merger"],
+      "metadata": { "angle": 0, "type": "major" }
+    },
+    {
+      "id": "aspect-opposition",
+      "name": "Opposition",
+      "symbol": "☍",
+      "category": "aspect_type",
+      "sections": {
+        "Core Meaning": "Two planetary archetypes face each other across the full diameter of the circle. Maximum tension, maximum awareness. The opposition is the 'Full Moon' of a cycle — what was seeded at the conjunction now reaches full visibility, often through confrontation or culmination.",
+        "In Cycles": "The opposition (180°) marks the midpoint of a synodic cycle. What began at the conjunction now manifests fully. There is polarization — the two principles can see each other clearly, but from the greatest possible distance. Integration requires holding both poles simultaneously.",
+        "Historical Pattern": "Oppositions between outer planets correlate with periods of heightened polarization, confrontation, and the full revelation of dynamics that were latent at the conjunction."
+      },
+      "keywords": ["polarization", "culmination", "awareness", "confrontation", "fullness", "tension"],
+      "metadata": { "angle": 180, "type": "major" }
+    },
+    {
+      "id": "aspect-square",
+      "name": "Square",
+      "symbol": "□",
+      "category": "aspect_type",
+      "sections": {
+        "Core Meaning": "Two planetary archetypes meet at a 90° angle — maximum friction. The square is the crisis point of a cycle: what was begun at the conjunction now meets its first major obstacle. There is no going back and no easy forward. Something must be built, decided, or fought through.",
+        "In Cycles": "The waxing square (90°) is the 'First Quarter' crisis — the impulse to grow meets external resistance. The waning square (270°) is the 'Last Quarter' crisis — the impulse to release meets internal resistance. Both demand action.",
+        "Historical Pattern": "Squares between outer planets correlate with periods of acute tension, structural crisis, and forced decision-making. They are often experienced as the most challenging phase of a cycle."
+      },
+      "keywords": ["crisis", "friction", "tension", "action", "obstacle", "decision", "building"],
+      "metadata": { "angle": 90, "type": "major" }
+    },
+    {
+      "id": "aspect-trine",
+      "name": "Trine",
+      "symbol": "△",
+      "category": "aspect_type",
+      "sections": {
+        "Core Meaning": "Two planetary archetypes flow together harmoniously at 120°. The trine is ease, talent, and grace — the two principles support and enhance each other without friction. But this ease can also mean complacency: what comes too easily may not be developed.",
+        "In Cycles": "The trine represents a phase of creative flowering within a cycle. The energies work together fluidly. There is momentum without resistance. The danger is taking the gifts for granted.",
+        "Historical Pattern": "Trines between outer planets correlate with periods of cultural flourishing, creative synthesis, and relative ease — though they may also indicate periods where deeper problems are masked by surface harmony."
+      },
+      "keywords": ["harmony", "flow", "ease", "talent", "grace", "complacency", "creative flowering"],
+      "metadata": { "angle": 120, "type": "major" }
+    },
+    {
+      "id": "aspect-sextile",
+      "name": "Sextile",
+      "symbol": "⚹",
+      "category": "aspect_type",
+      "sections": {
+        "Core Meaning": "Two planetary archetypes meet at 60° — a gentle, supportive aspect that creates opportunity without force. The sextile is subtler than the trine: it offers possibility rather than guaranteed ease. It invites conscious participation.",
+        "In Cycles": "The sextile represents an opening — a window of opportunity within a longer cycle. It is not as dramatic as the conjunction or opposition, but it enables new combinations and creative possibilities that would not otherwise emerge.",
+        "Historical Pattern": "Sextiles between outer planets create long background conditions that support evolutionary development. They rarely produce dramatic events on their own, but they enable the work of other, harder aspects."
+      },
+      "keywords": ["opportunity", "support", "possibility", "subtlety", "enablement", "creative opening"],
+      "metadata": { "angle": 60, "type": "major" }
+    },
+
+    {
+      "id": "cycle-saturn-pluto",
+      "name": "Saturn–Pluto Cycle",
+      "symbol": "♄♇",
+      "category": "world_transit",
+      "sections": {
+        "Core Meaning": "The Saturn–Pluto cycle is the 'conservative–Loss–empowerment complex' (Tarnas). It brings the encounter between structure (Saturn) and elemental, transformative power (Pluto). When these two meet, civilizations face their deepest tests: the existing order meets forces that can destroy or transform it. There is an atmosphere of gravity, moral seriousness, and the sense that something epochal is at stake.",
+        "Light": "Moral courage under extreme pressure. The capacity to endure, to rebuild from ruins, to face the worst and not break. Societies and individuals discover what they are truly made of. Deepened seriousness about what matters.",
+        "Shadow": "Authoritarianism, totalitarianism, collective trauma, pandemic, economic collapse, war. The hardening of power structures. Scapegoating, surveillance, the weaponization of fear. The sense that the world has become dangerous.",
+        "Historical Pattern": "1913–1916 (conjunction): World War I, collapse of empires. 1939–1941 (square): World War II begins, the Holocaust. 1946–1948 (conjunction): Cold War begins, partition of India, founding of Israel. 1964–1967 (opposition): Vietnam escalation, Cultural Revolution. 1981–1984 (conjunction): Reagan–Thatcher conservatism, AIDS crisis, nuclear tensions. 2001–2004 (opposition): 9/11, War on Terror, security state. 2018–2021 (conjunction): COVID-19 pandemic, global lockdowns, authoritarian surge.",
+        "Notable Figures": "People born under Saturn–Pluto conjunctions or hard aspects often carry a quality of intense moral seriousness and the capacity to endure extreme circumstances: Abraham Lincoln (Saturn square Pluto), Nelson Mandela (Saturn opposition Pluto), Dietrich Bonhoeffer (Saturn conjunct Pluto).",
+        "Questions": "What structures in my life are being tested to their foundations?\nWhere am I being asked to face something I have been avoiding?\nWhat must die for something more real to be born?\nHow do I hold power without becoming what I oppose?",
+        "Current Relevance": "The 2020 conjunction in Capricorn seeded a new 33-year cycle. We are in the early phase — the themes of that conjunction (pandemic, institutional crisis, authoritarian temptation, collective mortality awareness) will continue to unfold."
+      },
+      "keywords": ["conservative empowerment", "moral seriousness", "civilizational test", "pandemic", "authoritarianism", "endurance", "destruction and rebuilding"],
+      "composite_of": ["archetype-saturn", "archetype-pluto"],
+      "metadata": {
+        "cycle_length": "33–38 years",
+        "scope": "civilizational",
+        "type": "societal",
+        "current_phase": "early waxing (post-conjunction 2020)",
+        "key_dates": {
+          "conjunction_2020": "Jan 12, 2020 (22° Capricorn)",
+          "waxing_square": "~2028",
+          "opposition": "~2035–2036",
+          "next_conjunction": "~2053"
+        }
+      }
+    },
+    {
+      "id": "cycle-saturn-uranus",
+      "name": "Saturn–Uranus Cycle",
+      "symbol": "♄⛢",
+      "category": "world_transit",
+      "sections": {
+        "Core Meaning": "The Saturn–Uranus cycle is the tension between the old and the new — between established structures and revolutionary impulse. When these two planets interact, there is a cultural tug-of-war: those who defend tradition, order, and continuity versus those who demand change, freedom, and a break with the past. This is the 'generation gap' writ large across history.",
+        "Light": "Creative tension that produces genuine innovation within form. The capacity to reform rather than destroy — to bring the new into being without losing what was valuable in the old. Constructive rebellion. Disciplined revolution.",
+        "Shadow": "Reactionary backlash vs. nihilistic disruption. Culture wars. The old guard clinging to power through suppression; the revolutionaries burning down what they don't understand. Polarization so extreme that dialogue becomes impossible.",
+        "Historical Pattern": "1930–1931 (opposition): Great Depression, rise of fascism vs. New Deal. 1951–1952 (square): McCarthyism, Korean War, conformity vs. Beat generation. 1965–1967 (conjunction): Counterculture, civil rights, revolutionary movements worldwide. 1975–1977 (square): Punk, economic crisis, Watergate fallout. 1986–1988 (conjunction): Glasnost, fall of Berlin Wall beginning, computer revolution. 1999–2000 (square): WTO protests, dot-com, Y2K anxiety. 2008–2012 (opposition): Financial crisis, Occupy, Arab Spring. 2020–2023 (square): Lockdown freedom tensions, culture wars, AI disruption.",
+        "Notable Figures": "Those born under Saturn–Uranus aspects often embody the tension between tradition and revolution: Martin Luther King Jr. (conjunction), Steve Jobs (conjunction), Greta Thunberg (square).",
+        "Questions": "Where am I clinging to old structures out of fear rather than wisdom?\nWhere am I rebelling against something I don't fully understand?\nHow can I honor what was built while making room for what must change?\nWhat is the creative possibility hidden in this tension?",
+        "Current Relevance": "The 2020–2023 waning square was the crisis phase of the 1988 cycle. The next conjunction (~2032 in Gemini) will begin a new 45-year cycle — the themes emerging now will seed that future."
+      },
+      "keywords": ["old vs new", "tradition vs revolution", "culture war", "reform", "freedom vs order", "generation gap", "creative tension"],
+      "composite_of": ["archetype-saturn", "archetype-uranus"],
+      "metadata": {
+        "cycle_length": "44–46 years",
+        "scope": "societal",
+        "type": "societal",
+        "current_phase": "late waning (approaching new conjunction ~2032)",
+        "key_dates": {
+          "last_conjunction": "1988 (28° Sagittarius)",
+          "waning_square_2021": "Feb 17, Jun 14, Dec 24, 2021 (7–13° Aquarius/Taurus)",
+          "next_conjunction": "~Jun 2032 (28° Gemini)"
+        }
+      }
+    },
+    {
+      "id": "cycle-saturn-neptune",
+      "name": "Saturn–Neptune Cycle",
+      "symbol": "♄♆",
+      "category": "world_transit",
+      "sections": {
+        "Core Meaning": "The Saturn–Neptune cycle governs the relationship between structure and dissolution, between material reality and spiritual/imaginative life. When these two meet, the boundaries between the real and the ideal become permeable. Institutions dissolve. Utopian visions emerge. Collective disillusionment follows — or, sometimes, genuine spiritual materialization: the dream becomes real.",
+        "Light": "The incarnation of vision. When Saturn and Neptune work together, what was merely imagined becomes real and enduring. Spiritual communities that actually function. Art that changes the material world. Compassion embodied in institutions.",
+        "Shadow": "Mass disillusionment, the collapse of meaning. Propaganda masquerading as truth. Addiction epidemics. The erosion of shared reality. Institutions hollowed out from within. The sense that nothing is real anymore.",
+        "Historical Pattern": "1846 (conjunction): Communist Manifesto, Baha'i Faith founded, pre-Raphaelites, utopianism. 1881–1882 (conjunction): Nietzsche's 'God is dead,' Theosophy spreads, anarchism. 1917 (opposition): Russian Revolution, Dada, Spanish flu, collapse of old certainties. 1952–1953 (conjunction): Existentialism, abstract expressionism, McCarthyism, early psychedelic research. 1971–1972 (opposition): Watergate, oil crisis, disillusionment with 1960s idealism. 1989 (conjunction): Fall of the Berlin Wall, end of Soviet Union, the dream of a borderless world. 2006–2007 (opposition): Financial bubble, social media illusion, housing crisis. 2025–2026 (conjunction): AI reality dissolution, institutional trust crisis, new spiritual movements, meaning-making renaissance.",
+        "Notable Figures": "Those born under Saturn–Neptune aspects navigate the tension between idealism and pragmatism: Karl Marx (conjunction), George Orwell (opposition), Martin Luther (early conjunction).",
+        "Questions": "What illusions am I being asked to release?\nWhat dreams am I being asked to embody — to make real through sustained effort?\nWhere has my idealism become escapism?\nWhat institutions in my life need to dissolve — and what needs to be built in their place?",
+        "Current Relevance": "The conjunction of 2025–2026 (in Aries) is the defining transit of this period. It signals the dissolution of old certainties and the birth of new visions. The last time Saturn met Neptune in Aries was 1846 — the year that seeded both Marxism and the Baha'i Faith. We are at an equivalent seed-moment."
+      },
+      "keywords": ["dissolution of structures", "incarnation of vision", "disillusionment", "utopia", "propaganda", "spiritual materialism", "meaning crisis"],
+      "composite_of": ["archetype-saturn", "archetype-neptune"],
+      "metadata": {
+        "cycle_length": "35–37 years",
+        "scope": "civilizational",
+        "type": "societal",
+        "current_phase": "conjunction (2024–2027)",
+        "key_dates": {
+          "conjunction_2025": "Feb 20, 2026 (0° Aries) — exact",
+          "first_pass": "Jun 2025 (late Pisces)",
+          "final_pass": "2026",
+          "waxing_square": "~2033",
+          "opposition": "~2043"
+        }
+      }
+    },
+    {
+      "id": "cycle-uranus-neptune",
+      "name": "Uranus–Neptune Cycle",
+      "symbol": "⛢♆",
+      "category": "world_transit",
+      "sections": {
+        "Core Meaning": "The Uranus–Neptune cycle governs the relationship between revolution and transcendence — between Promethean awakening and Dionysian dissolution. When these two interact, there is a creative explosion at the intersection of technology and spirituality, innovation and imagination, liberation and mysticism. The mundane world becomes enchanted; the spiritual world becomes electrified.",
+        "Light": "Visionary breakthroughs that transform humanity's relationship to consciousness itself. New art forms, new spiritual technologies, new ways of perceiving reality. The synthesis of science and mysticism. Creative genius of the highest order.",
+        "Shadow": "Collective delusion amplified by technology. Spiritual narcissism meeting digital narcissism. Cults with broadcast power. The confusion between genuine awakening and manufactured ecstasy. Virtual reality as escape from reality.",
+        "Historical Pattern": "1821 (conjunction): Romantic era peak, photography invented, Shelley/Keats/Byron, Transcendentalism. 1906–1910 (opposition): Cubism, quantum physics, Theosophy golden age, early cinema, Freud and Jung. 1993 (conjunction): World Wide Web, rave culture, New Age peak, virtual reality, Hubble Deep Field. 2023–2029 (sextile): AI consciousness debates, psychedelic renaissance, digital meaning-making tools, new forms of collective imagination.",
+        "Notable Figures": "Those born under Uranus–Neptune aspects often combine revolutionary vision with spiritual or artistic depth: William Blake (square), Nikola Tesla (opposition), Albert Einstein (square).",
+        "Questions": "What new forms of consciousness are becoming available to me?\nWhere is technology serving my awakening — and where is it deepening my sleep?\nWhat creative vision is trying to emerge through me?\nHow can I participate in the collective imagination without losing my center?",
+        "Current Relevance": "The 2023–2029 sextile is a supportive background aspect enabling new creative and spiritual forms. It is the 'enabling condition' for the harder transits (Saturn–Neptune, etc.) — providing the imaginative raw material that the conjunctions and squares will shape."
+      },
+      "keywords": ["visionary breakthrough", "spiritual technology", "creative revolution", "enchantment", "digital mysticism", "collective imagination"],
+      "composite_of": ["archetype-uranus", "archetype-neptune"],
+      "metadata": {
+        "cycle_length": "171 years",
+        "scope": "generational",
+        "type": "generational",
+        "current_phase": "waxing sextile (2023–2029)",
+        "key_dates": {
+          "last_conjunction": "1993 (19° Capricorn)",
+          "waxing_sextile": "2023–2029",
+          "waxing_square": "~2038–2042",
+          "opposition": "~2078"
+        }
+      }
+    },
+    {
+      "id": "cycle-neptune-pluto",
+      "name": "Neptune–Pluto Cycle",
+      "symbol": "♆♇",
+      "category": "world_transit",
+      "sections": {
+        "Core Meaning": "The Neptune–Pluto cycle is the longest and deepest of all planetary cycles — the 'meta-transit' that forms the background of entire civilizations. It governs the evolutionary transformation of humanity's collective unconscious, the deep shifts in what a culture considers sacred, powerful, and real. Every human alive today was born under the waxing sextile of this cycle.",
+        "Light": "The slow, deep transformation of civilization's relationship to the numinous. The emergence of new archetypal forms that will shape consciousness for centuries. The possibility that humanity is undergoing a fundamental evolutionary shift — from ego-centered to participatory consciousness.",
+        "Shadow": "The forces operating at this depth are beyond individual or even national control. The shadow is the sheer scale of the transformation — the sense that old forms of meaning are dying and nothing has yet replaced them. Nihilism as a civilizational condition.",
+        "Historical Pattern": "The last conjunction was 1891–1892 (8° Gemini) — the birth of modern depth psychology (Freud, Jung), the discovery of X-rays and radioactivity, the beginning of cinema, the Dreyfus affair, the roots of both World Wars. The current sextile (1943–2037) has been the background condition for: nuclear age, space exploration, digital revolution, psychedelic research, environmentalism, and the current AI transformation.",
+        "Notable Figures": "The Neptune–Pluto cycle is too long for individual biographies to capture. Instead, it shapes entire generations and civilizational phases. Everyone born between 1943 and 2037 carries the sextile — a generation tasked with the creative integration of evolutionary and transcendent forces.",
+        "Questions": "What is dying in the collective consciousness that I can feel in my own life?\nWhat new form of the sacred is trying to emerge — not just for me, but for all of us?\nHow does my personal transformation participate in the transformation of civilization?\nWhat does it mean to be alive during this particular chapter of the human story?",
+        "Current Relevance": "The sextile (1943–2037) is the constant background hum beneath all other transits. It provides the substrate — the deep evolutionary current — that gives the shorter cycles their ultimate significance. When Saturn meets Neptune in 2025, it does so within this much larger Neptune–Pluto field. The AI revolution, the meaning crisis, the psychedelic renaissance — all expressions of this deepest cycle."
+      },
+      "keywords": ["civilizational evolution", "collective unconscious", "deep transformation", "the numinous", "epochal shift", "beyond individual"],
+      "composite_of": ["archetype-neptune", "archetype-pluto"],
+      "metadata": {
+        "cycle_length": "492 years",
+        "scope": "civilizational",
+        "type": "civilizational",
+        "current_phase": "waxing sextile (1943–2037)",
+        "key_dates": {
+          "last_conjunction": "1891–1892 (8° Gemini)",
+          "waxing_sextile": "1943–2037 (longest-running aspect of our era)",
+          "waxing_square": "~2063–2068",
+          "opposition": "~2137"
+        }
+      }
+    },
+    {
+      "id": "cycle-uranus-pluto",
+      "name": "Uranus–Pluto Cycle",
+      "symbol": "⛢♇",
+      "category": "world_transit",
+      "sections": {
+        "Core Meaning": "The Uranus–Pluto cycle is the most volatile of the outer-planet cycles — the archetype of revolutionary empowerment. When Uranus (liberation, awakening) meets Pluto (elemental power, transformation), the result is explosive: mass movements, revolutionary upheaval, the irruption of the repressed, and the demand for fundamental change. This is the cycle of revolutions.",
+        "Light": "Liberating empowerment. The moment when oppressed peoples find their voice and their power. Creative destruction that clears the way for genuinely new forms of life. The courage to transform radically.",
+        "Shadow": "Violent upheaval, extremism, the Reign of Terror. Revolutionary movements that become as tyrannical as what they replaced. Technological power unleashed without wisdom. The intoxication of destruction.",
+        "Historical Pattern": "1787–1798 (opposition): French Revolution, Rights of Man, Haitian Revolution. 1845–1856 (square): 1848 revolutions across Europe, Communist Manifesto, abolition movements. 1896–1907 (opposition): labor movements, anarchism, Russian Revolution of 1905, Relativity. 1928–1937 (square): Great Depression, rise of fascism, New Deal, Spanish Civil War. 1960–1972 (conjunction): Civil rights, counterculture, feminism, decolonization, moon landing, sexual revolution. 2007–2020 (square): Financial crisis, Occupy, Arab Spring, #MeToo, BLM, populist upheavals worldwide.",
+        "Notable Figures": "Those born under Uranus–Pluto aspects often carry the archetype of the revolutionary transformer: Robespierre (conjunction), Frederick Douglass (square), John Lennon (conjunction), Malala Yousafzai (square).",
+        "Questions": "What power is awakening in me that I have been afraid to claim?\nWhat systems around me are ripe for transformation — and what is my role in that transformation?\nHow do I channel revolutionary energy without being consumed by it?\nWhat does liberation actually look like — not in theory, but in my life?",
+        "Current Relevance": "The 2007–2020 waning square produced the populist upheavals, social justice movements, and technological disruptions of our era. We are now in a quieter phase, but the next conjunction (~2104) is being seeded. The movements born in the square phase are still unfolding."
+      },
+      "keywords": ["revolutionary empowerment", "mass movements", "creative destruction", "liberation", "upheaval", "radical transformation"],
+      "composite_of": ["archetype-uranus", "archetype-pluto"],
+      "metadata": {
+        "cycle_length": "127–142 years",
+        "scope": "generational",
+        "type": "generational",
+        "current_phase": "post-waning-square, approaching waning sextile",
+        "key_dates": {
+          "last_conjunction": "1965–1966 (17° Virgo)",
+          "waning_square": "2012–2015 (8–15° Aries/Capricorn)",
+          "waning_sextile": "~2026–2030",
+          "opposition": "~2046–2048",
+          "next_conjunction": "~2104"
+        }
+      }
+    },
+    {
+      "id": "cycle-jupiter-saturn",
+      "name": "Jupiter–Saturn Cycle",
+      "symbol": "♃♄",
+      "category": "world_transit",
+      "sections": {
+        "Core Meaning": "The Jupiter–Saturn cycle — the 'Great Conjunction' — is the most socially visible of all planetary cycles. It governs 20-year periods of social, political, and economic development. Jupiter (expansion) meets Saturn (contraction) to mark the rhythm of civilizational chapters: each conjunction begins a new era of social organization.",
+        "Light": "The grounding of vision in reality. Each Great Conjunction marks a moment when collective aspirations crystallize into new institutions, movements, and social forms. The pragmatic idealist.",
+        "Shadow": "The tension between growth and austerity. Economic cycles of boom and bust. The conflict between those who want more and those who insist on less. Social ambition meeting structural limitation.",
+        "Historical Pattern": "1842 (conjunction, earth): Industrial age begins in earnest. 1861 (conjunction): American Civil War. 1901 (conjunction): Progressive Era, new century optimism. 1940–1941 (conjunction): WWII turning point, new world order seeds. 1961 (conjunction): Kennedy era, space race, new social vision. 1980–1981 (conjunction): Reagan–Thatcher, neoliberal era begins. 2000 (conjunction): Dot-com, War on Terror era. 2020 (conjunction, air): Great Conjunction in Aquarius, shift from earth to air element — digital age, network society, AI era.",
+        "Notable Figures": "Jupiter–Saturn conjunctions mark generational turning points rather than individual destinies, but leaders who rise at these moments often define their 20-year era: JFK (1961), Reagan (1980), Biden/Pandemic (2020).",
+        "Questions": "What 20-year chapter of my life is beginning or ending?\nHow am I balancing expansion and contraction right now?\nWhat social structures am I participating in building?\nWhat vision am I trying to make real?",
+        "Current Relevance": "The 2020 conjunction in Aquarius (0°) began a major shift: the Great Conjunction moved from earth signs (where it had been since 1802) to air signs. This is a ~200-year element shift — from the material/industrial age to the informational/network age. We are at the very beginning of this new era."
+      },
+      "keywords": ["social cycles", "20-year chapters", "expansion vs contraction", "institutional formation", "great conjunction", "era shifts"],
+      "composite_of": ["archetype-jupiter", "archetype-saturn"],
+      "metadata": {
+        "cycle_length": "19.86 years",
+        "scope": "societal",
+        "type": "societal",
+        "current_phase": "early waxing (post-conjunction 2020)",
+        "key_dates": {
+          "conjunction_2020": "Dec 21, 2020 (0° Aquarius)",
+          "waxing_square": "~2025",
+          "opposition": "~2030–2031",
+          "waning_square": "~2035",
+          "next_conjunction": "~2040 (Libra)"
+        }
+      }
+    },
+    {
+      "id": "cycle-jupiter-pluto",
+      "name": "Jupiter–Pluto Cycle",
+      "symbol": "♃♇",
+      "category": "world_transit",
+      "sections": {
+        "Core Meaning": "The Jupiter–Pluto cycle governs the relationship between expansion and elemental power — the amplification of transformative forces. When Jupiter meets Pluto, whatever is powerful becomes more powerful. This is the cycle of titanic ambition, plutocratic wealth, mass movements that grow exponentially, and the inflation of power dynamics to their largest scale.",
+        "Light": "Profound empowerment and expansion. The courage to transform on a grand scale. Philanthropic vision. The amplification of evolutionary forces toward positive ends. Deep faith meeting deep power.",
+        "Shadow": "Plutocracy, megalomania, the concentration of wealth and power. Pandemics and their exploitation. The inflation of shadow dynamics. Cult leaders, demagogues, monopolists.",
+        "Historical Pattern": "1918 (conjunction): Spanish flu pandemic, end of WWI, Russian Revolution aftermath. 1943 (conjunction): WWII turning point, Manhattan Project. 1968 (conjunction): MLK assassination, revolutionary movements peak, Prague Spring. 1981 (conjunction): Reagan, AIDS begins, power consolidation. 1994 (conjunction): Rwandan genocide, internet commercialization. 2007 (conjunction): Financial crisis seeds, subprime. 2020 (conjunction): COVID-19 pandemic, trillion-dollar bailouts.",
+        "Notable Figures": "Those born under Jupiter–Pluto aspects often embody amplified power dynamics: Napoleon (conjunction), J.P. Morgan (conjunction), Elon Musk (conjunction).",
+        "Questions": "Where is power being amplified in my life — for good or ill?\nWhat transformation am I being called to pursue on a larger scale?\nWhere does my ambition serve evolution — and where does it serve ego?",
+        "Current Relevance": "The 2020 triple conjunction in Capricorn (amplified by Saturn–Pluto) was the astrological signature of the pandemic. The next conjunction is ~2033 in Aquarius."
+      },
+      "keywords": ["amplified power", "titanic ambition", "plutocracy", "mass transformation", "pandemic", "exponential growth"],
+      "composite_of": ["archetype-jupiter", "archetype-pluto"],
+      "metadata": {
+        "cycle_length": "12–13 years",
+        "scope": "societal",
+        "type": "societal",
+        "current_phase": "waxing (post-conjunction 2020)",
+        "key_dates": {
+          "conjunction_2020": "Apr 4, Jun 30, Nov 12, 2020 (22–24° Capricorn)",
+          "next_conjunction": "~2033 (Aquarius)"
+        }
+      }
+    },
+
+    {
+      "id": "meta-personal-vs-societal",
+      "name": "Personal vs. World Transits",
+      "category": "guide",
+      "sections": {
+        "Core Meaning": "Archetypal cosmology operates at two scales simultaneously: the personal and the collective. World transits (outer planet cycles) set the weather of the age — the archetypal atmosphere everyone lives within. Personal transits occur when these moving planets aspect your natal chart, creating moments when the collective weather becomes your individual storm or blessing.",
+        "Personal Transits": "When a transiting outer planet (Saturn, Uranus, Neptune, Pluto) forms an aspect to a planet in your natal chart, the archetypal themes of that cycle become intensely personal. Saturn transiting your natal Sun: identity tested by limitation. Pluto transiting your natal Venus: love transformed through crisis. Neptune transiting your natal Mercury: thought dissolving into imagination.",
+        "World Transits": "When outer planets aspect each other in the sky, the themes are collective — they manifest as historical events, cultural movements, and the general 'mood of the age.' But you feel them too, filtered through your natal chart. The 2020 Saturn–Pluto conjunction happened at 22° Capricorn — if you have planets near that degree, you felt it more intensely than most.",
+        "The Bridge": "The deepest insight of archetypal cosmology is that personal and collective are not separate. Your Saturn return at 29 is both your individual maturation crisis and your participation in the Saturn principle itself. When world transits activate your chart, you become a vessel for collective themes — your personal story becomes a fractal of the larger story.",
+        "How to Read Both": "1. Check the current world transits — what is the archetypal weather? 2. Check where those transiting planets fall in your natal chart — which houses are activated? 3. Check if they aspect your natal planets — which personal themes are being triggered? 4. Sit with the resonance between your inner experience and the outer world."
+      },
+      "keywords": ["personal transits", "world transits", "as above so below", "collective and individual", "natal activation"]
+    }
+  ]
+}

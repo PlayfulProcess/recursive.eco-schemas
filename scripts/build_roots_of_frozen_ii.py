@@ -1,0 +1,395 @@
+#!/usr/bin/env python3
+"""Build 'Roots of Frozen II' grammar — the real Sámi culture, Nordic mythology,
+elemental spirits, Scandinavian folklore, and musical traditions that inspired
+Disney's Frozen II."""
+
+import json, os
+
+grammar = {
+    "_grammar_commons": {
+        "schema_version": "1.0",
+        "license": "CC-BY-SA-4.0",
+        "attribution": [
+            {"name": "PlayfulProcess", "date": "2026", "note": "Grammar compilation and children's adaptations"},
+            {"name": "Sámi oral tradition", "date": "ancient–present", "note": "Joik songs, noaidi (shaman) traditions, and reindeer herding culture of northern Scandinavia"},
+            {"name": "Snorri Sturluson", "date": "c. 1220", "note": "'Prose Edda' — primary source for Norse mythology, public domain"},
+            {"name": "Peter Christen Asbjørnsen & Jørgen Moe", "date": "1841–1844", "note": "'Norske Folkeeventyr' (Norwegian Folktales) — public domain fairy tale collections"},
+            {"name": "Elias Lönnrot", "date": "1835/1849", "note": "'Kalevala' — Finnish national epic compiled from oral tradition, public domain"}
+        ]
+    },
+    "name": "Roots of Frozen II — Nordic Mythology, Sámi Culture & Elemental Spirits for Kids",
+    "description": "The real mythic, cultural, and musical traditions behind Disney's Frozen II — told for children. Explore the Sámi people's reindeer culture and sacred joik singing, Norse elemental spirits and frost giants, Scandinavian folk magic, the Northern Lights as ancestor spirits, and the deep forest traditions of northern Europe. Each card connects a real cultural tradition to the film moment it inspired.\n\nSources: Snorri Sturluson's 'Prose Edda' (c. 1220); Asbjørnsen & Moe's 'Norwegian Folktales' (1841-44); Elias Lönnrot's 'Kalevala' (1835/1849); Sámi cultural consultants and oral tradition. All written source texts are public domain.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Theodor Kittelsen's Norwegian fairy tale paintings (1880s-1900s) — haunting trolls, forests, and northern landscapes. John Bauer's Swedish fairy tale illustrations (1907-1915) — ethereal forests, trolls, and princesses. Kay Nielsen's 'East of the Sun and West of the Moon' illustrations (1914) — Art Nouveau Nordic fairy tales. W.G. Collingwood's Norse mythology illustrations (1908) — dramatic depictions of Edda scenes.",
+    "grammar_type": "custom",
+    "creator_name": "PlayfulProcess",
+    "tags": [
+        "sami", "nordic", "norse", "mythology", "folklore",
+        "scandinavia", "joik", "reindeer", "northern-lights", "spirits",
+        "kids", "cultural-roots", "frozen-inspired", "elements",
+        "norway", "sweden", "finland", "ice", "forest", "shamanism"
+    ],
+    "roots": ["indigenous-knowledge", "mythopoetic-enchantment"],
+    "shelves": ["children", "wonder", "wisdom"],
+    "lineages": ["Akomolafe", "Shrei", "Andreotti"],
+    "worldview": "animist",
+    "items": []
+}
+
+items = []
+sort = 0
+
+# =============================================================================
+# L1 ITEMS
+# =============================================================================
+
+l1_items = [
+    # --- SÁMI CULTURE ---
+    {
+        "id": "who-are-the-sami",
+        "name": "The Sámi: Europe's Arctic People",
+        "category": "sami-culture",
+        "sections": {
+            "Story": "In the far north of Europe, where the sun doesn't set in summer and doesn't rise in winter, live the Sámi people — one of the oldest indigenous cultures in Europe. They've lived in Sápmi (their homeland across Norway, Sweden, Finland, and Russia) for at least 10,000 years.\n\nThe Sámi aren't one group — they're many communities with different languages, traditions, and ways of life. Some are reindeer herders following their herds across the tundra. Some are coastal fishermen. Some are forest Sámi living in the birch and pine forests. But they share a deep connection to the northern land, the reindeer, and the changing seasons of the Arctic.",
+            "The Real Tradition": "There are approximately 80,000–100,000 Sámi people today, speaking nine distinct Sámi languages. They have their own parliament (Sámediggi) in Norway, Sweden, and Finland. Sámi culture has survived centuries of forced assimilation — their language was banned in schools, their religion suppressed, and their land taken. The cultural revival of the past 50 years is one of Europe's most important indigenous rights movements.",
+            "Film Connection": "The Northuldra people in Frozen II are directly inspired by the Sámi. Disney worked with Sámi cultural consultants and signed a contract with the Sámi parliaments to ensure respectful representation. The reindeer herding, the clothing, and the relationship with nature all come from Sámi traditions.",
+            "Reflection": "The Sámi have lived in the same place for 10,000 years — that's five times longer than the Roman Empire existed! What does it take for a culture to last that long?"
+        },
+        "keywords": ["sami", "sapmi", "indigenous", "arctic", "scandinavia", "reindeer"]
+    },
+    {
+        "id": "reindeer-partnership",
+        "name": "Reindeer: Partners, Not Property",
+        "category": "sami-culture",
+        "sections": {
+            "Story": "For the Sámi, reindeer aren't like cows or sheep — they're partners. Reindeer herding isn't farming; it's a RELATIONSHIP. The herder follows the reindeer as much as leading them, reading their behavior to know when to move, where to find food, and when storms are coming.\n\nReindeer herds migrate hundreds of miles between summer coastal pastures and winter inland forests. The herder's family moves with them, living in lavvu (tent-like homes similar to tepees) along ancient migration routes that haven't changed in centuries.\n\nEach reindeer has its own personality, and experienced herders know every animal in a herd of thousands. The Sámi have over 300 words for reindeer — describing their age, color, antler shape, personality, and role in the herd.",
+            "The Real Tradition": "Reindeer herding is legally protected as a Sámi right in Scandinavia. Only Sámi people may herd reindeer in Norway and Sweden. Modern herders use snowmobiles and GPS alongside traditional knowledge, but the fundamental relationship — following the herd, reading the land, living with the seasons — hasn't changed. Climate change is the biggest threat today: warmer winters create ice layers over lichen, starving the herds.",
+            "Film Connection": "Kristoff's relationship with Sven in both Frozen films reflects the Sámi reindeer partnership. Sven isn't a pet or a beast of burden — he's Kristoff's equal, his companion, his family. The reindeer herding scenes in Frozen II, with the Northuldra community, show this partnership culture.",
+            "Reflection": "The Sámi have 300 words for reindeer because they pay such close attention. What animal or part of nature do YOU know really well? Could you describe it in 10 different ways?"
+        },
+        "keywords": ["reindeer", "herding", "partnership", "migration", "lavvu", "sami"]
+    },
+    {
+        "id": "joik-singing",
+        "name": "Joik: Singing the World Alive",
+        "category": "sami-culture",
+        "sections": {
+            "Story": "Joik (also spelled yoik) is the Sámi way of singing — and it's unlike any music you've heard. You don't joik ABOUT something; you joik something INTO BEING. A joik of a wolf isn't a song about wolves — it IS the wolf, brought alive through sound.\n\nJoik has no instruments — it's pure voice, sometimes with a frame drum. The melody can sound like wind, like water, like a reindeer running. Each person can have their own personal joik, given to them as a gift. Mountains, rivers, and animals have joiks too. When you joik a mountain, you're calling its spirit into the room.\n\nChristian missionaries banned joik for centuries, calling it 'devil's music.' But the Sámi kept singing in secret, and today joik is the heartbeat of Sámi cultural revival.",
+            "The Real Tradition": "Joik is one of the oldest living music traditions in Europe, possibly 10,000+ years old. It uses a pentatonic scale with microtonal variations and circular breathing techniques. Modern Sámi musicians like Mari Boine, Sofia Jannok, and Jon Henrik Fjällgren blend joik with contemporary genres. In 2019, KEiiNO represented Norway at Eurovision with a joik-pop fusion that became a massive fan favorite.",
+            "Film Connection": "The haunting 'Ah ah ah ah' vocal call that opens Frozen II (called 'Vuelie') is based on a real Sámi joik. The vocal was originally recorded by Sámi musician Frode Fjellheim, who adapted traditional joik into a choral arrangement. Every time you hear that ethereal voice calling Elsa northward — that's joik.",
+            "Reflection": "Try it yourself: instead of singing a song ABOUT your pet or your favorite place, try making a sound that IS them. What does your cat sound like as a melody? What does your backyard sound like as a hum?"
+        },
+        "keywords": ["joik", "singing", "voice", "spirit", "banned", "revival", "vuelie"]
+    },
+    {
+        "id": "sami-gakti",
+        "name": "Gákti: Clothes That Speak",
+        "category": "sami-culture",
+        "sections": {
+            "Story": "A Sámi person's traditional clothing — the gákti — is like a wearable identity card. Every detail tells a story: the colors show which region you're from, the patterns indicate your family, and the way the belt is tied shows whether you're married or single.\n\nA gákti from Kautokeino in Norway is bright blue and red with intricate braided ribbons. A gákti from Jokkmokk in Sweden might be darker with different patterns. Someone who knows Sámi culture can look at a gákti and tell where the wearer is from, just like reading a map.\n\nMaking a gákti is a skilled craft passed from parent to child. The fabrics, ribbons, tin thread embroidery, and silver jewelry are all handmade. A complete gákti with accessories can take months to create.",
+            "The Real Tradition": "Gákti is worn for special occasions: weddings, confirmations, national day celebrations, and the Sámi Easter festivals in Kautokeino and Karasjok. Tin thread embroidery (a Sámi specialty) and silver jewelry with specific symbols are important accessories. Wearing gákti is an act of cultural pride, especially given the history of forced assimilation when Sámi dress was discouraged or banned.",
+            "Film Connection": "The Northuldra clothing in Frozen II — the embroidered tunics, the belts, the fur-trimmed boots — is directly based on gákti design. Disney's Sámi consultants ensured the patterns and colors were respectful and accurate rather than generic 'Nordic' stereotypes.",
+            "Reflection": "Your clothes probably don't tell people where your family is from or whether you're married! But in Sámi culture, clothing is a language. What would YOUR outfit say about you if every color and pattern had meaning?"
+        },
+        "keywords": ["gakti", "clothing", "identity", "craft", "tin-thread", "regional"]
+    },
+    # --- NORSE ELEMENTAL SPIRITS ---
+    {
+        "id": "four-spirits",
+        "name": "The Four Elemental Spirits of Nordic Tradition",
+        "category": "norse-elements",
+        "sections": {
+            "Story": "In Norse and Scandinavian tradition, the four elements aren't just physics — they're alive. Each element has spirits and beings associated with it:\n\n🌊 WATER: The Nøkken (shapeshifting water spirit) plays haunting music to lure travelers. The Sjöra (Swedish lake spirit) protects fish and punishes greedy fishermen.\n\n🔥 FIRE: The fire giant Surtr guards Muspelheim and will one day burn the world at Ragnarök. Fire is both hearth-warmth and world-destroyer.\n\n🌬️ AIR/WIND: The Fossegrim plays the fiddle in waterfalls, and wind was believed to be the breath of giants or gods. Odin himself is the wind-god.\n\n🌍 EARTH: Trolls, huldrefolk (hidden people), and underground dwarves live within rocks and mountains. The earth isn't dead stone — it's full of beings.",
+            "The Real Tradition": "Scandinavian folk belief maintained these elemental spirits well into the 20th century. Farmers left offerings for the tomte (house spirit) and avoided disturbing troll stones. The Norwegian concept of 'underjordiske' (underground ones) and the Icelandic 'huldufólk' (hidden people) are still culturally present — road construction in Iceland has been rerouted to avoid disturbing elf habitats as recently as 2015.",
+            "Film Connection": "Frozen II features four elemental spirits — water (the Nokk horse), fire (Bruni the salamander), earth (the Earth Giants), and wind (Gale). Each is based on real Nordic elemental traditions. The film's central question — how do humans live in harmony with elemental forces? — is exactly the question Scandinavian folk tradition has been answering for millennia.",
+            "Reflection": "Which element feels most like you? Are you flowing like water, warm like fire, free like wind, or steady like earth? In Nordic tradition, each person has a natural element."
+        },
+        "keywords": ["elements", "spirits", "nokken", "surtr", "trolls", "folklore"]
+    },
+    {
+        "id": "the-nokk",
+        "name": "The Nøkken: The Shape-Shifting Water Spirit",
+        "category": "norse-elements",
+        "sections": {
+            "Story": "In every Scandinavian lake, river, and stream, there MIGHT be a Nøkken hiding. The Nøkken (Norwegian), Näcken (Swedish), or Nix (German) is a water spirit who can take any form — a beautiful white horse standing by the shore, a handsome young man playing a violin, a golden harp floating on the water.\n\nThe Nøkken's music is so beautiful that anyone who hears it walks toward the water in a trance. Children were warned: never follow beautiful music to the water's edge! But the Nøkken isn't entirely evil — in some stories, you can bargain with it. Throw a coin in the water, or offer it black sheep's wool, and it might teach you to play music so beautifully that the trees dance and the waterfalls stop falling.",
+            "The Real Tradition": "The Nøkken belief served as water safety education for children in rural Scandinavia for centuries. It also reflects deep respect for water's power — every still pond or fast river was treated as home to an intelligent being. The musical aspect connects to the Fossegrim tradition: supernatural beings as the SOURCE of music, teaching humans to play if properly propitiated.",
+            "Film Connection": "The Nokk in Frozen II appears as a magnificent water horse that guards the passage to the enchanted forest. Elsa must face and tame it — echoing the folklore tradition that the Nøkken can be mastered by the brave. The horse form (bäckahästen) is the most common Nøkken shape in Scandinavian tradition.",
+            "Reflection": "The Nøkken uses beautiful things (music, a pretty horse) to lure people into danger. Can you think of real-life situations where something that looks beautiful or fun might actually be dangerous?"
+        },
+        "keywords": ["nokken", "nacken", "water-horse", "shapeshifter", "music", "danger"]
+    },
+    {
+        "id": "frost-giants",
+        "name": "Jötnar: The Frost Giants Who Built the World",
+        "category": "norse-elements",
+        "sections": {
+            "Story": "In the very beginning — before there were gods, humans, trees, or even the sun — there was ICE and FIRE separated by a great empty gap called Ginnungagap. When the ice from the north (Niflheim) met the fire from the south (Muspelheim), the ice melted and formed the first being: Ymir, the primordial frost giant.\n\nYmir was so enormous that when the gods eventually killed him, they built the ENTIRE WORLD from his body: his flesh became the earth, his blood became the oceans, his bones became the mountains, his skull became the sky, and his brains became the clouds.\n\nSo everything you see — every mountain, every ocean, every cloud — is the body of a frost giant. The earth isn't just rock and water; it's the remains of the first living being.",
+            "The Real Tradition": "The Jötnar (giants) in Norse mythology aren't just big humans — they're primordial forces of nature. They represent the raw, untamed power of ice, fire, storms, and mountains. The gods (Æsir) are always in tension with the giants, which represents the human struggle to create order from natural chaos. Importantly, the gods themselves are DESCENDED from giants — they're not opposites but relatives.",
+            "Film Connection": "The Earth Giants in Frozen II are directly inspired by the Jötnar. They're enormous, ancient, and made of the landscape itself. The film's reveal that the earth, water, fire, and wind spirits were there BEFORE humans echoes the Norse creation myth where giants preceded gods and humans.",
+            "Reflection": "If the world is made from a giant's body, then every mountain is a bone and every river is a vein. Does that make the earth feel more ALIVE to you? What would you say to a mountain if you knew it was once part of a living being?"
+        },
+        "keywords": ["jotnar", "frost-giants", "ymir", "creation", "ginnungagap", "norse"]
+    },
+    {
+        "id": "fire-salamander",
+        "name": "The Salamander and the Hearth: Fire Spirits of the North",
+        "category": "norse-elements",
+        "sections": {
+            "Story": "In the long, dark Scandinavian winters, fire was LIFE. The hearth was the center of the home, and keeping it burning was sacred. And where there's fire, medieval Europeans believed, there are salamanders.\n\nThe fire salamander wasn't the little amphibian you find in streams — it was a mythical creature that LIVED in flames. People saw real salamanders crawling out of firewood (they'd been hibernating in the logs!) and believed they were born from fire itself. Paracelsus, the great alchemist, named fire salamanders as one of the four elemental beings alongside water undines, earth gnomes, and air sylphs.\n\nIn Norse tradition, fire spirits were more fearsome: the fire giant Surtr will one day burn the entire world at Ragnarök, the end of all things. Fire gives life in winter but ends the world in myth — the ultimate double-edged element.",
+            "The Real Tradition": "Fire reverence in Nordic culture included the 'hearth cult' — the home fire was never allowed to go out, and moving fire from one home to another transferred spiritual protection. Midsummer bonfires (still celebrated across Scandinavia) were believed to ward off evil spirits and bless the community. The alchemical tradition of elemental salamanders influenced European occultism and fantasy literature for centuries.",
+            "Film Connection": "Bruni, the adorable fire spirit salamander in Frozen II, comes directly from the alchemical fire salamander tradition. The film cleverly makes fire the smallest, cutest spirit — because in the frozen north, a tiny flame is the most precious thing of all.",
+            "Reflection": "Fire can keep you warm or burn your house down. It cooks your food and destroys forests. Can you think of other things that are both helpful and dangerous depending on how you use them?"
+        },
+        "keywords": ["salamander", "fire", "hearth", "surtr", "paracelsus", "elements"]
+    },
+    {
+        "id": "northern-lights",
+        "name": "The Northern Lights: Ancestors Dancing in the Sky",
+        "category": "norse-elements",
+        "sections": {
+            "Story": "Look up on a cold, clear winter night in the Arctic, and you might see the sky DANCE. Green, purple, pink, and white curtains of light ripple across the darkness. The Northern Lights — Aurora Borealis — are one of Earth's most spectacular sights.\n\nBut what ARE they? Every northern culture had its own answer:\n\nThe Sámi believed the lights were the souls of the dead — you must be quiet and respectful, or they might sweep down and carry you away. NEVER whistle at the Northern Lights!\n\nThe Norse saw them as light reflecting off the armor of the Valkyries riding across the sky, or as the gleaming edge of the Bifröst bridge connecting Earth to Asgard.\n\nThe Finnish called them 'revontulet' — fox fires — because a magical fox ran across the Arctic snow, and its tail sprayed sparks into the sky.",
+            "The Real Tradition": "Sámi beliefs about the Northern Lights (guovssahas) were deeply respectful — children were brought inside when they appeared, and making noise during an aurora display was considered dangerous. Some Sámi communities believed the lights could hear human speech and would descend on those who mocked them. This respect for atmospheric phenomena reflects the broader animist worldview where natural events have agency and personhood.",
+            "Film Connection": "The magical atmosphere of the enchanted forest in Frozen II — with its shimmering barriers and mystical lights — evokes the Northern Lights directly. The idea that ancestral voices call from beyond (central to Frozen II's plot) connects to the Sámi belief that the aurora contains the spirits of ancestors.",
+            "Reflection": "Imagine seeing the Northern Lights for the first time, without knowing anything about science. What story would YOU make up to explain them? The Sámi said ancestors, the Norse said warriors, the Finns said a fox — what would you say?"
+        },
+        "keywords": ["northern-lights", "aurora", "ancestors", "valkyries", "fox-fires", "sami"]
+    },
+    # --- SCANDINAVIAN FOLKLORE ---
+    {
+        "id": "enchanted-forest",
+        "name": "The Enchanted Forest: Where Human and Spirit Worlds Meet",
+        "category": "scandinavian-folklore",
+        "sections": {
+            "Story": "In Scandinavian folklore, the forest is never JUST trees. It's a border between the human world and the spirit world. Step off the path and you might end up in the realm of the huldrefolk (hidden people), the trolls, or the Skogsrå (forest spirit).\n\nThe Skogsrå appears as a beautiful woman seen from the front — but from behind, she's hollow like a rotting tree trunk, or has a fox's tail. She protects the forest and punishes those who harm it. If you treat the forest with respect — taking only what you need, thanking the trees — the Skogsrå might bless you with good hunting.\n\nIn old Scandinavia, every forest had its own character and its own spirits. People spoke to trees, left food for forest beings, and never cut wood without asking permission first.",
+            "The Real Tradition": "Belief in skogsrå, huldra, and forest spirits persisted in rural Scandinavia into the 20th century. Charcoal burners, loggers, and hunters were especially likely to maintain relationships with forest spirits. The practice of 'asking permission' before felling trees has parallels in Sámi tradition (where specific trees and groves were considered sacred). Scandinavian environmental consciousness today is partly rooted in these old forest relationships.",
+            "Film Connection": "The enchanted forest in Frozen II is surrounded by a magical mist that keeps humans out — a direct echo of folklore forests where you can enter but might not return. The forest has its own will, its own spirits, and its own rules. Anna and Elsa must earn the right to be there, just as folklore heroes must show respect to enter enchanted woods.",
+            "Reflection": "Next time you're in a forest or even near a big tree, try standing still and just listening. What sounds do you hear? Does the forest feel like it's watching you? People in old Scandinavia would say yes — and they'd say that's not scary, it's just respectful."
+        },
+        "keywords": ["enchanted-forest", "skogsra", "huldra", "spirits", "trees", "boundary"]
+    },
+    {
+        "id": "trolls-and-huldre",
+        "name": "Trolls and Huldrefolk: The Hidden Neighbors",
+        "category": "scandinavian-folklore",
+        "sections": {
+            "Story": "Trolls in Scandinavian folklore aren't the cute little dolls with pink hair. They're HUGE, ancient, often ugly, and they live inside mountains. They come out at night because sunlight turns them to stone (that's why Norway has so many troll-shaped rocks!).\n\nBut trolls aren't always mean. Some are just grumpy neighbors who want to be left alone. If you accidentally build your barn over a troll's home, they'll make trouble — but if you move it and apologize, they might leave you gifts.\n\nThe huldrefolk (hidden people) are different — they look like beautiful humans but live inside hills and mountains in a parallel world. Sometimes they marry humans, sometimes they steal children (and leave changeling substitutes), and sometimes they just want to be left alone. Icelanders STILL believe in them — 54% of Icelanders say they can't deny the existence of huldufólk!",
+            "The Real Tradition": "Troll and huldrefolk beliefs functioned as explanations for natural phenomena (oddly shaped rocks, echoes in valleys, mysterious sounds), as social regulation (don't build on certain land, don't go out at night), and as ecological protection (sacred groves where cutting trees was 'troll territory'). The Icelandic Hidden People tradition remains culturally significant — the Elfschool in Reykjavik teaches huldufólk studies, and construction projects genuinely consult with 'elf advocates.'",
+            "Film Connection": "Kristoff's troll family in Frozen is a cheerful Disney take on mountain trolls who adopt human children. In Frozen II, the Earth Giants sleeping as boulders directly references the sunlight-turns-trolls-to-stone tradition. The whole concept of the Northuldra living in harmony with supernatural forest beings echoes the old Scandinavian relationship with hidden neighbors.",
+            "Reflection": "What if there really were people living invisibly right next to you, in the walls of your house or under the garden? Would you want to meet them? What would be the polite way to share space with someone you can't see?"
+        },
+        "keywords": ["trolls", "huldrefolk", "hidden-people", "mountains", "stone", "neighbors"]
+    },
+    {
+        "id": "dam-and-memory",
+        "name": "Dams, Memory, and Colonialism: The Real History",
+        "category": "scandinavian-folklore",
+        "sections": {
+            "Story": "Here's a true and important story. In the 20th century, the governments of Norway, Sweden, and Finland built hydroelectric dams on rivers that flowed through Sámi territory. The dams flooded reindeer pastures, sacred sites, and whole communities. The Sámi weren't asked permission.\n\nThe most famous resistance was the Alta controversy (1979-1981) in Norway, where Sámi protesters and environmentalists tried to stop a dam on the Alta River. They lost that battle — the dam was built — but the fight sparked a revolution in Sámi rights. Norway established the Sámi Parliament in 1989 partly because of Alta.\n\nThe wound is still healing. Many Sámi elders remember being punished for speaking their language in school, being told their culture was inferior, and watching their land disappear under reservoirs.",
+            "The Real Tradition": "Forced assimilation policies ('Norwegianization,' 'Swedishization') targeted the Sámi from the late 1800s through the 1960s. Sámi children were sent to boarding schools where their language was forbidden. Sacred drum (goavddis) ceremonies were criminalized. Land was confiscated for mining, logging, and hydroelectric projects. Today, truth and reconciliation processes are underway in all Scandinavian countries, and Sámi cultural revival is strong — but the trauma is generational.",
+            "Film Connection": "The dam in Frozen II is the film's central plot device: King Runeard built it as a secret weapon against the Northuldra, disguised as a 'gift.' The film explicitly portrays colonial deception — building infrastructure on indigenous land as a tool of control. When Anna destroys the dam, it's an act of decolonial justice. Disney's Sámi consultants confirmed this was intentional.",
+            "Reflection": "Sometimes grown-ups and governments do things that seem nice (building a dam, 'helping' people) but are actually harmful. How can you tell the difference between a real gift and a trick? What does it mean to REALLY listen to the people affected?"
+        },
+        "keywords": ["dam", "alta", "colonialism", "sami-rights", "resistance", "truth"]
+    },
+    # --- NORSE MYTHOLOGY ---
+    {
+        "id": "yggdrasil",
+        "name": "Yggdrasil: The World Tree",
+        "category": "norse-mythology",
+        "sections": {
+            "Story": "Imagine a tree so enormous that its branches hold up the sky, its roots reach down to the land of the dead, and the entire universe lives in its trunk and leaves. That's Yggdrasil — the great ash tree at the center of Norse cosmology.\n\nYggdrasil connects Nine Worlds: Asgard (home of the gods) sits in the top branches. Midgard (our world, the human world) wraps around the middle trunk. Niflheim (the frozen underworld) and Hel (land of the dead) hang from the roots.\n\nA wise eagle sits at the top, a great serpent gnaws at the roots, and a squirrel named Ratatoskr runs up and down carrying insults between them. Three wells feed the roots: the Well of Wisdom, the Well of Fate, and the roaring spring that feeds all the rivers of the world.",
+            "The Real Tradition": "Yggdrasil ('Odin's horse,' because Odin hung himself from it for nine days to gain wisdom) represents the Norse understanding of cosmic interconnection. Everything is connected through the World Tree — gods, humans, giants, elves, dwarves, and the dead all share one living structure. Sacred trees were central to Norse worship; the great temple at Uppsala (described by Adam of Bremen, c. 1070) had a sacred tree, possibly representing Yggdrasil.",
+            "Film Connection": "The magical forest in Frozen II functions like a miniature Yggdrasil — a living system connecting the four elements, the spirits, humans, and the past to the present. The four elemental symbols meeting at a center point (which Elsa discovers) echoes the nine-worlds-connected-by-one-tree structure. When Elsa reaches Ahtohallan (the glacier of memory), she's essentially reaching one of the great wells at Yggdrasil's roots.",
+            "Reflection": "If the whole world grew on one tree, every creature would be a neighbor. Birds in the branches, squirrels on the trunk, worms in the roots — all sharing one home. In a way, our planet IS that tree. What's your branch?"
+        },
+        "keywords": ["yggdrasil", "world-tree", "nine-worlds", "cosmology", "ash-tree", "connection"]
+    },
+    {
+        "id": "ahtohallan-memory-river",
+        "name": "Rivers of Memory: Water, Ice, and the Past",
+        "category": "norse-mythology",
+        "sections": {
+            "Story": "In Norse mythology, memory is a THING — it has physical form. Two ravens named Huginn (Thought) and Muninn (Memory) fly out every day and return to whisper everything they've seen into Odin's ears. Odin says he fears for Huginn, but he fears even MORE for Muninn — because losing memory is worse than losing thought.\n\nThe Well of Mímir at Yggdrasil's roots contains all the wisdom of the past. Odin sacrificed his own EYE to drink from it. Memory and wisdom live in water — in wells, in rivers, in ice that preserves things for millennia.\n\nIn Sámi tradition too, sacred springs and rivers were places where the past and present met. The Sámi word for certain sacred sites literally translates as 'memory places.'",
+            "The Real Tradition": "Water as a repository of memory is a widespread Nordic belief. Glaciers in Scandinavia preserve air bubbles, pollen, and even ancient human artifacts — they literally contain the past. The Norwegian concept of 'minnested' (memory place) and the Sámi concept of 'sieiddit' (sacred natural sites) both treat landscape features as containers of ancestral knowledge. Modern science agrees: ice cores from Greenland and Scandinavian glaciers are our best records of ancient climate.",
+            "Film Connection": "Ahtohallan — the mythical river of memory that Elsa journeys to in Frozen II — combines the Norse Well of Mímir with the Sámi concept of sacred water places. It's a glacier that literally contains the past, frozen in ice. The lullaby 'All Is Found' describes a river that 'knows' everything that happened. Water remembers.",
+            "Reflection": "If you could visit a magical river that showed you any memory from the past, what would you want to see? A moment from history? Something from your grandparents' childhood? Be careful — Elsa learned that some memories are painful."
+        },
+        "keywords": ["memory", "ahtohallan", "mimir", "huginn-muninn", "water", "glaciers"]
+    },
+    {
+        "id": "ragnarok-renewal",
+        "name": "Ragnarök: The End That's Also a Beginning",
+        "category": "norse-mythology",
+        "sections": {
+            "Story": "Norse mythology doesn't have a happy ever after — it has RAGNARÖK, the twilight of the gods. A terrible winter lasting three years. The great wolf Fenrir breaks free and swallows the sun. The serpent Jörmungandr rises from the ocean. Fire giant Surtr burns everything. Gods fight giants and BOTH sides die. The world sinks into the sea.\n\nBut here's the secret: after the destruction, the world rises again. Green and fresh. Two humans — Líf and Lífthrasir — survive, hidden in the World Tree. A new sun is born (the old sun's daughter). The earth produces food without being planted. The cycle begins again.\n\nRagnarök isn't the end of everything — it's the end of THIS everything. Destruction makes new creation possible.",
+            "The Real Tradition": "The cyclical nature of Ragnarök — destruction followed by renewal — reflects the Nordic experience of extreme seasons: the 'death' of winter followed by the explosive rebirth of the Arctic spring. It also reflects the volcanic and seismic activity of Iceland, where creation (new land from lava) and destruction happen simultaneously. The Norse didn't see death as final; they saw it as transformation.",
+            "Film Connection": "Frozen II's climax mirrors Ragnarök: the dam must be destroyed (the old order must fall) before the enchanted forest can be freed and renewed. Anna makes the choice to let the destruction happen, trusting that something better will emerge. The 'doing the next right thing' message is pure Norse: you face the end with courage, knowing renewal follows.",
+            "Reflection": "Have you ever had something end — a friendship, a school year, a favorite toy that broke — and then discovered that something new and good came after? That's Ragnarök on a small scale. Endings make room for beginnings."
+        },
+        "keywords": ["ragnarok", "destruction", "renewal", "cycle", "norse", "fenrir", "surtr"]
+    },
+    # --- SCANDINAVIAN MUSIC & ARTS ---
+    {
+        "id": "hardanger-fiddle",
+        "name": "The Hardanger Fiddle: Music from the Waterfalls",
+        "category": "music-and-arts",
+        "sections": {
+            "Story": "The Hardanger fiddle (hardingfele) is Norway's most magical instrument. It looks like a regular violin but has extra 'sympathetic strings' underneath the playing strings that vibrate on their own, creating an eerie, shimmering echo — like hearing music played inside a waterfall.\n\nLegend says the first Hardanger fiddle was given to a human by the Fossegrim — the waterfall spirit. If you brought a white goat to a waterfall on a Thursday evening and offered it to the Fossegrim, he would take your hand and move your fingers across the strings until they bled, and after that you could play so beautifully that tables danced and the waterfall flowed uphill.\n\nBut if your offering was too small, the Fossegrim would only teach you how to tune the instrument — not how to play it!",
+            "The Real Tradition": "The Hardanger fiddle dates to the 1650s in western Norway. Its unique sympathetic strings (4-5 extra strings resonating under the fingerboard) create the distinctive 'ringing' sound. Hardingfele music accompanies the Norwegian folk dances springar, gangar, and halling. The instrument was banned by some churches in the 18th century as 'the devil's instrument' — like joik, Nordic folk music had a troubled relationship with Christianity.",
+            "Film Connection": "The orchestral score of both Frozen films includes Hardanger fiddle for its 'Nordic' sound. The shimmering, echoing quality perfectly evokes ice, northern landscapes, and ancient mystery. When you hear those ethereal, ringing string melodies in Frozen II's score — that's the Hardanger fiddle's sympathetic strings singing.",
+            "Reflection": "The Fossegrim only teaches music to people who make a generous offering. What do you think that means about learning any skill? Does it take sacrifice (practice, patience, effort) to get really good at something?"
+        },
+        "keywords": ["hardanger-fiddle", "fossegrim", "waterfall", "music", "norway", "magic"]
+    },
+    {
+        "id": "nordic-lullabies",
+        "name": "Byssan Lansen: Nordic Lullabies and Dark Comfort",
+        "category": "music-and-arts",
+        "sections": {
+            "Story": "Scandinavian lullabies are beautiful — but if you translate them, they're DARK. 'Trollmors Vaggsång' (The Troll Mother's Lullaby) is about a troll mother singing to thirteen troll babies under a bridge. 'Byssan Lansen' mentions a king killing rats. 'Ack Värmeland' is about heartbreak and death.\n\nWhy? Because in a culture that lived through months of darkness, extreme cold, and genuine danger, lullabies weren't about pretending everything was fine. They were about saying: 'Yes, the world has trolls and wolves and dark winters — but right now, here in my arms, you're safe. I'll protect you.'\n\nThe darkness makes the comfort MORE real, not less. You can't truly feel safe unless you know what you're safe FROM.",
+            "The Real Tradition": "Nordic lullaby traditions include the Norwegian 'bånsull,' the Swedish 'vaggvisa,' and the Sámi 'luohti' (which doubles as a joik for a specific child). The practice of singing children to sleep with songs that acknowledge danger — winter, wolves, trolls, death — is ancient and pan-Nordic. Modern research suggests this may actually be MORE comforting to children than artificially cheerful lullabies, because it validates their real fears.",
+            "Film Connection": "'All Is Found,' the lullaby Queen Iduna sings to young Elsa and Anna in Frozen II, is a perfect Nordic lullaby: beautiful melody, but the lyrics are about a mysterious, possibly dangerous river that holds all secrets and memories. It's comforting AND ominous — exactly the Nordic lullaby tradition. The song later becomes the key to unlocking the plot's central mystery.",
+            "Reflection": "Think about your favorite bedtime story or song. Is there anything a little scary or sad in it? Sometimes the best comfort isn't 'nothing bad exists' — it's 'bad things exist, AND I'm here to keep you safe.' Which feels more real to you?"
+        },
+        "keywords": ["lullaby", "comfort", "darkness", "trollmor", "byssan", "all-is-found"]
+    },
+    {
+        "id": "runes-and-symbols",
+        "name": "Runes: Letters That Are Also Spells",
+        "category": "music-and-arts",
+        "sections": {
+            "Story": "Runes aren't just an alphabet — they're magic. The Norse god Odin hung himself from Yggdrasil for NINE DAYS, pierced by his own spear, without food or water, until the runes revealed themselves to him. Each rune is both a letter and a power:\n\n• ᚠ Fehu (F) — Wealth, abundance, cattle\n• ᚢ Uruz (U) — Strength, wild ox, health\n• ᚦ Thurisaz (Þ) — Giant, thorn, protection\n• ᚨ Ansuz (A) — Odin, breath, divine message\n• ᛁ Isa (I) — Ice, stillness, waiting\n• ᛊ Sowilo (S) — Sun, victory, light\n\nRunes were carved on weapons to make them powerful, on ships to ensure safe voyages, on doorways for protection, and on gravestones to honor the dead. Finding a rune was like finding a message from the universe.",
+            "The Real Tradition": "The Elder Futhark (the oldest complete runic alphabet, c. 150-800 CE) contains 24 runes. Rune stones found across Scandinavia record everything from memorials to legal property claims to love poetry. The Rök Runestone in Sweden (c. 800 CE) contains over 700 runes — one of the longest known runic inscriptions. Rune divination (casting runes for wisdom) was practiced by the Norse völva (seers) and continues in modern Nordic spiritual practice.",
+            "Film Connection": "The four elemental symbols in Frozen II — the diamond shapes for water, fire, earth, and air — are designed in a runic/Nordic knot style. The mysterious symbols Elsa follows northward function exactly like runes: they're both letters (conveying information) and magic (having power). The entire quest is essentially a rune reading — following carved symbols toward hidden wisdom.",
+            "Reflection": "If you could create your own magical alphabet where each letter had a special power, what would the first three letters be? What would they mean? The Norse believed that naming something gives you power over it."
+        },
+        "keywords": ["runes", "futhark", "odin", "magic", "alphabet", "symbols"]
+    },
+]
+
+for item in l1_items:
+    sort += 1
+    item["sort_order"] = sort
+    item["level"] = 1
+    items.append(item)
+
+# =============================================================================
+# L2 EMERGENCE — THEMATIC GROUPS
+# =============================================================================
+
+l2_items = [
+    {
+        "id": "theme-sami-culture",
+        "name": "The Sámi — Living with the Land for 10,000 Years",
+        "category": "theme-collections",
+        "level": 2,
+        "composite_of": ["who-are-the-sami", "reindeer-partnership", "joik-singing", "sami-gakti"],
+        "relationship_type": "emergence",
+        "sections": {
+            "About": "The Sámi people are the indigenous inhabitants of northern Scandinavia — reindeer herders, fishermen, and joik singers whose culture is among the oldest continuous traditions in Europe. Their worldview is animist: the land, the reindeer, and the Northern Lights are all relatives. After centuries of forced assimilation, Sámi culture is experiencing a powerful revival.",
+            "For Parents": "These stories introduce children to indigenous rights in a European context — many kids learn about Native American or Aboriginal Australian cultures but don't know that Europe has indigenous peoples too. The Sámi experience of cultural suppression and revival parallels indigenous struggles worldwide. Disney's consultation with Sámi parliaments for Frozen II is a good example of how representation can be done responsibly.",
+            "Cultural Note": "Sámi culture is living, not historical. Be mindful of the difference between learning ABOUT a culture (respectful) and appropriating it (wearing gákti-inspired costumes for Halloween). The Sámi Cultural Agreement that Disney signed is a model for respectful engagement."
+        },
+        "keywords": ["sami", "indigenous", "reindeer", "joik", "cultural-revival"]
+    },
+    {
+        "id": "theme-elements",
+        "name": "The Living Elements — Nordic Elemental Spirits",
+        "category": "theme-collections",
+        "level": 2,
+        "composite_of": ["four-spirits", "the-nokk", "frost-giants", "fire-salamander", "northern-lights"],
+        "relationship_type": "emergence",
+        "sections": {
+            "About": "In the Nordic worldview, the four elements — water, fire, earth, and air — aren't just physics; they're communities of living beings. Water has its Nøkken, earth has its trolls and giants, fire has its salamanders and Surtr, and the air carries the Northern Lights and the breath of gods. Each element demands respect and relationship, not domination.",
+            "For Parents": "The elemental spirits are a gateway to discussing both science and spirituality. You can explain the SCIENCE of the Northern Lights (solar wind hitting the magnetosphere) AND the cultural MEANING (ancestors dancing). One doesn't replace the other. Children naturally see the world as alive — these stories honor that instinct before school teaches them to see nature as 'just stuff.'",
+            "Safety Note": "Nordic folklore used spirits like the Nøkken to teach water safety: don't swim alone, respect deep water, don't go near ice in spring. These stories serve the same function as modern safety lessons — they just wrap them in more memorable packaging!"
+        },
+        "keywords": ["elements", "spirits", "nokken", "giants", "northern-lights", "animism"]
+    },
+    {
+        "id": "theme-folklore",
+        "name": "The Enchanted Forest — Scandinavian Folk Belief",
+        "category": "theme-collections",
+        "level": 2,
+        "composite_of": ["enchanted-forest", "trolls-and-huldre", "dam-and-memory"],
+        "relationship_type": "emergence",
+        "sections": {
+            "About": "Scandinavian folklore creates a world where the forest is a boundary between human and spirit realms, where trolls are grumpy neighbors rather than monsters, and where the hidden people live in a parallel world just behind the rocks. But this enchanted tradition has a shadow: the real history of colonialism against the Sámi, including the dams that destroyed their land, adds a layer of truth to the fairytale idea that human arrogance can break the natural order.",
+            "For Parents": "The dam story (based on the Alta controversy and other real events) is important for older children. It connects the fairy tale to reality: the enchanted forest in Frozen II isn't just fantasy — it represents real indigenous land that was really taken. This is age-appropriate introduction to colonialism and indigenous rights, wrapped in a story they already love.",
+            "Discussion Questions": "Why did the trolls and hidden people in stories always punish humans who took too much? What real-world lesson is hidden inside that? What does it mean that the Sámi were punished for speaking their own language — just like the enchanted forest was imprisoned?"
+        },
+        "keywords": ["folklore", "enchanted-forest", "trolls", "colonialism", "sami-rights"]
+    },
+    {
+        "id": "theme-norse-mythology",
+        "name": "The Old Gods — Norse Cosmology",
+        "category": "theme-collections",
+        "level": 2,
+        "composite_of": ["yggdrasil", "ahtohallan-memory-river", "ragnarok-renewal"],
+        "relationship_type": "emergence",
+        "sections": {
+            "About": "Norse mythology provides the cosmic architecture for Frozen II's world: a World Tree connecting realms, wells of memory and wisdom, and a cycle of destruction and renewal that gives the story its structure. Unlike many mythologies where good defeats evil forever, the Norse accepted that even gods die — but the world is reborn. This gave Scandinavian culture a unique blend of fatalism and hope.",
+            "For Parents": "Norse mythology can be intense (self-sacrifice, Ragnarök, the death of gods), but it offers something rare in children's media: the idea that doing the right thing doesn't guarantee a happy ending, but you do it anyway. Anna's 'do the next right thing' in Frozen II is pure Norse ethics. These myths help children develop moral courage — doing right because it's right, not because it's rewarded.",
+            "Reading More": "For age-appropriate Norse myths, try Neil Gaiman's 'Norse Mythology' (2017) for ages 10+, or Kevin Crossley-Holland's 'The Norse Myths' for teens. For younger children, D'Aulaires' 'Book of Norse Myths' remains a classic."
+        },
+        "keywords": ["norse", "yggdrasil", "ragnarok", "cosmology", "mythology"]
+    },
+    {
+        "id": "theme-music-arts",
+        "name": "Songs from the Cold — Nordic Musical Traditions",
+        "category": "theme-collections",
+        "level": 2,
+        "composite_of": ["hardanger-fiddle", "nordic-lullabies", "runes-and-symbols"],
+        "relationship_type": "emergence",
+        "sections": {
+            "About": "Nordic music and symbolic arts — from the haunting Hardanger fiddle to the dark comfort of Scandinavian lullabies to the magical runic alphabet — share a common quality: they embrace darkness as part of beauty. The shimmering sympathetic strings of the fiddle echo in empty valleys. The lullabies acknowledge wolves and winter while promising safety. The runes carry both information and power. In a land of extreme seasons, art doesn't pretend winter doesn't exist — it makes winter beautiful.",
+            "For Parents": "The Nordic approach to children's arts is notably different from much American children's media: it doesn't shy away from darkness, sadness, or danger. Scandinavian children's literature (Astrid Lindgren, Tove Jansson) is beloved worldwide precisely because it respects children enough to include real emotions. The lullaby tradition is a perfect entry point for discussing this approach.",
+            "Activity": "Listen to Frozen II's 'All Is Found' and then listen to a traditional Norwegian lullaby (try 'Byssan Lansen' or 'Trollmors Vaggsång' on YouTube). Can you hear the similarity? Both are beautiful, both are a little mysterious, and both say: 'the world is bigger than you know, and that's okay.'"
+        },
+        "keywords": ["music", "fiddle", "lullaby", "runes", "nordic", "beauty-in-darkness"]
+    },
+]
+
+for item in l2_items:
+    sort += 1
+    item["sort_order"] = sort
+    items.append(item)
+
+# =============================================================================
+# L3 META-EMERGENCE
+# =============================================================================
+
+l3_items = [
+    {
+        "id": "meta-into-the-unknown",
+        "name": "Into the Unknown — The Nordic Spirit Behind Frozen II",
+        "category": "meta",
+        "level": 3,
+        "composite_of": ["theme-sami-culture", "theme-elements", "theme-folklore", "theme-norse-mythology", "theme-music-arts"],
+        "relationship_type": "emergence",
+        "sections": {
+            "About": "Frozen II draws from one of the world's richest cultural wells: the interwoven traditions of Norse mythology, Scandinavian folklore, and Sámi indigenous culture. These aren't three separate things — they're layers of the same landscape. The Norse myths provide cosmic structure (World Tree, elemental forces, cycles of destruction and renewal). Scandinavian folklore fills the forests with spirits, trolls, and enchanted places. And Sámi culture grounds it all in a living, present-day indigenous tradition of animism, joik singing, and partnership with the reindeer and the land.",
+            "The Big Idea": "The deepest theme connecting all these traditions is RELATIONSHIP. The Norse related to gods who were flawed and mortal. The Scandinavians related to forest spirits as neighbors. The Sámi related to reindeer as partners and to the Northern Lights as ancestors. In every case, the 'other' — whether supernatural, natural, or divine — is met with respect and reciprocity, not conquest and control. Frozen II's message is the same: the enchanted forest isn't a problem to solve but a relationship to repair.",
+            "Why This Matters Now": "In a world facing climate crisis, cultural homogenization, and the loss of indigenous knowledge, these northern traditions offer something urgent: a way of living WITH the land rather than ON it. The Sámi didn't have a word for 'wilderness' because they didn't separate 'nature' from 'home.' Maybe that's the wisdom we need most."
+        },
+        "keywords": ["frozen-ii", "nordic", "sami", "mythology", "relationship", "animism"]
+    }
+]
+
+for item in l3_items:
+    sort += 1
+    item["sort_order"] = sort
+    items.append(item)
+
+grammar["items"] = items
+
+# Write output
+outdir = os.path.join(os.path.dirname(__file__), "..", "grammars", "roots-of-frozen-ii")
+os.makedirs(outdir, exist_ok=True)
+outpath = os.path.join(outdir, "grammar.json")
+
+with open(outpath, "w") as f:
+    json.dump(grammar, f, indent=2, ensure_ascii=False)
+
+print(f"Wrote {len(items)} items to {outpath}")
+print(f"  L1: {sum(1 for i in items if i['level'] == 1)}")
+print(f"  L2: {sum(1 for i in items if i['level'] == 2)}")
+print(f"  L3: {sum(1 for i in items if i['level'] == 3)}")
