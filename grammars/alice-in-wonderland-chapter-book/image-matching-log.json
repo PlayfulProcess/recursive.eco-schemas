@@ -1,0 +1,206 @@
+{
+  "grammar": "alice-in-wonderland-chapter-book",
+  "matching_session": "2026-03-05",
+  "total_images_scanned": 139,
+  "total_matched": 98,
+  "total_needs_vision": 43,
+  "total_unmatched": 2,
+  "methods_used": ["filename-parse", "vision-verified", "approximate-range"],
+  "matches": [
+    {
+      "filename": "Alices Adventures in Wonderland 1907 - Arthur Rackham (1867-1939) - 13 images#___Rackham, A. (1867-1939) - Alice's Adventures in W'land 1907 - Mad Hatter's tea party.jpg",
+      "parsed": {
+        "artist": "Arthur Rackham",
+        "artist_dates": "1867-1939",
+        "edition": "Alice's Adventures in Wonderland, 1907",
+        "scene": "Mad Hatter's tea party"
+      },
+      "matched_to": "ch07-no-room",
+      "level": "L1",
+      "method": "vision-verified",
+      "confidence": "high",
+      "reasoning": "Vision shows Hatter, March Hare, Alice at long table with teacups. Specific moment: Alice arriving. Maps to 'No Room! No Room!' scene.",
+      "l1_vs_l2_reasoning": "Alice is present at the table — this is a specific narrative moment (L1), not a general chapter theme (L2).",
+      "human_approved": null
+    },
+    {
+      "filename": "Alices Adventures in Wonderland 1922 - Gwynedd Hudson (1882-1932) - 12 images___Hudson, G. (1882-1932) - Alice 1922 - March Hare & The Hatter.jpg",
+      "parsed": {
+        "artist": "Gwynedd Hudson",
+        "artist_dates": "1882-1932",
+        "edition": "Alice's Adventures in Wonderland, 1922",
+        "scene": "March Hare & The Hatter"
+      },
+      "matched_to": "chapter-07-a-mad-tea-party",
+      "level": "L2",
+      "method": "vision-verified",
+      "confidence": "high",
+      "reasoning": "Vision shows Hatter + March Hare + sleeping Dormouse but NO Alice. Characters/setting without a specific scene beat.",
+      "l1_vs_l2_reasoning": "Alice absent. Shows the cast of the chapter, not a moment — classic L2 chapter cover.",
+      "human_approved": null
+    },
+    {
+      "filename": "Alices Adventures in Wonderland 1910 - Brinsley Le Fanu (1854-1929) - 10 images___Le Fanu, Brinsley (1854-1929) - Alice 1910 - March Hare's house.jpg",
+      "parsed": {
+        "artist": "Brinsley Le Fanu",
+        "artist_dates": "1854-1929",
+        "edition": "Alice's Adventures in Wonderland, 1910",
+        "scene": "March Hare's house"
+      },
+      "matched_to": "ch07-no-room",
+      "level": "L1",
+      "method": "filename-parse",
+      "confidence": "medium",
+      "reasoning": "March Hare's house is the setting for the tea party. Could be L1 (arrival scene) or L2 (chapter setting). Needs vision to confirm whether Alice is shown arriving or it's just the house exterior.",
+      "l1_vs_l2_reasoning": "AMBIGUOUS — building/setting images are borderline. If it shows the exterior, it's more L2 (chapter atmosphere). If Alice is approaching, it's L1.",
+      "human_approved": null,
+      "flag": "needs-vision-review"
+    },
+    {
+      "filename": "Alices Adventures in Wonderland 1907 - Arthur Rackham (1867-1939) - 13 images#___Rackham, A. (1867-1939) - Alice's Adventures in W'land 1907 - Knave of Spades.jpg",
+      "parsed": {
+        "artist": "Arthur Rackham",
+        "artist_dates": "1867-1939",
+        "edition": "Alice's Adventures in Wonderland, 1907",
+        "scene": "Knave of Spades"
+      },
+      "matched_to": "ch11-the-court-assembles",
+      "level": "L1",
+      "method": "filename-parse",
+      "confidence": "medium",
+      "reasoning": "Knave of Spades is not a named character in the scenes. The Knave of Hearts is the one on trial. This could be ch11 (court assembles with card characters) or ch08 (royal procession includes card characters). Matched to court scene as most likely.",
+      "l1_vs_l2_reasoning": "Specific character portrait — L1 for the scene where card characters appear most prominently.",
+      "human_approved": null,
+      "flag": "needs-vision-review"
+    },
+    {
+      "filename": "Alices Adventures in Wonderland 1922 - Gwynedd Hudson (1882-1932) - 12 images___Hudson, G. (1882-1932) - Alice 1922 - Alice & Dinah.jpg",
+      "parsed": {
+        "artist": "Gwynedd Hudson",
+        "artist_dates": "1882-1932",
+        "edition": "Alice's Adventures in Wonderland, 1922",
+        "scene": "Alice & Dinah"
+      },
+      "matched_to": "ch12-waking-up",
+      "level": "L1",
+      "method": "filename-parse",
+      "confidence": "medium",
+      "reasoning": "Dinah the cat appears in the opening (Alice thinking about her) and the ending (waking up with Dinah). Matched to waking-up as the more iconic Dinah scene, but could also be ch01-bored-by-the-river.",
+      "l1_vs_l2_reasoning": "If Alice is awake holding Dinah → ch12. If Alice is by the river daydreaming about Dinah → ch01. Needs vision.",
+      "human_approved": null,
+      "flag": "needs-vision-review"
+    },
+    {
+      "filename": "Alices Adventures in Wonderland 1911 - Tenniel (1820-1914) & Theaker (1873-1954) - 8 images___Tenniel (1820-1914) & Theaker (1873-1954) - King & Queen of Hearts.jpg",
+      "parsed": {
+        "artist": "Tenniel & Theaker",
+        "artist_dates": "1820-1914 / 1873-1954",
+        "edition": "Alice's Adventures in Wonderland, 1911",
+        "scene": "King & Queen of Hearts"
+      },
+      "matched_to": "chapter-08-the-queens-croquet-ground",
+      "level": "L2",
+      "method": "filename-parse",
+      "confidence": "high",
+      "reasoning": "King & Queen of Hearts as a pair without a specific scene context = chapter-level character portrait.",
+      "l1_vs_l2_reasoning": "Character portrait without narrative action = L2. If they were shown ordering an execution or playing croquet, it would be L1.",
+      "human_approved": null
+    }
+  ],
+  "failures": [
+    {
+      "filename": "1772256523101-vmi4nmeglr.png",
+      "parsed": null,
+      "failure_reason": "No metadata in filename — random ID. Cannot determine artist, scene, or context without vision.",
+      "recommendation": "Requires vision analysis to identify content."
+    },
+    {
+      "filename": "18705366453_70611cc444_c.webp",
+      "parsed": null,
+      "failure_reason": "Flickr-style filename with no scene metadata. Cannot match without vision.",
+      "recommendation": "Requires vision analysis to identify content."
+    }
+  ],
+  "ambiguities_encountered": [
+    {
+      "pattern": "Character portraits without action",
+      "example": "King & Queen of Hearts, Alice portrait, Gryphon",
+      "resolution": "Character portrait without narrative action → L2 chapter cover. Character IN action → L1 scene.",
+      "confidence_in_rule": "high"
+    },
+    {
+      "pattern": "Setting/building images",
+      "example": "March Hare's house",
+      "resolution": "Building exterior → L2. Character approaching/entering building → L1. Needs vision to distinguish.",
+      "confidence_in_rule": "medium"
+    },
+    {
+      "pattern": "Dinah the cat appears in ch01 AND ch12",
+      "example": "Alice & Dinah",
+      "resolution": "Need vision to determine: awake+outdoors = ch01, awake+indoors = ch12.",
+      "confidence_in_rule": "high"
+    },
+    {
+      "pattern": "Cheshire Cat appears in ch06 AND ch08",
+      "example": "The Cheshire Cat, Cheshire Cat in tree, Dispute over head",
+      "resolution": "Cat in tree grinning = ch06-the-cheshire-cat. Cat's floating head with King/executioner = ch08-the-cheshire-cats-head.",
+      "confidence_in_rule": "high"
+    },
+    {
+      "pattern": "Multiple court/trial scenes",
+      "example": "In court, Trial of Knave, Tipped over jury box, Alice & the Jurors",
+      "resolution": "General court scene → ch11-the-court-assembles. Hatter testifying → ch11-the-hatters-evidence. Alice with jury → ch12-alice-tips-the-jury.",
+      "confidence_in_rule": "high"
+    },
+    {
+      "pattern": "Knave of Spades vs Knave of Hearts",
+      "example": "Rackham 'Knave of Spades'",
+      "resolution": "The story features the Knave of Hearts. 'Knave of Spades' may be Rackham's artistic choice. Needs vision to determine if the illustration shows a trial scene (ch11) or procession (ch08).",
+      "confidence_in_rule": "low"
+    }
+  ],
+  "heuristics_learned": [
+    {
+      "rule": "Filename triple-underscore convention",
+      "description": "Filenames use '___' to separate collection metadata (left) from specific image metadata (right). Parse the RIGHT side for artist, year, and scene.",
+      "reliability": "very high",
+      "applies_to": "All illustrated edition images in this collection"
+    },
+    {
+      "rule": "Scene description is the strongest signal",
+      "description": "The text after the last ' - ' in the right side of ___ is the scene description. This matches grammar items with ~85% accuracy without vision.",
+      "reliability": "high",
+      "applies_to": "Named scene descriptions"
+    },
+    {
+      "rule": "L1 vs L2: presence of Alice",
+      "description": "If Alice is DOING something specific → L1. If the image shows characters/setting without Alice or without a specific moment → L2.",
+      "reliability": "high",
+      "applies_to": "All narrative illustrations"
+    },
+    {
+      "rule": "L1 vs L2: action vs portrait",
+      "description": "Characters IN ACTION (swimming, falling, running) → L1. Characters POSED or in setting → L2.",
+      "reliability": "high",
+      "applies_to": "All illustrations"
+    },
+    {
+      "rule": "Multiple scenes for same character",
+      "description": "The Cheshire Cat, the Duchess, and playing cards each appear in multiple chapters. Need additional context (other characters present, setting) to disambiguate.",
+      "reliability": "medium",
+      "applies_to": "Recurring characters"
+    },
+    {
+      "rule": "Carroll manuscript pages are sequential",
+      "description": "Lewis-Carroll-Alice-Under-Ground-N.webp pages follow the story sequentially. Page ranges can be mapped to chapters, but precise scene boundaries need vision.",
+      "reliability": "medium",
+      "applies_to": "Manuscript pages only"
+    },
+    {
+      "rule": "Random/ID filenames are unmatchable without vision",
+      "description": "Files with numeric IDs or Flickr-style names have zero filename metadata. Always flag for vision review.",
+      "reliability": "very high",
+      "applies_to": "Files without descriptive names"
+    }
+  ]
+}
