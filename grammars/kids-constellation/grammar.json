@@ -1,0 +1,1320 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "date": "2026-03-27",
+        "note": "Meta grammar mapping the constellation of kids content on recursive.eco."
+      }
+    ]
+  },
+  "name": "Kids Constellation: Stories, Storyboards & Media",
+  "description": "A map of maps for the children's channel. 64 grammars of stories, mythology, storyboards, and media. From PlayfulProcess originals (Shiryo, Story Tree, Alice chapter books) to public domain classics (Pinocchio, Peter Pan, world mythology) to curated video playlists (PBS Kids, Art with Mati and Dada). Each item is a doorway into a full grammar.",
+  "grammar_type": "custom",
+  "creator_name": "PlayfulProcess",
+  "tags": [
+    "kids",
+    "children",
+    "stories",
+    "constellation",
+    "meta"
+  ],
+  "roots": [
+    "wonder-imagination"
+  ],
+  "shelves": [
+    "children"
+  ],
+  "lineages": [],
+  "worldview": "imaginative",
+  "grammars": [
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/a-little-princess",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/adventures-of-pinocchio",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/aesops-fables",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/aesops-fables-storyboard",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/alice-5-minute-stories",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/alice-in-the-mythlands",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/alice-in-the-mythlands-storyboard",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/alice-in-wonderland-chapter-book",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/andersens-fairy-tales",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/animal-fables",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/anne-of-green-gables",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/anon-shiryo-cat-stories",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/art-with-mati-and-dada",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/biblical-stories-kids",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/biblical-stories-kids-storyboard",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/celtic-fairy-tales",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/children-story-tree",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/colonial-tongues",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/cosmic-unfolding",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/decolonizing-childhood",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/dinosaur-tree",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/dreamtime-kids",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/dreamtime-kids-storyboard",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/egyptian-kids",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/egyptian-kids-storyboard",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/emerald-kids-folk-tales",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/evolution-tree",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/folk-tales-tibet",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/giras-do-sitio",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/homer-kids",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/homer-kids-storyboard",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/instituto-canoa-math-6",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/japanese-fairy-tales",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/jungle-book",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/just-so-stories",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/kids-workouts-gvo-kids-youtube-playlist",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/king-arthur-kids",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/king-arthur-kids-storyboard",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/maya-kids",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/maya-kids-storyboard",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/nastacia-conta",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/norse-kids",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/norse-kids-storyboard",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/one-story-kids",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/pbs-kids",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/peter-pan",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/polynesian-kids",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/polynesian-kids-storyboard",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/ramayana-kids",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/ramayana-kids-storyboard",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/roots-of-frozen-ii",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/roots-of-moana",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/secret-garden",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/story-01-asking-not-complaining",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/story-02-gratitude-not-praise",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/through-the-looking-glass",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/tibetan-dream-kids",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/tibetan-dream-kids-storyboard",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/tom-sawyer",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/west-african-kids",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/west-african-kids-storyboard",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/wildflowers-of-california",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/winnie-the-pooh-chapter-book",
+    "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/wonderful-wizard-of-oz"
+  ],
+  "items": [
+    {
+      "id": "aesops-fables",
+      "name": "Aesop's Fables",
+      "sort_order": 1,
+      "level": 1,
+      "category": "original",
+      "sections": {
+        "About": "The timeless moral fables attributed to Aesop, a legendary storyteller of ancient Greece (c. 620-564 BCE). Through talking animals, cunning foxes, proud lions, and foolish asses, these 284 short tales"
+      },
+      "keywords": [
+        "aesops-fables"
+      ],
+      "metadata": {
+        "grammar_slug": "aesops-fables",
+        "item_count": 310
+      }
+    },
+    {
+      "id": "alice-5-minute-stories",
+      "name": "Alice in Wonderland — Illustrated Chapter Books",
+      "sort_order": 2,
+      "level": 1,
+      "category": "original",
+      "sections": {
+        "About": "Lewis Carroll's complete original text in ALL CAPS with 121 public domain illustrations. 12 printable landscape booklets (one per chapter). Each page has one illustration and a passage of text. Print "
+      },
+      "keywords": [
+        "alice-5-minute-stories"
+      ],
+      "metadata": {
+        "grammar_slug": "alice-5-minute-stories",
+        "item_count": 16
+      }
+    },
+    {
+      "id": "alice-in-wonderland-chapter-book",
+      "name": "Alice’s Adventures in Wonderland — A Chapter Book",
+      "sort_order": 3,
+      "level": 1,
+      "category": "original",
+      "sections": {
+        "About": "Lewis Carroll's beloved classic broken into scenes for multi-level reading. Level 2 chapters are emergent summaries (perfect for the littlest readers). Level 1 scenes contain the COMPLETE ORIGINAL TEX"
+      },
+      "keywords": [
+        "alice-in-wonderland-chapter-book"
+      ],
+      "metadata": {
+        "grammar_slug": "alice-in-wonderland-chapter-book",
+        "item_count": 59
+      }
+    },
+    {
+      "id": "animal-fables",
+      "name": "Animal Fables: The Stories Nobody Finished",
+      "sort_order": 4,
+      "level": 1,
+      "category": "original",
+      "sections": {
+        "About": "Twenty-five one-minute fables with no morals. Each story: one animal, one impossible situation, one silence at the end. Structurally lifted from the world's great epics — Mahabharata, Ramayana, Odysse"
+      },
+      "keywords": [
+        "animal-fables"
+      ],
+      "metadata": {
+        "grammar_slug": "animal-fables",
+        "item_count": 31
+      }
+    },
+    {
+      "id": "anon-shiryo-cat-stories",
+      "name": "Anon's Robot Stories: Shiryo & Bishisheshi",
+      "sort_order": 5,
+      "level": 1,
+      "category": "original",
+      "sections": {
+        "About": "A collection of children's stories where Anon — a genderless, ageless parent learning through life — watches their robot Shiryo learn to care for a kitten named Bishisheshi. Each story teaches a relat"
+      },
+      "keywords": [
+        "anon-shiryo-cat-stories"
+      ],
+      "metadata": {
+        "grammar_slug": "anon-shiryo-cat-stories",
+        "item_count": 3
+      }
+    },
+    {
+      "id": "children-story-tree",
+      "name": "The Story Tree: Children's Stories for Every Age",
+      "sort_order": 6,
+      "level": 1,
+      "category": "original",
+      "sections": {
+        "About": "A curated collection of 33 essential children's stories drawn from the world's great traditions — Aesop's fables, Grimm and Andersen fairy tales, Greek and Norse myths, folk tales from six continents,"
+      },
+      "keywords": [
+        "children-story-tree"
+      ],
+      "metadata": {
+        "grammar_slug": "children-story-tree",
+        "item_count": 48
+      }
+    },
+    {
+      "id": "colonial-tongues",
+      "name": "Línguas Coloniais / Colonial Tongues: The Violence We Speak Without Knowing",
+      "sort_order": 7,
+      "level": 1,
+      "category": "original",
+      "sections": {
+        "About": "Every language carries its history in its idioms. In Portuguese: 'judiar' means to mistreat — from 'judeu' (Jew). 'Denegrir' means to defame — from 'negro' (black). A nightstand is a 'criado-mudo' — a"
+      },
+      "keywords": [
+        "colonial-tongues"
+      ],
+      "metadata": {
+        "grammar_slug": "colonial-tongues",
+        "item_count": 27
+      }
+    },
+    {
+      "id": "cosmic-unfolding",
+      "name": "Cosmic Unfolding",
+      "sort_order": 8,
+      "level": 1,
+      "category": "original",
+      "sections": {
+        "About": "The story of everything — from the Big Bang to you reading this sentence. Thirty milestones in the 13.8-billion-year history of the universe, told with wonder and awe. Each event is a turning point: t"
+      },
+      "keywords": [
+        "cosmic-unfolding"
+      ],
+      "metadata": {
+        "grammar_slug": "cosmic-unfolding",
+        "item_count": 40
+      }
+    },
+    {
+      "id": "dinosaur-tree",
+      "name": "Dinosaur Tree",
+      "sort_order": 9,
+      "level": 1,
+      "category": "original",
+      "sections": {
+        "About": "A journey through the age of dinosaurs — from the first tiny hunters of the Triassic to the mighty giants of the Cretaceous. Thirty species organized by the three great periods of the Mesozoic Era, wi"
+      },
+      "keywords": [
+        "dinosaur-tree"
+      ],
+      "metadata": {
+        "grammar_slug": "dinosaur-tree",
+        "item_count": 40
+      }
+    },
+    {
+      "id": "emerald-kids-folk-tales",
+      "name": "Emerald Kids: Folk Tales & Mythology for Young Listeners",
+      "sort_order": 10,
+      "level": 1,
+      "category": "original",
+      "sections": {
+        "About": "A kid-friendly playlist of animated folk tales and mythology videos inspired by stories referenced in The Emerald podcast. This playlist starts with joyful creation stories, Mother Earth celebrations,"
+      },
+      "keywords": [
+        "emerald-kids-folk-tales"
+      ],
+      "metadata": {
+        "grammar_slug": "emerald-kids-folk-tales",
+        "item_count": 27
+      }
+    },
+    {
+      "id": "evolution-tree",
+      "name": "Evolution Tree",
+      "sort_order": 11,
+      "level": 1,
+      "category": "original",
+      "sections": {
+        "About": "The tree of life — 30 major transitions in evolution, from the first self-replicating molecules to the human mind. Each branch point represents a moment when life invented something new: a new body pl"
+      },
+      "keywords": [
+        "evolution-tree"
+      ],
+      "metadata": {
+        "grammar_slug": "evolution-tree",
+        "item_count": 40
+      }
+    },
+    {
+      "id": "story-01-asking-not-complaining",
+      "name": "Shiryo Learns to Ask — Full Story",
+      "sort_order": 12,
+      "level": 1,
+      "category": "original",
+      "sections": {
+        "About": "The complete page-by-page sequence for Story 1: Shiryo learns that asking is better than complaining. Each page includes narrative text, image status, and generation prompts for AI image creation (Mid"
+      },
+      "keywords": [
+        "story-01-asking-not-complaining"
+      ],
+      "metadata": {
+        "grammar_slug": "story-01-asking-not-complaining",
+        "item_count": 10
+      }
+    },
+    {
+      "id": "story-02-gratitude-not-praise",
+      "name": "Shiryo Learns to Say Thank You — Full Story",
+      "sort_order": 13,
+      "level": 1,
+      "category": "original",
+      "sections": {
+        "About": "The complete page-by-page sequence for Story 2: Shiryo learns that gratitude is better than praise. Nature wants to be thanked and tended to, not congratulated. Each page includes narrative text and g"
+      },
+      "keywords": [
+        "story-02-gratitude-not-praise"
+      ],
+      "metadata": {
+        "grammar_slug": "story-02-gratitude-not-praise",
+        "item_count": 10
+      }
+    },
+    {
+      "id": "wildflowers-of-california",
+      "name": "Wildflowers of California",
+      "sort_order": 14,
+      "level": 1,
+      "category": "original",
+      "sections": {
+        "About": "A field guide to 30 beloved California wildflowers — from the golden poppies of spring hillsides to the desert lilies of the Mojave. Each flower is a doorway into California's extraordinary ecological"
+      },
+      "keywords": [
+        "wildflowers-of-california"
+      ],
+      "metadata": {
+        "grammar_slug": "wildflowers-of-california",
+        "item_count": 40
+      }
+    },
+    {
+      "id": "winnie-the-pooh-chapter-book",
+      "name": "Winnie-the-Pooh — A Chapter Book",
+      "sort_order": 15,
+      "level": 1,
+      "category": "original",
+      "sections": {
+        "About": "A. A. Milne's beloved classic broken into scenes for multi-level reading. Level 1 scenes contain the complete original text. Level 2 chapters provide brief summaries. Based on the 1926 first edition, "
+      },
+      "keywords": [
+        "winnie-the-pooh-chapter-book"
+      ],
+      "metadata": {
+        "grammar_slug": "winnie-the-pooh-chapter-book",
+        "item_count": 41
+      }
+    },
+    {
+      "id": "a-little-princess",
+      "name": "A Little Princess",
+      "sort_order": 16,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "Frances Hodgson Burnett's A Little Princess (1905) — the beloved story of Sara Crewe, a girl whose imagination and inner dignity sustain her through the cruelest reversal of fortune. From pampered pup"
+      },
+      "keywords": [
+        "a-little-princess"
+      ],
+      "metadata": {
+        "grammar_slug": "a-little-princess",
+        "item_count": 45
+      }
+    },
+    {
+      "id": "adventures-of-pinocchio",
+      "name": "The Adventures of Pinocchio",
+      "sort_order": 17,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "Carlo Collodi's The Adventures of Pinocchio (Le Avventure di Pinocchio, 1883) -- the original Italian tale of a wooden puppet's long, painful, hilarious journey to become a real boy. Far darker and ri"
+      },
+      "keywords": [
+        "adventures-of-pinocchio"
+      ],
+      "metadata": {
+        "grammar_slug": "adventures-of-pinocchio",
+        "item_count": 47
+      }
+    },
+    {
+      "id": "alice-in-the-mythlands",
+      "name": "Alice in the Mythlands: Where the Stories Begin",
+      "sort_order": 18,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "A series of rhyming poems in which Alice falls through a book of myths and lands — each time — in a different mythic world. She meets Raven stealing light from boxes, Anansi outwitting a god for stori"
+      },
+      "keywords": [
+        "alice-in-the-mythlands"
+      ],
+      "metadata": {
+        "grammar_slug": "alice-in-the-mythlands",
+        "item_count": 17
+      }
+    },
+    {
+      "id": "andersens-fairy-tales",
+      "name": "Andersen's Fairy Tales",
+      "sort_order": 19,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "Eighteen fairy tales by Hans Christian Andersen (1805-1875), the Danish master whose stories transformed children's literature forever. From the naked Emperor to the freezing match girl, from the Snow"
+      },
+      "keywords": [
+        "andersens-fairy-tales"
+      ],
+      "metadata": {
+        "grammar_slug": "andersens-fairy-tales",
+        "item_count": 30
+      }
+    },
+    {
+      "id": "anne-of-green-gables",
+      "name": "Anne of Green Gables",
+      "sort_order": 20,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "L.M. Montgomery's Anne of Green Gables (1908) — the story of Anne Shirley, a fierce, imaginative orphan who transforms the quiet community of Avonlea, Prince Edward Island, through the sheer force of "
+      },
+      "keywords": [
+        "anne-of-green-gables"
+      ],
+      "metadata": {
+        "grammar_slug": "anne-of-green-gables",
+        "item_count": 84
+      }
+    },
+    {
+      "id": "biblical-stories-kids",
+      "name": "Stories from the Living Stars",
+      "sort_order": 21,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "Biblical tales retold as cosmic mythology for bedtime. 48 stories in rhyming verse with an esoteric, animist lens — Jesus as shaman for the Cosmic Christ, angels as star-beings, nature as conscious pa"
+      },
+      "keywords": [
+        "biblical-stories-kids"
+      ],
+      "metadata": {
+        "grammar_slug": "biblical-stories-kids",
+        "item_count": 84
+      }
+    },
+    {
+      "id": "celtic-fairy-tales",
+      "name": "Celtic Fairy Tales",
+      "sort_order": 22,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "Twenty-six fairy tales from Irish, Scottish, and Welsh tradition, selected and edited by Joseph Jacobs (1892) with illustrations by John D. Batten. This landmark anthology gathers tales of fairy encha"
+      },
+      "keywords": [
+        "celtic-fairy-tales"
+      ],
+      "metadata": {
+        "grammar_slug": "celtic-fairy-tales",
+        "item_count": 32
+      }
+    },
+    {
+      "id": "decolonizing-childhood",
+      "name": "Decolonizing Childhood — The Spirits Speak",
+      "sort_order": 23,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "A grammar of childhood told by three lines of Umbanda spirits working together: Erês (child spirits who know from inside), Caboclos (indigenous ancestors who remember how children were raised on the l"
+      },
+      "keywords": [
+        "decolonizing-childhood"
+      ],
+      "metadata": {
+        "grammar_slug": "decolonizing-childhood",
+        "item_count": 64
+      }
+    },
+    {
+      "id": "dreamtime-kids",
+      "name": "The Songlines: Stories from the Dreaming",
+      "sort_order": 24,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "A bedtime mythology grammar drawing from the oldest continuous spiritual tradition on Earth — Aboriginal Australian Dreamtime stories. Forty-two rhyming verses retell publicly shared stories of how An"
+      },
+      "keywords": [
+        "dreamtime-kids"
+      ],
+      "metadata": {
+        "grammar_slug": "dreamtime-kids",
+        "item_count": 60
+      }
+    },
+    {
+      "id": "egyptian-kids",
+      "name": "The Sun's Children: Stories from the Nile",
+      "sort_order": 25,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "Egyptian mythology in rhyming verse for bedtime. The birth of the sun from the primordial waters, Osiris and Isis's love that conquered death, Horus's battle to reclaim the throne, Ra's nightly journe"
+      },
+      "keywords": [
+        "egyptian-kids"
+      ],
+      "metadata": {
+        "grammar_slug": "egyptian-kids",
+        "item_count": 60
+      }
+    },
+    {
+      "id": "folk-tales-tibet",
+      "name": "Folk Tales from Tibet",
+      "sort_order": 26,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "Twenty-two folk tales collected and translated by Captain W. F. O'Connor during the British Mission to Lhasa (1904). Animal trickster tales, magical adventures, and moral fables from the oral traditio"
+      },
+      "keywords": [
+        "folk-tales-tibet"
+      ],
+      "metadata": {
+        "grammar_slug": "folk-tales-tibet",
+        "item_count": 25
+      }
+    },
+    {
+      "id": "giras-do-sitio",
+      "name": "As Giras do Sítio — When Vovó Nastácia Came Home",
+      "sort_order": 27,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "A children's grammar where Tia Nastácia returns as a preta velha in Umbanda to speak with Pedro (Pedrinho grown up) and his family. Each story is a gira — a spiritual gathering where ancestors come to"
+      },
+      "keywords": [
+        "giras-do-sitio"
+      ],
+      "metadata": {
+        "grammar_slug": "giras-do-sitio",
+        "item_count": 19
+      }
+    },
+    {
+      "id": "homer-kids",
+      "name": "The Wine-Dark Sea: Homer for Bedtime",
+      "sort_order": 28,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "The Iliad and Odyssey retold as cosmic mythology for bedtime. 42 stories in rhyming verse with an esoteric, animist lens — the gods as vast cosmic intelligences, Odysseus as shaman-trickster, the Troj"
+      },
+      "keywords": [
+        "homer-kids"
+      ],
+      "metadata": {
+        "grammar_slug": "homer-kids",
+        "item_count": 65
+      }
+    },
+    {
+      "id": "instituto-canoa-math-6",
+      "name": "Curupira's Math Forest — Grade 6",
+      "sort_order": 29,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "Twenty-five group math activities for 6th graders, guided by the Curupira — a forest guardian spirit from Tupi-Guarani mythology with flame-red hair and backwards feet. Based on Instituto Canoa's coll"
+      },
+      "keywords": [
+        "instituto-canoa-math-6"
+      ],
+      "metadata": {
+        "grammar_slug": "instituto-canoa-math-6",
+        "item_count": 36
+      }
+    },
+    {
+      "id": "japanese-fairy-tales",
+      "name": "Japanese Fairy Tales",
+      "sort_order": 30,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "Twenty-two classic Japanese fairy tales compiled by Yei Theodora Ozaki (1908), translated from the modern Japanese versions of Sadanami Sanjin. These beloved stories — including Momotaro, Urashima Tar"
+      },
+      "keywords": [
+        "japanese-fairy-tales"
+      ],
+      "metadata": {
+        "grammar_slug": "japanese-fairy-tales",
+        "item_count": 34
+      }
+    },
+    {
+      "id": "jungle-book",
+      "name": "The Jungle Book",
+      "sort_order": 31,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "Rudyard Kipling's masterwork of animal fable and adventure (1894) -- seven stories and seven companion poems set in the jungles of India, the seal beaches of the Bering Sea, and the military camps of "
+      },
+      "keywords": [
+        "jungle-book"
+      ],
+      "metadata": {
+        "grammar_slug": "jungle-book",
+        "item_count": 25
+      }
+    },
+    {
+      "id": "just-so-stories",
+      "name": "Just So Stories",
+      "sort_order": 32,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "Rudyard Kipling's Just So Stories for Little Children (1902) -- twelve pourquoi tales explaining how animals got their features and how humanity invented writing, told in Kipling's rolling, rhythmic, "
+      },
+      "keywords": [
+        "just-so-stories"
+      ],
+      "metadata": {
+        "grammar_slug": "just-so-stories",
+        "item_count": 20
+      }
+    },
+    {
+      "id": "king-arthur-kids",
+      "name": "Sword and Grail: King Arthur for Bedtime",
+      "sort_order": 33,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "Arthurian legend retold as shamanic mythology for bedtime. 42 stories in rhyming verse with an esoteric, Celtic lens — Merlin as the last Druid, the Grail as vessel of divine consciousness, Avalon as "
+      },
+      "keywords": [
+        "king-arthur-kids"
+      ],
+      "metadata": {
+        "grammar_slug": "king-arthur-kids",
+        "item_count": 66
+      }
+    },
+    {
+      "id": "maya-kids",
+      "name": "The Ballcourt of the Gods: Stories from the Maya",
+      "sort_order": 34,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "K'iche' Maya mythology in rhyming verse for bedtime. The silence before creation, the false sun's vanity, the first ballplayers who descended to the underworld, and the Hero Twins who defeated the lor"
+      },
+      "keywords": [
+        "maya-kids"
+      ],
+      "metadata": {
+        "grammar_slug": "maya-kids",
+        "item_count": 60
+      }
+    },
+    {
+      "id": "nastacia-conta",
+      "name": "Nastácia Conta — She Was Always the Author",
+      "sort_order": 35,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "A retelling of Monteiro Lobato's entire Sítio do Picapau Amarelo universe through the eyes of Tia Nastácia — the Black woman Lobato wrote as a cook, but who was always the keeper of the stories, the h"
+      },
+      "keywords": [
+        "nastacia-conta"
+      ],
+      "metadata": {
+        "grammar_slug": "nastacia-conta",
+        "item_count": 38
+      }
+    },
+    {
+      "id": "norse-kids",
+      "name": "The World Tree: Stories from the North",
+      "sort_order": 36,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "Forty-two Norse myths retold as rhyming bedtime verses for children, spanning from the void of Ginnungagap to the green world reborn after Ragnarök. This is the ONLY major mythology where the gods LOS"
+      },
+      "keywords": [
+        "norse-kids"
+      ],
+      "metadata": {
+        "grammar_slug": "norse-kids",
+        "item_count": 60
+      }
+    },
+    {
+      "id": "one-story-kids",
+      "name": "The One Story: The Pattern Beneath the Myths",
+      "sort_order": 37,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "The meta-grammar of the bedtime mythology series. 42 universal archetypes that appear across all 11 traditions — Biblical, Arthurian, Greek, Hindu, Polynesian, Egyptian, Tibetan, West African, Norse, "
+      },
+      "keywords": [
+        "one-story-kids"
+      ],
+      "metadata": {
+        "grammar_slug": "one-story-kids",
+        "item_count": 66
+      }
+    },
+    {
+      "id": "peter-pan",
+      "name": "Peter Pan",
+      "sort_order": 38,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "J.M. Barrie's Peter Pan (originally published as Peter and Wendy, 1911) — the beloved story of the boy who never grew up, the Darling children's flight to Neverland, and the bittersweet truth that all"
+      },
+      "keywords": [
+        "peter-pan"
+      ],
+      "metadata": {
+        "grammar_slug": "peter-pan",
+        "item_count": 88
+      }
+    },
+    {
+      "id": "polynesian-kids",
+      "name": "The Ocean's Children: Stories from the Pacific",
+      "sort_order": 39,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "Polynesian mythology in rhyming verse for bedtime. The creation of the world from Rangi and Papa's embrace, Maui's impossible feats (fishing up islands, stealing fire, slowing the sun), Pele's volcani"
+      },
+      "keywords": [
+        "polynesian-kids"
+      ],
+      "metadata": {
+        "grammar_slug": "polynesian-kids",
+        "item_count": 61
+      }
+    },
+    {
+      "id": "ramayana-kids",
+      "name": "Rama's Bow: The Ramayana for Bedtime",
+      "sort_order": 40,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "The Ramayana retold as devotional-cosmic mythology for bedtime. 42 stories in rhyming verse with an esoteric, animist lens — Rama as Vishnu choosing human limitation, Sita as Earth goddess, Hanuman as"
+      },
+      "keywords": [
+        "ramayana-kids"
+      ],
+      "metadata": {
+        "grammar_slug": "ramayana-kids",
+        "item_count": 60
+      }
+    },
+    {
+      "id": "roots-of-frozen-ii",
+      "name": "Roots of Frozen II — Nordic Mythology, Sámi Culture & Elemental Spirits for Kids",
+      "sort_order": 41,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "The real mythic, cultural, and musical traditions behind Disney's Frozen II — told for children. Explore the Sámi people's reindeer culture and sacred joik singing, Norse elemental spirits and frost g"
+      },
+      "keywords": [
+        "roots-of-frozen-ii"
+      ],
+      "metadata": {
+        "grammar_slug": "roots-of-frozen-ii",
+        "item_count": 24
+      }
+    },
+    {
+      "id": "roots-of-moana",
+      "name": "Roots of Moana — Polynesian Mythology & Wayfinding for Kids",
+      "sort_order": 42,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "The real mythic, cultural, and musical traditions behind Disney's Moana — told for children. Explore the demigod Māui's legendary feats, Polynesian star navigation, oceanic animism where every wave an"
+      },
+      "keywords": [
+        "roots-of-moana"
+      ],
+      "metadata": {
+        "grammar_slug": "roots-of-moana",
+        "item_count": 25
+      }
+    },
+    {
+      "id": "secret-garden",
+      "name": "The Secret Garden",
+      "sort_order": 43,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "Frances Hodgson Burnett's The Secret Garden (1911) — the story of Mary Lennox, a disagreeable orphan who discovers a locked garden on the Yorkshire moors and, in bringing it back to life, heals hersel"
+      },
+      "keywords": [
+        "secret-garden"
+      ],
+      "metadata": {
+        "grammar_slug": "secret-garden",
+        "item_count": 61
+      }
+    },
+    {
+      "id": "through-the-looking-glass",
+      "name": "Through the Looking-Glass",
+      "sort_order": 44,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "Lewis Carroll's beloved sequel to Alice's Adventures in Wonderland (1871), in which Alice steps through a mirror into a world where everything runs backwards. Structured as a chess game, the story fol"
+      },
+      "keywords": [
+        "through-the-looking-glass"
+      ],
+      "metadata": {
+        "grammar_slug": "through-the-looking-glass",
+        "item_count": 57
+      }
+    },
+    {
+      "id": "tibetan-dream-kids",
+      "name": "The Lands of Sleep: A Dream Guide for Bedtime",
+      "sort_order": 45,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "Tibetan dream yoga and bardo traditions in rhyming verse for bedtime. The ONLY grammar designed to be read AS a bedtime ritual — not just stories about sleep, but stories that accompany the actual pro"
+      },
+      "keywords": [
+        "tibetan-dream-kids"
+      ],
+      "metadata": {
+        "grammar_slug": "tibetan-dream-kids",
+        "item_count": 54
+      }
+    },
+    {
+      "id": "tom-sawyer",
+      "name": "The Adventures of Tom Sawyer",
+      "sort_order": 46,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "Mark Twain's The Adventures of Tom Sawyer (1876) -- the great American novel of boyhood. Tom Sawyer whitewashes a fence, falls in love, witnesses a murder, runs away to be a pirate, attends his own fu"
+      },
+      "keywords": [
+        "tom-sawyer"
+      ],
+      "metadata": {
+        "grammar_slug": "tom-sawyer",
+        "item_count": 49
+      }
+    },
+    {
+      "id": "west-african-kids",
+      "name": "Spider's Thread: Stories from West Africa",
+      "sort_order": 47,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "Forty-two bedtime stories in rhyming verse, drawn from West African mythology — Akan/Ashanti trickster tales, Yoruba Orisha traditions, and Igbo wisdom — retold for children with esoteric annotations "
+      },
+      "keywords": [
+        "west-african-kids"
+      ],
+      "metadata": {
+        "grammar_slug": "west-african-kids",
+        "item_count": 60
+      }
+    },
+    {
+      "id": "wonderful-wizard-of-oz",
+      "name": "The Wonderful Wizard of Oz",
+      "sort_order": 48,
+      "level": 1,
+      "category": "public-domain",
+      "sections": {
+        "About": "L. Frank Baum's The Wonderful Wizard of Oz (1900) -- the first great American fairy tale. Dorothy, a Kansas farm girl, is carried by a cyclone to the Land of Oz, where she meets the Scarecrow, the Tin"
+      },
+      "keywords": [
+        "wonderful-wizard-of-oz"
+      ],
+      "metadata": {
+        "grammar_slug": "wonderful-wizard-of-oz",
+        "item_count": 35
+      }
+    },
+    {
+      "id": "aesops-fables-storyboard",
+      "name": "Aesop's Fables for Little Ones — Storyboard",
+      "sort_order": 49,
+      "level": 1,
+      "category": "storyboard",
+      "sections": {
+        "About": "Production storyboard for animated series based on 30 of Aesop's most beloved fables. Each fable is a 5-minute episode split into 3 scenes with rhyming narration, AI image prompts, and camera directio"
+      },
+      "keywords": [
+        "aesops-fables-storyboard"
+      ],
+      "metadata": {
+        "grammar_slug": "aesops-fables-storyboard",
+        "item_count": 120
+      }
+    },
+    {
+      "id": "alice-in-the-mythlands-storyboard",
+      "name": "Alice in the Mythlands: Where the Stories Begin — Storyboard",
+      "sort_order": 50,
+      "level": 1,
+      "category": "storyboard",
+      "sections": {
+        "About": "Production storyboard for animated series based on Alice in the Mythlands: Where the Stories Begin. Each story is split into 4-8 scenes with narration arcs, AI image generation prompts, camera directi"
+      },
+      "keywords": [
+        "alice-in-the-mythlands-storyboard"
+      ],
+      "metadata": {
+        "grammar_slug": "alice-in-the-mythlands-storyboard",
+        "item_count": 75
+      }
+    },
+    {
+      "id": "biblical-stories-kids-storyboard",
+      "name": "Stories from the Living Stars — Storyboard",
+      "sort_order": 51,
+      "level": 1,
+      "category": "storyboard",
+      "sections": {
+        "About": "Production storyboard for animated series based on Stories from the Living Stars. Each story is split into 4-8 scenes with narration arcs, AI image generation prompts, camera directions, and public do"
+      },
+      "keywords": [
+        "biblical-stories-kids-storyboard"
+      ],
+      "metadata": {
+        "grammar_slug": "biblical-stories-kids-storyboard",
+        "item_count": 192
+      }
+    },
+    {
+      "id": "dreamtime-kids-storyboard",
+      "name": "The Songlines: Stories from the Dreaming — Storyboard",
+      "sort_order": 52,
+      "level": 1,
+      "category": "storyboard",
+      "sections": {
+        "About": "Production storyboard for animated series based on The Songlines: Stories from the Dreaming. Each story is split into 4-8 scenes with narration arcs, AI image generation prompts, camera directions, an"
+      },
+      "keywords": [
+        "dreamtime-kids-storyboard"
+      ],
+      "metadata": {
+        "grammar_slug": "dreamtime-kids-storyboard",
+        "item_count": 168
+      }
+    },
+    {
+      "id": "egyptian-kids-storyboard",
+      "name": "The Sun's Children: Stories from the Nile — Storyboard",
+      "sort_order": 53,
+      "level": 1,
+      "category": "storyboard",
+      "sections": {
+        "About": "Production storyboard for animated series based on The Sun's Children: Stories from the Nile. Each story is split into 4-8 scenes with narration arcs, AI image generation prompts, camera directions, a"
+      },
+      "keywords": [
+        "egyptian-kids-storyboard"
+      ],
+      "metadata": {
+        "grammar_slug": "egyptian-kids-storyboard",
+        "item_count": 168
+      }
+    },
+    {
+      "id": "homer-kids-storyboard",
+      "name": "The Wine-Dark Sea: Homer for Bedtime — Storyboard",
+      "sort_order": 54,
+      "level": 1,
+      "category": "storyboard",
+      "sections": {
+        "About": "Production storyboard for animated series based on The Wine-Dark Sea: Homer for Bedtime. Each story is split into 4-8 scenes with narration arcs, AI image generation prompts, camera directions, and pu"
+      },
+      "keywords": [
+        "homer-kids-storyboard"
+      ],
+      "metadata": {
+        "grammar_slug": "homer-kids-storyboard",
+        "item_count": 169
+      }
+    },
+    {
+      "id": "king-arthur-kids-storyboard",
+      "name": "Sword and Grail: King Arthur for Bedtime — Storyboard",
+      "sort_order": 55,
+      "level": 1,
+      "category": "storyboard",
+      "sections": {
+        "About": "Production storyboard for animated series based on Sword and Grail: King Arthur for Bedtime. Each story is split into 4-8 scenes with narration arcs, AI image generation prompts, camera directions, an"
+      },
+      "keywords": [
+        "king-arthur-kids-storyboard"
+      ],
+      "metadata": {
+        "grammar_slug": "king-arthur-kids-storyboard",
+        "item_count": 170
+      }
+    },
+    {
+      "id": "maya-kids-storyboard",
+      "name": "The Ballcourt of the Gods: Stories from the Maya — Storyboard",
+      "sort_order": 56,
+      "level": 1,
+      "category": "storyboard",
+      "sections": {
+        "About": "Production storyboard for animated series based on The Ballcourt of the Gods: Stories from the Maya. Each story is split into 4-8 scenes with narration arcs, AI image generation prompts, camera direct"
+      },
+      "keywords": [
+        "maya-kids-storyboard"
+      ],
+      "metadata": {
+        "grammar_slug": "maya-kids-storyboard",
+        "item_count": 168
+      }
+    },
+    {
+      "id": "norse-kids-storyboard",
+      "name": "The World Tree: Stories from the North — Storyboard",
+      "sort_order": 57,
+      "level": 1,
+      "category": "storyboard",
+      "sections": {
+        "About": "Production storyboard for animated series based on The World Tree: Stories from the North. Each story is split into 4-8 scenes with narration arcs, AI image generation prompts, camera directions, and "
+      },
+      "keywords": [
+        "norse-kids-storyboard"
+      ],
+      "metadata": {
+        "grammar_slug": "norse-kids-storyboard",
+        "item_count": 168
+      }
+    },
+    {
+      "id": "polynesian-kids-storyboard",
+      "name": "The Ocean's Children: Stories from the Pacific — Storyboard",
+      "sort_order": 58,
+      "level": 1,
+      "category": "storyboard",
+      "sections": {
+        "About": "Production storyboard for animated series based on The Ocean's Children: Stories from the Pacific. Each story is split into 4-8 scenes with narration arcs, AI image generation prompts, camera directio"
+      },
+      "keywords": [
+        "polynesian-kids-storyboard"
+      ],
+      "metadata": {
+        "grammar_slug": "polynesian-kids-storyboard",
+        "item_count": 168
+      }
+    },
+    {
+      "id": "ramayana-kids-storyboard",
+      "name": "Rama's Bow: The Ramayana for Bedtime — Storyboard",
+      "sort_order": 59,
+      "level": 1,
+      "category": "storyboard",
+      "sections": {
+        "About": "Production storyboard for animated series based on Rama's Bow: The Ramayana for Bedtime. Each story is split into 4-8 scenes with narration arcs, AI image generation prompts, camera directions, and pu"
+      },
+      "keywords": [
+        "ramayana-kids-storyboard"
+      ],
+      "metadata": {
+        "grammar_slug": "ramayana-kids-storyboard",
+        "item_count": 230
+      }
+    },
+    {
+      "id": "tibetan-dream-kids-storyboard",
+      "name": "The Lands of Sleep: A Dream Guide for Bedtime — Storyboard",
+      "sort_order": 60,
+      "level": 1,
+      "category": "storyboard",
+      "sections": {
+        "About": "Production storyboard for animated series based on The Lands of Sleep: A Dream Guide for Bedtime. Each story is split into 4-8 scenes with narration arcs, AI image generation prompts, camera direction"
+      },
+      "keywords": [
+        "tibetan-dream-kids-storyboard"
+      ],
+      "metadata": {
+        "grammar_slug": "tibetan-dream-kids-storyboard",
+        "item_count": 144
+      }
+    },
+    {
+      "id": "west-african-kids-storyboard",
+      "name": "Spider's Thread: Stories from West Africa — Storyboard",
+      "sort_order": 61,
+      "level": 1,
+      "category": "storyboard",
+      "sections": {
+        "About": "Production storyboard for animated series based on Spider's Thread: Stories from West Africa. Each story is split into 4-8 scenes with narration arcs, AI image generation prompts, camera directions, a"
+      },
+      "keywords": [
+        "west-african-kids-storyboard"
+      ],
+      "metadata": {
+        "grammar_slug": "west-african-kids-storyboard",
+        "item_count": 168
+      }
+    },
+    {
+      "id": "art-with-mati-and-dada",
+      "name": "Art with Mati and Dada",
+      "sort_order": 62,
+      "level": 1,
+      "category": "media",
+      "sections": {
+        "About": "A delightful journey through art history as Mati & Dada meet famous painters across time. Fun stories, gentle pacing, and beautiful visuals introduce kids to great artists in a way that’s engaging, ed"
+      },
+      "keywords": [
+        "art-with-mati-and-dada"
+      ],
+      "metadata": {
+        "grammar_slug": "art-with-mati-and-dada",
+        "item_count": 40
+      }
+    },
+    {
+      "id": "kids-workouts-gvo-kids-youtube-playlist",
+      "name": "Kids Workouts - GVO Kids YouTube Playlist",
+      "sort_order": 63,
+      "level": 1,
+      "category": "media",
+      "sections": {
+        "About": "Fun workouts for the whole family."
+      },
+      "keywords": [
+        "kids-workouts-gvo-kids-youtube-playlist"
+      ],
+      "metadata": {
+        "grammar_slug": "kids-workouts-gvo-kids-youtube-playlist",
+        "item_count": 50
+      }
+    },
+    {
+      "id": "pbs-kids",
+      "name": "PBS KIDS",
+      "sort_order": 64,
+      "level": 1,
+      "category": "media",
+      "sections": {
+        "About": "Videos form PBS Kids channel in YouTube Kids. Daniel Tiger is the best, but there is more!"
+      },
+      "keywords": [
+        "pbs-kids"
+      ],
+      "metadata": {
+        "grammar_slug": "pbs-kids",
+        "item_count": 50
+      }
+    },
+    {
+      "id": "l2-original",
+      "name": "PlayfulProcess Originals (15)",
+      "sort_order": 65,
+      "level": 2,
+      "category": "grouping",
+      "composite_of": [
+        "aesops-fables",
+        "alice-5-minute-stories",
+        "alice-in-wonderland-chapter-book",
+        "animal-fables",
+        "anon-shiryo-cat-stories",
+        "children-story-tree",
+        "colonial-tongues",
+        "cosmic-unfolding",
+        "dinosaur-tree",
+        "emerald-kids-folk-tales",
+        "evolution-tree",
+        "story-01-asking-not-complaining",
+        "story-02-gratitude-not-praise",
+        "wildflowers-of-california",
+        "winnie-the-pooh-chapter-book"
+      ],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Grammars created by PlayfulProcess: original stories, curated collections, and educational content for children and families."
+      },
+      "keywords": [
+        "l2-original"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "l2-public-domain",
+      "name": "Public Domain Stories (33)",
+      "sort_order": 66,
+      "level": 2,
+      "category": "grouping",
+      "composite_of": [
+        "a-little-princess",
+        "adventures-of-pinocchio",
+        "alice-in-the-mythlands",
+        "andersens-fairy-tales",
+        "anne-of-green-gables",
+        "biblical-stories-kids",
+        "celtic-fairy-tales",
+        "decolonizing-childhood",
+        "dreamtime-kids",
+        "egyptian-kids",
+        "folk-tales-tibet",
+        "giras-do-sitio",
+        "homer-kids",
+        "instituto-canoa-math-6",
+        "japanese-fairy-tales",
+        "jungle-book",
+        "just-so-stories",
+        "king-arthur-kids",
+        "maya-kids",
+        "nastacia-conta",
+        "norse-kids",
+        "one-story-kids",
+        "peter-pan",
+        "polynesian-kids",
+        "ramayana-kids",
+        "roots-of-frozen-ii",
+        "roots-of-moana",
+        "secret-garden",
+        "through-the-looking-glass",
+        "tibetan-dream-kids",
+        "tom-sawyer",
+        "west-african-kids",
+        "wonderful-wizard-of-oz"
+      ],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Classic children's literature and world mythology from the public domain, structured as grammars for recursive exploration."
+      },
+      "keywords": [
+        "l2-public-domain"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "l2-storyboards",
+      "name": "Storyboards (13)",
+      "sort_order": 67,
+      "level": 2,
+      "category": "grouping",
+      "composite_of": [
+        "aesops-fables-storyboard",
+        "alice-in-the-mythlands-storyboard",
+        "biblical-stories-kids-storyboard",
+        "dreamtime-kids-storyboard",
+        "egyptian-kids-storyboard",
+        "homer-kids-storyboard",
+        "king-arthur-kids-storyboard",
+        "maya-kids-storyboard",
+        "norse-kids-storyboard",
+        "polynesian-kids-storyboard",
+        "ramayana-kids-storyboard",
+        "tibetan-dream-kids-storyboard",
+        "west-african-kids-storyboard"
+      ],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Visual storyboard versions of grammars, designed for younger readers with age-adapted retellings."
+      },
+      "keywords": [
+        "l2-storyboards"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "l2-media",
+      "name": "Video & Media (3)",
+      "sort_order": 68,
+      "level": 2,
+      "category": "grouping",
+      "composite_of": [
+        "art-with-mati-and-dada",
+        "kids-workouts-gvo-kids-youtube-playlist",
+        "pbs-kids"
+      ],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "YouTube playlists and video content curated for kids: PBS Kids, art education, workouts."
+      },
+      "keywords": [
+        "l2-media"
+      ],
+      "metadata": {}
+    }
+  ]
+}
