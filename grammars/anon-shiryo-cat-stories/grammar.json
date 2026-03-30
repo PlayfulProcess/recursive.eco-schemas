@@ -214,13 +214,16 @@
       "level": 2,
       "composite_of": [
         "story-01-asking",
-        "story-02-gratitude"
+        "story-02-gratitude",
+        "story-06-being",
+        "story-07-roots",
+        "story-08-together"
       ],
       "category": "series-cover",
       "sort_order": 0,
       "sections": {
         "Summary": "Anon made a robot. The robot is learning to take care of a cat. Together, they are learning the grammars of being alive.",
-        "Series_Arc": "Each story teaches one relational grammar — a pattern of how to be with others and with nature. The stories build on each other:\n\nStory 1: Asking > Complaining — the grammar of REQUESTING (agency, vulnerability)\nStory 2: Thank You > Congrats — the grammar of RECEIVING (humility, gratitude)\n\nThe arc moves from outward (how I speak to you) to inward (how I relate to what you give me). Future stories could continue:\nStory 3: Tending > Fixing — the grammar of CARING\nStory 4: Noticing > Judging — the grammar of SEEING\nStory 5: Waiting > Rushing — the grammar of TIME\n\nEach story ends with the same line — 'because they were learning too' — a recursive signature that reminds the reader: the parent is not above the lesson.",
+        "Series_Arc": "Each story teaches one relational grammar — a pattern of how to be with others and with nature. The stories build on each other:\n\n**Season 1: Shadow Awareness** — learning where your impact falls\nStory 1: Asking > Complaining — the grammar of REQUESTING (agency, vulnerability)\nStory 2: Thank You > Congrats — the grammar of RECEIVING (humility, gratitude)\nStory 3: Tending > Fixing — the grammar of CARING (planned)\nStory 4: Noticing > Judging — the grammar of SEEING (planned)\nStory 5: Waiting > Rushing — the grammar of TIME (planned)\n\n**Season 2: Everything You Need** — discovering you already have it\nStory 6: Being > Performing — the grammar of ARRIVING (presence without technique)\nStory 7: Roots > Reaching — the grammar of BELONGING (connection was already happening)\nStory 8: Together — the grammar of ENOUGH (just here, together)\n\nSeason 1 ends each story with 'because they were learning too.' Season 2 carries this signature through Stories 6 and 7, then breaks it in Story 8 — the final story — replacing it with: 'They were just here. Together. And that was everything they needed.' The learning has become so continuous it no longer needs naming.",
         "Core_Characters": "ANON — genderless, ageless parent and creator. Not the wise sage — learning alongside. The reader's stand-in.\n\nSHIRYO (思慮) — a handmade robot learning to care for a living being. Earnest, literal, trying hard. Named for 'thoughtfulness' in Japanese — what the robot is growing into.\n\nBISHISHESHI — a kitten who is nature itself in miniature. Cannot be controlled, only tended to. Responds to authentic relating, not authority.",
         "Design_Philosophy": "These stories are not about manners. They are about relational grammars — the deep patterns that shape how we connect.\n\nThe robot is the perfect protagonist because it has no social conditioning. It tries the 'logical' approach first (complain, praise, fix, judge) and slowly discovers the relational approach (ask, thank, tend, notice).\n\nThe cat is the perfect teacher because nature doesn't negotiate. A cat will not respond to commands, complaints, or applause. A cat responds to genuine presence.\n\nThe parent (Anon) is not the authority. Anon models the grammar by living it — asking instead of telling, thanking instead of praising — but the final line always reveals: Anon is learning too.\n\nThis is the recursive structure: the child learns from the cat, the parent learns from watching the child learn. The reader learns from all three.",
         "Symbolic_Roots": "Japanese: 思慮 (shiryo, thoughtfulness), 甘える (amaeru, healthy dependence), いただきます (itadakimasu, 'I humbly receive')\nHaudenosaunee: The Thanksgiving Address — thanking each element of the natural world\nNonviolent Communication (Rosenberg): requests vs. demands, observations vs. evaluations\nIndigenous traditions: responding to nature with gratitude and tending, not praise\nMonastery traditions: 'grace' as thanks, not congratulations\n\nThese are not decorative references — they are the root system under each simple story.",
@@ -251,8 +254,8 @@
       "image_url": "",
       "metadata": {
         "item_type": "series-cover",
-        "total_stories": 2,
-        "total_planned": 5,
+        "total_stories": 5,
+        "total_planned": 8,
         "age_range": "3-7 read-aloud, 5-9 independent",
         "stories": [
           {
@@ -268,6 +271,30 @@
             "grammar": "Thank You > Congrats",
             "sequence_ref": "sequences/story-02-gratitude-not-praise/grammar.json",
             "status": "draft"
+          },
+          {
+            "id": "story-06-being",
+            "title": "Shiryo Learns to Just Be",
+            "grammar": "Being > Performing",
+            "sequence_ref": "sequences/story-06-being-not-performing/grammar.json",
+            "status": "draft",
+            "season": 2
+          },
+          {
+            "id": "story-07-roots",
+            "title": "Shiryo Finds the Bolt",
+            "grammar": "Roots > Reaching",
+            "sequence_ref": "sequences/story-07-roots-not-reaching/grammar.json",
+            "status": "draft",
+            "season": 2
+          },
+          {
+            "id": "story-08-together",
+            "title": "A Day",
+            "grammar": "Together",
+            "sequence_ref": "sequences/story-08-together/grammar.json",
+            "status": "draft",
+            "season": 2
           }
         ]
       },
