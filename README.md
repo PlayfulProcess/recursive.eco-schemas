@@ -433,4 +433,31 @@ Before submitting:
 
 ## License
 
-CC-BY-SA-4.0 — Share alike with attribution.
+**CC-BY-SA-4.0** — Share alike with attribution.
+
+All grammars in this repository are licensed under [Creative Commons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+
+### What this means for different content types
+
+| Content | Status | Notes |
+|---------|--------|-------|
+| **Symbolic systems** (tarot, I Ching, astrology) | Original interpretations are CC-BY-SA-4.0 | Traditional systems belong to the commons; your interpretations are your contribution |
+| **Public domain texts** (Alice in Wonderland, Dhammapada) | Public domain source + CC-BY-SA-4.0 adaptations | The source text is free; your arrangement, illustrations, and commentary are licensed |
+| **Music grammars** | See below | Special considerations for track metadata, lyrics, and translations |
+| **Course grammars** | CC-BY-SA-4.0 | Educational content created by contributors |
+
+### Music Grammars
+
+Music grammars contain several types of content with different copyright status:
+
+- **Track metadata** (artist names, album titles, durations) — Factual information, not subject to copyright
+- **YouTube auto-captions** — Machine-generated approximations of lyrics, not reproductions of copyrighted lyrics. Used as a starting point for personal study.
+- **User translations** — Original creative works by the contributor, licensed CC-BY-SA-4.0
+- **User commentary and notes** — Original creative works by the contributor, licensed CC-BY-SA-4.0
+- **Spotify/YouTube URLs** — Links for attribution and playback, not copyrighted content
+
+Music grammars are tools for personal study, translation practice, and meaning-making. They do not redistribute copyrighted audio or official lyrics.
+
+### The code
+
+The recursive.eco platform code is private and unlicensed. This repository contains only grammar content (JSON data), which is CC-BY-SA-4.0.
