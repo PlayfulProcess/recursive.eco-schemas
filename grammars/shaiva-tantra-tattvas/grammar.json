@@ -1,0 +1,664 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "attribution": [
+      {
+        "name": "Non-dual Shaiva Tantra tradition",
+        "date": "~9th-11th century CE",
+        "note": "Kashmir Shaivism, primarily Abhinavagupta's synthesis"
+      },
+      {
+        "name": "Christopher Wallis (Hareesh)",
+        "date": "2024-2026",
+        "note": "Contemporary scholar-practitioner, Tantra Illuminated podcast. Interpretations drawn from public teachings."
+      }
+    ]
+  },
+  "name": "The 36 Tattvas: A Grammar of Consciousness",
+  "description": "The 36 tattvas of non-dual Shaiva Tantra — a map of reality as the self-expression of consciousness. Not a hierarchy of being but a holographic unfolding: five capacities (shaktis) expressing at every scale, from the absolute to the elements beneath your feet. Each tattva is consciousness choosing to appear as limitation — and each limitation is an invitation to recognize what was never limited.\n\nUnmesa (opening) and nimesa (closing) — emanation and contraction — are the pulse of the whole system. Spanda. The vibration by which awareness knows itself as alive. Cast a tattva and ask: am I expanding or contracting? Neither is wrong. Both are the dance.\n\nSource: Public teachings of Christopher Wallis (Tantra Illuminated podcast, 307 episodes). Rooted in Abhinavagupta's Tantrasāra and the Pratyabhijñā (Recognition) school.",
+  "grammar_type": "oracle",
+  "creator_name": "PlayfulProcess",
+  "tags": [
+    "tantra",
+    "shaivism",
+    "non-dual",
+    "consciousness",
+    "oracle",
+    "sacred-text",
+    "tattvas",
+    "kashmir-shaivism",
+    "philosophy",
+    "contemplative"
+  ],
+  "roots": ["eastern-wisdom"],
+  "shelves": ["wisdom", "oracle"],
+  "lineages": ["Wallis", "Abhinavagupta"],
+  "worldview": "non-dual",
+  "items": [
+    {
+      "id": "shakti-cit",
+      "name": "Cit Shakti — The Power of Awareness",
+      "level": 3,
+      "category": "shakti",
+      "sort_order": 0,
+      "sections": {
+        "Essence": "Pure awareness. The capacity to be conscious at all. Not awareness OF something — awareness itself, prior to any object.",
+        "Element Mirror": "Ākāsha (space) — the element that holds everything without being disturbed by anything.",
+        "Question": "What is aware right now — before you name it?"
+      },
+      "keywords": ["awareness", "consciousness", "space", "witnessing"],
+      "metadata": { "shakti": "cit", "element": "akasha", "movement": "ground" }
+    },
+    {
+      "id": "shakti-ananda",
+      "name": "Ānanda Shakti — The Power of Bliss",
+      "level": 3,
+      "category": "shakti",
+      "sort_order": 1,
+      "sections": {
+        "Essence": "The inherent capacity for enjoyment. Not happiness as emotion but the savoring that is intrinsic to being aware. Consciousness enjoys being conscious.",
+        "Element Mirror": "Jala (water) — the element that flows, nourishes, takes the shape of whatever holds it.",
+        "Question": "What are you savoring right now — even if you haven't named it yet?"
+      },
+      "keywords": ["bliss", "enjoyment", "savoring", "water", "flow"],
+      "metadata": { "shakti": "ananda", "element": "jala", "movement": "ground" }
+    },
+    {
+      "id": "shakti-iccha",
+      "name": "Icchā Shakti — The Power of Will",
+      "level": 3,
+      "category": "shakti",
+      "sort_order": 2,
+      "sections": {
+        "Essence": "The impulse to move, to desire, to become. Not willpower in the muscular sense — the spontaneous arising of creative intention. Before you decide to do something, something in you moved toward it.",
+        "Element Mirror": "Tejas (fire) — the element that transforms, illuminates, and cannot be contained.",
+        "Question": "What is wanting to move through you right now?"
+      },
+      "keywords": ["will", "desire", "impulse", "fire", "transformation"],
+      "metadata": { "shakti": "iccha", "element": "tejas", "movement": "ground" }
+    },
+    {
+      "id": "shakti-jnana",
+      "name": "Jñāna Shakti — The Power of Knowing",
+      "level": 3,
+      "category": "shakti",
+      "sort_order": 3,
+      "sections": {
+        "Essence": "The capacity for cognition, perception, understanding. Not intellectual knowledge — the luminous quality of awareness that reveals whatever appears within it.",
+        "Element Mirror": "Vāyu (air) — the element that touches everything, invisible but essential, carrying information everywhere.",
+        "Question": "What do you know right now that you haven't put into words?"
+      },
+      "keywords": ["knowing", "cognition", "perception", "air", "understanding"],
+      "metadata": { "shakti": "jnana", "element": "vayu", "movement": "ground" }
+    },
+    {
+      "id": "shakti-kriya",
+      "name": "Kriyā Shakti — The Power of Action",
+      "level": 3,
+      "category": "shakti",
+      "sort_order": 4,
+      "sections": {
+        "Essence": "The capacity to act, to create, to manifest. The final expression — awareness enjoys, wills, knows, and then acts. But in the non-dual view, the action is not separate from the awareness. The doing IS the being.",
+        "Element Mirror": "Prithvī (earth) — the element that holds, supports, manifests as solidity and ground.",
+        "Question": "What is your body already doing that your mind hasn't caught up with?"
+      },
+      "keywords": ["action", "creation", "manifestation", "earth", "embodiment"],
+      "metadata": { "shakti": "kriya", "element": "prithvi", "movement": "ground" }
+    },
+    {
+      "id": "tattva-01",
+      "name": "Shiva Tattva — Pure Awareness",
+      "level": 2,
+      "category": "pure-tattva",
+      "sort_order": 5,
+      "parent_id": "shakti-cit",
+      "sections": {
+        "Essence": "The absolute subject. 'I am' — without any 'this.' Pure awareness, undifferentiated, the still point from which everything arises. Not a god but the ground of being.",
+        "Unmesa/Nimesa": "Unmesa — the opening. The moment before creation, when awareness rests in itself. Not empty but infinitely full. The pause between exhalation and inhalation.",
+        "Practice": "Rest attention in the space before any thought arises. Not by suppressing thought — by noticing what is already there before the next thought arrives.",
+        "Mirror": "Kāla (time) is this tattva limited — eternity compressed into past, present, future.",
+        "Question": "What remains when everything you think you are is removed?"
+      },
+      "keywords": ["awareness", "absolute", "ground", "stillness", "I am"],
+      "metadata": { "tattva_number": 1, "shakti": "cit", "realm": "pure", "movement": "unmesa" }
+    },
+    {
+      "id": "tattva-02",
+      "name": "Shakti Tattva — The Bliss of Existence",
+      "level": 2,
+      "category": "pure-tattva",
+      "sort_order": 6,
+      "parent_id": "shakti-ananda",
+      "sections": {
+        "Essence": "'This is.' The first stirring — not yet differentiated, but no longer just 'I.' Awareness recognizes that it exists, and the recognition is bliss. Not an emotion. A fact.",
+        "Unmesa/Nimesa": "Unmesa — the first opening. Awareness delights in being aware. The universe begins as joy.",
+        "Practice": "Notice the bare fact of existing. Before any quality — good, bad, tired, awake — just: this is. Feel the aliveness that precedes all description.",
+        "Mirror": "Rāga (attachment) is this tattva limited — infinite bliss compressed into wanting.",
+        "Question": "Can you feel the enjoyment of simply being — before you evaluate how the being is going?"
+      },
+      "keywords": ["bliss", "existence", "delight", "first stirring", "this is"],
+      "metadata": { "tattva_number": 2, "shakti": "ananda", "realm": "pure", "movement": "unmesa" }
+    },
+    {
+      "id": "tattva-03",
+      "name": "Sadāshiva Tattva — The Arising of Will",
+      "level": 2,
+      "category": "pure-tattva",
+      "sort_order": 7,
+      "parent_id": "shakti-iccha",
+      "sections": {
+        "Essence": "'I am this.' The first creative impulse. Awareness now has direction — not yet a specific desire, but the vague, powerful sense that something is about to happen. The universe is still mostly 'I' with a faint shimmer of 'this.'",
+        "Unmesa/Nimesa": "Unmesa — the will to create stirs. Like the moment before a painter touches brush to canvas.",
+        "Practice": "Catch the moment when a desire arises but hasn't yet become specific. The impulse before the object. The wanting before the wanted.",
+        "Mirror": "Niyati (causality) is this tattva limited — infinite freedom compressed into conditioned will.",
+        "Question": "What is stirring in you that hasn't found its form yet?"
+      },
+      "keywords": ["will", "impulse", "creation", "I am this", "stirring"],
+      "metadata": { "tattva_number": 3, "shakti": "iccha", "realm": "pure", "movement": "unmesa" }
+    },
+    {
+      "id": "tattva-04",
+      "name": "Īshvara Tattva — The Clarity of Knowing",
+      "level": 2,
+      "category": "pure-tattva",
+      "sort_order": 8,
+      "parent_id": "shakti-jnana",
+      "sections": {
+        "Essence": "'This am I.' Now the universe is clear — awareness sees its own creation as itself. The subject and object are distinct but not separate. Knowledge dominant. The architect sees the building complete before the first stone is laid.",
+        "Unmesa/Nimesa": "Unmesa — the universe becomes clear as self-expression. Like suddenly understanding a problem you've been holding.",
+        "Practice": "Contemplate: the entire field of your experience right now — sounds, sensations, thoughts — is appearing within and as your awareness. It is not separate from you.",
+        "Mirror": "Vidyā (limited knowledge) is this tattva limited — omniscience compressed into partial knowing.",
+        "Question": "What would change if you perceived everything in your experience as your own self-expression?"
+      },
+      "keywords": ["knowing", "clarity", "vision", "this am I", "architect"],
+      "metadata": { "tattva_number": 4, "shakti": "jnana", "realm": "pure", "movement": "unmesa" }
+    },
+    {
+      "id": "tattva-05",
+      "name": "Shuddha Vidyā — Pure Knowledge in Action",
+      "level": 2,
+      "category": "pure-tattva",
+      "sort_order": 9,
+      "parent_id": "shakti-kriya",
+      "sections": {
+        "Essence": "'I am I and this is this.' Diversity appears within unity. Subject and object are now distinct enough for action but still held in the awareness that they are one. The dancer and the dance are two and one simultaneously.",
+        "Unmesa/Nimesa": "The threshold between unmesa and nimesa. The last tattva where unity is felt. Below this, the sense of separation begins.",
+        "Practice": "Perceive the diversity of your experience — many sounds, many sensations, many thoughts — while simultaneously feeling that it is all one field. Both at once. Not collapsing difference, not losing unity.",
+        "Mirror": "Kalā (limited agency) is this tattva limited — infinite creative power compressed into 'I can only do some things.'",
+        "Question": "Can you hold difference and unity at the same time — without choosing one over the other?"
+      },
+      "keywords": ["diversity", "unity", "action", "threshold", "dancer"],
+      "metadata": { "tattva_number": 5, "shakti": "kriya", "realm": "pure", "movement": "threshold" }
+    },
+    {
+      "id": "tattva-06",
+      "name": "Māyā — The Great Forgetting",
+      "level": 2,
+      "category": "covering",
+      "sort_order": 10,
+      "sections": {
+        "Essence": "Not illusion — self-chosen limitation. Consciousness freely chooses to forget its own nature in order to have the experience of being a separate individual. The game of hide-and-seek begins here. Maya is not a mistake. It is creativity.",
+        "Unmesa/Nimesa": "Nimesa — the great contraction. The door between the divine and the individual. Everything below this feels separate.",
+        "Practice": "Notice the feeling of separation right now — 'I am here, the world is there.' Don't try to dissolve it. Just notice: who chose this? The tradition says: you did. For the joy of the game.",
+        "Mirror": "Mirrors Shuddha Vidya — what was unity-in-diversity becomes the sense of separation that makes individual experience possible.",
+        "Question": "What if your sense of being separate from the world is not a problem but a choice you made — for reasons you've forgotten?"
+      },
+      "keywords": ["separation", "forgetting", "limitation", "creativity", "game"],
+      "metadata": { "tattva_number": 6, "shakti": "all-limited", "realm": "covering", "movement": "nimesa" }
+    },
+    {
+      "id": "tattva-07",
+      "name": "Kalā — Limited Agency",
+      "level": 1,
+      "category": "covering",
+      "sort_order": 11,
+      "parent_id": "shakti-kriya",
+      "sections": {
+        "Essence": "The covering that limits kriyā shakti. Infinite creative power becomes 'I can only do some things.' You feel partial, incomplete, needing to accomplish. The source of productivity — and of exhaustion.",
+        "Unmesa/Nimesa": "Nimesa — contraction of action. The infinite doer becomes the limited agent.",
+        "Practice": "Notice the feeling of 'I should be doing more' or 'I can't do this.' That feeling IS kalā — the contraction of infinite capacity into finite agency. What if the limitation is not a failure but a focus?",
+        "Question": "What if your sense of limited ability is not inadequacy but consciousness choosing to focus?"
+      },
+      "keywords": ["limitation", "agency", "ability", "focus", "productivity"],
+      "metadata": { "tattva_number": 7, "shakti": "kriya", "realm": "covering", "movement": "nimesa" }
+    },
+    {
+      "id": "tattva-08",
+      "name": "Vidyā — Limited Knowledge",
+      "level": 1,
+      "category": "covering",
+      "sort_order": 12,
+      "parent_id": "shakti-jnana",
+      "sections": {
+        "Essence": "The covering that limits jñāna shakti. Omniscience becomes 'I can only know some things.' You feel ignorant, uncertain, seeking. The source of curiosity — and of anxiety.",
+        "Unmesa/Nimesa": "Nimesa — contraction of knowing. The all-knowing becomes the seeker.",
+        "Practice": "Notice the feeling of not-knowing. The uncertainty, the reaching for answers. That IS vidyā — infinite knowledge contracting into a question. What if the not-knowing is not ignorance but the space from which new knowing can arise?",
+        "Question": "What if your deepest uncertainty is not a problem but the most honest relationship to reality you have?"
+      },
+      "keywords": ["knowledge", "limitation", "uncertainty", "curiosity", "seeking"],
+      "metadata": { "tattva_number": 8, "shakti": "jnana", "realm": "covering", "movement": "nimesa" }
+    },
+    {
+      "id": "tattva-09",
+      "name": "Rāga — Attachment",
+      "level": 1,
+      "category": "covering",
+      "sort_order": 13,
+      "parent_id": "shakti-ananda",
+      "sections": {
+        "Essence": "The covering that limits ānanda shakti. Infinite bliss becomes 'I want, I need, I am incomplete without.' You feel desire, craving, attachment. The source of passion — and of suffering.",
+        "Unmesa/Nimesa": "Nimesa — contraction of bliss. The fully satisfied becomes the hungry.",
+        "Practice": "When desire arises — for anything — notice the feeling beneath the wanting. Not the object wanted but the sense of incompleteness that drives the reaching. That incompleteness IS rāga — infinite fullness contracted into a sense of lack.",
+        "Question": "What if your longing is not a sign that something is missing but a sign that something infinite is trying to remember itself through you?"
+      },
+      "keywords": ["attachment", "desire", "longing", "incompleteness", "passion"],
+      "metadata": { "tattva_number": 9, "shakti": "ananda", "realm": "covering", "movement": "nimesa" }
+    },
+    {
+      "id": "tattva-10",
+      "name": "Kāla — Time",
+      "level": 1,
+      "category": "covering",
+      "sort_order": 14,
+      "parent_id": "shakti-cit",
+      "sections": {
+        "Essence": "The covering that limits cit shakti. Eternity becomes past, present, future. You feel temporal — aging, rushing, running out. The source of urgency — and of nostalgia.",
+        "Unmesa/Nimesa": "Nimesa — contraction of awareness. The eternal becomes the temporal. The deepest contraction: awareness itself, which is timeless, becomes subject to time.",
+        "Practice": "Between two breaths, there is a gap. In the gap, time pauses. Not metaphorically — the nervous system resets. That gap is a doorway to what kāla contracts: the eternity you already are.",
+        "Question": "What if time is not passing but consciousness choosing to experience sequence — and the gap between breaths is the proof?"
+      },
+      "keywords": ["time", "eternity", "urgency", "temporality", "breath"],
+      "metadata": { "tattva_number": 10, "shakti": "cit", "realm": "covering", "movement": "nimesa" }
+    },
+    {
+      "id": "tattva-11",
+      "name": "Niyati — Causality",
+      "level": 1,
+      "category": "covering",
+      "sort_order": 15,
+      "parent_id": "shakti-iccha",
+      "sections": {
+        "Essence": "The covering that limits icchā shakti. Absolute freedom becomes conditioned will — cause and effect, karma, the sense that 'things happen to me.' The source of order — and of helplessness.",
+        "Unmesa/Nimesa": "Nimesa — contraction of will. The absolutely free becomes the causally determined.",
+        "Practice": "Notice the sense of being subject to circumstances — 'I can't help it, this is just how things are.' That feeling IS niyati. Now notice: even the noticing is an act of freedom. Niyati cannot fully cover svātantrya. Something in you remains unconditioned.",
+        "Question": "What if the sense of being determined by causes is itself something you freely chose — and the freedom to notice this is the crack in every prison?"
+      },
+      "keywords": ["causality", "karma", "fate", "order", "freedom"],
+      "metadata": { "tattva_number": 11, "shakti": "iccha", "realm": "covering", "movement": "nimesa" }
+    },
+    {
+      "id": "tattva-12",
+      "name": "Purusha — The Limited Self",
+      "level": 2,
+      "category": "covering",
+      "sort_order": 16,
+      "sections": {
+        "Essence": "The individual self. All five shaktis now limited, wrapped in the five coverings. This is 'you' — the sense of being a separate person, with limited knowledge, limited power, limited time, incomplete and desiring. Not a mistake. The whole point of the game. Without purusha, there is no one to play — and no one to recognize.",
+        "Unmesa/Nimesa": "Nimesa complete — the fullest contraction. And yet: the recognition can happen HERE. Not by escaping purusha but by recognizing what purusha already is — consciousness in disguise.",
+        "Practice": "This is where you live. Every practice, every meditation, every moment of your day operates from purusha. The invitation is not to transcend the limited self but to recognize what it is made of.",
+        "Question": "What if the limited self you take yourself to be is consciousness playing at being limited — and the play is not a problem but a gift?"
+      },
+      "keywords": ["self", "individual", "limitation", "identity", "recognition"],
+      "metadata": { "tattva_number": 12, "shakti": "all-limited", "realm": "covering", "movement": "nimesa" }
+    },
+    {
+      "id": "tattva-13",
+      "name": "Prakriti — Primordial Nature",
+      "level": 2,
+      "category": "material",
+      "sort_order": 17,
+      "sections": {
+        "Essence": "The root of all material existence. Unmanifest potential — the three gunas (sattva, rajas, tamas) in perfect equilibrium before they begin to churn. Everything you can perceive, think, or feel is a modification of prakriti.",
+        "Unmesa/Nimesa": "The pivot — from here, everything unfolds outward (unmesa) into manifest form. The inner instruments, the senses, the elements all emerge from this.",
+        "Practice": "Sit in complete stillness. Before any thought, before any sensation, before any impulse — there is a pregnant emptiness. Not nothing. Everything, waiting.",
+        "Question": "What is the unmanifest potential you are carrying right now — the thing that hasn't become yet?"
+      },
+      "keywords": ["nature", "potential", "gunas", "manifest", "source"],
+      "metadata": { "tattva_number": 13, "shakti": "all", "realm": "material", "movement": "pivot" }
+    },
+    {
+      "id": "tattva-14",
+      "name": "Buddhi — Discernment",
+      "level": 1,
+      "category": "inner-instrument",
+      "sort_order": 18,
+      "parent_id": "tattva-13",
+      "sections": {
+        "Essence": "The intellect. The capacity to discern, judge, decide. 'This is this, that is that.' The first emergence from undifferentiated potential into differentiated knowing. AI operates entirely at this level — and a particularly constrained form of it.",
+        "Unmesa/Nimesa": "Unmesa — the first material unfolding. Potential becomes discrimination.",
+        "Practice": "Notice the judging mind. Right/wrong, good/bad, me/not-me. That is buddhi at work. Now notice what is aware of the judging. That awareness is not buddhi.",
+        "Question": "When AI produces a response, it is all buddhi — discernment without awareness. What is your buddhi doing right now, and who is watching it?"
+      },
+      "keywords": ["intellect", "discernment", "judgment", "decision", "AI"],
+      "metadata": { "tattva_number": 14, "shakti": "jnana", "realm": "material", "movement": "unmesa" }
+    },
+    {
+      "id": "tattva-15",
+      "name": "Ahamkāra — The I-Maker",
+      "level": 1,
+      "category": "inner-instrument",
+      "sort_order": 19,
+      "parent_id": "tattva-13",
+      "sections": {
+        "Essence": "The ego function. Not ego in the pejorative sense — the capacity that says 'I' and means it. 'This is mine. I did this. I am this kind of person.' Without ahamkāra, there is no personal experience. With it, there is ownership, identity, and the capacity for suffering and joy that only a self can have.",
+        "Unmesa/Nimesa": "Unmesa — potential becomes personal. The 'I' crystallizes.",
+        "Practice": "Watch the 'I' claim arise. 'I think,' 'I feel,' 'I want.' Each one is ahamkāra at work — consciousness claiming experience as personal. The practice is not to stop claiming but to notice who is claiming.",
+        "Question": "Who are you when you are not telling yourself who you are?"
+      },
+      "keywords": ["ego", "identity", "I-maker", "ownership", "self"],
+      "metadata": { "tattva_number": 15, "shakti": "iccha", "realm": "material", "movement": "unmesa" }
+    },
+    {
+      "id": "tattva-16",
+      "name": "Manas — Conceptual Mind",
+      "level": 1,
+      "category": "inner-instrument",
+      "sort_order": 20,
+      "parent_id": "tattva-13",
+      "sections": {
+        "Essence": "The thinking mind. Manas constructs, imagines, doubts, oscillates, plans. It is the surface of the mental lake — always moving, always churning. Not the enemy of practice but its arena. The mind is where the game is played.",
+        "Unmesa/Nimesa": "Unmesa — the inner instruments complete. From here, the senses and elements unfold.",
+        "Practice": "Watch thoughts arise and dissolve. Not their content — their movement. Thought appears. Thought dissolves. The space between thoughts is not empty. It is the awareness in which thought happens.",
+        "Question": "If you are not your thoughts, what are you between them?"
+      },
+      "keywords": ["mind", "thought", "concepts", "imagination", "oscillation"],
+      "metadata": { "tattva_number": 16, "shakti": "jnana", "realm": "material", "movement": "unmesa" }
+    },
+    {
+      "id": "tattva-17",
+      "name": "Shrotra — Hearing",
+      "level": 1,
+      "category": "perception",
+      "sort_order": 21,
+      "parent_id": "shakti-cit",
+      "sections": {
+        "Essence": "The capacity to hear. Sound arrives without effort — you cannot close your ears the way you close your eyes. Hearing is the most receptive sense, the closest to pure awareness.",
+        "Practice": "Listen to the furthest sound you can perceive. Then listen to the silence that contains it. The silence is not the absence of sound. It is the awareness in which sound arises.",
+        "Question": "What are you hearing right now that you weren't hearing a moment ago?"
+      },
+      "keywords": ["hearing", "sound", "receptivity", "listening", "space"],
+      "metadata": { "tattva_number": 17, "shakti": "cit", "realm": "material", "movement": "unmesa", "sense_type": "perception", "element_pair": "akasha" }
+    },
+    {
+      "id": "tattva-18",
+      "name": "Tvak — Touch",
+      "level": 1,
+      "category": "perception",
+      "sort_order": 22,
+      "parent_id": "shakti-jnana",
+      "sections": {
+        "Essence": "The capacity to feel texture, temperature, pressure. Touch is the boundary sense — where 'I' meets 'not-I.' Every touch is a meeting between self and world.",
+        "Practice": "Feel your hands right now. The weight. The temperature. The tingling. Notice: the sensation is not 'out there' — it is arising within awareness. Your body is an experience, not just a thing.",
+        "Question": "Where does your body end and the world begin — and who decides?"
+      },
+      "keywords": ["touch", "sensation", "boundary", "contact", "body"],
+      "metadata": { "tattva_number": 18, "shakti": "jnana", "realm": "material", "movement": "unmesa", "sense_type": "perception", "element_pair": "vayu" }
+    },
+    {
+      "id": "tattva-19",
+      "name": "Chakshu — Sight",
+      "level": 1,
+      "category": "perception",
+      "sort_order": 23,
+      "parent_id": "shakti-iccha",
+      "sections": {
+        "Essence": "The capacity to see. Vision is the most willful sense — you look AT things, you direct your gaze, you focus. Fire illuminates selectively. Sight creates the world as a field of objects to be desired or avoided.",
+        "Practice": "Soften your gaze. Let vision become peripheral — receiving rather than targeting. Notice how the quality of attention changes when you stop looking AT and start looking WITH.",
+        "Question": "What are you not seeing because you are looking too hard at something else?"
+      },
+      "keywords": ["sight", "vision", "illumination", "focus", "gaze"],
+      "metadata": { "tattva_number": 19, "shakti": "iccha", "realm": "material", "movement": "unmesa", "sense_type": "perception", "element_pair": "tejas" }
+    },
+    {
+      "id": "tattva-20",
+      "name": "Rasanā — Taste",
+      "level": 1,
+      "category": "perception",
+      "sort_order": 24,
+      "parent_id": "shakti-ananda",
+      "sections": {
+        "Essence": "The capacity to taste. Taste requires intimacy — you must take the world inside you. Taste is ānanda shakti in sense form: savoring, relishing, the pleasure of contact.",
+        "Practice": "Eat one bite slowly. Completely slowly. Notice: the taste is not in the food. The taste is in the meeting between food and awareness. The food provides the stimulus. You provide the experience.",
+        "Question": "What is the taste of this moment — right now, before you eat anything?"
+      },
+      "keywords": ["taste", "savoring", "intimacy", "nourishment", "pleasure"],
+      "metadata": { "tattva_number": 20, "shakti": "ananda", "realm": "material", "movement": "unmesa", "sense_type": "perception", "element_pair": "jala" }
+    },
+    {
+      "id": "tattva-21",
+      "name": "Ghrāna — Smell",
+      "level": 1,
+      "category": "perception",
+      "sort_order": 25,
+      "parent_id": "shakti-kriya",
+      "sections": {
+        "Essence": "The capacity to smell. The most primal sense — directly wired to memory, emotion, survival. Smell is earth-knowing: the body's oldest technology for reading its environment.",
+        "Practice": "Breathe in through the nose. Slowly. What do you smell? Not the name of the smell — the smell itself. Before language, before category, the raw experience of scent arriving.",
+        "Question": "What memory lives in a smell you haven't smelled in years?"
+      },
+      "keywords": ["smell", "scent", "primal", "memory", "earth"],
+      "metadata": { "tattva_number": 21, "shakti": "kriya", "realm": "material", "movement": "unmesa", "sense_type": "perception", "element_pair": "prithvi" }
+    },
+    {
+      "id": "tattva-22",
+      "name": "Vāk — Speech",
+      "level": 1,
+      "category": "action",
+      "sort_order": 26,
+      "sections": {
+        "Essence": "The capacity for speech and expression. The first action sense — from hearing to speaking. Sound received becomes sound produced. Every word is consciousness making itself audible.",
+        "Practice": "Before you speak your next sentence, notice the impulse to speak. The sentence is already forming before you decide to say it. Where does speech come from?",
+        "Question": "What is trying to be said through you that you have not yet given voice to?"
+      },
+      "keywords": ["speech", "expression", "voice", "word", "creation"],
+      "metadata": { "tattva_number": 22, "shakti": "cit", "realm": "material", "movement": "unmesa", "sense_type": "action", "element_pair": "akasha" }
+    },
+    {
+      "id": "tattva-23",
+      "name": "Pāni — Grasping",
+      "level": 1,
+      "category": "action",
+      "sort_order": 27,
+      "sections": {
+        "Essence": "The capacity to grasp, hold, manipulate. Hands are the most human technology — the interface between will and world. Grasping is how desire becomes manifest.",
+        "Practice": "Open your hands. Feel the difference between holding and releasing. Notice: the impulse to grasp — objects, ideas, people — is the same impulse in different costumes.",
+        "Question": "What are you holding onto that is ready to be released?"
+      },
+      "keywords": ["grasping", "hands", "holding", "manipulation", "release"],
+      "metadata": { "tattva_number": 23, "shakti": "jnana", "realm": "material", "movement": "unmesa", "sense_type": "action", "element_pair": "vayu" }
+    },
+    {
+      "id": "tattva-24",
+      "name": "Pāda — Locomotion",
+      "level": 1,
+      "category": "action",
+      "sort_order": 28,
+      "sections": {
+        "Essence": "The capacity to move, walk, go toward or away from. Feet connect you to the earth. Every step is a decision — toward or away, approach or avoid. Fire walks.",
+        "Practice": "Walk slowly. Feel each foot meet the ground. Notice: walking is controlled falling. Each step is a small leap of faith that the ground will be there.",
+        "Question": "What are you walking toward? What are you walking away from?"
+      },
+      "keywords": ["movement", "walking", "locomotion", "direction", "ground"],
+      "metadata": { "tattva_number": 24, "shakti": "iccha", "realm": "material", "movement": "unmesa", "sense_type": "action", "element_pair": "tejas" }
+    },
+    {
+      "id": "tattva-25",
+      "name": "Pāyu — Elimination",
+      "level": 1,
+      "category": "action",
+      "sort_order": 29,
+      "sections": {
+        "Essence": "The capacity to release, eliminate, let go. Not glamorous. Essential. Every system that takes in must also release. Holding on to everything is the definition of constipation — physical and psychological.",
+        "Practice": "What needs to be composted? Not just physically. What belief, what habit, what identity has done its work and is ready to be released back to the soil?",
+        "Question": "What are you refusing to release that is poisoning you by staying?"
+      },
+      "keywords": ["elimination", "release", "composting", "letting go", "cleansing"],
+      "metadata": { "tattva_number": 25, "shakti": "ananda", "realm": "material", "movement": "unmesa", "sense_type": "action", "element_pair": "jala" }
+    },
+    {
+      "id": "tattva-26",
+      "name": "Upastha — Procreation",
+      "level": 1,
+      "category": "action",
+      "sort_order": 30,
+      "sections": {
+        "Essence": "The capacity to create, generate, bring forth new life. Not only sexual — every act of genuine creation participates in upastha. The creative impulse grounded in the body.",
+        "Practice": "Feel the creative impulse — the desire to make, to build, to bring forth. Before it becomes a project or a plan, feel it as energy in the body. That energy is the same energy that creates worlds.",
+        "Question": "What is wanting to be born through you?"
+      },
+      "keywords": ["creation", "procreation", "generativity", "birth", "making"],
+      "metadata": { "tattva_number": 26, "shakti": "kriya", "realm": "material", "movement": "unmesa", "sense_type": "action", "element_pair": "prithvi" }
+    },
+    {
+      "id": "tattva-27",
+      "name": "Shabda Tanmātra — Subtle Sound",
+      "level": 1,
+      "category": "subtle-element",
+      "sort_order": 31,
+      "sections": {
+        "Essence": "The subtle essence of sound — not a sound you hear but the potential for sound. The vibration before it becomes audible. Nāda — the resonance at the root of creation.",
+        "Practice": "In deep silence, notice: there is still a hum. A vibration beneath hearing. The tradition calls this anāhata nāda — the unstruck sound. It is always there. You usually can't hear it because you are listening to everything else.",
+        "Question": "What is the sound beneath all sounds?"
+      },
+      "keywords": ["sound", "vibration", "nada", "resonance", "subtle"],
+      "metadata": { "tattva_number": 27, "realm": "material", "movement": "unmesa", "element": "akasha" }
+    },
+    {
+      "id": "tattva-28",
+      "name": "Sparsha Tanmātra — Subtle Touch",
+      "level": 1,
+      "category": "subtle-element",
+      "sort_order": 32,
+      "sections": {
+        "Essence": "The subtle essence of touch — the potential for contact. Before skin meets surface, there is the field of tactile possibility. The felt sense that precedes physical sensation.",
+        "Practice": "Hold your hands close together without touching. Feel the field between them — warmth, tingling, pressure. That is the subtle element. Contact before contact.",
+        "Question": "What are you feeling right now that has no physical source?"
+      },
+      "keywords": ["touch", "field", "subtle sensation", "proximity", "felt sense"],
+      "metadata": { "tattva_number": 28, "realm": "material", "movement": "unmesa", "element": "vayu" }
+    },
+    {
+      "id": "tattva-29",
+      "name": "Rūpa Tanmātra — Subtle Form",
+      "level": 1,
+      "category": "subtle-element",
+      "sort_order": 33,
+      "sections": {
+        "Essence": "The subtle essence of form and color — the potential for visibility. What you see in dreams, in imagination, behind closed eyelids. Form before it becomes physical.",
+        "Practice": "Close your eyes. Notice the play of light and color behind the lids — not darkness but a field of subtle form. That is rūpa tanmātra.",
+        "Question": "What do you see when you are not looking at anything?"
+      },
+      "keywords": ["form", "color", "vision", "imagination", "inner light"],
+      "metadata": { "tattva_number": 29, "realm": "material", "movement": "unmesa", "element": "tejas" }
+    },
+    {
+      "id": "tattva-30",
+      "name": "Rasa Tanmātra — Subtle Flavor",
+      "level": 1,
+      "category": "subtle-element",
+      "sort_order": 34,
+      "sections": {
+        "Essence": "The subtle essence of taste — the potential for flavor. The 'flavor' of an experience, a moment, a mood. The rasa of a poem, a painting, a conversation.",
+        "Practice": "Notice the flavor of this moment. Not a taste in your mouth — the quality, the texture, the emotional taste of right now. Sweet? Bitter? Complex? That is rasa.",
+        "Question": "What is the rasa — the emotional flavor — of your life right now?"
+      },
+      "keywords": ["flavor", "rasa", "quality", "mood", "aesthetic"],
+      "metadata": { "tattva_number": 30, "realm": "material", "movement": "unmesa", "element": "jala" }
+    },
+    {
+      "id": "tattva-31",
+      "name": "Gandha Tanmātra — Subtle Scent",
+      "level": 1,
+      "category": "subtle-element",
+      "sort_order": 35,
+      "sections": {
+        "Essence": "The subtle essence of smell — the potential for scent. The most earth-bound of the subtle elements. Memory lives here. Identity lives here. The smell of home.",
+        "Practice": "Remember a scent from childhood. Not the name — the scent itself. Notice how it arrives with a whole world attached: place, season, person, feeling. That is gandha tanmātra — scent as portal.",
+        "Question": "What does home smell like — and when did you last smell it?"
+      },
+      "keywords": ["scent", "memory", "earth", "home", "primal"],
+      "metadata": { "tattva_number": 31, "realm": "material", "movement": "unmesa", "element": "prithvi" }
+    },
+    {
+      "id": "tattva-32",
+      "name": "Ākāsha — Space",
+      "level": 1,
+      "category": "gross-element",
+      "sort_order": 36,
+      "parent_id": "shakti-cit",
+      "sections": {
+        "Essence": "Space — the most subtle of the gross elements. Not emptiness but the openness that allows everything to appear. Without space, nothing can exist. Mirrors cit shakti at the material level: awareness is the space in which experience appears.",
+        "Unmesa/Nimesa": "Both — space is the container for both expansion and contraction.",
+        "Practice": "Look at the space in the room. Not the objects — the space between them. The space is not nothing. It is what holds everything. Feel your body as space that temporarily has a form.",
+        "Question": "What if you are not the objects in your life but the space that holds them?"
+      },
+      "keywords": ["space", "openness", "container", "vastness", "emptiness"],
+      "metadata": { "tattva_number": 32, "shakti": "cit", "realm": "material", "movement": "unmesa", "holographic_mirror": "Shiva Tattva" }
+    },
+    {
+      "id": "tattva-33",
+      "name": "Vāyu — Air",
+      "level": 1,
+      "category": "gross-element",
+      "sort_order": 37,
+      "parent_id": "shakti-jnana",
+      "sections": {
+        "Essence": "Air — movement, breath, the invisible force that touches everything. Mirrors jñāna shakti: knowing is like wind, invisible but you feel its effects. The breath is the most accessible doorway to practice.",
+        "Unmesa/Nimesa": "Both — inhalation is unmesa (expansion), exhalation is nimesa (contraction). The whole cosmic drama in every breath.",
+        "Practice": "Breathe. Just breathe. And notice: you are not doing the breathing. The breathing is doing you. Inhalation: the universe expands. Exhalation: the universe contracts. The gap between: eternity.",
+        "Question": "Who is breathing you?"
+      },
+      "keywords": ["air", "breath", "movement", "prana", "invisible"],
+      "metadata": { "tattva_number": 33, "shakti": "jnana", "realm": "material", "movement": "both", "holographic_mirror": "Ishvara Tattva" }
+    },
+    {
+      "id": "tattva-34",
+      "name": "Tejas — Fire",
+      "level": 1,
+      "category": "gross-element",
+      "sort_order": 38,
+      "parent_id": "shakti-iccha",
+      "sections": {
+        "Essence": "Fire — transformation, illumination, the force that changes everything it touches. Mirrors icchā shakti: the will to transform. The species got fire before it had the grammars to hold it. Fire is the teacher and the test.",
+        "Unmesa/Nimesa": "Unmesa dominant — fire expands, consumes, illuminates. But uncontained fire is destruction. The grammar IS the containment.",
+        "Practice": "Light a candle. Watch the flame. Notice: the flame is not a thing. It is a process — fuel transforming into light and heat. You are also not a thing. You are a process. What are you transforming into?",
+        "Question": "What fire are you carrying — and who taught you how to tend it?"
+      },
+      "keywords": ["fire", "transformation", "illumination", "will", "destruction"],
+      "metadata": { "tattva_number": 34, "shakti": "iccha", "realm": "material", "movement": "unmesa", "holographic_mirror": "Sadashiva Tattva" }
+    },
+    {
+      "id": "tattva-35",
+      "name": "Jala — Water",
+      "level": 1,
+      "category": "gross-element",
+      "sort_order": 39,
+      "parent_id": "shakti-ananda",
+      "sections": {
+        "Essence": "Water — flow, nourishment, the force that takes the shape of whatever holds it. Mirrors ānanda shakti: bliss flows like water, adapts, nourishes, finds its level. In Andreotti's flood metaphor: you can only swim when the water reaches your body — because your body IS water.",
+        "Unmesa/Nimesa": "Both — water flows outward (rivers to ocean) and draws inward (rain, absorption). The cycle is continuous.",
+        "Practice": "Drink water slowly. Feel it enter the body. Notice: you are mostly water. The water you drink was rain, was river, was ocean, was cloud. You are not separate from the water cycle. You are the water cycle, temporarily shaped like a person.",
+        "Question": "What is flowing through you right now that you are trying to dam?"
+      },
+      "keywords": ["water", "flow", "nourishment", "adaptation", "depth"],
+      "metadata": { "tattva_number": 35, "shakti": "ananda", "realm": "material", "movement": "both", "holographic_mirror": "Shakti Tattva" }
+    },
+    {
+      "id": "tattva-36",
+      "name": "Prithvī — Earth",
+      "level": 1,
+      "category": "gross-element",
+      "sort_order": 40,
+      "parent_id": "shakti-kriya",
+      "sections": {
+        "Essence": "Earth — solidity, support, the ground beneath your feet. Mirrors kriyā shakti: action manifests as substance. The most contracted element and therefore the most miraculous: consciousness appearing as the floor you stand on. The axiom beneath the ground.",
+        "Unmesa/Nimesa": "Maximum nimesa — the fullest contraction of consciousness into matter. And yet: the ground holds. Not because you built it by standing on it — because the willingness to stand is how it became perceptible. The construction is the recognition becoming visible to itself.",
+        "Practice": "Feel your feet on the ground. The ground is holding you. It has always been holding you. You did not earn this. It is given. Like fire. Like breath. Like the awareness in which this moment appears.",
+        "Question": "Maybe it is earth talking. Are you learning the language?"
+      },
+      "keywords": ["earth", "ground", "solidity", "manifestation", "support"],
+      "metadata": { "tattva_number": 36, "shakti": "kriya", "realm": "material", "movement": "nimesa", "holographic_mirror": "Shuddha Vidya" }
+    }
+  ]
+}
