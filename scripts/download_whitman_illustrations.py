@@ -129,6 +129,144 @@ ILLUSTRATIONS = [
         'Blake\'s "Death\'s Door" engraving — the design that inspired Whitman\'s Harleigh Cemetery tomb architecture. Symbolic substitute where no PD tomb photo is available.',
         'Pre-1929 engraving, PD worldwide'
     ),
+
+    # =========================================================================
+    # PAINTINGS & IMAGES — pairing each poem with a period-appropriate PD work
+    # =========================================================================
+
+    # Millet — Whitman's favorite painter (Whitman d. 1875 too, all PD)
+    (
+        '14-millet-the-sower-1850.jpg',
+        'https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Fran%C3%A7ois_Millet_-_The_Sower_-_Walters_37905.jpg?width=1200',
+        'Jean-François Millet (1814-1875)',
+        '1850',
+        'The Sower. Whitman\'s favorite painter; in 1881 Whitman declared Leaves of Grass was "own born brother" to Millet\'s peasant paintings. Pairs with Song of Myself § 1 — the celebration of self that is also celebration of the soil.',
+        'Walters Art Museum / Boston MFA. PD worldwide (Millet d. 1875).'
+    ),
+    (
+        '15-millet-the-gleaners-1857.jpg',
+        'https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Fran%C3%A7ois_Millet_-_Gleaners_-_Google_Art_Project_2.jpg?width=1200',
+        'Jean-François Millet (1814-1875)',
+        '1857',
+        'The Gleaners. Musée d\'Orsay. Pairs with Song of Myself § 6 (What is the grass) — the democratic grass that grows for all and covers all.',
+        'Musée d\'Orsay. PD worldwide.'
+    ),
+    (
+        '16-millet-angelus-1859.jpg',
+        'https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Fran%C3%A7ois_Millet_(II)_-_The_Angelus_-_WGA15717.jpg?width=1200',
+        'Jean-François Millet (1814-1875)',
+        '1857-59',
+        'The Angelus. Musée d\'Orsay. Pairs with When Lilacs Last in the Dooryard Bloom\'d — the evening/mourning register, working people stopping their labor to honor the dead.',
+        'Musée d\'Orsay. PD worldwide.'
+    ),
+
+    # Winslow Homer — American contemporary, PD (d. 1910)
+    (
+        '17-homer-prisoners-from-the-front-1866.jpg',
+        'https://commons.wikimedia.org/wiki/Special:FilePath/Winslow_Homer_-_Prisoners_from_the_Front_-_Google_Art_Project.jpg?width=1200',
+        'Winslow Homer (1836-1910)',
+        '1866',
+        'Prisoners from the Front. Metropolitan Museum of Art. Pairs with Reconciliation — Civil War reckoning rendered at a specific visual angle.',
+        'Met. PD (Homer d. 1910).'
+    ),
+    (
+        '18-homer-snap-the-whip-1872.jpg',
+        'https://commons.wikimedia.org/wiki/Special:FilePath/Snap_the_Whip_1872_Winslow_Homer.jpeg?width=1200',
+        'Winslow Homer (1836-1910)',
+        '1872',
+        'Snap the Whip. Metropolitan Museum. Pairs with There Was a Child Went Forth — the absorbing child among other children in the specific American landscape.',
+        'Met. PD.'
+    ),
+    (
+        '19-homer-veteran-new-field-1865.jpg',
+        'https://commons.wikimedia.org/wiki/Special:FilePath/The_Veteran_in_a_New_Field_1865_Winslow_Homer.jpg?width=1200',
+        'Winslow Homer (1836-1910)',
+        '1865',
+        'The Veteran in a New Field. Metropolitan Museum. Pairs with I Hear America Singing — the returned soldier, now a mower, each singing what belongs to him or her and to none else.',
+        'Met. PD.'
+    ),
+
+    # Other period pairings
+    (
+        '20-bierstadt-bombardment-of-fort-sumter-1863.jpg',
+        'https://commons.wikimedia.org/wiki/Special:FilePath/Bombardment_of_Fort_Sumter.jpg?width=1200',
+        'Albert Bierstadt (1830-1902) or period chromolithograph',
+        '1863',
+        'Bombardment of Fort Sumter. Pairs with Beat! Beat! Drums! — the ruthless-force opening of the war into civic space.',
+        'PD (pre-1929 publication).'
+    ),
+    (
+        '21-church-sunrise-in-the-tropics.jpg',
+        'https://commons.wikimedia.org/wiki/Special:FilePath/Frederic_Edwin_Church_-_Sunrise%2C_1862.jpg?width=1200',
+        'Frederic Edwin Church (1826-1900)',
+        '1862',
+        'Sunrise, 1862 (Hudson River School). Pairs with Song of Myself § 48 or Darest Thou Now O Soul — the soul venturing out toward the unknown region.',
+        'PD (Church d. 1900; painting 1862).'
+    ),
+    (
+        '22-kensett-eatons-neck-1872.jpg',
+        'https://commons.wikimedia.org/wiki/Special:FilePath/John_Frederick_Kensett_-_Eaton%27s_Neck%2C_Long_Island.jpg?width=1200',
+        'John Frederick Kensett (1816-1872)',
+        '1872',
+        'Eaton\'s Neck, Long Island. Metropolitan Museum. Pairs with Out of the Cradle Endlessly Rocking and As I Ebb\'d — the specific Long Island shore Whitman grew up on.',
+        'Met. PD.'
+    ),
+    (
+        '23-cole-oxbow-1836.jpg',
+        'https://commons.wikimedia.org/wiki/Special:FilePath/Cole_Thomas_The_Oxbow_(The_Connecticut_River_near_Northampton_1836).jpg?width=1200',
+        'Thomas Cole (1801-1848)',
+        '1836',
+        'View from Mount Holyoke (The Oxbow). Metropolitan Museum. American landscape pairing with Song of the Open Road — the long brown path, the earth sufficient.',
+        'Met. PD.'
+    ),
+    (
+        '24-eakins-swimming-1885.jpg',
+        'https://commons.wikimedia.org/wiki/Special:FilePath/Eakins%2C_Swimming_1885.jpg?width=1200',
+        'Thomas Eakins (1844-1916)',
+        '1885',
+        'Swimming (The Swimming Hole). Amon Carter Museum. Pairs with I Saw in Louisiana a Live-Oak Growing and When I Heard at the Close of the Day — male companionship and embodiment, Eakins being Whitman\'s closest artist friend.',
+        'Amon Carter Museum. PD (Eakins d. 1916; painting 1885).'
+    ),
+    (
+        '25-audubon-ruffed-grouse.jpg',
+        'https://commons.wikimedia.org/wiki/Special:FilePath/Audubon_ruffedgrouse.jpg?width=1200',
+        'John James Audubon (1785-1851)',
+        '1827-38',
+        'Ruffed Grouse (Birds of America). Pairs with Song of Myself § 52 — the spotted hawk / untamed bird at the closing of the long poem.',
+        'PD worldwide.'
+    ),
+    (
+        '26-fabre-spider-1879.jpg',
+        'https://commons.wikimedia.org/wiki/Special:FilePath/Epeire_f%C3%A9roce_-_Fabre.jpg?width=1200',
+        'Jean-Henri Fabre (1823-1915), Souvenirs Entomologiques',
+        '1879-1907',
+        'Spider engraving from Fabre\'s entomology. Pairs with A Noiseless Patient Spider.',
+        'PD (Fabre d. 1915; publication pre-1929).'
+    ),
+    (
+        '27-currier-ives-central-park.jpg',
+        'https://commons.wikimedia.org/wiki/Special:FilePath/Currier_Ives_Central_Park_1864.jpg?width=1200',
+        'Currier & Ives',
+        '1864',
+        'Central Park lithograph. Pairs with Crossing Brooklyn Ferry — the civic crowd Whitman addresses.',
+        'PD (1864 lithograph).'
+    ),
+    (
+        '28-suez-canal-opening-1869.jpg',
+        'https://commons.wikimedia.org/wiki/Special:FilePath/Opening_of_the_Suez_Canal%2C_1869.jpg?width=1200',
+        'Unknown 19th-century artist',
+        '1869',
+        'Opening of the Suez Canal, 1869 — the event that inspired Whitman\'s Passage to India. Pairs with Passage to India.',
+        'PD (pre-1929).'
+    ),
+    (
+        '29-daguerreotype-early-portrait.jpg',
+        'https://commons.wikimedia.org/wiki/Special:FilePath/Emily_Dickinson_daguerreotype_(Restored).png?width=800',
+        '19th-century daguerreotype (Whitman\'s contemporary)',
+        'c.1847',
+        'A contemporary daguerreotype (Emily Dickinson c.1847) illustrating the imaging technology of Whitman\'s era. Alternative only if other Whitman portraits fail. Not directly Whitman.',
+        'PD (pre-1929).'
+    ),
 ]
 
 
