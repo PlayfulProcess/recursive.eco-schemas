@@ -1,788 +1,591 @@
-{
-  "_grammar_commons": {
-    "schema_version": "1.0",
-    "license": "CC-BY-SA-4.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-    "attribution": [
-      {
-        "name": "PlayfulProcess",
-        "url": "https://lifeisprocess.substack.com/",
-        "date": "2026-04-21",
-        "note": "Original creator / deck curator"
-      },
-      {
-        "name": "Walt Whitman",
-        "url": "https://whitmanarchive.org/",
-        "date": "1819-1892",
-        "note": "Source author. All texts public domain. Canonical source: Deathbed edition (1891-92) cross-referenced with Walt Whitman Archive."
-      }
-    ]
-  },
-  "name": "Walt Whitman: Leaves of Grass in Five Phases",
-  "description": "A contemplative deck drawn from Walt Whitman's poetry and life, organized chronologically across five creative phases from the 1855 Eruption through the Deathbed Arrangements (1891-92). All texts are public domain. Full poems included (some long poems excerpted with phase context noted). Draw a card: sit with a poem, or with a biographical moment. The phases follow Whitman's own evolution rather than the edition-by-edition cluster structure of the final book.",
-  "grammar_type": "custom",
-  "creator_name": "PlayfulProcess",
-  "creator_link": "https://lifeisprocess.substack.com/",
-  "tags": [
-    "poetry",
-    "whitman",
-    "american",
-    "democracy",
-    "contemplative",
-    "journaling",
-    "oracle",
-    "public-domain"
-  ],
-  "cover_image_url": "",
-  "items": [
-    {
-      "id": "phase-1-eruption",
-      "name": "Phase I — The 1855 Eruption",
-      "sort_order": 0,
-      "level": 2,
-      "category": "phases",
-      "sections": {
+"""
+Build the Walt Whitman grammar JSON from structured Python dicts.
+All texts public domain (Whitman d. 1892).
+
+Organization: 5 chronological phases + biographical anchors.
+Writes clean JSON via json.dump to avoid hand-format errors.
+"""
+
+import json
+import os
+
+grammar = {
+    "_grammar_commons": {
+        "schema_version": "1.0",
+        "license": "CC-BY-SA-4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "attribution": [
+            {
+                "name": "PlayfulProcess",
+                "url": "https://lifeisprocess.substack.com/",
+                "date": "2026-04-21",
+                "note": "Original creator / deck curator"
+            },
+            {
+                "name": "Walt Whitman",
+                "url": "https://whitmanarchive.org/",
+                "date": "1819-1892",
+                "note": "Source author. All texts public domain. Canonical source: Deathbed edition (1891-92) cross-referenced with Walt Whitman Archive."
+            }
+        ]
+    },
+    "name": "Walt Whitman: Leaves of Grass in Five Phases",
+    "description": "A contemplative deck drawn from Walt Whitman's poetry and life, organized chronologically across five creative phases from the 1855 Eruption through the Deathbed Arrangements (1891-92). All texts are public domain. Full poems included (some long poems excerpted with phase context noted). Draw a card: sit with a poem, or with a biographical moment. The phases follow Whitman's own evolution rather than the edition-by-edition cluster structure of the final book.",
+    "grammar_type": "custom",
+    "creator_name": "PlayfulProcess",
+    "creator_link": "https://lifeisprocess.substack.com/",
+    "tags": [
+        "poetry",
+        "whitman",
+        "american",
+        "democracy",
+        "contemplative",
+        "journaling",
+        "oracle",
+        "public-domain"
+    ],
+    "cover_image_url": "",
+    "items": []
+}
+
+items = []
+
+# =============================================================================
+# PHASE I — The 1855 Eruption
+# =============================================================================
+
+items.append({
+    "id": "phase-1-eruption",
+    "name": "Phase I — The 1855 Eruption",
+    "sort_order": 0,
+    "level": 2,
+    "category": "phases",
+    "sections": {
         "Phase": "1855 — The First Edition",
         "About": "In July 1855, Whitman self-published a thin green volume in Brooklyn. It contained twelve untitled poems and a long preface. He set type for several pages himself. He mailed a copy to Ralph Waldo Emerson in Concord. No one else knew what had arrived. The American literary world, such as it was, had no category for what the book was doing. Whitman had been a printer, a schoolteacher, a newspaper editor, a drifter among Brooklyn's working people. He was thirty-six. He had, quietly, spent the previous five years in what would later be called a period of germination. This phase is what came out. The first edition is the eruption.",
         "Reflection": "What has been germinating in you, quietly, without anyone knowing, that may one day arrive as a single volume nobody was expecting?"
-      },
-      "keywords": [
-        "1855",
-        "eruption",
-        "first-edition",
-        "brooklyn"
-      ],
-      "metadata": {
-        "period": "1855",
-        "type": "phase-anchor"
-      }
     },
-    {
-      "id": "song-of-myself-s1",
-      "name": "Song of Myself, § 1 (1855)",
-      "sort_order": 1,
-      "level": 1,
-      "category": "phase-1-eruption",
-      "sections": {
+    "keywords": ["1855", "eruption", "first-edition", "brooklyn"],
+    "metadata": {"period": "1855", "type": "phase-anchor"}
+})
+
+items.append({
+    "id": "song-of-myself-s1",
+    "name": "Song of Myself, § 1 (1855)",
+    "sort_order": 1,
+    "level": 1,
+    "category": "phase-1-eruption",
+    "sections": {
         "Poem": "I celebrate myself, and sing myself,\nAnd what I assume you shall assume,\nFor every atom belonging to me as good belongs to you.\n\nI loafe and invite my soul,\nI lean and loafe at my ease observing a spear of summer grass.\n\nMy tongue, every atom of my blood, form'd from this soil, this air,\nBorn here of parents born here from parents the same, and their parents the same,\nI, thirty-seven years old in perfect health begin,\nHoping to cease not till death.\n\nCreeds and schools in abeyance,\nRetiring back a while sufficient at what they are, but never forgotten,\nI harbor for good or bad, I permit to speak at every hazard,\nNature without check with original energy.",
         "About": "The opening of the long poem that became the center of Leaves of Grass. Twelve lines, and the ontology is laid down: celebration of self that is celebration of everyone, because atoms are shared.",
         "Reflection": "Every atom belonging to you belongs just as much to someone else. This is biologically and physically true. How does it change what you think of as yours?"
-      },
-      "keywords": [
-        "self",
-        "loafing",
-        "embodiment",
-        "shared atoms"
-      ],
-      "metadata": {
-        "source": "Song of Myself, first published 1855; final form 1891-92",
-        "year": "1855"
-      }
     },
-    {
-      "id": "song-of-myself-s6",
-      "name": "Song of Myself, § 6 — A child said What is the grass? (1855)",
-      "sort_order": 2,
-      "level": 1,
-      "category": "phase-1-eruption",
-      "sections": {
+    "keywords": ["self", "loafing", "embodiment", "shared atoms"],
+    "metadata": {"source": "Song of Myself, first published 1855; final form 1891-92", "year": "1855"}
+})
+
+items.append({
+    "id": "song-of-myself-s6",
+    "name": "Song of Myself, § 6 — A child said What is the grass? (1855)",
+    "sort_order": 2,
+    "level": 1,
+    "category": "phase-1-eruption",
+    "sections": {
         "Poem": "A child said What is the grass? fetching it to me with full hands;\nHow could I answer the child? I do not know what it is any more than he.\n\nI guess it must be the flag of my disposition, out of hopeful green stuff woven.\n\nOr I guess it is the handkerchief of the Lord,\nA scented gift and remembrancer designedly dropt,\nBearing the owner's name someway in the corners, that we may see and remark, and say Whose?\n\nOr I guess the grass is itself a child, the produced babe of the vegetation.\n\nOr I guess it is a uniform hieroglyphic,\nAnd it means, Sprouting alike in broad zones and narrow zones,\nGrowing among black folks as among white,\nKanuck, Tuckahoe, Congressman, Cuff, I give them the same, I receive them the same.\n\nAnd now it seems to me the beautiful uncut hair of graves.\n\nTenderly will I use you curling grass,\nIt may be you transpire from the breasts of young men,\nIt may be if I had known them I would have loved them,\nIt may be you are from old people, or from offspring taken soon out of their mothers' laps,\nAnd here you are the mothers' laps.\n\nThis grass is very dark to be from the white heads of old mothers,\nDarker than the colorless beards of old men,\nDark to come from under the faint red roofs of mouths.",
         "About": "A child asks the cosmic question Whitman refuses to answer with certainty. He guesses, instead, several possibilities, each partial. The democratic grass grows for all and covers all.",
         "Reflection": "When a child asks you a cosmic question, what do you do? Whitman guesses honestly. He does not pretend to know. Could you?"
-      },
-      "keywords": [
-        "grass",
-        "child",
-        "uncertainty",
-        "democracy",
-        "death",
-        "equality"
-      ],
-      "metadata": {
-        "source": "Song of Myself § 6, first published 1855",
-        "year": "1855"
-      }
     },
-    {
-      "id": "song-of-myself-s48",
-      "name": "Song of Myself, § 48 — The soul is not more than the body (1855)",
-      "sort_order": 3,
-      "level": 1,
-      "category": "phase-1-eruption",
-      "sections": {
+    "keywords": ["grass", "child", "uncertainty", "democracy", "death", "equality"],
+    "metadata": {"source": "Song of Myself § 6, first published 1855", "year": "1855"}
+})
+
+items.append({
+    "id": "song-of-myself-s48",
+    "name": "Song of Myself, § 48 — The soul is not more than the body (1855)",
+    "sort_order": 3,
+    "level": 1,
+    "category": "phase-1-eruption",
+    "sections": {
         "Poem": "I have said that the soul is not more than the body,\nAnd I have said that the body is not more than the soul,\nAnd nothing, not God, is greater to one than one's self is,\nAnd whoever walks a furlong without sympathy walks to his own funeral drest in his shroud,\nAnd I or you pocketless of a dime may purchase the pick of the earth,\nAnd to glance with an eye or show a bean in its pod confounds the learning of all times,\nAnd there is no trade or employment but the young man following it may become a hero,\nAnd there is no object so soft but it makes a hub for the wheel'd universe,\nAnd I say to any man or woman, Let your soul stand cool and composed before a million universes.\n\nAnd I say to mankind, Be not curious about God,\nFor I who am curious about each am not curious about God,\n(No array of terms can say how much I am at peace about God and about death.)\n\nI hear and behold God in every object, yet understand God not in the least,\nNor do I understand who there can be more wonderful than myself.",
         "About": "Whitman's theology, in one page. No hierarchy of soul-over-body. No metaphysical transcendence above the furlong walked. God in every object, understood not at all. Self as wonderful as anything.",
         "Reflection": "Is there a furlong you have recently walked without sympathy? What would it mean to walk it again?"
-      },
-      "keywords": [
-        "soul",
-        "body",
-        "god",
-        "sympathy",
-        "equality"
-      ],
-      "metadata": {
-        "source": "Song of Myself § 48, first published 1855",
-        "year": "1855"
-      }
     },
-    {
-      "id": "song-of-myself-s52",
-      "name": "Song of Myself, § 52 — The spotted hawk (1855)",
-      "sort_order": 4,
-      "level": 1,
-      "category": "phase-1-eruption",
-      "sections": {
+    "keywords": ["soul", "body", "god", "sympathy", "equality"],
+    "metadata": {"source": "Song of Myself § 48, first published 1855", "year": "1855"}
+})
+
+items.append({
+    "id": "song-of-myself-s52",
+    "name": "Song of Myself, § 52 — The spotted hawk (1855)",
+    "sort_order": 4,
+    "level": 1,
+    "category": "phase-1-eruption",
+    "sections": {
         "Poem": "The spotted hawk swoops by and accuses me, he complains of my gab and my loitering.\n\nI too am not a bit tamed, I too am untranslatable,\nI sound my barbaric yawp over the roofs of the world.\n\nThe last scud of day holds back for me,\nIt flings my likeness after the rest and true as any on the shadow'd wilds,\nIt coaxes me to the vapor and the dusk.\n\nI depart as air, I shake my white locks at the runaway sun,\nI effuse my flesh in eddies, and drift it in lacy jags.\n\nI bequeath myself to the dirt to grow from the grass I love,\nIf you want me again look for me under your boot-soles.\n\nYou will hardly know who I am or what I mean,\nBut I shall be good health to you nevertheless,\nAnd filter and fibre your blood.\n\nFailing to fetch me at first keep encouraged,\nMissing me one place search another,\nI stop somewhere waiting for you.",
         "About": "The ending of Song of Myself. Whitman promises to return to the dirt, to the grass, to the reader's body. The last line — I stop somewhere waiting for you — is one of the great final lines in any tradition.",
         "Reflection": "If you will be good health to someone after you are gone, who is that person? What of you are you already sending into their body?"
-      },
-      "keywords": [
-        "death",
-        "continuity",
-        "grass",
-        "waiting",
-        "companionship"
-      ],
-      "metadata": {
-        "source": "Song of Myself § 52, first published 1855",
-        "year": "1855"
-      }
     },
-    {
-      "id": "there-was-a-child-went-forth",
-      "name": "There Was a Child Went Forth (1855)",
-      "sort_order": 5,
-      "level": 1,
-      "category": "phase-1-eruption",
-      "sections": {
+    "keywords": ["death", "continuity", "grass", "waiting", "companionship"],
+    "metadata": {"source": "Song of Myself § 52, first published 1855", "year": "1855"}
+})
+
+items.append({
+    "id": "there-was-a-child-went-forth",
+    "name": "There Was a Child Went Forth (1855)",
+    "sort_order": 5,
+    "level": 1,
+    "category": "phase-1-eruption",
+    "sections": {
         "Poem": "There was a child went forth every day,\nAnd the first object he look'd upon, that object he became,\nAnd that object became part of him for the day or a certain part of the day,\nOr for many years or stretching cycles of years.\n\nThe early lilacs became part of this child,\nAnd grass and white and red morning-glories, and white and red clover, and the song of the phoebe-bird,\nAnd the Third-month lambs and the sow's pink-faint litter, and the mare's foal and the cow's calf,\nAnd the noisy brood of the barnyard or by the mire of the pond-side,\nAnd the fish suspending themselves so curiously below there, and the beautiful curious liquid,\nAnd the water-plants with their graceful flat heads, all became part of him.\n\nThe field-sprouts of Fourth-month and Fifth-month became part of him,\nWinter-grain sprouts and those of the light-yellow corn, and the esculent roots of the garden,\nAnd the apple-trees cover'd with blossoms and the fruit afterward, and wood-berries, and the commonest weeds by the road,\nAnd the old drunkard staggering home from the outhouse of the tavern whence he had lately risen,\nAnd the schoolmistress that pass'd on her way to the school,\nAnd the friendly boys that pass'd, and the quarrelsome boys,\nAnd the tidy and fresh-cheek'd girls, and the barefoot negro boy and girl,\nAnd all the changes of city and country wherever he went.\n\nHis own parents, he that had father'd him and she that had conceiv'd him in her womb and birth'd him,\nThey gave this child more of themselves than that,\nThey gave him afterward every day, they became part of him.\n\nThe mother at home quietly placing the dishes on the supper-table,\nThe mother with mild words, clean her cap and gown, a wholesome odor falling off her person and clothes as she walks by,\nThe father, strong, self-sufficient, manly, mean, anger'd, unjust,\nThe blow, the quick loud word, the tight bargain, the crafty lure,\nThe family usages, the language, the company, the furniture, the yearning and swelling heart,\nAffection that will not be gainsay'd, the sense of what is real, the thought if after all it should prove unreal,\nThe doubts of day-time and the doubts of night-time, the curious whether and how,\nWhether that which appears so is so, or is it all flashes and specks?\n\nThese became part of that child who went forth every day, and who now goes, and will always go forth every day.",
         "About": "Whitman's theory of identity by absorption. What you look upon, you become. The child is not a sealed self but a porous organism taking in lilacs, lambs, schoolmistresses, the father's crafty lure, the mother's wholesome odor — all becoming parts of who the child is. This is the biological hypothesis the book has been making, rendered in 1855.",
         "Reflection": "What did you look upon today that you are now also? What did your child look upon today that she now also is?"
-      },
-      "keywords": [
-        "identity",
-        "absorption",
-        "child",
-        "porousness",
-        "formation"
-      ],
-      "metadata": {
-        "source": "First published 1855",
-        "year": "1855"
-      }
     },
-    {
-      "id": "phase-2-body-comrades-sea",
-      "name": "Phase II — Body, Comrades, Sea (1856-1860)",
-      "sort_order": 10,
-      "level": 2,
-      "category": "phases",
-      "sections": {
+    "keywords": ["identity", "absorption", "child", "porousness", "formation"],
+    "metadata": {"source": "First published 1855", "year": "1855"}
+})
+
+# =============================================================================
+# PHASE II — Body, Comrades, Sea (1856-1860)
+# =============================================================================
+
+items.append({
+    "id": "phase-2-body-comrades-sea",
+    "name": "Phase II — Body, Comrades, Sea (1856-1860)",
+    "sort_order": 10,
+    "level": 2,
+    "category": "phases",
+    "sections": {
         "Phase": "1856-1860 — Expansion",
         "About": "Between the first edition and the third, Whitman more than tripled his book. The 1856 second edition added Crossing Brooklyn Ferry and Song of the Open Road. The 1860 third edition was a massive expansion — 146 new poems, including the Calamus cluster of male-male love poems and the Children of Adam heterosexual cluster, plus the sea-drift meditations of Out of the Cradle Endlessly Rocking and As I Ebb'd with the Ocean of Life. This is the phase in which Leaves of Grass acquires its full emotional range: the civic body of the ferry, the intimate body of the lover, the grieving body on the shore listening to a bird lose its mate.",
         "Reflection": "Your writing has phases. What was your 1856? What was your 1860? What cluster of feeling arrived that the first utterance had not yet found room for?"
-      },
-      "keywords": [
-        "1856",
-        "1860",
-        "calamus",
-        "children-of-adam",
-        "sea-drift",
-        "expansion"
-      ],
-      "metadata": {
-        "period": "1856-1860",
-        "type": "phase-anchor"
-      }
     },
-    {
-      "id": "i-hear-america-singing",
-      "name": "I Hear America Singing (1860)",
-      "sort_order": 11,
-      "level": 1,
-      "category": "phase-2-body-comrades-sea",
-      "sections": {
+    "keywords": ["1856", "1860", "calamus", "children-of-adam", "sea-drift", "expansion"],
+    "metadata": {"period": "1856-1860", "type": "phase-anchor"}
+})
+
+items.append({
+    "id": "i-hear-america-singing",
+    "name": "I Hear America Singing (1860)",
+    "sort_order": 11,
+    "level": 1,
+    "category": "phase-2-body-comrades-sea",
+    "sections": {
         "Poem": "I hear America singing, the varied carols I hear,\nThose of mechanics, each one singing his as it should be blithe and strong,\nThe carpenter singing his as he measures his plank or beam,\nThe mason singing his as he makes ready for work, or leaves off work,\nThe boatman singing what belongs to him in his boat, the deckhand singing on the steamboat deck,\nThe shoemaker singing as he sits on his bench, the hatter singing as he stands,\nThe wood-cutter's song, the ploughboy's on his way in the morning, or at noon intermission or at sundown,\nThe delicious singing of the mother, or of the young wife at work, or of the girl sewing or washing,\nEach singing what belongs to him or her and to none else,\nThe day what belongs to the day—at night the party of young fellows, robust, friendly,\nSinging with open mouths their strong melodious songs.",
         "About": "Whitman's democratic sonic imagination. Each trade, each laborer, each woman, each young man singing what is theirs alone. The song belongs to the singer; the many songs together make the country.",
         "Reflection": "What is the song that belongs to you and to none else? Have you sung it today?"
-      },
-      "keywords": [
-        "labor",
-        "democracy",
-        "song",
-        "individuality"
-      ],
-      "metadata": {
-        "source": "Leaves of Grass, 1860 edition and later",
-        "year": "1860"
-      }
     },
-    {
-      "id": "crossing-brooklyn-ferry",
-      "name": "Crossing Brooklyn Ferry, excerpt (1856)",
-      "sort_order": 12,
-      "level": 1,
-      "category": "phase-2-body-comrades-sea",
-      "sections": {
+    "keywords": ["labor", "democracy", "song", "individuality"],
+    "metadata": {"source": "Leaves of Grass, 1860 edition and later", "year": "1860"}
+})
+
+items.append({
+    "id": "crossing-brooklyn-ferry",
+    "name": "Crossing Brooklyn Ferry, excerpt (1856)",
+    "sort_order": 12,
+    "level": 1,
+    "category": "phase-2-body-comrades-sea",
+    "sections": {
         "Poem": "Flood-tide below me! I see you face to face!\nClouds of the west—sun there half an hour high—I see you also face to face.\n\nCrowds of men and women attired in the usual costumes, how curious you are to me!\nOn the ferry-boats the hundreds and hundreds that cross, returning home, are more curious to me than you suppose,\nAnd you that shall cross from shore to shore years hence are more to me, and more in my meditations, than you might suppose.\n\n...\n\nIt avails not, time nor place—distance avails not,\nI am with you, you men and women of a generation, or ever so many generations hence,\nJust as you feel when you look on the river and sky, so I felt,\nJust as any of you is one of a living crowd, I was one of a crowd,\nJust as you are refresh'd by the gladness of the river and the bright flow, I was refresh'd,\nJust as you stand and lean on the rail, yet hurry with the swift current, I stood yet was hurried,\nJust as you look on the numberless masts of ships and the thick-stemm'd pipes of steamboats, I look'd.\n\nI too many and many a time cross'd the river of old,\nWatch'd the Twelfth-month sea-gulls, saw them high in the air floating with motionless wings, oscillating their bodies,\nSaw how the glistening yellow lit up parts of their bodies and left the rest in strong shadow,\nSaw the slow-wheeling circles and the gradual edging toward the south.\n\n...\n\nWhat is it then between us?\nWhat is the count of the scores or hundreds of years between us?\n\nWhatever it is, it avails not—distance avails not, and place avails not.",
         "About": "Whitman addresses readers he will never meet, through time. The ferry crossing is an ordinary thing; the reach across centuries is what the poem does with the ordinariness. The poem is, in effect, a letter to you specifically.",
         "Reflection": "Whitman is speaking to you. What do you say back?"
-      },
-      "keywords": [
-        "time",
-        "reader",
-        "ferry",
-        "brooklyn",
-        "continuity"
-      ],
-      "metadata": {
-        "source": "First published 1856 as Sun-Down Poem; retitled 1860",
-        "year": "1856"
-      }
     },
-    {
-      "id": "when-i-heard-at-close-of-day",
-      "name": "When I Heard at the Close of the Day (Calamus, 1860)",
-      "sort_order": 13,
-      "level": 1,
-      "category": "phase-2-body-comrades-sea",
-      "sections": {
+    "keywords": ["time", "reader", "ferry", "brooklyn", "continuity"],
+    "metadata": {"source": "First published 1856 as Sun-Down Poem; retitled 1860", "year": "1856"}
+})
+
+items.append({
+    "id": "when-i-heard-at-close-of-day",
+    "name": "When I Heard at the Close of the Day (Calamus, 1860)",
+    "sort_order": 13,
+    "level": 1,
+    "category": "phase-2-body-comrades-sea",
+    "sections": {
         "Poem": "When I heard at the close of the day how my name had been receiv'd with plaudits in the capitol, still it was not a happy night for me that follow'd,\nAnd else when I carous'd, or when my plans were accomplish'd, still I was not happy,\nBut the day when I rose at dawn from the bed of perfect health, refresh'd, singing, inhaling the ripe breath of autumn,\nWhen I saw the full moon in the west grow pale and disappear in the morning light,\nWhen I wander'd alone over the beach, and undressing bathed, laughing with the cool waters, and saw the sun rise,\nAnd when I thought how my dear friend my lover was on his way coming, O then I was happy,\nO then each breath tasted sweeter, and all that day my food nourish'd me more, and the beautiful day pass'd well,\nAnd the next came with equal joy, and with the next at evening came my friend,\nAnd that night while all was still I heard the waters roll slowly continually up the shores,\nI heard the hissing rustle of the liquid and sands as directed to me whispering to congratulate me,\nFor the one I love most lay sleeping by me under the same cover in the cool night,\nIn the stillness in the autumn moonbeams his face was inclin'd toward me,\nAnd his arm lay lightly around my breast—and that night I was happy.",
         "About": "From Calamus, the cluster celebrating male-male love. Public success does not produce happiness; the beloved's body beside yours does. This poem measures happiness by what it actually is.",
         "Reflection": "What do you currently think will make you happy? Whitman thought public recognition would. It did not. What did. What does for you?"
-      },
-      "keywords": [
-        "love",
-        "body",
-        "companionship",
-        "beloved",
-        "measure"
-      ],
-      "metadata": {
-        "source": "Calamus cluster, 1860 edition",
-        "year": "1860"
-      }
     },
-    {
-      "id": "i-saw-in-louisiana-a-live-oak",
-      "name": "I Saw in Louisiana a Live-Oak Growing (Calamus, 1860)",
-      "sort_order": 14,
-      "level": 1,
-      "category": "phase-2-body-comrades-sea",
-      "sections": {
+    "keywords": ["love", "body", "companionship", "beloved", "measure"],
+    "metadata": {"source": "Calamus cluster, 1860 edition", "year": "1860"}
+})
+
+items.append({
+    "id": "i-saw-in-louisiana-a-live-oak",
+    "name": "I Saw in Louisiana a Live-Oak Growing (Calamus, 1860)",
+    "sort_order": 14,
+    "level": 1,
+    "category": "phase-2-body-comrades-sea",
+    "sections": {
         "Poem": "I saw in Louisiana a live-oak growing,\nAll alone stood it and the moss hung down from the branches,\nWithout any companion it grew there uttering joyous leaves of dark green,\nAnd its look, rude, unbending, lusty, made me think of myself,\nBut I wonder'd how it could utter joyous leaves standing alone there without its friend near, for I knew I could not,\nAnd I broke off a twig with a certain number of leaves upon it, and twined around it a little moss,\nAnd brought it away, and I have placed it in sight in my room,\nIt is not needed to remind me as of my own dear friends,\n(For I believe lately I think of little else than of them,)\nYet it remains to me a curious token, it makes me think of manly love;\nFor all that, and though the live-oak glistens there in Louisiana solitary in a wide flat space,\nUttering joyous leaves all its life without a friend a lover near,\nI know very well I could not.",
         "About": "The live-oak can stand alone and utter joyous leaves. Whitman cannot. The admission is the poem. He carries the twig home as a token of what he cannot do.",
         "Reflection": "What are you unable to do alone? Is there a token you keep that reminds you of what you cannot be without the beloved?"
-      },
-      "keywords": [
-        "solitude",
-        "friendship",
-        "love",
-        "oak",
-        "admission"
-      ],
-      "metadata": {
-        "source": "Calamus cluster, 1860 edition",
-        "year": "1860"
-      }
     },
-    {
-      "id": "out-of-the-cradle-endlessly-rocking",
-      "name": "Out of the Cradle Endlessly Rocking, opening (1859)",
-      "sort_order": 15,
-      "level": 1,
-      "category": "phase-2-body-comrades-sea",
-      "sections": {
+    "keywords": ["solitude", "friendship", "love", "oak", "admission"],
+    "metadata": {"source": "Calamus cluster, 1860 edition", "year": "1860"}
+})
+
+items.append({
+    "id": "out-of-the-cradle-endlessly-rocking",
+    "name": "Out of the Cradle Endlessly Rocking, opening (1859)",
+    "sort_order": 15,
+    "level": 1,
+    "category": "phase-2-body-comrades-sea",
+    "sections": {
         "Poem": "Out of the cradle endlessly rocking,\nOut of the mocking-bird's throat, the musical shuttle,\nOut of the Ninth-month midnight,\nOver the sterile sands and the fields beyond, where the child leaving his bed wander'd alone, bareheaded, barefoot,\nDown from the shower'd halo,\nUp from the mystic play of shadows twining and twisting as if they were alive,\nOut from the patches of briers and blackberries,\nFrom the memories of the bird that chanted to me,\nFrom your memories sad brother, from the fitful risings and fallings I heard,\nFrom under that yellow half-moon late-risen and swollen as if with tears,\nFrom those beginning notes of yearning and love there in the mist,\nFrom the thousand responses of my heart never to cease,\nFrom the myriad thence-arous'd words,\nFrom the word stronger and more delicious than any,\nFrom such as now they start the scene revisiting,\nAs a flock, twittering, rising, or overhead passing,\nBorn hither, ere all eludes me, hurriedly,\nA man, yet by these tears a little boy again,\nThrowing myself on the sand, confronting the waves,\nI, chanter of pains and joys, uniter of here and hereafter,\nTaking all hints to use them, but swiftly leaping beyond them,\nA reminiscence sing.",
         "About": "The opening of one of Whitman's great long poems, set on the Long Island shore where he grew up. A child hears a mockingbird lose its mate. The bird's cry becomes the poet's vocation. The sea and the bird teach him the word that structures the rest of the poem: death.",
         "Reflection": "What moment in your childhood — specific, sensory, embodied — turned out later to have been the call to your vocation? Whitman names the exact beach, the specific bird. Can you name yours?"
-      },
-      "keywords": [
-        "childhood",
-        "vocation",
-        "sea",
-        "bird",
-        "death",
-        "language"
-      ],
-      "metadata": {
-        "source": "First published 1859 as A Child's Reminiscence; retitled 1860",
-        "year": "1859"
-      }
     },
-    {
-      "id": "as-i-ebb-d-with-the-ocean-of-life",
-      "name": "As I Ebb'd with the Ocean of Life, excerpt (1860)",
-      "sort_order": 16,
-      "level": 1,
-      "category": "phase-2-body-comrades-sea",
-      "sections": {
+    "keywords": ["childhood", "vocation", "sea", "bird", "death", "language"],
+    "metadata": {"source": "First published 1859 as A Child's Reminiscence; retitled 1860", "year": "1859"}
+})
+
+items.append({
+    "id": "as-i-ebb-d-with-the-ocean-of-life",
+    "name": "As I Ebb'd with the Ocean of Life, excerpt (1860)",
+    "sort_order": 16,
+    "level": 1,
+    "category": "phase-2-body-comrades-sea",
+    "sections": {
         "Poem": "As I ebb'd with the ocean of life,\nAs I wended the shores I know,\nAs I walk'd where the ripples continually wash you Paumanok,\nWhere they rustle up hoarse and sibilant,\nWhere the fierce old mother endlessly cries for her castaways,\nI musing late in the autumn day, gazing off southward,\nHeld by this electric self out of the pride of which I utter poems,\nWas seiz'd by the spirit that trails in the lines underfoot,\nThe rim, the sediment that stands for all the water and all the land of the globe.\n\n...\n\nO baffled, balk'd, bent to the very earth,\nOppress'd with myself that I have dared to open my mouth,\nAware now that amid all that blab whose echoes recoil upon me I have not once had the least idea who or what I am,\nBut that before all my arrogant poems the real Me stands yet untouch'd, untold, altogether unreach'd,\nWithdrawn far, mocking me with mock-congratulatory signs and bows,\nWith peals of distant ironical laughter at every word I have written,\nPointing in silence to these songs, and then to the sand beneath.\n\nI perceive I have not really understood any thing, not a single object, and that no man ever can.",
         "About": "The underside of Whitman's confidence. In the ebbing tide, he admits that the real Me stands untold, that all his arrogant poems have missed it, that he has not understood any thing. This is the phase the triumphalist reading of Whitman usually skips.",
         "Reflection": "When was the last time you admitted you have not understood any thing? Whitman did it in print, at the peak of his powers. Could you?"
-      },
-      "keywords": [
-        "humility",
-        "failure",
-        "sea",
-        "paumanok",
-        "underside"
-      ],
-      "metadata": {
-        "source": "Sea-Drift cluster, 1860",
-        "year": "1860"
-      }
     },
-    {
-      "id": "phase-3-drum-taps",
-      "name": "Phase III — Drum-Taps (1861-1865)",
-      "sort_order": 20,
-      "level": 2,
-      "category": "phases",
-      "sections": {
+    "keywords": ["humility", "failure", "sea", "paumanok", "underside"],
+    "metadata": {"source": "Sea-Drift cluster, 1860", "year": "1860"}
+})
+
+# =============================================================================
+# PHASE III — Drum-Taps (Civil War, 1861-1865)
+# =============================================================================
+
+items.append({
+    "id": "phase-3-drum-taps",
+    "name": "Phase III — Drum-Taps (1861-1865)",
+    "sort_order": 20,
+    "level": 2,
+    "category": "phases",
+    "sections": {
         "Phase": "1861-1865 — The Civil War",
         "About": "In December 1862, Whitman left New York to find his brother George, who had been wounded at Fredericksburg. He found him alive. He did not leave. For the next three years he served as a volunteer hospital attendant in Washington, visiting wounded and dying soldiers — Union and Confederate both — bringing them small gifts, writing letters for those who could not write, sitting with those who were dying. He made, by his own count, over six hundred visits and tended to tens of thousands of men. The experience produced Drum-Taps (1865), the war book that is also the book where the confident voice of 1855 breaks and remakes itself. Whitman called it, near the end of his life, the most valuable experience of his existence.",
         "Reflection": "Has there been a Fredericksburg in your life — a specific place you went to find someone you loved and did not leave for years? What did that staying make of you?"
-      },
-      "keywords": [
-        "civil-war",
-        "drum-taps",
-        "nursing",
-        "fredericksburg",
-        "washington"
-      ],
-      "metadata": {
-        "period": "1861-1865",
-        "type": "phase-anchor"
-      }
     },
-    {
-      "id": "beat-beat-drums",
-      "name": "Beat! Beat! Drums! (1861)",
-      "sort_order": 21,
-      "level": 1,
-      "category": "phase-3-drum-taps",
-      "sections": {
+    "keywords": ["civil-war", "drum-taps", "nursing", "fredericksburg", "washington"],
+    "metadata": {"period": "1861-1865", "type": "phase-anchor"}
+})
+
+items.append({
+    "id": "beat-beat-drums",
+    "name": "Beat! Beat! Drums! (1861)",
+    "sort_order": 21,
+    "level": 1,
+    "category": "phase-3-drum-taps",
+    "sections": {
         "Poem": "Beat! beat! drums!—blow! bugles! blow!\nThrough the windows—through doors—burst like a ruthless force,\nInto the solemn church, and scatter the congregation,\nInto the school where the scholar is studying;\nLeave not the bridegroom quiet—no happiness must he have now with his bride,\nNor the peaceful farmer any peace, ploughing his field or gathering his grain,\nSo fierce you whirr and pound you drums—so shrill you bugles blow.\n\nBeat! beat! drums!—blow! bugles! blow!\nOver the traffic of cities—over the rumble of wheels in the streets;\nAre beds prepared for sleepers at night in the houses? no sleepers must sleep in those beds,\nNo bargainers' bargains by day—no brokers or speculators—would they continue?\nWould the talkers be talking? would the singer attempt to sing?\nWould the lawyer rise in the court to state his case before the judge?\nThen rattle quicker, heavier drums—you bugles wilder blow.\n\nBeat! beat! drums!—blow! bugles! blow!\nMake no parley—stop for no expostulation,\nMind not the timid—mind not the weeper or prayer,\nMind not the old man beseeching the young man,\nLet not the child's voice be heard, nor the mother's entreaties,\nMake even the trestles to shake the dead where they lie awaiting the hearses,\nSo strong you thump O terrible drums—so loud you bugles blow.",
         "About": "Written at the outbreak of war, before Whitman had seen its cost. The drums of war burst into every domestic and civic space. No one is exempt.",
         "Reflection": "What in your present moment is so loud it admits of no peaceful space? Is the loudness adaptive or is it a machinery that has forgotten what it was serving?"
-      },
-      "keywords": [
-        "war",
-        "disruption",
-        "civic life",
-        "interruption"
-      ],
-      "metadata": {
-        "source": "Drum-Taps, 1865",
-        "year": "1861"
-      }
     },
-    {
-      "id": "cavalry-crossing-a-ford",
-      "name": "Cavalry Crossing a Ford (1865)",
-      "sort_order": 22,
-      "level": 1,
-      "category": "phase-3-drum-taps",
-      "sections": {
+    "keywords": ["war", "disruption", "civic life", "interruption"],
+    "metadata": {"source": "Drum-Taps, 1865", "year": "1861"}
+})
+
+items.append({
+    "id": "cavalry-crossing-a-ford",
+    "name": "Cavalry Crossing a Ford (1865)",
+    "sort_order": 22,
+    "level": 1,
+    "category": "phase-3-drum-taps",
+    "sections": {
         "Poem": "A line in long array where they wind betwixt green islands,\nThey take a serpentine course, their arms flash in the sun—hark to the musical clank,\nBehold the silvery river, in it the splashing horses loitering stop to drink,\nBehold the brown-faced men, each group, each person a picture, the negligent rest on the saddles,\nSome emerge on the opposite bank, others are just entering the ford—while,\nScarlet and blue and snowy white,\nThe guidon flags flutter gayly in the wind.",
         "About": "Seven lines. A small scene. Whitman is watching, not judging. The men cross the ford. The flags flutter. The negligent rest on saddles. The war is present entirely through the ordinariness of men doing soldier-things in afternoon light.",
         "Reflection": "A painter's poem. Practice of attention. What would you see if you looked at the current moment with only the painter's task, without the judgment?"
-      },
-      "keywords": [
-        "war",
-        "attention",
-        "painting",
-        "ordinariness"
-      ],
-      "metadata": {
-        "source": "Drum-Taps, 1865",
-        "year": "1865"
-      }
     },
-    {
-      "id": "the-wound-dresser",
-      "name": "The Wound-Dresser, excerpt (1865)",
-      "sort_order": 23,
-      "level": 1,
-      "category": "phase-3-drum-taps",
-      "sections": {
+    "keywords": ["war", "attention", "painting", "ordinariness"],
+    "metadata": {"source": "Drum-Taps, 1865", "year": "1865"}
+})
+
+items.append({
+    "id": "the-wound-dresser",
+    "name": "The Wound-Dresser, excerpt (1865)",
+    "sort_order": 23,
+    "level": 1,
+    "category": "phase-3-drum-taps",
+    "sections": {
         "Poem": "Bearing the bandages, water and sponge,\nStraight and swift to my wounded I go,\nWhere they lie on the ground after the battle brought in,\nWhere their priceless blood reddens the grass, the ground,\nOr to the rows of the hospital tent, or under the roof'd hospital,\nTo the long rows of cots up and down each side I return,\nTo each and all one after another I draw near, not one do I miss,\nAn attendant follows holding a tray, he carries a refuse pail,\nSoon to be fill'd with clotted rags and blood, emptied, and fill'd again.\n\nI onward go, I stop,\nWith hinged knees and steady hand to dress wounds,\nI am firm with each, the pangs are sharp yet unavoidable,\nOne turns to me his appealing eyes—poor boy! I never knew you,\nYet I think I could not refuse this moment to die for you, if that would save you.\n\n...\n\nThus in silence in dreams' projections,\nReturning, resuming, I thread my way through the hospitals,\nThe hurt and wounded I pacify with soothing hand,\nI sit by the restless all the dark night, some are so young,\nSome suffer so much, I recall the experience sweet and sad,\n(Many a soldier's loving arms about this neck have cross'd and rested,\nMany a soldier's kiss dwells on these bearded lips.)",
         "About": "Whitman's hospital work, rendered directly. The sponges, the refuse pail, the soldier's eyes. Not the war as symbol; the war as the body learning to dress wounds.",
         "Reflection": "Whitman would, in that moment, have died for a boy whose name he did not know. He says so. Who is the boy in your life whose name you do not yet know, for whom you would?"
-      },
-      "keywords": [
-        "war",
-        "nursing",
-        "body",
-        "care",
-        "witness"
-      ],
-      "metadata": {
-        "source": "Drum-Taps, 1865",
-        "year": "1865"
-      }
     },
-    {
-      "id": "reconciliation",
-      "name": "Reconciliation (1865)",
-      "sort_order": 24,
-      "level": 1,
-      "category": "phase-3-drum-taps",
-      "sections": {
+    "keywords": ["war", "nursing", "body", "care", "witness"],
+    "metadata": {"source": "Drum-Taps, 1865", "year": "1865"}
+})
+
+items.append({
+    "id": "reconciliation",
+    "name": "Reconciliation (1865)",
+    "sort_order": 24,
+    "level": 1,
+    "category": "phase-3-drum-taps",
+    "sections": {
         "Poem": "Word over all, beautiful as the sky,\nBeautiful that war and all its deeds of carnage must in time be utterly lost,\nThat the hands of the sisters Death and Night incessantly softly wash again, and ever again, this soil'd world;\nFor my enemy is dead, a man divine as myself is dead,\nI look where he lies white-faced and still in the coffin—I draw near,\nBend down and touch lightly with my lips the white face in the coffin.",
         "About": "Six lines. The enemy is dead. Whitman approaches and kisses the white face. The kiss is not forgiveness; the kiss is recognition.",
         "Reflection": "Is there an enemy in your life who is no longer an enemy? If they died tomorrow, would you approach the coffin?"
-      },
-      "keywords": [
-        "reconciliation",
-        "death",
-        "enemy",
-        "recognition",
-        "war"
-      ],
-      "metadata": {
-        "source": "Drum-Taps, 1865",
-        "year": "1865"
-      }
     },
-    {
-      "id": "phase-4-lincoln",
-      "name": "Phase IV — Memories of Lincoln (1865-1868)",
-      "sort_order": 30,
-      "level": 2,
-      "category": "phases",
-      "sections": {
+    "keywords": ["reconciliation", "death", "enemy", "recognition", "war"],
+    "metadata": {"source": "Drum-Taps, 1865", "year": "1865"}
+})
+
+# =============================================================================
+# PHASE IV — Memories of Lincoln (1865-1868)
+# =============================================================================
+
+items.append({
+    "id": "phase-4-lincoln",
+    "name": "Phase IV — Memories of Lincoln (1865-1868)",
+    "sort_order": 30,
+    "level": 2,
+    "category": "phases",
+    "sections": {
         "Phase": "1865-1868 — Lincoln and After",
         "About": "On April 14, 1865 — five days after Lee's surrender at Appomattox — Abraham Lincoln was assassinated at Ford's Theatre. Whitman was in Washington. He had seen Lincoln many times from a distance; he had never met him. The death broke him. He wrote two great elegies immediately (O Captain! My Captain!, Hush'd Be the Camps To-Day) and one that took him months: When Lilacs Last in the Dooryard Bloom'd. For the rest of his life, every spring when the lilacs bloomed, Whitman thought of Lincoln. The Memories of Lincoln cluster, assembled later, is the tribute he continued to refine.",
         "Reflection": "Is there a public death that broke you? What natural thing — a flower, a constellation — now carries that grief for you?"
-      },
-      "keywords": [
-        "lincoln",
-        "assassination",
-        "grief",
-        "1865"
-      ],
-      "metadata": {
-        "period": "1865-1868",
-        "type": "phase-anchor"
-      }
     },
-    {
-      "id": "when-lilacs-last",
-      "name": "When Lilacs Last in the Dooryard Bloom'd, I-III (1865)",
-      "sort_order": 31,
-      "level": 1,
-      "category": "phase-4-lincoln",
-      "sections": {
+    "keywords": ["lincoln", "assassination", "grief", "1865"],
+    "metadata": {"period": "1865-1868", "type": "phase-anchor"}
+})
+
+items.append({
+    "id": "when-lilacs-last",
+    "name": "When Lilacs Last in the Dooryard Bloom'd, I-III (1865)",
+    "sort_order": 31,
+    "level": 1,
+    "category": "phase-4-lincoln",
+    "sections": {
         "Poem": "1.\n\nWhen lilacs last in the dooryard bloom'd,\nAnd the great star early droop'd in the western sky in the night,\nI mourn'd, and yet shall mourn with ever-returning spring.\n\nEver-returning spring, trinity sure to me you bring,\nLilac blooming perennial and drooping star in the west,\nAnd thought of him I love.\n\n2.\n\nO powerful western fallen star!\nO shades of night—O moody, tearful night!\nO great star disappear'd—O the black murk that hides the star!\nO cruel hands that hold me powerless—O helpless soul of me!\nO harsh surrounding cloud that will not free my soul.\n\n3.\n\nIn the dooryard fronting an old farm-house near the white-wash'd palings,\nStands the lilac-bush tall-growing with heart-shaped leaves of rich green,\nWith many a pointed blossom rising delicate, with the perfume strong I love,\nWith every leaf a miracle—and from this bush in the dooryard,\nWith delicate-color'd blossoms and heart-shaped leaves of rich green,\nA sprig with its flower I break.",
         "About": "Whitman's elegy for Abraham Lincoln. The lilac in the dooryard, the star in the west (Venus), and the song of the hermit thrush form the three symbols of the full poem. Among the great American elegies.",
         "Reflection": "Whitman smelled lilacs and thought of Lincoln for the rest of his life. What is your lilac?"
-      },
-      "keywords": [
-        "grief",
-        "lincoln",
-        "lilac",
-        "spring",
-        "elegy"
-      ],
-      "metadata": {
-        "source": "Sequel to Drum-Taps, 1865",
-        "year": "1865"
-      }
     },
-    {
-      "id": "o-captain-my-captain",
-      "name": "O Captain! My Captain! (1865)",
-      "sort_order": 32,
-      "level": 1,
-      "category": "phase-4-lincoln",
-      "sections": {
+    "keywords": ["grief", "lincoln", "lilac", "spring", "elegy"],
+    "metadata": {"source": "Sequel to Drum-Taps, 1865", "year": "1865"}
+})
+
+items.append({
+    "id": "o-captain-my-captain",
+    "name": "O Captain! My Captain! (1865)",
+    "sort_order": 32,
+    "level": 1,
+    "category": "phase-4-lincoln",
+    "sections": {
         "Poem": "O Captain! my Captain! our fearful trip is done,\nThe ship has weather'd every rack, the prize we sought is won,\nThe port is near, the bells I hear, the people all exulting,\nWhile follow eyes the steady keel, the vessel grim and daring;\n        But O heart! heart! heart!\n          O the bleeding drops of red,\n            Where on the deck my Captain lies,\n              Fallen cold and dead.\n\nO Captain! my Captain! rise up and hear the bells;\nRise up—for you the flag is flung—for you the bugle trills,\nFor you bouquets and ribbon'd wreaths—for you the shores a-crowding,\nFor you they call, the swaying mass, their eager faces turning;\n        Here Captain! dear father!\n          This arm beneath your head!\n            It is some dream that on the deck,\n              You've fallen cold and dead.\n\nMy Captain does not answer, his lips are pale and still,\nMy father does not feel my arm, he has no pulse nor will,\nThe ship is anchor'd safe and sound, its voyage closed and done,\nFrom fearful trip the victor ship comes in with object won;\n        Exult O shores, and ring O bells!\n          But I with mournful tread,\n            Walk the deck my Captain lies,\n              Fallen cold and dead.",
         "About": "The most conventional of Whitman's Lincoln elegies — rhymed, metered, widely taught in schools. Whitman later regretted how popular it became, because it was the least characteristic of his style and overshadowed When Lilacs Last, which he thought the better poem. Still: it does what it does, and it does it well.",
         "Reflection": "What have you made that became more famous than your favorite of your own works? How do you feel about it?"
-      },
-      "keywords": [
-        "lincoln",
-        "elegy",
-        "captain",
-        "conventional",
-        "popular"
-      ],
-      "metadata": {
-        "source": "Sequel to Drum-Taps, 1865",
-        "year": "1865"
-      }
     },
-    {
-      "id": "darest-thou-now-o-soul",
-      "name": "Darest Thou Now O Soul (1868)",
-      "sort_order": 33,
-      "level": 1,
-      "category": "phase-4-lincoln",
-      "sections": {
+    "keywords": ["lincoln", "elegy", "captain", "conventional", "popular"],
+    "metadata": {"source": "Sequel to Drum-Taps, 1865", "year": "1865"}
+})
+
+items.append({
+    "id": "darest-thou-now-o-soul",
+    "name": "Darest Thou Now O Soul (1868)",
+    "sort_order": 33,
+    "level": 1,
+    "category": "phase-4-lincoln",
+    "sections": {
         "Poem": "Darest thou now O soul,\nWalk out with me toward the unknown region,\nWhere neither ground is for the feet nor any path to follow?\n\nNo map there, nor guide,\nNor voice sounding, nor touch of human hand,\nNor face with blooming flesh, nor lips, nor eyes, are in that land.\n\nI know it not O soul,\nNor dost thou, all is a blank before us,\nAll waits undream'd of in that region, that inaccessible land.\n\nTill when the ties loosen,\nAll but the ties eternal, Time and Space,\nNor darkness, gravitation, sense, nor any bounds bounding us.\n\nThen we burst forth, we float,\nIn Time and Space O soul, prepared for them,\nEqual, equipt at last, (O joy! O fruit of all!) them to fulfil O soul.",
         "About": "Late Whitman, addressed to his own soul. The question is whether the soul is ready to walk out to the unknown without map, guide, voice, or human touch.",
         "Reflection": "What in you is prepared for the unknown region? What is not yet?"
-      },
-      "keywords": [
-        "soul",
-        "unknown",
-        "death",
-        "preparation",
-        "courage"
-      ],
-      "metadata": {
-        "source": "Whispers of Heavenly Death cluster, 1868",
-        "year": "1868"
-      }
     },
-    {
-      "id": "phase-5-late-work",
-      "name": "Phase V — Late Work (1871-1892)",
-      "sort_order": 40,
-      "level": 2,
-      "category": "phases",
-      "sections": {
+    "keywords": ["soul", "unknown", "death", "preparation", "courage"],
+    "metadata": {"source": "Whispers of Heavenly Death cluster, 1868", "year": "1868"}
+})
+
+# =============================================================================
+# PHASE V — Late Work (1871-1892)
+# =============================================================================
+
+items.append({
+    "id": "phase-5-late-work",
+    "name": "Phase V — Late Work (1871-1892)",
+    "sort_order": 40,
+    "level": 2,
+    "category": "phases",
+    "sections": {
         "Phase": "1871-1892 — Late Work, Stroke, Camden, Deathbed",
         "About": "In 1873, at age 54, Whitman suffered a paralytic stroke. He never fully recovered. He moved to Camden, New Jersey, into the home of his brother George and sister-in-law Louisa, and lived the last nineteen years of his life as an invalid. He continued editing Leaves of Grass through successive editions, culminating in the 1891-92 Deathbed edition. The late poems are quieter, shorter, more elegiac. A Noiseless Patient Spider. Passage to India. The Song of the Open Road's final revisions. The work of a body that could no longer walk the open road, but still knew what the road had been for.",
         "Reflection": "Whitman's best-known work is a book about bodily expansion, freedom, the open road. The last third of his life was spent mostly housebound. He did not stop working. What happens when the body that wrote the body of work can no longer move?"
-      },
-      "keywords": [
-        "late-work",
-        "stroke",
-        "camden",
-        "deathbed",
-        "1891-92"
-      ],
-      "metadata": {
-        "period": "1871-1892",
-        "type": "phase-anchor"
-      }
     },
-    {
-      "id": "noiseless-patient-spider",
-      "name": "A Noiseless Patient Spider (1871)",
-      "sort_order": 41,
-      "level": 1,
-      "category": "phase-5-late-work",
-      "sections": {
+    "keywords": ["late-work", "stroke", "camden", "deathbed", "1891-92"],
+    "metadata": {"period": "1871-1892", "type": "phase-anchor"}
+})
+
+items.append({
+    "id": "noiseless-patient-spider",
+    "name": "A Noiseless Patient Spider (1871)",
+    "sort_order": 41,
+    "level": 1,
+    "category": "phase-5-late-work",
+    "sections": {
         "Poem": "A noiseless patient spider,\nI mark'd where on a little promontory it stood isolated,\nMark'd how to explore the vacant vast surrounding,\nIt launch'd forth filament, filament, filament, out of itself,\nEver unreeling them, ever tirelessly speeding them.\n\nAnd you O my soul where you stand,\nSurrounded, detached, in measureless oceans of space,\nCeaselessly musing, venturing, throwing, seeking the spheres to connect them,\nTill the bridge you will need be form'd, till the ductile anchor hold,\nTill the gossamer thread you fling catch somewhere, O my soul.",
         "About": "Ten lines. The soul as the spider, casting filament after filament across the void, waiting for one to hold. Whitman at his most economical and most mystical.",
         "Reflection": "What filament are you currently casting into the void? How long has it been unanchored? Whitman's instruction is: keep casting."
-      },
-      "keywords": [
-        "soul",
-        "spider",
-        "connection",
-        "patience",
-        "void"
-      ],
-      "metadata": {
-        "source": "Passage to India, 1871",
-        "year": "1871"
-      }
     },
-    {
-      "id": "passage-to-india-excerpt",
-      "name": "Passage to India, excerpt from IX (1871)",
-      "sort_order": 42,
-      "level": 1,
-      "category": "phase-5-late-work",
-      "sections": {
+    "keywords": ["soul", "spider", "connection", "patience", "void"],
+    "metadata": {"source": "Passage to India, 1871", "year": "1871"}
+})
+
+items.append({
+    "id": "passage-to-india-excerpt",
+    "name": "Passage to India, excerpt from IX (1871)",
+    "sort_order": 42,
+    "level": 1,
+    "category": "phase-5-late-work",
+    "sections": {
         "Poem": "Passage O soul to India!\nEclaircise the myths Asiatic, the primitive fables.\n\nNot you alone proud truths of the world,\nNor you alone ye facts of modern science,\nBut myths and fables of eld, Asia's, Africa's fables,\nThe far-darting beams of the spirit, the unloos'd dreams,\nThe deep diving bibles and legends,\nThe daring plots of the poets, the elder religions;\nO you temples fairer than lilies pour'd over by the rising sun!\nO you fables spurning the known, eluding the hold of the known, mounting to heaven!\n\n...\n\nO we can wait no longer,\nWe too take ship O soul,\nJoyous we too launch out on trackless seas,\nFearless for unknown shores on waves of ecstasy to sail,\nAmid the wafting winds, (thou pressing me to thee, I thee to me, O soul,)\nCaroling free, singing our song of God,\nChanting our chant of pleasant exploration.\n\nWith laugh and many a kiss,\n(Let others deprecate, let others weep for sin, remorse, humiliation,)\nO soul thou pleasest me, I thee.\n\nO soul, repressless, I with thee and thou with me,\nThy circumnavigation of the world begin,\nOf man, the voyage of his mind's return,\nTo reason's early paradise,\nBack, back to wisdom's birth, to innocent intuitions,\nAgain with fair creation.",
         "About": "Written in 1871 for the opening of the Suez Canal, the poem uses the new global connectivity of steamship and telegraph as the image for a soul's voyage back to its own source — the Asian fables, the elder religions, the primitive wisdom the poet says the modern world has been cut off from.",
         "Reflection": "What voyage back to wisdom's birth have you been making without calling it that?"
-      },
-      "keywords": [
-        "soul",
-        "india",
-        "voyage",
-        "wisdom",
-        "suez"
-      ],
-      "metadata": {
-        "source": "Passage to India, 1871",
-        "year": "1871"
-      }
     },
-    {
-      "id": "song-of-the-open-road",
-      "name": "Song of the Open Road, excerpt from I (1856)",
-      "sort_order": 43,
-      "level": 1,
-      "category": "phase-5-late-work",
-      "sections": {
+    "keywords": ["soul", "india", "voyage", "wisdom", "suez"],
+    "metadata": {"source": "Passage to India, 1871", "year": "1871"}
+})
+
+items.append({
+    "id": "song-of-the-open-road",
+    "name": "Song of the Open Road, excerpt from I (1856)",
+    "sort_order": 43,
+    "level": 1,
+    "category": "phase-5-late-work",
+    "sections": {
         "Poem": "Afoot and light-hearted I take to the open road,\nHealthy, free, the world before me,\nThe long brown path before me leading wherever I choose.\n\nHenceforth I ask not good-fortune, I myself am good-fortune,\nHenceforth I whimper no more, postpone no more, need nothing,\nDone with indoor complaints, libraries, querulous criticisms,\nStrong and content I travel the open road.\n\nThe earth, that is sufficient,\nI do not want the constellations any nearer,\nI know they are very well where they are,\nI know they suffice for those who belong to them.\n\n(Still here I carry my old delicious burdens,\nI carry them, men and women, I carry them with me wherever I go,\nI swear it is impossible for me to get rid of them,\nI am fill'd with them, and I will fill them in return.)",
         "About": "Written in 1856, revised through Whitman's life, retained in the Deathbed edition. The phrase the long brown path before me leading wherever I choose has become part of the American lexicon. The parenthetical stanza — I carry them with me wherever I go — is the one that never gets quoted and that the poem turns on.",
         "Reflection": "What delicious burdens do you carry? Whitman says it is impossible to get rid of them. He is not complaining. He is carrying."
-      },
-      "keywords": [
-        "road",
-        "travel",
-        "freedom",
-        "burdens",
-        "carrying"
-      ],
-      "metadata": {
-        "source": "First published 1856; revised through 1891-92",
-        "year": "1856 (revised 1881)"
-      }
     },
-    {
-      "id": "so-long",
-      "name": "So Long!, closing lines (1860/1881)",
-      "sort_order": 44,
-      "level": 1,
-      "category": "phase-5-late-work",
-      "sections": {
+    "keywords": ["road", "travel", "freedom", "burdens", "carrying"],
+    "metadata": {"source": "First published 1856; revised through 1891-92", "year": "1856 (revised 1881)"}
+})
+
+items.append({
+    "id": "so-long",
+    "name": "So Long!, closing lines (1860/1881)",
+    "sort_order": 44,
+    "level": 1,
+    "category": "phase-5-late-work",
+    "sections": {
         "Poem": "My songs cease, I abandon them,\nFrom behind the screen where I hid I advance personally solely to you.\n\nCamerado, this is no book,\nWho touches this touches a man,\n(Is it night? are we here together alone?)\nIt is I you hold and who holds you,\nI spring from the pages into your arms—decease calls me forth.\n\nO how your fingers drowse me,\nYour breath falls around me like dew, your pulse lulls the tympans of my ears,\nI feel immerged from head to foot,\nDelicious, enough.\n\nEnough O deed impromptu and secret,\nEnough O gliding present—enough O summ'd-up past.\n\nDear friend whoever you are take this kiss,\nI give it especially to you, do not forget me,\nI feel like one who has done work for the day to retire awhile,\nI receive now again of my many translations, from my avataras ascending, while others doubtless await me,\nAn unknown sphere more real than I dream'd, more direct, darts awakening rays about me, So long!\nRemember my words, I may again return,\nI love you, I depart from materials,\nI am as one disembodied, triumphant, dead.",
         "About": "The last poem in every edition of Leaves of Grass. Whitman's farewell to the reader, the one whose body he has been pressing into for four hundred pages. The book ends with the author promising it is not a book but a man, and giving the reader a kiss, and saying goodbye.",
         "Reflection": "What are the closing words you would write to someone you will never meet but whose body you have been pressing into through your work?"
-      },
-      "keywords": [
-        "farewell",
-        "reader",
-        "touch",
-        "kiss",
-        "closing"
-      ],
-      "metadata": {
-        "source": "First published 1860; revised through 1881",
-        "year": "1860"
-      }
     },
-    {
-      "id": "bio-brooklyn-printer",
-      "name": "Biographical: Brooklyn Printer (1830s)",
-      "sort_order": 50,
-      "level": 1,
-      "category": "biographical",
-      "sections": {
+    "keywords": ["farewell", "reader", "touch", "kiss", "closing"],
+    "metadata": {"source": "First published 1860; revised through 1881", "year": "1860"}
+})
+
+# =============================================================================
+# BIOGRAPHICAL PHASE ANCHORS
+# =============================================================================
+
+items.append({
+    "id": "bio-brooklyn-printer",
+    "name": "Biographical: Brooklyn Printer (1830s)",
+    "sort_order": 50,
+    "level": 1,
+    "category": "biographical",
+    "sections": {
         "Moment": "Whitman left school at age eleven. By thirteen he was setting type for a Brooklyn printer. The physical act of composing text by hand — choosing each letter, spacing each line, feeling the weight of lead as words accumulated — shaped the rest of his life. He would, in 1855, typeset several pages of the first edition of Leaves of Grass himself.",
         "Reflection": "What physical craft formed the rhythm of your thinking before you had the vocabulary for what you were thinking? The body learns before the mind does."
-      },
-      "keywords": [
-        "craft",
-        "printing",
-        "body",
-        "formation",
-        "brooklyn"
-      ],
-      "metadata": {
-        "source": "Specimen Days, standard biographies; primary accounts PD",
-        "year": "1830s"
-      }
     },
-    {
-      "id": "bio-self-review-scandal",
-      "name": "Biographical: The 1855 Self-Review Scandal",
-      "sort_order": 51,
-      "level": 1,
-      "category": "biographical",
-      "sections": {
+    "keywords": ["craft", "printing", "body", "formation", "brooklyn"],
+    "metadata": {"source": "Specimen Days, standard biographies; primary accounts PD", "year": "1830s"}
+})
+
+items.append({
+    "id": "bio-self-review-scandal",
+    "name": "Biographical: The 1855 Self-Review Scandal",
+    "sort_order": 51,
+    "level": 1,
+    "category": "biographical",
+    "sections": {
         "Moment": "In the months after publishing the first edition, Whitman anonymously wrote three glowing reviews of his own book and placed them in friendly newspapers. One began: An American bard at last! Contemporaries found out. The scandal was modest at the time but has embarrassed scholars ever since. Whitman never apologized. He had decided the book needed a reader-voice to survive, and if one was not coming, he would provide one himself.",
         "Reflection": "What have you done to help your work find a reader that, in polite society, would be considered too much? Whitman wrote his own reviews. What is the equivalent for your work?"
-      },
-      "keywords": [
-        "self-promotion",
-        "ethics",
-        "scandal",
-        "reviews"
-      ],
-      "metadata": {
-        "source": "Documented in the Walt Whitman Archive and standard biographies",
-        "year": "1855"
-      }
     },
-    {
-      "id": "bio-emerson-letter",
-      "name": "Biographical: The Emerson Letter (1855)",
-      "sort_order": 52,
-      "level": 1,
-      "category": "biographical",
-      "sections": {
+    "keywords": ["self-promotion", "ethics", "scandal", "reviews"],
+    "metadata": {"source": "Documented in the Walt Whitman Archive and standard biographies", "year": "1855"}
+})
+
+items.append({
+    "id": "bio-emerson-letter",
+    "name": "Biographical: The Emerson Letter (1855)",
+    "sort_order": 52,
+    "level": 1,
+    "category": "biographical",
+    "sections": {
         "Moment": "Whitman mailed a copy of the first edition to Ralph Waldo Emerson in Concord. On July 21, 1855, Emerson wrote back a private letter that ended: I greet you at the beginning of a great career. Whitman, without asking permission, published the letter in a New York review. In the second edition, he printed a line from it — in gold — on the spine. Emerson was mortified; Whitman was unrepentant. The younger poet had needed the imprimatur; the older essayist was slow to forgive the breach, though he never fully withdrew the recognition.",
         "Reflection": "Whitman's hunger for recognition was real and the breach was also real. Both were true. He did not apologize. Was he right? Is there a hunger in your own life you could more honestly name — even if the naming would expose something you would rather keep private?"
-      },
-      "keywords": [
-        "recognition",
-        "ambition",
-        "breach",
-        "ethics",
-        "hunger"
-      ],
-      "metadata": {
-        "source": "Emerson-Whitman correspondence, Walt Whitman Archive",
-        "year": "1855"
-      }
     },
-    {
-      "id": "bio-civil-war-nurse",
-      "name": "Biographical: The Civil War Nurse (1862-1865)",
-      "sort_order": 53,
-      "level": 1,
-      "category": "biographical",
-      "sections": {
+    "keywords": ["recognition", "ambition", "breach", "ethics", "hunger"],
+    "metadata": {"source": "Emerson-Whitman correspondence, Walt Whitman Archive", "year": "1855"}
+})
+
+items.append({
+    "id": "bio-civil-war-nurse",
+    "name": "Biographical: The Civil War Nurse (1862-1865)",
+    "sort_order": 53,
+    "level": 1,
+    "category": "biographical",
+    "sections": {
         "Moment": "Whitman went to Washington in December 1862 to find his brother George, who had been wounded at Fredericksburg. He found him alive. He did not leave. For three years he served as a volunteer hospital attendant, visiting wounded and dying soldiers from both sides, bringing them small gifts, writing letters for those who could not write, sitting with those who were dying. He made over six hundred visits and tended to tens of thousands of men. He called it, later, the most valuable experience of his existence.",
         "Reflection": "Whitman had no medical training. He went anyway. He did what was available — presence, letters, small gifts, conversation. What is available to you in a situation where the professionals have other work?"
-      },
-      "keywords": [
-        "war",
-        "nursing",
-        "presence",
-        "witness",
-        "formation"
-      ],
-      "metadata": {
-        "source": "Specimen Days, 1882, PD",
-        "year": "1862-1865"
-      }
     },
-    {
-      "id": "bio-stroke-camden",
-      "name": "Biographical: The Stroke and Camden (1873-1892)",
-      "sort_order": 54,
-      "level": 1,
-      "category": "biographical",
-      "sections": {
+    "keywords": ["war", "nursing", "presence", "witness", "formation"],
+    "metadata": {"source": "Specimen Days, 1882, PD", "year": "1862-1865"}
+})
+
+items.append({
+    "id": "bio-stroke-camden",
+    "name": "Biographical: The Stroke and Camden (1873-1892)",
+    "sort_order": 54,
+    "level": 1,
+    "category": "biographical",
+    "sections": {
         "Moment": "In January 1873, at 54, Whitman suffered a paralytic stroke in Washington. He recovered partial mobility but never full health. He moved to Camden, New Jersey, into the home of his brother George and sister-in-law Louisa. The last nineteen years of his life were lived as an invalid. He received visitors including Oscar Wilde (1882). He continued editing Leaves of Grass through successive editions. The 1891-92 Deathbed edition was compiled in the Camden house.",
         "Reflection": "Whitman's best-known work is about bodily freedom, the open road, expansion. The last third of his life was spent mostly housebound. He did not stop working. What does it mean that the bard of the body continued to sing after the body had been taken?"
-      },
-      "keywords": [
-        "illness",
-        "endurance",
-        "late-work",
-        "body",
-        "continuation"
-      ],
-      "metadata": {
-        "source": "Standard biographies, Walt Whitman Archive photographs and letters",
-        "year": "1873-1892"
-      }
     },
-    {
-      "id": "bio-death-deathbed-edition",
-      "name": "Biographical: Death and the Deathbed Edition (1891-1892)",
-      "sort_order": 55,
-      "level": 1,
-      "category": "biographical",
-      "sections": {
+    "keywords": ["illness", "endurance", "late-work", "body", "continuation"],
+    "metadata": {"source": "Standard biographies, Walt Whitman Archive photographs and letters", "year": "1873-1892"}
+})
+
+items.append({
+    "id": "bio-death-deathbed-edition",
+    "name": "Biographical: Death and the Deathbed Edition (1891-1892)",
+    "sort_order": 55,
+    "level": 1,
+    "category": "biographical",
+    "sections": {
         "Moment": "In the last months of his life, Whitman worked with Horace Traubel, a young disciple who lived nearby and visited almost daily, to finalize what would be the canonical edition of Leaves of Grass. He sequenced the poems himself. He corrected galleys from his bed. On March 26, 1892, he died in his small house in Camden. The Deathbed edition was already in press. His grave in Harleigh Cemetery, which he designed himself, is a massive granite tomb modeled on an Etruscan mausoleum. Traubel's multi-volume With Walt Whitman in Camden (recorded daily conversations, 1888-1892) is the single most detailed record of any American poet's last years.",
         "Reflection": "If you had a Traubel in your life — a young disciple who visited you daily and wrote down what you said — what would they hear you saying?"
-      },
-      "keywords": [
-        "death",
-        "deathbed-edition",
-        "traubel",
-        "camden",
-        "legacy"
-      ],
-      "metadata": {
-        "source": "Traubel's With Walt Whitman in Camden, PD for volumes pub. before 1928",
-        "year": "1891-1892"
-      }
-    }
-  ]
-}
+    },
+    "keywords": ["death", "deathbed-edition", "traubel", "camden", "legacy"],
+    "metadata": {"source": "Traubel's With Walt Whitman in Camden, PD for volumes pub. before 1928", "year": "1891-1892"}
+})
+
+# =============================================================================
+# Finalize
+# =============================================================================
+
+grammar["items"] = items
+
+# Write cleanly with Python's JSON encoder
+out_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'grammars', 'walt-whitman', 'grammar.json')
+out_path = os.path.abspath(out_path)
+
+with open(out_path, 'w', encoding='utf-8') as f:
+    json.dump(grammar, f, indent=2, ensure_ascii=False)
+
+print(f"Wrote {out_path}")
+print(f"Items: {len(items)}")
+
+# Verify roundtrip
+with open(out_path, encoding='utf-8') as f:
+    reloaded = json.load(f)
+assert len(reloaded['items']) == len(items), "Roundtrip failed"
+print("Roundtrip OK")
+
+# Report size
+import os as _os
+size = _os.path.getsize(out_path)
+print(f"File size: {size:,} bytes ({size/1024:.1f} KB)")
