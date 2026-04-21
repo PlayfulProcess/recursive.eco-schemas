@@ -59,7 +59,7 @@ items.append({
     "name": "Phase I — The 1855 Eruption",
     "sort_order": 0,
     "level": 2,
-    "category": "phases",
+    "category": "phase",
     "sections": {
         "Phase": "1855 — The First Edition",
         "About": "In July 1855, Whitman self-published a thin green volume in Brooklyn. It contained twelve untitled poems and a long preface. He set type for several pages himself. He mailed a copy to Ralph Waldo Emerson in Concord. No one else knew what had arrived. The American literary world, such as it was, had no category for what the book was doing. Whitman had been a printer, a schoolteacher, a newspaper editor, a drifter among Brooklyn's working people. He was thirty-six. He had, quietly, spent the previous five years in what would later be called a period of germination. This phase is what came out. The first edition is the eruption.",
