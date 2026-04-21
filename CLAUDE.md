@@ -4,6 +4,21 @@
 
 A public repository of **grammars** — structured JSON files that represent symbolic systems (tarot decks, philosophical texts, mythology, children's stories, etc.) for use with the Flow recursive viewer at [recursive.eco](https://recursive.eco). Each grammar is a self-contained dataset that the viewer can render as cards, readings, or explorations.
 
+## Copyright Boundaries for Grammar Construction
+
+**Every grammar in this repo must respect source copyright.** Violations expose the author and recursive.eco to legal risk and undermine the CC-BY-SA-4.0 commons we are trying to build.
+
+- **Public domain sources are preferred.** Before building a grammar, confirm: (1) author death date (most jurisdictions: PD 70 years post-mortem), (2) publication date (US: pre-1929 is PD regardless of author death).
+- **Copyrighted songs/lyrics are NOT reproduced.** For grammars that reference songs, each card has a `song_url` field linking out. Lyrics themselves are not embedded except for fair-use fragments (≤15 words with full attribution).
+- **Copyrighted books**: structural concepts are not copyrightable; the author's specific words are. When building a grammar inspired by a copyrighted source, write entirely original prose in the grammar's fields; reference the source book as inspiration in the description with full bibliographic attribution.
+- **Piracy sites** (oceanofpdf, z-library, etc.) are never used. Legal access: Kindle, library borrow, Internet Archive controlled lending, used bookstores.
+- **When uncertain**: paraphrase + attribute. If the passage is too important to paraphrase, the author must purchase a copy and apply the 15-word fair-use rule.
+
+## In-Progress Grammar Drafts (April 2026)
+
+- **Walt Whitman** (`plan/whitman-grammar-plan.md`, `grammars/walt-whitman/grammar.json`) — first-draft JSON with 15 items (11 poems + 4 biographical anchors) across Whitman's cluster structure. All PD. Author review: whether the cluster representation feels right and whether more biographical beats are wanted. Target full deck: ~40-60 items.
+- **Brazilian Expressions Tarot** (`plan/brazilian-expressions-tarot-plan.md`, `grammars/brazilian-expressions/grammar.json`) — first-draft JSON with 12 expressions across 5 clusters (saudade, jeitinho, refusal, amazement, affection, body-in-language). Designed to be played by the author with her daughter for cultural transmission + Portuguese reading practice. **Author review needed** on Brazilian Portuguese nuance — some cards flagged `confidence: medium` where Claude is least sure about register/usage. Target full deck: 30-40 cards after review.
+
 ## Repository Structure
 
 ```
