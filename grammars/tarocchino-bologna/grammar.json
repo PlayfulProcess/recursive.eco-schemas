@@ -1,0 +1,2040 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "attribution": [
+      {
+        "name": "Bolognese card-making tradition",
+        "date": "16th c. onward",
+        "note": "The Tarocchino di Bologna game deck (62 cards)"
+      },
+      {
+        "name": "Michael Dummett",
+        "date": "1980",
+        "note": "A-order classification; Bolognese composition and trump order"
+      },
+      {
+        "name": "Wikimedia Commons",
+        "date": "public domain",
+        "note": "Composite deck sheet (Tarocco Bolognese.png); per-card scans are a TODO"
+      },
+      {
+        "name": "PlayfulProcess",
+        "date": "2026",
+        "note": "Grammar architecture and summaries"
+      }
+    ]
+  },
+  "name": "Tarocchino di Bologna — The Real 62-Card Bolognese Deck",
+  "description": "The genuine Tarocchino di Bologna — the fast 62-card Bolognese game deck (one of Michael Dummett's A-order traditions), built structure-accurate to distinguish it from modern Marseille-named 'Tarocchino' homages. Three things define it: the pips 2–5 are removed (leaving Ace, 6–10, and four courts per suit); the four equal, interchangeable PAPI (the 'Quattro Mori') replace the Popess, Empress, Emperor and Pope; and the ANGEL (Judgement) is the highest trump of all, ranked above even the World.\n\nIt was made to play a brisk trick-taking game, not for divination — flagged on every card. Each trump carries an Iconography note and a 'In the Bolognese deck' note explaining its distinctive placement; the minors document the 2–5 stripping; emergences gather the Four Papi and the Bolognese trump order.\n\nIMAGE NOTE: no clean per-card public-domain scan of a Bolognese deck is available on Wikimedia Commons (the BnF albums are 100+ unlabelled sequential scans needing vision to identify). This grammar therefore ships structure-first, with the composite deck sheet as cover; per-card imaging (e.g. from the Mitelli 1664 Tarocchino or the BnF albums) is a documented follow-up.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: composite Tarocco Bolognese sheet (Wikimedia Commons); BnF Gallica albums 'Tarocchino de Bologne' (btv1b105138709) and 'à deux têtes' (btv1b105088141); the Giuseppe Maria Mitelli etched Tarocchino, 1664.",
+  "grammar_type": "tarot",
+  "creator_name": "PlayfulProcess",
+  "creator_link": "https://recursive.eco",
+  "cover_image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tarocco%20Bolognese.png?width=900",
+  "tags": [
+    "tarot",
+    "tarocchino",
+    "bologna",
+    "bolognese",
+    "a-order",
+    "62-cards",
+    "history",
+    "trionfi",
+    "four-papi"
+  ],
+  "roots": [
+    "western-esoteric",
+    "renaissance"
+  ],
+  "shelves": [
+    "wonder",
+    "mirror"
+  ],
+  "lineages": [
+    "Andreotti"
+  ],
+  "worldview": "historical",
+  "is_published": false,
+  "items": [
+    {
+      "id": "trump-matto",
+      "name": "The Fool",
+      "sort_order": 0,
+      "category": "trump",
+      "level": 1,
+      "keywords": [
+        "fool",
+        "il matto",
+        "bolognese",
+        "tarocchino",
+        "trionfi",
+        "arcana:the-fool"
+      ],
+      "metadata": {
+        "arcana": "trump",
+        "italian_name": "Il Matto",
+        "tradition": "bolognese",
+        "archetype": "arcana:the-fool",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A ragged fool — unnumbered, the 'Excuse' of the game, exempt from following suit.",
+        "In the Bolognese deck": "Stands outside the ranking, like the Fool everywhere.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "trump-bagatto",
+      "name": "The Magician",
+      "sort_order": 1,
+      "category": "trump",
+      "level": 1,
+      "keywords": [
+        "magician",
+        "il bagattino",
+        "bolognese",
+        "tarocchino",
+        "trionfi",
+        "arcana:the-magician"
+      ],
+      "metadata": {
+        "arcana": "trump",
+        "italian_name": "Il Bagattino",
+        "tradition": "bolognese",
+        "archetype": "arcana:the-magician",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A craftsman at his table — the lowest of the trumps proper.",
+        "In the Bolognese deck": "The base of the trump ladder; the everyman who opens the parade.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "trump-papa-a",
+      "name": "Papa (Moor) I",
+      "sort_order": 2,
+      "category": "trump",
+      "level": 1,
+      "keywords": [
+        "papa (moor) i",
+        "papa / moro",
+        "bolognese",
+        "tarocchino",
+        "trionfi"
+      ],
+      "metadata": {
+        "arcana": "trump",
+        "italian_name": "Papa / Moro",
+        "tradition": "bolognese",
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Iconography": "One of four near-identical crowned/turbaned figures.",
+        "In the Bolognese deck": "THE FOUR PAPI are the signature of the Bolognese deck: four equal, interchangeable cards that replace the Popess, Empress, Emperor and Pope. They rank only among themselves, by order of play.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "trump-papa-b",
+      "name": "Papa (Moor) II",
+      "sort_order": 3,
+      "category": "trump",
+      "level": 1,
+      "keywords": [
+        "papa (moor) ii",
+        "papa / moro",
+        "bolognese",
+        "tarocchino",
+        "trionfi"
+      ],
+      "metadata": {
+        "arcana": "trump",
+        "italian_name": "Papa / Moro",
+        "tradition": "bolognese",
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Iconography": "The second of the four equal Papi.",
+        "In the Bolognese deck": "One of the four interchangeable Papi (see Papa I).",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "trump-papa-c",
+      "name": "Papa (Moor) III",
+      "sort_order": 4,
+      "category": "trump",
+      "level": 1,
+      "keywords": [
+        "papa (moor) iii",
+        "papa / moro",
+        "bolognese",
+        "tarocchino",
+        "trionfi"
+      ],
+      "metadata": {
+        "arcana": "trump",
+        "italian_name": "Papa / Moro",
+        "tradition": "bolognese",
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Iconography": "The third of the four equal Papi.",
+        "In the Bolognese deck": "One of the four interchangeable Papi (see Papa I).",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "trump-papa-d",
+      "name": "Papa (Moor) IV",
+      "sort_order": 5,
+      "category": "trump",
+      "level": 1,
+      "keywords": [
+        "papa (moor) iv",
+        "papa / moro",
+        "bolognese",
+        "tarocchino",
+        "trionfi"
+      ],
+      "metadata": {
+        "arcana": "trump",
+        "italian_name": "Papa / Moro",
+        "tradition": "bolognese",
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Iconography": "The fourth of the four equal Papi.",
+        "In the Bolognese deck": "One of the four interchangeable Papi (see Papa I).",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "trump-amore",
+      "name": "Love",
+      "sort_order": 6,
+      "category": "trump",
+      "level": 1,
+      "keywords": [
+        "love",
+        "l'amore",
+        "bolognese",
+        "tarocchino",
+        "trionfi",
+        "arcana:the-lovers"
+      ],
+      "metadata": {
+        "arcana": "trump",
+        "italian_name": "L'Amore",
+        "tradition": "bolognese",
+        "archetype": "arcana:the-lovers",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A couple beneath a winged Cupid.",
+        "In the Bolognese deck": "Union and choice, just above the Papi.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "trump-carro",
+      "name": "The Chariot",
+      "sort_order": 7,
+      "category": "trump",
+      "level": 1,
+      "keywords": [
+        "chariot",
+        "il carro",
+        "bolognese",
+        "tarocchino",
+        "trionfi",
+        "arcana:the-chariot"
+      ],
+      "metadata": {
+        "arcana": "trump",
+        "italian_name": "Il Carro",
+        "tradition": "bolognese",
+        "archetype": "arcana:the-chariot",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A victor in a triumphal car.",
+        "In the Bolognese deck": "Triumph; opens the central virtue cluster.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "trump-temperanza",
+      "name": "Temperance",
+      "sort_order": 8,
+      "category": "trump",
+      "level": 1,
+      "keywords": [
+        "temperance",
+        "la temperanza",
+        "bolognese",
+        "tarocchino",
+        "trionfi",
+        "arcana:temperance"
+      ],
+      "metadata": {
+        "arcana": "trump",
+        "italian_name": "La Temperanza",
+        "tradition": "bolognese",
+        "archetype": "arcana:temperance",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A figure pouring between two vessels.",
+        "In the Bolognese deck": "First of the three virtues, grouped together in the Bolognese order.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "trump-giustizia",
+      "name": "Justice",
+      "sort_order": 9,
+      "category": "trump",
+      "level": 1,
+      "keywords": [
+        "justice",
+        "la giustizia",
+        "bolognese",
+        "tarocchino",
+        "trionfi",
+        "arcana:justice"
+      ],
+      "metadata": {
+        "arcana": "trump",
+        "italian_name": "La Giustizia",
+        "tradition": "bolognese",
+        "archetype": "arcana:justice",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "An enthroned woman with sword and scales.",
+        "In the Bolognese deck": "The middle virtue of the central cluster.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "trump-forza",
+      "name": "Strength",
+      "sort_order": 10,
+      "category": "trump",
+      "level": 1,
+      "keywords": [
+        "strength",
+        "la forza",
+        "bolognese",
+        "tarocchino",
+        "trionfi",
+        "arcana:strength"
+      ],
+      "metadata": {
+        "arcana": "trump",
+        "italian_name": "La Forza",
+        "tradition": "bolognese",
+        "archetype": "arcana:strength",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A figure mastering a lion or column.",
+        "In the Bolognese deck": "The third clustered virtue.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "trump-ruota",
+      "name": "Wheel of Fortune",
+      "sort_order": 11,
+      "category": "trump",
+      "level": 1,
+      "keywords": [
+        "wheel of fortune",
+        "la ruota",
+        "bolognese",
+        "tarocchino",
+        "trionfi",
+        "arcana:wheel-of-fortune"
+      ],
+      "metadata": {
+        "arcana": "trump",
+        "italian_name": "La Ruota",
+        "tradition": "bolognese",
+        "archetype": "arcana:wheel-of-fortune",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A turning wheel with rising and falling figures.",
+        "In the Bolognese deck": "Fortune's turn, above the virtues.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "trump-vecchio",
+      "name": "The Old Man (Time)",
+      "sort_order": 12,
+      "category": "trump",
+      "level": 1,
+      "keywords": [
+        "old man (time)",
+        "il vecchio",
+        "bolognese",
+        "tarocchino",
+        "trionfi",
+        "arcana:the-hermit"
+      ],
+      "metadata": {
+        "arcana": "trump",
+        "italian_name": "Il Vecchio",
+        "tradition": "bolognese",
+        "archetype": "arcana:the-hermit",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A bent old man with an hourglass — Time, the Bolognese 'Hermit'.",
+        "In the Bolognese deck": "Time and age.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "trump-traditore",
+      "name": "The Traitor (Hanged Man)",
+      "sort_order": 13,
+      "category": "trump",
+      "level": 1,
+      "keywords": [
+        "traitor (hanged man)",
+        "il traditore",
+        "bolognese",
+        "tarocchino",
+        "trionfi",
+        "arcana:the-hanged-man"
+      ],
+      "metadata": {
+        "arcana": "trump",
+        "italian_name": "Il Traditore",
+        "tradition": "bolognese",
+        "archetype": "arcana:the-hanged-man",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A youth hung by one foot — the shaming image of a traitor.",
+        "In the Bolognese deck": "Suspension and disgrace.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "trump-morte",
+      "name": "Death",
+      "sort_order": 14,
+      "category": "trump",
+      "level": 1,
+      "keywords": [
+        "death",
+        "la morte",
+        "bolognese",
+        "tarocchino",
+        "trionfi",
+        "arcana:death"
+      ],
+      "metadata": {
+        "arcana": "trump",
+        "italian_name": "La Morte",
+        "tradition": "bolognese",
+        "archetype": "arcana:death",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A skeletal reaper among the fallen.",
+        "In the Bolognese deck": "The great leveller.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "trump-diavolo",
+      "name": "The Devil",
+      "sort_order": 15,
+      "category": "trump",
+      "level": 1,
+      "keywords": [
+        "devil",
+        "il diavolo",
+        "bolognese",
+        "tarocchino",
+        "trionfi",
+        "arcana:the-devil"
+      ],
+      "metadata": {
+        "arcana": "trump",
+        "italian_name": "Il Diavolo",
+        "tradition": "bolognese",
+        "archetype": "arcana:the-devil",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A horned figure over bound captives.",
+        "In the Bolognese deck": "Bondage and appetite.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "trump-torre",
+      "name": "The Lightning (Tower)",
+      "sort_order": 16,
+      "category": "trump",
+      "level": 1,
+      "keywords": [
+        "lightning (tower)",
+        "la saetta / la torre",
+        "bolognese",
+        "tarocchino",
+        "trionfi",
+        "arcana:the-tower"
+      ],
+      "metadata": {
+        "arcana": "trump",
+        "italian_name": "La Saetta / La Torre",
+        "tradition": "bolognese",
+        "archetype": "arcana:the-tower",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A tower struck by a bolt — called 'La Saetta' (the lightning) in Bologna.",
+        "In the Bolognese deck": "Sudden ruin.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "trump-stella",
+      "name": "The Star",
+      "sort_order": 17,
+      "category": "trump",
+      "level": 1,
+      "keywords": [
+        "star",
+        "la stella",
+        "bolognese",
+        "tarocchino",
+        "trionfi",
+        "arcana:the-star"
+      ],
+      "metadata": {
+        "arcana": "trump",
+        "italian_name": "La Stella",
+        "tradition": "bolognese",
+        "archetype": "arcana:the-star",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A figure beneath a great star.",
+        "In the Bolognese deck": "First of the three heavenly lights.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "trump-luna",
+      "name": "The Moon",
+      "sort_order": 18,
+      "category": "trump",
+      "level": 1,
+      "keywords": [
+        "moon",
+        "la luna",
+        "bolognese",
+        "tarocchino",
+        "trionfi",
+        "arcana:the-moon"
+      ],
+      "metadata": {
+        "arcana": "trump",
+        "italian_name": "La Luna",
+        "tradition": "bolognese",
+        "archetype": "arcana:the-moon",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "The Moon over the night world.",
+        "In the Bolognese deck": "The second light.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "trump-sole",
+      "name": "The Sun",
+      "sort_order": 19,
+      "category": "trump",
+      "level": 1,
+      "keywords": [
+        "sun",
+        "il sole",
+        "bolognese",
+        "tarocchino",
+        "trionfi",
+        "arcana:the-sun"
+      ],
+      "metadata": {
+        "arcana": "trump",
+        "italian_name": "Il Sole",
+        "tradition": "bolognese",
+        "archetype": "arcana:the-sun",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A radiant sun over the day world.",
+        "In the Bolognese deck": "The third light.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "trump-mondo",
+      "name": "The World",
+      "sort_order": 20,
+      "category": "trump",
+      "level": 1,
+      "keywords": [
+        "world",
+        "il mondo",
+        "bolognese",
+        "tarocchino",
+        "trionfi",
+        "arcana:the-world"
+      ],
+      "metadata": {
+        "arcana": "trump",
+        "italian_name": "Il Mondo",
+        "tradition": "bolognese",
+        "archetype": "arcana:the-world",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A figure within a cosmic frame.",
+        "In the Bolognese deck": "Near the summit — but NOT the highest in Bologna.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "trump-angelo",
+      "name": "The Angel (Judgement)",
+      "sort_order": 21,
+      "category": "trump",
+      "level": 1,
+      "keywords": [
+        "angel (judgement)",
+        "l'angelo",
+        "bolognese",
+        "tarocchino",
+        "trionfi",
+        "arcana:judgement"
+      ],
+      "metadata": {
+        "arcana": "trump",
+        "italian_name": "L'Angelo",
+        "tradition": "bolognese",
+        "archetype": "arcana:judgement",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Angels with trumpets; the dead rise.",
+        "In the Bolognese deck": "The HIGHEST trump of the Bolognese deck — uniquely placed ABOVE the World.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "coins-ace",
+      "name": "Ace of Coins",
+      "sort_order": 22,
+      "category": "suit-coins",
+      "level": 1,
+      "keywords": [
+        "coins",
+        "earth",
+        "ace",
+        "denari",
+        "pip",
+        "suit:coins",
+        "rank:ace",
+        "card:ace-of-coins"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Coins",
+        "suit_italian": "Denari",
+        "element": "Earth",
+        "rank": "Ace",
+        "court": false,
+        "archetype": "card:ace-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Ace of Coins (Denari). The suit-emblems of coins in the Bolognese pattern.",
+        "In the Bolognese deck": "The Tarocchino REMOVES the pips 2–5 — only the Ace and 6–10 remain, the cut that makes it a 62-card deck.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "coins-six",
+      "name": "Six of Coins",
+      "sort_order": 23,
+      "category": "suit-coins",
+      "level": 1,
+      "keywords": [
+        "coins",
+        "earth",
+        "six",
+        "denari",
+        "pip",
+        "suit:coins",
+        "rank:six",
+        "card:six-of-coins"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Coins",
+        "suit_italian": "Denari",
+        "element": "Earth",
+        "rank": "Six",
+        "court": false,
+        "archetype": "card:six-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Six of Coins (Denari). The suit-emblems of coins in the Bolognese pattern.",
+        "In the Bolognese deck": "The Tarocchino REMOVES the pips 2–5 — only the Ace and 6–10 remain, the cut that makes it a 62-card deck.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "coins-seven",
+      "name": "Seven of Coins",
+      "sort_order": 24,
+      "category": "suit-coins",
+      "level": 1,
+      "keywords": [
+        "coins",
+        "earth",
+        "seven",
+        "denari",
+        "pip",
+        "suit:coins",
+        "rank:seven",
+        "card:seven-of-coins"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Coins",
+        "suit_italian": "Denari",
+        "element": "Earth",
+        "rank": "Seven",
+        "court": false,
+        "archetype": "card:seven-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Seven of Coins (Denari). The suit-emblems of coins in the Bolognese pattern.",
+        "In the Bolognese deck": "The Tarocchino REMOVES the pips 2–5 — only the Ace and 6–10 remain, the cut that makes it a 62-card deck.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "coins-eight",
+      "name": "Eight of Coins",
+      "sort_order": 25,
+      "category": "suit-coins",
+      "level": 1,
+      "keywords": [
+        "coins",
+        "earth",
+        "eight",
+        "denari",
+        "pip",
+        "suit:coins",
+        "rank:eight",
+        "card:eight-of-coins"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Coins",
+        "suit_italian": "Denari",
+        "element": "Earth",
+        "rank": "Eight",
+        "court": false,
+        "archetype": "card:eight-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Eight of Coins (Denari). The suit-emblems of coins in the Bolognese pattern.",
+        "In the Bolognese deck": "The Tarocchino REMOVES the pips 2–5 — only the Ace and 6–10 remain, the cut that makes it a 62-card deck.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "coins-nine",
+      "name": "Nine of Coins",
+      "sort_order": 26,
+      "category": "suit-coins",
+      "level": 1,
+      "keywords": [
+        "coins",
+        "earth",
+        "nine",
+        "denari",
+        "pip",
+        "suit:coins",
+        "rank:nine",
+        "card:nine-of-coins"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Coins",
+        "suit_italian": "Denari",
+        "element": "Earth",
+        "rank": "Nine",
+        "court": false,
+        "archetype": "card:nine-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Nine of Coins (Denari). The suit-emblems of coins in the Bolognese pattern.",
+        "In the Bolognese deck": "The Tarocchino REMOVES the pips 2–5 — only the Ace and 6–10 remain, the cut that makes it a 62-card deck.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "coins-ten",
+      "name": "Ten of Coins",
+      "sort_order": 27,
+      "category": "suit-coins",
+      "level": 1,
+      "keywords": [
+        "coins",
+        "earth",
+        "ten",
+        "denari",
+        "pip",
+        "suit:coins",
+        "rank:ten",
+        "card:ten-of-coins"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Coins",
+        "suit_italian": "Denari",
+        "element": "Earth",
+        "rank": "Ten",
+        "court": false,
+        "archetype": "card:ten-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Ten of Coins (Denari). The suit-emblems of coins in the Bolognese pattern.",
+        "In the Bolognese deck": "The Tarocchino REMOVES the pips 2–5 — only the Ace and 6–10 remain, the cut that makes it a 62-card deck.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "coins-fante",
+      "name": "Knave (Fante) of Coins",
+      "sort_order": 28,
+      "category": "suit-coins",
+      "level": 1,
+      "keywords": [
+        "coins",
+        "earth",
+        "fante",
+        "denari",
+        "court"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Coins",
+        "suit_italian": "Denari",
+        "element": "Earth",
+        "rank": "Knave (Fante)",
+        "court": true,
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Iconography": "Knave (Fante) of Coins (Denari). A courtly figure of the suit.",
+        "In the Bolognese deck": "The Bolognese keeps the full four-card court (King, Queen, Knight, Knave).",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "coins-cavallo",
+      "name": "Knight (Cavallo) of Coins",
+      "sort_order": 29,
+      "category": "suit-coins",
+      "level": 1,
+      "keywords": [
+        "coins",
+        "earth",
+        "cavallo",
+        "denari",
+        "court"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Coins",
+        "suit_italian": "Denari",
+        "element": "Earth",
+        "rank": "Knight (Cavallo)",
+        "court": true,
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Iconography": "Knight (Cavallo) of Coins (Denari). A courtly figure of the suit.",
+        "In the Bolognese deck": "The Bolognese keeps the full four-card court (King, Queen, Knight, Knave).",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "coins-regina",
+      "name": "Queen (Regina) of Coins",
+      "sort_order": 30,
+      "category": "suit-coins",
+      "level": 1,
+      "keywords": [
+        "coins",
+        "earth",
+        "regina",
+        "denari",
+        "court"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Coins",
+        "suit_italian": "Denari",
+        "element": "Earth",
+        "rank": "Queen (Regina)",
+        "court": true,
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Iconography": "Queen (Regina) of Coins (Denari). A courtly figure of the suit.",
+        "In the Bolognese deck": "The Bolognese keeps the full four-card court (King, Queen, Knight, Knave).",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "coins-re",
+      "name": "King (Re) of Coins",
+      "sort_order": 31,
+      "category": "suit-coins",
+      "level": 1,
+      "keywords": [
+        "coins",
+        "earth",
+        "re",
+        "denari",
+        "court"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Coins",
+        "suit_italian": "Denari",
+        "element": "Earth",
+        "rank": "King (Re)",
+        "court": true,
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Iconography": "King (Re) of Coins (Denari). A courtly figure of the suit.",
+        "In the Bolognese deck": "The Bolognese keeps the full four-card court (King, Queen, Knight, Knave).",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "cups-ace",
+      "name": "Ace of Cups",
+      "sort_order": 32,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "ace",
+        "coppe",
+        "pip",
+        "suit:cups",
+        "rank:ace",
+        "card:ace-of-cups"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "suit_italian": "Coppe",
+        "element": "Water",
+        "rank": "Ace",
+        "court": false,
+        "archetype": "card:ace-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Ace of Cups (Coppe). The suit-emblems of cups in the Bolognese pattern.",
+        "In the Bolognese deck": "The Tarocchino REMOVES the pips 2–5 — only the Ace and 6–10 remain, the cut that makes it a 62-card deck.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "cups-six",
+      "name": "Six of Cups",
+      "sort_order": 33,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "six",
+        "coppe",
+        "pip",
+        "suit:cups",
+        "rank:six",
+        "card:six-of-cups"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "suit_italian": "Coppe",
+        "element": "Water",
+        "rank": "Six",
+        "court": false,
+        "archetype": "card:six-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Six of Cups (Coppe). The suit-emblems of cups in the Bolognese pattern.",
+        "In the Bolognese deck": "The Tarocchino REMOVES the pips 2–5 — only the Ace and 6–10 remain, the cut that makes it a 62-card deck.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "cups-seven",
+      "name": "Seven of Cups",
+      "sort_order": 34,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "seven",
+        "coppe",
+        "pip",
+        "suit:cups",
+        "rank:seven",
+        "card:seven-of-cups"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "suit_italian": "Coppe",
+        "element": "Water",
+        "rank": "Seven",
+        "court": false,
+        "archetype": "card:seven-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Seven of Cups (Coppe). The suit-emblems of cups in the Bolognese pattern.",
+        "In the Bolognese deck": "The Tarocchino REMOVES the pips 2–5 — only the Ace and 6–10 remain, the cut that makes it a 62-card deck.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "cups-eight",
+      "name": "Eight of Cups",
+      "sort_order": 35,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "eight",
+        "coppe",
+        "pip",
+        "suit:cups",
+        "rank:eight",
+        "card:eight-of-cups"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "suit_italian": "Coppe",
+        "element": "Water",
+        "rank": "Eight",
+        "court": false,
+        "archetype": "card:eight-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Eight of Cups (Coppe). The suit-emblems of cups in the Bolognese pattern.",
+        "In the Bolognese deck": "The Tarocchino REMOVES the pips 2–5 — only the Ace and 6–10 remain, the cut that makes it a 62-card deck.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "cups-nine",
+      "name": "Nine of Cups",
+      "sort_order": 36,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "nine",
+        "coppe",
+        "pip",
+        "suit:cups",
+        "rank:nine",
+        "card:nine-of-cups"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "suit_italian": "Coppe",
+        "element": "Water",
+        "rank": "Nine",
+        "court": false,
+        "archetype": "card:nine-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Nine of Cups (Coppe). The suit-emblems of cups in the Bolognese pattern.",
+        "In the Bolognese deck": "The Tarocchino REMOVES the pips 2–5 — only the Ace and 6–10 remain, the cut that makes it a 62-card deck.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "cups-ten",
+      "name": "Ten of Cups",
+      "sort_order": 37,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "ten",
+        "coppe",
+        "pip",
+        "suit:cups",
+        "rank:ten",
+        "card:ten-of-cups"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "suit_italian": "Coppe",
+        "element": "Water",
+        "rank": "Ten",
+        "court": false,
+        "archetype": "card:ten-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Ten of Cups (Coppe). The suit-emblems of cups in the Bolognese pattern.",
+        "In the Bolognese deck": "The Tarocchino REMOVES the pips 2–5 — only the Ace and 6–10 remain, the cut that makes it a 62-card deck.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "cups-fante",
+      "name": "Knave (Fante) of Cups",
+      "sort_order": 38,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "fante",
+        "coppe",
+        "court"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "suit_italian": "Coppe",
+        "element": "Water",
+        "rank": "Knave (Fante)",
+        "court": true,
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Iconography": "Knave (Fante) of Cups (Coppe). A courtly figure of the suit.",
+        "In the Bolognese deck": "The Bolognese keeps the full four-card court (King, Queen, Knight, Knave).",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "cups-cavallo",
+      "name": "Knight (Cavallo) of Cups",
+      "sort_order": 39,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "cavallo",
+        "coppe",
+        "court"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "suit_italian": "Coppe",
+        "element": "Water",
+        "rank": "Knight (Cavallo)",
+        "court": true,
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Iconography": "Knight (Cavallo) of Cups (Coppe). A courtly figure of the suit.",
+        "In the Bolognese deck": "The Bolognese keeps the full four-card court (King, Queen, Knight, Knave).",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "cups-regina",
+      "name": "Queen (Regina) of Cups",
+      "sort_order": 40,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "regina",
+        "coppe",
+        "court"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "suit_italian": "Coppe",
+        "element": "Water",
+        "rank": "Queen (Regina)",
+        "court": true,
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Iconography": "Queen (Regina) of Cups (Coppe). A courtly figure of the suit.",
+        "In the Bolognese deck": "The Bolognese keeps the full four-card court (King, Queen, Knight, Knave).",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "cups-re",
+      "name": "King (Re) of Cups",
+      "sort_order": 41,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "re",
+        "coppe",
+        "court"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "suit_italian": "Coppe",
+        "element": "Water",
+        "rank": "King (Re)",
+        "court": true,
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Iconography": "King (Re) of Cups (Coppe). A courtly figure of the suit.",
+        "In the Bolognese deck": "The Bolognese keeps the full four-card court (King, Queen, Knight, Knave).",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "swords-ace",
+      "name": "Ace of Swords",
+      "sort_order": 42,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "ace",
+        "spade",
+        "pip",
+        "suit:swords",
+        "rank:ace",
+        "card:ace-of-swords"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "suit_italian": "Spade",
+        "element": "Air",
+        "rank": "Ace",
+        "court": false,
+        "archetype": "card:ace-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Ace of Swords (Spade). The suit-emblems of swords in the Bolognese pattern.",
+        "In the Bolognese deck": "The Tarocchino REMOVES the pips 2–5 — only the Ace and 6–10 remain, the cut that makes it a 62-card deck.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "swords-six",
+      "name": "Six of Swords",
+      "sort_order": 43,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "six",
+        "spade",
+        "pip",
+        "suit:swords",
+        "rank:six",
+        "card:six-of-swords"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "suit_italian": "Spade",
+        "element": "Air",
+        "rank": "Six",
+        "court": false,
+        "archetype": "card:six-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Six of Swords (Spade). The suit-emblems of swords in the Bolognese pattern.",
+        "In the Bolognese deck": "The Tarocchino REMOVES the pips 2–5 — only the Ace and 6–10 remain, the cut that makes it a 62-card deck.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "swords-seven",
+      "name": "Seven of Swords",
+      "sort_order": 44,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "seven",
+        "spade",
+        "pip",
+        "suit:swords",
+        "rank:seven",
+        "card:seven-of-swords"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "suit_italian": "Spade",
+        "element": "Air",
+        "rank": "Seven",
+        "court": false,
+        "archetype": "card:seven-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Seven of Swords (Spade). The suit-emblems of swords in the Bolognese pattern.",
+        "In the Bolognese deck": "The Tarocchino REMOVES the pips 2–5 — only the Ace and 6–10 remain, the cut that makes it a 62-card deck.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "swords-eight",
+      "name": "Eight of Swords",
+      "sort_order": 45,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "eight",
+        "spade",
+        "pip",
+        "suit:swords",
+        "rank:eight",
+        "card:eight-of-swords"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "suit_italian": "Spade",
+        "element": "Air",
+        "rank": "Eight",
+        "court": false,
+        "archetype": "card:eight-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Eight of Swords (Spade). The suit-emblems of swords in the Bolognese pattern.",
+        "In the Bolognese deck": "The Tarocchino REMOVES the pips 2–5 — only the Ace and 6–10 remain, the cut that makes it a 62-card deck.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "swords-nine",
+      "name": "Nine of Swords",
+      "sort_order": 46,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "nine",
+        "spade",
+        "pip",
+        "suit:swords",
+        "rank:nine",
+        "card:nine-of-swords"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "suit_italian": "Spade",
+        "element": "Air",
+        "rank": "Nine",
+        "court": false,
+        "archetype": "card:nine-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Nine of Swords (Spade). The suit-emblems of swords in the Bolognese pattern.",
+        "In the Bolognese deck": "The Tarocchino REMOVES the pips 2–5 — only the Ace and 6–10 remain, the cut that makes it a 62-card deck.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "swords-ten",
+      "name": "Ten of Swords",
+      "sort_order": 47,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "ten",
+        "spade",
+        "pip",
+        "suit:swords",
+        "rank:ten",
+        "card:ten-of-swords"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "suit_italian": "Spade",
+        "element": "Air",
+        "rank": "Ten",
+        "court": false,
+        "archetype": "card:ten-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Ten of Swords (Spade). The suit-emblems of swords in the Bolognese pattern.",
+        "In the Bolognese deck": "The Tarocchino REMOVES the pips 2–5 — only the Ace and 6–10 remain, the cut that makes it a 62-card deck.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "swords-fante",
+      "name": "Knave (Fante) of Swords",
+      "sort_order": 48,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "fante",
+        "spade",
+        "court"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "suit_italian": "Spade",
+        "element": "Air",
+        "rank": "Knave (Fante)",
+        "court": true,
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Iconography": "Knave (Fante) of Swords (Spade). A courtly figure of the suit.",
+        "In the Bolognese deck": "The Bolognese keeps the full four-card court (King, Queen, Knight, Knave).",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "swords-cavallo",
+      "name": "Knight (Cavallo) of Swords",
+      "sort_order": 49,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "cavallo",
+        "spade",
+        "court"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "suit_italian": "Spade",
+        "element": "Air",
+        "rank": "Knight (Cavallo)",
+        "court": true,
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Iconography": "Knight (Cavallo) of Swords (Spade). A courtly figure of the suit.",
+        "In the Bolognese deck": "The Bolognese keeps the full four-card court (King, Queen, Knight, Knave).",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "swords-regina",
+      "name": "Queen (Regina) of Swords",
+      "sort_order": 50,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "regina",
+        "spade",
+        "court"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "suit_italian": "Spade",
+        "element": "Air",
+        "rank": "Queen (Regina)",
+        "court": true,
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Iconography": "Queen (Regina) of Swords (Spade). A courtly figure of the suit.",
+        "In the Bolognese deck": "The Bolognese keeps the full four-card court (King, Queen, Knight, Knave).",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "swords-re",
+      "name": "King (Re) of Swords",
+      "sort_order": 51,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "re",
+        "spade",
+        "court"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "suit_italian": "Spade",
+        "element": "Air",
+        "rank": "King (Re)",
+        "court": true,
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Iconography": "King (Re) of Swords (Spade). A courtly figure of the suit.",
+        "In the Bolognese deck": "The Bolognese keeps the full four-card court (King, Queen, Knight, Knave).",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "batons-ace",
+      "name": "Ace of Batons",
+      "sort_order": 52,
+      "category": "suit-batons",
+      "level": 1,
+      "keywords": [
+        "batons",
+        "fire",
+        "ace",
+        "bastoni",
+        "pip",
+        "suit:wands",
+        "rank:ace",
+        "card:ace-of-wands"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Batons",
+        "suit_italian": "Bastoni",
+        "element": "Fire",
+        "rank": "Ace",
+        "court": false,
+        "archetype": "card:ace-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Ace of Batons (Bastoni). The suit-emblems of batons in the Bolognese pattern.",
+        "In the Bolognese deck": "The Tarocchino REMOVES the pips 2–5 — only the Ace and 6–10 remain, the cut that makes it a 62-card deck.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "batons-six",
+      "name": "Six of Batons",
+      "sort_order": 53,
+      "category": "suit-batons",
+      "level": 1,
+      "keywords": [
+        "batons",
+        "fire",
+        "six",
+        "bastoni",
+        "pip",
+        "suit:wands",
+        "rank:six",
+        "card:six-of-wands"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Batons",
+        "suit_italian": "Bastoni",
+        "element": "Fire",
+        "rank": "Six",
+        "court": false,
+        "archetype": "card:six-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Six of Batons (Bastoni). The suit-emblems of batons in the Bolognese pattern.",
+        "In the Bolognese deck": "The Tarocchino REMOVES the pips 2–5 — only the Ace and 6–10 remain, the cut that makes it a 62-card deck.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "batons-seven",
+      "name": "Seven of Batons",
+      "sort_order": 54,
+      "category": "suit-batons",
+      "level": 1,
+      "keywords": [
+        "batons",
+        "fire",
+        "seven",
+        "bastoni",
+        "pip",
+        "suit:wands",
+        "rank:seven",
+        "card:seven-of-wands"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Batons",
+        "suit_italian": "Bastoni",
+        "element": "Fire",
+        "rank": "Seven",
+        "court": false,
+        "archetype": "card:seven-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Seven of Batons (Bastoni). The suit-emblems of batons in the Bolognese pattern.",
+        "In the Bolognese deck": "The Tarocchino REMOVES the pips 2–5 — only the Ace and 6–10 remain, the cut that makes it a 62-card deck.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "batons-eight",
+      "name": "Eight of Batons",
+      "sort_order": 55,
+      "category": "suit-batons",
+      "level": 1,
+      "keywords": [
+        "batons",
+        "fire",
+        "eight",
+        "bastoni",
+        "pip",
+        "suit:wands",
+        "rank:eight",
+        "card:eight-of-wands"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Batons",
+        "suit_italian": "Bastoni",
+        "element": "Fire",
+        "rank": "Eight",
+        "court": false,
+        "archetype": "card:eight-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Eight of Batons (Bastoni). The suit-emblems of batons in the Bolognese pattern.",
+        "In the Bolognese deck": "The Tarocchino REMOVES the pips 2–5 — only the Ace and 6–10 remain, the cut that makes it a 62-card deck.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "batons-nine",
+      "name": "Nine of Batons",
+      "sort_order": 56,
+      "category": "suit-batons",
+      "level": 1,
+      "keywords": [
+        "batons",
+        "fire",
+        "nine",
+        "bastoni",
+        "pip",
+        "suit:wands",
+        "rank:nine",
+        "card:nine-of-wands"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Batons",
+        "suit_italian": "Bastoni",
+        "element": "Fire",
+        "rank": "Nine",
+        "court": false,
+        "archetype": "card:nine-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Nine of Batons (Bastoni). The suit-emblems of batons in the Bolognese pattern.",
+        "In the Bolognese deck": "The Tarocchino REMOVES the pips 2–5 — only the Ace and 6–10 remain, the cut that makes it a 62-card deck.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "batons-ten",
+      "name": "Ten of Batons",
+      "sort_order": 57,
+      "category": "suit-batons",
+      "level": 1,
+      "keywords": [
+        "batons",
+        "fire",
+        "ten",
+        "bastoni",
+        "pip",
+        "suit:wands",
+        "rank:ten",
+        "card:ten-of-wands"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Batons",
+        "suit_italian": "Bastoni",
+        "element": "Fire",
+        "rank": "Ten",
+        "court": false,
+        "archetype": "card:ten-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Ten of Batons (Bastoni). The suit-emblems of batons in the Bolognese pattern.",
+        "In the Bolognese deck": "The Tarocchino REMOVES the pips 2–5 — only the Ace and 6–10 remain, the cut that makes it a 62-card deck.",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "batons-fante",
+      "name": "Knave (Fante) of Batons",
+      "sort_order": 58,
+      "category": "suit-batons",
+      "level": 1,
+      "keywords": [
+        "batons",
+        "fire",
+        "fante",
+        "bastoni",
+        "court"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Batons",
+        "suit_italian": "Bastoni",
+        "element": "Fire",
+        "rank": "Knave (Fante)",
+        "court": true,
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Iconography": "Knave (Fante) of Batons (Bastoni). A courtly figure of the suit.",
+        "In the Bolognese deck": "The Bolognese keeps the full four-card court (King, Queen, Knight, Knave).",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "batons-cavallo",
+      "name": "Knight (Cavallo) of Batons",
+      "sort_order": 59,
+      "category": "suit-batons",
+      "level": 1,
+      "keywords": [
+        "batons",
+        "fire",
+        "cavallo",
+        "bastoni",
+        "court"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Batons",
+        "suit_italian": "Bastoni",
+        "element": "Fire",
+        "rank": "Knight (Cavallo)",
+        "court": true,
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Iconography": "Knight (Cavallo) of Batons (Bastoni). A courtly figure of the suit.",
+        "In the Bolognese deck": "The Bolognese keeps the full four-card court (King, Queen, Knight, Knave).",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "batons-regina",
+      "name": "Queen (Regina) of Batons",
+      "sort_order": 60,
+      "category": "suit-batons",
+      "level": 1,
+      "keywords": [
+        "batons",
+        "fire",
+        "regina",
+        "bastoni",
+        "court"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Batons",
+        "suit_italian": "Bastoni",
+        "element": "Fire",
+        "rank": "Queen (Regina)",
+        "court": true,
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Iconography": "Queen (Regina) of Batons (Bastoni). A courtly figure of the suit.",
+        "In the Bolognese deck": "The Bolognese keeps the full four-card court (King, Queen, Knight, Knave).",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "batons-re",
+      "name": "King (Re) of Batons",
+      "sort_order": 61,
+      "category": "suit-batons",
+      "level": 1,
+      "keywords": [
+        "batons",
+        "fire",
+        "re",
+        "bastoni",
+        "court"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Batons",
+        "suit_italian": "Bastoni",
+        "element": "Fire",
+        "rank": "King (Re)",
+        "court": true,
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Iconography": "King (Re) of Batons (Bastoni). A courtly figure of the suit.",
+        "In the Bolognese deck": "The Bolognese keeps the full four-card court (King, Queen, Knight, Knave).",
+        "Tradition Note": "The Tarocchino was made to play a fast Bolognese trick-taking game, not for divination. The notes here are historical and structural; any reading is a later overlay, not part of the deck's original use."
+      }
+    },
+    {
+      "id": "emg-papi",
+      "name": "The Four Papi — the Bolognese Signature",
+      "sort_order": 62,
+      "category": "emergence",
+      "level": 2,
+      "composite_of": [
+        "trump-papa-a",
+        "trump-papa-b",
+        "trump-papa-c",
+        "trump-papa-d"
+      ],
+      "relationship_type": "emergence",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tarocco%20Bolognese.png?width=900",
+      "metadata": {},
+      "sections": {
+        "About these cards": "The single most distinctive feature of the Bolognese deck: four equal, interchangeable 'Papi' (also called the four Moors) replace the Popess, Empress, Emperor and Pope. They have no fixed order among themselves — whichever is played first outranks the others on that trick. The heretical Popess simply vanishes.",
+        "Why it matters": "This is exactly what a modern Marseille-named 'Tarocchino' deck gets wrong. The Papi are the test of whether a deck is really Bolognese."
+      }
+    },
+    {
+      "id": "emg-trumps",
+      "name": "The Trumps in the Bolognese Order",
+      "sort_order": 63,
+      "category": "emergence",
+      "level": 2,
+      "composite_of": [
+        "trump-matto",
+        "trump-bagatto",
+        "trump-papa-a",
+        "trump-papa-b",
+        "trump-papa-c",
+        "trump-papa-d",
+        "trump-amore",
+        "trump-carro",
+        "trump-temperanza",
+        "trump-giustizia",
+        "trump-forza",
+        "trump-ruota",
+        "trump-vecchio",
+        "trump-traditore",
+        "trump-morte",
+        "trump-diavolo",
+        "trump-torre",
+        "trump-stella",
+        "trump-luna",
+        "trump-sole",
+        "trump-mondo",
+        "trump-angelo"
+      ],
+      "relationship_type": "emergence",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tarocco%20Bolognese.png?width=900",
+      "metadata": {},
+      "sections": {
+        "About this order": "The Bolognese trump order differs from the Marseille: the three virtues (Temperance, Justice, Strength) sit clustered in the middle, and — uniquely — the ANGEL (Judgement) is the HIGHEST trump, ranked ABOVE the World. The deck is one of Dummett's A-order traditions.",
+        "How to use": "Read the trumps from the Bagattino up to the Angel to see a trump sequence that the printed Marseille never standardised."
+      }
+    },
+    {
+      "id": "emg-suit-coins",
+      "name": "Suit of Coins (Denari) — pips 2–5 removed",
+      "sort_order": 64,
+      "category": "emergence",
+      "level": 2,
+      "composite_of": [
+        "coins-ace",
+        "coins-six",
+        "coins-seven",
+        "coins-eight",
+        "coins-nine",
+        "coins-ten",
+        "coins-fante",
+        "coins-cavallo",
+        "coins-regina",
+        "coins-re"
+      ],
+      "relationship_type": "emergence",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tarocco%20Bolognese.png?width=900",
+      "metadata": {},
+      "sections": {
+        "About this suit": "The Coins (Denari) of the Tarocchino: Ace and 6–10 only, plus the four courts — the Bolognese 'stripping' of the low pips that gives the 62-card deck."
+      }
+    },
+    {
+      "id": "emg-suit-cups",
+      "name": "Suit of Cups (Coppe) — pips 2–5 removed",
+      "sort_order": 65,
+      "category": "emergence",
+      "level": 2,
+      "composite_of": [
+        "cups-ace",
+        "cups-six",
+        "cups-seven",
+        "cups-eight",
+        "cups-nine",
+        "cups-ten",
+        "cups-fante",
+        "cups-cavallo",
+        "cups-regina",
+        "cups-re"
+      ],
+      "relationship_type": "emergence",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tarocco%20Bolognese.png?width=900",
+      "metadata": {},
+      "sections": {
+        "About this suit": "The Cups (Coppe) of the Tarocchino: Ace and 6–10 only, plus the four courts — the Bolognese 'stripping' of the low pips that gives the 62-card deck."
+      }
+    },
+    {
+      "id": "emg-suit-swords",
+      "name": "Suit of Swords (Spade) — pips 2–5 removed",
+      "sort_order": 66,
+      "category": "emergence",
+      "level": 2,
+      "composite_of": [
+        "swords-ace",
+        "swords-six",
+        "swords-seven",
+        "swords-eight",
+        "swords-nine",
+        "swords-ten",
+        "swords-fante",
+        "swords-cavallo",
+        "swords-regina",
+        "swords-re"
+      ],
+      "relationship_type": "emergence",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tarocco%20Bolognese.png?width=900",
+      "metadata": {},
+      "sections": {
+        "About this suit": "The Swords (Spade) of the Tarocchino: Ace and 6–10 only, plus the four courts — the Bolognese 'stripping' of the low pips that gives the 62-card deck."
+      }
+    },
+    {
+      "id": "emg-suit-batons",
+      "name": "Suit of Batons (Bastoni) — pips 2–5 removed",
+      "sort_order": 67,
+      "category": "emergence",
+      "level": 2,
+      "composite_of": [
+        "batons-ace",
+        "batons-six",
+        "batons-seven",
+        "batons-eight",
+        "batons-nine",
+        "batons-ten",
+        "batons-fante",
+        "batons-cavallo",
+        "batons-regina",
+        "batons-re"
+      ],
+      "relationship_type": "emergence",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tarocco%20Bolognese.png?width=900",
+      "metadata": {},
+      "sections": {
+        "About this suit": "The Batons (Bastoni) of the Tarocchino: Ace and 6–10 only, plus the four courts — the Bolognese 'stripping' of the low pips that gives the 62-card deck."
+      }
+    }
+  ]
+}

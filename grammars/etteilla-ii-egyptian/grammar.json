@@ -1,0 +1,3046 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "attribution": [
+      {
+        "name": "Jean-Baptiste Alliette (Etteilla)",
+        "date": "1788–1791",
+        "note": "Original divinatory system, card titles, numbering, and reversed meanings"
+      },
+      {
+        "name": "Simon-François Blocquel (as 'Julia Orsini')",
+        "date": "1838–1845",
+        "note": "Etteilla II — Grand Étteilla Égyptien (Blocquel–Hodot, 1838–1845) edition"
+      },
+      {
+        "name": "Benebell Wen",
+        "date": "2022",
+        "note": "Etteilla reconstruction research (benebellwen.com/etteilla)"
+      },
+      {
+        "name": "PlayfulProcess",
+        "date": "2026",
+        "note": "Grammar architecture; readings rewritten within Etteilla's tradition"
+      }
+    ]
+  },
+  "name": "Etteilla II",
+  "description": "The second edition, issued by Simon Blocquel (under the name 'Julia Orsini'), with redesigned letterpress panels — the form in which the Etteilla system spread most widely.\n\nJean-Baptiste Alliette — 'Etteilla' — created the first tarot deck made specifically for divination. He renamed and renumbered the cards around an Egyptian-Hermetic cosmogony: the first cards are the days of creation, two cards (Le Chaos and La Folie) are the male and female significators of the querent, and the trumps carry his own idiosyncratic meanings — the Bateleur as illness, the Capucin (Hermit) as the traitor, the Devil as raw force. He was also the first to give every card a systematic reversed meaning, and to read the sixteen court cards as PEOPLE in the querent's life.\n\nThis edition is rewritten to sit inside that system: each card carries its place in Etteilla's structure, an Upright and a Reversed reading in his cartomantic register, and — for the courts — the person-reading that is the signature of French cartomancy. The cosmogony cards keep their etymology, Genesis, historical, and Hermetic notes.\n\nScholarly note: the meanings are written faithfully to Etteilla's published system; the exact two-word keyword printed on each historical card is left for a future enrichment from a primary source (Etteilla's 'Cours théorique et pratique du livre de Thot') rather than guessed.",
+  "grammar_type": "tarot",
+  "creator_name": "PlayfulProcess",
+  "creator_link": "https://recursive.eco",
+  "cover_image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275744030-hcyoyrcwiyo.jpg",
+  "tags": [
+    "tarot",
+    "etteilla",
+    "cartomancy",
+    "egyptian-tarot",
+    "divination",
+    "livre-de-thot",
+    "french-occult",
+    "18th-century"
+  ],
+  "roots": [
+    "western-esoteric",
+    "mysticism"
+  ],
+  "shelves": [
+    "wonder",
+    "mirror"
+  ],
+  "lineages": [
+    "Andreotti"
+  ],
+  "worldview": "esoteric",
+  "is_published": false,
+  "items": [
+    {
+      "id": "etteilla-01",
+      "name": "Le Chaos (The Questioner - Male)",
+      "sort_order": 0,
+      "category": "major",
+      "level": 1,
+      "keywords": [
+        "potential",
+        "uncertainty",
+        "beginnings",
+        "the querent",
+        "male energy",
+        "etteilla:significator-male"
+      ],
+      "metadata": {
+        "suit": null,
+        "arcana": "major",
+        "number": 1,
+        "symbols": [
+          "void",
+          "chaos",
+          "potential",
+          "beginning"
+        ],
+        "etymology": {
+          "notes": "Represents the male querent (significator). In Hermetic philosophy, this is the Ein Sof or Tao—divine consciousness before manifestation.",
+          "origin": "From Greek 'χάος' (khaos) meaning the primordial void or abyss",
+          "literal": "Chaos / The Void"
+        },
+        "french_name": "Le Chaos",
+        "genesis_day": "Before Creation - The Void",
+        "etteilla_version": "Etteilla II (Orsini/Blocquel, 1838)",
+        "hermetic_correspondence": "Corresponds to the Ein Sof in Kabbalah, the Tao in Eastern philosophy, and the prima materia in alchemy",
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Card in Etteilla's System": "Le Chaos — the male querent (significator)",
+        "Upright": "The male consultant himself: the matter as it now stands, full of unformed potential. The fertile void before the question takes shape.",
+        "Reversed": "A question asked from confusion or anxiety; the void felt as emptiness rather than promise.",
+        "Etymology": "Chaos / The Void. From Greek 'χάος' (khaos) meaning the primordial void or abyss. Represents the male querent (significator). In Hermetic philosophy, this is the Ein Sof or Tao—divine consciousness before manifestation.",
+        "Genesis Connection": "Before Creation - The Void",
+        "Historical Context": "In Etteilla's system, Le Chaos represents the first moment of the Genesis creation narrative—the primordial void before 'Let there be light.' This card draws heavily from the Hermetic text 'Poimandres' (Divine Pymander), where creation begins with an infinite darkness containing all potential.\n\nJean-Baptiste Alliette (Etteilla) believed tarot originated with the Egyptian priests of the Temple of Ptah at Memphis, encoding ancient wisdom about cosmic origins. The Chaos card embodies this philosophy: it is not emptiness but pregnant potential, the divine spirit before it takes form.\n\nIn practical cartomancy, this card serves as the male querent's significator—representing the questioner himself when male. Etteilla's 1783 'Manière de se récréer avec le jeu de cartes nommées tarots' established this convention, which persists in Grand Etteilla readings today.",
+        "Hermetic Correspondence": "Corresponds to the Ein Sof in Kabbalah, the Tao in Eastern philosophy, and the prima materia in alchemy"
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275745936-cqygi3yn9wu.jpg"
+    },
+    {
+      "id": "etteilla-02",
+      "name": "La Lumière (Light/Enlightenment)",
+      "sort_order": 1,
+      "category": "major",
+      "level": 1,
+      "keywords": [
+        "clarity",
+        "enlightenment",
+        "truth",
+        "understanding",
+        "awareness",
+        "etteilla:cosmogony"
+      ],
+      "metadata": {
+        "suit": null,
+        "arcana": "major",
+        "number": 2,
+        "symbols": [
+          "light",
+          "clarity",
+          "truth",
+          "illumination"
+        ],
+        "etymology": {
+          "notes": "Corresponds to Genesis 1:3 'Let there be light' - the first act of creation",
+          "origin": "From Latin 'lumen' meaning light, radiance, or understanding",
+          "literal": "The Light / Enlightenment"
+        },
+        "french_name": "La Lumière",
+        "genesis_day": "Day 1 - Creation of Light",
+        "tts_audio_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/tts-audio/1772311873403-3f87wja70n4.wav",
+        "etteilla_version": "Etteilla II (Orsini/Blocquel, 1838)",
+        "hermetic_correspondence": "The Divine Nous (Mind) of Hermetic philosophy; the first emanation of the Absolute",
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Card in Etteilla's System": "La Lumière — Light / Clarification",
+        "Upright": "Illumination and clarity — understanding dawning on the matter (Etteilla's 'éclaircissement').",
+        "Reversed": "Fire and ardour turned destructive; clarity flaring into heat and haste.",
+        "Etymology": "The Light / Enlightenment. From Latin 'lumen' meaning light, radiance, or understanding. Corresponds to Genesis 1:3 'Let there be light' - the first act of creation",
+        "Genesis Connection": "Day 1 - Creation of Light",
+        "Historical Context": "La Lumière represents the first divine act in Genesis: 'And God said, Let there be light: and there was light.' In Etteilla's Hermetic interpretation, this is not merely physical illumination but the emergence of consciousness and understanding from the void.\n\nThe card draws from the Corpus Hermeticum, where light represents divine Nous (Mind) becoming aware of itself. Etteilla's system uniquely places this as card 2, immediately following Chaos, establishing a creation sequence that differs markedly from the Tarot de Marseille tradition.\n\nIn the 1843 'Jeu de la princesses' version, this card appears as 'Osiris or the Sun,' connecting to Egyptian solar theology.",
+        "Hermetic Correspondence": "The Divine Nous (Mind) of Hermetic philosophy; the first emanation of the Absolute"
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275747347-twgs0pdhumi.jpg"
+    },
+    {
+      "id": "etteilla-03",
+      "name": "Les Plantes (Plants/Growth)",
+      "sort_order": 2,
+      "category": "major",
+      "level": 1,
+      "keywords": [
+        "growth",
+        "fertility",
+        "development",
+        "nature",
+        "nurturing",
+        "etteilla:cosmogony"
+      ],
+      "metadata": {
+        "suit": null,
+        "arcana": "major",
+        "number": 3,
+        "symbols": [
+          "plants",
+          "growth",
+          "fertility",
+          "nature"
+        ],
+        "etymology": {
+          "notes": "Corresponds to Genesis 1:11-12, the creation of vegetation on the third day",
+          "origin": "From Latin 'planta' meaning plant, sprout, or cutting",
+          "literal": "The Plants / Vegetation"
+        },
+        "french_name": "Les Plantes",
+        "genesis_day": "Day 3 - Creation of Plants",
+        "etteilla_version": "Etteilla II (Orsini/Blocquel, 1838)",
+        "hermetic_correspondence": "The vegetable soul; the life force animating organic matter",
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Card in Etteilla's System": "Les Plantes — Growth / Discourse",
+        "Upright": "What is proposed takes root; growth, talk that bears fruit, the green beginning of a thing.",
+        "Reversed": "Things still fluid and unsettled; words that run off like water, nothing yet rooted.",
+        "Etymology": "The Plants / Vegetation. From Latin 'planta' meaning plant, sprout, or cutting. Corresponds to Genesis 1:11-12, the creation of vegetation on the third day",
+        "Genesis Connection": "Day 3 - Creation of Plants",
+        "Historical Context": "Les Plantes embodies the third day of Genesis creation, when God commanded the earth to bring forth grass, herbs, and fruit-bearing trees. In Etteilla's system, this represents the first manifestation of organic life—the transition from abstract elements to living, growing things.\n\nThe Hermetic interpretation connects this card to the vegetable soul in Neoplatonic philosophy—the animating principle that distinguishes living matter from mere elements. Etteilla saw in vegetation the first evidence of divine life force manifesting in material form.",
+        "Hermetic Correspondence": "The vegetable soul; the life force animating organic matter"
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275747006-ihg7umz8hyr.jpg"
+    },
+    {
+      "id": "etteilla-04",
+      "name": "Le Ciel (The Heavens)",
+      "sort_order": 3,
+      "category": "major",
+      "level": 1,
+      "keywords": [
+        "perspective",
+        "order",
+        "divine",
+        "cosmos",
+        "higher view",
+        "etteilla:cosmogony"
+      ],
+      "metadata": {
+        "suit": null,
+        "arcana": "major",
+        "number": 4,
+        "symbols": [
+          "sky",
+          "stars",
+          "cosmos",
+          "order"
+        ],
+        "etymology": {
+          "notes": "Corresponds to Genesis 1:6-8, the creation of the firmament",
+          "origin": "From Latin 'caelum' meaning sky, heavens, or celestial vault",
+          "literal": "The Heavens / The Sky"
+        },
+        "french_name": "Le Ciel",
+        "genesis_day": "Day 2 - Creation of the Firmament",
+        "etteilla_version": "Etteilla II (Orsini/Blocquel, 1838)",
+        "hermetic_correspondence": "The celestial sphere; the realm of planetary intelligences and fixed stars",
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Card in Etteilla's System": "Le Ciel — The Heavens",
+        "Upright": "Favour from above: expansion, protection, a matter blessed and widening.",
+        "Reversed": "A blessing withheld or delayed; distance, a sky that does not answer.",
+        "Etymology": "The Heavens / The Sky. From Latin 'caelum' meaning sky, heavens, or celestial vault. Corresponds to Genesis 1:6-8, the creation of the firmament",
+        "Genesis Connection": "Day 2 - Creation of the Firmament",
+        "Historical Context": "Le Ciel represents the creation of the firmament—the great dome separating the waters above from the waters below. In ancient cosmology, this was understood as the physical structure of heaven itself, the boundary between earthly and divine realms.\n\nIn Hermetic philosophy, the celestial sphere contains the planetary intelligences that govern earthly affairs. Etteilla integrated astrological correspondences throughout his system, seeing the heavens as a living influence rather than mere backdrop.",
+        "Hermetic Correspondence": "The celestial sphere; the realm of planetary intelligences and fixed stars"
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275747134-wukkdqf6l0e.jpg"
+    },
+    {
+      "id": "etteilla-05",
+      "name": "L'Homme et les Quadrupèdes (Man and Quadrupeds)",
+      "sort_order": 4,
+      "category": "major",
+      "level": 1,
+      "keywords": [
+        "instinct",
+        "nature",
+        "stewardship",
+        "relationship",
+        "balance",
+        "earthly creatures",
+        "etteilla:cosmogony"
+      ],
+      "metadata": {
+        "suit": null,
+        "arcana": "major",
+        "number": 5,
+        "symbols": [
+          "human",
+          "quadrupeds",
+          "nature",
+          "dominion",
+          "instinct"
+        ],
+        "etymology": {
+          "notes": "Corresponds to Genesis 1:24-27, creation of land animals and humanity",
+          "origin": "From Latin 'homo' (man) and 'quadrupes' (four-footed animal)",
+          "literal": "Man and the Quadrupeds / Humanity and Animals"
+        },
+        "french_name": "L'Homme et les Quadrupèdes",
+        "genesis_day": "Day 6 - Creation of Animals and Humanity",
+        "etteilla_version": "Etteilla II (Orsini/Blocquel, 1838)",
+        "hermetic_correspondence": "The microcosm; humanity as reflection of cosmic order",
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Card in Etteilla's System": "L'Homme et les Quadrupèdes — Man and Beasts",
+        "Upright": "The living world of work and livelihood; natural strength, sustenance, the body's labour.",
+        "Reversed": "The brute in man; appetite unchecked, toil without reward.",
+        "Etymology": "Man and the Quadrupeds / Humanity and Animals. From Latin 'homo' (man) and 'quadrupes' (four-footed animal). Corresponds to Genesis 1:24-27, creation of land animals and humanity",
+        "Genesis Connection": "Day 6 - Creation of Animals and Humanity",
+        "Historical Context": "This card depicts the sixth day of creation, when God made the beasts of the earth and then humanity in His own image. In Etteilla's system, this represents the culmination of material creation—the emergence of conscious beings capable of reflecting the divine.\n\nThe Hermetic tradition sees humanity as the microcosm—containing within itself all the elements and principles of the greater cosmos. Etteilla's card reflects this: the human figure stands as the meeting point of heaven and earth, spirit and matter.",
+        "Hermetic Correspondence": "The microcosm; humanity as reflection of cosmic order"
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275746887-scunfby994q.jpg"
+    },
+    {
+      "id": "etteilla-06",
+      "name": "Les Astres (The Celestial Bodies)",
+      "sort_order": 5,
+      "category": "major",
+      "level": 1,
+      "keywords": [
+        "guidance",
+        "hope",
+        "destiny",
+        "timing",
+        "navigation",
+        "cosmic order",
+        "etteilla:cosmogony"
+      ],
+      "metadata": {
+        "suit": null,
+        "arcana": "major",
+        "number": 6,
+        "symbols": [
+          "sun",
+          "moon",
+          "stars",
+          "celestial bodies",
+          "guidance",
+          "destiny"
+        ],
+        "etymology": {
+          "notes": "Corresponds to Genesis 1:14-19, creation of sun, moon, and stars",
+          "origin": "From Latin 'stella' meaning star or celestial body",
+          "literal": "The Stars"
+        },
+        "french_name": "Les Étoiles",
+        "genesis_day": "Day 4 - Creation of Sun, Moon, and Stars",
+        "etteilla_version": "Etteilla II (Orsini/Blocquel, 1838)",
+        "hermetic_correspondence": "The stellar intelligences; astrological influences on human affairs",
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Card in Etteilla's System": "Les Astres — The Stars",
+        "Upright": "The stars favourable: hope, guidance, a destiny inclined to the good.",
+        "Reversed": "An ill or clouded star; hope deferred, a guiding light obscured.",
+        "Etymology": "The Stars. From Latin 'stella' meaning star or celestial body. Corresponds to Genesis 1:14-19, creation of sun, moon, and stars",
+        "Genesis Connection": "Day 4 - Creation of Sun, Moon, and Stars",
+        "Historical Context": "Les Étoiles depicts the fourth day of Genesis, when God created the sun, moon, and stars to govern day and night and to mark seasons, days, and years. For Etteilla, this was not merely astronomical but deeply astrological—the stars influence human destiny.\n\nEtteilla's 'Société des Interprètes du Livre de Thot' systematically integrated astrology with tarot. The stars card embodies this synthesis: celestial bodies are not distant objects but active powers shaping earthly events.",
+        "Hermetic Correspondence": "The stellar intelligences; astrological influences on human affairs"
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275749154-nhucylwu6ge.jpg"
+    },
+    {
+      "id": "etteilla-07",
+      "name": "Les Oiseaux et les Poissons (Birds and Fishes)",
+      "sort_order": 6,
+      "category": "major",
+      "level": 1,
+      "keywords": [
+        "freedom",
+        "adaptability",
+        "elements",
+        "movement",
+        "flow",
+        "etteilla:cosmogony"
+      ],
+      "metadata": {
+        "suit": null,
+        "arcana": "major",
+        "number": 7,
+        "symbols": [
+          "birds",
+          "fish",
+          "air",
+          "water",
+          "freedom"
+        ],
+        "etymology": {
+          "notes": "Corresponds to Genesis 1:20-23, creation of sea and sky creatures on day five",
+          "origin": "From Latin 'avis' (bird) and 'piscis' (fish)",
+          "literal": "The Birds and the Fish"
+        },
+        "french_name": "Les Oiseaux et les Poissons",
+        "genesis_day": "Day 5 - Creation of Birds and Fish",
+        "etteilla_version": "Etteilla II (Orsini/Blocquel, 1838)",
+        "hermetic_correspondence": "The elemental realms of Air and Water; mobility between states",
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Card in Etteilla's System": "Les Oiseaux et les Poissons — Birds and Fishes",
+        "Upright": "Air and water teeming: news, messages, plenty, journeys, fertile movement.",
+        "Reversed": "Idle gossip, scattered news, a voyage or message delayed.",
+        "Etymology": "The Birds and the Fish. From Latin 'avis' (bird) and 'piscis' (fish). Corresponds to Genesis 1:20-23, creation of sea and sky creatures on day five",
+        "Genesis Connection": "Day 5 - Creation of Birds and Fish",
+        "Historical Context": "Les Oiseaux et les Poissons represents the fifth day of creation, when God filled the waters with fish and the sky with birds. These are the first animals—creatures that inhabit the fluid realms of water and air rather than solid earth.\n\nIn Etteilla's Hermetic symbolism, birds and fish represent mobility and freedom in their respective elements. Birds ascend toward the divine; fish explore the depths of the unconscious.",
+        "Hermetic Correspondence": "The elemental realms of Air and Water; mobility between states"
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275749213-64qqr3jxe3b.jpg"
+    },
+    {
+      "id": "etteilla-08",
+      "name": "Repos (Rest)",
+      "sort_order": 7,
+      "category": "major",
+      "level": 1,
+      "keywords": [
+        "rest",
+        "completion",
+        "integration",
+        "pause",
+        "reflection",
+        "etteilla:cosmogony"
+      ],
+      "metadata": {
+        "suit": null,
+        "arcana": "major",
+        "number": 8,
+        "symbols": [
+          "rest",
+          "sabbath",
+          "completion",
+          "integration"
+        ],
+        "etymology": {
+          "notes": "Corresponds to Genesis 2:2-3, the seventh day when God rested and made it holy",
+          "origin": "From Latin 'repausare' meaning to rest, pause, or cease from labor",
+          "literal": "Rest / Repose"
+        },
+        "french_name": "Le Repos",
+        "genesis_day": "Day 7 - The Day of Rest",
+        "etteilla_version": "Etteilla II (Orsini/Blocquel, 1838)",
+        "hermetic_correspondence": "The Sabbath; sacred rest; return to unity",
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Card in Etteilla's System": "Le Repos — Rest",
+        "Upright": "The seventh day: rest, completion, peace earned after labour.",
+        "Reversed": "Idleness and stagnation; rest curdled into inertia.",
+        "Etymology": "Rest / Repose. From Latin 'repausare' meaning to rest, pause, or cease from labor. Corresponds to Genesis 2:2-3, the seventh day when God rested and made it holy",
+        "Genesis Connection": "Day 7 - The Day of Rest",
+        "Historical Context": "Le Repos represents the Sabbath—the seventh day when God rested from creation and sanctified rest itself. In Etteilla's system, this card serves as the female querent's significator, balancing Le Chaos which represents male questioners.\n\nThe 1865 Etteilla III booklet states: 'The true sense of this card is profound peace.' This is not mere inactivity but sacred completion—the rest that comes after work is finished.",
+        "Hermetic Correspondence": "The Sabbath; sacred rest; return to unity"
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275749347-dxh6t442rkj.jpg"
+    },
+    {
+      "id": "etteilla-09",
+      "name": "La Justice (Justice)",
+      "sort_order": 8,
+      "category": "major",
+      "level": 1,
+      "keywords": [
+        "justice",
+        "balance",
+        "fairness",
+        "karma",
+        "truth",
+        "arcana:justice"
+      ],
+      "metadata": {
+        "suit": null,
+        "arcana": "major",
+        "number": 9,
+        "symbols": [
+          "scales",
+          "sword",
+          "balance",
+          "law"
+        ],
+        "etymology": {
+          "notes": "One of the four cardinal virtues from Plato's Republic",
+          "origin": "From Latin 'justitia' meaning righteousness, equity, or lawfulness",
+          "literal": "Justice"
+        },
+        "french_name": "La Justice",
+        "genesis_day": "Post-Creation: Cardinal Virtue I",
+        "etteilla_version": "Etteilla II (Orsini/Blocquel, 1838)",
+        "hermetic_correspondence": "Ma'at; cosmic balance; the weighing of souls",
+        "archetype": "arcana:justice",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "La Justice — Justice",
+        "Upright": "Lawful judgment, balance restored, a matter set right.",
+        "Reversed": "Injustice, bias, the law bent or misused.",
+        "Etymology": "Justice. From Latin 'justitia' meaning righteousness, equity, or lawfulness. One of the four cardinal virtues from Plato's Republic",
+        "Genesis Connection": "Post-Creation: Cardinal Virtue I",
+        "Historical Context": "Following the seven days of creation, Etteilla's trumps transition to the four cardinal virtues as described by Plato: Justice, Temperance, Fortitude, and Prudence. La Justice represents the first of these—the principle of righteous judgment and fair dealing.\n\nIn the Hermetic tradition, Justice connects to Ma'at—the Egyptian goddess of truth, balance, and cosmic order.",
+        "Hermetic Correspondence": "Ma'at; cosmic balance; the weighing of souls"
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275749291-apd0dnsbk7.jpg"
+    },
+    {
+      "id": "etteilla-10",
+      "name": "La Tempérance (Temperance)",
+      "sort_order": 9,
+      "category": "major",
+      "level": 1,
+      "keywords": [
+        "moderation",
+        "balance",
+        "patience",
+        "blending",
+        "healing",
+        "arcana:temperance"
+      ],
+      "metadata": {
+        "suit": null,
+        "arcana": "major",
+        "number": 10,
+        "symbols": [
+          "cups",
+          "water",
+          "angel",
+          "flow"
+        ],
+        "etymology": {
+          "notes": "The second cardinal virtue; the golden mean between excess and deficiency",
+          "origin": "From Latin 'temperantia' meaning self-control, moderation, or sobriety",
+          "literal": "Temperance / Moderation"
+        },
+        "french_name": "La Tempérance",
+        "genesis_day": "Post-Creation: Cardinal Virtue II",
+        "etteilla_version": "Etteilla II (Orsini/Blocquel, 1838)",
+        "hermetic_correspondence": "The alchemical mixing of elements; the art of proportion",
+        "archetype": "arcana:temperance",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "La Tempérance — Temperance",
+        "Upright": "Moderation and prudent management; opposites blended well.",
+        "Reversed": "Excess and imbalance; the measure lost.",
+        "Etymology": "Temperance / Moderation. From Latin 'temperantia' meaning self-control, moderation, or sobriety. The second cardinal virtue; the golden mean between excess and deficiency",
+        "Genesis Connection": "Post-Creation: Cardinal Virtue II",
+        "Historical Context": "La Tempérance represents the second Platonic virtue—the principle of moderation and self-control that enables harmonious living. The traditional image shows a figure pouring liquid between vessels, representing the careful mixing and balancing of elements.\n\nThis alchemical symbolism was not lost on Etteilla, who saw in temperance the secret of transformation.",
+        "Hermetic Correspondence": "The alchemical mixing of elements; the art of proportion"
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275749976-is3rhn391g.jpg"
+    },
+    {
+      "id": "etteilla-11",
+      "name": "La Force (Strength)",
+      "sort_order": 10,
+      "category": "major",
+      "level": 1,
+      "keywords": [
+        "strength",
+        "courage",
+        "patience",
+        "inner power",
+        "gentleness",
+        "arcana:strength"
+      ],
+      "metadata": {
+        "suit": null,
+        "arcana": "major",
+        "number": 11,
+        "symbols": [
+          "lion",
+          "woman",
+          "courage",
+          "gentleness"
+        ],
+        "etymology": {
+          "notes": "The third cardinal virtue; moral courage rather than mere physical power",
+          "origin": "From Latin 'fortitudo' meaning courage, bravery, or strength of character",
+          "literal": "Strength / Fortitude"
+        },
+        "french_name": "La Force",
+        "genesis_day": "Post-Creation: Cardinal Virtue III",
+        "etteilla_version": "Etteilla II (Orsini/Blocquel, 1838)",
+        "hermetic_correspondence": "Mastery of the animal nature; courage guided by wisdom",
+        "archetype": "arcana:strength",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "La Force — Strength",
+        "Upright": "Courage and self-mastery; force rightly governed.",
+        "Reversed": "Weakness, or strength misused as domination.",
+        "Etymology": "Strength / Fortitude. From Latin 'fortitudo' meaning courage, bravery, or strength of character. The third cardinal virtue; moral courage rather than mere physical power",
+        "Genesis Connection": "Post-Creation: Cardinal Virtue III",
+        "Historical Context": "La Force embodies the third Platonic virtue—fortitude or courage. This is not mere physical strength but moral courage: the capacity to face difficulty, danger, or pain without yielding to fear.\n\nThe traditional image often shows a figure with a lion, representing the mastery of animal instincts through gentle strength rather than violent domination.",
+        "Hermetic Correspondence": "Mastery of the animal nature; courage guided by wisdom"
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275751657-s8fklbbsdjm.jpg"
+    },
+    {
+      "id": "etteilla-12",
+      "name": "La Prudence (Prudence)",
+      "sort_order": 11,
+      "category": "major",
+      "level": 1,
+      "keywords": [
+        "wisdom",
+        "caution",
+        "foresight",
+        "discretion",
+        "planning",
+        "virtue:prudence"
+      ],
+      "metadata": {
+        "suit": null,
+        "arcana": "major",
+        "number": 12,
+        "symbols": [
+          "mirror",
+          "snake",
+          "wisdom",
+          "caution"
+        ],
+        "etymology": {
+          "notes": "The fourth cardinal virtue; considered by Aristotle as 'practical wisdom'",
+          "origin": "From Latin 'prudentia' meaning foresight, wisdom, or practical judgment",
+          "literal": "Prudence / Wisdom"
+        },
+        "french_name": "La Prudence",
+        "genesis_day": "Post-Creation: Cardinal Virtue IV",
+        "etteilla_version": "Etteilla II (Orsini/Blocquel, 1838)",
+        "hermetic_correspondence": "Phronesis; practical wisdom; the inner counselor",
+        "archetype": "virtue:prudence",
+        "mapping_confidence": "loose"
+      },
+      "sections": {
+        "Card in Etteilla's System": "La Prudence — Prudence",
+        "Upright": "Foresight and careful counsel (Etteilla set Prudence where ordinary tarot has the Hanged Man).",
+        "Reversed": "Imprudence and rashness; a clear warning ignored.",
+        "Etymology": "Prudence / Wisdom. From Latin 'prudentia' meaning foresight, wisdom, or practical judgment. The fourth cardinal virtue; considered by Aristotle as 'practical wisdom'",
+        "Genesis Connection": "Post-Creation: Cardinal Virtue IV",
+        "Historical Context": "La Prudence completes the quartet of cardinal virtues—representing practical wisdom, foresight, and good judgment. Aristotle called this 'phronesis,' the ability to discern the right course of action in particular circumstances.\n\nThe traditional image often shows a figure with a mirror (self-knowledge) and a serpent (wisdom).",
+        "Hermetic Correspondence": "Phronesis; practical wisdom; the inner counselor"
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275751810-bxugyod3y1m.jpg"
+    },
+    {
+      "id": "etteilla-13",
+      "name": "Le Grand Prêtre (The High Priest)",
+      "sort_order": 12,
+      "category": "major",
+      "level": 1,
+      "keywords": [
+        "spirituality",
+        "tradition",
+        "guidance",
+        "wisdom",
+        "blessing",
+        "orthodoxy",
+        "arcana:the-hierophant"
+      ],
+      "metadata": {
+        "suit": null,
+        "arcana": "major",
+        "number": 13,
+        "symbols": [
+          "priest",
+          "temple",
+          "blessing",
+          "tradition",
+          "sacred knowledge"
+        ],
+        "archetype": "arcana:the-hierophant",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "Le Grand Prêtre — The High Priest",
+        "Upright": "Counsel, sanction, marriage, spiritual authority; a trusted guide.",
+        "Reversed": "Hollow dogma, a bad counsellor, hypocrisy in high place."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275751625-uf2vb0pujy.jpg"
+    },
+    {
+      "id": "etteilla-14",
+      "name": "Le Diable (The Devil)",
+      "sort_order": 13,
+      "category": "major",
+      "level": 1,
+      "keywords": [
+        "bondage",
+        "addiction",
+        "materialism",
+        "shadow",
+        "temptation",
+        "illusion",
+        "arcana:the-devil"
+      ],
+      "metadata": {
+        "suit": null,
+        "arcana": "major",
+        "number": 14,
+        "symbols": [
+          "devil",
+          "chains",
+          "darkness",
+          "temptation",
+          "bondage"
+        ],
+        "archetype": "arcana:the-devil",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "Le Diable — Force / The Devil",
+        "Upright": "Raw force and vehemence — power over circumstance (Etteilla read the Devil as energy, not only evil).",
+        "Reversed": "Fury and ravage; bondage to one's own passions."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275751767-yv396dv1p0p.jpg"
+    },
+    {
+      "id": "etteilla-15",
+      "name": "Le Magicien ou le Bateleur (The Magician/Juggler)",
+      "sort_order": 14,
+      "category": "major",
+      "level": 1,
+      "keywords": [
+        "skill",
+        "manifestation",
+        "craft",
+        "will",
+        "creation",
+        "dexterity",
+        "arcana:the-magician"
+      ],
+      "metadata": {
+        "suit": null,
+        "arcana": "major",
+        "number": 15,
+        "symbols": [
+          "wand",
+          "tools",
+          "craft",
+          "skill",
+          "table",
+          "juggler"
+        ],
+        "archetype": "arcana:the-magician",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "Le Magicien / Le Bateleur — Illness",
+        "Upright": "The juggler's hand at work; in Etteilla's system the Bateleur governs illness and its cure — a matter of the body, skill applied.",
+        "Reversed": "A charlatan, trickery; malady worsening, a false remedy."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275751695-bkso8k5cjwj.jpg"
+    },
+    {
+      "id": "etteilla-16",
+      "name": "Le Jugement Dernier (The Last Judgment)",
+      "sort_order": 15,
+      "category": "major",
+      "level": 1,
+      "keywords": [
+        "judgment",
+        "awakening",
+        "calling",
+        "evaluation",
+        "rebirth",
+        "reckoning",
+        "arcana:judgement"
+      ],
+      "metadata": {
+        "suit": null,
+        "arcana": "major",
+        "number": 16,
+        "symbols": [
+          "angel",
+          "trumpet",
+          "resurrection",
+          "graves",
+          "calling"
+        ],
+        "archetype": "arcana:judgement",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "Le Jugement Dernier — Last Judgement",
+        "Upright": "Awakening, a decisive change, renewal answering the trumpet's call.",
+        "Reversed": "A verdict postponed; fear of change, the summons unheeded."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275753634-cfxqixdmh9.jpg"
+    },
+    {
+      "id": "etteilla-17",
+      "name": "La Mort (Death)",
+      "sort_order": 16,
+      "category": "major",
+      "level": 1,
+      "keywords": [
+        "transformation",
+        "ending",
+        "change",
+        "release",
+        "renewal",
+        "arcana:death"
+      ],
+      "metadata": {
+        "suit": null,
+        "arcana": "major",
+        "number": 17,
+        "symbols": [
+          "skeleton",
+          "scythe",
+          "transformation",
+          "ending"
+        ],
+        "archetype": "arcana:death",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "La Mort — Death",
+        "Upright": "Transformation, the necessary end that clears the ground.",
+        "Reversed": "Inertia; a change resisted, an ending only half-made."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275753492-71rwq7jx03e.jpg"
+    },
+    {
+      "id": "etteilla-18",
+      "name": "Le Capucin (The Hermit/Monk)",
+      "sort_order": 17,
+      "category": "major",
+      "level": 1,
+      "keywords": [
+        "solitude",
+        "introspection",
+        "wisdom",
+        "guidance",
+        "retreat",
+        "arcana:the-hermit"
+      ],
+      "metadata": {
+        "suit": null,
+        "arcana": "major",
+        "number": 18,
+        "symbols": [
+          "monk",
+          "lantern",
+          "staff",
+          "solitude"
+        ],
+        "archetype": "arcana:the-hermit",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "Le Capucin — The Traitor / Hermit",
+        "Upright": "The hooded solitary; in Etteilla's reading the Capucin is the traitor — concealment, a matter hidden, or prudent withdrawal.",
+        "Reversed": "A secret enemy unmasked; treachery, false counsel exposed."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275753769-8oay5xcwzvc.jpg"
+    },
+    {
+      "id": "etteilla-19",
+      "name": "Le Temple Foudroyé (The Struck Temple)",
+      "sort_order": 18,
+      "category": "major",
+      "level": 1,
+      "keywords": [
+        "sudden change",
+        "revelation",
+        "upheaval",
+        "breakthrough",
+        "liberation",
+        "arcana:the-tower"
+      ],
+      "metadata": {
+        "suit": null,
+        "arcana": "major",
+        "number": 19,
+        "symbols": [
+          "tower",
+          "lightning",
+          "destruction",
+          "revelation"
+        ],
+        "archetype": "arcana:the-tower",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "Le Temple Foudroyé — The Struck Temple",
+        "Upright": "The temple thrown down: sudden ruin, downfall, a structure broken open.",
+        "Reversed": "A calamity narrowly escaped — but oppression, confinement, ruin deferred."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275753632-j257syyppfk.jpg"
+    },
+    {
+      "id": "etteilla-20",
+      "name": "La Roue de Fortune (Wheel of Fortune)",
+      "sort_order": 19,
+      "category": "major",
+      "level": 1,
+      "keywords": [
+        "cycles",
+        "change",
+        "fortune",
+        "karma",
+        "turning point",
+        "arcana:wheel-of-fortune"
+      ],
+      "metadata": {
+        "suit": null,
+        "arcana": "major",
+        "number": 20,
+        "symbols": [
+          "wheel",
+          "cycle",
+          "fortune",
+          "change"
+        ],
+        "archetype": "arcana:wheel-of-fortune",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "La Roue de Fortune — Wheel of Fortune",
+        "Upright": "Fortune turning upward: increase, elevation, luck in the matter.",
+        "Reversed": "A fall; fortune reversed, gain turning to loss."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275753592-98lwwsjn89u.jpg"
+    },
+    {
+      "id": "etteilla-21",
+      "name": "Le Despote Africain (African Despot/King)",
+      "sort_order": 20,
+      "category": "major",
+      "level": 1,
+      "keywords": [
+        "authority",
+        "power",
+        "leadership",
+        "control",
+        "dominion",
+        "arcana:the-emperor"
+      ],
+      "metadata": {
+        "suit": null,
+        "arcana": "major",
+        "number": 21,
+        "symbols": [
+          "king",
+          "throne",
+          "power",
+          "authority"
+        ],
+        "archetype": "arcana:the-emperor",
+        "mapping_confidence": "loose"
+      },
+      "sections": {
+        "Card in Etteilla's System": "Le Despote Africain — The Sovereign",
+        "Upright": "Great power and a powerful protector; dissension mastered by a strong hand.",
+        "Reversed": "Tyranny; a dangerous man, discord stirred from above."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275755605-qfulwdacuf.jpg"
+    },
+    {
+      "id": "etteilla-22",
+      "name": "Roi de Bâton (King of Wands)",
+      "sort_order": 21,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "leadership",
+        "vision",
+        "entrepreneur",
+        "boldness",
+        "charisma",
+        "suit:wands",
+        "rank:king",
+        "card:king-of-wands"
+      ],
+      "metadata": {
+        "suit": "batons",
+        "arcana": "minor",
+        "number": 22,
+        "symbols": [
+          "king",
+          "wand",
+          "throne",
+          "fire",
+          "leadership"
+        ],
+        "archetype": "card:king-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "A court of Bâtons (Batons) — and so a PERSON. In Etteilla's cartomancy every court card signifies someone in the querent's life, coloured by the suit (enterprise, work, the countryside and growth). Upright the person is well-disposed; reversed, ill-disposed.",
+        "Upright (the person well-disposed)": "An enterprising, honourable man — of the country or of business; a good friend in practical affairs.",
+        "Reversed (the person ill-disposed)": "The same man turned harsh, grasping, or unreliable in his dealings."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275755786-ohpsl4qilqh.jpg"
+    },
+    {
+      "id": "etteilla-23",
+      "name": "Reine de Bâton (Queen of Wands)",
+      "sort_order": 22,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "confidence",
+        "warmth",
+        "creativity",
+        "independence",
+        "determination",
+        "suit:wands",
+        "rank:queen",
+        "card:queen-of-wands"
+      ],
+      "metadata": {
+        "suit": "batons",
+        "arcana": "minor",
+        "number": 23,
+        "symbols": [
+          "queen",
+          "wand",
+          "sunflower",
+          "fire",
+          "cat"
+        ],
+        "archetype": "card:queen-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "A court of Bâtons (Batons) — and so a PERSON. In Etteilla's cartomancy every court card signifies someone in the querent's life, coloured by the suit (enterprise, work, the countryside and growth). Upright the person is well-disposed; reversed, ill-disposed.",
+        "Upright (the person well-disposed)": "A capable, honest woman of warmth and industry; a good helper and counsellor.",
+        "Reversed (the person ill-disposed)": "A meddling or obstinate woman; help offered with strings."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275755668-ba8p2m45bs.jpg"
+    },
+    {
+      "id": "etteilla-24",
+      "name": "Chevalier de Bâton (Knight of Wands)",
+      "sort_order": 23,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "adventure",
+        "energy",
+        "passion",
+        "impulsiveness",
+        "travel",
+        "suit:wands",
+        "rank:knight",
+        "card:knight-of-wands"
+      ],
+      "metadata": {
+        "suit": "batons",
+        "arcana": "minor",
+        "number": 24,
+        "symbols": [
+          "knight",
+          "horse",
+          "wand",
+          "desert",
+          "adventure"
+        ],
+        "archetype": "card:knight-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "A court of Bâtons (Batons) — and so a PERSON. In Etteilla's cartomancy every court card signifies someone in the querent's life, coloured by the suit (enterprise, work, the countryside and growth). Upright the person is well-disposed; reversed, ill-disposed.",
+        "Upright (the person well-disposed)": "A departure, a young man setting out; enterprise on the move, news of work.",
+        "Reversed (the person ill-disposed)": "A hasty or quarrelsome youth; a journey or venture gone wrong."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275755600-ilrinuiknuq.jpg"
+    },
+    {
+      "id": "etteilla-25",
+      "name": "Valet de Bâton (Page of Wands)",
+      "sort_order": 24,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "exploration",
+        "enthusiasm",
+        "discovery",
+        "free spirit",
+        "news",
+        "suit:wands",
+        "rank:page",
+        "card:page-of-wands"
+      ],
+      "metadata": {
+        "suit": "batons",
+        "arcana": "minor",
+        "number": 25,
+        "symbols": [
+          "page",
+          "wand",
+          "youth",
+          "message",
+          "enthusiasm"
+        ],
+        "archetype": "card:page-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "A court of Bâtons (Batons) — and so a PERSON. In Etteilla's cartomancy every court card signifies someone in the querent's life, coloured by the suit (enterprise, work, the countryside and growth). Upright the person is well-disposed; reversed, ill-disposed.",
+        "Upright (the person well-disposed)": "A messenger, a youth bearing news of work or family; a small good beginning.",
+        "Reversed (the person ill-disposed)": "Bad news, a careless messenger, a rumour about one's affairs."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275755641-8kcyqzbxy6.jpg"
+    },
+    {
+      "id": "etteilla-26",
+      "name": "Dix de Bâton (Ten of Wands)",
+      "sort_order": 25,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "burden",
+        "responsibility",
+        "hard work",
+        "stress",
+        "determination",
+        "suit:wands",
+        "rank:ten",
+        "card:ten-of-wands"
+      ],
+      "metadata": {
+        "suit": "batons",
+        "arcana": "minor",
+        "number": 26,
+        "symbols": [
+          "ten wands",
+          "burden",
+          "struggle",
+          "determination"
+        ],
+        "archetype": "card:ten-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Ten of Bâtons (Batons) — the suit of Fire, governing enterprise, work, the countryside and growth.",
+        "Upright": "the matter at its fullest — completion, or surfeit, within enterprise.",
+        "Reversed": "Excess and burden; a cycle that overstays."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275758272-eje9gjhpaat.jpg"
+    },
+    {
+      "id": "etteilla-27",
+      "name": "Neuf de Bâton (Nine of Wands)",
+      "sort_order": 26,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "resilience",
+        "persistence",
+        "boundaries",
+        "defensiveness",
+        "last stand",
+        "suit:wands",
+        "rank:nine",
+        "card:nine-of-wands"
+      ],
+      "metadata": {
+        "suit": "batons",
+        "arcana": "minor",
+        "number": 27,
+        "symbols": [
+          "nine wands",
+          "bandage",
+          "vigilance",
+          "defense"
+        ],
+        "archetype": "card:nine-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Nine of Bâtons (Batons) — the suit of Fire, governing enterprise, work, the countryside and growth.",
+        "Upright": "near-fulfilment; intensity, the thing almost complete, within enterprise.",
+        "Reversed": "Strain, delay, intensity turned against itself."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275757413-osmvqg2gj1j.jpg"
+    },
+    {
+      "id": "etteilla-28",
+      "name": "Huit de Bâton (Eight of Wands)",
+      "sort_order": 27,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "speed",
+        "action",
+        "movement",
+        "progress",
+        "communication",
+        "suit:wands",
+        "rank:eight",
+        "card:eight-of-wands"
+      ],
+      "metadata": {
+        "suit": "batons",
+        "arcana": "minor",
+        "number": 28,
+        "symbols": [
+          "eight wands",
+          "flight",
+          "speed",
+          "arrows"
+        ],
+        "archetype": "card:eight-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Eight of Bâtons (Batons) — the suit of Fire, governing enterprise, work, the countryside and growth.",
+        "Upright": "comings and goings, change, the matter in motion, within enterprise.",
+        "Reversed": "Movement stalled; restlessness without progress."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275757487-p3pe6ibjaa.jpg"
+    },
+    {
+      "id": "etteilla-29",
+      "name": "Sept de Bâton (Seven of Wands)",
+      "sort_order": 28,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "defense",
+        "perseverance",
+        "competition",
+        "challenge",
+        "standing ground",
+        "suit:wands",
+        "rank:seven",
+        "card:seven-of-wands"
+      ],
+      "metadata": {
+        "suit": "batons",
+        "arcana": "minor",
+        "number": 29,
+        "symbols": [
+          "seven wands",
+          "defense",
+          "high ground",
+          "challenge"
+        ],
+        "archetype": "card:seven-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Seven of Bâtons (Batons) — the suit of Fire, governing enterprise, work, the countryside and growth.",
+        "Upright": "a hope and a partial success, still uncertain, within enterprise.",
+        "Reversed": "The hope dashed; effort abandoned."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275757466-qy5jgqhzajp.jpg"
+    },
+    {
+      "id": "etteilla-30",
+      "name": "Six de Bâton (Six of Wands)",
+      "sort_order": 29,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "victory",
+        "success",
+        "recognition",
+        "achievement",
+        "pride",
+        "suit:wands",
+        "rank:six",
+        "card:six-of-wands"
+      ],
+      "metadata": {
+        "suit": "batons",
+        "arcana": "minor",
+        "number": 30,
+        "symbols": [
+          "six wands",
+          "victory",
+          "laurel",
+          "horse",
+          "crowd"
+        ],
+        "archetype": "card:six-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Six of Bâtons (Batons) — the suit of Fire, governing enterprise, work, the countryside and growth.",
+        "Upright": "a passage, a road, fair give-and-take, within enterprise.",
+        "Reversed": "The way blocked; an exchange gone unequal."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275757772-dxudd4x09p5.jpg"
+    },
+    {
+      "id": "etteilla-31",
+      "name": "Cinq de Bâton (Five of Wands)",
+      "sort_order": 30,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "conflict",
+        "competition",
+        "tension",
+        "diversity",
+        "challenge",
+        "suit:wands",
+        "rank:five",
+        "card:five-of-wands"
+      ],
+      "metadata": {
+        "suit": "batons",
+        "arcana": "minor",
+        "number": 31,
+        "symbols": [
+          "five wands",
+          "conflict",
+          "competition",
+          "struggle"
+        ],
+        "archetype": "card:five-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Five of Bâtons (Batons) — the suit of Fire, governing enterprise, work, the countryside and growth.",
+        "Upright": "a turn or loss within the matter — a test, within enterprise.",
+        "Reversed": "The loss easing, or the test deepening."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275760600-8i65qary0f.jpg"
+    },
+    {
+      "id": "etteilla-32",
+      "name": "Quatre de Bâton (Four of Wands)",
+      "sort_order": 31,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "celebration",
+        "harmony",
+        "homecoming",
+        "community",
+        "foundation",
+        "suit:wands",
+        "rank:four",
+        "card:four-of-wands"
+      ],
+      "metadata": {
+        "suit": "batons",
+        "arcana": "minor",
+        "number": 32,
+        "symbols": [
+          "four wands",
+          "celebration",
+          "garland",
+          "home",
+          "castle"
+        ],
+        "archetype": "card:four-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Four of Bâtons (Batons) — the suit of Fire, governing enterprise, work, the countryside and growth.",
+        "Upright": "a settling, a small security, a needed pause, within enterprise.",
+        "Reversed": "Stagnation; holding on too tightly."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275759756-k8dhmpcugw.jpg"
+    },
+    {
+      "id": "etteilla-33",
+      "name": "Trois de Bâton (Three of Wands)",
+      "sort_order": 32,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "expansion",
+        "foresight",
+        "exploration",
+        "enterprise",
+        "progress",
+        "suit:wands",
+        "rank:three",
+        "card:three-of-wands"
+      ],
+      "metadata": {
+        "suit": "batons",
+        "arcana": "minor",
+        "number": 33,
+        "symbols": [
+          "three wands",
+          "ships",
+          "horizon",
+          "waiting",
+          "commerce"
+        ],
+        "archetype": "card:three-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Three of Bâtons (Batons) — the suit of Fire, governing enterprise, work, the countryside and growth.",
+        "Upright": "increase; a third party, growth, the thing taking shape, within enterprise.",
+        "Reversed": "Growth checked; effort scattered, a delay."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275759909-gsa0f70ocyn.jpg"
+    },
+    {
+      "id": "etteilla-34",
+      "name": "Deux de Bâton (Two of Wands)",
+      "sort_order": 33,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "planning",
+        "decisions",
+        "future",
+        "options",
+        "partnership",
+        "suit:wands",
+        "rank:two",
+        "card:two-of-wands"
+      ],
+      "metadata": {
+        "suit": "batons",
+        "arcana": "minor",
+        "number": 34,
+        "symbols": [
+          "two wands",
+          "globe",
+          "decision",
+          "contemplation"
+        ],
+        "archetype": "card:two-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Two of Bâtons (Batons) — the suit of Fire, governing enterprise, work, the countryside and growth.",
+        "Upright": "a meeting or exchange; the matter shared with another, within enterprise.",
+        "Reversed": "Division, a pairing strained or broken."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275759882-dxsn2b2nlr.jpg"
+    },
+    {
+      "id": "etteilla-35",
+      "name": "As de Bâton (Ace of Wands)",
+      "sort_order": 34,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "inspiration",
+        "new beginnings",
+        "potential",
+        "creativity",
+        "power",
+        "suit:wands",
+        "rank:ace",
+        "card:ace-of-wands"
+      ],
+      "metadata": {
+        "suit": "batons",
+        "arcana": "minor",
+        "number": 35,
+        "symbols": [
+          "ace",
+          "wand",
+          "hand",
+          "clouds",
+          "new growth"
+        ],
+        "archetype": "card:ace-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Ace of Bâtons (Batons) — the suit of Fire, governing enterprise, work, the countryside and growth.",
+        "Upright": "a strong onset of the matter — the suit's force at its purest, within enterprise.",
+        "Reversed": "That force blocked or misdirected at the very start."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275759820-1a9qf0fxhfvj.jpg"
+    },
+    {
+      "id": "etteilla-36",
+      "name": "Roi de Coupe (King of Cups)",
+      "sort_order": 35,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "emotional balance",
+        "compassion",
+        "diplomacy",
+        "calm",
+        "wisdom",
+        "suit:cups",
+        "rank:king",
+        "card:king-of-cups"
+      ],
+      "metadata": {
+        "suit": "coupes",
+        "arcana": "minor",
+        "number": 36,
+        "symbols": [
+          "king",
+          "cup",
+          "throne",
+          "water",
+          "fish"
+        ],
+        "archetype": "card:king-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "A court of Coupes (Cups) — and so a PERSON. In Etteilla's cartomancy every court card signifies someone in the querent's life, coloured by the suit (love, affection, friendship and the heart). Upright the person is well-disposed; reversed, ill-disposed.",
+        "Upright (the person well-disposed)": "A fair, kindly, well-meaning man — often a man of feeling or of the Church; a benefactor in love or friendship.",
+        "Reversed (the person ill-disposed)": "A fickle or self-indulgent man; affection that cannot be trusted."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275764982-ycwzz16pga.jpg"
+    },
+    {
+      "id": "etteilla-37",
+      "name": "Reine de Coupe (Queen of Cups)",
+      "sort_order": 36,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "intuition",
+        "compassion",
+        "nurturing",
+        "psychic",
+        "emotional depth",
+        "suit:cups",
+        "rank:queen",
+        "card:queen-of-cups"
+      ],
+      "metadata": {
+        "suit": "coupes",
+        "arcana": "minor",
+        "number": 37,
+        "symbols": [
+          "queen",
+          "cup",
+          "throne",
+          "water",
+          "shells"
+        ],
+        "archetype": "card:queen-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "A court of Coupes (Cups) — and so a PERSON. In Etteilla's cartomancy every court card signifies someone in the querent's life, coloured by the suit (love, affection, friendship and the heart). Upright the person is well-disposed; reversed, ill-disposed.",
+        "Upright (the person well-disposed)": "A loving, fair-natured woman; devotion, friendship, a tender influence.",
+        "Reversed (the person ill-disposed)": "A jealous or capricious woman; love soured into possessiveness."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275765211-poln8r5d9yd.jpg"
+    },
+    {
+      "id": "etteilla-38",
+      "name": "Chevalier de Coupe (Knight of Cups)",
+      "sort_order": 37,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "romance",
+        "charm",
+        "imagination",
+        "invitation",
+        "proposal",
+        "suit:cups",
+        "rank:knight",
+        "card:knight-of-cups"
+      ],
+      "metadata": {
+        "suit": "coupes",
+        "arcana": "minor",
+        "number": 38,
+        "symbols": [
+          "knight",
+          "horse",
+          "cup",
+          "river",
+          "romance"
+        ],
+        "archetype": "card:knight-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "A court of Coupes (Cups) — and so a PERSON. In Etteilla's cartomancy every court card signifies someone in the querent's life, coloured by the suit (love, affection, friendship and the heart). Upright the person is well-disposed; reversed, ill-disposed.",
+        "Upright (the person well-disposed)": "An arrival, a lover or friend approaching; an invitation, a proposal of the heart.",
+        "Reversed (the person ill-disposed)": "A seducer or flatterer; an arrival that disappoints."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275765308-57393fgxjp.jpg"
+    },
+    {
+      "id": "etteilla-39",
+      "name": "Valet de Coupe (Page of Cups)",
+      "sort_order": 38,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "creativity",
+        "intuition",
+        "messages",
+        "inner child",
+        "sensitivity",
+        "suit:cups",
+        "rank:page",
+        "card:page-of-cups"
+      ],
+      "metadata": {
+        "suit": "coupes",
+        "arcana": "minor",
+        "number": 39,
+        "symbols": [
+          "page",
+          "cup",
+          "fish",
+          "message",
+          "youth"
+        ],
+        "archetype": "card:page-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "A court of Coupes (Cups) — and so a PERSON. In Etteilla's cartomancy every court card signifies someone in the querent's life, coloured by the suit (love, affection, friendship and the heart). Upright the person is well-disposed; reversed, ill-disposed.",
+        "Upright (the person well-disposed)": "A fair youth bringing affection or good news; a sweet, sincere proposal.",
+        "Reversed (the person ill-disposed)": "A flatterer, an idle promise; feeling that is only on the surface."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275765236-sjfs1wxdnf.jpg"
+    },
+    {
+      "id": "etteilla-40",
+      "name": "Dix de Coupe (Ten of Cups)",
+      "sort_order": 39,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "happiness",
+        "harmony",
+        "family",
+        "fulfillment",
+        "peace",
+        "suit:cups",
+        "rank:ten",
+        "card:ten-of-cups"
+      ],
+      "metadata": {
+        "suit": "coupes",
+        "arcana": "minor",
+        "number": 40,
+        "symbols": [
+          "ten cups",
+          "rainbow",
+          "family",
+          "home",
+          "joy"
+        ],
+        "archetype": "card:ten-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Ten of Coupes (Cups) — the suit of Water, governing love, affection, friendship and the heart.",
+        "Upright": "the matter at its fullest — completion, or surfeit, within love.",
+        "Reversed": "Excess and burden; a cycle that overstays."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275765019-62ykrwcdcjl.jpg"
+    },
+    {
+      "id": "etteilla-41",
+      "name": "Neuf de Coupe (Nine of Cups)",
+      "sort_order": 40,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "wishes",
+        "satisfaction",
+        "pleasure",
+        "contentment",
+        "indulgence",
+        "suit:cups",
+        "rank:nine",
+        "card:nine-of-cups"
+      ],
+      "metadata": {
+        "suit": "coupes",
+        "arcana": "minor",
+        "number": 41,
+        "symbols": [
+          "nine cups",
+          "satisfaction",
+          "abundance",
+          "wish"
+        ],
+        "archetype": "card:nine-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Nine of Coupes (Cups) — the suit of Water, governing love, affection, friendship and the heart.",
+        "Upright": "near-fulfilment; intensity, the thing almost complete, within love.",
+        "Reversed": "Strain, delay, intensity turned against itself."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275767069-0p0ypwughii.jpg"
+    },
+    {
+      "id": "etteilla-42",
+      "name": "Huit de Coupe (Eight of Cups)",
+      "sort_order": 41,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "departure",
+        "withdrawal",
+        "seeking",
+        "disappointment",
+        "growth",
+        "suit:cups",
+        "rank:eight",
+        "card:eight-of-cups"
+      ],
+      "metadata": {
+        "suit": "coupes",
+        "arcana": "minor",
+        "number": 42,
+        "symbols": [
+          "eight cups",
+          "departure",
+          "moon",
+          "mountains",
+          "journey"
+        ],
+        "archetype": "card:eight-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Eight of Coupes (Cups) — the suit of Water, governing love, affection, friendship and the heart.",
+        "Upright": "comings and goings, change, the matter in motion, within love.",
+        "Reversed": "Movement stalled; restlessness without progress."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275767173-i4t0r1be2kr.jpg"
+    },
+    {
+      "id": "etteilla-43",
+      "name": "Sept de Coupe (Seven of Cups)",
+      "sort_order": 42,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "choices",
+        "fantasy",
+        "illusion",
+        "imagination",
+        "wishful thinking",
+        "suit:cups",
+        "rank:seven",
+        "card:seven-of-cups"
+      ],
+      "metadata": {
+        "suit": "coupes",
+        "arcana": "minor",
+        "number": 43,
+        "symbols": [
+          "seven cups",
+          "clouds",
+          "visions",
+          "fantasy",
+          "choices"
+        ],
+        "archetype": "card:seven-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Seven of Coupes (Cups) — the suit of Water, governing love, affection, friendship and the heart.",
+        "Upright": "a hope and a partial success, still uncertain, within love.",
+        "Reversed": "The hope dashed; effort abandoned."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275767065-o3evbognquf.jpg"
+    },
+    {
+      "id": "etteilla-44",
+      "name": "Six de Coupe (Six of Cups)",
+      "sort_order": 43,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "nostalgia",
+        "memories",
+        "childhood",
+        "innocence",
+        "reunion",
+        "suit:cups",
+        "rank:six",
+        "card:six-of-cups"
+      ],
+      "metadata": {
+        "suit": "coupes",
+        "arcana": "minor",
+        "number": 44,
+        "symbols": [
+          "six cups",
+          "children",
+          "flowers",
+          "garden",
+          "past"
+        ],
+        "archetype": "card:six-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Six of Coupes (Cups) — the suit of Water, governing love, affection, friendship and the heart.",
+        "Upright": "a passage, a road, fair give-and-take, within love.",
+        "Reversed": "The way blocked; an exchange gone unequal."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275767004-q96p3nnmiok.jpg"
+    },
+    {
+      "id": "etteilla-45",
+      "name": "Cinq de Coupe (Five of Cups)",
+      "sort_order": 44,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "loss",
+        "grief",
+        "disappointment",
+        "regret",
+        "perspective",
+        "suit:cups",
+        "rank:five",
+        "card:five-of-cups"
+      ],
+      "metadata": {
+        "suit": "coupes",
+        "arcana": "minor",
+        "number": 45,
+        "symbols": [
+          "five cups",
+          "cloaked figure",
+          "bridge",
+          "spilled",
+          "loss"
+        ],
+        "archetype": "card:five-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Five of Coupes (Cups) — the suit of Water, governing love, affection, friendship and the heart.",
+        "Upright": "a turn or loss within the matter — a test, within love.",
+        "Reversed": "The loss easing, or the test deepening."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275767104-02jhxxde4xtp.jpg"
+    },
+    {
+      "id": "etteilla-46",
+      "name": "Quatre de Coupe (Four of Cups)",
+      "sort_order": 45,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "apathy",
+        "contemplation",
+        "dissatisfaction",
+        "meditation",
+        "reevaluation",
+        "suit:cups",
+        "rank:four",
+        "card:four-of-cups"
+      ],
+      "metadata": {
+        "suit": "coupes",
+        "arcana": "minor",
+        "number": 46,
+        "symbols": [
+          "four cups",
+          "contemplation",
+          "tree",
+          "offer",
+          "withdrawal"
+        ],
+        "archetype": "card:four-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Four of Coupes (Cups) — the suit of Water, governing love, affection, friendship and the heart.",
+        "Upright": "a settling, a small security, a needed pause, within love.",
+        "Reversed": "Stagnation; holding on too tightly."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275768810-818gxitgz4m.jpg"
+    },
+    {
+      "id": "etteilla-47",
+      "name": "Trois de Coupe (Three of Cups)",
+      "sort_order": 46,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "celebration",
+        "friendship",
+        "community",
+        "creativity",
+        "collaboration",
+        "suit:cups",
+        "rank:three",
+        "card:three-of-cups"
+      ],
+      "metadata": {
+        "suit": "coupes",
+        "arcana": "minor",
+        "number": 47,
+        "symbols": [
+          "three cups",
+          "dancing women",
+          "celebration",
+          "friendship",
+          "harvest"
+        ],
+        "archetype": "card:three-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Three of Coupes (Cups) — the suit of Water, governing love, affection, friendship and the heart.",
+        "Upright": "increase; a third party, growth, the thing taking shape, within love.",
+        "Reversed": "Growth checked; effort scattered, a delay."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275768931-7xr75sjz3pn.jpg"
+    },
+    {
+      "id": "etteilla-48",
+      "name": "Deux de Coupe (Two of Cups)",
+      "sort_order": 47,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "partnership",
+        "love",
+        "attraction",
+        "connection",
+        "harmony",
+        "suit:cups",
+        "rank:two",
+        "card:two-of-cups"
+      ],
+      "metadata": {
+        "suit": "coupes",
+        "arcana": "minor",
+        "number": 48,
+        "symbols": [
+          "two cups",
+          "couple",
+          "caduceus",
+          "lion",
+          "union"
+        ],
+        "archetype": "card:two-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Two of Coupes (Cups) — the suit of Water, governing love, affection, friendship and the heart.",
+        "Upright": "a meeting or exchange; the matter shared with another, within love.",
+        "Reversed": "Division, a pairing strained or broken."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275768767-esi2mit509.jpg"
+    },
+    {
+      "id": "etteilla-49",
+      "name": "As de Coupe (Ace of Cups)",
+      "sort_order": 48,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "new love",
+        "emotional beginning",
+        "intuition",
+        "creativity",
+        "spirituality",
+        "suit:cups",
+        "rank:ace",
+        "card:ace-of-cups"
+      ],
+      "metadata": {
+        "suit": "coupes",
+        "arcana": "minor",
+        "number": 49,
+        "symbols": [
+          "ace",
+          "cup",
+          "hand",
+          "dove",
+          "water",
+          "lotus"
+        ],
+        "archetype": "card:ace-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Ace of Coupes (Cups) — the suit of Water, governing love, affection, friendship and the heart.",
+        "Upright": "a strong onset of the matter — the suit's force at its purest, within love.",
+        "Reversed": "That force blocked or misdirected at the very start."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275769008-m33zmsz9dpc.jpg"
+    },
+    {
+      "id": "etteilla-50",
+      "name": "Roi d'Épée (King of Swords)",
+      "sort_order": 49,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "authority",
+        "truth",
+        "intellect",
+        "judgment",
+        "ethics",
+        "suit:swords",
+        "rank:king",
+        "card:king-of-swords"
+      ],
+      "metadata": {
+        "suit": "epees",
+        "arcana": "minor",
+        "number": 50,
+        "symbols": [
+          "king",
+          "sword",
+          "throne",
+          "butterflies",
+          "air"
+        ],
+        "archetype": "card:king-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "A court of Épées (Swords) — and so a PERSON. In Etteilla's cartomancy every court card signifies someone in the querent's life, coloured by the suit (conflict, law, arms and sharp trouble). Upright the person is well-disposed; reversed, ill-disposed.",
+        "Upright (the person well-disposed)": "A man of law or of arms — a judge, soldier, or official; powerful, but often an adversary.",
+        "Reversed (the person ill-disposed)": "A cruel or vindictive man; authority used to wound, a dangerous enemy."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275768830-6mhbtlqvi23.jpg"
+    },
+    {
+      "id": "etteilla-51",
+      "name": "Reine d'Épée (Queen of Swords)",
+      "sort_order": 50,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "perception",
+        "clarity",
+        "independence",
+        "wit",
+        "boundaries",
+        "suit:swords",
+        "rank:queen",
+        "card:queen-of-swords"
+      ],
+      "metadata": {
+        "suit": "epees",
+        "arcana": "minor",
+        "number": 51,
+        "symbols": [
+          "queen",
+          "sword",
+          "throne",
+          "clouds",
+          "butterflies"
+        ],
+        "archetype": "card:queen-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "A court of Épées (Swords) — and so a PERSON. In Etteilla's cartomancy every court card signifies someone in the querent's life, coloured by the suit (conflict, law, arms and sharp trouble). Upright the person is well-disposed; reversed, ill-disposed.",
+        "Upright (the person well-disposed)": "A sharp, discerning woman, often a widow or one acquainted with sorrow; keen judgment.",
+        "Reversed (the person ill-disposed)": "A spiteful or grieving woman; malice, mourning, a bitter tongue."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275770906-trm0852rg9.jpg"
+    },
+    {
+      "id": "etteilla-52",
+      "name": "Chevalier d'Épée (Knight of Swords)",
+      "sort_order": 51,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "action",
+        "ambition",
+        "direct",
+        "assertive",
+        "hasty",
+        "suit:swords",
+        "rank:knight",
+        "card:knight-of-swords"
+      ],
+      "metadata": {
+        "suit": "epees",
+        "arcana": "minor",
+        "number": 52,
+        "symbols": [
+          "knight",
+          "horse",
+          "sword",
+          "wind",
+          "clouds"
+        ],
+        "archetype": "card:knight-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "A court of Épées (Swords) — and so a PERSON. In Etteilla's cartomancy every court card signifies someone in the querent's life, coloured by the suit (conflict, law, arms and sharp trouble). Upright the person is well-disposed; reversed, ill-disposed.",
+        "Upright (the person well-disposed)": "A soldier, the approach of conflict or a rival; swift, cutting action.",
+        "Reversed (the person ill-disposed)": "An enemy's attack, reckless aggression; conflict that overreaches."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275770772-gx45zs0dkg.jpg"
+    },
+    {
+      "id": "etteilla-53",
+      "name": "Valet d'Épée (Page of Swords)",
+      "sort_order": 52,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "curiosity",
+        "vigilance",
+        "communication",
+        "truth-seeking",
+        "new ideas",
+        "suit:swords",
+        "rank:page",
+        "card:page-of-swords"
+      ],
+      "metadata": {
+        "suit": "epees",
+        "arcana": "minor",
+        "number": 53,
+        "symbols": [
+          "page",
+          "sword",
+          "wind",
+          "vigilance",
+          "youth"
+        ],
+        "archetype": "card:page-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "A court of Épées (Swords) — and so a PERSON. In Etteilla's cartomancy every court card signifies someone in the querent's life, coloured by the suit (conflict, law, arms and sharp trouble). Upright the person is well-disposed; reversed, ill-disposed.",
+        "Upright (the person well-disposed)": "A watcher or spy, a youth bearing sharp news; vigilance, a matter observed.",
+        "Reversed (the person ill-disposed)": "Surveillance turned hostile; a spy, slander, trouble carried by a youth."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275770762-rje1t6x5q9c.jpg"
+    },
+    {
+      "id": "etteilla-54",
+      "name": "Dix d'Épée (Ten of Swords)",
+      "sort_order": 53,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "ending",
+        "betrayal",
+        "rock bottom",
+        "release",
+        "new beginning",
+        "suit:swords",
+        "rank:ten",
+        "card:ten-of-swords"
+      ],
+      "metadata": {
+        "suit": "epees",
+        "arcana": "minor",
+        "number": 54,
+        "symbols": [
+          "ten swords",
+          "figure",
+          "darkness",
+          "dawn",
+          "ending"
+        ],
+        "archetype": "card:ten-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Ten of Épées (Swords) — the suit of Air, governing conflict, law, arms and sharp trouble.",
+        "Upright": "the matter at its fullest — completion, or surfeit, within conflict.",
+        "Reversed": "Excess and burden; a cycle that overstays."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275770776-yvmvyjr5kdk.jpg"
+    },
+    {
+      "id": "etteilla-55",
+      "name": "Neuf d'Épée (Nine of Swords)",
+      "sort_order": 54,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "anxiety",
+        "worry",
+        "nightmares",
+        "guilt",
+        "despair",
+        "suit:swords",
+        "rank:nine",
+        "card:nine-of-swords"
+      ],
+      "metadata": {
+        "suit": "epees",
+        "arcana": "minor",
+        "number": 55,
+        "symbols": [
+          "nine swords",
+          "figure",
+          "bed",
+          "night",
+          "worry"
+        ],
+        "archetype": "card:nine-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Nine of Épées (Swords) — the suit of Air, governing conflict, law, arms and sharp trouble.",
+        "Upright": "near-fulfilment; intensity, the thing almost complete, within conflict.",
+        "Reversed": "Strain, delay, intensity turned against itself."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275770913-m1g9u9f8dy.jpg"
+    },
+    {
+      "id": "etteilla-56",
+      "name": "Huit d'Épée (Eight of Swords)",
+      "sort_order": 55,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "restriction",
+        "imprisonment",
+        "victim mentality",
+        "helplessness",
+        "self-limiting",
+        "suit:swords",
+        "rank:eight",
+        "card:eight-of-swords"
+      ],
+      "metadata": {
+        "suit": "epees",
+        "arcana": "minor",
+        "number": 56,
+        "symbols": [
+          "eight swords",
+          "bound figure",
+          "water",
+          "castle",
+          "restriction"
+        ],
+        "archetype": "card:eight-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Eight of Épées (Swords) — the suit of Air, governing conflict, law, arms and sharp trouble.",
+        "Upright": "comings and goings, change, the matter in motion, within conflict.",
+        "Reversed": "Movement stalled; restlessness without progress."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275772704-innolv3pwsi.jpg"
+    },
+    {
+      "id": "etteilla-57",
+      "name": "Sept d'Épée (Seven of Swords)",
+      "sort_order": 56,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "strategy",
+        "deception",
+        "stealth",
+        "betrayal",
+        "cunning",
+        "suit:swords",
+        "rank:seven",
+        "card:seven-of-swords"
+      ],
+      "metadata": {
+        "suit": "epees",
+        "arcana": "minor",
+        "number": 57,
+        "symbols": [
+          "seven swords",
+          "figure",
+          "tents",
+          "stealth",
+          "escape"
+        ],
+        "archetype": "card:seven-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Seven of Épées (Swords) — the suit of Air, governing conflict, law, arms and sharp trouble.",
+        "Upright": "a hope and a partial success, still uncertain, within conflict.",
+        "Reversed": "The hope dashed; effort abandoned."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275772702-2bf1tqx8fju.jpg"
+    },
+    {
+      "id": "etteilla-58",
+      "name": "Six d'Épée (Six of Swords)",
+      "sort_order": 57,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "transition",
+        "moving on",
+        "travel",
+        "healing",
+        "relief",
+        "suit:swords",
+        "rank:six",
+        "card:six-of-swords"
+      ],
+      "metadata": {
+        "suit": "epees",
+        "arcana": "minor",
+        "number": 58,
+        "symbols": [
+          "six swords",
+          "boat",
+          "water",
+          "figures",
+          "journey"
+        ],
+        "archetype": "card:six-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Six of Épées (Swords) — the suit of Air, governing conflict, law, arms and sharp trouble.",
+        "Upright": "a passage, a road, fair give-and-take, within conflict.",
+        "Reversed": "The way blocked; an exchange gone unequal."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275772621-w5pbgcsa0u8.jpg"
+    },
+    {
+      "id": "etteilla-59",
+      "name": "Cinq d'Épée (Five of Swords)",
+      "sort_order": 58,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "conflict",
+        "defeat",
+        "winning at cost",
+        "tension",
+        "hostility",
+        "suit:swords",
+        "rank:five",
+        "card:five-of-swords"
+      ],
+      "metadata": {
+        "suit": "epees",
+        "arcana": "minor",
+        "number": 59,
+        "symbols": [
+          "five swords",
+          "figures",
+          "clouds",
+          "conflict",
+          "defeat"
+        ],
+        "archetype": "card:five-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Five of Épées (Swords) — the suit of Air, governing conflict, law, arms and sharp trouble.",
+        "Upright": "a turn or loss within the matter — a test, within conflict.",
+        "Reversed": "The loss easing, or the test deepening."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275772683-cmvvm8f7c2.jpg"
+    },
+    {
+      "id": "etteilla-60",
+      "name": "Quatre d'Épée (Four of Swords)",
+      "sort_order": 59,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "rest",
+        "recovery",
+        "contemplation",
+        "meditation",
+        "retreat",
+        "suit:swords",
+        "rank:four",
+        "card:four-of-swords"
+      ],
+      "metadata": {
+        "suit": "epees",
+        "arcana": "minor",
+        "number": 60,
+        "symbols": [
+          "four swords",
+          "tomb",
+          "stained glass",
+          "rest",
+          "prayer"
+        ],
+        "archetype": "card:four-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Four of Épées (Swords) — the suit of Air, governing conflict, law, arms and sharp trouble.",
+        "Upright": "a settling, a small security, a needed pause, within conflict.",
+        "Reversed": "Stagnation; holding on too tightly."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275772509-j5luz3bo0tt.jpg"
+    },
+    {
+      "id": "etteilla-61",
+      "name": "Trois d'Épée (Three of Swords)",
+      "sort_order": 60,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "heartbreak",
+        "grief",
+        "sorrow",
+        "pain",
+        "truth",
+        "suit:swords",
+        "rank:three",
+        "card:three-of-swords"
+      ],
+      "metadata": {
+        "suit": "epees",
+        "arcana": "minor",
+        "number": 61,
+        "symbols": [
+          "three swords",
+          "heart",
+          "clouds",
+          "rain",
+          "piercing"
+        ],
+        "archetype": "card:three-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Three of Épées (Swords) — the suit of Air, governing conflict, law, arms and sharp trouble.",
+        "Upright": "increase; a third party, growth, the thing taking shape, within conflict.",
+        "Reversed": "Growth checked; effort scattered, a delay."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275774405-gkogzemfi5h.jpg"
+    },
+    {
+      "id": "etteilla-62",
+      "name": "Deux d'Épée (Two of Swords)",
+      "sort_order": 61,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "indecision",
+        "stalemate",
+        "blocked",
+        "denial",
+        "balance",
+        "suit:swords",
+        "rank:two",
+        "card:two-of-swords"
+      ],
+      "metadata": {
+        "suit": "epees",
+        "arcana": "minor",
+        "number": 62,
+        "symbols": [
+          "two swords",
+          "blindfold",
+          "moon",
+          "water",
+          "balance"
+        ],
+        "archetype": "card:two-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Two of Épées (Swords) — the suit of Air, governing conflict, law, arms and sharp trouble.",
+        "Upright": "a meeting or exchange; the matter shared with another, within conflict.",
+        "Reversed": "Division, a pairing strained or broken."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275774489-jqu0s2mc4s.jpg"
+    },
+    {
+      "id": "etteilla-63",
+      "name": "As d'Épée (Ace of Swords)",
+      "sort_order": 62,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "breakthrough",
+        "clarity",
+        "truth",
+        "new idea",
+        "victory",
+        "suit:swords",
+        "rank:ace",
+        "card:ace-of-swords"
+      ],
+      "metadata": {
+        "suit": "epees",
+        "arcana": "minor",
+        "number": 63,
+        "symbols": [
+          "ace",
+          "sword",
+          "crown",
+          "hand",
+          "clouds",
+          "victory"
+        ],
+        "archetype": "card:ace-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Ace of Épées (Swords) — the suit of Air, governing conflict, law, arms and sharp trouble.",
+        "Upright": "a strong onset of the matter — the suit's force at its purest, within conflict.",
+        "Reversed": "That force blocked or misdirected at the very start."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275774469-jzooi2vifj.jpg"
+    },
+    {
+      "id": "etteilla-64",
+      "name": "Roi de Denier (King of Coins)",
+      "sort_order": 63,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "abundance",
+        "security",
+        "business",
+        "discipline",
+        "prosperity",
+        "suit:coins",
+        "rank:king",
+        "card:king-of-coins"
+      ],
+      "metadata": {
+        "suit": "deniers",
+        "arcana": "minor",
+        "number": 64,
+        "symbols": [
+          "king",
+          "coin",
+          "throne",
+          "castle",
+          "abundance"
+        ],
+        "archetype": "card:king-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "A court of Deniers (Coins) — and so a PERSON. In Etteilla's cartomancy every court card signifies someone in the querent's life, coloured by the suit (money, trade, property and practical gain). Upright the person is well-disposed; reversed, ill-disposed.",
+        "Upright (the person well-disposed)": "A man of means — a merchant or man of property; reliable in money, a useful protector.",
+        "Reversed (the person ill-disposed)": "A miserly or corrupt man; wealth used coldly, gain without scruple."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275774645-c4iyz9ajv8.jpg"
+    },
+    {
+      "id": "etteilla-65",
+      "name": "Reine de Denier (Queen of Coins)",
+      "sort_order": 64,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "nurturing",
+        "practical",
+        "abundance",
+        "sensuality",
+        "security",
+        "suit:coins",
+        "rank:queen",
+        "card:queen-of-coins"
+      ],
+      "metadata": {
+        "suit": "deniers",
+        "arcana": "minor",
+        "number": 65,
+        "symbols": [
+          "queen",
+          "coin",
+          "throne",
+          "garden",
+          "rabbit"
+        ],
+        "archetype": "card:queen-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "A court of Deniers (Coins) — and so a PERSON. In Etteilla's cartomancy every court card signifies someone in the querent's life, coloured by the suit (money, trade, property and practical gain). Upright the person is well-disposed; reversed, ill-disposed.",
+        "Upright (the person well-disposed)": "A prosperous, practical woman; security, a generous and capable manager.",
+        "Reversed (the person ill-disposed)": "A grasping or showy woman; luxury without warmth."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275774467-1csjhxtjpvm.jpg"
+    },
+    {
+      "id": "etteilla-66",
+      "name": "Chevalier de Denier (Knight of Coins)",
+      "sort_order": 65,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "hard work",
+        "routine",
+        "persistence",
+        "reliability",
+        "patience",
+        "suit:coins",
+        "rank:knight",
+        "card:knight-of-coins"
+      ],
+      "metadata": {
+        "suit": "deniers",
+        "arcana": "minor",
+        "number": 66,
+        "symbols": [
+          "knight",
+          "horse",
+          "coin",
+          "field",
+          "patience"
+        ],
+        "archetype": "card:knight-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "A court of Deniers (Coins) — and so a PERSON. In Etteilla's cartomancy every court card signifies someone in the querent's life, coloured by the suit (money, trade, property and practical gain). Upright the person is well-disposed; reversed, ill-disposed.",
+        "Upright (the person well-disposed)": "Money arriving, a useful and dependable man; a profitable matter approaching.",
+        "Reversed (the person ill-disposed)": "A stalled payment, a heavy and unimaginative man; gain delayed."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275776527-fc9oqxuhvra.jpg"
+    },
+    {
+      "id": "etteilla-67",
+      "name": "Valet de Denier (Page of Coins)",
+      "sort_order": 66,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "opportunity",
+        "manifestation",
+        "study",
+        "skill building",
+        "diligence",
+        "suit:coins",
+        "rank:page",
+        "card:page-of-coins"
+      ],
+      "metadata": {
+        "suit": "deniers",
+        "arcana": "minor",
+        "number": 67,
+        "symbols": [
+          "page",
+          "coin",
+          "youth",
+          "landscape",
+          "study"
+        ],
+        "archetype": "card:page-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "A court of Deniers (Coins) — and so a PERSON. In Etteilla's cartomancy every court card signifies someone in the querent's life, coloured by the suit (money, trade, property and practical gain). Upright the person is well-disposed; reversed, ill-disposed.",
+        "Upright (the person well-disposed)": "A student or clerk, news of money or study; diligence, a small material beginning.",
+        "Reversed (the person ill-disposed)": "Bad news of money, a careless clerk; effort that earns little."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275777156-4a7p2ej4oz7.jpg"
+    },
+    {
+      "id": "etteilla-68",
+      "name": "Dix de Denier (Ten of Coins)",
+      "sort_order": 67,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "legacy",
+        "inheritance",
+        "family",
+        "wealth",
+        "tradition",
+        "suit:coins",
+        "rank:ten",
+        "card:ten-of-coins"
+      ],
+      "metadata": {
+        "suit": "deniers",
+        "arcana": "minor",
+        "number": 68,
+        "symbols": [
+          "ten coins",
+          "family",
+          "archway",
+          "dogs",
+          "legacy"
+        ],
+        "archetype": "card:ten-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Ten of Deniers (Coins) — the suit of Earth, governing money, trade, property and practical gain.",
+        "Upright": "the matter at its fullest — completion, or surfeit, within money.",
+        "Reversed": "Excess and burden; a cycle that overstays."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275803169-q0tq3mrzih.jpg"
+    },
+    {
+      "id": "etteilla-69",
+      "name": "Neuf de Denier (Nine of Coins)",
+      "sort_order": 68,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "abundance",
+        "luxury",
+        "self-sufficiency",
+        "discipline",
+        "reward",
+        "suit:coins",
+        "rank:nine",
+        "card:nine-of-coins"
+      ],
+      "metadata": {
+        "suit": "deniers",
+        "arcana": "minor",
+        "number": 69,
+        "symbols": [
+          "nine coins",
+          "woman",
+          "falcon",
+          "garden",
+          "luxury"
+        ],
+        "archetype": "card:nine-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Nine of Deniers (Coins) — the suit of Earth, governing money, trade, property and practical gain.",
+        "Upright": "near-fulfilment; intensity, the thing almost complete, within money.",
+        "Reversed": "Strain, delay, intensity turned against itself."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275776451-h1p7yyaq7v.jpg"
+    },
+    {
+      "id": "etteilla-70",
+      "name": "Huit de Denier (Eight of Coins)",
+      "sort_order": 69,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "craftsmanship",
+        "skill",
+        "diligence",
+        "apprenticeship",
+        "quality",
+        "suit:coins",
+        "rank:eight",
+        "card:eight-of-coins"
+      ],
+      "metadata": {
+        "suit": "deniers",
+        "arcana": "minor",
+        "number": 70,
+        "symbols": [
+          "eight coins",
+          "craftsman",
+          "tools",
+          "work",
+          "detail"
+        ],
+        "archetype": "card:eight-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Eight of Deniers (Coins) — the suit of Earth, governing money, trade, property and practical gain.",
+        "Upright": "comings and goings, change, the matter in motion, within money.",
+        "Reversed": "Movement stalled; restlessness without progress."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275776346-dgo7aw6kd4.jpg"
+    },
+    {
+      "id": "etteilla-71",
+      "name": "Sept de Denier (Seven of Coins)",
+      "sort_order": 70,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "patience",
+        "investment",
+        "evaluation",
+        "reward",
+        "perseverance",
+        "suit:coins",
+        "rank:seven",
+        "card:seven-of-coins"
+      ],
+      "metadata": {
+        "suit": "deniers",
+        "arcana": "minor",
+        "number": 71,
+        "symbols": [
+          "seven coins",
+          "figure",
+          "vine",
+          "waiting",
+          "evaluation"
+        ],
+        "archetype": "card:seven-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Seven of Deniers (Coins) — the suit of Earth, governing money, trade, property and practical gain.",
+        "Upright": "a hope and a partial success, still uncertain, within money.",
+        "Reversed": "The hope dashed; effort abandoned."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275779642-8pa7tstdf1r.jpg"
+    },
+    {
+      "id": "etteilla-72",
+      "name": "Six de Denier (Six of Coins)",
+      "sort_order": 71,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "generosity",
+        "charity",
+        "giving",
+        "receiving",
+        "balance",
+        "suit:coins",
+        "rank:six",
+        "card:six-of-coins"
+      ],
+      "metadata": {
+        "suit": "deniers",
+        "arcana": "minor",
+        "number": 72,
+        "symbols": [
+          "six coins",
+          "scales",
+          "giving",
+          "receiving",
+          "merchant"
+        ],
+        "archetype": "card:six-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Six of Deniers (Coins) — the suit of Earth, governing money, trade, property and practical gain.",
+        "Upright": "a passage, a road, fair give-and-take, within money.",
+        "Reversed": "The way blocked; an exchange gone unequal."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275778970-i802l1sfpt.jpg"
+    },
+    {
+      "id": "etteilla-73",
+      "name": "Cinq de Denier (Five of Coins)",
+      "sort_order": 72,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "poverty",
+        "hardship",
+        "isolation",
+        "worry",
+        "insecurity",
+        "suit:coins",
+        "rank:five",
+        "card:five-of-coins"
+      ],
+      "metadata": {
+        "suit": "deniers",
+        "arcana": "minor",
+        "number": 73,
+        "symbols": [
+          "five coins",
+          "figures",
+          "snow",
+          "church",
+          "hardship"
+        ],
+        "archetype": "card:five-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Five of Deniers (Coins) — the suit of Earth, governing money, trade, property and practical gain.",
+        "Upright": "a turn or loss within the matter — a test, within money.",
+        "Reversed": "The loss easing, or the test deepening."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275778943-mp4uoii8chq.jpg"
+    },
+    {
+      "id": "etteilla-74",
+      "name": "Quatre de Denier (Four of Coins)",
+      "sort_order": 73,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "security",
+        "control",
+        "conservation",
+        "stability",
+        "possessiveness",
+        "suit:coins",
+        "rank:four",
+        "card:four-of-coins"
+      ],
+      "metadata": {
+        "suit": "deniers",
+        "arcana": "minor",
+        "number": 74,
+        "symbols": [
+          "four coins",
+          "figure",
+          "city",
+          "crown",
+          "control"
+        ],
+        "archetype": "card:four-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Four of Deniers (Coins) — the suit of Earth, governing money, trade, property and practical gain.",
+        "Upright": "a settling, a small security, a needed pause, within money.",
+        "Reversed": "Stagnation; holding on too tightly."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275779126-az4rhzb0a1.jpg"
+    },
+    {
+      "id": "etteilla-75",
+      "name": "Trois de Denier (Three of Coins)",
+      "sort_order": 74,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "teamwork",
+        "collaboration",
+        "skill",
+        "implementation",
+        "planning",
+        "suit:coins",
+        "rank:three",
+        "card:three-of-coins"
+      ],
+      "metadata": {
+        "suit": "deniers",
+        "arcana": "minor",
+        "number": 75,
+        "symbols": [
+          "three coins",
+          "craftsmen",
+          "cathedral",
+          "collaboration",
+          "planning"
+        ],
+        "archetype": "card:three-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Three of Deniers (Coins) — the suit of Earth, governing money, trade, property and practical gain.",
+        "Upright": "increase; a third party, growth, the thing taking shape, within money.",
+        "Reversed": "Growth checked; effort scattered, a delay."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275779045-spgn0anfbih.jpg"
+    },
+    {
+      "id": "etteilla-76",
+      "name": "Deux de Denier (Two of Coins)",
+      "sort_order": 75,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "balance",
+        "adaptability",
+        "time management",
+        "priorities",
+        "flexibility",
+        "suit:coins",
+        "rank:two",
+        "card:two-of-coins"
+      ],
+      "metadata": {
+        "suit": "deniers",
+        "arcana": "minor",
+        "number": 76,
+        "symbols": [
+          "two coins",
+          "figure",
+          "infinity",
+          "waves",
+          "balance"
+        ],
+        "archetype": "card:two-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Two of Deniers (Coins) — the suit of Earth, governing money, trade, property and practical gain.",
+        "Upright": "a meeting or exchange; the matter shared with another, within money.",
+        "Reversed": "Division, a pairing strained or broken."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275781388-uh4fpvtgbcb.jpg"
+    },
+    {
+      "id": "etteilla-77",
+      "name": "As de Denier (Ace of Coins)",
+      "sort_order": 76,
+      "category": "minor",
+      "level": 1,
+      "keywords": [
+        "opportunity",
+        "prosperity",
+        "new venture",
+        "manifestation",
+        "security",
+        "suit:coins",
+        "rank:ace",
+        "card:ace-of-coins"
+      ],
+      "metadata": {
+        "suit": "deniers",
+        "arcana": "minor",
+        "number": 77,
+        "symbols": [
+          "ace",
+          "coin",
+          "hand",
+          "garden",
+          "gateway"
+        ],
+        "archetype": "card:ace-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Card in Etteilla's System": "The Ace of Deniers (Coins) — the suit of Earth, governing money, trade, property and practical gain.",
+        "Upright": "a strong onset of the matter — the suit's force at its purest, within money.",
+        "Reversed": "That force blocked or misdirected at the very start."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275781311-e0uemupxh5d.jpg"
+    },
+    {
+      "id": "etteilla-78",
+      "name": "La Folie (The Questioner - Female)",
+      "sort_order": 77,
+      "category": "major",
+      "level": 1,
+      "keywords": [
+        "questioning",
+        "openness",
+        "innocence",
+        "beginning",
+        "female energy",
+        "etteilla:significator-female"
+      ],
+      "metadata": {
+        "suit": null,
+        "arcana": "major",
+        "number": 0,
+        "symbols": [
+          "wanderer",
+          "folly",
+          "innocence",
+          "openness"
+        ],
+        "archetype": null,
+        "mapping_confidence": "none"
+      },
+      "sections": {
+        "Card in Etteilla's System": "La Folie — the female querent (significator)",
+        "Upright": "The female consultant herself, and the wild card outside the count: the matter unbound, open to any turn.",
+        "Reversed": "Recklessness; a question asked in folly, energy with no rein."
+      },
+      "image_url": "https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammars/1771275781264-wy6atn4o0dr.jpg"
+    }
+  ]
+}

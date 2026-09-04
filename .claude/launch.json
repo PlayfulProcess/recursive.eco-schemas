@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "alice-book",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["-e", "const h=require('http'),f=require('fs'),p=require('path');const root=p.resolve('grammars/alice-5-minute-stories');const mime={'.html':'text/html','.css':'text/css','.js':'application/javascript','.json':'application/json','.mp3':'audio/mpeg','.jpg':'image/jpeg','.png':'image/png','.webp':'image/webp','.svg':'image/svg+xml'};h.createServer((q,r)=>{let u=q.url==='/'?'/booklets/book.html':q.url;let fp=p.join(root,decodeURIComponent(u));f.stat(fp,(e,s)=>{if(e){r.writeHead(404);r.end('Not found');return}let ext=p.extname(fp);r.writeHead(200,{'Content-Type':mime[ext]||'application/octet-stream','Cache-Control':'no-cache','Access-Control-Allow-Origin':'*'});f.createReadStream(fp).pipe(r)})}).listen(3456,()=>console.log('Serving on http://localhost:3456'))"],
+      "port": 3456
+    }
+  ]
+}

@@ -1,0 +1,3919 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "attribution": [
+      {
+        "name": "S.L. MacGregor Mathers / Hermetic Order of the Golden Dawn",
+        "date": "1888",
+        "note": "Book T (Liber T) — the correspondence system: paths, decans, Sephiroth, titles"
+      },
+      {
+        "name": "Pamela Colman Smith & A.E. Waite",
+        "date": "1909",
+        "note": "Rider-Waite-Smith imagery (public domain), the most famous Golden-Dawn-derived deck"
+      },
+      {
+        "name": "Wikimedia Commons",
+        "date": "public domain",
+        "note": "RWS card scans"
+      },
+      {
+        "name": "PlayfulProcess",
+        "date": "2026",
+        "note": "Grammar architecture; correspondences compiled from Book T"
+      }
+    ]
+  },
+  "name": "Golden Dawn Tarot — Book T with Rider-Waite-Smith Imagery",
+  "description": "The Golden Dawn version of the Rider-Waite tarot — Pamela Colman Smith's familiar imagery carried by the full correspondence system of the Hermetic Order of the Golden Dawn, set down in Book T (Liber T) by S.L. MacGregor Mathers in 1888. Waite and Smith were both Golden Dawn initiates; their 1909 deck is the tradition's most famous visual expression, but the published deck strips out the esoteric scaffolding. This grammar puts it back.\n\nEvery card is built precisely within the tradition. The 22 trumps carry their Hebrew letter, their path on the Tree of Life, their astrological attribution, and their Book T title (the Fool is 'The Spirit of Æther'; Strength is 'Daughter of the Flaming Sword'). The small cards 2–10 carry the 36 decans — Planet in Sign — their Sephirah and World, and their 'Lord of ...' titles (Two of Wands is the 'Lord of Dominion', Mars in Aries). The Aces are the Roots of the Powers of the elements; the courts are mapped to the Golden Dawn's Knight / Queen / Prince / Princess and their element-in-element nature.\n\nNote the Golden Dawn order, which Waite kept: Strength at VIII (Leo) and Justice at XI (Libra), swapped from the older Marseille. Where modern writers add an outer planet (Uranus, Neptune, Pluto) to the three elemental trumps, the classical Book T attribution is given and the overlay noted.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Pamela Colman Smith, Rider-Waite-Smith Tarot, 1909 (Wikimedia Commons) — the canonical illustrated minors. Correspondence text compiled from the public-domain Book T / Liber T (Mathers; pub. Regardie, 'The Golden Dawn').",
+  "grammar_type": "tarot",
+  "creator_name": "PlayfulProcess",
+  "creator_link": "https://recursive.eco",
+  "cover_image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_00_Fool.jpg",
+  "tags": [
+    "tarot",
+    "golden-dawn",
+    "book-t",
+    "rider-waite-smith",
+    "kabbalah",
+    "decans",
+    "astrology",
+    "esoteric",
+    "public-domain",
+    "tree-of-life"
+  ],
+  "roots": [
+    "western-esoteric",
+    "mysticism"
+  ],
+  "shelves": [
+    "wonder",
+    "mirror"
+  ],
+  "lineages": [
+    "Andreotti"
+  ],
+  "worldview": "esoteric",
+  "is_published": false,
+  "items": [
+    {
+      "id": "major-00-the-fool",
+      "name": "0 — The Fool",
+      "sort_order": 0,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "fool",
+        "major arcana",
+        "golden dawn",
+        "aleph",
+        "air",
+        "arcana:the-fool"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_00_Fool.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 0,
+        "hebrew_letter": "א",
+        "hebrew_translit": "Aleph",
+        "tree_path": 11,
+        "attribution": "Air",
+        "golden_dawn_title": "The Spirit of Æther",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_00_Fool.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "The Fool",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-fool",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*The Spirit of Æther*",
+        "Correspondences": "**Hebrew letter:** א (Aleph, 'ox') — path 11 on the Tree of Life.\n\n**Attribution:** Air.\n\n*(Classical Golden Dawn / Book T attribution. Modern decks add an outer planet — Uranus, Neptune, or Pluto — to the three elemental trumps.)*",
+        "Divinatory Meaning": "Boundless potential, the divine spark stepping into incarnation; freedom, beginnings, holy folly.",
+        "Reversed / Ill-Dignified": "Recklessness, dispersion of force, a leap taken in ignorance rather than trust."
+      }
+    },
+    {
+      "id": "major-01-the-magician",
+      "name": "1 — The Magician",
+      "sort_order": 1,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "magician",
+        "major arcana",
+        "golden dawn",
+        "beth",
+        "mercury",
+        "arcana:the-magician"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_01_Magician.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 1,
+        "hebrew_letter": "ב",
+        "hebrew_translit": "Beth",
+        "tree_path": 12,
+        "attribution": "Mercury",
+        "golden_dawn_title": "The Magus of Power",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_01_Magician.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "The Magician",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-magician",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*The Magus of Power*",
+        "Correspondences": "**Hebrew letter:** ב (Beth, 'house') — path 12 on the Tree of Life.\n\n**Attribution:** Mercury.\n\n*(Classical Golden Dawn / Book T attribution. Modern decks add an outer planet — Uranus, Neptune, or Pluto — to the three elemental trumps.)*",
+        "Divinatory Meaning": "Will and skill uniting the four elements; conscious direction of force, the word made act.",
+        "Reversed / Ill-Dignified": "Trickery, cunning misused, willpower turned to manipulation or scattered."
+      }
+    },
+    {
+      "id": "major-02-the-high-priestess",
+      "name": "2 — The High Priestess",
+      "sort_order": 2,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "high priestess",
+        "major arcana",
+        "golden dawn",
+        "gimel",
+        "the moon",
+        "arcana:the-high-priestess"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_02_High_Priestess.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 2,
+        "hebrew_letter": "ג",
+        "hebrew_translit": "Gimel",
+        "tree_path": 13,
+        "attribution": "the Moon",
+        "golden_dawn_title": "The Priestess of the Silver Star",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_02_High_Priestess.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "The High Priestess",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-high-priestess",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*The Priestess of the Silver Star*",
+        "Correspondences": "**Hebrew letter:** ג (Gimel, 'camel') — path 13 on the Tree of Life.\n\n**Attribution:** the Moon.\n\n*(Classical Golden Dawn / Book T attribution. Modern decks add an outer planet — Uranus, Neptune, or Pluto — to the three elemental trumps.)*",
+        "Divinatory Meaning": "Hidden wisdom, the unmanifest, intuition and the lunar current; the veil before the sanctuary.",
+        "Reversed / Ill-Dignified": "Secrets withheld, surface knowledge, intuition ignored or clouded."
+      }
+    },
+    {
+      "id": "major-03-the-empress",
+      "name": "3 — The Empress",
+      "sort_order": 3,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "empress",
+        "major arcana",
+        "golden dawn",
+        "daleth",
+        "venus",
+        "arcana:the-empress"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_03_Empress.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 3,
+        "hebrew_letter": "ד",
+        "hebrew_translit": "Daleth",
+        "tree_path": 14,
+        "attribution": "Venus",
+        "golden_dawn_title": "The Daughter of the Mighty Ones",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_03_Empress.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "The Empress",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-empress",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*The Daughter of the Mighty Ones*",
+        "Correspondences": "**Hebrew letter:** ד (Daleth, 'door') — path 14 on the Tree of Life.\n\n**Attribution:** Venus.\n\n*(Classical Golden Dawn / Book T attribution. Modern decks add an outer planet — Uranus, Neptune, or Pluto — to the three elemental trumps.)*",
+        "Divinatory Meaning": "Generative love, fertility, the creative imagination clothing spirit in form.",
+        "Reversed / Ill-Dignified": "Sterility, indulgence, creative power blocked or squandered in excess."
+      }
+    },
+    {
+      "id": "major-04-the-emperor",
+      "name": "4 — The Emperor",
+      "sort_order": 4,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "emperor",
+        "major arcana",
+        "golden dawn",
+        "heh",
+        "aries",
+        "arcana:the-emperor"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_04_Emperor.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 4,
+        "hebrew_letter": "ה",
+        "hebrew_translit": "Heh",
+        "tree_path": 15,
+        "attribution": "Aries",
+        "golden_dawn_title": "Sun of the Morning, Chief among the Mighty",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_04_Emperor.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "The Emperor",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-emperor",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Sun of the Morning, Chief among the Mighty*",
+        "Correspondences": "**Hebrew letter:** ה (Heh, 'window') — path 15 on the Tree of Life.\n\n**Attribution:** Aries.\n\n*(Classical Golden Dawn / Book T attribution. Modern decks add an outer planet — Uranus, Neptune, or Pluto — to the three elemental trumps.)*",
+        "Divinatory Meaning": "Sovereign order, structure, the ordering reason that gives the world its law.",
+        "Reversed / Ill-Dignified": "Tyranny, rigidity, authority hardened into domination."
+      }
+    },
+    {
+      "id": "major-05-the-hierophant",
+      "name": "5 — The Hierophant",
+      "sort_order": 5,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "hierophant",
+        "major arcana",
+        "golden dawn",
+        "vau",
+        "taurus",
+        "arcana:the-hierophant"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_05_Hierophant.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 5,
+        "hebrew_letter": "ו",
+        "hebrew_translit": "Vau",
+        "tree_path": 16,
+        "attribution": "Taurus",
+        "golden_dawn_title": "The Magus of the Eternal Gods",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_05_Hierophant.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "The Hierophant",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-hierophant",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*The Magus of the Eternal Gods*",
+        "Correspondences": "**Hebrew letter:** ו (Vau, 'nail') — path 16 on the Tree of Life.\n\n**Attribution:** Taurus.\n\n*(Classical Golden Dawn / Book T attribution. Modern decks add an outer planet — Uranus, Neptune, or Pluto — to the three elemental trumps.)*",
+        "Divinatory Meaning": "Revelation through tradition, the teacher and the bridge between heaven and the seeker.",
+        "Reversed / Ill-Dignified": "Dogma, hollow orthodoxy, the letter of the teaching without its spirit."
+      }
+    },
+    {
+      "id": "major-06-the-lovers",
+      "name": "6 — The Lovers",
+      "sort_order": 6,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "lovers",
+        "major arcana",
+        "golden dawn",
+        "zain",
+        "gemini",
+        "arcana:the-lovers"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_06_Lovers.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 6,
+        "hebrew_letter": "ז",
+        "hebrew_translit": "Zain",
+        "tree_path": 17,
+        "attribution": "Gemini",
+        "golden_dawn_title": "The Children of the Voice; the Oracle of the Mighty Gods",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_06_Lovers.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "The Lovers",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-lovers",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*The Children of the Voice; the Oracle of the Mighty Gods*",
+        "Correspondences": "**Hebrew letter:** ז (Zain, 'sword') — path 17 on the Tree of Life.\n\n**Attribution:** Gemini.\n\n*(Classical Golden Dawn / Book T attribution. Modern decks add an outer planet — Uranus, Neptune, or Pluto — to the three elemental trumps.)*",
+        "Divinatory Meaning": "Union, the analysis that leads to synthesis, and the moral choice at the crossroads.",
+        "Reversed / Ill-Dignified": "Indecision, a union founded on weakness, temptation, choice avoided."
+      }
+    },
+    {
+      "id": "major-07-the-chariot",
+      "name": "7 — The Chariot",
+      "sort_order": 7,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "chariot",
+        "major arcana",
+        "golden dawn",
+        "cheth",
+        "cancer",
+        "arcana:the-chariot"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_07_Chariot.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 7,
+        "hebrew_letter": "ח",
+        "hebrew_translit": "Cheth",
+        "tree_path": 18,
+        "attribution": "Cancer",
+        "golden_dawn_title": "The Child of the Powers of the Waters; the Lord of the Triumph of Light",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_07_Chariot.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "The Chariot",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-chariot",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*The Child of the Powers of the Waters; the Lord of the Triumph of Light*",
+        "Correspondences": "**Hebrew letter:** ח (Cheth, 'fence') — path 18 on the Tree of Life.\n\n**Attribution:** Cancer.\n\n*(Classical Golden Dawn / Book T attribution. Modern decks add an outer planet — Uranus, Neptune, or Pluto — to the three elemental trumps.)*",
+        "Divinatory Meaning": "Triumph through the holding of opposing forces, the will armoured and advancing.",
+        "Reversed / Ill-Dignified": "Loss of control, conflict of forces, a triumph undone by pride."
+      }
+    },
+    {
+      "id": "major-08-strength",
+      "name": "8 — Strength",
+      "sort_order": 8,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "strength",
+        "major arcana",
+        "golden dawn",
+        "teth",
+        "leo",
+        "arcana:strength"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_08_Strength.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 8,
+        "hebrew_letter": "ט",
+        "hebrew_translit": "Teth",
+        "tree_path": 19,
+        "attribution": "Leo",
+        "golden_dawn_title": "Daughter of the Flaming Sword",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_08_Strength.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "Strength",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:strength",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Daughter of the Flaming Sword*",
+        "Correspondences": "**Hebrew letter:** ט (Teth, 'serpent') — path 19 on the Tree of Life.\n\n**Attribution:** Leo.\n\n*(Classical Golden Dawn / Book T attribution. Modern decks add an outer planet — Uranus, Neptune, or Pluto — to the three elemental trumps.)*",
+        "Divinatory Meaning": "The gentle mastery of instinct, spiritual force quietly governing the lion of passion.",
+        "Reversed / Ill-Dignified": "Brute force, domination by appetite, weakness disguised as control."
+      }
+    },
+    {
+      "id": "major-09-the-hermit",
+      "name": "9 — The Hermit",
+      "sort_order": 9,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "hermit",
+        "major arcana",
+        "golden dawn",
+        "yod",
+        "virgo",
+        "arcana:the-hermit"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_09_Hermit.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 9,
+        "hebrew_letter": "י",
+        "hebrew_translit": "Yod",
+        "tree_path": 20,
+        "attribution": "Virgo",
+        "golden_dawn_title": "The Magus of the Voice of Power, the Prophet of the Eternal",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_09_Hermit.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "The Hermit",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-hermit",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*The Magus of the Voice of Power, the Prophet of the Eternal*",
+        "Correspondences": "**Hebrew letter:** י (Yod, 'hand') — path 20 on the Tree of Life.\n\n**Attribution:** Virgo.\n\n*(Classical Golden Dawn / Book T attribution. Modern decks add an outer planet — Uranus, Neptune, or Pluto — to the three elemental trumps.)*",
+        "Divinatory Meaning": "The inner light carried into solitude, prudence, the patient and secret search.",
+        "Reversed / Ill-Dignified": "Isolation that avoids, a lamp hoarded, withdrawal mistaken for wisdom."
+      }
+    },
+    {
+      "id": "major-10-wheel-of-fortune",
+      "name": "10 — Wheel of Fortune",
+      "sort_order": 10,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "wheel of fortune",
+        "major arcana",
+        "golden dawn",
+        "kaph",
+        "jupiter",
+        "arcana:wheel-of-fortune"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_10_Wheel_of_Fortune.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 10,
+        "hebrew_letter": "כ",
+        "hebrew_translit": "Kaph",
+        "tree_path": 21,
+        "attribution": "Jupiter",
+        "golden_dawn_title": "The Lord of the Forces of Life",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_10_Wheel_of_Fortune.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "Wheel of Fortune",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:wheel-of-fortune",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*The Lord of the Forces of Life*",
+        "Correspondences": "**Hebrew letter:** כ (Kaph, 'palm') — path 21 on the Tree of Life.\n\n**Attribution:** Jupiter.\n\n*(Classical Golden Dawn / Book T attribution. Modern decks add an outer planet — Uranus, Neptune, or Pluto — to the three elemental trumps.)*",
+        "Divinatory Meaning": "The turning of cycles, destiny in motion, the rhythm that raises and lowers.",
+        "Reversed / Ill-Dignified": "Resistance to change, ill fortune, being dragged by the wheel."
+      }
+    },
+    {
+      "id": "major-11-justice",
+      "name": "11 — Justice",
+      "sort_order": 11,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "justice",
+        "major arcana",
+        "golden dawn",
+        "lamed",
+        "libra",
+        "arcana:justice"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_11_Justice.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 11,
+        "hebrew_letter": "ל",
+        "hebrew_translit": "Lamed",
+        "tree_path": 22,
+        "attribution": "Libra",
+        "golden_dawn_title": "Daughter of the Lords of Truth; the Ruler of the Balance",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_11_Justice.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "Justice",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:justice",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Daughter of the Lords of Truth; the Ruler of the Balance*",
+        "Correspondences": "**Hebrew letter:** ל (Lamed, 'ox-goad') — path 22 on the Tree of Life.\n\n**Attribution:** Libra.\n\n*(Classical Golden Dawn / Book T attribution. Modern decks add an outer planet — Uranus, Neptune, or Pluto — to the three elemental trumps.)*",
+        "Divinatory Meaning": "Equilibrium, the exact adjustment of forces, consequence and the law of the balance.",
+        "Reversed / Ill-Dignified": "Injustice, imbalance, severity without mercy, the scales falsified."
+      }
+    },
+    {
+      "id": "major-12-the-hanged-man",
+      "name": "12 — The Hanged Man",
+      "sort_order": 12,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "hanged man",
+        "major arcana",
+        "golden dawn",
+        "mem",
+        "water",
+        "arcana:the-hanged-man"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_12_Hanged_Man.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 12,
+        "hebrew_letter": "מ",
+        "hebrew_translit": "Mem",
+        "tree_path": 23,
+        "attribution": "Water",
+        "golden_dawn_title": "The Spirit of the Mighty Waters",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_12_Hanged_Man.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "The Hanged Man",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-hanged-man",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*The Spirit of the Mighty Waters*",
+        "Correspondences": "**Hebrew letter:** מ (Mem, 'water') — path 23 on the Tree of Life.\n\n**Attribution:** Water.\n\n*(Classical Golden Dawn / Book T attribution. Modern decks add an outer planet — Uranus, Neptune, or Pluto — to the three elemental trumps.)*",
+        "Divinatory Meaning": "Willing reversal and sacrifice, the world seen anew, redemption through surrender.",
+        "Reversed / Ill-Dignified": "Useless sacrifice, stagnation, attachment refusing to let go."
+      }
+    },
+    {
+      "id": "major-13-death",
+      "name": "13 — Death",
+      "sort_order": 13,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "death",
+        "major arcana",
+        "golden dawn",
+        "nun",
+        "scorpio",
+        "arcana:death"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_13_Death.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 13,
+        "hebrew_letter": "נ",
+        "hebrew_translit": "Nun",
+        "tree_path": 24,
+        "attribution": "Scorpio",
+        "golden_dawn_title": "The Child of the Great Transformers; Lord of the Gate of Death",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_13_Death.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "Death",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:death",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*The Child of the Great Transformers; Lord of the Gate of Death*",
+        "Correspondences": "**Hebrew letter:** נ (Nun, 'fish') — path 24 on the Tree of Life.\n\n**Attribution:** Scorpio.\n\n*(Classical Golden Dawn / Book T attribution. Modern decks add an outer planet — Uranus, Neptune, or Pluto — to the three elemental trumps.)*",
+        "Divinatory Meaning": "Transformation, the necessary dissolution that clears the ground for new life.",
+        "Reversed / Ill-Dignified": "Stagnation, fear of change, decay resisted instead of released."
+      }
+    },
+    {
+      "id": "major-14-temperance",
+      "name": "14 — Temperance",
+      "sort_order": 14,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "temperance",
+        "major arcana",
+        "golden dawn",
+        "samekh",
+        "sagittarius",
+        "arcana:temperance"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_14_Temperance.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 14,
+        "hebrew_letter": "ס",
+        "hebrew_translit": "Samekh",
+        "tree_path": 25,
+        "attribution": "Sagittarius",
+        "golden_dawn_title": "Daughter of the Reconcilers; the Bringer Forth of Life",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_14_Temperance.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "Temperance",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:temperance",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Daughter of the Reconcilers; the Bringer Forth of Life*",
+        "Correspondences": "**Hebrew letter:** ס (Samekh, 'prop') — path 25 on the Tree of Life.\n\n**Attribution:** Sagittarius.\n\n*(Classical Golden Dawn / Book T attribution. Modern decks add an outer planet — Uranus, Neptune, or Pluto — to the three elemental trumps.)*",
+        "Divinatory Meaning": "The reconciling flow, the tempering of opposites, the alchemy of the middle way.",
+        "Reversed / Ill-Dignified": "Imbalance, impatience, dissipation, the vital stream spilled."
+      }
+    },
+    {
+      "id": "major-15-the-devil",
+      "name": "15 — The Devil",
+      "sort_order": 15,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "devil",
+        "major arcana",
+        "golden dawn",
+        "ayin",
+        "capricorn",
+        "arcana:the-devil"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_15_Devil.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 15,
+        "hebrew_letter": "ע",
+        "hebrew_translit": "Ayin",
+        "tree_path": 26,
+        "attribution": "Capricorn",
+        "golden_dawn_title": "The Lord of the Gates of Matter; the Child of the Forces of Time",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_15_Devil.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "The Devil",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-devil",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*The Lord of the Gates of Matter; the Child of the Forces of Time*",
+        "Correspondences": "**Hebrew letter:** ע (Ayin, 'eye') — path 26 on the Tree of Life.\n\n**Attribution:** Capricorn.\n\n*(Classical Golden Dawn / Book T attribution. Modern decks add an outer planet — Uranus, Neptune, or Pluto — to the three elemental trumps.)*",
+        "Divinatory Meaning": "The magnetic force of matter and instinct; mirth, materiality, energy that binds when unconscious.",
+        "Reversed / Ill-Dignified": "Release from bondage, or a deeper enslavement to appetite and obsession."
+      }
+    },
+    {
+      "id": "major-16-the-tower",
+      "name": "16 — The Tower",
+      "sort_order": 16,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "tower",
+        "major arcana",
+        "golden dawn",
+        "peh",
+        "mars",
+        "arcana:the-tower"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_16_Tower.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 16,
+        "hebrew_letter": "פ",
+        "hebrew_translit": "Peh",
+        "tree_path": 27,
+        "attribution": "Mars",
+        "golden_dawn_title": "The Lord of the Hosts of the Mighty",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_16_Tower.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "The Tower",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-tower",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*The Lord of the Hosts of the Mighty*",
+        "Correspondences": "**Hebrew letter:** פ (Peh, 'mouth') — path 27 on the Tree of Life.\n\n**Attribution:** Mars.\n\n*(Classical Golden Dawn / Book T attribution. Modern decks add an outer planet — Uranus, Neptune, or Pluto — to the three elemental trumps.)*",
+        "Divinatory Meaning": "Sudden upheaval, the lightning that breaks false structures and frees what they caged.",
+        "Reversed / Ill-Dignified": "Catastrophe resisted, a collapse delayed but coming, clinging to ruins."
+      }
+    },
+    {
+      "id": "major-17-the-star",
+      "name": "17 — The Star",
+      "sort_order": 17,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "star",
+        "major arcana",
+        "golden dawn",
+        "tzaddi",
+        "aquarius",
+        "arcana:the-star"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_17_Star.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 17,
+        "hebrew_letter": "צ",
+        "hebrew_translit": "Tzaddi",
+        "tree_path": 28,
+        "attribution": "Aquarius",
+        "golden_dawn_title": "The Daughter of the Firmament; the Dweller between the Waters",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_17_Star.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "The Star",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-star",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*The Daughter of the Firmament; the Dweller between the Waters*",
+        "Correspondences": "**Hebrew letter:** צ (Tzaddi, 'fish-hook') — path 28 on the Tree of Life.\n\n**Attribution:** Aquarius.\n\n*(Classical Golden Dawn / Book T attribution. Modern decks add an outer planet — Uranus, Neptune, or Pluto — to the three elemental trumps.)*",
+        "Divinatory Meaning": "Hope and renewal, the waters of life freely poured, the star that orients after the dark.",
+        "Reversed / Ill-Dignified": "Despair, disillusion, hope clouded, the gift withheld."
+      }
+    },
+    {
+      "id": "major-18-the-moon",
+      "name": "18 — The Moon",
+      "sort_order": 18,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "moon",
+        "major arcana",
+        "golden dawn",
+        "qoph",
+        "pisces",
+        "arcana:the-moon"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_18_Moon.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 18,
+        "hebrew_letter": "ק",
+        "hebrew_translit": "Qoph",
+        "tree_path": 29,
+        "attribution": "Pisces",
+        "golden_dawn_title": "The Ruler of Flux and Reflux; the Child of the Sons of the Mighty",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_18_Moon.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "The Moon",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-moon",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*The Ruler of Flux and Reflux; the Child of the Sons of the Mighty*",
+        "Correspondences": "**Hebrew letter:** ק (Qoph, 'back of head') — path 29 on the Tree of Life.\n\n**Attribution:** Pisces.\n\n*(Classical Golden Dawn / Book T attribution. Modern decks add an outer planet — Uranus, Neptune, or Pluto — to the three elemental trumps.)*",
+        "Divinatory Meaning": "The realm of dream and instinct, illusion, the perilous nocturnal path of the soul.",
+        "Reversed / Ill-Dignified": "Deception conquering, fear, illusions taken for truth."
+      }
+    },
+    {
+      "id": "major-19-the-sun",
+      "name": "19 — The Sun",
+      "sort_order": 19,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "sun",
+        "major arcana",
+        "golden dawn",
+        "resh",
+        "the sun",
+        "arcana:the-sun"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_19_Sun.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 19,
+        "hebrew_letter": "ר",
+        "hebrew_translit": "Resh",
+        "tree_path": 30,
+        "attribution": "the Sun",
+        "golden_dawn_title": "The Lord of the Fire of the World",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_19_Sun.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "The Sun",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-sun",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*The Lord of the Fire of the World*",
+        "Correspondences": "**Hebrew letter:** ר (Resh, 'head') — path 30 on the Tree of Life.\n\n**Attribution:** the Sun.\n\n*(Classical Golden Dawn / Book T attribution. Modern decks add an outer planet — Uranus, Neptune, or Pluto — to the three elemental trumps.)*",
+        "Divinatory Meaning": "Conscious life, clarity, vitality, the restored innocence of the lit world.",
+        "Reversed / Ill-Dignified": "Vanity, a clouded sun, false brilliance, joy only on the surface."
+      }
+    },
+    {
+      "id": "major-20-judgement",
+      "name": "20 — Judgement",
+      "sort_order": 20,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "judgement",
+        "major arcana",
+        "golden dawn",
+        "shin",
+        "fire / spirit",
+        "arcana:judgement"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_20_Judgement.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 20,
+        "hebrew_letter": "ש",
+        "hebrew_translit": "Shin",
+        "tree_path": 31,
+        "attribution": "Fire / Spirit",
+        "golden_dawn_title": "The Spirit of the Primal Fire",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_20_Judgement.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "Judgement",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:judgement",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*The Spirit of the Primal Fire*",
+        "Correspondences": "**Hebrew letter:** ש (Shin, 'tooth') — path 31 on the Tree of Life.\n\n**Attribution:** Fire / Spirit.\n\n*(Classical Golden Dawn / Book T attribution. Modern decks add an outer planet — Uranus, Neptune, or Pluto — to the three elemental trumps.)*",
+        "Divinatory Meaning": "The call to awaken, regeneration, the summons answered and the self reborn.",
+        "Reversed / Ill-Dignified": "Stagnation, a call refused, fear of decision, the trumpet unheard."
+      }
+    },
+    {
+      "id": "major-21-the-world",
+      "name": "21 — The World",
+      "sort_order": 21,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "world",
+        "major arcana",
+        "golden dawn",
+        "tau",
+        "saturn",
+        "arcana:the-world"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_21_World.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 21,
+        "hebrew_letter": "ת",
+        "hebrew_translit": "Tau",
+        "tree_path": 32,
+        "attribution": "Saturn",
+        "golden_dawn_title": "The Great One of the Night of Time",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_21_World.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "The World",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-world",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*The Great One of the Night of Time*",
+        "Correspondences": "**Hebrew letter:** ת (Tau, 'cross') — path 32 on the Tree of Life.\n\n**Attribution:** Saturn.\n\n*(Classical Golden Dawn / Book T attribution. Modern decks add an outer planet — Uranus, Neptune, or Pluto — to the three elemental trumps.)*",
+        "Divinatory Meaning": "Completion, the Great Work accomplished, the cosmos harmonised and the journey closed.",
+        "Reversed / Ill-Dignified": "Incompletion, a goal almost reached, a cycle that fails to close."
+      }
+    },
+    {
+      "id": "wands-ace",
+      "name": "Ace of Wands",
+      "sort_order": 22,
+      "category": "suit-wands",
+      "level": 1,
+      "keywords": [
+        "wands",
+        "fire",
+        "ace",
+        "minor arcana",
+        "golden dawn",
+        "suit:wands",
+        "rank:ace",
+        "card:ace-of-wands"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands01.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Wands",
+        "element": "Fire",
+        "rank": "Ace",
+        "golden_dawn_title": "Root of the Powers of Fire",
+        "sephirah": "Kether",
+        "world": "Atziluth (the Archetypal World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands01.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "Ace of Wands",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:ace-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Root of the Powers of Fire*",
+        "Correspondences": "**Kether** in Atziluth (the Archetypal World). The Ace is the root and seed of the whole suit, the pure power of Fire before it divides. It rules, with its court, one quadrant of the heavens.",
+        "Divinatory Meaning": "The seed of all fire — pure energy, the spark of creation and will at its origin.",
+        "Reversed / Ill-Dignified": "Force misapplied, a beginning without direction."
+      }
+    },
+    {
+      "id": "wands-02",
+      "name": "Two of Wands",
+      "sort_order": 23,
+      "category": "suit-wands",
+      "level": 1,
+      "keywords": [
+        "wands",
+        "fire",
+        "mars in aries",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:wands",
+        "rank:two",
+        "card:two-of-wands"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands02.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Wands",
+        "element": "Fire",
+        "number": 2,
+        "golden_dawn_title": "Lord of Dominion",
+        "decan": "Mars in Aries",
+        "sephirah": "Chokmah",
+        "world": "Atziluth (the Archetypal World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands02.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "2 of Wands",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:two-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Dominion*",
+        "Correspondences": "**Decan:** Mars in Aries (the 1st decanate of its sign).\n\n**Sephirah:** Chokmah in Atziluth (the Archetypal World).",
+        "Divinatory Meaning": "Bold dominion and influence over others; authority established by will.",
+        "Reversed / Ill-Dignified": "Restlessness, a domineering edge, pride overreaching."
+      }
+    },
+    {
+      "id": "wands-03",
+      "name": "Three of Wands",
+      "sort_order": 24,
+      "category": "suit-wands",
+      "level": 1,
+      "keywords": [
+        "wands",
+        "fire",
+        "sun in aries",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:wands",
+        "rank:three",
+        "card:three-of-wands"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands03.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Wands",
+        "element": "Fire",
+        "number": 3,
+        "golden_dawn_title": "Lord of Established Strength",
+        "decan": "Sun in Aries",
+        "sephirah": "Binah",
+        "world": "Atziluth (the Archetypal World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands03.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "3 of Wands",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:three-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Established Strength*",
+        "Correspondences": "**Decan:** Sun in Aries (the 2nd decanate of its sign).\n\n**Sephirah:** Binah in Atziluth (the Archetypal World).",
+        "Divinatory Meaning": "Established strength, enterprise realised, pride in work, help from others.",
+        "Reversed / Ill-Dignified": "Conceit, arrogance, strength resting on its laurels."
+      }
+    },
+    {
+      "id": "wands-04",
+      "name": "Four of Wands",
+      "sort_order": 25,
+      "category": "suit-wands",
+      "level": 1,
+      "keywords": [
+        "wands",
+        "fire",
+        "venus in aries",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:wands",
+        "rank:four",
+        "card:four-of-wands"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands04.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Wands",
+        "element": "Fire",
+        "number": 4,
+        "golden_dawn_title": "Lord of Perfected Work",
+        "decan": "Venus in Aries",
+        "sephirah": "Chesed",
+        "world": "Atziluth (the Archetypal World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands04.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "4 of Wands",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:four-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Perfected Work*",
+        "Correspondences": "**Decan:** Venus in Aries (the 3rd decanate of its sign).\n\n**Sephirah:** Chesed in Atziluth (the Archetypal World).",
+        "Divinatory Meaning": "Completion and rest after labour, harmony, the perfected work celebrated.",
+        "Reversed / Ill-Dignified": "Work unfinished, a foundation not yet stable."
+      }
+    },
+    {
+      "id": "wands-05",
+      "name": "Five of Wands",
+      "sort_order": 26,
+      "category": "suit-wands",
+      "level": 1,
+      "keywords": [
+        "wands",
+        "fire",
+        "saturn in leo",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:wands",
+        "rank:five",
+        "card:five-of-wands"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands05.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Wands",
+        "element": "Fire",
+        "number": 5,
+        "golden_dawn_title": "Lord of Strife",
+        "decan": "Saturn in Leo",
+        "sephirah": "Geburah",
+        "world": "Atziluth (the Archetypal World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands05.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "5 of Wands",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:five-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Strife*",
+        "Correspondences": "**Decan:** Saturn in Leo (the 1st decanate of its sign).\n\n**Sephirah:** Geburah in Atziluth (the Archetypal World).",
+        "Divinatory Meaning": "Competition, struggle, quarrels — the friction that sharpens.",
+        "Reversed / Ill-Dignified": "Pointless contradiction, complications, conflict for its own sake."
+      }
+    },
+    {
+      "id": "wands-06",
+      "name": "Six of Wands",
+      "sort_order": 27,
+      "category": "suit-wands",
+      "level": 1,
+      "keywords": [
+        "wands",
+        "fire",
+        "jupiter in leo",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:wands",
+        "rank:six",
+        "card:six-of-wands"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands06.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Wands",
+        "element": "Fire",
+        "number": 6,
+        "golden_dawn_title": "Lord of Victory",
+        "decan": "Jupiter in Leo",
+        "sephirah": "Tiphareth",
+        "world": "Atziluth (the Archetypal World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands06.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "6 of Wands",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:six-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Victory*",
+        "Correspondences": "**Decan:** Jupiter in Leo (the 2nd decanate of its sign).\n\n**Sephirah:** Tiphareth in Atziluth (the Archetypal World).",
+        "Divinatory Meaning": "Victory after strife, success, recognition, good news arriving.",
+        "Reversed / Ill-Dignified": "Delay, apprehension, a triumph that breeds complacency."
+      }
+    },
+    {
+      "id": "wands-07",
+      "name": "Seven of Wands",
+      "sort_order": 28,
+      "category": "suit-wands",
+      "level": 1,
+      "keywords": [
+        "wands",
+        "fire",
+        "mars in leo",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:wands",
+        "rank:seven",
+        "card:seven-of-wands"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands07.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Wands",
+        "element": "Fire",
+        "number": 7,
+        "golden_dawn_title": "Lord of Valour",
+        "decan": "Mars in Leo",
+        "sephirah": "Netzach",
+        "world": "Atziluth (the Archetypal World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands07.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "7 of Wands",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:seven-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Valour*",
+        "Correspondences": "**Decan:** Mars in Leo (the 3rd decanate of its sign).\n\n**Sephirah:** Netzach in Atziluth (the Archetypal World).",
+        "Divinatory Meaning": "Courage against the odds, holding one's ground from a position of advantage.",
+        "Reversed / Ill-Dignified": "Anxiety, yielding ground, valour spent on the wrong fight."
+      }
+    },
+    {
+      "id": "wands-08",
+      "name": "Eight of Wands",
+      "sort_order": 29,
+      "category": "suit-wands",
+      "level": 1,
+      "keywords": [
+        "wands",
+        "fire",
+        "mercury in sagittarius",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:wands",
+        "rank:eight",
+        "card:eight-of-wands"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands08.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Wands",
+        "element": "Fire",
+        "number": 8,
+        "golden_dawn_title": "Lord of Swiftness",
+        "decan": "Mercury in Sagittarius",
+        "sephirah": "Hod",
+        "world": "Atziluth (the Archetypal World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands08.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "8 of Wands",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:eight-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Swiftness*",
+        "Correspondences": "**Decan:** Mercury in Sagittarius (the 1st decanate of its sign).\n\n**Sephirah:** Hod in Atziluth (the Archetypal World).",
+        "Divinatory Meaning": "Swift action and messages, energy rushing toward its aim.",
+        "Reversed / Ill-Dignified": "Haste scattering force, stagnation, arrows loosed too soon."
+      }
+    },
+    {
+      "id": "wands-09",
+      "name": "Nine of Wands",
+      "sort_order": 30,
+      "category": "suit-wands",
+      "level": 1,
+      "keywords": [
+        "wands",
+        "fire",
+        "moon in sagittarius",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:wands",
+        "rank:nine",
+        "card:nine-of-wands"
+      ],
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Tarot_Nine_of_Wands.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Wands",
+        "element": "Fire",
+        "number": 9,
+        "golden_dawn_title": "Lord of Great Strength",
+        "decan": "Moon in Sagittarius",
+        "sephirah": "Yesod",
+        "world": "Atziluth (the Archetypal World)",
+        "illustrations": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Tarot_Nine_of_Wands.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "9 of Wands",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:nine-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Great Strength*",
+        "Correspondences": "**Decan:** Moon in Sagittarius (the 2nd decanate of its sign).\n\n**Sephirah:** Yesod in Atziluth (the Archetypal World).",
+        "Divinatory Meaning": "Strength held in reserve, resilience, recovery, readiness for one more stand.",
+        "Reversed / Ill-Dignified": "Obstinacy, exhaustion, defence become rigidity."
+      }
+    },
+    {
+      "id": "wands-10",
+      "name": "Ten of Wands",
+      "sort_order": 31,
+      "category": "suit-wands",
+      "level": 1,
+      "keywords": [
+        "wands",
+        "fire",
+        "saturn in sagittarius",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:wands",
+        "rank:ten",
+        "card:ten-of-wands"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands10.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Wands",
+        "element": "Fire",
+        "number": 10,
+        "golden_dawn_title": "Lord of Oppression",
+        "decan": "Saturn in Sagittarius",
+        "sephirah": "Malkuth",
+        "world": "Atziluth (the Archetypal World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands10.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "10 of Wands",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:ten-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Oppression*",
+        "Correspondences": "**Decan:** Saturn in Sagittarius (the 3rd decanate of its sign).\n\n**Sephirah:** Malkuth in Atziluth (the Archetypal World).",
+        "Divinatory Meaning": "Overload, burden, force used cruelly, the weight of too much carried.",
+        "Reversed / Ill-Dignified": "A burden set down, but treachery or collapse may follow."
+      }
+    },
+    {
+      "id": "wands-knight",
+      "name": "Knight of Wands",
+      "sort_order": 32,
+      "category": "suit-wands",
+      "level": 1,
+      "keywords": [
+        "wands",
+        "fire",
+        "knight",
+        "knight",
+        "court card",
+        "golden dawn",
+        "suit:wands",
+        "rank:knight",
+        "card:knight-of-wands"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands12.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Wands",
+        "element": "Fire",
+        "rank": "Knight",
+        "golden_dawn_rank": "Knight",
+        "element_in_element": "Fire of Fire",
+        "rules": "21° Scorpio – 20° Sagittarius",
+        "court": true,
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands12.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "Knight of Wands",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:knight-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Rank": "RWS **Knight of Wands** = Golden Dawn **Knight of Wands** — **Fire of Fire**.",
+        "Correspondences": "Rules 21° Scorpio – 20° Sagittarius. As Fire of Fire, this court is the fire aspect of a ardent and swift suit.",
+        "Divinatory Meaning": "Headlong, active, the mounted warrior who charges and is gone, coloured by the ardent and swift nature of Wands. A person or force of this temperament, or the call to embody it.",
+        "Reversed / Ill-Dignified": "The Fire of Fire energy turned excessive, immature, or against itself."
+      }
+    },
+    {
+      "id": "wands-queen",
+      "name": "Queen of Wands",
+      "sort_order": 33,
+      "category": "suit-wands",
+      "level": 1,
+      "keywords": [
+        "wands",
+        "fire",
+        "queen",
+        "queen",
+        "court card",
+        "golden dawn",
+        "suit:wands",
+        "rank:queen",
+        "card:queen-of-wands"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands13.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Wands",
+        "element": "Fire",
+        "rank": "Queen",
+        "golden_dawn_rank": "Queen",
+        "element_in_element": "Water of Fire",
+        "rules": "21° Pisces – 20° Aries",
+        "court": true,
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands13.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "Queen of Wands",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:queen-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Rank": "RWS **Queen of Wands** = Golden Dawn **Queen of Wands** — **Water of Fire**.",
+        "Correspondences": "Rules 21° Pisces – 20° Aries. As Water of Fire, this court is the water aspect of a ardent and swift suit.",
+        "Divinatory Meaning": "Receptive mastery, magnetic and deep, the power held within, coloured by the ardent and swift nature of Wands. A person or force of this temperament, or the call to embody it.",
+        "Reversed / Ill-Dignified": "The Water of Fire energy turned excessive, immature, or against itself."
+      }
+    },
+    {
+      "id": "wands-king",
+      "name": "King of Wands",
+      "sort_order": 34,
+      "category": "suit-wands",
+      "level": 1,
+      "keywords": [
+        "wands",
+        "fire",
+        "king",
+        "prince",
+        "court card",
+        "golden dawn",
+        "suit:wands",
+        "rank:king",
+        "card:king-of-wands"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands14.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Wands",
+        "element": "Fire",
+        "rank": "King",
+        "golden_dawn_rank": "Prince",
+        "element_in_element": "Air of Fire",
+        "rules": "21° Cancer – 20° Leo",
+        "court": true,
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands14.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "King of Wands",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:king-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Rank": "RWS **King of Wands** = Golden Dawn **Prince of Wands** — **Air of Fire**.",
+        "Correspondences": "Rules 21° Cancer – 20° Leo. As Air of Fire, this court is the air aspect of a ardent and swift suit.",
+        "Divinatory Meaning": "The intellect of the suit in action — swift, reasoning, decisive, coloured by the ardent and swift nature of Wands. A person or force of this temperament, or the call to embody it.",
+        "Reversed / Ill-Dignified": "The Air of Fire energy turned excessive, immature, or against itself."
+      }
+    },
+    {
+      "id": "wands-page",
+      "name": "Page of Wands",
+      "sort_order": 35,
+      "category": "suit-wands",
+      "level": 1,
+      "keywords": [
+        "wands",
+        "fire",
+        "page",
+        "princess",
+        "court card",
+        "golden dawn",
+        "suit:wands",
+        "rank:page",
+        "card:page-of-wands"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands11.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Wands",
+        "element": "Fire",
+        "rank": "Page",
+        "golden_dawn_rank": "Princess",
+        "element_in_element": "Earth of Fire",
+        "rules": "one quadrant of the heavens around the North Pole (with the Ace)",
+        "court": true,
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands11.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "Page of Wands",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:page-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Rank": "RWS **Page of Wands** = Golden Dawn **Princess of Wands** — **Earth of Fire**.",
+        "Correspondences": "Rules one quadrant of the heavens around the North Pole (with the Ace). As Earth of Fire, this court is the earth aspect of a ardent and swift suit.",
+        "Divinatory Meaning": "The suit made earth — daring, brilliant, the herald and the throne, coloured by the ardent and swift nature of Wands. A person or force of this temperament, or the call to embody it.",
+        "Reversed / Ill-Dignified": "The Earth of Fire energy turned excessive, immature, or against itself."
+      }
+    },
+    {
+      "id": "cups-ace",
+      "name": "Ace of Cups",
+      "sort_order": 36,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "ace",
+        "minor arcana",
+        "golden dawn",
+        "suit:cups",
+        "rank:ace",
+        "card:ace-of-cups"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups01.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "element": "Water",
+        "rank": "Ace",
+        "golden_dawn_title": "Root of the Powers of Water",
+        "sephirah": "Kether",
+        "world": "Briah (the Creative World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups01.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "Ace of Cups",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:ace-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Root of the Powers of Water*",
+        "Correspondences": "**Kether** in Briah (the Creative World). The Ace is the root and seed of the whole suit, the pure power of Water before it divides. It rules, with its court, one quadrant of the heavens.",
+        "Divinatory Meaning": "The seed of all water — the wellspring of love, joy, and the fertilising emotions.",
+        "Reversed / Ill-Dignified": "Feeling blocked at the source, an empty or overflowing cup."
+      }
+    },
+    {
+      "id": "cups-02",
+      "name": "Two of Cups",
+      "sort_order": 37,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "venus in cancer",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:cups",
+        "rank:two",
+        "card:two-of-cups"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups02.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "element": "Water",
+        "number": 2,
+        "golden_dawn_title": "Lord of Love",
+        "decan": "Venus in Cancer",
+        "sephirah": "Chokmah",
+        "world": "Briah (the Creative World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups02.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "2 of Cups",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:two-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Love*",
+        "Correspondences": "**Decan:** Venus in Cancer (the 1st decanate of its sign).\n\n**Sephirah:** Chokmah in Briah (the Creative World).",
+        "Divinatory Meaning": "Love, harmony, union, mutual attraction freely given.",
+        "Reversed / Ill-Dignified": "False love, disunion, a bond cooling."
+      }
+    },
+    {
+      "id": "cups-03",
+      "name": "Three of Cups",
+      "sort_order": 38,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "mercury in cancer",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:cups",
+        "rank:three",
+        "card:three-of-cups"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups03.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "element": "Water",
+        "number": 3,
+        "golden_dawn_title": "Lord of Abundance",
+        "decan": "Mercury in Cancer",
+        "sephirah": "Binah",
+        "world": "Briah (the Creative World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups03.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "3 of Cups",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:three-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Abundance*",
+        "Correspondences": "**Decan:** Mercury in Cancer (the 2nd decanate of its sign).\n\n**Sephirah:** Binah in Briah (the Creative World).",
+        "Divinatory Meaning": "Plenty, joy, celebration, the overflow shared among friends.",
+        "Reversed / Ill-Dignified": "Excess, a pleasure that cannot last."
+      }
+    },
+    {
+      "id": "cups-04",
+      "name": "Four of Cups",
+      "sort_order": 39,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "moon in cancer",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:cups",
+        "rank:four",
+        "card:four-of-cups"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups04.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "element": "Water",
+        "number": 4,
+        "golden_dawn_title": "Lord of Blended Pleasure",
+        "decan": "Moon in Cancer",
+        "sephirah": "Chesed",
+        "world": "Briah (the Creative World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups04.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "4 of Cups",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:four-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Blended Pleasure*",
+        "Correspondences": "**Decan:** Moon in Cancer (the 3rd decanate of its sign).\n\n**Sephirah:** Chesed in Briah (the Creative World).",
+        "Divinatory Meaning": "Pleasure mixed with weariness, satiety, the apathy of having enough.",
+        "Reversed / Ill-Dignified": "A new feeling stirring, restlessness breaking the spell."
+      }
+    },
+    {
+      "id": "cups-05",
+      "name": "Five of Cups",
+      "sort_order": 40,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "mars in scorpio",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:cups",
+        "rank:five",
+        "card:five-of-cups"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups05.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "element": "Water",
+        "number": 5,
+        "golden_dawn_title": "Lord of Loss in Pleasure",
+        "decan": "Mars in Scorpio",
+        "sephirah": "Geburah",
+        "world": "Briah (the Creative World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups05.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "5 of Cups",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:five-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Loss in Pleasure*",
+        "Correspondences": "**Decan:** Mars in Scorpio (the 1st decanate of its sign).\n\n**Sephirah:** Geburah in Briah (the Creative World).",
+        "Divinatory Meaning": "Disappointment within plenty, sorrow, the cup spilled.",
+        "Reversed / Ill-Dignified": "Hope returning, what remains gathered up."
+      }
+    },
+    {
+      "id": "cups-06",
+      "name": "Six of Cups",
+      "sort_order": 41,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "sun in scorpio",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:cups",
+        "rank:six",
+        "card:six-of-cups"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups06.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "element": "Water",
+        "number": 6,
+        "golden_dawn_title": "Lord of Pleasure",
+        "decan": "Sun in Scorpio",
+        "sephirah": "Tiphareth",
+        "world": "Briah (the Creative World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups06.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "6 of Cups",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:six-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Pleasure*",
+        "Correspondences": "**Decan:** Sun in Scorpio (the 2nd decanate of its sign).\n\n**Sephirah:** Tiphareth in Briah (the Creative World).",
+        "Divinatory Meaning": "Well-being, harmony, the sweet pleasure of memory and the past.",
+        "Reversed / Ill-Dignified": "Living in the past, nostalgia that holds one back."
+      }
+    },
+    {
+      "id": "cups-07",
+      "name": "Seven of Cups",
+      "sort_order": 42,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "venus in scorpio",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:cups",
+        "rank:seven",
+        "card:seven-of-cups"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups07.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "element": "Water",
+        "number": 7,
+        "golden_dawn_title": "Lord of Illusionary Success",
+        "decan": "Venus in Scorpio",
+        "sephirah": "Netzach",
+        "world": "Briah (the Creative World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups07.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "7 of Cups",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:seven-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Illusionary Success*",
+        "Correspondences": "**Decan:** Venus in Scorpio (the 3rd decanate of its sign).\n\n**Sephirah:** Netzach in Briah (the Creative World).",
+        "Divinatory Meaning": "Illusion, fantasy, deceptive success, intoxication with one's own visions.",
+        "Reversed / Ill-Dignified": "Clarity returning, will reasserted over fantasy."
+      }
+    },
+    {
+      "id": "cups-08",
+      "name": "Eight of Cups",
+      "sort_order": 43,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "saturn in pisces",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:cups",
+        "rank:eight",
+        "card:eight-of-cups"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups08.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "element": "Water",
+        "number": 8,
+        "golden_dawn_title": "Lord of Abandoned Success",
+        "decan": "Saturn in Pisces",
+        "sephirah": "Hod",
+        "world": "Briah (the Creative World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups08.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "8 of Cups",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:eight-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Abandoned Success*",
+        "Correspondences": "**Decan:** Saturn in Pisces (the 1st decanate of its sign).\n\n**Sephirah:** Hod in Briah (the Creative World).",
+        "Divinatory Meaning": "Leaving behind what was won to seek a deeper meaning; withdrawal.",
+        "Reversed / Ill-Dignified": "Aimless drifting, abandonment without purpose."
+      }
+    },
+    {
+      "id": "cups-09",
+      "name": "Nine of Cups",
+      "sort_order": 44,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "jupiter in pisces",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:cups",
+        "rank:nine",
+        "card:nine-of-cups"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups09.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "element": "Water",
+        "number": 9,
+        "golden_dawn_title": "Lord of Material Happiness",
+        "decan": "Jupiter in Pisces",
+        "sephirah": "Yesod",
+        "world": "Briah (the Creative World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups09.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "9 of Cups",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:nine-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Material Happiness*",
+        "Correspondences": "**Decan:** Jupiter in Pisces (the 2nd decanate of its sign).\n\n**Sephirah:** Yesod in Briah (the Creative World).",
+        "Divinatory Meaning": "The 'wish' card — contentment, physical well-being, fulfilment.",
+        "Reversed / Ill-Dignified": "Smugness, excess, satisfaction grown complacent."
+      }
+    },
+    {
+      "id": "cups-10",
+      "name": "Ten of Cups",
+      "sort_order": 45,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "mars in pisces",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:cups",
+        "rank:ten",
+        "card:ten-of-cups"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups10.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "element": "Water",
+        "number": 10,
+        "golden_dawn_title": "Lord of Perfected Success",
+        "decan": "Mars in Pisces",
+        "sephirah": "Malkuth",
+        "world": "Briah (the Creative World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups10.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "10 of Cups",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:ten-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Perfected Success*",
+        "Correspondences": "**Decan:** Mars in Pisces (the 3rd decanate of its sign).\n\n**Sephirah:** Malkuth in Briah (the Creative World).",
+        "Divinatory Meaning": "Lasting happiness, harmony, the suit fulfilled in shared joy.",
+        "Reversed / Ill-Dignified": "Discord beneath a calm surface, a peace not quite real."
+      }
+    },
+    {
+      "id": "cups-knight",
+      "name": "Knight of Cups",
+      "sort_order": 46,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "knight",
+        "knight",
+        "court card",
+        "golden dawn",
+        "suit:cups",
+        "rank:knight",
+        "card:knight-of-cups"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups12.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "element": "Water",
+        "rank": "Knight",
+        "golden_dawn_rank": "Knight",
+        "element_in_element": "Fire of Water",
+        "rules": "21° Aquarius – 20° Pisces",
+        "court": true,
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups12.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "Knight of Cups",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:knight-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Rank": "RWS **Knight of Cups** = Golden Dawn **Knight of Cups** — **Fire of Water**.",
+        "Correspondences": "Rules 21° Aquarius – 20° Pisces. As Fire of Water, this court is the fire aspect of a tender and dreaming suit.",
+        "Divinatory Meaning": "Headlong, active, the mounted warrior who charges and is gone, coloured by the tender and dreaming nature of Cups. A person or force of this temperament, or the call to embody it.",
+        "Reversed / Ill-Dignified": "The Fire of Water energy turned excessive, immature, or against itself."
+      }
+    },
+    {
+      "id": "cups-queen",
+      "name": "Queen of Cups",
+      "sort_order": 47,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "queen",
+        "queen",
+        "court card",
+        "golden dawn",
+        "suit:cups",
+        "rank:queen",
+        "card:queen-of-cups"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups13.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "element": "Water",
+        "rank": "Queen",
+        "golden_dawn_rank": "Queen",
+        "element_in_element": "Water of Water",
+        "rules": "21° Gemini – 20° Cancer",
+        "court": true,
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups13.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "Queen of Cups",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:queen-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Rank": "RWS **Queen of Cups** = Golden Dawn **Queen of Cups** — **Water of Water**.",
+        "Correspondences": "Rules 21° Gemini – 20° Cancer. As Water of Water, this court is the water aspect of a tender and dreaming suit.",
+        "Divinatory Meaning": "Receptive mastery, magnetic and deep, the power held within, coloured by the tender and dreaming nature of Cups. A person or force of this temperament, or the call to embody it.",
+        "Reversed / Ill-Dignified": "The Water of Water energy turned excessive, immature, or against itself."
+      }
+    },
+    {
+      "id": "cups-king",
+      "name": "King of Cups",
+      "sort_order": 48,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "king",
+        "prince",
+        "court card",
+        "golden dawn",
+        "suit:cups",
+        "rank:king",
+        "card:king-of-cups"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups14.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "element": "Water",
+        "rank": "King",
+        "golden_dawn_rank": "Prince",
+        "element_in_element": "Air of Water",
+        "rules": "21° Libra – 20° Scorpio",
+        "court": true,
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups14.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "King of Cups",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:king-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Rank": "RWS **King of Cups** = Golden Dawn **Prince of Cups** — **Air of Water**.",
+        "Correspondences": "Rules 21° Libra – 20° Scorpio. As Air of Water, this court is the air aspect of a tender and dreaming suit.",
+        "Divinatory Meaning": "The intellect of the suit in action — swift, reasoning, decisive, coloured by the tender and dreaming nature of Cups. A person or force of this temperament, or the call to embody it.",
+        "Reversed / Ill-Dignified": "The Air of Water energy turned excessive, immature, or against itself."
+      }
+    },
+    {
+      "id": "cups-page",
+      "name": "Page of Cups",
+      "sort_order": 49,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "page",
+        "princess",
+        "court card",
+        "golden dawn",
+        "suit:cups",
+        "rank:page",
+        "card:page-of-cups"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups11.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "element": "Water",
+        "rank": "Page",
+        "golden_dawn_rank": "Princess",
+        "element_in_element": "Earth of Water",
+        "rules": "one quadrant of the heavens around the North Pole (with the Ace)",
+        "court": true,
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups11.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "Page of Cups",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:page-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Rank": "RWS **Page of Cups** = Golden Dawn **Princess of Cups** — **Earth of Water**.",
+        "Correspondences": "Rules one quadrant of the heavens around the North Pole (with the Ace). As Earth of Water, this court is the earth aspect of a tender and dreaming suit.",
+        "Divinatory Meaning": "The suit made earth — daring, brilliant, the herald and the throne, coloured by the tender and dreaming nature of Cups. A person or force of this temperament, or the call to embody it.",
+        "Reversed / Ill-Dignified": "The Earth of Water energy turned excessive, immature, or against itself."
+      }
+    },
+    {
+      "id": "swords-ace",
+      "name": "Ace of Swords",
+      "sort_order": 50,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "ace",
+        "minor arcana",
+        "golden dawn",
+        "suit:swords",
+        "rank:ace",
+        "card:ace-of-swords"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords01.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "element": "Air",
+        "rank": "Ace",
+        "golden_dawn_title": "Root of the Powers of Air",
+        "sephirah": "Kether",
+        "world": "Yetzirah (the Formative World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords01.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "Ace of Swords",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:ace-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Root of the Powers of Air*",
+        "Correspondences": "**Kether** in Yetzirah (the Formative World). The Ace is the root and seed of the whole suit, the pure power of Air before it divides. It rules, with its court, one quadrant of the heavens.",
+        "Divinatory Meaning": "The seed of all air — the sword of mind and truth, force invoked for good or ill.",
+        "Reversed / Ill-Dignified": "The double-edged blade turned the wrong way; reason used to wound."
+      }
+    },
+    {
+      "id": "swords-02",
+      "name": "Two of Swords",
+      "sort_order": 51,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "moon in libra",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:swords",
+        "rank:two",
+        "card:two-of-swords"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords02.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "element": "Air",
+        "number": 2,
+        "golden_dawn_title": "Lord of Peace Restored",
+        "decan": "Moon in Libra",
+        "sephirah": "Chokmah",
+        "world": "Yetzirah (the Formative World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords02.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "2 of Swords",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:two-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Peace Restored*",
+        "Correspondences": "**Decan:** Moon in Libra (the 1st decanate of its sign).\n\n**Sephirah:** Chokmah in Yetzirah (the Formative World).",
+        "Divinatory Meaning": "Truce, a balance held by tension, peace restored after conflict.",
+        "Reversed / Ill-Dignified": "Duplicity, the stalemate broken the wrong way."
+      }
+    },
+    {
+      "id": "swords-03",
+      "name": "Three of Swords",
+      "sort_order": 52,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "saturn in libra",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:swords",
+        "rank:three",
+        "card:three-of-swords"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords03.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "element": "Air",
+        "number": 3,
+        "golden_dawn_title": "Lord of Sorrow",
+        "decan": "Saturn in Libra",
+        "sephirah": "Binah",
+        "world": "Yetzirah (the Formative World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords03.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "3 of Swords",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:three-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Sorrow*",
+        "Correspondences": "**Decan:** Saturn in Libra (the 2nd decanate of its sign).\n\n**Sephirah:** Binah in Yetzirah (the Formative World).",
+        "Divinatory Meaning": "Heartbreak, grief, separation — sorrow that clears the air.",
+        "Reversed / Ill-Dignified": "Pain that lingers, a slow and grudging recovery."
+      }
+    },
+    {
+      "id": "swords-04",
+      "name": "Four of Swords",
+      "sort_order": 53,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "jupiter in libra",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:swords",
+        "rank:four",
+        "card:four-of-swords"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords04.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "element": "Air",
+        "number": 4,
+        "golden_dawn_title": "Lord of Rest from Strife",
+        "decan": "Jupiter in Libra",
+        "sephirah": "Chesed",
+        "world": "Yetzirah (the Formative World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords04.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "4 of Swords",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:four-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Rest from Strife*",
+        "Correspondences": "**Decan:** Jupiter in Libra (the 3rd decanate of its sign).\n\n**Sephirah:** Chesed in Yetzirah (the Formative World).",
+        "Divinatory Meaning": "Repose, recovery, retreat, the rest that heals.",
+        "Reversed / Ill-Dignified": "Restlessness, a return to the fray too soon."
+      }
+    },
+    {
+      "id": "swords-05",
+      "name": "Five of Swords",
+      "sort_order": 54,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "venus in aquarius",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:swords",
+        "rank:five",
+        "card:five-of-swords"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords05.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "element": "Air",
+        "number": 5,
+        "golden_dawn_title": "Lord of Defeat",
+        "decan": "Venus in Aquarius",
+        "sephirah": "Geburah",
+        "world": "Yetzirah (the Formative World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords05.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "5 of Swords",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:five-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Defeat*",
+        "Correspondences": "**Decan:** Venus in Aquarius (the 1st decanate of its sign).\n\n**Sephirah:** Geburah in Yetzirah (the Formative World).",
+        "Divinatory Meaning": "Defeat, loss, dishonour, the costs of winning at any price.",
+        "Reversed / Ill-Dignified": "An empty victory, resentment that outlives the fight."
+      }
+    },
+    {
+      "id": "swords-06",
+      "name": "Six of Swords",
+      "sort_order": 55,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "mercury in aquarius",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:swords",
+        "rank:six",
+        "card:six-of-swords"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords06.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "element": "Air",
+        "number": 6,
+        "golden_dawn_title": "Lord of Earned Success",
+        "decan": "Mercury in Aquarius",
+        "sephirah": "Tiphareth",
+        "world": "Yetzirah (the Formative World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords06.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "6 of Swords",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:six-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Earned Success*",
+        "Correspondences": "**Decan:** Mercury in Aquarius (the 2nd decanate of its sign).\n\n**Sephirah:** Tiphareth in Yetzirah (the Formative World).",
+        "Divinatory Meaning": "Passage from trouble toward calmer water, progress earned.",
+        "Reversed / Ill-Dignified": "A transition stalled, the far shore not yet reached."
+      }
+    },
+    {
+      "id": "swords-07",
+      "name": "Seven of Swords",
+      "sort_order": 56,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "moon in aquarius",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:swords",
+        "rank:seven",
+        "card:seven-of-swords"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords07.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "element": "Air",
+        "number": 7,
+        "golden_dawn_title": "Lord of Unstable Effort",
+        "decan": "Moon in Aquarius",
+        "sephirah": "Netzach",
+        "world": "Yetzirah (the Formative World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords07.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "7 of Swords",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:seven-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Unstable Effort*",
+        "Correspondences": "**Decan:** Moon in Aquarius (the 3rd decanate of its sign).\n\n**Sephirah:** Netzach in Yetzirah (the Formative World).",
+        "Divinatory Meaning": "Cunning, a partial and unreliable success, slipping away with the prize.",
+        "Reversed / Ill-Dignified": "Exposure, the plan undone, what was taken returned."
+      }
+    },
+    {
+      "id": "swords-08",
+      "name": "Eight of Swords",
+      "sort_order": 57,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "jupiter in gemini",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:swords",
+        "rank:eight",
+        "card:eight-of-swords"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords08.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "element": "Air",
+        "number": 8,
+        "golden_dawn_title": "Lord of Shortened Force",
+        "decan": "Jupiter in Gemini",
+        "sephirah": "Hod",
+        "world": "Yetzirah (the Formative World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords08.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "8 of Swords",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:eight-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Shortened Force*",
+        "Correspondences": "**Decan:** Jupiter in Gemini (the 1st decanate of its sign).\n\n**Sephirah:** Hod in Yetzirah (the Formative World).",
+        "Divinatory Meaning": "Restriction, constraint, force turned against itself, indecision.",
+        "Reversed / Ill-Dignified": "Release, the bonds loosened, freedom found within limits."
+      }
+    },
+    {
+      "id": "swords-09",
+      "name": "Nine of Swords",
+      "sort_order": 58,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "mars in gemini",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:swords",
+        "rank:nine",
+        "card:nine-of-swords"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords09.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "element": "Air",
+        "number": 9,
+        "golden_dawn_title": "Lord of Despair and Cruelty",
+        "decan": "Mars in Gemini",
+        "sephirah": "Yesod",
+        "world": "Yetzirah (the Formative World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords09.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "9 of Swords",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:nine-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Despair and Cruelty*",
+        "Correspondences": "**Decan:** Mars in Gemini (the 2nd decanate of its sign).\n\n**Sephirah:** Yesod in Yetzirah (the Formative World).",
+        "Divinatory Meaning": "Anguish, nightmare, cruelty, the long night of despair.",
+        "Reversed / Ill-Dignified": "The worst passing, a first grey light of dawn."
+      }
+    },
+    {
+      "id": "swords-10",
+      "name": "Ten of Swords",
+      "sort_order": 59,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "sun in gemini",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:swords",
+        "rank:ten",
+        "card:ten-of-swords"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords10.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "element": "Air",
+        "number": 10,
+        "golden_dawn_title": "Lord of Ruin",
+        "decan": "Sun in Gemini",
+        "sephirah": "Malkuth",
+        "world": "Yetzirah (the Formative World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords10.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "10 of Swords",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:ten-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Ruin*",
+        "Correspondences": "**Decan:** Sun in Gemini (the 3rd decanate of its sign).\n\n**Sephirah:** Malkuth in Yetzirah (the Formative World).",
+        "Divinatory Meaning": "Ruin, the end of an illusion, the failure of force, rock bottom.",
+        "Reversed / Ill-Dignified": "Recovery — from here the only way is up."
+      }
+    },
+    {
+      "id": "swords-knight",
+      "name": "Knight of Swords",
+      "sort_order": 60,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "knight",
+        "knight",
+        "court card",
+        "golden dawn",
+        "suit:swords",
+        "rank:knight",
+        "card:knight-of-swords"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords12.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "element": "Air",
+        "rank": "Knight",
+        "golden_dawn_rank": "Knight",
+        "element_in_element": "Fire of Air",
+        "rules": "21° Taurus – 20° Gemini",
+        "court": true,
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords12.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "Knight of Swords",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:knight-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Rank": "RWS **Knight of Swords** = Golden Dawn **Knight of Swords** — **Fire of Air**.",
+        "Correspondences": "Rules 21° Taurus – 20° Gemini. As Fire of Air, this court is the fire aspect of a keen and restless suit.",
+        "Divinatory Meaning": "Headlong, active, the mounted warrior who charges and is gone, coloured by the keen and restless nature of Swords. A person or force of this temperament, or the call to embody it.",
+        "Reversed / Ill-Dignified": "The Fire of Air energy turned excessive, immature, or against itself."
+      }
+    },
+    {
+      "id": "swords-queen",
+      "name": "Queen of Swords",
+      "sort_order": 61,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "queen",
+        "queen",
+        "court card",
+        "golden dawn",
+        "suit:swords",
+        "rank:queen",
+        "card:queen-of-swords"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords13.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "element": "Air",
+        "rank": "Queen",
+        "golden_dawn_rank": "Queen",
+        "element_in_element": "Water of Air",
+        "rules": "21° Virgo – 20° Libra",
+        "court": true,
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords13.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "Queen of Swords",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:queen-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Rank": "RWS **Queen of Swords** = Golden Dawn **Queen of Swords** — **Water of Air**.",
+        "Correspondences": "Rules 21° Virgo – 20° Libra. As Water of Air, this court is the water aspect of a keen and restless suit.",
+        "Divinatory Meaning": "Receptive mastery, magnetic and deep, the power held within, coloured by the keen and restless nature of Swords. A person or force of this temperament, or the call to embody it.",
+        "Reversed / Ill-Dignified": "The Water of Air energy turned excessive, immature, or against itself."
+      }
+    },
+    {
+      "id": "swords-king",
+      "name": "King of Swords",
+      "sort_order": 62,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "king",
+        "prince",
+        "court card",
+        "golden dawn",
+        "suit:swords",
+        "rank:king",
+        "card:king-of-swords"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords14.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "element": "Air",
+        "rank": "King",
+        "golden_dawn_rank": "Prince",
+        "element_in_element": "Air of Air",
+        "rules": "21° Capricorn – 20° Aquarius",
+        "court": true,
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords14.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "King of Swords",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:king-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Rank": "RWS **King of Swords** = Golden Dawn **Prince of Swords** — **Air of Air**.",
+        "Correspondences": "Rules 21° Capricorn – 20° Aquarius. As Air of Air, this court is the air aspect of a keen and restless suit.",
+        "Divinatory Meaning": "The intellect of the suit in action — swift, reasoning, decisive, coloured by the keen and restless nature of Swords. A person or force of this temperament, or the call to embody it.",
+        "Reversed / Ill-Dignified": "The Air of Air energy turned excessive, immature, or against itself."
+      }
+    },
+    {
+      "id": "swords-page",
+      "name": "Page of Swords",
+      "sort_order": 63,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "page",
+        "princess",
+        "court card",
+        "golden dawn",
+        "suit:swords",
+        "rank:page",
+        "card:page-of-swords"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords11.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "element": "Air",
+        "rank": "Page",
+        "golden_dawn_rank": "Princess",
+        "element_in_element": "Earth of Air",
+        "rules": "one quadrant of the heavens around the North Pole (with the Ace)",
+        "court": true,
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords11.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "Page of Swords",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:page-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Rank": "RWS **Page of Swords** = Golden Dawn **Princess of Swords** — **Earth of Air**.",
+        "Correspondences": "Rules one quadrant of the heavens around the North Pole (with the Ace). As Earth of Air, this court is the earth aspect of a keen and restless suit.",
+        "Divinatory Meaning": "The suit made earth — daring, brilliant, the herald and the throne, coloured by the keen and restless nature of Swords. A person or force of this temperament, or the call to embody it.",
+        "Reversed / Ill-Dignified": "The Earth of Air energy turned excessive, immature, or against itself."
+      }
+    },
+    {
+      "id": "pentacles-ace",
+      "name": "Ace of Pentacles",
+      "sort_order": 64,
+      "category": "suit-pentacles",
+      "level": 1,
+      "keywords": [
+        "pentacles",
+        "earth",
+        "ace",
+        "minor arcana",
+        "golden dawn",
+        "suit:coins",
+        "rank:ace",
+        "card:ace-of-coins"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents01.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Pentacles",
+        "element": "Earth",
+        "rank": "Ace",
+        "golden_dawn_title": "Root of the Powers of Earth",
+        "sephirah": "Kether",
+        "world": "Assiah (the Material World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents01.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "Ace of Pentacles",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:ace-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Root of the Powers of Earth*",
+        "Correspondences": "**Kether** in Assiah (the Material World). The Ace is the root and seed of the whole suit, the pure power of Earth before it divides. It rules, with its court, one quadrant of the heavens.",
+        "Divinatory Meaning": "The seed of all earth — the root of wealth, body, and material beginnings.",
+        "Reversed / Ill-Dignified": "Materialism, a foundation laid on the wrong ground."
+      }
+    },
+    {
+      "id": "pentacles-02",
+      "name": "Two of Pentacles",
+      "sort_order": 65,
+      "category": "suit-pentacles",
+      "level": 1,
+      "keywords": [
+        "pentacles",
+        "earth",
+        "jupiter in capricorn",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:coins",
+        "rank:two",
+        "card:two-of-coins"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents02.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Pentacles",
+        "element": "Earth",
+        "number": 2,
+        "golden_dawn_title": "Lord of Harmonious Change",
+        "decan": "Jupiter in Capricorn",
+        "sephirah": "Chokmah",
+        "world": "Assiah (the Material World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents02.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "2 of Pentacles",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:two-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Harmonious Change*",
+        "Correspondences": "**Decan:** Jupiter in Capricorn (the 1st decanate of its sign).\n\n**Sephirah:** Chokmah in Assiah (the Material World).",
+        "Divinatory Meaning": "Balancing flux, juggling demands, graceful adaptation to change.",
+        "Reversed / Ill-Dignified": "Imbalance, disorder, too many things in the air."
+      }
+    },
+    {
+      "id": "pentacles-03",
+      "name": "Three of Pentacles",
+      "sort_order": 66,
+      "category": "suit-pentacles",
+      "level": 1,
+      "keywords": [
+        "pentacles",
+        "earth",
+        "mars in capricorn",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:coins",
+        "rank:three",
+        "card:three-of-coins"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents03.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Pentacles",
+        "element": "Earth",
+        "number": 3,
+        "golden_dawn_title": "Lord of Material Works",
+        "decan": "Mars in Capricorn",
+        "sephirah": "Binah",
+        "world": "Assiah (the Material World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents03.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "3 of Pentacles",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:three-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Material Works*",
+        "Correspondences": "**Decan:** Mars in Capricorn (the 2nd decanate of its sign).\n\n**Sephirah:** Binah in Assiah (the Material World).",
+        "Divinatory Meaning": "Skilled work, craft, building, recognition of one's ability.",
+        "Reversed / Ill-Dignified": "Mediocrity, careless work, skill not yet earned."
+      }
+    },
+    {
+      "id": "pentacles-04",
+      "name": "Four of Pentacles",
+      "sort_order": 67,
+      "category": "suit-pentacles",
+      "level": 1,
+      "keywords": [
+        "pentacles",
+        "earth",
+        "sun in capricorn",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:coins",
+        "rank:four",
+        "card:four-of-coins"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents04.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Pentacles",
+        "element": "Earth",
+        "number": 4,
+        "golden_dawn_title": "Lord of Earthly Power",
+        "decan": "Sun in Capricorn",
+        "sephirah": "Chesed",
+        "world": "Assiah (the Material World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents04.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "4 of Pentacles",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:four-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Earthly Power*",
+        "Correspondences": "**Decan:** Sun in Capricorn (the 3rd decanate of its sign).\n\n**Sephirah:** Chesed in Assiah (the Material World).",
+        "Divinatory Meaning": "Security, holding, possession, the consolidation of gains.",
+        "Reversed / Ill-Dignified": "Hoarding, blockage, holding so tight nothing moves."
+      }
+    },
+    {
+      "id": "pentacles-05",
+      "name": "Five of Pentacles",
+      "sort_order": 68,
+      "category": "suit-pentacles",
+      "level": 1,
+      "keywords": [
+        "pentacles",
+        "earth",
+        "mercury in taurus",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:coins",
+        "rank:five",
+        "card:five-of-coins"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents05.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Pentacles",
+        "element": "Earth",
+        "number": 5,
+        "golden_dawn_title": "Lord of Material Trouble",
+        "decan": "Mercury in Taurus",
+        "sephirah": "Geburah",
+        "world": "Assiah (the Material World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents05.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "5 of Pentacles",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:five-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Material Trouble*",
+        "Correspondences": "**Decan:** Mercury in Taurus (the 1st decanate of its sign).\n\n**Sephirah:** Geburah in Assiah (the Material World).",
+        "Divinatory Meaning": "Hardship, want, loss, the cold outside the lit window.",
+        "Reversed / Ill-Dignified": "Recovery beginning, help arriving, the worst behind."
+      }
+    },
+    {
+      "id": "pentacles-06",
+      "name": "Six of Pentacles",
+      "sort_order": 69,
+      "category": "suit-pentacles",
+      "level": 1,
+      "keywords": [
+        "pentacles",
+        "earth",
+        "moon in taurus",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:coins",
+        "rank:six",
+        "card:six-of-coins"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents06.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Pentacles",
+        "element": "Earth",
+        "number": 6,
+        "golden_dawn_title": "Lord of Material Success",
+        "decan": "Moon in Taurus",
+        "sephirah": "Tiphareth",
+        "world": "Assiah (the Material World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents06.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "6 of Pentacles",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:six-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Material Success*",
+        "Correspondences": "**Decan:** Moon in Taurus (the 2nd decanate of its sign).\n\n**Sephirah:** Tiphareth in Assiah (the Material World).",
+        "Divinatory Meaning": "Generosity, fair exchange, success that is shared.",
+        "Reversed / Ill-Dignified": "Strings attached, an unequal gift, charity that controls."
+      }
+    },
+    {
+      "id": "pentacles-07",
+      "name": "Seven of Pentacles",
+      "sort_order": 70,
+      "category": "suit-pentacles",
+      "level": 1,
+      "keywords": [
+        "pentacles",
+        "earth",
+        "saturn in taurus",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:coins",
+        "rank:seven",
+        "card:seven-of-coins"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents07.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Pentacles",
+        "element": "Earth",
+        "number": 7,
+        "golden_dawn_title": "Lord of Success Unfulfilled",
+        "decan": "Saturn in Taurus",
+        "sephirah": "Netzach",
+        "world": "Assiah (the Material World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents07.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "7 of Pentacles",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:seven-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Success Unfulfilled*",
+        "Correspondences": "**Decan:** Saturn in Taurus (the 3rd decanate of its sign).\n\n**Sephirah:** Netzach in Assiah (the Material World).",
+        "Divinatory Meaning": "Patience, the pause before harvest, growth not yet realised.",
+        "Reversed / Ill-Dignified": "Impatience, wasted effort, a crop abandoned too soon."
+      }
+    },
+    {
+      "id": "pentacles-08",
+      "name": "Eight of Pentacles",
+      "sort_order": 71,
+      "category": "suit-pentacles",
+      "level": 1,
+      "keywords": [
+        "pentacles",
+        "earth",
+        "sun in virgo",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:coins",
+        "rank:eight",
+        "card:eight-of-coins"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents08.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Pentacles",
+        "element": "Earth",
+        "number": 8,
+        "golden_dawn_title": "Lord of Prudence",
+        "decan": "Sun in Virgo",
+        "sephirah": "Hod",
+        "world": "Assiah (the Material World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents08.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "8 of Pentacles",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:eight-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Prudence*",
+        "Correspondences": "**Decan:** Sun in Virgo (the 1st decanate of its sign).\n\n**Sephirah:** Hod in Assiah (the Material World).",
+        "Divinatory Meaning": "Diligence, skill cultivated, the careful work of the apprentice.",
+        "Reversed / Ill-Dignified": "Hollow effort, perfectionism, skill without soul."
+      }
+    },
+    {
+      "id": "pentacles-09",
+      "name": "Nine of Pentacles",
+      "sort_order": 72,
+      "category": "suit-pentacles",
+      "level": 1,
+      "keywords": [
+        "pentacles",
+        "earth",
+        "venus in virgo",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:coins",
+        "rank:nine",
+        "card:nine-of-coins"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents09.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Pentacles",
+        "element": "Earth",
+        "number": 9,
+        "golden_dawn_title": "Lord of Material Gain",
+        "decan": "Venus in Virgo",
+        "sephirah": "Yesod",
+        "world": "Assiah (the Material World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents09.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "9 of Pentacles",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:nine-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Material Gain*",
+        "Correspondences": "**Decan:** Venus in Virgo (the 2nd decanate of its sign).\n\n**Sephirah:** Yesod in Assiah (the Material World).",
+        "Divinatory Meaning": "Solitary plenty, refinement, material gain quietly enjoyed.",
+        "Reversed / Ill-Dignified": "Dependence, hollow luxury, gain that isolates."
+      }
+    },
+    {
+      "id": "pentacles-10",
+      "name": "Ten of Pentacles",
+      "sort_order": 73,
+      "category": "suit-pentacles",
+      "level": 1,
+      "keywords": [
+        "pentacles",
+        "earth",
+        "mercury in virgo",
+        "minor arcana",
+        "decan",
+        "golden dawn",
+        "suit:coins",
+        "rank:ten",
+        "card:ten-of-coins"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents10.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Pentacles",
+        "element": "Earth",
+        "number": 10,
+        "golden_dawn_title": "Lord of Wealth",
+        "decan": "Mercury in Virgo",
+        "sephirah": "Malkuth",
+        "world": "Assiah (the Material World)",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents10.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "10 of Pentacles",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:ten-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Title": "*Lord of Wealth*",
+        "Correspondences": "**Decan:** Mercury in Virgo (the 3rd decanate of its sign).\n\n**Sephirah:** Malkuth in Assiah (the Material World).",
+        "Divinatory Meaning": "Lasting wealth, family, inheritance, completion in the world of matter.",
+        "Reversed / Ill-Dignified": "Stagnation, the burden of riches, a legacy that weighs."
+      }
+    },
+    {
+      "id": "pentacles-knight",
+      "name": "Knight of Pentacles",
+      "sort_order": 74,
+      "category": "suit-pentacles",
+      "level": 1,
+      "keywords": [
+        "pentacles",
+        "earth",
+        "knight",
+        "knight",
+        "court card",
+        "golden dawn",
+        "suit:coins",
+        "rank:knight",
+        "card:knight-of-coins"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents12.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Pentacles",
+        "element": "Earth",
+        "rank": "Knight",
+        "golden_dawn_rank": "Knight",
+        "element_in_element": "Fire of Earth",
+        "rules": "21° Leo – 20° Virgo",
+        "court": true,
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents12.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "Knight of Pentacles",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:knight-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Rank": "RWS **Knight of Pentacles** = Golden Dawn **Knight of Pentacles** — **Fire of Earth**.",
+        "Correspondences": "Rules 21° Leo – 20° Virgo. As Fire of Earth, this court is the fire aspect of a steady and enduring suit.",
+        "Divinatory Meaning": "Headlong, active, the mounted warrior who charges and is gone, coloured by the steady and enduring nature of Pentacles. A person or force of this temperament, or the call to embody it.",
+        "Reversed / Ill-Dignified": "The Fire of Earth energy turned excessive, immature, or against itself."
+      }
+    },
+    {
+      "id": "pentacles-queen",
+      "name": "Queen of Pentacles",
+      "sort_order": 75,
+      "category": "suit-pentacles",
+      "level": 1,
+      "keywords": [
+        "pentacles",
+        "earth",
+        "queen",
+        "queen",
+        "court card",
+        "golden dawn",
+        "suit:coins",
+        "rank:queen",
+        "card:queen-of-coins"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents13.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Pentacles",
+        "element": "Earth",
+        "rank": "Queen",
+        "golden_dawn_rank": "Queen",
+        "element_in_element": "Water of Earth",
+        "rules": "21° Sagittarius – 20° Capricorn",
+        "court": true,
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents13.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "Queen of Pentacles",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:queen-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Rank": "RWS **Queen of Pentacles** = Golden Dawn **Queen of Pentacles** — **Water of Earth**.",
+        "Correspondences": "Rules 21° Sagittarius – 20° Capricorn. As Water of Earth, this court is the water aspect of a steady and enduring suit.",
+        "Divinatory Meaning": "Receptive mastery, magnetic and deep, the power held within, coloured by the steady and enduring nature of Pentacles. A person or force of this temperament, or the call to embody it.",
+        "Reversed / Ill-Dignified": "The Water of Earth energy turned excessive, immature, or against itself."
+      }
+    },
+    {
+      "id": "pentacles-king",
+      "name": "King of Pentacles",
+      "sort_order": 76,
+      "category": "suit-pentacles",
+      "level": 1,
+      "keywords": [
+        "pentacles",
+        "earth",
+        "king",
+        "prince",
+        "court card",
+        "golden dawn",
+        "suit:coins",
+        "rank:king",
+        "card:king-of-coins"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents14.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Pentacles",
+        "element": "Earth",
+        "rank": "King",
+        "golden_dawn_rank": "Prince",
+        "element_in_element": "Air of Earth",
+        "rules": "21° Aries – 20° Taurus",
+        "court": true,
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents14.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "King of Pentacles",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:king-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Rank": "RWS **King of Pentacles** = Golden Dawn **Prince of Pentacles** — **Air of Earth**.",
+        "Correspondences": "Rules 21° Aries – 20° Taurus. As Air of Earth, this court is the air aspect of a steady and enduring suit.",
+        "Divinatory Meaning": "The intellect of the suit in action — swift, reasoning, decisive, coloured by the steady and enduring nature of Pentacles. A person or force of this temperament, or the call to embody it.",
+        "Reversed / Ill-Dignified": "The Air of Earth energy turned excessive, immature, or against itself."
+      }
+    },
+    {
+      "id": "pentacles-page",
+      "name": "Page of Pentacles",
+      "sort_order": 77,
+      "category": "suit-pentacles",
+      "level": 1,
+      "keywords": [
+        "pentacles",
+        "earth",
+        "page",
+        "princess",
+        "court card",
+        "golden dawn",
+        "suit:coins",
+        "rank:page",
+        "card:page-of-coins"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents11.jpg",
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Pentacles",
+        "element": "Earth",
+        "rank": "Page",
+        "golden_dawn_rank": "Princess",
+        "element_in_element": "Earth of Earth",
+        "rules": "one quadrant of the heavens around the North Pole (with the Ace)",
+        "court": true,
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents11.jpg",
+            "artist": "Pamela Colman Smith",
+            "artist_dates": "1878–1951",
+            "edition": "Rider-Waite-Smith, 1909 (public domain imagery)",
+            "scene": "Page of Pentacles",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:page-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Golden Dawn Rank": "RWS **Page of Pentacles** = Golden Dawn **Princess of Pentacles** — **Earth of Earth**.",
+        "Correspondences": "Rules one quadrant of the heavens around the North Pole (with the Ace). As Earth of Earth, this court is the earth aspect of a steady and enduring suit.",
+        "Divinatory Meaning": "The suit made earth — daring, brilliant, the herald and the throne, coloured by the steady and enduring nature of Pentacles. A person or force of this temperament, or the call to embody it.",
+        "Reversed / Ill-Dignified": "The Earth of Earth energy turned excessive, immature, or against itself."
+      }
+    },
+    {
+      "id": "emg-majors",
+      "name": "The 22 Keys — The Paths of the Tree",
+      "sort_order": 78,
+      "category": "emergence",
+      "level": 2,
+      "composite_of": [
+        "major-00-the-fool",
+        "major-01-the-magician",
+        "major-02-the-high-priestess",
+        "major-03-the-empress",
+        "major-04-the-emperor",
+        "major-05-the-hierophant",
+        "major-06-the-lovers",
+        "major-07-the-chariot",
+        "major-08-strength",
+        "major-09-the-hermit",
+        "major-10-wheel-of-fortune",
+        "major-11-justice",
+        "major-12-the-hanged-man",
+        "major-13-death",
+        "major-14-temperance",
+        "major-15-the-devil",
+        "major-16-the-tower",
+        "major-17-the-star",
+        "major-18-the-moon",
+        "major-19-the-sun",
+        "major-20-judgement",
+        "major-21-the-world"
+      ],
+      "relationship_type": "emergence",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_21_World.jpg",
+      "metadata": {},
+      "sections": {
+        "About the Keys": "In the Golden Dawn the 22 trumps are the 22 paths joining the ten Sephiroth on the Tree of Life, each carrying a Hebrew letter and an astrological force. This is the heart of the tradition: the tarot as a map of the descent and return of spirit. Note the Golden Dawn order — Strength at VIII (Leo), Justice at XI (Libra) — the swap from the Marseille that Waite and Smith kept.",
+        "How to Use": "Read the trumps as paths, not just pictures: each is a stage and a doorway on the Tree."
+      }
+    },
+    {
+      "id": "emg-decans",
+      "name": "The 36 Decans — Lords of the Minor Arcana",
+      "sort_order": 79,
+      "category": "emergence",
+      "level": 2,
+      "composite_of": [
+        "wands-02",
+        "wands-03",
+        "wands-04",
+        "wands-05",
+        "wands-06",
+        "wands-07",
+        "wands-08",
+        "wands-09",
+        "wands-10",
+        "cups-02",
+        "cups-03",
+        "cups-04",
+        "cups-05",
+        "cups-06",
+        "cups-07",
+        "cups-08",
+        "cups-09",
+        "cups-10",
+        "swords-02",
+        "swords-03",
+        "swords-04",
+        "swords-05",
+        "swords-06",
+        "swords-07",
+        "swords-08",
+        "swords-09",
+        "swords-10",
+        "pentacles-02",
+        "pentacles-03",
+        "pentacles-04",
+        "pentacles-05",
+        "pentacles-06",
+        "pentacles-07",
+        "pentacles-08",
+        "pentacles-09",
+        "pentacles-10"
+      ],
+      "relationship_type": "emergence",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands02.jpg",
+      "metadata": {},
+      "sections": {
+        "About the Decans": "The small cards 2–10 map to the 36 decans — the ten-degree divisions of the zodiac — each ruled by a planet and bearing a Book T title (the 'Lord of ...'). The number gives the Sephirah, the suit gives the World. This is what lets a Golden Dawn reader date and place a card in the wheel of the year.",
+        "How to Use": "Read each pip as Planet-in-Sign within a Sephirah: the decan is the weather, the Sephirah the depth, the suit the world."
+      }
+    },
+    {
+      "id": "emg-suit-wands",
+      "name": "Suit of Wands — Fire (Atziluth)",
+      "sort_order": 80,
+      "category": "emergence",
+      "level": 2,
+      "composite_of": [
+        "wands-ace",
+        "wands-02",
+        "wands-03",
+        "wands-04",
+        "wands-05",
+        "wands-06",
+        "wands-07",
+        "wands-08",
+        "wands-09",
+        "wands-10",
+        "wands-knight",
+        "wands-queen",
+        "wands-king",
+        "wands-page"
+      ],
+      "relationship_type": "emergence",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wands05.jpg",
+      "metadata": {},
+      "sections": {
+        "About this Suit": "The Wands, suit of Fire, unfolding through the Sephiroth in Atziluth (the Archetypal World). From the Ace (Kether, the root) down to the Ten (Malkuth, the suit made fully manifest), with the four courts as Fire's inner elements.",
+        "How to Use": "Follow the suit from Ace to Ten to watch Fire descend from pure potential into the fully realised world."
+      }
+    },
+    {
+      "id": "emg-suit-cups",
+      "name": "Suit of Cups — Water (Briah)",
+      "sort_order": 81,
+      "category": "emergence",
+      "level": 2,
+      "composite_of": [
+        "cups-ace",
+        "cups-02",
+        "cups-03",
+        "cups-04",
+        "cups-05",
+        "cups-06",
+        "cups-07",
+        "cups-08",
+        "cups-09",
+        "cups-10",
+        "cups-knight",
+        "cups-queen",
+        "cups-king",
+        "cups-page"
+      ],
+      "relationship_type": "emergence",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cups05.jpg",
+      "metadata": {},
+      "sections": {
+        "About this Suit": "The Cups, suit of Water, unfolding through the Sephiroth in Briah (the Creative World). From the Ace (Kether, the root) down to the Ten (Malkuth, the suit made fully manifest), with the four courts as Water's inner elements.",
+        "How to Use": "Follow the suit from Ace to Ten to watch Water descend from pure potential into the fully realised world."
+      }
+    },
+    {
+      "id": "emg-suit-swords",
+      "name": "Suit of Swords — Air (Yetzirah)",
+      "sort_order": 82,
+      "category": "emergence",
+      "level": 2,
+      "composite_of": [
+        "swords-ace",
+        "swords-02",
+        "swords-03",
+        "swords-04",
+        "swords-05",
+        "swords-06",
+        "swords-07",
+        "swords-08",
+        "swords-09",
+        "swords-10",
+        "swords-knight",
+        "swords-queen",
+        "swords-king",
+        "swords-page"
+      ],
+      "relationship_type": "emergence",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swords05.jpg",
+      "metadata": {},
+      "sections": {
+        "About this Suit": "The Swords, suit of Air, unfolding through the Sephiroth in Yetzirah (the Formative World). From the Ace (Kether, the root) down to the Ten (Malkuth, the suit made fully manifest), with the four courts as Air's inner elements.",
+        "How to Use": "Follow the suit from Ace to Ten to watch Air descend from pure potential into the fully realised world."
+      }
+    },
+    {
+      "id": "emg-suit-pentacles",
+      "name": "Suit of Pentacles — Earth (Assiah)",
+      "sort_order": 83,
+      "category": "emergence",
+      "level": 2,
+      "composite_of": [
+        "pentacles-ace",
+        "pentacles-02",
+        "pentacles-03",
+        "pentacles-04",
+        "pentacles-05",
+        "pentacles-06",
+        "pentacles-07",
+        "pentacles-08",
+        "pentacles-09",
+        "pentacles-10",
+        "pentacles-knight",
+        "pentacles-queen",
+        "pentacles-king",
+        "pentacles-page"
+      ],
+      "relationship_type": "emergence",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pents05.jpg",
+      "metadata": {},
+      "sections": {
+        "About this Suit": "The Pentacles, suit of Earth, unfolding through the Sephiroth in Assiah (the Material World). From the Ace (Kether, the root) down to the Ten (Malkuth, the suit made fully manifest), with the four courts as Earth's inner elements.",
+        "How to Use": "Follow the suit from Ace to Ten to watch Earth descend from pure potential into the fully realised world."
+      }
+    }
+  ]
+}

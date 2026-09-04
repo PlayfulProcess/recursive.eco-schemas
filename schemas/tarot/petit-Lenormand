@@ -1,0 +1,1458 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "Yve Lepkowski",
+        "url": "",
+        "date": "2026-01-22",
+        "note": "Original creator"
+      }
+    ]
+  },
+  "name": "Petit Lenormand",
+  "description": "A 34-card Lenormand oracle deck with playful artistic interpretations of the traditional symbols.\n\nThe Lenormand system, named after the famous French fortune-teller Marie Anne Lenormand (1772-1843), uses a 36-card deck with straightforward symbolic imagery. Unlike tarot, Lenormand cards are typically read in combinations where meanings blend together.\n\nThis version includes some creative variations: Goose (instead of Stork), Rabbits (instead of Mice), and Dove (instead of Lily). Note: This edition omits cards 8 (Coffin) and 9 (Bouquet).\n\nArtwork by Yve Lepkowski (https://stolen-thyme.com/). Licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA 4.0). You may share and adapt this work with proper attribution.",
+  "cover_image_url": "https://drive.google.com/uc?export=view&id=1Ib04SUtcbBCCwcYtntYgfSEFiCTtIIVB",
+  "tags": [
+    "lenormand",
+    "oracle",
+    "fortune-telling",
+    "divination",
+    "symbolic"
+  ],
+  "grammar_type": "tarot",
+  "items": [
+    {
+      "id": "lenormand-01",
+      "name": "Rider",
+      "image_url": "https://drive.google.com/uc?export=view&id=1Ib04SUtcbBCCwcYtntYgfSEFiCTtIIVB",
+      "sections": {
+        "Summary": "News coming quickly.",
+        "Interpretation": "The Rider brings news, messages, and visitors. Something is approaching quickly. Expect communication or a new development arriving soon.",
+        "Reversed": "In Lenormand, reversal is not typically used. When negative: delayed news, unwanted visitor, or hasty decisions."
+      },
+      "keywords": [
+        "news",
+        "messages",
+        "visitor",
+        "speed",
+        "movement"
+      ],
+      "questions": [
+        "What news is coming?",
+        "Who or what is approaching?"
+      ],
+      "sort_order": 0,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 1,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "rider",
+          "horse",
+          "messenger",
+          "speed"
+        ],
+        "image_filename": "lenormand-01"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-02",
+      "name": "Clover",
+      "image_url": "https://drive.google.com/uc?export=view&id=15-KxzKXXVOz0HG13QlQH-yIk2Rot-WCJ",
+      "sections": {
+        "Summary": "Small luck and opportunity.",
+        "Interpretation": "The Clover represents small strokes of luck and fleeting opportunities. Not major fortune, but pleasant surprises and moments of good luck. Take the chance when it appears.",
+        "Reversed": "When negative: missed opportunity, luck running out, or gambling losses."
+      },
+      "keywords": [
+        "luck",
+        "opportunity",
+        "small fortune",
+        "brief happiness",
+        "gamble"
+      ],
+      "questions": [
+        "What small luck is coming?",
+        "Should I take this chance?"
+      ],
+      "sort_order": 1,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 2,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "clover",
+          "luck",
+          "chance",
+          "green"
+        ],
+        "image_filename": "lenormand-02"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-03",
+      "name": "Ship",
+      "image_url": "https://drive.google.com/uc?export=view&id=1yhGAb0HyLK-3HegNz9sI_dCB7OIuEE25",
+      "sections": {
+        "Summary": "Travel and commerce.",
+        "Interpretation": "The Ship represents travel, journeys, and foreign affairs. It can indicate physical travel, commerce, or something coming from afar. Movement toward distant goals.",
+        "Reversed": "When negative: cancelled travel, shipping delays, or feeling adrift."
+      },
+      "keywords": [
+        "travel",
+        "journey",
+        "commerce",
+        "foreign matters",
+        "movement"
+      ],
+      "questions": [
+        "What journey lies ahead?",
+        "What foreign influences are present?"
+      ],
+      "sort_order": 2,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 3,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "ship",
+          "water",
+          "journey",
+          "cargo"
+        ],
+        "image_filename": "lenormand-03"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-04",
+      "name": "Home (House)",
+      "image_url": "https://drive.google.com/uc?export=view&id=123ycKoYhS4BerzabTWIJVB9MC9wKNhYU",
+      "sections": {
+        "Summary": "Home, family, and security.",
+        "Interpretation": "The Home represents your dwelling, family, security, and comfort. It speaks to domestic matters, property, and the foundation of your life.",
+        "Reversed": "When negative: domestic problems, insecurity, or issues with property."
+      },
+      "keywords": [
+        "home",
+        "family",
+        "security",
+        "property",
+        "traditions"
+      ],
+      "questions": [
+        "What's happening at home?",
+        "Where do I feel secure?"
+      ],
+      "sort_order": 3,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 4,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "house",
+          "home",
+          "family",
+          "shelter"
+        ],
+        "image_filename": "lenormand-04"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-05",
+      "name": "Tree",
+      "image_url": "https://drive.google.com/uc?export=view&id=1rqaG3Ag4W-Wdf2edDK11nAfrPZOGtxuN",
+      "sections": {
+        "Summary": "Health and growth over time.",
+        "Interpretation": "The Tree represents health, slow growth, and deep roots. Things take time like a tree growing. It can indicate physical health or spiritual/karmic matters.",
+        "Reversed": "When negative: health issues, stagnation, or problems with long-term matters."
+      },
+      "keywords": [
+        "health",
+        "growth",
+        "longevity",
+        "patience",
+        "roots"
+      ],
+      "questions": [
+        "How is my health?",
+        "What is growing slowly?"
+      ],
+      "sort_order": 4,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 5,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "tree",
+          "roots",
+          "growth",
+          "nature"
+        ],
+        "image_filename": "lenormand-05"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-06",
+      "name": "Clouds",
+      "image_url": "https://drive.google.com/uc?export=view&id=1sARvIvmM-KQarY_JwRXWpXsqeHRredlQ",
+      "sections": {
+        "Summary": "Confusion and uncertainty.",
+        "Interpretation": "The Clouds represent confusion, uncertainty, and things not being clear. Like weather, this state is temporary. The dark side brings more confusion than the light side.",
+        "Reversed": "When negative: deep confusion, depression, or lies being told."
+      },
+      "keywords": [
+        "confusion",
+        "doubt",
+        "uncertainty",
+        "unclear",
+        "temporary"
+      ],
+      "questions": [
+        "What is unclear?",
+        "What confusion needs clearing?"
+      ],
+      "sort_order": 5,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 6,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "clouds",
+          "sky",
+          "darkness",
+          "light"
+        ],
+        "image_filename": "lenormand-06"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-07",
+      "name": "Serpent (Snake)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1xyPXTRsEhRDFjW6DJHpWj1bGkhypedRL",
+      "sections": {
+        "Summary": "Complications and detours.",
+        "Interpretation": "The Serpent represents complications, detours, and sometimes a rival or enemy (often female). The path is not straight—expect twists and turns. Can also represent wisdom through experience.",
+        "Reversed": "When negative: betrayal, deception, or a dangerous person nearby."
+      },
+      "keywords": [
+        "complications",
+        "detours",
+        "rival",
+        "wisdom",
+        "betrayal"
+      ],
+      "questions": [
+        "What complications exist?",
+        "Who might be working against me?"
+      ],
+      "sort_order": 6,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 7,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "snake",
+          "serpent",
+          "coils",
+          "winding"
+        ],
+        "image_filename": "lenormand-07"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-10",
+      "name": "Scythe",
+      "image_url": "https://drive.google.com/uc?export=view&id=1Sb3n5qfi7mGazUuJ9qjDen5ARLpi2v4J",
+      "sections": {
+        "Summary": "Sudden cuts and endings.",
+        "Interpretation": "The Scythe cuts suddenly and decisively. It can represent sudden endings, accidents, surgery, or harvesting what you've sown. Cuts both good and bad ties.",
+        "Reversed": "When negative: accidents, painful endings, or surgical procedures."
+      },
+      "keywords": [
+        "sudden ending",
+        "cutting away",
+        "harvest",
+        "danger",
+        "surgery"
+      ],
+      "questions": [
+        "What needs to be cut away?",
+        "What sudden change is coming?"
+      ],
+      "sort_order": 7,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 10,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "scythe",
+          "blade",
+          "harvest",
+          "cutting"
+        ],
+        "image_filename": "lenormand-10"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-11",
+      "name": "Whip (Birch Rods)",
+      "image_url": "https://drive.google.com/uc?export=view&id=17_kqZZAduVYkr8tP6xw9aIVH0WHqCXaK",
+      "sections": {
+        "Summary": "Conflict and repetition.",
+        "Interpretation": "The Whip represents arguments, conflict, and repetitive actions. It can indicate sports, exercise, or passionate encounters. Something happens again and again.",
+        "Reversed": "When negative: abuse, fighting, or destructive patterns."
+      },
+      "keywords": [
+        "conflict",
+        "arguments",
+        "repetition",
+        "exercise",
+        "passion"
+      ],
+      "questions": [
+        "What conflict exists?",
+        "What keeps repeating?"
+      ],
+      "sort_order": 8,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 11,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "whip",
+          "rods",
+          "conflict",
+          "motion"
+        ],
+        "image_filename": "lenormand-11"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-12",
+      "name": "Birds",
+      "image_url": "https://drive.google.com/uc?export=view&id=15yZQ6V-4XuLtjSjwSPFw3kS1A9I-8Qsq",
+      "sections": {
+        "Summary": "Communication and chatter.",
+        "Interpretation": "The Birds represent communication, conversations, and often gossip. They can indicate a couple (elderly or business partners) or nervous, chattering energy.",
+        "Reversed": "When negative: gossip, anxiety, or worrisome news."
+      },
+      "keywords": [
+        "communication",
+        "gossip",
+        "couples",
+        "anxiety",
+        "meetings"
+      ],
+      "questions": [
+        "What conversations are happening?",
+        "What couples or pairs are involved?"
+      ],
+      "sort_order": 9,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 12,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "birds",
+          "pair",
+          "communication",
+          "flight"
+        ],
+        "image_filename": "lenormand-12"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-13",
+      "name": "Child",
+      "image_url": "https://drive.google.com/uc?export=view&id=1fvFhCNLdUBcF5IAERSx1O-ct1H-teM4e",
+      "sections": {
+        "Summary": "New beginnings and innocence.",
+        "Interpretation": "The Child represents new beginnings, actual children, or something small and innocent. Can indicate inexperience or something in early stages needing care.",
+        "Reversed": "When negative: immaturity, naivety, or a difficult child."
+      },
+      "keywords": [
+        "new beginning",
+        "child",
+        "innocence",
+        "small",
+        "inexperience"
+      ],
+      "questions": [
+        "What new beginning is emerging?",
+        "What needs nurturing?"
+      ],
+      "sort_order": 10,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 13,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "child",
+          "youth",
+          "new",
+          "small"
+        ],
+        "image_filename": "lenormand-13"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-14",
+      "name": "Fox",
+      "image_url": "https://drive.google.com/uc?export=view&id=1oi_y1L91VHxSBqe9IRIy-O6fx5fBGHpF",
+      "sections": {
+        "Summary": "Cunning and employment.",
+        "Interpretation": "The Fox represents cunning, self-interest, and often employment. It warns of deception but also encourages smart strategies. Can indicate job or work situations.",
+        "Reversed": "When negative: deception, trickery, or job loss."
+      },
+      "keywords": [
+        "cunning",
+        "employment",
+        "self-interest",
+        "strategy",
+        "caution"
+      ],
+      "questions": [
+        "Where should I be careful?",
+        "What work matters are present?"
+      ],
+      "sort_order": 11,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 14,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "fox",
+          "cunning",
+          "work",
+          "survival"
+        ],
+        "image_filename": "lenormand-14"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-15",
+      "name": "Bear",
+      "image_url": "https://drive.google.com/uc?export=view&id=1p8gRQYkmHwz7cQPEjC1v4CMT6nQz9f5a",
+      "sections": {
+        "Summary": "Strength and authority.",
+        "Interpretation": "The Bear represents strength, power, and authority figures—often a boss or mother. Can indicate finances, investments, and the need for strength.",
+        "Reversed": "When negative: overbearing authority, financial problems, or jealousy."
+      },
+      "keywords": [
+        "strength",
+        "boss",
+        "authority",
+        "finances",
+        "mother"
+      ],
+      "questions": [
+        "Who holds power?",
+        "What financial matters exist?"
+      ],
+      "sort_order": 12,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 15,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "bear",
+          "power",
+          "authority",
+          "finance"
+        ],
+        "image_filename": "lenormand-15"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-16",
+      "name": "Stars",
+      "image_url": "https://drive.google.com/uc?export=view&id=1gDmKQhcl_w7lhBxGwSUG-fkJvyWT0NeT",
+      "sections": {
+        "Summary": "Hope and guidance.",
+        "Interpretation": "The Stars bring hope, inspiration, and guidance. They light the way forward. Can indicate technology, the internet, or spiritual guidance. A very positive card.",
+        "Reversed": "When negative: false hopes or feeling lost without guidance."
+      },
+      "keywords": [
+        "hope",
+        "inspiration",
+        "guidance",
+        "technology",
+        "clarity"
+      ],
+      "questions": [
+        "What hope guides me?",
+        "Where is clarity emerging?"
+      ],
+      "sort_order": 13,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 16,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "stars",
+          "night",
+          "hope",
+          "navigation"
+        ],
+        "image_filename": "lenormand-16"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-17",
+      "name": "Goose (Stork)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1axj1fbxNNJVHf3t4o-3ckQF1TO-jt7BU",
+      "sections": {
+        "Summary": "Changes and transitions.",
+        "Interpretation": "The Goose (traditionally Stork) represents changes and transitions—usually positive. Associated with moving, improvement, and sometimes pregnancy or birth of new projects.",
+        "Reversed": "When negative: unwanted changes or restlessness."
+      },
+      "keywords": [
+        "change",
+        "improvement",
+        "moving",
+        "transition",
+        "pregnancy"
+      ],
+      "questions": [
+        "What change is coming?",
+        "What is improving?"
+      ],
+      "sort_order": 14,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 17,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "goose",
+          "flight",
+          "migration",
+          "change"
+        ],
+        "image_filename": "lenormand-17"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-18",
+      "name": "Dog",
+      "image_url": "https://drive.google.com/uc?export=view&id=1HXh4ZMbaU13FsZLI1o4XdBE8M94Ywfzi",
+      "sections": {
+        "Summary": "Friendship and loyalty.",
+        "Interpretation": "The Dog represents a loyal friend, trust, and faithfulness. It can indicate a specific friend or the quality of loyalty in a situation. Reliable support.",
+        "Reversed": "When negative: false friend, disloyalty, or being too dependent."
+      },
+      "keywords": [
+        "friendship",
+        "loyalty",
+        "trust",
+        "support",
+        "faithful friend"
+      ],
+      "questions": [
+        "Who is loyal to me?",
+        "Where can I find faithful support?"
+      ],
+      "sort_order": 15,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 18,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "dog",
+          "loyalty",
+          "friend",
+          "devotion"
+        ],
+        "image_filename": "lenormand-18"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-19",
+      "name": "Tower",
+      "image_url": "https://drive.google.com/uc?export=view&id=1zRzJpzp4WosP-HU_qvVtgrmHWNeujhP_",
+      "sections": {
+        "Summary": "Authority and isolation.",
+        "Interpretation": "The Tower represents authority, institutions (government, corporations, hospitals), and sometimes isolation. It can indicate ambition or the need for boundaries.",
+        "Reversed": "When negative: loneliness, imprisonment, or bureaucratic obstacles."
+      },
+      "keywords": [
+        "authority",
+        "institutions",
+        "isolation",
+        "ambition",
+        "boundaries"
+      ],
+      "questions": [
+        "What institutions are involved?",
+        "Where are boundaries needed?"
+      ],
+      "sort_order": 16,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 19,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "tower",
+          "institution",
+          "isolation",
+          "structure"
+        ],
+        "image_filename": "lenormand-19"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-20",
+      "name": "Garden",
+      "image_url": "https://drive.google.com/uc?export=view&id=1cz5bzDuJmbv1DPshRGp4QdknfWM0GQye",
+      "sections": {
+        "Summary": "Social gatherings and public.",
+        "Interpretation": "The Garden represents social gatherings, the public, and your reputation. It can indicate parties, networking, or how you're perceived by society.",
+        "Reversed": "When negative: social problems, bad reputation, or unwanted public attention."
+      },
+      "keywords": [
+        "social events",
+        "public",
+        "networking",
+        "reputation",
+        "groups"
+      ],
+      "questions": [
+        "What social situations exist?",
+        "How is my public image?"
+      ],
+      "sort_order": 17,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 20,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "garden",
+          "gathering",
+          "public",
+          "society"
+        ],
+        "image_filename": "lenormand-20"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-21",
+      "name": "Mountain",
+      "image_url": "https://drive.google.com/uc?export=view&id=1XAoCcx7Pi6xWL9iM8gN64vA27QYd1YTE",
+      "sections": {
+        "Summary": "Obstacles and delays.",
+        "Interpretation": "The Mountain represents obstacles, delays, and blockages. Something stands in your way. It can also represent a stubborn enemy or the need for patience and persistence.",
+        "Reversed": "When negative: insurmountable problems or a powerful enemy."
+      },
+      "keywords": [
+        "obstacles",
+        "delays",
+        "challenges",
+        "blockage",
+        "enemy"
+      ],
+      "questions": [
+        "What obstacle stands before me?",
+        "What is causing delays?"
+      ],
+      "sort_order": 18,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 21,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "mountain",
+          "obstacle",
+          "challenge",
+          "summit"
+        ],
+        "image_filename": "lenormand-21"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-22",
+      "name": "Roads (Crossroads)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1FDjfZ1L-CdMyHiGRraLbqmPkduIDTdqI",
+      "sections": {
+        "Summary": "Choices and decisions.",
+        "Interpretation": "The Roads represent choices, decisions, and multiple options. You're at a crossroads and must choose a direction. Can indicate important decisions or freedom of choice.",
+        "Reversed": "When negative: confusion, indecision, or choosing wrong."
+      },
+      "keywords": [
+        "choices",
+        "decisions",
+        "options",
+        "directions",
+        "freedom"
+      ],
+      "questions": [
+        "What choice must I make?",
+        "What options do I have?"
+      ],
+      "sort_order": 19,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 22,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "roads",
+          "crossroads",
+          "choice",
+          "paths"
+        ],
+        "image_filename": "lenormand-22"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-23",
+      "name": "Rabbits (Mice)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1tmD8l5zjoul1rpKqiMiPtCU7zpIzD6PR",
+      "sections": {
+        "Summary": "Small losses and worries.",
+        "Interpretation": "The Rabbits (traditionally Mice) represent small losses, theft, and things being nibbled away. Stress and worry deplete resources. Watch for things slowly disappearing.",
+        "Reversed": "When negative: significant theft, health issues, or persistent anxiety."
+      },
+      "keywords": [
+        "losses",
+        "stress",
+        "theft",
+        "worry",
+        "depletion"
+      ],
+      "questions": [
+        "What is being diminished?",
+        "What small worries gnaw at me?"
+      ],
+      "sort_order": 20,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 23,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "rabbits",
+          "nibbling",
+          "loss",
+          "anxiety"
+        ],
+        "image_filename": "lenormand-23"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-24",
+      "name": "Heart",
+      "image_url": "https://drive.google.com/uc?export=view&id=19wwdAEYKw6OdWCzN7xjosz7KPSkO8ICX",
+      "sections": {
+        "Summary": "Love and emotions.",
+        "Interpretation": "The Heart represents love, romance, and matters of the heart. It brings emotional warmth, passion, and happiness. A very positive card for love questions.",
+        "Reversed": "When negative: heartbreak, unrequited love, or emotional pain."
+      },
+      "keywords": [
+        "love",
+        "romance",
+        "emotion",
+        "passion",
+        "happiness"
+      ],
+      "questions": [
+        "What does my heart want?",
+        "Where is love in this situation?"
+      ],
+      "sort_order": 21,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 24,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "heart",
+          "love",
+          "emotion",
+          "passion"
+        ],
+        "image_filename": "lenormand-24"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-25",
+      "name": "Ring",
+      "image_url": "https://drive.google.com/uc?export=view&id=1k9nB0vsrWv4EPleTGzVx1OYKnzl-_TR9",
+      "sections": {
+        "Summary": "Commitment and cycles.",
+        "Interpretation": "The Ring represents commitment, contracts, and binding agreements. It can indicate marriage, business partnerships, or the completion of a cycle. What goes around comes around.",
+        "Reversed": "When negative: broken promises, divorce, or unfulfilled contracts."
+      },
+      "keywords": [
+        "commitment",
+        "contracts",
+        "cycles",
+        "partnership",
+        "marriage"
+      ],
+      "questions": [
+        "What commitment exists?",
+        "What cycle is completing?"
+      ],
+      "sort_order": 22,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 25,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "ring",
+          "circle",
+          "contract",
+          "bond"
+        ],
+        "image_filename": "lenormand-25"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-26",
+      "name": "Book",
+      "image_url": "https://drive.google.com/uc?export=view&id=1UAFfTpOtZxL6Xi4qjs5giB0eMl5vHMhk",
+      "sections": {
+        "Summary": "Secrets and knowledge.",
+        "Interpretation": "The Book represents secrets, hidden knowledge, and education. Something is unknown or being concealed. Can indicate studies, research, or discovering hidden information.",
+        "Reversed": "When negative: dark secrets, ignorance, or hidden enemies."
+      },
+      "keywords": [
+        "secrets",
+        "knowledge",
+        "education",
+        "mystery",
+        "research"
+      ],
+      "questions": [
+        "What is hidden?",
+        "What do I need to learn?"
+      ],
+      "sort_order": 23,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 26,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "book",
+          "secrets",
+          "knowledge",
+          "education"
+        ],
+        "image_filename": "lenormand-26"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-27",
+      "name": "Letter",
+      "image_url": "https://drive.google.com/uc?export=view&id=16d_fNWEAM2CXXnEpz26dnyWndA1CuJMW",
+      "sections": {
+        "Summary": "Documents and messages.",
+        "Interpretation": "The Letter represents documents, written communication, and official messages. Expect news in writing—emails, texts, contracts, or certificates.",
+        "Reversed": "When negative: bad news, legal problems, or delayed correspondence."
+      },
+      "keywords": [
+        "documents",
+        "messages",
+        "communication",
+        "news",
+        "paperwork"
+      ],
+      "questions": [
+        "What message is coming?",
+        "What documents are important?"
+      ],
+      "sort_order": 24,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 27,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "letter",
+          "document",
+          "message",
+          "paper"
+        ],
+        "image_filename": "lenormand-27"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-28",
+      "name": "Man (Gentleman)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1RfyoVRTJvpBg_AEbC_c4gtWUp2WZHk78",
+      "sections": {
+        "Summary": "Male significator.",
+        "Interpretation": "The Man is a significator representing a significant male person in the reading—the querent if male, a partner, father, son, or important man in the situation.",
+        "Reversed": "When negative: a problematic man or masculine energy causing issues."
+      },
+      "keywords": [
+        "man",
+        "male person",
+        "significant male",
+        "self",
+        "partner"
+      ],
+      "questions": [
+        "What man is involved?",
+        "How is the male energy in this?"
+      ],
+      "sort_order": 25,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 28,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "man",
+          "gentleman",
+          "male",
+          "self"
+        ],
+        "image_filename": "lenormand-28"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-29",
+      "name": "Lady (Woman)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1aoaNM-mmo4rM14p7bU6qVYdsVRU-PCLv",
+      "sections": {
+        "Summary": "Female significator.",
+        "Interpretation": "The Lady is a significator representing a significant female person in the reading—the querent if female, a partner, mother, daughter, or important woman in the situation.",
+        "Reversed": "When negative: a problematic woman or feminine energy causing issues."
+      },
+      "keywords": [
+        "woman",
+        "female person",
+        "significant female",
+        "self",
+        "partner"
+      ],
+      "questions": [
+        "What woman is involved?",
+        "How is the feminine energy in this?"
+      ],
+      "sort_order": 26,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 29,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "woman",
+          "lady",
+          "female",
+          "self"
+        ],
+        "image_filename": "lenormand-29"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-30",
+      "name": "Dove (Lily)",
+      "image_url": "https://drive.google.com/uc?export=view&id=1Hhcrwxk5iCiCR4UtFHSIFE4W8hREXBf2",
+      "sections": {
+        "Summary": "Peace and purity.",
+        "Interpretation": "The Dove (traditionally Lily) represents peace, purity, and harmony. It can indicate mature wisdom, peaceful resolution, or in some traditions, sexuality and sensuality.",
+        "Reversed": "When negative: lack of peace, impurity, or elderly person's problems."
+      },
+      "keywords": [
+        "peace",
+        "purity",
+        "harmony",
+        "wisdom",
+        "sexuality"
+      ],
+      "questions": [
+        "Where is peace found?",
+        "What brings harmony?"
+      ],
+      "sort_order": 27,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 30,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "dove",
+          "peace",
+          "purity",
+          "harmony"
+        ],
+        "image_filename": "lenormand-30"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-31",
+      "name": "Sun",
+      "image_url": "https://drive.google.com/uc?export=view&id=183fP_bPkiMK2vW6dsYCOiDAojEz5GbwC",
+      "sections": {
+        "Summary": "Success and happiness.",
+        "Interpretation": "The Sun is one of the most positive cards—success, happiness, energy, and warmth. It illuminates whatever it touches with positive energy. Victory and achievement.",
+        "Reversed": "When negative: burnout, arrogance, or temporary setbacks in success."
+      },
+      "keywords": [
+        "success",
+        "happiness",
+        "energy",
+        "victory",
+        "positivity"
+      ],
+      "questions": [
+        "What success is shining?",
+        "Where is happiness found?"
+      ],
+      "sort_order": 28,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 31,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "sun",
+          "warmth",
+          "success",
+          "energy"
+        ],
+        "image_filename": "lenormand-31"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-32",
+      "name": "Moon",
+      "image_url": "https://drive.google.com/uc?export=view&id=1fWF5EMeXQM2638xYHDDJoG8dmVxpHT4a",
+      "sections": {
+        "Summary": "Recognition and emotions.",
+        "Interpretation": "The Moon represents recognition, fame, and emotional matters. It highlights deep feelings, intuition, and how others see you. Associated with creative and romantic pursuits.",
+        "Reversed": "When negative: emotional confusion, depression, or damaged reputation."
+      },
+      "keywords": [
+        "recognition",
+        "fame",
+        "emotions",
+        "intuition",
+        "subconscious"
+      ],
+      "questions": [
+        "What recognition am I receiving?",
+        "What emotions are involved?"
+      ],
+      "sort_order": 29,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 32,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "moon",
+          "night",
+          "recognition",
+          "intuition"
+        ],
+        "image_filename": "lenormand-32"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-33",
+      "name": "Key",
+      "image_url": "https://drive.google.com/uc?export=view&id=1ScJA6aa7WD8Uy3WK6OG_iUAx1EQX7dSX",
+      "sections": {
+        "Summary": "Solutions and importance.",
+        "Interpretation": "The Key represents solutions, answers, and things of importance. It unlocks doors and indicates fate or destiny. Whatever it touches becomes significant or finds resolution.",
+        "Reversed": "When negative: locked doors, lost keys, or missing solutions."
+      },
+      "keywords": [
+        "solutions",
+        "answers",
+        "importance",
+        "fate",
+        "unlocking"
+      ],
+      "questions": [
+        "What is the key to this situation?",
+        "What opens doors?"
+      ],
+      "sort_order": 30,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 33,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "key",
+          "unlock",
+          "solution",
+          "destiny"
+        ],
+        "image_filename": "lenormand-33"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-34",
+      "name": "Fish",
+      "image_url": "https://drive.google.com/uc?export=view&id=1p_wuaILdV4ec-VdI18nxKxwf7iF9tQwN",
+      "sections": {
+        "Summary": "Money and abundance.",
+        "Interpretation": "The Fish represent money, business, and material abundance. They indicate financial matters, independence, and the flow of resources. A positive card for material concerns.",
+        "Reversed": "When negative: financial loss, greed, or problematic business dealings."
+      },
+      "keywords": [
+        "money",
+        "business",
+        "abundance",
+        "independence",
+        "flow"
+      ],
+      "questions": [
+        "What financial matters exist?",
+        "Where is abundance flowing?"
+      ],
+      "sort_order": 31,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 34,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "fish",
+          "water",
+          "money",
+          "plenty"
+        ],
+        "image_filename": "lenormand-34"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-35",
+      "name": "Anchor",
+      "image_url": "https://drive.google.com/uc?export=view&id=1GaYEDPeezxdwUHwzM2UMYvQ_onVX_0z1",
+      "sections": {
+        "Summary": "Stability and work.",
+        "Interpretation": "The Anchor represents stability, work, and reaching your destination. It indicates perseverance paying off, job security, and finding safe harbor after a journey.",
+        "Reversed": "When negative: stuck, can't move forward, or unstable work situation."
+      },
+      "keywords": [
+        "stability",
+        "work",
+        "perseverance",
+        "reaching goals",
+        "security"
+      ],
+      "questions": [
+        "What provides stability?",
+        "What work is important?"
+      ],
+      "sort_order": 32,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 35,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "anchor",
+          "harbor",
+          "stability",
+          "work"
+        ],
+        "image_filename": "lenormand-35"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    },
+    {
+      "id": "lenormand-36",
+      "name": "Cross",
+      "image_url": "https://drive.google.com/uc?export=view&id=1LlHxFVnnMJTHG58HwlFFQO7zgN5klfsF",
+      "sections": {
+        "Summary": "Burden and fate.",
+        "Interpretation": "The Cross represents burdens, fate, and karmic lessons. It can indicate suffering that must be endured or religious/spiritual matters. Heavy responsibility that shapes your path.",
+        "Reversed": "When negative: heavy suffering, feeling cursed, or overwhelming burdens."
+      },
+      "keywords": [
+        "burden",
+        "destiny",
+        "suffering",
+        "religion",
+        "responsibility"
+      ],
+      "questions": [
+        "What burden do I carry?",
+        "What is my fate?"
+      ],
+      "sort_order": 33,
+      "subcategory": null,
+      "grammar_type": "tarot",
+      "metadata": {
+        "number": 36,
+        "suit": null,
+        "arcana": null,
+        "symbols": [
+          "cross",
+          "burden",
+          "fate",
+          "religion"
+        ],
+        "image_filename": "lenormand-36"
+      },
+      "origin": {
+        "type": "imported",
+        "source_format": "tarot_legacy",
+        "timestamp": "2026-01-22T05:08:04.858Z"
+      },
+      "level": 1
+    }
+  ],
+  "creator_name": "Yve Lepkowski",
+  "creator_link": ""
+}
