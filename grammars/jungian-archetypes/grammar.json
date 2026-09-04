@@ -1,0 +1,954 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "url": "https://lifeisprocess.substack.com/",
+        "date": "2026-03-03",
+        "note": "Original grammar structure and interpretations"
+      }
+    ]
+  },
+  "name": "Jungian Archetypes — The Inner Cast",
+  "description": "A 34-card oracle deck based on Carl Jung's theory of archetypes and the collective unconscious. 24 L1 archetypes (Ego, Shadow, Anima, Animus, Self, Persona, Great Mother, Wise Old Man, Trickster, Divine Child, Hero, and more), 6 L2 archetypal dynamics (Shadow Meets Ego, Persona-Shadow Split, Hero and the Dragon), and 4 L3 individuation stages (Individuation, Night Sea Journey, Sacred Marriage, The Return). Built from memory, drawing on Jung's Collected Works, James Hillman's archetypal psychology, Marie-Louise von Franz's fairy tale analyses, and Joseph Campbell's hero's journey.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Images from Jung's 'Red Book' (Liber Novus) — Jung's own paintings and calligraphy of archetypal visions (published 2009, images from 1914-1930). Alchemical illustrations from 'Rosarium Philosophorum' (1550) — the alchemical marriage sequence Jung used extensively, public domain. Illustrations from 'Atalanta Fugiens' by Michael Maier (1617) — alchemical emblems, public domain. Tarot de Marseille imagery (17th-18th century) — the original tarot archetypes that influenced Jung's thinking. William Blake's mythological paintings and engravings (1790s-1820s) — archetypal imagery of creation, fall, and redemption. Gustave Doré's illustrations of Dante's 'Divine Comedy' (1861-1868) — descent, transformation, and return imagery. Ancient Greek vase paintings depicting mythological archetypes (Hero, Trickster, Great Mother). Hindu and Buddhist mandala imagery — Jung drew heavily on mandala symbolism for the Self archetype.",
+  "grammar_type": "tarot",
+  "creator_name": "PlayfulProcess",
+  "creator_link": "https://lifeisprocess.substack.com/",
+  "tags": [
+    "jung",
+    "archetypes",
+    "psychology",
+    "shadow",
+    "individuation",
+    "oracle",
+    "depth-psychology",
+    "collective-unconscious"
+  ],
+  "cover_image_url": "",
+  "items": [
+    {
+      "id": "the-ego",
+      "name": "The Ego",
+      "symbol": "🪞",
+      "level": 1,
+      "category": "self-structure",
+      "sort_order": 0,
+      "sections": {
+        "Interpretation": "The centre of your conscious mind — the 'I' that narrates your life. The Ego organises experience, makes decisions, and maintains the boundary between inner and outer worlds. When healthy, it is a skilled navigator. When inflated, it mistakes itself for the whole psyche. When deflated, it drowns in the unconscious.",
+        "Shadow": "Ego inflation — believing you are the master of your psyche rather than a servant of the Self. Rigidity, defensiveness, inability to hear what the unconscious is trying to say.",
+        "Light": "Clarity, agency, self-awareness. The ability to say 'I choose this' while remaining open to what is larger than you.",
+        "Summary": "The conscious centre. Your narrator, your navigator.",
+        "Questions": "Where are you over-identified with your story? What would remain if the story fell away?"
+      },
+      "keywords": [
+        "consciousness",
+        "identity",
+        "agency",
+        "self-awareness",
+        "centre"
+      ],
+      "metadata": {
+        "jungian_concept": "Ego",
+        "domain": "Consciousness"
+      }
+    },
+    {
+      "id": "the-shadow",
+      "name": "The Shadow",
+      "symbol": "🌑",
+      "level": 1,
+      "category": "unconscious",
+      "sort_order": 1,
+      "sections": {
+        "Interpretation": "Everything you have refused to be. The Shadow is not evil — it is the unlived life, the parts of yourself you pushed into the dark because your family, culture, or survival demanded it. It appears in your dreams as a threatening figure of your own gender. It shows up in waking life as the people who irritate you most — because they carry your own rejected qualities.",
+        "Shadow": "Projection — seeing your own darkness only in others. Moral superiority. Explosive eruptions of the very qualities you deny. The longer the Shadow is ignored, the more destructive its eventual appearance.",
+        "Light": "Integration — owning your full humanity. Creative energy recovered from repression. The paradox: the Shadow also contains gold — talents and strengths you were told were too much.",
+        "Summary": "The rejected self. What you cannot see in yourself, you will meet in the world.",
+        "Questions": "Who irritates you most right now? What quality in them might be your own unlived potential?"
+      },
+      "keywords": [
+        "repression",
+        "projection",
+        "darkness",
+        "integration",
+        "denied-self"
+      ],
+      "metadata": {
+        "jungian_concept": "Shadow",
+        "domain": "Personal Unconscious"
+      }
+    },
+    {
+      "id": "the-anima",
+      "name": "The Anima",
+      "symbol": "🌙",
+      "level": 1,
+      "category": "unconscious",
+      "sort_order": 2,
+      "sections": {
+        "Interpretation": "The inner feminine in a man's psyche — or more broadly, the contrasexual soul-image that mediates between consciousness and the deep unconscious. The Anima appears first as a projected fascination with an outer person, then gradually reveals herself as an inner guide. She has four stages: Eve (the biological), Helen (the romantic), Mary (the spiritual), and Sophia (the wise).",
+        "Shadow": "Moodiness, sentimentality, possession by irrational feelings. Falling in love with a projection rather than a person. The negative Anima whispers 'nothing is worth doing' or seduces you into passive fantasy.",
+        "Light": "Access to feeling, intuition, creativity, and the symbolic life. The Anima as guide to the unconscious — she is the bridge between what you know and what you have not yet imagined.",
+        "Summary": "The soul-image. The inner feminine. Guide to the depths.",
+        "Questions": "What are you fascinated by right now? Is it a projection or a genuine encounter?"
+      },
+      "keywords": [
+        "feminine",
+        "soul",
+        "projection",
+        "feeling",
+        "intuition",
+        "eros"
+      ],
+      "metadata": {
+        "jungian_concept": "Anima",
+        "domain": "Collective Unconscious"
+      }
+    },
+    {
+      "id": "the-animus",
+      "name": "The Animus",
+      "symbol": "☀️",
+      "level": 1,
+      "category": "unconscious",
+      "sort_order": 3,
+      "sections": {
+        "Interpretation": "The inner masculine in a woman's psyche — or the contrasexual spirit-image that gives form and direction to unconscious contents. The Animus appears first as a physical power figure, then as a man of action, then as a word-bearer (professor, clergyman), and finally as the mediator of meaning. He provides initiative, courage, and the capacity to see truth.",
+        "Shadow": "Opinionated rigidity — 'sacred convictions' that brook no discussion. The negative Animus speaks in absolutes: 'You should...', 'You always...', 'You never...' He can make a person argumentative, dismissive, or brutally self-critical.",
+        "Light": "Inner strength, clarity of thought, spiritual meaning, creative logos. The positive Animus gives a woman (or anyone) the sword of discrimination — the ability to cut through confusion and name what is true.",
+        "Summary": "The spirit-image. The inner masculine. Bearer of meaning and word.",
+        "Questions": "Where is an inner voice speaking in harsh absolutes? What truth might it be trying to reach, badly?"
+      },
+      "keywords": [
+        "masculine",
+        "spirit",
+        "logos",
+        "conviction",
+        "discrimination",
+        "initiative"
+      ],
+      "metadata": {
+        "jungian_concept": "Animus",
+        "domain": "Collective Unconscious"
+      }
+    },
+    {
+      "id": "the-self",
+      "name": "The Self",
+      "symbol": "☯️",
+      "level": 1,
+      "category": "self-structure",
+      "sort_order": 4,
+      "sections": {
+        "Interpretation": "The totality of the psyche — conscious and unconscious, light and dark, masculine and feminine united. The Self is the archetype of wholeness and the regulating centre of the personality. It often appears in dreams as a mandala, a divine child, a precious stone, or a figure of great authority. It is not the ego but the greater personality that the ego orbits.",
+        "Shadow": "Identification with the Self leads to psychic inflation — the guru complex, messianic delusions, the feeling of being 'chosen.' The Self can also overwhelm a weak ego, leading to dissolution.",
+        "Light": "The experience of meaning, purpose, and belonging to something larger. The Self is the inner compass that guides individuation. When you feel 'called' to something you cannot explain rationally, the Self is speaking.",
+        "Summary": "The archetype of wholeness. The god-image within. The centre and the circumference.",
+        "Questions": "What in your life feels like it is being guided by something wiser than your conscious mind?"
+      },
+      "keywords": [
+        "wholeness",
+        "mandala",
+        "totality",
+        "centre",
+        "god-image",
+        "individuation"
+      ],
+      "metadata": {
+        "jungian_concept": "Self",
+        "domain": "Collective Unconscious"
+      }
+    },
+    {
+      "id": "the-persona",
+      "name": "The Persona",
+      "symbol": "🎭",
+      "level": 1,
+      "category": "self-structure",
+      "sort_order": 5,
+      "sections": {
+        "Interpretation": "The social mask — the face you show the world. The Persona is necessary: it allows you to function in society, to be a professional at work and a parent at home. The word comes from the Latin for 'mask' — the masks worn by actors in Roman theatre. The danger is not having a Persona but becoming one.",
+        "Shadow": "Over-identification with the role. When the mask fuses to the face, you lose access to your authentic self. The executive who cannot stop performing authority. The caretaker who has forgotten their own needs. Persona-identification is the most common form of psychological inauthenticity.",
+        "Light": "Skillful social adaptation. The ability to meet the world gracefully while remaining connected to your inner life. A flexible Persona is a sign of psychological health.",
+        "Summary": "The social mask. Necessary, dangerous when mistaken for the self.",
+        "Questions": "Which of your roles has become too rigid? What would you be if no one was watching?"
+      },
+      "keywords": [
+        "mask",
+        "role",
+        "social-adaptation",
+        "identity",
+        "performance"
+      ],
+      "metadata": {
+        "jungian_concept": "Persona",
+        "domain": "Consciousness"
+      }
+    },
+    {
+      "id": "the-great-mother",
+      "name": "The Great Mother",
+      "symbol": "🌍",
+      "level": 1,
+      "category": "archetypal-figures",
+      "sort_order": 6,
+      "sections": {
+        "Interpretation": "The primordial image of the nourishing, containing, and devouring feminine. She is the earth that feeds and the earth that swallows. Every culture knows her: Demeter and Kali, the Virgin Mary and the Wicked Stepmother. She appears when you need nourishment, protection, or must confront the terror of dependency and engulfment.",
+        "Shadow": "The Devouring Mother — overprotection that prevents growth, smothering love, the mother who consumes her children's independence. Also: abandonment, emotional starvation, the absent mother who leaves a void.",
+        "Light": "Unconditional nourishment, deep belonging, the experience of being held by life itself. Creative fertility. The capacity to nurture without possessing.",
+        "Summary": "She who gives life and takes it back. Nourishment and engulfment.",
+        "Questions": "Where do you need nourishment right now? Where are you being held too tightly — or not tightly enough?"
+      },
+      "keywords": [
+        "mother",
+        "nourishment",
+        "fertility",
+        "earth",
+        "containment",
+        "devouring"
+      ],
+      "metadata": {
+        "jungian_concept": "Great Mother",
+        "domain": "Collective Unconscious"
+      }
+    },
+    {
+      "id": "the-wise-old-man",
+      "name": "The Wise Old Man",
+      "symbol": "🧙",
+      "level": 1,
+      "category": "archetypal-figures",
+      "sort_order": 7,
+      "sections": {
+        "Interpretation": "The archetype of spirit, meaning, and hidden knowledge. He appears in dreams and myths as the wizard, the hermit, the guru, the professor — Gandalf, Merlin, Obi-Wan Kenobi. He arrives when you face a situation that requires insight beyond your personal experience. He represents the accumulated wisdom of the collective unconscious.",
+        "Shadow": "The charlatan, the false guru, the authoritarian father. When the Wise Old Man is negative, he offers certainty without compassion, knowledge without humility. He can make you dependent on external authority rather than your own inner knowing.",
+        "Light": "Timely insight, deep understanding, the gift of perspective. The voice in a dream that says exactly what you needed to hear. The mentor who appears when the student is ready.",
+        "Summary": "The archetype of meaning. The inner teacher who knows what you have forgotten.",
+        "Questions": "What insight keeps trying to reach you? Who or what has been your Wise Old Man — and have you outgrown them?"
+      },
+      "keywords": [
+        "wisdom",
+        "spirit",
+        "mentor",
+        "knowledge",
+        "meaning",
+        "guide"
+      ],
+      "metadata": {
+        "jungian_concept": "Wise Old Man / Senex",
+        "domain": "Collective Unconscious"
+      }
+    },
+    {
+      "id": "the-trickster",
+      "name": "The Trickster",
+      "symbol": "🃏",
+      "level": 1,
+      "category": "archetypal-figures",
+      "sort_order": 8,
+      "sections": {
+        "Interpretation": "The archetype of disruption, play, and boundary-crossing. The Trickster breaks every rule, violates every taboo, and turns every situation upside down — not from malice but from an energy older than morality. He is Hermes, Loki, Coyote, Anansi. He appears when a system has become too rigid and needs to be shaken loose. He is the fool who speaks truth to power.",
+        "Shadow": "Chaos without purpose, cruelty disguised as humour, manipulation, con artistry. The shadow Trickster destabilises everything and rebuilds nothing. Addiction to novelty, inability to commit.",
+        "Light": "Creative destruction, humour that heals, the ability to see through pretence. The Trickster is the psyche's immune system against rigidity. He restores life to dead forms.",
+        "Summary": "The sacred clown. Chaos that serves renewal.",
+        "Questions": "What in your life needs to be disrupted? Where have you become too serious, too rigid, too certain?"
+      },
+      "keywords": [
+        "chaos",
+        "humour",
+        "boundary-crossing",
+        "disruption",
+        "play",
+        "renewal"
+      ],
+      "metadata": {
+        "jungian_concept": "Trickster",
+        "domain": "Collective Unconscious"
+      }
+    },
+    {
+      "id": "the-divine-child",
+      "name": "The Divine Child",
+      "symbol": "✨",
+      "level": 1,
+      "category": "archetypal-figures",
+      "sort_order": 9,
+      "sections": {
+        "Interpretation": "The archetype of new beginnings, potential, and the future self. The Divine Child appears in myths as the miraculous infant — born in danger, abandoned, then found and raised by humble folk. Moses in the bulrushes, the Christ child in the manger, the infant Heracles. In dreams, a baby often signals the birth of a new psychic content — a new attitude, a new possibility.",
+        "Shadow": "The Puer Aeternus — the eternal boy or girl who refuses to grow up. Peter Pan. The refusal of responsibility, the addiction to possibility over commitment, the flight from the heaviness of adult life.",
+        "Light": "Genuine renewal, beginner's mind, the innocence that is not naivety but openness. Creative potential. The courage to begin again.",
+        "Summary": "The miracle of beginning. Potential incarnate. The future knocking.",
+        "Questions": "What is trying to be born in you? What new beginning are you protecting — or refusing?"
+      },
+      "keywords": [
+        "potential",
+        "renewal",
+        "innocence",
+        "beginning",
+        "puer",
+        "future"
+      ],
+      "metadata": {
+        "jungian_concept": "Divine Child / Puer Aeternus",
+        "domain": "Collective Unconscious"
+      }
+    },
+    {
+      "id": "the-hero",
+      "name": "The Hero",
+      "symbol": "⚔️",
+      "level": 1,
+      "category": "archetypal-figures",
+      "sort_order": 10,
+      "sections": {
+        "Interpretation": "The ego's champion — the one who ventures into the unknown, faces the dragon, and returns with the treasure. The Hero's journey is the central myth of consciousness: separation from the mother-world, initiation through ordeal, return with new knowledge. Every time you face something difficult and do not run, the Hero is active.",
+        "Shadow": "The hero who cannot stop fighting. Grandiosity, the need to be special, the compulsion to rescue others (which denies them their own agency). The hero who slays every dragon eventually becomes a dragon.",
+        "Light": "Courage, determination, the willingness to sacrifice comfort for growth. The Hero is the archetype that makes consciousness possible — without the Hero's willingness to face the unknown, we remain in the unconscious paradise of childhood.",
+        "Summary": "The dragon-slayer. Courage that makes consciousness possible.",
+        "Questions": "What dragon are you being called to face? Are you fighting the right battle — or someone else's?"
+      },
+      "keywords": [
+        "courage",
+        "quest",
+        "dragon",
+        "sacrifice",
+        "consciousness",
+        "journey"
+      ],
+      "metadata": {
+        "jungian_concept": "Hero",
+        "domain": "Collective Unconscious"
+      }
+    },
+    {
+      "id": "the-maiden",
+      "name": "The Maiden",
+      "symbol": "🌸",
+      "level": 1,
+      "category": "archetypal-figures",
+      "sort_order": 11,
+      "sections": {
+        "Interpretation": "The archetype of psychic receptivity, innocence, and the soul's vulnerability. The Maiden is Persephone before the abduction, Sleeping Beauty before the spindle. She represents the part of the psyche that is open, undefended, and available to be moved by life. She is not weak — she is the vulnerability that makes transformation possible.",
+        "Shadow": "Helplessness, the victim identity, passivity that becomes a strategy. The shadow Maiden waits to be rescued rather than participating in her own transformation. She may also appear as the seductress who uses innocence as a weapon.",
+        "Light": "Openness to experience, the capacity to be genuinely moved, psychic flexibility. The Maiden is the part of us that has not yet hardened into certainty. She is the door through which new life enters.",
+        "Summary": "The open soul. Vulnerability that invites transformation.",
+        "Questions": "Where in your life are you waiting to be rescued? What would it mean to walk willingly into the underworld?"
+      },
+      "keywords": [
+        "innocence",
+        "receptivity",
+        "vulnerability",
+        "transformation",
+        "Persephone"
+      ],
+      "metadata": {
+        "jungian_concept": "Kore / Maiden",
+        "domain": "Collective Unconscious"
+      }
+    },
+    {
+      "id": "the-father",
+      "name": "The Father",
+      "symbol": "👑",
+      "level": 1,
+      "category": "archetypal-figures",
+      "sort_order": 12,
+      "sections": {
+        "Interpretation": "The archetype of law, order, authority, and the initiating principle. The Father is the sky-god who establishes the rules, the king who holds the kingdom together, the judge who discerns right from wrong. He is necessary for structure, but his ultimate task is to be transcended — the son must eventually dethrone the father to become himself.",
+        "Shadow": "The tyrant — rigid authority that crushes individuality. The absent father who leaves a void where structure should be. Patriarchal control. The inner critic that speaks with the father's voice long after the father is gone.",
+        "Light": "Healthy structure, clear boundaries, the capacity to initiate and provide. The good father gives law that liberates rather than oppresses. He provides the container within which growth can safely happen.",
+        "Summary": "The lawgiver. Structure that enables freedom — or crushes it.",
+        "Questions": "What authority are you rebelling against? Is it an outer authority, or an inner one you have not yet confronted?"
+      },
+      "keywords": [
+        "authority",
+        "law",
+        "order",
+        "structure",
+        "king",
+        "patriarchy"
+      ],
+      "metadata": {
+        "jungian_concept": "Father / Senex",
+        "domain": "Collective Unconscious"
+      }
+    },
+    {
+      "id": "the-crone",
+      "name": "The Crone",
+      "symbol": "🦉",
+      "level": 1,
+      "category": "archetypal-figures",
+      "sort_order": 13,
+      "sections": {
+        "Interpretation": "The wise old woman — Hecate at the crossroads, Baba Yaga in the forest, the fairy godmother who knows the way. She is the Great Mother in her third aspect: not giving life or sustaining it, but guiding the soul through the passages of death and transformation. She appears at liminal moments — transitions, endings, initiations.",
+        "Shadow": "The witch who devours, the bitter old woman, the hag who guards the threshold and will not let you pass without extracting a price. Resentment that has crystallised into cruelty. Wisdom weaponised.",
+        "Light": "The wisdom that comes from having lived through loss. The Crone sees through illusions because she has outlived them. She offers the medicine that tastes bitter but heals. She is the midwife of transformation.",
+        "Summary": "The wise woman at the crossroads. Bitter medicine that heals.",
+        "Questions": "What transition are you in? What old wisdom — perhaps from an elder, perhaps from your own experience — is available to you now?"
+      },
+      "keywords": [
+        "wisdom",
+        "transition",
+        "crone",
+        "Hecate",
+        "crossroads",
+        "initiation"
+      ],
+      "metadata": {
+        "jungian_concept": "Crone / Wise Old Woman",
+        "domain": "Collective Unconscious"
+      }
+    },
+    {
+      "id": "the-orphan",
+      "name": "The Orphan",
+      "symbol": "🚪",
+      "level": 1,
+      "category": "archetypal-figures",
+      "sort_order": 14,
+      "sections": {
+        "Interpretation": "The archetype of abandonment, self-reliance, and the fall from paradise. The Orphan has lost the protection of the parental world and must learn to survive alone. This is the necessary wound: we must all become orphans to become ourselves. Every hero's journey begins with an orphaning — the exile from the known world.",
+        "Shadow": "Victimhood, chronic mistrust, the belief that the world owes you a debt. The shadow Orphan manipulates through helplessness or hardens into cynicism: 'No one will ever be there for me, so I need no one.'",
+        "Light": "Resilience, empathy for suffering, radical self-reliance tempered by the knowledge that everyone is orphaned in some way. The Orphan becomes the great equaliser — the one who sees through privilege because they have lived without it.",
+        "Summary": "The necessary wound. Abandonment that forges self-reliance.",
+        "Questions": "Where do you still feel abandoned? What strength grew from that wound?"
+      },
+      "keywords": [
+        "abandonment",
+        "resilience",
+        "exile",
+        "self-reliance",
+        "wound"
+      ],
+      "metadata": {
+        "jungian_concept": "Orphan",
+        "domain": "Collective Unconscious"
+      }
+    },
+    {
+      "id": "the-lover",
+      "name": "The Lover",
+      "symbol": "💗",
+      "level": 1,
+      "category": "archetypal-figures",
+      "sort_order": 15,
+      "sections": {
+        "Interpretation": "The archetype of passion, devotion, and sacred union. The Lover does not merely love another person — the Lover loves life itself with an intensity that dissolves boundaries. Eros and Psyche, Tristan and Isolde, Rumi and Shams. The Lover commits fully, surrenders to the experience, and is transformed by the encounter.",
+        "Shadow": "Obsession, possession, jealousy, addiction. The shadow Lover confuses merging with intimacy, intensity with depth. Codependency. The Don Juan who collects lovers to avoid being truly known by any of them.",
+        "Light": "The capacity for deep connection, aesthetic sensitivity, devotion to beauty and truth. The Lover breaks down the walls that isolation built. Through the Lover we learn that the heart must be broken open before it can hold the world.",
+        "Summary": "Sacred passion. The archetype that dissolves boundaries and demands surrender.",
+        "Questions": "What are you devoted to? Where are you withholding your full passion out of fear?"
+      },
+      "keywords": [
+        "passion",
+        "devotion",
+        "eros",
+        "union",
+        "surrender",
+        "beauty"
+      ],
+      "metadata": {
+        "jungian_concept": "Lover",
+        "domain": "Collective Unconscious"
+      }
+    },
+    {
+      "id": "the-destroyer",
+      "name": "The Destroyer",
+      "symbol": "🔥",
+      "level": 1,
+      "category": "archetypal-figures",
+      "sort_order": 16,
+      "sections": {
+        "Interpretation": "The archetype of necessary ending, creative destruction, and the death that precedes rebirth. Shiva Nataraja dancing the world to destruction and renewal. The Destroyer clears away what is dead so that new life can grow. Without destruction, there is only stagnation. The autumn that strips the trees is not the enemy of spring.",
+        "Shadow": "Nihilism, rage, the compulsion to tear down without vision for what comes next. Self-destruction. The shadow Destroyer burns the house down with everyone still inside it.",
+        "Light": "The courage to let go, to end what has run its course, to clear the ground. The Destroyer serves life by removing what no longer serves it. Grief, properly held, is the Destroyer's gift — it makes room.",
+        "Summary": "Sacred ending. The fire that clears the ground for new growth.",
+        "Questions": "What needs to end in your life? What are you holding onto past its time?"
+      },
+      "keywords": [
+        "destruction",
+        "ending",
+        "renewal",
+        "Shiva",
+        "letting-go",
+        "death"
+      ],
+      "metadata": {
+        "jungian_concept": "Destroyer",
+        "domain": "Collective Unconscious"
+      }
+    },
+    {
+      "id": "the-creator",
+      "name": "The Creator",
+      "symbol": "🎨",
+      "level": 1,
+      "category": "archetypal-figures",
+      "sort_order": 17,
+      "sections": {
+        "Interpretation": "The archetype of imagination, vision, and bringing forth new forms. The Creator is the artist, the inventor, the dreamer who gives shape to the invisible. This archetype drives you to make something that did not exist before — not for reward but because the act of creation is itself a form of worship.",
+        "Shadow": "Perfectionism that prevents completion. The tortured artist. Creating as ego-inflation rather than service. The shadow Creator hoards their vision or uses creativity to avoid the messiness of real life.",
+        "Light": "Authentic self-expression, the capacity to give form to inner experience, the deep satisfaction of making. The Creator participates in the original act of creation — every genuine work of art adds something to the world that was not there before.",
+        "Summary": "The maker of worlds. Imagination given form.",
+        "Questions": "What is asking to be created through you? What are you not making because you fear it won't be perfect?"
+      },
+      "keywords": [
+        "imagination",
+        "creation",
+        "art",
+        "vision",
+        "making",
+        "expression"
+      ],
+      "metadata": {
+        "jungian_concept": "Creator",
+        "domain": "Collective Unconscious"
+      }
+    },
+    {
+      "id": "the-ruler",
+      "name": "The Ruler",
+      "symbol": "🏛️",
+      "level": 1,
+      "category": "archetypal-figures",
+      "sort_order": 18,
+      "sections": {
+        "Interpretation": "The archetype of sovereignty, responsibility, and the power to create order from chaos. The Ruler takes responsibility for the whole kingdom — inner and outer. This is not the tyrant who dominates but the true king or queen who serves the realm. The Ruler asks: what is best for the whole, not just for me?",
+        "Shadow": "Control, domination, the inability to delegate or trust. The shadow Ruler becomes the micromanager, the despot, the person who believes order requires suppression of all that is wild and free.",
+        "Light": "The capacity to take responsibility, to create and maintain systems that serve life, to hold power without being corrupted by it. The good Ruler creates the conditions for everyone to flourish.",
+        "Summary": "Sovereignty and service. Power held in trust for the whole.",
+        "Questions": "Where do you need to take more responsibility? Where are you controlling what should be free?"
+      },
+      "keywords": [
+        "sovereignty",
+        "responsibility",
+        "order",
+        "power",
+        "leadership",
+        "service"
+      ],
+      "metadata": {
+        "jungian_concept": "Ruler / King-Queen",
+        "domain": "Collective Unconscious"
+      }
+    },
+    {
+      "id": "the-caregiver",
+      "name": "The Caregiver",
+      "symbol": "🤲",
+      "level": 1,
+      "category": "archetypal-figures",
+      "sort_order": 19,
+      "sections": {
+        "Interpretation": "The archetype of compassion, generosity, and selfless service. The Caregiver is moved by the suffering of others and acts to alleviate it. This is the nurse, the therapist, the friend who shows up at 3am. The Caregiver enacts the principle that we are responsible for one another.",
+        "Shadow": "Martyrdom, codependency, enabling. The shadow Caregiver gives in order to be needed, sacrifices self to avoid confronting their own emptiness, or uses caretaking as a form of control. Compassion fatigue. Resentment disguised as generosity.",
+        "Light": "Genuine compassion that flows without depletion. The capacity to hold space for another's suffering without needing to fix it. The Caregiver who has learned to care for themselves can care for others indefinitely.",
+        "Summary": "Compassion in action. The one who shows up for others' suffering.",
+        "Questions": "Are you giving from overflow or from depletion? Who is caring for the caregiver?"
+      },
+      "keywords": [
+        "compassion",
+        "service",
+        "generosity",
+        "martyrdom",
+        "caregiving"
+      ],
+      "metadata": {
+        "jungian_concept": "Caregiver",
+        "domain": "Collective Unconscious"
+      }
+    },
+    {
+      "id": "the-explorer",
+      "name": "The Explorer",
+      "symbol": "🧭",
+      "level": 1,
+      "category": "archetypal-figures",
+      "sort_order": 20,
+      "sections": {
+        "Interpretation": "The archetype of freedom, discovery, and the refusal to be contained. The Explorer is called by the horizon. Every unknown territory — geographical, intellectual, psychological — draws the Explorer forward. This archetype drives the urge to travel, to learn, to push beyond the known. Odysseus, Marco Polo, the seeker who leaves home to find themselves.",
+        "Shadow": "Restlessness, commitment-phobia, the grass-is-always-greener mentality. The shadow Explorer uses wandering as escape rather than discovery. They accumulate experiences without being transformed by any of them.",
+        "Light": "Genuine discovery, the expansion of consciousness through encounter with the unknown. The Explorer who goes deep enough eventually discovers that the most foreign territory is within.",
+        "Summary": "The seeker of horizons. Freedom that discovers what is unknown.",
+        "Questions": "Are you exploring or escaping? What inner territory have you been avoiding?"
+      },
+      "keywords": [
+        "freedom",
+        "discovery",
+        "journey",
+        "seeking",
+        "horizon",
+        "unknown"
+      ],
+      "metadata": {
+        "jungian_concept": "Explorer / Seeker",
+        "domain": "Collective Unconscious"
+      }
+    },
+    {
+      "id": "the-sage",
+      "name": "The Sage",
+      "symbol": "📜",
+      "level": 1,
+      "category": "archetypal-figures",
+      "sort_order": 21,
+      "sections": {
+        "Interpretation": "The archetype of truth, understanding, and the pursuit of knowledge for its own sake. The Sage is the philosopher, the scholar, the contemplative who seeks to understand the nature of reality. Unlike the Wise Old Man who offers guidance, the Sage is the seeker of truth who may never finish seeking — and does not mind.",
+        "Shadow": "Detachment that becomes disconnection. The ivory tower. Analysis paralysis. The shadow Sage substitutes understanding for living, collects knowledge as a defence against feeling, or uses intellectual superiority to avoid intimacy.",
+        "Light": "Clarity of understanding, the capacity to see patterns and meaning, the deep pleasure of comprehension. The Sage's gift is perspective — the ability to step back and see the whole.",
+        "Summary": "The seeker of truth. Understanding that illuminates without possessing.",
+        "Questions": "Are you understanding your life or living it? What do you know that you haven't yet embodied?"
+      },
+      "keywords": [
+        "truth",
+        "knowledge",
+        "understanding",
+        "contemplation",
+        "philosophy"
+      ],
+      "metadata": {
+        "jungian_concept": "Sage",
+        "domain": "Collective Unconscious"
+      }
+    },
+    {
+      "id": "the-magician",
+      "name": "The Magician",
+      "symbol": "⚗️",
+      "level": 1,
+      "category": "archetypal-figures",
+      "sort_order": 22,
+      "sections": {
+        "Interpretation": "The archetype of transformation, sacred technology, and the power to change reality through understanding its hidden laws. The Magician is the alchemist, the shaman, the healer who works with invisible forces. Where the Creator makes something new, the Magician transforms what already exists — lead into gold, illness into health, unconsciousness into awareness.",
+        "Shadow": "Manipulation, the abuse of knowledge for power, the sorcerer's apprentice who unleashes forces beyond their control. The shadow Magician uses insight into human nature to control others.",
+        "Light": "Genuine transformation — of self, of situation, of consciousness. The Magician sees the hidden connections between things and works with them. Healing at the deepest level is Magician's work.",
+        "Summary": "The transformer. Sacred technology for turning lead into gold.",
+        "Questions": "What transformation is underway in your life? Are you the alchemist, or the lead?"
+      },
+      "keywords": [
+        "transformation",
+        "alchemy",
+        "healing",
+        "power",
+        "hidden-laws",
+        "shaman"
+      ],
+      "metadata": {
+        "jungian_concept": "Magician",
+        "domain": "Collective Unconscious"
+      }
+    },
+    {
+      "id": "the-rebel",
+      "name": "The Rebel",
+      "symbol": "⚡",
+      "level": 1,
+      "category": "archetypal-figures",
+      "sort_order": 23,
+      "sections": {
+        "Interpretation": "The archetype of revolution, liberation, and the refusal to accept injustice. The Rebel sees what is wrong and acts to change it — not from the Trickster's playful chaos but from a burning sense that things must be different. Prometheus stealing fire for humanity, the revolutionary who risks everything for freedom.",
+        "Shadow": "Rebellion as identity — defining yourself entirely by what you are against. Chronic opposition that cannot build, only destroy. The shadow Rebel becomes the very tyrant they opposed.",
+        "Light": "The courage to stand against injustice, to speak truth to power, to sacrifice personal comfort for collective liberation. The Rebel is the psyche's response to systems that have become oppressive.",
+        "Summary": "Sacred outrage. The one who breaks chains — outer and inner.",
+        "Questions": "What injustice are you tolerating? Is your rebellion creating something, or only opposing something?"
+      },
+      "keywords": [
+        "revolution",
+        "liberation",
+        "justice",
+        "defiance",
+        "Prometheus",
+        "freedom"
+      ],
+      "metadata": {
+        "jungian_concept": "Rebel / Outlaw",
+        "domain": "Collective Unconscious"
+      }
+    },
+    {
+      "id": "shadow-meets-ego",
+      "name": "Shadow Meets Ego",
+      "symbol": "🌓",
+      "level": 2,
+      "category": "archetypal-dynamics",
+      "sort_order": 24,
+      "composite_of": [
+        "the-shadow",
+        "the-ego"
+      ],
+      "sections": {
+        "Interpretation": "The confrontation between who you think you are and who you also are. This is the classic Jungian crisis: the moral, responsible ego meets the shadow and discovers its own capacity for everything it has condemned. This dynamic produces the dark night of the soul, the midlife crisis, the moment of reckoning.",
+        "Summary": "The reckoning. When the mask meets the mirror.",
+        "Questions": "What have you recently discovered about yourself that disturbs you? Can you hold it without judgment?"
+      },
+      "keywords": [
+        "confrontation",
+        "crisis",
+        "integration",
+        "dark-night",
+        "reckoning"
+      ],
+      "metadata": {
+        "dynamic": "Shadow-Ego confrontation"
+      }
+    },
+    {
+      "id": "persona-shadow-split",
+      "name": "The Persona-Shadow Split",
+      "symbol": "🎭🌑",
+      "level": 2,
+      "category": "archetypal-dynamics",
+      "sort_order": 25,
+      "composite_of": [
+        "the-persona",
+        "the-shadow"
+      ],
+      "sections": {
+        "Interpretation": "The greater the Persona, the darker the Shadow. What you perform in public, you compensate for in private. The saint and the sinner are the same person, divided. This dynamic explains the public figure caught in scandal — the moral crusader with a secret life. In everyday life, it shows up as the gap between who you pretend to be and who you are when no one is watching.",
+        "Summary": "The brighter the mask, the deeper the darkness behind it.",
+        "Questions": "What is the gap between your public and private self? What would integration look like?"
+      },
+      "keywords": [
+        "split",
+        "hypocrisy",
+        "compensation",
+        "public-private",
+        "integration"
+      ],
+      "metadata": {
+        "dynamic": "Persona-Shadow compensation"
+      }
+    },
+    {
+      "id": "hero-dragon",
+      "name": "The Hero and the Dragon",
+      "symbol": "⚔️🐉",
+      "level": 2,
+      "category": "archetypal-dynamics",
+      "sort_order": 26,
+      "composite_of": [
+        "the-hero",
+        "the-great-mother"
+      ],
+      "sections": {
+        "Interpretation": "The central myth of consciousness. The dragon is the Terrible Mother — the regressive pull of the unconscious, the comfort of remaining a child. The Hero must slay or tame the dragon to win the treasure of independent consciousness. But Jung warned: the hero who slays every dragon eventually becomes the dragon. The mature version of this dynamic is not conquest but relationship.",
+        "Summary": "The foundational myth. Consciousness wrestling free from the unconscious.",
+        "Questions": "What are you fighting to separate from? Is it time to stop fighting and start relating?"
+      },
+      "keywords": [
+        "dragon",
+        "consciousness",
+        "separation",
+        "independence",
+        "treasure"
+      ],
+      "metadata": {
+        "dynamic": "Hero-Dragon (consciousness vs. unconscious)"
+      }
+    },
+    {
+      "id": "anima-animus-projection",
+      "name": "The Projection of the Soul",
+      "symbol": "🌙☀️",
+      "level": 2,
+      "category": "archetypal-dynamics",
+      "sort_order": 27,
+      "composite_of": [
+        "the-anima",
+        "the-animus"
+      ],
+      "sections": {
+        "Interpretation": "Falling in love is falling into a projection. The Anima or Animus is projected onto another person, who becomes luminous, irresistible, larger than life. The projection is not false — it reveals a genuine inner reality — but it uses the other person as a screen. The work of relationship is to withdraw the projection without losing the love. To see the real person behind the god or goddess you projected.",
+        "Summary": "The alchemy of projection. Seeing the god in another — then finding it in yourself.",
+        "Questions": "Who carries your projection right now? What quality in them actually belongs to you?"
+      },
+      "keywords": [
+        "projection",
+        "love",
+        "fascination",
+        "soul-image",
+        "relationship"
+      ],
+      "metadata": {
+        "dynamic": "Anima-Animus projection"
+      }
+    },
+    {
+      "id": "trickster-ruler",
+      "name": "The Trickster and the King",
+      "symbol": "🃏👑",
+      "level": 2,
+      "category": "archetypal-dynamics",
+      "sort_order": 28,
+      "composite_of": [
+        "the-trickster",
+        "the-ruler"
+      ],
+      "sections": {
+        "Interpretation": "Every court needs a jester. The Trickster exists in perpetual tension with the Ruler — chaos opposing order, play opposing duty, irreverence opposing authority. A kingdom without a Trickster becomes a tyranny. A Trickster without a kingdom becomes mere chaos. The psyche needs both: structure that enables, and laughter that liberates.",
+        "Summary": "Order and chaos in creative tension. The jester who keeps the king honest.",
+        "Questions": "Where in your life is order becoming oppressive? Where is chaos becoming directionless?"
+      },
+      "keywords": [
+        "order",
+        "chaos",
+        "tension",
+        "jester",
+        "authority",
+        "balance"
+      ],
+      "metadata": {
+        "dynamic": "Trickster-Ruler polarity"
+      }
+    },
+    {
+      "id": "creator-destroyer",
+      "name": "Creation and Destruction",
+      "symbol": "🎨🔥",
+      "level": 2,
+      "category": "archetypal-dynamics",
+      "sort_order": 29,
+      "composite_of": [
+        "the-creator",
+        "the-destroyer"
+      ],
+      "sections": {
+        "Interpretation": "Every act of creation is also an act of destruction. To write a poem, you must destroy the blank page. To build a new life, you must let the old one die. Brahma and Shiva, creation and dissolution, the inhale and the exhale. This dynamic teaches that you cannot create anything new while desperately preserving everything old.",
+        "Summary": "The eternal cycle. You cannot build without clearing the ground.",
+        "Questions": "What must you destroy to create what you long for? What are you preserving that blocks new growth?"
+      },
+      "keywords": [
+        "creation",
+        "destruction",
+        "cycle",
+        "renewal",
+        "transformation"
+      ],
+      "metadata": {
+        "dynamic": "Creator-Destroyer cycle"
+      }
+    },
+    {
+      "id": "individuation",
+      "name": "Individuation",
+      "symbol": "🌀",
+      "level": 3,
+      "category": "the-journey",
+      "sort_order": 30,
+      "composite_of": [
+        "the-ego",
+        "the-self",
+        "the-shadow",
+        "the-anima",
+        "the-animus"
+      ],
+      "sections": {
+        "Interpretation": "The central concept of Jungian psychology — the lifelong process of becoming who you truly are. Not perfection but completeness. Not the hero's triumph but the sage's acceptance. Individuation means integrating the Shadow, withdrawing projections, developing a relationship with the Self, and learning to hold the tension of opposites without splitting into one side or the other.",
+        "Summary": "The journey of becoming whole. Not perfect, but complete.",
+        "Questions": "Where are you in the process of becoming yourself? What part of you is still waiting to be included?"
+      },
+      "keywords": [
+        "wholeness",
+        "integration",
+        "becoming",
+        "process",
+        "completeness"
+      ],
+      "metadata": {
+        "stage": "The overarching process"
+      }
+    },
+    {
+      "id": "the-descent",
+      "name": "The Night Sea Journey",
+      "symbol": "🌊",
+      "level": 3,
+      "category": "the-journey",
+      "sort_order": 31,
+      "composite_of": [
+        "the-hero",
+        "the-shadow",
+        "the-great-mother"
+      ],
+      "sections": {
+        "Interpretation": "The mythic pattern of descent into the depths — Jonah in the whale, Inanna in the underworld, Christ in the tomb. The Night Sea Journey is the necessary depression, the dark night, the period when the old self dies and the new self has not yet been born. You cannot skip this stage. The only way out is through.",
+        "Summary": "The descent into darkness. The whale's belly. The necessary passage through death.",
+        "Questions": "Are you in a descent? Can you stop trying to escape and let it do its work?"
+      },
+      "keywords": [
+        "descent",
+        "darkness",
+        "death-rebirth",
+        "depression",
+        "underworld",
+        "transformation"
+      ],
+      "metadata": {
+        "stage": "The necessary descent"
+      }
+    },
+    {
+      "id": "the-conjunction",
+      "name": "The Sacred Marriage",
+      "symbol": "💍",
+      "level": 3,
+      "category": "the-journey",
+      "sort_order": 32,
+      "composite_of": [
+        "the-anima",
+        "the-animus",
+        "the-self"
+      ],
+      "sections": {
+        "Interpretation": "The alchemical coniunctio — the union of opposites within the psyche. Masculine and feminine, conscious and unconscious, light and dark joined in sacred marriage. This is not a relationship with another person (though it may be reflected in one) but an inner event: the moment when the warring halves of the soul make peace. It is the goal of individuation and the image of the Self realised.",
+        "Summary": "The union of opposites. Inner marriage that makes the soul whole.",
+        "Questions": "What opposites in you are ready to be reconciled? Where have you been choosing sides in a war that needs a wedding?"
+      },
+      "keywords": [
+        "union",
+        "opposites",
+        "coniunctio",
+        "marriage",
+        "wholeness",
+        "alchemy"
+      ],
+      "metadata": {
+        "stage": "The union of opposites"
+      }
+    },
+    {
+      "id": "the-return",
+      "name": "The Return",
+      "symbol": "🏠",
+      "level": 3,
+      "category": "the-journey",
+      "sort_order": 33,
+      "composite_of": [
+        "the-hero",
+        "the-self",
+        "the-ego"
+      ],
+      "sections": {
+        "Interpretation": "The final stage: the hero returns from the underworld, the seeker comes home. But home is different now — or rather, you are different, and so home is seen with new eyes. The Return is not going back to the beginning. It is arriving where you started and knowing the place for the first time. The ego has been through the fire and now serves the Self willingly. This is wisdom.",
+        "Summary": "Coming home transformed. Seeing the ordinary with extraordinary eyes.",
+        "Questions": "What have you learned that you are ready to bring back to the world? How has the journey changed what 'home' means?"
+      },
+      "keywords": [
+        "return",
+        "home",
+        "wisdom",
+        "completion",
+        "service",
+        "integration"
+      ],
+      "metadata": {
+        "stage": "The return with the elixir"
+      }
+    }
+  ]
+}

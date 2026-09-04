@@ -1,0 +1,62 @@
+{
+  "description": "Voice configuration for Alice in Wonderland audiobook. Edit voice_id to swap voices.",
+  "model": "eleven_multilingual_v2",
+  "output_format": "mp3_44100_128",
+  "roles": {
+    "narrator": {
+      "description": "Warm adult female narrator — reads all narration and stage directions",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "voice_name": "Matilda",
+      "settings": {
+        "stability": 0.65,
+        "similarity_boost": 0.75,
+        "style": 0.1,
+        "speed": 0.92
+      }
+    },
+    "alice": {
+      "description": "Young female voice — Alice, curious and expressive",
+      "voice_id": "jBpfuIE2acCO8z3wKNLl",
+      "voice_name": "Gigi (childish/animation)",
+      "settings": {
+        "stability": 0.5,
+        "similarity_boost": 0.8,
+        "style": 0.2,
+        "speed": 1.0
+      }
+    },
+    "male": {
+      "description": "Energetic male — Rabbit, Hatter, King, Gryphon, Mouse, Dodo, Bill, etc.",
+      "voice_id": "bVMeCyTHy58xNoL34h3p",
+      "voice_name": "Jeremy (excited/narration)",
+      "settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.7,
+        "style": 0.3,
+        "speed": 1.0
+      }
+    },
+    "female": {
+      "description": "Authoritative female — Queen, Duchess, Cook, Pigeon",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi (strong/narration)",
+      "settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.95
+      }
+    },
+    "quirky": {
+      "description": "Distinctive/ethereal — Cheshire Cat, Caterpillar, Mock Turtle, Dormouse",
+      "voice_id": "z9fAnlkpzviPz146aGWa",
+      "voice_name": "Glinda (witch/character)",
+      "settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.65,
+        "style": 0.4,
+        "speed": 0.9
+      }
+    }
+  }
+}

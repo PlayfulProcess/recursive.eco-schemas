@@ -1,0 +1,770 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "attribution": [
+      {"name": "PlayfulProcess", "date": "2026", "note": "Original grammar: structural survey of nation-building, language politics, borders, sovereignty, and alternative frameworks"}
+    ]
+  },
+  "name": "The Architecture of Nations",
+  "description": "A structural survey of how the modern world was built — the treaties that drew borders, the policies that standardized languages, the frameworks that defined who counts as a nation and who doesn't, and the knowledge systems that persist beneath and beyond those structures. 45 cards across six domains: Borders & Maps, Languages & Scripts, Sovereignty & Recognition, Development & Progress, Knowledge & Patrimony, and Resistance & Persistence.\n\nEach card presents what happened, the underlying pattern, and what still operates today. No editorializing needed — the architecture speaks for itself.",
+  "grammar_type": "custom",
+  "creator_name": "PlayfulProcess",
+  "tags": ["nation-state", "borders", "language", "sovereignty", "cartography", "development", "indigenous", "resistance", "linguistics", "geopolitics"],
+  "roots": ["western-philosophy", "indigenous-knowledge"],
+  "shelves": ["contested", "mirror"],
+  "lineages": ["Akomolafe", "Andreotti", "Kelty"],
+  "worldview": "dialectical",
+  "items": [
+    {
+      "id": "treaty-westphalia",
+      "name": "The Treaty of Westphalia (1648)",
+      "sort_order": 1,
+      "category": "borders-maps",
+      "level": 1,
+      "sections": {
+        "What Happened": "Two treaties signed in Osnabrück and Münster ended the Thirty Years' War and established a new principle: each sovereign state has exclusive authority within its territory. No emperor, no pope can override the ruler within his borders. This was a European solution to a European problem — religious wars — but it became the template exported to the entire world.",
+        "The Pattern": "A local arrangement becomes the universal standard. The Westphalian model assumes that the world is naturally divided into bounded territories with single sovereign authorities. It has no framework for overlapping jurisdictions, shared lands, nomadic peoples, or governance that isn't tied to a specific patch of ground.",
+        "Still Here": "Every international institution — the UN, international law, diplomacy itself — assumes Westphalian sovereignty. When a people doesn't fit this model (nomads, diasporas, indigenous nations within settler states), the system has no category for them. They become anomalies in a framework designed for 17th-century European princes."
+      },
+      "keywords": ["westphalia", "sovereignty", "nation-state", "europe", "1648"],
+      "metadata": {"astrology": {"planets": ["Saturn", "Jupiter"], "signs": ["Capricorn", "Sagittarius"], "themes": ["sovereignty", "institutional-order"]}}
+    },
+    {
+      "id": "berlin-conference",
+      "name": "The Berlin Conference (1884–85)",
+      "sort_order": 2,
+      "category": "borders-maps",
+      "level": 1,
+      "sections": {
+        "What Happened": "Fourteen European powers met in Berlin to regulate the partition of Africa. No African representatives were present. Over the next thirty years, European states drew borders across the continent using maps, rulers, and negotiation tables thousands of miles from the lands being divided. By 1914, only Ethiopia and Liberia remained independent.",
+        "The Pattern": "The people living on the land were not consulted about how the land would be divided. Borders cut through existing kingdoms, language groups, trade networks, and kinship systems. The conference didn't create colonialism — but it organized it into the bureaucratic form that would define Africa's political geography for the next century and beyond.",
+        "Still Here": "Almost every African border today follows the lines drawn in Berlin. The continent's 54 nations correspond to colonial administrative units, not to the political, linguistic, or cultural territories that existed before. The Organization of African Unity agreed in 1964 to keep colonial borders to avoid cascading conflicts — inheriting the architecture because dismantling it seemed even more dangerous."
+      },
+      "keywords": ["berlin-conference", "africa", "partition", "colonialism", "1884"],
+      "metadata": {"astrology": {"planets": ["Mars", "Saturn"], "signs": ["Aries", "Capricorn"], "themes": ["conquest", "partition"]}}
+    },
+    {
+      "id": "sykes-picot",
+      "name": "The Sykes-Picot Agreement (1916)",
+      "sort_order": 3,
+      "category": "borders-maps",
+      "level": 1,
+      "sections": {
+        "What Happened": "During World War I, British diplomat Mark Sykes and French diplomat François Georges-Picot secretly drew lines on a map of the Ottoman Empire, dividing it into British and French spheres of influence. The agreement contradicted promises made to Arab leaders who were fighting alongside the Allies in exchange for independence. When the war ended, the map became reality.",
+        "The Pattern": "A secret agreement between two powers defines the political future of millions who were not party to the negotiation. The resulting borders created Iraq (combining Kurds, Sunni Arabs, and Shia Arabs), Syria, Lebanon, Jordan, and Palestine — entities that reflected European administrative logic, not the social geography of the region.",
+        "Still Here": "The borders of the modern Middle East remain substantially those drawn by Sykes and Picot. The conflicts in Iraq, Syria, Lebanon, and Israel/Palestine all unfold within — and often against — this framework. When ISIS declared its caliphate in 2014, one of its first symbolic acts was bulldozing the Syria-Iraq border: 'The end of Sykes-Picot.'"
+      },
+      "keywords": ["sykes-picot", "middle-east", "borders", "secret-treaty", "ottoman"],
+      "metadata": {"astrology": {"planets": ["Mars", "Neptune"], "signs": ["Aries", "Pisces"], "themes": ["secret-agreements", "imposed-borders"]}}
+    },
+    {
+      "id": "partition-india",
+      "name": "The Partition of India (1947)",
+      "sort_order": 4,
+      "category": "borders-maps",
+      "level": 1,
+      "sections": {
+        "What Happened": "British lawyer Cyril Radcliffe, who had never been to India, was given five weeks to draw a line dividing the subcontinent into Hindu-majority India and Muslim-majority Pakistan. The Radcliffe Line cut through Punjab and Bengal, splitting villages, families, and water systems. The resulting migration displaced 15 million people. Between one and two million died in the violence.",
+        "The Pattern": "A departing power draws a border based on religious demographics, as if populations were cleanly separable. The act of drawing the line created the very communal identities it claimed to reflect — people who had lived together for generations were suddenly on the wrong side. The border didn't resolve a conflict; it created one.",
+        "Still Here": "India and Pakistan have fought four wars. Kashmir remains divided and disputed. Bangladesh (formerly East Pakistan) separated in 1971. The Radcliffe Line, drawn in five weeks by a man who'd never visited, defines the lives of 1.8 billion people. Families separated in 1947 still cannot easily cross."
+      },
+      "keywords": ["partition", "india", "pakistan", "radcliffe-line", "1947", "displacement"],
+      "metadata": {"astrology": {"planets": ["Mars", "Pluto"], "signs": ["Aries", "Scorpio"], "themes": ["division", "mass-displacement"]}}
+    },
+    {
+      "id": "terra-nullius",
+      "name": "Terra Nullius: The Legal Fiction of Empty Land",
+      "sort_order": 5,
+      "category": "borders-maps",
+      "level": 1,
+      "sections": {
+        "What Happened": "Terra nullius — 'land belonging to no one' — was the legal principle that allowed European powers to claim inhabited territories by declaring them empty. If the people living there didn't use the land in ways Europeans recognized (permanent agriculture, fenced property, written deeds), the land was legally vacant. Australia was classified as terra nullius until 1992.",
+        "The Pattern": "The concept requires a very specific definition of 'use' and 'ownership.' Hunting, gathering, seasonal migration, ceremonial use, songlines — none of these count. Only sedentary agriculture with individual title counts as 'occupying' land. The definition of emptiness was engineered to produce the conclusion it needed.",
+        "Still Here": "Australia's Mabo v Queensland (1992) overturned terra nullius after 204 years, recognizing native title. But the principle's logic persists wherever land is treated as unused because its use isn't legible to the dominant system — from urban 'vacant lots' that are community gardens to forests 'wasted' because they aren't logged."
+      },
+      "keywords": ["terra-nullius", "land-rights", "legal-fiction", "australia", "indigenous"],
+      "metadata": {"astrology": {"planets": ["Saturn", "Neptune"], "signs": ["Capricorn", "Pisces"], "themes": ["legal-fiction", "erasure"]}}
+    },
+    {
+      "id": "doctrine-discovery",
+      "name": "The Doctrine of Discovery (1493)",
+      "sort_order": 6,
+      "category": "borders-maps",
+      "level": 1,
+      "sections": {
+        "What Happened": "In 1493, Pope Alexander VI issued the papal bull Inter Caetera, granting Spain sovereignty over lands 'discovered' west of a line in the Atlantic. The Doctrine of Discovery — the principle that Christian nations could claim non-Christian lands — became foundational to colonial law across the Americas, Australia, and New Zealand. It was cited by the US Supreme Court as recently as 1823 (Johnson v. M'Intosh).",
+        "The Pattern": "A religious authority grants political sovereignty over lands whose inhabitants practice different religions. The doctrine creates a hierarchy: Christian peoples have full sovereignty; non-Christian peoples have occupancy rights at best. Discovery by Europeans overrides prior presence by everyone else.",
+        "Still Here": "The Vatican formally repudiated the Doctrine in 2023. But its legal offspring remain embedded in property law across the Americas. Johnson v. M'Intosh has never been overruled. Indigenous land claims in the US, Canada, Australia, and New Zealand still operate within legal frameworks that trace back to a 15th-century papal decree."
+      },
+      "keywords": ["doctrine-discovery", "papal-bull", "indigenous", "sovereignty", "1493"],
+      "metadata": {"astrology": {"planets": ["Jupiter", "Pluto"], "signs": ["Sagittarius", "Scorpio"], "themes": ["religious-authority", "dispossession"]}}
+    },
+    {
+      "id": "mercator-projection",
+      "name": "The Mercator Projection (1569)",
+      "sort_order": 7,
+      "category": "borders-maps",
+      "level": 1,
+      "sections": {
+        "What Happened": "Gerardus Mercator created a map projection optimized for navigation — straight lines on the map correspond to constant compass bearings. The trade-off: landmasses near the poles are enormously inflated. Greenland appears the size of Africa (it's actually 14 times smaller). Europe looks much larger than South America (it's actually half the size). This projection became the default world map in classrooms worldwide.",
+        "The Pattern": "Every flat map of a spherical Earth distorts something — area, shape, distance, or direction. But Mercator's particular distortion enlarges the colonizing nations and shrinks the colonized ones. This wasn't a conspiracy; it was a navigation tool. But when a navigation tool becomes the default picture of the world, its distortions become invisible assumptions.",
+        "Still Here": "Google Maps used Mercator until 2018. Most classroom wall maps still use it or similar projections. Alternative projections (Peters, Gall-Peters, AuthaGraph) exist but never achieved dominance. The mental map most people carry — with a giant Europe and a small Africa — is Mercator's map."
+      },
+      "keywords": ["mercator", "map", "projection", "cartography", "distortion"],
+      "metadata": {"astrology": {"planets": ["Mercury", "Jupiter"], "signs": ["Gemini", "Sagittarius"], "themes": ["representation", "navigation", "distortion"]}}
+    },
+    {
+      "id": "straight-line-borders",
+      "name": "Straight-Line Borders: When Geometry Replaces Geography",
+      "sort_order": 8,
+      "category": "borders-maps",
+      "level": 1,
+      "sections": {
+        "What Happened": "Roughly 44% of the world's borders are straight lines — and they're concentrated in Africa, the Middle East, and North America. These lines follow latitudes, longitudes, or arbitrary geometric arcs, ignoring rivers, mountains, ethnic groups, and trade routes. They were drawn on small-scale maps in distant capitals, often by administrators who had never visited the territory.",
+        "The Pattern": "Straight-line borders are the signature of external administration. Where borders follow rivers and mountain ranges, they tend to reflect local political realities. Where borders are straight, they almost always reflect decisions made far away. The straightness itself is a record of who was and wasn't at the table.",
+        "Still Here": "The US-Canada border west of the Great Lakes is the 49th parallel — a line that cuts through ecosystems, watersheds, and indigenous territories. Africa's straight-line borders split over 177 ethnic groups between two or more countries. These geometric borders generate ongoing conflicts between state sovereignty and the actual social geography of the people living there."
+      },
+      "keywords": ["borders", "geometry", "africa", "middle-east", "arbitrary"],
+      "metadata": {"astrology": {"planets": ["Saturn", "Uranus"], "signs": ["Capricorn", "Aquarius"], "themes": ["abstraction", "imposed-order"]}}
+    },
+    {
+      "id": "language-death",
+      "name": "Language Death: One Language Every Two Weeks",
+      "sort_order": 9,
+      "category": "languages-scripts",
+      "level": 1,
+      "sections": {
+        "What Happened": "Of the roughly 7,000 languages spoken today, linguists estimate that one goes extinct every two weeks. By 2100, between 50% and 90% of current languages may be gone. This is not a natural process — the vast majority of language deaths occur when speakers shift to a dominant language under economic pressure, educational policy, or social stigma. A language rarely dies of old age; it dies of shame.",
+        "The Pattern": "Language death follows power. When a state standardizes one language for education, law, and commerce, other languages become 'dialects,' then 'folk speech,' then silence. Each language carries unique knowledge — Inuit has dozens of words for snow conditions, Aboriginal Australian languages encode navigation in grammar. When a language dies, its entire epistemology goes with it.",
+        "Still Here": "UNESCO classifies 2,680 languages as endangered. Papua New Guinea alone has 840 languages. Most endangered languages are spoken by indigenous and minority communities who face pressure to assimilate. Language death is accelerating as urbanization, mass media, and the internet consolidate around a handful of global languages."
+      },
+      "keywords": ["language-death", "extinction", "endangerment", "diversity", "loss"],
+      "metadata": {"astrology": {"planets": ["Pluto", "Saturn"], "signs": ["Scorpio", "Capricorn"], "themes": ["extinction", "irreversible-loss"]}}
+    },
+    {
+      "id": "french-academy",
+      "name": "The Académie Française: Standardizing a Language, Erasing Dialects",
+      "sort_order": 10,
+      "category": "languages-scripts",
+      "level": 1,
+      "sections": {
+        "What Happened": "Cardinal Richelieu founded the Académie Française in 1635 to standardize the French language. After the Revolution, the Republic made this project explicit: speaking French was citizenship, and regional languages — Breton, Occitan, Basque, Alsatian, Corsican — were obstacles to national unity. School children were punished for speaking their mother tongue. By 1900, France had been linguistically unified through deliberate policy.",
+        "The Pattern": "One nation, one language. The equation of linguistic unity with political loyalty is a modern invention. Before nation-states, multilingualism was the norm everywhere. The French model — a standard language enforced through schools and bureaucracy — became the template for nationalist language policy worldwide, from Turkey to Indonesia to post-colonial Africa.",
+        "Still Here": "France still has no constitutional recognition of regional languages (an amendment was rejected in 2021). Occitan, once spoken by 10 million, has fewer than 100,000 fluent speakers. The Académie continues to police French, resisting English loanwords. The same model operates wherever a national language is treated as more 'real' than the languages people actually speak at home."
+      },
+      "keywords": ["french", "academy", "standardization", "dialect", "prestige"],
+      "metadata": {"astrology": {"planets": ["Saturn", "Mercury"], "signs": ["Capricorn", "Gemini"], "themes": ["standardization", "authority-over-speech"]}}
+    },
+    {
+      "id": "script-revolution-turkey",
+      "name": "Turkey's Script Revolution (1928)",
+      "sort_order": 11,
+      "category": "languages-scripts",
+      "level": 1,
+      "sections": {
+        "What Happened": "In 1928, Mustafa Kemal Atatürk replaced the Arabic script used for Ottoman Turkish with a modified Latin alphabet. The change was implemented in months — all government documents, newspapers, and schools switched. Overnight, centuries of Ottoman literature became inaccessible to ordinary people. Atatürk personally toured the country teaching the new letters on blackboards.",
+        "The Pattern": "Script change is the most radical form of linguistic engineering. It doesn't change what people say — it changes what they can read. By severing the connection to Ottoman (and by extension Arabic and Persian) literary tradition, the script revolution reoriented Turkey toward Europe. Similar script changes occurred in Soviet Central Asia (Arabic → Latin → Cyrillic) and Vietnam (Chinese characters → Latin-based quốc ngữ).",
+        "Still Here": "Most Turks today cannot read Ottoman texts without specialized training. The script revolution succeeded in its goal: modern Turkey's cultural orientation is toward Europe. But it also created a break in cultural memory — a population that cannot read its own grandparents' letters."
+      },
+      "keywords": ["turkey", "ataturk", "latin-alphabet", "script-change", "modernization"],
+      "metadata": {"astrology": {"planets": ["Uranus", "Mercury"], "signs": ["Aquarius", "Gemini"], "themes": ["revolution", "rupture-with-past"]}}
+    },
+    {
+      "id": "residential-schools",
+      "name": "Residential Schools: Language as Target",
+      "sort_order": 12,
+      "category": "languages-scripts",
+      "level": 1,
+      "sections": {
+        "What Happened": "From the 1880s to the 1990s, governments in Canada, the United States, Australia, and New Zealand removed indigenous children from their families and placed them in boarding schools where they were forbidden to speak their languages, practice their ceremonies, or wear their hair. The explicit policy was assimilation — as Captain Richard Henry Pratt put it: 'Kill the Indian, save the man.' Over 150,000 children passed through Canada's residential school system alone.",
+        "The Pattern": "Language was targeted precisely because it carries culture. If you break the transmission of language from grandparent to grandchild, you break the transmission of law, ceremony, medicine, ecology, identity, and cosmology in a single generation. The schools understood that language is not just communication — it is the container for an entire way of being.",
+        "Still Here": "Canada's Truth and Reconciliation Commission (2015) documented the system's impacts including thousands of deaths. Unmarked graves continue to be found. The intergenerational trauma — addiction, family breakdown, language loss — is a present-tense reality, not a historical fact. Many of the languages targeted are now critically endangered, spoken only by elders."
+      },
+      "keywords": ["residential-schools", "indigenous", "assimilation", "language-suppression", "canada", "australia", "usa"],
+      "metadata": {"astrology": {"planets": ["Saturn", "Pluto"], "signs": ["Capricorn", "Scorpio"], "themes": ["institutional-violence", "cultural-erasure"]}}
+    },
+    {
+      "id": "lingua-francas",
+      "name": "Lingua Francas: How Power Creates Common Tongues",
+      "sort_order": 13,
+      "category": "languages-scripts",
+      "level": 1,
+      "sections": {
+        "What Happened": "Throughout history, the language of the dominant power becomes the language everyone needs to learn: Greek in the Hellenistic world, Latin in the Roman Empire, Arabic across the Islamic caliphate, French in European diplomacy, English in the British Empire and its American successor. The term 'lingua franca' itself originally referred to the pidgin Italian used by Mediterranean traders.",
+        "The Pattern": "A lingua franca is never neutral. It carries the grammar, categories, and worldview of its source culture. When English becomes the language of science, business, and the internet, it doesn't just enable communication — it determines which concepts are easy to think and which require translation. The language of the powerful becomes the language of the possible.",
+        "Still Here": "English is now the world's dominant lingua franca, spoken by 1.5 billion people (most as a second language). It's the mandatory language of aviation, maritime law, and most international organizations. This is enormously practical and simultaneously a consolidation — ideas that don't translate easily into English become harder to publish, fund, and disseminate."
+      },
+      "keywords": ["lingua-franca", "english", "arabic", "trade", "empire", "communication"],
+      "metadata": {"astrology": {"planets": ["Mercury", "Jupiter"], "signs": ["Gemini", "Sagittarius"], "themes": ["trade-language", "expansion"]}}
+    },
+    {
+      "id": "creole-languages",
+      "name": "Creole Languages: When Languages Collide and Create",
+      "sort_order": 14,
+      "category": "languages-scripts",
+      "level": 1,
+      "sections": {
+        "What Happened": "When speakers of mutually unintelligible languages are forced into contact — through slavery, colonization, or trade — they develop pidgins (simplified contact languages). When children grow up speaking a pidgin as their first language, it becomes a creole: a fully complex, rule-governed language born from collision. Haitian Creole, Tok Pisin, Cape Verdean Kriolu, and dozens of others emerged from the plantation system, the slave trade, and colonial contact zones.",
+        "The Pattern": "Creoles are languages born from violence that become vehicles for identity and resistance. They were long dismissed as 'broken' versions of European languages, but linguists now recognize them as complete languages with their own grammars. The dismissal itself reveals the pattern: a language created by enslaved people is treated as inferior to the language of their enslavers.",
+        "Still Here": "Haitian Creole is spoken by 12 million people but was only recognized as Haiti's official language alongside French in 1987. In many creole-speaking communities, the creole is the language of home and street while the colonial language remains the language of school, court, and prestige. The hierarchy of languages mirrors the hierarchy of peoples."
+      },
+      "keywords": ["creole", "pidgin", "language-creation", "caribbean", "contact"],
+      "metadata": {"astrology": {"planets": ["Venus", "Mercury"], "signs": ["Libra", "Gemini"], "themes": ["creation-from-contact", "synthesis"]}}
+    },
+    {
+      "id": "code-switching",
+      "name": "Code-Switching: Living Between Languages",
+      "sort_order": 15,
+      "category": "languages-scripts",
+      "level": 1,
+      "sections": {
+        "What Happened": "Code-switching is the practice of alternating between languages or language varieties within a single conversation or even a single sentence. It's universal among multilingual speakers — a Chicano teenager might switch between English and Spanish mid-sentence, a Nigerian professional between Yoruba, pidgin, and English depending on context. Linguists once treated this as confusion; it is now recognized as a sophisticated cognitive skill.",
+        "The Pattern": "Code-switching maps power. People switch to the dominant language in formal settings (court, school, job interview) and to their home language in intimate settings (family, friends, prayer). The switch itself is a navigation of two worlds — and the need to switch reveals that one language is coded as 'official' and the other as 'unofficial.' The bilingual person carries this border inside them.",
+        "Still Here": "Code-switching is now studied as a marker of cognitive flexibility, not deficiency. But the social pressure remains: speaking the 'wrong' language in the 'wrong' context can cost you a job, a grade, or social standing. The ability to code-switch is a survival skill that monolingual people in dominant cultures never have to develop."
+      },
+      "keywords": ["code-switching", "bilingual", "identity", "context", "navigation"],
+      "metadata": {"astrology": {"planets": ["Mercury", "Moon"], "signs": ["Gemini", "Cancer"], "themes": ["adaptation", "dual-belonging"]}}
+    },
+    {
+      "id": "place-name-changes",
+      "name": "Place-Name Changes: Who Names the Land",
+      "sort_order": 16,
+      "category": "languages-scripts",
+      "level": 1,
+      "sections": {
+        "What Happened": "Colonial powers renamed the places they claimed. Mountains, rivers, cities, and continents received European names — often the names of the very people who conquered them. Denali became Mount McKinley. Uluru became Ayers Rock. The Congo was renamed Zaire, then back again. Bombay became Mumbai, Madras became Chennai, Rhodesia became Zimbabwe. Each renaming was an act of sovereignty: whoever names the land, owns the story.",
+        "The Pattern": "Naming is the most basic act of possession. When colonizers name a place, they insert it into their geography and their history. When post-colonial states rename places, they are reclaiming narrative sovereignty — even when the old name persists in international usage. The struggle over names is never just about words; it's about whose presence is considered original.",
+        "Still Here": "Denali was restored in 2015 (after a century as McKinley). Czechia replaced Czech Republic. Türkiye replaced Turkey. Indigenous place names are slowly returning to maps in Australia, New Zealand, and Canada. But most of the world's geographic names still reflect colonial cartography — and the maps in your phone still default to European names for places that had names for millennia before Europeans arrived."
+      },
+      "keywords": ["toponymy", "renaming", "colonialism", "identity", "bombay-mumbai"],
+      "metadata": {"astrology": {"planets": ["Mercury", "Pluto"], "signs": ["Gemini", "Scorpio"], "themes": ["naming-power", "identity-erasure"]}}
+    },
+    {
+      "id": "oral-traditions",
+      "name": "Oral Traditions: Knowledge Without Writing",
+      "sort_order": 17,
+      "category": "languages-scripts",
+      "level": 1,
+      "sections": {
+        "What Happened": "For most of human history, all knowledge was oral. Law codes, medical knowledge, navigation, history, astronomy, and ethics were transmitted through memorized songs, stories, and ceremonies — often with extraordinary precision. Aboriginal Australians maintain oral traditions describing geological events from 10,000 years ago. West African griots carry genealogies spanning centuries. Polynesian navigators memorized star charts covering thousands of miles of open ocean.",
+        "The Pattern": "Writing-based civilizations assumed that oral cultures had no knowledge systems — just 'folklore.' This is a category error. Oral traditions are not pre-literate (waiting to become written); they are differently literate, with their own technologies of memory, accuracy, and transmission. By privileging written records, colonial legal systems invalidated oral testimony, oral treaties, and oral title to land.",
+        "Still Here": "Courts in many countries now accept oral history as evidence in land claims. But the deeper issue persists: academic knowledge, legal evidence, and 'official' history still privilege written sources. Knowledge that was never written down — because it didn't need to be — remains invisible to systems that can only see documents."
+      },
+      "keywords": ["oral-tradition", "storytelling", "memory", "indigenous", "griot"],
+      "metadata": {"astrology": {"planets": ["Moon", "Neptune"], "signs": ["Cancer", "Pisces"], "themes": ["memory", "living-knowledge"]}}
+    },
+    {
+      "id": "self-determination",
+      "name": "Self-Determination: A Promise Selectively Applied",
+      "sort_order": 18,
+      "category": "sovereignty-recognition",
+      "level": 1,
+      "sections": {
+        "What Happened": "At the 1919 Paris Peace Conference, Woodrow Wilson championed 'the self-determination of peoples' — the principle that every nation should govern itself. The principle was applied to break up the Austro-Hungarian and Ottoman empires into new nation-states. It was not applied to European colonies in Africa, Asia, or the Pacific. Ho Chi Minh attended the conference with a petition for Vietnamese independence; he was ignored.",
+        "The Pattern": "Self-determination was conceived as a universal right but applied as a selective tool. Peoples who looked like European nations (with written languages, recognized borders, and Christian majorities) received statehood. Peoples who didn't were classified as 'not yet ready' for self-governance. The principle contained its own exception: only peoples already recognized as peoples could claim the right to be peoples.",
+        "Still Here": "Self-determination remains the basis for independence movements worldwide — from Catalonia to Kurdistan to Scotland to Tibet. But the international system has no consistent criteria for when a group qualifies. The principle is simultaneously the most powerful idea in modern politics and the most selectively applied."
+      },
+      "keywords": ["self-determination", "wilson", "versailles", "sovereignty", "selective"],
+      "metadata": {"astrology": {"planets": ["Sun", "Jupiter"], "signs": ["Leo", "Sagittarius"], "themes": ["sovereignty", "selective-application"]}}
+    },
+    {
+      "id": "tribes-vs-nations",
+      "name": "\"Tribes\" vs \"Nations\": Who Gets Sovereignty",
+      "sort_order": 19,
+      "category": "sovereignty-recognition",
+      "level": 1,
+      "sections": {
+        "What Happened": "European colonizers classified non-European political entities as 'tribes' rather than 'nations.' The distinction was not descriptive but legal: nations have sovereignty, tribes do not. The Zulu kingdom, with its standing army and complex administration, was a 'tribe.' The Haudenosaunee Confederacy, whose constitution influenced the US founders, was a collection of 'tribes.' The word 'tribe' was applied to entities ranging from nomadic bands to million-person kingdoms.",
+        "The Pattern": "The tribe/nation distinction is a sorting mechanism. 'Nation' implies statehood, diplomacy, and legal equality. 'Tribe' implies a stage of development — a people on their way to becoming a nation but not there yet. The classification justified treating indigenous political entities as subordinate, their treaties as provisional, and their sovereignty as incomplete.",
+        "Still Here": "The word 'tribe' persists in common usage, academia, and even some indigenous self-descriptions (reclaimed). But the underlying distinction — between peoples who 'have' sovereignty and peoples who are still 'developing' toward it — continues to structure international law and domestic indigenous policy."
+      },
+      "keywords": ["tribe", "nation", "sovereignty", "classification", "hierarchy"],
+      "metadata": {"astrology": {"planets": ["Jupiter", "Saturn"], "signs": ["Sagittarius", "Capricorn"], "themes": ["classification", "hierarchy-of-peoples"]}}
+    },
+    {
+      "id": "failed-states",
+      "name": "\"Failed States\": Who Defines Failure",
+      "sort_order": 20,
+      "category": "sovereignty-recognition",
+      "level": 1,
+      "sections": {
+        "What Happened": "After the Cold War, the concept of the 'failed state' emerged to describe countries where central government had collapsed — Somalia, Afghanistan, the DRC. The Failed States Index (now the Fragile States Index) ranks countries annually. States that 'fail' become candidates for international intervention, structural adjustment programs, or UN trusteeship. No Western country has ever appeared near the top of the list.",
+        "The Pattern": "The concept measures failure against a very specific template: the Westphalian nation-state with centralized government, monopoly on violence, and bureaucratic administration. States that function through clan networks, customary law, or decentralized governance are classified as 'failing' — even when they provide security and services through non-state mechanisms. The index measures how well a country performs at being a European-style state.",
+        "Still Here": "The Fragile States Index continues to be published and cited in policy. Countries at the top become targets for intervention, aid conditionality, and external governance programs. The concept creates a feedback loop: states classified as 'failing' lose investor confidence and diplomatic standing, which makes them more fragile."
+      },
+      "keywords": ["failed-state", "fragile-state", "intervention", "sovereignty", "index"],
+      "metadata": {"astrology": {"planets": ["Saturn", "Mars"], "signs": ["Capricorn", "Aries"], "themes": ["judgment", "intervention-justification"]}}
+    },
+    {
+      "id": "passport-citizenship",
+      "name": "Passport and Citizenship: The Document That Defines Belonging",
+      "sort_order": 21,
+      "category": "sovereignty-recognition",
+      "level": 1,
+      "sections": {
+        "What Happened": "Passports in their modern form emerged after World War I, when states needed to control the movement of people across borders. Before 1914, most people could travel freely without documents. The passport system created a new reality: your identity is defined by which state claims you. A person without a passport — without a state willing to vouch for them — effectively doesn't exist in the international system.",
+        "The Pattern": "The passport is a technology that makes the nation-state visible on the body of the individual. It sorts the world's people into national containers and assigns each person a mobility profile. A German passport opens 190 countries without a visa. An Afghan passport opens 27. Same person, different document, different world. The passport doesn't describe identity — it produces it.",
+        "Still Here": "Passport inequality is one of the most concrete expressions of the global hierarchy. Citizenship in a wealthy country is the most valuable asset a person can hold — worth more, in economic terms, than any education or skill. The 'passport index' ranks citizenships by their power, making explicit what the system usually keeps implicit."
+      },
+      "keywords": ["passport", "citizenship", "identity", "mobility", "borders"],
+      "metadata": {"astrology": {"planets": ["Saturn", "Moon"], "signs": ["Capricorn", "Cancer"], "themes": ["belonging", "documented-identity"]}}
+    },
+    {
+      "id": "stateless-peoples",
+      "name": "Stateless Peoples: Existing Without Recognition",
+      "sort_order": 22,
+      "category": "sovereignty-recognition",
+      "level": 1,
+      "sections": {
+        "What Happened": "The UN estimates 10 million people worldwide are stateless — they have no citizenship in any country. The Rohingya in Myanmar, the Bidun in the Gulf states, many Roma in Europe, and Palestinians in various host countries exist in legal limbo. They cannot vote, own property, travel freely, or access state services. They are present but unrecognized — people the system was not designed to see.",
+        "The Pattern": "In a world organized into nation-states, people who don't belong to any state fall through every net. Statelessness reveals the system's foundational assumption: that every human being belongs to exactly one state. Those who don't — through denationalization, border changes, ethnic exclusion, or refugee flight — become administrative impossibilities. Hannah Arendt called this 'the right to have rights' — without a state, you have no rights at all.",
+        "Still Here": "Statelessness is growing. Climate refugees, denationalization campaigns (India's NRC), and the collapse of states create new stateless populations. The 1954 and 1961 UN conventions on statelessness have been ratified by fewer than half the world's countries."
+      },
+      "keywords": ["stateless", "kurds", "rohingya", "roma", "palestinians", "recognition"],
+      "metadata": {"astrology": {"planets": ["Neptune", "Saturn"], "signs": ["Pisces", "Capricorn"], "themes": ["invisibility", "structural-exclusion"]}}
+    },
+    {
+      "id": "mandate-system",
+      "name": "The Mandate System: Colonialism by Another Name",
+      "sort_order": 23,
+      "category": "sovereignty-recognition",
+      "level": 1,
+      "sections": {
+        "What Happened": "After World War I, the League of Nations distributed Germany's colonies and Ottoman provinces to Allied powers as 'mandates' — territories to be administered in trust until their populations were 'ready' for self-governance. Class A mandates (former Ottoman territories) were considered 'almost ready.' Class C mandates (Pacific islands, Southwest Africa) were considered so 'primitive' that independence was not contemplated. The system repackaged colonial rule as humanitarian tutelage.",
+        "The Pattern": "When outright colonialism becomes morally unacceptable, it is replaced by a system that performs the same function under a new name. The mandate system introduced the template that persists: external powers govern others 'for their own good,' with readiness for self-governance determined by the external power. The language shifted from 'conquest' to 'development,' but the relationship remained the same.",
+        "Still Here": "The mandate system evolved into the UN Trusteeship system (1945) and conceptually into 'state-building' interventions, international protectorates (Kosovo, East Timor), and the 'Responsibility to Protect' doctrine. The grammar is consistent: external authority is justified by the target population's alleged inability to govern itself."
+      },
+      "keywords": ["mandate", "league-of-nations", "trusteeship", "colonial", "administration"],
+      "metadata": {"astrology": {"planets": ["Jupiter", "Saturn"], "signs": ["Sagittarius", "Capricorn"], "themes": ["paternalism", "rebranded-control"]}}
+    },
+    {
+      "id": "united-nations-seats",
+      "name": "The United Nations: Who Has a Seat",
+      "sort_order": 24,
+      "category": "sovereignty-recognition",
+      "level": 1,
+      "sections": {
+        "What Happened": "The United Nations was founded in 1945 by 51 countries — most of them Allied powers and their dependencies. The Security Council's five permanent members (US, UK, France, Russia, China) were given veto power over all substantive decisions. This structure froze 1945's power dynamics into permanent institutional form. No African or South American country has a permanent seat. No veto has been given to any nation that gained independence after 1945.",
+        "The Pattern": "The organization designed to represent all nations embeds the hierarchy of the nations that founded it. The veto power means that the five victors of World War II can block any action, regardless of the wishes of the other 188 member states. The UN General Assembly operates on one-nation-one-vote, but its resolutions are non-binding. The body with real power — the Security Council — has never been reformed to reflect the world as it is.",
+        "Still Here": "Every attempt to reform the Security Council has been vetoed by one or more permanent members. Japan, Germany, India, Brazil, and Nigeria have all campaigned for permanent seats without success. The structure designed in 1945 remains the architecture of global governance — a building whose floor plan cannot be changed because the people who built it hold the keys."
+      },
+      "keywords": ["united-nations", "security-council", "veto", "representation", "1945"],
+      "metadata": {"astrology": {"planets": ["Jupiter", "Sun"], "signs": ["Sagittarius", "Leo"], "themes": ["global-governance", "frozen-power"]}}
+    },
+    {
+      "id": "invention-development",
+      "name": "The Invention of \"Development\" (1949)",
+      "sort_order": 25,
+      "category": "development-progress",
+      "level": 1,
+      "sections": {
+        "What Happened": "On January 20, 1949, President Harry Truman's inaugural address introduced the concept of 'underdeveloped areas.' In a single speech, two billion people were redefined. Countries that had been colonized, exploited, or simply organized differently were now 'underdeveloped' — not victims of extraction but patients awaiting treatment. The Point Four program would deliver 'development' through technical assistance and capital investment.",
+        "The Pattern": "The word 'underdeveloped' created a single scale of human progress with Western industrial capitalism at the top. Countries were no longer different — they were behind. Development implied that every society is on the same path, just at different stages. This erased the possibility that some societies might be organized around different values — sufficiency rather than growth, relationship rather than accumulation.",
+        "Still Here": "The development industry is now a $200 billion annual enterprise. The World Bank, IMF, and bilateral aid agencies still operate within Truman's framework: there is one path, and assistance means helping countries walk it faster. Alternative frameworks (Buen Vivir, degrowth, post-development) challenge this logic but remain marginal in institutional practice."
+      },
+      "keywords": ["development", "truman", "point-four", "underdeveloped", "1949"],
+      "metadata": {"astrology": {"planets": ["Jupiter", "Saturn"], "signs": ["Sagittarius", "Capricorn"], "themes": ["progress-ideology", "linear-time"]}}
+    },
+    {
+      "id": "gdp-measure",
+      "name": "GDP: Measuring Wealth, Missing Everything Else",
+      "sort_order": 26,
+      "category": "development-progress",
+      "level": 1,
+      "sections": {
+        "What Happened": "Gross Domestic Product was developed by Simon Kuznets in the 1930s as a wartime planning tool — a way to measure a nation's productive capacity for war. Kuznets himself warned that it should never be used as a measure of welfare. It was adopted anyway. GDP counts every monetary transaction equally: a dollar spent on chemotherapy and a dollar spent on a landmine both count as growth. Unpaid care work, subsistence farming, and ecosystem services count as zero.",
+        "The Pattern": "GDP measures market activity, not well-being. A country that cuts down its forests, pollutes its rivers, and drives its people to work 80-hour weeks will show higher GDP than one whose forests stand, whose rivers are clean, and whose people work less. The metric creates what it measures: countries optimize for GDP growth because that's what gets measured, compared, and rewarded by international institutions.",
+        "Still Here": "GDP remains the primary metric by which countries are ranked, loans are issued, and policies are evaluated. Alternatives exist — Bhutan's Gross National Happiness, the Human Development Index, the Genuine Progress Indicator — but none has displaced GDP as the number that matters. What we measure is what we value, and we still measure market output."
+      },
+      "keywords": ["gdp", "economics", "measurement", "kuznets", "growth"],
+      "metadata": {"astrology": {"planets": ["Mercury", "Jupiter"], "signs": ["Virgo", "Sagittarius"], "themes": ["quantification", "reductionism"]}}
+    },
+    {
+      "id": "third-world",
+      "name": "The \"Third World\": A Cold War Category",
+      "sort_order": 27,
+      "category": "development-progress",
+      "level": 1,
+      "sections": {
+        "What Happened": "French demographer Alfred Sauvy coined 'Third World' (Tiers Monde) in 1952, echoing France's Third Estate — the commoners who overthrew the aristocracy. The First World was the Western capitalist bloc, the Second World the Soviet communist bloc, the Third World was everyone else. What began as a political category (non-aligned nations) quickly became an economic one (poor countries), then a civilizational one (backward countries).",
+        "The Pattern": "A geopolitical alignment category became a developmental hierarchy. Countries with vastly different histories, economies, and cultures — Brazil, Bangladesh, Botswana, Bhutan — were lumped into a single category defined by what they were not: not Western, not Soviet, not 'developed.' The term erased specificity and imposed a ranking system where two-thirds of humanity occupied the lowest tier.",
+        "Still Here": "The term 'Third World' has fallen from official use, replaced by 'developing countries,' 'the Global South,' or 'emerging markets.' But each replacement carries the same assumption: there is a First and a rest. The hierarchy persists even as the vocabulary changes. The question no one asks: who assigned the numbers?"
+      },
+      "keywords": ["third-world", "cold-war", "non-aligned", "classification", "hierarchy"],
+      "metadata": {"astrology": {"planets": ["Saturn", "Pluto"], "signs": ["Capricorn", "Scorpio"], "themes": ["classification", "geopolitical-hierarchy"]}}
+    },
+    {
+      "id": "structural-adjustment",
+      "name": "Structural Adjustment: The IMF and the Remaking of Economies",
+      "sort_order": 28,
+      "category": "development-progress",
+      "level": 1,
+      "sections": {
+        "What Happened": "Beginning in the 1980s, the International Monetary Fund and World Bank offered loans to countries in debt crisis — on the condition that they restructure their economies. Structural Adjustment Programs (SAPs) required privatization of state industries, removal of trade barriers, cuts to social spending, and deregulation of labor markets. Over 70 countries in Africa, Latin America, and Asia underwent structural adjustment between 1980 and 2000.",
+        "The Pattern": "A country in crisis borrows money; the lender dictates how the country must reorganize its economy. The conditions consistently favor foreign capital (open markets, privatization) and disfavor domestic welfare (cuts to health, education, subsidies). The borrower's democratic processes are bypassed — elected governments implement policies they did not campaign on, because the alternative is default. Debt becomes a mechanism of governance.",
+        "Still Here": "The IMF has renamed its programs (Poverty Reduction and Growth Facility, Extended Fund Facility) but conditionality persists. Countries that receive IMF support still accept policy conditions. The debate continues: did structural adjustment promote growth, or did it deepen poverty while opening markets for external benefit? The empirical record is, at best, mixed."
+      },
+      "keywords": ["imf", "structural-adjustment", "austerity", "privatization", "conditionality"],
+      "metadata": {"astrology": {"planets": ["Saturn", "Pluto"], "signs": ["Capricorn", "Scorpio"], "themes": ["structural-coercion", "debt-as-leverage"]}}
+    },
+    {
+      "id": "civilizing-mission",
+      "name": "The Civilizing Mission: Progress as Justification",
+      "sort_order": 29,
+      "category": "development-progress",
+      "level": 1,
+      "sections": {
+        "What Happened": "The mission civilisatrice (France), the White Man's Burden (Britain), the Manifest Destiny (United States) — each colonial power developed a moral narrative to justify expansion. The argument: we are not conquering; we are uplifting. We bring education, medicine, Christianity, and law to peoples who lack them. The civilizing mission transformed extraction into charity and conquest into rescue. Rudyard Kipling wrote it plainly in 1899: 'Take up the White Man's burden / Send forth the best ye breed.'",
+        "The Pattern": "The civilizing mission requires a hierarchy of civilizations — some peoples are 'advanced,' others are 'primitive,' and the advanced have a duty to uplift the primitive. This framework makes resistance appear as ingratitude and self-governance as premature. It also obscures the economic motive: the mission provides the moral cover for the extraction of labor, land, and resources.",
+        "Still Here": "The explicit language has changed, but the logic persists wherever 'development,' 'modernization,' or 'capacity building' is offered by powerful nations to less powerful ones on terms set by the powerful. The question remains: when does help become control? And who gets to decide when someone is 'ready' to make their own decisions?"
+      },
+      "keywords": ["civilizing-mission", "white-mans-burden", "progress", "justification"],
+      "metadata": {"astrology": {"planets": ["Jupiter", "Sun"], "signs": ["Sagittarius", "Leo"], "themes": ["benevolent-superiority", "civilizational-hierarchy"]}}
+    },
+    {
+      "id": "linear-vs-cyclical-time",
+      "name": "Linear Time vs Cyclical Time: Whose Calendar, Whose History",
+      "sort_order": 30,
+      "category": "development-progress",
+      "level": 1,
+      "sections": {
+        "What Happened": "Western modernity runs on linear time: past → present → future, from primitive to civilized, from underdeveloped to developed. This timeline, rooted in Christian eschatology (creation → fall → redemption → end times) and later secularized as 'progress,' became the only legitimate way to understand history. Other temporal frameworks — the Hindu yugas (cyclical ages), the Andean pachakuti (time turning over), Aboriginal Australian Dreamtime (the past is also now) — were classified as pre-modern.",
+        "The Pattern": "Linear time is not a neutral container — it is a sorting mechanism. If history moves in one direction, some peoples are 'ahead' and others are 'behind.' This makes inequality look like a timing problem rather than a structural one. Cyclical and relational time frameworks don't produce this hierarchy because they don't assume a single direction of travel. Different temporal frameworks produce different ideas about what matters.",
+        "Still Here": "The Gregorian calendar, Greenwich Mean Time, and the Western academic periodization (ancient/medieval/modern) remain the world's default frameworks. Development economics still assumes that the future is knowable and improvable along a single axis. But climate crisis is reviving interest in cyclical and ecological time — the recognition that not all change is progress, and not all futures are better."
+      },
+      "keywords": ["linear-time", "cyclical-time", "calendar", "progress", "cosmology"],
+      "metadata": {"astrology": {"planets": ["Saturn", "Neptune"], "signs": ["Capricorn", "Pisces"], "themes": ["temporal-frameworks", "progress-vs-cycles"]}}
+    },
+    {
+      "id": "museums-patrimony",
+      "name": "Museums and Cultural Patrimony: Who Keeps the Artifacts",
+      "sort_order": 31,
+      "category": "knowledge-patrimony",
+      "level": 1,
+      "sections": {
+        "What Happened": "The great museums of Europe — the British Museum, the Louvre, the Pergamon — were built during the colonial era and filled with objects taken from colonized territories. The Benin Bronzes, the Parthenon Marbles, the Rosetta Stone, Nefertiti's bust, the Koh-i-Noor diamond. Some were purchased, some were looted, some were taken under conditions where the concept of 'consent' had no meaning. Today these institutions hold the cultural heritage of peoples who want it back.",
+        "The Pattern": "The museum is a technology of classification: it removes an object from its living context and places it in a European narrative framework. A mask used in ceremony becomes 'African art.' A sacred text becomes 'a manuscript.' The act of collection is also an act of recontextualization — the collector decides what the object means. The countries that collected the most objects are, not coincidentally, the countries that colonized the most territory.",
+        "Still Here": "Repatriation movements are accelerating. France returned 26 Benin Bronzes to Benin in 2021. Germany followed. But the British Museum resists, arguing it is a 'universal museum' that belongs to everyone. The debate crystallizes the fundamental question: who has the right to care for, interpret, and display the material heritage of a culture — the culture that made it, or the institution that took it?"
+      },
+      "keywords": ["museum", "patrimony", "repatriation", "looting", "benin-bronzes"],
+      "metadata": {"astrology": {"planets": ["Venus", "Pluto"], "signs": ["Taurus", "Scorpio"], "themes": ["ownership", "cultural-possession"]}}
+    },
+    {
+      "id": "traditional-knowledge",
+      "name": "Traditional Ecological Knowledge: Science Without Laboratories",
+      "sort_order": 32,
+      "category": "knowledge-patrimony",
+      "level": 1,
+      "sections": {
+        "What Happened": "Indigenous peoples worldwide developed sophisticated knowledge systems about ecology, medicine, agriculture, and navigation over thousands of years. Aboriginal Australians practiced fire management that prevented catastrophic wildfires. Amazonian peoples created terra preta (enriched soil) that remains fertile centuries later. Polynesian navigators read stars, waves, and bird behavior to cross thousands of miles of open ocean. This knowledge was rarely recognized as 'science.'",
+        "The Pattern": "Western science defines knowledge through a specific method: hypothesis, controlled experiment, peer review, publication. Knowledge produced by other methods — observation across generations, relational understanding, ceremonial practice — is classified as 'belief,' 'folklore,' or 'anecdote.' This isn't a neutral classification; it determines what counts as evidence in courts, what gets funded, and whose expertise is consulted when decisions are made about land, water, and health.",
+        "Still Here": "Climate scientists are increasingly recognizing TEK (Traditional Ecological Knowledge) as a legitimate data source. Australia now incorporates Aboriginal fire management. The IPCC cites indigenous observations. But the structural inequality remains: TEK is 'validated' by being accepted into Western scientific frameworks, not by being recognized as a parallel system with its own standards of evidence."
+      },
+      "keywords": ["traditional-knowledge", "tek", "indigenous-science", "ecology", "observation"],
+      "metadata": {"astrology": {"planets": ["Moon", "Neptune"], "signs": ["Cancer", "Pisces"], "themes": ["embodied-knowledge", "relational-science"]}}
+    },
+    {
+      "id": "seed-patents",
+      "name": "Seed Banks vs Seed Patents: Who Owns Life",
+      "sort_order": 33,
+      "category": "knowledge-patrimony",
+      "level": 1,
+      "sections": {
+        "What Happened": "For ten thousand years, farmers saved, shared, and bred seeds. This common heritage — the genetic diversity of the world's food crops — was developed by millions of unnamed farmers across every continent. Beginning in the 1980s, corporations began patenting genetically modified seeds, making it illegal for farmers to save and replant them. The genetic raw material developed by peasant farmers over millennia became corporate intellectual property after a single laboratory modification.",
+        "The Pattern": "A commons developed collectively over thousands of years is enclosed by private actors who add one modification and claim ownership of the whole. This is biopiracy in its structural form: the neem tree (used in Indian medicine for centuries) gets patented by a Western company. Basmati rice (bred by South Asian farmers for generations) gets trademarked. The knowledge is common; the profit is private.",
+        "Still Here": "Four corporations control over 60% of the global seed market. Farmers in many countries must buy new seed each year rather than saving from their harvest. Seed sovereignty movements (Navdanya in India, La Via Campesina globally) fight to maintain farmers' right to save and share seeds. The Svalbard Global Seed Vault preserves genetic diversity — but access and governance remain contested."
+      },
+      "keywords": ["seeds", "patents", "monsanto", "biopiracy", "food-sovereignty"],
+      "metadata": {"astrology": {"planets": ["Pluto", "Venus"], "signs": ["Scorpio", "Taurus"], "themes": ["commodification-of-life", "biopiracy"]}}
+    },
+    {
+      "id": "enclosure-commons",
+      "name": "The Enclosure of the Commons: Privatizing Shared Resources",
+      "sort_order": 34,
+      "category": "knowledge-patrimony",
+      "level": 1,
+      "sections": {
+        "What Happened": "In England between the 15th and 19th centuries, common lands — shared pastures, forests, and fields that villagers had used collectively for generations — were fenced off and converted to private property through Acts of Parliament. The Enclosure Acts dispossessed millions of rural people, creating the landless labor force that powered the Industrial Revolution. The pattern then exported globally: colonial administrations converted communal lands to private title across Africa, Asia, and the Americas.",
+        "The Pattern": "Enclosure is the conversion of shared resources into private property. It requires first making the commons 'legible' — mapping it, surveying it, assigning it a monetary value — then transferring it to individual or corporate ownership. The process treats collective management as inefficiency and private ownership as progress. Each enclosure creates both wealth (for the new owner) and poverty (for those who lose access).",
+        "Still Here": "Enclosure continues at every scale. Ocean fisheries, the electromagnetic spectrum, the human genome, digital platforms, even outer space are being divided into ownable units. The logic is the same: a shared resource is 'unmanaged' until someone owns it. The commons — from village pastures to the atmosphere — keeps shrinking."
+      },
+      "keywords": ["enclosure", "commons", "privatization", "land", "shared-resources"],
+      "metadata": {"astrology": {"planets": ["Saturn", "Pluto"], "signs": ["Capricorn", "Scorpio"], "themes": ["privatization", "dispossession"]}}
+    },
+    {
+      "id": "intellectual-property",
+      "name": "Intellectual Property: Fencing the Mind",
+      "sort_order": 35,
+      "category": "knowledge-patrimony",
+      "level": 1,
+      "sections": {
+        "What Happened": "The TRIPS Agreement (Trade-Related Aspects of Intellectual Property Rights), negotiated in 1994 as part of the World Trade Organization, required all WTO member states to adopt Western-style intellectual property protections. Countries that had no patent systems — or had deliberately kept medicines, seeds, and educational materials outside patent protection — were required to create them. India's generic pharmaceutical industry, which supplied affordable medicines to the developing world, was restructured under TRIPS pressure.",
+        "The Pattern": "Intellectual property extends enclosure from land to ideas. A patent grants a temporary monopoly on a piece of knowledge — but 'temporary' means 20 years, and the knowledge being patented often builds on centuries of collective development. TRIPS globalized a particular property regime: one that treats knowledge as ownable, excludable, and monetizable. Communities that treat knowledge as shared inheritance — a commons — found their traditions newly illegal.",
+        "Still Here": "The COVID-19 pandemic made the consequences visible: patent-protected vaccines were available in wealthy countries months before poorer ones. The TRIPS waiver debate (2021-22) pitted pharmaceutical profits against global health. The architecture remains: knowledge is property, and property has owners. Who those owners are — and who they aren't — is not accidental."
+      },
+      "keywords": ["intellectual-property", "copyright", "patents", "trips", "knowledge-enclosure"],
+      "metadata": {"astrology": {"planets": ["Mercury", "Saturn"], "signs": ["Gemini", "Capricorn"], "themes": ["knowledge-ownership", "access-restriction"]}}
+    },
+    {
+      "id": "water-rights",
+      "name": "Water Rights: Who Owns a River",
+      "sort_order": 36,
+      "category": "knowledge-patrimony",
+      "level": 1,
+      "sections": {
+        "What Happened": "Water was traditionally managed as a commons — rivers, aquifers, and rainfall belonged to no one and everyone. Beginning in the 1990s, international financial institutions pushed water privatization as a condition of loans. Bolivia's Cochabamba Water War (2000) erupted when a Bechtel subsidiary raised water prices 200% after privatization — it became illegal to collect rainwater. After months of protests and a state of siege, the privatization was reversed.",
+        "The Pattern": "Water sits at the intersection of every theme in this grammar: it crosses borders that states drew, it sustains communities that markets ignore, and it cannot be enclosed without endangering life. The push to privatize water treats a survival need as an economic good — but unlike other goods, the alternative to buying water is dying. Privatization of necessities converts a right into a purchase.",
+        "Still Here": "The UN recognized water as a human right in 2010, but this is non-binding. Water privatization continues in many countries. Water scarcity, driven by climate change, is intensifying conflicts over rivers that cross borders (the Nile, the Indus, the Colorado). The question of who owns a river — the state it flows through, the people who depend on it, or the company that bottles it — has no settled answer."
+      },
+      "keywords": ["water", "rights", "privatization", "rivers", "commons", "access"],
+      "metadata": {"astrology": {"planets": ["Neptune", "Pluto"], "signs": ["Pisces", "Scorpio"], "themes": ["water-as-commodity", "life-source"]}}
+    },
+    {
+      "id": "ubuntu",
+      "name": "Ubuntu: I Am Because We Are",
+      "sort_order": 37,
+      "category": "resistance-persistence",
+      "level": 1,
+      "sections": {
+        "What Happened": "Ubuntu is a Nguni Bantu concept, often translated as 'I am because we are' — the idea that a person's humanity is constituted through their relationships with others. Archbishop Desmond Tutu described it as the recognition that 'my humanity is caught up, is inextricably bound up, in yours.' Ubuntu became a foundational principle of South Africa's post-apartheid Truth and Reconciliation Commission, choosing restorative justice over retribution.",
+        "The Pattern": "Ubuntu represents a fundamentally different starting point from Western liberal individualism. Where the Western tradition begins with the autonomous individual who then enters into social contracts, ubuntu begins with the relationship — the self emerges from community, not the other way around. This isn't a philosophical abstraction; it's a different architecture of personhood that produces different approaches to justice, governance, and economics.",
+        "Still Here": "Ubuntu influences South African jurisprudence, appears in the preamble to constitutional documents, and has been adopted as a framework for conflict resolution across the continent. It also circulates globally as an alternative to the competitive individualism that structures most Western institutions. The question ubuntu poses to the Western model: what if the basic unit of society isn't the individual?"
+      },
+      "keywords": ["ubuntu", "africa", "relational", "philosophy", "community"],
+      "metadata": {"astrology": {"planets": ["Moon", "Venus"], "signs": ["Cancer", "Libra"], "themes": ["relational-being", "communal-identity"]}}
+    },
+    {
+      "id": "buen-vivir",
+      "name": "Buen Vivir: Living Well vs Living Better",
+      "sort_order": 38,
+      "category": "resistance-persistence",
+      "level": 1,
+      "sections": {
+        "What Happened": "Buen Vivir (Spanish) or Sumak Kawsay (Quechua) translates roughly as 'the good life' or 'living well' — but it means something different from the Western consumer version. Rooted in Andean indigenous cosmology, it describes a life in harmony with community and nature, oriented toward sufficiency rather than accumulation. Ecuador (2008) and Bolivia (2009) wrote Buen Vivir into their constitutions as an alternative to the development paradigm.",
+        "The Pattern": "Buen Vivir doesn't reject well-being — it redefines it. The development model asks: how do we grow more? Buen Vivir asks: how do we live well together, including with non-human beings? It's not anti-modern; it's differently modern. By entering constitutional law, it moved from philosophy to governance — a rare instance of an indigenous framework becoming state policy rather than being displaced by one.",
+        "Still Here": "Ecuador's constitution grants rights to nature (Pachamama) alongside Buen Vivir. In practice, the tension between Buen Vivir and extractive economics (oil, mining) remains unresolved — the same constitutions that enshrine Buen Vivir also depend on resource extraction for revenue. The framework is both achieved and aspirational: a direction rather than a destination."
+      },
+      "keywords": ["buen-vivir", "sumak-kawsay", "andean", "ecology", "constitution"],
+      "metadata": {"astrology": {"planets": ["Venus", "Neptune"], "signs": ["Taurus", "Pisces"], "themes": ["harmony", "sufficiency-over-growth"]}}
+    },
+    {
+      "id": "rights-of-nature",
+      "name": "The Rights of Nature: Legal Personhood for Rivers",
+      "sort_order": 39,
+      "category": "resistance-persistence",
+      "level": 1,
+      "sections": {
+        "What Happened": "In 2017, New Zealand granted legal personhood to the Whanganui River — the river became, in law, a living entity with its own rights, represented by two guardians (one appointed by the Māori, one by the Crown). The same year, India's Ganges and Yamuna rivers received similar status. Ecuador's 2008 constitution grants rights to Pachamama (nature itself). These are not metaphors — they are legal frameworks with enforceable consequences.",
+        "The Pattern": "Western law traditionally classifies everything as either a person (with rights) or a property (owned by a person). There is no category for a river, a forest, or a mountain as a being in its own right. Rights-of-nature laws create a new legal category that indigenous cosmologies have always recognized: non-human entities as subjects, not objects. The legal innovation is actually a return — to a worldview where humans are participants in, not owners of, the living world.",
+        "Still Here": "Rights-of-nature provisions now exist in the constitutions or laws of Ecuador, Bolivia, New Zealand, Colombia, Bangladesh, and Uganda. Courts have begun enforcing them — in 2021, Ecuador's Constitutional Court ruled against mining in a protected forest based on the rights of nature. The movement is small but growing, and it represents the most radical challenge to the property-based legal architecture that underwrites the modern state."
+      },
+      "keywords": ["rights-of-nature", "ecuador", "whanganui", "legal-personhood", "river"],
+      "metadata": {"astrology": {"planets": ["Neptune", "Jupiter"], "signs": ["Pisces", "Sagittarius"], "themes": ["non-human-personhood", "legal-revolution"]}}
+    },
+    {
+      "id": "land-back",
+      "name": "Land Back: Return as a Living Movement",
+      "sort_order": 40,
+      "category": "resistance-persistence",
+      "level": 1,
+      "sections": {
+        "What Happened": "Land Back is a movement — primarily in North America, Australia, and New Zealand — that calls for the return of indigenous lands to indigenous stewardship. It ranges from symbolic acknowledgments (land acknowledgment statements) to legal transfers (the return of national parks, forests, and sacred sites) to full sovereignty claims. In 2022, the US returned the National Bison Range to the Confederated Salish and Kootenai Tribes. In Australia, Uluru was returned to the Anangu people in 1985.",
+        "The Pattern": "Land Back challenges the assumption that dispossession is permanent. It asserts that the original taking was illegitimate and that return is both possible and necessary — not as charity but as justice. The movement also reframes the relationship to land itself: indigenous land management (fire stewardship, sustainable harvest, ceremonial care) often produces better ecological outcomes than state or corporate management.",
+        "Still Here": "Land Back is accelerating. Cities are returning parklands. Universities are acknowledging whose land they occupy. Conservation organizations are transferring lands to indigenous management. But the structural challenge remains: returning land within a legal system designed to legitimize its taking requires creative legal work — or the transformation of the legal system itself."
+      },
+      "keywords": ["land-back", "indigenous", "return", "sovereignty", "reparation"],
+      "metadata": {"astrology": {"planets": ["Pluto", "Moon"], "signs": ["Scorpio", "Cancer"], "themes": ["return", "ancestral-connection"]}}
+    },
+    {
+      "id": "language-revitalization",
+      "name": "Language Revitalization: Hebrew, Welsh, Māori, Hawaiian",
+      "sort_order": 41,
+      "category": "resistance-persistence",
+      "level": 1,
+      "sections": {
+        "What Happened": "Hebrew was a liturgical language with no native speakers for nearly two millennia before Eliezer Ben-Yehuda and the Zionist movement revived it as a living language in the late 19th century. Welsh was declining rapidly before immersion schools (Ysgolion Meithrin) reversed the trend. Māori language nests (Kōhanga Reo), Hawaiian immersion schools (Kula Kaiapuni), and similar programs in Basque, Catalan, and Irish have pulled languages back from the edge.",
+        "The Pattern": "Language revitalization proves that language death is not inevitable — it's a political outcome that can be politically reversed. The key ingredients are intergenerational transmission (children must learn the language from birth), institutional support (schools, media, government services in the language), and prestige (the language must be associated with identity, not shame). All three require investment and political will.",
+        "Still Here": "Welsh has reversed its decline — the percentage of speakers is growing. Hawaiian immersion students now attend university in Hawaiian. Māori is increasingly visible in New Zealand public life. These are genuine successes, but they remain exceptions. For every language saved, dozens go silent. The structural pressures — economic incentives to speak the dominant language, education systems in the colonial language, the internet's linguistic concentration — have not changed."
+      },
+      "keywords": ["language-revitalization", "hebrew", "welsh", "maori", "hawaiian", "revival"],
+      "metadata": {"astrology": {"planets": ["Mercury", "Pluto"], "signs": ["Gemini", "Scorpio"], "themes": ["resurrection", "cultural-renewal"]}}
+    },
+    {
+      "id": "indigenous-mapping",
+      "name": "Indigenous Mapping: Counter-Cartography",
+      "sort_order": 42,
+      "category": "resistance-persistence",
+      "level": 1,
+      "sections": {
+        "What Happened": "Indigenous peoples worldwide are creating their own maps — using both traditional knowledge and modern GIS technology — to document territories, sacred sites, resource use, and ecological knowledge that colonial maps erased. Aboriginal Australians map songlines. Amazonian communities map forest use to resist logging concessions. Arctic peoples map ice conditions, animal migration, and place names in their own languages. Counter-mapping takes the colonizer's most powerful tool — the map — and turns it around.",
+        "The Pattern": "Colonial maps see territory: bounded areas, resource deposits, administrative units. Indigenous maps see relationships: paths of travel, seasonal cycles, story-places, kinship networks across landscapes. Counter-mapping doesn't just fill in blanks on existing maps — it reveals that the 'blanks' were never blank. Every 'empty' space on a colonial map was full of meaning that the map was designed not to see.",
+        "Still Here": "Indigenous mapping projects now operate on every continent. They have been used successfully in land claims, environmental impact assessments, and natural resource management. Google Earth and open-source GIS have democratized mapping technology. But the deeper question persists: whose map counts in court? Whose map determines policy? And can a map made by a community carry the same legal weight as a map made by a state?"
+      },
+      "keywords": ["indigenous-mapping", "counter-cartography", "land", "stories", "gis"],
+      "metadata": {"astrology": {"planets": ["Moon", "Mercury"], "signs": ["Cancer", "Gemini"], "themes": ["alternative-knowledge", "story-maps"]}}
+    },
+    {
+      "id": "food-sovereignty",
+      "name": "Food Sovereignty: Who Decides What a Community Eats",
+      "sort_order": 43,
+      "category": "resistance-persistence",
+      "level": 1,
+      "sections": {
+        "What Happened": "La Vía Campesina, a global movement of 200 million peasant farmers, coined 'food sovereignty' in 1996 as an alternative to 'food security.' Food security asks: does everyone have enough calories? Food sovereignty asks: who controls the food system? The distinction matters because a country can be 'food secure' while importing all its food from multinational corporations, leaving its own farmers landless and its food supply dependent on global commodity markets.",
+        "The Pattern": "Food sovereignty reconnects food to land, culture, and community. It insists that the right to food includes the right to produce food — and that communities, not corporations or international markets, should determine their own agricultural policies. This challenges the WTO's agricultural trade regime, which treats food as a commodity like any other, subject to the same rules of free trade.",
+        "Still Here": "Food sovereignty is now recognized in the constitutions of several countries (Ecuador, Bolivia, Nepal, Venezuela). Urban farming, seed-saving networks, community-supported agriculture, and farmer-to-farmer knowledge exchanges are all expressions of the principle. But the structural power of agribusiness continues to consolidate — and the gap between food sovereignty as principle and food sovereignty as practice remains wide."
+      },
+      "keywords": ["food-sovereignty", "la-via-campesina", "agriculture", "local", "autonomy"],
+      "metadata": {"astrology": {"planets": ["Venus", "Moon"], "signs": ["Taurus", "Cancer"], "themes": ["nourishment", "autonomy"]}}
+    },
+    {
+      "id": "plurinational-state",
+      "name": "The Plurinational State: Bolivia's Experiment",
+      "sort_order": 44,
+      "category": "resistance-persistence",
+      "level": 1,
+      "sections": {
+        "What Happened": "In 2009, Bolivia adopted a new constitution renaming itself the Plurinational State of Bolivia — explicitly recognizing 36 indigenous nations within one state. The constitution grants indigenous autonomy, recognizes indigenous justice systems alongside the state judiciary, makes Quechua, Aymara, and Guaraní official languages alongside Spanish, and enshrines Buen Vivir as a governing principle. This was the first modern constitution to reject the one-nation-one-state model from within.",
+        "The Pattern": "The plurinational state challenges the foundational assumption of the Westphalian model: that each state contains one nation. Instead, it acknowledges that most states contain multiple nations and builds governance structures that reflect this reality rather than suppressing it. This is not decentralization or multiculturalism — it's a different architecture of sovereignty, where multiple legal traditions, languages, and governance systems coexist within one state.",
+        "Still Here": "Bolivia's plurinational experiment faces immense challenges — economic dependence on extraction, political instability, and the gap between constitutional ideals and institutional capacity. But the model itself has influenced constitutional debates in Ecuador, Nepal, and beyond. The question it poses is structural: is the one-nation-one-state model inevitable, or is it just one possible architecture among many?"
+      },
+      "keywords": ["plurinational", "bolivia", "constitution", "indigenous-rights", "multiple-nations"],
+      "metadata": {"astrology": {"planets": ["Jupiter", "Uranus"], "signs": ["Sagittarius", "Aquarius"], "themes": ["constitutional-innovation", "plural-sovereignty"]}}
+    },
+    {
+      "id": "zapatista",
+      "name": "The Zapatistas: A World Where Many Worlds Fit",
+      "sort_order": 45,
+      "category": "resistance-persistence",
+      "level": 1,
+      "sections": {
+        "What Happened": "On January 1, 1994 — the day NAFTA took effect — the Zapatista Army of National Liberation (EZLN) seized several towns in Chiapas, Mexico's poorest state. Mostly Tzotzil, Tzeltal, and Tojolabal Maya, the Zapatistas were fighting not for state power but for autonomy — the right to govern themselves according to their own traditions. Their slogan: 'Un mundo donde quepan muchos mundos' — a world where many worlds fit.",
+        "The Pattern": "The Zapatistas rejected both the state and the market as the organizing principle of life. They built autonomous municipalities with their own schools, clinics, and justice systems, operating outside the Mexican state while remaining technically within it. Their innovation was structural: rather than seeking to capture state power (the traditional revolutionary goal), they created parallel governance. Rather than demanding inclusion in the existing system, they built an alternative.",
+        "Still Here": "Thirty years later, the Zapatista autonomous zones still function — with autonomous schools, health systems, and rotating governance. They've hosted international gatherings, published extensively, and influenced movements worldwide. Their model — autonomy without secession, governance without the state, resistance without seeking power — remains one of the most radical experiments in alternative political architecture anywhere on Earth."
+      },
+      "keywords": ["zapatista", "chiapas", "autonomy", "indigenous", "pluriverse"],
+      "metadata": {"astrology": {"planets": ["Uranus", "Moon"], "signs": ["Aquarius", "Cancer"], "themes": ["autonomy", "pluriverse"]}}
+    },
+    {
+      "id": "group-borders-maps",
+      "name": "Borders & Maps: How Lines Were Drawn",
+      "sort_order": 46,
+      "category": "thematic-group",
+      "level": 2,
+      "sections": {
+        "About": "The borders of the modern world were drawn by a remarkably small number of people in a remarkably short period of time. Between 1884 and 1947, a handful of treaties, conferences, and backroom agreements created the political map we now treat as natural. These eight cards trace the architecture of territorial division — from the Treaty of Westphalia (which invented the nation-state as a concept) through the Berlin Conference and Sykes-Picot (which drew the borders of Africa and the Middle East) to the Mercator Projection (which shaped how we see the world itself).",
+        "For Readers": "Start with the Treaty of Westphalia to understand the model, then the Berlin Conference or Sykes-Picot to see it applied. Terra Nullius and the Doctrine of Discovery reveal the legal fictions that made it possible. The Mercator Projection shows how even a map — supposedly objective — carries a worldview."
+      },
+      "keywords": ["borders", "maps", "cartography", "territory"],
+      "composite_of": ["treaty-westphalia", "berlin-conference", "sykes-picot", "partition-india", "terra-nullius", "doctrine-discovery", "mercator-projection", "straight-line-borders"],
+      "relationship_type": "emergence",
+      "metadata": {}
+    },
+    {
+      "id": "group-languages",
+      "name": "Languages & Scripts: What Was Standardized, What Was Lost",
+      "sort_order": 47,
+      "category": "thematic-group",
+      "level": 2,
+      "sections": {
+        "About": "Language is where power meets identity most intimately. These nine cards trace the relationship between language and nation-building — from the standardization of prestige languages (French Academy) and the suppression of indigenous ones (Residential Schools) to the creative resistance of creole languages and code-switching. A language dies every two weeks; some are being revived. Place names change when power changes hands. And oral traditions carry entire knowledge systems that written culture cannot see.",
+        "For Readers": "Language Death and Residential Schools show the destructive side. Creole Languages and Code-Switching show the creative side — how people make new languages and navigate between worlds. Oral Traditions challenges the assumption that writing is superior to speech."
+      },
+      "keywords": ["language", "script", "standardization", "loss", "creation"],
+      "composite_of": ["language-death", "french-academy", "script-revolution-turkey", "residential-schools", "lingua-francas", "creole-languages", "code-switching", "place-name-changes", "oral-traditions"],
+      "relationship_type": "emergence",
+      "metadata": {}
+    },
+    {
+      "id": "group-sovereignty",
+      "name": "Sovereignty & Recognition: Who Gets to Be a State",
+      "sort_order": 48,
+      "category": "thematic-group",
+      "level": 2,
+      "sections": {
+        "About": "Who counts as a nation? Who gets recognized? These seven cards examine the gatekeeping mechanisms of the international system — how self-determination was promised to all but delivered selectively, how the distinction between 'tribes' and 'nations' determined who got sovereignty, how passports and citizenship sort people into hierarchies of mobility, and how the United Nations froze 1945's power dynamics into permanent institutional form. At the edges: stateless peoples who fall through every category.",
+        "For Readers": "Start with Self-Determination to see the promise, then Stateless Peoples to see who it excludes. The Mandate System shows how colonialism was repackaged after it became unfashionable. The UN Security Council card reveals how the architecture of global governance was designed never to change."
+      },
+      "keywords": ["sovereignty", "recognition", "statehood", "exclusion"],
+      "composite_of": ["self-determination", "tribes-vs-nations", "failed-states", "passport-citizenship", "stateless-peoples", "mandate-system", "united-nations-seats"],
+      "relationship_type": "emergence",
+      "metadata": {}
+    },
+    {
+      "id": "group-development",
+      "name": "Development & Progress: Whose Timeline Counts",
+      "sort_order": 49,
+      "category": "thematic-group",
+      "level": 2,
+      "sections": {
+        "About": "In 1949, President Truman invented the concept of 'underdeveloped areas' and two billion people were redefined as being behind on a single timeline of progress. These six cards examine the architecture of development — how GDP became the measure of all things, how the 'Third World' became a category, how structural adjustment rewired economies, and how the civilizing mission provided the moral framework. The final card steps back to ask: what if linear time itself is the assumption that makes the whole system seem natural?",
+        "For Readers": "The Invention of Development is the key card — it shows how a single speech created the conceptual framework that still structures international relations. GDP reveals how measurement shapes reality. Linear vs Cyclical Time opens the deepest question: is progress a direction or a story?"
+      },
+      "keywords": ["development", "progress", "modernity", "measurement"],
+      "composite_of": ["invention-development", "gdp-measure", "third-world", "structural-adjustment", "civilizing-mission", "linear-vs-cyclical-time"],
+      "relationship_type": "emergence",
+      "metadata": {}
+    },
+    {
+      "id": "group-knowledge",
+      "name": "Knowledge & Patrimony: Who Owns Culture, Knowledge, Nature",
+      "sort_order": 50,
+      "category": "thematic-group",
+      "level": 2,
+      "sections": {
+        "About": "These six cards trace the enclosure of shared resources — from village commons to seed varieties to rivers to ideas themselves. Museums house other peoples' heritage. Patents enclose other peoples' knowledge. Water gets privatized. The TRIPS agreement extended Western intellectual property law worldwide. Each card shows the same pattern: a commons developed collectively is enclosed by private actors who claim ownership. The logical endpoint is a world where everything — land, water, seeds, genes, ideas — is ownable.",
+        "For Readers": "Enclosure of the Commons is the foundational pattern — all the other cards are variations. Seed Patents and Water Rights show enclosure applied to life's necessities. Traditional Ecological Knowledge shows what the enclosure paradigm cannot see."
+      },
+      "keywords": ["knowledge", "patrimony", "ownership", "commons"],
+      "composite_of": ["museums-patrimony", "traditional-knowledge", "seed-patents", "enclosure-commons", "intellectual-property", "water-rights"],
+      "relationship_type": "emergence",
+      "metadata": {}
+    },
+    {
+      "id": "group-resistance",
+      "name": "Resistance & Persistence: What Survived, What's Returning",
+      "sort_order": 51,
+      "category": "thematic-group",
+      "level": 2,
+      "sections": {
+        "About": "The architecture described in the first five sections — borders, languages, sovereignty, development, and enclosure — is not the only structure in the world. These nine cards document what survived, what's returning, and what's being invented. Ubuntu and Buen Vivir offer alternative philosophies of personhood and the good life. Rights of Nature extends legal personhood beyond humans. Land Back and Language Revitalization reverse specific acts of dispossession. The Zapatistas and Bolivia's Plurinational State build alternative governance. Counter-mapping reclaims the colonizer's most powerful tool.",
+        "For Readers": "These cards are not just 'hopeful endings' — they are working alternatives with real-world implementations. Start with Buen Vivir or Rights of Nature to see how indigenous frameworks are entering constitutional law. The Zapatistas show what thirty years of autonomous governance actually looks like."
+      },
+      "keywords": ["resistance", "persistence", "alternative", "indigenous", "renewal"],
+      "composite_of": ["ubuntu", "buen-vivir", "rights-of-nature", "land-back", "language-revitalization", "indigenous-mapping", "food-sovereignty", "plurinational-state", "zapatista"],
+      "relationship_type": "emergence",
+      "metadata": {}
+    },
+    {
+      "id": "meta-architecture",
+      "name": "The Architecture of Nations: A Reader's Map",
+      "sort_order": 52,
+      "category": "meta",
+      "level": 3,
+      "sections": {
+        "About": "This grammar maps the structures that made the modern world — and the structures that persist alongside, beneath, and beyond them. It is organized not as history but as architecture: six domains (Borders, Languages, Sovereignty, Development, Knowledge, Resistance) that interlock to form the system we live inside. The borders were drawn with languages in mind. The languages were standardized with sovereignty in mind. The sovereignty was distributed with development in mind. And development was measured with enclosure in mind. The system is coherent — and knowing its architecture is the first step toward seeing what it includes, what it excludes, and what alternatives already exist.",
+        "Contemplation": "The nation-state is roughly 375 years old. Modern borders are mostly less than 150 years old. The development framework is 75 years old. These are not ancient realities — they are recent inventions that have naturalized themselves so thoroughly that imagining alternatives feels utopian. But alternatives aren't hypothetical — they're operating right now, in Chiapas and Bolivia and New Zealand and Cochabamba. The architecture of nations is not a prison. It's a building. And buildings can be renovated."
+      },
+      "keywords": ["nation-state", "architecture", "structure", "modernity", "alternatives"],
+      "composite_of": ["group-borders-maps", "group-languages", "group-sovereignty", "group-development", "group-knowledge", "group-resistance"],
+      "relationship_type": "emergence",
+      "metadata": {}
+    },
+    {
+      "id": "meta-what-was-here-before",
+      "name": "What Was Here Before: The World That Was Not Made",
+      "sort_order": 53,
+      "category": "meta",
+      "level": 3,
+      "sections": {
+        "About": "Before the Treaty of Westphalia, before the Berlin Conference, before passports and GDP and the Mercator Projection — there were other ways of organizing human life on Earth. Not primitive precursors waiting to become modern, but fully developed alternatives: governance through kinship rather than territory, knowledge through relationship rather than extraction, time through cycles rather than lines, identity through belonging rather than documents. These ways did not disappear when the nation-state arrived. They persisted, adapted, went underground, and are now resurfacing — in constitutions, in courts, in forests, and in the streets.",
+        "Contemplation": "What if the modern world is not the culmination of human development but one experiment among many — an experiment whose results are now in, and whose side effects (ecological collapse, inequality, alienation) suggest that the experiment might need to be revised? The alternatives are not nostalgic returns to a pre-modern past. They are living practices, operating today, that begin from different assumptions about what a person is, what land is, and what 'the good life' means. The question is not whether alternatives exist. They do. The question is whether the architecture of nations has room for them — or whether the architecture itself must change."
+      },
+      "keywords": ["pre-colonial", "indigenous", "alternatives", "pluriverse", "what-persists"],
+      "composite_of": ["group-resistance", "group-knowledge"],
+      "relationship_type": "emergence",
+      "metadata": {}
+    }
+  ]
+}

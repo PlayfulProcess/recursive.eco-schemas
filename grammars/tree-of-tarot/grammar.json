@@ -1,0 +1,859 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "attribution": [
+      {
+        "name": "Michael Dummett",
+        "date": "1980",
+        "note": "A/B/C trump-order classification ('The Game of Tarot') — the scholarly backbone"
+      },
+      {
+        "name": "Tarot History Forum",
+        "date": "ongoing",
+        "note": "Scholarly community consulted for genealogy (facts only; no text reproduced)"
+      },
+      {
+        "name": "PlayfulProcess",
+        "date": "2026",
+        "note": "Genealogical synthesis; Dummett A/B/C framework"
+      }
+    ]
+  },
+  "name": "The Tree of Tarot — A Grammar of Tarot Grammars",
+  "description": "The genealogy of tarot as a single explorable tree: the decks ARE the cards. Built to render in the recursive.eco tree-viewer, with L1 = individual decks/traditions, L2 = the branches (Michael Dummett's A / B / C trump-orders, plus the occult reframing and the sui-generis relatives), and L3 = the root 'The Tree of Tarot'.\n\nIt corrects a common misconception: the Tarot de Marseille is NOT descended from the Bolognese Tarocchino — they are cousins, both descending from the mid-1400s Italian trionfi. Each leaf links to its full deck in this library (built, live in Supabase, or planned).\n\nThis is the capstone of the tarot collection: a map you can walk from the 1440s Milanese game decks, through the three regional orders and the printed Marseille standard, into the occult reframing that invented divination and produced the modern decks.",
+  "grammar_type": "custom",
+  "creator_name": "PlayfulProcess",
+  "creator_link": "https://recursive.eco",
+  "tags": [
+    "tarot",
+    "history",
+    "genealogy",
+    "tree",
+    "meta-grammar",
+    "lineage",
+    "dummett",
+    "public-domain"
+  ],
+  "roots": [
+    "western-esoteric",
+    "renaissance"
+  ],
+  "shelves": [
+    "wonder",
+    "mirror"
+  ],
+  "lineages": [
+    "Andreotti"
+  ],
+  "worldview": "historical",
+  "default_preview": "tree",
+  "is_published": false,
+  "items": [
+    {
+      "id": "deck-visconti-sforza",
+      "name": "Visconti-Sforza Tarot",
+      "sort_order": 0,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "roots"
+      ],
+      "metadata": {
+        "branch": "branch-roots",
+        "derives_from": [],
+        "when": "Milan, c. 1451"
+      },
+      "sections": {
+        "What it is": "The oldest near-complete tarot — 74 of 78 cards survive, painted by the Bembo workshop for the dukes of Milan. A game deck; four cards (Devil, Tower, Knight of Coins, Three of Swords) are lost.",
+        "Where & when": "Milan, c. 1451",
+        "Lineage": "Seeds the C-order. Sister to the Cary-Yale and Brera-Brambilla decks.",
+        "In this library": "✅ Built in this library (grammars/visconti-sforza-tarot)."
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Viscontisforzatarot.jpg"
+    },
+    {
+      "id": "deck-cary-yale",
+      "name": "Cary-Yale (Visconti di Modrone)",
+      "sort_order": 1,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "roots"
+      ],
+      "metadata": {
+        "branch": "branch-roots",
+        "derives_from": [],
+        "when": "Milan, c. 1442"
+      },
+      "sections": {
+        "What it is": "The most lavish hand-painted tarot, with SIX courts per suit (incl. female Horsewoman & Damsel) and the unique theological virtues Faith, Hope, Charity.",
+        "Where & when": "Milan, c. 1442",
+        "Lineage": "A root deck; its idiosyncrasies (extra virtues, six courts) show how unsettled the early form was.",
+        "In this library": "✅ Built (grammars/cary-yale-visconti-tarot)."
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cary-Yale%20Tarot%20deck%20-%20Damsel%20of%20Swords.jpg"
+    },
+    {
+      "id": "deck-brera-brambilla",
+      "name": "Brera-Brambilla",
+      "sort_order": 2,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "roots"
+      ],
+      "metadata": {
+        "branch": "branch-roots",
+        "derives_from": [],
+        "when": "Milan, c. 1442"
+      },
+      "sections": {
+        "What it is": "The third Bembo sister deck, surviving only as a fragment (~48 cards, just two trumps).",
+        "Where & when": "Milan, c. 1442",
+        "Lineage": "A root deck; fills out the Milanese hand-painted group.",
+        "In this library": "🔨 Planned (image-poor; needs museum scans)."
+      }
+    },
+    {
+      "id": "deck-tarocchino-bologna",
+      "name": "Tarocchino di Bologna",
+      "sort_order": 3,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "a"
+      ],
+      "metadata": {
+        "branch": "branch-a",
+        "derives_from": [
+          "deck-italian-trionfi"
+        ],
+        "when": "Bologna, 16th c.→"
+      },
+      "sections": {
+        "What it is": "The 62-card Bolognese game deck (pips 2–5 removed), with the distinctive four 'Papi' and the A-order trump sequence. The living southern game tradition.",
+        "Where & when": "Bologna, 16th c.→",
+        "Lineage": "A-order. A COUSIN of the Marseille, not its ancestor — both descend from the common Italian root.",
+        "In this library": "✅ Built in this library (grammars/tarocchino-bologna) — structure-accurate; per-card images TODO."
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tarocco%20Bolognese.png"
+    },
+    {
+      "id": "deck-minchiate",
+      "name": "Minchiate (Florence)",
+      "sort_order": 4,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "a"
+      ],
+      "metadata": {
+        "branch": "branch-a",
+        "derives_from": [
+          "deck-italian-trionfi"
+        ],
+        "when": "Florence, 16th c.→"
+      },
+      "sections": {
+        "What it is": "The 97-card Florentine expansion — adds the four elements, twelve zodiac signs, and the full set of seven virtues, plus five supreme 'Arie'.",
+        "Where & when": "Florence, 16th c.→",
+        "Lineage": "A-order (Florentine). The most cosmological tarot.",
+        "In this library": "✅ Built (grammars/minchiate-florence-tarot)."
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Minchiate%20card%20deck%20-%20Florence%20-%201860-1890%20-%20Trumps%20-%2040%20-%20Le%20Trombe.jpg"
+    },
+    {
+      "id": "deck-tarocco-siciliano",
+      "name": "Tarocco Siciliano",
+      "sort_order": 5,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "a"
+      ],
+      "metadata": {
+        "branch": "branch-a",
+        "derives_from": [
+          "deck-italian-trionfi"
+        ],
+        "when": "Sicily, 18th c.→"
+      },
+      "sections": {
+        "What it is": "Sicily's small, unusual deck, with cards found nowhere else (the 'Fugitivo' and 'Miseria').",
+        "Where & when": "Sicily, 18th c.→",
+        "Lineage": "A-order offshoot, the southernmost branch.",
+        "In this library": "🔨 Planned."
+      }
+    },
+    {
+      "id": "deck-charles-vi",
+      "name": "'Charles VI' / Gringonneur",
+      "sort_order": 6,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "b"
+      ],
+      "metadata": {
+        "branch": "branch-b",
+        "derives_from": [
+          "deck-italian-trionfi"
+        ],
+        "when": "Ferrara/Bologna, c. 1450–80"
+      },
+      "sections": {
+        "What it is": "A hand-painted deck of which 17 trumps survive at the BnF. Long mis-called the oldest tarot (and wrongly tied to a 1392 payment to Gringonneur).",
+        "Where & when": "Ferrara/Bologna, c. 1450–80",
+        "Lineage": "B-order (Ferrarese). A documentary cornerstone of the eastern tradition.",
+        "In this library": "✅ Built in this library (grammars/charles-vi-tarot)."
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Empereur%20tarot%20charles6.jpg"
+    },
+    {
+      "id": "deck-este",
+      "name": "d'Este Tarot",
+      "sort_order": 7,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "b"
+      ],
+      "metadata": {
+        "branch": "branch-b",
+        "derives_from": [
+          "deck-italian-trionfi"
+        ],
+        "when": "Ferrara, 15th c."
+      },
+      "sections": {
+        "What it is": "Fragmentary hand-painted cards from the Este court of Ferrara.",
+        "Where & when": "Ferrara, 15th c.",
+        "Lineage": "B-order. Completes the eastern luxury-deck picture beside Visconti's western ones.",
+        "In this library": "🔨 Planned."
+      }
+    },
+    {
+      "id": "deck-marseille-conver",
+      "name": "Tarot de Marseille — Conver 1760",
+      "sort_order": 8,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "c"
+      ],
+      "metadata": {
+        "branch": "branch-c",
+        "derives_from": [
+          "deck-visconti-sforza"
+        ],
+        "when": "Marseille, 1760"
+      },
+      "sections": {
+        "What it is": "The canonical printed standard (Type II), a woodcut game deck whose 22 trumps fixed the names and images the whole occult era inherited.",
+        "Where & when": "Marseille, 1760",
+        "Lineage": "C-order, the trunk. Descends from the Milanese standard; everything occult branches from it.",
+        "In this library": "✅ Built (grammars/tarot-de-marseille-conver)."
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nicolas%20Conver%20Tarot%201760.jpg"
+    },
+    {
+      "id": "deck-marseille-type1",
+      "name": "Marseille Type I — Noblet / Dodal",
+      "sort_order": 9,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "c"
+      ],
+      "metadata": {
+        "branch": "branch-c",
+        "derives_from": [
+          "deck-visconti-sforza"
+        ],
+        "when": "Paris/Lyon, 1650–1701"
+      },
+      "sections": {
+        "What it is": "The earlier Marseille pattern (Jean Noblet c. 1650, Jean Dodal 1701), slightly different from the later Conver 'Type II'.",
+        "Where & when": "Paris/Lyon, 1650–1701",
+        "Lineage": "C-order. The first crystallisation of the Marseille image.",
+        "In this library": "🔨 Planned (fuller PD pip scans live here)."
+      }
+    },
+    {
+      "id": "deck-besancon",
+      "name": "Tarot de Besançon / Swiss 1JJ",
+      "sort_order": 10,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "c"
+      ],
+      "metadata": {
+        "branch": "branch-c",
+        "derives_from": [
+          "deck-marseille-conver"
+        ],
+        "when": "Switzerland/E. France, 18th c."
+      },
+      "sections": {
+        "What it is": "A Marseille variant that replaces the Popess and Pope with Juno and Jupiter — a Protestant-friendly redesign.",
+        "Where & when": "Switzerland/E. France, 18th c.",
+        "Lineage": "C-order sibling of the Marseille.",
+        "In this library": "✅ Built (partial, variant highlights) — grammars/tarot-de-besancon."
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tarot%201JJ%20-%20Junon%20-%201.%20Version.png"
+    },
+    {
+      "id": "deck-belgian",
+      "name": "Belgian / Vandenborre Tarot",
+      "sort_order": 11,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "c"
+      ],
+      "metadata": {
+        "branch": "branch-c",
+        "derives_from": [
+          "deck-marseille-conver"
+        ],
+        "when": "Brussels, 18th c."
+      },
+      "sections": {
+        "What it is": "The Flemish 'Tarot de Vandenborre', replacing the Popess and Pope with Bacchus and the Spanish Captain (Capitano Eracasse).",
+        "Where & when": "Brussels, 18th c.",
+        "Lineage": "C-order sibling of the Marseille.",
+        "In this library": "🔨 Planned."
+      }
+    },
+    {
+      "id": "deck-piemontese",
+      "name": "Tarocco Piemontese",
+      "sort_order": 12,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "c"
+      ],
+      "metadata": {
+        "branch": "branch-c",
+        "derives_from": [
+          "deck-marseille-conver"
+        ],
+        "when": "Piedmont, 19th c.→"
+      },
+      "sections": {
+        "What it is": "The Piedmontese playing pattern, a later Italian descendant of the Marseille type.",
+        "Where & when": "Piedmont, 19th c.→",
+        "Lineage": "C-order, the living Italian game pattern.",
+        "In this library": "🔨 Planned."
+      }
+    },
+    {
+      "id": "deck-court-de-gebelin",
+      "name": "Court de Gébelin's Plates",
+      "sort_order": 13,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "occult"
+      ],
+      "metadata": {
+        "branch": "branch-occult",
+        "derives_from": [
+          "deck-marseille-conver"
+        ],
+        "when": "Paris, 1781"
+      },
+      "sections": {
+        "What it is": "Antoine Court de Gébelin's engravings in 'Le Monde primitif', which first claimed the tarot was the ancient Egyptian 'Book of Thoth'. The myth that launched occult tarot.",
+        "Where & when": "Paris, 1781",
+        "Lineage": "The hinge: re-reads the C-order Marseille as esoteric wisdom.",
+        "In this library": "✅ Built in this library (grammars/court-de-gebelin-tarot)."
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Court%20de%20G%C3%A9belin%20-%20Atout%2021.jpg"
+    },
+    {
+      "id": "deck-etteilla-i",
+      "name": "Etteilla I — Livre de Thot",
+      "sort_order": 14,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "occult"
+      ],
+      "metadata": {
+        "branch": "branch-occult",
+        "derives_from": [
+          "deck-court-de-gebelin",
+          "deck-marseille-conver"
+        ],
+        "when": "Paris, 1788–91"
+      },
+      "sections": {
+        "What it is": "The FIRST deck designed for divination — Jean-Baptiste Alliette's renamed, renumbered cards with a cosmogony sequence, significators, and systematic reversed meanings.",
+        "Where & when": "Paris, 1788–91",
+        "Lineage": "First fruit of the occult branch; descends from the Marseille via Court de Gébelin.",
+        "In this library": "✅ Rewritten in this library + live in Supabase."
+      }
+    },
+    {
+      "id": "deck-etteilla-iii",
+      "name": "Etteilla II & III (editions)",
+      "sort_order": 15,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "occult"
+      ],
+      "metadata": {
+        "branch": "branch-occult",
+        "derives_from": [
+          "deck-etteilla-i"
+        ],
+        "when": "1838 / 1865"
+      },
+      "sections": {
+        "What it is": "Later editions of Etteilla's system — Blocquel's 'Julia Orsini' (II) and Regamey's chromolithograph 'Oracle des Dames' (III).",
+        "Where & when": "1838 / 1865",
+        "Lineage": "Continuations of Etteilla's deck.",
+        "In this library": "✅ Rewritten + live."
+      }
+    },
+    {
+      "id": "deck-levi",
+      "name": "Éliphas Lévi",
+      "sort_order": 16,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "occult"
+      ],
+      "metadata": {
+        "branch": "branch-occult",
+        "derives_from": [
+          "deck-marseille-conver"
+        ],
+        "when": "Paris, 1850s"
+      },
+      "sections": {
+        "What it is": "Lévi wrote no deck but mapped the 22 trumps onto the 22 Hebrew letters and the Kabbalistic Tree of Life — the framework all later esoteric tarot uses.",
+        "Where & when": "Paris, 1850s",
+        "Lineage": "A tradition NODE: the Kabbalistic key, inherited by Wirth and the Golden Dawn.",
+        "In this library": "📘 Tradition node (no deck)."
+      }
+    },
+    {
+      "id": "deck-papus",
+      "name": "Papus — Tarot des Bohémiens",
+      "sort_order": 17,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "occult"
+      ],
+      "metadata": {
+        "branch": "branch-occult",
+        "derives_from": [
+          "deck-levi"
+        ],
+        "when": "Paris, 1889"
+      },
+      "sections": {
+        "What it is": "Gérard Encausse ('Papus') systematised the Lévi correspondences in a famous book, illustrated with Wirth's majors.",
+        "Where & when": "Paris, 1889",
+        "Lineage": "A tradition NODE linking Lévi to Wirth.",
+        "In this library": "📘 Tradition node."
+      }
+    },
+    {
+      "id": "deck-oswald-wirth",
+      "name": "Oswald Wirth Tarot",
+      "sort_order": 18,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "occult"
+      ],
+      "metadata": {
+        "branch": "branch-occult",
+        "derives_from": [
+          "deck-levi",
+          "deck-marseille-conver"
+        ],
+        "when": "Paris, 1889 / 1926"
+      },
+      "sections": {
+        "What it is": "Wirth designed 22 esoteric Major Arcana under Stanislas de Guaita — reworked Marseille imagery carrying Lévi's Hebrew-letter and astrological symbols.",
+        "Where & when": "Paris, 1889 / 1926",
+        "Lineage": "Bridges Lévi's Kabbalah into imagery; the Continental esoteric major arcana.",
+        "In this library": "✅ Built (grammars/oswald-wirth-tarot)."
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Oswald%20Wirth%20-%20Les%2022%20Arcanes%20du%20Tarot%20Kabbalistique.jpg"
+    },
+    {
+      "id": "deck-golden-dawn",
+      "name": "Golden Dawn — Book T",
+      "sort_order": 19,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "occult"
+      ],
+      "metadata": {
+        "branch": "branch-occult",
+        "derives_from": [
+          "deck-levi",
+          "deck-marseille-conver"
+        ],
+        "when": "London, 1888"
+      },
+      "sections": {
+        "What it is": "The Hermetic Order of the Golden Dawn's complete correspondence system (Book T): paths, decans, Sephiroth, 'Lord of…' titles. It swaps Strength↔Justice.",
+        "Where & when": "London, 1888",
+        "Lineage": "The English synthesis; parent of the Rider-Waite-Smith and Thoth decks.",
+        "In this library": "✅ Built (grammars/golden-dawn-book-t-tarot, with RWS imagery)."
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_00_Fool.jpg"
+    },
+    {
+      "id": "deck-rws",
+      "name": "Rider-Waite-Smith",
+      "sort_order": 20,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "occult"
+      ],
+      "metadata": {
+        "branch": "branch-occult",
+        "derives_from": [
+          "deck-golden-dawn"
+        ],
+        "when": "London, 1909"
+      },
+      "sections": {
+        "What it is": "A.E. Waite & Pamela Colman Smith's deck — the first to fully illustrate the minor arcana with scenes. The most influential modern tarot.",
+        "Where & when": "London, 1909",
+        "Lineage": "Descends from the Golden Dawn; ancestor of thousands of modern decks.",
+        "In this library": "🟢 Live in Supabase (RWS Archetypal)."
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_01_Magician.jpg"
+    },
+    {
+      "id": "deck-thoth",
+      "name": "Thoth (Crowley–Harris)",
+      "sort_order": 21,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "occult"
+      ],
+      "metadata": {
+        "branch": "branch-occult",
+        "derives_from": [
+          "deck-golden-dawn"
+        ],
+        "when": "London, 1944"
+      },
+      "sections": {
+        "What it is": "Aleister Crowley and Lady Frieda Harris's esoteric deck — the culmination of the Golden Dawn line.",
+        "Where & when": "London, 1944",
+        "Lineage": "Descends from the Golden Dawn. ⛔ Still in copyright — referenced here, never reproduced.",
+        "In this library": "⛔ Copyright — reference only, not built."
+      }
+    },
+    {
+      "id": "deck-sola-busca",
+      "name": "Sola Busca",
+      "sort_order": 22,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "sui"
+      ],
+      "metadata": {
+        "branch": "branch-sui",
+        "derives_from": [
+          "deck-italian-trionfi"
+        ],
+        "when": "Ferrara/Venice, c. 1491"
+      },
+      "sections": {
+        "What it is": "The earliest COMPLETE 78-card illustrated deck — trumps named for classical figures (Mato, Panfilio, Catulo…), steeped in alchemical and humanist symbolism. Pamela Colman Smith studied its pips.",
+        "Where & when": "Ferrara/Venice, c. 1491",
+        "Lineage": "A sui-generis offshoot, in none of the three orders; an alchemical art-object more than a game deck.",
+        "In this library": "🟢 Live in Supabase."
+      }
+    },
+    {
+      "id": "deck-mantegna",
+      "name": "Mantegna 'Tarocchi'",
+      "sort_order": 23,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "sui"
+      ],
+      "metadata": {
+        "branch": "branch-sui",
+        "derives_from": [],
+        "when": "N. Italy, c. 1465"
+      },
+      "sections": {
+        "What it is": "A 50-card series of educational engravings (muses, virtues, planets, estates) — NOT a tarot at all, despite the name; it has no suits and no trick-taking trumps.",
+        "Where & when": "N. Italy, c. 1465",
+        "Lineage": "A famous false relative, included to clear up the confusion.",
+        "In this library": "✅ Built in this library (grammars/mantegna-tarocchi) — grammar_type 'custom', not 'tarot'."
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Master%20of%20the%20E-Series%20Tarocchi%20-%20The%20Beggar%20%28from%20the%20Tarocchi%2C%20series%20E-%20Conditions%20of%20Man%2C%201%29%20-%201924.432.1%20-%20Cleveland%20Museum%20of%20Art.jpg"
+    },
+    {
+      "id": "deck-modern-derivatives",
+      "name": "Modern Derivative Decks",
+      "sort_order": 24,
+      "category": "deck",
+      "level": 1,
+      "keywords": [
+        "tarot",
+        "history",
+        "sui"
+      ],
+      "metadata": {
+        "branch": "branch-sui",
+        "derives_from": [
+          "deck-rws",
+          "deck-marseille-conver"
+        ],
+        "when": "20th–21st c."
+      },
+      "sections": {
+        "What it is": "The thousands of modern decks descending from the Marseille, RWS, or Thoth — including the library's own community decks (Tarocchino Arlecchino, Clown Town, Anecdotes, Luiza Lian, the Ontoject…).",
+        "Where & when": "20th–21st c.",
+        "Lineage": "The living edge of the tree; nearly all trace to RWS or the Marseille.",
+        "In this library": "🟢 Several live in Supabase."
+      }
+    },
+    {
+      "id": "branch-roots",
+      "name": "Roots — The First Tarots (Milan, c. 1440s)",
+      "sort_order": 25,
+      "category": "branch",
+      "level": 2,
+      "composite_of": [
+        "deck-visconti-sforza",
+        "deck-cary-yale",
+        "deck-brera-brambilla"
+      ],
+      "relationship_type": "emergence",
+      "keywords": [
+        "tarot",
+        "branch",
+        "history"
+      ],
+      "metadata": {},
+      "sections": {
+        "About this branch": "The earliest surviving tarots: luxurious hand-painted decks made for the Visconti and Sforza courts of Milan. Tarot begins here as a card GAME (trionfi), not divination. These Milanese decks seed what Dummett calls the C-order.",
+        "Decks here": "Visconti-Sforza Tarot, Cary-Yale (Visconti di Modrone), Brera-Brambilla"
+      }
+    },
+    {
+      "id": "branch-a",
+      "name": "A-Order — Bologna & Florence (the South)",
+      "sort_order": 26,
+      "category": "branch",
+      "level": 2,
+      "composite_of": [
+        "deck-tarocchino-bologna",
+        "deck-minchiate",
+        "deck-tarocco-siciliano"
+      ],
+      "relationship_type": "emergence",
+      "keywords": [
+        "tarot",
+        "branch",
+        "history"
+      ],
+      "metadata": {},
+      "sections": {
+        "About this branch": "One of the three regional trump orders (Dummett's A). The southern tradition, home of the Bolognese Tarocchino and the vast Florentine Minchiate. Note the four interchangeable 'Papi' replacing the Popess/Empress/Emperor/Pope.",
+        "Decks here": "Tarocchino di Bologna, Minchiate (Florence), Tarocco Siciliano"
+      }
+    },
+    {
+      "id": "branch-b",
+      "name": "B-Order — Ferrara (the East)",
+      "sort_order": 27,
+      "category": "branch",
+      "level": 2,
+      "composite_of": [
+        "deck-charles-vi",
+        "deck-este"
+      ],
+      "relationship_type": "emergence",
+      "keywords": [
+        "tarot",
+        "branch",
+        "history"
+      ],
+      "metadata": {},
+      "sections": {
+        "About this branch": "The eastern trump order (Dummett's B), associated with the d'Este court of Ferrara. Known mostly from fragments and the so-called 'Charles VI' deck.",
+        "Decks here": "'Charles VI' / Gringonneur, d'Este Tarot"
+      }
+    },
+    {
+      "id": "branch-c",
+      "name": "C-Order — Milan & the West → the Printed Standard",
+      "sort_order": 28,
+      "category": "branch",
+      "level": 2,
+      "composite_of": [
+        "deck-marseille-conver",
+        "deck-marseille-type1",
+        "deck-besancon",
+        "deck-belgian",
+        "deck-piemontese"
+      ],
+      "relationship_type": "emergence",
+      "keywords": [
+        "tarot",
+        "branch",
+        "history"
+      ],
+      "metadata": {},
+      "sections": {
+        "About this branch": "The western trump order (Dummett's C) that, through Milan and France, became the printed STANDARD — the Tarot de Marseille — and its regional cousins. This is the trunk from which the occult decks branch.",
+        "Decks here": "Tarot de Marseille — Conver 1760, Marseille Type I — Noblet / Dodal, Tarot de Besançon / Swiss 1JJ, Belgian / Vandenborre Tarot, Tarocco Piemontese"
+      }
+    },
+    {
+      "id": "branch-occult",
+      "name": "The Occult Reframing (France → England, 1781→)",
+      "sort_order": 29,
+      "category": "branch",
+      "level": 2,
+      "composite_of": [
+        "deck-court-de-gebelin",
+        "deck-etteilla-i",
+        "deck-etteilla-iii",
+        "deck-levi",
+        "deck-papus",
+        "deck-oswald-wirth",
+        "deck-golden-dawn",
+        "deck-rws",
+        "deck-thoth"
+      ],
+      "relationship_type": "emergence",
+      "keywords": [
+        "tarot",
+        "branch",
+        "history"
+      ],
+      "metadata": {},
+      "sections": {
+        "About this branch": "From the 1780s the Tarot de Marseille was reinterpreted as ancient esoteric wisdom — Court de Gébelin's Egyptian myth, Etteilla's cartomancy, Lévi's Kabbalah, and then the English decks (Golden Dawn, Rider-Waite-Smith, Thoth). Divination is INVENTED on this branch.",
+        "Decks here": "Court de Gébelin's Plates, Etteilla I — Livre de Thot, Etteilla II & III (editions), Éliphas Lévi, Papus — Tarot des Bohémiens, Oswald Wirth Tarot, Golden Dawn — Book T, Rider-Waite-Smith, Thoth (Crowley–Harris)"
+      }
+    },
+    {
+      "id": "branch-sui",
+      "name": "Sui Generis & Relatives",
+      "sort_order": 30,
+      "category": "branch",
+      "level": 2,
+      "composite_of": [
+        "deck-sola-busca",
+        "deck-mantegna",
+        "deck-modern-derivatives"
+      ],
+      "relationship_type": "emergence",
+      "keywords": [
+        "tarot",
+        "branch",
+        "history"
+      ],
+      "metadata": {},
+      "sections": {
+        "About this branch": "Decks that stand apart from the three orders, plus the relatives constantly confused with tarot: the alchemical Sola Busca, the Mantegna 'Tarocchi' (not actually a tarot), and the modern derivative decks.",
+        "Decks here": "Sola Busca, Mantegna 'Tarocchi', Modern Derivative Decks"
+      }
+    },
+    {
+      "id": "root-tree-of-tarot",
+      "name": "The Tree of Tarot",
+      "sort_order": 31,
+      "category": "root",
+      "level": 3,
+      "composite_of": [
+        "branch-roots",
+        "branch-a",
+        "branch-b",
+        "branch-c",
+        "branch-occult",
+        "branch-sui"
+      ],
+      "relationship_type": "emergence",
+      "keywords": [
+        "tarot",
+        "genealogy",
+        "history",
+        "tree"
+      ],
+      "metadata": {},
+      "sections": {
+        "The Whole Tree": "Tarot began as a card GAME in mid-1400s Northern Italy — a fifth suit of 22 illustrated 'triumphs' added to an ordinary pack. From that single root three regional trump-orders diverged (Dummett's A, B, C), the western C-order hardened into the printed Tarot de Marseille, and from the 1780s the Marseille was reimagined as esoteric wisdom, producing the occult decks. Divination is a late branch, not the root.",
+        "How to read this tree": "Each branch is a lineage; each leaf is a deck. Crucially, the Marseille (C-order) and the Bolognese Tarocchino (A-order) are COUSINS — both children of the common Italian root — not parent and child. Follow a branch down to see what descends from what."
+      }
+    }
+  ]
+}

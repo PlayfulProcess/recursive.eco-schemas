@@ -1,0 +1,426 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "recursive.eco community",
+        "role": "author",
+        "url": "https://recursive.eco"
+      }
+    ]
+  },
+  "name": "Human Design \u2014 Canonical",
+  "description": "A canonical Human Design grammar covering centers, types, authorities, and the first 16 gates (linked to their I Ching hexagrams). A living document \u2014 contribute the remaining gates at github.com/PlayfulProcess/recursive.eco-schemas",
+  "grammar_type": "astrology",
+  "tags": ["human-design", "bodygraph", "gates", "centers", "canonical"],
+  "items": [
+    {
+      "id": "center-head",
+      "name": "Head Center",
+      "symbol": "\u25b3",
+      "category": "center",
+      "sections": {
+        "Story": "The Head Center is the pressure to think \u2014 to ask questions, to be inspired, to wonder. It is NOT the thinking itself (that belongs to the Ajna). This is the fuel of mental inquiry.",
+        "Defined": "Consistent mental pressure and inspiration. You have reliable access to questions that inspire you. Don't try to answer everyone else's questions.",
+        "Undefined": "Amplified mental pressure from others. You may feel overwhelmed by questions that aren't yours. Learn to recognize which questions truly belong to you."
+      },
+      "keywords": ["inspiration", "pressure", "questions", "doubt", "confusion"],
+      "metadata": {}
+    },
+    {
+      "id": "center-ajna",
+      "name": "Ajna Center",
+      "symbol": "\u25bd",
+      "category": "center",
+      "sections": {
+        "Story": "The Ajna is the mind's processor \u2014 where concepts are formed, opinions crystallized, and ideas structured. It processes but does not decide.",
+        "Defined": "A fixed way of thinking and processing information. Your conceptual framework is consistent. Beware of rigidity.",
+        "Undefined": "Mental flexibility \u2014 you can see things from many perspectives. The trap is pretending to be certain when you're not."
+      },
+      "keywords": ["thinking", "concepts", "opinions", "processing", "analysis"],
+      "metadata": {}
+    },
+    {
+      "id": "center-throat",
+      "name": "Throat Center",
+      "symbol": "\u25c7",
+      "category": "center",
+      "sections": {
+        "Story": "The Throat is the center of manifestation and communication. Everything in the bodygraph that wants to become action or expression must pass through the Throat.",
+        "Defined": "Reliable access to expression and action. Your voice and timing for speaking are consistent.",
+        "Undefined": "Inconsistent access to expression. You may try to attract attention or speak at the wrong time. Wait to be recognized or invited to speak."
+      },
+      "keywords": ["manifestation", "communication", "expression", "action", "voice"],
+      "metadata": {}
+    },
+    {
+      "id": "center-g",
+      "name": "G Center (Self)",
+      "symbol": "\u25c6",
+      "category": "center",
+      "sections": {
+        "Story": "The G Center is identity, direction, and love. It is the magnetic monopole that holds the illusion of separation together and draws you along your correct geometry through life.",
+        "Defined": "A fixed sense of identity and direction. You know who you are and where you're going (even if you can't explain it). You're here to be in the right place.",
+        "Undefined": "Identity and direction are fluid \u2014 influenced by environment and others. You're designed to sample many identities. The key is correct environment."
+      },
+      "keywords": ["identity", "direction", "love", "self", "magnetic monopole"],
+      "metadata": {}
+    },
+    {
+      "id": "center-heart",
+      "name": "Heart Center (Ego)",
+      "symbol": "\u2665",
+      "category": "center",
+      "sections": {
+        "Story": "The Heart Center is willpower, ego, and the material world. It governs self-worth, promises, and the capacity to compete and control resources.",
+        "Defined": "Consistent access to willpower. You can make and keep promises. Be careful not to overwork the will \u2014 rest is essential.",
+        "Undefined": "Inconsistent willpower. Making promises and proving self-worth are traps. You are not here to prove anything."
+      },
+      "keywords": ["willpower", "ego", "worth", "promises", "material"],
+      "metadata": {}
+    },
+    {
+      "id": "center-sacral",
+      "name": "Sacral Center",
+      "symbol": "\u25a0",
+      "category": "center",
+      "sections": {
+        "Story": "The Sacral is the great motor of life force \u2014 sexuality, fertility, work capacity, and the gut response. It is the defining center: if it's defined, you're a Generator or Manifesting Generator.",
+        "Defined": "Enormous sustainable life force and work energy. You are designed to respond \u2014 wait for something to respond TO. Your gut sound (uh-huh / unh-unh) is your truth.",
+        "Undefined": "You do not have consistent access to life force energy. You are NOT here to work in the sacral way. Rest when tired. You amplify and mirror sacral energy around you."
+      },
+      "keywords": ["life force", "sexuality", "work", "response", "gut"],
+      "metadata": {}
+    },
+    {
+      "id": "center-spleen",
+      "name": "Splenic Center",
+      "symbol": "\u25cb",
+      "category": "center",
+      "sections": {
+        "Story": "The Spleen is the body's immune system and survival intelligence. It operates in the NOW \u2014 spontaneous, intuitive knowing that speaks once and doesn't repeat.",
+        "Defined": "Consistent access to spontaneous awareness. You have a reliable immune system and intuitive sense of what's healthy. Trust the first hit.",
+        "Undefined": "Amplified sensitivity to fear and health concerns. You hold onto things (people, habits, jobs) past their time because the fear of letting go is amplified."
+      },
+      "keywords": ["intuition", "survival", "health", "fear", "now"],
+      "metadata": {}
+    },
+    {
+      "id": "center-solar-plexus",
+      "name": "Solar Plexus Center",
+      "symbol": "\u25b2",
+      "category": "center",
+      "sections": {
+        "Story": "The Solar Plexus is the emotional wave \u2014 pleasure to pain and back. If it's defined, there is no truth in the now. You must wait through the wave for emotional clarity.",
+        "Defined": "You are an emotional being. Your truth comes in waves. NEVER make decisions in the high or the low \u2014 wait for the middle. Emotional clarity is the goal, not emotional certainty.",
+        "Undefined": "You take in and amplify others' emotions. You can become wise about emotions, but you're not here to be defined by them. Avoid making decisions to avoid confrontation."
+      },
+      "keywords": ["emotions", "wave", "clarity", "desire", "sensitivity"],
+      "metadata": {}
+    },
+    {
+      "id": "center-root",
+      "name": "Root Center",
+      "symbol": "\u25a1",
+      "category": "center",
+      "sections": {
+        "Story": "The Root is adrenaline pressure \u2014 the drive to get things done, to evolve, to keep moving. It is a motor and a pressure center, fueling activity and stress.",
+        "Defined": "Consistent adrenaline pressure. You process stress in a reliable way. Be careful not to become addicted to the pressure.",
+        "Undefined": "Amplified stress and pressure from outside. You may feel constant urgency to finish things. The key is to not let pressure drive your decisions."
+      },
+      "keywords": ["pressure", "stress", "adrenaline", "drive", "evolution"],
+      "metadata": {}
+    },
+    {
+      "id": "type-generator",
+      "name": "Generator",
+      "symbol": "\u2b24",
+      "category": "type",
+      "sections": {
+        "Story": "Generators are the life force of the planet \u2014 about 37% of the population. Their strategy is to RESPOND. Their sacral gut response (uh-huh/unh-unh) is their inner authority guide.",
+        "Strategy": "Wait to respond. Do not initiate. When something shows up in your reality, check your gut \u2014 does it light you up? If yes, engage. If not, let it pass.",
+        "Signature": "Satisfaction. When you're living correctly, you go to bed satisfied. When you're not, you feel frustrated."
+      },
+      "keywords": ["response", "satisfaction", "frustration", "life force", "sacral"],
+      "metadata": {}
+    },
+    {
+      "id": "type-manifesting-generator",
+      "name": "Manifesting Generator",
+      "symbol": "\u2b24\u26a1",
+      "category": "type",
+      "sections": {
+        "Story": "Manifesting Generators are multi-passionate energy beings \u2014 about 33% of the population. They respond AND manifest, but the key is still to RESPOND FIRST, then act.",
+        "Strategy": "Wait to respond, then inform before acting. You're designed to skip steps and move fast \u2014 but only after the sacral responds. Your path is non-linear and that's correct.",
+        "Signature": "Satisfaction and peace. Frustration and anger are the not-self signals."
+      },
+      "keywords": ["response", "speed", "multi-passionate", "non-linear", "sacral"],
+      "metadata": {}
+    },
+    {
+      "id": "type-projector",
+      "name": "Projector",
+      "symbol": "\u25c7",
+      "category": "type",
+      "sections": {
+        "Story": "Projectors are the guides and managers \u2014 about 20% of the population. They see into others and systems with penetrating awareness. Their strategy is to WAIT FOR THE INVITATION.",
+        "Strategy": "Wait for the invitation \u2014 for the big things (career, relationships, place to live). In the meantime, study what interests you and become wise in your area. When recognized and invited, your guidance lands.",
+        "Signature": "Success. When living correctly, you feel recognized and valued. When not, you feel bitter."
+      },
+      "keywords": ["invitation", "recognition", "guidance", "bitterness", "success"],
+      "metadata": {}
+    },
+    {
+      "id": "type-manifestor",
+      "name": "Manifestor",
+      "symbol": "\u26a1",
+      "category": "type",
+      "sections": {
+        "Story": "Manifestors are the initiators \u2014 about 8% of the population. They are the only type designed to initiate action. Their strategy is to INFORM before acting.",
+        "Strategy": "Inform. You have the energy to initiate and make things happen. But if you don't tell people what you're doing, you meet resistance. Informing is not asking for permission \u2014 it's clearing the way.",
+        "Signature": "Peace. When living correctly, you feel at peace. When not, you feel angry."
+      },
+      "keywords": ["initiation", "informing", "peace", "anger", "impact"],
+      "metadata": {}
+    },
+    {
+      "id": "type-reflector",
+      "name": "Reflector",
+      "symbol": "\u25cb",
+      "category": "type",
+      "sections": {
+        "Story": "Reflectors are the mirrors of the community \u2014 about 1% of the population. With no defined centers, they reflect and amplify the environment. Their strategy is to wait a LUNAR CYCLE before making major decisions.",
+        "Strategy": "Wait 28 days (one lunar cycle) for major decisions. You are deeply affected by the Moon's transit through all 64 gates. Over a month, you get a complete picture. Your health and clarity depend on correct environment.",
+        "Signature": "Surprise and delight. When in the right environment, life surprises you. When not, you feel disappointed."
+      },
+      "keywords": ["lunar cycle", "reflection", "environment", "surprise", "disappointment"],
+      "metadata": {}
+    },
+    {
+      "id": "gate-1",
+      "name": "Gate 1 \u2014 The Creative",
+      "symbol": "\u4dc0",
+      "category": "gate",
+      "sections": {
+        "Story": "The Gate of Self-Expression. The creative force that must express its unique individuality. Located in the G Center, connected to the Throat via Channel 1-8.",
+        "I Ching": "Hexagram 1 \u2014 The Creative (Qian). Pure yang energy. The creative impulse that initiates all things.",
+        "Gift": "Freshness \u2014 authentic creative expression that is always new.",
+        "Shadow": "Entropy \u2014 suppressing your creative uniqueness, conforming."
+      },
+      "keywords": ["self-expression", "creativity", "individuality", "G Center"],
+      "metadata": { "gate_number": 1, "center": "G" }
+    },
+    {
+      "id": "gate-2",
+      "name": "Gate 2 \u2014 The Receptive",
+      "symbol": "\u4dc1",
+      "category": "gate",
+      "sections": {
+        "Story": "The Gate of the Direction of the Self. The driver that knows where to go without knowing how. Located in the G Center, connected to the Sacral via Channel 2-14.",
+        "I Ching": "Hexagram 2 \u2014 The Receptive (Kun). Pure yin energy. The capacity to receive and be directed by a higher knowing.",
+        "Gift": "Orientation \u2014 a deep inner knowing of direction.",
+        "Shadow": "Dislocation \u2014 not trusting your inner direction, following others' maps."
+      },
+      "keywords": ["direction", "receptivity", "higher knowing", "G Center"],
+      "metadata": { "gate_number": 2, "center": "G" }
+    },
+    {
+      "id": "gate-3",
+      "name": "Gate 3 \u2014 Difficulty at the Beginning",
+      "symbol": "\u4dc2",
+      "category": "gate",
+      "sections": {
+        "Story": "The Gate of Ordering. The pressure of the new, the chaos before the pattern emerges. Located in the Sacral Center, connected to the Throat via Channel 3-60.",
+        "I Ching": "Hexagram 3 \u2014 Difficulty at the Beginning (Zhun). The sprouting seed pushing through resistance.",
+        "Gift": "Innovation \u2014 finding new order in chaos.",
+        "Shadow": "Chaos \u2014 getting stuck in the disorder, unable to find the pattern."
+      },
+      "keywords": ["ordering", "innovation", "beginning", "Sacral"],
+      "metadata": { "gate_number": 3, "center": "Sacral" }
+    },
+    {
+      "id": "gate-4",
+      "name": "Gate 4 \u2014 Youthful Folly",
+      "symbol": "\u4dc3",
+      "category": "gate",
+      "sections": {
+        "Story": "The Gate of Formulization. The mental pressure to find answers and create logical formulas. Located in the Ajna, connected to the Head via Channel 4-63.",
+        "I Ching": "Hexagram 4 \u2014 Youthful Folly (Meng). The young student who must learn that not all questions have answers yet.",
+        "Gift": "Understanding \u2014 the ability to see patterns and formulate answers.",
+        "Shadow": "Intolerance \u2014 forcing answers, mental impatience."
+      },
+      "keywords": ["mental answers", "logic", "formulas", "Ajna"],
+      "metadata": { "gate_number": 4, "center": "Ajna" }
+    },
+    {
+      "id": "gate-5",
+      "name": "Gate 5 \u2014 Waiting",
+      "symbol": "\u4dc4",
+      "category": "gate",
+      "sections": {
+        "Story": "The Gate of Fixed Rhythms. The natural patterns and habits that sustain life force. Located in the Sacral Center, connected to the Spleen via Channel 5-15.",
+        "I Ching": "Hexagram 5 \u2014 Waiting (Xu). Patient nourishment of natural timing.",
+        "Gift": "Patience \u2014 trusting natural rhythms and timing.",
+        "Shadow": "Impatience \u2014 forcing timing, disrupting natural flow."
+      },
+      "keywords": ["rhythm", "habits", "patience", "timing", "Sacral"],
+      "metadata": { "gate_number": 5, "center": "Sacral" }
+    },
+    {
+      "id": "gate-6",
+      "name": "Gate 6 \u2014 Conflict",
+      "symbol": "\u4dc5",
+      "category": "gate",
+      "sections": {
+        "Story": "The Gate of Friction. Emotional boundaries that must be respected. The pH balance of the emotional wave. Located in the Solar Plexus, connected to the Sacral via Channel 6-59.",
+        "I Ching": "Hexagram 6 \u2014 Conflict (Song). Tension between inner truth and outer challenge.",
+        "Gift": "Diplomacy \u2014 navigating emotional friction with grace.",
+        "Shadow": "Conflict \u2014 emotional reactivity and boundary violation."
+      },
+      "keywords": ["friction", "boundaries", "intimacy", "Solar Plexus"],
+      "metadata": { "gate_number": 6, "center": "Solar Plexus" }
+    },
+    {
+      "id": "gate-7",
+      "name": "Gate 7 \u2014 The Army",
+      "symbol": "\u4dc6",
+      "category": "gate",
+      "sections": {
+        "Story": "The Gate of the Role of the Self in Interaction. Leadership through democratic process. Located in the G Center, connected to the Throat via Channel 7-31.",
+        "I Ching": "Hexagram 7 \u2014 The Army (Shi). Leading by serving the collective direction.",
+        "Gift": "Guidance \u2014 natural leadership that serves the whole.",
+        "Shadow": "Division \u2014 authoritarianism, leading for ego rather than the collective."
+      },
+      "keywords": ["leadership", "democracy", "role", "G Center"],
+      "metadata": { "gate_number": 7, "center": "G" }
+    },
+    {
+      "id": "gate-8",
+      "name": "Gate 8 \u2014 Holding Together",
+      "symbol": "\u4dc7",
+      "category": "gate",
+      "sections": {
+        "Story": "The Gate of Contribution. The voice that says 'I know I can make a contribution.' Located in the Throat, connected to the G Center via Channel 1-8.",
+        "I Ching": "Hexagram 8 \u2014 Holding Together (Bi). Union through shared values and authentic contribution.",
+        "Gift": "Style \u2014 unique creative expression that contributes to the whole.",
+        "Shadow": "Mediocrity \u2014 conforming expression, hiding uniqueness."
+      },
+      "keywords": ["contribution", "style", "expression", "Throat"],
+      "metadata": { "gate_number": 8, "center": "Throat" }
+    },
+    {
+      "id": "gate-9",
+      "name": "Gate 9 \u2014 The Taming Power of the Small",
+      "symbol": "\u4dc8",
+      "category": "gate",
+      "sections": {
+        "Story": "The Gate of Focus. The ability to concentrate energy on details. Located in the Sacral Center, connected to the Root via Channel 9-52.",
+        "I Ching": "Hexagram 9 \u2014 Taming Power of the Small (Xiao Chu). Gentle restraint and focused attention.",
+        "Gift": "Determination \u2014 focused, detailed, persistent energy.",
+        "Shadow": "Inertia \u2014 stuck in details, unable to see the bigger picture."
+      },
+      "keywords": ["focus", "detail", "determination", "Sacral"],
+      "metadata": { "gate_number": 9, "center": "Sacral" }
+    },
+    {
+      "id": "gate-10",
+      "name": "Gate 10 \u2014 Treading",
+      "symbol": "\u4dc9",
+      "category": "gate",
+      "sections": {
+        "Story": "The Gate of the Behavior of the Self. How you walk through the world, your way of being. Located in the G Center, connected to the Sacral via Channel 10-34 and to the Spleen via Channel 10-57.",
+        "I Ching": "Hexagram 10 \u2014 Treading (L\u00fc). Walking your path with integrity, even when tigers are present.",
+        "Gift": "Naturalness \u2014 being yourself without pretense.",
+        "Shadow": "Self-obsession \u2014 over-concern with how you appear to others."
+      },
+      "keywords": ["self-love", "behavior", "authenticity", "G Center"],
+      "metadata": { "gate_number": 10, "center": "G" }
+    },
+    {
+      "id": "gate-11",
+      "name": "Gate 11 \u2014 Peace",
+      "symbol": "\u4dca",
+      "category": "gate",
+      "sections": {
+        "Story": "The Gate of Ideas. A flood of ideas and images seeking expression. Located in the Ajna, connected to the Throat via Channel 11-56.",
+        "I Ching": "Hexagram 11 \u2014 Peace (Tai). Harmony between heaven and earth, the abundance of ideas.",
+        "Gift": "Idealism \u2014 seeing the beauty of what could be.",
+        "Shadow": "Obscurity \u2014 ideas that never find form, mental overwhelm."
+      },
+      "keywords": ["ideas", "imagination", "peace", "Ajna"],
+      "metadata": { "gate_number": 11, "center": "Ajna" }
+    },
+    {
+      "id": "gate-12",
+      "name": "Gate 12 \u2014 Standstill",
+      "symbol": "\u4dcb",
+      "category": "gate",
+      "sections": {
+        "Story": "The Gate of Caution. The voice of 'I can try.' Social caution and the timing of emotional expression. Located in the Throat, connected to the Solar Plexus via Channel 12-22.",
+        "I Ching": "Hexagram 12 \u2014 Standstill (Pi). A time of withdrawal, waiting for the right moment.",
+        "Gift": "Discrimination \u2014 knowing when to speak and when to be silent.",
+        "Shadow": "Vanity \u2014 social performance, articulation without depth."
+      },
+      "keywords": ["caution", "social expression", "timing", "Throat"],
+      "metadata": { "gate_number": 12, "center": "Throat" }
+    },
+    {
+      "id": "gate-13",
+      "name": "Gate 13 \u2014 Fellowship",
+      "symbol": "\u4dcc",
+      "category": "gate",
+      "sections": {
+        "Story": "The Gate of the Listener. The keeper of secrets and stories. Located in the G Center, connected to the Throat via Channel 13-33.",
+        "I Ching": "Hexagram 13 \u2014 Fellowship with Men (Tong Ren). Community formed through shared stories and openness.",
+        "Gift": "Discernment \u2014 hearing the universal in the personal.",
+        "Shadow": "Discord \u2014 secrets that divide rather than unite."
+      },
+      "keywords": ["listening", "secrets", "stories", "G Center"],
+      "metadata": { "gate_number": 13, "center": "G" }
+    },
+    {
+      "id": "gate-14",
+      "name": "Gate 14 \u2014 Possession in Great Measure",
+      "symbol": "\u4dcd",
+      "category": "gate",
+      "sections": {
+        "Story": "The Gate of Power Skills. Wealth, resources, and the energy to manage them. Located in the Sacral, connected to the G Center via Channel 2-14.",
+        "I Ching": "Hexagram 14 \u2014 Possession in Great Measure (Da You). Abundance held with grace and responsibility.",
+        "Gift": "Competence \u2014 mastery of resources and practical skills.",
+        "Shadow": "Compromise \u2014 selling out, using power without purpose."
+      },
+      "keywords": ["resources", "wealth", "power skills", "Sacral"],
+      "metadata": { "gate_number": 14, "center": "Sacral" }
+    },
+    {
+      "id": "gate-15",
+      "name": "Gate 15 \u2014 Modesty",
+      "symbol": "\u4dce",
+      "category": "gate",
+      "sections": {
+        "Story": "The Gate of Extremes. The flow of humanity's rhythms and the love of humanity. Located in the G Center, connected to the Sacral via Channel 5-15.",
+        "I Ching": "Hexagram 15 \u2014 Modesty (Qian). The mountain within the earth, greatness that doesn't need to show itself.",
+        "Gift": "Magnetism \u2014 attracting the right flow of humanity toward you.",
+        "Shadow": "Dullness \u2014 losing connection to the natural rhythm of life."
+      },
+      "keywords": ["humanity", "rhythms", "extremes", "G Center"],
+      "metadata": { "gate_number": 15, "center": "G" }
+    },
+    {
+      "id": "gate-16",
+      "name": "Gate 16 \u2014 Enthusiasm",
+      "symbol": "\u4dcf",
+      "category": "gate",
+      "sections": {
+        "Story": "The Gate of Skills. Identifying and mastering the skills worth developing. Located in the Throat, connected to the Spleen via Channel 16-48.",
+        "I Ching": "Hexagram 16 \u2014 Enthusiasm (Yu). The energy that comes from doing what you love.",
+        "Gift": "Versatility \u2014 the ability to identify and develop talent.",
+        "Shadow": "Indifference \u2014 half-hearted effort, dabbling without depth."
+      },
+      "keywords": ["skills", "enthusiasm", "mastery", "Throat"],
+      "metadata": { "gate_number": 16, "center": "Throat" }
+    }
+  ]
+}

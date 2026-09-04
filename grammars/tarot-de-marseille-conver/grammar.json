@@ -1,0 +1,2902 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "attribution": [
+      {
+        "name": "Nicolas Conver",
+        "date": "1760",
+        "note": "Master cardmaker of Marseille; his woodcut Tarot fixed the canonical TdM pattern"
+      },
+      {
+        "name": "Wikimedia Commons",
+        "date": "public domain",
+        "note": "Card images, Category:Tarot de Marseille - Nicolas Conver 1760"
+      },
+      {
+        "name": "PlayfulProcess",
+        "date": "2026",
+        "note": "Grammar architecture; traditional cartomantic summaries"
+      }
+    ]
+  },
+  "name": "Tarot de Marseille — Nicolas Conver 1760 (The Printed Standard)",
+  "description": "The deck the whole occult era treated as canonical. Printed from woodblocks by the master cardmaker Nicolas Conver in Marseille in 1760, this is the most reproduced version of the Tarot de Marseille — the standardised pattern that fixed the 22 trumps' names, numbers, and images for centuries. Crucially, it was made to PLAY a game: tarot, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games), in which the 22 trumps are a permanent trump suit and the Fool (Le Mat) is the 'Excuse'. It was never meant for divination — the reading meanings here are a later overlay. It is the bridge between the Italian game decks and the French occult revival: the deck Court de Gébelin theorised over, Etteilla read fortunes from, and Lévi and Oswald Wirth re-symbolised.\n\nThis grammar holds the full 78-card deck. The 22 majors are imaged from Conver's 1760 woodcuts, each with an Iconography note and traditional Upright / Reversed meanings. The 56 minors carry the traditional cartomantic meanings; because Marseille pips are emblematic rather than scenic (unlike the later Rider-Waite-Smith), few pip scans exist on Commons, so most pip images are left for a later illustration pass.\n\nNote the PRE-Golden-Dawn order this deck fixes, and which later English decks changed: the unnumbered Fool (Le Mat), Justice at VIII, Strength (La Force) at XI, and Death (XIII) left unnamed.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Nicolas Conver, Tarot de Marseille, 1760, woodcut with stencil colour (Wikimedia Commons, Category:Tarot de Marseille - Nicolas Conver 1760). For a fuller pip set, the Jean Dodal (1701) and Jean Noblet (c. 1650) Marseille decks are also public domain.",
+  "grammar_type": "tarot",
+  "creator_name": "PlayfulProcess",
+  "creator_link": "https://recursive.eco",
+  "cover_image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nicolas%20Conver%20Tarot%201760.jpg",
+  "tags": [
+    "tarot",
+    "marseille",
+    "nicolas-conver",
+    "1760",
+    "woodcut",
+    "major-arcana",
+    "public-domain",
+    "cartomancy",
+    "printed-standard"
+  ],
+  "roots": [
+    "western-esoteric"
+  ],
+  "shelves": [
+    "wonder",
+    "mirror"
+  ],
+  "lineages": [
+    "Andreotti"
+  ],
+  "worldview": "traditional",
+  "is_published": false,
+  "items": [
+    {
+      "id": "major-00-le-mat",
+      "name": "0 — The Fool",
+      "sort_order": 0,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "fool",
+        "le mat",
+        "major arcana",
+        "marseille",
+        "arcana:the-fool"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/LE%20MAT%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 0,
+        "french_name": "Le Mat",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/LE%20MAT%20Nicolas%20Conver%20Tarot%201760.jpg",
+            "artist": "Nicolas Conver",
+            "artist_dates": "fl. 1760, Marseille",
+            "edition": "Tarot de Marseille, Nicolas Conver, 1760 (woodcut)",
+            "scene": "The Fool (Le Mat)",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-fool",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A traveller in motley walks rightward with a staff and bundle, a small animal tearing at his trailing leg. He alone carries no number — outside the count.",
+        "Upright": "Beginnings, wandering, freedom, the leap taken without calculation; the unattached spirit moving on.",
+        "Reversed": "Folly, heedlessness, dispersion; movement without direction or commitment.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "major-01-le-bateleur",
+      "name": "1 — The Magician",
+      "sort_order": 1,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "magician",
+        "le bateleur",
+        "major arcana",
+        "marseille",
+        "arcana:the-magician"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/I%20LE%20BATELEUR%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 1,
+        "french_name": "Le Bateleur",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/I%20LE%20BATELEUR%20Nicolas%20Conver%20Tarot%201760.jpg",
+            "artist": "Nicolas Conver",
+            "artist_dates": "fl. 1760, Marseille",
+            "edition": "Tarot de Marseille, Nicolas Conver, 1760 (woodcut)",
+            "scene": "The Magician (Le Bateleur)",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-magician",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A young mountebank stands at a table of cups, coins, and knives, a wand in one hand, his hat brim a lemniscate. The lowest trump, the everyman entertainer.",
+        "Upright": "Skill, initiative, the will gathering its tools, a beginning in the maker's hands.",
+        "Reversed": "Trickery, false starts, cleverness without substance, manipulation.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "major-02-la-papesse",
+      "name": "2 — The High Priestess",
+      "sort_order": 2,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "high priestess",
+        "la papesse",
+        "major arcana",
+        "marseille",
+        "arcana:the-high-priestess"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/II%20LA%20PAPESSE%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 2,
+        "french_name": "La Papesse",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/II%20LA%20PAPESSE%20Nicolas%20Conver%20Tarot%201760.jpg",
+            "artist": "Nicolas Conver",
+            "artist_dates": "fl. 1760, Marseille",
+            "edition": "Tarot de Marseille, Nicolas Conver, 1760 (woodcut)",
+            "scene": "The High Priestess (La Papesse)",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-high-priestess",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A seated, veiled woman in papal tiara holds an open book, a curtain behind her.",
+        "Upright": "Hidden knowledge, intuition, patience, the wisdom that waits and conceals.",
+        "Reversed": "Secrets misused, surface knowledge, withdrawal, sterile silence.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "major-03-limperatrice",
+      "name": "3 — The Empress",
+      "sort_order": 3,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "empress",
+        "l'impératrice",
+        "major arcana",
+        "marseille",
+        "arcana:the-empress"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/II%20L%27IMP%C3%89RATRICE%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 3,
+        "french_name": "L'Impératrice",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/II%20L%27IMP%C3%89RATRICE%20Nicolas%20Conver%20Tarot%201760.jpg",
+            "artist": "Nicolas Conver",
+            "artist_dates": "fl. 1760, Marseille",
+            "edition": "Tarot de Marseille, Nicolas Conver, 1760 (woodcut)",
+            "scene": "The Empress (L'Impératrice)",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-empress",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A crowned woman enthroned with sceptre and an eagle shield. (Conver's block mislabels her 'II'; she is trump III.)",
+        "Upright": "Abundance, fertility, creativity, worldly feminine authority and the flowering of forms.",
+        "Reversed": "Vanity, sterility, smothering, creativity blocked or squandered.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "major-04-lempereur",
+      "name": "4 — The Emperor",
+      "sort_order": 4,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "emperor",
+        "l'empereur",
+        "major arcana",
+        "marseille",
+        "arcana:the-emperor"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/IIII-L%27EMPEREUR%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 4,
+        "french_name": "L'Empereur",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/IIII-L%27EMPEREUR%20Nicolas%20Conver%20Tarot%201760.jpg",
+            "artist": "Nicolas Conver",
+            "artist_dates": "fl. 1760, Marseille",
+            "edition": "Tarot de Marseille, Nicolas Conver, 1760 (woodcut)",
+            "scene": "The Emperor (L'Empereur)",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-emperor",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A bearded sovereign sits in profile, legs crossed in the figure of four, sceptre and eagle shield at hand.",
+        "Upright": "Authority, structure, stability, reason giving the world its order.",
+        "Reversed": "Domination, rigidity, tyranny, order hardened into oppression.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "major-05-le-pape",
+      "name": "5 — The Hierophant",
+      "sort_order": 5,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "hierophant",
+        "le pape",
+        "major arcana",
+        "marseille",
+        "arcana:the-hierophant"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/V%20LE%20PAPE%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 5,
+        "french_name": "Le Pape",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/V%20LE%20PAPE%20Nicolas%20Conver%20Tarot%201760.jpg",
+            "artist": "Nicolas Conver",
+            "artist_dates": "fl. 1760, Marseille",
+            "edition": "Tarot de Marseille, Nicolas Conver, 1760 (woodcut)",
+            "scene": "The Hierophant (Le Pape)",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-hierophant",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A tiara'd pope raises his hand in blessing over two tonsured clerics, a pillar at each side.",
+        "Upright": "Teaching, tradition, blessing, the bridge between the human and the sacred.",
+        "Reversed": "Dogma, empty orthodoxy, conformity, the letter without the spirit.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "major-06-lamoureux",
+      "name": "6 — The Lovers",
+      "sort_order": 6,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "lovers",
+        "l'amoureux",
+        "major arcana",
+        "marseille",
+        "arcana:the-lovers"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/VI%20L%27AMOUREUX%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 6,
+        "french_name": "L'Amoureux",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/VI%20L%27AMOUREUX%20Nicolas%20Conver%20Tarot%201760.jpg",
+            "artist": "Nicolas Conver",
+            "artist_dates": "fl. 1760, Marseille",
+            "edition": "Tarot de Marseille, Nicolas Conver, 1760 (woodcut)",
+            "scene": "The Lovers (L'Amoureux)",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-lovers",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A youth stands between two women under a blindfolded Cupid drawing his bow — the choice between two ways.",
+        "Upright": "Love, union, and above all a choice that must be made; the heart at a crossroads.",
+        "Reversed": "Indecision, temptation, a union founded on weakness, choice deferred.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "major-07-le-chariot",
+      "name": "7 — The Chariot",
+      "sort_order": 7,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "chariot",
+        "le chariot",
+        "major arcana",
+        "marseille",
+        "arcana:the-chariot"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/VII%20LE%20CHARIOT%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 7,
+        "french_name": "Le Chariot",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/VII%20LE%20CHARIOT%20Nicolas%20Conver%20Tarot%201760.jpg",
+            "artist": "Nicolas Conver",
+            "artist_dates": "fl. 1760, Marseille",
+            "edition": "Tarot de Marseille, Nicolas Conver, 1760 (woodcut)",
+            "scene": "The Chariot (Le Chariot)",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-chariot",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A crowned prince stands in a canopied chariot drawn by two horses facing different ways; he holds no reins.",
+        "Upright": "Victory, drive, mastery, holding opposing forces together and advancing by will.",
+        "Reversed": "Loss of control, conflict, a triumph undone by pride or haste.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "major-08-la-justice",
+      "name": "8 — Justice",
+      "sort_order": 8,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "justice",
+        "la justice",
+        "major arcana",
+        "marseille",
+        "arcana:justice"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/VIII%20LA%20JUSTICE%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 8,
+        "french_name": "La Justice",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/VIII%20LA%20JUSTICE%20Nicolas%20Conver%20Tarot%201760.jpg",
+            "artist": "Nicolas Conver",
+            "artist_dates": "fl. 1760, Marseille",
+            "edition": "Tarot de Marseille, Nicolas Conver, 1760 (woodcut)",
+            "scene": "Justice (La Justice)",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:justice",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "An enthroned woman holds an upright sword and a level balance, eyes open. In this deck she is VIII.",
+        "Upright": "Balance, fairness, consequence, the exact weighing of each act.",
+        "Reversed": "Injustice, imbalance, severity, judgment distorted or evaded.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "major-09-lhermite",
+      "name": "9 — The Hermit",
+      "sort_order": 9,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "hermit",
+        "l'hermite",
+        "major arcana",
+        "marseille",
+        "arcana:the-hermit"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/VIIII%20L%27HERMITE%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 9,
+        "french_name": "L'Hermite",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/VIIII%20L%27HERMITE%20Nicolas%20Conver%20Tarot%201760.jpg",
+            "artist": "Nicolas Conver",
+            "artist_dates": "fl. 1760, Marseille",
+            "edition": "Tarot de Marseille, Nicolas Conver, 1760 (woodcut)",
+            "scene": "The Hermit (L'Hermite)",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-hermit",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A cloaked old man walks with a staff, lifting a lantern half-shielded by his cloak.",
+        "Upright": "Solitude, prudence, the inner light, the patient search carried one step at a time.",
+        "Reversed": "Isolation, withdrawal that avoids, a light hoarded or refused.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "major-10-la-roue",
+      "name": "10 — Wheel of Fortune",
+      "sort_order": 10,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "wheel of fortune",
+        "la roue de fortune",
+        "major arcana",
+        "marseille",
+        "arcana:wheel-of-fortune"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/X%20LA%20ROUE%20DE%20FORTUNE%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 10,
+        "french_name": "La Roue de Fortune",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/X%20LA%20ROUE%20DE%20FORTUNE%20Nicolas%20Conver%20Tarot%201760.jpg",
+            "artist": "Nicolas Conver",
+            "artist_dates": "fl. 1760, Marseille",
+            "edition": "Tarot de Marseille, Nicolas Conver, 1760 (woodcut)",
+            "scene": "Wheel of Fortune (La Roue de Fortune)",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:wheel-of-fortune",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A wheel on a frame turns: animal-eared creatures rise on one side and fall on the other, a sphinx-like figure crowning the top.",
+        "Upright": "Change, cycles, fortune turning, the moment of luck or reversal.",
+        "Reversed": "Bad turns, resistance to change, being dragged by the wheel.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "major-11-la-force",
+      "name": "11 — Strength",
+      "sort_order": 11,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "strength",
+        "la force",
+        "major arcana",
+        "marseille",
+        "arcana:strength"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/XI%20LA%20FORCE%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 11,
+        "french_name": "La Force",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/XI%20LA%20FORCE%20Nicolas%20Conver%20Tarot%201760.jpg",
+            "artist": "Nicolas Conver",
+            "artist_dates": "fl. 1760, Marseille",
+            "edition": "Tarot de Marseille, Nicolas Conver, 1760 (woodcut)",
+            "scene": "Strength (La Force)",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:strength",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A woman in a wide hat calmly parts the jaws of a lion. In this deck Strength is XI.",
+        "Upright": "Courage, gentle mastery of instinct, force governed by spirit rather than violence.",
+        "Reversed": "Brute force, domination by appetite, weakness disguised as control.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "major-12-le-pendu",
+      "name": "12 — The Hanged Man",
+      "sort_order": 12,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "hanged man",
+        "le pendu",
+        "major arcana",
+        "marseille",
+        "arcana:the-hanged-man"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/XII%20LE%20PENDU%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 12,
+        "french_name": "Le Pendu",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/XII%20LE%20PENDU%20Nicolas%20Conver%20Tarot%201760.jpg",
+            "artist": "Nicolas Conver",
+            "artist_dates": "fl. 1760, Marseille",
+            "edition": "Tarot de Marseille, Nicolas Conver, 1760 (woodcut)",
+            "scene": "The Hanged Man (Le Pendu)",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-hanged-man",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A youth hangs by one ankle from a wooden frame between two trees, hands behind his back, leg crossed; his face is calm.",
+        "Upright": "Suspension, sacrifice, surrender, the world seen from a reversed point of view.",
+        "Reversed": "Useless sacrifice, stagnation, martyrdom that serves no one.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "major-13-la-mort",
+      "name": "13 — Death",
+      "sort_order": 13,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "death",
+        "la mort",
+        "major arcana",
+        "marseille",
+        "arcana:death"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/13%20XIII%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 13,
+        "french_name": "La Mort",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/13%20XIII%20Nicolas%20Conver%20Tarot%201760.jpg",
+            "artist": "Nicolas Conver",
+            "artist_dates": "fl. 1760, Marseille",
+            "edition": "Tarot de Marseille, Nicolas Conver, 1760 (woodcut)",
+            "scene": "Death (La Mort)",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:death",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A skeleton with a scythe mows a black ground from which hands, feet, and crowned heads sprout. The card bears its number XIII but no name.",
+        "Upright": "Transformation, the necessary clearing-away, endings that make room.",
+        "Reversed": "Stagnation, fear of change, decay resisted instead of released.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "major-14-temperance",
+      "name": "14 — Temperance",
+      "sort_order": 14,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "temperance",
+        "tempérance",
+        "major arcana",
+        "marseille",
+        "arcana:temperance"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/XIIII%20TEMPERANCE%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 14,
+        "french_name": "Tempérance",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/XIIII%20TEMPERANCE%20Nicolas%20Conver%20Tarot%201760.jpg",
+            "artist": "Nicolas Conver",
+            "artist_dates": "fl. 1760, Marseille",
+            "edition": "Tarot de Marseille, Nicolas Conver, 1760 (woodcut)",
+            "scene": "Temperance (Tempérance)",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:temperance",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A winged angel pours liquid between two vessels in an unbroken stream.",
+        "Upright": "Moderation, harmony, the patient blending of opposites, the flow of life renewed.",
+        "Reversed": "Imbalance, impatience, dissipation, the flow spilled or blocked.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "major-15-le-diable",
+      "name": "15 — The Devil",
+      "sort_order": 15,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "devil",
+        "le diable",
+        "major arcana",
+        "marseille",
+        "arcana:the-devil"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/XV%20LE%20DIABLE%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 15,
+        "french_name": "Le Diable",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/XV%20LE%20DIABLE%20Nicolas%20Conver%20Tarot%201760.jpg",
+            "artist": "Nicolas Conver",
+            "artist_dates": "fl. 1760, Marseille",
+            "edition": "Tarot de Marseille, Nicolas Conver, 1760 (woodcut)",
+            "scene": "The Devil (Le Diable)",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-devil",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A horned, bat-winged figure on a pedestal raises a torch; two small horned captives are chained below.",
+        "Upright": "Instinct, desire, bondage, the magnetic pull of matter and appetite — energy that enslaves when unconscious.",
+        "Reversed": "Release from bondage, or deeper enslavement: obsession, the chains embraced.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "major-16-la-maison-dieu",
+      "name": "16 — The Tower",
+      "sort_order": 16,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "tower",
+        "la maison dieu",
+        "major arcana",
+        "marseille",
+        "arcana:the-tower"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/XVI%20LA%20MAISON%20DE%20DIEU%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 16,
+        "french_name": "La Maison Dieu",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/XVI%20LA%20MAISON%20DE%20DIEU%20Nicolas%20Conver%20Tarot%201760.jpg",
+            "artist": "Nicolas Conver",
+            "artist_dates": "fl. 1760, Marseille",
+            "edition": "Tarot de Marseille, Nicolas Conver, 1760 (woodcut)",
+            "scene": "The Tower (La Maison Dieu)",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-tower",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Lightning knocks the crown from a tower; two figures fall headlong amid coloured spheres. Its name, 'the House of God', is older than 'the Tower'.",
+        "Upright": "Sudden upheaval, the breaking of false structures, liberation through shock.",
+        "Reversed": "Disaster resisted, a collapse delayed but coming, clinging to ruins.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "major-17-letoile",
+      "name": "17 — The Star",
+      "sort_order": 17,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "star",
+        "l'étoile",
+        "major arcana",
+        "marseille",
+        "arcana:the-star"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/XVII%20L%27ETOILE%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 17,
+        "french_name": "L'Étoile",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/XVII%20L%27ETOILE%20Nicolas%20Conver%20Tarot%201760.jpg",
+            "artist": "Nicolas Conver",
+            "artist_dates": "fl. 1760, Marseille",
+            "edition": "Tarot de Marseille, Nicolas Conver, 1760 (woodcut)",
+            "scene": "The Star (L'Étoile)",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-star",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A naked woman kneels by water pouring two urns onto land and stream, a great star and seven smaller ones above.",
+        "Upright": "Hope, renewal, serenity, the gift freely poured after the storm.",
+        "Reversed": "Despair, disillusion, hope clouded, the waters poured in vain.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "major-18-la-lune",
+      "name": "18 — The Moon",
+      "sort_order": 18,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "moon",
+        "la lune",
+        "major arcana",
+        "marseille",
+        "arcana:the-moon"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/XVIII%20LA%20LUNE%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 18,
+        "french_name": "La Lune",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/XVIII%20LA%20LUNE%20Nicolas%20Conver%20Tarot%201760.jpg",
+            "artist": "Nicolas Conver",
+            "artist_dates": "fl. 1760, Marseille",
+            "edition": "Tarot de Marseille, Nicolas Conver, 1760 (woodcut)",
+            "scene": "The Moon (La Lune)",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-moon",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Under a dripping face-moon two dogs bay between two towers while a crayfish climbs from a pool.",
+        "Upright": "The unconscious, dreams, illusion, the dim and winding path crossed by feeling.",
+        "Reversed": "Deception, fear, confusion, illusions mistaken for truth.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "major-19-le-soleil",
+      "name": "19 — The Sun",
+      "sort_order": 19,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "sun",
+        "le soleil",
+        "major arcana",
+        "marseille",
+        "arcana:the-sun"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/XVIIII%20LE%20SOLEIL%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 19,
+        "french_name": "Le Soleil",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/XVIIII%20LE%20SOLEIL%20Nicolas%20Conver%20Tarot%201760.jpg",
+            "artist": "Nicolas Conver",
+            "artist_dates": "fl. 1760, Marseille",
+            "edition": "Tarot de Marseille, Nicolas Conver, 1760 (woodcut)",
+            "scene": "The Sun (Le Soleil)",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-sun",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Two children stand by a low wall beneath a great rayed face-sun that drips golden tears.",
+        "Upright": "Joy, clarity, vitality, the warmth of conscious understanding and shared life.",
+        "Reversed": "Vanity, false brightness, a clouded sun, happiness only on the surface.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "major-20-le-jugement",
+      "name": "20 — Judgement",
+      "sort_order": 20,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "judgement",
+        "le jugement",
+        "major arcana",
+        "marseille",
+        "arcana:judgement"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/XX%20LE%20JUGEMENT%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 20,
+        "french_name": "Le Jugement",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/XX%20LE%20JUGEMENT%20Nicolas%20Conver%20Tarot%201760.jpg",
+            "artist": "Nicolas Conver",
+            "artist_dates": "fl. 1760, Marseille",
+            "edition": "Tarot de Marseille, Nicolas Conver, 1760 (woodcut)",
+            "scene": "Judgement (Le Jugement)",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:judgement",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "An angel sounds a trumpet from the clouds; three figures rise from a tomb with arms raised.",
+        "Upright": "Awakening, renewal, a decisive call answered, the self risen to new life.",
+        "Reversed": "Stagnation, a call refused, fear of change, the trumpet unheard.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "major-21-le-monde",
+      "name": "21 — The World",
+      "sort_order": 21,
+      "category": "major-arcana",
+      "level": 1,
+      "keywords": [
+        "world",
+        "le monde",
+        "major arcana",
+        "marseille",
+        "arcana:the-world"
+      ],
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/XXI%20LE%20MONDE%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {
+        "arcana": "major",
+        "number": 21,
+        "french_name": "Le Monde",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/XXI%20LE%20MONDE%20Nicolas%20Conver%20Tarot%201760.jpg",
+            "artist": "Nicolas Conver",
+            "artist_dates": "fl. 1760, Marseille",
+            "edition": "Tarot de Marseille, Nicolas Conver, 1760 (woodcut)",
+            "scene": "The World (Le Monde)",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "arcana:the-world",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "A dancing figure within a pointed-oval wreath, the four living creatures — angel, eagle, lion, bull — in the corners.",
+        "Upright": "Completion, fulfilment, integration, the world harmonised and the journey closed.",
+        "Reversed": "Incompletion, a goal almost reached, a cycle that fails to close.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "coins-ace",
+      "name": "Ace of Coins",
+      "sort_order": 22,
+      "category": "suit-coins",
+      "level": 1,
+      "keywords": [
+        "coins",
+        "earth",
+        "ace",
+        "minor arcana",
+        "deniers",
+        "suit:coins",
+        "rank:ace",
+        "card:ace-of-coins"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Coins",
+        "suit_french": "Deniers",
+        "element": "Earth",
+        "rank": "Ace",
+        "archetype": "card:ace-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Ace of Coins: a single coin laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "a fresh start, the suit's energy at its purest and most potent — within money, body, work, and the material world.",
+        "Reversed": "a false start, energy blocked at the source.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "coins-02",
+      "name": "Two of Coins",
+      "sort_order": 23,
+      "category": "suit-coins",
+      "level": 1,
+      "keywords": [
+        "coins",
+        "earth",
+        "two",
+        "minor arcana",
+        "deniers",
+        "suit:coins",
+        "rank:two",
+        "card:two-of-coins"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Coins",
+        "suit_french": "Deniers",
+        "element": "Earth",
+        "rank": "Two",
+        "archetype": "card:two-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Two of Coins: 2 coins laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "balance, partnership, a choice held in equilibrium — within money, body, work, and the material world.",
+        "Reversed": "division, imbalance, a partnership strained.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "coins-03",
+      "name": "Three of Coins",
+      "sort_order": 24,
+      "category": "suit-coins",
+      "level": 1,
+      "keywords": [
+        "coins",
+        "earth",
+        "three",
+        "minor arcana",
+        "deniers",
+        "suit:coins",
+        "rank:three",
+        "card:three-of-coins"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Coins",
+        "suit_french": "Deniers",
+        "element": "Earth",
+        "rank": "Three",
+        "archetype": "card:three-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Three of Coins: 3 coins laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "increase, collaboration, early success — within money, body, work, and the material world.",
+        "Reversed": "delay, growth stalled, effort scattered.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "coins-04",
+      "name": "Four of Coins",
+      "sort_order": 25,
+      "category": "suit-coins",
+      "level": 1,
+      "keywords": [
+        "coins",
+        "earth",
+        "four",
+        "minor arcana",
+        "deniers",
+        "suit:coins",
+        "rank:four",
+        "card:four-of-coins"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Coins",
+        "suit_french": "Deniers",
+        "element": "Earth",
+        "rank": "Four",
+        "archetype": "card:four-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Four of Coins: 4 coins laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "foundation, rest, consolidation, a settled position — within money, body, work, and the material world.",
+        "Reversed": "stagnation, rigidity, security clung to.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "coins-05",
+      "name": "Five of Coins",
+      "sort_order": 26,
+      "category": "suit-coins",
+      "level": 1,
+      "keywords": [
+        "coins",
+        "earth",
+        "five",
+        "minor arcana",
+        "deniers",
+        "suit:coins",
+        "rank:five",
+        "card:five-of-coins"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Coins",
+        "suit_french": "Deniers",
+        "element": "Earth",
+        "rank": "Five",
+        "archetype": "card:five-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Five of Coins: 5 coins laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "conflict, difficulty, the testing of the suit — within money, body, work, and the material world.",
+        "Reversed": "the easing of conflict, or loss deepened.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "coins-06",
+      "name": "Six of Coins",
+      "sort_order": 27,
+      "category": "suit-coins",
+      "level": 1,
+      "keywords": [
+        "coins",
+        "earth",
+        "six",
+        "minor arcana",
+        "deniers",
+        "suit:coins",
+        "rank:six",
+        "card:six-of-coins"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Coins",
+        "suit_french": "Deniers",
+        "element": "Earth",
+        "rank": "Six",
+        "archetype": "card:six-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Six of Coins: 6 coins laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "reciprocity, ease, a balance restored — within money, body, work, and the material world.",
+        "Reversed": "imbalance returning, harmony lost.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "coins-07",
+      "name": "Seven of Coins",
+      "sort_order": 28,
+      "category": "suit-coins",
+      "level": 1,
+      "keywords": [
+        "coins",
+        "earth",
+        "seven",
+        "minor arcana",
+        "deniers",
+        "suit:coins",
+        "rank:seven",
+        "card:seven-of-coins"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Coins",
+        "suit_french": "Deniers",
+        "element": "Earth",
+        "rank": "Seven",
+        "archetype": "card:seven-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Seven of Coins: 7 coins laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "effort against resistance, partial and uncertain gain — within money, body, work, and the material world.",
+        "Reversed": "struggle abandoned, effort wasted.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "coins-08",
+      "name": "Eight of Coins",
+      "sort_order": 29,
+      "category": "suit-coins",
+      "level": 1,
+      "keywords": [
+        "coins",
+        "earth",
+        "eight",
+        "minor arcana",
+        "deniers",
+        "suit:coins",
+        "rank:eight",
+        "card:eight-of-coins"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Coins",
+        "suit_french": "Deniers",
+        "element": "Earth",
+        "rank": "Eight",
+        "archetype": "card:eight-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Eight of Coins: 8 coins laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "change, swiftness, energy in motion — within money, body, work, and the material world.",
+        "Reversed": "blockage, stalled movement, scattered force.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "coins-09",
+      "name": "Nine of Coins",
+      "sort_order": 30,
+      "category": "suit-coins",
+      "level": 1,
+      "keywords": [
+        "coins",
+        "earth",
+        "nine",
+        "minor arcana",
+        "deniers",
+        "suit:coins",
+        "rank:nine",
+        "card:nine-of-coins"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Coins",
+        "suit_french": "Deniers",
+        "element": "Earth",
+        "rank": "Nine",
+        "archetype": "card:nine-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Nine of Coins: 9 coins laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "intensity at its height, the suit almost complete — within money, body, work, and the material world.",
+        "Reversed": "strain, overreach, intensity turned against itself.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "coins-10",
+      "name": "Ten of Coins",
+      "sort_order": 31,
+      "category": "suit-coins",
+      "level": 1,
+      "keywords": [
+        "coins",
+        "earth",
+        "ten",
+        "minor arcana",
+        "deniers",
+        "suit:coins",
+        "rank:ten",
+        "card:ten-of-coins"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Coins",
+        "suit_french": "Deniers",
+        "element": "Earth",
+        "rank": "Ten",
+        "archetype": "card:ten-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Ten of Coins: 10 coins laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "the suit in full — its plenty and its weight together — within money, body, work, and the material world.",
+        "Reversed": "burden, excess, a cycle that overstays.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "coins-page",
+      "name": "Page of Coins",
+      "sort_order": 32,
+      "category": "suit-coins",
+      "level": 1,
+      "keywords": [
+        "coins",
+        "earth",
+        "page",
+        "court card",
+        "valet",
+        "suit:coins",
+        "rank:page",
+        "card:page-of-coins"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Coins",
+        "suit_french": "Deniers",
+        "element": "Earth",
+        "rank": "Page",
+        "court": true,
+        "archetype": "card:page-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Page of Coins (Valet): a standing or seated court figure of the Marseille pattern bearing the coin emblem, in the flat bold colours of the woodcut.",
+        "Upright": "Page of Coins — the youth and messenger of the suit — its energy learning, curious, within money, body, work, and the material world.",
+        "Reversed": "The same energy obstructed, immature, or turned against itself.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "coins-knight",
+      "name": "Knight of Coins",
+      "sort_order": 33,
+      "category": "suit-coins",
+      "level": 1,
+      "keywords": [
+        "coins",
+        "earth",
+        "knight",
+        "court card",
+        "cavalier",
+        "suit:coins",
+        "rank:knight",
+        "card:knight-of-coins"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Coins",
+        "suit_french": "Deniers",
+        "element": "Earth",
+        "rank": "Knight",
+        "court": true,
+        "archetype": "card:knight-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Knight of Coins (Cavalier): a standing or seated court figure of the Marseille pattern bearing the coin emblem, in the flat bold colours of the woodcut.",
+        "Upright": "Knight of Coins — the suit in motion — questing, active, riding out, within money, body, work, and the material world.",
+        "Reversed": "The same energy obstructed, immature, or turned against itself.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "coins-queen",
+      "name": "Queen of Coins",
+      "sort_order": 34,
+      "category": "suit-coins",
+      "level": 1,
+      "keywords": [
+        "coins",
+        "earth",
+        "queen",
+        "court card",
+        "reine",
+        "suit:coins",
+        "rank:queen",
+        "card:queen-of-coins"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Coins",
+        "suit_french": "Deniers",
+        "element": "Earth",
+        "rank": "Queen",
+        "court": true,
+        "archetype": "card:queen-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Queen of Coins (Reine): a standing or seated court figure of the Marseille pattern bearing the coin emblem, in the flat bold colours of the woodcut.",
+        "Upright": "Queen of Coins — the inward mastery of the suit — it held and understood, within money, body, work, and the material world.",
+        "Reversed": "The same energy obstructed, immature, or turned against itself.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "coins-king",
+      "name": "King of Coins",
+      "sort_order": 35,
+      "category": "suit-coins",
+      "level": 1,
+      "keywords": [
+        "coins",
+        "earth",
+        "king",
+        "court card",
+        "roi",
+        "suit:coins",
+        "rank:king",
+        "card:king-of-coins"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Coins",
+        "suit_french": "Deniers",
+        "element": "Earth",
+        "rank": "King",
+        "court": true,
+        "archetype": "card:king-of-coins",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "King of Coins (Roi): a standing or seated court figure of the Marseille pattern bearing the coin emblem, in the flat bold colours of the woodcut.",
+        "Upright": "King of Coins — the outward authority of the suit — it commanded and ruled, within money, body, work, and the material world.",
+        "Reversed": "The same energy obstructed, immature, or turned against itself.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "cups-ace",
+      "name": "Ace of Cups",
+      "sort_order": 36,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "ace",
+        "minor arcana",
+        "coupes",
+        "suit:cups",
+        "rank:ace",
+        "card:ace-of-cups"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "suit_french": "Coupes",
+        "element": "Water",
+        "rank": "Ace",
+        "archetype": "card:ace-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Ace of Cups: a single cup laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "a fresh start, the suit's energy at its purest and most potent — within love, feeling, and the inner life.",
+        "Reversed": "a false start, energy blocked at the source.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "cups-02",
+      "name": "Two of Cups",
+      "sort_order": 37,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "two",
+        "minor arcana",
+        "coupes",
+        "suit:cups",
+        "rank:two",
+        "card:two-of-cups"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "suit_french": "Coupes",
+        "element": "Water",
+        "rank": "Two",
+        "archetype": "card:two-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Two of Cups: 2 cups laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "balance, partnership, a choice held in equilibrium — within love, feeling, and the inner life.",
+        "Reversed": "division, imbalance, a partnership strained.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "cups-03",
+      "name": "Three of Cups",
+      "sort_order": 38,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "three",
+        "minor arcana",
+        "coupes",
+        "suit:cups",
+        "rank:three",
+        "card:three-of-cups"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "suit_french": "Coupes",
+        "element": "Water",
+        "rank": "Three",
+        "archetype": "card:three-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Three of Cups: 3 cups laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "increase, collaboration, early success — within love, feeling, and the inner life.",
+        "Reversed": "delay, growth stalled, effort scattered.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "cups-04",
+      "name": "Four of Cups",
+      "sort_order": 39,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "four",
+        "minor arcana",
+        "coupes",
+        "suit:cups",
+        "rank:four",
+        "card:four-of-cups"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "suit_french": "Coupes",
+        "element": "Water",
+        "rank": "Four",
+        "archetype": "card:four-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Four of Cups: 4 cups laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "foundation, rest, consolidation, a settled position — within love, feeling, and the inner life.",
+        "Reversed": "stagnation, rigidity, security clung to.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "cups-05",
+      "name": "Five of Cups",
+      "sort_order": 40,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "five",
+        "minor arcana",
+        "coupes",
+        "suit:cups",
+        "rank:five",
+        "card:five-of-cups"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "suit_french": "Coupes",
+        "element": "Water",
+        "rank": "Five",
+        "archetype": "card:five-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Five of Cups: 5 cups laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "conflict, difficulty, the testing of the suit — within love, feeling, and the inner life.",
+        "Reversed": "the easing of conflict, or loss deepened.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "cups-06",
+      "name": "Six of Cups",
+      "sort_order": 41,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "six",
+        "minor arcana",
+        "coupes",
+        "suit:cups",
+        "rank:six",
+        "card:six-of-cups"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "suit_french": "Coupes",
+        "element": "Water",
+        "rank": "Six",
+        "archetype": "card:six-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Six of Cups: 6 cups laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "reciprocity, ease, a balance restored — within love, feeling, and the inner life.",
+        "Reversed": "imbalance returning, harmony lost.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "cups-07",
+      "name": "Seven of Cups",
+      "sort_order": 42,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "seven",
+        "minor arcana",
+        "coupes",
+        "suit:cups",
+        "rank:seven",
+        "card:seven-of-cups"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "suit_french": "Coupes",
+        "element": "Water",
+        "rank": "Seven",
+        "archetype": "card:seven-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Seven of Cups: 7 cups laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "effort against resistance, partial and uncertain gain — within love, feeling, and the inner life.",
+        "Reversed": "struggle abandoned, effort wasted.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "cups-08",
+      "name": "Eight of Cups",
+      "sort_order": 43,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "eight",
+        "minor arcana",
+        "coupes",
+        "suit:cups",
+        "rank:eight",
+        "card:eight-of-cups"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "suit_french": "Coupes",
+        "element": "Water",
+        "rank": "Eight",
+        "archetype": "card:eight-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Eight of Cups: 8 cups laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "change, swiftness, energy in motion — within love, feeling, and the inner life.",
+        "Reversed": "blockage, stalled movement, scattered force.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "cups-09",
+      "name": "Nine of Cups",
+      "sort_order": 44,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "nine",
+        "minor arcana",
+        "coupes",
+        "suit:cups",
+        "rank:nine",
+        "card:nine-of-cups"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "suit_french": "Coupes",
+        "element": "Water",
+        "rank": "Nine",
+        "archetype": "card:nine-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Nine of Cups: 9 cups laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "intensity at its height, the suit almost complete — within love, feeling, and the inner life.",
+        "Reversed": "strain, overreach, intensity turned against itself.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "cups-10",
+      "name": "Ten of Cups",
+      "sort_order": 45,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "ten",
+        "minor arcana",
+        "coupes",
+        "suit:cups",
+        "rank:ten",
+        "card:ten-of-cups"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "suit_french": "Coupes",
+        "element": "Water",
+        "rank": "Ten",
+        "archetype": "card:ten-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Ten of Cups: 10 cups laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "the suit in full — its plenty and its weight together — within love, feeling, and the inner life.",
+        "Reversed": "burden, excess, a cycle that overstays.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "cups-page",
+      "name": "Page of Cups",
+      "sort_order": 46,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "page",
+        "court card",
+        "valet",
+        "suit:cups",
+        "rank:page",
+        "card:page-of-cups"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "suit_french": "Coupes",
+        "element": "Water",
+        "rank": "Page",
+        "court": true,
+        "archetype": "card:page-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Page of Cups (Valet): a standing or seated court figure of the Marseille pattern bearing the cup emblem, in the flat bold colours of the woodcut.",
+        "Upright": "Page of Cups — the youth and messenger of the suit — its energy learning, curious, within love, feeling, and the inner life.",
+        "Reversed": "The same energy obstructed, immature, or turned against itself.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "cups-knight",
+      "name": "Knight of Cups",
+      "sort_order": 47,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "knight",
+        "court card",
+        "cavalier",
+        "suit:cups",
+        "rank:knight",
+        "card:knight-of-cups"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "suit_french": "Coupes",
+        "element": "Water",
+        "rank": "Knight",
+        "court": true,
+        "archetype": "card:knight-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Knight of Cups (Cavalier): a standing or seated court figure of the Marseille pattern bearing the cup emblem, in the flat bold colours of the woodcut.",
+        "Upright": "Knight of Cups — the suit in motion — questing, active, riding out, within love, feeling, and the inner life.",
+        "Reversed": "The same energy obstructed, immature, or turned against itself.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "cups-queen",
+      "name": "Queen of Cups",
+      "sort_order": 48,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "queen",
+        "court card",
+        "reine",
+        "suit:cups",
+        "rank:queen",
+        "card:queen-of-cups"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "suit_french": "Coupes",
+        "element": "Water",
+        "rank": "Queen",
+        "court": true,
+        "archetype": "card:queen-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Queen of Cups (Reine): a standing or seated court figure of the Marseille pattern bearing the cup emblem, in the flat bold colours of the woodcut.",
+        "Upright": "Queen of Cups — the inward mastery of the suit — it held and understood, within love, feeling, and the inner life.",
+        "Reversed": "The same energy obstructed, immature, or turned against itself.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "cups-king",
+      "name": "King of Cups",
+      "sort_order": 49,
+      "category": "suit-cups",
+      "level": 1,
+      "keywords": [
+        "cups",
+        "water",
+        "king",
+        "court card",
+        "roi",
+        "suit:cups",
+        "rank:king",
+        "card:king-of-cups"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Cups",
+        "suit_french": "Coupes",
+        "element": "Water",
+        "rank": "King",
+        "court": true,
+        "archetype": "card:king-of-cups",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "King of Cups (Roi): a standing or seated court figure of the Marseille pattern bearing the cup emblem, in the flat bold colours of the woodcut.",
+        "Upright": "King of Cups — the outward authority of the suit — it commanded and ruled, within love, feeling, and the inner life.",
+        "Reversed": "The same energy obstructed, immature, or turned against itself.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "swords-ace",
+      "name": "Ace of Swords",
+      "sort_order": 50,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "ace",
+        "minor arcana",
+        "épées",
+        "suit:swords",
+        "rank:ace",
+        "card:ace-of-swords"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "suit_french": "Épées",
+        "element": "Air",
+        "rank": "Ace",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/As%20%C3%89P%C3%89E%20Nicolas%20Conver%20Tarot%201760.jpg",
+            "artist": "Nicolas Conver",
+            "artist_dates": "fl. 1760, Marseille",
+            "edition": "Tarot de Marseille, Nicolas Conver, 1760 (woodcut)",
+            "scene": "Ace of Swords",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:ace-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Ace of Swords: a single sword laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "a fresh start, the suit's energy at its purest and most potent — within mind, conflict, decision, and the cut of judgment.",
+        "Reversed": "a false start, energy blocked at the source.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/As%20%C3%89P%C3%89E%20Nicolas%20Conver%20Tarot%201760.jpg"
+    },
+    {
+      "id": "swords-02",
+      "name": "Two of Swords",
+      "sort_order": 51,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "two",
+        "minor arcana",
+        "épées",
+        "suit:swords",
+        "rank:two",
+        "card:two-of-swords"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "suit_french": "Épées",
+        "element": "Air",
+        "rank": "Two",
+        "archetype": "card:two-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Two of Swords: 2 swords laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "balance, partnership, a choice held in equilibrium — within mind, conflict, decision, and the cut of judgment.",
+        "Reversed": "division, imbalance, a partnership strained.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "swords-03",
+      "name": "Three of Swords",
+      "sort_order": 52,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "three",
+        "minor arcana",
+        "épées",
+        "suit:swords",
+        "rank:three",
+        "card:three-of-swords"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "suit_french": "Épées",
+        "element": "Air",
+        "rank": "Three",
+        "archetype": "card:three-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Three of Swords: 3 swords laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "increase, collaboration, early success — within mind, conflict, decision, and the cut of judgment.",
+        "Reversed": "delay, growth stalled, effort scattered.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "swords-04",
+      "name": "Four of Swords",
+      "sort_order": 53,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "four",
+        "minor arcana",
+        "épées",
+        "suit:swords",
+        "rank:four",
+        "card:four-of-swords"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "suit_french": "Épées",
+        "element": "Air",
+        "rank": "Four",
+        "archetype": "card:four-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Four of Swords: 4 swords laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "foundation, rest, consolidation, a settled position — within mind, conflict, decision, and the cut of judgment.",
+        "Reversed": "stagnation, rigidity, security clung to.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "swords-05",
+      "name": "Five of Swords",
+      "sort_order": 54,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "five",
+        "minor arcana",
+        "épées",
+        "suit:swords",
+        "rank:five",
+        "card:five-of-swords"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "suit_french": "Épées",
+        "element": "Air",
+        "rank": "Five",
+        "archetype": "card:five-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Five of Swords: 5 swords laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "conflict, difficulty, the testing of the suit — within mind, conflict, decision, and the cut of judgment.",
+        "Reversed": "the easing of conflict, or loss deepened.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "swords-06",
+      "name": "Six of Swords",
+      "sort_order": 55,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "six",
+        "minor arcana",
+        "épées",
+        "suit:swords",
+        "rank:six",
+        "card:six-of-swords"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "suit_french": "Épées",
+        "element": "Air",
+        "rank": "Six",
+        "archetype": "card:six-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Six of Swords: 6 swords laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "reciprocity, ease, a balance restored — within mind, conflict, decision, and the cut of judgment.",
+        "Reversed": "imbalance returning, harmony lost.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "swords-07",
+      "name": "Seven of Swords",
+      "sort_order": 56,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "seven",
+        "minor arcana",
+        "épées",
+        "suit:swords",
+        "rank:seven",
+        "card:seven-of-swords"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "suit_french": "Épées",
+        "element": "Air",
+        "rank": "Seven",
+        "archetype": "card:seven-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Seven of Swords: 7 swords laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "effort against resistance, partial and uncertain gain — within mind, conflict, decision, and the cut of judgment.",
+        "Reversed": "struggle abandoned, effort wasted.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "swords-08",
+      "name": "Eight of Swords",
+      "sort_order": 57,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "eight",
+        "minor arcana",
+        "épées",
+        "suit:swords",
+        "rank:eight",
+        "card:eight-of-swords"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "suit_french": "Épées",
+        "element": "Air",
+        "rank": "Eight",
+        "archetype": "card:eight-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Eight of Swords: 8 swords laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "change, swiftness, energy in motion — within mind, conflict, decision, and the cut of judgment.",
+        "Reversed": "blockage, stalled movement, scattered force.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "swords-09",
+      "name": "Nine of Swords",
+      "sort_order": 58,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "nine",
+        "minor arcana",
+        "épées",
+        "suit:swords",
+        "rank:nine",
+        "card:nine-of-swords"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "suit_french": "Épées",
+        "element": "Air",
+        "rank": "Nine",
+        "archetype": "card:nine-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Nine of Swords: 9 swords laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "intensity at its height, the suit almost complete — within mind, conflict, decision, and the cut of judgment.",
+        "Reversed": "strain, overreach, intensity turned against itself.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "swords-10",
+      "name": "Ten of Swords",
+      "sort_order": 59,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "ten",
+        "minor arcana",
+        "épées",
+        "suit:swords",
+        "rank:ten",
+        "card:ten-of-swords"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "suit_french": "Épées",
+        "element": "Air",
+        "rank": "Ten",
+        "archetype": "card:ten-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Ten of Swords: 10 swords laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "the suit in full — its plenty and its weight together — within mind, conflict, decision, and the cut of judgment.",
+        "Reversed": "burden, excess, a cycle that overstays.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "swords-page",
+      "name": "Page of Swords",
+      "sort_order": 60,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "page",
+        "court card",
+        "valet",
+        "suit:swords",
+        "rank:page",
+        "card:page-of-swords"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "suit_french": "Épées",
+        "element": "Air",
+        "rank": "Page",
+        "court": true,
+        "archetype": "card:page-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Page of Swords (Valet): a standing or seated court figure of the Marseille pattern bearing the sword emblem, in the flat bold colours of the woodcut.",
+        "Upright": "Page of Swords — the youth and messenger of the suit — its energy learning, curious, within mind, conflict, decision, and the cut of judgment.",
+        "Reversed": "The same energy obstructed, immature, or turned against itself.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "swords-knight",
+      "name": "Knight of Swords",
+      "sort_order": 61,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "knight",
+        "court card",
+        "cavalier",
+        "suit:swords",
+        "rank:knight",
+        "card:knight-of-swords"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "suit_french": "Épées",
+        "element": "Air",
+        "rank": "Knight",
+        "court": true,
+        "archetype": "card:knight-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Knight of Swords (Cavalier): a standing or seated court figure of the Marseille pattern bearing the sword emblem, in the flat bold colours of the woodcut.",
+        "Upright": "Knight of Swords — the suit in motion — questing, active, riding out, within mind, conflict, decision, and the cut of judgment.",
+        "Reversed": "The same energy obstructed, immature, or turned against itself.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "swords-queen",
+      "name": "Queen of Swords",
+      "sort_order": 62,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "queen",
+        "court card",
+        "reine",
+        "suit:swords",
+        "rank:queen",
+        "card:queen-of-swords"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "suit_french": "Épées",
+        "element": "Air",
+        "rank": "Queen",
+        "court": true,
+        "archetype": "card:queen-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Queen of Swords (Reine): a standing or seated court figure of the Marseille pattern bearing the sword emblem, in the flat bold colours of the woodcut.",
+        "Upright": "Queen of Swords — the inward mastery of the suit — it held and understood, within mind, conflict, decision, and the cut of judgment.",
+        "Reversed": "The same energy obstructed, immature, or turned against itself.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "swords-king",
+      "name": "King of Swords",
+      "sort_order": 63,
+      "category": "suit-swords",
+      "level": 1,
+      "keywords": [
+        "swords",
+        "air",
+        "king",
+        "court card",
+        "roi",
+        "suit:swords",
+        "rank:king",
+        "card:king-of-swords"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Swords",
+        "suit_french": "Épées",
+        "element": "Air",
+        "rank": "King",
+        "court": true,
+        "archetype": "card:king-of-swords",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "King of Swords (Roi): a standing or seated court figure of the Marseille pattern bearing the sword emblem, in the flat bold colours of the woodcut.",
+        "Upright": "King of Swords — the outward authority of the suit — it commanded and ruled, within mind, conflict, decision, and the cut of judgment.",
+        "Reversed": "The same energy obstructed, immature, or turned against itself.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "batons-ace",
+      "name": "Ace of Batons",
+      "sort_order": 64,
+      "category": "suit-batons",
+      "level": 1,
+      "keywords": [
+        "batons",
+        "fire",
+        "ace",
+        "minor arcana",
+        "bâtons",
+        "suit:wands",
+        "rank:ace",
+        "card:ace-of-wands"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Batons",
+        "suit_french": "Bâtons",
+        "element": "Fire",
+        "rank": "Ace",
+        "illustrations": [
+          {
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/As%20BATON%20Nicolas%20Conver%20Tarot%201760.jpg",
+            "artist": "Nicolas Conver",
+            "artist_dates": "fl. 1760, Marseille",
+            "edition": "Tarot de Marseille, Nicolas Conver, 1760 (woodcut)",
+            "scene": "Ace of Batons",
+            "license": "Public Domain",
+            "is_primary": true
+          }
+        ],
+        "archetype": "card:ace-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Ace of Batons: a single baton laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "a fresh start, the suit's energy at its purest and most potent — within will, work, enterprise, and growth.",
+        "Reversed": "a false start, energy blocked at the source.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/As%20BATON%20Nicolas%20Conver%20Tarot%201760.jpg"
+    },
+    {
+      "id": "batons-02",
+      "name": "Two of Batons",
+      "sort_order": 65,
+      "category": "suit-batons",
+      "level": 1,
+      "keywords": [
+        "batons",
+        "fire",
+        "two",
+        "minor arcana",
+        "bâtons",
+        "suit:wands",
+        "rank:two",
+        "card:two-of-wands"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Batons",
+        "suit_french": "Bâtons",
+        "element": "Fire",
+        "rank": "Two",
+        "archetype": "card:two-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Two of Batons: 2 batons laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "balance, partnership, a choice held in equilibrium — within will, work, enterprise, and growth.",
+        "Reversed": "division, imbalance, a partnership strained.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "batons-03",
+      "name": "Three of Batons",
+      "sort_order": 66,
+      "category": "suit-batons",
+      "level": 1,
+      "keywords": [
+        "batons",
+        "fire",
+        "three",
+        "minor arcana",
+        "bâtons",
+        "suit:wands",
+        "rank:three",
+        "card:three-of-wands"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Batons",
+        "suit_french": "Bâtons",
+        "element": "Fire",
+        "rank": "Three",
+        "archetype": "card:three-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Three of Batons: 3 batons laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "increase, collaboration, early success — within will, work, enterprise, and growth.",
+        "Reversed": "delay, growth stalled, effort scattered.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "batons-04",
+      "name": "Four of Batons",
+      "sort_order": 67,
+      "category": "suit-batons",
+      "level": 1,
+      "keywords": [
+        "batons",
+        "fire",
+        "four",
+        "minor arcana",
+        "bâtons",
+        "suit:wands",
+        "rank:four",
+        "card:four-of-wands"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Batons",
+        "suit_french": "Bâtons",
+        "element": "Fire",
+        "rank": "Four",
+        "archetype": "card:four-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Four of Batons: 4 batons laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "foundation, rest, consolidation, a settled position — within will, work, enterprise, and growth.",
+        "Reversed": "stagnation, rigidity, security clung to.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "batons-05",
+      "name": "Five of Batons",
+      "sort_order": 68,
+      "category": "suit-batons",
+      "level": 1,
+      "keywords": [
+        "batons",
+        "fire",
+        "five",
+        "minor arcana",
+        "bâtons",
+        "suit:wands",
+        "rank:five",
+        "card:five-of-wands"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Batons",
+        "suit_french": "Bâtons",
+        "element": "Fire",
+        "rank": "Five",
+        "archetype": "card:five-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Five of Batons: 5 batons laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "conflict, difficulty, the testing of the suit — within will, work, enterprise, and growth.",
+        "Reversed": "the easing of conflict, or loss deepened.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "batons-06",
+      "name": "Six of Batons",
+      "sort_order": 69,
+      "category": "suit-batons",
+      "level": 1,
+      "keywords": [
+        "batons",
+        "fire",
+        "six",
+        "minor arcana",
+        "bâtons",
+        "suit:wands",
+        "rank:six",
+        "card:six-of-wands"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Batons",
+        "suit_french": "Bâtons",
+        "element": "Fire",
+        "rank": "Six",
+        "archetype": "card:six-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Six of Batons: 6 batons laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "reciprocity, ease, a balance restored — within will, work, enterprise, and growth.",
+        "Reversed": "imbalance returning, harmony lost.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "batons-07",
+      "name": "Seven of Batons",
+      "sort_order": 70,
+      "category": "suit-batons",
+      "level": 1,
+      "keywords": [
+        "batons",
+        "fire",
+        "seven",
+        "minor arcana",
+        "bâtons",
+        "suit:wands",
+        "rank:seven",
+        "card:seven-of-wands"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Batons",
+        "suit_french": "Bâtons",
+        "element": "Fire",
+        "rank": "Seven",
+        "archetype": "card:seven-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Seven of Batons: 7 batons laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "effort against resistance, partial and uncertain gain — within will, work, enterprise, and growth.",
+        "Reversed": "struggle abandoned, effort wasted.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "batons-08",
+      "name": "Eight of Batons",
+      "sort_order": 71,
+      "category": "suit-batons",
+      "level": 1,
+      "keywords": [
+        "batons",
+        "fire",
+        "eight",
+        "minor arcana",
+        "bâtons",
+        "suit:wands",
+        "rank:eight",
+        "card:eight-of-wands"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Batons",
+        "suit_french": "Bâtons",
+        "element": "Fire",
+        "rank": "Eight",
+        "archetype": "card:eight-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Eight of Batons: 8 batons laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "change, swiftness, energy in motion — within will, work, enterprise, and growth.",
+        "Reversed": "blockage, stalled movement, scattered force.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "batons-09",
+      "name": "Nine of Batons",
+      "sort_order": 72,
+      "category": "suit-batons",
+      "level": 1,
+      "keywords": [
+        "batons",
+        "fire",
+        "nine",
+        "minor arcana",
+        "bâtons",
+        "suit:wands",
+        "rank:nine",
+        "card:nine-of-wands"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Batons",
+        "suit_french": "Bâtons",
+        "element": "Fire",
+        "rank": "Nine",
+        "archetype": "card:nine-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Nine of Batons: 9 batons laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "intensity at its height, the suit almost complete — within will, work, enterprise, and growth.",
+        "Reversed": "strain, overreach, intensity turned against itself.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "batons-10",
+      "name": "Ten of Batons",
+      "sort_order": 73,
+      "category": "suit-batons",
+      "level": 1,
+      "keywords": [
+        "batons",
+        "fire",
+        "ten",
+        "minor arcana",
+        "bâtons",
+        "suit:wands",
+        "rank:ten",
+        "card:ten-of-wands"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Batons",
+        "suit_french": "Bâtons",
+        "element": "Fire",
+        "rank": "Ten",
+        "archetype": "card:ten-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Ten of Batons: 10 batons laid out in the woodcut's symmetrical pattern, with floral scrollwork between them. Marseille pips are emblematic, not scenic.",
+        "Upright": "the suit in full — its plenty and its weight together — within will, work, enterprise, and growth.",
+        "Reversed": "burden, excess, a cycle that overstays.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "batons-page",
+      "name": "Page of Batons",
+      "sort_order": 74,
+      "category": "suit-batons",
+      "level": 1,
+      "keywords": [
+        "batons",
+        "fire",
+        "page",
+        "court card",
+        "valet",
+        "suit:wands",
+        "rank:page",
+        "card:page-of-wands"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Batons",
+        "suit_french": "Bâtons",
+        "element": "Fire",
+        "rank": "Page",
+        "court": true,
+        "archetype": "card:page-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Page of Batons (Valet): a standing or seated court figure of the Marseille pattern bearing the baton emblem, in the flat bold colours of the woodcut.",
+        "Upright": "Page of Batons — the youth and messenger of the suit — its energy learning, curious, within will, work, enterprise, and growth.",
+        "Reversed": "The same energy obstructed, immature, or turned against itself.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "batons-knight",
+      "name": "Knight of Batons",
+      "sort_order": 75,
+      "category": "suit-batons",
+      "level": 1,
+      "keywords": [
+        "batons",
+        "fire",
+        "knight",
+        "court card",
+        "cavalier",
+        "suit:wands",
+        "rank:knight",
+        "card:knight-of-wands"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Batons",
+        "suit_french": "Bâtons",
+        "element": "Fire",
+        "rank": "Knight",
+        "court": true,
+        "archetype": "card:knight-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Knight of Batons (Cavalier): a standing or seated court figure of the Marseille pattern bearing the baton emblem, in the flat bold colours of the woodcut.",
+        "Upright": "Knight of Batons — the suit in motion — questing, active, riding out, within will, work, enterprise, and growth.",
+        "Reversed": "The same energy obstructed, immature, or turned against itself.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "batons-queen",
+      "name": "Queen of Batons",
+      "sort_order": 76,
+      "category": "suit-batons",
+      "level": 1,
+      "keywords": [
+        "batons",
+        "fire",
+        "queen",
+        "court card",
+        "reine",
+        "suit:wands",
+        "rank:queen",
+        "card:queen-of-wands"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Batons",
+        "suit_french": "Bâtons",
+        "element": "Fire",
+        "rank": "Queen",
+        "court": true,
+        "archetype": "card:queen-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "Queen of Batons (Reine): a standing or seated court figure of the Marseille pattern bearing the baton emblem, in the flat bold colours of the woodcut.",
+        "Upright": "Queen of Batons — the inward mastery of the suit — it held and understood, within will, work, enterprise, and growth.",
+        "Reversed": "The same energy obstructed, immature, or turned against itself.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "batons-king",
+      "name": "King of Batons",
+      "sort_order": 77,
+      "category": "suit-batons",
+      "level": 1,
+      "keywords": [
+        "batons",
+        "fire",
+        "king",
+        "court card",
+        "roi",
+        "suit:wands",
+        "rank:king",
+        "card:king-of-wands"
+      ],
+      "metadata": {
+        "arcana": "minor",
+        "suit": "Batons",
+        "suit_french": "Bâtons",
+        "element": "Fire",
+        "rank": "King",
+        "court": true,
+        "archetype": "card:king-of-wands",
+        "mapping_confidence": "exact"
+      },
+      "sections": {
+        "Iconography": "King of Batons (Roi): a standing or seated court figure of the Marseille pattern bearing the baton emblem, in the flat bold colours of the woodcut.",
+        "Upright": "King of Batons — the outward authority of the suit — it commanded and ruled, within will, work, enterprise, and growth.",
+        "Reversed": "The same energy obstructed, immature, or turned against itself.",
+        "Tradition Note": "The Tarot de Marseille was made to play *tarot*, a trick-taking card game (the ancestor of today's French Tarot and the central-European Tarock games) — not for divination. The upright and reversed meanings here are a later overlay, added by Etteilla and the occultists from the 1780s onward; they are not part of the deck's original tradition."
+      }
+    },
+    {
+      "id": "emg-majors",
+      "name": "The 22 Trumps — The Marseille Standard",
+      "sort_order": 78,
+      "category": "emergence",
+      "level": 2,
+      "composite_of": [
+        "major-00-le-mat",
+        "major-01-le-bateleur",
+        "major-02-la-papesse",
+        "major-03-limperatrice",
+        "major-04-lempereur",
+        "major-05-le-pape",
+        "major-06-lamoureux",
+        "major-07-le-chariot",
+        "major-08-la-justice",
+        "major-09-lhermite",
+        "major-10-la-roue",
+        "major-11-la-force",
+        "major-12-le-pendu",
+        "major-13-la-mort",
+        "major-14-temperance",
+        "major-15-le-diable",
+        "major-16-la-maison-dieu",
+        "major-17-letoile",
+        "major-18-la-lune",
+        "major-19-le-soleil",
+        "major-20-le-jugement",
+        "major-21-le-monde"
+      ],
+      "relationship_type": "emergence",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/XXI%20LE%20MONDE%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {},
+      "sections": {
+        "About the Trumps": "Conver's 1760 trumps are the images the whole occult era treated as canonical. This is the deck Court de Gébelin theorised over, Etteilla read from, and Lévi and Wirth re-symbolised. Note the order it fixes: the unnumbered Fool, Justice at VIII, Strength at XI, and Death (XIII) left unnamed — all of which the later Golden Dawn would alter.",
+        "How to Use": "Read the trumps as the standard reference sequence against which every later esoteric deck defined itself."
+      }
+    },
+    {
+      "id": "emg-suit-coins",
+      "name": "Suit of Coins (Deniers) — Earth",
+      "sort_order": 79,
+      "category": "emergence",
+      "level": 2,
+      "composite_of": [
+        "coins-ace",
+        "coins-02",
+        "coins-03",
+        "coins-04",
+        "coins-05",
+        "coins-06",
+        "coins-07",
+        "coins-08",
+        "coins-09",
+        "coins-10",
+        "coins-page",
+        "coins-knight",
+        "coins-queen",
+        "coins-king"
+      ],
+      "relationship_type": "emergence",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/As%20BATON%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {},
+      "sections": {
+        "About this Suit": "The Coins (Deniers) of the Marseille — the suit of Earth. Its pips are emblematic woodcut arrangements rather than the scenic pictures the later Rider-Waite-Smith would invent.",
+        "How to Use": "Read the suit for money — using the traditional cartomantic meanings rather than scene-reading."
+      }
+    },
+    {
+      "id": "emg-suit-cups",
+      "name": "Suit of Cups (Coupes) — Water",
+      "sort_order": 80,
+      "category": "emergence",
+      "level": 2,
+      "composite_of": [
+        "cups-ace",
+        "cups-02",
+        "cups-03",
+        "cups-04",
+        "cups-05",
+        "cups-06",
+        "cups-07",
+        "cups-08",
+        "cups-09",
+        "cups-10",
+        "cups-page",
+        "cups-knight",
+        "cups-queen",
+        "cups-king"
+      ],
+      "relationship_type": "emergence",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/As%20BATON%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {},
+      "sections": {
+        "About this Suit": "The Cups (Coupes) of the Marseille — the suit of Water. Its pips are emblematic woodcut arrangements rather than the scenic pictures the later Rider-Waite-Smith would invent.",
+        "How to Use": "Read the suit for love — using the traditional cartomantic meanings rather than scene-reading."
+      }
+    },
+    {
+      "id": "emg-suit-swords",
+      "name": "Suit of Swords (Épées) — Air",
+      "sort_order": 81,
+      "category": "emergence",
+      "level": 2,
+      "composite_of": [
+        "swords-ace",
+        "swords-02",
+        "swords-03",
+        "swords-04",
+        "swords-05",
+        "swords-06",
+        "swords-07",
+        "swords-08",
+        "swords-09",
+        "swords-10",
+        "swords-page",
+        "swords-knight",
+        "swords-queen",
+        "swords-king"
+      ],
+      "relationship_type": "emergence",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/As%20%C3%89P%C3%89E%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {},
+      "sections": {
+        "About this Suit": "The Swords (Épées) of the Marseille — the suit of Air. Its pips are emblematic woodcut arrangements rather than the scenic pictures the later Rider-Waite-Smith would invent.",
+        "How to Use": "Read the suit for mind — using the traditional cartomantic meanings rather than scene-reading."
+      }
+    },
+    {
+      "id": "emg-suit-batons",
+      "name": "Suit of Batons (Bâtons) — Fire",
+      "sort_order": 82,
+      "category": "emergence",
+      "level": 2,
+      "composite_of": [
+        "batons-ace",
+        "batons-02",
+        "batons-03",
+        "batons-04",
+        "batons-05",
+        "batons-06",
+        "batons-07",
+        "batons-08",
+        "batons-09",
+        "batons-10",
+        "batons-page",
+        "batons-knight",
+        "batons-queen",
+        "batons-king"
+      ],
+      "relationship_type": "emergence",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/As%20BATON%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "metadata": {},
+      "sections": {
+        "About this Suit": "The Batons (Bâtons) of the Marseille — the suit of Fire. Its pips are emblematic woodcut arrangements rather than the scenic pictures the later Rider-Waite-Smith would invent.",
+        "How to Use": "Read the suit for will — using the traditional cartomantic meanings rather than scene-reading."
+      }
+    }
+  ]
+}

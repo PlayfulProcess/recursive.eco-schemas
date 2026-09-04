@@ -1,0 +1,1037 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "url": "https://lifeisprocess.substack.com/",
+        "date": "2026-03-05",
+        "note": "Grammar structure, organization, and synthesis"
+      }
+    ]
+  },
+  "name": "The Grammar of Economic Ideas",
+  "description": "Fifty-five foundational economic concepts — from Adam Smith to Karl Marx to Elinor Ostrom to Kropotkin — presented without hierarchy between schools of thought. Classical, behavioral, Marxist, anarchist, ecological, and complexity economics sit side by side. Each idea gets a plain-language explanation, a real-world sighting, its common misuse, and threads connecting it to other concepts in the grammar. The goal is not to judge which lens is right, but to make the ideas accessible and see where they weave — or don't.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: William Hogarth's satirical prints on commerce and morality (18th century). Honoré Daumier's lithographs of capitalists and workers (1830s-1870s). Diego Rivera's murals depicting labor and industry. Illustrations from Adam Smith's 'Wealth of Nations' early editions. Soviet constructivist economic posters (1920s-1930s). WPA-era American economic education posters.",
+  "grammar_type": "custom",
+  "creator_name": "PlayfulProcess",
+  "creator_link": "https://lifeisprocess.substack.com/",
+  "tags": [
+    "economics",
+    "philosophy",
+    "political-economy",
+    "marxism",
+    "anarchism",
+    "behavioral-economics",
+    "complexity",
+    "commons",
+    "critique",
+    "systems-thinking"
+  ],
+  "roots": ["western-philosophy", "social-theory"],
+  "shelves": ["wisdom", "contested"],
+  "lineages": ["Andreotti", "Kelty", "Akomolafe"],
+  "worldview": "dialectical",
+  "cover_image_url": "",
+  "items": [
+    {
+      "id": "opportunity-cost",
+      "name": "Opportunity Cost",
+      "level": 1,
+      "category": "costs-and-tradeoffs",
+      "sort_order": 0,
+      "sections": {
+        "The Idea": "The true cost of anything is what you give up to get it. Not just the money — the next-best thing you could have done with your time, energy, or resources. Every yes is a no to something else. The concept was formalized by Friedrich von Wieser in the 1870s, but the intuition is ancient: you cannot walk two paths at once.",
+        "In the Wild": "A student spends four years in university. The tuition is visible, but the opportunity cost is the four years of wages, experience, and alternative learning they didn't pursue. A city builds a stadium instead of a hospital — the cost isn't just the construction bill, it's the hospital that doesn't exist. Every national budget is a map of opportunity costs.",
+        "The Trap": "Opportunity cost gets weaponized to make everything sound wasteful. 'You could be doing something more productive' is a thought that, taken to its limit, makes rest and play impossible. Not everything needs to be optimized. Also: opportunity cost assumes you can actually evaluate the alternatives, which you often can't. The road not taken is unknowable.",
+        "Connects To": "Sunk Cost (the mirror image — costs you can't recover vs. futures you could pursue), Comparative Advantage (opportunity cost is what makes specialization rational), Bounded Rationality (we can't actually calculate all alternatives), Hyperbolic Discounting (we systematically mis-value future opportunities)."
+      },
+      "keywords": ["choice", "tradeoff", "scarcity", "decision"],
+      "metadata": {}
+    },
+    {
+      "id": "sunk-cost",
+      "name": "Sunk Cost",
+      "level": 1,
+      "category": "costs-and-tradeoffs",
+      "sort_order": 1,
+      "sections": {
+        "The Idea": "Money, time, or effort already spent that you cannot get back, no matter what you do next. Rational decision-making says sunk costs should be irrelevant — only future costs and benefits matter. But humans are not rational. We finish bad movies because we paid for the ticket. We stay in failing projects because of what we've already invested. The sunk cost fallacy is one of the most reliable bugs in human reasoning.",
+        "In the Wild": "The Concorde supersonic jet kept getting funded by the British and French governments long after it was clear it would never be commercially viable — the billions already spent made it politically impossible to cancel. This is so common it's sometimes called the 'Concorde Fallacy.' On a personal level: staying in a bad relationship because of 'all the years we've put in.'",
+        "The Trap": "The rational advice — 'ignore sunk costs' — can become its own kind of cruelty. Sometimes what looks like a sunk cost fallacy is actually honoring a commitment, or recognizing that abandoning something has social and emotional costs that economists don't count. Marx would note that telling workers to 'just move on' from a dying industry ignores that their sunk costs include their entire identity and community.",
+        "Connects To": "Opportunity Cost (sunk costs blind us to better alternatives), Loss Aversion (we feel losses more than gains, making sunk costs psychologically heavy), Endowment Effect (we overvalue what we already have), Alienation (when your sunk cost is your entire working life)."
+      },
+      "keywords": ["fallacy", "loss", "irrecoverable", "decision"],
+      "metadata": {}
+    },
+    {
+      "id": "marginal-cost",
+      "name": "Marginal Cost",
+      "level": 1,
+      "category": "costs-and-tradeoffs",
+      "sort_order": 2,
+      "sections": {
+        "The Idea": "The cost of producing one more unit of something. Not the average cost, not the total cost — just the next one. This is where most real decisions live. Should we hire one more worker? Print one more book? Serve one more customer? Marginal thinking is the engine of microeconomics: keep going until the cost of the next unit exceeds the benefit of the next unit.",
+        "In the Wild": "A software company has spent millions building a product. The marginal cost of one more download is essentially zero — just server bandwidth. This is why digital goods break classical economics: when marginal cost approaches zero, the old supply curves stop working. Airlines use marginal cost thinking obsessively — an empty seat on a departing flight has near-zero marginal cost, which is why last-minute fares can be shockingly cheap or shockingly expensive.",
+        "The Trap": "Marginal thinking works beautifully for widgets but gets strange when applied to human beings. What's the 'marginal cost' of educating one more child? Of treating one more patient? When we marginal-cost our way through public services, we end up with a world where everything has a price and nothing has a value. The anarchist critique: marginal cost analysis assumes the production system itself is legitimate — it optimizes within a framework it never questions.",
+        "Connects To": "Diminishing Marginal Returns (the marginal cost often rises as you scale), Economies of Scale (sometimes it falls), Supply and Demand (marginal cost shapes the supply curve), Artificial Scarcity (what happens when marginal cost is zero but you charge anyway)."
+      },
+      "keywords": ["marginal", "incremental", "production", "decision"],
+      "metadata": {}
+    },
+    {
+      "id": "transaction-costs",
+      "name": "Transaction Costs",
+      "level": 1,
+      "category": "costs-and-tradeoffs",
+      "sort_order": 3,
+      "sections": {
+        "The Idea": "The hidden costs of making an exchange happen — searching for a trading partner, negotiating terms, writing contracts, enforcing agreements, worrying about getting cheated. Ronald Coase's 1937 insight: firms exist because some transactions are cheaper to organize internally than through markets. If transaction costs were zero, we wouldn't need companies at all — everything could be freelance contracts. But transaction costs are never zero.",
+        "In the Wild": "Why do you buy from Amazon instead of finding the cheapest individual seller for each item? Transaction costs — the time to search, compare, verify trustworthiness, arrange shipping. Amazon's entire business model is reducing your transaction costs (while increasing their market power). Blockchain enthusiasts claim crypto reduces transaction costs; critics note it often just shifts them elsewhere.",
+        "The Trap": "Transaction cost economics can make every human relationship look like a negotiation problem. Marriage, friendship, community — all become 'efficient governance structures for reducing transaction costs.' This lens is useful but impoverishing. Kropotkin's mutual aid, gift economies, and indigenous reciprocity systems work precisely because they refuse to count transaction costs — trust and relationship ARE the infrastructure.",
+        "Connects To": "Switching Costs (a specific type of transaction cost), Commons-Based Peer Production (open source radically lowers transaction costs), Regulatory Capture (regulation creates transaction costs that incumbents can navigate but newcomers can't), Gift Economy (works by making the 'transaction' a relationship instead of an exchange)."
+      },
+      "keywords": ["friction", "negotiation", "coase", "institutions"],
+      "metadata": {}
+    },
+    {
+      "id": "externalities",
+      "name": "Externalities",
+      "level": 1,
+      "category": "costs-and-tradeoffs",
+      "sort_order": 4,
+      "sections": {
+        "The Idea": "Costs or benefits that land on people who weren't part of the deal. A factory pollutes a river — the people downstream pay the cost but received none of the profit. A neighbor plants a garden — you enjoy the beauty for free. Negative externalities are costs shoved onto others; positive externalities are gifts leaked to bystanders. The concept reveals a crack in the free market story: when prices don't include all costs, 'efficient' markets produce inefficient — even devastating — outcomes.",
+        "In the Wild": "Climate change is the largest externality in human history. Fossil fuel prices never included the cost of a destabilized atmosphere. The carbon you burn heating your house won't bill you for the flood in Bangladesh. On the positive side: vaccinations protect not just the vaccinated but everyone around them (herd immunity). Education benefits not just the student but the whole society — which is why most countries subsidize it.",
+        "The Trap": "The standard economic fix — 'internalize the externality' through taxes or cap-and-trade — assumes we can accurately price everything, from a child's asthma to the extinction of a species. Some things resist pricing. The deeper critique: externalities aren't bugs in capitalism, they're features. The ability to externalize costs onto the powerless — colonies, future generations, ecosystems — is how profits get made. What economists call a 'market failure,' Marx calls 'business as usual.'",
+        "Connects To": "Tragedy of the Commons (externalities on shared resources), Public Goods (positive externalities that markets underproduce), Commodity Fetishism (prices hide the externalized suffering in production), Degrowth (what if the entire growth model is one giant negative externality?)."
+      },
+      "keywords": ["spillover", "pollution", "third-party", "market-failure"],
+      "metadata": {}
+    },
+    {
+      "id": "switching-costs",
+      "name": "Switching Costs",
+      "level": 1,
+      "category": "costs-and-tradeoffs",
+      "sort_order": 5,
+      "sections": {
+        "The Idea": "The price you pay for changing from one product, service, or system to another — not just in money, but in time, learning, lost data, broken habits, and social disruption. High switching costs create lock-in: even when a better alternative exists, the cost of switching keeps you trapped. This is why your bank, your phone ecosystem, and your social media platform can treat you badly and still keep you.",
+        "In the Wild": "Apple's ecosystem is a masterclass in switching costs. Your photos in iCloud, your music in Apple Music, your texts in iMessage, your apps purchased in the App Store — each one is a thread that makes leaving more painful. Enterprise software (SAP, Oracle) builds switching costs deliberately: once a company has spent years customizing the system, migrating away would cost more than the original purchase.",
+        "The Trap": "Switching costs get used to justify monopolistic behavior as 'ecosystem value.' But there's a subtler trap: the concept assumes that the ability to switch is inherently good, that freedom means consumer choice. Anarchists and communitarians note that some of the best human institutions — families, neighborhoods, commons — work precisely because people can't easily exit. Sometimes lock-in is commitment, and commitment is what makes cooperation possible.",
+        "Connects To": "Transaction Costs (switching costs are a form of transaction cost), Rent-Seeking (monopolists deliberately raise switching costs), Sunk Cost (past investment creates the psychological stickiness), Commons-Based Peer Production (open standards reduce switching costs by design)."
+      },
+      "keywords": ["lock-in", "friction", "platform", "monopoly"],
+      "metadata": {}
+    },
+    {
+      "id": "diminishing-marginal-returns",
+      "name": "Diminishing Marginal Returns",
+      "level": 1,
+      "category": "returns-and-scale",
+      "sort_order": 6,
+      "sections": {
+        "The Idea": "Add more of one input while holding others constant, and eventually each additional unit produces less and less extra output. The first worker in an empty field is enormously productive. The tenth worker is helpful. The hundredth is tripping over the others. This isn't pessimism — it's a physical constraint. You can't get infinite wheat from a finite field no matter how many farmers you add.",
+        "In the Wild": "Studying for an exam: the first two hours are gold, the next two are useful, and by hour eight you're staring at the page retaining nothing. Fertilizer on crops: a little boosts yields dramatically, too much poisons the soil. The law applies to almost everything with a fixed constraint — and something is almost always fixed.",
+        "The Trap": "Diminishing returns gets misapplied as 'more is always worse' or 'we've hit the limit.' It doesn't say more is bad — it says each additional unit is less impactful than the last. The curve is flattening, not reversing. Also: diminishing returns assume you're adding more of the same thing. Innovation, creativity, and systemic change can break the curve entirely — which is why pure marginalist thinking misses revolutionary possibility.",
+        "Connects To": "Marginal Cost (diminishing returns means rising marginal costs), Economies of Scale (the counterforce — sometimes more IS better, up to a point), Compound Interest (the opposite pattern: returns that accelerate), Degrowth (if societal well-being has diminishing returns to GDP, why keep growing?)."
+      },
+      "keywords": ["diminishing", "productivity", "saturation", "marginal"],
+      "metadata": {}
+    },
+    {
+      "id": "economies-of-scale",
+      "name": "Economies of Scale",
+      "level": 1,
+      "category": "returns-and-scale",
+      "sort_order": 7,
+      "sections": {
+        "The Idea": "As you produce more of something, the cost per unit tends to fall. Building one car is absurdly expensive; building a million spreads the factory cost, the design cost, and the tooling cost across all of them. This is the economic engine of bigness — the reason small shops struggle against Walmart, the reason startups chase growth, the reason monopolies keep forming despite everyone agreeing they're bad.",
+        "In the Wild": "Amazon's distribution network, Costco's bulk purchasing, chip fabrication plants that cost $20 billion but produce processors for $50 each. Scale economies explain why there are only a few major aircraft manufacturers in the world — the upfront costs are so enormous that only massive volume makes the math work. In healthcare, large hospital systems can afford specialized equipment that small clinics cannot.",
+        "The Trap": "Scale economies have a shadow: diseconomies of scale. Past a certain size, organizations become bureaucratic, slow, and alienating. Marx saw industrial scale as both capitalism's strength and its vulnerability — the factory concentrates workers, which concentrates their power. The anarchist response: small-scale, federated production may be 'inefficient' by the numbers but produces better lives, stronger communities, and more resilient systems. Efficiency for whom?",
+        "Connects To": "Division of Labor (the mechanism behind many scale economies), Diminishing Marginal Returns (eventually scale hits limits too), Rent-Seeking (scale becomes a moat against competition), Prefigurative Economics (what if we optimize for human flourishing instead of unit cost?)."
+      },
+      "keywords": ["scale", "efficiency", "bigness", "production"],
+      "metadata": {}
+    },
+    {
+      "id": "comparative-advantage",
+      "name": "Comparative Advantage",
+      "level": 1,
+      "category": "returns-and-scale",
+      "sort_order": 8,
+      "sections": {
+        "The Idea": "Even if you're better at everything than your neighbor, you both benefit by specializing in what you're relatively best at and trading. David Ricardo's 1817 insight: it's not about who's the absolute best — it's about who gives up the least to produce something. Portugal might make both wine and cloth better than England, but if Portugal is way better at wine and only slightly better at cloth, both countries gain when Portugal focuses on wine and England on cloth.",
+        "In the Wild": "A surgeon who is also the fastest typist in the hospital still hires a medical secretary — because every hour spent typing is an hour not spent in surgery, where their comparative advantage is enormous. Global trade patterns follow this logic (in theory): countries specialize in what they produce at lowest relative cost. Bangladesh makes garments, Germany makes machines, Colombia grows coffee.",
+        "The Trap": "Comparative advantage is the intellectual foundation of free trade — and it's a powerful idea. But the theory assumes: workers can smoothly transition between industries (they can't), countries trade as equals (they don't), and the gains from trade are fairly distributed (they aren't). When a country's 'comparative advantage' is cheap labor due to political repression, the elegant math is doing ideological work. As Andreotti might note: comparative advantage between colonizer and colony is not a neutral discovery — it was manufactured.",
+        "Connects To": "Division of Labor (comparative advantage at the individual level), Opportunity Cost (the mechanism — you specialize where your opportunity cost is lowest), Primitive Accumulation (how some countries got their 'advantages'), Race to the Bottom (when comparative advantage becomes a competition to be cheapest)."
+      },
+      "keywords": ["trade", "specialization", "ricardo", "efficiency"],
+      "metadata": {}
+    },
+    {
+      "id": "division-of-labor",
+      "name": "Division of Labor",
+      "level": 1,
+      "category": "returns-and-scale",
+      "sort_order": 9,
+      "sections": {
+        "The Idea": "Break a complex task into specialized subtasks and productivity explodes. Adam Smith's famous pin factory: one worker making pins from scratch produces maybe 20 a day. Ten workers, each handling one step — drawing wire, straightening, cutting, pointing, grinding, heading — produce 48,000. The gains come from practice (you get fast at your one thing), saved time (no switching between tasks), and the possibility of mechanizing repetitive steps.",
+        "In the Wild": "Every modern supply chain is division of labor at planetary scale. Your phone contains components from dozens of countries, each specializing in one piece. Restaurants divide: prep cook, line cook, sous chef, expeditor. Software teams divide: frontend, backend, DevOps, design. Even this grammar is division of labor — someone structures, someone writes, someone reviews.",
+        "The Trap": "Smith celebrated the pin factory's output but admitted the human cost: 'The man whose whole life is spent in performing a few simple operations... becomes as stupid and ignorant as it is possible for a human creature to become.' Marx took this further — division of labor under capitalism doesn't just specialize, it alienates. The worker becomes a fragment, producing something they don't own and can't afford. The anarchist alternative: rotate roles, share skills, sacrifice some efficiency for whole human beings.",
+        "Connects To": "Economies of Scale (division of labor is how scale gains happen), Alienation (the psychic cost of extreme specialization), Comparative Advantage (division of labor between nations), Commons-Based Peer Production (Wikipedia achieves division of labor without bosses)."
+      },
+      "keywords": ["specialization", "smith", "pins", "productivity"],
+      "metadata": {}
+    },
+    {
+      "id": "compound-interest",
+      "name": "Compound Interest",
+      "level": 1,
+      "category": "returns-and-scale",
+      "sort_order": 10,
+      "sections": {
+        "The Idea": "Interest on interest. You earn a return, that return gets added to the principal, and next period you earn returns on the larger amount. The curve starts gentle and goes exponential. At 7% annual growth, your money doubles every 10 years. In 50 years, it's 30 times larger. This is why financial advisors preach 'start early' — and why debt can spiral out of control so fast.",
+        "In the Wild": "A 25-year-old who invests $5,000 per year for 10 years and then stops will have more at retirement than a 35-year-old who invests $5,000 per year for 30 years straight. That's the magic (and the cruelty) of compounding — time matters more than amount. On the debt side: credit card interest at 20% compounds, turning a $5,000 balance into a life sentence for people without the means to pay it down.",
+        "The Trap": "Compound interest is often called 'the eighth wonder of the world' (attributed to Einstein, probably falsely). But compounding is morally neutral — it compounds wealth for the wealthy and compounds debt for the poor. It's the mathematical engine of inequality: those who start with capital see it grow exponentially, while those who start with debt see it grow just as fast in the other direction. Ancient societies knew this — Babylonian, Hebrew, and Islamic traditions all restricted or banned interest (usury) for exactly this reason.",
+        "Connects To": "Feedback Loops (compounding is a positive feedback loop), Boom and Bust (compounding credit creates bubbles), Primitive Accumulation (you need initial capital to benefit from compounding), Surplus Value (whose labor generates the returns that compound?)."
+      },
+      "keywords": ["exponential", "growth", "debt", "accumulation"],
+      "metadata": {}
+    },
+    {
+      "id": "feedback-loops",
+      "name": "Feedback Loops",
+      "level": 1,
+      "category": "returns-and-scale",
+      "sort_order": 11,
+      "sections": {
+        "The Idea": "An output that feeds back as an input, amplifying or dampening itself. Positive feedback loops accelerate: more users attract more users (network effects), more fear causes more selling causes more fear (bank runs). Negative feedback loops stabilize: a thermostat, a central bank raising rates when inflation rises. Economies are tangles of both kinds. The interplay between reinforcing and balancing loops is what makes economic systems feel alive — and why they resist simple control.",
+        "In the Wild": "Housing bubble: rising prices attract speculators, who push prices higher, attracting more speculators (positive loop). Until someone flinches and the loop reverses, violently. On the balancing side: when a product gets too expensive, demand drops, pushing the price back down (negative loop). Platform economies are built on positive loops — the more drivers Uber has, the shorter wait times are, the more riders join, the more drivers want to drive.",
+        "The Trap": "Positive feedback loops are what make small advantages compound into monopolies and small injustices compound into systemic oppression. Seeing the loops is essential — but 'systems thinking' can become a way of saying 'it's complicated' and avoiding the question of who benefits from the current feedback structure. Recursive economics asks: can we design loops that compound well-being rather than wealth? That amplify cooperation rather than competition?",
+        "Connects To": "Compound Interest (financial positive feedback), Reflexivity (beliefs and markets feeding back on each other), Boom and Bust (positive feedback in both directions), Recursive Value (the idea that value can feed back into its own creation), Emergence in Markets (complex feedback produces unpredictable order)."
+      },
+      "keywords": ["positive", "negative", "reinforcing", "balancing", "complexity"],
+      "metadata": {}
+    },
+    {
+      "id": "supply-and-demand",
+      "name": "Supply and Demand",
+      "level": 1,
+      "category": "supply-and-demand",
+      "sort_order": 12,
+      "sections": {
+        "The Idea": "The foundational model: when more people want something (demand rises), the price goes up. When more of something is available (supply rises), the price goes down. Where the two curves cross, you get the market price. It's elegant, intuitive, and — as a first approximation — genuinely useful. It explains why umbrellas cost more when it rains and why last year's phones get cheaper. It does not explain why insulin costs $300 in the US and $30 in Canada.",
+        "In the Wild": "Concert tickets: limited supply, high demand, prices soar (or scalpers fill the gap). Housing in popular cities: demand grows faster than supply, rents skyrocket. Oil prices swing with OPEC production decisions (supply) and global economic activity (demand). Farmers' markets show it in real time — the last vendor standing at 2pm will sell you tomatoes cheap.",
+        "The Trap": "Supply and demand is presented as a natural law, like gravity. But supply and demand curves are shaped by power: who has money to demand, who has access to supply, who sets the rules. A homeless person has infinite demand for shelter and zero market demand — because demand in economics means 'willingness AND ability to pay.' Marx pointed out that 'effective demand' excludes anyone without money, making the market blind to real human need. The model works; the question is what it leaves out.",
+        "Connects To": "Price Equilibrium (where the curves cross), Elasticity (how sensitive the curves are), Externalities (costs the curves don't see), Artificial Scarcity (manipulating the supply side), Commodity Fetishism (the social relations hidden behind the price)."
+      },
+      "keywords": ["price", "market", "equilibrium", "fundamental"],
+      "metadata": {}
+    },
+    {
+      "id": "elasticity",
+      "name": "Elasticity",
+      "level": 1,
+      "category": "supply-and-demand",
+      "sort_order": 13,
+      "sections": {
+        "The Idea": "How much does quantity demanded (or supplied) change when the price changes? If a 10% price hike causes a 20% drop in sales, demand is elastic — people are sensitive to price and will find alternatives. If a 10% hike barely dents sales, demand is inelastic — people need it regardless. Luxuries tend to be elastic (skip the yacht). Necessities tend to be inelastic (still need the insulin).",
+        "In the Wild": "Gasoline: inelastic in the short run (you still drive to work), more elastic in the long run (you buy a smaller car or move closer). Cigarettes: famously inelastic, which is why tobacco taxes generate reliable revenue. Designer handbags: paradoxically, sometimes raising the price increases demand (see Veblen Goods). Housing in a city with no alternatives: brutally inelastic, which is why landlords can keep raising rent.",
+        "The Trap": "Elasticity sounds neutral and mathematical, but it maps directly onto vulnerability. The less elastic your demand, the more power the supplier has over you. People with inelastic demand for medicine, housing, food, and water are people who can be exploited. This is why anarchists and socialists argue that inelastic goods — things people genuinely cannot go without — should never be left to market pricing. When demand is inelastic, the 'free' market is anything but free.",
+        "Connects To": "Supply and Demand (elasticity describes the shape of the curves), Substitutes and Complements (availability of substitutes makes demand more elastic), Price Discrimination (sellers exploit inelastic segments), Veblen Goods (where the demand curve bends backward)."
+      },
+      "keywords": ["responsiveness", "price", "sensitivity", "demand"],
+      "metadata": {}
+    },
+    {
+      "id": "price-equilibrium",
+      "name": "Price Equilibrium",
+      "level": 1,
+      "category": "supply-and-demand",
+      "sort_order": 14,
+      "sections": {
+        "The Idea": "The price at which the quantity people want to buy exactly matches the quantity sellers want to sell. No shortage, no surplus — the market 'clears.' In the textbook, this is where the supply and demand curves cross, and it happens naturally through the adjustments of buyers and sellers. Adam Smith called this the 'invisible hand' — no one plans the equilibrium, but it emerges from countless individual decisions.",
+        "In the Wild": "Stock markets find equilibrium prices millions of times per second through continuous bidding. A farmers' market finds it more slowly — too many zucchini this week means prices drop by Saturday afternoon. Labor markets supposedly find equilibrium wages, though the 'adjustments' can take years and leave communities devastated in the meantime.",
+        "The Trap": "Equilibrium is the most seductive and most contested concept in economics. The classical view treats it as natural and desirable. But equilibrium can settle at a point where millions are unemployed, unhoused, or starving — the market 'clears' at a price that clears people out of the market entirely. Keynes showed that economies can get stuck in bad equilibria. Complexity economists argue true equilibrium rarely exists — markets are always in flux, always becoming. The equilibrium model is a snapshot of something that never holds still.",
+        "Connects To": "Supply and Demand (the mechanism), Emergence in Markets (equilibrium as an emergent property), Boom and Bust (what happens when equilibrium breaks), Reflexivity (expectations about equilibrium change the equilibrium)."
+      },
+      "keywords": ["balance", "market-clearing", "stability", "convergence"],
+      "metadata": {}
+    },
+    {
+      "id": "arbitrage",
+      "name": "Arbitrage",
+      "level": 1,
+      "category": "supply-and-demand",
+      "sort_order": 15,
+      "sections": {
+        "The Idea": "Buy low here, sell high there, pocket the difference. Arbitrage exploits price differences for the same thing in different markets. In theory, arbitrage is self-eliminating: as arbitrageurs buy in the cheap market and sell in the expensive one, prices converge. This is the market's error-correction mechanism — arbitrage is how 'the law of one price' enforces itself.",
+        "In the Wild": "Currency traders exploit tiny differences in exchange rates across markets, making fractions of a cent millions of times a day. Ticket scalpers are arbitrageurs: buying at face value, selling where demand exceeds supply. Global commodity traders buy grain where it's cheap and ship it where it's expensive. Arbitrage is ancient — medieval merchants did exactly this along trade routes.",
+        "The Trap": "Arbitrage sounds innocent — just 'correcting' price differences. But arbitrage is only possible when someone has better information, faster access, or more capital than others. High-frequency traders front-run ordinary investors by microseconds. Global food arbitrage can mean shipping grain out of a famine region to a richer market where the 'price is better.' The efficiency argument says this is good — the justice argument says it's extractive. Arbitrage corrects prices; it doesn't correct power.",
+        "Connects To": "Price Equilibrium (arbitrage pushes toward it), Transaction Costs (limit what arbitrage is profitable), Comparative Advantage (international trade as geographic arbitrage), Rent-Seeking (when arbitrage becomes extraction)."
+      },
+      "keywords": ["price-difference", "profit", "markets", "efficiency"],
+      "metadata": {}
+    },
+    {
+      "id": "price-discrimination",
+      "name": "Price Discrimination",
+      "level": 1,
+      "category": "supply-and-demand",
+      "sort_order": 16,
+      "sections": {
+        "The Idea": "Charging different prices to different buyers for the same product, based on how much they're willing or able to pay. Student discounts, senior rates, airline pricing, surge pricing — all price discrimination. Economists identify three degrees: first-degree (charge each person their maximum willingness to pay), second-degree (volume discounts), and third-degree (group-based pricing). The seller captures more of the value by tailoring the price.",
+        "In the Wild": "Airline seats: the same flight might have 15 different prices depending on when you booked, your loyalty status, and whether you're flying for business. Pharmaceutical companies charge vastly different prices for the same drug in different countries. Software companies offer 'enterprise' pricing that's 10x the individual rate for the same product. Amazon has been caught changing prices based on browsing history.",
+        "The Trap": "Sometimes price discrimination is progressive — sliding-scale clinics, pay-what-you-can restaurants. But more often it's about extracting maximum value from those with the least bargaining power. When algorithms do the discriminating, the process becomes invisible: you don't know you're paying more. The power asymmetry is the point. And when 'discrimination' is based on race, zip code, or accent, the economic euphemism barely hides what's really happening.",
+        "Connects To": "Elasticity (price discrimination targets groups with different elasticities), Arbitrage (arbitrage breaks down price discrimination — if I can resell my cheap ticket, you can't charge you more), Veblen Goods (where high price IS the product), Adverse Selection (information asymmetry cuts both ways)."
+      },
+      "keywords": ["pricing", "segmentation", "power", "surplus"],
+      "metadata": {}
+    },
+    {
+      "id": "substitutes-and-complements",
+      "name": "Substitutes and Complements",
+      "level": 1,
+      "category": "goods-and-resources",
+      "sort_order": 17,
+      "sections": {
+        "The Idea": "Some goods replace each other (substitutes): butter and margarine, Uber and taxis, email and postal mail. When the price of one rises, demand for the other rises too — people switch. Other goods go together (complements): printers and ink, cars and gasoline, phones and data plans. When the price of one rises, demand for the other falls — they're a package deal. Knowing which is which shapes strategy, policy, and power.",
+        "In the Wild": "Razor companies sell handles cheap and blades expensive — complements exploited. Apple makes the phone and controls the App Store — complements captured. Public transit and cycling are substitutes for driving — investing in them reduces car demand. Coffee and tea are loose substitutes; coffee and cream are complements. The relationship isn't fixed: streaming video was once a complement to cable, then became its substitute and killed it.",
+        "The Trap": "The substitute/complement framework assumes goods are things that exist independently and just happen to relate. But relationships between goods are often manufactured. Tech companies deliberately make their products complementary to lock you in, then eliminate substitutes through acquisition or regulation. More fundamentally: the framework treats everything as a 'good' to be consumed. What's the substitute for clean air? For community? For meaning? Some things that matter most have no substitutes at all.",
+        "Connects To": "Elasticity (substitutes make demand more elastic), Switching Costs (what prevents you from using a substitute), Artificial Scarcity (eliminating substitutes to maintain power), Supply and Demand (substitute/complement relationships shape demand curves)."
+      },
+      "keywords": ["substitution", "complementary", "relationship", "goods"],
+      "metadata": {}
+    },
+    {
+      "id": "public-goods",
+      "name": "Public Goods",
+      "level": 1,
+      "category": "goods-and-resources",
+      "sort_order": 18,
+      "sections": {
+        "The Idea": "A good that is non-rivalrous (my using it doesn't reduce your ability to use it) and non-excludable (you can't easily prevent people from using it). Lighthouses, national defense, clean air, open-source software, mathematical knowledge. Markets systematically underproduce public goods because you can't charge for them effectively — why pay if you can benefit for free? This is why governments, communities, and commons step in.",
+        "In the Wild": "Street lighting: everyone on the block benefits, whether they pay taxes or not. Wikipedia: 300 million readers, funded by donations from a fraction of them. Scientific research: the knowledge benefits everyone but individual companies can't capture the full return, so governments fund basic research. GPS was built by the US military and gifted to the world — now it enables trillions in economic activity.",
+        "The Trap": "The standard economic story says public goods need government provision because markets fail. But this frames commons and community provision as second-best solutions to a market problem. Anarchists and commons theorists flip it: maybe public goods are the natural state, and privatization is the aberration. Indigenous communities managed shared resources for millennia without states or markets. The real question isn't 'how do we fix the market failure?' but 'why are we trying to market things that work better as commons?'",
+        "Connects To": "Free Rider Problem (the core challenge of public goods), Common-Pool Resources (the sibling category — rivalrous but non-excludable), Commons-Based Peer Production (public goods made by volunteers), Artificial Scarcity (turning public goods into private ones through enclosure)."
+      },
+      "keywords": ["non-rival", "non-excludable", "provision", "collective"],
+      "metadata": {}
+    },
+    {
+      "id": "common-pool-resources",
+      "name": "Common-Pool Resources",
+      "level": 1,
+      "category": "goods-and-resources",
+      "sort_order": 19,
+      "sections": {
+        "The Idea": "Resources that are rivalrous (if I take a fish, you can't take that fish) but non-excludable (hard to fence off the ocean). Fisheries, forests, aquifers, the atmosphere. The conventional story says these are doomed to overuse — Hardin's 'Tragedy of the Commons.' But Elinor Ostrom won the Nobel Prize by showing this is wrong. Communities around the world have managed common-pool resources sustainably for centuries, using local rules, monitoring, and graduated sanctions. Neither privatization nor state control is necessary.",
+        "In the Wild": "Swiss alpine meadows managed communally since the 1200s. Lobster fishing territories in Maine, governed by informal local rules. Acequia irrigation systems in New Mexico, managed collectively for 400 years. Japanese forest commons (iriai) that outperform both private and state forests. Ostrom documented hundreds of these cases. The commons aren't tragic — they're sophisticated.",
+        "The Trap": "Hardin's 'Tragedy of the Commons' (1968) has been one of the most influential — and most misleading — metaphors in economics. It assumes users are selfish, isolated, and unable to communicate. Real commons have rules. Hardin's essay was actually about unregulated open access, not about commons. The 'tragedy' narrative was used to justify privatization (enclosure) and state control of resources that communities were managing just fine. Ostrom's work is the antidote, but the myth persists.",
+        "Connects To": "Tragedy of the Commons (the myth this concept corrects), Public Goods (the sibling category), Mutual Aid (the social fabric that makes commons work), Primitive Accumulation (enclosure of the commons was how capitalism began), Degrowth (commons-based governance as an alternative to growth-dependent systems)."
+      },
+      "keywords": ["commons", "ostrom", "governance", "shared"],
+      "metadata": {}
+    },
+    {
+      "id": "normal-and-inferior-goods",
+      "name": "Normal and Inferior Goods",
+      "level": 1,
+      "category": "goods-and-resources",
+      "sort_order": 20,
+      "sections": {
+        "The Idea": "When your income rises, you buy more of some things (normal goods) and less of others (inferior goods). Get a raise and you eat out more (normal good) and buy less instant ramen (inferior good). This isn't a judgment about the goods themselves — 'inferior' just means demand falls as income rises. The classification reveals how consumption tracks with class and tells us something about what people buy because they want to versus what they buy because they have to.",
+        "In the Wild": "Bus rides are an inferior good in cities with cars — ridership drops as incomes rise. Dollar store purchases are inferior goods. Organic produce is a normal good (often a luxury good — demand rises faster than income). During recessions, 'inferior' goods see a boom: canned soup, public transit, community college enrollment. The pattern maps the texture of economic class in a society.",
+        "The Trap": "The language itself is loaded. Calling ramen 'inferior' and organic quinoa 'normal' embeds class judgment into the math. The framework also assumes that income growth is the relevant axis — but what if someone chooses the simpler good not because they can't afford better, but because they value sufficiency over consumption? Degrowth thinkers note that the entire normal/inferior framework assumes more income means more consumption means more welfare — an equation that breaks down above a certain level.",
+        "Connects To": "Veblen Goods (where price and status invert the demand curve), Supply and Demand (income shifts the demand curve), Elasticity (income elasticity determines normal vs. inferior), Degrowth (questioning the assumption that 'normal' consumption is desirable)."
+      },
+      "keywords": ["income", "demand", "poverty", "class"],
+      "metadata": {}
+    },
+    {
+      "id": "veblen-goods",
+      "name": "Veblen Goods",
+      "level": 1,
+      "category": "goods-and-resources",
+      "sort_order": 21,
+      "sections": {
+        "The Idea": "Goods whose demand increases as their price increases — the opposite of normal market logic. Named after Thorstein Veblen, who in 1899 described 'conspicuous consumption': buying expensive things precisely because they're expensive, to signal status. A $50,000 Hermès bag isn't 200 times more functional than a $250 bag. The excess is the point. The price IS the product.",
+        "In the Wild": "Luxury watches that cost more than cars. Designer water. First-class airline seats that cost 10x economy for 2x the space. Premium vodka that wins no blind taste tests but sells on brand. Veblen dynamics also work in reverse: when luxury brands get 'too accessible' (too many people can afford them), the elite abandons them. Burberry learned this the hard way in the early 2000s.",
+        "The Trap": "It's easy to sneer at Veblen goods as foolish vanity. But Veblen's insight was structural, not moralistic: in a society organized by status, signaling status is rational. The poor sometimes buy expensive brands not out of irrationality but because being perceived as poor has real costs — in hiring, housing, and how police treat you. Commodity fetishism meets conspicuous consumption: we relate to each other through the things we buy, because the system gives us few other ways to express ourselves.",
+        "Connects To": "Commodity Fetishism (the social relations crystallized in luxury goods), Normal and Inferior Goods (Veblen goods break the standard model), Price Discrimination (luxury brands segment ruthlessly), Alienation (when identity is reduced to what you can buy)."
+      },
+      "keywords": ["conspicuous", "consumption", "status", "luxury"],
+      "metadata": {}
+    },
+    {
+      "id": "artificial-scarcity",
+      "name": "Artificial Scarcity",
+      "level": 1,
+      "category": "goods-and-resources",
+      "sort_order": 22,
+      "sections": {
+        "The Idea": "When something could be abundant but is deliberately made scarce to preserve its market value. Digital files can be copied infinitely at zero cost — so we invented DRM, paywalls, and intellectual property law to create scarcity where none naturally exists. Diamonds aren't actually rare — De Beers stockpiled them for decades to keep prices high. Artificial scarcity is the mirror of real scarcity: it's scarcity as a business model.",
+        "In the Wild": "Academic journals charge $30 per article for research that was publicly funded and that the authors gave away for free. Disney's 'vault' strategy: withdrawing films from sale to create artificial scarcity and drive up demand. Pharmaceutical companies that patent slight variations of existing drugs to extend exclusivity. NFTs: an entire technology designed to impose scarcity on digital objects. Software licensing that charges per seat for code that costs nothing to copy.",
+        "The Trap": "The standard defense of artificial scarcity is incentives: without copyright protection, who would create? Without patents, who would innovate? This is a real concern but also a self-serving one — the biggest beneficiaries of IP law are corporations, not individual creators. The open-source movement, Creative Commons, and indigenous knowledge systems demonstrate that abundance-based models can drive enormous creativity. The deeper question: in a world of digital abundance, why is our economic system still organized around scarcity?",
+        "Connects To": "Public Goods (artificial scarcity turns public goods into private ones), Commons-Based Peer Production (the alternative: build in the open), Marginal Cost (artificial scarcity charges high prices for zero-marginal-cost goods), Primitive Accumulation (enclosure of the digital commons), Planned Obsolescence (manufacturing scarcity through time)."
+      },
+      "keywords": ["intellectual-property", "digital", "enclosure", "abundance"],
+      "metadata": {}
+    },
+    {
+      "id": "pareto-efficiency",
+      "name": "Pareto Efficiency",
+      "level": 1,
+      "category": "efficiency-and-welfare",
+      "sort_order": 23,
+      "sections": {
+        "The Idea": "A state where you can't make anyone better off without making someone else worse off. Named after Vilfredo Pareto (1848-1923), who also noticed that 80% of Italy's land was owned by 20% of the people (the origin of the '80/20 rule'). A Pareto improvement is a change that helps at least one person and hurts no one. When no more Pareto improvements are possible, you've reached Pareto efficiency. It sounds ideal — but it has a dark side.",
+        "In the Wild": "A teacher assigning extra credit that any student can earn (without penalizing others) is a Pareto improvement. Redistributing unused food to the hungry is Pareto-improving if the original owner has genuinely abandoned it. Most real policy decisions, though, are NOT Pareto improvements — building a highway helps commuters and hurts the neighborhoods it demolishes. Raising minimum wage helps workers and (maybe) hurts some employers. Almost everything interesting in politics fails the Pareto test.",
+        "The Trap": "Here's the devastating critique: a society where one person owns everything and everyone else is starving is Pareto efficient — because you can't give food to the starving without 'making the owner worse off.' Pareto efficiency says nothing about fairness, justice, or distribution. It is perfectly compatible with obscene inequality. Using Pareto efficiency as a policy goal — as mainstream economics often does — smuggles in a profound conservatism: any redistribution is suspect because someone loses. This is ideology dressed in mathematics.",
+        "Connects To": "Deadweight Loss (measures departure from Pareto efficiency), Externalities (unpriced externalities mean markets aren't Pareto efficient), Supply and Demand (textbook markets supposedly reach Pareto outcomes), Surplus Value (Marx would say the entire employer-worker relationship is Pareto efficient only if you accept the starting distribution of power)."
+      },
+      "keywords": ["optimality", "allocation", "improvement", "welfare"],
+      "metadata": {}
+    },
+    {
+      "id": "deadweight-loss",
+      "name": "Deadweight Loss",
+      "level": 1,
+      "category": "efficiency-and-welfare",
+      "sort_order": 24,
+      "sections": {
+        "The Idea": "Value that is destroyed — not transferred to someone else, but simply lost — when markets are distorted from their 'efficient' equilibrium. Taxes, monopolies, price controls, and tariffs all create deadweight loss in the textbook model: transactions that would have made both buyer and seller better off simply don't happen because the price has been pushed away from equilibrium.",
+        "In the Wild": "A tax on wine means some buyers who valued wine more than its production cost — but less than the taxed price — stop buying. That lost mutual benefit is deadweight loss. Rent control: when maximum rents are set below market rate, some landlords withdraw units and some potential tenants who would have paid a bit more can't find apartments. Monopoly pricing: the monopolist produces less and charges more than a competitive market would, destroying surplus.",
+        "The Trap": "Deadweight loss is the primary weapon against regulation and taxation in mainstream economics. 'Taxes create deadweight loss' becomes 'taxes are wasteful.' But this framing assumes the pre-tax market outcome was efficient and just — which requires no externalities, no power imbalances, no information problems, and a fair initial distribution of wealth. In the real world, 'deadweight loss' from a minimum wage might be offset by the deadweight loss of poverty — workers too sick, stressed, and exhausted to be productive. The triangle on the graph doesn't capture everything that matters.",
+        "Connects To": "Pareto Efficiency (deadweight loss measures departure from it), Price Equilibrium (the reference point for measuring the loss), Externalities (unpriced externalities create their own deadweight losses that markets ignore), Rent-Seeking (monopolists create deadweight loss to capture surplus)."
+      },
+      "keywords": ["inefficiency", "tax", "monopoly", "welfare-loss"],
+      "metadata": {}
+    },
+    {
+      "id": "tragedy-of-the-commons",
+      "name": "Tragedy of the Commons",
+      "level": 1,
+      "category": "efficiency-and-welfare",
+      "sort_order": 25,
+      "sections": {
+        "The Idea": "Garrett Hardin's 1968 parable: herders sharing a pasture each have an incentive to add one more cow, because they get all the benefit of the extra cow but share the cost of overgrazing with everyone. Individually rational, collectively catastrophic — the pasture is destroyed. The moral, as usually told: shared resources without private ownership or state regulation are doomed.",
+        "In the Wild": "Overfishing in international waters. Groundwater depletion when farmers drill deeper wells. Traffic congestion (the road is a commons; each additional driver degrades it for all). Climate change (the atmosphere as unregulated commons for carbon emissions). These are real and serious problems. The question is what follows from diagnosing them.",
+        "The Trap": "Hardin's essay is one of the most cited in social science — and one of the most debunked. His pasture scenario describes open access (no rules), not a commons (community-governed). Real historical commons had rules, boundaries, and sanctions. Hardin's 'solution' — privatize or nationalize — was exactly what England's Enclosure Acts did in the 18th century, dispossessing millions of commoners to create private property. Ostrom showed that communities can and do manage commons effectively. The 'tragedy' is not inevitable — it's a choice to ignore alternatives.",
+        "Connects To": "Common-Pool Resources (Ostrom's corrective to this story), Free Rider Problem (the individual incentive at the heart of the tragedy), Externalities (each herder externalizes the cost of overgrazing), Primitive Accumulation (enclosure was justified by this logic), Mutual Aid (the cooperative mechanisms that prevent the tragedy)."
+      },
+      "keywords": ["overuse", "commons", "hardin", "depletion"],
+      "metadata": {}
+    },
+    {
+      "id": "free-rider-problem",
+      "name": "Free Rider Problem",
+      "level": 1,
+      "category": "efficiency-and-welfare",
+      "sort_order": 26,
+      "sections": {
+        "The Idea": "When people can benefit from something without contributing to its cost, the incentive is to let others pay while you ride for free. If enough people reason this way, the good doesn't get provided at all — or is chronically underfunded. This is the core challenge of collective action: everyone wants the park, nobody wants to pay for it. Everyone wants clean air, nobody wants to cut their emissions first.",
+        "In the Wild": "Public radio: millions listen, a fraction donate. Union negotiations: all workers benefit from the contract, but non-members don't pay dues (hence 'right-to-work' laws, which enshrine free riding). Vaccination: unvaccinated individuals benefit from herd immunity created by those who did vaccinate. Open-source software: millions use it, a few maintain it. The free rider problem explains why so many public goods are underprovided.",
+        "The Trap": "The free rider problem assumes people are calculating self-interest maximizers who would always defect if they could get away with it. But humans are also social, reciprocal, and reputation-conscious. Kropotkin's mutual aid framework shows that cooperation has been as fundamental to evolutionary success as competition. Many communities solve free rider problems through social norms, trust, and identity — not through enforcement. Framing every contribution gap as a 'free rider problem' obscures the possibility that people want to contribute and need only the social infrastructure to do so.",
+        "Connects To": "Public Goods (where free riding is most acute), Tragedy of the Commons (free riding on shared resources), Mutual Aid (the cooperative alternative to the free rider assumption), Moral Hazard (a related incentive problem in insurance)."
+      },
+      "keywords": ["collective-action", "incentives", "public-goods", "cooperation"],
+      "metadata": {}
+    },
+    {
+      "id": "moral-hazard",
+      "name": "Moral Hazard",
+      "level": 1,
+      "category": "efficiency-and-welfare",
+      "sort_order": 27,
+      "sections": {
+        "The Idea": "When someone is insulated from the consequences of their actions, they take bigger risks. Insure your car and you park more carelessly. Guarantee a bank's losses and it makes reckless loans. Moral hazard is an incentive problem: protection from downside risk changes behavior in ways that make the bad outcome more likely. The name is misleading — it's not about morality but about the structure of incentives.",
+        "In the Wild": "The 2008 financial crisis is the textbook case: banks that were 'too big to fail' knew governments would bail them out, so they took enormous risks with mortgage-backed securities. When the bets went bad, taxpayers absorbed the losses. On a smaller scale: corporate limited liability means shareholders can only lose their investment, not their personal wealth — which encourages riskier ventures. Health insurance raises moral hazard debates: does coverage make people careless about their health?",
+        "The Trap": "Moral hazard in healthcare is a pernicious myth in its extreme form. Yes, people with insurance visit the doctor more — but that's often people finally getting care they couldn't afford before. Calling that 'moral hazard' implies that the optimal amount of healthcare for the uninsured is zero. The concept also gets asymmetrically applied: when workers want unemployment insurance, moral hazard is invoked immediately. When banks want bailouts, moral hazard is an afterthought. Moral hazard analysis mirrors power — it disciplines the weak and excuses the powerful.",
+        "Connects To": "Adverse Selection (the other major information problem in markets), Free Rider Problem (similar incentive structure), Boom and Bust (moral hazard fuels reckless expansion), Reserve Army of Labor (unemployment as 'discipline' is the anti-moral-hazard argument applied to workers)."
+      },
+      "keywords": ["risk", "insurance", "bailout", "incentives"],
+      "metadata": {}
+    },
+    {
+      "id": "adverse-selection",
+      "name": "Adverse Selection",
+      "level": 1,
+      "category": "efficiency-and-welfare",
+      "sort_order": 28,
+      "sections": {
+        "The Idea": "When one side of a transaction knows more than the other, the informed side uses that advantage, and the uninformed side gets stuck with the worst deals. George Akerlof's 'Market for Lemons' (1970): if sellers know which used cars are lemons and buyers don't, the good cars leave the market (why sell a good car at a 'lemon price'?), and only lemons remain. Information asymmetry can destroy markets entirely.",
+        "In the Wild": "Health insurance: people who know they're sick are most eager to buy insurance, while healthy people may skip it. This drives up premiums, pushing out more healthy people, driving premiums higher — a death spiral. The mandate in the Affordable Care Act was designed to break this spiral by forcing everyone in. Job markets: candidates know their own abilities better than employers, which is why hiring involves elaborate signaling (degrees, interviews, references).",
+        "The Trap": "Adverse selection is real, but the concept gets used to argue against insurance programs, welfare, and public services. 'If you offer generous benefits, the wrong people will sign up.' This logic, taken to its extreme, means we should provide nothing to anyone to avoid attracting those who need it most — which is absurd. The anarchist response: build systems based on universal access and trust rather than trying to sort 'deserving' from 'undeserving.' Adverse selection is a problem of market design, not of human nature.",
+        "Connects To": "Moral Hazard (the sibling information problem — adverse selection is before the deal, moral hazard is after), Bounded Rationality (information asymmetry assumes one side has good information, which isn't always true either), Transaction Costs (much of the cost in markets is about managing information asymmetry), Commodity Fetishism (the things we buy conceal information about how they were made)."
+      },
+      "keywords": ["information", "asymmetry", "lemons", "akerlof"],
+      "metadata": {}
+    },
+    {
+      "id": "loss-aversion",
+      "name": "Loss Aversion",
+      "level": 1,
+      "category": "behavioral",
+      "sort_order": 29,
+      "sections": {
+        "The Idea": "Losses hurt roughly twice as much as equivalent gains feel good. Losing $100 stings more than finding $100 delights. Daniel Kahneman and Amos Tversky demonstrated this in the 1970s as part of Prospect Theory, which replaced the 'rational actor' model with a psychologically realistic one. We are not calculating machines — we are loss-averse animals who feel the downside more vividly than the upside.",
+        "In the Wild": "Investors hold losing stocks too long (hoping to avoid 'realizing' the loss) and sell winning stocks too soon (locking in the gain). People reject fair gambles: most won't accept a 50/50 chance to win $1,100 or lose $1,000, even though the expected value is positive. In negotiations, concessions feel larger to the giver than to the receiver, making compromise painful on both sides. Insurance companies exist because people will pay a premium to avoid even small losses.",
+        "The Trap": "Loss aversion is real, but it gets used to explain too much. Not all refusal to change is irrational bias — sometimes people resist because the change is genuinely bad for them and 'loss aversion' is a convenient label to dismiss their objections. When communities resist development that will demolish their neighborhood, calling it 'loss aversion' pathologizes legitimate resistance. The behavioral economics frame can become a new paternalism: ordinary people are biased, so experts should nudge them toward 'better' choices.",
+        "Connects To": "Sunk Cost (loss aversion drives the sunk cost fallacy), Endowment Effect (loss aversion for things you already own), Nudge Theory (designed to work with loss aversion, not against it), Bounded Rationality (loss aversion is one of many 'biases' that define real decision-making)."
+      },
+      "keywords": ["kahneman", "tversky", "prospect-theory", "psychology"],
+      "metadata": {}
+    },
+    {
+      "id": "bounded-rationality",
+      "name": "Bounded Rationality",
+      "level": 1,
+      "category": "behavioral",
+      "sort_order": 30,
+      "sections": {
+        "The Idea": "Herbert Simon's 1955 insight: people don't optimize — they 'satisfice.' We don't examine every option, calculate every probability, and choose the mathematically best outcome. We search until we find something good enough, and we stop. Not because we're stupid, but because our time, information, and cognitive capacity are limited. Rationality is bounded by the real constraints of being human. This isn't a failure — it's an adaptation.",
+        "In the Wild": "How did you choose where to eat last night? Not by surveying every restaurant, comparing reviews, and running a cost-benefit analysis. You picked something familiar, or asked a friend, or went somewhere nearby. This is satisficing, and it works remarkably well. Organizations do it too: companies set profit targets rather than maximizing, hiring managers pick the first qualified candidate rather than reviewing thousands. The whole economy runs on good-enough decisions.",
+        "The Trap": "Bounded rationality is the most important challenge to mainstream economics, which builds its entire edifice on rational optimization. But the behavioral economics industry sometimes treats bounded rationality as a list of 'biases' to be fixed, rather than as a fundamental reconceptualization. If rationality is always bounded, then 'optimal' is always contextual. There is no view from nowhere. This has radical implications: if the perfectly rational agent doesn't exist, then the 'efficient markets' that depend on it don't exist either.",
+        "Connects To": "Loss Aversion (one specific bound on rationality), Anchoring (another bound), Opportunity Cost (impossible to fully calculate with bounded cognition), Emergence in Markets (bounded agents create complex system behavior), Reflexivity (beliefs shaped by bounded cognition feed back into the system they're trying to understand)."
+      },
+      "keywords": ["simon", "satisficing", "limits", "cognition"],
+      "metadata": {}
+    },
+    {
+      "id": "anchoring",
+      "name": "Anchoring",
+      "level": 1,
+      "category": "behavioral",
+      "sort_order": 31,
+      "sections": {
+        "The Idea": "The first number you hear disproportionately influences your judgment, even when it's irrelevant. Ask people to estimate the population of Turkey after spinning a wheel that lands on 65 — they guess higher than those whose wheel landed on 10. The anchor pulls your estimate toward it. This isn't subtle: anchoring effects are enormous, well-replicated, and extremely difficult to override even when you know about them.",
+        "In the Wild": "Real estate agents anchor buyers with the listing price — all subsequent negotiation orbits that number. Retail pricing uses anchoring constantly: 'Was $200, now $79!' — the $200 is the anchor that makes $79 feel like a steal. Salary negotiations: whoever names a number first sets the anchor. Menu design puts the expensive item first so the second-most-expensive seems reasonable. Legal damages: plaintiffs ask for astronomical amounts to anchor the jury high.",
+        "The Trap": "Once you learn about anchoring, you see it everywhere — which is both useful and dangerous. Not every first number is a manipulative anchor; sometimes the first offer in a negotiation is simply a reasonable starting point. The bigger concern: anchoring is weaponized by those with the power to set the terms. Who gets to anchor the conversation about what a 'fair wage' is? About what healthcare 'should cost'? The anchor often reflects existing power structures, and adjustments from that anchor stay close to it. Anchoring preserves the status quo.",
+        "Connects To": "Price Discrimination (anchoring is one tool sellers use to segment buyers), Bounded Rationality (anchoring is an artifact of satisficing with limited information), Nudge Theory (choice architecture uses anchoring deliberately), Commodity Fetishism (the price tag is an anchor that conceals the labor behind the product)."
+      },
+      "keywords": ["bias", "reference-point", "negotiation", "framing"],
+      "metadata": {}
+    },
+    {
+      "id": "endowment-effect",
+      "name": "Endowment Effect",
+      "level": 1,
+      "category": "behavioral",
+      "sort_order": 32,
+      "sections": {
+        "The Idea": "People value things more once they own them. Give someone a coffee mug and ask what they'd sell it for — the answer is roughly twice what they'd have paid for it before owning it. The mere act of possession changes perceived value. This is loss aversion applied to stuff: selling feels like losing, and losses loom larger than gains. The endowment effect means markets should be stickier than classical theory predicts — people don't trade as freely as the model assumes.",
+        "In the Wild": "Homeowners consistently overvalue their houses relative to market appraisals. Ticket holders demand far more to sell a concert ticket than they would have paid to buy one. Companies offering 'free trials' exploit the endowment effect: once you've used the software for 30 days, canceling feels like a loss. In negotiations, each side values their concessions more than the other side does, making agreements harder.",
+        "The Trap": "The endowment effect is fascinating psychologically but tricky politically. When indigenous communities resist selling their land at market price, is that the endowment effect or is it that the land genuinely has irreplaceable value to them that the market can't measure? Calling deep attachment a 'cognitive bias' trivializes it. Sometimes what looks like irrational overvaluation is actually a recognition that some things cannot be replaced and should not be traded. The endowment effect might be less a bias and more a wisdom the market doesn't understand.",
+        "Connects To": "Loss Aversion (the engine behind the endowment effect), Sunk Cost (past investment deepens the endowment), Switching Costs (endowment effect plus switching costs creates powerful lock-in), Gift Economy (in gift economies, the endowment effect works differently — things are valuable because they circulate, not because you hold them)."
+      },
+      "keywords": ["ownership", "overvaluation", "status-quo", "loss-aversion"],
+      "metadata": {}
+    },
+    {
+      "id": "hyperbolic-discounting",
+      "name": "Hyperbolic Discounting",
+      "level": 1,
+      "category": "behavioral",
+      "sort_order": 33,
+      "sections": {
+        "The Idea": "We massively overvalue immediate rewards relative to future ones — and the discounting isn't steady, it's steep at first and flattens out. Offer someone $100 today or $110 tomorrow, and most choose today. Offer $100 in 30 days or $110 in 31 days — same one-day wait, same $10 gain — and most choose to wait. We're not consistently impatient; we're disproportionately impatient about right now. This creates a systematic bias toward present consumption over future well-being.",
+        "In the Wild": "Credit card debt: the pleasure of buying now overwhelms the pain of interest later. Climate inaction: the cost of emissions cuts is immediate and concrete; the cost of climate change is future and abstract. Procrastination: the comfort of not-doing is immediate; the benefit of doing is delayed. Retirement savings: every behavioral economics program (auto-enrollment, escalating contributions) is designed to counteract hyperbolic discounting.",
+        "The Trap": "Hyperbolic discounting is the justification for a vast industry of paternalistic intervention — auto-enrollments, commitment devices, 'save more tomorrow' programs. These work, but they also assume a particular vision of what people should want (more savings, less consumption, delayed gratification). What if someone from a precarious economic background rationally prefers $100 now because they genuinely don't trust that the $110 will be there tomorrow? What looks like a bias might be a survival strategy for people who've been systematically betrayed by institutions that promised a future.",
+        "Connects To": "Compound Interest (hyperbolic discounting makes people undervalue compounding), Loss Aversion (the immediate loss of spending money now vs. the abstract loss of future savings), Nudge Theory (designed to counteract present bias), Degrowth (what if the 'bias' toward sufficiency-now over growth-later is actually wise?)."
+      },
+      "keywords": ["time-preference", "impatience", "present-bias", "future"],
+      "metadata": {}
+    },
+    {
+      "id": "nudge-theory",
+      "name": "Nudge Theory",
+      "level": 1,
+      "category": "behavioral",
+      "sort_order": 34,
+      "sections": {
+        "The Idea": "Since people are predictably irrational, you can design the choice environment — the 'choice architecture' — to steer them toward better decisions without restricting their options. Richard Thaler and Cass Sunstein's 2008 book 'Nudge' made this mainstream: put the salad first in the cafeteria line, make organ donation opt-out instead of opt-in, auto-enroll workers in retirement savings. The architecture of the choice matters as much as the options themselves.",
+        "In the Wild": "Organ donation rates: countries with opt-out systems (you're a donor unless you say no) have vastly higher donation rates than opt-in countries, even though individuals are equally 'free' to choose. The UK's Behavioural Insights Team ('Nudge Unit') used simple letter redesigns to collect millions more in unpaid taxes. Companies nudge constantly: default subscription renewals, one-click buying, 'recommended for you' algorithms.",
+        "The Trap": "Who designs the nudge? And toward whose version of 'better'? Thaler calls it 'libertarian paternalism' — you're free to choose, but the defaults are chosen for you. Critics from the left note that nudging is individualistic — it adjusts behavior without challenging the system that created the problem. Why nudge people to save for retirement when you could provide universal pensions? Critics from the anarchist tradition go further: who gave the architects permission to design your choices? Nudging is governance disguised as helpfulness. The most effective nudges are the ones you don't notice.",
+        "Connects To": "Bounded Rationality (nudging works because we satisfice, not optimize), Loss Aversion (many nudges exploit loss aversion), Hyperbolic Discounting (nudges counteract present bias), Prefigurative Economics (the alternative: build systems that don't require behavioral manipulation)."
+      },
+      "keywords": ["thaler", "sunstein", "choice-architecture", "paternalism"],
+      "metadata": {}
+    },
+    {
+      "id": "creative-destruction",
+      "name": "Creative Destruction",
+      "level": 1,
+      "category": "systems-and-cycles",
+      "sort_order": 35,
+      "sections": {
+        "The Idea": "Capitalism progresses by destroying what came before. Joseph Schumpeter (1942) borrowed the idea from Marx: the 'perennial gale of creative destruction' is how new technologies, new firms, and new ways of organizing replace the old. The automobile destroyed the horse industry. Streaming destroyed video stores. This isn't a side effect of capitalism — it IS capitalism. The system's dynamism and its cruelty spring from the same source.",
+        "In the Wild": "Kodak invented the digital camera and was destroyed by it. Nokia dominated mobile phones and was swept away by smartphones. Coal towns built around an industry that's being creatively destroyed by renewable energy — except the 'creation' lands in different places than the 'destruction.' Silicon Valley celebrates disruption as heroic; the disrupted experience it as devastation.",
+        "The Trap": "Schumpeter presented creative destruction as neutral and inevitable, like weather. But who gets the creation and who gets the destruction is a political question. When tech billionaires 'disrupt' taxi drivers, hotel workers, or journalism, the creative part accrues to investors and the destructive part falls on workers and communities. Marx's original point was sharper: capitalism MUST destroy to grow, and the people destroyed are not collateral damage but necessary fuel. Creative destruction is not a bug — it's the operating principle.",
+        "Connects To": "Boom and Bust (creative destruction operates cyclically), Planned Obsolescence (manufactured destruction), Division of Labor (creative destruction reshuffles who specializes in what), Alienation (the human cost of being 'creatively destroyed'), Prefigurative Economics (what if we could innovate without destroying?)."
+      },
+      "keywords": ["schumpeter", "innovation", "disruption", "capitalism"],
+      "metadata": {}
+    },
+    {
+      "id": "rent-seeking",
+      "name": "Rent-Seeking",
+      "level": 1,
+      "category": "systems-and-cycles",
+      "sort_order": 36,
+      "sections": {
+        "The Idea": "Making money not by creating value but by manipulating the system to capture value others created. Lobbying for a tariff that protects your industry from competition. Getting a regulation passed that only you can comply with. Acquiring a patent not to innovate but to sue anyone who does. 'Rent' here doesn't mean apartment rent — it means income earned from controlling access rather than producing anything. Rent-seeking is the economic term for using power to extract wealth without contributing to it.",
+        "In the Wild": "Pharmaceutical companies that spend more on lobbying than research. Telecom monopolies that fight municipal broadband to protect their pricing power. Occupational licensing that requires 1,000 hours of training to braid hair — protecting existing salons, not consumers. Patent trolls: companies that exist solely to buy patents and threaten lawsuits. Corporate subsidies that flow to profitable companies while small businesses get nothing.",
+        "The Trap": "Rent-seeking is one of the few economic concepts that both libertarians and Marxists agree is real and bad — but they diagnose it differently. Libertarians say: remove government and you remove the means of rent-seeking. Marxists say: rent-seeking is inherent to capital — owning things and charging for access IS rent-seeking. The anarchist synthesis: all concentrated power enables extraction, whether it's called 'government,' 'corporation,' or 'property.' The question isn't which institution to blame but how to prevent the concentration of power itself.",
+        "Connects To": "Regulatory Capture (the mechanism through which rent-seeking operates in government), Deadweight Loss (rent-seeking creates it), Economies of Scale (scale can become a rent-seeking moat), Surplus Value (Marx would say all profit from ownership is rent-seeking), Artificial Scarcity (creating scarcity to extract rent)."
+      },
+      "keywords": ["lobbying", "monopoly", "unproductive", "extraction"],
+      "metadata": {}
+    },
+    {
+      "id": "regulatory-capture",
+      "name": "Regulatory Capture",
+      "level": 1,
+      "category": "systems-and-cycles",
+      "sort_order": 37,
+      "sections": {
+        "The Idea": "When the agency meant to regulate an industry ends up serving that industry's interests instead. The regulated become the regulators. This happens because industries have concentrated, well-funded interests in influencing regulation, while the public's interest is diffuse and poorly organized. Over time, the revolving door between industry and government, the lobbying, and the information asymmetry tilt the regulator toward the regulated.",
+        "In the Wild": "The Federal Aviation Administration historically staffed by aviation industry veterans. The SEC's difficulty regulating Wall Street while hiring from and losing staff to Wall Street firms. The Environmental Protection Agency under administrators who previously lobbied against environmental regulation. Agricultural regulators who champion industrial farming because the industry writes the standards they enforce.",
+        "The Trap": "Regulatory capture is often invoked by those who want to eliminate regulation altogether: 'Regulation doesn't work because it gets captured, so let's deregulate.' But the absence of regulation doesn't prevent corporate power — it simply removes the pretense of public accountability. The anarchist analysis: both regulation and deregulation serve capital when the underlying power structure is unchanged. The question isn't more or less regulation but more or less democracy. Capture is a symptom of concentrated power, not of the concept of rules.",
+        "Connects To": "Rent-Seeking (capture is how rent-seekers embed themselves in the system), Moral Hazard (captured regulators create moral hazard for the industry), Transaction Costs (regulation creates costs that incumbents can afford and newcomers can't), Feedback Loops (capture creates a self-reinforcing loop between industry and regulator)."
+      },
+      "keywords": ["regulation", "corruption", "revolving-door", "power"],
+      "metadata": {}
+    },
+    {
+      "id": "reflexivity",
+      "name": "Reflexivity",
+      "level": 1,
+      "category": "systems-and-cycles",
+      "sort_order": 38,
+      "sections": {
+        "The Idea": "The observer changes the observed. George Soros's key insight about markets: participants don't just passively respond to fundamentals — their beliefs about the market actively shape the market. If enough people believe a stock will rise, they buy it, and it rises. If enough people believe a bank is failing, they withdraw deposits, and the bank fails. The map doesn't just describe the territory — it alters it. This makes economics fundamentally different from physics: the equations are self-referential.",
+        "In the Wild": "Self-fulfilling prophecies in financial markets: analysts predict a recession, companies cut spending in anticipation, the economy contracts. The 2008 housing bubble: belief that housing prices always rise led to behavior that pushed prices higher, confirming the belief — until reality punctured the loop. Central bank 'forward guidance': merely stating an intention about interest rates changes economic behavior before any rate actually changes. Currency attacks: Soros himself famously bet against the British pound, and the bet helped cause the devaluation he predicted.",
+        "The Trap": "Reflexivity undermines the entire foundation of economics as a predictive science. If beliefs shape outcomes, and outcomes shape beliefs, there's no stable ground from which to model the system — you're inside the recursion. Most mainstream economics ignores this, treating expectations as either rational (they match the true model) or as random errors. Reflexivity says there is no 'true model' independent of belief. This connects to recursive economics: value itself is reflexive — it feeds back on its own conditions of creation.",
+        "Connects To": "Feedback Loops (reflexivity is a cognitive feedback loop between beliefs and reality), Boom and Bust (reflexive spirals drive both manias and panics), Price Equilibrium (reflexivity says equilibrium may be a fiction), Recursive Value (the deepest connection — value that refers back to itself), Bounded Rationality (reflexivity makes full rationality impossible — you'd need to model yourself modeling yourself)."
+      },
+      "keywords": ["soros", "self-fulfilling", "recursion", "complexity"],
+      "metadata": {}
+    },
+    {
+      "id": "inflation",
+      "name": "Inflation",
+      "level": 1,
+      "category": "systems-and-cycles",
+      "sort_order": 39,
+      "sections": {
+        "The Idea": "A general rise in prices over time — not one thing getting expensive, but money itself losing purchasing power. A dollar buys less next year than it does today. Moderate inflation (2-3%) is considered normal and healthy by most economists. Hyperinflation (prices doubling monthly) destroys economies. Deflation (falling prices) sounds nice but discourages spending and investment, since why buy today what will be cheaper tomorrow? The causes are debated fiercely: too much money chasing too few goods (monetarist), too much demand (Keynesian), or sellers raising prices because they can (post-Keynesian).",
+        "In the Wild": "Weimar Germany (1923): prices doubled every few days; people wallpapered with worthless banknotes. Zimbabwe (2008): 79.6 billion percent monthly inflation. More recently: the post-COVID inflation spike of 2021-2023, where supply chain disruptions, stimulus spending, and corporate pricing power all played roles — and economists argued bitterly about which one mattered most. Your grandparents' stories about what things used to cost are inflation stories.",
+        "The Trap": "Inflation politics is class politics. Inflation hurts people on fixed incomes (pensioners, workers) and benefits debtors (including governments and corporations who owe money in depreciated currency). The anti-inflation crusade — raising interest rates, cutting spending, 'cooling' the economy — causes unemployment, disproportionately hitting the least powerful. The monetarist obsession with inflation control (Friedman, Volcker) was, from a Marxist perspective, a class project: disciplining workers and protecting the value of capital. Who decides how much unemployment is acceptable to control inflation? Not the unemployed.",
+        "Connects To": "Supply and Demand (one explanation of inflation: too much demand), Feedback Loops (inflationary expectations can become self-fulfilling), Boom and Bust (inflation often accompanies booms; deflation accompanies busts), Reserve Army of Labor (unemployment as inflation control), Compound Interest (inflation compounds too — slowly, but relentlessly)."
+      },
+      "keywords": ["money", "prices", "purchasing-power", "monetary-policy"],
+      "metadata": {}
+    },
+    {
+      "id": "boom-and-bust",
+      "name": "Boom and Bust Cycles",
+      "level": 1,
+      "category": "systems-and-cycles",
+      "sort_order": 40,
+      "sections": {
+        "The Idea": "Economies don't grow steadily — they surge and crash, expand and contract. The boom: optimism, credit expansion, rising asset prices, speculative frenzy. The bust: panic, credit contraction, falling prices, bankruptcy, unemployment. Hyman Minsky showed that stability itself is destabilizing: during good times, people take bigger risks because things seem safe, which plants the seeds of the next crisis. 'The Minsky Moment' is when the music stops.",
+        "In the Wild": "Tulip mania (1637), the South Sea Bubble (1720), the Great Depression (1929), the dot-com crash (2000), the Global Financial Crisis (2008), crypto crashes (2022). The pattern repeats with eerie regularity — different assets, same psychology. Each time, people say 'this time is different' during the boom, and 'how did we not see this coming?' during the bust. We always see it coming. We just can't stop it.",
+        "The Trap": "Mainstream economics long treated cycles as aberrations — random shocks hitting an otherwise stable system. But Marx, Minsky, and complexity economists argue that cycles are inherent to capitalism. The boom isn't a healthy growth phase disrupted by an accident — it's an overaccumulation phase that must collapse. The bust isn't a failure — it's capitalism's way of devaluing excess capital and disciplining workers. If this is true, then 'managing' the cycle is like managing a fever — you can moderate it but you can't cure the infection without addressing the system.",
+        "Connects To": "Feedback Loops (positive feedback drives both boom and bust), Reflexivity (beliefs about the cycle become part of the cycle), Compound Interest (credit compounding drives the boom), Creative Destruction (busts clear the way for new accumulation), Moral Hazard (bailouts during busts enable riskier booms)."
+      },
+      "keywords": ["cycles", "crisis", "recession", "mania", "minsky"],
+      "metadata": {}
+    },
+    {
+      "id": "emergence-in-markets",
+      "name": "Emergence in Markets",
+      "level": 1,
+      "category": "systems-and-cycles",
+      "sort_order": 41,
+      "sections": {
+        "The Idea": "Complex patterns arising from simple interactions, without anyone planning them. No one designed the layout of a city's restaurants — but they cluster, specialize, and differentiate in patterns that look designed. No one coordinates the global price of wheat — but millions of individual decisions produce a coherent signal. Emergence is the bridge between micro (individual choices) and macro (system-level patterns). It's what Adam Smith was gesturing at with the 'invisible hand,' but the complexity version is richer: emergence can produce order, chaos, inequality, and resilience all at once.",
+        "In the Wild": "Traffic patterns emerge from individual driving decisions. Fashion trends emerge from individual clothing choices. Real estate prices form neighborhood-level patterns no one planned. Wikipedia's structure emerges from millions of edits. Stock market crashes emerge from individual sell decisions cascading. The economy itself is an emergent system — no one runs it, yet it has structure, rhythm, and personality.",
+        "The Trap": "Emergence gets romanticized as 'the wisdom of the crowd' or 'spontaneous order' — terms beloved by libertarians who argue that markets left alone produce optimal outcomes. But emergence is value-neutral: it produces slums as readily as skylines, monopolies as readily as diversity, extinction as readily as adaptation. The question isn't whether markets produce emergent order — they do — but whether that order serves human flourishing. Emergence without justice is just sophisticated chaos.",
+        "Connects To": "Price Equilibrium (equilibrium as an emergent property of market interactions), Feedback Loops (the mechanism through which emergence operates), Reflexivity (emergent patterns that feed back into participant behavior), Bounded Rationality (emergence from agents who satisfice, not optimize), Recursive Value (emergence as self-referential creation — value creating the conditions for more value)."
+      },
+      "keywords": ["complexity", "self-organization", "bottom-up", "emergent-order"],
+      "metadata": {}
+    },
+    {
+      "id": "commodity-fetishism",
+      "name": "Commodity Fetishism",
+      "level": 1,
+      "category": "critique-and-power",
+      "sort_order": 42,
+      "sections": {
+        "The Idea": "Marx's concept from Capital, Volume 1: in a market economy, social relationships between people appear as relationships between things. The price tag on a shirt conceals the human relationships embedded in it — the cotton picker, the spinner, the sewer, the shipper, their wages, their working conditions, their lives. We relate to each other through commodities, and the commodities seem to have a life of their own. The 'fetish' is not desire — it's the illusion that value is a property of things rather than of human labor and social relations.",
+        "In the Wild": "You hold a smartphone and see a product, a price, a brand. You don't see the Congolese miner who extracted the cobalt, the Foxconn worker who assembled it, or the environmental destruction in the rare earth mines. The commodity appears as if by magic in a store, with no visible history. Coffee 'costs' $5 — but what does that price actually contain? Supply chains are designed to be invisible. The fetish is the invisibility.",
+        "The Trap": "Commodity fetishism is one of the most powerful ideas in social theory, but it's easy to turn it into a simple moral lesson: 'look behind the label!' Fair trade, ethical consumption, supply chain transparency — these address the symptom, not the cause. Marx's point wasn't that we need better labels but that the market form itself produces the fetish. As long as we relate to each other through buying and selling, the things we buy will conceal the relations they embody. The structure, not the ignorance, is the problem.",
+        "Connects To": "Alienation (commodity fetishism is alienation made material), Veblen Goods (conspicuous consumption is fetishism at its purest), Supply and Demand (the price mechanism that creates the veil), Surplus Value (what the fetish conceals: extracted labor), Artificial Scarcity (fetishism applied to the digital realm)."
+      },
+      "keywords": ["marx", "alienation", "value", "social-relations"],
+      "metadata": {}
+    },
+    {
+      "id": "surplus-value",
+      "name": "Surplus Value",
+      "level": 1,
+      "category": "critique-and-power",
+      "sort_order": 43,
+      "sections": {
+        "The Idea": "Marx's central economic argument: workers create more value than they're paid. A worker produces $500 worth of goods per day but receives $200 in wages. The $300 difference — surplus value — is claimed by the capitalist as profit. This isn't theft in the legal sense (the wage was 'agreed to'), but it's exploitation in the structural sense: the worker has no choice but to accept because the alternative is starvation. Profit, in this view, is not the reward for risk or innovation — it's the unpaid labor of workers.",
+        "In the Wild": "A barista makes drinks that sell for $500 in a shift and earns $80. A garment worker produces $1,000 worth of clothing and earns $5. A programmer generates millions in revenue for their company and receives a fraction in salary (though stock options blur this line). The gap between what workers produce and what they're paid has widened dramatically since the 1970s — productivity has doubled while real wages have barely moved. The surplus went somewhere.",
+        "The Trap": "Mainstream economists reject the labor theory of value on which surplus value rests, arguing that value comes from scarcity and subjective preference, not labor. And they have a point: a mudpie takes labor to make but has no value. But rejecting the labor theory doesn't make the distributional question go away. Whether you call it 'surplus value' or 'return on capital,' the fact remains that those who own the means of production capture most of the value while those who do the work capture less. The debate about terminology obscures the agreement about the pattern.",
+        "Connects To": "Alienation (surplus value extraction alienates workers from the product of their labor), Commodity Fetishism (surplus value is what the price tag hides), Reserve Army of Labor (unemployment keeps wages low and surplus value high), Primitive Accumulation (how the capitalist got the means of production in the first place), Compound Interest (surplus value, invested, compounds into dynasties)."
+      },
+      "keywords": ["marx", "exploitation", "labor", "profit", "capital"],
+      "metadata": {}
+    },
+    {
+      "id": "primitive-accumulation",
+      "name": "Primitive Accumulation",
+      "level": 1,
+      "category": "critique-and-power",
+      "sort_order": 44,
+      "sections": {
+        "The Idea": "Where did the first capital come from? Capitalism requires that some people own the means of production and others own nothing but their labor. Marx called the historical process that created this divide 'primitive accumulation' — and it wasn't pretty. England's Enclosure Acts (16th-19th centuries) expelled peasants from common land, creating both private property and a landless workforce forced to sell their labor. Colonialism did the same globally: land, resources, and people were seized to create the initial stockpile of capital.",
+        "In the Wild": "The transatlantic slave trade: 12 million people kidnapped to create the wealth that funded the Industrial Revolution. The colonization of the Americas, Africa, and Asia: entire continents' resources extracted to build European capital. More recently: post-Soviet privatization in the 1990s, when public assets were sold for pennies to oligarchs. David Harvey's concept of 'accumulation by dispossession' extends this: land grabs, water privatization, and patent enclosures continue the process today.",
+        "The Trap": "Economics textbooks typically start the story of capitalism with 'free exchange between willing parties.' Primitive accumulation reveals the violence behind that origin story. Capital didn't emerge from savings and hard work — it emerged from theft, enclosure, slavery, and conquest. This matters because it means the current distribution of wealth is not the natural result of merit but the compounded legacy of historical violence. Understanding this changes everything about how you evaluate 'free' markets and 'equal' exchange.",
+        "Connects To": "Common-Pool Resources (enclosure destroyed the commons), Tragedy of the Commons (the narrative that justified enclosure), Compound Interest (stolen wealth, invested, compounds across centuries), Surplus Value (primitive accumulation creates the conditions for surplus value extraction), Comparative Advantage (colonial 'advantages' were manufactured through dispossession)."
+      },
+      "keywords": ["marx", "enclosure", "dispossession", "origins-of-capital"],
+      "metadata": {}
+    },
+    {
+      "id": "alienation",
+      "name": "Alienation",
+      "level": 1,
+      "category": "critique-and-power",
+      "sort_order": 45,
+      "sections": {
+        "The Idea": "Marx identified four dimensions of alienation under capitalism: from the product of your labor (you make something you don't own), from the process of labor (you don't control how you work), from your fellow workers (competition replaces solidarity), and from your own human potential (work becomes mere survival, not creative expression). Alienation isn't a feeling — it's a structural condition. You can be alienated and not know it, the way a fish doesn't know it's in water.",
+        "In the Wild": "An Amazon warehouse worker who packs 300 boxes a day and can't afford the products inside them. A teacher drowning in standardized testing who entered the profession to inspire. A programmer building surveillance software they find morally repugnant because the salary is good. A gig worker with five 'jobs' and no career, no benefits, no relationship to what they produce. The Sunday night dread that pervades entire economies is alienation made visceral.",
+        "The Trap": "Alienation gets psychologized — treated as burnout, depression, or 'work-life balance' issues requiring self-care. But Marx's point was structural: alienation is built into wage labor itself, not into individual workplaces that happen to be bad. You can love your job and still be alienated from it — if you don't own the product, don't control the process, and could be fired at will. The self-care industry is, from this angle, a way of managing alienation without addressing it. The alternative isn't better bosses — it's worker ownership, cooperative production, and work as genuine self-expression.",
+        "Connects To": "Division of Labor (extreme specialization deepens alienation), Surplus Value (alienation is the subjective experience of surplus value extraction), Commodity Fetishism (alienated labor produces commodities that conceal their origin), Sunk Cost (you've invested your life in alienating work — the sunk cost of identity), Prefigurative Economics (building non-alienating economic relations now, not after the revolution)."
+      },
+      "keywords": ["marx", "labor", "estrangement", "meaning", "work"],
+      "metadata": {}
+    },
+    {
+      "id": "reserve-army-of-labor",
+      "name": "Reserve Army of Labor",
+      "level": 1,
+      "category": "critique-and-power",
+      "sort_order": 46,
+      "sections": {
+        "The Idea": "Marx's term for the permanently unemployed and underemployed population that capitalism requires. The reserve army serves a function: it keeps wages down. When workers know there are dozens of people ready to take their job, they accept lower pay, worse conditions, and longer hours. Full employment, from this perspective, isn't just hard to achieve — it's structurally impossible under capitalism, because full employment would give workers too much power. Unemployment isn't a bug; it's a feature.",
+        "In the Wild": "The gig economy as a modern reserve army: millions of workers with no guaranteed hours, competing for tasks, driving down the effective wage. Immigration debates often revolve around the reserve army dynamic — employers benefit from a larger labor pool, while existing workers feel the competition. The 2020 labor shortage (when workers briefly had power during COVID recovery) triggered a panic among employers and policymakers — the 'labor shortage' was, from Marx's perspective, simply the reserve army temporarily depleting.",
+        "The Trap": "Mainstream economics calls this the 'natural rate of unemployment' or NAIRU (Non-Accelerating Inflation Rate of Unemployment) — the level of unemployment needed to keep inflation stable. Strip away the jargon and it means: some people must be unemployed so that prices don't rise too fast for everyone else. This is presented as a technical finding, but it's a political choice: whose suffering is acceptable to preserve whose purchasing power? The reserve army concept makes visible what NAIRU obscures: that unemployment is imposed, not natural.",
+        "Connects To": "Surplus Value (the reserve army keeps wages below the value workers produce), Inflation (the supposed tradeoff between unemployment and inflation), Moral Hazard (unemployment benefits are attacked for reducing the reserve army's discipline), Mutual Aid (community support systems that sustain people when the economy discards them), Creative Destruction (busts replenish the reserve army)."
+      },
+      "keywords": ["marx", "unemployment", "wages", "discipline", "precarity"],
+      "metadata": {}
+    },
+    {
+      "id": "planned-obsolescence",
+      "name": "Planned Obsolescence",
+      "level": 1,
+      "category": "critique-and-power",
+      "sort_order": 47,
+      "sections": {
+        "The Idea": "Designing products to fail, go out of fashion, or become incompatible — so you have to buy them again. The Phoebus cartel (1924) agreed to limit lightbulb lifespans to 1,000 hours, down from 2,500. General Motors introduced annual model changes in the 1920s to make last year's car feel outdated. Today, software updates that slow old phones, fashion cycles that accelerate, and printers that refuse third-party ink all continue the tradition. Planned obsolescence is waste engineered into the system to maintain demand.",
+        "In the Wild": "Apple's 'batterygate' — iOS updates that slowed older iPhones. Fast fashion: Zara produces 450 million garments per year, designed to be worn a handful of times. Printer companies that brick machines if you use non-branded cartridges. Textbook publishers who release 'new editions' with rearranged chapters to kill the used book market. Electronics with soldered-in batteries that can't be replaced.",
+        "The Trap": "Planned obsolescence reveals a deep contradiction in capitalism: the system needs infinite consumption on a finite planet. Making things that last would be efficient but unprofitable. Making things that break is profitable but wasteful. The right-to-repair movement, degrowth economics, and circular economy proposals all target planned obsolescence, but the force driving it — the need for perpetual sales growth — is structural, not a bad habit. As long as firms must grow or die, they'll find ways to make things die first.",
+        "Connects To": "Creative Destruction (planned obsolescence is destruction without the creation), Artificial Scarcity (obsolescence creates artificial scarcity over time), Degrowth (a world without planned obsolescence needs a different growth model), Commodity Fetishism (we desire the new model without seeing the waste trail), Feedback Loops (obsolescence creates a buy-discard-buy loop)."
+      },
+      "keywords": ["waste", "consumption", "design", "profit-motive"],
+      "metadata": {}
+    },
+    {
+      "id": "mutual-aid",
+      "name": "Mutual Aid",
+      "level": 1,
+      "category": "solidarity-and-alternatives",
+      "sort_order": 48,
+      "sections": {
+        "The Idea": "Peter Kropotkin's 1902 counter-argument to Social Darwinism: cooperation, not competition, is the primary factor in evolution and human survival. Species that help each other survive — ants, wolves, humans — outlast those that don't. Mutual aid is not charity (which flows downward from the powerful) but reciprocal support among equals. It's the barn-raising, the lending circle, the community fridge, the strike fund. Kropotkin, a geographer and anarchist prince who renounced his title, drew on both biological observation and the history of medieval guilds and peasant communes.",
+        "In the Wild": "Mutual aid societies in Black American communities that provided insurance, burial funds, and loans when banks wouldn't serve them. The Black Panthers' Free Breakfast Program. Indigenous mutual aid networks that predate colonialism by millennia. During COVID-19, mutual aid networks exploded globally — neighbors organizing to deliver groceries, share resources, and check on each other. Open-source software communities: thousands of people maintaining critical infrastructure for free, because it needs doing.",
+        "The Trap": "Mutual aid gets romanticized ('communities helping each other!') in ways that can be co-opted. When governments cut social services and say 'the community will step up,' that's not mutual aid — that's austerity. Real mutual aid is political: it builds power, demonstrates alternatives, and challenges the legitimacy of systems that fail people. It's also fragile — mutual aid networks burn out, face free rider problems, and struggle to scale. The point isn't that mutual aid replaces institutions but that it models a different relationship to need, one based on solidarity rather than transaction.",
+        "Connects To": "Free Rider Problem (mutual aid communities navigate this through trust and norms), Tragedy of the Commons (mutual aid is how actual commons are maintained), Transaction Costs (mutual aid minimizes them through relationship), Gift Economy (mutual aid as a practice of giving without accounting), Common-Pool Resources (Ostrom's communities are practicing mutual aid)."
+      },
+      "keywords": ["kropotkin", "cooperation", "anarchism", "survival", "reciprocity"],
+      "metadata": {}
+    },
+    {
+      "id": "gift-economy",
+      "name": "Gift Economy",
+      "level": 1,
+      "category": "solidarity-and-alternatives",
+      "sort_order": 49,
+      "sections": {
+        "The Idea": "An economic system based on giving rather than trading. Marcel Mauss's 'The Gift' (1925) showed that gift-giving in indigenous societies wasn't charity but a sophisticated economic system: gifts create obligations, build relationships, and circulate wealth. The potlatch of Pacific Northwest peoples, the kula ring of the Trobriand Islands — these aren't primitive precursors to markets but parallel systems with their own logic. In gift economies, wealth is measured not by what you accumulate but by what you give away.",
+        "In the Wild": "The Burning Man principle of 'gifting' (no money exchanged). Open-source software as a gift economy: developers give code, receive reputation, build relationships. Academic peer review: scholars review each other's work for free. Babysitting co-ops. Tool libraries. Community seed swaps. Religious tithing. Potluck dinners. Every friendship is partly a gift economy — you don't keep a ledger of who bought lunch last.",
+        "The Trap": "Gift economies are real and powerful, but they have their own shadow: the gift that creates an obligation you didn't want, the social pressure to give beyond your means, the status competition of who can give the most. Mauss himself showed that gifts can be coercive — the 'poison in the gift.' Corporate 'gifts' (free samples, loyalty rewards) are marketing strategies dressed in gift language. The question is whether a gift economy can scale beyond tight-knit communities, or whether it only works where people know each other well enough to maintain reciprocity.",
+        "Connects To": "Mutual Aid (gift economy at the community level), Commodity Fetishism (gift economies make social relations visible, markets hide them), Transaction Costs (gift economies minimize formal transaction costs but increase social obligations), Veblen Goods (conspicuous consumption vs. conspicuous giving), Endowment Effect (in gift economies, the endowment effect works differently — things are for circulating)."
+      },
+      "keywords": ["mauss", "reciprocity", "potlatch", "indigenous", "obligation"],
+      "metadata": {}
+    },
+    {
+      "id": "commons-based-peer-production",
+      "name": "Commons-Based Peer Production",
+      "level": 1,
+      "category": "solidarity-and-alternatives",
+      "sort_order": 50,
+      "sections": {
+        "The Idea": "Yochai Benkler's term for what happens when large groups of people collaborate to produce shared resources without traditional hierarchies or market incentives. Linux, Wikipedia, OpenStreetMap, Creative Commons — these aren't firms or markets but a third mode of production where people self-select into tasks, work voluntarily, and share the output freely. Benkler argues this isn't a curiosity but a serious economic model enabled by the near-zero marginal cost of digital collaboration.",
+        "In the Wild": "Wikipedia: 60 million articles in 300 languages, produced by volunteers, free to everyone, and more accurate than Britannica on average. Linux runs most of the internet's servers, most smartphones (via Android), and most supercomputers — built collaboratively by thousands of contributors. OpenStreetMap rivals Google Maps in many regions. Arduino, Blender, Signal — critical infrastructure built as commons. This isn't a niche: commons-based peer production underlies much of the modern digital economy.",
+        "The Trap": "The dark side: tech companies build empires on commons-based labor. Google profits from Linux and Wikipedia without paying contributors. GitHub (owned by Microsoft) hosts the world's open-source code. Amazon Web Services runs on open-source infrastructure. The commons produces the value; capital captures it. This is what Christopher Kelty calls the 'recursive public' problem — communities that build shared infrastructure must constantly fight enclosure by the very platforms they enable. Commons-based production works; the question is who benefits.",
+        "Connects To": "Public Goods (CBPP produces public goods without government), Artificial Scarcity (CBPP opposes it by building in the open), Marginal Cost (CBPP works because digital marginal costs approach zero), Division of Labor (CBPP achieves it through self-selection, not management), Recursive Value (the commons produces value that sustains the commons — value feeding back on itself)."
+      },
+      "keywords": ["benkler", "open-source", "wikipedia", "collaboration", "digital-commons"],
+      "metadata": {}
+    },
+    {
+      "id": "prefigurative-economics",
+      "name": "Prefigurative Economics",
+      "level": 1,
+      "category": "solidarity-and-alternatives",
+      "sort_order": 51,
+      "sections": {
+        "The Idea": "Building the world you want inside the world as it is. Prefiguration means the means must embody the ends — you can't build a cooperative society through authoritarian methods. In economics, this means creating alternative economic institutions NOW: worker cooperatives, community land trusts, credit unions, time banks, solidarity economy networks. Not as stepping stones to revolution but as the revolution itself, happening incrementally, in the cracks of the existing system.",
+        "In the Wild": "Mondragon Corporation in the Basque Country: a network of worker-owned cooperatives with 80,000+ members, operating since 1956. Zapatista autonomous communities in Chiapas, Mexico, running their own economic systems since 1994. Community land trusts that remove housing from the speculative market. Mutual credit systems like Sardex in Sardinia. Worker co-ops in Emilia-Romagna, Italy, where cooperatives account for 30% of GDP. Transition Towns building local resilience.",
+        "The Trap": "Prefigurative economics gets criticized from the revolutionary left ('you can't build socialism in one co-op — you need systemic change') and from the mainstream ('cute but can't scale'). Both critiques have weight. Cooperatives operating in a capitalist market face intense competitive pressure and can end up replicating the dynamics they sought to escape. But the prefigurative response is pragmatic: if not now, when? If not here, where? Every successful cooperative is proof that another economy is possible — not in theory, but in practice.",
+        "Connects To": "Mutual Aid (the ethic that animates prefigurative economics), Alienation (prefiguration aims to create non-alienating work), Economies of Scale (the tension: can cooperatives compete at scale?), Creative Destruction (prefiguration creates without destroying), Commons-Based Peer Production (the digital wing of prefigurative economics)."
+      },
+      "keywords": ["anarchism", "practice", "means-ends", "cooperatives", "direct-action"],
+      "metadata": {}
+    },
+    {
+      "id": "degrowth",
+      "name": "Degrowth",
+      "level": 1,
+      "category": "solidarity-and-alternatives",
+      "sort_order": 52,
+      "sections": {
+        "The Idea": "The radical proposition that infinite economic growth on a finite planet is not just impossible but undesirable. Degrowth doesn't mean recession — it means deliberately designing an economy that uses less energy and materials while increasing well-being, equality, and ecological health. GDP measures throughput (how much stuff moves through the economy), not welfare. Degrowth asks: what if we optimized for flourishing instead of flow? The idea draws on ecological economics (Georgescu-Roegen), post-development theory (Latouche), and indigenous cosmovisions that never assumed growth was the goal.",
+        "In the Wild": "Bhutan measures Gross National Happiness instead of GDP. The 'Buen Vivir' framework in Ecuador and Bolivia, rooted in indigenous Quechua concepts of 'living well' rather than 'having more.' The four-day work week movement (same output, less labor, more life). Community-supported agriculture. Repair cafes. The global movement against planned obsolescence. Research consistently shows that above a moderate threshold, more GDP does not increase happiness, health, or life satisfaction.",
+        "The Trap": "Degrowth terrifies mainstream economists and politicians because the entire modern system — debt, pensions, taxation, employment — is designed around growth. Stop growing and debts become unpayable, pensions collapse, unemployment rises. Degrowth proponents know this: the point isn't to stop growth within the current system but to build a different system that doesn't require growth. This is the hardest sell in economics — not because the idea is wrong but because the transition is genuinely difficult and the powerful have everything to lose.",
+        "Connects To": "Diminishing Marginal Returns (well-being has diminishing returns to GDP), Planned Obsolescence (degrowth eliminates the need for it), Externalities (growth-dependent economies externalize ecological costs), Compound Interest (compound growth is the mathematical heart of the problem), Prefigurative Economics (degrowth is practiced, not just theorized), Feedback Loops (growth creates ecological feedback that undermines growth)."
+      },
+      "keywords": ["ecology", "limits", "sufficiency", "well-being", "gdp"],
+      "metadata": {}
+    },
+    {
+      "id": "recursive-value",
+      "name": "Recursive Value",
+      "level": 1,
+      "category": "solidarity-and-alternatives",
+      "sort_order": 53,
+      "sections": {
+        "The Idea": "What if value could refer back to itself — creating the conditions for its own continuation? A forest produces the soil that sustains the forest. A community's trust generates the cooperation that deepens the trust. An open-source project creates tools that enable more open-source projects. Recursive value is value that feeds back into its own conditions of existence. It's the economic parallel to autopoiesis in biology — self-creating systems. This isn't a metaphor: it's a design principle for economies that sustain themselves without requiring external extraction or infinite growth.",
+        "In the Wild": "A community garden that feeds the neighbors who tend it. A credit union owned by the depositors it serves. A cooperative that reinvests profits into worker education, which increases productivity, which generates profits to reinvest. An ecosystem: every organism's waste is another organism's resource — the whole thing sustains itself recursively. The internet itself: infrastructure that enables the creation of more infrastructure. Recursive value is all around us; we just don't have economic language for it because mainstream economics thinks in lines, not loops.",
+        "The Trap": "Recursive value sounds beautiful, but self-referential systems can be fragile. A recursive loop that reinforces positive patterns can also reinforce negative ones — a community whose distrust generates isolation generates more distrust. The recursion is value-neutral; what makes it generative or degenerative is the quality of the relationships within it. Also: recursive value challenges the very concept of measurement in economics, because value that refers to itself can't be pinned to an external metric. How do you price trust? How do you GDP a forest?",
+        "Connects To": "Feedback Loops (recursive value is a specific kind of positive feedback), Reflexivity (Soros's concept applied to value creation itself), Emergence in Markets (recursive value as an emergent property of well-designed systems), Commons-Based Peer Production (the clearest existing example of recursive value), Degrowth (recursive value enables economies that don't need linear growth), Compound Interest (the extractive twin — compound interest is recursive value captured by capital)."
+      },
+      "keywords": ["recursion", "self-reference", "value-creation", "complexity", "autopoiesis"],
+      "metadata": {}
+    },
+
+    {
+      "id": "l2-costs-and-tradeoffs",
+      "name": "Everything Has a Price (Even Doing Nothing)",
+      "level": 2,
+      "category": "costs-and-tradeoffs",
+      "sort_order": 54,
+      "composite_of": ["opportunity-cost", "sunk-cost", "marginal-cost", "transaction-costs", "externalities", "switching-costs"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "These six concepts share a single insight: every action has costs beyond what's on the price tag, and every inaction has costs too. The seen and the unseen. The paid and the externalized. The recovered and the sunk. Together they form a grammar of hidden costs — the things markets don't show you but that shape your life anyway.",
+        "How These Weave": "Opportunity cost teaches you to look sideways (what else could you do?). Sunk cost teaches you to look forward (what's done is done). Marginal cost teaches you to think at the edge (one more unit). Transaction costs explain why institutions exist (coordination isn't free). Externalities reveal who else is paying (the river downstream, the child breathing the air). Switching costs explain why you're stuck (the golden cage). Together, these concepts dissolve the illusion that economics is about money. It's about choices, constraints, and who bears the invisible costs."
+      },
+      "keywords": ["costs", "tradeoffs", "decisions", "meta"],
+      "metadata": {}
+    },
+    {
+      "id": "l2-returns-and-scale",
+      "name": "More Is Not Always Better",
+      "level": 2,
+      "category": "returns-and-scale",
+      "sort_order": 55,
+      "composite_of": ["diminishing-marginal-returns", "economies-of-scale", "comparative-advantage", "division-of-labor", "compound-interest", "feedback-loops"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "This group maps how things grow, scale, and sometimes hit walls. The core tension: some processes reward bigness (economies of scale, compound interest, positive feedback loops) while others punish it (diminishing returns, diseconomies of scale, negative feedback). Understanding when more helps and when more hurts is one of the deepest practical skills in economics — and in life.",
+        "How These Weave": "Diminishing returns and economies of scale are in constant tension — one says bigger gets harder, the other says bigger gets cheaper. Division of labor and comparative advantage explain why specialization works, but also why it can trap people and nations in narrow roles. Compound interest and feedback loops show how small advantages amplify over time — for wealth, for debt, for power, for ecological damage. The thread connecting all six: growth is nonlinear, and the shape of the curve matters more than the direction."
+      },
+      "keywords": ["returns", "scale", "growth", "meta"],
+      "metadata": {}
+    },
+    {
+      "id": "l2-supply-and-demand",
+      "name": "The Dance of Buyers and Sellers",
+      "level": 2,
+      "category": "supply-and-demand",
+      "sort_order": 56,
+      "composite_of": ["supply-and-demand", "elasticity", "price-equilibrium", "arbitrage", "price-discrimination"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "The market as a living system: buyers and sellers meeting, negotiating, adjusting, converging on prices. This is the most familiar territory in economics — the part taught in every Econ 101 class. It's powerful and genuinely useful for understanding everyday market behavior. It's also, as the other categories in this grammar reveal, radically incomplete.",
+        "How These Weave": "Supply and demand gives you the basic model. Elasticity tells you how sensitive the actors are. Price equilibrium describes where they settle. Arbitrage shows how price differences get corrected. Price discrimination reveals how sellers exploit information advantages. Together they paint a picture of markets as discovery mechanisms — but every concept in this group also reveals a crack: demand excludes the poor, equilibrium can settle at misery, arbitrage requires information the powerful hoard, and price discrimination is power wearing an efficiency mask."
+      },
+      "keywords": ["markets", "price", "exchange", "meta"],
+      "metadata": {}
+    },
+    {
+      "id": "l2-goods-and-resources",
+      "name": "Not All Things Are Alike",
+      "level": 2,
+      "category": "goods-and-resources",
+      "sort_order": 57,
+      "composite_of": ["substitutes-and-complements", "public-goods", "common-pool-resources", "normal-and-inferior-goods", "veblen-goods", "artificial-scarcity"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Economics pretends to be about 'goods' in general, but not all goods are alike. Some replace each other, some need each other. Some are shared by nature, some are hoarded by design. Some get cheaper as you get richer, some get more expensive because they're expensive. This group maps the taxonomy of goods — and in doing so reveals that the category of 'goods' is itself political. What counts as a commodity versus a commons is not given by nature but chosen by power.",
+        "How These Weave": "Substitutes and complements show that goods exist in relationship, not isolation. Public goods and common-pool resources reveal that some things work best when shared — and that sharing has been systematically undermined. Normal and inferior goods map consumption to class. Veblen goods show that price can be the product. Artificial scarcity ties it together: in a world of potential abundance, scarcity is increasingly manufactured. The taxonomy of goods is a map of who controls access to what."
+      },
+      "keywords": ["goods", "types", "resources", "meta"],
+      "metadata": {}
+    },
+    {
+      "id": "l2-efficiency-and-welfare",
+      "name": "When Markets Fail",
+      "level": 2,
+      "category": "efficiency-and-welfare",
+      "sort_order": 58,
+      "composite_of": ["pareto-efficiency", "deadweight-loss", "tragedy-of-the-commons", "free-rider-problem", "moral-hazard", "adverse-selection"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Even within the mainstream framework, markets fail constantly. They fail when information is asymmetric, when goods are public, when resources are shared, when incentives misalign. This group documents those failures — and reveals an interesting tension: mainstream economics identifies market failure as an exception requiring correction, while critical economics sees it as the norm requiring transformation.",
+        "How These Weave": "Pareto efficiency defines the ideal that markets are supposed to reach. Deadweight loss measures how far they fall short. The tragedy of the commons and the free rider problem show collective action failures. Moral hazard and adverse selection show information failures. Together they form an honest self-critique from within the market paradigm: even on its own terms, the free market often doesn't work. The question is whether the right response is better markets, better regulation, or something else entirely."
+      },
+      "keywords": ["failure", "welfare", "efficiency", "meta"],
+      "metadata": {}
+    },
+    {
+      "id": "l2-behavioral",
+      "name": "The Irrational Animal",
+      "level": 2,
+      "category": "behavioral",
+      "sort_order": 59,
+      "composite_of": ["loss-aversion", "bounded-rationality", "anchoring", "endowment-effect", "hyperbolic-discounting", "nudge-theory"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Homo economicus — the rational, self-interested, utility-maximizing agent — doesn't exist. Real people are loss-averse, present-biased, anchored by irrelevant numbers, attached to what they own, and limited in their ability to process information. Behavioral economics documents these departures from rationality with devastating precision. The question is what to do about it: fix the people, fix the environment, or question whether 'rationality' was ever the right standard.",
+        "How These Weave": "Bounded rationality is the foundation: we can't optimize, so we use shortcuts. Loss aversion, anchoring, and the endowment effect are specific shortcuts that systematically bias our decisions. Hyperbolic discounting biases us toward the present. Nudge theory is the policy response: since people are predictably irrational, redesign the choice environment. Together they demolish the rational actor but raise a new question: who gets to define what's rational, and who gets to redesign the choices?"
+      },
+      "keywords": ["behavioral", "psychology", "bias", "meta"],
+      "metadata": {}
+    },
+    {
+      "id": "l2-systems-and-cycles",
+      "name": "The Economy Eats Itself",
+      "level": 2,
+      "category": "systems-and-cycles",
+      "sort_order": 60,
+      "composite_of": ["creative-destruction", "rent-seeking", "regulatory-capture", "reflexivity", "inflation", "boom-and-bust", "emergence-in-markets"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "The economy is not a machine that reaches equilibrium and stays there. It's a living system that creates, destroys, captures, reflects, inflates, booms, busts, and emerges — ceaselessly. This group maps the dynamic, self-consuming, self-generating patterns of capitalism as a system. These aren't aberrations to be managed but intrinsic properties of an economy built on creative destruction and compound growth.",
+        "How These Weave": "Creative destruction is the engine: the old must die for the new to live. Rent-seeking and regulatory capture show how the winners try to stop the engine and lock in their position. Reflexivity reveals that the system is self-aware in a destabilizing way — beliefs about the economy change the economy. Inflation and boom-and-bust are the rhythms that result. Emergence shows that the system's behavior can't be reduced to its parts. The economy is a complex adaptive system — and no one is driving."
+      },
+      "keywords": ["systems", "cycles", "dynamics", "meta"],
+      "metadata": {}
+    },
+    {
+      "id": "l2-critique-and-power",
+      "name": "Who Benefits?",
+      "level": 2,
+      "category": "critique-and-power",
+      "sort_order": 61,
+      "composite_of": ["commodity-fetishism", "surplus-value", "primitive-accumulation", "alienation", "reserve-army-of-labor", "planned-obsolescence"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Marx asked the question that mainstream economics avoids: who benefits from this arrangement, and at whose expense? These six concepts — mostly Marxist in origin — form a coherent critique of capitalism not as a broken system but as a system working exactly as designed: extracting surplus value from workers, concealing that extraction behind commodity fetishism, maintaining discipline through unemployment, and ensuring perpetual consumption through planned obsolescence. Whether you agree or not, these concepts make visible what market economics leaves invisible.",
+        "How These Weave": "Primitive accumulation explains the violent origins. Surplus value explains the ongoing extraction. Alienation describes the human cost. The reserve army of labor explains how wages stay low. Commodity fetishism explains why we don't see any of this when we look at a price tag. Planned obsolescence ensures the cycle never ends. Together they form a system: historical theft → structural exploitation → psychological alienation → ideological concealment → enforced consumption → repeat. Whether this is the whole truth or a partial lens, it's a lens that reveals what other frameworks hide."
+      },
+      "keywords": ["marxism", "critique", "power", "meta"],
+      "metadata": {}
+    },
+    {
+      "id": "l2-solidarity-and-alternatives",
+      "name": "Another Economy Is Possible",
+      "level": 2,
+      "category": "solidarity-and-alternatives",
+      "sort_order": 62,
+      "composite_of": ["mutual-aid", "gift-economy", "commons-based-peer-production", "prefigurative-economics", "degrowth", "recursive-value"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "After the critique, the creation. These six concepts aren't utopian fantasies — they're existing practices, operating right now, often at significant scale. Mutual aid networks, gift economies, open-source production, worker cooperatives, degrowth communities, and recursive value systems are all functioning alternatives to the dominant model. They don't need capitalism to fail in order to exist. They already exist in its gaps, its margins, and sometimes its mainstream.",
+        "How These Weave": "Mutual aid provides the ethic: solidarity, not charity. Gift economy provides the mechanism: circulation, not accumulation. Commons-based peer production provides the model: collaborative creation at scale. Prefigurative economics provides the strategy: build the alternative now. Degrowth provides the horizon: an economy that serves life rather than consuming it. Recursive value provides the theory: value that sustains its own conditions of existence. Together they sketch the outline of an economy based on cooperation, sufficiency, and self-renewing abundance."
+      },
+      "keywords": ["alternatives", "anarchism", "commons", "solidarity", "meta"],
+      "metadata": {}
+    },
+
+    {
+      "id": "l3-the-rational-actor",
+      "name": "The Rational Actor",
+      "level": 3,
+      "category": "meta-lens",
+      "sort_order": 63,
+      "composite_of": ["l2-costs-and-tradeoffs", "l2-returns-and-scale", "l2-supply-and-demand"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "The classical and neoclassical economics worldview: people are rational, markets are efficient, prices contain information, and the invisible hand guides self-interest toward collective benefit. This is the dominant paradigm — the one taught in most Econ 101 classes, the one that shapes policy, the one that most people mean when they say 'economics.' Its toolkit (costs, tradeoffs, returns, supply, demand) is genuinely powerful for understanding market behavior.",
+        "The Lens": "The rational actor lens sees the economy as a system of incentives and constraints, where individuals optimize and markets coordinate. It's mathematical, precise, and elegant. When it works — and it often does for everyday market transactions — it works beautifully. It explains why prices adjust to shortages, why specialization increases productivity, and why competition drives innovation.",
+        "What It Illuminates": "How markets coordinate behavior without central planning. Why prices carry information. How trade can make everyone better off. The logic of scarcity, tradeoffs, and marginal thinking. The conditions under which competition serves consumers. The efficiency gains from specialization and exchange.",
+        "What It Obscures": "Power. History. Emotion. Community. Ecology. The rational actor lens assumes voluntary exchange between equals, but most economic relationships involve unequal power. It assumes markets start from a neutral position, but every market inherits a history of violence and dispossession. It assumes preferences are given, but preferences are shaped by advertising, culture, and ideology. It sees the world in equilibrium, but the world is always in motion."
+      },
+      "keywords": ["classical", "neoclassical", "rational", "homo-economicus"],
+      "metadata": {}
+    },
+    {
+      "id": "l3-the-messy-reality",
+      "name": "The Messy Reality",
+      "level": 3,
+      "category": "meta-lens",
+      "sort_order": 64,
+      "composite_of": ["l2-goods-and-resources", "l2-efficiency-and-welfare", "l2-behavioral"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "The correction to the classical story, from within the mainstream tradition itself. Institutional economists, behavioral economists, and welfare economists have spent a century documenting all the ways reality departs from the textbook: goods aren't all alike, markets fail in predictable ways, and people are not rational optimizers. This isn't anti-economics — it's economics growing up and confronting its own assumptions.",
+        "The Lens": "The messy reality lens sees the economy as a complex, imperfect system full of information problems, behavioral quirks, and institutional frictions. It keeps the mathematical toolkit of mainstream economics but applies it to realistic humans in realistic institutions. The goal is better policy design: if people are loss-averse, design savings programs accordingly. If markets fail for public goods, provide them publicly.",
+        "What It Illuminates": "Why real markets deviate from textbook predictions. How cognitive biases shape economic behavior. Why some goods need public provision. How information asymmetry creates dysfunction. The importance of institutional design — the 'rules of the game' that shape economic outcomes. The gap between theoretical efficiency and lived experience.",
+        "What It Obscures": "The messy reality lens is reformist, not transformative. It identifies market failures but not market harms — it asks 'how can we make this work better?' but rarely 'should this exist at all?' It treats behavioral biases as individual problems rather than structural features. It can see that nudging people toward retirement savings is good, but it can't see that the retirement system itself might be the problem. It fixes the engine without questioning where the car is going."
+      },
+      "keywords": ["institutional", "behavioral", "complexity", "real-world"],
+      "metadata": {}
+    },
+    {
+      "id": "l3-the-political-economy",
+      "name": "The Political Economy",
+      "level": 3,
+      "category": "meta-lens",
+      "sort_order": 65,
+      "composite_of": ["l2-systems-and-cycles", "l2-critique-and-power", "l2-solidarity-and-alternatives"],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "The oldest and most radical tradition in economic thought — economics as the study of power, class, and possibility. Before economics became a 'science' of markets, it was 'political economy': the study of how societies organize production, distribution, and the relationships between people. Marx, Kropotkin, Polanyi, Ostrom, and contemporary thinkers in degrowth and solidarity economics share this tradition. They ask not 'is the market efficient?' but 'who does the economy serve, and could it serve differently?'",
+        "The Lens": "The political economy lens sees the economy as a social construction — not a natural phenomenon but a set of rules, institutions, and power relations that could be organized otherwise. It insists that every economic arrangement produces winners and losers, and that the arrangement itself is a political choice. It takes seriously both the critique (what's wrong) and the alternative (what else is possible), moving between Marx's diagnosis and Kropotkin's vision.",
+        "What It Illuminates": "The historical origins of economic inequality (not talent but theft). The structural mechanisms that reproduce class (not laziness but extraction). The ideological function of economic 'science' (naturalizing a particular arrangement as inevitable). The existence of functioning alternatives (cooperatives, commons, gift economies). The possibility that another economy is not only desirable but already partially here.",
+        "What It Obscures": "This lens can be so focused on power and structure that it undervalues individual agency, innovation, and the genuine coordination achievements of markets. It can romanticize alternatives and underestimate transition costs. It sometimes treats all mainstream economics as ideology rather than engaging with its genuine insights about efficiency, incentives, and information. At its worst, political economy becomes its own orthodoxy — as certain of its answers as the neoclassical school it critiques."
+      },
+      "keywords": ["political-economy", "marxism", "anarchism", "power", "alternatives"],
+      "metadata": {}
+    }
+  ]
+}

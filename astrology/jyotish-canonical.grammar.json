@@ -1,0 +1,419 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "recursive.eco community",
+        "role": "author",
+        "url": "https://recursive.eco"
+      }
+    ]
+  },
+  "name": "Jyotish \u2014 Canonical",
+  "description": "A canonical Vedic astrology (Jyotish) grammar covering grahas (planets), rashis (signs), bhavas (houses), and nakshatras (lunar mansions). A living document \u2014 contribute at github.com/PlayfulProcess/recursive.eco-schemas",
+  "grammar_type": "astrology",
+  "tags": ["astrology", "jyotish", "vedic", "canonical", "nakshatras"],
+  "items": [
+    {
+      "id": "graha-surya",
+      "name": "Surya",
+      "symbol": "\u2609",
+      "category": "graha",
+      "sections": {
+        "Story": "Surya is the Atma \u2014 the soul, the divine light of consciousness. In Jyotish, the Sun represents the father, authority, government, and the eternal self that is beyond birth and death.",
+        "Light": "Authority, dharma, self-realization, leadership, vitality, honor from the state.",
+        "Shadow": "Excessive pride, domination, father wounds, separation from community.",
+        "Dignity": "Exalted in Mesha (Aries). Debilitated in Tula (Libra). Own sign: Simha (Leo)."
+      },
+      "keywords": ["atma", "soul", "father", "authority", "dharma"],
+      "metadata": { "planet": "Sun", "english_name": "Sun" }
+    },
+    {
+      "id": "graha-chandra",
+      "name": "Chandra",
+      "symbol": "\u263d",
+      "category": "graha",
+      "sections": {
+        "Story": "Chandra is Manas \u2014 the mind, the feeling nature, the flow of consciousness moment to moment. In Jyotish, the Moon is arguably more important than the Sun; the Rashi chart is calculated from the Moon sign.",
+        "Light": "Emotional intelligence, nurturing, public connection, fertility, comfort.",
+        "Shadow": "Instability of mind, emotional dependency, anxiety, attachment to comfort.",
+        "Dignity": "Exalted in Vrishabha (Taurus). Debilitated in Vrishchika (Scorpio). Own sign: Karka (Cancer)."
+      },
+      "keywords": ["manas", "mind", "mother", "emotions", "public"],
+      "metadata": { "planet": "Moon", "english_name": "Moon" }
+    },
+    {
+      "id": "graha-mangala",
+      "name": "Mangala",
+      "symbol": "\u2642",
+      "category": "graha",
+      "sections": {
+        "Story": "Mangala is the commander \u2014 raw energy, courage, and the power to act. Mars in Jyotish governs brothers, property, surgery, and the fire of tapas (spiritual heat).",
+        "Light": "Courage, technical skill, logical precision, protective strength, land ownership.",
+        "Shadow": "Anger, accidents, conflicts with siblings, Mangal Dosha in marriage.",
+        "Dignity": "Exalted in Makara (Capricorn). Debilitated in Karka (Cancer). Own signs: Mesha (Aries), Vrishchika (Scorpio)."
+      },
+      "keywords": ["energy", "courage", "brothers", "property", "surgery"],
+      "metadata": { "planet": "Mars", "english_name": "Mars" }
+    },
+    {
+      "id": "graha-budha",
+      "name": "Budha",
+      "symbol": "\u263f",
+      "category": "graha",
+      "sections": {
+        "Story": "Budha is discrimination \u2014 the intellect that sorts, categorizes, and communicates. Mercury in Jyotish is the prince, adaptable and influenced by the planets it associates with.",
+        "Light": "Intelligence, speech, commerce, mathematics, writing, humor.",
+        "Shadow": "Nervous disorders, duplicity, overthinking, skin conditions.",
+        "Dignity": "Exalted in Kanya (Virgo). Debilitated in Meena (Pisces). Own signs: Mithuna (Gemini), Kanya (Virgo)."
+      },
+      "keywords": ["intellect", "speech", "commerce", "discrimination", "adaptability"],
+      "metadata": { "planet": "Mercury", "english_name": "Mercury" }
+    },
+    {
+      "id": "graha-guru",
+      "name": "Guru",
+      "symbol": "\u2643",
+      "category": "graha",
+      "sections": {
+        "Story": "Guru (Brihaspati) is the great teacher \u2014 wisdom, dharma, and divine grace. Jupiter in Jyotish is the most benefic planet, governing children, husband (in a woman's chart), wealth, and spiritual knowledge.",
+        "Light": "Wisdom, prosperity, children, spiritual teaching, dharma, expansion.",
+        "Shadow": "Overindulgence, false teaching, weight gain, complacency, dogmatism.",
+        "Dignity": "Exalted in Karka (Cancer). Debilitated in Makara (Capricorn). Own signs: Dhanus (Sagittarius), Meena (Pisces)."
+      },
+      "keywords": ["wisdom", "teacher", "children", "dharma", "prosperity"],
+      "metadata": { "planet": "Jupiter", "english_name": "Jupiter" }
+    },
+    {
+      "id": "graha-shukra",
+      "name": "Shukra",
+      "symbol": "\u2640",
+      "category": "graha",
+      "sections": {
+        "Story": "Shukra is the guru of the asuras \u2014 beauty, desire, and the knowledge of resurrection. Venus in Jyotish governs wife (in a man's chart), luxury, vehicles, poetry, and the arts.",
+        "Light": "Beauty, romance, luxury, artistic talent, vehicles, diplomacy.",
+        "Shadow": "Lust, over-attachment to pleasure, vanity, materialism.",
+        "Dignity": "Exalted in Meena (Pisces). Debilitated in Kanya (Virgo). Own signs: Vrishabha (Taurus), Tula (Libra)."
+      },
+      "keywords": ["beauty", "love", "luxury", "arts", "wife", "vehicles"],
+      "metadata": { "planet": "Venus", "english_name": "Venus" }
+    },
+    {
+      "id": "graha-shani",
+      "name": "Shani",
+      "symbol": "\u2644",
+      "category": "graha",
+      "sections": {
+        "Story": "Shani is the great karmic teacher \u2014 slow, heavy, and exacting. Saturn in Jyotish governs suffering, service, longevity, discipline, and the working class. Sade Sati (7.5-year Saturn transit) is a rite of passage.",
+        "Light": "Discipline, longevity, service, detachment, spiritual maturity, democratic values.",
+        "Shadow": "Chronic illness, delay, depression, poverty, isolation, fear.",
+        "Dignity": "Exalted in Tula (Libra). Debilitated in Mesha (Aries). Own signs: Makara (Capricorn), Kumbha (Aquarius)."
+      },
+      "keywords": ["karma", "discipline", "suffering", "longevity", "service"],
+      "metadata": { "planet": "Saturn", "english_name": "Saturn" }
+    },
+    {
+      "id": "graha-rahu",
+      "name": "Rahu",
+      "symbol": "\u260a",
+      "category": "graha",
+      "sections": {
+        "Story": "Rahu is the shadow planet of obsession \u2014 the head of the serpent who swallowed the nectar of immortality. It represents insatiable desire, foreign influences, technology, and unconventional paths.",
+        "Light": "Innovation, foreign connections, research, material ambition, breaking taboos.",
+        "Shadow": "Obsession, illusion, addiction, scandals, fear of the unknown.",
+        "Dignity": "Strong in Vrishabha/Mithuna. Weak in Vrishchika/Dhanus. Acts like the lord of the sign it occupies."
+      },
+      "keywords": ["obsession", "illusion", "foreign", "technology", "desire"],
+      "metadata": { "planet": "North Node", "english_name": "North Node" }
+    },
+    {
+      "id": "graha-ketu",
+      "name": "Ketu",
+      "symbol": "\u260b",
+      "category": "graha",
+      "sections": {
+        "Story": "Ketu is the shadow planet of liberation \u2014 the tail of the serpent, representing spiritual detachment, past-life mastery, and the impulse to transcend the material world.",
+        "Light": "Spiritual insight, moksha, past-life skills, healing, mysticism.",
+        "Shadow": "Confusion, self-doubt, isolation, psychic disturbances, loss.",
+        "Dignity": "Strong in Vrishchika/Dhanus. Weak in Vrishabha/Mithuna. Acts like the lord of the sign it occupies."
+      },
+      "keywords": ["liberation", "moksha", "past life", "detachment", "mysticism"],
+      "metadata": { "planet": "South Node", "english_name": "South Node" }
+    },
+    {
+      "id": "rashi-mesha",
+      "name": "Mesha",
+      "symbol": "\u2648",
+      "category": "rashi",
+      "sections": {
+        "Story": "Mesha is the first impulse \u2014 pure initiating fire. Ruled by Mangala, this is where the soul first takes action. Pitta constitution, cardinal fire, the warrior's beginning.",
+        "Light": "Courage, independence, pioneering spirit, athletic ability.",
+        "Shadow": "Rashness, selfishness, burns and fevers, head injuries."
+      },
+      "keywords": ["fire", "cardinal", "Mars-ruled", "initiative"],
+      "metadata": { "sign": "Aries", "english_name": "Aries", "ruler": "Mars" }
+    },
+    {
+      "id": "rashi-vrishabha",
+      "name": "Vrishabha",
+      "symbol": "\u2649",
+      "category": "rashi",
+      "sections": {
+        "Story": "Vrishabha is the fertile earth \u2014 wealth, beauty, and sensory pleasure. Ruled by Shukra, this sign builds, stabilizes, and attracts. The bull who does not move unless moved by love.",
+        "Light": "Stability, wealth accumulation, artistic sense, loyalty.",
+        "Shadow": "Stubbornness, materialism, throat ailments, possessiveness."
+      },
+      "keywords": ["earth", "fixed", "Venus-ruled", "wealth"],
+      "metadata": { "sign": "Taurus", "english_name": "Taurus", "ruler": "Venus" }
+    },
+    {
+      "id": "rashi-mithuna",
+      "name": "Mithuna",
+      "symbol": "\u264a",
+      "category": "rashi",
+      "sections": {
+        "Story": "Mithuna is the twins \u2014 duality, communication, and the play of the mind. Ruled by Budha, this sign gathers, connects, and distributes knowledge.",
+        "Light": "Communication, versatility, business acumen, humor.",
+        "Shadow": "Restlessness, duplicity, nervous exhaustion, skin issues."
+      },
+      "keywords": ["air", "mutable", "Mercury-ruled", "communication"],
+      "metadata": { "sign": "Gemini", "english_name": "Gemini", "ruler": "Mercury" }
+    },
+    {
+      "id": "rashi-karka",
+      "name": "Karka",
+      "symbol": "\u264b",
+      "category": "rashi",
+      "sections": {
+        "Story": "Karka is the crab \u2014 the protective shell around tender feeling. Ruled by Chandra, this is where home, mother, and emotional nourishment reside. Guru (Jupiter) finds exaltation here.",
+        "Light": "Emotional depth, nurturing, home-making, public influence.",
+        "Shadow": "Moodiness, clinging, digestive issues, over-protectiveness."
+      },
+      "keywords": ["water", "cardinal", "Moon-ruled", "nurturing"],
+      "metadata": { "sign": "Cancer", "english_name": "Cancer", "ruler": "Moon" }
+    },
+    {
+      "id": "rashi-simha",
+      "name": "Simha",
+      "symbol": "\u264c",
+      "category": "rashi",
+      "sections": {
+        "Story": "Simha is the lion \u2014 sovereignty, creative power, and the radiance of the soul. Ruled by Surya, this is where dharma shines through personal expression and leadership.",
+        "Light": "Leadership, creative power, generosity, dignity, charisma.",
+        "Shadow": "Pride, autocracy, heart conditions, need for adulation."
+      },
+      "keywords": ["fire", "fixed", "Sun-ruled", "leadership"],
+      "metadata": { "sign": "Leo", "english_name": "Leo", "ruler": "Sun" }
+    },
+    {
+      "id": "rashi-kanya",
+      "name": "Kanya",
+      "symbol": "\u264d",
+      "category": "rashi",
+      "sections": {
+        "Story": "Kanya is the maiden \u2014 discrimination, purity, and service. Ruled by Budha, this is where intellect meets devotion. The sign of the artisan, the healer, and the analyst.",
+        "Light": "Analytical skill, service orientation, health awareness, craftsmanship.",
+        "Shadow": "Criticism, worry, intestinal disorders, perfectionism."
+      },
+      "keywords": ["earth", "mutable", "Mercury-ruled", "analysis"],
+      "metadata": { "sign": "Virgo", "english_name": "Virgo", "ruler": "Mercury" }
+    },
+    {
+      "id": "rashi-tula",
+      "name": "Tula",
+      "symbol": "\u264e",
+      "category": "rashi",
+      "sections": {
+        "Story": "Tula is the scales \u2014 balance, justice, and the art of relationship. Ruled by Shukra, this is where Shani (Saturn) finds exaltation. Commerce, law, and partnership thrive here.",
+        "Light": "Diplomacy, fairness, aesthetic sense, commercial skill.",
+        "Shadow": "Indecision, dependency, kidney/lower back issues, superficiality."
+      },
+      "keywords": ["air", "cardinal", "Venus-ruled", "balance"],
+      "metadata": { "sign": "Libra", "english_name": "Libra", "ruler": "Venus" }
+    },
+    {
+      "id": "rashi-vrishchika",
+      "name": "Vrishchika",
+      "symbol": "\u264f",
+      "category": "rashi",
+      "sections": {
+        "Story": "Vrishchika is the scorpion \u2014 transformation, hidden power, and the occult. Ruled by Mangala (and Ketu), this is the sign of deep research, mystery, and regeneration.",
+        "Light": "Research ability, occult knowledge, psychological depth, resilience.",
+        "Shadow": "Jealousy, secrecy, reproductive issues, vindictiveness."
+      },
+      "keywords": ["water", "fixed", "Mars-ruled", "transformation"],
+      "metadata": { "sign": "Scorpio", "english_name": "Scorpio", "ruler": "Mars" }
+    },
+    {
+      "id": "rashi-dhanus",
+      "name": "Dhanus",
+      "symbol": "\u2650",
+      "category": "rashi",
+      "sections": {
+        "Story": "Dhanus is the archer \u2014 dharma, higher learning, and the search for truth. Ruled by Guru, this is the sign of the teacher, the philosopher, and the seeker who fires arrows at the infinite.",
+        "Light": "Wisdom, teaching ability, righteousness, long-distance travel.",
+        "Shadow": "Dogmatism, hip/thigh issues, excess, preachiness."
+      },
+      "keywords": ["fire", "mutable", "Jupiter-ruled", "wisdom"],
+      "metadata": { "sign": "Sagittarius", "english_name": "Sagittarius", "ruler": "Jupiter" }
+    },
+    {
+      "id": "rashi-makara",
+      "name": "Makara",
+      "symbol": "\u2651",
+      "category": "rashi",
+      "sections": {
+        "Story": "Makara is the sea-goat \u2014 ambition, structure, and the climb to worldly mastery. Ruled by Shani, this is where Mangala (Mars) finds exaltation. Karma yoga in its purest form.",
+        "Light": "Ambition, organizational skill, endurance, practical wisdom.",
+        "Shadow": "Coldness, workaholism, bone/joint issues, pessimism."
+      },
+      "keywords": ["earth", "cardinal", "Saturn-ruled", "ambition"],
+      "metadata": { "sign": "Capricorn", "english_name": "Capricorn", "ruler": "Saturn" }
+    },
+    {
+      "id": "rashi-kumbha",
+      "name": "Kumbha",
+      "symbol": "\u2652",
+      "category": "rashi",
+      "sections": {
+        "Story": "Kumbha is the water-bearer \u2014 humanitarian vision, networks, and gains. Ruled by Shani (and Rahu), this sign serves the collective through innovation and detachment.",
+        "Light": "Humanitarian ideals, scientific thinking, networking, gains from groups.",
+        "Shadow": "Eccentric detachment, circulation issues, aloofness."
+      },
+      "keywords": ["air", "fixed", "Saturn-ruled", "humanity"],
+      "metadata": { "sign": "Aquarius", "english_name": "Aquarius", "ruler": "Saturn" }
+    },
+    {
+      "id": "rashi-meena",
+      "name": "Meena",
+      "symbol": "\u2653",
+      "category": "rashi",
+      "sections": {
+        "Story": "Meena is the two fish \u2014 dissolution, moksha, and the ocean of consciousness. Ruled by Guru, this is where Shukra (Venus) finds exaltation. The final sign, where all rivers return to the sea.",
+        "Light": "Spiritual depth, compassion, imagination, final liberation.",
+        "Shadow": "Escapism, foot ailments, confusion, loss of boundaries."
+      },
+      "keywords": ["water", "mutable", "Jupiter-ruled", "moksha"],
+      "metadata": { "sign": "Pisces", "english_name": "Pisces", "ruler": "Jupiter" }
+    },
+    {
+      "id": "nakshatra-ashwini",
+      "name": "Ashwini",
+      "symbol": "\ud83d\udc0e",
+      "category": "nakshatra",
+      "sections": {
+        "Story": "The horsemen healers \u2014 twin physicians of the gods. Speed, healing, and the miracle of new beginnings. 0\u00b0\u201313\u00b020' Mesha.",
+        "Light": "Healing ability, speed, youthful energy, pioneering medicine.",
+        "Shadow": "Impulsiveness, superficial healing, recklessness."
+      },
+      "keywords": ["healing", "speed", "beginnings", "Ketu-ruled"],
+      "metadata": { "english_name": "Ashwini", "degree_start": 0, "degree_end": 13.33, "ruler": "Ketu" }
+    },
+    {
+      "id": "nakshatra-bharani",
+      "name": "Bharani",
+      "symbol": "\u25bd",
+      "category": "nakshatra",
+      "sections": {
+        "Story": "The bearer \u2014 the yoni, the womb of creation and destruction. Bharani holds the power of restraint and transformation. 13\u00b020'\u201326\u00b040' Mesha.",
+        "Light": "Creative power, endurance, nurturing through difficulty, sexual vitality.",
+        "Shadow": "Jealousy, moral rigidity, struggles with sexuality."
+      },
+      "keywords": ["creation", "restraint", "transformation", "Venus-ruled"],
+      "metadata": { "english_name": "Bharani", "degree_start": 13.33, "degree_end": 26.67, "ruler": "Venus" }
+    },
+    {
+      "id": "nakshatra-krittika",
+      "name": "Krittika",
+      "symbol": "\ud83d\udd2a",
+      "category": "nakshatra",
+      "sections": {
+        "Story": "The razor \u2014 the fire that cuts and purifies. Krittika spans the border of Mesha and Vrishabha, the foster mothers of Kartikeya. 26\u00b040' Mesha \u2013 10\u00b0 Vrishabha.",
+        "Light": "Purification, courage, clarity, strong digestion, truthfulness.",
+        "Shadow": "Harshness, destructive criticism, inflammatory conditions."
+      },
+      "keywords": ["purification", "fire", "cutting", "Sun-ruled"],
+      "metadata": { "english_name": "Krittika", "degree_start": 26.67, "degree_end": 40, "ruler": "Sun" }
+    },
+    {
+      "id": "nakshatra-rohini",
+      "name": "Rohini",
+      "symbol": "\ud83d\udc02",
+      "category": "nakshatra",
+      "sections": {
+        "Story": "The red one \u2014 fertility, beauty, and the creative power of desire. Rohini was the Moon's favorite wife. 10\u00b0\u201323\u00b020' Vrishabha.",
+        "Light": "Beauty, artistic talent, magnetism, fertility, material abundance.",
+        "Shadow": "Possessiveness, jealousy, over-attachment to beauty."
+      },
+      "keywords": ["beauty", "fertility", "desire", "Moon-ruled"],
+      "metadata": { "english_name": "Rohini", "degree_start": 40, "degree_end": 53.33, "ruler": "Moon" }
+    },
+    {
+      "id": "nakshatra-mrigashira",
+      "name": "Mrigashira",
+      "symbol": "\ud83e\udd8c",
+      "category": "nakshatra",
+      "sections": {
+        "Story": "The deer's head \u2014 the eternal seeker, always searching, always curious. Mrigashira spans Vrishabha\u2013Mithuna. 23\u00b020' Vrishabha \u2013 6\u00b040' Mithuna.",
+        "Light": "Seeking, research, gentle nature, perceptiveness, travel.",
+        "Shadow": "Fickleness, never settling, suspicious nature."
+      },
+      "keywords": ["seeking", "curiosity", "gentleness", "Mars-ruled"],
+      "metadata": { "english_name": "Mrigashira", "degree_start": 53.33, "degree_end": 66.67, "ruler": "Mars" }
+    },
+    {
+      "id": "nakshatra-ardra",
+      "name": "Ardra",
+      "symbol": "\ud83d\udca7",
+      "category": "nakshatra",
+      "sections": {
+        "Story": "The teardrop \u2014 the storm that clears, the destruction that renews. Ardra is Rudra's star, fierce and transformative. 6\u00b040'\u201320\u00b0 Mithuna.",
+        "Light": "Intellectual brilliance, research, effort, transformation through crisis.",
+        "Shadow": "Destructiveness, cruelty, storms of emotion, arrogance."
+      },
+      "keywords": ["storm", "transformation", "intellect", "Rahu-ruled"],
+      "metadata": { "english_name": "Ardra", "degree_start": 66.67, "degree_end": 80, "ruler": "Rahu" }
+    },
+    {
+      "id": "nakshatra-punarvasu",
+      "name": "Punarvasu",
+      "symbol": "\ud83c\udfe0",
+      "category": "nakshatra",
+      "sections": {
+        "Story": "Return of the light \u2014 renewal, restoration, and the journey home. Punarvasu spans Mithuna\u2013Karka. 20\u00b0 Mithuna \u2013 3\u00b020' Karka.",
+        "Light": "Renewal, philosophical understanding, contentment, return to wholeness.",
+        "Shadow": "Restlessness, over-simplification, lack of ambition."
+      },
+      "keywords": ["renewal", "return", "contentment", "Jupiter-ruled"],
+      "metadata": { "english_name": "Punarvasu", "degree_start": 80, "degree_end": 93.33, "ruler": "Jupiter" }
+    },
+    {
+      "id": "nakshatra-pushya",
+      "name": "Pushya",
+      "symbol": "\ud83c\udf3c",
+      "category": "nakshatra",
+      "sections": {
+        "Story": "The nourisher \u2014 the most auspicious nakshatra, where Brihaspati's blessings flow. 3\u00b020'\u201316\u00b040' Karka.",
+        "Light": "Nourishment, generosity, spiritual growth, protection, prosperity.",
+        "Shadow": "Over-attachment, orthodoxy, emotional manipulation."
+      },
+      "keywords": ["nourishment", "auspiciousness", "protection", "Saturn-ruled"],
+      "metadata": { "english_name": "Pushya", "degree_start": 93.33, "degree_end": 106.67, "ruler": "Saturn" }
+    },
+    {
+      "id": "nakshatra-ashlesha",
+      "name": "Ashlesha",
+      "symbol": "\ud83d\udc0d",
+      "category": "nakshatra",
+      "sections": {
+        "Story": "The serpent's embrace \u2014 kundalini energy, hypnotic power, and the wisdom of the nagas. 16\u00b040'\u201330\u00b0 Karka.",
+        "Light": "Kundalini awakening, mystical insight, political cunning, healing through venom.",
+        "Shadow": "Deception, cold-bloodedness, poison, manipulation."
+      },
+      "keywords": ["serpent", "kundalini", "mysticism", "Mercury-ruled"],
+      "metadata": { "english_name": "Ashlesha", "degree_start": 106.67, "degree_end": 120, "ruler": "Mercury" }
+    }
+  ]
+}

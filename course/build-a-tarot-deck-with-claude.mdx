@@ -1,0 +1,204 @@
+---
+id: build-a-tarot-deck-with-claude
+title: "Build a Tarot Deck with Claude Code"
+description: "Work the way the Recursive Tarot was built: clone the public repo, use Claude Code to turn a public-domain deck into a grammar, source images from Wikimedia Commons, preview it locally, and push it back so anyone can play it in recursive.eco."
+duration: 60
+author: PlayfulProcess
+date: 2026-06-02
+---
+
+# Build a Tarot Deck with Claude Code
+
+**Turn a centuries-old public-domain deck into a living grammar — and contribute it to a public commons anyone can read, play, and improve.**
+
+This course teaches the exact workflow the [Recursive Tarot collection](https://github.com/PlayfulProcess/recursive.eco-schemas) was built with: a public GitHub repo as the library, **Claude Code** as your hands, and recursive.eco as the window people look through. You don't need to be a developer. You need a deck you love, a respect for the sources, and a willingness to let Claude do the typing.
+
+---
+
+## The big idea
+
+Three layers, and you only really touch the first one:
+
+| Layer | What it is | Who touches it |
+|---|---|---|
+| **The public repo** (`recursive.eco-schemas`) | The library. Every deck is a JSON file in the `tarot/` folder. | You + Claude Code + anyone on GitHub |
+| **The app** (recursive.eco) | The window. Renders decks as cards, trees, and oracles. | Readers and players |
+| **Your private vault** | An automatic per-save backup of your own drafts. | Nobody — it just happens |
+
+You work in the **library**. You clone the repo, build a deck with Claude Code, preview it locally, and push. The deck is now public — anyone can see it, fork it, open a pull request, or play it in the app. That's the whole shape: **GitHub is the backend; the viewers are thin.**
+
+### What you'll learn
+
+- Set up Claude Code against the public grammar repo
+- Choose a deck that's genuinely public domain (and what's off-limits)
+- Understand the **grammar** format — a deck is a list of cards, each with named sections
+- Use the **"generator as research"** pattern — let a small script BE your research
+- Pull real public-domain images from **Wikimedia Commons** (without guessing filenames)
+- Keep it **honest** — game-vs-divination, no forced equivalences, real attribution
+- Preview cards / tree / study **locally**, with no app and no account
+- Push your branch, see its version history, and bring it into recursive.eco
+
+### Prerequisites
+
+- A free **GitHub** account
+- Access to **Claude Code** ([claude.com/code](https://claude.com/code))
+- That's it. Claude handles Python, git, and the JSON.
+
+---
+
+## Part 1 — Set up
+
+1. **Clone the repo** (Claude Code can do this for you — just ask):
+   ```
+   git clone https://github.com/PlayfulProcess/recursive.eco-schemas.git
+   cd recursive.eco-schemas
+   ```
+2. **Open it in Claude Code** and ask it to give you a tour:
+   > "Read TAROT.md and [GRAMMAR_FORMAT.md](https://github.com/PlayfulProcess/recursive.eco-schemas/blob/main/GRAMMAR_FORMAT.md) and tell me how a tarot deck is structured in this repo."
+3. **Make a branch** so your work is yours until it's ready:
+   ```
+   git checkout -b my-deck-name
+   ```
+
+The folders that matter:
+- `tarot/` — the community decks (this is where published decks live).
+- `GRAMMAR_FORMAT.md` — the contract for what a grammar JSON must look like.
+- `scripts/` — the Python generators that build each deck.
+- `plan/build-logs/` — a short log per deck recording sources and decisions.
+
+---
+
+## Part 2 — Choose a public-domain deck
+
+The commons only works if we respect copyright. Before you start, confirm your deck is **public domain**:
+
+- **Pre-1929 publications** are public domain in the US, regardless of the artist's death date.
+- **Artist died 70+ years ago** → public domain in most countries.
+- **Off-limits:** modern decks still in copyright. The **Thoth** deck (Crowley–Harris, 1944) is the classic trap — reference it, never reproduce it.
+
+Good hunting grounds:
+- **Wikimedia Commons** — scanned historical decks (Visconti-Sforza, Marseille, Etteilla, Court de Gébelin, Minchiate…).
+- **The Tarot History Forum** ([forum.tarothistory.com](https://forum.tarothistory.com/)) — the scholars. Read it for **facts**; don't copy their text (it's theirs).
+
+Ask Claude Code:
+> "Search Wikimedia Commons for a complete public-domain scan of the [deck name]. List the exact file names from the Commons API — don't guess them."
+
+---
+
+## Part 3 — Understand the grammar format
+
+A **grammar** is just a JSON file. A tarot deck is a grammar whose items are cards:
+
+```json
+{
+  "name": "Tarot de Marseille — Conver 1760",
+  "grammar_type": "tarot",
+  "items": [
+    {
+      "id": "major-13-la-mort",
+      "name": "13 — Death",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/13%20XIII%20Nicolas%20Conver%20Tarot%201760.jpg",
+      "sections": {
+        "Iconography": "A skeleton with a scythe...",
+        "Upright": "Transformation, the necessary ending...",
+        "Reversed": "Stagnation, change resisted...",
+        "Tradition Note": "The Marseille was a GAME deck, not for divination..."
+      }
+    }
+  ]
+}
+```
+
+Three things to know:
+- **Sections are free-form.** Use whatever a reader needs — `Iconography`, `History`, `Upright`, `Reversed`, `Correspondences`. Different traditions want different sections.
+- **The tree.** Decks link together into a genealogy (`tree-of-tarot`) — items can point at other grammars. You don't have to build that; just know your deck can become a leaf on it.
+- **Archetype tags.** Each card gets a canonical hashtag like `arcana:death` so the app can show "Death across every deck." A script (`stamp_archetypes.py`) adds these — you just run it.
+
+Full field reference: [`GRAMMAR_FORMAT.md`](https://github.com/PlayfulProcess/recursive.eco-schemas/blob/main/GRAMMAR_FORMAT.md) — read it (or have Claude read it to you) for the full contract, including reference items / meta-grammars, the `performance` object, and astrology category roles.
+
+---
+
+## Part 4 — Build it with Claude Code (the "generator as research" pattern)
+
+The trick that makes this fast: **don't hand-write 78 cards. Write a small Python generator** whose data tables ARE your research, then run it and iterate.
+
+Ask Claude Code something like:
+> "Write `scripts/generate_my_deck.py` that builds `tarot/my-deck/grammar.json`. Put the 22 majors in a data table with their iconography and meaning; generate the 56 minors combinatorially from suit × rank. Use the Wikimedia filenames you pulled from the Commons API for `image_url`."
+
+Why a generator and not hand-typing?
+- The script is **reviewable** — anyone can see exactly how every card was made.
+- It's **re-runnable** — fix one row, regenerate the whole deck.
+- The act of filling the tables **is the research** — gaps in the table show you what you still don't know.
+
+Then:
+> "Run it, then validate: no duplicate ids, every `composite_of` reference resolves, no empty sections."
+
+---
+
+## Part 5 — Images from Wikimedia Commons
+
+Two hard-won tricks (Claude knows them; ask for them by name):
+
+1. **Pull exact filenames from the Commons API — never guess.** Filenames have accents, commas, and quirks that break links.
+   > "Query the Commons API `list=categorymembers` for Category:[deck] and give me the exact file titles."
+2. **Hotlink via `Special:FilePath`**, and for TIF/SVG originals add `?width=`:
+   - `https://commons.wikimedia.org/wiki/Special:FilePath/<urlencoded-filename>`
+   - `...?width=700` makes Wikimedia return a **JPEG** even for `.tif` files (which browsers can't show raw).
+
+Always record the artist, edition, and "Public Domain" in the card's attribution. The commons runs on credit.
+
+---
+
+## Part 6 — Keep it honest
+
+This is what separates a *scholarly* deck from a generic one:
+
+- **Game vs. divination.** Most historical decks (Visconti, Marseille, Minchiate) were **game** decks. Divination meanings came centuries later. Say so — a one-line "Tradition Note" on each card.
+- **No forced equivalences.** Etteilla renumbered Death to 17; the Golden Dawn swapped Strength and Justice; Minchiate has cards with no standard match; Sola Busca only *loosely* maps. The archetype tags carry a `mapping_confidence` of `exact` / `loose` / `none` — use `none` rather than jam a card into a slot it doesn't fit.
+- **Attribution.** Public-domain images, credited. Facts from the forum, in your own words. Never paste copyrighted text.
+
+Ask Claude:
+> "Add a short, honest 'Tradition Note' to every card, and run `stamp_archetypes.py` so the cards get their canonical archetype hashtags — marking the non-mappings as `none`, not forcing them."
+
+---
+
+## Part 7 — Preview it locally (no app, no account)
+
+The repo ships static viewers so you can **see your deck render right from your file**:
+
+```
+# from the repo root, start a tiny local server:
+python -m http.server 8000
+# then open in your browser:
+#   http://localhost:8000/site/cards.html?file=tarot/my-deck/grammar.json
+#   http://localhost:8000/site/tree.html?file=tarot/tree-of-tarot/grammar.json
+#   http://localhost:8000/site/study.html?file=tarot/my-deck/grammar.json
+```
+
+(You need the local server because browsers won't read `file://` paths directly.) Tweak the JSON, refresh, see it change. This is the whole loop on your own machine — the app isn't involved yet.
+
+---
+
+## Part 8 — Push, share, and bring it into recursive.eco
+
+1. **Commit and push your branch** (Claude can do this):
+   ```
+   git add tarot/my-deck scripts/generate_my_deck.py
+   git commit -m "Add [deck] — historical, public-domain"
+   git push origin my-deck-name
+   ```
+2. **Open a pull request** on GitHub. Now scholars can review it, suggest fixes, and — once merged — it's part of the public commons.
+3. **In recursive.eco**, a community deck in `tarot/` can be **imported** (it becomes a playable oracle), **edited** by any signed-in user (changes commit back to this public repo with full version history), or **forked** into your own copy.
+4. Your pushed work shows up in **version history** — every commit, every contributor, attributed.
+
+That's the full circle: **you build it once in the open, anyone can improve it, and readers play it in the app.**
+
+---
+
+## The ethos
+
+You're not making a product. You're **seeding a commons**. A deck you build well — accurate, public-domain, honestly noted — becomes something a stranger in another country can read, correct, teach from, and draw a card from. The repo is public so the work can outlive any one of us; the viewers are thin so the data, not the platform, is what matters.
+
+Now go pick a deck you love, and let's build it.
+
+> **Next:** read `TAROT.md` for the decks already built, and `plan/tarot-roadmap-and-supabase-log.md` for the ones still waiting for a builder. One of them could be yours.

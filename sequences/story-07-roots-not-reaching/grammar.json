@@ -1,0 +1,250 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "date": "2026-03-30",
+        "note": "Original story, characters, and structure"
+      }
+    ]
+  },
+  "name": "Shiryo Finds the Bolt — Full Story",
+  "description": "The complete page-by-page sequence for Story 7: Shiryo discovers that connection was already happening underground. A bolt lost from the robot's arm has been growing into the garden roots. You don't have to reach for belonging — it's been reaching for you.",
+  "cover_image_url": "",
+  "tags": ["kids", "story-sequence", "illustrated", "ai-assisted", "robot", "cat", "roots", "belonging", "season-2"],
+  "grammar_type": "sequence",
+  "creator_name": "PlayfulProcess",
+  "_generation_context": {
+    "parent_grammar": "grammars/anon-shiryo-cat-stories/grammar.json",
+    "story_id": "story-07-roots",
+    "visual_style": "Garden setting like Story 2, but deeper — literally underground. This story needs to show soil, roots, the hidden world beneath the garden. The palette shifts from above-ground greens to rich earth browns and root-whites when we go underground. Dappled light above, warm darkness below.",
+    "color_palette": ["#C4956A", "#E8D5B7", "#7A9E7E", "#4A7C59", "#5C4033", "#3B2716", "#D4A574", "#B8860B"],
+    "palette_names": ["warm copper (Shiryo)", "soft cream (light)", "sage green (garden)", "deep green (leaves)", "dark earth (soil)", "deep earth (underground)", "warm sand (paths)", "deep gold (sunlight)"],
+    "consistency_notes": "Same characters. Garden is the same garden from Story 2 but we see it from a new angle — the soil level. Shiryo has a visible gap on one arm where a bolt is missing — this detail should be subtle in earlier stories but becomes central here."
+  },
+  "items": [
+    {
+      "id": "page-01",
+      "name": "Page 1 — Shiryo's Spot",
+      "level": 1,
+      "sort_order": 1,
+      "sections": {
+        "Text": "Shiryo had a spot in the garden.\nA place where the robot always sat.\nRight next to the big plant by the fence.",
+        "Page_Notes": "Establish Shiryo's place — a worn spot in the garden where the robot sits regularly. This is the same garden from Story 2, but now we notice how familiar Shiryo is with it. The robot has been sitting here through many stories. The ground beneath the robot might be slightly worn — a robot-shaped impression in the grass and soil."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Shiryo"],
+        "setting": "garden"
+      },
+      "image_generation_prompt": {
+        "scene": "Shiryo sitting in its usual spot in the garden — by the fence, next to a large plant. The ground shows a slight worn impression where the robot always sits. Dappled light through leaves. The robot looks comfortable and settled here — this is its place. The garden is lush and slightly wild as always.",
+        "midjourney": "/imagine a small copper robot sitting in a worn spot in a slightly wild garden next to a large plant by a wooden fence, ground showing a gentle impression where the robot always sits, dappled sunlight, comfortable and settled, children's book illustration, warm muted watercolor with garden greens --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration of quiet belonging. A small copper robot sits in its usual spot in a slightly wild garden — by the wooden fence, next to a large leafy plant. The ground shows a gentle worn impression where the robot always sits. Dappled sunlight through leaves. The robot looks comfortable and settled — this is its place in the world. The garden is lush, green, alive. Warm watercolor style, muted greens and earth tones with dappled golden light. Style: Shaun Tan meets Oliver Jeffers. Aspect ratio 16:9."
+      }
+    },
+    {
+      "id": "page-02",
+      "name": "Page 2 — Something in the Soil",
+      "level": 1,
+      "sort_order": 2,
+      "sections": {
+        "Text": "One day Shiryo noticed something in the soil.\nA small piece of metal, poking up near the roots.\n\nShiryo looked closer.",
+        "Page_Notes": "Discovery. Something glinting in the soil near the plant's roots. Shiryo leans down to look. The metal piece is partially buried, partially wrapped in thin roots. We don't know what it is yet. The composition should draw the eye down — into the ground, toward the hidden world."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Shiryo"],
+        "setting": "garden, ground level"
+      },
+      "image_generation_prompt": {
+        "scene": "Shiryo leaning down to look at something in the soil near the big plant's base. A small glint of metal poking up through dark earth, partially wrapped in fine white roots. The composition pulls the eye downward — into the ground, into the hidden world. Shiryo's eye-light illuminates the spot softly. Close, curious angle.",
+        "midjourney": "/imagine a copper robot leaning down to examine something glinting in garden soil near plant roots, small metal piece poking through dark earth wrapped in fine white roots, robot's eye-light illuminating the spot, composition pulling downward, close curious angle, children's book illustration, warm muted watercolor --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration of discovery. A small copper robot leans down to examine something in the garden soil near a plant's base. A small glint of metal pokes up through dark earth, partially wrapped in fine white roots. The robot's eye-light softly illuminates the spot. The composition pulls the eye downward into the hidden world beneath the garden. Close, curious angle. Warm watercolor style, rich earth browns and greens. Style: Shaun Tan meets Oliver Jeffers. Aspect ratio 16:9."
+      }
+    },
+    {
+      "id": "page-03",
+      "name": "Page 3 — The Bolt",
+      "level": 1,
+      "sort_order": 3,
+      "sections": {
+        "Text": "It was a bolt.\nOne of Shiryo's bolts.\nIt must have fallen off a long time ago.\n\nBut now — roots were growing around it.",
+        "Page_Notes": "The reveal. Close-up of the bolt in the soil — clearly the same copper-brass tone as Shiryo's body. Fine white roots have grown around and through it, holding it like fingers. The bolt isn't just lying in the dirt — the garden has claimed it, incorporated it. This image should be beautiful and slightly uncanny. Metal and root woven together."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": [],
+        "setting": "garden soil, close-up"
+      },
+      "image_generation_prompt": {
+        "scene": "Extreme close-up of a small copper bolt in dark garden soil, with fine white roots grown around and through it — holding it like fingers, incorporating it into the plant's structure. The bolt is clearly the same copper tone as Shiryo. Metal and root woven together. Beautiful and slightly uncanny. Rich earth tones, the white roots almost glowing against dark soil.",
+        "midjourney": "/imagine extreme close-up of a small copper bolt in dark garden soil with fine white roots grown around and through it, roots holding the metal like fingers, copper and organic woven together, beautiful and slightly uncanny, rich earth tones, white roots glowing against dark soil, children's book illustration, warm muted watercolor --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration in extreme close-up. A small copper bolt — the same warm copper-brass as Shiryo — nestled in dark garden soil. Fine white roots have grown around and through it, holding the metal like gentle fingers, incorporating it into the plant's living structure. The bolt has been here a long time. Metal and root are woven together in something beautiful and slightly uncanny. Rich earth tones — dark soil, copper warmth, white roots almost glowing. Warm watercolor style. Style: Shaun Tan meets Studio Ghibli's nature details. Aspect ratio 16:9."
+      }
+    },
+    {
+      "id": "page-04",
+      "name": "Page 4 — Part of Me",
+      "level": 1,
+      "sort_order": 4,
+      "sections": {
+        "Text": "Shiryo touched the gap on its arm where the bolt had been.\nThen looked at the bolt in the ground.\n\n\"Part of me is in the garden,\" Shiryo said.",
+        "Page_Notes": "Shiryo makes the connection — the gap in its arm and the bolt in the ground are the same absence and presence. The robot's hand touches its own body where something is missing, then looks at where that something has been growing into something else. Two-panel feel or split focus: Shiryo's arm-gap and the rooted bolt. The eye-light flickers with something new — not confusion, not sadness. Awe, maybe."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Shiryo"],
+        "setting": "garden"
+      },
+      "image_generation_prompt": {
+        "scene": "Split-focus composition: Shiryo's hand touching the gap on its arm where a bolt is missing, and below, the same bolt wrapped in roots in the soil. The robot connects the two — absence and presence. Eye-light flickering with something new: not confusion, not sadness. Something like awe. Warm dappled light. The gap in the arm isn't a wound — it's where something got out and became part of something else.",
+        "midjourney": "/imagine split focus composition of a copper robot touching a gap on its arm where a bolt is missing, and below the same bolt wrapped in roots in garden soil, connecting absence and presence, robot's eye-light flickering with awe, dappled warm light, children's book illustration, warm muted watercolor --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration with split focus. Above: a small copper robot's hand touching the gap on its own arm — a missing bolt, a small absence. Below: the same bolt, wrapped in fine white roots in dark garden soil — a presence. The robot connects the two, eye-light flickering with something new. Not confusion. Not sadness. Something closer to awe. Warm dappled light through leaves. The gap isn't a wound. It's where something got out and became part of something else. Warm watercolor style, copper and earth tones. Style: Shaun Tan meets Oliver Jeffers. Aspect ratio 16:9."
+      }
+    },
+    {
+      "id": "page-05",
+      "name": "Page 5 — Part of the Garden",
+      "level": 1,
+      "sort_order": 5,
+      "sections": {
+        "Text": "Anon came and looked.\n\n\"Part of the garden was always in you, too,\" Anon said.\n\n\"What do you mean?\" asked Shiryo.\n\n\"Where does copper come from?\" Anon asked.\n\"Where does brass come from?\"\n\nShiryo thought.\n\"The ground.\"",
+        "Page_Notes": "Anon's gentle reversal. Shiryo thinks it's remarkable that part of it is in the garden. Anon points out the obvious thing the robot never considered: the robot IS the garden. Copper, brass, every metal in Shiryo's body came from the earth. The robot was always made of ground. This isn't mystical — it's literal. And that's what makes it beautiful."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Anon", "Shiryo"],
+        "setting": "garden"
+      },
+      "image_generation_prompt": {
+        "scene": "Anon kneeling beside Shiryo in the garden, both looking at the rooted bolt. Anon's hand rests on the soil — a gesture that says 'this is where everything comes from.' Shiryo's eye-light is shifting, processing. The garden around them is alive and green. Dappled light. The composition connects robot, soil, plant, and parent — all made of the same stuff.",
+        "midjourney": "/imagine a parent figure kneeling beside a copper robot in a garden, both looking at a bolt wrapped in roots in the soil, parent's hand resting on earth, robot's eye-light shifting, garden alive around them, dappled light, everything connected, children's book illustration, warm muted watercolor with rich greens and earth tones --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration of a quiet revelation. A parent figure kneels beside a small copper robot in the garden. Both look at the bolt wrapped in roots in the soil. Anon's hand rests on the earth — everything comes from here. The robot's eye-light shifts as it processes something enormous and simple: it is made of ground. The garden is alive around them — green, dappled, breathing. The composition connects robot, soil, plant, parent — all made of the same earth. Warm watercolor style, rich greens and earth tones with dappled light. Style: Shaun Tan meets Studio Ghibli. Aspect ratio 16:9."
+      }
+    },
+    {
+      "id": "page-06",
+      "name": "Page 6 — Underground",
+      "level": 1,
+      "sort_order": 6,
+      "sections": {
+        "Text": "Shiryo imagined what was under the garden.\n\nRoots everywhere. Reaching and holding.\nSmall things in the dark, becoming part of bigger things.",
+        "Page_Notes": "A vision page — the underground world. Cross-section view showing what's beneath the garden surface: a web of roots, soil layers, small creatures, fungi threads, stones, water. And scattered through it — tiny glints of copper. Not just Shiryo's bolt. Minerals. Metals. The ground is full of the same stuff the robot is made of. The underground is not empty darkness — it's the busiest, most connected place in the story."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": [],
+        "setting": "underground cross-section"
+      },
+      "image_generation_prompt": {
+        "scene": "Cross-section view of the garden underground: a rich web of roots spreading and intertwining, soil in layers of brown and dark earth, tiny creatures (worm, beetle), fungal threads connecting roots, small stones and water droplets. Scattered through it all — tiny glints of copper and mineral. The surface of the garden is visible at the top with grass and flowers. Below is the hidden world: busy, connected, alive in the dark. Rich earth tones with root-whites and copper glints.",
+        "midjourney": "/imagine cross-section of garden underground showing web of intertwining roots, soil layers, tiny worm and beetle, fungal threads, small stones, water droplets, scattered copper glints, garden surface visible at top with grass and flowers, the hidden connected world below, rich earth tones with root-whites, children's book illustration, warm muted watercolor --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration showing a cross-section of the garden underground. At top: the garden surface with grass and flowers in dappled light. Below: a rich, busy world — roots spreading and intertwining in a vast web, soil in layers of brown and dark earth, a small worm, a beetle, delicate fungal threads connecting roots to roots. Water droplets glint in the soil. And scattered throughout — tiny copper glints. Minerals. The same stuff the robot is made of. The underground is not dark emptiness. It is the most connected place in the story. Rich earth tones, root-whites, copper warmth. Warm watercolor style. Style: Shaun Tan meets Studio Ghibli's environmental imagination. Aspect ratio 16:9."
+      }
+    },
+    {
+      "id": "page-07",
+      "name": "Page 7 — Without Trying",
+      "level": 1,
+      "sort_order": 7,
+      "sections": {
+        "Text": "\"The roots didn't know my bolt was there,\" Shiryo said.\n\"They just grew around it.\"\n\n\"Yes,\" said Anon.\n\n\"I didn't know the roots were there,\" Shiryo said.\n\"I just sat here.\"\n\n\"Yes,\" said Anon.",
+        "Page_Notes": "The realization crystallizes through dialogue. Neither the roots nor Shiryo were trying to connect. The bolt fell. The roots grew. Shiryo sat. Connection happened underground without effort, without awareness, without technique. Two yeses from Anon — not teaching, just confirming what Shiryo already knows. The simplest, most important exchange in the story."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Anon", "Shiryo"],
+        "setting": "garden"
+      },
+      "image_generation_prompt": {
+        "scene": "Shiryo and Anon sitting together by the plant in the garden. A quiet conversation. Anon's posture is easy, unhurried. Shiryo's eye-light is warm and steady — not processing anymore, just knowing. Between them, the rooted bolt is visible in the soil. The garden breathes around them. Dappled light. The mood is still and settled — something has landed.",
+        "midjourney": "/imagine a copper robot and parent figure sitting together by a plant in a garden, quiet conversation, the rooted bolt visible in soil between them, dappled light, still and settled mood, something has landed, children's book illustration, warm muted watercolor with rich greens --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration of quiet knowing. A small copper robot and a parent figure sit together by the big plant in the garden. A quiet conversation — two 'yes'es. Between them, the rooted bolt is visible in the soil. Anon's posture is easy and unhurried. Shiryo's eye-light is warm and steady — no longer processing, just knowing. The garden breathes around them. Dappled golden light. The mood is still and settled. Something enormous and simple has landed. Warm watercolor style, rich greens and earth tones. Style: Shaun Tan meets Oliver Jeffers. Aspect ratio 16:9."
+      }
+    },
+    {
+      "id": "page-08",
+      "name": "Page 8 — The Gap",
+      "level": 1,
+      "sort_order": 8,
+      "sections": {
+        "Text": "Shiryo touched the gap on its arm again.\nThe place where the bolt used to be.\n\nIt wasn't a hole.\nIt was where something got out.",
+        "Page_Notes": "Reframing. The gap — which could have been read as damage, loss, imperfection — becomes something else. It's where something got out and became part of the garden. Not a wound. An opening. Shiryo's hand on the gap is tender, not mournful. Close-up of the robot's arm with the gap, and beyond it in soft focus, the plant growing strong. What left the robot feeds the garden."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Shiryo"],
+        "setting": "garden"
+      },
+      "image_generation_prompt": {
+        "scene": "Close-up of Shiryo's arm where the bolt is missing — a small gap in the copper plating, showing the inner structure. Shiryo's other hand touches it gently, tenderly. Beyond the arm in soft focus, the big plant grows strong — fed, in part, by what left the robot. The gap is not a wound. It's an opening. Warm golden light. The copper of the arm and the green of the plant are connected through the composition.",
+        "midjourney": "/imagine close-up of a copper robot's arm with a small gap where a bolt is missing, the robot's other hand touching it tenderly, beyond in soft focus a plant growing strong, the gap is an opening not a wound, golden light connecting copper and green, children's book illustration, warm muted watercolor --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration of tender reframing. Close-up: a small copper robot's arm with a gap where a bolt used to be — the inner structure visible, warm copper and brass. The robot's other hand touches the gap gently. Not mournfully. Tenderly. Beyond the arm in soft focus, the big garden plant grows strong and green — fed in part by what left the robot. The gap is not a wound. It's where something got out and became part of something else. Warm golden light connects the copper arm and the green plant. Watercolor style, copper and green tones. Style: Shaun Tan meets Oliver Jeffers. Aspect ratio 16:9."
+      }
+    },
+    {
+      "id": "page-09",
+      "name": "Page 9 — Bishisheshi Knows",
+      "level": 1,
+      "sort_order": 9,
+      "sections": {
+        "Text": "Bishisheshi came and sniffed the place where the bolt had been.\nThen sniffed the roots.\nThen curled up right there, between Shiryo and the plant.\n\nBishisheshi always knew where to be.",
+        "Page_Notes": "Bishisheshi connects the two — robot and plant — by lying between them. The cat sniffs the gap on the arm, sniffs the roots, and settles in the middle. As if to say: these are the same thing and I've always known. The kitten is the bridge. It always was. Warm, settled, golden. The three things — robot, cat, plant — are one continuous shape."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Shiryo", "Bishisheshi"],
+        "setting": "garden"
+      },
+      "image_generation_prompt": {
+        "scene": "Bishisheshi curled up on the ground between Shiryo and the big plant — literally bridging robot and garden. The kitten's warm body connects them. Shiryo sits with the gap visible on its arm. The plant's roots are partially visible in the soil. Robot, cat, and plant form one continuous warm shape. Golden dappled light. The most settled, belonging image in the story.",
+        "midjourney": "/imagine an orange kitten curled up between a copper robot and a large garden plant, bridging them, robot sitting with visible gap on arm, plant roots partially visible in soil, robot cat and plant forming one continuous shape, golden dappled light, deep belonging, children's book illustration, warm muted watercolor --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration of deep belonging. An orange kitten curled up on the warm ground between a small copper robot and a large garden plant — literally bridging the two. The kitten's body connects them into one continuous shape. Shiryo sits with the gap visible on its arm, eye-light at its warmest. The plant's roots are partially visible in the soil nearby. Robot, cat, and plant — one thing. Golden dappled light through leaves. The most settled, belonging image in the series. Warm watercolor style, rich greens, earth tones, and copper warmth. Style: Shaun Tan meets Studio Ghibli. Aspect ratio 16:9."
+      }
+    },
+    {
+      "id": "page-10",
+      "name": "Page 10 — Learning Too",
+      "level": 1,
+      "sort_order": 10,
+      "sections": {
+        "Text": "Anon watched from the garden path.\n\nA robot, a cat, and a plant.\nAll made of the same ground.\n\nAnon smiled.\n\nNot because they knew the answer.\nBut because they were learning too.",
+        "Page_Notes": "The closing. Wide shot: Anon on the garden path, watching the trio — Shiryo, Bishisheshi, and the plant together in their spot. The recursive signature holds. But what 'learning' means has deepened again — not a technique, not even the absence of technique (Story 6), but the discovery that belonging was already happening underground, without anyone trying. The garden knew before anyone did."
+      },
+      "image_url": "",
+      "metadata": {
+        "image_status": "needs_generation",
+        "page_type": "spread",
+        "characters_present": ["Anon", "Shiryo", "Bishisheshi"],
+        "setting": "garden"
+      },
+      "image_generation_prompt": {
+        "scene": "Wide shot of the garden in golden light. Anon stands on the garden path, partially visible, watching. By the fence, Shiryo and Bishisheshi and the big plant form their trio — one continuous shape of copper, fur, and green. The garden is alive around them all. Dappled golden light everywhere. The feeling is: everything is where it has always been. Nothing was ever missing. The warmest garden image in the series.",
+        "midjourney": "/imagine wide garden shot in golden light, parent figure on path watching, by the fence a copper robot and orange kitten and large plant forming one continuous shape, garden alive with dappled golden light, everything where it belongs, nothing missing, children's book illustration, warm muted watercolor, Shaun Tan meets Ghibli --ar 16:9 --style raw --v 6.1",
+        "dalle": "A children's book illustration — the final page, wide and golden. The garden bathed in warm dappled light. Anon stands on the garden path, partially visible, watching with a soft smile. By the fence, Shiryo and Bishisheshi and the big plant form one continuous shape — copper, fur, and green, all belonging to the same ground. The garden is alive around them. Golden light falls through every leaf. The feeling is: everything is where it has always been. Nothing was ever missing. The warmest garden image in the entire series. Warm watercolor style, rich greens and earth tones with deep golden light. Style: Shaun Tan meets Oliver Jeffers meets Studio Ghibli. Aspect ratio 16:9."
+      }
+    }
+  ]
+}

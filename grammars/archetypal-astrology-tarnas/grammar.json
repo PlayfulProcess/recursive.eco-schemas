@@ -1,0 +1,646 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "Richard Tarnas",
+        "date": "2006",
+        "note": "Cosmos and Psyche: Intimations of a New World View (Viking/Penguin). Primary source for the archetypal astrology framework."
+      },
+      {
+        "name": "Richard Tarnas",
+        "date": "1991",
+        "note": "The Passion of the Western Mind. Background for the intellectual history of archetypal thought."
+      },
+      {
+        "name": "Stanislav Grof",
+        "date": "1985-2010",
+        "note": "Holotropic research and perinatal matrices informing the archetypal framework."
+      },
+      {
+        "name": "PlayfulProcess",
+        "date": "2026-03-03",
+        "note": "Grammar structure, content written from memory based on Tarnas's published works."
+      }
+    ]
+  },
+  "name": "Archetypal Astrology — Richard Tarnas",
+  "description": "A grammar of planetary archetypes based on Richard Tarnas's archetypal astrology, as developed in 'Cosmos and Psyche' (2006) and his lectures at the California Institute of Integral Studies. Unlike traditional astrology, Tarnas's framework centers on the PLANETS as primary archetypal forces — not the zodiac signs. Each planet embodies a multivalent archetype drawn from Greek mythology, depth psychology, and the history of ideas. The power of the system lies in planetary ASPECTS — when two or more planetary archetypes combine (through conjunction, opposition, square, or trine), they produce emergent archetypal dynamics that can be observed in both individual psychology and collective cultural events.\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Classical paintings of the planetary deities: Botticelli's 'Birth of Venus', Caravaggio's 'Jupiter, Neptune, and Pluto', Velázquez's 'Mars', Rubens's 'Saturn Devouring His Son', Raphael's 'The School of Athens' (Mercury/Hermes). Giovanni Battista Tiepolo's ceiling frescoes of planetary gods (18th century). Ancient Roman frescoes and mosaics depicting planetary deities (Pompeii, Herculaneum). Medieval and Renaissance astronomical manuscripts with planetary symbols and orbits. William Blake's mythological paintings (Uranus/creative rebellion imagery). Gustave Moreau's symbolist paintings of mythological figures (Jupiter, Prometheus). NASA planetary photographs for the outer planets (public domain).",
+  "grammar_type": "astrology",
+  "creator_name": "PlayfulProcess",
+  "tags": [
+    "astrology",
+    "archetypes",
+    "tarnas",
+    "planets",
+    "cosmos-and-psyche",
+    "depth-psychology",
+    "jung",
+    "mythology"
+  ],
+  "items": [
+    {
+      "id": "sun",
+      "name": "The Sun — The Central Self",
+      "category": "luminaries",
+      "sections": {
+        "Archetype": "The solar principle. The central, radiant Self — conscious identity, vitality, the will to exist and to shine. In Tarnas's framework, the Sun represents the heroic impulse toward individuation, the drive to become who you are. It is Apollo: light, clarity, rational order, creative expression, and the courage to stand in the center of your own life. The Sun is not just ego — it is the archetypal Self in its fullest expression, the organizing center around which all other planetary archetypes orbit.",
+        "Mythological Root": "Apollo/Helios — the god of light, truth, prophecy, music, healing, and rational order. Apollo drives his chariot across the sky, bringing consciousness wherever he goes. He is also the god of the Delphic oracle: 'Know thyself.' The Sun archetype carries this dual quality of illumination and self-knowledge.",
+        "Psychological Dimension": "The conscious ego and its relationship to the deeper Self (in the Jungian sense). Solar energy is the force of individuation — the drive to become a distinct, integrated, creative individual. When the Sun is strong, there is vitality, purpose, confidence, and creative fire. When it is blocked or eclipsed, there is depression, loss of meaning, identity crisis.",
+        "In World Transits": "Periods of strong solar emphasis correlate with the emergence of great individuals, heroic cultural moments, and collective movements toward self-determination and creative expression. Solar eclipses have been symbolically associated with crises of leadership and identity.",
+        "Shadow": "Narcissism, egocentrism, tyrannical authority, blinding certainty. The shadow of the Sun is the ego that confuses itself with the whole — the king who believes he IS the kingdom.",
+        "Keywords": "Identity, vitality, purpose, creativity, leadership, consciousness, individuation, heroism, will"
+      },
+      "keywords": [
+        "identity",
+        "vitality",
+        "consciousness",
+        "ego",
+        "leadership",
+        "creativity"
+      ],
+      "sort_order": 0,
+      "level": 1,
+      "metadata": {}
+    },
+    {
+      "id": "moon",
+      "name": "The Moon — The Receptive Soul",
+      "category": "luminaries",
+      "sections": {
+        "Archetype": "The lunar principle. The receptive, reflective, feeling dimension of the psyche — memory, instinct, emotional responsiveness, the need for belonging and security. The Moon is the archetype of the matrix: the mother, the womb, the home, the body, the unconscious ground from which consciousness emerges. Where the Sun says 'I am,' the Moon says 'I feel, I remember, I belong.'",
+        "Mythological Root": "Artemis/Selene/Hecate — the triple goddess of the Moon representing maiden, mother, and crone. Artemis is the wild, untamed feminine — protector of children and animals, goddess of the hunt and the forest. Selene illuminates the night. Hecate guards the crossroads between worlds. The Moon archetype carries all three faces: nurturing, intuitive, and mysterious.",
+        "Psychological Dimension": "The emotional body, the personal unconscious, early conditioning, attachment patterns. The Moon governs how we instinctively respond to the world before thought intervenes. It is the realm of mood, memory, dreams, and the body's felt sense. In therapy, the Moon is often where the earliest wounds and deepest needs reside.",
+        "In World Transits": "Lunar archetypal periods correlate with heightened emotional sensitivity in the collective — movements centered on care, home, family, refugees, the maternal, food security, and the protection of the vulnerable. The Moon also governs collective moods and emotional contagion.",
+        "Shadow": "Emotional overwhelm, regression, dependency, moodiness, clinging to the past. The shadow of the Moon is the refusal to grow up — the eternal child who wants to return to the womb rather than face the world.",
+        "Keywords": "Feeling, memory, instinct, home, mother, receptivity, the unconscious, care, belonging"
+      },
+      "keywords": [
+        "emotion",
+        "instinct",
+        "memory",
+        "home",
+        "mother",
+        "unconscious"
+      ],
+      "sort_order": 1,
+      "level": 1,
+      "metadata": {}
+    },
+    {
+      "id": "mercury",
+      "name": "Mercury — The Messenger",
+      "category": "personal-planets",
+      "sections": {
+        "Archetype": "The mercurial principle. Communication, thought, language, connection, commerce, travel, and the movement of information. Mercury is the archetype of the mind in its most agile mode — making connections, translating between realms, carrying messages between gods and mortals. Mercury is also the Trickster: playful, ambiguous, boundary-crossing, never quite pinned down.",
+        "Mythological Root": "Hermes/Mercury — messenger of the gods, psychopomp (guide of souls to the underworld), patron of travelers, thieves, merchants, and tricksters. Hermes invented the lyre from a tortoise shell on the day he was born, stole Apollo's cattle, and talked his way out of punishment. He is the god of crossroads, boundaries, and the spaces between things.",
+        "Psychological Dimension": "The cognitive function — how we perceive, process, categorize, and communicate experience. Mercury governs learning, speech, writing, analysis, and the endless human need to name things and make meaning through language. It is also the archetype of the messenger between conscious and unconscious — dreams, synchronicities, and intuitive flashes are mercurial phenomena.",
+        "In World Transits": "Mercury-dominant periods correlate with revolutions in communication, technology, media, trade, and intellectual life. The printing press, the telegraph, the internet — all Mercurial breakthroughs. Mercury retrograde periods are symbolically associated with communication breakdowns and the revision of ideas.",
+        "Shadow": "Deception, manipulation, superficiality, nervousness, over-intellectualization. The shadow of Mercury is the mind that spins without grounding — clever but not wise, informed but not understanding.",
+        "Keywords": "Communication, thought, language, connection, commerce, trickster, translation, speed, wit"
+      },
+      "keywords": [
+        "communication",
+        "thought",
+        "language",
+        "trickster",
+        "commerce",
+        "intellect"
+      ],
+      "sort_order": 2,
+      "level": 1,
+      "metadata": {}
+    },
+    {
+      "id": "venus",
+      "name": "Venus — The Beloved",
+      "category": "personal-planets",
+      "sections": {
+        "Archetype": "The Venus principle. Love, beauty, desire, relationship, aesthetic sensibility, pleasure, and the experience of value. Venus is the archetype of erotic and aesthetic attraction — the force that draws things together, creates harmony, and recognizes beauty. She governs not only romantic love but all forms of appreciation: art, music, nature, the body, and the pleasures of embodied life.",
+        "Mythological Root": "Aphrodite/Venus — born from the sea foam, irresistible to gods and mortals alike. Aphrodite is not merely the goddess of sexual love — she is the principle of attraction itself, the cosmic force that draws unlike things into relationship. Her domain includes art, beauty, gardens, friendship, and the capacity to find the world desirable.",
+        "Psychological Dimension": "The relational function — how we love, what we find beautiful, what we value, and how we experience pleasure. Venus governs the capacity for intimacy, receptivity to beauty, and the ability to be moved by the world. She is also the archetype of feminine self-possession — not the mother (Moon) but the lover, the artist, the one who creates beauty.",
+        "In World Transits": "Venus-dominant periods correlate with cultural flowering in the arts, heightened aesthetic sensibility, movements centered on love and relationship, and periods of peace and diplomatic reconciliation. Venus-Pluto combinations can produce intensely passionate or obsessive cultural expressions.",
+        "Shadow": "Vanity, possessiveness, indulgence, superficial charm, aesthetic snobbery. The shadow of Venus is beauty without depth — seduction without love, pleasure without meaning.",
+        "Keywords": "Love, beauty, desire, relationship, art, pleasure, harmony, attraction, value"
+      },
+      "keywords": [
+        "love",
+        "beauty",
+        "desire",
+        "relationship",
+        "art",
+        "pleasure"
+      ],
+      "sort_order": 3,
+      "level": 1,
+      "metadata": {}
+    },
+    {
+      "id": "mars",
+      "name": "Mars — The Warrior",
+      "category": "personal-planets",
+      "sections": {
+        "Archetype": "The Mars principle. Action, assertion, aggression, desire, courage, competition, and the will to overcome obstacles. Mars is the archetype of directed energy — the force that says 'I want' and moves toward its object. He governs physical strength, sexual drive, anger, initiative, and the capacity to fight for what matters. Mars is the warrior, the athlete, the pioneer, the one who goes first.",
+        "Mythological Root": "Ares/Mars — the god of war, battle, and martial courage. But Mars is not merely destructive: he is the protector, the guardian, the force that defends the vulnerable and fights for justice. In Roman religion, Mars was also a god of agriculture — the energy needed to break ground and plant seeds. The martial archetype includes the surgeon, the athlete, the activist, and anyone who acts decisively under pressure.",
+        "Psychological Dimension": "The assertive function — how we pursue what we want, handle conflict, express anger, and take initiative. Mars governs the fight-or-flight response, physical energy, competitive drive, and the capacity to set boundaries. Healthy Mars energy is decisive, courageous, and protective. Blocked Mars becomes passive-aggressive, impotent, or explosively violent.",
+        "In World Transits": "Mars-dominant periods correlate with wars, revolutions, military action, athletic achievement, and collective expressions of anger and assertion. Mars-Saturn combinations produce disciplined military power or frustrated aggression. Mars-Uranus combinations produce sudden, revolutionary violence or breakthrough action.",
+        "Shadow": "Violence, cruelty, destructiveness, recklessness, domination. The shadow of Mars is force without wisdom — the warrior who has forgotten what he's fighting for.",
+        "Keywords": "Action, assertion, courage, anger, desire, competition, initiative, force, will"
+      },
+      "keywords": [
+        "action",
+        "assertion",
+        "courage",
+        "anger",
+        "competition",
+        "force"
+      ],
+      "sort_order": 4,
+      "level": 1,
+      "metadata": {}
+    },
+    {
+      "id": "jupiter",
+      "name": "Jupiter — The King",
+      "category": "social-planets",
+      "sections": {
+        "Archetype": "The Jupiter principle. Expansion, growth, abundance, meaning, faith, generosity, and the impulse toward the larger picture. Jupiter is the archetype of the benevolent king — the force that opens doors, creates opportunity, bestows gifts, and sees the grand pattern. He governs philosophy, religion, higher education, law, foreign travel, and the human need to find meaning in existence.",
+        "Mythological Root": "Zeus/Jupiter — king of the gods, ruler of Mount Olympus, lord of the sky and thunder. Zeus is the great affirmer — he says YES to life in its fullness. He is the father of gods and mortals, the guarantor of justice and hospitality, the one who rewards virtue and punishes hubris. But Zeus is also polymorphously excessive — his love affairs are legendary, his appetite for experience insatiable.",
+        "Psychological Dimension": "The meaning-making function — how we construct a vision of the world that gives life purpose and direction. Jupiter governs faith, optimism, generosity, moral vision, and the capacity for hope. He is the archetype of the teacher, the mentor, the generous benefactor. Jupiter's psychology is expansive: more, bigger, further, higher.",
+        "In World Transits": "Jupiter-dominant periods correlate with cultural optimism, religious revivals, philosophical breakthroughs, economic expansion, and legislative reform. Jupiter-Uranus combinations produce sudden breakthroughs and cultural awakenings. Jupiter-Neptune combinations produce religious and spiritual movements, idealism, and artistic inspiration.",
+        "Shadow": "Excess, inflation, grandiosity, self-righteousness, overextension. The shadow of Jupiter is the promise that can't be kept — the king who becomes a tyrant, the faith that becomes fanaticism, the abundance that becomes gluttony.",
+        "Keywords": "Expansion, meaning, abundance, faith, generosity, wisdom, opportunity, growth, vision"
+      },
+      "keywords": [
+        "expansion",
+        "meaning",
+        "abundance",
+        "faith",
+        "wisdom",
+        "growth"
+      ],
+      "sort_order": 5,
+      "level": 1,
+      "metadata": {}
+    },
+    {
+      "id": "saturn",
+      "name": "Saturn — The Elder",
+      "category": "social-planets",
+      "sections": {
+        "Archetype": "The Saturn principle. Contraction, limitation, structure, time, discipline, maturity, and the encounter with reality's hard edges. Saturn is the archetype of the old man — the force that says NO, imposes boundaries, demands responsibility, and tests what is real. He governs authority, tradition, duty, mortality, and the slow work of building something that lasts. Saturn is the teacher who teaches through difficulty.",
+        "Mythological Root": "Kronos/Saturn — the titan who ruled before Zeus, the god of time who devoured his own children. Saturn is the original patriarch — the stern father whose authority is both protective and oppressive. But Saturn also ruled over the Golden Age, a time of order and abundance. In alchemy, Saturn is the lead that must be transformed into gold. He is the prima materia — the starting point of all transformation.",
+        "Psychological Dimension": "The reality function — how we deal with limitation, authority, aging, failure, and the irreversibility of time. Saturn governs the superego, the inner critic, the conscience, and the capacity for self-discipline. Saturn's psychology is contractive: less, slower, harder, more real. Saturn transits often correlate with crisis, loss, depression — but also with maturation, accomplishment, and the building of lasting structures.",
+        "In World Transits": "Saturn-dominant periods correlate with economic contraction, conservative movements, institutional reform, and collective confrontation with mortality and limitation. Saturn-Pluto combinations produce periods of intense hardship, authoritarian pressure, and the destruction and rebuilding of structures. Saturn-Neptune combinations produce the dissolution of institutions and ideological disillusionment.",
+        "Shadow": "Rigidity, depression, pessimism, authoritarianism, fear. The shadow of Saturn is the wall that becomes a prison — the structure that was meant to protect but now imprisons.",
+        "Keywords": "Limitation, structure, time, discipline, maturity, authority, responsibility, mortality, reality"
+      },
+      "keywords": [
+        "limitation",
+        "structure",
+        "time",
+        "discipline",
+        "authority",
+        "maturity"
+      ],
+      "sort_order": 6,
+      "level": 1,
+      "metadata": {}
+    },
+    {
+      "id": "uranus",
+      "name": "Uranus — The Awakener",
+      "category": "outer-planets",
+      "sections": {
+        "Archetype": "The Uranus principle. Tarnas's most radical reinterpretation: Uranus does not carry the archetype of Ouranos (the sky father) but of PROMETHEUS — the titan who stole fire from the gods and gave it to humanity. Uranus-Prometheus is the archetype of rebellion, revolution, awakening, liberation, innovation, and the sudden breakthrough of the new. He is the force that shatters the old order and brings the shock of freedom.",
+        "Mythological Root": "Prometheus (not Ouranos) — the titan who defied Zeus to bring fire (consciousness, technology, freedom) to humanity, and was punished for it by being chained to a rock. Tarnas's key insight is that the planet's archetypal correlations match Prometheus, not Ouranos. Every major Uranus transit in history correlates with revolutionary upheaval, technological breakthrough, and the liberation of consciousness: the French Revolution, the 1960s, the internet revolution.",
+        "Psychological Dimension": "The individuating function in its most radical form — the drive to break free from all conditioning, to rebel against every authority, to see the world with completely fresh eyes. Uranus governs genius, eccentricity, sudden insight, and the electrifying experience of awakening. Uranus transits are often experienced as disruptive, disorienting, and liberating — the lightning bolt that shatters the old self.",
+        "In World Transits": "Uranus is THE planet of world-historical transformation in Tarnas's system. The Uranus-Pluto cycle (conjunction ~1960s, square ~2010s) correlates with revolutionary mass movements. The Jupiter-Uranus cycle correlates with sudden creative and scientific breakthroughs. The Saturn-Uranus cycle correlates with the tension between old and new, conservative and revolutionary.",
+        "Shadow": "Chaos, instability, recklessness, ideological extremism, the rebel without a cause. The shadow of Uranus is revolution that destroys without building — freedom that becomes merely destructive.",
+        "Keywords": "Revolution, awakening, liberation, innovation, rebellion, genius, electricity, disruption, Prometheus"
+      },
+      "keywords": [
+        "revolution",
+        "awakening",
+        "liberation",
+        "innovation",
+        "rebellion",
+        "genius"
+      ],
+      "sort_order": 7,
+      "level": 1,
+      "metadata": {}
+    },
+    {
+      "id": "neptune",
+      "name": "Neptune — The Mystic",
+      "category": "outer-planets",
+      "sections": {
+        "Archetype": "The Neptune principle. Dissolution, transcendence, imagination, spirituality, compassion, and the longing for union with something greater. Neptune is the archetype of the mystic and the artist — the force that dissolves boundaries between self and other, real and imagined, human and divine. He governs dreams, visions, film, music, mystical experience, and all forms of transcendence — including addiction, delusion, and escapism.",
+        "Mythological Root": "Poseidon/Neptune — lord of the sea, the deep, the unconscious depths. But also Dionysus — the god of ecstasy, intoxication, theatre, and the dissolution of the ego. Neptune's domain is everything that is fluid, boundaryless, oceanic. The sea is the great dissolver — it erodes all edges, mixes all waters, and contains depths we cannot fathom.",
+        "Psychological Dimension": "The transcendent function — the psyche's capacity to dissolve the boundaries of ego and experience something larger. Neptune governs the mystical, the artistic, the empathic, and the imaginal. It is the archetype of compassion (feeling WITH another) and of imagination (seeing what is not yet visible). Neptune transits often correlate with spiritual awakening, creative inspiration — but also with confusion, deception, and the loss of solid ground.",
+        "In World Transits": "Neptune-dominant periods correlate with religious and spiritual movements, the rise of film and mass media, heightened collective idealism, and epidemics of addiction and disillusionment. Neptune-Pluto combinations (very rare, ~500 year cycle) correlate with the deepest transformations of civilization's spiritual foundations. Saturn-Neptune combinations correlate with the collision between ideals and reality.",
+        "Shadow": "Delusion, escapism, addiction, deception, victimhood, spiritual bypassing. The shadow of Neptune is the dream that replaces reality — the refusal to wake up, the fantasy that is more comfortable than truth.",
+        "Keywords": "Transcendence, imagination, spirituality, compassion, dissolution, dreams, mysticism, the ocean, unity"
+      },
+      "keywords": [
+        "transcendence",
+        "imagination",
+        "spirituality",
+        "compassion",
+        "dissolution",
+        "dreams"
+      ],
+      "sort_order": 8,
+      "level": 1,
+      "metadata": {}
+    },
+    {
+      "id": "pluto",
+      "name": "Pluto — The Transformer",
+      "category": "outer-planets",
+      "sections": {
+        "Archetype": "The Pluto principle. The most powerful and most feared of the planetary archetypes. Pluto governs the primordial forces of nature — death and rebirth, destruction and regeneration, the eruption of the instinctual, evolutionary, and elemental powers of life. Pluto is the archetype of transformation through crisis: the descent into the underworld, the encounter with what has been repressed, and the emergence of something fundamentally new from the ashes of the old.",
+        "Mythological Root": "Hades/Pluto — lord of the underworld, god of death and hidden wealth. But also Shiva (the destroyer/creator), Kali (the dark mother), and Dionysus in his most chthonic form. Pluto's domain is everything that lives underground — buried treasure, volcanic magma, repressed trauma, the collective shadow. 'Pluto' means 'the wealthy one' — the riches of the underworld are real, but you must descend to claim them.",
+        "Psychological Dimension": "The transformative function — the psyche's capacity for death and rebirth at the deepest level. Pluto governs the instincts (sexual, aggressive, survival), power dynamics, compulsive patterns, and the encounter with the shadow. Pluto transits are often experienced as crises — loss, betrayal, power struggles, psychological breakdown — that ultimately force a deeper level of honesty and integration. Pluto is the planet of depth psychology itself.",
+        "In World Transits": "Pluto-dominant periods correlate with mass transformations of power structures, world wars, plagues, nuclear energy, depth psychology, and the eruption of collective shadow material. The Uranus-Pluto cycle is the most revolutionary in the entire system. The Saturn-Pluto cycle correlates with the hardest, most consequential periods of history — 'the empire strikes back,' the confrontation between entrenched power and the force of transformation.",
+        "Shadow": "Destruction, obsession, manipulation, totalitarianism, nihilism. The shadow of Pluto is power that has become an end in itself — the will to dominate, the refusal to let go, the identification with the destroyer rather than the transformative process.",
+        "Keywords": "Transformation, death-rebirth, power, the underworld, shadow, intensity, evolution, crisis, depth"
+      },
+      "keywords": [
+        "transformation",
+        "death-rebirth",
+        "power",
+        "shadow",
+        "intensity",
+        "evolution"
+      ],
+      "sort_order": 9,
+      "level": 1,
+      "metadata": {}
+    },
+    {
+      "id": "saturn-pluto",
+      "name": "Saturn–Pluto — The Hard Reckoning",
+      "category": "outer-planet-cycles",
+      "composite_of": [
+        "saturn",
+        "pluto"
+      ],
+      "sections": {
+        "Dynamic": "The most consequential and feared cycle in archetypal astrology. When Saturn (contraction, structure, authority, reality) meets Pluto (transformation, destruction, power, the underworld), the result is periods of extreme hardship, the destruction and rebuilding of institutions, and the confrontation between entrenched power structures and elemental forces of change. This is the archetype of empire under stress, of civilizational trial by fire.",
+        "Historical Correlations": "Tarnas documents Saturn-Pluto alignments correlating with: World War I (conjunction 1914), World War II (square 1939-41), the Cold War crises, September 11 2001 (opposition), and the 2020 pandemic (conjunction). These periods share a quality of gravity, severity, and the feeling that 'the world will never be the same.'",
+        "Psychological Experience": "Saturn-Pluto transits are experienced as periods of intense pressure, loss, confrontation with mortality, and the need to rebuild from the ground up. They strip away everything that isn't essential. What survives a Saturn-Pluto transit is real; what doesn't wasn't.",
+        "Shadow": "Authoritarianism, totalitarianism, mass destruction, nihilistic power. The darkest expression of Saturn-Pluto is power without mercy — the empire that crushes all opposition.",
+        "Questions": "What structure in your life is being tested? What needs to die so something more real can be built? Where are you being asked to face the hardest truth?"
+      },
+      "keywords": [
+        "hard-reckoning",
+        "empire",
+        "crisis",
+        "power",
+        "destruction",
+        "rebuilding"
+      ],
+      "sort_order": 10,
+      "level": 2,
+      "relationship_type": "emergence",
+      "metadata": {}
+    },
+    {
+      "id": "uranus-pluto",
+      "name": "Uranus–Pluto — The Revolutionary Fire",
+      "category": "outer-planet-cycles",
+      "composite_of": [
+        "uranus",
+        "pluto"
+      ],
+      "sections": {
+        "Dynamic": "The most revolutionary cycle in the system. When Uranus-Prometheus (rebellion, liberation, awakening) meets Pluto (elemental power, transformation, the instinctual), the result is explosive revolutionary energy — mass movements, radical social transformation, the eruption of suppressed collective energies, and the birth of new cultural paradigms. This is the archetype of the revolutionary moment.",
+        "Historical Correlations": "Tarnas documents Uranus-Pluto alignments correlating with: the French Revolution (opposition 1787-98), the revolutionary wave of 1848 (conjunction), the 1960s counterculture and global upheaval (conjunction 1960-72), and the global protest movements and populist upheaval of the 2010s (square 2007-20). These periods share a quality of radical liberation, creative destruction, and the feeling that everything is possible.",
+        "Psychological Experience": "Uranus-Pluto transits are experienced as periods of intense creative-destructive energy, radical self-transformation, the shedding of old identities, and the compulsive drive toward liberation. They can be ecstatic and terrifying simultaneously.",
+        "Shadow": "Destructive radicalism, ideological extremism, revolutionary violence without constructive vision. The shadow of Uranus-Pluto is the revolution that eats its children.",
+        "Questions": "What is trying to break free in you? What old structures need to be shattered? Can you channel this energy creatively rather than destructively?"
+      },
+      "keywords": [
+        "revolution",
+        "liberation",
+        "upheaval",
+        "transformation",
+        "awakening",
+        "radicalism"
+      ],
+      "sort_order": 11,
+      "level": 2,
+      "relationship_type": "emergence",
+      "metadata": {}
+    },
+    {
+      "id": "jupiter-uranus",
+      "name": "Jupiter–Uranus — The Breakthrough",
+      "category": "outer-planet-cycles",
+      "composite_of": [
+        "jupiter",
+        "uranus"
+      ],
+      "sections": {
+        "Dynamic": "The cycle of sudden expansion and creative breakthrough. When Jupiter (expansion, meaning, faith, opportunity) meets Uranus (rebellion, innovation, awakening), the result is periods of remarkable inventiveness, scientific discovery, philosophical breakthrough, and the opening of new horizons. This is the archetype of the eureka moment — the flash of insight that changes everything.",
+        "Historical Correlations": "Tarnas documents Jupiter-Uranus alignments correlating with: Copernicus's heliocentric theory, Newton's Principia, Darwin's Origin of Species, Einstein's relativity papers, the Wright Brothers' first flight, the Moon landing, and major technological and scientific breakthroughs throughout history. These periods share a quality of expansive excitement, the thrill of discovery, and the sense that a new world is opening.",
+        "Psychological Experience": "Jupiter-Uranus transits are experienced as periods of creative expansion, sudden opportunities, restlessness, and the desire to break free into something larger. They bring optimism, adventure, and the feeling that anything is possible — but can also produce overextension and unrealistic expectations.",
+        "Shadow": "Manic inflation, reckless optimism, promises that can't be kept. The shadow of Jupiter-Uranus is the breakthrough that goes too far too fast.",
+        "Questions": "What new possibility is opening for you? Where is your thinking ready for a breakthrough? Are you willing to risk the leap?"
+      },
+      "keywords": [
+        "breakthrough",
+        "discovery",
+        "innovation",
+        "expansion",
+        "eureka",
+        "adventure"
+      ],
+      "sort_order": 12,
+      "level": 2,
+      "relationship_type": "emergence",
+      "metadata": {}
+    },
+    {
+      "id": "saturn-neptune",
+      "name": "Saturn–Neptune — The Dissolving Wall",
+      "category": "outer-planet-cycles",
+      "composite_of": [
+        "saturn",
+        "neptune"
+      ],
+      "sections": {
+        "Dynamic": "The cycle of the collision between reality and ideals. When Saturn (structure, limitation, hard reality) meets Neptune (dissolution, imagination, transcendence), existing structures dissolve while new ideals crystallize — or vice versa. This is the archetype of disillusionment and re-enchantment, the collapse of empires and the birth of utopian visions, the confrontation between what IS and what COULD BE.",
+        "Historical Correlations": "Tarnas documents Saturn-Neptune alignments correlating with: the fall of the Berlin Wall (conjunction 1989), the Russian Revolution (conjunction 1917), the Romantic movement's collision with industrial reality, and periods of mass ideological disillusionment and spiritual seeking. These periods share a quality of dissolving certainties and the search for new meaning.",
+        "Psychological Experience": "Saturn-Neptune transits are experienced as periods when the ground shifts — old certainties dissolve, faith is tested, and the boundary between real and imagined becomes porous. They can produce spiritual crisis, creative inspiration, profound compassion — or confusion, disillusionment, and escapism.",
+        "Shadow": "Nihilistic disillusionment, escapism, deception at the institutional level, the abuse of spiritual authority.",
+        "Questions": "What belief system is dissolving for you? What new vision is trying to crystallize? Can you hold the tension between reality and dream?"
+      },
+      "keywords": [
+        "disillusionment",
+        "dissolution",
+        "ideals",
+        "reality",
+        "faith",
+        "collapse"
+      ],
+      "sort_order": 13,
+      "level": 2,
+      "relationship_type": "emergence",
+      "metadata": {}
+    },
+    {
+      "id": "saturn-uranus",
+      "name": "Saturn–Uranus — The Tension of Change",
+      "category": "outer-planet-cycles",
+      "composite_of": [
+        "saturn",
+        "uranus"
+      ],
+      "sections": {
+        "Dynamic": "The cycle of the fundamental tension between old and new, conservative and revolutionary, structure and freedom. When Saturn (tradition, authority, stability) meets Uranus (rebellion, innovation, disruption), the result is intense friction between established institutions and the forces of change. This is the archetype of generational conflict, of the old guard versus the avant-garde.",
+        "Historical Correlations": "Saturn-Uranus alignments correlate with periods of acute political polarization, generational conflict, and the tension between traditional and progressive forces. The 2021 Saturn-Uranus square correlated with intense political division, debates about freedom versus authority, and institutional resistance to change.",
+        "Psychological Experience": "Saturn-Uranus transits are experienced as periods of frustrating constraint alternating with sudden breakthroughs — two steps forward, one step back. The challenge is to honor both the need for stability and the need for change, without being captured by either extreme.",
+        "Shadow": "Rigid authoritarianism OR reckless rebellion — each pole provoking the other into greater extremity.",
+        "Questions": "Where in your life are tradition and innovation in conflict? Can you integrate both? What structure needs to be reformed rather than destroyed?"
+      },
+      "keywords": [
+        "tension",
+        "old-vs-new",
+        "polarization",
+        "reform",
+        "tradition",
+        "change"
+      ],
+      "sort_order": 14,
+      "level": 2,
+      "relationship_type": "emergence",
+      "metadata": {}
+    },
+    {
+      "id": "venus-mars",
+      "name": "Venus–Mars — The Erotic Dance",
+      "category": "personal-cycles",
+      "composite_of": [
+        "venus",
+        "mars"
+      ],
+      "sections": {
+        "Dynamic": "The most primal of the personal planetary combinations — the meeting of the feminine and masculine principles, desire and pursuit, beauty and force, receptivity and assertion. Venus-Mars is the archetype of erotic attraction, creative tension between opposites, and the dance of polarity that generates new life. This is not just sexual — it is the creative tension between any two complementary forces.",
+        "Historical Correlations": "Venus-Mars cycles correlate with cultural expressions of gender dynamics, shifts in romantic and sexual culture, and artistic movements that explore the tension between beauty and power, love and war. The conjunction often coincides with intensely passionate cultural moments.",
+        "Psychological Experience": "Venus-Mars transits are experienced as periods of heightened desire, creative passion, romantic intensity, and the need to integrate opposing drives within oneself. They ask: can you be both strong and tender? Both assertive and receptive?",
+        "Shadow": "Battle of the sexes, seduction as conquest, beauty weaponized, force applied to love.",
+        "Questions": "How do you balance desire and assertion? Where is the creative tension in your relationships? Can you honor both your strength and your softness?"
+      },
+      "keywords": [
+        "eros",
+        "polarity",
+        "desire",
+        "masculine-feminine",
+        "creativity",
+        "passion"
+      ],
+      "sort_order": 15,
+      "level": 2,
+      "relationship_type": "emergence",
+      "metadata": {}
+    },
+    {
+      "id": "jupiter-saturn",
+      "name": "Jupiter–Saturn — The Great Conjunction",
+      "category": "social-cycles",
+      "composite_of": [
+        "jupiter",
+        "saturn"
+      ],
+      "sections": {
+        "Dynamic": "The oldest observed planetary cycle in astrology — the 'Great Conjunction' that occurs every 20 years and has been used to mark social and political epochs for millennia. When Jupiter (expansion, vision, faith) meets Saturn (contraction, structure, reality), the result is a tension between growth and limitation that sets the tone for a generation. This is the archetype of civilization-building — the marriage of vision and discipline.",
+        "Historical Correlations": "Great Conjunctions have been used since Babylonian times to mark political transitions and the founding of new institutional orders. The 2020 Great Conjunction in Aquarius (the first air-sign conjunction in 200 years) was widely interpreted as marking the transition from the industrial age to the information/digital age.",
+        "Psychological Experience": "Jupiter-Saturn transits are experienced as periods of reality-testing for your ambitions and visions. What you've been building either solidifies or collapses. They ask: is your dream realistic? Is your structure alive?",
+        "Shadow": "Paralysis between expansion and contraction, ambition frustrated by limitation, vision crushed by reality.",
+        "Questions": "What vision are you trying to build? What structures support it? Where is the balance between reaching higher and building deeper?"
+      },
+      "keywords": [
+        "great-conjunction",
+        "civilization",
+        "vision",
+        "structure",
+        "epochs",
+        "balance"
+      ],
+      "sort_order": 16,
+      "level": 2,
+      "relationship_type": "emergence",
+      "metadata": {}
+    },
+    {
+      "id": "neptune-pluto",
+      "name": "Neptune–Pluto — The Civilizational Depth",
+      "category": "outer-planet-cycles",
+      "composite_of": [
+        "neptune",
+        "pluto"
+      ],
+      "sections": {
+        "Dynamic": "The slowest and deepest of all planetary cycles — approximately 500 years. When Neptune (transcendence, imagination, spirituality) meets Pluto (transformation, elemental power, the underworld), the result is a transformation so deep it reshapes the spiritual and psychological foundations of civilization itself. This is the archetype of civilizational rebirth — the death and regeneration of an entire worldview.",
+        "Historical Correlations": "The most recent Neptune-Pluto conjunction occurred in 1891-92, correlating with the birth of depth psychology (Freud, Jung), quantum physics, modern art, and the dissolution of the classical worldview. The previous conjunction (~1399) correlated with the early Renaissance. These are centuries-scale transformations that redefine what it means to be human.",
+        "Psychological Experience": "Neptune-Pluto dynamics operate at a level deeper than individual psychology — they are felt as the 'spirit of the age,' the unconscious assumptions of an era. When you feel that 'something fundamental has shifted' in the world, you may be sensing Neptune-Pluto.",
+        "Shadow": "Civilizational collapse, the death of meaning, nihilism on a species scale.",
+        "Questions": "What civilizational transformation are you living through? What worldview is dying? What is being born that you can barely imagine?"
+      },
+      "keywords": [
+        "civilizational",
+        "depth",
+        "worldview",
+        "rebirth",
+        "epochal",
+        "spiritual-transformation"
+      ],
+      "sort_order": 17,
+      "level": 2,
+      "relationship_type": "emergence",
+      "metadata": {}
+    },
+    {
+      "id": "sun-saturn",
+      "name": "Sun–Saturn — The Test of Character",
+      "category": "personal-cycles",
+      "composite_of": [
+        "sun",
+        "saturn"
+      ],
+      "sections": {
+        "Dynamic": "When the central Self (Sun) encounters limitation, authority, and time (Saturn), the result is a test of character — a confrontation between who you want to be and what reality demands. Sun-Saturn is the archetype of earned achievement, the mentor-student relationship, and the slow forging of authentic authority through discipline and difficulty.",
+        "Psychological Experience": "Sun-Saturn transits often feel heavy — depression, self-doubt, the feeling of being blocked. But they are also the periods when real accomplishment happens. Saturn doesn't destroy the Sun — it concentrates it, focuses it, gives it weight and substance. The person who emerges from a Sun-Saturn transit has earned something real.",
+        "Shadow": "Crushing self-criticism, fear of failure, identification with the inner critic, the authority figure who crushes creativity.",
+        "Questions": "What is being tested in your sense of self? Where do you need more discipline? What authentic authority are you being asked to step into?"
+      },
+      "keywords": [
+        "character",
+        "discipline",
+        "authority",
+        "achievement",
+        "testing",
+        "maturity"
+      ],
+      "sort_order": 18,
+      "level": 2,
+      "relationship_type": "emergence",
+      "metadata": {}
+    },
+    {
+      "id": "moon-pluto",
+      "name": "Moon–Pluto — The Emotional Depths",
+      "category": "personal-cycles",
+      "composite_of": [
+        "moon",
+        "pluto"
+      ],
+      "sections": {
+        "Dynamic": "When the emotional, instinctual self (Moon) encounters the forces of transformation and the underworld (Pluto), the result is a descent into the deepest emotional territory — primal feelings, maternal complexes, survival instincts, and the transformative power of confronting what has been repressed in the emotional body. Moon-Pluto is the archetype of emotional catharsis and the dark feminine.",
+        "Psychological Experience": "Moon-Pluto transits often surface early emotional wounds, attachment traumas, and the most primitive layers of the psyche. They can produce intense emotional experiences — grief, rage, ecstasy, terror — that ultimately lead to a deeper emotional authenticity. This is the 'descent of Inanna' territory: you must go down before you can come back up transformed.",
+        "Shadow": "Emotional manipulation, obsessive attachment, the devouring mother, emotional vampirism.",
+        "Questions": "What emotion are you afraid to feel? What early wound is asking for attention? Can you let the old emotional pattern die?"
+      },
+      "keywords": [
+        "emotional-depths",
+        "catharsis",
+        "primal",
+        "attachment",
+        "dark-feminine",
+        "transformation"
+      ],
+      "sort_order": 19,
+      "level": 2,
+      "relationship_type": "emergence",
+      "metadata": {}
+    },
+    {
+      "id": "planetary-archetypes",
+      "name": "The Planetary Archetypes",
+      "sort_order": 20,
+      "category": "meta",
+      "level": 3,
+      "composite_of": [
+        "sun",
+        "moon",
+        "mercury",
+        "venus",
+        "mars",
+        "jupiter",
+        "saturn",
+        "uranus",
+        "neptune",
+        "pluto"
+      ],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "The ten planetary bodies as archetypal forces. In Tarnas's framework, the planets are not causal agents — they are synchronistic indicators of archetypal dynamics operating in both the individual psyche and the collective. Each planet embodies a multivalent archetype: a cluster of meanings, images, drives, and experiences that appear across mythology, psychology, history, and personal life. The planets are organized into three tiers: the Luminaries (Sun and Moon, the central polarity of consciousness), the Personal Planets (Mercury, Venus, Mars — fast-moving, individually felt), and the Outer Planets (Jupiter, Saturn, Uranus, Neptune, Pluto — slow-moving, collectively transformative).",
+        "How to Use": "Draw a single planet for daily reflection on the archetypal energy most present in your life. Or draw two planets to explore their dynamic combination. The real power of this grammar is in the L2 aspects — what happens when archetypes meet."
+      },
+      "keywords": [
+        "planets",
+        "archetypes",
+        "astrology"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "the-world-transits",
+      "name": "The World Transits",
+      "sort_order": 21,
+      "category": "meta",
+      "level": 3,
+      "composite_of": [
+        "saturn-pluto",
+        "uranus-pluto",
+        "jupiter-uranus",
+        "saturn-neptune",
+        "saturn-uranus",
+        "jupiter-saturn",
+        "neptune-pluto"
+      ],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "The great planetary cycles that shape collective history. This is the core of Tarnas's 'Cosmos and Psyche' — the discovery that the outer-planet cycles (Saturn-Pluto, Uranus-Pluto, Jupiter-Uranus, etc.) correlate with remarkable consistency to the major events, movements, and cultural transformations of Western history. These are not causal claims — Tarnas is careful to speak of 'correlation' and 'synchronicity' rather than causation. But the patterns are striking enough to suggest that the cosmos is more deeply interconnected with human experience than the modern worldview assumes.",
+        "How to Use": "Use these world transit cards to understand the archetypal quality of the current historical moment. What planetary cycles are active now? What does that tell us about the character of our time? These are also powerful for understanding historical periods — draw a card to explore what archetypal dynamics shaped a particular era."
+      },
+      "keywords": [
+        "world-transits",
+        "history",
+        "collective",
+        "cycles",
+        "epochs"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "personal-dynamics",
+      "name": "Personal Dynamics",
+      "sort_order": 22,
+      "category": "meta",
+      "level": 3,
+      "composite_of": [
+        "venus-mars",
+        "sun-saturn",
+        "moon-pluto"
+      ],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "The planetary combinations most intimately felt in individual psychology and relationships. While the outer-planet cycles shape collective history, these personal dynamics shape the inner life — the test of character (Sun-Saturn), the erotic dance (Venus-Mars), and the emotional depths (Moon-Pluto). These are the archetypes most relevant to personal reflection, therapy, and the work of self-understanding.",
+        "How to Use": "Draw these cards when you are working with personal questions about identity, relationships, and emotional life. They offer a mythic lens on experiences that might otherwise feel merely personal."
+      },
+      "keywords": [
+        "personal",
+        "psychology",
+        "relationships",
+        "inner-life"
+      ],
+      "metadata": {}
+    }
+  ]
+}

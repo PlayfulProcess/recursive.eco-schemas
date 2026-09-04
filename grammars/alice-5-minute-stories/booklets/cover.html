@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alice's Adventures in Wonderland — Book Cover</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; overflow: hidden; }
+    body {
+      font-family: 'Georgia', 'Cambria', serif;
+      background: #2c1810; color: white;
+      display: flex; height: 100vh;
+    }
+    .cover-left {
+      width: 50%; height: 100%; display: flex;
+      align-items: center; justify-content: center;
+      padding: 24px; background: #1a0e08;
+    }
+    .cover-left img {
+      max-width: 100%; max-height: 90vh;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+      object-fit: contain;
+    }
+    .cover-right {
+      width: 50%; height: 100%; display: flex;
+      align-items: center; justify-content: center;
+      padding: 40px 40px 60px; background: #2c1810;
+      border-left: 1px solid #5a4030;
+    }
+    .title-block { text-align: center; }
+    .ornament {
+      font-size: 24px; color: #d4a76a; margin-bottom: 30px;
+      letter-spacing: 8px;
+    }
+    .book-title {
+      font-size: clamp(28px, 5vw, 52px);
+      line-height: 1.15; margin-bottom: 30px;
+      font-weight: 800; letter-spacing: 1px;
+    }
+    .author {
+      font-size: clamp(14px, 2vw, 22px);
+      letter-spacing: 4px; color: #d4a76a;
+      margin-bottom: 40px;
+    }
+    .edition {
+      font-size: clamp(10px, 1.2vw, 14px);
+      letter-spacing: 2px; color: #a08060;
+      line-height: 1.8;
+    }
+    .play-hint {
+      margin-top: 50px; font-size: 13px;
+      color: #7a6050; letter-spacing: 1px;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
+    }
+    .progress-bar {
+      position: fixed; bottom: 0; left: 0;
+      height: 3px; background: #d4a76a;
+      width: 0%; transition: width 0.1s linear;
+    }
+    /* Clickable overlay */
+    .click-overlay {
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%;
+      cursor: pointer; z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div class="cover-left">
+    <img src="https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-01-down-the-rabbit-hole/arthur-rackham-1907.jpg" alt="Alice in Wonderland — Arthur Rackham illustration">
+  </div>
+  <div class="cover-right">
+    <div class="title-block">
+      <div class="ornament">&#10048; &#10048; &#10048;</div>
+      <h1 class="book-title">ALICE'S<br>ADVENTURES<br>IN WONDERLAND</h1>
+      <div class="author">LEWIS CARROLL</div>
+      <div class="edition">
+        ILLUSTRATED CHAPTER BOOKS<br>
+        117 PUBLIC DOMAIN ILLUSTRATIONS<br>
+        TENNIEL &middot; RACKHAM &middot; CARROLL &middot; HUDSON &amp; MORE
+      </div>
+      <div class="play-hint" id="hint">CLICK ANYWHERE TO BEGIN</div>
+    </div>
+  </div>
+  <div class="progress-bar" id="progressBar"></div>
+  <div class="click-overlay" id="clickOverlay"></div>
+  <script>
+    var AUTO_ADVANCE_SECONDS = 5;
+    var params = new URLSearchParams(window.location.search);
+    var isAutoplay = params.has('autoplay');
+    var progressBar = document.getElementById('progressBar');
+    var hint = document.getElementById('hint');
+    var overlay = document.getElementById('clickOverlay');
+    var timer = null;
+    var startTime = null;
+
+    function goToChapter1() {
+      var qs = window.location.search.slice(1);
+      window.location.href = '/booklets/chapter01-down-the-rabbit-hole.html' + (qs ? '?' + qs : '');
+    }
+
+    // Click anywhere to advance immediately
+    overlay.addEventListener('click', function() {
+      if (timer) clearInterval(timer);
+      goToChapter1();
+    });
+
+    if (isAutoplay) {
+      // Enter fullscreen
+      document.documentElement.requestFullscreen().catch(function() {});
+      hint.textContent = 'STARTING IN ' + AUTO_ADVANCE_SECONDS + ' SECONDS...';
+
+      // Progress bar + countdown
+      startTime = Date.now();
+      timer = setInterval(function() {
+        var elapsed = (Date.now() - startTime) / 1000;
+        var pct = Math.min(100, (elapsed / AUTO_ADVANCE_SECONDS) * 100);
+        progressBar.style.width = pct + '%';
+        var remaining = Math.ceil(AUTO_ADVANCE_SECONDS - elapsed);
+        if (remaining > 0) {
+          hint.textContent = 'STARTING IN ' + remaining + '...';
+        }
+        if (elapsed >= AUTO_ADVANCE_SECONDS) {
+          clearInterval(timer);
+          goToChapter1();
+        }
+      }, 100);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#1a0a0a"/>
+  <defs>
+    <radialGradient id="glow-tattva-24" cx="50%" cy="50%"><stop offset="0%" stop-color="#c62828" stop-opacity="0.15"/><stop offset="100%" stop-color="#1a0a0a" stop-opacity="0"/></radialGradient>
+  </defs>
+  <g>
+    <circle cx="200" cy="200" r="180" fill="url(#glow-tattva-24)"/>
+    <circle cx="200" cy="200" r="130" fill="none" stroke="#ef5350" stroke-width="1.5" opacity="0.15"/>
+    <rect x="160" y="160" width="80" height="80" fill="none" stroke="#c62828" stroke-width="1.5" opacity="0.4" transform="rotate(45 200 200)"/>
+    <line x1="220" y1="200" x2="276" y2="200" stroke="#ef5350" stroke-width="0.8" opacity="0.35"/><line x1="214.14213562373095" y1="214.14213562373095" x2="253.74011537017762" y2="253.7401153701776" stroke="#ef5350" stroke-width="0.8" opacity="0.35"/><line x1="200" y1="220" x2="200" y2="276" stroke="#ef5350" stroke-width="0.8" opacity="0.35"/><line x1="185.85786437626905" y1="214.14213562373095" x2="146.2598846298224" y2="253.74011537017762" stroke="#ef5350" stroke-width="0.8" opacity="0.35"/><line x1="180" y1="200" x2="124" y2="200" stroke="#ef5350" stroke-width="0.8" opacity="0.35"/><line x1="185.85786437626905" y1="185.85786437626905" x2="146.25988462982238" y2="146.2598846298224" stroke="#ef5350" stroke-width="0.8" opacity="0.35"/><line x1="200" y1="180" x2="200" y2="124" stroke="#ef5350" stroke-width="0.8" opacity="0.35"/><line x1="214.14213562373095" y1="185.85786437626905" x2="253.7401153701776" y2="146.25988462982238" stroke="#ef5350" stroke-width="0.8" opacity="0.35"/>
+    <circle cx="200" cy="200" r="5" fill="#c62828" opacity="0.9"/>
+  </g>
+</svg>

@@ -1,0 +1,273 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "url": "https://lifeisprocess.substack.com/",
+        "date": "2026-04-21",
+        "note": "Original creator — deck designed to be played by the author with her daughter, for cultural transmission and early Portuguese reading."
+      }
+    ]
+  },
+  "name": "Baralho de Expressões Brasileiras",
+  "description": "A mother-daughter deck of Brazilian Portuguese expressions, idioms, and cultural sayings. Designed for play and early reading. Each card: the expression, its literal word-by-word, its cultural meaning, a short scene where it is used, and a song anchor (title/artist/year/link — not lyrics; linking out respects copyright). Play modes include morning draw, song-first recognition, and scene improvisation. FIRST DRAFT — the author (native Brazilian Portuguese speaker) will review for nuance. Fields marked confidence:low need her eye most. Twelve cards in this first draft; target is 30-40 across six clusters (saudade, jeitinho, refusal, amazement, affection, body-in-language).",
+  "grammar_type": "custom",
+  "creator_name": "PlayfulProcess",
+  "creator_link": "https://lifeisprocess.substack.com/",
+  "tags": [
+    "brazilian",
+    "portuguese",
+    "idioms",
+    "kids",
+    "mother-daughter",
+    "cultural-transmission",
+    "reading-practice",
+    "tarot-style"
+  ],
+  "cover_image_url": "",
+  "items": [
+    {
+      "id": "saudade",
+      "name": "Saudade",
+      "sort_order": 0,
+      "level": 1,
+      "category": "saudade",
+      "sections": {
+        "Expressão": "Saudade",
+        "Literal": "(untranslatable — wistful longing for what or whom is absent; held as a kind of presence)",
+        "Significado": "The feeling of missing someone or something that is not there, held not as pain to be fixed but as the texture love takes when the loved one is away. Central to Brazilian emotional vocabulary; often claimed as untranslatable because the feeling-structure has no direct equivalent in English (longing / nostalgia / wistfulness each catch a piece, none catches the whole).",
+        "Cena": "A child's grandmother has just gone home after a week-long visit. Dinner is quiet. 'Mãe,' the child says, 'estou com saudade da vovó.' The mother does not try to console. She says, 'eu também, meu amor.' Saudade is not sadness to be fixed. Saudade is the texture of love noticing an absence.",
+        "Música": "Chega de Saudade — Antônio Carlos Jobim & Vinícius de Moraes, 1958. The song that birthed bossa nova. The title is a paradox: 'Enough of saudade' is itself an expression of saudade for someone whose return is being longed for.",
+        "Dificuldade": "1"
+      },
+      "keywords": ["longing", "love", "absence", "untranslatable", "core-vocabulary"],
+      "metadata": {
+        "song_url": "https://www.youtube.com/watch?v=m0VTgx4Tcr4",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "dar-um-jeitinho",
+      "name": "Dar um jeitinho",
+      "sort_order": 1,
+      "level": 1,
+      "category": "jeitinho",
+      "sections": {
+        "Expressão": "Dar um jeitinho",
+        "Literal": "Give a little way / give a little way-of-doing",
+        "Significado": "To find an informal workaround — usually bending a rule, using a personal connection, or improvising a solution where the official path would fail. The jeitinho is the Brazilian relational ethic: the world is not governed by rules alone; it is also governed by specific relationships, context, and the creativity of the person asking. Whether this is virtue or vice is debated; most Brazilians hold it as both at once.",
+        "Cena": "You arrive at the bank five minutes after closing. The doors are locked. A security guard sees you. You explain that you have to deposit the rent check today or your landlord will charge interest. The guard looks around, knocks on the window, gets the attention of a teller. They do not need to let you in. They do it anyway. 'Tá, dá um jeitinho,' the guard says as you thank him. The jeitinho has happened.",
+        "Música": "Aquarela do Brasil — Ary Barroso, 1939. The original 'Brasil!' samba exalting Brazilian character, warmth, and improvisation. Public domain in the US.",
+        "Dificuldade": "2"
+      },
+      "keywords": ["informal", "workaround", "relationships", "improvisation", "core-ethic"],
+      "metadata": {
+        "song_url": "https://www.youtube.com/watch?v=a1rorWUIkq8",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "nem-vem-que-nao-tem",
+      "name": "Nem vem que não tem",
+      "sort_order": 2,
+      "level": 1,
+      "category": "refusal",
+      "sections": {
+        "Expressão": "Nem vem que não tem",
+        "Literal": "Don't even come, because there isn't",
+        "Significado": "A playful, emphatic refusal. Roughly: 'don't even try that on me' or 'that's not going to fly.' The speaker is blocking an attempt before it fully arrives. Tone is dismissive but rarely hostile — more like a sibling's eye-roll than an insult. Often deployed when someone is making excuses, attempting flattery to get something, or trying a maneuver both parties know is a maneuver.",
+        "Cena": "Your older cousin asks to borrow your bicycle for the weekend. The last time, she came back with a flat tire and didn't pay to fix it. She starts: 'Prometo que dessa vez eu—' You cut her off with a smile: 'Nem vem que não tem.' Everyone laughs, including her. The refusal is clear and the relationship is intact.",
+        "Música": "Frequently appears in funk carioca and samba dialogues. Jorge Ben Jor's 1970s catalog uses this register often.",
+        "Dificuldade": "3"
+      },
+      "keywords": ["refusal", "playful", "dismissive", "sibling-register", "boundaries"],
+      "metadata": {
+        "song_url": "",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "nossa",
+      "name": "Nossa!",
+      "sort_order": 3,
+      "level": 1,
+      "category": "amazement",
+      "sections": {
+        "Expressão": "Nossa!",
+        "Literal": "Ours! (shortened from 'Nossa Senhora' — Our Lady / the Virgin Mary)",
+        "Significado": "Wow! / Oh my goodness! / That's incredible! The most pervasive Brazilian interjection of surprise or amazement. The religious origin (Our Lady) is mostly forgotten in everyday use; 'nossa' just means 'wow.' Used positively or negatively — for delight, shock, concern, or incredulity — and calibrated by tone and context.",
+        "Cena": "A child runs inside with a bird's nest she has found. 'Mãe! Olha o que eu achei!' She shows the delicate woven construction, with three tiny blue eggs inside. The mother kneels, looks, and says, 'Nossa!' — soft, almost breathed. The nossa does the work of wonder that a longer sentence would ruin.",
+        "Música": "Nossa, Nossa (Michel Teló's 2011 'Ai Se Eu Te Pego' uses the register of astonishment throughout). Also abundant in MPB — Caetano, Elis, Chico — as emotional punctuation.",
+        "Dificuldade": "1"
+      },
+      "keywords": ["wow", "amazement", "interjection", "catholic-residue", "everyday"],
+      "metadata": {
+        "song_url": "https://www.youtube.com/watch?v=hcm55lU9knw",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "eita",
+      "name": "Eita!",
+      "sort_order": 4,
+      "level": 1,
+      "category": "amazement",
+      "sections": {
+        "Expressão": "Eita!",
+        "Literal": "(pure interjection, no literal meaning)",
+        "Significado": "An exclamation of surprise, often with a slightly ominous or mock-ominous edge. 'Eita' is more common in the Northeast and in country/forró contexts, though it travels throughout Brazil. Tone ranges from 'uh-oh' to 'whoa!' depending on situation. Paired with 'eita nois' ('eita us' — a warm collective affirmation in some contexts) or with specific follow-ups for specific kinds of surprise.",
+        "Cena": "A child is about to spill her açaí bowl. The mother sees it a half-second before it happens. 'Eita!' — half warning, half already-resigned. The bowl spills. The eita has prepared the moment.",
+        "Música": "Abundant in forró, sertanejo, and coco traditions of the Northeast. Dominguinhos, Luiz Gonzaga, Elba Ramalho — frequent 'eita' in refrains.",
+        "Dificuldade": "1"
+      },
+      "keywords": ["interjection", "northeast", "surprise", "warning", "folk"],
+      "metadata": {
+        "song_url": "",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "cair-a-ficha",
+      "name": "Cair a ficha",
+      "sort_order": 5,
+      "level": 1,
+      "category": "body-in-language",
+      "sections": {
+        "Expressão": "Cair a ficha",
+        "Literal": "The token dropped / the token falls",
+        "Significado": "To finally understand; the penny drops. Reference to old pay phones that required a token (ficha) which would fall into the mechanism once the call connected. The expression captures the moment of delayed recognition — when something you had been told, or had seen in front of you, finally becomes clear. Often used with a delay implied: 'só hoje caiu a ficha' — 'only today did the token drop.'",
+        "Cena": "Your daughter has been asking for weeks why her grandmother always keeps extra food in the freezer. You have explained that grandmother lived through shortages. The daughter nods but does not quite understand. One afternoon, at the supermarket, the daughter sees empty shelves — a supplier strike. She looks at you. 'Mãe,' she says, 'caiu a ficha.' The understanding has landed in the body, not just the head.",
+        "Música": "Elis Regina and other MPB classics use the body-register of recognition. 'Cair a ficha' itself is conversational rather than lyric.",
+        "Dificuldade": "3"
+      },
+      "keywords": ["understanding", "recognition", "delay", "body", "learning"],
+      "metadata": {
+        "song_url": "",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "pisar-na-bola",
+      "name": "Pisar na bola",
+      "sort_order": 6,
+      "level": 1,
+      "category": "body-in-language",
+      "sections": {
+        "Expressão": "Pisar na bola",
+        "Literal": "To step on the ball",
+        "Significado": "To screw up; to disappoint someone; to fall short of what was expected. From futebol (football/soccer): a player who has the ball at their feet and, instead of controlling it, steps on it and loses possession — an avoidable, visible failure. The expression carries the tone of *you had it, and you lost it — and it was on you.* Usually not devastating; more like a respectful call-out.",
+        "Cena": "You promised your friend you would pick her up at the airport. You forgot. She took an Uber, tired, at midnight. The next day, she calls. 'Amiga, você pisou na bola.' Not shouting. Not ending the friendship. Just naming it. You apologize. You do not make the excuse you were going to make. You pisou na bola. You own it.",
+        "Música": "Football culture is saturated in Brazilian music — samba, MPB, and sertanejo all have songs using 'pisar na bola' or its near-cousins. Jorge Aragão, Zeca Pagodinho ballads.",
+        "Dificuldade": "3"
+      },
+      "keywords": ["mistake", "disappointment", "football", "owning-up", "accountability"],
+      "metadata": {
+        "song_url": "",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "encher-o-saco",
+      "name": "Encher o saco",
+      "sort_order": 7,
+      "level": 1,
+      "category": "body-in-language",
+      "sections": {
+        "Expressão": "Encher o saco",
+        "Literal": "To fill the bag / to fill the sack",
+        "Significado": "To annoy, to bother, to wear someone down with repeated small irritations. The 'saco' is the patience-container; when it is full, the person is no longer tolerating. Register is informal but not crude (though it derives from a more vulgar origin). Commonly used with 'estou de saco cheio' — 'I'm fed up' / 'my bag is full.'",
+        "Cena": "Your daughter has asked for ice cream six times in the last twenty minutes. You have said no, patiently, five times. On the sixth time, you look at her and say: 'Filha, você está enchendo o saco.' She stops. She understands this is a line. Fifteen minutes later, she is playing with her toys. The patience-container has been named and not crossed.",
+        "Música": "Informal register — more common in conversation than in lyrics, though Brazilian rock (Legião Urbana, Titãs) uses the register of exhaustion with social annoyance.",
+        "Dificuldade": "3"
+      },
+      "keywords": ["annoyance", "patience", "limits", "parenting", "informal"],
+      "metadata": {
+        "song_url": "",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "meu-bem",
+      "name": "Meu bem",
+      "sort_order": 8,
+      "level": 1,
+      "category": "affection",
+      "sections": {
+        "Expressão": "Meu bem",
+        "Literal": "My good / my well / my precious",
+        "Significado": "My dear / my love / sweetheart. A warm form of address, used between romantic partners but also from parents to children, between close friends, and (carefully) between shopkeepers and customers in some regions. Carries a specific softness; less possessive than 'meu amor' but more intimate than a name.",
+        "Cena": "Your daughter has had a hard day at school. She tells you about it slowly at dinner. You do not interrupt. When she finishes, you say: 'Eu entendo, meu bem.' The 'meu bem' does half the comforting; the rest is the attention you gave her story.",
+        "Música": "João Gilberto recorded 'Bim Bom' and dozens of standards using 'meu bem.' Saturated throughout bossa nova and MPB.",
+        "Dificuldade": "2"
+      },
+      "keywords": ["affection", "tenderness", "parenting", "warmth", "address"],
+      "metadata": {
+        "song_url": "",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "ta-de-brincadeira",
+      "name": "Tá de brincadeira",
+      "sort_order": 9,
+      "level": 1,
+      "category": "refusal",
+      "sections": {
+        "Expressão": "Tá de brincadeira",
+        "Literal": "You are of play / you are in play-mode",
+        "Significado": "You're kidding / you must be joking. Expresses incredulity at what the other person has just said or done. Can be warm or sharp depending on tone — 'tá de brincadeira?' said laughing is a playful push-back; said flat is 'seriously, no.' Related to 'você tá brincando?' but with a slightly more idiomatic register.",
+        "Cena": "Your cousin tells you she has decided to move to Japan with two weeks' notice. You stare at her. 'Ana, você tá de brincadeira.' She shakes her head. 'Não tô, não.' The conversation shifts. Your tá-de-brincadeira has acknowledged the surprise and invited her to walk you through the decision.",
+        "Música": "Playful register — common in samba and pagode banter. Chico Buarque's 'Construção' uses related registers of disbelief at injustice.",
+        "Dificuldade": "3"
+      },
+      "keywords": ["incredulity", "kidding", "surprise", "pushback", "informal"],
+      "metadata": {
+        "song_url": "",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "valeu",
+      "name": "Valeu",
+      "sort_order": 10,
+      "level": 1,
+      "category": "affection",
+      "sections": {
+        "Expressão": "Valeu",
+        "Literal": "It was worth (it) / it had value",
+        "Significado": "Thanks (informal) / cheers / I appreciate it. The past-tense form of 'valer' (to be worth) is used as a casual thank-you — roughly 'it was worth it (you did that).' Often combined: 'valeu, brother,' 'valeu aí.' Register is warm and peer-to-peer; one does not typically 'valeu' an elder or a formal figure (one says 'obrigado/obrigada' for those). Between friends, however, 'valeu' carries a specific warmth that 'obrigado' does not.",
+        "Cena": "Your friend has helped you move a heavy piece of furniture up three flights of stairs. As you both sit, breathing hard, on the top landing, you say: 'Cara, valeu.' She nods: 'Magina' (from 'imagina' — 'don't mention it'). The exchange is short. It is also complete.",
+        "Música": "Abundant in pagode, funk, and contemporary MPB — often as refrain punctuation. Gilberto Gil, Caetano, Marisa Monte all use the register.",
+        "Dificuldade": "1"
+      },
+      "keywords": ["thanks", "informal", "friendship", "gratitude", "peer-to-peer"],
+      "metadata": {
+        "song_url": "",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "bater-as-botas",
+      "name": "Bater as botas",
+      "sort_order": 11,
+      "level": 1,
+      "category": "body-in-language",
+      "sections": {
+        "Expressão": "Bater as botas",
+        "Literal": "To clap the boots / to strike the boots",
+        "Significado": "To die. Colloquial, often humorous or irreverent — used when the speaker wants to name death without the gravity of 'morrer.' Possibly from the image of a body's boots falling to the floor at the end. Similar to English 'kicked the bucket' or 'bit the dust.' Used about oneself often: 'um dia a gente bate as botas' ('one day we clap our boots') — a casual memento mori.",
+        "Cena": "Your grandmother, at 89, is telling a story at Sunday lunch. She pauses, smiles, and says: 'Quando eu bater as botas, quero que vocês ponham bossa nova no meu velório.' Everyone laughs, including her. The naming of death through 'bater as botas' let her make a practical request without heaviness. This is what the expression is for.",
+        "Música": "Frequent in sertanejo, samba, and popular song — often in humorous contexts. Chico Buarque, Martinho da Vila, regional music all use it.",
+        "Dificuldade": "3"
+      },
+      "keywords": ["death", "colloquial", "humor", "memento-mori", "grandmother"],
+      "metadata": {
+        "song_url": "",
+        "confidence": "medium"
+      }
+    }
+  ]
+}

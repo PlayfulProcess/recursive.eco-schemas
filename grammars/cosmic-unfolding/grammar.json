@@ -1,0 +1,616 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "date": "2026-03-06",
+        "note": "Original from-memory grammar based on current astrophysics and cosmology consensus, inspired by the storytelling style of Neil deGrasse Tyson's Cosmos"
+      }
+    ]
+  },
+  "name": "Cosmic Unfolding",
+  "description": "The story of everything — from the Big Bang to you reading this sentence. Thirty milestones in the 13.8-billion-year history of the universe, told with wonder and awe. Each event is a turning point: the moment the first light escaped, the first star ignited, the first planet formed, the first cell divided, the first eye opened. Tiered content for young children (Story) and older readers (Science).\n\nPUBLIC DOMAIN ILLUSTRATION REFERENCES: Camille Flammarion (1842–1925), whose astronomical illustrations in 'Astronomie Populaire' (1880) and 'L'Atmosphère' (1888) combined scientific accuracy with cosmic wonder. Étienne Léopold Trouvelot (1827–1895), whose astronomical pastels at Harvard Observatory captured planets, nebulae, and solar phenomena with remarkable beauty.",
+  "grammar_type": "custom",
+  "creator_name": "PlayfulProcess",
+  "tags": ["cosmos", "big-bang", "astrophysics", "evolution", "kids", "science", "wonder", "timeline"],
+  "roots": ["natural-philosophy"],
+  "shelves": ["wonder", "children"],
+  "lineages": ["Kelty"],
+  "worldview": "rationalist",
+  "items": [
+    {
+      "id": "big-bang",
+      "name": "The Big Bang",
+      "sort_order": 1,
+      "category": "first-moments",
+      "level": 1,
+      "sections": {
+        "Story": "Before the Big Bang, there was no 'before.' There was no space, no time, no up or down, no light or dark — nothing at all. Then, 13.8 billion years ago, everything that would ever exist burst into being from a point smaller than an atom. Not an explosion in space — an explosion OF space. The universe didn't expand into anything; space itself stretched and grew, carrying everything with it. In the first tiny fraction of a second, the universe was hotter than anything has ever been since.",
+        "Science": "The Big Bang wasn't an explosion in pre-existing space — it was the origin of space, time, matter, and energy simultaneously. At t=0, the observable universe was compressed into a singularity of effectively zero volume and infinite density (a point where general relativity breaks down and a theory of quantum gravity is needed). Within the first 10⁻⁴³ seconds (the Planck time), the four fundamental forces may have been unified. The evidence for the Big Bang includes the cosmic microwave background, the observed expansion of the universe (Hubble's Law), the abundance of light elements, and the evolution of galaxy populations over cosmic time.",
+        "Mind-Blowing Fact": "The Big Bang happened everywhere at once. There's no center point where it happened — because every point in the universe WAS the Big Bang. The spot where you're sitting right now was there at the beginning, compressed into that unimaginably tiny, hot point along with everything else.",
+        "Reflection": "Everything that exists — every star, every planet, every person, every atom in your body — came from the same moment. What does it mean that we all share the same origin?"
+      },
+      "keywords": ["big-bang", "origin", "singularity", "beginning"],
+      "metadata": {"time": "13.8 billion years ago", "era": "Planck Epoch"}
+    },
+    {
+      "id": "first-forces",
+      "name": "The Four Forces Separate",
+      "sort_order": 2,
+      "category": "first-moments",
+      "level": 1,
+      "sections": {
+        "Story": "In the very first instant, the universe had just one force — one rule that governed everything. But as the universe cooled (faster than the blink of an eye!), that single force split into four: gravity (which pulls big things together), electromagnetism (which makes light and holds atoms together), and two nuclear forces (which hold the centers of atoms together and cause radioactivity). These four forces are still the only forces in the universe today — everything that happens is caused by one of them.",
+        "Science": "At the highest energies immediately after the Big Bang, the four fundamental forces — gravity, electromagnetism, the strong nuclear force, and the weak nuclear force — are theorized to have been unified as a single force. As the universe cooled, symmetry-breaking phase transitions caused them to separate: gravity first (at ~10⁻⁴³ s, the Planck time), then the strong force (at ~10⁻³⁶ s, releasing enormous energy that may have driven cosmic inflation), and finally the electromagnetic and weak forces split (at ~10⁻¹² s). This sequence is predicted by Grand Unified Theories (GUTs), though experimental confirmation remains elusive — the energies involved are far beyond what any particle accelerator can achieve.",
+        "Mind-Blowing Fact": "All four forces separated within the first trillionth of a second. Every force you've ever felt — the gravity holding you to Earth, the light hitting your eyes, the nuclear reactions powering the Sun — all came from the same original force, splitting apart before you could blink.",
+        "Reflection": "Four simple forces create everything — from stars to snowflakes to your thoughts. Why do simple rules sometimes create incredibly complex results?"
+      },
+      "keywords": ["forces", "gravity", "electromagnetism", "symmetry-breaking"],
+      "metadata": {"time": "13.8 billion years ago", "era": "Grand Unification Epoch"}
+    },
+    {
+      "id": "inflation",
+      "name": "Cosmic Inflation",
+      "sort_order": 3,
+      "category": "first-moments",
+      "level": 1,
+      "sections": {
+        "Story": "Right after the Big Bang, something astonishing happened: the universe suddenly blew up like the world's fastest balloon. In a tiny, tiny fraction of a second — far shorter than the blink of an eye — the universe grew from smaller than an atom to larger than a galaxy. Then, just as suddenly, the rapid expansion stopped and the universe kept growing at a gentler pace. This crazy moment is called inflation, and it explains why the universe looks the same in every direction.",
+        "Science": "Cosmic inflation, proposed by Alan Guth in 1981, posits that between ~10⁻³⁶ and ~10⁻³² seconds after the Big Bang, the universe underwent exponential expansion by a factor of at least 10²⁶ (possibly far more). This solves several cosmological puzzles: the horizon problem (why the CMB is uniform across causally disconnected regions), the flatness problem (why the universe's geometry is nearly Euclidean), and the monopole problem (why magnetic monopoles predicted by GUTs aren't observed). Quantum fluctuations during inflation, stretched to macroscopic scales, seeded the density variations that eventually became galaxies — meaning the largest structures in the cosmos originated from quantum randomness.",
+        "Mind-Blowing Fact": "During inflation, the universe expanded faster than the speed of light. Wait — isn't that impossible? Nothing can travel through space faster than light, but space itself can stretch as fast as it wants. The rules of space don't apply to space itself!",
+        "Reflection": "The tiniest quantum fluctuations during inflation became the seeds of galaxies. The smallest things can have the biggest consequences. Can you think of a small moment that led to something huge?"
+      },
+      "keywords": ["inflation", "expansion", "exponential", "quantum"],
+      "metadata": {"time": "10^-36 to 10^-32 seconds", "era": "Inflationary Epoch"}
+    },
+    {
+      "id": "quarks-to-protons",
+      "name": "Quarks Become Protons and Neutrons",
+      "sort_order": 4,
+      "category": "first-moments",
+      "level": 1,
+      "sections": {
+        "Story": "The baby universe was a wild soup of tiny particles called quarks, zipping around at incredible speeds. But as things cooled down (still in the first second!), quarks started sticking together in groups of three, forming protons and neutrons — the building blocks of every atom that would ever exist. Every proton in your body was assembled in this moment, and they've survived for 13.8 billion years without breaking apart.",
+        "Science": "During the quark epoch (10⁻¹² to 10⁻⁶ seconds), the universe was a quark-gluon plasma — a state of matter where quarks and gluons moved freely rather than being confined in hadrons. As the temperature dropped below ~2 trillion Kelvin (~10⁻⁶ seconds), the strong force confined quarks into baryons (protons and neutrons) in a phase transition called hadronization. During this period, a slight asymmetry between matter and antimatter (about 1 extra matter particle per billion matter-antimatter pairs) ensured that matter survived the mutual annihilation — this baryogenesis is one of the deepest unsolved problems in physics. Every proton in existence today was formed during this epoch.",
+        "Mind-Blowing Fact": "For every billion particles of matter created, there were a billion particles of antimatter — and they annihilated each other. Only one in a billion survived. You, and everything you see, are made from the tiny remainder that was left over. We exist because of a rounding error in the universe's math!",
+        "Reflection": "We exist because of a tiny imbalance — one extra particle in every billion. What if everything had been perfectly balanced? Sometimes imperfection is what makes existence possible."
+      },
+      "keywords": ["quarks", "protons", "neutrons", "matter"],
+      "metadata": {"time": "1 microsecond after Big Bang", "era": "Quark Epoch"}
+    },
+    {
+      "id": "first-atoms",
+      "name": "The First Atoms — Hydrogen and Helium",
+      "sort_order": 5,
+      "category": "first-moments",
+      "level": 1,
+      "sections": {
+        "Story": "Three minutes after the Big Bang, the universe had cooled enough for protons and neutrons to stick together and form the nuclei of the simplest atoms: hydrogen (just one proton) and helium (two protons and two neutrons). That's it — just two kinds of atoms floating in a glowing fog. Every other element — carbon, oxygen, iron, gold — would have to be created later, inside stars. But for now, the universe was a simple, elegant place.",
+        "Science": "Big Bang nucleosynthesis (BBN) occurred between ~10 seconds and ~20 minutes after the Big Bang, when temperatures were between 10 billion and 1 billion Kelvin — the narrow window where nuclear fusion could occur but the universe hadn't yet cooled too much for reactions. The result: approximately 75% hydrogen, 25% helium-4, trace amounts of deuterium, helium-3, and lithium-7, and essentially nothing heavier. This prediction, first calculated by Alpher, Bethe, and Gamow in 1948, matches observed primordial abundances with remarkable precision — one of the strongest confirmations of the Big Bang model.",
+        "Mind-Blowing Fact": "The recipe for the early universe is astonishingly simple: 75% hydrogen, 25% helium, and a pinch of lithium. That's the entire ingredient list. Everything else — every carbon atom in your body, every oxygen atom you breathe — had to be cooked up later inside stars.",
+        "Reflection": "The universe started with the simplest possible ingredients and built everything from there. What can you build from simple beginnings?"
+      },
+      "keywords": ["nucleosynthesis", "hydrogen", "helium", "atoms"],
+      "metadata": {"time": "3 minutes after Big Bang", "era": "Big Bang Nucleosynthesis"}
+    },
+    {
+      "id": "first-light",
+      "name": "The First Light — The Cosmic Microwave Background",
+      "sort_order": 6,
+      "category": "first-moments",
+      "level": 1,
+      "sections": {
+        "Story": "For 380,000 years after the Big Bang, the universe was a glowing fog — so hot and thick that light couldn't travel through it. Photons (particles of light) kept bumping into electrons and getting scattered. Then the universe cooled enough for electrons to join atoms, and suddenly — the fog cleared. Light was free! That first light is still traveling through space today, stretched by the expansion of the universe into invisible microwaves. We call it the Cosmic Microwave Background, and it's the oldest light in existence.",
+        "Science": "Recombination (a misnomer — electrons and protons were combining for the first time, not re-combining) occurred at ~380,000 years when the temperature dropped to ~3,000 K, allowing electrons to bind with nuclei and form neutral atoms. The universe transitioned from opaque plasma to transparent gas, and photons decoupled from matter. These photons have been redshifted by a factor of ~1,100 due to cosmic expansion, from visible light to microwaves at 2.725 K. Discovered accidentally by Penzias and Wilson in 1965 (earning the Nobel Prize), the CMB is the most precise blackbody spectrum ever measured. Its tiny temperature fluctuations (~1 part in 100,000) map the density variations that seeded all cosmic structure.",
+        "Mind-Blowing Fact": "About 1% of the static on an old TV set that's not tuned to any channel is caused by the Cosmic Microwave Background — you can literally see the afterglow of the Big Bang in television static! That light has been traveling for 13.8 billion years to reach your screen.",
+        "Reflection": "The oldest light in the universe is still shining, everywhere around us, but we can't see it with our eyes. What else might be all around us that we can't perceive?"
+      },
+      "keywords": ["CMB", "light", "transparency", "photons", "recombination"],
+      "metadata": {"time": "380,000 years after Big Bang", "era": "Recombination"}
+    },
+    {
+      "id": "dark-ages",
+      "name": "The Cosmic Dark Ages",
+      "sort_order": 7,
+      "category": "stellar-era",
+      "level": 1,
+      "sections": {
+        "Story": "After the first light was released, the universe entered a long, quiet darkness. No stars existed yet — just enormous clouds of hydrogen and helium gas drifting in the blackness. For nearly 200 million years (longer than dinosaurs existed!), the universe was completely dark. But something was happening in that darkness: gravity was slowly, patiently pulling gas clouds together, squeezing them tighter and tighter, preparing for the moment when the first star would ignite.",
+        "Science": "The cosmic dark ages (~380,000 to ~200 million years after the Big Bang) were the interval between the release of the CMB and the formation of the first luminous objects. During this period, the universe contained only neutral hydrogen and helium gas, plus dark matter. Dark matter halos began gravitational collapse first (since dark matter doesn't interact with radiation pressure), creating gravitational wells into which baryonic matter fell. This hierarchical structure formation — small halos merging into larger ones — is confirmed by N-body simulations and observations of the high-redshift universe by JWST. The dark ages ended with 'cosmic dawn,' when the first stars' ultraviolet light reionized the intergalactic medium.",
+        "Mind-Blowing Fact": "The cosmic dark ages lasted about 200 million years — longer than the entire age of dinosaurs (186 million years). For all that time, there wasn't a single point of light anywhere in the entire universe. Just darkness and patient gravity, preparing.",
+        "Reflection": "Great things can grow in darkness and silence. The universe spent 200 million years in the dark before the first star shone. What important things in your life needed time and patience before they could begin?"
+      },
+      "keywords": ["dark-ages", "darkness", "gravity", "gas-clouds"],
+      "metadata": {"time": "380,000 to ~200 million years", "era": "Dark Ages"}
+    },
+    {
+      "id": "first-stars",
+      "name": "The First Stars Ignite",
+      "sort_order": 8,
+      "category": "stellar-era",
+      "level": 1,
+      "sections": {
+        "Story": "After 200 million years of darkness, the first star finally lit up! It was nothing like our Sun — it was a monster, maybe a hundred times bigger and millions of times brighter. It blazed with a fierce blue-white light, ending the cosmic dark ages forever. But these first stars burned so fast and so hot that they lived only a few million years before exploding. They were the mayflies of the cosmos — brilliant but brief — and their explosions scattered the first heavy elements into space.",
+        "Science": "Population III stars — the first generation — formed from primordial hydrogen and helium gas at ~200 million years after the Big Bang (z ≈ 20–30). Without metals to provide cooling channels, gas clouds could only fragment into very large clumps, producing stars estimated at 100–1,000 solar masses. These massive stars had surface temperatures exceeding 100,000 K, emitting copious ultraviolet radiation that reionized the surrounding intergalactic medium. Their lifetimes were only a few million years before ending as supernovae or pair-instability supernovae, seeding the universe with the first elements heavier than lithium. No Population III star has been directly observed, though JWST is searching for their signatures in the earliest galaxies.",
+        "Mind-Blowing Fact": "The first stars were so massive that some of them died by literally blowing themselves completely apart — not even leaving a black hole behind. Called pair-instability supernovae, these explosions were so powerful that a single star could outshine an entire galaxy for weeks.",
+        "Reflection": "The first stars burned brightest but died youngest. There's a pattern in nature: intensity and longevity often trade off. Is it better to burn bright and brief, or steady and long?"
+      },
+      "keywords": ["population-III", "first-stars", "fusion", "reionization"],
+      "metadata": {"time": "~200 million years after Big Bang", "era": "Cosmic Dawn"}
+    },
+    {
+      "id": "stellar-forges",
+      "name": "Stars as Element Factories",
+      "sort_order": 9,
+      "category": "stellar-era",
+      "level": 1,
+      "sections": {
+        "Story": "Stars are the factories of the universe. Deep inside every star, the crushing pressure and searing heat smash hydrogen atoms together to make helium — that's fusion, and it's what makes stars shine. But bigger stars don't stop there. They keep fusing heavier and heavier elements: carbon, nitrogen, oxygen, silicon, all the way up to iron. Every element in your body — the calcium in your bones, the iron in your blood, the carbon in every cell — was forged inside a star.",
+        "Science": "Stellar nucleosynthesis is the process by which stars convert light elements into heavier ones through nuclear fusion. Main-sequence stars fuse hydrogen into helium via the pp-chain or CNO cycle. Massive stars (>8 solar masses) progress through successive burning stages: helium → carbon/oxygen, carbon → neon/magnesium, neon → oxygen/magnesium, oxygen → silicon/sulfur, and silicon → iron. Each stage is shorter: hydrogen burning lasts millions of years, while silicon burning lasts only about one day. Iron (⁵⁶Fe) is the endpoint because iron fusion is endothermic — it absorbs rather than releases energy. This 'onion shell' structure, with layers of progressively heavier elements, is the star's final configuration before core collapse.",
+        "Mind-Blowing Fact": "As Neil deGrasse Tyson says: 'We are not simply in the universe — we are part of it. We are born from it.' Every atom of carbon in your body was fused inside a star that lived and died before our Sun was born. You are literally made of stardust.",
+        "Reflection": "The atoms in your left hand may have come from a different star than the atoms in your right hand. You are an assembly of stardust from across the galaxy. How does knowing this change how you see yourself?"
+      },
+      "keywords": ["nucleosynthesis", "elements", "carbon", "oxygen", "iron"],
+      "metadata": {"time": "Ongoing since first stars", "era": "Stellar Nucleosynthesis"}
+    },
+    {
+      "id": "supernovae",
+      "name": "Supernovae — Death Creates Life",
+      "sort_order": 10,
+      "category": "stellar-era",
+      "level": 1,
+      "sections": {
+        "Story": "When a massive star dies, it doesn't go quietly — it explodes in a supernova, one of the most powerful events in the universe. For a few weeks, a single exploding star can outshine an entire galaxy of billions of stars! But here's the beautiful part: this destruction is also creation. The explosion is so powerful that it forges elements heavier than iron — gold, silver, platinum, uranium — and scatters them across space, where they'll become part of new stars, new planets, and eventually, new life.",
+        "Science": "Core-collapse supernovae occur when a massive star's iron core (~1.4 solar masses, the Chandrasekhar limit) can no longer support itself against gravity. The core collapses in milliseconds, bouncing off the nuclear density limit and sending a shockwave outward. The explosion releases ~10⁴⁴ joules of kinetic energy and ~3×10⁴⁶ joules as neutrinos — briefly outshining the host galaxy. The r-process (rapid neutron capture) during the explosion creates elements heavier than iron, including gold, platinum, and uranium. Neutron star mergers (kilonovae) are now recognized as another major r-process site. Supernova remnants enrich the interstellar medium with heavy elements, enabling the formation of rocky planets and organic chemistry — a direct prerequisite for life as we know it.",
+        "Mind-Blowing Fact": "The gold in every wedding ring, the uranium in every nuclear reactor, and the iodine in your thyroid gland were all forged in the explosions of dying stars or the collisions of neutron stars. These elements literally cannot be made any other way. Supernovae are the only reason you exist.",
+        "Reflection": "The most creative moment in a star's existence is its death. Destruction and creation are intertwined. Can you think of endings in your own life that were also beginnings?"
+      },
+      "keywords": ["supernova", "explosion", "heavy-elements", "gold", "stardust"],
+      "metadata": {"time": "Ongoing since first massive stars died", "era": "Stellar Evolution"}
+    },
+    {
+      "id": "galaxies-form",
+      "name": "Galaxies Assemble",
+      "sort_order": 11,
+      "category": "stellar-era",
+      "level": 1,
+      "sections": {
+        "Story": "Stars don't like to be alone — gravity pulls them together into vast spinning cities of stars called galaxies. The first galaxies were small and messy, but over billions of years they grew by crashing into each other and merging, like streams joining to form rivers. Today the universe contains at least two trillion galaxies, each containing billions or even trillions of stars. And between the galaxies? Mostly empty space — vast, dark voids where almost nothing exists.",
+        "Science": "Galaxy formation followed hierarchical structure formation: dark matter halos collapsed first, with baryonic gas falling into their gravitational wells. The first proto-galaxies (~500 million years after the Big Bang, z ≈ 10) were small, irregular, and actively merging. Over cosmic time, mergers built larger galaxies, with morphology depending on merger history (major mergers producing ellipticals, gas-rich accretion building spirals). Supermassive black holes grew alongside their host galaxies, with AGN feedback regulating star formation. JWST has revealed unexpectedly massive and mature galaxies at high redshifts (z > 10), challenging models of early galaxy evolution. The observable universe contains an estimated 2 trillion galaxies, organized into a cosmic web of filaments and voids.",
+        "Mind-Blowing Fact": "There are more galaxies in the observable universe (~2 trillion) than there are grains of sand on all the beaches on Earth. And each galaxy contains billions of stars, most of which probably have planets. The number of worlds out there is beyond anything the human mind can truly grasp.",
+        "Reflection": "We live in one galaxy among trillions. Each one is a vast island of stars, and between them lie enormous empty voids. Does knowing how much is out there make you feel small, or connected, or both?"
+      },
+      "keywords": ["galaxies", "milky-way", "dark-matter", "structure"],
+      "metadata": {"time": "~1 billion years after Big Bang", "era": "Galaxy Formation"}
+    },
+    {
+      "id": "milky-way",
+      "name": "Our Galaxy — The Milky Way",
+      "sort_order": 12,
+      "category": "stellar-era",
+      "level": 1,
+      "sections": {
+        "Story": "Our home galaxy is the Milky Way — a gigantic pinwheel of about 200–400 billion stars, spinning slowly through space. On a dark night away from city lights, you can see it as a glowing band across the sky (that's what people used to think looked like spilled milk). Our Sun is just one ordinary star about two-thirds of the way out from the center, in a quiet neighborhood called the Orion Arm. It takes our Sun 230 million years to orbit the galaxy once — a 'galactic year.'",
+        "Science": "The Milky Way is a barred spiral galaxy with a diameter of ~100,000 light-years and a mass of ~1.5 trillion solar masses (including dark matter). It contains 200–400 billion stars organized in spiral arms (Perseus, Sagittarius, Orion-Cygnus, and others) around a central bar. At the galactic center lies Sagittarius A* (Sgr A*), a supermassive black hole of ~4 million solar masses, imaged by the Event Horizon Telescope in 2022. The Milky Way began assembling ~13.6 billion years ago through the accretion of smaller galaxies — a process still ongoing (the Sagittarius Dwarf Galaxy is currently being tidally disrupted and absorbed). In ~4.5 billion years, the Milky Way will merge with the Andromeda Galaxy (M31) to form 'Milkomeda.'",
+        "Mind-Blowing Fact": "The last time our Sun was in the same position in its orbit around the galaxy, dinosaurs were just appearing on Earth. That's how long one 'galactic year' is — 230 million Earth years. Our Sun has only completed about 20 galactic orbits since it was born.",
+        "Reflection": "We're all riding on a planet, orbiting a star, which is orbiting a galaxy — and we can't feel any of it. What else might be moving that we can't perceive?"
+      },
+      "keywords": ["milky-way", "spiral", "home-galaxy", "100-billion-stars"],
+      "metadata": {"time": "~13.6 billion years ago (began forming)", "era": "Galaxy Evolution"}
+    },
+    {
+      "id": "solar-nebula",
+      "name": "A Cloud Collapses — The Solar Nebula",
+      "sort_order": 13,
+      "category": "solar-system",
+      "level": 1,
+      "sections": {
+        "Story": "About 4.6 billion years ago, in a quiet corner of the Milky Way, a giant cloud of gas and dust started to collapse. Maybe a nearby supernova gave it a push. The cloud began spinning faster and faster as it shrank (like an ice skater pulling in her arms), flattening into a disk. Most of the material fell to the center, where it would become our Sun. The rest — a tiny fraction — would become everything else: all the planets, moons, comets, and asteroids.",
+        "Science": "The solar nebula was a molecular cloud fragment of ~1–2 solar masses that began gravitational collapse ~4.6 Ga. Evidence for a supernova trigger comes from short-lived radioactive isotopes (⁲⁶Al, ⁶⁰Fe) found in primitive meteorites (chondrites), indicating injection of fresh supernova material shortly before or during collapse. Angular momentum conservation caused the cloud to spin faster as it contracted, forming a protoplanetary disk (proplyds of similar geometry are observed around young stars in the Orion Nebula by JWST and Hubble). The nebular hypothesis, first proposed by Kant (1755) and Laplace (1796), is now the standard model of solar system formation, supported by isotopic dating, disk observations, and numerical simulations.",
+        "Mind-Blowing Fact": "We know the exact age of the solar system — 4,567 million years — because scientists can measure the ages of meteorites using radioactive decay. Some meteorites are chunks of the original solar nebula that never got incorporated into a planet. They are older than Earth itself!",
+        "Reflection": "Our entire solar system may exist because a dying star's explosion triggered the collapse of a gas cloud. A death leading to a birth leading to life. Does knowing your home's origin story change how you feel about it?"
+      },
+      "keywords": ["solar-nebula", "collapse", "spinning", "disk"],
+      "metadata": {"time": "4.6 billion years ago", "era": "Solar System Formation"}
+    },
+    {
+      "id": "sun-ignites",
+      "name": "Our Sun Ignites",
+      "sort_order": 14,
+      "category": "solar-system",
+      "level": 1,
+      "sections": {
+        "Story": "At the center of the spinning disk, material kept piling up — getting hotter and denser and more squished. When the core reached 15 million degrees, something incredible happened: hydrogen atoms started smashing together and fusing into helium, releasing enormous amounts of energy. Our Sun was born! It was like lighting a match that would burn for 10 billion years. The Sun's fierce light and wind blew away the remaining gas from the inner solar system, revealing the rocky planets beneath.",
+        "Science": "The Sun is a G2V main-sequence star with a mass of ~2×10³⁰ kg (333,000 Earth masses) and a luminosity of ~3.8×10²⁶ watts. Its core sustains hydrogen fusion at ~15.7 million K and ~250 billion atmospheres of pressure via the proton-proton chain, converting ~600 million tonnes of hydrogen into ~596 million tonnes of helium per second (the 4 million tonne difference is converted to energy via E=mc²). The T Tauri phase — the Sun's first ~10 million years — was characterized by powerful stellar winds and UV radiation that cleared residual gas from the inner disk, halting gas giant formation inside the snow line. The Sun is currently ~4.6 Gyr into its ~10 Gyr main-sequence lifetime.",
+        "Mind-Blowing Fact": "The Sun converts 4 million tonnes of matter into pure energy every single second — and it's been doing this for 4.6 billion years. That's the mass of a large mountain, vanishing into light and heat, every second of every day. And it still has enough fuel for another 5 billion years.",
+        "Reflection": "Our Sun is an ordinary star — not the biggest, not the brightest, not the most special. But it's OUR star, and its steady, reliable burning is what makes life possible. Sometimes being ordinary and dependable matters more than being spectacular."
+      },
+      "keywords": ["sun", "star", "fusion", "yellow-dwarf"],
+      "metadata": {"time": "4.6 billion years ago", "era": "Solar System Formation"}
+    },
+    {
+      "id": "planets-form",
+      "name": "The Planets Take Shape",
+      "sort_order": 15,
+      "category": "solar-system",
+      "level": 1,
+      "sections": {
+        "Story": "In the disk of dust and gas spinning around the young Sun, tiny grains of dust started bumping into each other and sticking together — like cosmic snowballs rolling downhill. Pebbles became boulders, boulders became mountains, mountains became little planets called planetesimals. Near the Sun where it was hot, only rock and metal could survive, so the inner planets (Mercury, Venus, Earth, Mars) are small and rocky. Farther out where it was cold, ice could survive too, and planets grew huge by capturing gas — becoming the gas giants Jupiter, Saturn, Uranus, and Neptune.",
+        "Science": "Planet formation proceeded through accretion in the protoplanetary disk. Dust grains grew via collisional sticking to ~cm-sized 'pebbles,' then planetesimals (~km-sized) formed via streaming instability or gravitational collapse. Rocky planets formed inside the snow line (~3 AU) through oligarchic growth — a few dozen Mars-sized embryos accumulated via mutual gravitational encounters, culminating in giant impacts. Beyond the snow line, ice provided additional solid material (3–4× more mass available), allowing cores to reach ~10 Earth masses and accrete massive hydrogen/helium envelopes — the core accretion model for gas giant formation. The Nice model and Grand Tack hypothesis suggest the giant planets migrated significantly during and after formation, sculpting the solar system architecture we see today.",
+        "Mind-Blowing Fact": "Jupiter is so massive that it contains more material than all the other planets, moons, asteroids, and comets in the solar system combined — more than twice as much, in fact. If Jupiter had been about 80 times more massive, it would have ignited as a second star, and we'd live in a binary star system!",
+        "Reflection": "The difference between a rocky planet and a gas giant was determined by temperature — where they happened to form in the disk. How much of what we become is determined by where and when we happen to start?"
+      },
+      "keywords": ["planets", "accretion", "rocky", "gas-giants"],
+      "metadata": {"time": "4.6–4.5 billion years ago", "era": "Planetary Formation"}
+    },
+    {
+      "id": "moon-forming-impact",
+      "name": "Theia Strikes — The Moon is Born",
+      "sort_order": 16,
+      "category": "solar-system",
+      "level": 1,
+      "sections": {
+        "Story": "About 4.5 billion years ago, a planet the size of Mars — called Theia — smashed into the young Earth at 40,000 kilometers per hour. The collision was so violent that both planets melted. Debris from the impact was flung into space, where it formed a ring around the shattered Earth. Over time, that ring of molten rock clumped together and cooled into our Moon. Without this cosmic accident, Earth might spin much faster, have no tides, and life might never have evolved the way it did.",
+        "Science": "The giant impact hypothesis proposes that the Moon formed ~4.5 Ga when a Mars-sized body (Theia) collided with proto-Earth at ~4 km/s in a glancing blow. SPH simulations show the impact would have vaporized significant portions of both bodies, creating a synestia (a donut-shaped cloud of vaporized rock) from which the Moon condensed. Evidence includes: the Moon's low iron content (Theia's core merged with Earth's), identical oxygen isotope ratios between Earth and Moon (suggesting thorough mixing), and the Moon's orbital parameters. The Moon's formation had profound consequences: it stabilized Earth's axial tilt (preventing extreme climate oscillations), created significant tidal forces (which may have been important for early life in tidal pools), and gradually slowed Earth's rotation from ~6 hours to 24 hours.",
+        "Mind-Blowing Fact": "Right after the Moon formed, it was about 15 times closer to Earth than it is today, and a day on Earth was only about 6 hours long. The Moon has been slowly drifting away ever since — about 3.8 centimeters per year. In the far future, the Moon will be too far away to cause total solar eclipses. We live in the only era where the Moon and Sun appear exactly the same size in our sky!",
+        "Reflection": "The Moon — which creates our tides, stabilizes our seasons, and inspired poets and scientists for millennia — was born from a violent catastrophe. The most beautiful things sometimes come from the most destructive events."
+      },
+      "keywords": ["moon", "theia", "impact", "tides"],
+      "metadata": {"time": "4.5 billion years ago", "era": "Hadean"}
+    },
+    {
+      "id": "late-heavy-bombardment",
+      "name": "The Late Heavy Bombardment",
+      "sort_order": 17,
+      "category": "earth-story",
+      "level": 1,
+      "sections": {
+        "Story": "For hundreds of millions of years after the planets formed, the inner solar system was a shooting gallery. Asteroids and comets rained down on Earth, the Moon, Mars, and Mercury in a terrifying barrage called the Late Heavy Bombardment. You can still see the evidence: all those craters on the Moon are scars from this cosmic storm. But the bombardment may have also delivered something precious — water. Many of Earth's oceans may have been delivered by icy asteroids during this violent time.",
+        "Science": "The Late Heavy Bombardment (LHB, ~4.1–3.8 Ga), also called the lunar cataclysm, is hypothesized from the clustering of impact melt ages in Apollo lunar samples around 3.9 Ga. The Nice model attributes it to a dynamical instability in the outer solar system: Jupiter and Saturn crossing their 2:1 mean-motion resonance destabilized the orbits of Uranus and Neptune, scattering the primordial Kuiper Belt inward. However, the LHB's intensity and even its existence as a discrete event are debated — it may represent a monotonically declining bombardment rate rather than a spike. Regardless, the early solar system experienced intense bombardment, and impacts likely delivered significant volatile inventory (water, organic molecules) to Earth via carbonaceous chondrites and comets.",
+        "Mind-Blowing Fact": "Look at the Moon through binoculars and you can see the scars of the Late Heavy Bombardment — every single crater is a record of an ancient impact. Earth was hit just as hard, but plate tectonics and erosion have erased most of the evidence. The Moon remembers what Earth has forgotten.",
+        "Reflection": "The same bombardment that devastated Earth's surface may have delivered the water that made life possible. The same event was both destroyer and life-giver. Can hardships in our own lives also bring unexpected gifts?"
+      },
+      "keywords": ["bombardment", "asteroids", "water", "hadean"],
+      "metadata": {"time": "4.1–3.8 billion years ago", "era": "Late Hadean"}
+    },
+    {
+      "id": "first-oceans",
+      "name": "The First Oceans",
+      "sort_order": 18,
+      "category": "earth-story",
+      "level": 1,
+      "sections": {
+        "Story": "As the young Earth cooled, something magical happened: water vapor in the atmosphere condensed and fell as rain. And it rained, and rained, and rained — for millions of years. The first oceans filled up, covering most of the planet in a vast, warm, salty sea. These oceans were nothing like today's blue waters — they were probably greenish, full of dissolved iron and minerals, under an orange sky with no oxygen. But they were the cradle of everything that lives.",
+        "Science": "Liquid water may have existed on Earth's surface as early as ~4.4 Ga, based on oxygen isotope evidence from Jack Hills zircon crystals in Western Australia — some of the oldest terrestrial minerals known. The source of Earth's water is debated: endogenous delivery (outgassing from the mantle), carbonaceous chondrite impacts, or cometary delivery. Deuterium/hydrogen ratios in ocean water most closely match those of carbonaceous chondrites, suggesting asteroidal rather than cometary origin for the bulk of Earth's water. The early Hadean ocean was likely mildly acidic, iron-rich, and under a CO₂/N₂ atmosphere with no free oxygen. These conditions — warm, mineral-rich water under UV radiation — may have been critical for prebiotic chemistry.",
+        "Mind-Blowing Fact": "Some of the water in your glass right now may be older than the Sun. Water molecules can survive for billions of years, and isotopic evidence suggests some of Earth's water formed in the interstellar medium before the solar system existed. You might be drinking interstellar water!",
+        "Reflection": "Water is so common we barely think about it — but it's the rarest and most precious substance for life in the known universe. Most of the cosmos is dry, cold, and empty. What everyday things do we take for granted that are actually extraordinary?"
+      },
+      "keywords": ["oceans", "water", "liquid", "cooling"],
+      "metadata": {"time": "~4.4 billion years ago", "era": "Hadean"}
+    },
+    {
+      "id": "first-life",
+      "name": "The First Life",
+      "sort_order": 19,
+      "category": "earth-story",
+      "level": 1,
+      "sections": {
+        "Story": "Somewhere in the warm, dark oceans of the young Earth — maybe near a volcanic vent on the sea floor, maybe in a tidal pool — something extraordinary happened. Chemicals began organizing themselves into tiny bubbles that could copy themselves. The first living cells were born. They were incredibly simple — just a tiny bag of chemistry — but they could do something no rock or ocean or star could do: they could make copies of themselves. Life had begun, and it would never stop.",
+        "Science": "Abiogenesis — the origin of life from non-living chemistry — remains one of science's greatest unsolved problems. The earliest evidence of life comes from ~3.8 Ga carbon isotope signatures in Isua, Greenland, and possible ~3.5 Ga stromatolites in Australia. Leading hypotheses for the site of abiogenesis include alkaline hydrothermal vents (the 'Lost City' type — Russell and Martin's model, where natural proton gradients could drive protometabolism), surface pools with wet-dry cycles (which concentrate and polymerize nucleotides), and impact crater environments. The RNA World hypothesis proposes that self-replicating RNA preceded DNA and proteins. LUCA (Last Universal Common Ancestor) was likely a thermophilic or mesophilic organism living near hydrothermal environments, already possessing the genetic code, ribosomes, and a lipid membrane.",
+        "Mind-Blowing Fact": "Life appeared on Earth almost as soon as conditions allowed it — within a few hundred million years of the oceans forming. This suggests that life might arise easily wherever conditions are right. Or it could mean we got incredibly lucky. Scientists genuinely don't know which — and that uncertainty is one of the deepest questions in all of science.",
+        "Reflection": "From non-living chemistry came living cells. The universe went from rocks and water to something that could grow, reproduce, and eventually wonder about its own origins. At what point does 'just chemistry' become 'alive'?"
+      },
+      "keywords": ["abiogenesis", "bacteria", "RNA", "origin-of-life"],
+      "metadata": {"time": "~3.8 billion years ago", "era": "Archean"}
+    },
+    {
+      "id": "photosynthesis",
+      "name": "Photosynthesis — Life Learns to Eat Sunlight",
+      "sort_order": 20,
+      "category": "earth-story",
+      "level": 1,
+      "sections": {
+        "Story": "One day, a tiny bacterium figured out an incredible trick: it learned to eat sunlight. Using a green molecule called chlorophyll, it could capture the energy of sunlight and use it to turn water and carbon dioxide into food — releasing oxygen as a waste product. This invention — photosynthesis — was the most important chemical reaction in the history of life. Every plant, every forest, every coral reef on Earth today runs on the same trick that little bacterium invented over 3 billion years ago.",
+        "Science": "Oxygenic photosynthesis evolved in cyanobacteria, likely ~3.4–2.7 Ga (timing debated). It uses two photosystems (PSI and PSII) linked in series to split water molecules (H₂O → 2H⁺ + ½O₂ + 2e⁻), releasing oxygen as a byproduct and generating ATP and NADPH for carbon fixation via the Calvin cycle. This is arguably the most consequential biological innovation in Earth history: it provided an effectively unlimited energy source (sunlight), produced the oxygen that transformed Earth's atmosphere and enabled aerobic respiration (~18× more efficient than anaerobic metabolism), and created the ozone layer that allowed life to colonize land. Anoxygenic photosynthesis (using H₂S or Fe²⁺ instead of H₂O) preceded it and does not produce oxygen.",
+        "Mind-Blowing Fact": "Photosynthesis is the foundation of almost all food chains on Earth. Every time you eat — whether it's a burger, a salad, or a candy bar — you're eating stored sunlight. Plants captured it, and you're releasing it. You are solar-powered!",
+        "Reflection": "A single-celled organism invented a process that changed the entire planet forever. You don't have to be big to change the world. What small innovations in your own life could have big effects?"
+      },
+      "keywords": ["photosynthesis", "cyanobacteria", "oxygen", "sunlight"],
+      "metadata": {"time": "~3.4 billion years ago", "era": "Archean"}
+    },
+    {
+      "id": "great-oxidation",
+      "name": "The Great Oxidation Event",
+      "sort_order": 21,
+      "category": "earth-story",
+      "level": 1,
+      "sections": {
+        "Story": "Remember those cyanobacteria that learned photosynthesis? They released oxygen as waste, and for hundreds of millions of years, the oceans soaked it up — iron in the water rusted and sank to the bottom (that's where iron ore comes from!). But eventually, the oceans couldn't absorb any more. Oxygen started building up in the atmosphere, and it was a catastrophe. Oxygen was poison to most life on Earth at the time! This was the Great Oxidation Event — the first mass extinction, caused not by an asteroid but by pollution from living things.",
+        "Science": "The Great Oxidation Event (GOE, ~2.4 Ga) marks the first permanent rise of atmospheric O₂ above ~0.001% of present levels. Before the GOE, photosynthetically produced O₂ was consumed by reduced minerals (dissolved iron → banded iron formations, reduced sulfur). Once these geological sinks were saturated, O₂ accumulated in the atmosphere. Evidence includes the disappearance of mass-independent fractionation of sulfur isotopes (MIF-S), the appearance of red beds (oxidized terrestrial sediments), and the cessation of detrital uraninite and pyrite. The GOE caused the first known mass extinction (obligate anaerobes) and may have triggered the Huronian glaciation (Snowball Earth) by destroying the methane greenhouse. Paradoxically, this catastrophe enabled the evolution of aerobic respiration — which would eventually power complex multicellular life.",
+        "Mind-Blowing Fact": "The first great environmental catastrophe on Earth was caused by tiny bacteria polluting the atmosphere with their waste product — oxygen. Life's first mass extinction was caused by life itself. And that 'pollution' became the very air you're breathing right now.",
+        "Reflection": "One organism's waste product became another organism's lifeblood. What we call pollution depends on perspective. Can today's environmental challenges also contain seeds of future opportunity?"
+      },
+      "keywords": ["oxygen", "catastrophe", "atmosphere", "rust"],
+      "metadata": {"time": "~2.4 billion years ago", "era": "Proterozoic"}
+    },
+    {
+      "id": "complex-cells",
+      "name": "Complex Cells — Endosymbiosis",
+      "sort_order": 22,
+      "category": "earth-story",
+      "level": 1,
+      "sections": {
+        "Story": "About 2 billion years ago, something amazing happened: one cell swallowed another — and instead of digesting it, they became partners. The swallowed cell was good at using oxygen to make energy. The bigger cell provided protection and food. Together, they became something new: a complex cell with a power station inside it. That swallowed cell became the mitochondrion, and it's still inside every cell of your body today. Later, another partnership brought in chloroplasts for plants. Life's greatest leap forward came not from competition, but from cooperation.",
+        "Science": "Endosymbiosis, championed by Lynn Margulis (1967), explains the origin of eukaryotic organelles. An archaeal host cell engulfed an alphaproteobacterium, which became the mitochondrion — retained for its efficient aerobic respiration (oxidative phosphorylation). Evidence is overwhelming: mitochondria have double membranes, their own circular DNA, bacterial-sized ribosomes (70S), and replicate by binary fission. A separate endosymbiotic event with a cyanobacterium produced chloroplasts in the ancestor of plants and algae. The host cell was likely an Asgard archaeon, based on phylogenomic analyses. This event, occurring ~2 Ga, may have happened only once for mitochondria (all eukaryotes descend from this single partnership), making it one of the rarest and most consequential events in evolutionary history.",
+        "Mind-Blowing Fact": "The mitochondria inside your cells have their own DNA — separate from your main DNA — and it's inherited only from your mother. By tracing mitochondrial DNA backward, scientists have found that all living humans share a common maternal ancestor who lived in Africa about 200,000 years ago. They call her 'Mitochondrial Eve.'",
+        "Reflection": "The most complex life on Earth didn't evolve through competition — it evolved through partnership. Two organisms that could have been enemies instead became inseparable allies. What partnerships in your life make you more than you could be alone?"
+      },
+      "keywords": ["eukaryotes", "mitochondria", "endosymbiosis", "cooperation"],
+      "metadata": {"time": "~2 billion years ago", "era": "Proterozoic"}
+    },
+    {
+      "id": "multicellular-life",
+      "name": "Multicellular Life",
+      "sort_order": 23,
+      "category": "earth-story",
+      "level": 1,
+      "sections": {
+        "Story": "For over 3 billion years, all life on Earth was single-celled — just individual cells floating or stuck together. Then, about 600 million years ago, cells started working together as a team, forming the first multicellular organisms. The Ediacaran creatures were the first large, visible lifeforms — soft, strange, quilted creatures that looked like nothing alive today. They lay on the ocean floor like living mattresses. They were the first experiments in bodies — and they opened the door to everything from jellyfish to giraffes to you.",
+        "Science": "Multicellularity evolved independently at least 25 times across the tree of life, but complex multicellularity with differentiated cell types evolved only ~6 times (animals, land plants, red algae, brown algae, and two groups of fungi). The Ediacaran biota (~635–539 Ma) represent the first large, macroscopic organisms: Dickinsonia, Charnia, Kimberella, and others with quilted, fractal body plans unlike any modern organisms. Their phylogenetic affinities are debated — some may be stem-group animals, others may represent extinct kingdoms. The evolution of multicellularity required cell adhesion, cell communication, programmed cell death, and the suppression of selfish replication — essentially, cells had to evolve 'social contracts' to cooperate. The Snowball Earth glaciations (~720–635 Ma) may have provided evolutionary pressure driving multicellularity.",
+        "Mind-Blowing Fact": "Your body contains about 37 trillion cells, all working together as a team. Each one carries essentially the same DNA, but they specialize: brain cells think, muscle cells move, immune cells fight invaders. You are not one organism — you are a cooperative community of 37 trillion tiny living things.",
+        "Reflection": "For billions of years, every living thing was a single cell going it alone. Then cells discovered teamwork and built bodies. You are made of trillions of cells cooperating. What can a team accomplish that no individual can?"
+      },
+      "keywords": ["multicellular", "cooperation", "ediacaran", "bodies"],
+      "metadata": {"time": "~600 million years ago", "era": "Ediacaran"}
+    },
+    {
+      "id": "cambrian-explosion",
+      "name": "The Cambrian Explosion",
+      "sort_order": 24,
+      "category": "life-diversifies",
+      "level": 1,
+      "sections": {
+        "Story": "About 540 million years ago, life went wild. In a geological blink — just 20 million years — almost every major animal body plan appeared: creatures with shells, spines, claws, eyes, legs, and jaws. It's called the Cambrian Explosion, and it was evolution's big party. The oceans suddenly filled with bizarre animals: five-eyed Opabinia, terrifying Anomalocaris, and the humble little Pikaia — a tiny worm-like creature that was the ancestor of all animals with backbones, including you.",
+        "Science": "The Cambrian Explosion (~541–520 Ma) saw the rapid diversification of nearly all modern animal phyla within ~20 million years. Possible triggers include: rising atmospheric oxygen crossing a threshold for large-body metabolism, the evolution of eyes (driving an evolutionary arms race — the 'Light Switch' hypothesis of Andrew Parker), the evolution of predation (driving defensive innovation), and ecological cascades following the end of Ediacaran ecosystems. The Burgess Shale (Canada, ~508 Ma) and Chengjiang (China, ~518 Ma) Lagerstätten preserve exquisite soft-body fossils, revealing the morphological experimentation of this period. Notably, many Cambrian body plans have no modern descendants — evolutionary experimentation with high extinction. Pikaia and Haikouichthys represent early chordates, placing our own lineage in the Cambrian.",
+        "Mind-Blowing Fact": "The evolution of eyes may have triggered the entire Cambrian Explosion. Once one predator evolved the ability to see, every other animal suddenly needed armor, speed, camouflage, or their own eyes to survive. Vision changed everything — literally in the blink of an eye.",
+        "Reflection": "After 3 billion years of mostly single-celled life, animals appeared in an explosion of creativity. Why do you think evolution was 'stuck' for so long and then suddenly went wild? Does creativity work like that in your own life too?"
+      },
+      "keywords": ["cambrian", "explosion", "eyes", "body-plans", "diversity"],
+      "metadata": {"time": "~540 million years ago", "era": "Cambrian"}
+    },
+    {
+      "id": "life-on-land",
+      "name": "Life Conquers Land",
+      "sort_order": 25,
+      "category": "life-diversifies",
+      "level": 1,
+      "sections": {
+        "Story": "For billions of years, all life lived in the ocean. Land was bare rock and dirt — no plants, no animals, no soil, nothing green. Then, about 470 million years ago, simple plants crept out of the water. Slowly, they spread across the land, creating the first soils and forests. About 375 million years ago, a fish called Tiktaalik crawled out of the water using fins that were starting to become legs. It was the pioneer of all land vertebrates — every frog, lizard, bird, and mammal descends from brave fish like Tiktaalik.",
+        "Science": "The colonization of land occurred in stages: lichens and simple plants (~470 Ma, Ordovician), arthropods (~430 Ma, Silurian), and tetrapod vertebrates (~375 Ma, Devonian). Tiktaalik roseae, discovered in 2004 in Arctic Canada by Neil Shubin's team, is the iconic fishapod — a transitional form with fish-like scales and fins but a tetrapod-like wrist, neck, and flat skull for breathing air. Its discovery was predicted: Shubin specifically targeted Late Devonian freshwater deposits to find an intermediate between lobe-finned fish and early tetrapods. Terrestrialization required solving fundamental challenges: support against gravity (stronger skeletons), desiccation (waterproof skin/cuticle), gas exchange in air (lungs), and reproduction without water (amniotic egg, seeds).",
+        "Mind-Blowing Fact": "The fish-to-land transition left a trace in your own body. The bones in your arm (humerus, radius, ulna) correspond exactly to the bones in Tiktaalik's fin. Your hands evolved from fish fins. As Neil Shubin titled his book: 'Your Inner Fish' is still in there.",
+        "Reflection": "The first fish to crawl onto land must have been terrible at walking. Every pioneer is awkward at first. What new territory have you ventured into where you felt clumsy but kept going?"
+      },
+      "keywords": ["land", "plants", "tetrapods", "tiktaalik"],
+      "metadata": {"time": "~470–375 million years ago", "era": "Ordovician to Devonian"}
+    },
+    {
+      "id": "age-of-dinosaurs",
+      "name": "The Age of Dinosaurs",
+      "sort_order": 26,
+      "category": "life-diversifies",
+      "level": 1,
+      "sections": {
+        "Story": "For 186 million years — longer than the time since they vanished — dinosaurs ruled the Earth. From tiny feathered hunters to thundering giants, they filled every niche and conquered every continent. During their reign, the supercontinent Pangaea broke apart, flowers first appeared, and some dinosaurs evolved into birds. Mammals existed too, but they were small, scurrying, nocturnal creatures living in the shadows of the great reptiles — waiting for their chance.",
+        "Science": "The Mesozoic Era (252–66 Ma) — the 'Age of Reptiles' — encompassed the Triassic, Jurassic, and Cretaceous periods. Dinosaurs arose in the Late Triassic and diversified after the end-Triassic extinction eliminated competing archosaurs. They achieved maximum diversity in the Late Cretaceous, with thousands of species spanning every terrestrial ecological niche. Key innovations included pneumatized bones (enabling gigantic sizes), sophisticated respiratory systems (unidirectional airflow, as in modern birds), and in many lineages, feathers. Simultaneously, flowering plants (angiosperms) radiated in the mid-Cretaceous (~130–90 Ma), co-evolving with insect pollinators and transforming terrestrial ecosystems. Early mammals were small (mostly <5 kg) and primarily nocturnal — a pattern called the 'nocturnal bottleneck' that may explain why most mammals have relatively poor color vision.",
+        "Mind-Blowing Fact": "Dinosaurs ruled for so long that some late dinosaurs were farther in time from the early dinosaurs than they are from us! Stegosaurus lived 155 million years ago and T. rex lived 67 million years ago — Stegosaurus was already ancient history when T. rex was alive. T. rex lived closer in time to you than to Stegosaurus.",
+        "Reflection": "Our ancestors lived in the shadows of dinosaurs for over 100 million years, small and humble, waiting for an opportunity. Sometimes the current state of affairs isn't permanent. What seems unchangeable today?"
+      },
+      "keywords": ["dinosaurs", "mesozoic", "reptiles", "birds"],
+      "metadata": {"time": "252–66 million years ago", "era": "Mesozoic"}
+    },
+    {
+      "id": "asteroid-impact",
+      "name": "The Asteroid — End and Beginning",
+      "sort_order": 27,
+      "category": "life-diversifies",
+      "level": 1,
+      "sections": {
+        "Story": "66 million years ago, a rock the size of a mountain — about 12 kilometers across — slammed into what is now Mexico's Yucatan Peninsula at 20 kilometers per second. The impact was 10 billion times more powerful than the atomic bomb dropped on Hiroshima. It set forests on fire across the planet, triggered earthquakes and tsunamis, and launched so much dust into the atmosphere that the Sun was blocked for months or years. The dinosaurs — except for the birds — were gone. But in the ashes and darkness, small, furry mammals survived, and their time was about to begin.",
+        "Science": "The Chicxulub impactor was a ~12 km carbonaceous chondrite asteroid that struck the Yucatán Peninsula at ~20 km/s, creating a ~180 km crater and releasing ~4.2×10²³ joules of energy. The Luis and Walter Alvarez hypothesis (1980) was confirmed by the discovery of the Chicxulub crater in 1990. Kill mechanisms included: thermal radiation from re-entering ejecta (global firestorms), impact winter from stratospheric dust and soot (photosynthesis collapse for months-years), acid rain from vaporized sulfate-rich target rocks, and long-term warming from CO₂ release. ~75% of all species went extinct, including all non-avian dinosaurs. The K-Pg boundary is marked by a global iridium anomaly (iridium being rare on Earth but common in asteroids) and a layer of shocked quartz and spherules.",
+        "Mind-Blowing Fact": "The asteroid hit with such force that material was blasted into space and rained back down all over the planet, heating the atmosphere to oven temperatures for hours. Every dinosaur on Earth — whether in North America, Africa, or Antarctica — experienced the same global catastrophe on the same terrible day.",
+        "Reflection": "The dinosaurs didn't do anything wrong — they were simply in the path of an asteroid. Sometimes catastrophe is random and beyond anyone's control. But from that catastrophe, mammals got their chance. How do we find meaning when terrible things happen for no reason?"
+      },
+      "keywords": ["asteroid", "chicxulub", "extinction", "mammals"],
+      "metadata": {"time": "66 million years ago", "era": "K-Pg boundary"}
+    },
+    {
+      "id": "rise-of-mammals",
+      "name": "The Rise of Mammals",
+      "sort_order": 28,
+      "category": "life-diversifies",
+      "level": 1,
+      "sections": {
+        "Story": "After the dinosaurs vanished, Earth was a devastated, empty world. But for the small mammals who survived, it was the opportunity of a lifetime. With the great reptiles gone, mammals exploded in diversity. Within a few million years, they grew from rat-sized to horse-sized. They evolved into whales, bats, elephants, primates, cats, dogs — every kind of mammal you know. The age of mammals had begun, and eventually one branch of tree-dwelling primates would come down from the trees and start asking questions about where it all came from.",
+        "Science": "The Cenozoic Era (66 Ma–present) saw the adaptive radiation of mammals into ecological niches vacated by dinosaurs. Within 10 million years of the K-Pg extinction, mammals had diversified into most modern orders. Key radiations include: Cetacean evolution (land mammals → whales, ~55–35 Ma), chiropteran evolution (bats, ~55 Ma), and primate evolution (earliest primates ~65 Ma, hominoids ~25 Ma). The Paleocene-Eocene Thermal Maximum (~56 Ma, +5–8°C) drove rapid evolution and dispersal. By the Miocene (~23–5 Ma), grasslands expanded globally, driving the evolution of grazers, pursuit predators, and social primates. Ice ages beginning ~2.6 Ma (Pleistocene) shaped modern biogeography and drove human evolution in fluctuating African environments.",
+        "Mind-Blowing Fact": "Whales evolved from small, dog-like land mammals called Pakicetus that lived about 50 million years ago. Over 15 million years, their legs gradually became flippers, their nostrils migrated to the top of their heads, and they grew to become the largest animals that have ever lived — larger than any dinosaur. Evolution turned a dog into a blue whale!",
+        "Reflection": "Mammals spent over 100 million years as small, insignificant creatures. Then, when the opportunity came, they were ready. Preparation plus opportunity equals transformation. Are you preparing for opportunities you can't yet see?"
+      },
+      "keywords": ["mammals", "cenozoic", "primates", "diversification"],
+      "metadata": {"time": "66–2 million years ago", "era": "Cenozoic"}
+    },
+    {
+      "id": "humans-arrive",
+      "name": "Humans Walk the Earth",
+      "sort_order": 29,
+      "category": "life-diversifies",
+      "level": 1,
+      "sections": {
+        "Story": "About 300,000 years ago, in Africa, a species of primate appeared that would change the planet forever: Homo sapiens — us. We weren't the fastest, strongest, or toughest. But we could do something no other animal could: we could imagine things that didn't exist yet, share those ideas with words, and work together to make them real. With language, fire, art, and tools, we spread across the entire world — from the African savanna to the Arctic ice, from mountaintops to the bottom of the sea.",
+        "Science": "Homo sapiens evolved in Africa ~300,000 years ago (earliest fossil evidence: Jebel Irhoud, Morocco, ~315 Ka). Our species is characterized by a globular braincase (~1,400 cm³), prominent chin, and reduced brow ridges. Key behavioral innovations include symbolic thought (ochre pigments and shell beads from ~100 Ka), language (debated timeline, but likely well-established by ~100 Ka), and cumulative culture — the ability to build on previous innovations across generations. Genetic evidence indicates a population bottleneck to perhaps ~10,000 breeding individuals before expansion out of Africa ~70–50 Ka. We interbred with Neanderthals (~2% of non-African DNA) and Denisovans (~5% of some Pacific Islander DNA). Agriculture (~12,000 years ago) triggered the Neolithic Revolution, leading to cities, writing, and eventually science.",
+        "Mind-Blowing Fact": "If the entire history of the universe were compressed into one calendar year, with the Big Bang on January 1st, humans wouldn't appear until the very last second before midnight on December 31st. All of recorded human history — every civilization, every war, every invention — would fit in the final fraction of that last second.",
+        "Reflection": "We are the universe becoming aware of itself. Atoms that were forged in stars arranged themselves into a creature that can study stars. As Neil deGrasse Tyson says: 'We are a way for the cosmos to know itself.' What does it mean to be the universe looking back at its own story?"
+      },
+      "keywords": ["humans", "homo-sapiens", "africa", "consciousness"],
+      "metadata": {"time": "~300,000 years ago", "era": "Pleistocene"}
+    },
+    {
+      "id": "the-present-moment",
+      "name": "Now — You Are Here",
+      "sort_order": 30,
+      "category": "life-diversifies",
+      "level": 1,
+      "sections": {
+        "Story": "Here you are — a living being made of atoms forged in ancient stars, breathing oxygen made by bacteria billions of years ago, carrying water that may be older than the Sun. You are standing on a rocky planet orbiting an ordinary star in one arm of a spiral galaxy, one of two trillion galaxies in the observable universe. And you are the first generation of this cosmic story that knows the whole story. Every event in these 30 cards had to happen — in exactly the right way — for you to exist and read this sentence.",
+        "Science": "Your cosmic address: Earth, Solar System, Orion Arm, Milky Way Galaxy, Local Group, Virgo Supercluster, Laniakea Supercluster, Observable Universe (radius: 46.5 billion light-years). You are made of ~7×10²⁷ atoms, predominantly hydrogen (by number), but also oxygen, carbon, nitrogen, calcium, phosphorus, and trace elements — all forged in stellar processes. The oxygen you breathe was produced by photosynthetic organisms. The calcium in your bones was made in supernovae. The iron in your blood was the last element fused in a massive star's core before it collapsed. You are, in the most literal scientific sense, the universe experiencing itself subjectively.",
+        "Mind-Blowing Fact": "Your body contains about 7 octillion atoms (7,000,000,000,000,000,000,000,000,000). Most of the hydrogen atoms in your body were created in the Big Bang itself — they are 13.8 billion years old. You are carrying around pieces of the beginning of everything.",
+        "Reflection": "The entire 13.8-billion-year story of the cosmos has led to this moment — you, reading these words, thinking these thoughts. You are not separate from the universe; you are the universe, aware of itself. What will you do with this astonishing gift of awareness?"
+      },
+      "keywords": ["present", "awareness", "perspective", "cosmic-address"],
+      "metadata": {"time": "Now", "era": "Holocene/Anthropocene"}
+    },
+
+    {
+      "id": "era-first-moments",
+      "name": "The First Moments — From Nothing to Something",
+      "sort_order": 31,
+      "category": "by-era",
+      "level": 2,
+      "sections": {
+        "About": "The first 380,000 years of the universe's existence — from the Big Bang through inflation, the formation of matter, and the release of the first light. In this era, the entire physical stage was set: the forces of nature separated, matter won its fight against antimatter, atoms assembled from quarks, and the universe cooled enough for light to travel freely. Everything that followed — stars, galaxies, planets, life — was built on the foundation laid in these first moments.",
+        "For Parents": "These six items cover the most abstract and mind-bending concepts: the origin of space and time, quantum physics, and the nature of matter. For younger children (4-7), focus on the Story sections — they use concrete analogies (balloons, ice skaters, fog). For older children (8-12), the Science sections introduce real physics vocabulary. Key themes: everything has a beginning, simple rules create complex outcomes, and the universe started with incredible simplicity (just hydrogen and helium). The Mind-Blowing Fact sections are designed to provoke wonder — use them as conversation starters."
+      },
+      "keywords": ["big-bang", "first-moments", "physics"],
+      "composite_of": ["big-bang", "first-forces", "inflation", "quarks-to-protons", "first-atoms", "first-light"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "era-stars-galaxies",
+      "name": "Stars and Galaxies — The Universe Lights Up",
+      "sort_order": 32,
+      "category": "by-era",
+      "level": 2,
+      "sections": {
+        "About": "The era when darkness gave way to starlight. After 200 million years of darkness, the first stars ignited, began forging new elements in their cores, and scattered those elements across space when they died as supernovae. Stars gathered into galaxies — including our Milky Way — creating the cosmic architecture we see today. This era established the fundamental cycle: stars are born, live, die, and their remains become the raw material for new stars, planets, and eventually life.",
+        "For Parents": "This section contains the most quotable, wonder-inducing content — especially the stardust connection. Neil deGrasse Tyson's famous 'We are stardust' idea lives here. The supernova story (destruction creating the elements of life) is a powerful metaphor for resilience and transformation. For younger kids, focus on the idea that we are literally made of star material. For older kids, the stellar nucleosynthesis pathway (hydrogen → helium → carbon → iron) is a beautiful example of how complexity builds step by step."
+      },
+      "keywords": ["stars", "galaxies", "elements", "astrophysics"],
+      "composite_of": ["dark-ages", "first-stars", "stellar-forges", "supernovae", "galaxies-form", "milky-way"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "era-solar-system",
+      "name": "Our Solar System — Home Takes Shape",
+      "sort_order": 33,
+      "category": "by-era",
+      "level": 2,
+      "sections": {
+        "About": "4.6 billion years ago, a cloud of stardust-enriched gas collapsed to form our Sun, its planets, and our Moon. This section covers the formation of our cosmic home: how a nebula became a solar system, how dust grains became planets, and how a catastrophic collision gave Earth its Moon — which would later stabilize the conditions for life. Every atom in the solar system was recycled from earlier generations of stars.",
+        "For Parents": "The solar system section makes the cosmic story personal — this is OUR neighborhood being built. The Moon-forming impact is dramatic and tangible (kids can look at the Moon tonight and know its origin story). Key discussion: everything in our solar system, including us, was made from the debris of dead stars. The solar system is a second-generation stellar system. For hands-on connection: meteorites in museums are pieces of the original solar nebula — older than Earth itself."
+      },
+      "keywords": ["solar-system", "sun", "planets", "moon"],
+      "composite_of": ["solar-nebula", "sun-ignites", "planets-form", "moon-forming-impact"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "era-earth-life",
+      "name": "Earth and Early Life — The Living Planet",
+      "sort_order": 34,
+      "category": "by-era",
+      "level": 2,
+      "sections": {
+        "About": "Earth's first 4 billion years — from a molten hellscape bombarded by asteroids to a planet teeming with microbial life that literally transformed the atmosphere. This era covers the origin of oceans, the origin of life itself, the invention of photosynthesis, the Great Oxidation catastrophe, the evolution of complex cells through endosymbiosis, and the first multicellular organisms. Most of life's history was invisible to the naked eye — just single cells, quietly remaking the world.",
+        "For Parents": "This section contains some of the most profound ideas in all of science: how life began from non-living chemistry, how cooperation (endosymbiosis) created complex cells, and how oxygen — now essential for us — was originally deadly pollution. These stories challenge simple narratives about competition and progress. The endosymbiosis story is especially powerful: every cell in your child's body contains the descendants of an ancient bacterial partnership. Cooperation, not just competition, drives evolution."
+      },
+      "keywords": ["earth", "life", "evolution", "cells"],
+      "composite_of": ["late-heavy-bombardment", "first-oceans", "first-life", "photosynthesis", "great-oxidation", "complex-cells", "multicellular-life"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "era-complex-life",
+      "name": "Complex Life — From Worms to Wondering",
+      "sort_order": 35,
+      "category": "by-era",
+      "level": 2,
+      "sections": {
+        "About": "The last 540 million years — the most dramatic chapter. The Cambrian Explosion filled the oceans with animals. Life crawled onto land. Dinosaurs ruled for 186 million years until an asteroid ended their reign. Mammals rose from the ashes, primates evolved, and finally — in the last cosmic eyeblink — humans appeared. We developed language, art, science, and the ability to understand the very story we're part of. The universe became conscious of itself.",
+        "For Parents": "This is the section kids are most familiar with — dinosaurs, evolution, humans. Use it to connect the cosmic story to their own existence. The cosmic calendar analogy (humans appearing in the last second of December 31st) powerfully conveys our lateness to the party. The asteroid impact teaches that catastrophe can be random but also transformative. And the final item — 'You Are Here' — brings the entire 13.8 billion year journey home to the child reading it. The deepest takeaway: you are not separate from this story. You ARE this story, in its latest chapter."
+      },
+      "keywords": ["evolution", "diversity", "animals", "humans"],
+      "composite_of": ["cambrian-explosion", "life-on-land", "age-of-dinosaurs", "asteroid-impact", "rise-of-mammals", "humans-arrive", "the-present-moment"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "theme-scale",
+      "name": "Scales of Time and Space",
+      "sort_order": 36,
+      "category": "by-theme",
+      "level": 2,
+      "sections": {
+        "About": "The cosmic story spans scales that defy human intuition: 13.8 billion years of time, 93 billion light-years of observable space, temperatures from trillions of degrees to near absolute zero, and sizes from subatomic particles to galaxy superclusters. This thematic grouping highlights moments where scale itself is the lesson — from the incomprehensible speed of the first moments to the patient billions of years of microbial evolution to the cosmic eyeblink of human existence.",
+        "For Parents": "Scale is one of the most important concepts in scientific literacy — and one of the hardest to teach. Use the cosmic calendar analogy throughout: if the universe's history were one year, Earth forms in September, complex life appears in December, dinosaurs go extinct on December 30th, and all of human civilization fits in the last 14 seconds. Another approach: if the Big Bang were your left hand stretched out, the present moment would be your right hand — and you could wipe out all of human history by filing one fingernail. These vivid comparisons help children develop a sense of deep time."
+      },
+      "keywords": ["scale", "time", "perspective", "humility"],
+      "composite_of": ["big-bang", "first-light", "first-stars", "solar-nebula", "first-life", "humans-arrive", "the-present-moment"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "theme-creation-destruction",
+      "name": "Creation Through Destruction",
+      "sort_order": 37,
+      "category": "by-theme",
+      "level": 2,
+      "sections": {
+        "About": "A recurring pattern throughout cosmic history: the most creative moments arise from destruction. Supernovae scatter the elements of life. The Moon was born from a catastrophic collision. The Late Heavy Bombardment may have delivered Earth's water. The Great Oxidation Event killed most life but enabled complex organisms. An asteroid wiped out the dinosaurs and cleared the way for mammals. Creation and destruction are not opposites — they are dance partners in the cosmic story.",
+        "For Parents": "This theme resonates deeply with children navigating their own experiences of change, loss, and new beginnings. The cosmic examples provide safe, awe-inspiring contexts for discussing difficult topics: endings that lead to beginnings, the value of difficulty, and how resilience works at every scale. Key discussion: 'Can you think of a time when something ended and something new began from it?' The supernovae story (a star must die for its elements to become planets and life) is perhaps the most beautiful example of this principle in all of science."
+      },
+      "keywords": ["destruction", "creation", "supernovae", "extinction", "renewal"],
+      "composite_of": ["supernovae", "moon-forming-impact", "late-heavy-bombardment", "great-oxidation", "asteroid-impact"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "theme-cooperation",
+      "name": "The Power of Coming Together",
+      "sort_order": 38,
+      "category": "by-theme",
+      "level": 2,
+      "sections": {
+        "About": "At every scale, the cosmos progresses through things coming together. Quarks combine into protons. Atoms assemble from particles. Gravity gathers gas into galaxies. Cells merge via endosymbiosis to create complex life. Individual cells cooperate to form multicellular bodies. The arrow of cosmic evolution consistently points toward greater cooperation and complexity — not through top-down design, but through the emergent power of simple things working together.",
+        "For Parents": "This is the most hopeful theme in the cosmic story — and a powerful counter-narrative to the idea that nature is purely 'red in tooth and claw.' Every major transition in cosmic and biological evolution involved some form of cooperation: particles binding, atoms bonding, cells merging, organisms forming societies. Use this to discuss teamwork, friendship, and community. The endosymbiosis story (two different organisms becoming one) is especially powerful: your child's cells are literally partnerships that have lasted 2 billion years. The deepest lesson: the universe builds complexity through collaboration."
+      },
+      "keywords": ["cooperation", "symbiosis", "complexity", "emergence"],
+      "composite_of": ["quarks-to-protons", "first-atoms", "galaxies-form", "complex-cells", "multicellular-life"],
+      "relationship_type": "emergence"
+    },
+
+    {
+      "id": "cosmic-timeline",
+      "name": "The Cosmic Timeline — 13.8 Billion Years in 30 Steps",
+      "sort_order": 39,
+      "category": "meta",
+      "level": 3,
+      "sections": {
+        "About": "The full chronological journey from the Big Bang to the present moment, organized into five eras: the First Moments (physics creates the stage), Stars and Galaxies (astrophysics lights it up), Our Solar System (home takes shape), Earth and Early Life (biology begins), and Complex Life (evolution produces us). Each era builds on the previous one — you can't have life without planets, can't have planets without elements, can't have elements without stars, can't have stars without the Big Bang. The cosmic story is one continuous, unbroken chain of cause and effect spanning 13.8 billion years.",
+        "For Parents": "This grammar tells the greatest story ever told — the true origin story of everything. It's designed to be read sequentially (following the timeline) or thematically (following patterns like creation-through-destruction or cooperation). For younger children, the Story sections use concrete imagery and analogies. For older children, the Science sections introduce real terminology and current research. The Reflection questions are designed to connect cosmic themes to personal experience. Best used as a bedtime series (one card per night = one month of cosmic bedtime stories) or as a reference during science discussions."
+      },
+      "keywords": ["timeline", "overview", "cosmic-calendar"],
+      "composite_of": ["era-first-moments", "era-stars-galaxies", "era-solar-system", "era-earth-life", "era-complex-life"],
+      "relationship_type": "emergence"
+    },
+    {
+      "id": "cosmic-themes",
+      "name": "Cosmic Themes — Patterns in the Unfolding",
+      "sort_order": 40,
+      "category": "meta",
+      "level": 3,
+      "sections": {
+        "About": "Beyond the timeline, three deep patterns run through the cosmic story. Scales of Time and Space reveal the mind-bending vastness of the universe and the humbling brevity of human existence. Creation Through Destruction shows that the most generative moments in cosmic history arise from catastrophe — supernovae, impacts, extinctions. The Power of Coming Together reveals that complexity at every scale emerges from cooperation — particles binding, cells merging, organisms teaming up. These themes recur from the Big Bang to the present, suggesting that the universe has a deep grammar of its own.",
+        "For Parents": "The thematic groupings allow you to use this grammar not just as a science resource but as a source of life wisdom. When a child faces a difficult ending, pull up the 'Creation Through Destruction' theme. When they're learning about teamwork, explore 'The Power of Coming Together.' When they need perspective on a bad day, the 'Scales of Time and Space' theme puts everything in cosmic context. These aren't just science stories — they're meaning-making tools drawn from the deepest truths we know about reality."
+      },
+      "keywords": ["themes", "patterns", "meaning", "wonder"],
+      "composite_of": ["theme-scale", "theme-creation-destruction", "theme-cooperation"],
+      "relationship_type": "emergence"
+    }
+  ]
+}

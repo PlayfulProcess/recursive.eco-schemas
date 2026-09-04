@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alice — Illustration Editor</title>
+<style>
+:root { --bg: #111; --card: #1a1a2e; --accent: #e94560; --ok: #4ecca3; --text: #eee; --muted: #777; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Georgia, serif; background: var(--bg); color: var(--text); }
+.header {
+  background: var(--card); padding: 16px 24px; position: sticky; top: 0; z-index: 100;
+  border-bottom: 2px solid var(--accent); display: flex; justify-content: space-between; align-items: center;
+}
+.header h1 { font-size: 1.2em; }
+.header .actions { display: flex; gap: 10px; }
+.header button {
+  padding: 8px 18px; border: none; border-radius: 4px; cursor: pointer;
+  font-weight: bold; font-size: 0.9em;
+}
+.btn-export { background: var(--ok); color: #000; }
+.btn-undo { background: #555; color: #fff; }
+.changes-count { color: var(--accent); font-weight: bold; font-size: 0.9em; }
+
+.chapter-section { padding: 12px 24px; }
+.chapter-title {
+  background: var(--accent); color: white; padding: 8px 16px; border-radius: 6px;
+  margin: 16px 0 8px; font-size: 1em; font-weight: bold;
+}
+.page-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px; padding: 8px 0;
+}
+.page-card {
+  background: var(--card); border: 2px solid #333; border-radius: 8px;
+  overflow: hidden; transition: border-color 0.2s; position: relative;
+}
+.page-card.selected { border-color: var(--accent); }
+.page-card.changed { border-color: var(--ok); }
+.page-card.removed { border-color: #e94560; opacity: 0.5; }
+.page-card .page-label {
+  padding: 6px 10px; font-size: 0.75em; color: var(--muted);
+  display: flex; justify-content: space-between;
+}
+.page-card .page-label strong { color: var(--text); }
+.page-card .img-wrap {
+  width: 100%; height: 200px; background: #0a0a0a; display: flex;
+  align-items: center; justify-content: center; cursor: pointer;
+  position: relative; overflow: hidden;
+}
+.page-card .img-wrap img {
+  max-width: 100%; max-height: 100%; object-fit: contain;
+}
+.page-card .img-wrap .no-img {
+  color: var(--muted); font-style: italic; font-size: 0.85em;
+}
+.page-card .text-preview {
+  padding: 8px 10px; font-size: 0.7em; color: var(--muted);
+  max-height: 60px; overflow: hidden; line-height: 1.4;
+}
+.page-card .img-info {
+  padding: 4px 10px 8px; font-size: 0.7em; color: var(--ok);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.page-card .badge-moved {
+  position: absolute; top: 4px; right: 4px; background: var(--ok);
+  color: #000; font-size: 0.65em; padding: 2px 6px; border-radius: 3px;
+  font-weight: bold;
+}
+.page-card .badge-removed {
+  position: absolute; top: 4px; right: 4px; background: var(--accent);
+  color: #fff; font-size: 0.65em; padding: 2px 6px; border-radius: 3px;
+  font-weight: bold;
+}
+
+/* Context menu */
+.ctx-menu {
+  position: fixed; background: var(--card); border: 1px solid #555;
+  border-radius: 6px; padding: 6px 0; z-index: 1000; min-width: 200px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5); display: none;
+}
+.ctx-menu .ctx-item {
+  padding: 8px 16px; cursor: pointer; font-size: 0.85em;
+  display: flex; gap: 8px; align-items: center;
+}
+.ctx-menu .ctx-item:hover { background: rgba(255,255,255,0.1); }
+.ctx-menu .ctx-sep { height: 1px; background: #444; margin: 4px 0; }
+
+/* Zoom overlay */
+.zoom-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.95);
+  z-index: 999; display: none; cursor: pointer;
+  align-items: center; justify-content: center;
+}
+.zoom-overlay img { max-width: 95vw; max-height: 95vh; object-fit: contain; }
+
+.help-text { padding: 12px 24px; color: var(--muted); font-size: 0.8em; line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>Illustration Editor</h1>
+    <span class="changes-count" id="changesCount">0 changes</span>
+  </div>
+  <div class="actions">
+    <button class="btn-undo" onclick="undoLast()">Undo</button>
+    <button class="btn-export" onclick="exportCSV()">Export CSV</button>
+  </div>
+</div>
+
+<div class="help-text">
+  <strong>Right-click</strong> an image to move it to a different page or delete it.
+  <strong>Click</strong> to zoom. Changes are tracked — export CSV when done.
+</div>
+
+<div id="content"></div>
+
+<div class="ctx-menu" id="ctxMenu">
+  <div class="ctx-item" onclick="promptMoveTo()">&#8644; Move to page...</div>
+  <div class="ctx-item" onclick="swapWith()">&#8646; Swap with page...</div>
+  <div class="ctx-sep"></div>
+  <div class="ctx-item" style="color:var(--accent)" onclick="removeImage()">&#10008; Remove image</div>
+</div>
+
+<div class="zoom-overlay" id="zoomOverlay" onclick="this.style.display='none'">
+  <img id="zoomImg">
+</div>
+
+<script>
+var DATA = [{"ch":1,"pg":0,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-the-white-rabbit-appears/gwynedd-hudson-1922.jpg","info":"Gwynedd Hudson — White Rabbit","label":"Ch1 Cover","text":"DOWN THE RABBIT-HOLE"},{"ch":1,"pg":1,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-02.jpg","info":"Lewis Carroll manuscript — Alice sitting with sister, beginning to get tired","label":"Ch1 p1","text":"ALICE WAS BEGINNING TO GET VERY TIRED OF SITTING BY HER SIST..."},{"ch":1,"pg":2,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-03.jpg","info":"Lewis Carroll manuscript — White Rabbit running by with pocket watch","label":"Ch1 p2","text":"“WITHOUT PICTURES OR CONVERSATIONS?”  SO SHE WAS CONSIDERING..."},{"ch":1,"pg":3,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-the-white-rabbit-appears/alice-b-woodward-1913.jpg","info":"Alice B. Woodward — Suddenly a white rabbit ran by","label":"Ch1 p3","text":"PICKING THE DAISIES, WHEN SUDDENLY A WHITE RABBIT WITH PINK ..."},{"ch":1,"pg":4,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-01-down-the-rabbit-hole/gwynedd-hudson-1922.jpg","info":"Gwynedd Hudson — Alice & Dinah","label":"Ch1 p4","text":"THERE WAS NOTHING SO VERY REMARKABLE IN THAT; NOR DID ALICE ..."},{"ch":1,"pg":5,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-falling-down/brinsley-le-fanu-1910.jpg","info":"Brinsley Le Fanu — Alice took marmalade as she fell","label":"Ch1 p5","text":"TIME IT ALL SEEMED QUITE NATURAL); BUT WHEN THE RABBIT ACTUA..."},{"ch":1,"pg":6,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-01-down-the-rabbit-hole/arthur-rackham-1907.jpg","info":"Arthur Rackham — Alice portrait","label":"Ch1 p6","text":"WATCH TO TAKE OUT OF IT, AND BURNING WITH CURIOSITY, SHE RAN..."},{"ch":1,"pg":7,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-01.jpg","info":"Lewis Carroll manuscript — Chapter I title page — Alice bored by the river","label":"Ch1 p7","text":"IN THE WORLD SHE WAS TO GET OUT AGAIN...."},{"ch":1,"pg":8,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-falling-down/william-h-walker-1907.jpg","info":"William H. Walker — Alice falling","label":"Ch1 p8","text":"THE RABBIT-HOLE WENT STRAIGHT ON LIKE A TUNNEL FOR SOME WAY,..."},{"ch":1,"pg":9,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-bored-by-the-river/brinsley-le-fanu-1910.jpg","info":"Brinsley Le Fanu — Alice took marmalade as she fell","label":"Ch1 p9","text":"DOWN, DOWN, DOWN. WOULD THE FALL NEVER COME TO AN END? “I WO..."},{"ch":1,"pg":10,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-the-white-rabbit-appears/arthur-rackham-1907.jpg","info":"Arthur Rackham — White Rabbit","label":"Ch1 p10","text":"ALICE WAS NOT A BIT HURT, AND SHE JUMPED UP ON TO HER FEET I..."},{"ch":1,"pg":11,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-07.jpg","info":"Lewis Carroll manuscript — Alice drinking from the DRINK ME bottle","label":"Ch1 p11","text":"THERE SEEMED TO BE NO USE IN WAITING BY THE LITTLE DOOR, SO ..."},{"ch":1,"pg":12,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-eat-me/nursery-alice-1890-cover.jpg","info":"E. Gertrude Thomson & John Tenniel — The Nursery Alice front cover","label":"Ch1 p12","text":"“WHAT A CURIOUS FEELING!” SAID ALICE; “I MUST BE SHUTTING UP..."},{"ch":1,"pg":13,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch01-the-hall-of-doors/brinsley-le-fanu-1910.jpg","info":"Brinsley Le Fanu — Glass table","label":"Ch1 p13","text":"AFTER A WHILE, FINDING THAT NOTHING MORE HAPPENED, SHE DECID..."},{"ch":1,"pg":14,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-04.jpg","info":"Lewis Carroll manuscript — Alice falling down the rabbit-hole","label":"Ch1 p14","text":"SHE ATE A LITTLE BIT, AND SAID ANXIOUSLY TO HERSELF, “WHICH ..."},{"ch":2,"pg":0,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-09.jpg","info":"Lewis Carroll manuscript — Alice growing enormously tall — curiouser and curiouser","label":"Ch2 Cover","text":"THE POOL OF TEARS"},{"ch":2,"pg":1,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-curiouser-and-curiouser/john-tenniel-colorized-e-g-thomson-1890.jpg","info":"John Tenniel (colorized E.G. Thomson) — How Alice grew tall","label":"Ch2 p1","text":"“CURIOUSER AND CURIOUSER!” CRIED ALICE (SHE WAS SO MUCH SURP..."},{"ch":2,"pg":2,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-10.jpg","info":"Lewis Carroll manuscript — Alice swimming in the pool of her own tears","label":"Ch2 p2","text":"AFTER A TIME SHE HEARD A LITTLE PATTERING OF FEET IN THE DIS..."},{"ch":2,"pg":3,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-meeting-the-mouse/emily-overnell-1912.jpg","info":"Emily Overnell — Alice in Wonderland frontispiece","label":"Ch2 p3","text":"“THAT WAS A NARROW ESCAPE!” SAID ALICE, A GOOD DEAL FRIGHTEN..."},{"ch":2,"pg":4,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-the-pool-of-tears/alice-b-woodward-1913.jpg","info":"Alice B. Woodward — They all swam to the shore","label":"Ch2 p4","text":"AS SHE SAID THESE WORDS HER FOOT SLIPPED, AND IN ANOTHER MOM..."},{"ch":2,"pg":5,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-the-pool-of-tears/arthur-rackham-1907.jpg","info":"Arthur Rackham — Pool of tears","label":"Ch2 p5","text":"“I WISH I HADN’T CRIED SO MUCH!” SAID ALICE, AS SHE SWAM ABO..."},{"ch":2,"pg":6,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch02-the-pool-of-tears/john-tenniel-colorized-e-g-thomson-1890.jpg","info":"John Tenniel (colorized E.G. Thomson) — Alice & Mouse in Pool of Tears","label":"Ch2 p6","text":"JUST THEN SHE HEARD SOMETHING SPLASHING ABOUT IN THE POOL A ..."},{"ch":2,"pg":7,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-12.jpg","info":"Lewis Carroll manuscript — Alice and the Mouse swimming in the pool of tears","label":"Ch2 p7","text":"“WE INDEED!” CRIED THE MOUSE, WHO WAS TREMBLING DOWN TO THE ..."},{"ch":3,"pg":0,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/emily-overnell-1912.jpg","info":"Emily Overnell — Got up in disgust","label":"Ch3 Cover","text":"A CAUCUS-RACE AND A LONG TALE"},{"ch":3,"pg":1,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/bessie-pease-gutmann-1933.jpg","info":"Bessie Pease Gutmann — Beg your acceptance","label":"Ch3 p1","text":"THEY WERE INDEED A QUEER-LOOKING PARTY THAT ASSEMBLED ON THE..."},{"ch":3,"pg":2,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-16.jpg","info":"Lewis Carroll manuscript — The Dodo presenting Alice with her own thimble as prize","label":"Ch3 p2","text":"“I THOUGHT YOU DID,” SAID THE MOUSE. “—I PROCEED. ‘EDWIN AND..."},{"ch":3,"pg":3,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/john-tenniel-colorized-e-g-thomson-1890.jpg","info":"John Tenniel (colorized E.G. Thomson) — Hand it over said Dodo","label":"Ch3 p3","text":"“IN THAT CASE,” SAID THE DODO SOLEMNLY, RISING TO ITS FEET, ..."},{"ch":3,"pg":4,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/william-h-walker-1907.jpg","info":"William H. Walker — Dodo","label":"Ch3 p4","text":"“WHAT IS A CAUCUS-RACE?” SAID ALICE; NOT THAT SHE WANTED MUC..."},{"ch":3,"pg":5,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/brinsley-le-fanu-1910.jpg","info":"Brinsley Le Fanu — Dodo presents Alice with her fingernail","label":"Ch3 p5","text":"THIS QUESTION THE DODO COULD NOT ANSWER WITHOUT A GREAT DEAL..."},{"ch":3,"pg":6,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-18.jpg","info":"Lewis Carroll manuscript — Alice distributing comfits to the animals","label":"Ch3 p6","text":"ALICE HAD NO IDEA WHAT TO DO, AND IN DESPAIR SHE PUT HER HAN..."},{"ch":3,"pg":7,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-driest-thing/john-tenniel-harry-theaker-1911.jpg","info":"John Tenniel & Harry Theaker — Dodo presents thimble to Alice","label":"Ch3 p7","text":"“ONLY A THIMBLE,” SAID ALICE SADLY.  “HAND IT OVER HERE,” SA..."},{"ch":3,"pg":8,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch03-the-caucus-race/arthur-rackham-1907.jpg","info":"Arthur Rackham — Who has won","label":"Ch3 p8","text":"ALICE THOUGHT THE WHOLE THING VERY ABSURD, BUT THEY ALL LOOK..."},{"ch":3,"pg":9,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-14.jpg","info":"Lewis Carroll manuscript — The Mouse tells its history — the driest thing","label":"Ch3 p9","text":"“YOU PROMISED TO TELL ME YOUR HISTORY, YOU KNOW,” SAID ALICE..."},{"ch":4,"pg":0,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-bill-the-lizard/harry-rountree-1928.jpg","info":"Harry Rountree — Poor Lizard Bill","label":"Ch4 Cover","text":"THE RABBIT SENDS IN A LITTLE BILL"},{"ch":4,"pg":1,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-stuck-in-the-house/bessie-pease-gutmann-1933.jpg","info":"Bessie Pease Gutmann — Hope I shan't grow more","label":"Ch4 p1","text":"IT WAS THE WHITE RABBIT, TROTTING SLOWLY BACK AGAIN, AND LOO..."},{"ch":4,"pg":2,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-bill-the-lizard/brinsley-le-fanu-1910.jpg","info":"Brinsley Le Fanu — White rabbit falls","label":"Ch4 p2","text":"BY THIS TIME SHE HAD FOUND HER WAY INTO A TIDY LITTLE ROOM W..."},{"ch":4,"pg":3,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-stuck-in-the-house/john-tenniel-colorized-e-g-thomson-1890.jpg","info":"John Tenniel (colorized E.G. Thomson) — She grew and grew","label":"Ch4 p3","text":"LUCKILY FOR ALICE, THE LITTLE MAGIC BOTTLE HAD NOW HAD ITS F..."},{"ch":4,"pg":4,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-mistaken-for-mary-ann/harry-rountree-1928.jpg","info":"Harry Rountree — Why, Mary Ann","label":"Ch4 p4","text":"“OH, YOU FOOLISH ALICE!” SHE ANSWERED HERSELF. “HOW CAN YOU ..."},{"ch":4,"pg":5,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-mistaken-for-mary-ann/john-tenniel-harry-theaker-1911.jpg","info":"John Tenniel & Harry Theaker — Rabbit started violently","label":"Ch4 p5","text":"“MARY ANN! MARY ANN!” SAID THE VOICE. “FETCH ME MY GLOVES TH..."},{"ch":4,"pg":6,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-bill-the-lizard/gwynedd-hudson-1922.jpg","info":"Gwynedd Hudson — Poor little lizard","label":"Ch4 p6","text":"“SURE, IT’S AN ARM, YER HONOUR!” (HE PRONOUNCED IT “ARRUM.”)..."},{"ch":4,"pg":7,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-bill-the-lizard/john-tenniel-colorized-e-g-thomson-1890.jpg","info":"John Tenniel (colorized E.G. Thomson) — Bill the Lizard","label":"Ch4 p7","text":"“OH! SO BILL’S GOT TO COME DOWN THE CHIMNEY, HAS HE?” SAID A..."},{"ch":4,"pg":8,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-19.jpg","info":"Lewis Carroll manuscript — Bill the Lizard being kicked up the chimney","label":"Ch4 p8","text":"THERE WAS A DEAD SILENCE INSTANTLY, AND ALICE THOUGHT TO HER..."},{"ch":4,"pg":9,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch04-the-great-puppy/john-tenniel-colorized-e-g-thomson-1890.jpg","info":"John Tenniel (colorized E.G. Thomson) — Dash the Puppy","label":"Ch4 p9","text":"“THE FIRST THING I’VE GOT TO DO,” SAID ALICE TO HERSELF, AS ..."},{"ch":5,"pg":0,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch05-who-are-you/gwynedd-hudson-1922.jpg","info":"Gwynedd Hudson — Advice from a caterpillar","label":"Ch5 Cover","text":"ADVICE FROM A CATERPILLAR"},{"ch":5,"pg":1,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch05-who-are-you/alice-b-woodward-1913.jpg","info":"Alice B. Woodward — Caterpillar","label":"Ch5 p1","text":"THE CATERPILLAR AND ALICE LOOKED AT EACH OTHER FOR SOME TIME..."},{"ch":5,"pg":2,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch05-who-are-you/william-h-walker-1907.jpg","info":"William H. Walker — Caterpillar","label":"Ch5 p2","text":"“I’M AFRAID I CAN’T PUT IT MORE CLEARLY,” ALICE REPLIED VERY..."},{"ch":5,"pg":3,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch05-who-are-you/gwynedd-hudson-1922.jpg","info":"Gwynedd Hudson — Advice from a caterpillar","label":"Ch5 p3","text":"WHICH BROUGHT THEM BACK AGAIN TO THE BEGINNING OF THE CONVER..."},{"ch":5,"pg":4,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch05-who-are-you/arthur-rackham-1907.jpg","info":"Arthur Rackham — Advice from a Caterpillar","label":"Ch5 p4","text":"“IS THAT ALL?” SAID ALICE, SWALLOWING DOWN HER ANGER AS WELL..."},{"ch":5,"pg":5,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch05-father-william/bessie-pease-gutmann-1933.jpg","info":"Bessie Pease Gutmann — Caterpillar","label":"Ch5 p5","text":"“I’M AFRAID I AM, SIR,” SAID ALICE; “I CAN’T REMEMBER THINGS..."},{"ch":5,"pg":6,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-23.jpg","info":"Lewis Carroll manuscript — Chapter II title page — Advice from a Caterpillar","label":"Ch5 p6","text":"“IN MY YOUTH,” SAID THE SAGE, AS HE SHOOK HIS GREY LOCKS,   ..."},{"ch":5,"pg":7,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-05-advice-from-a-caterpillar/john-tenniel-colorized-e-g-thomson-1890.jpg","info":"John Tenniel (colorized E.G. Thomson) — Caterpillar","label":"Ch5 p7","text":"THE CATERPILLAR WAS THE FIRST TO SPEAK.  “WHAT SIZE DO YOU W..."},{"ch":5,"pg":8,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-24.jpg","info":"Lewis Carroll manuscript — The Pigeon calling Alice a serpent in the tree","label":"Ch5 p8","text":"AS THERE SEEMED TO BE NO CHANCE OF GETTING HER HANDS UP TO H..."},{"ch":6,"pg":0,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-25.jpg","info":"Lewis Carroll manuscript — The Cheshire Cat sitting in a tree, grinning","label":"Ch6 Cover","text":"PIG AND PEPPER"},{"ch":6,"pg":1,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-27.jpg","info":"Lewis Carroll manuscript — Alice holding the baby that turns into a pig","label":"Ch6 p1","text":"FOR A MINUTE OR TWO SHE STOOD LOOKING AT THE HOUSE, AND WOND..."},{"ch":6,"pg":2,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-duchesss-kitchen/arthur-rackham-1907.jpg","info":"Arthur Rackham — Saucepan flew by","label":"Ch6 p2","text":"AT THIS MOMENT THE DOOR OF THE HOUSE OPENED, AND A LARGE PLA..."},{"ch":6,"pg":3,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-duchesss-kitchen/brinsley-le-fanu-1910.jpg","info":"Brinsley Le Fanu — The Duchess's kitchen","label":"Ch6 p3","text":"THE DOOR LED RIGHT INTO A LARGE KITCHEN, WHICH WAS FULL OF S..."},{"ch":6,"pg":4,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-baby-turns-into-a-pig/gwynedd-hudson-1922.jpg","info":"Gwynedd Hudson — Duchess & the Baby","label":"Ch6 p4","text":"“I DON’T KNOW OF ANY THAT DO,” ALICE SAID VERY POLITELY, FEE..."},{"ch":6,"pg":5,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-baby-turns-into-a-pig/alice-b-woodward-1913.jpg","info":"Alice B. Woodward — You may nurse the baby said Duchess","label":"Ch6 p5","text":"“OH, DON’T BOTHER ME,” SAID THE DUCHESS; “I NEVER COULD ABID..."},{"ch":6,"pg":6,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-fish-footman/alice-b-woodward-1913.jpg","info":"Alice B. Woodward — You may nurse the baby, said Duchess","label":"Ch6 p6","text":"“HERE! YOU MAY NURSE IT A BIT, IF YOU LIKE!” THE DUCHESS SAI..."},{"ch":6,"pg":7,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-28.jpg","info":"Lewis Carroll manuscript — The Cheshire Cat grin fading, leaving only the smile","label":"Ch6 p7","text":"AS SOON AS SHE HAD MADE OUT THE PROPER WAY OF NURSING IT, (W..."},{"ch":6,"pg":8,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-baby-turns-into-a-pig/john-tenniel-colorized-e-g-thomson-1890.jpg","info":"John Tenniel (colorized E.G. Thomson) — The Pig-baby","label":"Ch6 p8","text":"NO, THERE WERE NO TEARS. “IF YOU’RE GOING TO TURN INTO A PIG..."},{"ch":6,"pg":9,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-cheshire-cat/john-tenniel-colorized-e-g-thomson-1890.jpg","info":"John Tenniel (colorized E.G. Thomson) — The Cheshire Cat in tree","label":"Ch6 p9","text":"SO SHE SET THE LITTLE CREATURE DOWN, AND FELT QUITE RELIEVED..."},{"ch":6,"pg":10,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-cheshire-cat/john-tenniel-harry-theaker-1911.jpg","info":"John Tenniel & Harry Theaker — The Cheshire Cat","label":"Ch6 p10","text":"SO SHE SET THE LITTLE CREATURE DOWN, AND FELT QUITE RELIEVED..."},{"ch":6,"pg":11,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-duchesss-kitchen/alice-b-woodward-1913.jpg","info":"Alice B. Woodward — Shan't said the Cook","label":"Ch6 p11","text":"THE CAT ONLY GRINNED WHEN IT SAW ALICE. IT LOOKED GOOD-NATUR..."},{"ch":6,"pg":12,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-26.jpg","info":"Lewis Carroll manuscript — The Duchess's kitchen — cook, baby, pepper, and Cheshire Cat","label":"Ch6 p12","text":"“HOW DO YOU KNOW I’M MAD?” SAID ALICE.  “YOU MUST BE,” SAID ..."},{"ch":6,"pg":13,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch06-the-baby-turns-into-a-pig/arthur-rackham-1907.jpg","info":"Arthur Rackham — Pig baby","label":"Ch6 p13","text":"“BY-THE-BYE, WHAT BECAME OF THE BABY?” SAID THE CAT. “I’D NE..."},{"ch":7,"pg":0,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-29.jpg","info":"Lewis Carroll manuscript — The Mad Tea-Party — Hatter, March Hare, and Dormouse","label":"Ch7 Cover","text":"A MAD TEA-PARTY"},{"ch":7,"pg":1,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-no-room/brinsley-le-fanu-1910.jpg","info":"Brinsley Le Fanu — March Hare's house","label":"Ch7 p1","text":"THERE WAS A TABLE SET OUT UNDER A TREE IN FRONT OF THE HOUSE..."},{"ch":7,"pg":2,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-alice-leaves-the-tea-party/lewis-carroll-1864-cheshire-cat-tree.webp","info":"Lewis Carroll — Alice under a tree with the Cheshire Cat","label":"Ch7 p2","text":"“THEN IT WASN’T VERY CIVIL OF YOU TO OFFER IT,” SAID ALICE A..."},{"ch":7,"pg":3,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-07-a-mad-tea-party/gwynedd-hudson-1922.jpg","info":"Gwynedd Hudson — March Hare & The Hatter","label":"Ch7 p3","text":"THE HATTER OPENED HIS EYES VERY WIDE ON HEARING THIS; BUT AL..."},{"ch":7,"pg":4,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-no-room/arthur-rackham-1907.jpg","info":"Arthur Rackham — Mad Hatter's tea party","label":"Ch7 p4","text":"“I DO,” ALICE HASTILY REPLIED; “AT LEAST—AT LEAST I MEAN WHA..."},{"ch":7,"pg":5,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-the-hatters-watch/lewis-carroll-1864-duchess-kitchen.webp","info":"Lewis Carroll — The Duchess's chaotic kitchen","label":"Ch7 p5","text":"THE HATTER WAS THE FIRST TO BREAK THE SILENCE. “WHAT DAY OF ..."},{"ch":7,"pg":6,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-no-room/john-tenniel-colorized-e-g-thomson-1890.jpg","info":"John Tenniel (colorized E.G. Thomson) — Mad Hatter's Tea Party","label":"Ch7 p6","text":"ALICE SIGHED WEARILY. “I THINK YOU MIGHT DO SOMETHING BETTER..."},{"ch":7,"pg":7,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-the-dormouses-story/harry-rountree-1928.jpg","info":"Harry Rountree — Dormouse is asleep","label":"Ch7 p7","text":"THE DORMOUSE SLOWLY OPENED HIS EYES. “I WASN’T ASLEEP,” HE S..."},{"ch":7,"pg":8,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch07-the-dormouses-story/brinsley-le-fanu-1910.jpg","info":"Brinsley Le Fanu — Dormouse put in teapot","label":"Ch7 p8","text":"“THERE’S NO SUCH THING!” ALICE WAS BEGINNING VERY ANGRILY, B..."},{"ch":7,"pg":9,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-07-a-mad-tea-party/william-h-walker-1907.jpg","info":"William H. Walker — Hatter's Tea Party","label":"Ch7 p9","text":"THE DORMOUSE HAD CLOSED ITS EYES BY THIS TIME, AND WAS GOING..."},{"ch":8,"pg":0,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-croquet-with-flamingos/john-tenniel-harry-theaker-1911.jpg","info":"John Tenniel & Harry Theaker — Invitation to play croquet","label":"Ch8 Cover","text":"THE QUEEN'S CROQUET-GROUND"},{"ch":8,"pg":1,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-painting-the-roses-red/gwynedd-hudson-1922.jpg","info":"Gwynedd Hudson — Gardeners painting roses red","label":"Ch8 p1","text":"A LARGE ROSE-TREE STOOD NEAR THE ENTRANCE OF THE GARDEN: THE..."},{"ch":8,"pg":2,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-the-royal-procession/john-tenniel-colorized-e-g-thomson-1890.jpg","info":"John Tenniel (colorized E.G. Thomson) — The Queen has come","label":"Ch8 p2","text":"“YOU’D BETTER NOT TALK!” SAID FIVE. “I HEARD THE QUEEN SAY O..."},{"ch":8,"pg":3,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-painting-the-roses-red/william-h-walker-1907.jpg","info":"William H. Walker — Playing cards","label":"Ch8 p3","text":"“YES, IT IS HIS BUSINESS!” SAID FIVE, “AND I’LL TELL HIM—IT ..."},{"ch":8,"pg":4,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-painting-the-roses-red/john-tenniel-colorized-e-g-thomson-1890.jpg","info":"John Tenniel (colorized E.G. Thomson) — Live cards with red rose-tree","label":"Ch8 p4","text":"FIVE AND SEVEN SAID NOTHING, BUT LOOKED AT TWO. TWO BEGAN IN..."},{"ch":8,"pg":5,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-the-royal-procession/arthur-rackham-1907.jpg","info":"Arthur Rackham — Queen of Hearts","label":"Ch8 p5","text":"FIRST CAME TEN SOLDIERS CARRYING CLUBS; THESE WERE ALL SHAPE..."},{"ch":8,"pg":6,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-the-cheshire-cats-head/gwynedd-hudson-1922.jpg","info":"Gwynedd Hudson — King Queen Executioner","label":"Ch8 p6","text":"“HOW SHOULD I KNOW?” SAID ALICE, SURPRISED AT HER OWN COURAG..."},{"ch":8,"pg":7,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-the-royal-procession/gwynedd-hudson-1922.jpg","info":"Gwynedd Hudson — King & Queen of Hearts","label":"Ch8 p7","text":"“GET UP!” SAID THE QUEEN, IN A SHRILL, LOUD VOICE, AND THE T..."},{"ch":8,"pg":8,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-croquet-with-flamingos/john-tenniel-colorized-e-g-thomson-1890.jpg","info":"John Tenniel (colorized E.G. Thomson) — Alice, the Duchess & the Flamingo","label":"Ch8 p8","text":"“THEIR HEADS ARE GONE, IF IT PLEASE YOUR MAJESTY!” THE SOLDI..."},{"ch":8,"pg":9,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-the-cheshire-cats-head/alice-b-woodward-1913.jpg","info":"Alice B. Woodward — Executioner came back with Duchess","label":"Ch8 p9","text":"“IT’S—IT’S A VERY FINE DAY!” SAID A TIMID VOICE AT HER SIDE...."},{"ch":8,"pg":10,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-08-the-queens-croquet-ground/john-tenniel-harry-theaker-1911.jpg","info":"John Tenniel & Harry Theaker — King & Queen of Hearts","label":"Ch8 p10","text":"“SHE BOXED THE QUEEN’S EARS—” THE RABBIT BEGAN. ALICE GAVE A..."},{"ch":8,"pg":11,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-painting-the-roses-red/bessie-pease-gutmann-1933.jpg","info":"Bessie Pease Gutmann — Shan't be beheaded","label":"Ch8 p11","text":"SHE WAS LOOKING ABOUT FOR SOME WAY OF ESCAPE, AND WONDERING ..."},{"ch":8,"pg":12,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-08-the-queens-croquet-ground/alice-b-woodward-1913.jpg","info":"Alice B. Woodward — King, Queen & Knave of Hearts","label":"Ch8 p12","text":"“I DON’T LIKE THE LOOK OF IT AT ALL,” SAID THE KING: “HOWEVE..."},{"ch":8,"pg":13,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch08-the-cheshire-cats-head/brinsley-le-fanu-1910.jpg","info":"Brinsley Le Fanu — Dispute over Cheshire cat's head","label":"Ch8 p13","text":"BY THE TIME SHE HAD CAUGHT THE FLAMINGO AND BROUGHT IT BACK,..."},{"ch":9,"pg":0,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-the-mock-turtles-school/john-tenniel-harry-theaker-1911.jpg","info":"John Tenniel & Harry Theaker — The Mock Turtle","label":"Ch9 Cover","text":"THE MOCK TURTLE'S STORY"},{"ch":9,"pg":1,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-the-duchess-and-her-morals/john-tenniel-colorized-e-g-thomson-1890.jpg","info":"John Tenniel (colorized E.G. Thomson) — Duchess","label":"Ch9 p1","text":"“YOU CAN’T THINK HOW GLAD I AM TO SEE YOU AGAIN, YOU DEAR OL..."},{"ch":9,"pg":2,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-the-duchess-and-her-morals/gwynedd-hudson-1922.jpg","info":"Gwynedd Hudson — Alice & the Duchess","label":"Ch9 p2","text":"“IT’S A MINERAL, I THINK,” SAID ALICE.  “OF COURSE IT IS,” S..."},{"ch":9,"pg":3,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-meeting-the-gryphon/brinsley-le-fanu-1910.jpg","info":"Brinsley Le Fanu — The griffin sleeps deeply","label":"Ch9 p3","text":"“LET’S GO ON WITH THE GAME,” THE QUEEN SAID TO ALICE; AND AL..."},{"ch":9,"pg":4,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-meeting-the-gryphon/bessie-pease-gutmann-1933.jpg","info":"Bessie Pease Gutmann — Gryphon","label":"Ch9 p4","text":"“COME ON, THEN,” SAID THE QUEEN, “AND HE SHALL TELL YOU HIS ..."},{"ch":9,"pg":5,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-meeting-the-gryphon/arthur-rackham-1907.jpg","info":"Arthur Rackham — Gryphon & Mock Turtle","label":"Ch9 p5","text":"THEY HAD NOT GONE FAR BEFORE THEY SAW THE MOCK TURTLE IN THE..."},{"ch":9,"pg":6,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-09-the-mock-turtles-story/john-tenniel-colorized-e-g-thomson-1890.jpg","info":"John Tenniel (colorized E.G. Thomson) — Alice, Mock Turtle & Gryphon","label":"Ch9 p6","text":"“ONCE,” SAID THE MOCK TURTLE AT LAST, WITH A DEEP SIGH, “I W..."},{"ch":9,"pg":7,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-the-mock-turtles-school/gwynedd-hudson-1922.jpg","info":"Gwynedd Hudson — Alice & Mock-turtle","label":"Ch9 p7","text":"“AND WASHING?” SAID THE MOCK TURTLE.  “CERTAINLY NOT!” SAID ..."},{"ch":9,"pg":8,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch09-the-mock-turtles-school/william-h-walker-1907.jpg","info":"William H. Walker — Turtle & Gryphon","label":"Ch9 p8","text":"“WELL, I CAN’T SHOW IT YOU MYSELF,” THE MOCK TURTLE SAID: “I..."},{"ch":10,"pg":0,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-35.jpg","info":"Lewis Carroll manuscript — The Lobster Quadrille dance by the sea","label":"Ch10 Cover","text":"THE LOBSTER QUADRILLE"},{"ch":10,"pg":1,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-37.jpg","info":"Lewis Carroll manuscript — Will you walk a little faster?","label":"Ch10 p1","text":"THE MOCK TURTLE SIGHED DEEPLY, AND DREW THE BACK OF ONE FLAP..."},{"ch":10,"pg":2,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/chapter-10-the-lobster-quadrille/lewis-carroll-1864-mock-turtle.webp","info":"Lewis Carroll — The Mock Turtle sitting sadly on a rock","label":"Ch10 p2","text":"“I COULD TELL YOU MY ADVENTURES—BEGINNING FROM THIS MORNING,..."},{"ch":10,"pg":3,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch10-the-lobster-quadrille/harry-rountree-1928.jpg","info":"Harry Rountree — Lobster Quadrille","label":"Ch10 p3","text":"“SHALL WE TRY ANOTHER FIGURE OF THE LOBSTER QUADRILLE?” THE ..."},{"ch":11,"pg":0,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-court-assembles/arthur-rackham-1907.jpg","info":"Arthur Rackham — Knave of Spades","label":"Ch11 Cover","text":"WHO STOLE THE TARTS?"},{"ch":11,"pg":1,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-court-assembles/arthur-rackham-1907.jpg","info":"Arthur Rackham — Trial of Knave of Hearts","label":"Ch11 p1","text":"THE KING AND QUEEN OF HEARTS WERE SEATED ON THEIR THRONE WHE..."},{"ch":11,"pg":2,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-court-assembles/william-h-walker-1907.jpg","info":"William H. Walker — In court","label":"Ch11 p2","text":"“THEY’RE PUTTING DOWN THEIR NAMES,” THE GRYPHON WHISPERED IN..."},{"ch":11,"pg":3,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-40.jpg","info":"Lewis Carroll manuscript — The King and Queen of Hearts on their thrones, court in session","label":"Ch11 p3","text":"ON THIS THE WHITE RABBIT BLEW THREE BLASTS ON THE TRUMPET, A..."},{"ch":11,"pg":4,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-39.jpg","info":"Lewis Carroll manuscript — Chapter IV title page — The court trial","label":"Ch11 p4","text":"“CALL THE FIRST WITNESS,” SAID THE KING; AND THE WHITE RABBI..."},{"ch":11,"pg":5,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch11-the-cooks-evidence/brinsley-le-fanu-1910.jpg","info":"Brinsley Le Fanu — The cook refuses to testify","label":"Ch11 p5","text":"“CALL THE NEXT WITNESS!” SAID THE KING.  THE NEXT WITNESS WA..."},{"ch":12,"pg":0,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-sentence-first/gwynedd-hudson-1922.jpg","info":"Gwynedd Hudson — Cards rose into the air","label":"Ch12 Cover","text":"ALICE'S EVIDENCE"},{"ch":12,"pg":1,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-41.jpg","info":"Lewis Carroll manuscript — Alice growing large in the courtroom","label":"Ch12 p1","text":"“HERE!” CRIED ALICE, QUITE FORGETTING IN THE FLURRY OF THE M..."},{"ch":12,"pg":2,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-alice-tips-the-jury/john-tenniel-colorized-e-g-thomson-1890.jpg","info":"John Tenniel (colorized E.G. Thomson) — Alice & the Jurors","label":"Ch12 p2","text":"“NOTHING WHATEVER?” PERSISTED THE KING.  “NOTHING WHATEVER,”..."},{"ch":12,"pg":3,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-43.jpg","info":"Lewis Carroll manuscript — A pack of cards flying at Alice","label":"Ch12 p3","text":"AT THIS MOMENT THE KING, WHO HAD BEEN FOR SOME TIME BUSILY W..."},{"ch":12,"pg":4,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-alice-tips-the-jury/john-tenniel-harry-theaker-1911.jpg","info":"John Tenniel & Harry Theaker — Tipped over jury box","label":"Ch12 p4","text":"“THAT’S THE MOST IMPORTANT PIECE OF EVIDENCE WE’VE HEARD YET..."},{"ch":12,"pg":5,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/manuscript-under-ground/manuscript-page-42.jpg","info":"Lewis Carroll manuscript — Sentence first, verdict afterwards","label":"Ch12 p5","text":"“BUT, IT GOES ON ‘THEY ALL RETURNED FROM HIM TO YOU,’” SAID ..."},{"ch":12,"pg":6,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-sentence-first/john-tenniel-colorized-e-g-thomson-1890.jpg","info":"John Tenniel (colorized E.G. Thomson) — The Shower of Cards","label":"Ch12 p6","text":"“STUFF AND NONSENSE!” SAID ALICE LOUDLY. “THE IDEA OF HAVING..."},{"ch":12,"pg":7,"url":"https://pub-71ebbc217e6247ecacb85126a6616699.r2.dev/grammar-illustrations/alice-in-wonderland/ch12-sentence-first/arthur-rackham-1907.jpg","info":"Arthur Rackham — Pack rose in the air","label":"Ch12 p7","text":"AT THIS THE WHOLE PACK ROSE UP INTO THE AIR, AND CAME FLYING..."}];
+var CHAPTERS = {"1":{"name":"DOWN THE RABBIT-HOLE","pages":{"1":"ALICE WAS BEGINNING TO GET VERY TIRED OF SITTING BY HER SISTER ON THE\n\nBANK, AND OF HAVING NOTHING TO DO: ONCE OR TWICE ","2":"“WITHOUT PICTURES OR CONVERSATIONS?”\n\nSO SHE WAS CONSIDERING IN HER OWN MIND (AS WELL AS SHE COULD, FOR THE\n\nHOT DAY MAD","3":"PICKING THE DAISIES, WHEN SUDDENLY A WHITE RABBIT WITH PINK EYES RAN\n\nCLOSE BY HER.","4":"THERE WAS NOTHING SO VERY REMARKABLE IN THAT; NOR DID ALICE THINK IT\n\nSO VERY MUCH OUT OF THE WAY TO HEAR THE RABBIT SAY","5":"TIME IT ALL SEEMED QUITE NATURAL); BUT WHEN THE RABBIT ACTUALLY TOOK A\n\nWATCH OUT OF ITS WAISTCOAT-POCKET, AND LOOKED AT","6":"WATCH TO TAKE OUT OF IT, AND BURNING WITH CURIOSITY, SHE RAN ACROSS THE\n\nFIELD AFTER IT, AND FORTUNATELY WAS JUST IN TIM","7":"IN THE WORLD SHE WAS TO GET OUT AGAIN.","8":"THE RABBIT-HOLE WENT STRAIGHT ON LIKE A TUNNEL FOR SOME WAY, AND THEN\nDIPPED SUDDENLY DOWN, SO SUDDENLY THAT ALICE HAD N","9":"DOWN, DOWN, DOWN. WOULD THE FALL NEVER COME TO AN END? “I WONDER HOW\nMANY MILES I’VE FALLEN BY THIS TIME?” SHE SAID ALOU","10":"ALICE WAS NOT A BIT HURT, AND SHE JUMPED UP ON TO HER FEET IN A MOMENT:\nSHE LOOKED UP, BUT IT WAS ALL DARK OVERHEAD; BEF","11":"THERE SEEMED TO BE NO USE IN WAITING BY THE LITTLE DOOR, SO SHE WENT\nBACK TO THE TABLE, HALF HOPING SHE MIGHT FIND ANOTH","12":"“WHAT A CURIOUS FEELING!” SAID ALICE; “I MUST BE SHUTTING UP LIKE A\nTELESCOPE.”\n\nAND SO IT WAS INDEED: SHE WAS NOW ONLY ","13":"AFTER A WHILE, FINDING THAT NOTHING MORE HAPPENED, SHE DECIDED ON GOING\nINTO THE GARDEN AT ONCE; BUT, ALAS FOR POOR ALIC","14":"SHE ATE A LITTLE BIT, AND SAID ANXIOUSLY TO HERSELF, “WHICH WAY? WHICH\nWAY?”, HOLDING HER HAND ON THE TOP OF HER HEAD TO"}},"2":{"name":"THE POOL OF TEARS","pages":{"1":"“CURIOUSER AND CURIOUSER!” CRIED ALICE (SHE WAS SO MUCH SURPRISED, THAT\nFOR THE MOMENT SHE QUITE FORGOT HOW TO SPEAK GOO","2":"AFTER A TIME SHE HEARD A LITTLE PATTERING OF FEET IN THE DISTANCE, AND\nSHE HASTILY DRIED HER EYES TO SEE WHAT WAS COMING","3":"“THAT WAS A NARROW ESCAPE!” SAID ALICE, A GOOD DEAL FRIGHTENED AT THE\nSUDDEN CHANGE, BUT VERY GLAD TO FIND HERSELF STILL","4":"AS SHE SAID THESE WORDS HER FOOT SLIPPED, AND IN ANOTHER MOMENT,\nSPLASH! SHE WAS UP TO HER CHIN IN SALT WATER. HER FIRST","5":"“I WISH I HADN’T CRIED SO MUCH!” SAID ALICE, AS SHE SWAM ABOUT, TRYING\nTO FIND HER WAY OUT. “I SHALL BE PUNISHED FOR IT ","6":"JUST THEN SHE HEARD SOMETHING SPLASHING ABOUT IN THE POOL A LITTLE WAY\nOFF, AND SHE SWAM NEARER TO MAKE OUT WHAT IT WAS:","7":"“WE INDEED!” CRIED THE MOUSE, WHO WAS TREMBLING DOWN TO THE END OF HIS\nTAIL. “AS IF I WOULD TALK ON SUCH A SUBJECT! OUR "}},"3":{"name":"A CAUCUS-RACE AND A LONG TALE","pages":{"1":"THEY WERE INDEED A QUEER-LOOKING PARTY THAT ASSEMBLED ON THE BANK—THE\nBIRDS WITH DRAGGLED FEATHERS, THE ANIMALS WITH THE","2":"“I THOUGHT YOU DID,” SAID THE MOUSE. “—I PROCEED. ‘EDWIN AND MORCAR,\nTHE EARLS OF MERCIA AND NORTHUMBRIA, DECLARED FOR H","3":"“IN THAT CASE,” SAID THE DODO SOLEMNLY, RISING TO ITS FEET, “I MOVE\nTHAT THE MEETING ADJOURN, FOR THE IMMEDIATE ADOPTION","4":"“WHAT IS A CAUCUS-RACE?” SAID ALICE; NOT THAT SHE WANTED MUCH TO\nKNOW, BUT THE DODO HAD PAUSED AS IF IT THOUGHT THAT SOM","5":"THIS QUESTION THE DODO COULD NOT ANSWER WITHOUT A GREAT DEAL OF\nTHOUGHT, AND IT SAT FOR A LONG TIME WITH ONE FINGER PRES","6":"ALICE HAD NO IDEA WHAT TO DO, AND IN DESPAIR SHE PUT HER HAND IN HER\nPOCKET, AND PULLED OUT A BOX OF COMFITS, (LUCKILY T","7":"“ONLY A THIMBLE,” SAID ALICE SADLY.\n\n“HAND IT OVER HERE,” SAID THE DODO.\n\nTHEN THEY ALL CROWDED ROUND HER ONCE MORE, WHI","8":"ALICE THOUGHT THE WHOLE THING VERY ABSURD, BUT THEY ALL LOOKED SO GRAVE\nTHAT SHE DID NOT DARE TO LAUGH; AND, AS SHE COUL","9":"“YOU PROMISED TO TELL ME YOUR HISTORY, YOU KNOW,” SAID ALICE, “AND WHY\nIT IS YOU HATE—C AND D,” SHE ADDED IN A WHISPER, "}},"4":{"name":"THE RABBIT SENDS IN A LITTLE BILL","pages":{"1":"IT WAS THE WHITE RABBIT, TROTTING SLOWLY BACK AGAIN, AND LOOKING\nANXIOUSLY ABOUT AS IT WENT, AS IF IT HAD LOST SOMETHING","2":"BY THIS TIME SHE HAD FOUND HER WAY INTO A TIDY LITTLE ROOM WITH A TABLE\nIN THE WINDOW, AND ON IT (AS SHE HAD HOPED) A FA","3":"LUCKILY FOR ALICE, THE LITTLE MAGIC BOTTLE HAD NOW HAD ITS FULL EFFECT,\nAND SHE GREW NO LARGER: STILL IT WAS VERY UNCOMF","4":"“OH, YOU FOOLISH ALICE!” SHE ANSWERED HERSELF. “HOW CAN YOU LEARN\nLESSONS IN HERE? WHY, THERE’S HARDLY ROOM FOR YOU, AND","5":"“MARY ANN! MARY ANN!” SAID THE VOICE. “FETCH ME MY GLOVES THIS MOMENT!”\nTHEN CAME A LITTLE PATTERING OF FEET ON THE STAI","6":"“SURE, IT’S AN ARM, YER HONOUR!” (HE PRONOUNCED IT “ARRUM.”)\n\n“AN ARM, YOU GOOSE! WHO EVER SAW ONE THAT SIZE? WHY, IT FI","7":"“OH! SO BILL’S GOT TO COME DOWN THE CHIMNEY, HAS HE?” SAID ALICE TO\nHERSELF. “SHY, THEY SEEM TO PUT EVERYTHING UPON BILL","8":"THERE WAS A DEAD SILENCE INSTANTLY, AND ALICE THOUGHT TO HERSELF, “I\nWONDER WHAT THEY WILL DO NEXT! IF THEY HAD ANY SENS","9":"“THE FIRST THING I’VE GOT TO DO,” SAID ALICE TO HERSELF, AS SHE\nWANDERED ABOUT IN THE WOOD, “IS TO GROW TO MY RIGHT SIZE"}},"5":{"name":"ADVICE FROM A CATERPILLAR","pages":{"1":"THE CATERPILLAR AND ALICE LOOKED AT EACH OTHER FOR SOME TIME IN\nSILENCE: AT LAST THE CATERPILLAR TOOK THE HOOKAH OUT OF ","2":"“I’M AFRAID I CAN’T PUT IT MORE CLEARLY,” ALICE REPLIED VERY POLITELY,\n“FOR I CAN’T UNDERSTAND IT MYSELF TO BEGIN WITH; ","3":"WHICH BROUGHT THEM BACK AGAIN TO THE BEGINNING OF THE CONVERSATION.\nALICE FELT A LITTLE IRRITATED AT THE CATERPILLAR’S M","4":"“IS THAT ALL?” SAID ALICE, SWALLOWING DOWN HER ANGER AS WELL AS SHE\nCOULD.\n\n“NO,” SAID THE CATERPILLAR.\n\nALICE THOUGHT S","5":"“I’M AFRAID I AM, SIR,” SAID ALICE; “I CAN’T REMEMBER THINGS AS I\nUSED—AND I DON’T KEEP THE SAME SIZE FOR TEN MINUTES TO","6":"“IN MY YOUTH,” SAID THE SAGE, AS HE SHOOK HIS GREY LOCKS,\n    “I KEPT ALL MY LIMBS VERY SUPPLE\nBY THE USE OF THIS OINTME","7":"THE CATERPILLAR WAS THE FIRST TO SPEAK.\n\n“WHAT SIZE DO YOU WANT TO BE?” IT ASKED.\n\n“OH, I’M NOT PARTICULAR AS TO SIZE,” ","8":"AS THERE SEEMED TO BE NO CHANCE OF GETTING HER HANDS UP TO HER HEAD,\nSHE TRIED TO GET HER HEAD DOWN TO THEM, AND WAS DEL"}},"6":{"name":"PIG AND PEPPER","pages":{"1":"FOR A MINUTE OR TWO SHE STOOD LOOKING AT THE HOUSE, AND WONDERING WHAT\nTO DO NEXT, WHEN SUDDENLY A FOOTMAN IN LIVERY CAM","2":"AT THIS MOMENT THE DOOR OF THE HOUSE OPENED, AND A LARGE PLATE CAME\nSKIMMING OUT, STRAIGHT AT THE FOOTMAN’S HEAD: IT JUS","3":"THE DOOR LED RIGHT INTO A LARGE KITCHEN, WHICH WAS FULL OF SMOKE FROM\nONE END TO THE OTHER: THE DUCHESS WAS SITTING ON A","4":"“I DON’T KNOW OF ANY THAT DO,” ALICE SAID VERY POLITELY, FEELING QUITE\nPLEASED TO HAVE GOT INTO A CONVERSATION.\n\n“YOU DO","5":"“OH, DON’T BOTHER ME,” SAID THE DUCHESS; “I NEVER COULD ABIDE\nFIGURES!” AND WITH THAT SHE BEGAN NURSING HER CHILD AGAIN,","6":"“HERE! YOU MAY NURSE IT A BIT, IF YOU LIKE!” THE DUCHESS SAID TO ALICE,\nFLINGING THE BABY AT HER AS SHE SPOKE. “I MUST G","7":"AS SOON AS SHE HAD MADE OUT THE PROPER WAY OF NURSING IT, (WHICH WAS TO\nTWIST IT UP INTO A SORT OF KNOT, AND THEN KEEP T","8":"NO, THERE WERE NO TEARS. “IF YOU’RE GOING TO TURN INTO A PIG, MY DEAR,”\nSAID ALICE, SERIOUSLY, “I’LL HAVE NOTHING MORE T","9":"SO SHE SET THE LITTLE CREATURE DOWN, AND FELT QUITE RELIEVED TO SEE IT\nTROT AWAY QUIETLY INTO THE WOOD. “IF IT HAD GROWN","10":"SO SHE SET THE LITTLE CREATURE DOWN, AND FELT QUITE RELIEVED TO SEE IT\nTROT AWAY QUIETLY INTO THE WOOD. “IF IT HAD GROWN","11":"THE CAT ONLY GRINNED WHEN IT SAW ALICE. IT LOOKED GOOD-NATURED, SHE\nTHOUGHT: STILL IT HAD VERY LONG CLAWS AND A GREAT MA","12":"“HOW DO YOU KNOW I’M MAD?” SAID ALICE.\n\n“YOU MUST BE,” SAID THE CAT, “OR YOU WOULDN’T HAVE COME HERE.”\n\nALICE DIDN’T THI","13":"“BY-THE-BYE, WHAT BECAME OF THE BABY?” SAID THE CAT. “I’D NEARLY\nFORGOTTEN TO ASK.”\n\n“IT TURNED INTO A PIG,” ALICE QUIET"}},"7":{"name":"A MAD TEA-PARTY","pages":{"1":"THERE WAS A TABLE SET OUT UNDER A TREE IN FRONT OF THE HOUSE, AND THE\nMARCH HARE AND THE HATTER WERE HAVING TEA AT IT: A","2":"“THEN IT WASN’T VERY CIVIL OF YOU TO OFFER IT,” SAID ALICE ANGRILY.\n\n“IT WASN’T VERY CIVIL OF YOU TO SIT DOWN WITHOUT BE","3":"THE HATTER OPENED HIS EYES VERY WIDE ON HEARING THIS; BUT ALL HE SAID\nWAS, “WHY IS A RAVEN LIKE A WRITING-DESK?”\n\n“COME,","4":"“I DO,” ALICE HASTILY REPLIED; “AT LEAST—AT LEAST I MEAN WHAT I\nSAY—THAT’S THE SAME THING, YOU KNOW.”\n\n“NOT THE SAME THI","5":"THE HATTER WAS THE FIRST TO BREAK THE SILENCE. “WHAT DAY OF THE MONTH\nIS IT?” HE SAID, TURNING TO ALICE: HE HAD TAKEN HI","6":"ALICE SIGHED WEARILY. “I THINK YOU MIGHT DO SOMETHING BETTER WITH THE\nTIME,” SHE SAID, “THAN WASTE IT IN ASKING RIDDLES ","7":"THE DORMOUSE SLOWLY OPENED HIS EYES. “I WASN’T ASLEEP,” HE SAID IN A\nHOARSE, FEEBLE VOICE: “I HEARD EVERY WORD YOU FELLO","8":"“THERE’S NO SUCH THING!” ALICE WAS BEGINNING VERY ANGRILY, BUT THE\nHATTER AND THE MARCH HARE WENT “SH! SH!” AND THE DORM","9":"THE DORMOUSE HAD CLOSED ITS EYES BY THIS TIME, AND WAS GOING OFF INTO A\nDOZE; BUT, ON BEING PINCHED BY THE HATTER, IT WO"}},"8":{"name":"THE QUEEN'S CROQUET-GROUND","pages":{"1":"A LARGE ROSE-TREE STOOD NEAR THE ENTRANCE OF THE GARDEN: THE ROSES\nGROWING ON IT WERE WHITE, BUT THERE WERE THREE GARDEN","2":"“YOU’D BETTER NOT TALK!” SAID FIVE. “I HEARD THE QUEEN SAY ONLY\nYESTERDAY YOU DESERVED TO BE BEHEADED!”\n\n“WHAT FOR?” SAI","3":"“YES, IT IS HIS BUSINESS!” SAID FIVE, “AND I’LL TELL HIM—IT WAS FOR\nBRINGING THE COOK TULIP-ROOTS INSTEAD OF ONIONS.”\n\nS","4":"FIVE AND SEVEN SAID NOTHING, BUT LOOKED AT TWO. TWO BEGAN IN A LOW\nVOICE, “WHY THE FACT IS, YOU SEE, MISS, THIS HERE OUG","5":"FIRST CAME TEN SOLDIERS CARRYING CLUBS; THESE WERE ALL SHAPED LIKE THE\nTHREE GARDENERS, OBLONG AND FLAT, WITH THEIR HAND","6":"“HOW SHOULD I KNOW?” SAID ALICE, SURPRISED AT HER OWN COURAGE. “IT’S\nNO BUSINESS OF MINE.”\n\nTHE QUEEN TURNED CRIMSON WIT","7":"“GET UP!” SAID THE QUEEN, IN A SHRILL, LOUD VOICE, AND THE THREE\nGARDENERS INSTANTLY JUMPED UP, AND BEGAN BOWING TO THE ","8":"“THEIR HEADS ARE GONE, IF IT PLEASE YOUR MAJESTY!” THE SOLDIERS SHOUTED\nIN REPLY.\n\n“THAT’S RIGHT!” SHOUTED THE QUEEN. “C","9":"“IT’S—IT’S A VERY FINE DAY!” SAID A TIMID VOICE AT HER SIDE. SHE WAS\nWALKING BY THE WHITE RABBIT, WHO WAS PEEPING ANXIOU","10":"“SHE BOXED THE QUEEN’S EARS—” THE RABBIT BEGAN. ALICE GAVE A LITTLE\nSCREAM OF LAUGHTER. “OH, HUSH!” THE RABBIT WHISPERED","11":"SHE WAS LOOKING ABOUT FOR SOME WAY OF ESCAPE, AND WONDERING WHETHER SHE\nCOULD GET AWAY WITHOUT BEING SEEN, WHEN SHE NOTI","12":"“I DON’T LIKE THE LOOK OF IT AT ALL,” SAID THE KING: “HOWEVER, IT MAY\nKISS MY HAND IF IT LIKES.”\n\n“I’D RATHER NOT,” THE ","13":"BY THE TIME SHE HAD CAUGHT THE FLAMINGO AND BROUGHT IT BACK, THE FIGHT\nWAS OVER, AND BOTH THE HEDGEHOGS WERE OUT OF SIGH"}},"9":{"name":"THE MOCK TURTLE'S STORY","pages":{"1":"“YOU CAN’T THINK HOW GLAD I AM TO SEE YOU AGAIN, YOU DEAR OLD THING!”\nSAID THE DUCHESS, AS SHE TUCKED HER ARM AFFECTIONA","2":"“IT’S A MINERAL, I THINK,” SAID ALICE.\n\n“OF COURSE IT IS,” SAID THE DUCHESS, WHO SEEMED READY TO AGREE TO\nEVERYTHING THA","3":"“LET’S GO ON WITH THE GAME,” THE QUEEN SAID TO ALICE; AND ALICE WAS TOO\nMUCH FRIGHTENED TO SAY A WORD, BUT SLOWLY FOLLOW","4":"“COME ON, THEN,” SAID THE QUEEN, “AND HE SHALL TELL YOU HIS HISTORY.”\n\nAS THEY WALKED OFF TOGETHER, ALICE HEARD THE KING","5":"THEY HAD NOT GONE FAR BEFORE THEY SAW THE MOCK TURTLE IN THE DISTANCE,\nSITTING SAD AND LONELY ON A LITTLE LEDGE OF ROCK,","6":"“ONCE,” SAID THE MOCK TURTLE AT LAST, WITH A DEEP SIGH, “I WAS A REAL\nTURTLE.”\n\nTHESE WORDS WERE FOLLOWED BY A VERY LONG","7":"“AND WASHING?” SAID THE MOCK TURTLE.\n\n“CERTAINLY NOT!” SAID ALICE INDIGNANTLY.\n\n“AH! THEN YOURS WASN’T A REALLY GOOD SCH","8":"“WELL, I CAN’T SHOW IT YOU MYSELF,” THE MOCK TURTLE SAID: “I’M TOO\nSTIFF. AND THE GRYPHON NEVER LEARNT IT.”\n\n“HADN’T TIM"}},"10":{"name":"THE LOBSTER QUADRILLE","pages":{"1":"THE MOCK TURTLE SIGHED DEEPLY, AND DREW THE BACK OF ONE FLAPPER ACROSS\nHIS EYES. HE LOOKED AT ALICE, AND TRIED TO SPEAK,","2":"“I COULD TELL YOU MY ADVENTURES—BEGINNING FROM THIS MORNING,” SAID\nALICE A LITTLE TIMIDLY: “BUT IT’S NO USE GOING BACK T","3":"“SHALL WE TRY ANOTHER FIGURE OF THE LOBSTER QUADRILLE?” THE GRYPHON\nWENT ON. “OR WOULD YOU LIKE THE MOCK TURTLE TO SING "}},"11":{"name":"WHO STOLE THE TARTS?","pages":{"1":"THE KING AND QUEEN OF HEARTS WERE SEATED ON THEIR THRONE WHEN THEY\nARRIVED, WITH A GREAT CROWD ASSEMBLED ABOUT THEM—ALL ","2":"“THEY’RE PUTTING DOWN THEIR NAMES,” THE GRYPHON WHISPERED IN REPLY,\n“FOR FEAR THEY SHOULD FORGET THEM BEFORE THE END OF ","3":"ON THIS THE WHITE RABBIT BLEW THREE BLASTS ON THE TRUMPET, AND THEN\nUNROLLED THE PARCHMENT SCROLL, AND READ AS FOLLOWS:—","4":"“CALL THE FIRST WITNESS,” SAID THE KING; AND THE WHITE RABBIT BLEW\nTHREE BLASTS ON THE TRUMPET, AND CALLED OUT, “FIRST W","5":"“CALL THE NEXT WITNESS!” SAID THE KING.\n\nTHE NEXT WITNESS WAS THE DUCHESS’S COOK. SHE CARRIED THE PEPPER-BOX IN\nHER HAND"}},"12":{"name":"ALICE'S EVIDENCE","pages":{"1":"“HERE!” CRIED ALICE, QUITE FORGETTING IN THE FLURRY OF THE MOMENT HOW\nLARGE SHE HAD GROWN IN THE LAST FEW MINUTES, AND S","2":"“NOTHING WHATEVER?” PERSISTED THE KING.\n\n“NOTHING WHATEVER,” SAID ALICE.\n\n“THAT’S VERY IMPORTANT,” THE KING SAID, TURNIN","3":"AT THIS MOMENT THE KING, WHO HAD BEEN FOR SOME TIME BUSILY WRITING IN\nHIS NOTE-BOOK, CACKLED OUT “SILENCE!” AND READ OUT","4":"“THAT’S THE MOST IMPORTANT PIECE OF EVIDENCE WE’VE HEARD YET,” SAID THE\nKING, RUBBING HIS HANDS; “SO NOW LET THE JURY—”\n","5":"“BUT, IT GOES ON ‘THEY ALL RETURNED FROM HIM TO YOU,’” SAID ALICE.\n\n“WHY, THERE THEY ARE!” SAID THE KING TRIUMPHANTLY, P","6":"“STUFF AND NONSENSE!” SAID ALICE LOUDLY. “THE IDEA OF HAVING THE\nSENTENCE FIRST!”\n\n“HOLD YOUR TONGUE!” SAID THE QUEEN, T","7":"AT THIS THE WHOLE PACK ROSE UP INTO THE AIR, AND CAME FLYING DOWN UPON\nHER: SHE GAVE A LITTLE SCREAM, HALF OF FRIGHT AND"}}};
+var changes = [];
+var ctxTarget = null; // { ch, pg }
+
+function render() {
+  var html = '';
+  var currentCh = null;
+
+  for (var i = 0; i < DATA.length; i++) {
+    var d = DATA[i];
+    if (d.ch !== currentCh) {
+      if (currentCh !== null) html += '</div></div>';
+      currentCh = d.ch;
+      var chName = CHAPTERS[d.ch] ? CHAPTERS[d.ch].name : 'Chapter ' + d.ch;
+      html += '<div class="chapter-section">';
+      html += '<div class="chapter-title">Chapter ' + d.ch + ': ' + chName + '</div>';
+      html += '<div class="page-grid">';
+    }
+
+    var hasImg = d.url && d.url.length > 0;
+    var changed = d._changed;
+    var removed = d._removed;
+    var cls = 'page-card';
+    if (changed) cls += ' changed';
+    if (removed) cls += ' removed';
+
+    html += '<div class="' + cls + '" data-idx="' + i + '">';
+    html += '<div class="page-label"><strong>' + (d.pg === 0 ? 'Cover' : 'Page ' + d.pg) + '</strong><span>' + d.label + '</span></div>';
+    html += '<div class="img-wrap" onclick="zoomImage(' + i + ')" oncontextmenu="showCtx(event,' + i + ')">';
+    if (hasImg && !removed) {
+      html += '<img src="' + d.url + '" loading="lazy">';
+      if (changed) html += '<div class="badge-moved">MOVED</div>';
+    } else if (removed) {
+      html += '<div class="no-img">REMOVED</div>';
+      html += '<div class="badge-removed">X</div>';
+    } else {
+      html += '<div class="no-img">No illustration</div>';
+    }
+    html += '</div>';
+    if (hasImg && !removed) {
+      html += '<div class="img-info">' + (d.info || '').substring(0, 60) + '</div>';
+    }
+    var textPreview = d.pg === 0 ? '[Cover]' : (CHAPTERS[d.ch]?.pages?.[d.pg] || d.text || '');
+    html += '<div class="text-preview">' + textPreview.substring(0, 120) + '</div>';
+    html += '</div>';
+  }
+  if (currentCh !== null) html += '</div></div>';
+  document.getElementById('content').innerHTML = html;
+  document.getElementById('changesCount').textContent = changes.length + ' changes';
+}
+
+function showCtx(e, idx) {
+  e.preventDefault();
+  var d = DATA[idx];
+  if (!d.url && !d._removed) return;
+  ctxTarget = idx;
+  var menu = document.getElementById('ctxMenu');
+  menu.style.display = 'block';
+  menu.style.left = e.clientX + 'px';
+  menu.style.top = e.clientY + 'px';
+}
+
+document.addEventListener('click', function() {
+  document.getElementById('ctxMenu').style.display = 'none';
+});
+
+function promptMoveTo() {
+  if (ctxTarget === null) return;
+  var d = DATA[ctxTarget];
+  var input = prompt('Move this image to which page? (chapter ' + d.ch + ', current: ' + (d.pg === 0 ? 'cover' : 'page ' + d.pg) + ')\n\nEnter page number (or 0 for cover):');
+  if (input === null) return;
+  var targetPg = parseInt(input);
+  if (isNaN(targetPg)) return;
+
+  // Find the target slot
+  var targetIdx = DATA.findIndex(function(x) { return x.ch === d.ch && x.pg === targetPg; });
+  if (targetIdx === -1) { alert('Page ' + targetPg + ' not found in chapter ' + d.ch); return; }
+
+  // Save change
+  changes.push({ type: 'move', from: { ch: d.ch, pg: d.pg, idx: ctxTarget }, to: { ch: d.ch, pg: targetPg, idx: targetIdx }, prevUrl: DATA[targetIdx].url, prevInfo: DATA[targetIdx].info });
+
+  // Move: put this image on target, clear source
+  var srcUrl = d.url;
+  var srcInfo = d.info;
+  DATA[targetIdx].url = srcUrl;
+  DATA[targetIdx].info = srcInfo;
+  DATA[targetIdx]._changed = true;
+  DATA[ctxTarget].url = '';
+  DATA[ctxTarget].info = 'text-only';
+  DATA[ctxTarget]._changed = true;
+
+  render();
+}
+
+function swapWith() {
+  if (ctxTarget === null) return;
+  var d = DATA[ctxTarget];
+  var input = prompt('Swap this image with which page? (chapter ' + d.ch + ', current: ' + (d.pg === 0 ? 'cover' : 'page ' + d.pg) + ')\n\nEnter page number:');
+  if (input === null) return;
+  var targetPg = parseInt(input);
+  if (isNaN(targetPg)) return;
+
+  var targetIdx = DATA.findIndex(function(x) { return x.ch === d.ch && x.pg === targetPg; });
+  if (targetIdx === -1) { alert('Page ' + targetPg + ' not found in chapter ' + d.ch); return; }
+
+  changes.push({ type: 'swap', a: { ch: d.ch, pg: d.pg, idx: ctxTarget, url: d.url, info: d.info }, b: { ch: d.ch, pg: targetPg, idx: targetIdx, url: DATA[targetIdx].url, info: DATA[targetIdx].info } });
+
+  // Swap
+  var tmpUrl = d.url, tmpInfo = d.info;
+  DATA[ctxTarget].url = DATA[targetIdx].url;
+  DATA[ctxTarget].info = DATA[targetIdx].info;
+  DATA[targetIdx].url = tmpUrl;
+  DATA[targetIdx].info = tmpInfo;
+  DATA[ctxTarget]._changed = true;
+  DATA[targetIdx]._changed = true;
+
+  render();
+}
+
+function removeImage() {
+  if (ctxTarget === null) return;
+  var d = DATA[ctxTarget];
+  changes.push({ type: 'remove', idx: ctxTarget, url: d.url, info: d.info });
+  DATA[ctxTarget]._removed = true;
+  DATA[ctxTarget]._prevUrl = d.url;
+  DATA[ctxTarget]._prevInfo = d.info;
+  DATA[ctxTarget].url = '';
+  DATA[ctxTarget].info = 'text-only';
+  render();
+}
+
+function undoLast() {
+  if (changes.length === 0) return;
+  var c = changes.pop();
+  if (c.type === 'remove') {
+    DATA[c.idx].url = c.url;
+    DATA[c.idx].info = c.info;
+    delete DATA[c.idx]._removed;
+    delete DATA[c.idx]._changed;
+  } else if (c.type === 'move') {
+    DATA[c.from.idx].url = DATA[c.to.idx].url;
+    DATA[c.from.idx].info = DATA[c.to.idx].info;
+    DATA[c.to.idx].url = c.prevUrl;
+    DATA[c.to.idx].info = c.prevInfo;
+    delete DATA[c.from.idx]._changed;
+    delete DATA[c.to.idx]._changed;
+  } else if (c.type === 'swap') {
+    DATA[c.a.idx].url = c.a.url;
+    DATA[c.a.idx].info = c.a.info;
+    DATA[c.b.idx].url = c.b.url;
+    DATA[c.b.idx].info = c.b.info;
+    delete DATA[c.a.idx]._changed;
+    delete DATA[c.b.idx]._changed;
+  }
+  render();
+}
+
+function zoomImage(idx) {
+  var d = DATA[idx];
+  if (!d.url || d._removed) return;
+  document.getElementById('zoomImg').src = d.url;
+  document.getElementById('zoomOverlay').style.display = 'flex';
+}
+
+function exportCSV() {
+  var lines = ['chapter,page,image_url,image_info'];
+  for (var i = 0; i < DATA.length; i++) {
+    var d = DATA[i];
+    var url = d._removed ? '' : d.url;
+    var info = d._removed ? 'text-only' : (d.info || 'text-only');
+    lines.push(d.ch + ',' + d.pg + ',"' + url + '","' + info.replace(/"/g, '""') + '"');
+  }
+  var csv = lines.join('\n');
+  var blob = new Blob([csv], { type: 'text/csv' });
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'illustration-assignments-edited.csv';
+  a.click();
+  URL.revokeObjectURL(a.href);
+  alert('CSV exported with ' + changes.length + ' changes. Give this file to Claude Code to update the booklets.');
+}
+
+render();
+</script>
+</body>
+</html>

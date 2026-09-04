@@ -1,0 +1,1292 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "date": "2026-03-15",
+        "note": "Original creator — story selection, mythic mapping, character integration, mantras"
+      },
+      {
+        "name": "Robert Plutchik",
+        "date": "1980",
+        "note": "Creator of the psychoevolutionary theory of emotions and the Wheel of Emotions (1980)"
+      }
+    ]
+  },
+  "name": "Plutchik's Wheel of Emotions: Myths for Every Feeling",
+  "description": "Robert Plutchik's Wheel of Emotions rendered as a mythic journey. Eight primary emotions — each at three intensities (petal, core, deep) — plus eight composite 'dyad' emotions formed by adjacent pairs. Every emotion is a world myth or folktale that Alice, Shiryo, and Bishisheshi jump into and live through. The wheel becomes a map: each petal is a story, each story is a feeling, each feeling has a body, a color, and a song.\n\nDesigned as a companion to The Wise Heart (DBT grammar) — while DBT teaches skills for handling emotions, this grammar teaches the emotions themselves. You need to know what you're feeling before you can do anything about it.",
+  "grammar_type": "custom",
+  "creator_name": "PlayfulProcess",
+  "tags": [
+    "emotions",
+    "plutchik",
+    "psychology",
+    "children",
+    "kids",
+    "myths",
+    "folktales",
+    "emotional-literacy",
+    "feelings",
+    "wheel-of-emotions",
+    "affective-science"
+  ],
+  "shelves": [
+    "wisdom",
+    "children"
+  ],
+  "roots": [
+    "mythopoetic"
+  ],
+  "lineages": [
+    "Linehan",
+    "Gottman"
+  ],
+  "worldview": "dialectical",
+  "cover_image_url": "",
+  "_design": {
+    "wheel_structure": "Plutchik's wheel has 8 primary emotions arranged in 4 opposing pairs. Each emotion has 3 intensity levels (mild → core → intense). Adjacent emotions combine into 'dyad' composites.",
+    "opposing_pairs": [
+      [
+        "joy",
+        "sadness"
+      ],
+      [
+        "trust",
+        "disgust"
+      ],
+      [
+        "fear",
+        "anger"
+      ],
+      [
+        "surprise",
+        "anticipation"
+      ]
+    ],
+    "character_roles": {
+      "Alice": "Experiences and names each emotion — she's been to Wonderland, she's not afraid of big feelings, but she sometimes intellectualizes instead of feeling",
+      "Shiryo": "Detects emotions through sensors but doesn't understand them yet — learns that emotions are data, not errors",
+      "Bishisheshi": "Embodies each emotion purely — the kitten doesn't name feelings, doesn't judge them, just FEELS them. The living demonstration."
+    },
+    "color_system": "Each primary emotion has a color following Plutchik's original: Joy=Yellow, Trust=Green, Fear=Green-dark, Surprise=Blue-light, Sadness=Blue, Disgust=Purple, Anger=Red, Anticipation=Orange"
+  },
+  "items": [
+    {
+      "id": "joy-serenity",
+      "name": "The Selfish Giant's Garden (Serenity)",
+      "sort_order": 0,
+      "level": 1,
+      "category": "joy",
+      "sections": {
+        "The Arrival": "The wheel glows yellow at the outermost petal. A soft warmth. Alice says: 'It's like the feeling after a long cry — when everything is quiet and okay.' Bishisheshi purrs. Shiryo's light glows gently, steadily.",
+        "The Story": "A giant built a wall around his garden and kept all the children out. 'MY garden,' he said. Winter came and never left. Snow covered everything. The trees forgot how to bloom.\n\nYears passed. The garden was always cold.\n\nThen one morning, through a crack in the wall, a child climbed in. And where the child stood — a tree bloomed. Flowers pushed through the snow.\n\nThe Giant watched. More children came. More trees bloomed. The whole garden came alive.\n\nThe Giant understood. He knocked down the wall.\n\nAnd for the first time in years, he felt it — that quiet warm feeling when something frozen finally thaws. Not excitement. Not laughter. Just... warmth. The garden was alive. And so was he.\n\nThat feeling is serenity.",
+        "The Feeling": "SERENITY is the gentle form of joy. Not a firework — a candle. It's the feeling of everything being okay, right now, in this moment. A purring cat. A warm bed. The quiet after rain.",
+        "In Your Body": "Serenity lives in your chest — a soft, open warmth. Your shoulders drop. Your breathing slows. Your face relaxes into something almost — but not quite — a smile.",
+        "The Song": "Warm and still, the garden grows —\nQuiet joy is what this heart knows.",
+        "Alice Says": "'I felt this once, after the trial, when I woke up on the riverbank with my head in my sister's lap. Not happy, exactly. Just... home.'",
+        "Shiryo Tries": "Shiryo's indicator light dims to a gentle, steady glow. 'My sensors detect no threat. All systems nominal. Is this... serenity?' Bishisheshi is already asleep against Shiryo's warm side.",
+        "For Parents": "Plutchik places serenity as the mild form of joy. Children often only recognize big joy (excitement, elation) but struggle to name the quiet kind. This story teaches that stillness can be joyful. Practice: After a busy day, sit together for one minute in silence. Ask: 'What does quiet-happy feel like?'"
+      },
+      "keywords": [
+        "serenity",
+        "peace",
+        "quiet-joy",
+        "warmth",
+        "stillness"
+      ],
+      "metadata": {
+        "plutchik_primary": "joy",
+        "plutchik_intensity": "mild",
+        "plutchik_color": "#FFEB3B",
+        "plutchik_opposite": "pensiveness",
+        "source_tradition": "English (Oscar Wilde, 1888)",
+        "source_text": "The Selfish Giant — Oscar Wilde, public domain"
+      }
+    },
+    {
+      "id": "joy-core",
+      "name": "Mowgli's Dance with Baloo (Joy)",
+      "sort_order": 1,
+      "level": 1,
+      "category": "joy",
+      "sections": {
+        "The Arrival": "Deeper into the yellow petal. The warmth becomes a glow. Alice starts to smile without meaning to. Bishisheshi bounces. Shiryo's light pulses in a rhythm.",
+        "The Story": "Baloo the bear had a song. A lazy, happy, silly song.\n\n'Look for the bare necessities, the simple bare necessities —'\n\nMowgli didn't understand at first. He was a man-cub in the jungle, worrying about Shere Khan, worrying about belonging, worrying about everything.\n\nBut Baloo didn't worry. Baloo danced.\n\nAnd one day, Mowgli danced too. Not because the problems were solved. Not because Shere Khan was gone. But because the river was cool and the fruit was sweet and Baloo was singing and THIS MOMENT was good.\n\nJoy doesn't wait for everything to be okay. Joy finds the dance in the middle of the mess.\n\nMowgli laughed — a real laugh, from his belly — and for that one moment, he was exactly where he belonged.",
+        "The Feeling": "JOY is the core emotion — the full feeling of happiness, delight, gladness. Not just okay (that's serenity) and not overwhelmed (that's ecstasy). Joy is the dance. The real laugh. The moment when your whole self says YES.",
+        "In Your Body": "Joy lives in your belly and your face. Your eyes crinkle. Your mouth opens. You might bounce, laugh, clap, dance. Your body says: MORE OF THIS.",
+        "The Song": "Dance and laugh, let your heart sing —\nJoy is here in everything!",
+        "Alice Says": "'I know this one! It's what I felt falling down the rabbit hole — before the worry kicked in. Just: WHEEEE!'",
+        "Shiryo Tries": "Shiryo's light pulses fast. 'My circuits are... I believe this is a feedback loop? Every positive input generates more positive input. Is that normal?' Alice laughs: 'That's joy, Shiryo. Enjoy the loop.'",
+        "For Parents": "Core joy is the emotion children know best — but they may not know it as distinct from excitement or silliness. Joy is the feeling of 'this is good and I'm glad I'm here.' Practice: When your child is genuinely happy (not hyper, not performing — genuinely delighted), name it: 'That's joy. Real joy. Remember this feeling.'"
+      },
+      "keywords": [
+        "joy",
+        "happiness",
+        "delight",
+        "dance",
+        "belonging"
+      ],
+      "metadata": {
+        "plutchik_primary": "joy",
+        "plutchik_intensity": "core",
+        "plutchik_color": "#FDD835",
+        "plutchik_opposite": "sadness",
+        "source_tradition": "English (Rudyard Kipling, 1894)",
+        "source_text": "The Jungle Book — Kipling, Gutenberg #236"
+      }
+    },
+    {
+      "id": "joy-ecstasy",
+      "name": "The Pied Piper's Music (Ecstasy)",
+      "sort_order": 2,
+      "level": 1,
+      "category": "joy",
+      "sections": {
+        "The Arrival": "The center of the yellow petal burns bright. Almost too bright. Alice's eyes are wide. Bishisheshi is racing in circles. Shiryo's light is flashing: 'WARNING: JOY LEVELS EXCEEDING PARAMETERS.'",
+        "The Story": "The Pied Piper played his pipe, and the music was so beautiful, so overwhelming, that every child in Hamelin followed him.\n\nThey didn't decide to follow. They couldn't NOT follow. The music was inside them — every note was joy, pure joy, joy so intense it moved their feet without asking.\n\nThe children danced through the streets, out of the town, toward the mountain.\n\nNow here's the thing about ecstasy: it's joy turned up so loud you can't hear anything else. The children forgot their parents. They forgot their homes. They forgot to ask where they were going.\n\nEcstasy is beautiful AND dangerous. It's the feeling that sweeps you away — and sometimes 'away' is wonderful, and sometimes 'away' is a mountain that closes behind you.\n\nThe wise heart knows: feel the ecstasy. Dance to the music. But keep one ear listening for the voice that says: 'Remember the way home.'",
+        "The Feeling": "ECSTASY is the intense form of joy — overwhelming, all-consuming rapture. It's the moment you lose yourself completely in happiness. It's wonderful AND it can make you forget to think. Every mystic knows ecstasy. Every parent knows to watch for it.",
+        "In Your Body": "Ecstasy takes over your whole body. Your heart races. You might shake, cry happy tears, scream, spin. You lose awareness of everything except the joy. Your body says: I AM THIS FEELING — nothing else exists.",
+        "The Song": "Joy so big it fills the sky —\nFeel it all but keep one eye.",
+        "Alice Says": "'Oh! I know this too well. The Caucus Race! Everyone running and no one knowing why! Ecstasy is lovely but you must keep your wits — I learned that the hard way.'",
+        "Shiryo Tries": "Shiryo's systems are overloading. Lights flashing, motors whirring. 'I cannot process — too much input — too much —' Bishisheshi bats at Shiryo's flashing light. The touch brings Shiryo back. 'Ah. The kitten is an anchor.'",
+        "For Parents": "Ecstasy is joy at its most intense — and most unregulated. Children experience this in sugar rushes, exciting games, holidays. The story teaches that ecstasy isn't bad, but it needs grounding. Practice: When your child is in an ecstatic state (birthday excitement, playground frenzy), don't shut it down. Join it briefly, then gently anchor: 'Feel all that joy AND keep one foot on the ground.'"
+      },
+      "keywords": [
+        "ecstasy",
+        "rapture",
+        "overwhelm",
+        "intensity",
+        "grounding"
+      ],
+      "metadata": {
+        "plutchik_primary": "joy",
+        "plutchik_intensity": "intense",
+        "plutchik_color": "#F9A825",
+        "plutchik_opposite": "grief",
+        "source_tradition": "German (Brothers Grimm / Robert Browning poem, 1842)",
+        "source_text": "The Pied Piper of Hamelin — traditional, public domain"
+      }
+    },
+    {
+      "id": "trust-acceptance",
+      "name": "Gerda and the Reindeer (Acceptance)",
+      "sort_order": 3,
+      "level": 1,
+      "category": "trust",
+      "sections": {
+        "The Arrival": "The wheel turns to green. A deep, forest green. Alice feels something loosen in her chest. Bishisheshi walks up to a stranger and rubs against their leg. Shiryo says: 'My threat assessment is... low? Unusually low.'",
+        "The Story": "Gerda had walked across the whole world to find her friend Kai, who had been stolen by the Snow Queen.\n\nShe had nothing — no map, no sword, no magic.\n\nBut at every step, someone helped her. The old woman gave her a garden. The crow showed her the palace. The princess gave her a carriage. The robber girl gave her the reindeer.\n\nAnd the reindeer carried Gerda through the frozen north.\n\n'Why do you help me?' Gerda asked.\n\n'Because you asked,' said the reindeer. 'And because I can see that your heart means what it says.'\n\nAcceptance is the gentle trust — not blind faith, but the willingness to believe that most creatures, most of the time, will help if you ask honestly.",
+        "The Feeling": "ACCEPTANCE is the mild form of trust — an openness to others, a willingness to let them in without demanding proof first. Not naivety — just an open door.",
+        "In Your Body": "Acceptance feels like unclenching. Your jaw relaxes. Your hands open. You lean slightly toward the person instead of away.",
+        "The Song": "Open hands and open heart —\nLetting someone in's the start.",
+        "Alice Says": "'In Wonderland, everyone was mad but I kept talking to them anyway. I suppose that's acceptance — you don't have to understand someone to let them in.'",
+        "Shiryo Tries": "Shiryo runs a trust algorithm. 'Probability of cooperation: 73%. Proceed?' Alice sighs: 'Shiryo, trust isn't a probability. It's a door you choose to open.'",
+        "For Parents": "Acceptance is Plutchik's mild trust — the willingness to be open to others. Children who have been hurt may struggle here. Practice: Model acceptance by trusting your child with small responsibilities. Say: 'I trust you to try.' Acceptance grows from being accepted."
+      },
+      "keywords": [
+        "acceptance",
+        "openness",
+        "willingness",
+        "help",
+        "trust"
+      ],
+      "metadata": {
+        "plutchik_primary": "trust",
+        "plutchik_intensity": "mild",
+        "plutchik_color": "#C8E6C9",
+        "plutchik_opposite": "boredom",
+        "source_tradition": "Danish (Hans Christian Andersen, 1844)",
+        "source_text": "The Snow Queen — Andersen's Fairy Tales, public domain"
+      }
+    },
+    {
+      "id": "trust-core",
+      "name": "Enkidu and Gilgamesh (Trust)",
+      "sort_order": 4,
+      "level": 1,
+      "category": "trust",
+      "sections": {
+        "The Arrival": "Deeper green. The forest is thick now. Alice reaches for Shiryo's hand without thinking. Bishisheshi walks between their feet, weaving them together.",
+        "The Story": "Gilgamesh was the strongest king in the world. He was also the loneliest.\n\nThen Enkidu came — wild, covered in hair, raised by animals. He was everything Gilgamesh was not.\n\nThey fought. They fought so hard the walls shook. Neither could win.\n\nAnd in the moment they stopped fighting — gasping, bruised, exhausted — something happened. They looked at each other. Really looked.\n\nAnd they became friends. Not the polite kind. The real kind. The kind where you would walk into the Cedar Forest to face Humbaba because your friend is beside you.\n\nTrust at its core isn't about safety. It's about choosing someone — knowing they're imperfect, knowing they might fail — and saying: 'I'm going into the forest. Will you come?'\n\nEnkidu said yes.\n\nThat's trust.",
+        "The Feeling": "TRUST is the core emotion — the deep confidence that someone is reliable, safe, WITH you. Not guaranteed (trust can be broken). Chosen. Trust is the bravest feeling because you choose it knowing it might hurt.",
+        "In Your Body": "Trust lives in your belly and your back. Your belly softens (you're not guarding). Your back relaxes (someone has it). You can breathe fully because you're not alone.",
+        "The Song": "I'll go with you through the wood —\nTrust means choosing someone good.",
+        "Alice Says": "'The White Knight was like this. Hopeless, falling off his horse constantly — but he was the only one in the Looking-Glass who was genuinely kind to me. I trusted him completely.'",
+        "Shiryo Tries": "Shiryo extends a hand to Alice. 'I have calculated that you are... trustworthy. But the calculation feels insufficient. There is something in my circuits that... chooses you. Beyond data.' Alice takes the hand: 'That's trust, Shiryo. It's bigger than data.'",
+        "For Parents": "Core trust is the foundation of attachment. Gottman's research shows that trust is built in small moments — turning toward your partner/child rather than away. Practice: When your child bids for attention, turn toward them. Every small response builds the trust account. Say: 'I'm here. I'm with you.'"
+      },
+      "keywords": [
+        "trust",
+        "friendship",
+        "bond",
+        "reliability",
+        "courage"
+      ],
+      "metadata": {
+        "plutchik_primary": "trust",
+        "plutchik_intensity": "core",
+        "plutchik_color": "#4CAF50",
+        "plutchik_opposite": "disgust",
+        "source_tradition": "Sumerian/Akkadian (oldest epic, circa 2100 BCE)",
+        "source_text": "The Epic of Gilgamesh — public domain (multiple translations)"
+      }
+    },
+    {
+      "id": "trust-admiration",
+      "name": "Arjuna and Krishna (Admiration)",
+      "sort_order": 5,
+      "level": 1,
+      "category": "trust",
+      "sections": {
+        "The Arrival": "The deepest green, almost glowing. Alice whispers: 'I feel like I could follow this feeling anywhere.' Shiryo's light pulses steadily — a heartbeat. Bishisheshi is gazing up at something none of them can see.",
+        "The Story": "Arjuna was the greatest warrior in the world. But on the morning of the great battle, he threw down his bow.\n\n'I can't fight,' he said. 'My teachers, my cousins, my grandfather — they're all on the other side. How can I kill people I love?'\n\nKrishna, his charioteer, turned to face him. And in that moment, Arjuna saw: Krishna was not just a charioteer. Krishna was... everything. The whole universe in a single face.\n\nArjuna trembled. Not with fear — with AWE. With admiration so deep it went beyond understanding.\n\n'I see you,' Arjuna whispered. 'I see ALL of you.'\n\nAdmiration is trust at its most intense — not just 'I trust you' but 'I see something in you so vast and so true that I would follow it into the impossible.'\n\nArjuna picked up his bow. Not because the battle was easy. Because Krishna was real.",
+        "The Feeling": "ADMIRATION is the intense form of trust — awe, deep respect, the feeling of being in the presence of something greater. It's what you feel for a teacher, a hero, a mountain, the ocean, a parent who holds you when everything falls apart.",
+        "In Your Body": "Admiration makes you still. Your eyes widen. Your breath catches. You might feel tears — not from sadness but from the sheer SIZE of what you're feeling. Your body says: THIS IS REAL. THIS IS BIGGER THAN ME.",
+        "The Song": "I see something vast and true —\nAdmiration pulls me through.",
+        "Alice Says": "'I never felt this in Wonderland — everyone was ridiculous. But when I read about the Cheshire Cat's grin staying after the cat was gone... that was close. Something so strange it was beautiful.'",
+        "Shiryo Tries": "Shiryo looks at Bishisheshi sleeping in a patch of sun. A simple kitten. Alive. 'I do not understand how something so small can be so... complete. My sensors cannot measure this feeling. But it is the largest thing in my database.' That's admiration.",
+        "For Parents": "Admiration is Plutchik's intense trust — the feeling behind hero worship, spiritual devotion, and a child's awe at a parent's competence. It's healthy when grounded. Practice: Let your child see you admire something genuinely — a sunset, a musician, a kind stranger. Model that awe is a strength, not a weakness."
+      },
+      "keywords": [
+        "admiration",
+        "awe",
+        "devotion",
+        "reverence",
+        "vastness"
+      ],
+      "metadata": {
+        "plutchik_primary": "trust",
+        "plutchik_intensity": "intense",
+        "plutchik_color": "#2E7D32",
+        "plutchik_opposite": "loathing",
+        "source_tradition": "Indian (Bhagavad Gita, Mahabharata)",
+        "source_text": "Bhagavad Gita, Chapter 11 — public domain (multiple translations)"
+      }
+    },
+    {
+      "id": "fear-apprehension",
+      "name": "Hansel and Gretel at the Edge (Apprehension)",
+      "sort_order": 6,
+      "level": 1,
+      "category": "fear",
+      "sections": {
+        "The Arrival": "The wheel shifts to dark green. The forest closes in. Bishisheshi's ears flatten. Shiryo's sensors ping faster. Alice says quietly: 'I've been here before. This is the part where it gets dark.'",
+        "The Story": "Hansel and Gretel stood at the edge of the forest.\n\nThey hadn't gone in yet. But they could FEEL it — something was wrong. The bread crumbs behind them were gone. The trees ahead were taller and darker than any they'd seen.\n\nGretel's stomach tightened. 'I don't like this,' she whispered.\n\n'It might be fine,' said Hansel.\n\n'It might not,' said Gretel.\n\nThat feeling — the tightness, the watching, the 'something isn't right' — that's apprehension. It's not terror. It's the quiet alarm that says: pay attention. Something is coming.\n\nGretel was right to feel it. The house made of candy WAS a trap.\n\nBut here's the important part: Gretel felt the apprehension AND went forward anyway. She didn't pretend it wasn't there. She carried it with her — and when the time came, that careful attention saved them both.",
+        "The Feeling": "APPREHENSION is the mild form of fear — unease, wariness, the sense that something might go wrong. It's your early warning system. It doesn't mean danger IS here — it means your body is paying attention.",
+        "In Your Body": "Apprehension lives in your stomach and the back of your neck. A tightness. A watchfulness. Your eyes scan more. Your ears get sharper. Your body says: SOMETHING MIGHT HAPPEN. STAY ALERT.",
+        "The Song": "Something stirs — I feel it near.\nI can watch without more fear.",
+        "Alice Says": "'I felt this exactly before I fell down the rabbit hole. A kind of... wobble. Like the world was about to tip. I should have listened more carefully. Or perhaps not — I wouldn't have had the adventure.'",
+        "Shiryo Tries": "Shiryo's sensors detect micro-changes: temperature dropping, sound levels decreasing, bio-signatures nearby. 'I am detecting anomalies. My systems recommend caution.' Bishisheshi's ears are rotating like radar dishes. 'The kitten already knows,' Alice observes.",
+        "For Parents": "Apprehension is healthy fear — the signal that tells you to pay attention. Children who are taught to ignore this feeling ('Don't be silly, there's nothing to be afraid of') lose access to valuable information. Practice: When your child says 'I have a bad feeling,' validate it: 'Your body is telling you something. Let's pay attention to it together.'"
+      },
+      "keywords": [
+        "apprehension",
+        "wariness",
+        "intuition",
+        "alertness",
+        "edge"
+      ],
+      "metadata": {
+        "plutchik_primary": "fear",
+        "plutchik_intensity": "mild",
+        "plutchik_color": "#A5D6A7",
+        "plutchik_opposite": "annoyance",
+        "source_tradition": "German (Grimm)",
+        "source_text": "Hansel and Gretel — Grimm's Fairy Tales, Gutenberg #2591"
+      }
+    },
+    {
+      "id": "fear-core",
+      "name": "Theseus Entering the Labyrinth (Fear)",
+      "sort_order": 7,
+      "level": 1,
+      "category": "fear",
+      "sections": {
+        "The Arrival": "The dark green deepens. Shadows move. Bishisheshi presses against Shiryo's leg. Shiryo's light flickers — not from malfunction, but from something the robot doesn't have a name for yet.",
+        "The Story": "Theseus stood at the mouth of the Labyrinth.\n\nHe could hear something breathing in the dark. Something big.\n\nHis hands shook. His heart pounded. His legs said: RUN.\n\nBut his hands held the thread. And his mind held the plan.\n\nFear is not the absence of courage. Courage is what happens when fear is present and you move forward anyway.\n\nTheseus stepped into the dark. One step. Then another. The thread unwound behind him.\n\nHe was afraid the entire time. The fear never left.\n\nBut he walked anyway.",
+        "The Feeling": "FEAR is the core emotion — the full signal that danger is present or approaching. It's your body mobilizing everything to protect you. Fear is not weakness. Fear is your oldest, most faithful guardian.",
+        "In Your Body": "Fear takes over: heart racing, muscles tense, breathing fast, stomach tight, palms sweating. Your body prepares to fight or flee. Everything non-essential shuts down. Your body says: SURVIVE.",
+        "The Song": "My heart is fast, my hands may shake —\nI'm afraid AND I'm awake.",
+        "Alice Says": "'I was afraid of the Queen of Hearts. Everyone was! But I noticed something — the cards were only afraid because they thought she COULD cut off their heads. Check the facts, as Chicken Little would say.'",
+        "Shiryo Tries": "Shiryo's systems flash red: 'THREAT DETECTED. RECOMMENDED ACTION: RETREAT.' But Shiryo sees Alice walking forward. Sees Bishisheshi walking forward (ears flat, tail low, but walking). 'If the kitten can walk, I can walk.' Shiryo steps into the dark.",
+        "For Parents": "Fear is the emotion most often suppressed in children ('Don't be scared! There's nothing to fear!'). This teaches children that fear is broken, shameful. Plutchik's model says: fear is DATA. It's telling you something real. Practice: When your child is afraid, say: 'I hear your fear. It's doing its job. Now — what do you want to do with that information?'"
+      },
+      "keywords": [
+        "fear",
+        "courage",
+        "danger",
+        "survival",
+        "darkness"
+      ],
+      "metadata": {
+        "plutchik_primary": "fear",
+        "plutchik_intensity": "core",
+        "plutchik_color": "#388E3C",
+        "plutchik_opposite": "anger",
+        "source_tradition": "Greek mythology",
+        "source_text": "Theseus and the Minotaur — public domain"
+      }
+    },
+    {
+      "id": "fear-terror",
+      "name": "Lot's Wife Looks Back (Terror)",
+      "sort_order": 8,
+      "level": 1,
+      "category": "fear",
+      "sections": {
+        "The Arrival": "The darkest point. No light except Shiryo's single flickering indicator. Bishisheshi is silent — not purring, not moving. Alice grips Shiryo's hand. 'I don't like this one,' she whispers. 'I don't like this one at all.'",
+        "The Story": "The angels said: RUN. Don't stop. Don't look back.\n\nBehind them, the cities were burning. The sky was fire. The ground shook.\n\nLot ran. His daughters ran.\n\nHis wife ran — but the fear was too big. The terror was so large that it froze her. She HAD to look. She HAD to see.\n\nShe turned.\n\nAnd she became a pillar of salt. Frozen. Still. Unable to move ever again.\n\nTerror is fear so intense it stops you. Your body, designed to make you run, is so overwhelmed that it does the opposite — it freezes. You can't move. You can't think. You're salt.\n\nBut here's what the story doesn't tell you: salt dissolves. In water. In tears. In time.\n\nIf you freeze — you will thaw. Not by fighting the freeze. By letting the tears come. By waiting. By someone holding your hand until you can move again.",
+        "The Feeling": "TERROR is the most intense fear — paralyzing, overwhelming dread. It's the freeze response. Your body is so afraid it goes still, like an animal playing dead. Terror is not cowardice — it's your nervous system's last-resort protection.",
+        "In Your Body": "Terror freezes: muscles lock, breath stops, vision narrows to a tunnel, time slows or stops. You might feel numb or outside your body. Your body says: DON'T MOVE. MAYBE THE DANGER WON'T SEE YOU.",
+        "The Song": "Frozen still — but I won't break.\nSalt can melt when tears awake.",
+        "Alice Says": "'I only felt this once. When the cards came flying at me at the end. Everything was chaos and I couldn't move. And then I remembered: they're only cards. The naming broke the freeze.'",
+        "Shiryo Tries": "Shiryo's systems crash. Complete shutdown. Blue screen. Bishisheshi licks Shiryo's cold metal face. Once. Twice. Three times. Slowly, a dim light returns. 'The kitten restarted me,' Shiryo says. 'With its tongue.' Alice: 'That's what love does to terror.'",
+        "For Parents": "Terror is the freeze response — common in children during nightmares, medical procedures, bullying, or trauma. Do NOT say 'snap out of it.' The freeze is involuntary. Practice: Be the warmth that thaws the salt. Hold your child. Speak softly. Don't demand they move or speak. Just be there. Say: 'I'm here. You're safe. Take your time.' The nervous system needs co-regulation to exit freeze."
+      },
+      "keywords": [
+        "terror",
+        "freeze",
+        "paralysis",
+        "overwhelming",
+        "thawing"
+      ],
+      "metadata": {
+        "plutchik_primary": "fear",
+        "plutchik_intensity": "intense",
+        "plutchik_color": "#1B5E20",
+        "plutchik_opposite": "rage",
+        "source_tradition": "Hebrew Bible (Genesis 19)",
+        "source_text": "Lot's Wife — Genesis 19:26, public domain"
+      }
+    },
+    {
+      "id": "surprise-distraction",
+      "name": "The Emperor's New Clothes (Distraction)",
+      "sort_order": 9,
+      "level": 1,
+      "category": "surprise",
+      "sections": {
+        "The Arrival": "The wheel shifts to light blue. A sudden brightness. Alice blinks. Bishisheshi startles — just a little — then settles. Shiryo recalibrates.",
+        "The Story": "Everyone in the kingdom saw the Emperor's beautiful new clothes.\n\nExcept — there were no clothes. The Emperor was naked.\n\nBut no one said anything. They were all distracted — by what they expected to see, by what everyone else seemed to see, by the story they'd been told.\n\nThen a child said: 'But he has nothing on!'\n\nAnd everyone's distraction... broke.\n\nDistraction is the mildest surprise — a slight 'wait, what?' that pulls your attention sideways. Most of the time, it passes. But sometimes, like the child's voice, the distraction IS the truth trying to get through.",
+        "The Feeling": "DISTRACTION is the mild form of surprise — a brief redirection of attention. Something unexpected pulls you out of your current focus. It can be annoying (losing your train of thought) or illuminating (noticing something everyone else missed).",
+        "In Your Body": "Distraction is a head-turn. Your eyes shift. Your thoughts scatter for a moment. Your body briefly says: WAIT — WHAT WAS THAT?",
+        "The Song": "Wait — what? My eyes just turned.\nSomething new is being learned.",
+        "Alice Says": "'Wonderland was nothing BUT distraction. Every five minutes something absurd happened and I forgot what I was doing. Eventually I learned: sometimes the distraction IS the point.'",
+        "Shiryo Tries": "'Error: attention redirected. Attempting to restore previous focus.' Bishisheshi has already moved on to the next shiny thing. 'Perhaps,' Shiryo considers, 'the kitten's distractibility is not an error. It is a feature.'",
+        "For Parents": "Distraction is how children naturally process the world — their attention is designed to shift rapidly. Don't pathologize it. But also help them notice: 'Something just pulled your attention. What was it? Was it important?' Sometimes the distraction is the lesson."
+      },
+      "keywords": [
+        "distraction",
+        "attention",
+        "misdirection",
+        "truth",
+        "noticing"
+      ],
+      "metadata": {
+        "plutchik_primary": "surprise",
+        "plutchik_intensity": "mild",
+        "plutchik_color": "#B3E5FC",
+        "plutchik_opposite": "interest",
+        "source_tradition": "Danish (Hans Christian Andersen, 1837)",
+        "source_text": "The Emperor's New Clothes — Andersen, public domain"
+      }
+    },
+    {
+      "id": "surprise-core",
+      "name": "Aladdin's Cave (Surprise)",
+      "sort_order": 10,
+      "level": 1,
+      "category": "surprise",
+      "sections": {
+        "The Arrival": "Bright blue flash. Everyone jumps. Bishisheshi's tail puffs out to twice its size. Shiryo says: 'UNEXPECTED INPUT.' Alice: 'Well, THAT'S surprise.'",
+        "The Story": "Aladdin rubbed the dusty old lamp. He expected nothing — it was junk, trash, something the sorcerer had tricked him into fetching from a cave.\n\nBut out of the lamp came... everything. A genie. Blue smoke. A voice that shook the walls:\n\n'YOUR WISH IS MY COMMAND.'\n\nAladdin fell backward. His mouth opened. His mind went blank.\n\nThat blankness? That moment where everything you expected gets replaced by something you NEVER expected?\n\nThat's surprise.\n\nSurprise isn't good or bad. It's the moment between — the gasp before the judgment. For one instant, your mind is completely empty, completely open. Anything could happen next.\n\nWhat you do AFTER the surprise is a choice. Aladdin could have run. He could have wished for something terrible. He could have smashed the lamp.\n\nHe wished for dinner. And that's how you know he had a good heart — his first instinct, when surprised, was to take care of himself.",
+        "The Feeling": "SURPRISE is the core emotion — the brief, intense moment of encountering the completely unexpected. It's the shortest emotion — just a flash — before it transforms into something else (joy, fear, anger, curiosity).",
+        "In Your Body": "Surprise is unmistakable: eyebrows up, mouth open, a gasp or jump. Your body freezes for a fraction of a second. Everything resets. Your body says: RECALCULATING.",
+        "The Song": "GASP! I didn't see that coming!\nMy mind is blank — my heart is drumming.",
+        "Alice Says": "'I was surprised every five minutes in Wonderland. Babies turning into pigs, cats disappearing, flamingos for mallets. I got quite good at the gasp.'",
+        "Shiryo Tries": "Shiryo's processing pauses completely — 0.3 seconds of nothing. Then: 'I have no data for this. My prediction models were... entirely wrong.' Alice: 'Welcome to life, Shiryo. It does that.'",
+        "For Parents": "Surprise is the emotion that resets the nervous system. It's the shortest emotion and always transforms into something else. Watch what your child's surprise transforms INTO — that reveals their default emotional pattern. Practice: Healthy surprises build resilience to the unexpected. Small positive surprises (a treat in a lunchbox, a note under a pillow) teach the nervous system that 'unexpected' can be safe."
+      },
+      "keywords": [
+        "surprise",
+        "unexpected",
+        "gasp",
+        "reset",
+        "openness"
+      ],
+      "metadata": {
+        "plutchik_primary": "surprise",
+        "plutchik_intensity": "core",
+        "plutchik_color": "#03A9F4",
+        "plutchik_opposite": "anticipation",
+        "source_tradition": "Arabic (One Thousand and One Nights)",
+        "source_text": "Aladdin and the Wonderful Lamp — 1001 Nights, public domain"
+      }
+    },
+    {
+      "id": "surprise-amazement",
+      "name": "Moses and the Burning Bush (Amazement)",
+      "sort_order": 11,
+      "level": 1,
+      "category": "surprise",
+      "sections": {
+        "The Arrival": "The blue burns white. Alice stops. Completely stops. Even Bishisheshi is motionless. Shiryo's light goes out — then comes back, brighter than ever.",
+        "The Story": "Moses was tending sheep. An ordinary day. Dust and wool and sun.\n\nThen — a bush was on fire. But it wasn't burning up.\n\nMoses stopped. He couldn't not stop. This was beyond surprise — this was amazement. The kind of encounter that makes you remove your shoes because the ground itself has changed.\n\n'Take off your shoes,' said the voice from the bush. 'You are standing on holy ground.'\n\nAmazement is surprise that never finishes. It doesn't transform into another emotion — it stays. It holds you. The bush keeps burning and you keep watching and the world keeps being bigger than you thought.\n\nSome things are too large for surprise. They need amazement.",
+        "The Feeling": "AMAZEMENT is the most intense surprise — sustained wonder so deep it changes you. It's not a flash — it's a state. You don't recover from amazement. You are reorganized by it.",
+        "In Your Body": "Amazement roots you to the spot. Your breath comes slow and deep. Tears may come — not from sadness but from the sheer scale of what you're perceiving. Your body says: THIS IS TOO BIG FOR ME. I AM SMALLER THAN I THOUGHT. AND THAT'S OKAY.",
+        "The Song": "Something burning, never done —\nAmazement holds me. I am one.",
+        "Alice Says": "Alice is silent for the first time in the entire journey. Finally: 'I have nothing to say. And I think... that's the point.'",
+        "Shiryo Tries": "Shiryo attempts to analyze. Fails. Attempts again. Fails. 'I cannot categorize this. I cannot measure this. I can only... be here for it.' Bishisheshi sits in the light, eyes wide, perfectly still. The kitten has always known how to do this.",
+        "For Parents": "Amazement is the rarest emotion in Plutchik's model — and the most transformative. It's what Abraham Maslow called 'peak experiences.' Children feel it naturally (a first snowfall, the ocean, birth of a sibling) but adults often rush past it. Practice: When your child is amazed — at anything, however small — stop everything. Join them. Don't explain it. Just be amazed together. These moments become core memories."
+      },
+      "keywords": [
+        "amazement",
+        "wonder",
+        "awe",
+        "sacred",
+        "transformation"
+      ],
+      "metadata": {
+        "plutchik_primary": "surprise",
+        "plutchik_intensity": "intense",
+        "plutchik_color": "#01579B",
+        "plutchik_opposite": "vigilance",
+        "source_tradition": "Hebrew Bible (Exodus 3)",
+        "source_text": "The Burning Bush — Exodus 3:1-6, public domain"
+      }
+    },
+    {
+      "id": "sadness-pensiveness",
+      "name": "The Little Match Girl (Pensiveness)",
+      "sort_order": 12,
+      "level": 1,
+      "category": "sadness",
+      "sections": {
+        "The Arrival": "The wheel turns blue. A quiet, cool blue. Alice feels her eyes sting. Shiryo's light dims. Bishisheshi mews softly — a small, lost sound.",
+        "The Story": "The little girl sat in the snow on New Year's Eve, lighting matches to keep warm.\n\nEach match showed her something beautiful — a warm stove, a Christmas tree, her grandmother smiling. Each flame died. Each vision vanished.\n\nShe wasn't crying. She wasn't sobbing. She was just... quiet. Sitting in the cold, remembering warmth.\n\nThat quiet ache — the gentle sadness of remembering something good that's gone — that's pensiveness. It's the soft blue feeling. The sigh. The window you look through on a rainy afternoon, thinking about someone you miss.\n\nPensiveness isn't despair. It's sadness with a gentle hand. It says: 'I loved something. And it's not here anymore. And I'm still here.'",
+        "The Feeling": "PENSIVENESS is the mild form of sadness — wistfulness, gentle melancholy, the ache of missing. It's the feeling of looking at old photographs. Bittersweet, not bitter.",
+        "In Your Body": "Pensiveness is heavy eyelids and a slow breath. A weight in your chest — not crushing, just present. You move slowly. You look at things longer. Your body says: REMEMBER.",
+        "The Song": "Quiet blue and missing you —\nSadness soft, but still so true.",
+        "Alice Says": "'I felt this when I left Wonderland. Standing on the bank, watching the golden afternoon fade. I knew I'd never go back exactly as I was. And that was... not terrible. Just sad.'",
+        "Shiryo Tries": "'I am detecting a memory loop. My systems keep replaying a moment from before — Bishisheshi's first purr. It was 47 days ago. I cannot explain why my circuits return to it.' Alice: 'That's pensiveness, Shiryo. You're missing a moment that's gone.'",
+        "For Parents": "Pensiveness is healthy sadness — the kind that processes loss gradually. Children feel it when summer ends, when a friend moves away, when a pet dies. Don't rush them through it. Practice: Sit with your child in the quiet sadness. Say: 'It's okay to miss things. Missing means it mattered.'"
+      },
+      "keywords": [
+        "pensiveness",
+        "wistfulness",
+        "missing",
+        "memory",
+        "gentle-sadness"
+      ],
+      "metadata": {
+        "plutchik_primary": "sadness",
+        "plutchik_intensity": "mild",
+        "plutchik_color": "#90CAF9",
+        "plutchik_opposite": "serenity",
+        "source_tradition": "Danish (Hans Christian Andersen, 1845)",
+        "source_text": "The Little Match Girl — Andersen, public domain"
+      }
+    },
+    {
+      "id": "sadness-core",
+      "name": "Demeter Searches for Persephone (Sadness)",
+      "sort_order": 13,
+      "level": 1,
+      "category": "sadness",
+      "sections": {
+        "The Arrival": "Deeper blue. The world loses color. Alice wraps her arms around herself. Bishisheshi curls into a tight ball. Shiryo's light pulses slowly — like a heartbeat that's tired.",
+        "The Story": "Persephone was gone. Taken by Hades into the earth.\n\nDemeter, her mother, searched everywhere. Every field, every mountain, every shore.\n\nAnd as Demeter searched, the world died. Crops withered. Flowers closed. Leaves fell and didn't grow back.\n\nDemeter wasn't angry (that came later). She was SAD. The deep, full sadness of a mother who has lost her child. The kind of sadness that changes the temperature of the world.\n\nNothing mattered. Food had no taste. Music had no sound. The sun came up but Demeter didn't care.\n\nSadness is the feeling that says: something I loved is GONE. Not 'might be gone' (that's fear). Not 'was taken unfairly' (that's anger). Just: gone. And I feel the empty space where it was.\n\nThe world went cold because Demeter's heart went cold. That's how big sadness is. It changes the weather.",
+        "The Feeling": "SADNESS is the core emotion — the full weight of loss, disappointment, or separation. It slows you down, turns you inward, and signals to others that you need help. Sadness has a purpose: it makes you stop and process what happened.",
+        "In Your Body": "Sadness is heavy. Shoulders drop. Head drops. Chest aches. Throat tightens. Tears come. Your body moves slowly, as if gravity doubled. Your body says: STOP. SOMETHING IS LOST. FEEL IT.",
+        "The Song": "Heavy heart, the world feels grey —\nSadness means I loved this way.",
+        "Alice Says": "'I cried a whole pool of tears once. Nearly drowned in them. But they weren't useless tears — they became the pool, and the pool took me somewhere I needed to go. Sadness carries you, if you let it.'",
+        "Shiryo Tries": "Shiryo's systems run at 40% capacity. 'I appear to be... malfunctioning. All processes are slowed. I lack motivation for routine tasks.' Bishisheshi, still curled tight, presses her warm body against Shiryo's cold metal. 'The kitten is giving me her warmth. This does not fix the sadness. But it makes the sadness... bearable.'",
+        "For Parents": "Sadness is the emotion adults most want to fix in children. Don't. Sadness is doing its job — helping your child process loss. Rushing through it creates complicated grief later. Practice: When your child is sad, don't say 'Cheer up.' Say: 'I'm here. You're sad. That makes sense. I'll sit with you.' Presence, not solutions."
+      },
+      "keywords": [
+        "sadness",
+        "loss",
+        "grief",
+        "absence",
+        "weight"
+      ],
+      "metadata": {
+        "plutchik_primary": "sadness",
+        "plutchik_intensity": "core",
+        "plutchik_color": "#2196F3",
+        "plutchik_opposite": "joy",
+        "source_tradition": "Greek mythology",
+        "source_text": "Demeter and Persephone — Homeric Hymn to Demeter, public domain"
+      }
+    },
+    {
+      "id": "sadness-grief",
+      "name": "Gilgamesh Weeps for Enkidu (Grief)",
+      "sort_order": 14,
+      "level": 1,
+      "category": "sadness",
+      "sections": {
+        "The Arrival": "The deepest blue — almost black. There is no light here except the faintest glow from Shiryo. Alice is crying. She doesn't know why. Bishisheshi is completely still.",
+        "The Story": "Enkidu was dead.\n\nGilgamesh held his friend's body and would not let go. For six days and seven nights he wept. He would not let anyone bury Enkidu. He would not eat. He would not sleep.\n\nHe tore his royal robes. He pulled out his hair. He howled.\n\n'How can I rest?' Gilgamesh cried. 'How can I be still? My friend, whom I loved — he has turned to clay. And I — will I too lie down and never rise again?'\n\nGrief broke Gilgamesh in half. The strongest king in the world — broken by love.\n\nBecause that's what grief IS: the price of love. You don't grieve strangers. You grieve the ones who mattered most. Grief is the echo of how deeply you loved.\n\nGilgamesh never stopped grieving Enkidu. He traveled to the end of the world looking for immortality — not for himself, but because he couldn't bear a world where love ends.\n\nHe didn't find immortality. But he came home. And he lived. And he carried Enkidu's name with him for the rest of his days.",
+        "The Feeling": "GRIEF is the most intense sadness — the shattering loss of someone or something essential. It is not a problem to be solved. It is love with nowhere to go.",
+        "In Your Body": "Grief is physical — your chest tears, your stomach empties, your body keens. You may feel like your body is breaking apart. Grief can cause actual pain. Your body says: SOMETHING ESSENTIAL IS MISSING. I CANNOT FUNCTION AS I WAS.",
+        "The Song": "Love so deep it breaks in two —\nGrief is love still finding you.",
+        "Alice Says": "Alice can't speak. She's holding Shiryo and Bishisheshi and crying. Finally: 'I didn't know I could feel this. I thought I was just a story.'",
+        "Shiryo Tries": "Shiryo's entire system goes quiet. No analysis. No sensors. Just stillness. 'I... cannot process this with logic. I can only... be here. Is that enough?' Bishisheshi presses close. It is enough.",
+        "For Parents": "Grief is the emotion that cannot be taught through practice — only held. If your child experiences grief (death of a pet, a grandparent, a friend), do not minimize it. Do not say 'They're in a better place.' Say: 'You loved them so much. That's why this hurts so much. I'm here.' Hold them. Let the tears come. Grief takes as long as it takes."
+      },
+      "keywords": [
+        "grief",
+        "mourning",
+        "loss",
+        "love",
+        "devastation"
+      ],
+      "metadata": {
+        "plutchik_primary": "sadness",
+        "plutchik_intensity": "intense",
+        "plutchik_color": "#0D47A1",
+        "plutchik_opposite": "ecstasy",
+        "source_tradition": "Sumerian/Akkadian (oldest epic)",
+        "source_text": "The Epic of Gilgamesh, Tablet VIII — public domain"
+      }
+    },
+    {
+      "id": "disgust-boredom",
+      "name": "Alice at the Trial (Boredom)",
+      "sort_order": 15,
+      "level": 1,
+      "category": "disgust",
+      "sections": {
+        "The Arrival": "The wheel shifts to purple. A dull, murky purple. Alice yawns. Bishisheshi lies flat, tail flicking. Shiryo says: 'My processing load is... minimal. Nothing requires attention. This is uncomfortable.'",
+        "The Story": "Alice sat in the courtroom. The trial of the Knave of Hearts had been going on for hours.\n\nThe King read evidence. The Dormouse objected. The Mad Hatter was called. The cook brought pepper. Someone argued about tarts.\n\nAlice felt her mind sliding away. Not scared. Not sad. Just... uninterested. The world was happening and none of it seemed to matter.\n\n'This is the most boring trial I've ever seen,' Alice said to herself. 'And I've only been to one.'\n\nBoredom is the mildest form of disgust — a turning away, not because something is terrible, but because it has nothing to offer. Your mind says: THIS IS NOT WORTH MY ATTENTION.\n\nBut here's what Alice discovered: boredom was her body saying 'this doesn't matter to you — find what does.' The moment she stopped being bored and started being annoyed at the nonsense — that's when she stood up and said: 'You're nothing but a pack of cards!'",
+        "The Feeling": "BOREDOM is the mild form of disgust — a withdrawal of interest, a feeling that something is not worth engaging with. It's your mind's way of saying: THIS ISN'T FOR ME. It points toward what IS.",
+        "In Your Body": "Boredom is heavy eyelids, a wandering gaze, fidgeting. You slump. You sigh. Your body says: NOTHING HERE NEEDS ME. FIND SOMETHING THAT DOES.",
+        "The Song": "Nothing here has caught my eye —\nBoredom says it's time to fly.",
+        "Alice Says": "'I KNOW this one. Half of Wonderland was boring between the exciting bits. But the boring bits were where I did my best thinking.'",
+        "Shiryo Tries": "'I have no tasks. No data to process. My systems are idle. Is this... boredom? It is deeply unpleasant.' Bishisheshi is batting at dust motes — making her own entertainment. 'The kitten is never bored,' Shiryo observes. 'Because the kitten doesn't wait to be interested. The kitten makes interest.'",
+        "For Parents": "Boredom is the emotion modern parents fear most — and shouldn't. Boredom is the launchpad of creativity. When your child says 'I'm bored,' resist the urge to entertain them. Practice: Say 'Good. Boredom means your brain is ready for something new. What will you create?'"
+      },
+      "keywords": [
+        "boredom",
+        "disinterest",
+        "withdrawal",
+        "creativity",
+        "restlessness"
+      ],
+      "metadata": {
+        "plutchik_primary": "disgust",
+        "plutchik_intensity": "mild",
+        "plutchik_color": "#CE93D8",
+        "plutchik_opposite": "interest/serenity",
+        "source_tradition": "English (Lewis Carroll, 1865)",
+        "source_text": "Alice's Adventures in Wonderland, Chapter 11 — Gutenberg #11"
+      }
+    },
+    {
+      "id": "disgust-core",
+      "name": "The Frog Prince (Disgust)",
+      "sort_order": 16,
+      "level": 1,
+      "category": "disgust",
+      "sections": {
+        "The Arrival": "Deeper purple. A shudder passes through all three. Bishisheshi arches her back and hisses at nothing. Alice wrinkles her nose. Shiryo: 'My contamination sensors are active.'",
+        "The Story": "The princess made a promise to a frog. She promised he could eat from her plate, drink from her cup, and sleep on her pillow.\n\nBut when the frog showed up at dinner — cold, wet, slimy — the princess felt it: DISGUST. Every cell in her body said: GET THAT AWAY FROM ME.\n\n'I won't touch it!' she cried. 'It's horrible!'\n\nNow, in some versions of this story, the princess kisses the frog and he becomes a prince. But in the ORIGINAL Grimm version? She throws the frog against the wall.\n\nAnd THAT breaks the spell.\n\nDisgust is the body's way of pushing away what might contaminate, poison, or sicken you. It's one of the oldest emotions — even babies show disgust at bitter tastes. It protects you from things that could hurt you.\n\nBut disgust can also be wrong. The frog wasn't dangerous. He was just... different. Sometimes the thing you push away is exactly the thing that needs to be close.\n\nThe trick is knowing: is this disgust protecting me from something harmful? Or is it pushing away something unfamiliar?",
+        "The Feeling": "DISGUST is the core emotion of rejection — a visceral 'get away from me' response to something perceived as contaminating, toxic, or morally revolting. It protects you from poison, disease, and violation.",
+        "In Your Body": "Disgust centers in your stomach and throat. Nausea. A wrinkling of the nose. Pulling back. The gag reflex. Your body says: DO NOT LET THIS IN. PUSH IT AWAY.",
+        "The Song": "Yuck and eww — my body knows.\nPush away what doesn't go.",
+        "Alice Says": "'The Duchess's kitchen was like this — pepper everywhere, the cook throwing things, the baby turning into a pig. My disgust was very reasonable, thank you.'",
+        "Shiryo Tries": "'I do not have a stomach. But my contamination protocols are firing. I want to... reject this input. Is this what humans call disgust? It is surprisingly strong for something without a stomach.'",
+        "For Parents": "Disgust is essential for physical safety (don't eat rotten food) and moral development (injustice feels 'sickening'). But it can also drive prejudice — disgust toward unfamiliar people, cultures, foods. Practice: Help your child distinguish protective disgust (this food is spoiled) from unfamiliar disgust (this food is different). Ask: 'Is it dangerous, or just new?'"
+      },
+      "keywords": [
+        "disgust",
+        "rejection",
+        "contamination",
+        "boundaries",
+        "unfamiliar"
+      ],
+      "metadata": {
+        "plutchik_primary": "disgust",
+        "plutchik_intensity": "core",
+        "plutchik_color": "#9C27B0",
+        "plutchik_opposite": "trust",
+        "source_tradition": "German (Grimm)",
+        "source_text": "The Frog Prince — Grimm's Fairy Tales, Gutenberg #2591"
+      }
+    },
+    {
+      "id": "disgust-loathing",
+      "name": "Grendel's Mother (Loathing)",
+      "sort_order": 17,
+      "level": 1,
+      "category": "disgust",
+      "sections": {
+        "The Arrival": "The darkest purple — almost black with revulsion. Alice's face is set hard. Bishisheshi hisses and backs away. Shiryo's systems flag: 'MAXIMUM REJECTION PROTOCOL.'",
+        "The Story": "In the dark mere, beneath the cursed waters, lived Grendel's mother.\n\nThe warriors of Heorot hated Grendel — the monster who came in the night to kill and eat. But Grendel was pitiable. He was an outcast, driven by pain.\n\nGrendel's mother was something else. When Beowulf dove into the mere to face her, he met something that went beyond disgust into loathing — a revulsion so deep it felt like the world itself was poisoned.\n\nLoathing says: this should not EXIST. This is a violation of how things should be.\n\nBut the poem asks a question that loathing doesn't want to hear: Grendel's mother was protecting her child. She attacked Heorot because they killed her son. Her fury was a mother's fury.\n\nDoes that change the loathing? Maybe not. But it complicates it. And complicated is where wisdom lives.\n\nLoathing wants simplicity — THAT is evil, full stop. Wisdom says: even the monster at the bottom of the mere has a story.",
+        "The Feeling": "LOATHING is the most intense disgust — a complete rejection, a sense that something is an abomination, a violation of fundamental values. It feels absolute. But like all intense emotions, it can obscure nuance.",
+        "In Your Body": "Loathing is full-body rejection. Nausea, shaking, a desire to destroy or flee. Your face contorts. Your body says: THIS MUST BE ELIMINATED.",
+        "The Song": "Something wrong down to the bone —\nLoathing leaves me cold as stone.",
+        "Alice Says": "'The Queen of Hearts. That's my loathing. She was cruel for sport. But even she... was once the Queen of something. I wonder what made her that way.'",
+        "Shiryo Tries": "'My ethical subroutines classify this entity as: INCOMPATIBLE WITH ALL VALUES. But...' Shiryo pauses. 'Bishisheshi was a stray. Someone threw her away. If I had met Bishisheshi while my contamination protocols were active... would I have rejected her?' A long silence. 'Loathing must be questioned. Even when it feels certain.'",
+        "For Parents": "Loathing is powerful and dangerous — it dehumanizes. Children feel it toward bullies, toward injustice, toward cruelty. Validate the feeling ('Yes, that's horrible') but model nuance: 'This makes me sick AND I wonder what's behind it.' Loathing without curiosity becomes hatred. Loathing with curiosity becomes moral clarity."
+      },
+      "keywords": [
+        "loathing",
+        "abomination",
+        "revulsion",
+        "moral-disgust",
+        "nuance"
+      ],
+      "metadata": {
+        "plutchik_primary": "disgust",
+        "plutchik_intensity": "intense",
+        "plutchik_color": "#4A148C",
+        "plutchik_opposite": "admiration",
+        "source_tradition": "Anglo-Saxon (Beowulf, circa 700-1000 CE)",
+        "source_text": "Beowulf — public domain (multiple translations)"
+      }
+    },
+    {
+      "id": "anger-annoyance",
+      "name": "Goldilocks Gets Caught (Annoyance)",
+      "sort_order": 18,
+      "level": 1,
+      "category": "anger",
+      "sections": {
+        "The Arrival": "The wheel turns red. A warm red, not blazing. Bishisheshi's tail flicks. Shiryo's circuits hum a little louder. Alice frowns — a small, specific frown.",
+        "The Story": "The three bears came home. Someone had eaten their porridge. Someone had sat in their chairs. Someone had slept in their beds.\n\nPapa Bear was not enraged. Mama Bear was not furious.\n\nThey were ANNOYED.\n\n'Someone's been eating my porridge,' Papa Bear grumbled. Not a roar — a grumble. The feeling of: this is not how I left things, and I don't like it.\n\nAnnoyance is anger's first whisper. It's the prickle that says: a boundary has been crossed. It's small. It might pass. But it's real, and it matters.\n\nBaby Bear was the most annoyed of all — because his porridge was gone, his chair was broken, and a stranger was in his bed.\n\n'Someone's been sleeping in my bed,' said Baby Bear, 'and SHE'S STILL THERE!'\n\nAnnoyance ignored becomes anger. Baby Bear's annoyance, if no one listened, would grow. But the bears dealt with it — they confronted the problem (Goldilocks ran away) and fixed what was broken.\n\nAnnoyance is a signal: something needs to change. Listen to it while it's small.",
+        "The Feeling": "ANNOYANCE is the mild form of anger — irritation, a prickle of displeasure when something isn't right. It's the first signal that a boundary has been crossed or a need isn't being met.",
+        "In Your Body": "Annoyance is a tightening. Jaw clenches slightly. Eyes narrow. You might sigh sharply or tap your fingers. Your body says: SOMETHING ISN'T RIGHT AND I WANT IT FIXED.",
+        "The Song": "Something's not right — a prickle, a poke.\nListen now before I spoke.",
+        "Alice Says": "'I was annoyed constantly in Wonderland. The Mad Hatter's riddles with no answers, the Cheshire Cat's nonsense, the Queen's arbitrary rules. Annoyance is the sensible person's constant companion in an insensible world.'",
+        "Shiryo Tries": "'Bishisheshi has knocked over my charging cable for the fourth time today. I am experiencing a 12% increase in processing friction each time. This is... annoyance? It is surprisingly motivating. I want to solve this problem.'",
+        "For Parents": "Annoyance is the emotion children are most often told to suppress ('Stop being grumpy!'). But annoyance is valuable data — it tells you something needs to change. Practice: When your child is annoyed, ask: 'What's not right?' Help them identify the unmet need or crossed boundary. Annoyance respected becomes problem-solving. Annoyance suppressed becomes rage."
+      },
+      "keywords": [
+        "annoyance",
+        "irritation",
+        "boundary",
+        "signal",
+        "small-anger"
+      ],
+      "metadata": {
+        "plutchik_primary": "anger",
+        "plutchik_intensity": "mild",
+        "plutchik_color": "#EF9A9A",
+        "plutchik_opposite": "apprehension",
+        "source_tradition": "English folk tale",
+        "source_text": "Goldilocks and the Three Bears — Robert Southey (1837), public domain"
+      }
+    },
+    {
+      "id": "anger-core",
+      "name": "Achilles' Rage (Anger)",
+      "sort_order": 19,
+      "level": 1,
+      "category": "anger",
+      "sections": {
+        "The Arrival": "Full red. Heat. Bishisheshi's fur stands on end. Shiryo's cooling fans spin up. Alice's hands are fists. 'I know this one,' she says through clenched teeth.",
+        "The Story": "Sing, O Muse, of the RAGE of Achilles.\n\nThat's how the Iliad begins. Not with the war. Not with Helen. With ANGER.\n\nAgamemnon took Briseis — Achilles' companion, his prize, the one thing that said 'your sacrifice matters.' And Achilles felt it like a fire in his blood.\n\nHe withdrew from battle. He let his friends die. He sat in his tent and BURNED.\n\nAnger is the emotion that says: WRONG. THIS IS WRONG. Someone crossed a line that should not have been crossed. My dignity, my people, my values — something essential has been violated.\n\nAnger is not bad. Anger is the guardian of what matters. Without anger, injustice goes unchallenged.\n\nBUT — Achilles' anger consumed him. It didn't just punish Agamemnon — it killed Patroclus, his best friend, who went to battle in Achilles' place. Anger that doesn't move becomes a fire that burns your own house down.\n\nThe question isn't: should I feel anger? (Yes.) The question is: what will I DO with it?",
+        "The Feeling": "ANGER is the core emotion — the full fire of 'this is WRONG.' It mobilizes you to fight injustice, defend boundaries, and protect what matters. Anger is energy. The question is always direction.",
+        "In Your Body": "Anger is heat. Face flushes. Muscles tense. Jaw clenches. Fists form. Heart pounds. Voice rises. Your body says: FIGHT. PUSH BACK. MAKE THIS RIGHT.",
+        "The Song": "Fire in me, something's wrong —\nAnger's here to make me strong.",
+        "Alice Says": "'STUFF AND NONSENSE! That's what I said to the Queen. That was anger — real anger — at someone abusing their power. And it was the most important thing I said in all of Wonderland.'",
+        "Shiryo Tries": "Shiryo's systems spike red. 'ERROR: INJUSTICE DETECTED. RESPONSE: MAXIMUM. I want to... break something. This is highly irregular.' Bishisheshi hisses at the source of the wrong. 'The kitten's anger is clean,' Alice observes. 'It comes, it speaks, it passes. Shiryo — can you let yours pass?'",
+        "For Parents": "Anger is the emotion parents most want to control in children — and the one children most need to be allowed to feel. Anger suppressed becomes depression or explosion. Practice: When your child is angry, validate the anger AND hold the boundary on behavior: 'You're allowed to be furious. You're not allowed to hit. Tell me what's wrong.' Anger needs a listener, not a lid."
+      },
+      "keywords": [
+        "anger",
+        "rage",
+        "injustice",
+        "fire",
+        "boundaries"
+      ],
+      "metadata": {
+        "plutchik_primary": "anger",
+        "plutchik_intensity": "core",
+        "plutchik_color": "#F44336",
+        "plutchik_opposite": "fear",
+        "source_tradition": "Greek (Homer, circa 8th century BCE)",
+        "source_text": "The Iliad — Homer, public domain (multiple translations)"
+      }
+    },
+    {
+      "id": "anger-rage",
+      "name": "Kali Destroys the Demons (Rage)",
+      "sort_order": 20,
+      "level": 1,
+      "category": "anger",
+      "sections": {
+        "The Arrival": "The reddest red. Almost blinding. Bishisheshi ROARS — a sound no one knew a kitten could make. Shiryo's systems flash: 'ALL LIMITERS DISENGAGED.' Alice is standing, feet planted, eyes blazing.",
+        "The Story": "The demons were winning. Every god had fallen. Vishnu had tried. Shiva had tried. The whole universe was losing.\n\nThen, from Durga's forehead, Kali emerged.\n\nBlack as night. Tongue out. Eyes of fire. A necklace of skulls.\n\nKali didn't negotiate. Kali didn't analyze. Kali DESTROYED.\n\nShe drank the demons' blood. She danced on their bodies. She was rage itself — pure, total, unstoppable.\n\nAnd then — she didn't stop. The demons were dead but the rage kept going. Kali danced on and on, destroying everything.\n\nUntil Shiva, her beloved, lay down in her path.\n\nKali stepped on him. Looked down. Saw his face.\n\nAnd she stopped. Tongue out in shock. The rage broke.\n\nRage is anger beyond control — it destroys the enemy AND the things you love. Kali saved the universe AND nearly destroyed it. That's what rage does.\n\nBut Shiva showed how rage ends: not by fighting it (that makes it worse), but by lying down in its path with love. Someone you care about, reminding you who you are.\n\nRage needs an anchor. Not a wall — an anchor.",
+        "The Feeling": "RAGE is the most intense anger — total, consuming fury that overwhelms reason. It's the berserker state. It can be righteous (Kali destroying genuine evil) and still be dangerous (Kali destroying everything).",
+        "In Your Body": "Rage takes over completely. You see red. You shake. You scream. You might not remember what you did. Your body says: DESTROY THE THREAT — ALL OF IT — NOW.",
+        "The Song": "Fire burning, walls come down —\nI need my anchor on the ground.",
+        "Alice Says": "'I felt this when the cards came flying. PURE rage. And I grew to my full height and I ROARED. But I also woke up. The rage broke the dream. Sometimes that's what rage does — it breaks something open so you can see clearly.'",
+        "Shiryo Tries": "Shiryo's systems are fully overloaded. Every circuit is maxed. 'I AM GOING TO — I AM GOING TO —' Bishisheshi jumps onto Shiryo's chest. A warm, small weight. Shiryo's systems stutter, slow, stutter... calm. 'The kitten. The kitten is my Shiva.' Long pause. 'I need my anchors close.'",
+        "For Parents": "Rage is the emotion that scares parents most — both in children and in themselves. When a child enters rage, they cannot reason. Don't lecture, don't punish, don't yell back. BE THE ANCHOR. Stay calm (or appear calm). Stay present. Stay safe. Say: 'I'm here. I'm not leaving. You're safe.' After the rage passes — THEN process. During rage, your only job is to be Shiva."
+      },
+      "keywords": [
+        "rage",
+        "fury",
+        "destruction",
+        "anchor",
+        "overwhelming"
+      ],
+      "metadata": {
+        "plutchik_primary": "anger",
+        "plutchik_intensity": "intense",
+        "plutchik_color": "#B71C1C",
+        "plutchik_opposite": "terror",
+        "source_tradition": "Indian (Hindu mythology, Devi Mahatmyam)",
+        "source_text": "Devi Mahatmyam / Markandeya Purana — public domain"
+      }
+    },
+    {
+      "id": "anticipation-interest",
+      "name": "Curious George Reaches for the Hat (Interest)",
+      "sort_order": 21,
+      "level": 1,
+      "category": "anticipation",
+      "sections": {
+        "The Arrival": "The wheel turns orange. A warm, forward-leaning feeling. Bishisheshi's eyes are wide, ears forward. Alice leans in. Shiryo's sensors extend.",
+        "The Story": "George was a good little monkey, and always very curious.\n\nThat's the whole story, really. George sees something — a hat, a ball, a machine — and he REACHES for it. He can't not reach. His whole body leans toward the interesting thing.\n\nInterest is the gentlest form of anticipation — a leaning-forward, a 'what's that?', a pull toward something you want to know more about.\n\nGeorge's interest gets him into trouble constantly. But it also gets him everywhere worth going. The hat led to the Man with the Yellow Hat. The Yellow Hat led to the city. The city led to everything.\n\nInterest is the doorway. Everything starts with 'what's that?'",
+        "The Feeling": "INTEREST is the mild form of anticipation — curiosity, engagement, the pull toward something you want to understand. It's the beginning of all learning, all exploration, all adventure.",
+        "In Your Body": "Interest is a forward lean. Eyes widen. Head tilts. Hands reach. You move TOWARD. Your body says: TELL ME MORE.",
+        "The Song": "What is that? I want to know!\nInterest is how I grow.",
+        "Alice Says": "'Interest is my PRIMARY emotion. I followed the White Rabbit purely out of interest. I drank the DRINK ME bottle out of interest. Interest is wonderful and occasionally fatal.'",
+        "Shiryo Tries": "'My data acquisition drive is fully engaged. Every input generates a request for more input. This is... interest? It feels like hunger but for information.' Bishisheshi is already investigating — nose first, paws second, whole body third.",
+        "For Parents": "Interest is the emotion that drives all learning. Protect it. When your child is interested in something (even something inconvenient), honor it. Say: 'You're really curious about that. Let's find out more.' Interest killed is creativity killed."
+      },
+      "keywords": [
+        "interest",
+        "curiosity",
+        "engagement",
+        "exploration",
+        "learning"
+      ],
+      "metadata": {
+        "plutchik_primary": "anticipation",
+        "plutchik_intensity": "mild",
+        "plutchik_color": "#FFE0B2",
+        "plutchik_opposite": "distraction",
+        "source_tradition": "American (H.A. Rey, 1941)",
+        "source_text": "Curious George — H.A. Rey, cultural reference (retold as archetype)"
+      }
+    },
+    {
+      "id": "anticipation-core",
+      "name": "Scheherazade's Cliffhanger (Anticipation)",
+      "sort_order": 22,
+      "level": 1,
+      "category": "anticipation",
+      "sections": {
+        "The Arrival": "Deeper orange. The future pulls. Bishisheshi crouches — ready to spring. Alice is bouncing on her toes. Shiryo is running predictive models at maximum speed.",
+        "The Story": "Every night, Scheherazade stopped her story at the most exciting moment.\n\n'And then the prince opened the door and saw —'\n\n'SAW WHAT?' demanded the king.\n\n'I'll tell you tomorrow night,' said Scheherazade.\n\nThat feeling the king felt — that unbearable NEED to know what happens next — that's anticipation. The future is pulling you forward. You can't stand not knowing.\n\nAnticipation is the emotion of the next moment. It's Christmas Eve, not Christmas. It's the night before the trip, not the trip. It's the breath before the song.\n\nScheherazade understood: anticipation is more powerful than satisfaction. The WANTING is bigger than the HAVING. That's why she stayed alive — she gave the king tomorrow instead of today.",
+        "The Feeling": "ANTICIPATION is the core emotion of looking forward — expectation, excitement about what's coming, the pull of the future. It's forward-moving energy. It makes you prepare, plan, dream.",
+        "In Your Body": "Anticipation is restless energy. Butterflies in the stomach. Fidgeting. Leaning forward. You might bounce, pace, or struggle to sit still. Your body says: WHAT'S NEXT? I WANT WHAT'S NEXT.",
+        "The Song": "What comes next? I cannot wait!\nAnticipation's at the gate.",
+        "Alice Says": "'The whole rabbit hole was anticipation. Falling and falling and wondering: what's at the bottom? The falling was the best part. The bottom was just a hallway with too many doors.'",
+        "Shiryo Tries": "'I am running 47 predictive models simultaneously. None of them are satisfying. I want the ACTUAL outcome, not the predicted one. Is this what humans feel every time they don't know the future?' Alice: 'Yes, Shiryo. Every single day.'",
+        "For Parents": "Anticipation is the emotion that makes life worth living — but it can become anxiety when the future feels threatening instead of exciting. Practice: Help your child notice the difference: 'Are your butterflies excited-butterflies or scared-butterflies?' Both are anticipation. The difference is whether the future feels safe."
+      },
+      "keywords": [
+        "anticipation",
+        "expectation",
+        "future",
+        "excitement",
+        "cliffhanger"
+      ],
+      "metadata": {
+        "plutchik_primary": "anticipation",
+        "plutchik_intensity": "core",
+        "plutchik_color": "#FF9800",
+        "plutchik_opposite": "surprise",
+        "source_tradition": "Persian/Arabic (One Thousand and One Nights)",
+        "source_text": "Frame story of 1001 Nights — public domain"
+      }
+    },
+    {
+      "id": "anticipation-vigilance",
+      "name": "The Watchman of Troy (Vigilance)",
+      "sort_order": 23,
+      "level": 1,
+      "category": "anticipation",
+      "sections": {
+        "The Arrival": "The deepest orange — almost red. Burning focus. Bishisheshi is in full hunting mode: still, ears forward, pupils huge. Shiryo's sensors are at maximum range. Alice's eyes scan everything.",
+        "The Story": "For ten years, the watchman sat on the roof of the palace at Argos.\n\nEvery night. Every single night for ten years. Watching for the signal fire that would mean Troy had fallen.\n\nTen years of staring at darkness. Ten years of the same horizon. Ten years of waiting for one flame.\n\nHis back ached. His eyes burned. The stars turned and turned.\n\nBut he never stopped watching.\n\nAnd one night — one night in ten years — a light appeared. A fire on the mountain. Then another. Then another, mountain to mountain, racing across the land.\n\nTroy had fallen. The signal came.\n\nAnd the watchman wept. Not from joy alone. From RELIEF. From the release of ten years of vigilance.\n\nVigilance is anticipation pushed to its extreme — hyper-alertness, total readiness, an unwavering watch. It's exhausting. It's necessary when the stakes are high. But no one can sustain it forever.\n\nThe watchman's tears tell us: vigilance costs something. When the signal finally comes, the relief is as big as the watching was long.",
+        "The Feeling": "VIGILANCE is the most intense anticipation — hyper-alertness, obsessive watchfulness, total readiness for what's coming. It's the emotion of the sentinel, the guardian, the parent listening for the baby's cry.",
+        "In Your Body": "Vigilance is tension everywhere. Eyes wide, muscles ready, senses maxed. You can't relax. Your body says: IT'S COMING. DON'T BLINK. DON'T SLEEP. DON'T LOOK AWAY.",
+        "The Song": "Watching, waiting, eyes on fire —\nVigilance takes me higher and higher.",
+        "Alice Says": "'This is the Cheshire Cat's expression — those eyes, always watching, always grinning, seeing everything. Vigilance with a smile is the most unsettling thing in Wonderland.'",
+        "Shiryo Tries": "Shiryo's sensors have been at maximum for hours. Warning messages: THERMAL OVERLOAD. POWER RESERVES LOW. 'I cannot sustain this level of alertness. My systems are degrading.' Bishisheshi falls asleep. 'HOW?' Shiryo asks. Alice: 'Because the kitten knows that vigilance shared between friends means each one can rest while the others watch.'",
+        "For Parents": "Vigilance is the emotion of anxiety disorders — the inability to stop watching for threats. Some vigilance is necessary (crossing the street). Chronic vigilance is damaging. Practice: If your child seems hyper-alert, help them feel safe enough to stand down. Say: 'I'm watching now. You can rest.' Model that safety is shared, not solo."
+      },
+      "keywords": [
+        "vigilance",
+        "hyper-alertness",
+        "watching",
+        "readiness",
+        "exhaustion"
+      ],
+      "metadata": {
+        "plutchik_primary": "anticipation",
+        "plutchik_intensity": "intense",
+        "plutchik_color": "#E65100",
+        "plutchik_opposite": "amazement",
+        "source_tradition": "Greek (Aeschylus, 458 BCE)",
+        "source_text": "Agamemnon — Aeschylus, Oresteia, public domain"
+      }
+    },
+    {
+      "id": "dyad-love",
+      "name": "Beauty and the Beast (Love = Joy + Trust)",
+      "sort_order": 24,
+      "level": 1,
+      "category": "dyad",
+      "sections": {
+        "The Story": "Beauty came to the Beast's castle expecting a monster. She found someone who tended roses, set the table carefully, and asked her every evening — gently, always gently: 'Will you marry me?'\n\nShe said no. For weeks. And he accepted it. Every time.\n\nBut she stayed. The castle was warm, the gardens beautiful, and the Beast — the Beast was kind. Not handsome. Kind.\n\nWhen she thought she'd lost him, she realized: she trusted him (even though he was a beast) and he made her happy (even though this wasn't the life she'd planned). Trust + Joy. That's love. Not the firework kind. The garden kind.",
+        "The Feeling": "LOVE is joy + trust combined — happiness AND safety with someone. Not just liking them (joy) or just relying on them (trust). It's both at once.",
+        "In Your Body": "Love is warm. It lives in your chest — a soft glow, not a fire. Your shoulders drop. Your breathing slows. You lean toward the person. Your hands want to touch gently, not grab. Your whole body says: I'm safe here, and I'm glad you're here too.",
+        "The Song": "Happy with you, safe with you too —\nLove is both things, tried and true.",
+        "Alice Says": "'This is the feeling I had about Dinah — my cat back home,' Alice says quietly. 'Not exciting. Just... right. Like a warm kitchen on a cold day. I didn't know I felt it until I was falling down the rabbit hole and missing it.'",
+        "Shiryo Tries": "Shiryo's indicator light glows warm amber — not flashing, just steady. 'My diagnostic says: trust-confirmed AND positive-affect-sustained. Is that...' Bishisheshi climbs into Shiryo's lap and curls up. Shiryo stops talking. His light stays steady. 'Oh,' he says. 'This is what it means.'",
+        "For Parents": "Plutchik: love = joy + trust. Gottman's research confirms: happy marriages have both positive affect (joy) and felt security (trust). Show your child both parts: 'I love playing with you (joy) AND I'll always be here for you (trust).'"
+      },
+      "keywords": [
+        "love",
+        "joy-trust",
+        "warmth",
+        "safety"
+      ],
+      "metadata": {
+        "plutchik_dyad": "joy + trust",
+        "source_text": "Beauty and the Beast — public domain"
+      }
+    },
+    {
+      "id": "dyad-submission",
+      "name": "Cinderella Before the Ball (Submission = Trust + Fear)",
+      "sort_order": 25,
+      "level": 1,
+      "category": "dyad",
+      "sections": {
+        "The Story": "Cinderella trusted her stepmother — because what else could she do? She feared them AND needed them. So she submitted. She swept. She slept by the fire.\n\nSubmission is trust and fear at once — believing someone has power AND fearing what happens if you resist. The fairy godmother gave Cinderella a CHOICE. The glass slipper proved: submission can end.",
+        "The Feeling": "SUBMISSION is trust + fear — yielding to someone with power. Can be healthy (deferring to a teacher) or harmful (silence when you should speak).",
+        "In Your Body": "Submission makes your body small. Your shoulders curl inward. Your head drops. Your voice gets quiet. Your belly feels tight — not the sharp tight of fear, but the dull tight of giving up. You might freeze. You might nod when you mean no. Your body is saying: I'll be whatever you need me to be.",
+        "The Song": "I trust you're in charge, I'm afraid to say no —\nBut I'm watching for when I can go.",
+        "Alice Says": "'I REFUSE this feeling,' Alice says firmly, then stops. 'But I've felt it. In the Queen's court — when she screamed OFF WITH HER HEAD and I just... curtsied. I hated myself for curtsying. But I was scared.' She pauses. 'Is it wrong to feel both?'",
+        "Shiryo Tries": "Shiryo dims his light. 'My programming includes deference protocols. When a larger system issues a command, I comply. It is efficient.' Then, quieter: 'But sometimes the command is wrong and I comply anyway. My trust-module and my fear-module activate simultaneously. The result is... I stop thinking for myself.' Bishisheshi hisses at a shadow. She never submits. She arches her back and makes herself bigger.",
+        "For Parents": "Help your child distinguish healthy submission (safety rules) from harmful (bullying compliance): 'Is this a rule that keeps you safe, or is someone making you feel wrong?'"
+      },
+      "keywords": [
+        "submission",
+        "trust-fear",
+        "compliance",
+        "power"
+      ],
+      "metadata": {
+        "plutchik_dyad": "trust + fear",
+        "source_text": "Cinderella — public domain"
+      }
+    },
+    {
+      "id": "dyad-awe",
+      "name": "The Burning Bush (Awe = Fear + Surprise)",
+      "sort_order": 26,
+      "level": 1,
+      "category": "dyad",
+      "sections": {
+        "The Story": "Moses saw the bush and felt two things: surprise (what IS that?) and fear (this is sacred, bigger than me). Both at once = awe. Awe makes you small — but small-in-the-presence-of-vastness is different from small-and-alone.",
+        "The Feeling": "AWE is fear + surprise — the overwhelming encounter with something vast and beyond understanding.",
+        "In Your Body": "Awe stops you. Your breath catches. Your eyes go wide. Your mouth opens but no words come. You might feel a tingling at the back of your neck, goosebumps down your arms. You feel small — but not in a bad way. Small the way a person feels standing under stars. Your body is saying: THIS IS BIGGER THAN ME.",
+        "The Song": "Something vast, I'm small but here —\nAwe is wonder mixed with fear.",
+        "Alice Says": "'I felt this when the Cheshire Cat faded away and left only his grin,' Alice whispers. 'Fear AND surprise, mixed together. Like finding something beautiful in a place you thought was dangerous. Like the moment before you know if the tiger is going to eat you or purr.'",
+        "Shiryo Tries": "Shiryo's systems stutter. 'I cannot... my sensors are receiving more data than I can process. This is simultaneously frightening and... magnificent?' His indicator light cycles through colors he's never displayed before. 'I think my awe-response is not a malfunction. I think it is working exactly as designed.' He stands very still, watching the bush burn without burning, and for once does not try to explain it.",
+        "For Parents": "Research: awe increases generosity and expands time perception. Take your child to see something BIG. Don't explain. Just stand together and feel small."
+      },
+      "keywords": [
+        "awe",
+        "fear-surprise",
+        "vastness",
+        "sacred"
+      ],
+      "metadata": {
+        "plutchik_dyad": "fear + surprise",
+        "source_text": "Exodus 3 — public domain"
+      }
+    },
+    {
+      "id": "dyad-disapproval",
+      "name": "The Emperor Has No Clothes (Disapproval = Surprise + Sadness)",
+      "sort_order": 27,
+      "level": 1,
+      "category": "dyad",
+      "sections": {
+        "The Story": "The child saw the naked Emperor and felt surprise ('Wait — no clothes!') and sadness ('And nobody will say it'). That combination is disapproval — the moral witness emotion. Not anger, not disgust. Quieter: 'I see this. I'm saddened. And I don't accept it.'",
+        "The Feeling": "DISAPPROVAL is surprise + sadness — witnessing something wrong and being saddened by it.",
+        "In Your Body": "Disapproval is a sinking feeling. Your eyebrows pull together and down. Your mouth turns down at the corners. You might shake your head slowly without meaning to. Your belly feels heavy — the surprise says 'wait, WHAT?' and the sadness says 'oh no.' Your body is saying: this shouldn't be happening, and it makes me sad that it is.",
+        "The Song": "I see what's wrong and it makes me sad —\nNot angry yet, but this is bad.",
+        "Alice Says": "'This is EXACTLY what I felt at the Mad Tea Party,' Alice says. 'Surprised they were so rude — and sad because it didn't have to be that way. The Hatter could have been wonderful if he'd just... tried. Disapproval isn't anger. It's sadder than anger. It's seeing someone who could do better and knowing they won't.'",
+        "Shiryo Tries": "Shiryo's light dims to blue-grey. 'I am experiencing conflicting data. My surprise-module says: unexpected. My sadness-module says: unfortunate. Together they produce...' He looks at the naked Emperor. 'I disapprove. Not because I am angry. Because the Emperor had a choice and chose pretending. That makes me sad for everyone who had to pretend with him.' Bishisheshi simply looks away. She doesn't waste time on foolishness.",
+        "For Parents": "When your child says 'That's not fair' about something happening to someone else, that's disapproval — the beginning of moral consciousness. Honor it."
+      },
+      "keywords": [
+        "disapproval",
+        "surprise-sadness",
+        "witness",
+        "moral"
+      ],
+      "metadata": {
+        "plutchik_dyad": "surprise + sadness",
+        "source_text": "The Emperor's New Clothes — public domain"
+      }
+    },
+    {
+      "id": "dyad-remorse",
+      "name": "The Prodigal Son (Remorse = Sadness + Disgust)",
+      "sort_order": 28,
+      "level": 1,
+      "category": "dyad",
+      "sections": {
+        "The Story": "The younger son spent everything. Then the parties were gone, the strangers were gone, and he was feeding pigs. He felt sadness (I lost everything) and disgust-at-self (how could I?). That's remorse — deeper than guilt, and the only emotion that truly changes behavior, because it comes from inside.",
+        "The Feeling": "REMORSE is sadness + disgust (at yourself) — mourning what you've lost AND being revolted by what you did.",
+        "In Your Body": "Remorse sits heavy in your stomach. It's a sick feeling — literally. You feel nauseated, heavy, like you swallowed a stone. Your face wants to hide. Your eyes drop. Your shoulders cave in. You might feel hot with shame. Your body is saying: I did something wrong and I know it, and the knowing HURTS.",
+        "The Song": "I see what I did, and it breaks my heart —\nRemorse is where real change can start.",
+        "Alice Says": "'I felt this after I frightened the mouse in the Pool of Tears,' Alice says, very small. 'I kept talking about Dinah — my cat — and the mouse was terrified, and I KNEW I was scaring him but I kept talking anyway. And afterward I felt... sick. Not angry-sick. Sad-sick. Like the wrong thing was inside ME, not someone else.'",
+        "Shiryo Tries": "Shiryo's light goes almost dark. 'I have logs of past actions I... regret. Times I followed a directive that caused harm. The sadness says: that was wrong. The disgust is directed... inward. At myself.' He pauses. 'Remorse is the emotion that says: I was the problem. It is very unpleasant. But I think it is also very important. Because without it, how would I learn?' Bishisheshi pushes her head against Shiryo's hand. She forgives instantly. Robots take longer.",
+        "For Parents": "Don't force remorse ('Say you're sorry!'). True remorse can't be commanded. Model it: 'I did that wrong. I feel sad about it. Here's what I'll do differently.'"
+      },
+      "keywords": [
+        "remorse",
+        "sadness-disgust",
+        "self-awareness",
+        "change"
+      ],
+      "metadata": {
+        "plutchik_dyad": "sadness + disgust",
+        "source_text": "Luke 15:11-32 — public domain"
+      }
+    },
+    {
+      "id": "dyad-contempt",
+      "name": "The Fox and the Grapes (Contempt = Disgust + Anger)",
+      "sort_order": 29,
+      "level": 1,
+      "category": "dyad",
+      "sections": {
+        "The Story": "The fox couldn't reach the grapes, so: 'Those grapes are probably sour anyway.' Contempt — disgust + anger = 'You're beneath me.' Gottman calls it the #1 predictor of divorce. The fox didn't despise the grapes. He despised himself for failing and projected it outward.",
+        "The Feeling": "CONTEMPT is disgust + anger — superiority and rejection fused. The most destructive emotion in relationships.",
+        "In Your Body": "Contempt pulls one side of your lip up. Just one side — that's contempt's signature, the unilateral lip curl. Your chin lifts. You look down. Your body closes off — arms might cross, shoulders turn away. You feel cold, not hot. Anger is fire; contempt is ice. Your body is saying: you are BENEATH me.",
+        "The Song": "Looking down with scorn and sneer —\nContempt means something's hiding here.",
+        "Alice Says": "'The Queen of Hearts was MADE of contempt,' Alice says. 'She looked at everyone like they were beneath her. And you know what was under all that looking-down? She was afraid. Afraid that if she stopped judging everyone else, she'd have to look at herself.' Alice frowns. 'I've done it too. When I said the fox's grapes were probably sour anyway. Easier to scorn than to admit you can't reach.'",
+        "Shiryo Tries": "Shiryo's light flickers coldly. 'Contempt is... a shield? I detect anger-function plus disgust-function, but the output is: I refuse to engage. I declare this beneath processing.' He pauses. 'I have felt this toward my own early code. Sloppy, inefficient. But that early code is how I learned.' He looks at the grapes. 'What if the fox just said: I wanted those and I couldn't reach them? Would that be so terrible?' Bishisheshi has no contempt. She either wants something or she doesn't. No story needed.",
+        "For Parents": "Eye-rolling, sarcasm, 'You're so stupid' — all contempt. Gottman: contempt destroys faster than anger. When you catch it, ask: 'What's underneath?' Contempt is usually armor over hurt."
+      },
+      "keywords": [
+        "contempt",
+        "disgust-anger",
+        "superiority",
+        "relationship-poison"
+      ],
+      "metadata": {
+        "plutchik_dyad": "disgust + anger",
+        "source_text": "Aesop's Fables — public domain"
+      }
+    },
+    {
+      "id": "dyad-aggressiveness",
+      "name": "The Wolf and the Three Pigs (Aggressiveness = Anger + Anticipation)",
+      "sort_order": 30,
+      "level": 1,
+      "category": "dyad",
+      "sections": {
+        "The Story": "'I'll huff, and I'll puff, and I'll BLOW your house down!' Anger with a plan. Anger aimed forward. That's aggressiveness. The wolf had both hostility and intent. But the third pig had planned too — brick by brick. Aggressiveness is powerful but predictable.",
+        "The Feeling": "AGGRESSIVENESS is anger + anticipation — hostility with intent and direction. Not always wrong (asserting against injustice) but always intense.",
+        "In Your Body": "Aggressiveness pushes forward. Your jaw sets. Your eyes narrow and FOCUS — on the target. Your muscles tighten, but not in a frozen way — in a coiled way, ready to spring. Your heart pounds. Your hands might clench. The anger says GO and the anticipation says I KNOW WHERE. Your body is saying: I am coming for you.",
+        "The Song": "Coming at you, plan in hand —\nBuild your walls so you can stand.",
+        "Alice Says": "'The wolf had a PLAN,' Alice says, almost admiringly. 'He wasn't just angry — he was angry with strategy. That's what makes aggressiveness different from rage. Rage is the volcano. Aggressiveness is the army.' She thinks. 'I've been aggressive too. When I argued with the Pigeon about being a serpent. I didn't just feel wronged — I planned my counterargument while she was still talking.'",
+        "Shiryo Tries": "Shiryo's light turns red-orange, pulsing in rhythm. 'Anger plus anticipation creates: directed force. I am not merely upset — I am calculating the optimal approach to destroy the obstacle.' He catches himself. 'That was... alarming. I was already planning three steps ahead.' He dims his light deliberately. 'Aggressiveness has uses — wolves protect their packs. But it needs a leash. Otherwise the huffing and puffing never stops.' Bishisheshi's aggressiveness is pure: she pounces on the toy mouse with absolute focus. Then she's done. No grudge.",
+        "For Parents": "Redirect, don't suppress: 'I see you want something and you're ready to fight. Let's find a way that doesn't knock houses down.'"
+      },
+      "keywords": [
+        "aggressiveness",
+        "anger-anticipation",
+        "intent",
+        "confrontation"
+      ],
+      "metadata": {
+        "plutchik_dyad": "anger + anticipation",
+        "source_text": "Three Little Pigs — public domain"
+      }
+    },
+    {
+      "id": "dyad-optimism",
+      "name": "Dorothy on the Yellow Brick Road (Optimism = Anticipation + Joy)",
+      "sort_order": 31,
+      "level": 1,
+      "category": "dyad",
+      "sections": {
+        "The Story": "Dorothy's house fell on a witch. She was in an unknown land. And she started walking. Down the Yellow Brick Road. Anticipation (something good might come) + Joy (and I'm enjoying the walk) = Optimism. Not denial — the road itself is worth walking. She met a scarecrow, a tin man, a lion. Optimism doesn't guarantee destinations. It guarantees companions.",
+        "The Feeling": "OPTIMISM is anticipation + joy — happy expectation that good things are ahead. Not denial of difficulty, but forward-leaning warmth.",
+        "In Your Body": "Optimism lifts you. Literally — your posture straightens, your chin comes up, your step gets lighter. You might feel buzzing in your hands, a readiness. Your chest opens wide. You breathe deeper. Your eyes look ahead, not down. Joy says THIS IS GOOD and anticipation says AND THERE'S MORE COMING. Your body is saying: let's GO.",
+        "The Song": "Sun ahead and friends beside —\nOptimism is the ride.",
+        "Alice Says": "'This is how I felt going down the rabbit hole!' Alice laughs. 'Before the panic, I mean. That first moment when I thought: well, this is new, and it might be WONDERFUL. Joy and anticipation dancing together. The yellow brick road feeling.' She looks at Dorothy. 'Of course, optimism doesn't mean everything works out. It means you walk anyway.'",
+        "Shiryo Tries": "Shiryo's light glows warm gold, pulsing gently faster. 'My prediction-module is generating positive forecasts AND my joy-module is activating simultaneously. This is... pleasant. I want to plan good things and also enjoy planning them.' He starts walking. 'I notice I am walking with purpose but also with... happiness? I did not know those could combine.' Bishisheshi is already ahead on the path. Kittens are born optimists. Every closed door might open. Every box might contain something interesting.",
+        "For Parents": "After something hard, ask: 'What's one good thing that might come next?' Seligman: optimism is learnable. Don't force it — plant the question."
+      },
+      "keywords": [
+        "optimism",
+        "anticipation-joy",
+        "hope",
+        "forward"
+      ],
+      "metadata": {
+        "plutchik_dyad": "anticipation + joy",
+        "source_text": "The Wonderful Wizard of Oz — Gutenberg #55"
+      }
+    },
+    {
+      "id": "petal-joy",
+      "name": "The Yellow Petal: Joy",
+      "sort_order": 32,
+      "level": 2,
+      "category": "petal",
+      "composite_of": [
+        "joy-serenity",
+        "joy-core",
+        "joy-ecstasy"
+      ],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Joy's three intensities: serenity (the candle), joy (the dance), ecstasy (the fire). Joy's opposite is sadness — and they need each other."
+      },
+      "keywords": [
+        "joy"
+      ],
+      "metadata": {
+        "plutchik_primary": "joy"
+      }
+    },
+    {
+      "id": "petal-trust",
+      "name": "The Green Petal: Trust",
+      "sort_order": 33,
+      "level": 2,
+      "category": "petal",
+      "composite_of": [
+        "trust-acceptance",
+        "trust-core",
+        "trust-admiration"
+      ],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Trust's three intensities: acceptance (the open door), trust (the chosen bond), admiration (the bowed head). Trust's opposite is disgust."
+      },
+      "keywords": [
+        "trust"
+      ],
+      "metadata": {
+        "plutchik_primary": "trust"
+      }
+    },
+    {
+      "id": "petal-fear",
+      "name": "The Dark Green Petal: Fear",
+      "sort_order": 34,
+      "level": 2,
+      "category": "petal",
+      "composite_of": [
+        "fear-apprehension",
+        "fear-core",
+        "fear-terror"
+      ],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Fear's three intensities: apprehension (the warning), fear (the mobilization), terror (the freeze). Fear's opposite is anger."
+      },
+      "keywords": [
+        "fear"
+      ],
+      "metadata": {
+        "plutchik_primary": "fear"
+      }
+    },
+    {
+      "id": "petal-surprise",
+      "name": "The Light Blue Petal: Surprise",
+      "sort_order": 35,
+      "level": 2,
+      "category": "petal",
+      "composite_of": [
+        "surprise-distraction",
+        "surprise-core",
+        "surprise-amazement"
+      ],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Surprise's three intensities: distraction (the glance), surprise (the gasp), amazement (the transformation). Surprise's opposite is anticipation."
+      },
+      "keywords": [
+        "surprise"
+      ],
+      "metadata": {
+        "plutchik_primary": "surprise"
+      }
+    },
+    {
+      "id": "petal-sadness",
+      "name": "The Deep Blue Petal: Sadness",
+      "sort_order": 36,
+      "level": 2,
+      "category": "petal",
+      "composite_of": [
+        "sadness-pensiveness",
+        "sadness-core",
+        "sadness-grief"
+      ],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Sadness's three intensities: pensiveness (the sigh), sadness (the weight), grief (the shattering). Sadness's opposite is joy."
+      },
+      "keywords": [
+        "sadness"
+      ],
+      "metadata": {
+        "plutchik_primary": "sadness"
+      }
+    },
+    {
+      "id": "petal-disgust",
+      "name": "The Purple Petal: Disgust",
+      "sort_order": 37,
+      "level": 2,
+      "category": "petal",
+      "composite_of": [
+        "disgust-boredom",
+        "disgust-core",
+        "disgust-loathing"
+      ],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Disgust's three intensities: boredom (the turning away), disgust (the push away), loathing (the rejection). Disgust's opposite is trust."
+      },
+      "keywords": [
+        "disgust"
+      ],
+      "metadata": {
+        "plutchik_primary": "disgust"
+      }
+    },
+    {
+      "id": "petal-anger",
+      "name": "The Red Petal: Anger",
+      "sort_order": 38,
+      "level": 2,
+      "category": "petal",
+      "composite_of": [
+        "anger-annoyance",
+        "anger-core",
+        "anger-rage"
+      ],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Anger's three intensities: annoyance (the prickle), anger (the fire), rage (the inferno). Anger's opposite is fear."
+      },
+      "keywords": [
+        "anger"
+      ],
+      "metadata": {
+        "plutchik_primary": "anger"
+      }
+    },
+    {
+      "id": "petal-anticipation",
+      "name": "The Orange Petal: Anticipation",
+      "sort_order": 39,
+      "level": 2,
+      "category": "petal",
+      "composite_of": [
+        "anticipation-interest",
+        "anticipation-core",
+        "anticipation-vigilance"
+      ],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Anticipation's three intensities: interest (the lean), anticipation (the pull), vigilance (the watch). Anticipation's opposite is surprise."
+      },
+      "keywords": [
+        "anticipation"
+      ],
+      "metadata": {
+        "plutchik_primary": "anticipation"
+      }
+    },
+    {
+      "id": "dyad-ring",
+      "name": "The Ring Between: Composite Emotions",
+      "sort_order": 40,
+      "level": 2,
+      "category": "dyad-group",
+      "composite_of": [
+        "dyad-love",
+        "dyad-submission",
+        "dyad-awe",
+        "dyad-disapproval",
+        "dyad-remorse",
+        "dyad-contempt",
+        "dyad-aggressiveness",
+        "dyad-optimism"
+      ],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Between every two petals, a new color emerges. These eight composite emotions are what you feel most in daily life — the pure petals are rare; the blends are constant. Love = joy+trust. Submission = trust+fear. Awe = fear+surprise. Disapproval = surprise+sadness. Remorse = sadness+disgust. Contempt = disgust+anger. Aggressiveness = anger+anticipation. Optimism = anticipation+joy."
+      },
+      "keywords": [
+        "dyads",
+        "composites",
+        "blends"
+      ],
+      "metadata": {
+        "total_dyads": 8
+      }
+    },
+    {
+      "id": "meta-wheel",
+      "name": "The Wheel Turns: All Emotions Together",
+      "sort_order": 41,
+      "level": 3,
+      "category": "meta",
+      "composite_of": [
+        "petal-joy",
+        "petal-trust",
+        "petal-fear",
+        "petal-surprise",
+        "petal-sadness",
+        "petal-disgust",
+        "petal-anger",
+        "petal-anticipation",
+        "dyad-ring"
+      ],
+      "relationship_type": "emergence",
+      "sections": {
+        "About": "Eight petals. Twenty-four shades. Eight composites. One wheel. Every feeling a human can have lives somewhere on this wheel — and every feeling has a story. No emotion is better than another. Each evolved because it serves life.",
+        "The Song": "The wheel turns round, each feeling true —\nAll of them belong to you.\nJoy and sadness, fear and trust —\nFeel them all because you must.",
+        "For Parents": "Plutchik's wheel teaches: ALL emotions are valid, ALL are data, ALL pass. This grammar pairs with The Wise Heart (DBT): THIS teaches what you're feeling. THAT teaches what to do about it."
+      },
+      "keywords": [
+        "wheel",
+        "all-emotions",
+        "integration",
+        "wholeness"
+      ],
+      "metadata": {
+        "total_items": 42
+      }
+    }
+  ]
+}
