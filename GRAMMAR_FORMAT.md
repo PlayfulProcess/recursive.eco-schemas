@@ -188,6 +188,27 @@ An unknown value is rejected by the write path with a 400 naming the allowed
 list — never silently stored, never silently dropped. An item with no `kind`
 renders exactly as it always did.
 
+### `slide.kind: "frames"` — a run of pictures on one card
+
+Added Sep 21 2026. A `slide` item whose `metadata.slide.kind` is `"frames"` shows a sequence of
+pictures on one card — cut or cross-faded at a fixed pace — instead of one picture per item. It
+exists so a sequence of images over one piece of music is ONE item with one dwell and one
+`performance.background_audio`, not several items with their own thumbnails and a cut between
+each.
+
+| field | type | default | what it is |
+|---|---|---|---|
+| `metadata.kind` | `"slide"` | — | as for every slide |
+| `metadata.slide.kind` | `"frames"` | — | required |
+| `metadata.slide.frames` | array | — | required, 1–24 entries; each `{ "url", "caption"? }` or a plain `https://` string; images must be on an allowed image host |
+| `metadata.slide.per_sec` | number | `2` | seconds each picture holds (0.3–30) |
+| `metadata.slide.transition` | `"cut"` \| `"fade"` | `"cut"` | a flash, or a 0.6 s cross-fade |
+| `metadata.slide.fit` | `"cover"` \| `"contain"` | `"cover"` | fill the stage, or letterbox |
+| `metadata.slide.duration_sec` | number | frames × per_sec | overrides the dwell |
+
+Captions sit low on a soft band. Reduced motion shows the last picture. The viewer falls back to
+a plain card when no frame has a usable `https://` address.
+
 ### `kind: "embed"` — a live page as an item
 
 An item that plays a whole other web page inside the viewer, the way a `clip`
