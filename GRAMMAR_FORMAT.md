@@ -171,6 +171,72 @@ purposes. The viewer ignores unknown keys.
 
 ---
 
+## Item kinds — `metadata.kind`
+
+In a sequence (a film, a playlist), an item can declare **what it is**. The
+value is one of:
+
+| `metadata.kind` | what it is |
+|---|---|
+| `divider` | a chapter card — a title on a coloured ground, no media |
+| `clip` | a cut from a video |
+| `note` | a text beat |
+| `slide` | an animated data panel the viewer draws from `metadata.slide` |
+| `embed` | a live web page played inside the viewer (below) |
+
+An unknown value is rejected by the write path with a 400 naming the allowed
+list — never silently stored, never silently dropped. An item with no `kind`
+renders exactly as it always did.
+
+### `kind: "embed"` — a live page as an item
+
+An item that plays a whole other web page inside the viewer, the way a `clip`
+plays a video. Used for interactive things that are not video and not a drawn
+panel: an agent-based model, a probability game, a chart.
+
+| field | type | default | what it is |
+|---|---|---|---|
+| `metadata.kind` | `"embed"` | — | required; without it `embed_url` is ignored |
+| `metadata.embed_url` | string | — | required; `https://` on an allowed host (below) |
+| `metadata.embed_ratio` | `"16:9"` \| `"4:3"` \| `"3:2"` \| `"1:1"` \| `"9:16"` | `"16:9"` | the frame's aspect ratio |
+| `metadata.embed_interactive` | boolean | `false` | may the viewer touch it **while the device is walled** |
+| `metadata.card_hold_sec` | number | `30` | dwell in Focus / autoplay, same field every non-video item uses |
+
+**Allowed hosts.** `recursive.eco`, any `*.recursive.eco` subdomain, and
+`playfulprocess.github.io`. Anything else — and any malformed URL — is refused:
+the write path answers a 400 naming the allowed hosts, and a value that reaches
+the viewer another way renders as a plain title card, never a blank and never a
+surprise frame.
+
+**The wall.** An embedded page must never be a way out. On a walled
+(Focus/kiosk) device the frame is display-only: a transparent shield sits over
+it and eats every pointer event, and the "Open in a new tab" link is hidden.
+`embed_interactive: true` lifts the shield for that one item — the link stays
+hidden regardless. In Standard the frame is fully interactive and the link shows.
+
+**The sandbox.** `sandbox="allow-scripts allow-same-origin"` and no `allow`
+attribute. The page may run and read its own storage; it cannot submit a form,
+open a popup, start a download, navigate the top-level window, lock the pointer,
+or ask for camera / microphone / geolocation.
+
+**Example**
+
+```json
+{
+  "name": "Zero-intelligence traders",
+  "sections": { "Note": "Gode & Sunder 1993 — price finds equilibrium with no strategy at all." },
+  "metadata": {
+    "kind": "embed",
+    "embed_url": "https://playfulprocess.github.io/emergence-lab/models/zero-intelligence.html",
+    "embed_ratio": "16:9",
+    "embed_interactive": true,
+    "card_hold_sec": 45
+  }
+}
+```
+
+---
+
 ## Category & section roles (astrology customization)
 
 For `astrology` (and Vedic/Jyotish) grammars, the astrology viewer buckets
