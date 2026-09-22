@@ -169,6 +169,13 @@ your grammar needs. Some conventions:
 You can also put arbitrary keys in `metadata` for editorial / study
 purposes. The viewer ignores unknown keys.
 
+The keys that DRAW something also live in `metadata`, and they have their own
+sections below: `kind` (*Item kinds*), `slide` and the `card_*` look family
+plus `card_hold_sec` (*Look and dwell*), `embed_url` (*kind: "embed"*). Two
+metadata keys that look like playback fields and are not: `subtitles` (stored
+caption cues, used for research and for finding cut points — the viewer never
+draws them) and `excerpt` (the words inside a cut, an editing aid).
+
 ---
 
 ## Item kinds — `metadata.kind`
@@ -301,11 +308,18 @@ fields — never put them inside an item.
 
 ---
 
-## Performance object (timestamped video clip rendering)
+## Performance object — what an item PLAYS
 
 For grammars where each item is a clip from a YouTube video — common
 in `sequence` grammars and useful in `custom` grammars too — each
-item carries an optional `performance` object:
+item carries an optional `performance` object.
+
+Everything in `performance` is measured in the **source video's own seconds**,
+the same clock as `start_sec`. That is the one thing to hold on to: an overlay
+at `start_sec: 1085` appears when the source video's playhead reaches 18:05,
+not 1085 seconds after the item came on screen. Screen time — how long a card
+or a slide sits there — is a different clock and lives in `metadata`; see
+*Look and dwell* below.
 
 ```jsonc
 {
@@ -316,30 +330,43 @@ item carries an optional `performance` object:
     "youtube_url": "https://www.youtube.com/watch?v=XS7RKHR_ink"
   },
   "performance": {
-    "start_sec": 300,         // crop start, in seconds
-    "end_sec": 450,           // crop end, in seconds
-    "volume": 1.0,            // 0..1
-    "video_visible": true,    // false = audio-only playback
-    "cover_image_url": "https://...",   // OPTIONAL — used in audio-only mode
+    "start_sec": 300,         // crop start, in the source's seconds
+    "end_sec": 450,           // crop end — reaching it advances the playlist
+    "volume": 1.0,            // the primary video's level, 0..1
+    "video_visible": true,    // false = audio-only; show a picture instead
+    "cover_image_url": "https://...",   // OPTIONAL — the audio-only picture
 
-    "background_audio": {     // OPTIONAL — overlay background music/ambience
+    "background_audio": {     // OPTIONAL — a second video playing underneath
       "youtube_video_id": "different-id-here",
       "start_sec": 0,
       "end_sec": 600,
-      "volume": 0.3
+      "volume": 0.45
     },
 
-    "overlays": [             // OPTIONAL — text or image overlays on the video
+    "audio_url": "https://.../line.mp3",  // OPTIONAL — a spoken clip for THIS item
+    "audio_delay_sec": 2.5,               // OPTIONAL — seconds before it starts (0–120)
+
+    "mutes": [                // OPTIONAL — bleeps on the primary video
+      { "start_sec": 1989.05, "end_sec": 1990 }
+    ],
+
+    "overlays": [             // OPTIONAL — timed text or pictures over the clip
       {
         "kind": "text",       // "text" or "image"
-        "content": "Overlay text or image URL",
-        "start_sec": 5,       // when this overlay appears
-        "end_sec": 12,        // when it disappears
+        "content": "Overlay text, or an https image address",
+        "start_sec": 5,       // when it appears, in the source's seconds
+        "end_sec": 12,        // when it goes
         "x_pct": 10,          // horizontal position, 0..100
         "y_pct": 80,          // vertical position, 0..100
-        "width_pct": 80       // width as percentage of viewport
+        "width_pct": 80,      // width, % of the player
+        "backdrop": "rgba(0,0,0,0.6)",  // OPTIONAL — a plate behind it
+        "align": "center",    // OPTIONAL, text only — start | center | end
+        "highlight": false    // OPTIONAL, text only — the marker sweep
       }
     ],
+
+    "motion": { "kind": "breathe", "to": { "scale": 1.03 } },  // OPTIONAL, image items
+    "transition": { "kind": "crossfade", "duration_sec": 0.8 },// OPTIONAL
 
     "words": [                // OPTIONAL — per-word karaoke timing (see below)
       { "w": "In", "start": 5.0, "end": 5.2 },
@@ -352,6 +379,93 @@ item carries an optional `performance` object:
   }
 }
 ```
+
+### The crop
+
+| field | type | what it does |
+|---|---|---|
+| `start_sec` | number | where the clip begins in the source video |
+| `end_sec` | number | where it ends — reaching it advances the playlist |
+| `volume` | number 0..1 | the primary video's level (default 1) |
+| `video_visible` | boolean | `false` = audio-only: the picture shows, the sound keeps running |
+| `cover_image_url` | string | the picture for `video_visible: false`. It is an OVERRIDE — without it the item's own `image_url` is used, and that is the ordinary way to do this |
+
+### Pictures over a clip — `overlays` with `kind: "image"`
+
+An image overlay is **the** way to put a picture over a playing clip. There is
+no separate slideshow, gallery or frames kind, and none is needed.
+
+| field | what it does |
+|---|---|
+| `content` | an `https://` image address on an allowed host (below) |
+| `start_sec` / `end_sec` | the window, in the source video's seconds |
+| `fit` | `"cover"` (crops) or `"contain"` (letterboxes) — the picture fills the whole frame, and `x_pct` / `y_pct` / `width_pct` are then ignored and may be omitted |
+| `backdrop` | a colour painted behind it; across the frame when `fit` is set |
+| `x_pct` / `y_pct` / `width_pct` | position and width as % of the player — required **unless** `fit` is set |
+
+**Allowed image hosts** (for `overlays[].content`, and for an image used as a
+background — see *Look and dwell*): `upload.wikimedia.org`,
+`images-assets.nasa.gov`, `i.ytimg.com`, `img.youtube.com`, the recursive.eco
+CDN, and `recursive.eco` / `*.recursive.eco`. `https` only, no credentials, no
+custom port. Anything else is refused by the write path with a 400 — copy the
+picture to the CDN first.
+
+**A run of pictures** is simply several image overlays in a row, each window
+butted against the next. This is the whole recipe; there is no other mechanism:
+
+```jsonc
+"overlays": [
+  { "kind": "image", "fit": "contain", "backdrop": "#05050a", "content": "https://upload.wikimedia.org/…/a.jpg", "start_sec": 20.1, "end_sec": 24.1 },
+  { "kind": "image", "fit": "contain", "backdrop": "#05050a", "content": "https://upload.wikimedia.org/…/b.jpg", "start_sec": 24.1, "end_sec": 28.1 },
+  { "kind": "image", "fit": "contain", "backdrop": "#05050a", "content": "https://upload.wikimedia.org/…/c.jpg", "start_sec": 28.1, "end_sec": 32.1 }
+]
+```
+
+At four seconds apart that reads as a sequence of plates; at 0.4 seconds apart
+the same array is stop motion.
+
+### Words over a clip — `overlays` with `kind: "text"`
+
+`content` is the words themselves, rendered as a text node — never HTML, never
+CSS. Besides the shared fields above, a text overlay takes:
+
+| field | what it does |
+|---|---|
+| `backdrop` | a padded plate behind the words, e.g. `"rgba(0,0,0,0.6)"`, so they read over the video |
+| `align` | `"start"`, `"center"` or `"end"` — where the words sit in their box |
+| `highlight` | `true` gives the marker sweep |
+| `fit` | a text overlay with `fit` is a full-frame panel: the words centred over the backdrop while the clip's audio keeps running underneath |
+
+A long quote is several text overlays handing over to each other, each with its
+own window — not one overlay with line breaks in it.
+
+**Words over footage go here, not in a slide.** An item that carries both a
+video and a `metadata.slide` plays the video and never draws the slide.
+
+### Sound — the bed, the voice, the level, the bleeps
+
+Four fields, one object. They are the whole sound vocabulary of an item:
+
+| field | what it is |
+|---|---|
+| `background_audio` | **the bed** — a second YouTube video playing underneath, `{ youtube_video_id, start_sec, end_sec, volume }`. Name the same `youtube_video_id` on consecutive items and the bed carries across the cut, so one recording can run under a whole opening |
+| `audio_url` (+ `audio_delay_sec`) | **the voice** — a hosted `.mp3` / `.m4a` / `.wav` for this one item. On a card it plays while the card shows and lengthens the dwell to cover `audio_delay_sec` + the clip. This is NOT the grammar's narration track (see *Audio karaoke mode*), which owns the whole playlist's clock; this one rides the playlist's clock and stands down while a narration track plays |
+| `volume` | **the level** — the primary video, 0..1 |
+| `mutes` | **the bleeps** — `[{ start_sec, end_sec }]` windows where the primary plays silent with a 1 kHz tone under them, so the gap reads as a bleep and not as a dropout. Source-video seconds, like everything else in `performance`. Use this to lose one word instead of re-cutting the clip |
+
+### Motion and transitions (Performance mode only)
+
+Two optional fields that only apply while the viewer is in Performance mode,
+and that `prefers-reduced-motion` switches off:
+
+| field | what it is |
+|---|---|
+| `motion` | Ken-Burns drift on an **image** item: `{ kind: "none" \| "zoom-in" \| "zoom-out" \| "breathe", from: { scale, x, y }, to: { scale, x, y }, duration_sec, easing }`. `x` and `y` are 0..1 of the frame and set one anchor point; `scale` is a multiplier around 1. Without `duration_sec` the crop window is used, else 6 s (zoom) / 8 s (breathe) |
+| `transition` | how this item covers the swap in from the previous one: `{ kind: "cut" \| "crossfade" \| "dip-to-colour" \| "wipe" \| "iris", duration_sec (0.1–3), colour }`. A video on either side always cuts — an iframe cannot crossfade |
+
+Both take grammar-level defaults at the **grammar root**, under
+`metadata.motion_defaults`: `{ "motion": {...}, "transition": {...} }`. An
+item's own value wins over the default.
 
 ### Audio karaoke mode (`words`)
 
@@ -398,6 +512,11 @@ item):
 timestamps aligned onto the item's own text), not hand-written. The field
 names are terse (`w` / `start` / `end`) because there's one object per word.
 
+**`metadata.audio` and `performance.audio_url` are two different things** and
+must not be confused: the narration track owns advancement for the whole
+grammar, while `audio_url` is one spoken line riding the playlist's own clock.
+Giving a film a narration track turns it into karaoke.
+
 ### Field-name conventions inside `performance`
 
 Note the **singular `sec`** (not `seconds`):
@@ -405,8 +524,8 @@ Note the **singular `sec`** (not `seconds`):
 - ✅ `start_sec`, `end_sec`
 - ❌ `start_seconds`, `end_seconds`
 
-This applies inside `performance`, inside `background_audio`, and
-inside `overlays[]`.
+This applies inside `performance`, inside `background_audio`, inside
+`overlays[]`, and inside `mutes[]`.
 
 ### When to use `performance`
 
@@ -417,6 +536,74 @@ inside `overlays[]`.
 
 The `performance` object lives on the **individual item**, not at
 the grammar root. Each clip has its own start/end.
+
+---
+
+## Look and dwell — what a non-video item shows, and for how long
+
+An item with no video still has to look like something and stay on screen for
+some length of time. Those are two small vocabularies in `metadata`, and they
+are easy to mix up with `performance`: **`performance` counts the source
+video's seconds; look and dwell describe the screen.**
+
+### Look — the ground, the ink, the type
+
+A plain card (including a `divider`) and a slide take the same four values
+under different names. The values are identical; only the spelling differs by
+where they sit:
+
+| on a plain card | inside `metadata.slide` | what it is |
+|---|---|---|
+| `card_bg` | `bg` | the ground: a colour, a `linear-gradient(...)` / `radial-gradient(...)`, a bare `https` image address, or `url('https://…') center/cover`. An image must be on the allowed-host list above |
+| `card_dim` | `dim` | 0–0.9 — darken an image ground so the words stay readable |
+| `card_ink` | `ink` | the text colour |
+| `card_font` | `font` | `serif` \| `sans` \| `narrow` \| `mono` \| `gothic` |
+| `card_subtitle` | (a slide line) | one line under the card's title |
+| — | `accent` | the kicker / bars / marker colour |
+| — | `align`, `size` | `start` \| `center`; `normal` \| `large` \| `huge` |
+
+A slide additionally takes the opening-title pieces `stars` (`true`, or 0–1 for
+density: a starfield over the ground), `outline` (hollow letters), `valign:
+"middle"`, and — on a `crawl` — `logo`, `logo_sec` (2–30) and `width` (40–160,
+the text column as a % of the stage).
+
+Colours accept `#hex`, `rgb()`, `hsl()` or a colour name. They are never CSS:
+the viewer owns the type and the palette, and a value it does not recognise is
+refused by the write path rather than injected into a style attribute.
+
+```jsonc
+// a chapter card: a NASA ground, dimmed, with yellow narrow type
+"metadata": {
+  "kind": "divider",
+  "card_bg": "url('https://images-assets.nasa.gov/image/…~medium.jpg') center/cover",
+  "card_dim": 0.65,
+  "card_ink": "#feda4a",
+  "card_font": "narrow",
+  "card_subtitle": "Every story about technology going wrong begins with a mad scientist."
+}
+```
+
+### Dwell — how long it stays
+
+| field | applies to | default |
+|---|---|---|
+| `metadata.slide.duration_sec` | an item with a slide bag — it outranks `card_hold_sec` | a crawl reads at ~0.3 s a word; a text slide ~1.6 s a line; max 600 |
+| `metadata.card_hold_sec` | a card, an image, a divider, a note, an embed | 10 s (30 s for an `embed`) |
+| `metadata.no_pause_after` | any item — `true` skips the beat between items so the cut flows straight on | — |
+
+The precedence is exactly that order: a slide's own `duration_sec`, else
+`card_hold_sec`, else the viewer's default. Two things that are **not** a
+dwell, and are the commonest confusion here:
+
+- `performance.end_sec` ends a **clip**. It is the source video's clock, and a
+  dwell can never shorten or lengthen a video.
+- `metadata.slide.motion_sec` is how much of the dwell the movement takes; what
+  is left holds the end state (black after a fade, say). It is motion inside
+  the dwell, not a second dwell.
+
+One exception worth knowing: an item with `performance.audio_url` holds for at
+least `audio_delay_sec` + the length of the clip, so a card is never cut off
+mid-sentence.
 
 ---
 
