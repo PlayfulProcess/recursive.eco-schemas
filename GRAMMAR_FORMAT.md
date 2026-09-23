@@ -146,6 +146,40 @@ or deeper.
 `composite_of` references must point to IDs that exist in the same
 `items[]` array. Broken references will fail validation.
 
+#### Editions and chapters are composite items
+
+A shorter cut of a playlist or film (an *edition*) is a composite item
+with `category: "edition"`. Its `composite_of` is the cut: which clips,
+in the order they play. `metadata.slug` is the link key,
+`view.html?id=<grammar id>&edition=<slug>` (without a slug, the item id
+works). The first section is the description the picker shows, and
+`metadata.requires: "supporter"` opens it only to the owner's supporters.
+
+```json
+{
+  "id": "ed-five",
+  "name": "With my five-year-old",
+  "category": "edition",
+  "composite_of": ["clip-mantra", "clip-moana", "clip-opening"],
+  "sections": { "About": "The cut I watch with my daughter." },
+  "metadata": { "slug": "five" }
+}
+```
+
+- **Leaves are what plays.** An item without `composite_of` is a clip or a
+  card; a composite (an edition, a chapter, any group) is never played as a
+  card, in the full film or in a cut. A composite listed inside an edition
+  contributes its own leaves.
+- A clip lives once. An edition only references it, so an edit to the clip
+  shows in every cut, and deleting the clip removes it from every
+  `composite_of`.
+- The viewer receives only the cut's clips; section keys beginning with `_`
+  (a curator's notebook) are removed from every cut.
+- Chapters can take the same shape with `category: "chapter"`.
+
+(Sep 20 to 22 2026 a cut was a grammar-level `editions` list plus a
+`metadata.cuts` tag on each item. That shape is retired.)
+
 ---
 
 ## Metadata fields
@@ -606,39 +640,6 @@ least `audio_delay_sec` + the length of the clip, so a card is never cut off
 mid-sentence.
 
 ---
-
-## Named cuts (editions) — shorter versions of the same playlist
-
-A grammar can offer shorter cuts of itself, each at its own link:
-`view.html?id=<grammar id>&edition=<slug>`. A cut is not a copy: it plays the
-same items, with the same crops, overlays and captions, and an edit to an item
-shows in every cut that includes it.
-
-Two small pieces of data make a cut:
-
-```json
-{
-  "editions": [
-    { "slug": "five", "label": "With my five-year-old", "description": "The cut I watch with my daughter." }
-  ],
-  "items": [
-    { "id": "…", "name": "One potato, two potatoes", "metadata": { "kind": "clip", "cuts": ["five", "film"] } }
-  ]
-}
-```
-
-- `editions` on the grammar NAMES the cuts: `slug` (a-z, 0-9, `-`; the URL
-  key, keep it stable), `label` (what the viewer's picker shows),
-  `description` (optional, shown behind an "i"), `requires: "supporter"`
-  (optional, the cut opens only for the owner's active supporters).
-- `metadata.cuts` on an item says which cuts it belongs to. An item can be in
-  several cuts; an item with no `cuts` plays only in the full grammar.
-- Items play in the grammar's own order. The viewer receives only the cut's
-  items — the rest never leave the server — and section keys beginning with
-  `_` are removed from every cut.
-
-(Before Sep 22 2026 a cut listed its item ids in `include` / `exclude`. That
-shape is retired; membership lives on the items.)
 
 ## Reference items & meta-grammars (a grammar of grammars)
 
