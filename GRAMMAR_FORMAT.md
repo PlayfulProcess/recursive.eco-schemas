@@ -607,6 +607,39 @@ mid-sentence.
 
 ---
 
+## Named cuts (editions) — shorter versions of the same playlist
+
+A grammar can offer shorter cuts of itself, each at its own link:
+`view.html?id=<grammar id>&edition=<slug>`. A cut is not a copy: it plays the
+same items, with the same crops, overlays and captions, and an edit to an item
+shows in every cut that includes it.
+
+Two small pieces of data make a cut:
+
+```json
+{
+  "editions": [
+    { "slug": "five", "label": "With my five-year-old", "description": "The cut I watch with my daughter." }
+  ],
+  "items": [
+    { "id": "…", "name": "One potato, two potatoes", "metadata": { "kind": "clip", "cuts": ["five", "film"] } }
+  ]
+}
+```
+
+- `editions` on the grammar NAMES the cuts: `slug` (a-z, 0-9, `-`; the URL
+  key, keep it stable), `label` (what the viewer's picker shows),
+  `description` (optional, shown behind an "i"), `requires: "supporter"`
+  (optional, the cut opens only for the owner's active supporters).
+- `metadata.cuts` on an item says which cuts it belongs to. An item can be in
+  several cuts; an item with no `cuts` plays only in the full grammar.
+- Items play in the grammar's own order. The viewer receives only the cut's
+  items — the rest never leave the server — and section keys beginning with
+  `_` are removed from every cut.
+
+(Before Sep 22 2026 a cut listed its item ids in `include` / `exclude`. That
+shape is retired; membership lives on the items.)
+
 ## Reference items & meta-grammars (a grammar of grammars)
 
 An item does not have to hold its own content — it can **point at another
