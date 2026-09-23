@@ -26,12 +26,14 @@ A grammar is a single JSON object:
   "creator_name": "string",            // OPTIONAL — your name or handle
   "creator_link": "string",            // OPTIONAL — your website or profile
   "is_published": false,               // OPTIONAL — false for drafts
+  "license": "CC-BY-SA-4.0",           // OPTIONAL — the licence of this grammar's CONTENT, an SPDX-style id; absent = CC-BY-SA-4.0 (see "Licences" below)
   "items": [ /* UnifiedItem objects */ ]   // REQUIRED — see "UnifiedItem" below
 
   // Optional library-placement fields (see CLAUDE.md "Monad Fields"):
   // "roots": [...], "shelves": [...], "lineages": [...], "worldview": "...",
 
-  // Optional commons metadata:
+  // Optional commons metadata — "license" here is a free-text CONTENT licence note (older
+  // grammars; sources and exceptions), "attribution" credits the sources:
   // "_grammar_commons": { "schema_version": "1.0", "license": "...", "attribution": [...] }
 
   // Optional astrology customization (see "Category & section roles" below):
@@ -909,6 +911,25 @@ print("OK")
 
 If you write a more thorough validator and submit it as
 `scripts/validate-grammar.py`, others will thank you.
+
+---
+
+## Licences
+
+Two different things, two different licences:
+
+- **The format** — this document, and the validators and scripts in this repo — is
+  **Apache-2.0** (see `LICENSE`). Anyone may implement it, in open or closed software.
+- **A grammar** written in the format is **content**. Its top-level `license` field is the
+  licence the author grants on that content: an SPDX-style id such as `CC-BY-SA-4.0`,
+  `CC-BY-4.0`, `CC0-1.0`, `CC-BY-NC-4.0` or `All-rights-reserved`. **Absent means
+  `CC-BY-SA-4.0`**, the recursive.eco default. Older grammars state it in
+  `_grammar_commons.license` instead.
+- `attribution.license` and each illustration's `license` record the licence of a **source**
+  (the grammar it was copied from, a public-domain scan). They are never changed by the
+  grammar's own licence: public-domain material stays public domain.
+- The names "recursive.eco" and "Recursive" and the spiral logo are not licensed by either;
+  see `TRADEMARKS.md`.
 
 ---
 

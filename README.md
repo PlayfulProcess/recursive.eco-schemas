@@ -449,9 +449,22 @@ Before submitting:
 
 ## License
 
-**CC-BY-SA-4.0** — Share alike with attribution.
+This repository holds code and content, under different licences:
 
-All grammars in this repository are licensed under [Creative Commons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+| What | Licence |
+|------|---------|
+| **The grammar format and the code** — `GRAMMAR_FORMAT.md` (the format spec), `scripts/` (including the validators `scripts/validate-grammar.mjs` and `scripts/validate.py`), `previews/*.py` and `*.html`, `plan/*.js`, the root `index.html` and `package.json` | **Apache-2.0** — see [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE) |
+| **Grammar content** — `grammars/`, `schemas/` (example and source grammars), `custom/`, `sequences/`, `creators/`, `astrology/`, `iching/`, `tarot/`, `previews/*.json`, `writing/`, `plan/*.md` | **CC-BY-SA-4.0** — see [`LICENSE-CONTENT.txt`](LICENSE-CONTENT.txt), unless a grammar's own `license` field says otherwise |
+| **Source texts** — `seeds/`, `compost/`, `sources/` | Downloaded or quoted source material. Each keeps its own status (mostly public domain); none of it is relicensed here |
+| **`mcp-server/`** | Not covered by either licence (no licence granted) |
+| **The names** "recursive.eco" and "Recursive", and the spiral logo | Not licensed — see [`TRADEMARKS.md`](TRADEMARKS.md) |
+
+So the format is open for anyone to implement, including in closed software, while a grammar
+written in it is content, and its `license` field is the licence of that content (default
+**CC-BY-SA-4.0** — share alike with attribution). Images keep the status recorded for each:
+public-domain images stay public domain.
+
+All grammars in this repository are licensed under [Creative Commons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/) unless the grammar says otherwise.
 
 ### What this means for different content types
 
@@ -476,4 +489,6 @@ Music grammars are tools for personal study, translation practice, and meaning-m
 
 ### The code
 
-The recursive.eco platform code is private and unlicensed. This repository contains only grammar content (JSON data), which is CC-BY-SA-4.0.
+The grammar format and the scripts in this repository are Apache-2.0 (above). The recursive.eco
+platform itself — Flow (Create), the MCP and the hosted API — is private and not open source.
+The viewers are planned for release under Apache-2.0 once they are extracted.

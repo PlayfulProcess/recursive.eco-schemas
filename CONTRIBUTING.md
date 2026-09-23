@@ -123,4 +123,4 @@ Open an issue or reach out to the community. We're here to help!
 
 ## License
 
-By contributing, you agree to share your contributions under the same license as the repository, making them part of the commons.
+By contributing, you agree to share your contributions under the licence that covers what you changed, making them part of the commons: code and the format spec under Apache-2.0, grammar content under CC-BY-SA-4.0 (or the licence the grammar declares). The README's License section says which folders are which.
