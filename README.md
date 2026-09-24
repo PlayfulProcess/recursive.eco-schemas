@@ -4,6 +4,18 @@ A commons for symbolic systems — tarot decks, I Ching interpretations, astrolo
 
 These grammars work with [recursive.eco](https://recursive.eco). Anyone can create, fork, and share them.
 
+## Work in progress
+
+This is a work in progress. I published it mainly so the pages could be served, and it isn't
+finished. Contributors are welcome: open an issue or send a pull request, however small.
+
+The idea behind [recursive.eco](https://recursive.eco) is a hypothesis, not a claim: that we may
+need to learn together how to create the conditions for recursive eco-improvement, rather than
+race toward recursive self-improvement.
+
+If your work appears here and you'd like it featured differently, removed, or given a shelf of
+your own, please write to pp@playfulprocess.com.
+
 ## Printable Alice in Wonderland Chapter Books
 
 Twelve illustrated chapter books of Lewis Carroll's complete original text in ALL CAPS, with 105 public domain illustrations from 10+ artists (1864-1933). Print at home, fold in half, read to your kids.
