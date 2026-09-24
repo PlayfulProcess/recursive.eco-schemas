@@ -453,10 +453,9 @@ This repository holds code and content, under different licences:
 
 | What | Licence |
 |------|---------|
-| **The grammar format and the code** — `GRAMMAR_FORMAT.md` (the format spec), `scripts/` (including the validators `scripts/validate-grammar.mjs` and `scripts/validate.py`), `previews/*.py` and `*.html`, `plan/*.js`, the root `index.html` and `package.json` | **Apache-2.0** — see [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE) |
+| **The grammar format and the code** — `GRAMMAR_FORMAT.md` (the format spec), `scripts/` (including the validators `scripts/validate-grammar.mjs` and `scripts/validate.py`), `previews/*.py` and `*.html`, `plan/*.js`, `mcp-server/` (the MCP server and its worker), the root `index.html` and `package.json` | **Apache-2.0** — see [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE) |
 | **Grammar content** — `grammars/`, `schemas/` (example and source grammars), `custom/`, `sequences/`, `creators/`, `astrology/`, `iching/`, `tarot/`, `previews/*.json`, `writing/`, `plan/*.md` | **CC-BY-SA-4.0** — see [`LICENSE-CONTENT.txt`](LICENSE-CONTENT.txt), unless a grammar's own `license` field says otherwise |
 | **Source texts** — `seeds/`, `compost/`, `sources/` | Downloaded or quoted source material. Each keeps its own status (mostly public domain); none of it is relicensed here |
-| **`mcp-server/`** | Not covered by either licence (no licence granted) |
 | **The names** "recursive.eco" and "Recursive", and the spiral logo | Not licensed — see [`TRADEMARKS.md`](TRADEMARKS.md) |
 
 So the format is open for anyone to implement, including in closed software, while a grammar
@@ -489,6 +488,7 @@ Music grammars are tools for personal study, translation practice, and meaning-m
 
 ### The code
 
-The grammar format and the scripts in this repository are Apache-2.0 (above). The recursive.eco
-platform itself — Flow (Create), the MCP and the hosted API — is private and not open source.
+The grammar format, the scripts and `mcp-server/` in this repository are Apache-2.0 (above). The
+recursive.eco platform itself — Flow (Create), its hosted MCP and the hosted API — is private and
+not open source.
 The viewers are planned for release under Apache-2.0 once they are extracted.
