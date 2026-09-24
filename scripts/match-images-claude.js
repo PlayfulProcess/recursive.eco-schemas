@@ -46,7 +46,7 @@ async function describeImage(filePath) {
     console.warn(`  SKIP (${(data.length / 1024 / 1024).toFixed(1)}MB > 4MB limit): ${path.basename(filePath)}`);
     return {
       file: path.basename(filePath),
-      path: filePath,
+      path: path.relative(process.cwd(), filePath).split(path.sep).join("/"),
       description: '{ "scene": "Image too large to process", "style": "unknown", "visible_text": null }',
       skipped: true,
     };
@@ -80,7 +80,7 @@ Reply ONLY as JSON (no markdown fences):
 
   return {
     file: path.basename(filePath),
-    path: filePath,
+    path: path.relative(process.cwd(), filePath).split(path.sep).join("/"),
     description: resp.content[0].text,
   };
 }

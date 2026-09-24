@@ -9,9 +9,15 @@
  */
 
 import { readFileSync, writeFileSync } from 'fs';
+import { fileURLToPath } from 'url';
 
-const TRANSCRIPT_PATH = 'C:/Users/USER/.claude/projects/C--Users-USER-OneDrive-Documentos-GitHub/f862eca8-50ed-40fd-8fa5-f70096e8c5be.jsonl';
-const ASSIGNMENTS_PATH = 'C:/Users/USER/OneDrive/Documentos/GitHub/recursive.eco-schemas/grammars/alice-5-minute-stories/illustration-assignments.json';
+// The Claude Code transcript that holds the CSV (session f862eca8-50ed-40fd-8fa5-f70096e8c5be.jsonl).
+const TRANSCRIPT_PATH = process.env.TRANSCRIPT_PATH;
+if (!TRANSCRIPT_PATH) {
+  console.error('Set TRANSCRIPT_PATH to the transcript .jsonl file.');
+  process.exit(1);
+}
+const ASSIGNMENTS_PATH = fileURLToPath(new URL('../grammars/alice-5-minute-stories/illustration-assignments.json', import.meta.url));
 const TARGET_LINE = 11760; // 1-indexed
 
 // --- Step 1: Read the specific line from the JSONL ---

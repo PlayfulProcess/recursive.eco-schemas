@@ -6,7 +6,8 @@ from botocore.config import Config
 
 ROOT = Path(__file__).resolve().parent.parent
 GRAMMAR_PATH = ROOT / 'grammars' / 'walt-whitman' / 'grammar.json'
-ENV_PATH = Path(r'C:\Users\USER\OneDrive\Documentos\GitHub\recursive-kids-stories-club\.env.local')
+# R2 credentials: set R2_ENV_FILE, or keep recursive-kids-stories-club next to this repo.
+ENV_PATH = Path(os.environ.get('R2_ENV_FILE') or ROOT.parent / 'recursive-kids-stories-club' / '.env.local')
 UA = 'recursive.eco-schemas/1.0 (+https://recursive.eco)'
 
 TARGETS = [

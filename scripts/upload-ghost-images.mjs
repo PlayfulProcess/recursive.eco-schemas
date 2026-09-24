@@ -17,9 +17,10 @@ import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
 import { readFileSync, writeFileSync, readdirSync, statSync } from 'fs';
 import { join, basename, extname } from 'path';
 import { config } from 'dotenv';
+import { fileURLToPath } from 'url';
 
-// Load env from recursive-kids-stories-club (has R2 vars)
-config({ path: 'C:/Users/USER/OneDrive/Documentos/GitHub/recursive-kids-stories-club/.env.local' });
+// Load env from recursive-kids-stories-club (has R2 vars), a sibling of this repo; R2_ENV_FILE overrides.
+config({ path: process.env.R2_ENV_FILE || fileURLToPath(new URL('../../recursive-kids-stories-club/.env.local', import.meta.url)) });
 
 const ACCOUNT_ID = process.env.CLOUDFLARE_ACCOUNT_ID;
 const ACCESS_KEY = process.env.R2_ACCESS_KEY_ID;
@@ -38,7 +39,8 @@ const s3 = new S3Client({
   credentials: { accessKeyId: ACCESS_KEY, secretAccessKey: SECRET_KEY },
 });
 
-const GHOST_IMAGES_DIR = 'C:/Users/USER/OneDrive/Documentos/GitHub/playfulprocess-1_1774599454/content/images';
+// Ghost backup export, unpacked next to this repo; GHOST_IMAGES_DIR overrides.
+const GHOST_IMAGES_DIR = process.env.GHOST_IMAGES_DIR || fileURLToPath(new URL('../../playfulprocess-1_1774599454/content/images', import.meta.url));
 const MIME_TYPES = {
   '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
   '.png': 'image/png', '.webp': 'image/webp',
