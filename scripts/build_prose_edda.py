@@ -11,6 +11,7 @@ Afterword, and selections from Skaldskaparmal.
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(SCRIPT_DIR)
@@ -267,7 +268,6 @@ def build_grammar():
             "name": "Foreword: The Euhemeristic Prologue",
             "sort_order": sort_order,
             "category": "foreword",
-            "level": 1,
             "sections": {
                 "Passage": fw_text
             },
@@ -300,7 +300,6 @@ def build_grammar():
             "name": f"Gylfe {ch['num']}: {ch['title']}",
             "sort_order": sort_order,
             "category": "gylfe",
-            "level": 1,
             "sections": {
                 "Passage": ch['text']
             },
@@ -319,7 +318,6 @@ def build_grammar():
             "name": "Afterword to the Fooling of Gylfe",
             "sort_order": sort_order,
             "category": "gylfe",
-            "level": 1,
             "sections": {
                 "Passage": aw_text
             },
@@ -353,7 +351,6 @@ def build_grammar():
             "name": f"Brage {ch['num']}: {ch['title']}",
             "sort_order": sort_order,
             "category": "brage",
-            "level": 1,
             "sections": {
                 "Passage": ch['text']
             },
@@ -373,7 +370,6 @@ def build_grammar():
             "name": "Afterword to Brage's Talk and Poetical Diction",
             "sort_order": sort_order,
             "category": "brage",
-            "level": 1,
             "sections": {
                 "Passage": baw_text
             },
@@ -390,14 +386,13 @@ def build_grammar():
         "name": "The Fooling of Gylfe (Gylfaginning)",
         "sort_order": sort_order,
         "category": "section",
-        "level": 2,
         "sections": {
             "About": "The Fooling of Gylfe (Gylfaginning) is the core mythological section of the Prose Edda. King Gylfe of Sweden, disguised as Ganglere, travels to Asgard to question the gods. Through dialogue with the mysterious figures High, Just-as-High, and Third, he learns the entire Norse cosmogony: the creation from Ymer's body, the world-tree Ygdrasil, the gods and goddesses, Thor's adventures among the giants, the death of Balder, and the final doom of Ragnarok followed by regeneration.",
             "For Readers": "This is the most complete and systematic account of Norse mythology that survives from the medieval period. Snorri wrote it as a handbook for poets, but it became the primary source for almost everything we know about the Norse gods. Read it as one continuous dialogue — Gylfe asks, the gods answer, and a whole cosmos unfolds."
         },
         "keywords": ["norse", "creation", "ragnarok", "odin", "thor", "balder"],
         "metadata": {},
-        "composite_of": gylfe_ids,
+        "parts": gylfe_ids,
         "relationship_type": "emergence"
     }
     items.append(l2_gylfe)
@@ -409,14 +404,13 @@ def build_grammar():
         "name": "Brage's Talk (Bragaraedur)",
         "sort_order": sort_order,
         "category": "section",
-        "level": 2,
         "sections": {
             "About": "Brage's Talk is set at a feast in Asgard where the god Brage tells the sea-giant Aeger the stories behind the poetic kennings. It includes the myth of Idun's apples of immortality, the tale of how Njord won Skade for his wife by making her laugh, and the origin of the mead of poetry — the sacred drink made from the blood of the wise Kvaser, stolen by Odin from the giants.",
             "For Readers": "Brage's Talk reveals how Norse myths were embedded in poetic language. Every kenning (poetic circumlocution) carried a story. When a skald called gold 'Sif's hair' or poetry 'Kvaser's blood,' the audience was expected to know the myth. This section restores those connections."
         },
         "keywords": ["brage", "idun", "poetry", "kenning", "mead", "skaldic"],
         "metadata": {},
-        "composite_of": brage_ids,
+        "parts": brage_ids,
         "relationship_type": "emergence"
     }
     items.append(l2_brage)
@@ -429,14 +423,13 @@ def build_grammar():
         "name": "Creation and the Cosmic Order",
         "sort_order": sort_order,
         "category": "theme",
-        "level": 2,
         "sections": {
             "About": "The Norse creation begins in the void of Ginungagap, between the ice of Niflheim and the fire of Muspelheim. From the melting ice, the giant Ymer is born; from his slain body the gods create the world. The world-tree Ygdrasil holds the cosmos together, with its roots reaching into the realms of death, frost-giants, and gods. Asgard gleams above; Midgard shelters humanity; and beneath it all, the Norns weave fate.",
             "For Readers": "The Norse creation myth is one of the most vivid in world mythology — a cosmos built from a murdered giant's flesh, skull, and blood. Notice how violence and beauty are intertwined: destruction creates, and creation contains the seeds of its own destruction at Ragnarok."
         },
         "keywords": ["creation", "ymer", "ginungagap", "ygdrasil", "asgard", "midgard"],
         "metadata": {},
-        "composite_of": creation_ids,
+        "parts": creation_ids,
         "relationship_type": "emergence"
     }
     items.append(l2_creation)
@@ -449,14 +442,13 @@ def build_grammar():
         "name": "The Gods, Goddesses, and Valhal",
         "sort_order": sort_order,
         "category": "theme",
-        "level": 2,
         "sections": {
             "About": "The Asas (gods) and Asynjes (goddesses) of Norse mythology: Odin the Allfather, Thor the Thunderer, Loke the Trickster, Balder the Beautiful, Frey and Freyja, Heimdal the Watchman, and many others. Also the monstrous offspring of Loke — the Fenris-wolf, the Midgard-serpent, and Hel, goddess of death. And Valhal, where the fallen warriors feast and fight until Ragnarok.",
             "For Readers": "The Norse gods are mortal — they age, they fear, and they will die at Ragnarok. This gives the mythology a tragic dignity found in few other traditions. Loke is especially complex: neither fully god nor fully enemy, he is the catalyst whose actions drive the entire mythic narrative toward its doom."
         },
         "keywords": ["odin", "thor", "loke", "balder", "valhal", "fenris", "hel"],
         "metadata": {},
-        "composite_of": gods_ids,
+        "parts": gods_ids,
         "relationship_type": "emergence"
     }
     items.append(l2_gods)
@@ -469,14 +461,13 @@ def build_grammar():
         "name": "Doom and Renewal: From Balder's Death to Ragnarok",
         "sort_order": sort_order,
         "category": "theme",
-        "level": 2,
         "sections": {
             "About": "The death of Balder — killed by a mistletoe dart guided by Loke's treachery — sets in motion the end of the world. Ragnarok brings the final battle: the Fenris-wolf swallows Odin, Thor slays the Midgard-serpent but falls to its venom, fire consumes the world. Yet from the ashes, a green earth rises, Balder returns, and a new age begins.",
             "For Readers": "Ragnarok is not mere destruction but a cosmic cycle of death and rebirth. The Norse faced the end with courage rather than despair — knowing the gods would fall but fighting anyway. This unflinching acceptance of mortality, paired with hope for renewal, is the heart of Norse wisdom."
         },
         "keywords": ["ragnarok", "balder", "death", "renewal", "doom", "regeneration"],
         "metadata": {},
-        "composite_of": doom_ids,
+        "parts": doom_ids,
         "relationship_type": "emergence"
     }
     items.append(l2_doom)
@@ -489,14 +480,13 @@ def build_grammar():
         "name": "The Prose Edda of Snorri Sturluson",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "sections": {
             "About": "The Prose Edda (also called the Younger Edda or Snorre's Edda) was written by the Icelandic scholar and chieftain Snorri Sturluson around 1220 CE. It is the most complete and systematic account of Norse mythology that survives from the medieval period. Originally composed as a handbook for poets — explaining the mythological allusions embedded in skaldic verse — it became the primary source for nearly everything we know about Odin, Thor, Loke, Ragnarok, and the Norse cosmos.",
             "For Readers": "Snorri wrote as a Christian looking back at the old faith with a mixture of scholarly distance and genuine admiration. His framing device — a Swedish king questioning disguised gods — gives the myths a quality of remembered wisdom: stories told about gods who were already gone. This makes the Prose Edda both a mythology and an elegy."
         },
         "keywords": ["norse", "edda", "snorri", "mythology", "odin", "thor", "ragnarok", "creation"],
         "metadata": {},
-        "composite_of": all_l2_ids,
+        "parts": all_l2_ids,
         "relationship_type": "emergence"
     }
     items.append(meta_item)
@@ -519,16 +509,16 @@ def build_grammar():
         "shelves": ["earth"],
         "lineages": ["Shrei"],
         "worldview": "animist",
-        "items": items
+        "nodes": items
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"Generated {OUTPUT_FILE}")
     print(f"  L1 items: {l1}")
     print(f"    Foreword: 1")

@@ -12,6 +12,7 @@ Structure: 12 chapters of autobiography
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SEED = os.path.join(SCRIPT_DIR, "..", "seeds", "olaudah-equiano.txt")
@@ -300,7 +301,6 @@ def build_grammar():
             item = {
                 "id": para_id,
                 "name": name,
-                "level": 1,
                 "category": slug,
                 "sort_order": sort_order,
                 "sections": {"Passage": para},
@@ -321,12 +321,11 @@ def build_grammar():
         items.append({
             "id": f"chapter-{slug}",
             "name": ch["title"],
-            "level": 2,
             "category": "chapter-group",
             "sort_order": sort_order,
             "sections": {"About": ch["summary"]},
             "keywords": [],
-            "composite_of": ids,
+            "parts": ids,
             "relationship_type": "emergence",
             "metadata": {},
         })
@@ -341,7 +340,6 @@ def build_grammar():
         items.append({
             "id": tg["id"],
             "name": tg["name"],
-            "level": 2,
             "category": "thematic-group",
             "sort_order": sort_order,
             "sections": {
@@ -349,7 +347,7 @@ def build_grammar():
                 "For Readers": tg["for_readers"],
             },
             "keywords": [],
-            "composite_of": composite_ids,
+            "parts": composite_ids,
             "relationship_type": "emergence",
             "metadata": {},
         })
@@ -362,7 +360,6 @@ def build_grammar():
     items.append({
         "id": "meta-arc-of-testimony",
         "name": "The Arc of Testimony",
-        "level": 3,
         "category": "meta-category",
         "sort_order": sort_order,
         "sections": {
@@ -370,7 +367,7 @@ def build_grammar():
             "For Readers": "Read in order to experience the full force of Equiano's argument. The Igbo chapters establish what was lost; the Middle Passage reveals the horror; the freedom chapters show what human agency can achieve even within an inhuman system; the final chapter reveals the purpose of the entire testimony.",
         },
         "keywords": ["autobiography", "testimony", "atlantic-world"],
-        "composite_of": chapter_l2_ids,
+        "parts": chapter_l2_ids,
         "relationship_type": "emergence",
         "metadata": {},
     })
@@ -379,7 +376,6 @@ def build_grammar():
     items.append({
         "id": "meta-themes-of-the-narrative",
         "name": "Themes of the Narrative",
-        "level": 3,
         "category": "meta-category",
         "sort_order": sort_order,
         "sections": {
@@ -387,7 +383,7 @@ def build_grammar():
             "For Readers": "Use these thematic groupings to explore the Narrative by subject. The Africa theme recovers a lost world. The slavery theme confronts the reader with documented horror. The freedom theme celebrates human agency. The faith theme shows how Equiano turned Christianity against the Christians who enslaved him.",
         },
         "keywords": ["themes", "testimony", "atlantic-slave-trade"],
-        "composite_of": thematic_l2_ids,
+        "parts": thematic_l2_ids,
         "relationship_type": "emergence",
         "metadata": {},
     })
@@ -414,16 +410,16 @@ def build_grammar():
         "shelves": ["resilience"],
         "lineages": ["Akomolafe", "Andreotti"],
         "worldview": "testimonial",
-        "items": items,
+        "nodes": items,
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"Generated {len(items)} items: {l1} L1 + {l2} L2 + {l3} L3")
     print(f"Output: {OUTPUT}")
 

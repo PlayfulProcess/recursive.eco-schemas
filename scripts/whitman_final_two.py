@@ -38,7 +38,7 @@ def main():
     public = os.environ['R2_PUBLIC_URL'].rstrip('/')
 
     g = json.loads(GRAMMAR_PATH.read_text(encoding='utf-8'))
-    items_by_id = {it['id']: it for it in g['items']}
+    items_by_id = {it['id']: it for it in g['nodes']}
 
     for iid, url, source_note, scene in TARGETS:
         print(f'--- {iid}')

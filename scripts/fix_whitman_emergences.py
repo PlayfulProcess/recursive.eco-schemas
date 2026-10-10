@@ -3,11 +3,11 @@ Convert Whitman grammar hierarchy to use the schema's standard emergence
 pattern (per recursive.eco-schemas README "Emergence Levels" section):
 
 - Level 1: base items (poems, biographical moments)
-- Level 2: emergent groupings with composite_of = [list of L1 ids]
+- Level 2: emergent groupings with parts = [list of L1 ids]
 
 The previous version used parent_id on L1 items pointing UP at L2 phases.
 This is backwards from the schema's pattern. The correct pattern: L2
-phase-emergences have composite_of pointing DOWN at L1 poems/moments.
+phase-emergences have parts pointing DOWN at L1 poems/moments.
 
 Also:
 - Remove the non-standard `parent_id` field I added earlier
@@ -16,6 +16,7 @@ Also:
 """
 import json
 import os
+from grammar_depth import node_depth
 
 PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'grammars', 'walt-whitman', 'grammar.json')
 PATH = os.path.abspath(PATH)
@@ -23,7 +24,7 @@ PATH = os.path.abspath(PATH)
 with open(PATH, encoding='utf-8') as f:
     g = json.load(f)
 
-items = g['items']
+items = g['nodes']
 
 # Add a biographical L2 emergence if missing (build script doesn't include it)
 bio_id = 'biographical'
@@ -32,7 +33,6 @@ if not any(it['id'] == bio_id for it in items):
         'id': bio_id,
         'name': 'Biographical Anchors',
         'sort_order': 49,
-        'level': 2,
         'category': 'phase',
         'sections': {
             'Phase': 'Life Moments',
@@ -62,7 +62,7 @@ if not any(it['id'] == bio_id for it in items):
 # Group L1 items by their category (phase-X or biographical)
 children_by_parent = {}
 for it in items:
-    if it.get('level') == 1:
+    if node_depth(it, items) == 1:
         cat = it.get('category', '')
         children_by_parent.setdefault(cat, []).append(it['id'])
 
@@ -74,18 +74,18 @@ for it in items:
         removed_parent_id += 1
 print(f'Removed non-standard parent_id from {removed_parent_id} items')
 
-# Add composite_of to L2 phase emergences
+# Add parts to L2 phase emergences
 added_composite = 0
 for it in items:
-    if it.get('level') == 2:
+    if node_depth(it, items) == 2:
         iid = it['id']
         children = children_by_parent.get(iid, [])
         if children:
-            it['composite_of'] = children
+            it['parts'] = children
             added_composite += 1
-            print(f'L2 {iid}: composite_of = [{len(children)} items]')
+            print(f'L2 {iid}: parts = [{len(children)} items]')
 
-print(f'Added composite_of to {added_composite} L2 emergences')
+print(f'Added parts to {added_composite} L2 emergences')
 
 # ---------------------------------------------------------------------------
 # Image URLs from whitman-illustrations-research.md
@@ -160,12 +160,12 @@ with open(PATH, 'w', encoding='utf-8') as f:
 # Verify
 with open(PATH, encoding='utf-8') as f:
     check = json.load(f)
-l2 = [it for it in check['items'] if it.get('level') == 2]
-l1 = [it for it in check['items'] if it.get('level') == 1]
-l2_with_composite = [it for it in l2 if it.get('composite_of')]
-with_images = [it for it in check['items'] if it.get('image_url')]
+l2 = [it for it in check['nodes'] if node_depth(it, check['nodes']) == 2]
+l1 = [it for it in check['nodes'] if node_depth(it, check['nodes']) == 1]
+l2_with_composite = [it for it in l2 if it.get('parts')]
+with_images = [it for it in check['nodes'] if it.get('image_url')]
 print(f'\nFinal structure:')
-print(f'  L2 emergences: {len(l2)}  | with composite_of: {len(l2_with_composite)}')
+print(f'  L2 emergences: {len(l2)}  | with parts: {len(l2_with_composite)}')
 print(f'  L1 base items: {len(l1)}')
 print(f'  Items with image_url: {len(with_images)}')
 print(f'  Cover: {bool(g.get("cover_image_url"))}')

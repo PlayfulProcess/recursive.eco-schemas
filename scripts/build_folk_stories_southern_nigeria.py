@@ -405,7 +405,7 @@ L3_DEFS = [
         "name": "Themes and Teachings",
         "category": "meta",
         "about": "The thematic currents of Southern Nigerian folk tales: origin myths that explain the natural world, the trickster wisdom of the tortoise, the dangerous intersection of beauty and marriage, the power of the spirit world, and the social dynamics of justice and authority. Together they reveal a rich, complex worldview where every creature, every natural phenomenon, and every social custom has its story.",
-        "composite_of": [
+        "parts": [
             "theme-why-the-world-is-so", "theme-tortoise-wisdom",
             "theme-beauty-and-danger", "theme-spirit-world",
             "theme-justice-and-power"
@@ -417,7 +417,7 @@ L3_DEFS = [
         "name": "Character Types",
         "category": "meta",
         "about": "The cast of characters in Southern Nigerian folklore: clever tortoises, powerful but outwitted beasts, birds with their own origin mysteries, and humans caught between the forces of beauty, power, and the spirit world. These character types reflect the social and natural world of the Cross River region.",
-        "composite_of": [
+        "parts": [
             "characters-birds", "characters-big-beasts"
         ],
         "keywords": ["characters", "archetypes", "animals"]
@@ -573,7 +573,6 @@ def build_l1_items(stories):
             "id": sdef["id"],
             "name": sdef["name"],
             "sort_order": sort_order,
-            "level": 1,
             "category": sdef["category"],
             "sections": sections,
             "keywords": sdef["keywords"],
@@ -594,14 +593,13 @@ def build_l2_items(l1_items):
             "id": group["id"],
             "name": group["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": group["category"],
             "sections": {
                 "About": group["about"],
                 "For Readers": group["for_readers"]
             },
             "keywords": group["keywords"],
-            "composite_of": group["member_ids"],
+            "parts": group["member_ids"],
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -612,14 +610,13 @@ def build_l2_items(l1_items):
             "id": group["id"],
             "name": group["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": group["category"],
             "sections": {
                 "About": group["about"],
                 "For Readers": group["for_readers"]
             },
             "keywords": group["keywords"],
-            "composite_of": group["member_ids"],
+            "parts": group["member_ids"],
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -637,11 +634,10 @@ def build_l3_items(start_sort_order):
             "id": l3["id"],
             "name": l3["name"],
             "sort_order": sort_order,
-            "level": 3,
             "category": l3["category"],
             "sections": {"About": l3["about"]},
             "keywords": l3["keywords"],
-            "composite_of": l3["composite_of"],
+            "parts": l3["parts"],
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -689,7 +685,7 @@ def build_grammar(l1_items, l2_items, l3_items):
         "lineages": ["Akomolafe", "Andreotti"],
         "worldview": "animist",
         "cover_image_url": "",
-        "items": l1_items + l2_items + l3_items
+        "nodes": l1_items + l2_items + l3_items
     }
     return grammar
 

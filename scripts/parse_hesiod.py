@@ -4,6 +4,7 @@ Parse Hesiod, the Homeric Hymns, and Homerica (Gutenberg #348).
 Major works: Works and Days, Theogony, Shield of Heracles + 33 Homeric Hymns.
 """
 import json, re, os
+from grammar_depth import node_depth
 
 with open("seeds/hesiod-homeric-hymns.txt", encoding="utf-8") as f:
     text = f.read()
@@ -169,7 +170,6 @@ for idx, (start_ln, heading, sid, name) in enumerate(section_positions):
         "name": name,
         "sort_order": sort_order,
         "category": cat,
-        "level": 1,
         "sections": {"Text": excerpt},
         "keywords": ["hesiod", "homeric-hymn", "greek"] + ([sid.replace("hymn-", "")] if sid.startswith("hymn-") else []),
         "metadata": metadata
@@ -205,13 +205,12 @@ for grp in groups:
         "name": grp["name"],
         "sort_order": sort_order,
         "category": "groups",
-        "level": 2,
         "sections": {
             "About": grp["about"],
             "For Readers": "Read these texts aloud if you can — they were composed for oral performance. Listen for the epithets (rosy-fingered, wine-dark, cloud-gathering) that are the signature of the oral tradition. Each epithet is a small theology: it tells you what the Greeks noticed about their gods."
         },
         "keywords": ["hesiod", "homeric-hymn", "greek"],
-        "composite_of": valid_refs,
+        "parts": valid_refs,
         "relationship_type": "emergence",
         "metadata": {}
     })
@@ -223,13 +222,12 @@ items.append({
     "name": "Greek Sacred Poetry: Where the Gods Speak",
     "sort_order": sort_order,
     "category": "meta",
-    "level": 3,
     "sections": {
         "About": "Hesiod and the Homeric Hymns represent the oldest surviving Greek sacred poetry — the texts that told the Greeks who their gods were, how the world was made, and how to live justly in it. The Theogony is a creation myth as ambitious as Genesis. Works and Days is a handbook for the moral life. The Homeric Hymns are the Greek scripture — direct addresses to the divine powers, telling their stories and praising their attributes. Together, these texts are the foundation on which all later Greek mythology, philosophy, and tragedy was built. When Sophocles wrote Oedipus, when Plato wrote the Republic, when Jung read Greek myth — these are the texts they knew.",
         "Contemplation": "These poets addressed the gods directly — 'Sing, Muse,' 'I begin to sing of Demeter' — as if the gods were listening. What if they were? And what if the act of addressing something sacred, whether or not it answers, is itself the point?"
     },
     "keywords": ["hesiod", "homer", "sacred-poetry", "greek", "foundation"],
-    "composite_of": [g["id"] for g in groups],
+    "parts": [g["id"] for g in groups],
     "relationship_type": "emergence",
     "metadata": {}
 })
@@ -254,7 +252,7 @@ grammar = {
     "shelves": ["wisdom"],
     "lineages": ["Shrei"],
     "worldview": "devotional",
-    "items": items
+    "nodes": items
 }
 
 os.makedirs("grammars/hesiod-homeric-hymns", exist_ok=True)
@@ -263,7 +261,7 @@ with open("grammars/hesiod-homeric-hymns/grammar.json", "w") as f:
 
 ids = [i["id"] for i in items]
 dupes = [x for x in ids if ids.count(x) > 1]
-bad_refs = [(i["id"], r) for i in items for r in i.get("composite_of", []) if r not in ids]
-print(f"Items: {len(items)}, L1: {sum(1 for i in items if i['level']==1)}, L2: {sum(1 for i in items if i['level']==2)}, L3: {sum(1 for i in items if i['level']==3)}")
+bad_refs = [(i["id"], r) for i in items for r in i.get("parts", []) if r not in ids]
+print(f"Items: {len(items)}, L1: {sum(1 for i in items if node_depth(i, items)==1)}, L2: {sum(1 for i in items if node_depth(i, items)==2)}, L3: {sum(1 for i in items if node_depth(i, items)==3)}")
 print(f"Dupes: {dupes}, Bad refs: {bad_refs}")
 print(f"Sort OK: {[i['sort_order'] for i in items] == list(range(1, len(items)+1))}")

@@ -89,13 +89,12 @@
     },
     "alice_character_description": null
   },
-  "items": [
+  "nodes": [
     {
       "id": "sword-merlin-born-scene-01",
       "name": "Ep1 Scene 1: The Boy Who Was Born Backwards",
       "sort_order": 1,
       "category": "the-sword",
-      "level": 1,
       "sections": {
         "Narration": "They said his father was a DEMON — dark,\na spirit who crept in without a MARK.\nHis mother was a nun (or was she not?) —\neither way, young MERLIN was the strangest tot.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -149,7 +148,6 @@
       "name": "Ep1 Scene 2: The Boy Who Was Born Backwards",
       "sort_order": 2,
       "category": "the-sword",
-      "level": 1,
       "sections": {
         "Narration": "He could remember BACKWARDS — not the past\nbut futures, clear as glass, arriving FAST.\n\"That tower will fall,\" he told the king, age FIVE.\n\"Two dragons underneath are still ALIVE.\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -202,7 +200,6 @@
       "name": "Ep1 Scene 3: The Boy Who Was Born Backwards",
       "sort_order": 3,
       "category": "the-sword",
-      "level": 1,
       "sections": {
         "Narration": "They dug. They FOUND them — one red, one white,\ntwisting underground in endless FIGHT.\n\"The red is BRITAIN. White is what invades.\nThis land is DREAMING, sir — in dragon SHADES.\"\nA child who sees tomorrow like a BOOK,\nwhose father was the dark, whose mother SHOOK\nwith prayer — MERLIN lived between the worlds\nlike smoke between two FIRES, like wind through furled\nsails. Half human, half something ELSE.\nThe greatest shaman Britain ever FELT.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -255,8 +252,7 @@
       "name": "Episode 1: The Boy Who Was Born Backwards",
       "sort_order": 4,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "sword-merlin-born-scene-01",
         "sword-merlin-born-scene-02",
         "sword-merlin-born-scene-03"
@@ -295,7 +291,6 @@
       "name": "Ep2 Scene 1: The King Who Wore Another's Face",
       "sort_order": 5,
       "category": "the-sword",
-      "level": 1,
       "sections": {
         "Narration": "King UTHER wanted Igraine — but she was wed\nto the Duke of Cornwall, safe in TINTAGEL'S bed.\n\"I'll die of love!\" cried Uther. \"Help me, MERLIN!\"\nMerlin sighed. \"This magic comes with STERLING",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -350,7 +345,6 @@
       "name": "Ep2 Scene 2: The King Who Wore Another's Face",
       "sort_order": 6,
       "category": "the-sword",
-      "level": 1,
       "sections": {
         "Narration": "price: the child she bears will be MINE to raise.\"\n\"Fine! YES! Whatever! Just give me her GAZE!\"\nSo Merlin wove a SHAPE around the king —\nUther looked like Cornwall. Everything:",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -404,7 +398,6 @@
       "name": "Ep2 Scene 3: The King Who Wore Another's Face",
       "sort_order": 7,
       "category": "the-sword",
-      "level": 1,
       "sections": {
         "Narration": "his face, his voice, his walk, his SMELL.\nHe entered Tintagel. Igraine couldn't TELL.\nThat night, ARTHUR was conceived — in lies\nand longing, underneath enchanted SKIES.\nThe greatest king was born from the worst TRICK.\nA throne built on deception, mortar THICK\nwith shame. But here's what Merlin KNEW:\nsometimes the cosmos uses CROOKED paths\nto grow something STRAIGHT and true.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -458,8 +451,7 @@
       "name": "Episode 2: The King Who Wore Another's Face",
       "sort_order": 8,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "sword-uther-igraine-scene-01",
         "sword-uther-igraine-scene-02",
         "sword-uther-igraine-scene-03"
@@ -499,7 +491,6 @@
       "name": "Ep3 Scene 1: The Sword in the Stone",
       "sort_order": 9,
       "category": "the-sword",
-      "level": 1,
       "sections": {
         "Narration": "A SWORD appeared one Christmas in a stone\noutside the church — shoved deep, embedded, SOWN\ninto marble with gold letters that READ:\n\"Whoso pulleth out this sword is KING.\" (Enough said.)",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -553,7 +544,6 @@
       "name": "Ep3 Scene 2: The Sword in the Stone",
       "sort_order": 10,
       "category": "the-sword",
-      "level": 1,
       "sections": {
         "Narration": "Every lord and knight and duke and EARL\npulled and strained and gave it quite a WHIRL.\nNone could budge it. Not one INCH.\nMeanwhile, young ARTHUR — just a squire, a CINCH",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -606,7 +596,6 @@
       "name": "Ep3 Scene 3: The Sword in the Stone",
       "sort_order": 11,
       "category": "the-sword",
-      "level": 1,
       "sections": {
         "Narration": "of a nobody — came looking for a sword\nhis brother Kay had lost (the careless LORD).\nHe saw the stone. He pulled. It slid out CLEAN\nlike butter from a dish — the smoothest thing you've SEEN.\n\"Who ARE you?\" cried the crowd. He didn't know.\n\"I'm Arthur. Kay forgot his sword. I should probably GO.\"\nBut Merlin stepped forward from the CROWD:\n\"This is your KING.\" And everyone was LOUD\nwith either joy or fury — mostly BOTH.\nThe humblest hand pulled what the mighty LOATHED\nto leave. The stone knew what the people DIDN'T.\nSovereignty chooses. You can't force it. DIDN'T.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -659,8 +648,7 @@
       "name": "Episode 3: The Sword in the Stone",
       "sort_order": 12,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "sword-stone-scene-01",
         "sword-stone-scene-02",
         "sword-stone-scene-03"
@@ -699,7 +687,6 @@
       "name": "Ep4 Scene 1: The Lady of the Lake",
       "sort_order": 13,
       "category": "the-sword",
-      "level": 1,
       "sections": {
         "Narration": "The LAKE was still. No ripple, not a BREEZE.\nThen — an ARM rose up between the TREES,\nholding something bright: a SWORD, a scabbard too,\nwrapped in white samite, dripping DEW.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -753,7 +740,6 @@
       "name": "Ep4 Scene 2: The Lady of the Lake",
       "sort_order": 14,
       "category": "the-sword",
-      "level": 1,
       "sections": {
         "Narration": "\"That's EXCALIBUR,\" said Merlin. \"Not the one\nyou pulled from stone — that broke. THIS one's the SUN\nforged into steel. But here's the SECRET, lad:\nthe scabbard's worth ten swords. The best gift you've HAD.\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -806,7 +792,6 @@
       "name": "Ep4 Scene 3: The Lady of the Lake",
       "sort_order": 15,
       "category": "the-sword",
-      "level": 1,
       "sections": {
         "Narration": "\"Why?\" asked Arthur. \"While you WEAR the sheath,\nyou'll never bleed — not even from BENEATH\nthe fiercest wound.\" The LADY rose — her face\nlike moonlight on the water, full of GRACE.\nShe gave the sword. She asked for nothing YET.\n(She would, though — the Lady doesn't FORGET.)\nThe feminine divine reached UP from below\nand handed power to the king. Now KNOW:\nevery king receives his sword from a WOMAN.\nThat's not legend. That's just HUMAN.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -859,8 +844,7 @@
       "name": "Episode 4: The Lady of the Lake",
       "sort_order": 16,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "sword-lady-lake-scene-01",
         "sword-lady-lake-scene-02",
         "sword-lady-lake-scene-03"
@@ -899,7 +883,6 @@
       "name": "Ep5 Scene 1: The Sword That Chose",
       "sort_order": 17,
       "category": "the-sword",
-      "level": 1,
       "sections": {
         "Narration": "EXCALIBUR — the name means \"cut STEEL\" —\nbut that's just what it did. What it could FEEL\nwas something else. This sword was ALIVE.\nIt hummed. It glowed. It helped its BEARER thrive.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -953,7 +936,6 @@
       "name": "Ep5 Scene 2: The Sword That Chose",
       "sort_order": 18,
       "category": "the-sword",
-      "level": 1,
       "sections": {
         "Narration": "In battle, it blazed bright as THIRTY torches,\nblinding enemies on their PORCHES\nof attack — they couldn't LOOK at Arthur's hand.\nThe sword lit up like SUNRISE on the land.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1006,7 +988,6 @@
       "name": "Ep5 Scene 3: The Sword That Chose",
       "sort_order": 19,
       "category": "the-sword",
-      "level": 1,
       "sections": {
         "Narration": "But Merlin said, \"The SCABBARD, Arthur. KEEP\nthe scabbard close. Don't lose it in your SLEEP.\nThe sword wins battles. But the sheath PROTECTS.\nThe sword is glory. The scabbard CORRECTS\nthe wounds.\" (Arthur lost the scabbard — Morgan STOLE it.\nAnd after that? Each wound took its TOLL. It\nturned out Merlin was right — as ALWAYS.\nThe flashy part is never what truly HALLWAYS\nyou through life. Protection beats PERFECTION.\nThe quiet gift outlasts the WEAPON's direction.)",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1059,8 +1040,7 @@
       "name": "Episode 5: The Sword That Chose",
       "sort_order": 20,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "sword-excalibur-scene-01",
         "sword-excalibur-scene-02",
         "sword-excalibur-scene-03"
@@ -1099,7 +1079,6 @@
       "name": "Ep6 Scene 1: The Table with No Head",
       "sort_order": 21,
       "category": "the-sword",
-      "level": 1,
       "sections": {
         "Narration": "When Arthur married GUINEVERE (the queen),\nher father gave a gift — the best he'd SEEN:\na TABLE. Enormous. Perfectly ROUND.\nNo head, no foot — just circle on the GROUND.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1153,7 +1132,6 @@
       "name": "Ep6 Scene 2: The Table with No Head",
       "sort_order": 22,
       "category": "the-sword",
-      "level": 1,
       "sections": {
         "Narration": "\"Why ROUND?\" asked Arthur. Merlin SMILED:\n\"Because at a rectangle, someone's always PILED\nat the top — the 'head.' The most important SEAT.\nBut at a circle? Every chair is SWEET.\nNo one's higher. No one's at the END.\nEvery knight is equal. Every FRIEND\nsits face to face with every OTHER.\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1206,7 +1184,6 @@
       "name": "Ep6 Scene 3: The Table with No Head",
       "sort_order": 23,
       "category": "the-sword",
-      "level": 1,
       "sections": {
         "Narration": "One hundred fifty SEATS around the ring.\nEach one carved with a knight's name — glittering THING.\nBut ONE seat stayed empty — the SIEGE PERILOUS:\n\"Dangerous Seat.\" Try sitting there? Imperious\ndeath — unless you're the ONE it's meant for.\nThe Grail knight. Coming soon. Just not SENT for yet.\nThe Table is a MANDALA, not furniture.\nA circle where the whole world sits as NURTURE.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1259,8 +1236,7 @@
       "name": "Episode 6: The Table with No Head",
       "sort_order": 24,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "sword-round-table-scene-01",
         "sword-round-table-scene-02",
         "sword-round-table-scene-03"
@@ -1299,7 +1275,6 @@
       "name": "Ep7 Scene 1: The Castle That Sang",
       "sort_order": 25,
       "category": "the-sword",
-      "level": 1,
       "sections": {
         "Narration": "They built CAMELOT where the rivers MEET —\na place where water, hills, and forest GREET\neach other. Merlin chose the SPOT himself:\n\"The land wants a castle HERE — I felt it, like an elf",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1353,7 +1328,6 @@
       "name": "Ep7 Scene 2: The Castle That Sang",
       "sort_order": 26,
       "category": "the-sword",
-      "level": 1,
       "sections": {
         "Narration": "feels acorns growing.\" Towers ROSE\nfrom limestone quarried where the white stone GLOWS.\nBanners snapped in wind — gold DRAGON flying,\nand the halls were full of music, LAUGHING, crying.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1406,7 +1380,6 @@
       "name": "Ep7 Scene 3: The Castle That Sang",
       "sort_order": 27,
       "category": "the-sword",
-      "level": 1,
       "sections": {
         "Narration": "It wasn't just a fortress. It was an IDEA:\nthat people could live JUSTLY. No more fear.\nKnights would ride out to PROTECT the weak,\nnot conquer. Every person there could SPEAK.\nThe court had poets, healers, HOUNDS, and hawks.\nMerlin paced the library in long WALKS.\nCamelot was never just a PLACE.\nIt was a QUESTION: can a kingdom run on GRACE\ninstead of force? On justice instead of GOLD?\nFor one bright moment — yes. Or so we're TOLD.\nAnd that's enough. The IDEA never dies.\nCamelot lives on wherever someone TRIES.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1459,8 +1432,7 @@
       "name": "Episode 7: The Castle That Sang",
       "sort_order": 28,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "sword-camelot-built-scene-01",
         "sword-camelot-built-scene-02",
         "sword-camelot-built-scene-03"
@@ -1499,7 +1471,6 @@
       "name": "Ep8 Scene 1: The Knight Who Was Too Perfect",
       "sort_order": 29,
       "category": "the-fellowship",
-      "level": 1,
       "sections": {
         "Narration": "LANCELOT was the best. At everything. BAR NONE.\nBest swordsman, best at jousting, fastest RUN.\nHe'd ride into a battle, lance in HAND,\nand thirty knights would fall across the LAND.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1553,7 +1524,6 @@
       "name": "Ep8 Scene 2: The Knight Who Was Too Perfect",
       "sort_order": 30,
       "category": "the-fellowship",
-      "level": 1,
       "sections": {
         "Narration": "He was raised by the LADY OF THE LAKE\n(yes, the same one — for the kingdom's SAKE).\nShe taught him honour, combat, poetry, and GRACE.\nHe arrived at Camelot with the PERFECT face.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1606,7 +1576,6 @@
       "name": "Ep8 Scene 3: The Knight Who Was Too Perfect",
       "sort_order": 31,
       "category": "the-fellowship",
-      "level": 1,
       "sections": {
         "Narration": "But perfection is a CAGE. A golden CAGE.\nAnd Lancelot? He carried a secret RAGE:\nhe loved the QUEEN. Not his queen — ARTHUR's.\nAnd that love, like a flame beneath still WATERS,\nwould burn down everything he built. But NOT yet.\nFor now, he's golden — every challenge MET,\nevery wrong made right, every villain BESTED.\nThe finest knight. The most completely TESTED.\nAnd the most dangerous, because his FLAW\nwas hidden underneath a suit of FLAWLESS awe.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1659,8 +1628,7 @@
       "name": "Episode 8: The Knight Who Was Too Perfect",
       "sort_order": 32,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "fellow-lancelot-scene-01",
         "fellow-lancelot-scene-02",
         "fellow-lancelot-scene-03"
@@ -1699,7 +1667,6 @@
       "name": "Ep9 Scene 1: Gawain and the Green Giant",
       "sort_order": 33,
       "category": "the-fellowship",
-      "level": 1,
       "sections": {
         "Narration": "On New Year's Day, the doors blew WIDE —\nin rode a KNIGHT, entirely green: his hide,\nhis horse, his armor, and his HAIR.\nHe held an AXE. He held a HOLLY. There",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1754,7 +1721,6 @@
       "name": "Ep9 Scene 2: Gawain and the Green Giant",
       "sort_order": 34,
       "category": "the-fellowship",
-      "level": 1,
       "sections": {
         "Narration": "he stood and said, \"A GAME! Who'll play?\nStrike off my head — then in a YEAR and a day,\ncome find me, and I'll strike off YOURS.\"\nGAWAIN stood up (the bravest on all fours)\nand CHOPPED. The green head rolled across the FLOOR.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1808,7 +1774,6 @@
       "name": "Ep9 Scene 3: Gawain and the Green Giant",
       "sort_order": 35,
       "category": "the-fellowship",
-      "level": 1,
       "sections": {
         "Narration": "The body picked it UP. The head said, \"MORE\nto come, Sir Gawain. See you NEXT year. Cheers.\"\nAnd rode out, headless, leaving Gawain in TEARS.\nA year of dread. A journey to the Green CHAPEL.\nThree temptations from a lady (what a GRAPPLE).\nGawain wore a GREEN sash — a tiny cheat.\nThe Green Knight nicked his neck: \"Almost COMPLETE.\nYou flinched. You're HUMAN. That's the whole POINT.\nHonour isn't perfection — it's the JOINT\nwhere courage meets your fear and says: I'll GO.\nEven knowing what's COMING. Even so.\"",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1862,8 +1827,7 @@
       "name": "Episode 9: Gawain and the Green Giant",
       "sort_order": 36,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "fellow-gawain-green-scene-01",
         "fellow-gawain-green-scene-02",
         "fellow-gawain-green-scene-03"
@@ -1903,7 +1867,6 @@
       "name": "Ep10 Scene 1: The Fool Who Found the Grail",
       "sort_order": 37,
       "category": "the-fellowship",
-      "level": 1,
       "sections": {
         "Narration": "PERCIVAL grew up in the woods with his MUM.\nShe kept him from the world — kept him DUMB\n(not stupid — just unknowing). No swords, no KNIGHTS.\nJust birdsong, berries, and the forest LIGHTS.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1958,7 +1921,6 @@
       "name": "Ep10 Scene 2: The Fool Who Found the Grail",
       "sort_order": 38,
       "category": "the-fellowship",
-      "level": 1,
       "sections": {
         "Narration": "Then he SAW one — a knight in shining gear —\nand thought it was an ANGEL. \"Come here! Come HERE!\"\nHe left his mother (she fainted from GRIEF)\nand rode to Camelot on a nag, in BRIEF:",
         "Direction": "[REVEAL] Pull back to reveal the full scene. Hold wide.",
@@ -2012,7 +1974,6 @@
       "name": "Ep10 Scene 3: The Fool Who Found the Grail",
       "sort_order": 39,
       "category": "the-fellowship",
-      "level": 1,
       "sections": {
         "Narration": "a FOOL. A country bumpkin. Laughed at by ALL.\nHe didn't know how to bow, or even CALL\na knight 'Sir.' He ate with his HANDS.\nBut the Grail — the GRAIL — has its own plans.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2066,7 +2027,6 @@
       "name": "Ep10 Scene 4: The Fool Who Found the Grail",
       "sort_order": 40,
       "category": "the-fellowship",
-      "level": 1,
       "sections": {
         "Narration": "It chose the fool BECAUSE he didn't know the rules.\nCleverness? The Grail has no use for TOOLS\nof intellect. It needs an open HEART,\na pair of eyes that haven't learned the ART\nof looking away. PERCIVAL saw the bleeding king,\nsaw the Grail, saw EVERYTHING —\nand failed to ask the question. But he'll be BACK.\nThe fool always returns. That's his KNACK.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2120,8 +2080,7 @@
       "name": "Episode 10: The Fool Who Found the Grail",
       "sort_order": 41,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "fellow-percival-fool-scene-01",
         "fellow-percival-fool-scene-02",
         "fellow-percival-fool-scene-03",
@@ -2162,7 +2121,6 @@
       "name": "Ep11 Scene 1: The Knight Made of Light",
       "sort_order": 42,
       "category": "the-fellowship",
-      "level": 1,
       "sections": {
         "Narration": "GALAHAD arrived at Camelot one day\nand sat in the SIEGE PERILOUS — the seat that SLAY-\ned anyone unworthy. Everyone GASPED.\nBut Galahad just sat. He wasn't CLASPED",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2216,7 +2174,6 @@
       "name": "Ep11 Scene 2: The Knight Made of Light",
       "sort_order": 43,
       "category": "the-fellowship",
-      "level": 1,
       "sections": {
         "Narration": "by death. The seat ACCEPTED him. Of course.\nHe was the son of Lancelot (by FORCE\nof prophecy, not love — a long sad TALE).\nHe had his father's SWORD-arm, but not his fail-",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2269,7 +2226,6 @@
       "name": "Ep11 Scene 3: The Knight Made of Light",
       "sort_order": 44,
       "category": "the-fellowship",
-      "level": 1,
       "sections": {
         "Narration": "ure. Galahad was PURE. Not pure like 'good' —\npure like LIGHT is pure: it does what it SHOULD\nwithout thought, without trying, without DOUBT.\nHe drew the sword from the floating stone (YES — another\nsword-in-stone!) and everyone SAID:\n\"He's the one. The GRAIL knight. Born and BRED\nfor this alone.\" And so he was. He'd FIND\nthe Grail, he'd HOLD it, he'd leave the world BEHIND.\nBut here's the cost of being made of LIGHT:\nyou can't STAY. This world is too dark, too TIGHT.\nGalahad achieved the Grail — and VANISHED.\nThe purest knight. The one the earth couldn't MANAGE.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2322,8 +2278,7 @@
       "name": "Episode 11: The Knight Made of Light",
       "sort_order": 45,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "fellow-galahad-scene-01",
         "fellow-galahad-scene-02",
         "fellow-galahad-scene-03"
@@ -2362,7 +2317,6 @@
       "name": "Ep12 Scene 1: The Love Potion",
       "sort_order": 46,
       "category": "the-fellowship",
-      "level": 1,
       "sections": {
         "Narration": "TRISTAN was supposed to bring ISEULT to his king —\na bride for Uncle Mark, a political THING.\nBut on the ship, a SERVANT mixed up the wine\nand poured the LOVE POTION — meant for the wedding line.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2416,7 +2370,6 @@
       "name": "Ep12 Scene 2: The Love Potion",
       "sort_order": 47,
       "category": "the-fellowship",
-      "level": 1,
       "sections": {
         "Narration": "They DRANK. Their eyes met over the cup's RIM.\nAnd that was it. She loved HIM. He loved HER. Grim,\nbecause she was promised to someone ELSE\nand he was the one who'd brought her. (Help yourSELVES\nto the irony.) They couldn't STOP.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2469,7 +2422,6 @@
       "name": "Ep12 Scene 3: The Love Potion",
       "sort_order": 48,
       "category": "the-fellowship",
-      "level": 1,
       "sections": {
         "Narration": "They tried! They hid in forests, drank from every DROP\nof willpower, but the potion wouldn't FADE.\nIt was like the universe had MADE\na love so strong that kingdoms couldn't CONTAIN it.\nThey met in secret. Got caught. Couldn't EXPLAIN it.\n\"It's not our fault — a POTION made us do this!\"\nBut was it the potion? Or was the potion just the KISS\nthe cosmos gives when two souls recognize EACH OTHER\nacross a crowded ship? Love like no other.\nHere's the truth: the potion was an EXCUSE.\nThe love was always there. The potion cut it LOOSE.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2522,8 +2474,7 @@
       "name": "Episode 12: The Love Potion",
       "sort_order": 49,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "fellow-tristan-iseult-scene-01",
         "fellow-tristan-iseult-scene-02",
         "fellow-tristan-iseult-scene-03"
@@ -2562,7 +2513,6 @@
       "name": "Ep13 Scene 1: The Kitchen Knight",
       "sort_order": 50,
       "category": "the-fellowship",
-      "level": 1,
       "sections": {
         "Narration": "A tall young man arrived at court one DAY\nand asked to work — not fight — just earn his PAY\nin the KITCHEN. Sir Kay (Arthur's grumpy BROTHER)\nnamed him 'Beaumains' — 'Pretty Hands.' No OTHER",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2616,7 +2566,6 @@
       "name": "Ep13 Scene 2: The Kitchen Knight",
       "sort_order": 51,
       "category": "the-fellowship",
-      "level": 1,
       "sections": {
         "Narration": "name. For a YEAR, he washed and scrubbed and COOKED\nwhile all the proper knights ignored him (LOOKED\nright through him). Then a damsel came with NEED:\n\"My sister's trapped! A tyrant!\" But her STEED",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2669,7 +2618,6 @@
       "name": "Ep13 Scene 3: The Kitchen Knight",
       "sort_order": 52,
       "category": "the-fellowship",
-      "level": 1,
       "sections": {
         "Narration": "was given to — \"The KITCHEN BOY? You jest!\"\nShe was FURIOUS. But Gareth rode — and BLESSED\nwith his mother's blood (he was Gawain's BROTHER,\na prince in hiding!), he beat one knight after ANOTHER.\nFive battles. Five victories. The damsel's SCORN\nturned slowly into awe, and love was BORN.\nGARETH. The prince who served as kitchen SLAVE\nto prove that honour doesn't need a family CRAVE.\nYou can be royalty and still wash DISHES.\nThe truest knight fulfills the humblest WISHES.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2722,8 +2670,7 @@
       "name": "Episode 13: The Kitchen Knight",
       "sort_order": 53,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "fellow-gareth-scene-01",
         "fellow-gareth-scene-02",
         "fellow-gareth-scene-03"
@@ -2762,7 +2709,6 @@
       "name": "Ep14 Scene 1: Arthur's Grumpy Brother",
       "sort_order": 54,
       "category": "the-fellowship",
-      "level": 1,
       "sections": {
         "Narration": "KAY was Arthur's foster-brother — grew up TOGETHER.\nKay was older, taller, meaner, and in WEATHER\nfoul or fair, he had the same expression: CROSS.\nWhen Arthur pulled the sword, Kay felt the LOSS.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2816,7 +2762,6 @@
       "name": "Ep14 Scene 2: Arthur's Grumpy Brother",
       "sort_order": 55,
       "category": "the-fellowship",
-      "level": 1,
       "sections": {
         "Narration": "\"That should be ME. I'M the eldest. I'M the one\nwho trained. Who WORKED. Who earned it.\" But the SUN\ndoesn't rise for those who earn it MOST.\nIt rises for the LAND. And Arthur was the host.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2869,7 +2814,6 @@
       "name": "Ep14 Scene 3: Arthur's Grumpy Brother",
       "sort_order": 56,
       "category": "the-fellowship",
-      "level": 1,
       "sections": {
         "Narration": "But here's the thing: Kay STAYED. Through everything.\nHe grumbled, mocked, and groused about the KING,\nbut when the battles came? Kay FOUGHT.\nWhen the court needed managing? Kay WROUGHT\norder from chaos (badly, but he TRIED).\nHe was the brother who was never the BRIDE\nbut always at the wedding, rolling EYES.\nThe loyal shadow. Cranky? Yes. UNWISE?\nSometimes. But there, ALWAYS there, through thick and THIN.\nNot every hero gets the glory. Some just GRIN\nand bear it, serve their brother, guard the DOOR.\nKay never left. What's LOYALTY if not that? Nothing more.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2922,8 +2866,7 @@
       "name": "Episode 14: Arthur's Grumpy Brother",
       "sort_order": 57,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "fellow-kay-scene-01",
         "fellow-kay-scene-02",
         "fellow-kay-scene-03"
@@ -2962,7 +2905,6 @@
       "name": "Ep15 Scene 1: The Beast That Barked",
       "sort_order": 58,
       "category": "the-quests",
-      "level": 1,
       "sections": {
         "Narration": "The QUESTING BEAST was — well, imagine THIS:\nthe head of a SNAKE, the body of a leopard, HISS\nand spots and all. The haunches of a LION.\nAnd from its belly? THIRTY HOUNDS, all cryin'.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3016,7 +2958,6 @@
       "name": "Ep15 Scene 2: The Beast That Barked",
       "sort_order": 59,
       "category": "the-quests",
-      "level": 1,
       "sections": {
         "Narration": "It sounded like a kennel on the RUN.\nBarking from inside — how's that for FUN?\nKing PELLINORE chased it for YEARS. His one obsession.\nEvery morning: \"TODAY I'll catch it!\" — same CONFESSION.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3069,7 +3010,6 @@
       "name": "Ep15 Scene 3: The Beast That Barked",
       "sort_order": 60,
       "category": "the-quests",
-      "level": 1,
       "sections": {
         "Narration": "He never did. That's sort of THE POINT.\nSome quests aren't meant to END — they anoint\nthe seeker with PURPOSE, not with prize.\nPellinore wasn't chasing a BEAST — in wise\nmen's eyes, he was chasing the act of CHASING.\nThe quest itself was the gift. The PACING\nof hooves, the glimpse of tail, the bark WITHIN —\nthe Questing Beast is life itself. You never WIN.\nYou just keep riding. And that's ENOUGH.\nThe chase is the treasure, even when it's TOUGH.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3122,8 +3062,7 @@
       "name": "Episode 15: The Beast That Barked",
       "sort_order": 61,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "quest-questing-beast-scene-01",
         "quest-questing-beast-scene-02",
         "quest-questing-beast-scene-03"
@@ -3162,7 +3101,6 @@
       "name": "Ep16 Scene 1: The Chapel Where the Dead Sit Up",
       "sort_order": 62,
       "category": "the-quests",
-      "level": 1,
       "sections": {
         "Narration": "Sir LANCELOT rode to a chapel in the DARK.\nNo living soul around — just silence, STARK\nand cold. Inside: a dead knight on a BIER,\nwrapped in silk, with candles burning NEAR.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3216,7 +3154,6 @@
       "name": "Ep16 Scene 2: The Chapel Where the Dead Sit Up",
       "sort_order": 63,
       "category": "the-quests",
-      "level": 1,
       "sections": {
         "Narration": "A sorceress had asked him for a CLOTH\nfrom the dead man's wrappings — or the dead would FROTH\nand rise. \"Just take it,\" she had SAID.\nBut as Lancelot reached — the DEAD",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3269,7 +3206,6 @@
       "name": "Ep16 Scene 3: The Chapel Where the Dead Sit Up",
       "sort_order": 64,
       "category": "the-quests",
-      "level": 1,
       "sections": {
         "Narration": "knight's hand MOVED. The chapel shook with DREAD.\nThe candles flickered. Shadows overhead\ngrew TEETH. Lancelot didn't flinch — he grabbed the CLOTH\nand walked right out, steady as a GOTH\nat a funeral. The dead lay DOWN.\nThe sorceress said, \"If you had shown one FROWN\nof fear, one trembling HAND, one blink of EYE,\nyou'd be here forever. You would DIE.\"\nThe Chapel Perilous tests your NERVE.\nThe dead don't want your life — they want to OBSERVE\nwhether you're brave enough to walk AMONG them.\nDeath respects the ones who don't succumb to NUMB.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3322,8 +3258,7 @@
       "name": "Episode 16: The Chapel Where the Dead Sit Up",
       "sort_order": 65,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "quest-chapel-perilous-scene-01",
         "quest-chapel-perilous-scene-02",
         "quest-chapel-perilous-scene-03"
@@ -3362,7 +3297,6 @@
       "name": "Ep17 Scene 1: The Dragon Under Britain",
       "sort_order": 66,
       "category": "the-quests",
-      "level": 1,
       "sections": {
         "Narration": "King VORTIGERN'S tower kept falling DOWN.\nEvery night it crumbled — stone by stone, brown\ndust and rubble. \"Why?\" the builders CRIED.\n\"SACRIFICE a fatherless boy,\" the druids LIED.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3417,7 +3351,6 @@
       "name": "Ep17 Scene 2: The Dragon Under Britain",
       "sort_order": 67,
       "category": "the-quests",
-      "level": 1,
       "sections": {
         "Narration": "They brought young MERLIN (fatherless, they said).\nBut instead of dying, he tilted his HEAD:\n\"Dig beneath the tower. You'll find a POOL.\nIn the pool: two dragons. That's your RULE.\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3471,7 +3404,6 @@
       "name": "Ep17 Scene 3: The Dragon Under Britain",
       "sort_order": 68,
       "category": "the-quests",
-      "level": 1,
       "sections": {
         "Narration": "They dug. The water DRAINED. And there they WERE:\na RED dragon and a WHITE, a snarling blur\nof scale and flame, fighting UNDERGROUND.\n\"The red is BRITAIN,\" Merlin said. \"Homebound\nand fierce. The white is SAXON — the invader.\"\nThe dragons fought. The red rose. The white CRATER-\ned into steam. \"Britain will ENDURE,\" said Merlin. \"But first\nit has to BURN. The dragon underneath is THIRST\nfor freedom, rage, and memory of who we WERE.\"\nEvery land has a dragon underneath. Can you hear IT PURR?",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3525,8 +3457,7 @@
       "name": "Episode 17: The Dragon Under Britain",
       "sort_order": 69,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "quest-dragon-scene-01",
         "quest-dragon-scene-02",
         "quest-dragon-scene-03"
@@ -3566,7 +3497,6 @@
       "name": "Ep18 Scene 1: Morgan le Fay's Tricks",
       "sort_order": 70,
       "category": "the-quests",
-      "level": 1,
       "sections": {
         "Narration": "MORGAN LE FAY was Arthur's half-SISTER —\nbeautiful, brilliant, and one heck of a TWISTER.\nShe learned magic from Merlin (some say she learned MORE)\nand used it to settle every SCORE.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3620,7 +3550,6 @@
       "name": "Ep18 Scene 2: Morgan le Fay's Tricks",
       "sort_order": 71,
       "category": "the-quests",
-      "level": 1,
       "sections": {
         "Narration": "She STOLE the scabbard — the one that kept\nArthur from bleeding — while the whole court SLEPT.\nShe threw it in a lake. \"Good LUCK,\" she said,\n\"bleeding now without your magic THREAD.\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3673,7 +3602,6 @@
       "name": "Ep18 Scene 3: Morgan le Fay's Tricks",
       "sort_order": 72,
       "category": "the-quests",
-      "level": 1,
       "sections": {
         "Narration": "She sent a poisoned CLOAK (Arthur almost wore it).\nShe trapped knights in enchanted VALLEYS — all adored it\n(the valleys were lovely — you just couldn't LEAVE).\nWas she evil? MAYBE. But here's what I believe:\nMorgan was the OLD religion — the goddess energy\nthat Arthur's Christian court pushed to the EDGE, you see.\nShe wasn't villainess — she was the WILD,\nthe UNDOMESTICATED feminine, the forest's CHILD.\nEvery time Arthur forgot the OLD ways,\nMorgan appeared. She was the land's GAZE\nreminding the king: you sit on a THRONE\nthat was here before you. And it's NOT your own.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3726,8 +3654,7 @@
       "name": "Episode 18: Morgan le Fay's Tricks",
       "sort_order": 73,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "quest-morgan-schemes-scene-01",
         "quest-morgan-schemes-scene-02",
         "quest-morgan-schemes-scene-03"
@@ -3766,7 +3693,6 @@
       "name": "Ep19 Scene 1: The Green Chapel",
       "sort_order": 74,
       "category": "the-quests",
-      "level": 1,
       "sections": {
         "Narration": "A YEAR had passed. Gawain rode through the SNOW\nto keep his word — to face the axe's BLOW.\nThe Green Chapel wasn't grand. It was a MOUND\nof earth, grass-covered, with a hollow SOUND",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3821,7 +3747,6 @@
       "name": "Ep19 Scene 2: The Green Chapel",
       "sort_order": 75,
       "category": "the-quests",
-      "level": 1,
       "sections": {
         "Narration": "of water running underneath. A BARROW.\nThe Green Knight waited, sharpening — narrow\nand tall and GRINNING. \"Kneel,\" he said.\nGawain knelt. The axe swung at his HEAD —",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3875,7 +3800,6 @@
       "name": "Ep19 Scene 3: The Green Chapel",
       "sort_order": 76,
       "category": "the-quests",
-      "level": 1,
       "sections": {
         "Narration": "he FLINCHED. \"Stay still,\" the Green Knight sighed.\nSecond swing — stopped short. Gawain nearly DIED\nof waiting. Third swing — NICK. Just a scratch.\n\"That's for the green sash — your little CATCH\nof dishonesty.\" Then the Green Knight LAUGHED:\n\"You're the finest knight I've seen. Your CRAFT\nis courage, not perfection. WELL DONE.\"\nHe was Bertilak — transformed by Morgan (just for FUN?).\nThe chapel was a test. The axe was MERCY.\nAnd Gawain went home wearing the green sash: CONTROVERSY\nturned to BADGE. The whole court wore green after THAT.\nHonesty's scar is the finest HAT.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3929,8 +3853,7 @@
       "name": "Episode 19: The Green Chapel",
       "sort_order": 77,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "quest-green-chapel-scene-01",
         "quest-green-chapel-scene-02",
         "quest-green-chapel-scene-03"
@@ -3970,7 +3893,6 @@
       "name": "Ep20 Scene 1: The Castle of Maidens",
       "sort_order": 78,
       "category": "the-quests",
-      "level": 1,
       "sections": {
         "Narration": "Seven knights held a CASTLE at the crossroads tight.\nInside: captured MAIDENS — seven, bathed in fright.\nFor seven years they'd been imprisoned THERE,\nguarded by the wicked seven, who didn't CARE.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4024,7 +3946,6 @@
       "name": "Ep20 Scene 2: The Castle of Maidens",
       "sort_order": 79,
       "category": "the-quests",
-      "level": 1,
       "sections": {
         "Narration": "\"No one can defeat all SEVEN,\" people said.\n\"Many have tried. They're all quite DEAD.\"\nBut GALAHAD (of course) rode up one DAWN,\nfought all seven knights and — by the YAWN\nof breakfast — every single one had FLED.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4077,7 +3998,6 @@
       "name": "Ep20 Scene 3: The Castle of Maidens",
       "sort_order": 80,
       "category": "the-quests",
-      "level": 1,
       "sections": {
         "Narration": "The maidens walked out, blinking, nearly DEAD\nfrom dark and hunger. Galahad didn't STAY\nfor thanks. He just rode on his quiet WAY.\nSeven knights. Seven maidens. Seven YEARS.\nThe number seven echoes down the SPHERES:\nseven planets, seven chakras, seven NOTES.\nThe Castle of Maidens is wherever power GLOATS\nover the imprisoned, and the freed walk OUT\ninto sunlight. That's what knights are ABOUT.\nNot glory. LIBERATION. Clear the door.\nThen ride on. There's always someone needing MORE.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4130,8 +4050,7 @@
       "name": "Episode 20: The Castle of Maidens",
       "sort_order": 81,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "quest-castle-maidens-scene-01",
         "quest-castle-maidens-scene-02",
         "quest-castle-maidens-scene-03"
@@ -4170,7 +4089,6 @@
       "name": "Ep21 Scene 1: King Pellinore's Chase",
       "sort_order": 82,
       "category": "the-quests",
-      "level": 1,
       "sections": {
         "Narration": "King PELLINORE lived for one thing alone:\nthe QUESTING BEAST. He'd left his wife, his THRONE,\nhis children, and his castle far BEHIND.\n\"I'll catch it TODAY!\" (He said this every TIME.)",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4224,7 +4142,6 @@
       "name": "Ep21 Scene 2: King Pellinore's Chase",
       "sort_order": 83,
       "category": "the-quests",
-      "level": 1,
       "sections": {
         "Narration": "He'd crash through Camelot on his HORSE at speed,\nhardly stopping — \"Can't chat! I'm in the LEAD!\"\nPeople got out of the way. The beast BARKED\nsomewhere in the distance, and Pellinore EMBARKED",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4277,7 +4194,6 @@
       "name": "Ep21 Scene 3: King Pellinore's Chase",
       "sort_order": 84,
       "category": "the-quests",
-      "level": 1,
       "sections": {
         "Narration": "again. For decades. DECADES. Riding through\nforests, swamps, and kingdoms no one KNEW.\nHe missed his daughter's wedding. Missed his SON\ngrowing up to be a knight. He missed the FUN.\nHe missed his LIFE — because he couldn't stop\nchasing a monster with a bark. POP\ngoes the weasel — some obsessions eat your DAYS.\nPellinore loved the HUNT more than the praise.\nBut when he died? The beast was seen no MORE.\nIt died with him. The hunter was the beast's CORE.\nWithout Pellinore, there was no beast to CHASE.\nSometimes the thing you seek is just a FACE\nyou put on your own hunger. Chase yourself? Embrace? Both.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4330,8 +4246,7 @@
       "name": "Episode 21: King Pellinore's Chase",
       "sort_order": 85,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "quest-pellinore-scene-01",
         "quest-pellinore-scene-02",
         "quest-pellinore-scene-03"
@@ -4370,7 +4285,6 @@
       "name": "Ep22 Scene 1: The Grail Appears at Camelot",
       "sort_order": 86,
       "category": "the-grail",
-      "level": 1,
       "sections": {
         "Narration": "It was PENTECOST. The court sat down to EAT.\nThe doors were shut. The bread was warm. The SEAT\nof every knight was filled. The hall was GOLD\nwith candlelight — and then the room went COLD.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4424,7 +4338,6 @@
       "name": "Ep22 Scene 2: The Grail Appears at Camelot",
       "sort_order": 87,
       "category": "the-grail",
-      "level": 1,
       "sections": {
         "Narration": "A CRACK of thunder. Every window BLAZED.\nAnd floating through the hall — the knights all GAZED —\ncame something covered in white SAMITE cloth,\nglowing like a sun wrapped in a MOTH",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4477,7 +4390,6 @@
       "name": "Ep22 Scene 3: The Grail Appears at Camelot",
       "sort_order": 88,
       "category": "the-grail",
-      "level": 1,
       "sections": {
         "Narration": "of silk. The GRAIL. It served each knight the food\nhe loved the most (a magical MOOD).\nThen it was GONE. Just — vanished. Like a dream.\nGawain stood: \"I VOW to seek that gleam!\"\nAnd one by one, a hundred knights stood UP.\nArthur wept: \"You'll chase a CUP\nand never return. This is the END\nof Camelot.\" He was RIGHT, my friend.\nThe Grail didn't come to START a quest.\nIt came to break the Table. To TEST\nwho could let go of everything they KNEW\nfor something they could only FEEL — not view.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4530,8 +4442,7 @@
       "name": "Episode 22: The Grail Appears at Camelot",
       "sort_order": 89,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "grail-appears-scene-01",
         "grail-appears-scene-02",
         "grail-appears-scene-03"
@@ -4570,7 +4481,6 @@
       "name": "Ep23 Scene 1: The Wounded King and the Wasteland",
       "sort_order": 90,
       "category": "the-grail",
-      "level": 1,
       "sections": {
         "Narration": "The FISHER KING lay in his castle, WOUNDED.\nA spear had pierced his thigh — and he FLOUNDERED\nyear after year, unable to heal or DIE.\nAnd here's the strange part — do you know WHY?",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4624,7 +4534,6 @@
       "name": "Ep23 Scene 2: The Wounded King and the Wasteland",
       "sort_order": 91,
       "category": "the-grail",
-      "level": 1,
       "sections": {
         "Narration": "The LAND around him withered TOO.\nThe crops went grey. The rivers DREW\nback into dust. The trees dropped DEAD.\nThe king is the land. When the king can't be FED",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4677,7 +4586,6 @@
       "name": "Ep23 Scene 3: The Wounded King and the Wasteland",
       "sort_order": 92,
       "category": "the-grail",
-      "level": 1,
       "sections": {
         "Narration": "or healed, the kingdom STARVES along with him.\n\"What ails you?\" — that's the question, tight and TRIM,\nthat would heal him. Just: \"WHAT AILS YOU, KING?\"\nBut no knight asked. They saw the suffering THING\nand looked away (too awkward, too polite).\nUntil one knight — a fool — arrives one NIGHT\nand either asks or doesn't (depends who WROTE it).\nThe Wasteland blooms or doesn't. The king KNOWS it:\nhealing comes from BEING ASKED — not from a pill\nor sword or spell. Just someone with the WILL\nto look at pain and say: \"TELL ME. I'm here.\"\nThe simplest medicine: a listening EAR.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4730,8 +4638,7 @@
       "name": "Episode 23: The Wounded King and the Wasteland",
       "sort_order": 93,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "grail-wasteland-scene-01",
         "grail-wasteland-scene-02",
         "grail-wasteland-scene-03"
@@ -4770,7 +4677,6 @@
       "name": "Ep24 Scene 1: The Question Percival Forgot to Ask",
       "sort_order": 94,
       "category": "the-grail",
-      "level": 1,
       "sections": {
         "Narration": "PERCIVAL — the fool from the forest — found the castle.\nHe was invited in. The GRAIL went PAST all,\ncarried by a maiden, glowing GOLD.\nA bleeding lance dripped red — and BEHOLD:",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4825,7 +4731,6 @@
       "name": "Ep24 Scene 2: The Question Percival Forgot to Ask",
       "sort_order": 95,
       "category": "the-grail",
-      "level": 1,
       "sections": {
         "Narration": "the Fisher King lay on his bed in PAIN.\nThe Grail passed. The lance passed. Again, AGAIN.\nPercival watched — amazed, confused, entranced.\nBut he remembered what his mother DANCED",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4879,7 +4784,6 @@
       "name": "Ep24 Scene 3: The Question Percival Forgot to Ask",
       "sort_order": 96,
       "category": "the-grail",
-      "level": 1,
       "sections": {
         "Narration": "into his head: \"Don't ask too many QUESTIONS.\nBe polite.\" So he sat there in SESSIONS\nof wonder, silent as a STONE.\nHe didn't ask. He left the king ALONE.\nNext morning — empty castle. Gone. All VANISHED.\nA maiden screamed: \"You FOOL! You could have BANISHED\nthe suffering! One question! 'WHAT AILS YOU?'\nThat's ALL it took! The Grail would SAIL you\nto healing — but you kept your mouth SHUT!\"\nPercival wept. His mother's advice had CUT\nhim off from the one thing that mattered MOST.\nPoliteness killed the chance. (What a terrible HOST\nof manners.) Now he wanders, years and YEARS,\nsearching for the castle through his TEARS.\nThe question waits. The Grail is PATIENT.\nBut the fool must learn to ask — not stay COMPLACENT.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4933,8 +4837,7 @@
       "name": "Episode 24: The Question Percival Forgot to Ask",
       "sort_order": 97,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "grail-percival-question-scene-01",
         "grail-percival-question-scene-02",
         "grail-percival-question-scene-03"
@@ -4974,7 +4877,6 @@
       "name": "Ep25 Scene 1: Galahad Sits in the Dangerous Seat",
       "sort_order": 98,
       "category": "the-grail",
-      "level": 1,
       "sections": {
         "Narration": "Remember the SIEGE PERILOUS? The seat that KILLS\nanyone unworthy? That gives deadly CHILLS?\nGalahad walked in on a Tuesday, COOL\nas ice cream, sat right down — the golden FOOL-",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5028,7 +4930,6 @@
       "name": "Ep25 Scene 2: Galahad Sits in the Dangerous Seat",
       "sort_order": 99,
       "category": "the-grail",
-      "level": 1,
       "sections": {
         "Narration": "proof test. The seat held. The court went WILD.\n\"He's the one! The prophesied CHILD!\"\nA sword appeared in a stone (AGAIN — this land\nloves sword-in-stone tricks). Only Galahad's HAND",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5081,7 +4982,6 @@
       "name": "Ep25 Scene 3: Galahad Sits in the Dangerous Seat",
       "sort_order": 100,
       "category": "the-grail",
-      "level": 1,
       "sections": {
         "Narration": "could pull it free. Of course. Of COURSE.\nHe rode out on a white horse (what REMORSE\ndid Arthur feel, watching him go? — THE BEST\nknight ever, riding toward a QUEST\nthat would take him out of the world for GOOD.)\nGalahad found the Grail. He UNDERSTOOD\nit wasn't a cup — it was a DOOR.\nHe looked inside and saw — well, what's the CORE\nof everything? The light behind the LIGHT?\nHe saw it. Smiled. And left this mortal SITE.\n\"Lord, take me now — I've SEEN enough to know.\"\nAnd he was gone. The purest knight. The highest GLOW.\nToo bright to stay. Too true to live AMONG\nthe compromises of a world still YOUNG.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5134,8 +5034,7 @@
       "name": "Episode 25: Galahad Sits in the Dangerous Seat",
       "sort_order": 101,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "grail-galahad-achieves-scene-01",
         "grail-galahad-achieves-scene-02",
         "grail-galahad-achieves-scene-03"
@@ -5174,7 +5073,6 @@
       "name": "Ep26 Scene 1: The Grail Chapel",
       "sort_order": 102,
       "category": "the-grail",
-      "level": 1,
       "sections": {
         "Narration": "Three knights reached the Grail at LAST:\nGALAHAD (the pure), PERCIVAL (the vast\nfool turned wise), and BORS (the practical MAN\nwho barely believed but stayed with the PLAN).",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5229,7 +5127,6 @@
       "name": "Ep26 Scene 2: The Grail Chapel",
       "sort_order": 103,
       "category": "the-grail",
-      "level": 1,
       "sections": {
         "Narration": "In the chapel at SARRAS, overseas,\nthe Grail sat on a silver altar. BREEZE\nof something not-wind filled the room — a BREATH.\nJoseph of Arimathea rose from DEATH",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5283,7 +5180,6 @@
       "name": "Ep26 Scene 3: The Grail Chapel",
       "sort_order": 104,
       "category": "the-grail",
-      "level": 1,
       "sections": {
         "Narration": "(or vision? or memory?) and celebrated MASS.\nThe Grail filled with light. Through the GLASS\nof flesh, the three knights saw — what DID they see?\nMalory won't quite say. Neither will WE.\nSomething that made Galahad WEEP with joy.\nSomething that made Percival, the FOREST boy,\nkneel and finally understand his mother's PRAYERS.\nSomething that made Bors believe — UNAWARES,\nthe practical man was undone by GRACE.\nThree different men. One cup. One FACE\nof the divine — and each saw it DIFFERENTLY.\nThat's the Grail's secret: it doesn't show EFFICIENTLY.\nIt shows each person what they NEED.\nThe cup is empty till you bring your SEED.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5337,8 +5233,7 @@
       "name": "Episode 26: The Grail Chapel",
       "sort_order": 105,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "grail-chapel-scene-01",
         "grail-chapel-scene-02",
         "grail-chapel-scene-03"
@@ -5378,7 +5273,6 @@
       "name": "Ep27 Scene 1: The Knights Come Home Changed",
       "sort_order": 106,
       "category": "the-grail",
-      "level": 1,
       "sections": {
         "Narration": "Of a hundred fifty knights who RODE away,\nhow many came back? Count them: SAD day.\nGalahad — gone. Ascended. LIGHT.\nPercival — dead within the year. Too BRIGHT\nfor ordinary life after what he'd SEEN.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5432,7 +5326,6 @@
       "name": "Ep27 Scene 2: The Knights Come Home Changed",
       "sort_order": 107,
       "category": "the-grail",
-      "level": 1,
       "sections": {
         "Narration": "Only BORS came home. The practical, the LEAN,\nthe one who almost didn't go at ALL.\nHe walked back into Camelot's great HALL\nand Arthur asked, \"What did you SEE?\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5485,7 +5378,6 @@
       "name": "Ep27 Scene 3: The Knights Come Home Changed",
       "sort_order": 108,
       "category": "the-grail",
-      "level": 1,
       "sections": {
         "Narration": "Bors tried to speak. Words wouldn't BE.\nHe opened his mouth and NOTHING came.\nSome things are too big for any NAME.\nHe just stood there, changed — DIFFERENT in the eyes,\nlike someone who's looked at the sun and TRIES\nto see normally again but can't.\n\"The quest is over,\" he managed. \"The enchant-\nment's broken. The Grail is GONE.\"\nBut the Table was half empty. DAWN\nof the end of Camelot — the knights who LIVED\ncame back wounded, hollowed, half-SHIVED\nof their old certainties. The Grail didn't SAVE\nCamelot. It opened every GRAVE\nof doubt and left the kingdom asking WHY.\nSometimes the gift from heaven makes you CRY.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5538,8 +5430,7 @@
       "name": "Episode 27: The Knights Come Home Changed",
       "sort_order": 109,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "grail-return-scene-01",
         "grail-return-scene-02",
         "grail-return-scene-03"
@@ -5578,7 +5469,6 @@
       "name": "Ep28 Scene 1: What the Grail Actually Is",
       "sort_order": 110,
       "category": "the-grail",
-      "level": 1,
       "sections": {
         "Narration": "So what IS it? This cup, this dish, this STONE\n(yes — in Wolfram's version, it's a STONE, not bone\nchina). This thing that drives a hundred KNIGHTS\nacross the world through forests, caves, and FIGHTS?",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5633,7 +5523,6 @@
       "name": "Ep28 Scene 2: What the Grail Actually Is",
       "sort_order": 111,
       "category": "the-grail",
-      "level": 1,
       "sections": {
         "Narration": "Some say it's the cup from the LAST SUPPER —\nthe one Jesus drank from. Could be. But UPPER\nlevels of the story say something MORE:\nit's the vessel of the DIVINE. The door",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5687,7 +5576,6 @@
       "name": "Ep28 Scene 3: What the Grail Actually Is",
       "sort_order": 112,
       "category": "the-grail",
-      "level": 1,
       "sections": {
         "Narration": "between this world and the next. A CUP\nthat fills when you're EMPTY. That lifts you UP\nwhen you ask the right QUESTION. It can't be SEIZED —\nonly received. Only the PLEASED-\nwith-nothing, the hungry, the fool on the ROAD\ncan hold it. It spills for the proud. It GLOWED\nfor Galahad, fed the Fisher King, and BROKE\nCamelot wide open with a single STROKE.\nThe Grail is whatever you SEE\nwhen you finally ask: 'What is WRONG with me?\nWhat AILS the world? And what can I POUR\nfrom my own heart to heal it?' NOTHING more.\nThe cup is you. The question is the KEY.\nThe Grail has always been inside. Now SEE.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5741,8 +5629,7 @@
       "name": "Episode 28: What the Grail Actually Is",
       "sort_order": 113,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "grail-meaning-scene-01",
         "grail-meaning-scene-02",
         "grail-meaning-scene-03"
@@ -5782,7 +5669,6 @@
       "name": "Ep29 Scene 1: The Secret in the Garden",
       "sort_order": 114,
       "category": "the-fall",
-      "level": 1,
       "sections": {
         "Narration": "They met in GARDENS — always gardens, green\nand private, where the roses built a SCREEN.\nLancelot and GUINEVERE — the best knight\nand the queen — hiding love in PLAIN SIGHT.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5837,7 +5723,6 @@
       "name": "Ep29 Scene 2: The Secret in the Garden",
       "sort_order": 115,
       "category": "the-fall",
-      "level": 1,
       "sections": {
         "Narration": "Everyone knew. (Everyone always KNOWS.)\nArthur knew — he saw how the river FLOWS\nbetween them, how their eyes would CATCH and hold.\nBut he loved them BOTH. What could he SCOLD?",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5891,7 +5776,6 @@
       "name": "Ep29 Scene 3: The Secret in the Garden",
       "sort_order": 116,
       "category": "the-fall",
-      "level": 1,
       "sections": {
         "Narration": "\"If I accuse them, I lose EVERYTHING:\nmy best friend AND my queen. The whole court RING\nwill shatter.\" So Arthur looked AWAY.\nAnd looking away became the price he'd PAY.\nBecause love in the dark grows CROOKED,\nlike a vine that's never LOOKED at\nby the sun. It tangles. It BREAKS walls.\nAnd eventually? Someone CALLS\nit out. Not gently. Not with GRACE.\nWith fury, and with armor in the SPACE\nwhere trust used to live. The garden BURNED.\nBut who betrayed whom? Arthur, who TURNED\nhis back? The lovers, who couldn't STOP?\nOr the system that forced them all to CROP\ntheir hearts into shapes that didn't FIT?\nLove isn't the villain. SILENCE is.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5945,8 +5829,7 @@
       "name": "Episode 29: The Secret in the Garden",
       "sort_order": 117,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "fall-lancelot-guinevere-scene-01",
         "fall-lancelot-guinevere-scene-02",
         "fall-lancelot-guinevere-scene-03"
@@ -5986,7 +5869,6 @@
       "name": "Ep30 Scene 1: The Son Arthur Didn't Want",
       "sort_order": 118,
       "category": "the-fall",
-      "level": 1,
       "sections": {
         "Narration": "Before Camelot, before the Table ROUND,\nyoung Arthur made a mistake — PROFOUND.\nHe lay with a woman (he didn't KNOW\nshe was his half-sister). And from that BLOW",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6040,7 +5922,6 @@
       "name": "Ep30 Scene 2: The Son Arthur Didn't Want",
       "sort_order": 119,
       "category": "the-fall",
-      "level": 1,
       "sections": {
         "Narration": "came MORDRED — born in shadow, raised in SPITE.\nSomeone told Arthur: \"A child born TONIGHT\nwill destroy you.\" So the king (oh, THIS\nis his worst moment — you can't DISMISS)",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6093,7 +5974,6 @@
       "name": "Ep30 Scene 3: The Son Arthur Didn't Want",
       "sort_order": 120,
       "category": "the-fall",
-      "level": 1,
       "sections": {
         "Narration": "put all the babies born that month on a BOAT\nand set it adrift. (Let THAT one float\nin your moral conscience.) The boat SANK.\nBut Mordred survived — washed up on a BANK,\nraised by a stranger, full of RAGE.\n\"My father tried to DROWN me.\" Every page\nof Mordred's life is written in that WOUND.\nThe son Arthur abandoned came back TUNED\nto one frequency: REVENGE.\nYou can't outrun your shadow. You can't AVENGE\nyourself against your own mistakes by DROWNING them.\nThey always wash ashore. They always COME.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6146,8 +6026,7 @@
       "name": "Episode 30: The Son Arthur Didn't Want",
       "sort_order": 121,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "fall-mordred-born-scene-01",
         "fall-mordred-born-scene-02",
         "fall-mordred-born-scene-03"
@@ -6186,7 +6065,6 @@
       "name": "Ep31 Scene 1: The Trap Is Set",
       "sort_order": 122,
       "category": "the-fall",
-      "level": 1,
       "sections": {
         "Narration": "AGRAVAIN (Gawain's brother — not the nice one)\nand MORDRED whispered: \"Isn't it TIME, son,\nwe told the king what everyone can SEE?\nLancelot and Guinevere. It can't just BE.\"",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6240,7 +6118,6 @@
       "name": "Ep31 Scene 2: The Trap Is Set",
       "sort_order": 123,
       "category": "the-fall",
-      "level": 1,
       "sections": {
         "Narration": "Gawain said, \"STOP. Leave it alone.\nSome truths are better left to moan\nin silence. If you open THIS door,\nyou'll burn the kingdom to the FLOOR.\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6293,7 +6170,6 @@
       "name": "Ep31 Scene 3: The Trap Is Set",
       "sort_order": 124,
       "category": "the-fall",
-      "level": 1,
       "sections": {
         "Narration": "But Agravain wanted JUSTICE (or was it pride?).\nAnd Mordred wanted CHAOS. Side by side,\nthey set the trap: \"Tonight, Arthur RIDES to hunt.\nWe'll catch them together — the whole STUNT\nexposed.\" Twelve knights crept to the queen's DOOR.\nLancelot was inside. The knights demanded MORE\nthan surrender — they wanted blood.\nLancelot fought through them like a FLOOD.\nKilled all twelve. (Agravain among the DEAD.)\nAnd now there was no looking away. The thread\nof silence — SNAPPED. Arthur had to ACT.\nNot because he wanted to. Because FACT\nhad replaced fiction. The dream was DONE.\nSometimes the truth destroys — not because it's WRONG,\nbut because it arrives at the wrong TIME.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6346,8 +6222,7 @@
       "name": "Episode 31: The Trap Is Set",
       "sort_order": 125,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "fall-agravain-accusation-scene-01",
         "fall-agravain-accusation-scene-02",
         "fall-agravain-accusation-scene-03"
@@ -6386,7 +6261,6 @@
       "name": "Ep32 Scene 1: The Queen on Trial",
       "sort_order": 126,
       "category": "the-fall",
-      "level": 1,
       "sections": {
         "Narration": "The LAW said: adultery by a queen means FIRE.\nGuinevere was led out to the PYRE.\nArthur — the king who loved her — had to STAND\nand watch. The law was bigger than his HAND.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6441,7 +6315,6 @@
       "name": "Ep32 Scene 2: The Queen on Trial",
       "sort_order": 127,
       "category": "the-fall",
-      "level": 1,
       "sections": {
         "Narration": "Was she guilty? YES — by the letter of the CODE.\nWas the law just? Ask the BURNING road\nshe walked, barefoot, in white, toward FLAME.\nAsk the crowd who whispered her NAME",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6495,7 +6368,6 @@
       "name": "Ep32 Scene 3: The Queen on Trial",
       "sort_order": 128,
       "category": "the-fall",
-      "level": 1,
       "sections": {
         "Narration": "but wouldn't meet her eyes. \"She loved,\" they SAID,\n\"is that worth dying for?\" (Yes.) \"Is she DEAD?\")\nNot yet — because LANCELOT was coming. FAST.\nRiding like thunder, breaking the CAST\nof justice with a sword. He cut through KNIGHTS,\nkilled Gareth (Gawain's beloved — awful NIGHTS\nwould follow), grabbed the queen, and RODE.\nHe saved her life. But the DEBT he owed\ngrew mountainous. Gawain, who'd been his FRIEND,\nswore blood-vengeance. This was the END\nof every friendship. Love saved the QUEEN.\nBut love at this cost? The cruelest SCENE.\nJustice and mercy drew their SWORDS.\nNeither won. They rarely DO — with words.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6549,8 +6421,7 @@
       "name": "Episode 32: The Queen on Trial",
       "sort_order": 129,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "fall-guinevere-trial-scene-01",
         "fall-guinevere-trial-scene-02",
         "fall-guinevere-trial-scene-03"
@@ -6590,7 +6461,6 @@
       "name": "Ep33 Scene 1: Lancelot's Rescue and Its Cost",
       "sort_order": 130,
       "category": "the-fall",
-      "level": 1,
       "sections": {
         "Narration": "Lancelot rode in like a STORM of steel —\ntwenty knights couldn't make him kneel.\nHe cut through everything between\nhimself and the burning, screaming QUEEN.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6645,7 +6515,6 @@
       "name": "Ep33 Scene 2: Lancelot's Rescue and Its Cost",
       "sort_order": 131,
       "category": "the-fall",
-      "level": 1,
       "sections": {
         "Narration": "But in the fury — in the red, blind RUSH —\nhis sword found GARETH. In the crush\nof bodies, he killed the one knight EVERYONE\nloved. Gareth — the kitchen knight. Arthur's young SON",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6699,7 +6568,6 @@
       "name": "Ep33 Scene 3: Lancelot's Rescue and Its Cost",
       "sort_order": 132,
       "category": "the-fall",
-      "level": 1,
       "sections": {
         "Narration": "of the heart (not the blood). The sweetest MAN\nin Camelot. Dead. By Lancelot's hand. The PLAN\nwent wrong. The rescue that should SAVE\nthe kingdom dug Camelot's GRAVE.\nGawain — Gareth's brother, Lancelot's FRIEND —\nstood over the body. \"This is THE END\nof you and me,\" he said. Cold as IRON.\nAnd Gawain, the most forgiving knight, the SIREN\nof honour, became Lancelot's HUNTER.\nNo peace. No pardon. Only THUNDER.\nThe best knight killed the kindest KNIGHT.\nAnd the kingdom split, LEFT from RIGHT.\nSometimes the thing you break while SAVING something else\nis the thing that mattered most. Forgive YOURSELF —\nor don't. Lancelot couldn't. That's his CROSS.\nEvery rescue has a cost. And this was TOTAL LOSS.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6753,8 +6621,7 @@
       "name": "Episode 33: Lancelot's Rescue and Its Cost",
       "sort_order": 133,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "fall-lancelot-rescue-scene-01",
         "fall-lancelot-rescue-scene-02",
         "fall-lancelot-rescue-scene-03"
@@ -6794,7 +6661,6 @@
       "name": "Ep34 Scene 1: Brother Against Brother",
       "sort_order": 134,
       "category": "the-fall",
-      "level": 1,
       "sections": {
         "Narration": "The kingdom SPLIT like a log under an axe.\nArthur (duty) versus Lancelot (the facts\nof love). GAWAIN swore he'd never rest\ntill Lancelot paid. The kingdom's BEST",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6848,7 +6714,6 @@
       "name": "Ep34 Scene 2: Brother Against Brother",
       "sort_order": 135,
       "category": "the-fall",
-      "level": 1,
       "sections": {
         "Narration": "knight and the kingdom's BEST king — at WAR.\nArthur besieged Lancelot's castle (Joyous GARD —\nimagine that name, dripping with IRONY).\nTwice Lancelot could have killed Arthur. DYNASTY",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6901,7 +6766,6 @@
       "name": "Ep34 Scene 3: Brother Against Brother",
       "sort_order": 136,
       "category": "the-fall",
-      "level": 1,
       "sections": {
         "Narration": "over. But he wouldn't. He LOVED the king.\nHe pulled his blows. He retreated from EVERYTHING.\n\"I will NOT fight you, Arthur. Not for REAL.\"\nBut Gawain? Gawain had no such ZEAL\nfor mercy. Three times they fought. Three WOUNDS\non Gawain — each time, Lancelot PRUNES\nhis power. \"I won't kill you, Gawain. STOP.\"\n\"Never,\" said Gawain. \"Not till you DROP.\"\nThe civil war burned through France and BACK.\nAnd while Arthur was away, pressed to the RACK\nof siege and honour — MORDRED seized the throne.\nThe shadow son. Finally HOME. Alone\nwith everything his father left BEHIND.\nThe snake in the garden had been there THE WHOLE TIME.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6954,8 +6818,7 @@
       "name": "Episode 34: Brother Against Brother",
       "sort_order": 137,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "fall-civil-war-scene-01",
         "fall-civil-war-scene-02",
         "fall-civil-war-scene-03"
@@ -6994,7 +6857,6 @@
       "name": "Ep35 Scene 1: The Dark Son Takes the Throne",
       "sort_order": 138,
       "category": "the-fall",
-      "level": 1,
       "sections": {
         "Narration": "While Arthur fought in France, MORDRED stayed.\n\"Regent,\" they called him. But the game he PLAYED\nwas not regenting — it was TAKING.\nHe forged letters: \"Arthur's DEAD.\" (He was faking.)",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -7048,7 +6910,6 @@
       "name": "Ep35 Scene 2: The Dark Son Takes the Throne",
       "sort_order": 139,
       "category": "the-fall",
-      "level": 1,
       "sections": {
         "Narration": "\"I'm KING now,\" Mordred told the people. SOME\nbelieved him. Power always finds the DUMB\nand the desperate. He tried to marry GUINEVERE.\n(She locked herself in a tower — FEAR",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -7101,7 +6962,6 @@
       "name": "Ep35 Scene 3: The Dark Son Takes the Throne",
       "sort_order": 140,
       "category": "the-fall",
-      "level": 1,
       "sections": {
         "Narration": "and fury in her eyes: \"I'd rather DIE.\")\nShe was right to run. Mordred's LIE\nwas total: he wanted the queen, the crown, the LAND.\nEverything his father touched — in Mordred's HAND.\nArthur heard. He came back. The FLEET\ncrossed the channel. Father and son would MEET\non the field of Camlann. The final DAY.\nThe shadow and the light, face to FACE. No way\naround it, under it, or THROUGH.\nSometimes the thing you threw away comes back for YOU.\nMordred was Arthur's mirror — dark GLASS\nshowing everything the king tried to PASS\noff as someone else's fault. Your shadow GROWS.\nYou can drown it, exile it, but EVERYONE KNOWS:\nit always comes home. And it always WANTS the throne.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -7154,8 +7014,7 @@
       "name": "Episode 35: The Dark Son Takes the Throne",
       "sort_order": 141,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "fall-mordred-rises-scene-01",
         "fall-mordred-rises-scene-02",
         "fall-mordred-rises-scene-03"
@@ -7194,7 +7053,6 @@
       "name": "Ep36 Scene 1: The Battle of Camlann",
       "sort_order": 142,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "The armies faced each other. Mist and GREY.\nArthur and Mordred — father, son. The DAY\nhung like a held breath. Negotiations TRIED:\n\"Let's talk.\" \"Fine.\" Both sides stood, side by SIDE.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -7249,7 +7107,6 @@
       "name": "Ep36 Scene 2: The Battle of Camlann",
       "sort_order": 143,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "\"But if any man draws a sword,\" they SAID,\n\"attack at once. This peace hangs by a THREAD.\"\nAn adder — one small SNAKE — slid through the grass.\nA knight drew steel to kill it. ALAS —",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -7303,7 +7160,6 @@
       "name": "Ep36 Scene 3: The Battle of Camlann",
       "sort_order": 144,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "the other side saw the flash. \"TREACHERY!\"\nAnd the field erupted. Every TREE\nof loyalty, every branch of years of TRUST,\ncame crashing down in blood and DUST.\nAll day they fought. The river ran RED.\nKnight by knight, friend by friend — all DEAD.\nBy evening, a hundred thousand LAY\nacross the field of Camlann. ONE DAY.\nAn adder. A reflex. A flash of STEEL.\nThe end of Camelot — undone by what we FEEL\nwhen we see a snake: FEAR. Just fear.\nThe smallest thing can end a kingdom HERE.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -7357,8 +7213,7 @@
       "name": "Episode 36: The Battle of Camlann",
       "sort_order": 145,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "return-camlann-scene-01",
         "return-camlann-scene-02",
         "return-camlann-scene-03"
@@ -7398,7 +7253,6 @@
       "name": "Ep37 Scene 1: Father and Son",
       "sort_order": 146,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "By sunset, only ARTHUR stood — and two\nknight companions, wounded, barely THROUGH.\nAcross the field of dead, one figure MOVED:\nMORDRED. Leaning on a sword. Ungrooved",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -7452,7 +7306,6 @@
       "name": "Ep37 Scene 2: Father and Son",
       "sort_order": 147,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "from any sense of mercy. \"FATHER,\" he spat.\n\"Let me GO,\" cried Bedivere. \"Leave him at THAT.\"\nBut Arthur picked up a SPEAR. \"This ends NOW.\"\nHe ran at his son — drove the spear THROUGH.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -7505,7 +7358,6 @@
       "name": "Ep37 Scene 3: Father and Son",
       "sort_order": 148,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "Mordred FELT it pierce him — chest to BACK.\nBut dying, he pulled himself UP the shaft, the crack\nof ribs ignored — closer, closer to his DAD —\nand brought his SWORD down on Arthur's HEAD. The sad,\nthe terrible, the MYTHIC final stroke.\nFather and son. Creator and the BROKE-\nn creation. Both fell. Mordred DIED.\nAnd Arthur? Arthur lay on his SIDE,\nbleeding from a wound that wouldn't CLOSE.\n\"Take me to the water,\" he spoke through his NOSE\nof blood. \"The lake. Please. Take me THERE.\"\nThe shadow and the king destroyed EACH OTHER. Fair?\nNo. But honest. The thing you reject ALWAYS\ncomes home. And it takes you WITH it, through the HALLWAYS\nof consequence, to the final DOOR.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -7558,8 +7410,7 @@
       "name": "Episode 37: Father and Son",
       "sort_order": 149,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "return-mordred-falls-scene-01",
         "return-mordred-falls-scene-02",
         "return-mordred-falls-scene-03"
@@ -7598,7 +7449,6 @@
       "name": "Ep38 Scene 1: The Sword Goes Home",
       "sort_order": 150,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "\"BEDIVERE,\" Arthur whispered, dying. \"Take\nExcalibur. Throw it in the LAKE.\"\nBedivere walked to the water's EDGE.\nHe looked at the sword — jeweled, on the LEDGE",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -7653,7 +7503,6 @@
       "name": "Ep38 Scene 2: The Sword Goes Home",
       "sort_order": 151,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "of throwing — and thought: \"This sword's too FINE\nto waste.\" He hid it. Walked back. \"Done. That's MINE —\nI mean — it's done.\" Arthur said, \"LIAR.\nWhat did you see?\" \"Ripples.\" \"You're a FLIER",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -7707,7 +7556,6 @@
       "name": "Ep38 Scene 3: The Sword Goes Home",
       "sort_order": 152,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "of falsehoods. Go BACK.\" Twice Bedivere tried\nand twice he lied. The third time — tears DRIED\non his face — he THREW. And from the lake,\na HAND rose up — white, calm — to take\nExcalibur. Caught it by the hilt. Drew it DOWN\nbeneath the surface. Not a sound. Not a FROWN\non the water. Just a hand. The Lady's CLAIM\nreturned. The sword went back from whence it CAME.\n\"What did you see?\" \"A hand, my lord. It TOOK the sword.\"\n\"Good,\" said Arthur. \"Now carry me. My CORD\nis cut.\" The gift from the feminine RETURNS\nto the feminine. Everything the kingdom EARNS\nfrom grace must be returned. You can't KEEP\nwhat was lent. Even Excalibur SLEEPS.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -7761,8 +7609,7 @@
       "name": "Episode 38: The Sword Goes Home",
       "sort_order": 153,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "return-excalibur-lake-scene-01",
         "return-excalibur-lake-scene-02",
         "return-excalibur-lake-scene-03"
@@ -7802,7 +7649,6 @@
       "name": "Ep39 Scene 1: Three Queens and a Barge",
       "sort_order": 154,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "A BARGE appeared on the lake — black-hulled, SLOW,\nwith three queens aboard, their faces all AGLOW\nwith grief and something deeper. One was MORGAN\n(yes — his enemy-sister, now ORGAN",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -7856,7 +7702,6 @@
       "name": "Ep39 Scene 2: Three Queens and a Barge",
       "sort_order": 155,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "of mercy). One was the Queen of NORTHGALIS.\nOne was the Queen of the WASTE LANDS (that is\nanother story). They reached out their HANDS.\n\"Come, brother,\" Morgan said. \"The far-off LANDS",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -7909,7 +7754,6 @@
       "name": "Ep39 Scene 3: Three Queens and a Barge",
       "sort_order": 156,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "are waiting.\" Arthur lay his head in Morgan's LAP.\nShe wept. She stroked his hair. The MAP\nof their whole war — the stolen scabbard, the poison CLOAK —\ndissolved. She was his sister, and she SPOKE\nwords of healing. Not revenge. Not FIGHT.\nJust: \"Rest now, Arthur. Rest. The LIGHT\nis gentler where we're going.\" And the barge\nmoved out across the water, silent, LARGE\nand dark against the setting sun.\nBedivere cried from the shore: \"My king! We're DONE?\"\n\"I go to Avalon,\" Arthur called. \"To HEAL.\nOr die. I don't know which. But FEEL\nthis: I'll come back when Britain NEEDS me most.\"\nThe barge slid into mist. A ghost\nof gold. Three queens. One wounded KING.\nThe women carried him. They carry EVERYTHING.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -7962,8 +7806,7 @@
       "name": "Episode 39: Three Queens and a Barge",
       "sort_order": 157,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "return-barge-scene-01",
         "return-barge-scene-02",
         "return-barge-scene-03"
@@ -8002,7 +7845,6 @@
       "name": "Ep40 Scene 1: The Isle of Apples",
       "sort_order": 158,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "AVALON. The Isle of Apples. WHERE?\nNobody knows. Some say it's THERE,\nin Glastonbury, where the monks once FOUND\na grave — or CLAIMED they did — in holy ground.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -8056,7 +7898,6 @@
       "name": "Ep40 Scene 2: The Isle of Apples",
       "sort_order": 159,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "But the real Avalon isn't on a MAP.\nIt's the place between WAKING and a nap,\nbetween this world and the one that SHIMMERS\njust behind it — where the starlight GLIMMERS",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -8109,7 +7950,6 @@
       "name": "Ep40 Scene 3: The Isle of Apples",
       "sort_order": 160,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "through the fabric of what we call REAL.\nNine maidens live there. They HEAL\nwith herbs and song. Apple trees grow TALL\nwithout winter, without FALL.\nThe veil is thin. The dead aren't DEAD —\nthey're resting, dreaming, being FED\nby something we can't name but always FEEL\nwhen the mist comes down and the world gets SURREAL.\nArthur sleeps in Avalon. His WOUNDS\nclose slowly. Centuries are AFTERNOONS\nthere. And when Britain needs him — when the darkest HOUR\narrives — he'll wake. He'll feel his POWER\nreturn. He'll cross the water. He'll come HOME.\nThe once and future king. Still on his THRONE\nof apple-boughs and mist. Just... WAITING.\nThe most beautiful kind of not-quite-FADING.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -8162,8 +8002,7 @@
       "name": "Episode 40: The Isle of Apples",
       "sort_order": 161,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "return-avalon-scene-01",
         "return-avalon-scene-02",
         "return-avalon-scene-03"
@@ -8202,7 +8041,6 @@
       "name": "Ep41 Scene 1: The King Who Sleeps",
       "sort_order": 162,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "In a cave. In a hill. Under GLASTONBURY.\nOr under SNOWDON. Or under EVERY\nhill in Britain where the mist comes DOWN\nand the locals say, \"Don't poke AROUND.\"",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -8257,7 +8095,6 @@
       "name": "Ep41 Scene 2: The King Who Sleeps",
       "sort_order": 163,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "Arthur sleeps — surrounded by his KNIGHTS.\nTheir armor gleams by underground LIGHTS\nthat have no source. Their horses BREATHE.\nTheir swords are sharp. The STONES beneath",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -8311,7 +8148,6 @@
       "name": "Ep41 Scene 3: The King Who Sleeps",
       "sort_order": 164,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "them hum. He's waiting for the DARKEST hour —\nwhen Britain faces its most terrible POWER\nand all seems lost. THEN — the hill will CRACK.\nThe horses will stamp. The king will sit UP.\n\"What year is it?\" he'll ask. And BACK\nhe'll ride, Excalibur raised high, the CUP\nof his return overflowing with LIGHT.\nThe once and future king. The ENDLESS knight.\nThis is the promise every child is TOLD:\nthat goodness doesn't die. It sleeps in GOLD\nunderneath the hills of your OWN country,\nwaiting. Patient. Drumming GENTLY.\nAnd when you need it most? It WAKES.\nArthur is the promise goodness MAKES.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -8365,8 +8201,7 @@
       "name": "Episode 41: The King Who Sleeps",
       "sort_order": 165,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "return-sleeps-scene-01",
         "return-sleeps-scene-02",
         "return-sleeps-scene-03"
@@ -8406,7 +8241,6 @@
       "name": "Ep42 Scene 1: Arthur Is Always Coming Back",
       "sort_order": 166,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "Here's the secret that the stories KEEP:\nArthur isn't just a king ASLEEP.\nHe's an IDEA — and ideas don't stay DOWN.\nThey show up wearing a different CROWN",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -8460,7 +8294,6 @@
       "name": "Ep42 Scene 2: Arthur Is Always Coming Back",
       "sort_order": 167,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "in every age. Wherever someone STANDS\nfor justice with trembling HANDS,\nwherever a table has no HEAD\nand everyone is equal — SOMETHING said:\n\"ARTHUR.\" Wherever a fool asks the RIGHT\nquestion of a suffering king at NIGHT,\nwherever a hand rises from the LAKE",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -8513,7 +8346,6 @@
       "name": "Ep42 Scene 3: Arthur Is Always Coming Back",
       "sort_order": 168,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "to offer something for someone else's SAKE,\nwherever a sword is returned instead of KEPT,\nand a kingdom's sins are honestly WEPT —\nthat's Arthur. He didn't need to wake UP.\nHe was never asleep. He's in every CUP\nof kindness, every round table where FRIENDS\nsit as equals, every story that never ENDS.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -8566,7 +8398,6 @@
       "name": "Ep42 Scene 4: Arthur Is Always Coming Back",
       "sort_order": 169,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "Goodnight, little knight. Your armor: LOVE.\nYour quest: TOMORROW. Your Grail: ABOVE\nand below and inside and EVERYWHERE.\nThe king sleeps in your heart. And he's ALWAYS there.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -8619,8 +8450,7 @@
       "name": "Episode 42: Arthur Is Always Coming Back",
       "sort_order": 170,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "return-always-scene-01",
         "return-always-scene-02",
         "return-always-scene-03",

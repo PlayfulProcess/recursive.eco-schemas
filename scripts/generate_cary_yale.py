@@ -199,7 +199,7 @@ for tid, name, ital, fname, icon, hist, reading in TRUMPS:
     u = img(fname)
     cat = "virtue" if tid.startswith("virtue") else "trump"
     items.append({
-        "id": tid, "name": name, "sort_order": sort_order, "category": cat, "level": 1,
+        "id": tid, "name": name, "sort_order": sort_order, "category": cat,
         "keywords": [name.lower(), ital.lower(), "trump" if cat == "trump" else "theological virtue",
                      "cary-yale"],
         "image_url": u,
@@ -244,7 +244,7 @@ for (rank_disp, rank_num), (suit_disp, suit_ital, element, theme), fname in pars
         reading = f"{cardname} — {PIP_MEANING[rank_num]}, within {theme}."
     items.append({
         "id": item_id, "name": cardname, "sort_order": sort_order,
-        "category": f"suit-{sid}", "level": 1,
+        "category": f"suit-{sid}",
         "keywords": [suit_disp.lower(), element.lower(), rank_disp.lower(),
                      "court card" if is_court else "pip", suit_ital.lower()],
         "image_url": u,
@@ -300,8 +300,8 @@ for sid, sdisp in [("coins", "Coins"), ("cups", "Cups"), ("swords", "Swords"), (
 for eid, ename, children, image_url, sections in emergences:
     children = [c for c in children if c in all_ids]
     items.append({
-        "id": eid, "name": ename, "sort_order": sort_order, "category": "emergence", "level": 2,
-        "composite_of": children, "relationship_type": "emergence",
+        "id": eid, "name": ename, "sort_order": sort_order, "category": "emergence",
+        "parts": children, "relationship_type": "emergence",
         "image_url": image_url, "metadata": {}, "sections": sections,
     })
     sort_order += 1
@@ -354,7 +354,7 @@ grammar = {
     "lineages": ["Andreotti"],
     "worldview": "historical",
     "is_published": False,
-    "items": items,
+    "nodes": items,
 }
 
 os.makedirs(OUT_DIR, exist_ok=True)

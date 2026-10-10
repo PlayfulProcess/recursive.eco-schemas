@@ -14,6 +14,7 @@ Structure:
 import json
 import re
 from pathlib import Path
+from grammar_depth import node_depth
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent
@@ -286,7 +287,6 @@ def build_grammar():
             "id": chapter_id,
             "name": chapter_name,
             "sort_order": sort_order,
-            "level": 1,
             "category": "chapter",
             "sections": {
                 "Text": ch['text'],
@@ -309,10 +309,9 @@ def build_grammar():
             "id": region_id,
             "name": region["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": "region",
             "relationship_type": "emergence",
-            "composite_of": region["chapters"],
+            "parts": region["chapters"],
             "sections": {
                 "About": region["about"],
                 "For Readers": region["for_readers"],
@@ -329,10 +328,9 @@ def build_grammar():
         "id": "voyage-of-the-beagle-complete",
         "name": "The Voyage of the Beagle",
         "sort_order": sort_order,
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": all_region_ids,
+        "parts": all_region_ids,
         "sections": {
             "About": "Charles Darwin's Voyage of the Beagle (1839, revised 1845) is the journal of a five-year circumnavigation that changed the course of science. As naturalist aboard HMS Beagle (1831-1836), the 22-year-old Darwin observed the geology, flora, fauna, and peoples of South America, the Galapagos, the Pacific islands, and beyond. The book is at once a travel adventure, a work of natural history, a geological treatise, and the intellectual autobiography of a young man whose observations would lead to the theory of evolution. Every chapter brims with wonder, meticulous observation, and the dawning realization that the living world is not fixed but mutable.",
             "For Readers": "The Voyage is Darwin's most readable book — vivid, adventurous, and full of personality. Read it chronologically to follow the journey, or browse by region. The Argentine chapters for gaucho adventure and giant fossils. Tierra del Fuego for human drama. The Galapagos for the seeds of evolution. The earthquake at Concepcion for geological dynamism. The coral atolls for elegant theory. Darwin's prose is clear and often beautiful, and his sense of wonder never flags across 21 chapters and five years of exploration.",
@@ -362,16 +360,16 @@ def build_grammar():
         "shelves": ["earth"],
         "lineages": ["Shrei"],
         "worldview": "naturalist",
-        "items": items,
+        "nodes": items,
     }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT_PATH}")
     print(f"  L1: {l1} chapters, L2: {l2} regions, L3: {l3} meta")
     print(f"  Total items: {len(items)}")

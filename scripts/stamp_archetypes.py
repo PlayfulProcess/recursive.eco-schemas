@@ -22,6 +22,7 @@ See plan/tarot-roadmap-and-supabase-log.md §6.
 import json
 import os
 import re
+from grammar_depth import node_depth
 
 GRAMMARS = os.path.join(os.path.dirname(__file__), "..", "grammars")
 
@@ -144,10 +145,10 @@ def stamp_deck(slug):
     path = os.path.join(GRAMMARS, slug, "grammar.json")
     g = json.load(open(path, encoding="utf-8"))
     n = 0
-    for it in g["items"]:
+    for it in g["nodes"]:
         cat = str(it.get("category", ""))
         md = it.get("metadata", {})
-        if cat == "emergence" or it.get("level", 1) >= 2 or it.get("composite_of"):
+        if cat == "emergence" or node_depth(it, g["nodes"]) >= 2 or it.get("parts"):
             continue
         n += 1
         # ---- Etteilla decks: resolve by Etteilla number ----

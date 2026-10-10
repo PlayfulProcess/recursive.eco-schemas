@@ -29,6 +29,7 @@ import json
 import re
 import os
 import sys
+from grammar_depth import node_depth
 
 SEED_PATH = os.path.join(os.path.dirname(__file__), '..', 'seeds', 'dark-night-of-the-soul.txt')
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), '..', 'grammars', 'dark-night-of-the-soul')
@@ -167,7 +168,6 @@ def build_grammar(parsed_items):
             'name': name,
             'sort_order': sort_order,
             'category': book_cat,
-            'level': 1,
             'sections': {'Text': pi['text']},
             'keywords': keywords[:6],
             'metadata': {'book': pi['book'], 'chapter': pi['chapter']}
@@ -184,8 +184,7 @@ def build_grammar(parsed_items):
             'name': 'Book I: The Dark Night of the Senses',
             'sort_order': sort_order,
             'category': 'book',
-            'level': 2,
-            'composite_of': book1_ids,
+            'parts': book1_ids,
             'relationship_type': 'emergence',
             'sections': {
                 'About': "The first stage of the soul's purification: the night of the senses. John of the Cross describes how God withdraws sensory consolations from the soul, leaving it in dryness, darkness, and apparent abandonment. This is not punishment but medicine -- the soul is being weaned from attachment to spiritual pleasure so it can begin to love God for God's own sake. John catalogs the seven capital sins as they manifest in spiritual life, showing how each is purged through the dark night.",
@@ -202,8 +201,7 @@ def build_grammar(parsed_items):
             'name': 'Book II: The Dark Night of the Spirit',
             'sort_order': sort_order,
             'category': 'book',
-            'level': 2,
-            'composite_of': book2_ids,
+            'parts': book2_ids,
             'relationship_type': 'emergence',
             'sections': {
                 'About': "The deeper and more terrible purification: the night of the spirit. Here the soul undergoes a radical transformation at the very center of its being. The darkness is more profound, the suffering more acute, but the purpose is the same: the soul is being prepared for union with God. John describes this night as a 'living death' -- the old self dying so that the new self, united with the divine, can be born. The concluding chapters describe the dawn of contemplative union.",
@@ -215,15 +213,14 @@ def build_grammar(parsed_items):
         sort_order += 1
 
     # L3
-    l2_ids = [i['id'] for i in items if i['level'] == 2]
+    l2_ids = [i['id'] for i in items if node_depth(i, items) == 2]
     if l2_ids:
         items.append({
             'id': 'the-dark-night',
             'name': 'The Dark Night of the Soul',
             'sort_order': sort_order,
             'category': 'meta-theme',
-            'level': 3,
-            'composite_of': l2_ids,
+            'parts': l2_ids,
             'relationship_type': 'emergence',
             'sections': {
                 'About': "St. John of the Cross's Dark Night of the Soul is one of the most profound works in the literature of mysticism. Written by a 16th-century Spanish Carmelite friar who himself endured imprisonment and torture, it maps the soul's journey through two successive 'nights' of purification -- the night of the senses and the night of the spirit -- toward union with God. The central paradox: what appears as abandonment is actually the deepest intimacy; what feels like death is actually birth. The phrase 'dark night of the soul' has entered common language, but its original meaning is far richer and more hopeful than popular usage suggests.",
@@ -263,7 +260,7 @@ def build_grammar(parsed_items):
         'shelves': ['wisdom'],
         'lineages': ['Linehan'],
         'worldview': 'contemplative',
-        'items': items
+        'nodes': items
     }
 
     return grammar
@@ -301,14 +298,14 @@ def main():
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
     item_counts = {}
-    for item in grammar['items']:
-        level = item['level']
+    for item in grammar['nodes']:
+        level = node_depth(item, grammar['nodes'])
         item_counts[level] = item_counts.get(level, 0) + 1
 
     print(f"\nGrammar written to {OUTPUT_PATH}")
     for level in sorted(item_counts):
         print(f"  L{level} items: {item_counts[level]}")
-    print(f"  Total: {len(grammar['items'])} items")
+    print(f"  Total: {len(grammar['nodes'])} items")
 
 
 if __name__ == '__main__':

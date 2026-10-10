@@ -15,6 +15,7 @@ Structure:
 import json
 import re
 from pathlib import Path
+from grammar_depth import node_depth
 
 SEED_PATH = Path(__file__).parent.parent / "seeds" / "song-of-songs.txt"
 OUTPUT_DIR = Path(__file__).parent.parent / "grammars" / "song-of-songs"
@@ -164,7 +165,6 @@ def build_grammar():
         add_item({
             "id": info["id"],
             "name": info["name"],
-            "level": 1,
             "category": "chapter",
             "sections": {
                 "Verse": format_chapter(verses),
@@ -182,7 +182,6 @@ def build_grammar():
     add_item({
         "id": "theme-awakening",
         "name": "The Awakening of Desire (Chapters 1-3)",
-        "level": 2,
         "category": "thematic-grouping",
         "sections": {
             "About": "The first movement of the Song traces desire from its first spark ('Let him kiss me') through the blossoming of spring to the frantic night search through the city. Love declares itself, nature responds, and the beloved learns that what the soul loves cannot be summoned but must be sought. The refrain to the daughters of Jerusalem -- 'stir not up love till he please' -- warns that love has its own timing.",
@@ -190,13 +189,12 @@ def build_grammar():
         },
         "keywords": ["awakening", "desire", "spring", "seeking", "nature"],
         "metadata": {},
-        "composite_of": ["chapter-1", "chapter-2", "chapter-3"]
+        "parts": ["chapter-1", "chapter-2", "chapter-3"]
     })
 
     add_item({
         "id": "theme-praise-and-loss",
         "name": "Praise and Loss: The Garden of the Body (Chapters 4-6)",
-        "level": 2,
         "category": "thematic-grouping",
         "sections": {
             "About": "The central movement presents the Song's deepest paradox: the beloved is most fully praised at the moment of potential loss. Chapter 4's exquisite garden imagery opens into chapter 5's missed encounter -- she hesitates, he vanishes, and the watchmen wound her. Only through loss does she discover how to describe what she loves. Chapter 6 resolves the crisis: he is found again in his garden.",
@@ -204,13 +202,12 @@ def build_grammar():
         },
         "keywords": ["praise", "loss", "garden", "separation", "reunion", "blazon"],
         "metadata": {},
-        "composite_of": ["chapter-4", "chapter-5", "chapter-6"]
+        "parts": ["chapter-4", "chapter-5", "chapter-6"]
     })
 
     add_item({
         "id": "theme-consummation",
         "name": "Love Strong as Death: Consummation and Seal (Chapters 7-8)",
-        "level": 2,
         "category": "thematic-grouping",
         "sections": {
             "About": "The final movement celebrates the body in ecstatic dance and arrives at the poem's supreme declaration: love is strong as death, unquenchable by many waters. The personal becomes cosmic. The vineyard imagery from chapter 1 returns transformed -- Solomon's thousand pieces of silver are nothing beside the vineyard of the beloved. The poem ends as it began, with a cry of urgency: 'Make haste, my beloved.'",
@@ -218,7 +215,7 @@ def build_grammar():
         },
         "keywords": ["consummation", "death", "seal", "fire", "water", "vineyard", "eternity"],
         "metadata": {},
-        "composite_of": ["chapter-7", "chapter-8"]
+        "parts": ["chapter-7", "chapter-8"]
     })
 
     # =========================================================================
@@ -228,7 +225,6 @@ def build_grammar():
     add_item({
         "id": "meta-song-of-songs",
         "name": "The Song of Songs: Sacred Eros",
-        "level": 3,
         "category": "meta-category",
         "sections": {
             "About": "The Song of Songs is the most extraordinary text in the biblical canon: an unabashed celebration of erotic love between two unnamed lovers, set among the gardens, vineyards, and hills of ancient Israel. It contains no mention of God, no moral instruction, no narrative of salvation -- only the voices of desire, praise, longing, and consummation. Jewish tradition reads it as an allegory of God's love for Israel; Christian tradition as Christ's love for the Church; but its primary meaning is the holiness of human love itself. It is the oldest and greatest love poem in Western literature.",
@@ -236,7 +232,7 @@ def build_grammar():
         },
         "keywords": ["song-of-songs", "sacred", "eros", "love", "beauty", "death", "garden", "seal", "bible"],
         "metadata": {},
-        "composite_of": ["theme-awakening", "theme-praise-and-loss", "theme-consummation"]
+        "parts": ["theme-awakening", "theme-praise-and-loss", "theme-consummation"]
     })
 
     # =========================================================================
@@ -262,7 +258,7 @@ def build_grammar():
         "shelves": ["wonder"],
         "lineages": ["Shrei", "Johnson"],
         "worldview": "devotional",
-        "items": items
+        "nodes": items
     }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -273,7 +269,7 @@ def build_grammar():
     print(f"Built Song of Songs grammar: {len(items)} items, {total_verses} verses across 8 chapters")
     for item in items:
         verse = item["sections"].get("Verse", "")
-        print(f"  L{item['level']}: {item['id']} - {item['name']} ({len(verse)} chars)")
+        print(f"  L{node_depth(item, items)}: {item['id']} - {item['name']} ({len(verse)} chars)")
 
 
 if __name__ == "__main__":

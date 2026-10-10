@@ -30,12 +30,12 @@ const assignments = JSON.parse(readFileSync(assignmentsPath, 'utf8'));
 const allIllustrations = [];
 const sceneMap = {};
 
-for (const item of grammar.items) {
+for (const item of grammar.nodes) {
   sceneMap[item.id] = {
     name: item.name,
     chapter: item.metadata.chapter_number,
     scene_number: item.metadata.scene_number || 0,
-    level: item.level,
+    level: nodeDepth(item, grammar.nodes),
   };
 
   for (const ill of (item.metadata?.illustrations || [])) {
@@ -60,7 +60,7 @@ console.log(`Loaded ${assignments.length} page assignments`);
 
 // Build chapter → ordered scene IDs
 const chapterScenes = {};
-for (const item of grammar.items.filter(i => i.level === 1)) {
+for (const item of grammar.nodes.filter((i) => nodeDepth(i, grammar.nodes) === 1)) {
   const ch = item.metadata.chapter_number;
   if (!chapterScenes[ch]) chapterScenes[ch] = [];
   chapterScenes[ch].push(item.id);
@@ -826,3 +826,20 @@ render();
 writeFileSync(outputPath, html);
 console.log(`\nReorder tool generated: ${outputPath}`);
 console.log(`Open: http://localhost:3456/booklets/reorder-tool.html`);
+
+// Depth from parts (grammar format v2 stores no level): a node with no parts is 1;
+// otherwise 1 + the deepest part. Cycle-safe. `nodes` is the nodes array or an id -> node Map.
+function nodeDepth(node, nodes, seen = new Set()) {
+  const parts = node && node.parts;
+  if (!parts || !parts.length) return 1;
+  const byId = nodes instanceof Map ? nodes : new Map(nodes.map((n) => [n.id, n]));
+  if (seen.has(node.id)) return 1;
+  seen.add(node.id);
+  let d = 1;
+  for (const id of parts) {
+    const c = byId.get(id);
+    if (c) d = Math.max(d, 1 + nodeDepth(c, byId, seen));
+  }
+  seen.delete(node.id);
+  return d;
+}

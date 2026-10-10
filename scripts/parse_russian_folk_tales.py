@@ -4,6 +4,7 @@ Parse Russian Folk-Tales (Afanasyev/Magnus, Gutenberg #62509) into grammar.json.
 73 tales organized into thematic L2 groups.
 """
 import json, re, os
+from grammar_depth import node_depth
 
 with open("seeds/russian-folk-tales.txt", encoding="utf-8") as f:
     lines = f.readlines()
@@ -216,7 +217,6 @@ for t in tales:
         "name": t["name"],
         "sort_order": sort_order,
         "category": "tales",
-        "level": 1,
         "sections": {
             "Story": t["text"]
         },
@@ -257,13 +257,12 @@ for theme_id, (theme_name, theme_about) in THEME_NAMES.items():
         "name": theme_name,
         "sort_order": sort_order,
         "category": "themes",
-        "level": 2,
         "sections": {
             "About": theme_about,
             "For Readers": f"These tales share the theme of {theme_name.lower()}. Read them as a group to see how Russian folk imagination circles around the same ideas from different angles. Notice the recurring motifs: the number three (three tasks, three sons, three sisters), the forest as threshold between worlds, the transformation that reveals true nature."
         },
         "keywords": ["russian", "folk-tale", theme_id],
-        "composite_of": refs,
+        "parts": refs,
         "relationship_type": "emergence",
         "metadata": {}
     })
@@ -275,13 +274,12 @@ items.append({
     "name": "The Russian Folk Soul",
     "sort_order": sort_order,
     "category": "meta",
-    "level": 3,
     "sections": {
         "About": "Seventy-three tales from the collection of Alexander Afanasyev — the Russian Grimm, who gathered these stories from across the Russian Empire in the mid-nineteenth century. This is the wild forest of Russian imagination: older than the tsars, older than Christianity (though it absorbed both), shaped by endless winters, vast distances, and the knowledge that the supernatural is never more than a footstep away. Bába Yagá guards the threshold between worlds. The dead dance at midnight. Animals speak truth that humans cannot. The bogatyrs ride out against impossible odds. The fool on the stove turns out to be the wisest of all. These tales were told by peasants to peasants, and their wisdom is the wisdom of people who have survived everything.",
         "Contemplation": "Which character are you in the folk tale of your own life right now? Are you the youngest son setting out with nothing? The enchanted prisoner waiting to be freed? The clever wife solving the puzzle the hero cannot? The fool on the stove, not yet ready to rise? The tale knows — and so do you, if you listen."
     },
     "keywords": ["russian", "folk-tale", "afanasyev", "soul", "collective"],
-    "composite_of": [f"theme-{t}" for t in THEME_NAMES],
+    "parts": [f"theme-{t}" for t in THEME_NAMES],
     "relationship_type": "emergence",
     "metadata": {}
 })
@@ -310,7 +308,7 @@ grammar = {
     "shelves": ["wonder", "wisdom"],
     "lineages": ["Shrei", "Akomolafe"],
     "worldview": "animist",
-    "items": items
+    "nodes": items
 }
 
 os.makedirs("grammars/russian-folk-tales", exist_ok=True)
@@ -322,14 +320,14 @@ ids = [i["id"] for i in items]
 dupes = [x for x in ids if ids.count(x) > 1]
 bad_refs = []
 for i in items:
-    for ref in i.get("composite_of", []):
+    for ref in i.get("parts", []):
         if ref not in ids:
             bad_refs.append((i["id"], ref))
 
 print(f"\nTotal items: {len(items)}")
-print(f"L1 tales: {sum(1 for i in items if i['level'] == 1)}")
-print(f"L2 themes: {sum(1 for i in items if i['level'] == 2)}")
-print(f"L3 meta: {sum(1 for i in items if i['level'] == 3)}")
+print(f"L1 tales: {sum(1 for i in items if node_depth(i, items) == 1)}")
+print(f"L2 themes: {sum(1 for i in items if node_depth(i, items) == 2)}")
+print(f"L3 meta: {sum(1 for i in items if node_depth(i, items) == 3)}")
 print(f"Sections: {sum(len(i.get('sections', {})) for i in items)}")
 print(f"Duplicate IDs: {dupes}")
 print(f"Bad refs: {bad_refs}")

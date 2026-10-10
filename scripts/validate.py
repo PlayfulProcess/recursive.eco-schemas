@@ -5,8 +5,8 @@ Validate all grammar.json files in grammars/.
 Checks:
 1. Valid JSON
 2. No duplicate IDs within a grammar
-3. All composite_of references point to existing IDs
-4. Required fields present (id, name, sections, level, category)
+3. All parts references point to existing IDs
+4. Required fields present (id, name, sections)
 5. sort_order is sequential
 6. Attribution metadata present
 """
@@ -28,7 +28,7 @@ def validate_grammar(grammar_path):
     except json.JSONDecodeError as e:
         return [f"{name}: Invalid JSON — {e}"]
 
-    items = data.get("items", [])
+    items = data.get("nodes", [])
     if not items:
         errors.append(f"{name}: No items found")
         return errors
@@ -41,10 +41,10 @@ def validate_grammar(grammar_path):
             errors.append(f"{name}: Duplicate ID '{item_id}'")
         seen.add(item_id)
 
-    # Check composite_of references
+    # Check parts references
     id_set = set(ids)
     for item in items:
-        for ref in item.get("composite_of", []):
+        for ref in item.get("parts", []):
             if ref not in id_set:
                 errors.append(f"{name}: '{item.get('id')}' references missing ID '{ref}'")
 

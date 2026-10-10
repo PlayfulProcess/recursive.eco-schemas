@@ -14,6 +14,7 @@ Structure:
 import json
 import re
 from pathlib import Path
+from grammar_depth import node_depth
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent
@@ -225,7 +226,6 @@ def build_grammar():
             "id": chapter_id,
             "name": chapter_name,
             "sort_order": sort_order,
-            "level": 1,
             "category": "chapter",
             "sections": {
                 "Text": ch['text'],
@@ -248,10 +248,9 @@ def build_grammar():
             "id": theme_id,
             "name": theme["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": theme["chapters"],
+            "parts": theme["chapters"],
             "sections": {
                 "About": theme["about"],
                 "For Readers": theme["for_readers"],
@@ -268,10 +267,9 @@ def build_grammar():
         "id": "my-first-summer-complete",
         "name": "My First Summer in the Sierra",
         "sort_order": sort_order,
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": all_theme_ids,
+        "parts": all_theme_ids,
         "sections": {
             "About": "John Muir's My First Summer in the Sierra (1911, based on journals from 1869) is the ecstatic record of a young Scotsman's first season in the mountains that would define his life. Hired as a sheepherder's assistant, the 31-year-old Muir follows a flock from the hot Central Valley up through the forest belts to the high meadows of Yosemite and the Tuolumne. His journal entries, dated from June through September 1869, combine precise botanical and geological observation with rhapsodic celebration. Every tree, flower, bird, and rock formation is greeted with wonder. The Sierra is not landscape but living temple, and Muir's summer among its peaks and meadows transforms him from wanderer to prophet of wilderness.",
             "For Readers": "Read this book in summer if you can, and outdoors if possible. Muir's prose is so saturated with sunlight and mountain air that it changes the reader's attention to the natural world. The chapters follow the calendar — June through September — and the elevation rises with the summer. Read straight through for the journey, or dip into individual chapters: The Yosemite for awe, A Bread Famine for humor and simplicity, Mount Hoffman for the summit of Muir's ecstasy, Back to the Lowlands for the bittersweet farewell.",
@@ -301,16 +299,16 @@ def build_grammar():
         "shelves": ["earth"],
         "lineages": ["Shrei"],
         "worldview": "naturalist",
-        "items": items,
+        "nodes": items,
     }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT_PATH}")
     print(f"  L1: {l1} chapters, L2: {l2} themes, L3: {l3} meta")
     print(f"  Total items: {len(items)}")

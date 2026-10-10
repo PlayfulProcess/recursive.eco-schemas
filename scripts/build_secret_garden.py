@@ -6,13 +6,14 @@ Source: Project Gutenberg eBook #113
 Structure: 27 chapters
 Levels:
   L1: Individual chapters (full text)
-  L2: Thematic groupings with composite_of + chapter summaries
+  L2: Thematic groupings with parts + chapter summaries
   L3: Meta-categories (The Story, Themes)
 """
 
 import json
 import re
 from pathlib import Path
+from grammar_depth import node_depth
 
 SEED_FILE = Path(__file__).parent.parent / "seeds" / "secret-garden.txt"
 OUTPUT_DIR = Path(__file__).parent.parent / "grammars" / "secret-garden"
@@ -295,7 +296,6 @@ def build_grammar():
             "name": f"Chapter {chapter_num}: {CHAPTER_TITLES[chapter_num]}",
             "sort_order": sort_order,
             "category": f"chapter-{chapter_num:02d}",
-            "level": 1,
             "sections": {
                 "Story": chapter_text,
                 "Reflection": CHAPTER_REFLECTIONS.get(chapter_num, "What does this chapter make you think about?"),
@@ -319,9 +319,8 @@ def build_grammar():
             "name": f"Summary: {CHAPTER_TITLES[chapter_num]}",
             "sort_order": sort_order,
             "category": "chapter-summary",
-            "level": 2,
             "relationship_type": "emergence",
-            "composite_of": [chapter_ids[chapter_num]],
+            "parts": [chapter_ids[chapter_num]],
             "sections": {
                 "About": CHAPTER_SUMMARIES.get(chapter_num, ""),
                 "For Parents": CHAPTER_PARENT_NOTES.get(chapter_num, ""),
@@ -345,9 +344,8 @@ def build_grammar():
             "name": theme_data["name"],
             "sort_order": sort_order,
             "category": "theme",
-            "level": 2,
             "relationship_type": "emergence",
-            "composite_of": theme_chapter_ids,
+            "parts": theme_chapter_ids,
             "sections": {
                 "About": theme_data["description"],
                 "For Parents": theme_data["for_parents"],
@@ -367,9 +365,8 @@ def build_grammar():
         "name": "The Story",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "relationship_type": "emergence",
-        "composite_of": all_summary_ids,
+        "parts": all_summary_ids,
         "sections": {
             "About": "The complete narrative of The Secret Garden: two damaged children and a hidden garden heal each other. Twenty-seven chapters trace Mary Lennox's arrival at Misselthwaite Manor, her discovery of the locked garden, her friendship with Dickon and Colin, and the miraculous return of health, hope, and family. Burnett's masterpiece argues that nature, honesty, and connection can mend what neglect and grief have broken.",
             "For Parents": "The Secret Garden is one of the most psychologically sophisticated children's novels ever written. Published in 1911, it anticipates modern understanding of childhood trauma, the healing power of nature, and the damage done by emotional neglect. Read it with your children and let the garden metaphor work on you too — we all have locked doors, buried keys, and dormant roses waiting for spring.",
@@ -384,9 +381,8 @@ def build_grammar():
         "name": "Themes",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "relationship_type": "emergence",
-        "composite_of": all_theme_ids,
+        "parts": all_theme_ids,
         "sections": {
             "About": "The great themes of The Secret Garden — healing through nature, locked doors and hidden things, contrariness as strength, the Magic, and broken families mended. These groupings reveal how Burnett weaves together physical healing, emotional growth, and spiritual awakening into a single story.",
             "For Parents": "These thematic groupings help you explore the novel beyond the plot. Each theme connects chapters that share a common thread. If your child is drawn to the garden scenes, explore 'Healing Through Nature.' If they're fascinated by Colin, 'The Magic' and 'Contrariness as Strength' offer different lenses. The story rewards re-reading from every angle.",
@@ -453,7 +449,7 @@ def build_grammar():
         "shelves": ["children"],
         "lineages": ["Shrei"],
         "worldview": "imaginative",
-        "items": items,
+        "nodes": items,
     }
 
     return grammar
@@ -468,10 +464,10 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    items = grammar["items"]
-    l1 = [i for i in items if i["level"] == 1]
-    l2 = [i for i in items if i["level"] == 2]
-    l3 = [i for i in items if i["level"] == 3]
+    items = grammar["nodes"]
+    l1 = [i for i in items if node_depth(i, items) == 1]
+    l2 = [i for i in items if node_depth(i, items) == 2]
+    l3 = [i for i in items if node_depth(i, items) == 3]
 
     print(f"Grammar written to {OUTPUT_FILE}")
     print(f"  L1 chapters: {len(l1)}")
@@ -488,7 +484,7 @@ def main():
 
     broken = []
     for item in items:
-        for ref in item.get("composite_of", []):
+        for ref in item.get("parts", []):
             if ref not in id_set:
                 broken.append((item["id"], ref))
     if broken:

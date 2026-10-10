@@ -6,13 +6,14 @@ Source: Project Gutenberg eBook #55
 Structure: 24 chapters + Introduction
 Levels:
   L1: Individual chapters
-  L2: Story arcs + thematic groups (with composite_of referencing L1 chapters)
+  L2: Story arcs + thematic groups (with parts referencing L1 chapters)
   L3: Meta-categories
 """
 
 import json
 import re
 from pathlib import Path
+from grammar_depth import node_depth
 
 SEED_FILE = Path(__file__).parent.parent / "seeds" / "wonderful-wizard-of-oz.txt"
 OUTPUT_DIR = Path(__file__).parent.parent / "grammars" / "wonderful-wizard-of-oz"
@@ -286,7 +287,6 @@ def build_grammar():
             "name": "Introduction",
             "sort_order": sort_order,
             "category": "introduction",
-            "level": 1,
             "sections": {
                 "Story": intro_text,
                 "About": CHAPTER_SUMMARIES[0],
@@ -308,7 +308,6 @@ def build_grammar():
             "name": f"Chapter {chapter_num} — {CHAPTER_TITLES[chapter_num]}",
             "sort_order": sort_order,
             "category": f"chapter-{chapter_num:02d}",
-            "level": 1,
             "sections": {
                 "Story": chapters[chapter_num],
                 "About": CHAPTER_SUMMARIES.get(chapter_num, ""),
@@ -331,9 +330,8 @@ def build_grammar():
             "name": arc_data["name"],
             "sort_order": sort_order,
             "category": "story-arc",
-            "level": 2,
             "relationship_type": "emergence",
-            "composite_of": composite,
+            "parts": composite,
             "sections": {
                 "About": arc_data["about"],
                 "For Parents": arc_data["for_parents"],
@@ -352,9 +350,8 @@ def build_grammar():
             "name": theme_data["name"],
             "sort_order": sort_order,
             "category": "theme",
-            "level": 2,
             "relationship_type": "emergence",
-            "composite_of": composite,
+            "parts": composite,
             "sections": {
                 "About": theme_data["about"],
                 "For Parents": theme_data["for_parents"],
@@ -373,9 +370,8 @@ def build_grammar():
         "name": "The Story",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "relationship_type": "emergence",
-        "composite_of": all_arc_ids,
+        "parts": all_arc_ids,
         "sections": {
             "About": "The complete narrative arc of The Wonderful Wizard of Oz in four movements: the journey from Kansas to Oz, the arrival at the Emerald City, the battle with the Wicked Witch, and the discovery that the Wizard is a humbug and the way home was always within reach. Twenty-four chapters of the first great American fairy tale.",
             "For Parents": "The Wonderful Wizard of Oz (1900) is the foundational American fairy tale -- the first to be set entirely in an American landscape of imagination. Unlike European fairy tales with their kings and princesses, Oz features a Kansas farm girl, a confidence man from Omaha, and a quartet of misfits who discover they already have what they seek. Read it as a bedtime adventure, but know that it works on deeper levels too: as a story about self-knowledge, about the gap between appearance and reality, and about the irreplaceable power of home.",
@@ -390,9 +386,8 @@ def build_grammar():
         "name": "Themes",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "relationship_type": "emergence",
-        "composite_of": all_theme_ids,
+        "parts": all_theme_ids,
         "sections": {
             "About": "The great themes of The Wizard of Oz: that you already have what you seek, that illusion and truth are woven together, that home is where love is, and that true friendship reveals who we really are. These themes cut across the chapters, connecting scenes from different parts of the story.",
             "For Parents": "These thematic groupings help you explore Oz beyond the plot. If your child is fascinated by the Emerald City's green spectacles, follow the Illusion and Truth thread. If they ask why Dorothy wants to go back to gray Kansas, explore Home and Belonging. The book rewards reading from many angles.",
@@ -459,7 +454,7 @@ def build_grammar():
         "shelves": ["children", "wonder"],
         "lineages": ["universal"],
         "worldview": "imaginative",
-        "items": items,
+        "nodes": items,
     }
 
     return grammar
@@ -474,10 +469,10 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    items = grammar["items"]
-    l1 = [i for i in items if i["level"] == 1]
-    l2 = [i for i in items if i["level"] == 2]
-    l3 = [i for i in items if i["level"] == 3]
+    items = grammar["nodes"]
+    l1 = [i for i in items if node_depth(i, items) == 1]
+    l2 = [i for i in items if node_depth(i, items) == 2]
+    l3 = [i for i in items if node_depth(i, items) == 3]
 
     print(f"Grammar written to {OUTPUT_FILE}")
     print(f"  L1 chapters: {len(l1)}")
@@ -494,7 +489,7 @@ def main():
 
     broken = []
     for item in items:
-        for ref in item.get("composite_of", []):
+        for ref in item.get("parts", []):
             if ref not in id_set:
                 broken.append((item["id"], ref))
     if broken:

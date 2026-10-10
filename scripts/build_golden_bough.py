@@ -15,6 +15,7 @@ import json
 import re
 import os
 from pathlib import Path
+from grammar_depth import node_depth
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent
@@ -321,7 +322,6 @@ def build_grammar():
             "id": ch_id,
             "name": ch_name,
             "sort_order": sort_order,
-            "level": 1,
             "category": "chapter",
             "sections": {
                 "Text": ch_text,
@@ -347,10 +347,9 @@ def build_grammar():
             "id": theme_id,
             "name": theme["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": composite,
+            "parts": composite,
             "sections": {
                 "About": theme["about"],
                 "For Readers": theme["for_readers"],
@@ -367,10 +366,9 @@ def build_grammar():
         "id": "golden-bough-complete",
         "name": "The Golden Bough: A Study of Magic and Religion",
         "sort_order": sort_order,
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": all_theme_ids,
+        "parts": all_theme_ids,
         "sections": {
             "About": "Sir James George Frazer's The Golden Bough (1890, abridged 1922) is one of the most influential works of comparative mythology and religion ever written. Starting from a single puzzle — why did the priest of Diana at Nemi have to kill his predecessor to take office? — Frazer spins outward through the world's myths, rituals, and folk customs to construct a vast theory of sacred kingship, dying gods, and the evolution of human thought from magic through religion to science. The book documents hundreds of customs from every inhabited continent: tree worship, harvest rituals, fire festivals, taboos, scapegoats, and the universal pattern of the dying and reviving god. Though many of Frazer's specific theories have been superseded, his method of cross-cultural comparison and his encyclopedic documentation of human ritual life remain invaluable. The Golden Bough influenced a generation of writers and thinkers, from T.S. Eliot and W.B. Yeats to Wittgenstein and Joseph Campbell.",
             "For Readers": "The Golden Bough rewards both sequential reading and browsing. Read Chapter 1 and 69 (Farewell to Nemi) for the frame. The magic chapters (3-5) and the dying god chapters (24-44) are the theoretical core. The harvest customs (45-54) and fire festivals (62) are the most vivid ethnographic material. Frazer writes beautifully — his prose is Victorian in its amplitude but always clear. The book is best approached as a cabinet of wonders: every chapter opens doors onto practices and beliefs that expand one's sense of what it means to be human.",
@@ -400,16 +398,16 @@ def build_grammar():
         "shelves": ["mirror"],
         "lineages": ["Shrei"],
         "worldview": "comparative",
-        "items": items,
+        "nodes": items,
     }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT_PATH}")
     print(f"  L1: {l1} chapters, L2: {l2} themes, L3: {l3} meta")
     print(f"  Total items: {len(items)}")

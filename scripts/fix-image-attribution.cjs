@@ -25,7 +25,7 @@ for (const grammarPath of GRAMMARS) {
   const slug = path.basename(path.dirname(grammarPath));
   let fixed = 0;
 
-  for (const item of grammar.items) {
+  for (const item of grammar.nodes) {
     const meta = item.metadata || {};
     const ills = meta.illustrations || [];
     if (ills.length === 0) continue;
@@ -53,7 +53,7 @@ for (const grammarPath of GRAMMARS) {
   }
 
   fs.writeFileSync(grammarPath, JSON.stringify(grammar, null, 2));
-  console.log(`${slug}: Fixed attribution on ${fixed} / ${grammar.items.length} items`);
+  console.log(`${slug}: Fixed attribution on ${fixed} / ${grammar.nodes.length} items`);
 }
 
 console.log('\nDone! Hero images will now show proper artist attribution.');

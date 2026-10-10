@@ -385,7 +385,6 @@ def build_items(sections):
             "id": item_id,
             "name": heading,
             "sort_order": sort_order,
-            "level": 1,
             "category": sec["chapter"]["category"],
             "sections": {
                 "Story": sec["text"],
@@ -454,14 +453,13 @@ def build_l2_items(l1_items):
                 "id": group["id"],
                 "name": group["name"],
                 "sort_order": sort_order,
-                "level": 2,
                 "category": "tribal-group",
                 "sections": {
                     "About": group["about"],
                     "For Readers": group["for_readers"]
                 },
                 "keywords": group["keywords"],
-                "composite_of": member_ids,
+                "parts": member_ids,
                 "relationship_type": "emergence",
                 "metadata": {}
             })
@@ -537,14 +535,13 @@ def build_l2_items(l1_items):
                 "id": tgroup["id"],
                 "name": tgroup["name"],
                 "sort_order": sort_order,
-                "level": 2,
                 "category": "themes",
                 "sections": {
                     "About": tgroup["about"],
                     "For Readers": tgroup["for_readers"]
                 },
                 "keywords": tgroup["keywords"],
-                "composite_of": member_ids,
+                "parts": member_ids,
                 "relationship_type": "emergence",
                 "metadata": {}
             })
@@ -566,13 +563,12 @@ def build_l3_items(start_sort_order, l2_items):
             "id": "meta-tribal-traditions",
             "name": "Tribal Traditions",
             "sort_order": sort_order,
-            "level": 3,
             "category": "meta",
             "sections": {
                 "About": "The myths of the North American Indians are organized here by the great tribal and linguistic families that Spence treats: Algonquian, Iroquois, Sioux, Pawnee, and the Northern and North-Western peoples. Each tradition has its own character — the Algonquian myths are dominated by the trickster-creator Glooskap, the Iroquois by the Thunder-god Hi'nun and the great Confederacy, the Sioux by the dark trickster Ictinike, the Pawnee by sacred ceremony, and the Northwest by shape-shifting beings and shadow-land journeys. Together they form a continent-spanning tapestry of imagination, spiritual insight, and narrative art."
             },
             "keywords": ["tribal", "traditions", "peoples", "nations"],
-            "composite_of": tribal_ids,
+            "parts": tribal_ids,
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -583,13 +579,12 @@ def build_l3_items(start_sort_order, l2_items):
             "id": "meta-themes",
             "name": "Themes Across Traditions",
             "sort_order": sort_order,
-            "level": 3,
             "category": "meta",
             "sections": {
                 "About": "Across all the tribal traditions collected by Spence, certain great themes recur: the trickster who creates and disrupts, the spirit world that lies just beyond the veil of the visible, the hero who earns power through spiritual discipline, the sacred animals who share their medicine with humanity, and the origin stories that explain how the world came to be as it is. These thematic groupings reveal the deep structural unity beneath the surface diversity of North American mythologies."
             },
             "keywords": ["themes", "cross-tribal", "unity", "patterns"],
-            "composite_of": theme_ids,
+            "parts": theme_ids,
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -644,7 +639,7 @@ def build_grammar(l1_items, l2_items, l3_items):
         "lineages": ["Shrei", "Andreotti"],
         "worldview": "animist",
         "cover_image_url": "",
-        "items": l1_items + l2_items + l3_items
+        "nodes": l1_items + l2_items + l3_items
     }
     return grammar
 

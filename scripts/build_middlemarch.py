@@ -19,6 +19,7 @@ import json
 import re
 import os
 from pathlib import Path
+from grammar_depth import node_depth
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent
@@ -502,7 +503,6 @@ def build_grammar():
             "id": "prelude",
             "name": "Prelude",
             "sort_order": sort_order,
-            "level": 1,
             "category": "prelude",
             "sections": {
                 "Text": prelude[0]['text'],
@@ -524,7 +524,6 @@ def build_grammar():
             "id": chapter_id,
             "name": f"Chapter {n}: {title}",
             "sort_order": sort_order,
-            "level": 1,
             "category": "chapter",
             "sections": {
                 "Text": ch['text'],
@@ -544,7 +543,6 @@ def build_grammar():
             "id": "finale",
             "name": "Finale",
             "sort_order": sort_order,
-            "level": 1,
             "category": "finale",
             "sections": {
                 "Text": finale[0]['text'],
@@ -566,10 +564,9 @@ def build_grammar():
             "id": book_id,
             "name": bg["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": "book",
             "relationship_type": "emergence",
-            "composite_of": chapter_ids,
+            "parts": chapter_ids,
             "sections": {
                 "About": bg["about"],
                 "For Readers": bg["for_readers"],
@@ -592,10 +589,9 @@ def build_grammar():
             "id": theme_id,
             "name": theme["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": chapter_ids,
+            "parts": chapter_ids,
             "sections": {
                 "About": theme["about"],
                 "For Readers": theme["for_readers"],
@@ -612,10 +608,9 @@ def build_grammar():
         "id": "middlemarch-complete",
         "name": "Middlemarch: A Study of Provincial Life",
         "sort_order": sort_order,
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": all_book_ids,
+        "parts": all_book_ids,
         "sections": {
             "About": "George Eliot's Middlemarch (1871-72) is widely regarded as the greatest English novel. Set in the fictional Midlands town of Middlemarch during the years 1829-1832, it weaves together four main plots: Dorothea Brooke's disastrous first marriage to the scholar Casaubon and her gradual awakening to love and purpose; Tertius Lydgate's brilliant medical ambitions undermined by his marriage to the beautiful, willful Rosamond Vincy; Fred Vincy's journey from irresponsible heir-in-waiting to honest farmer, guided by his love for Mary Garth; and the banker Bulstrode's hidden past catching up with him. Through these interlocking stories, Eliot creates a comprehensive vision of English provincial life — its politics, religion, medicine, marriage, money, and moral texture. The novel's method is radical sympathy: every character, even the most flawed, is understood from inside.",
             "For Readers": "Middlemarch is long but never slow. It can be read as a love story (Dorothea and Ladislaw), a cautionary tale (Lydgate and Rosamond), a mystery (Bulstrode's past), or a social panorama — but it is most truly a novel about how difficult it is to do good in an imperfect world. Virginia Woolf called it 'one of the few English novels written for grown-up people.' The eight books create a natural rhythm: each has a distinct title and emotional arc. The Prelude and Finale frame the whole as a meditation on the lives of women — 'many Theresas' whose greatness the world cannot see.",
@@ -629,10 +624,9 @@ def build_grammar():
         "id": "middlemarch-thematic-arcs",
         "name": "Thematic Arcs of Middlemarch",
         "sort_order": sort_order,
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": all_theme_ids,
+        "parts": all_theme_ids,
         "sections": {
             "About": "Six thematic threads run through Middlemarch, each illuminating a different dimension of Eliot's moral vision. Dorothea's Vocation traces the Prelude's 'new Theresa' through disillusionment to a different kind of greatness. The Lydgate-Rosamond Marriage is the novel's most modern story — a clinical study of how two people of intelligence and beauty can destroy each other's happiness through daily misattunement. Money, Work, and Vocation maps how economic life shapes moral character. Knowledge and Illusion explores the gap between learning and wisdom. Reform and Community tests idealism against the stubborn reality of provincial society. Women and Constraint frames the entire novel as a study of how social structures limit human possibility.",
             "For Readers": "These themes interpenetrate at every point. Dorothea's vocation is constrained by her gender; Lydgate's marriage fails because of his blindness about money and social expectation; Bulstrode's wealth corrupts reform; Fred's redemption comes through honest work. Reading across themes reveals the novel's web-like structure — what Eliot called 'the stealthy convergence of human lots.' No character exists in isolation; every choice ripples outward through the community.",
@@ -662,16 +656,16 @@ def build_grammar():
         "shelves": ["mirror"],
         "lineages": ["Gottman"],
         "worldview": "realist",
-        "items": items,
+        "nodes": items,
     }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT_PATH}")
     print(f"  L1: {l1} (prelude + chapters + finale), L2: {l2} (books + themes), L3: {l3} meta")
     print(f"  Total items: {len(items)}")

@@ -35,12 +35,11 @@
   "lineages": ["Linehan", "Gottman", "Johnson"],
   "worldview": "dialectical",
   "cover_image_url": "",
-  "items": [
+  "nodes": [
     {
       "id": "anger",
       "name": "Anger",
       "symbol": "🔴",
-      "level": 1,
       "category": "emotion",
       "sort_order": 1,
       "sections": {
@@ -59,7 +58,6 @@
       "id": "sadness",
       "name": "Sadness",
       "symbol": "🔵",
-      "level": 1,
       "category": "emotion",
       "sort_order": 2,
       "sections": {
@@ -77,7 +75,6 @@
       "id": "fear",
       "name": "Fear",
       "symbol": "⚫",
-      "level": 1,
       "category": "emotion",
       "sort_order": 3,
       "sections": {
@@ -95,7 +92,6 @@
       "id": "joy",
       "name": "Joy",
       "symbol": "🟡",
-      "level": 1,
       "category": "emotion",
       "sort_order": 4,
       "sections": {
@@ -113,7 +109,6 @@
       "id": "disgust",
       "name": "Disgust",
       "symbol": "🟤",
-      "level": 1,
       "category": "emotion",
       "sort_order": 5,
       "sections": {
@@ -131,7 +126,6 @@
       "id": "surprise",
       "name": "Surprise",
       "symbol": "⚡",
-      "level": 1,
       "category": "emotion",
       "sort_order": 6,
       "sections": {
@@ -149,7 +143,6 @@
       "id": "shame",
       "name": "Shame",
       "symbol": "🫥",
-      "level": 1,
       "category": "emotion",
       "sort_order": 7,
       "sections": {
@@ -168,7 +161,6 @@
       "id": "guilt",
       "name": "Guilt",
       "symbol": "⚖️",
-      "level": 1,
       "category": "emotion",
       "sort_order": 8,
       "sections": {
@@ -186,7 +178,6 @@
       "id": "loneliness",
       "name": "Loneliness",
       "symbol": "🌑",
-      "level": 1,
       "category": "emotion",
       "sort_order": 9,
       "sections": {
@@ -205,7 +196,6 @@
       "id": "longing",
       "name": "Longing",
       "symbol": "🌊",
-      "level": 1,
       "category": "emotion",
       "sort_order": 10,
       "sections": {
@@ -223,7 +213,6 @@
       "id": "jealousy",
       "name": "Jealousy",
       "symbol": "🟢",
-      "level": 1,
       "category": "emotion",
       "sort_order": 11,
       "sections": {
@@ -241,7 +230,6 @@
       "id": "resentment",
       "name": "Resentment",
       "symbol": "🧱",
-      "level": 1,
       "category": "emotion",
       "sort_order": 12,
       "sections": {
@@ -259,7 +247,6 @@
       "id": "contempt-feeling",
       "name": "Contempt (The Feeling)",
       "symbol": "🐍",
-      "level": 1,
       "category": "emotion",
       "sort_order": 13,
       "sections": {
@@ -277,7 +264,6 @@
       "id": "vulnerability",
       "name": "Vulnerability",
       "symbol": "🦋",
-      "level": 1,
       "category": "emotion",
       "sort_order": 14,
       "sections": {
@@ -295,7 +281,6 @@
       "id": "tenderness",
       "name": "Tenderness",
       "symbol": "🌸",
-      "level": 1,
       "category": "emotion",
       "sort_order": 15,
       "sections": {
@@ -313,7 +298,6 @@
       "id": "desire-feeling",
       "name": "Desire",
       "symbol": "🔥",
-      "level": 1,
       "category": "emotion",
       "sort_order": 16,
       "sections": {
@@ -331,7 +315,6 @@
       "id": "numbness",
       "name": "Numbness",
       "symbol": "🧊",
-      "level": 1,
       "category": "emotion",
       "sort_order": 17,
       "sections": {
@@ -349,7 +332,6 @@
       "id": "overwhelm",
       "name": "Overwhelm",
       "symbol": "🌀",
-      "level": 1,
       "category": "emotion",
       "sort_order": 18,
       "sections": {
@@ -367,7 +349,6 @@
       "id": "mind-reading",
       "name": "Mind Reading",
       "symbol": "🔮",
-      "level": 1,
       "category": "cognition",
       "sort_order": 19,
       "sections": {
@@ -385,7 +366,6 @@
       "id": "catastrophizing",
       "name": "Catastrophizing",
       "symbol": "💥",
-      "level": 1,
       "category": "cognition",
       "sort_order": 20,
       "sections": {
@@ -403,7 +383,6 @@
       "id": "black-white",
       "name": "Black and White Thinking",
       "symbol": "⬛",
-      "level": 1,
       "category": "cognition",
       "sort_order": 21,
       "sections": {
@@ -422,7 +401,6 @@
       "id": "should-thinking",
       "name": "The Shoulds",
       "symbol": "📋",
-      "level": 1,
       "category": "cognition",
       "sort_order": 22,
       "sections": {
@@ -440,7 +418,6 @@
       "id": "personalization",
       "name": "Personalization",
       "symbol": "🎯",
-      "level": 1,
       "category": "cognition",
       "sort_order": 23,
       "sections": {
@@ -458,7 +435,6 @@
       "id": "negative-filter",
       "name": "The Negative Filter",
       "symbol": "🕶️",
-      "level": 1,
       "category": "cognition",
       "sort_order": 24,
       "sections": {
@@ -476,7 +452,6 @@
       "id": "emotional-reasoning",
       "name": "Emotional Reasoning",
       "symbol": "💭",
-      "level": 1,
       "category": "cognition",
       "sort_order": 25,
       "sections": {
@@ -494,7 +469,6 @@
       "id": "abandonment-schema",
       "name": "\"They'll Leave\"",
       "symbol": "🚪",
-      "level": 1,
       "category": "cognition",
       "sort_order": 26,
       "sections": {
@@ -512,7 +486,6 @@
       "id": "defectiveness-schema",
       "name": "\"I'm Not Enough\"",
       "symbol": "🪞",
-      "level": 1,
       "category": "cognition",
       "sort_order": 27,
       "sections": {
@@ -530,7 +503,6 @@
       "id": "mistrust-schema",
       "name": "\"They'll Hurt Me\"",
       "symbol": "🛡️",
-      "level": 1,
       "category": "cognition",
       "sort_order": 28,
       "sections": {
@@ -548,7 +520,6 @@
       "id": "self-sacrifice-schema",
       "name": "\"Their Needs Come First\"",
       "symbol": "🫗",
-      "level": 1,
       "category": "cognition",
       "sort_order": 29,
       "sections": {
@@ -566,7 +537,6 @@
       "id": "internal-working-model",
       "name": "The Internal Working Model",
       "symbol": "🗺️",
-      "level": 1,
       "category": "cognition",
       "sort_order": 30,
       "sections": {
@@ -585,7 +555,6 @@
       "id": "the-story-i-tell",
       "name": "The Story I Tell Myself",
       "symbol": "📖",
-      "level": 1,
       "category": "cognition",
       "sort_order": 31,
       "sections": {
@@ -603,7 +572,6 @@
       "id": "wise-mind",
       "name": "Wise Mind",
       "symbol": "☯️",
-      "level": 1,
       "category": "cognition",
       "sort_order": 32,
       "sections": {
@@ -622,7 +590,6 @@
       "id": "mentalization",
       "name": "Seeing the Other's Mind",
       "symbol": "👁️",
-      "level": 1,
       "category": "cognition",
       "sort_order": 33,
       "sections": {
@@ -640,7 +607,6 @@
       "id": "radical-acceptance",
       "name": "Radical Acceptance",
       "symbol": "🌅",
-      "level": 1,
       "category": "cognition",
       "sort_order": 34,
       "sections": {
@@ -659,7 +625,6 @@
       "id": "pursuing",
       "name": "Pursuing",
       "symbol": "🏃",
-      "level": 1,
       "category": "behavior",
       "sort_order": 35,
       "sections": {
@@ -678,7 +643,6 @@
       "id": "withdrawing",
       "name": "Withdrawing",
       "symbol": "🐢",
-      "level": 1,
       "category": "behavior",
       "sort_order": 36,
       "sections": {
@@ -697,7 +661,6 @@
       "id": "bidding",
       "name": "Making a Bid",
       "symbol": "🤲",
-      "level": 1,
       "category": "behavior",
       "sort_order": 37,
       "sections": {
@@ -715,7 +678,6 @@
       "id": "turning-toward",
       "name": "Turning Toward",
       "symbol": "🌻",
-      "level": 1,
       "category": "behavior",
       "sort_order": 38,
       "sections": {
@@ -733,7 +695,6 @@
       "id": "turning-away",
       "name": "Turning Away",
       "symbol": "📱",
-      "level": 1,
       "category": "behavior",
       "sort_order": 39,
       "sections": {
@@ -751,7 +712,6 @@
       "id": "repairing",
       "name": "Repairing",
       "symbol": "🩹",
-      "level": 1,
       "category": "behavior",
       "sort_order": 40,
       "sections": {
@@ -769,7 +729,6 @@
       "id": "attacking",
       "name": "Attacking",
       "symbol": "⚔️",
-      "level": 1,
       "category": "behavior",
       "sort_order": 41,
       "sections": {
@@ -787,7 +746,6 @@
       "id": "defending",
       "name": "Defending",
       "symbol": "🛡️",
-      "level": 1,
       "category": "behavior",
       "sort_order": 42,
       "sections": {
@@ -805,7 +763,6 @@
       "id": "soothing",
       "name": "Soothing (Self or Other)",
       "symbol": "🫁",
-      "level": 1,
       "category": "behavior",
       "sort_order": 43,
       "sections": {
@@ -823,7 +780,6 @@
       "id": "expressing-need",
       "name": "Expressing a Need",
       "symbol": "💬",
-      "level": 1,
       "category": "behavior",
       "sort_order": 44,
       "sections": {
@@ -841,7 +797,6 @@
       "id": "boundary-setting",
       "name": "Setting a Boundary",
       "symbol": "🚧",
-      "level": 1,
       "category": "behavior",
       "sort_order": 45,
       "sections": {
@@ -859,7 +814,6 @@
       "id": "performing",
       "name": "Performing",
       "symbol": "🎭",
-      "level": 1,
       "category": "behavior",
       "sort_order": 46,
       "sections": {
@@ -878,7 +832,6 @@
       "id": "rupturing",
       "name": "Rupturing",
       "symbol": "💔",
-      "level": 1,
       "category": "behavior",
       "sort_order": 47,
       "sections": {
@@ -896,7 +849,6 @@
       "id": "freezing",
       "name": "Freezing",
       "symbol": "🧊",
-      "level": 1,
       "category": "behavior",
       "sort_order": 48,
       "sections": {
@@ -914,7 +866,6 @@
       "id": "projecting",
       "name": "Projecting",
       "symbol": "🪞",
-      "level": 1,
       "category": "behavior",
       "sort_order": 49,
       "sections": {
@@ -933,7 +884,6 @@
       "id": "listening",
       "name": "Really Listening",
       "symbol": "👂",
-      "level": 1,
       "category": "behavior",
       "sort_order": 50,
       "sections": {
@@ -951,10 +901,9 @@
       "id": "anxious-triangle",
       "name": "The Anxious Triangle",
       "symbol": "📐",
-      "level": 2,
       "category": "triangle",
       "sort_order": 51,
-      "composite_of": ["fear", "abandonment-schema", "pursuing"],
+      "parts": ["fear", "abandonment-schema", "pursuing"],
       "relationship_type": "emergence",
       "sections": {
         "About": "[SESSION-4: L2 TRIANGLES] The classic anxious-attachment loop: FEEL fear of abandonment → THINK 'they'll leave' → DO pursue harder. The three vertices reinforce each other: pursuit drives the partner away, which confirms the abandonment belief, which intensifies the fear. Johnson's protest polka at its core. Bowlby: the hyperactivation strategy — when the attachment system is activated and the figure is unavailable, ESCALATE the signal. This triangle runs the pursuing partner in most distressed couples.",
@@ -969,10 +918,9 @@
       "id": "avoidant-triangle",
       "name": "The Avoidant Triangle",
       "symbol": "📐",
-      "level": 2,
       "category": "triangle",
       "sort_order": 52,
-      "composite_of": ["overwhelm", "defectiveness-schema", "withdrawing"],
+      "parts": ["overwhelm", "defectiveness-schema", "withdrawing"],
       "relationship_type": "emergence",
       "sections": {
         "About": "[SESSION-4: L2 TRIANGLES] The classic avoidant-attachment loop: FEEL overwhelmed → THINK 'I'm not enough / I'll make it worse' → DO withdraw. The deactivation strategy: when emotions escalate, the system shuts down to conserve. Bowlby: if escalating the signal (pursuit) didn't work in childhood, the child learns to SUPPRESS it — appear self-sufficient, don't show need. This triangle runs the withdrawing partner in most distressed couples. Not indifference but PROTECTION.",
@@ -987,10 +935,9 @@
       "id": "shame-hide-triangle",
       "name": "The Shame-Hide Triangle",
       "symbol": "📐",
-      "level": 2,
       "category": "triangle",
       "sort_order": 53,
-      "composite_of": ["shame", "defectiveness-schema", "performing"],
+      "parts": ["shame", "defectiveness-schema", "performing"],
       "relationship_type": "emergence",
       "sections": {
         "About": "[SESSION-4: L2 TRIANGLES] The hiding loop: FEEL shame → THINK 'I am defective, if they see me they'll leave' → DO perform a false self. Winnicott's false self meets Young's defectiveness schema. This triangle traps the person in a cage of their own making: the performance succeeds (the partner stays) which CONFIRMS that the real self isn't enough (because the partner loves the performance, not you). Success reinforces the shame. The mask becomes the person.",
@@ -1005,10 +952,9 @@
       "id": "anger-attack-triangle",
       "name": "The Anger-Attack Triangle",
       "symbol": "📐",
-      "level": 2,
       "category": "triangle",
       "sort_order": 54,
-      "composite_of": ["anger", "should-thinking", "attacking"],
+      "parts": ["anger", "should-thinking", "attacking"],
       "relationship_type": "emergence",
       "sections": {
         "About": "[SESSION-4: L2 TRIANGLES] The criticism loop: FEEL anger → THINK 'they should know better / they should be different' → DO attack their character. Gottman's first horseman powered by Ellis's shoulds. The most visible triangle in couples conflict — it's loud, it's dramatic, and it's usually the presenting problem in therapy. But it's also the most SURFACE triangle: underneath the anger are softer emotions (hurt, fear, loneliness) that the should-thinking converts into righteous attack.",
@@ -1023,10 +969,9 @@
       "id": "resentment-sacrifice-triangle",
       "name": "The Resentment-Sacrifice Triangle",
       "symbol": "📐",
-      "level": 2,
       "category": "triangle",
       "sort_order": 55,
-      "composite_of": ["resentment", "self-sacrifice-schema", "performing"],
+      "parts": ["resentment", "self-sacrifice-schema", "performing"],
       "relationship_type": "emergence",
       "sections": {
         "About": "[SESSION-4: L2 TRIANGLES] The martyrdom loop: FEEL resentment → THINK 'their needs come first, I shouldn't complain' → DO keep performing/giving. The silent volcano triangle. Unlike the anger-attack triangle (loud, visible), this one is invisible until it erupts. Young's self-sacrifice schema drives the behavior; the resentment accumulates underground; the performance continues on the surface. The partner often has no idea until the self-sacrificer explodes or leaves.",
@@ -1041,10 +986,9 @@
       "id": "jealousy-mistrust-triangle",
       "name": "The Jealousy-Mistrust Triangle",
       "symbol": "📐",
-      "level": 2,
       "category": "triangle",
       "sort_order": 56,
-      "composite_of": ["jealousy", "mistrust-schema", "pursuing"],
+      "parts": ["jealousy", "mistrust-schema", "pursuing"],
       "relationship_type": "emergence",
       "sections": {
         "About": "[SESSION-4: L2 TRIANGLES] The surveillance loop: FEEL jealousy → THINK 'they'll hurt/betray me' → DO pursue/check/monitor. Young's mistrust schema meets attachment jealousy. This triangle can emerge after a real betrayal (an affair, a discovered lie) or from an unhealed history (childhood abuse, past relationship betrayals). The distinction matters: post-betrayal jealousy is a REASONABLE response; schema-driven jealousy is an old wound running new software.",
@@ -1059,10 +1003,9 @@
       "id": "loneliness-withdrawal-triangle",
       "name": "The Loneliness-Withdrawal Triangle",
       "symbol": "📐",
-      "level": 2,
       "category": "triangle",
       "sort_order": 57,
-      "composite_of": ["loneliness", "negative-filter", "turning-away"],
+      "parts": ["loneliness", "negative-filter", "turning-away"],
       "relationship_type": "emergence",
       "sections": {
         "About": "[SESSION-4: L2 TRIANGLES] The giving-up loop: FEEL loneliness → THINK through the negative filter ('They don't care, nothing will change, what's the point?') → DO turn away. The quiet death of a relationship. Unlike the anxious triangle (which is loud), this triangle is SILENT — the person who has stopped reaching because they've concluded it won't work. Gottman: when bids stop being made, the relationship has entered its most dangerous phase — not conflict, but apathy.",
@@ -1077,10 +1020,9 @@
       "id": "vulnerability-connection-triangle",
       "name": "The Vulnerability-Connection Triangle",
       "symbol": "💗",
-      "level": 2,
       "category": "triangle",
       "sort_order": 58,
-      "composite_of": ["vulnerability", "wise-mind", "expressing-need"],
+      "parts": ["vulnerability", "wise-mind", "expressing-need"],
       "relationship_type": "emergence",
       "sections": {
         "About": "[SESSION-4: L2 TRIANGLES] The HEALING loop: FEEL vulnerability → THINK from wise mind ('Both my fear and my need are real') → DO express the need directly. This is the triangle that BREAKS the destructive cycles. Johnson's softening event mapped as a triangle. The pursuer stops attacking and says 'I need you.' The withdrawer stops hiding and says 'I'm scared.' Wise mind holds both the feeling AND the awareness. This triangle is what therapy is trying to produce.",
@@ -1095,10 +1037,9 @@
       "id": "tenderness-listening-triangle",
       "name": "The Tenderness-Listening Triangle",
       "symbol": "💗",
-      "level": 2,
       "category": "triangle",
       "sort_order": 59,
-      "composite_of": ["tenderness", "mentalization", "listening"],
+      "parts": ["tenderness", "mentalization", "listening"],
       "relationship_type": "emergence",
       "sections": {
         "About": "[SESSION-4: L2 TRIANGLES] The RECEIVING loop: FEEL tenderness → THINK by mentalizing ('I can imagine what this is like for them') → DO really listen. The partner-side of the healing cycle. When one partner vulnerably expresses a need (Vulnerability-Connection Triangle), this triangle is what the RECEIVING partner does. Rogers' three conditions in triangle form: unconditional positive regard (tenderness) + empathic understanding (mentalization) + congruence (genuine listening).",
@@ -1113,10 +1054,9 @@
       "id": "contempt-disgust-triangle",
       "name": "The Contempt-Disgust Triangle",
       "symbol": "📐",
-      "level": 2,
       "category": "triangle",
       "sort_order": 60,
-      "composite_of": ["contempt-feeling", "should-thinking", "attacking"],
+      "parts": ["contempt-feeling", "should-thinking", "attacking"],
       "relationship_type": "emergence",
       "sections": {
         "About": "[SESSION-4: L2 TRIANGLES] The DEADLIEST loop: FEEL contempt → THINK 'they should be fundamentally different' → DO attack their character. Gottman's research: this triangle predicts divorce with over 90% accuracy. Distinct from the anger-attack triangle by DEGREE: anger attacks behavior, contempt attacks BEING. The contemptuous partner has moved from 'I'm frustrated with what you do' to 'I look down on who you are.' The superiority position makes repair nearly impossible.",
@@ -1131,10 +1071,9 @@
       "id": "numbness-freeze-triangle",
       "name": "The Numbness-Freeze Triangle",
       "symbol": "📐",
-      "level": 2,
       "category": "triangle",
       "sort_order": 61,
-      "composite_of": ["numbness", "internal-working-model", "freezing"],
+      "parts": ["numbness", "internal-working-model", "freezing"],
       "relationship_type": "emergence",
       "sections": {
         "About": "[SESSION-4: L2 TRIANGLES] The shutdown loop: FEEL nothing (numbness) → THINK from the internal working model ('feelings are dangerous / closeness hurts') → DO freeze. Porges' dorsal vagal system as a relational pattern. This triangle is often trauma-rooted — the person learned early that emotional expression was dangerous or useless. The system shut down to survive. Now, in an adult relationship, the same shutdown activates whenever emotion or intimacy approaches.",
@@ -1149,10 +1088,9 @@
       "id": "guilt-repair-triangle",
       "name": "The Guilt-Repair Triangle",
       "symbol": "💗",
-      "level": 2,
       "category": "triangle",
       "sort_order": 62,
-      "composite_of": ["guilt", "the-story-i-tell", "repairing"],
+      "parts": ["guilt", "the-story-i-tell", "repairing"],
       "relationship_type": "emergence",
       "sections": {
         "About": "[SESSION-4: L2 TRIANGLES] The accountability loop: FEEL guilt → THINK 'I caused harm — the story I tell must include my part' → DO repair. The prosocial triangle. Tangney: guilt (unlike shame) motivates approach, not avoidance. This triangle is what makes a relationship RESILIENT — not the absence of rupture but the presence of repair. The couple who can run this triangle after conflict has the immune system healthy relationships need.",
@@ -1167,10 +1105,9 @@
       "id": "desire-risk-triangle",
       "name": "The Desire-Risk Triangle",
       "symbol": "💗",
-      "level": 2,
       "category": "triangle",
       "sort_order": 63,
-      "composite_of": ["desire-feeling", "radical-acceptance", "expressing-need"],
+      "parts": ["desire-feeling", "radical-acceptance", "expressing-need"],
       "relationship_type": "emergence",
       "sections": {
         "About": "[SESSION-4: L2 TRIANGLES] The eros loop: FEEL desire → THINK through radical acceptance ('It's okay to want, wanting is human, I accept that I'm a desiring being') → DO express the want directly. Perel meets Linehan. This triangle addresses the death of desire in long-term relationships — not through technique but through the courage to want OUT LOUD. Many couples lose desire not because the want disappears but because it becomes too risky to express. This triangle restores the risk.",
@@ -1185,10 +1122,9 @@
       "id": "joy-expansion-triangle",
       "name": "The Joy-Expansion Triangle",
       "symbol": "💗",
-      "level": 2,
       "category": "triangle",
       "sort_order": 64,
-      "composite_of": ["joy", "mentalization", "turning-toward"],
+      "parts": ["joy", "mentalization", "turning-toward"],
       "relationship_type": "emergence",
       "sections": {
         "About": "[SESSION-4: L2 TRIANGLES] The celebration loop: FEEL joy → THINK by mentalizing ('My partner would love to share this') → DO turn toward with enthusiasm. Gable's capitalization research: how couples respond to good news predicts relationship satisfaction better than how they handle conflict. This triangle is the POSITIVE engine — it builds the emotional bank account that sustains couples through hard times. Gottman's 5:1 ratio in triangle form.",
@@ -1203,10 +1139,9 @@
       "id": "l3-interlocking-triangles",
       "name": "The Interlocking Triangles",
       "symbol": "🔗",
-      "level": 3,
       "category": "meta",
       "sort_order": 65,
-      "composite_of": ["anxious-triangle", "avoidant-triangle", "loneliness-withdrawal-triangle", "jealousy-mistrust-triangle"],
+      "parts": ["anxious-triangle", "avoidant-triangle", "loneliness-withdrawal-triangle", "jealousy-mistrust-triangle"],
       "relationship_type": "emergence",
       "sections": {
         "About": "[SESSION-5: L3 META] The destructive dance: two triangles interlocking across the relational field. One partner runs the Anxious Triangle (fear → they'll leave → pursue); the other runs the Avoidant Triangle (overwhelm → I'm not enough → withdraw). Each partner's behavior triggers the other's triangle. The pursuit triggers the withdrawal; the withdrawal triggers the pursuit. Johnson's negative interaction cycle mapped as two interlocking geometric forms. Neither partner is the problem — the INTERLOCK is the problem. When couples can see the pattern rather than blame each other, transformation begins. This meta-pattern includes the Loneliness-Withdrawal and Jealousy-Mistrust triangles as variations on the same theme: two people, two triangles, one escalating dance.",
@@ -1219,10 +1154,9 @@
       "id": "l3-healing-triangles",
       "name": "The Healing Triangles",
       "symbol": "💛",
-      "level": 3,
       "category": "meta",
       "sort_order": 66,
-      "composite_of": ["vulnerability-connection-triangle", "tenderness-listening-triangle", "guilt-repair-triangle", "joy-expansion-triangle"],
+      "parts": ["vulnerability-connection-triangle", "tenderness-listening-triangle", "guilt-repair-triangle", "joy-expansion-triangle"],
       "relationship_type": "emergence",
       "sections": {
         "About": "[SESSION-5: L3 META] The virtuous counterpart to the Interlocking Triangles. Four healing loops that build security, repair rupture, and generate positive affect. Vulnerability-Connection (opening) pairs with Tenderness-Listening (receiving). Guilt-Repair (accountability) restores what was broken. Joy-Expansion (celebration) builds the reserve. Together they represent the COMPLETE toolkit for a thriving relationship: the capacity to be vulnerable, the capacity to receive vulnerability, the capacity to take responsibility, and the capacity to celebrate. Johnson's Hold Me Tight conversations, Gottman's Sound Relationship House, Rogers' therapeutic conditions — all converge in these four triangles.",
@@ -1235,10 +1169,9 @@
       "id": "l3-changing-the-triangle",
       "name": "Changing the Triangle",
       "symbol": "🔄",
-      "level": 3,
       "category": "meta",
       "sort_order": 67,
-      "composite_of": ["wise-mind", "radical-acceptance", "mentalization", "expressing-need", "soothing"],
+      "parts": ["wise-mind", "radical-acceptance", "mentalization", "expressing-need", "soothing"],
       "relationship_type": "emergence",
       "sections": {
         "About": "[SESSION-5: L3 META] The intervention principle: you only need to change ONE vertex to change the entire triangle. The CBT insight applied to relational loops. Can't change the feeling? Change the thought. Can't change the thought? Change the behavior. Can't change the behavior? Change the feeling (through the body — soothing, breathing, movement). The five L1 cards composing this meta-pattern are the TOOLS for change: wise mind (cognitive clarity), radical acceptance (reality-based thinking), mentalization (seeing the other), expressing need (vulnerable action), and soothing (physiological regulation). Each one can be the lever that shifts a destructive triangle toward a healing one.",
@@ -1251,10 +1184,9 @@
       "id": "l3-two-triangles-one-dance",
       "name": "Two Triangles, One Dance",
       "symbol": "🌀",
-      "level": 3,
       "category": "meta",
       "sort_order": 68,
-      "composite_of": ["l3-interlocking-triangles", "l3-healing-triangles", "l3-changing-the-triangle"],
+      "parts": ["l3-interlocking-triangles", "l3-healing-triangles", "l3-changing-the-triangle"],
       "relationship_type": "emergence",
       "sections": {
         "About": "[SESSION-5: L3 META] The apex card: the entire Inner Triangle system in one insight. Every couple is two triangles dancing. Each partner has their own Feel → Think → Do loop. The loops interlock. The dance can be destructive (interlocking triangles: each partner's behavior triggers the other's pain) or healing (healing triangles: each partner's vulnerability meets the other's tenderness). The meta-insight: the SAME three vertices exist in both destructive and healing loops — the difference is which version of each vertex is active. Fear vs. vulnerability. Mind-reading vs. mentalization. Attacking vs. expressing need. One shift in one vertex in one partner ripples across all six vertices in the shared dance. Johnson's negative interaction cycle BECOMING the positive one: the same energy, redirected. This is the grammar's central teaching: you are not stuck. The triangle can change. And when yours changes, theirs shifts too.",

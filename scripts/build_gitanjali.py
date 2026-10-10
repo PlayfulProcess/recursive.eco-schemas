@@ -10,6 +10,7 @@ for each poem and L2/L3 thematic emergence groups.
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SEED_PATH = os.path.join(os.path.dirname(__file__), '..', 'seeds', 'gitanjali.txt')
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), '..', 'grammars', 'gitanjali')
@@ -167,7 +168,6 @@ def build_grammar(poems):
             "name": truncate_name(poem_text),
             "sort_order": sort_order,
             "category": "poem",
-            "level": 1,
             "sections": {
                 "Verse": poem_text
             },
@@ -188,14 +188,13 @@ def build_grammar(poems):
             "name": theme["name"],
             "sort_order": sort_order,
             "category": "theme",
-            "level": 2,
             "sections": {
                 "About": theme["about"],
                 "For Readers": theme["for_readers"]
             },
             "keywords": [],
             "metadata": {
-                "composite_of": composite_ids,
+                "parts": composite_ids,
                 "relationship_type": "emergence"
             }
         }
@@ -209,14 +208,13 @@ def build_grammar(poems):
         "name": "Song Offerings",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "sections": {
             "About": "Gitanjali means 'Song Offerings' -- from the Bengali 'gita' (song) and 'anjali' (offering, as in cupped hands raised in devotion). These 103 prose poems, translated from Bengali by Tagore himself in 1912, move through the full arc of devotional experience: wonder at creation, longing for the divine beloved, surrender through service, communion with nature, the innocence of children, the pilgrimage of life, ecstatic celebration, and finally the serene acceptance of death as homecoming. Together they form one continuous prayer -- a single salutation that begins in smallness and ends in infinity.",
             "For Readers": "Gitanjali can be read straight through as a devotional arc, or dipped into at random like an oracle. The thematic groupings here offer a middle path: follow one thread (nature, death, joy) and discover how Tagore circles the same mysteries from different angles. These poems belong to no single religion -- they have been claimed by Hindus, Christians, Sufis, and secular humanists alike. Tagore himself resisted labels: 'My religion is in the reconciliation of the superpersonal Man, the universal human spirit, in my own individual being.'"
         },
         "keywords": ["devotion", "bengali", "nobel-prize", "prayer", "offering"],
         "metadata": {
-            "composite_of": all_theme_ids,
+            "parts": all_theme_ids,
             "relationship_type": "emergence"
         }
     }
@@ -240,7 +238,7 @@ def build_grammar(poems):
         "shelves": ["wisdom"],
         "lineages": ["Shrei", "Andreotti"],
         "worldview": "devotional",
-        "items": items
+        "nodes": items
     }
 
     return grammar
@@ -276,13 +274,13 @@ def main():
     grammar = build_grammar(poems)
 
     # Count items by level
-    l1_count = sum(1 for item in grammar['items'] if item['level'] == 1)
-    l2_count = sum(1 for item in grammar['items'] if item['level'] == 2)
-    l3_count = sum(1 for item in grammar['items'] if item['level'] == 3)
+    l1_count = sum(1 for item in grammar['nodes'] if node_depth(item, grammar['nodes']) == 1)
+    l2_count = sum(1 for item in grammar['nodes'] if node_depth(item, grammar['nodes']) == 2)
+    l3_count = sum(1 for item in grammar['nodes'] if node_depth(item, grammar['nodes']) == 3)
     print(f"L1 items: {l1_count}")
     print(f"L2 items: {l2_count}")
     print(f"L3 items: {l3_count}")
-    print(f"Total items: {len(grammar['items'])}")
+    print(f"Total items: {len(grammar['nodes'])}")
 
     # Write output
     os.makedirs(OUTPUT_DIR, exist_ok=True)

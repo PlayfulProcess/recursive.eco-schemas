@@ -134,7 +134,7 @@ def main():
     )
 
     g = json.loads(GRAMMAR_PATH.read_text(encoding='utf-8'))
-    items = g.get('items', [])
+    items = g.get('nodes', [])
 
     # Collect items whose image_url is still a Wikimedia URL (those are the failures)
     failures = []

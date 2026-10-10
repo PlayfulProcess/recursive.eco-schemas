@@ -13,6 +13,7 @@ Structure:
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SEED = os.path.join(os.path.dirname(__file__), '..', 'seeds', 'new-light-alchymie.txt')
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), '..', 'grammars', 'new-light-alchymie')
@@ -451,7 +452,6 @@ def build_l1_items(sections):
             'name': sec['name'],
             'sort_order': sort_order,
             'category': sec['category'],
-            'level': 1,
             'sections': {
                 'Text': truncated
             },
@@ -557,8 +557,7 @@ def build_l2_items(l1_items, start_sort):
         'name': 'The Twelve Treatises of Alchymie',
         'sort_order': sort_order,
         'category': 'new-light-of-alchymie',
-        'level': 2,
-        'composite_of': treatise_ids,
+        'parts': treatise_ids,
         'relationship_type': 'emergence',
         'sections': {
             'About': 'The twelve core treatises of Sendivogius\'s A New Light of Alchymie, progressing from the nature of things through the generation of metals, the role of seed and sperm, the second matter, putrefaction, and culminating in the practical creation of the Philosophers\' Stone. Together they form a complete alchemical cosmology and methodology, moving from metaphysics to praxis.',
@@ -577,8 +576,7 @@ def build_l2_items(l1_items, start_sort):
         'name': 'Supplementary Alchemical Texts',
         'sort_order': sort_order,
         'category': 'new-light-of-alchymie',
-        'level': 2,
-        'composite_of': supp_ids,
+        'parts': supp_ids,
         'relationship_type': 'emergence',
         'sections': {
             'About': 'The supplementary texts appended to the Twelve Treatises: Sendivogius\'s Epilogue summarizing his work, a Preface introducing the allegorical Riddle, the Parable itself (a rich alchemical allegory of Neptune\'s island and the Philosophers\' Stone), and the famous Dialogue between Mercury, the Alchymist, and Nature — a satirical and instructive dramatic piece warning against misunderstanding alchemical principles.',
@@ -597,8 +595,7 @@ def build_l2_items(l1_items, start_sort):
         'name': 'The Four Elements',
         'sort_order': sort_order,
         'category': 'treatise-of-sulphur',
-        'level': 2,
-        'composite_of': element_ids,
+        'parts': element_ids,
         'relationship_type': 'emergence',
         'sections': {
             'About': 'Sendivogius\'s detailed exposition of the four classical elements — Earth, Water, Aire, and Fire — as they relate to alchemical transformation. Each element is described not merely as a substance but as a living principle with its own character, role in generation, and relationship to the others. Earth is the receptacle, Water the carrier, Aire the mediator, Fire the purifier.',
@@ -617,8 +614,7 @@ def build_l2_items(l1_items, start_sort):
         'name': 'The Principles of All Things',
         'sort_order': sort_order,
         'category': 'treatise-of-sulphur',
-        'level': 2,
-        'composite_of': principle_ids,
+        'parts': principle_ids,
         'relationship_type': 'emergence',
         'sections': {
             'About': 'The theoretical core of the Treatise of Sulphur: Sendivogius\'s account of the Three Principles (Mercury, Sulphur, Salt) and their origin from the Four Elements. Sulphur is placed first among principles as the most worthy — the tinging, congealing, and ripening force that gives metals their identity.',
@@ -637,8 +633,7 @@ def build_l2_items(l1_items, start_sort):
         'name': 'Generation, Growth, and Preservation',
         'sort_order': sort_order,
         'category': 'nature-of-things',
-        'level': 2,
-        'composite_of': life_cycle_1,
+        'parts': life_cycle_1,
         'relationship_type': 'emergence',
         'sections': {
             'About': 'The first three books of Paracelsus\'s Nature of Things treat the coming-into-being of all natural things. Book 1 covers generation from putrefaction — including the famous recipe for generating a Homunculus. Book 2 discusses growth and increase in metals, stones, and living things. Book 3 addresses preservation: how to protect bodies from decay through balsam, salt, and the art of embalming.',
@@ -657,8 +652,7 @@ def build_l2_items(l1_items, start_sort):
         'name': 'Life, Death, and Resurrection',
         'sort_order': sort_order,
         'category': 'nature-of-things',
-        'level': 2,
-        'composite_of': life_cycle_2,
+        'parts': life_cycle_2,
         'relationship_type': 'emergence',
         'sections': {
             'About': 'The middle triad of Paracelsus\'s work addresses the great cycle: Life (Book 4) explores the vital force in all things, from metals to humans; Death (Book 5) catalogs the forms of decay, destruction, and ruin; Resurrection (Book 6) treats the renewal and restoration of things thought destroyed — from metals to plants to the human body.',
@@ -677,8 +671,7 @@ def build_l2_items(l1_items, start_sort):
         'name': 'Transmutation and Separation',
         'sort_order': sort_order,
         'category': 'nature-of-things',
-        'level': 2,
-        'composite_of': arts,
+        'parts': arts,
         'relationship_type': 'emergence',
         'sections': {
             'About': 'The practical arts of alchemical transformation. Book 7 on Transmutation covers the changing of one substance into another — metals into gold, but also broader transformations in nature. Book 8 on Separation details the art of extracting essences: separating metals from ores, refining minerals, distilling vegetables, and processing animal substances.',
@@ -698,8 +691,7 @@ def build_l2_items(l1_items, start_sort):
         'name': 'The Doctrine of Signatures',
         'sort_order': sort_order,
         'category': 'nature-of-things',
-        'level': 2,
-        'composite_of': sig_ids,
+        'parts': sig_ids,
         'relationship_type': 'emergence',
         'sections': {
             'About': 'Book 9\'s detailed sub-sections expound Paracelsus\'s famous Doctrine of Signatures — the idea that all things bear visible signs of their inner nature and purpose. Covers monstrous signs in humans, astrological physiognomy, chiromancy (palmistry), mineral signatures, and peculiar signs of natural and supernatural things.',
@@ -725,8 +717,7 @@ def build_l3_items(start_sort):
         'name': 'Sendivogius: A New Light and the Treatise of Sulphur',
         'sort_order': sort_order,
         'category': 'meta',
-        'level': 3,
-        'composite_of': ['l2-twelve-treatises', 'l2-supplementary-texts',
+        'parts': ['l2-twelve-treatises', 'l2-supplementary-texts',
                          'l2-four-elements', 'l2-principles'],
         'relationship_type': 'emergence',
         'sections': {
@@ -745,8 +736,7 @@ def build_l3_items(start_sort):
         'name': 'Paracelsus: Of the Nature of Things',
         'sort_order': sort_order,
         'category': 'meta',
-        'level': 3,
-        'composite_of': ['l2-generation-growth', 'l2-life-death-resurrection',
+        'parts': ['l2-generation-growth', 'l2-life-death-resurrection',
                          'l2-transmutation-separation', 'l2-signatures'],
         'relationship_type': 'emergence',
         'sections': {
@@ -765,8 +755,7 @@ def build_l3_items(start_sort):
         'name': 'A New Light of Alchymie: The Complete Work',
         'sort_order': sort_order,
         'category': 'meta',
-        'level': 3,
-        'composite_of': ['l3-sendivogius', 'l3-paracelsus', 'chymicall-dictionary'],
+        'parts': ['l3-sendivogius', 'l3-paracelsus', 'chymicall-dictionary'],
         'relationship_type': 'emergence',
         'sections': {
             'About': 'The complete 1650 volume translated by John French, M.D., bringing together three major alchemical works: Sendivogius\'s A New Light of Alchymie and Treatise of Sulphur, Paracelsus\'s Nine Books of the Nature of Things, and a comprehensive Chymicall Dictionary. Together they form one of the most important alchemical compilations in the English language, offering theory, practice, allegory, and reference in a single volume.',
@@ -846,7 +835,7 @@ def build_grammar():
         'shelves': ['wisdom'],
         'lineages': ['Shrei'],
         'worldview': 'animist',
-        'items': all_items
+        'nodes': all_items
     }
 
     return grammar
@@ -860,19 +849,19 @@ def main():
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
     print(f"\nWrote {OUTPUT}")
-    print(f"Total items: {len(grammar['items'])}")
+    print(f"Total items: {len(grammar['nodes'])}")
 
     # Quick validation
-    items = grammar['items']
+    items = grammar['nodes']
     ids = [i['id'] for i in items]
     dupes = [x for x in ids if ids.count(x) > 1]
-    bad_refs = [(i['id'], r) for i in items for r in i.get('composite_of', []) if r not in ids]
+    bad_refs = [(i['id'], r) for i in items for r in i.get('parts', []) if r not in ids]
     orders = [i['sort_order'] for i in items]
 
     print(f"\nValidation:")
-    print(f"  L1: {sum(1 for i in items if i['level'] == 1)}")
-    print(f"  L2: {sum(1 for i in items if i['level'] == 2)}")
-    print(f"  L3: {sum(1 for i in items if i['level'] == 3)}")
+    print(f"  L1: {sum(1 for i in items if node_depth(i, items) == 1)}")
+    print(f"  L2: {sum(1 for i in items if node_depth(i, items) == 2)}")
+    print(f"  L3: {sum(1 for i in items if node_depth(i, items) == 3)}")
     print(f"  Duplicate IDs: {dupes}")
     print(f"  Bad refs: {bad_refs}")
     print(f"  Sort orders sequential: {orders == list(range(1, len(items) + 1))}")

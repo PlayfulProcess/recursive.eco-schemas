@@ -13,6 +13,7 @@ Levels:
 import json
 import re
 from pathlib import Path
+from grammar_depth import node_depth
 
 SEED_FILE = Path(__file__).parent.parent / "seeds" / "just-so-stories.txt"
 OUTPUT_DIR = Path(__file__).parent.parent / "grammars" / "just-so-stories"
@@ -205,7 +206,6 @@ def build_grammar():
             "name": story_def["name"],
             "sort_order": sort_order,
             "category": "story",
-            "level": 1,
             "sections": {
                 "Story": raw_text,
                 "About": story_def["summary"],
@@ -233,9 +233,8 @@ def build_grammar():
         "name": "How Animals Got Their Features",
         "sort_order": sort_order,
         "category": "thematic-group",
-        "level": 2,
         "relationship_type": "emergence",
-        "composite_of": animal_stories,
+        "parts": animal_stories,
         "sections": {
             "About": "Seven stories explaining how animals came to look and behave the way they do: the Whale's throat-grating, the Camel's hump, the Rhinoceros's wrinkly skin, the Leopard's spots, the Elephant's trunk, the Kangaroo's long legs, and the Armadillo's armor. These are Kipling's version of origin myths -- pourquoi tales that answer 'Why?' with humor, imagination, and rhythmic prose.",
             "For Parents": "These seven stories form the heart of the collection. Children love the 'why?' format -- it mirrors their own endless questions about the natural world. Each story rewards reading aloud: the rolling rhythms, the coined words ('satiable curiosity'), and the ritual phrases ('O Best Beloved') are designed to be heard, not just read. Great for sparking nature observations: 'Why do you think elephants really have trunks?'",
@@ -255,9 +254,8 @@ def build_grammar():
         "name": "The Invention of Writing",
         "sort_order": sort_order,
         "category": "thematic-group",
-        "level": 2,
         "relationship_type": "emergence",
-        "composite_of": human_stories,
+        "parts": human_stories,
         "sections": {
             "About": "Two companion stories about Tegumai and his daughter Taffy inventing written communication. The first letter (a picture) causes hilarious misunderstanding. The alphabet (sound-symbols) solves the problem. Together they celebrate the miracle of writing and the ingenuity of a father-daughter team working out one of humanity's greatest inventions.",
             "For Parents": "These two stories are best read together, as the second directly solves the problem revealed by the first. They're wonderful for children who are learning to read and write -- making the abstract miracle of literacy into a concrete, funny story. Try having your child invent their own symbols for sounds after reading these.",
@@ -278,9 +276,8 @@ def build_grammar():
         "name": "Cosmic Tales",
         "sort_order": sort_order,
         "category": "thematic-group",
-        "level": 2,
         "relationship_type": "emergence",
-        "composite_of": cosmic_stories,
+        "parts": cosmic_stories,
         "sections": {
             "About": "Three stories that operate on a larger scale than the animal tales. The Crab explains the tides through a creation myth. The Cat explores the ancient contract between wildness and domestication. The Butterfly uses Solomon's wisdom to explore the paradox that even empty boasts can serve a purpose. These are the collection's most philosophical stories.",
             "For Parents": "The Cat That Walked by Himself is the jewel of this group -- and possibly the whole collection. Its exploration of independence versus belonging resonates with every child (and adult) who has struggled with the tension between freedom and community. The ending is ambiguous and rich. The Butterfly That Stamped has surprising depth about wisdom, marriage, and humility.",
@@ -302,9 +299,8 @@ def build_grammar():
         "name": "Curiosity and Consequence",
         "sort_order": sort_order,
         "category": "theme",
-        "level": 2,
         "relationship_type": "emergence",
-        "composite_of": curiosity_stories,
+        "parts": curiosity_stories,
         "sections": {
             "About": "Stories where curiosity, cleverness, or disobedience leads to permanent change. The Elephant's Child asks one question too many and gets a trunk. The Mariner's resourcefulness gives the Whale a grating. Taffy's picture-letter causes chaos. Pau Amma's rebellious play shapes the tides. In Kipling's world, every action leaves a permanent mark on the world.",
             "For Parents": "Kipling celebrates curiosity even as he shows its dangers. The Elephant's Child is spanked by every relative for asking questions -- but his curiosity gives elephants their most useful feature. This is a wonderful theme for encouraging children's questions while talking honestly about the consequences of impulsive action.",
@@ -326,9 +322,8 @@ def build_grammar():
         "name": "Laziness, Vanity, and Trickery",
         "sort_order": sort_order,
         "category": "theme",
-        "level": 2,
         "relationship_type": "emergence",
-        "composite_of": laziness_stories,
+        "parts": laziness_stories,
         "sections": {
             "About": "Stories where character flaws -- laziness, greed, vanity -- lead to transformation. The Camel's refusal to work earns him a hump. The Rhinoceros's rudeness earns him wrinkly skin. Old Man Kangaroo's vanity sets a Dingo on his tail forever. The Hedgehog and Tortoise's trickery confuses a Jaguar and creates a new creature entirely.",
             "For Parents": "These stories are moral fables dressed in comedy. The consequences in Kipling's world are permanent but often funny rather than cruel -- the Camel can now work three days without eating, the Armadillo is a marvel of adaptation. Great for conversations about how our habits and choices shape who we become -- literally, in these stories.",
@@ -349,9 +344,8 @@ def build_grammar():
         "name": "Independence and Belonging",
         "sort_order": sort_order,
         "category": "theme",
-        "level": 2,
         "relationship_type": "emergence",
-        "composite_of": independence_stories,
+        "parts": independence_stories,
         "sections": {
             "About": "The Cat walks alone. Pau Amma plays by himself while others follow the rules. The Butterfly boasts of power he doesn't have. These stories explore the tension between independence and community, between following your own path and accepting your place in the larger order. Kipling's answers are nuanced: the Cat gets his freedom but pays a price; Pau Amma is disciplined but not destroyed.",
             "For Parents": "The Cat story is a philosophical gem. Children who are fiercely independent will identify with the Cat; children who value belonging will side with the Dog. Neither is wrong. This is a wonderful story for exploring different temperaments and the idea that there's more than one valid way to live.",
@@ -370,9 +364,8 @@ def build_grammar():
         "name": "The Stories",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "relationship_type": "emergence",
-        "composite_of": all_group_ids,
+        "parts": all_group_ids,
         "sections": {
             "About": "The complete Just So Stories: twelve tales in three natural groups. Seven animal origin stories explain how creatures got their distinctive features. Two Tegumai stories celebrate the invention of writing. Three cosmic tales explore the tides, the contract between wildness and civilization, and the uses of wisdom. All twelve are told in Kipling's unmistakable voice -- rolling, rhythmic, playful, designed to be read aloud to a beloved child.",
             "How to Use": "Start with The Elephant's Child -- it's the most beloved and the most fun to read aloud. Then try How the Whale Got His Throat for its wonderful rhythmic language. Save The Cat That Walked by Himself for last -- it's the most complex and rewards a reader who already knows Kipling's voice.",
@@ -387,9 +380,8 @@ def build_grammar():
         "name": "Themes",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "relationship_type": "emergence",
-        "composite_of": all_theme_ids,
+        "parts": all_theme_ids,
         "sections": {
             "About": "The themes that run through Just So Stories: curiosity and its consequences, laziness and trickery and the transformations they bring, and the tension between independence and belonging. These themes cut across the story groupings, connecting the animal tales to the cosmic ones and revealing the deeper questions Kipling was exploring beneath the humor.",
             "How to Use": "Browse by theme when a particular question is alive in your child's life. A child who asks 'why?' endlessly will love the curiosity stories. A child struggling with rules or chores will find the laziness tales illuminating. A child navigating the tension between fitting in and being themselves will connect deeply with the independence stories.",
@@ -454,7 +446,7 @@ def build_grammar():
         "shelves": ["children", "wonder", "contested"],
         "lineages": ["universal"],
         "worldview": "imaginative",
-        "items": items,
+        "nodes": items,
     }
 
     return grammar
@@ -469,10 +461,10 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    items = grammar["items"]
-    l1 = [i for i in items if i["level"] == 1]
-    l2 = [i for i in items if i["level"] == 2]
-    l3 = [i for i in items if i["level"] == 3]
+    items = grammar["nodes"]
+    l1 = [i for i in items if node_depth(i, items) == 1]
+    l2 = [i for i in items if node_depth(i, items) == 2]
+    l3 = [i for i in items if node_depth(i, items) == 3]
 
     print(f"Grammar written to {OUTPUT_FILE}")
     print(f"  L1 stories: {len(l1)}")
@@ -488,7 +480,7 @@ def main():
 
     broken = []
     for item in items:
-        for ref in item.get("composite_of", []):
+        for ref in item.get("parts", []):
             if ref not in id_set:
                 broken.append((item["id"], ref))
     if broken:

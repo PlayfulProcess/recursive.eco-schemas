@@ -17,6 +17,7 @@ import json
 import re
 import sys
 import textwrap
+from grammar_depth import node_depth
 
 
 # Visual style palettes per tradition/mythology
@@ -351,14 +352,14 @@ def build_storyboard_grammar(source_grammar_path, grammar_slug, tradition_key, o
 
     # Determine field names
     verse_field = "Verse" if any("Verse" in i.get("sections", {})
-                                 for i in source["items"] if i.get("level") == 1) else "Story"
+                                 for i in source["nodes"] if node_depth(i, source["nodes"]) == 1) else "Story"
 
     items = []
     sort_order = 0
     episode_num = 0
 
-    for source_item in source["items"]:
-        if source_item.get("level", 1) != 1:
+    for source_item in source["nodes"]:
+        if node_depth(source_item, source["nodes"]) != 1:
             continue
 
         episode_num += 1
@@ -397,7 +398,6 @@ def build_storyboard_grammar(source_grammar_path, grammar_slug, tradition_key, o
                 "name": f"Ep{episode_num} Scene {scene_idx + 1}: {source_item['name']}",
                 "sort_order": sort_order,
                 "category": source_item.get("category", source_item["id"]),
-                "level": 1,
                 "sections": {
                     "Narration": scene_text,
                     "Direction": f"[{scene_type.upper()}] {camera}",
@@ -443,8 +443,7 @@ def build_storyboard_grammar(source_grammar_path, grammar_slug, tradition_key, o
             "name": f"Episode {episode_num}: {source_item['name']}",
             "sort_order": sort_order,
             "category": "episodes",
-            "level": 2,
-            "composite_of": scene_ids,
+            "parts": scene_ids,
             "relationship_type": "emergence",
             "sections": {
                 "About": f"Episode {episode_num} of the series. {len(scenes)} scenes, ~{total_time} seconds total narration.",
@@ -488,17 +487,17 @@ def build_storyboard_grammar(source_grammar_path, grammar_slug, tradition_key, o
             "target_audience": "ages 4-10",
             "narration_speed_wpm": 140,
             "total_episodes": episode_num,
-            "total_scenes": len([i for i in items if i.get("level") == 1]),
+            "total_scenes": len([i for i in items if node_depth(i, items) == 1]),
             "visual_style_guide": VISUAL_STYLES.get(tradition_key, {}),
             "alice_character_description": ALICE_CHARACTER if "alice" in grammar_slug else None,
         },
-        "items": items,
+        "nodes": items,
     }
 
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(storyboard, f, indent=2, ensure_ascii=False)
 
-    return episode_num, len([i for i in items if i.get("level") == 1])
+    return episode_num, len([i for i in items if node_depth(i, items) == 1])
 
 
 def main():

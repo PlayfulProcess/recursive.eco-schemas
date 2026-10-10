@@ -10,6 +10,7 @@ import json
 import os
 import re
 import sys
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
@@ -329,7 +330,6 @@ def build_grammar(poems):
             "name": name,
             "sort_order": poem["song_number"],
             "category": "song",
-            "level": 1,
             "sections": {
                 "Verse": poem["verse"],
             },
@@ -343,7 +343,7 @@ def build_grammar(poems):
         }
         items.append(item)
 
-    # Build a set of valid song IDs for composite_of references
+    # Build a set of valid song IDs for parts references
     valid_ids = {item["id"] for item in items}
 
     # L2: Thematic emergence groups
@@ -356,8 +356,7 @@ def build_grammar(poems):
             "name": theme["name"],
             "sort_order": sort_base + i,
             "category": "theme",
-            "level": 2,
-            "composite_of": composite,
+            "parts": composite,
             "relationship_type": "emergence",
             "sections": {
                 "About": theme["about"],
@@ -375,8 +374,7 @@ def build_grammar(poems):
         "name": "The Songs of Kabir",
         "sort_order": 300,
         "category": "meta",
-        "level": 3,
-        "composite_of": all_theme_ids,
+        "parts": all_theme_ids,
         "relationship_type": "emergence",
         "sections": {
             "About": (
@@ -441,7 +439,7 @@ def build_grammar(poems):
         "shelves": ["wisdom"],
         "lineages": ["Shrei", "Andreotti"],
         "worldview": "non-dual",
-        "items": items,
+        "nodes": items,
     }
 
     return grammar
@@ -480,10 +478,10 @@ def main():
     grammar = build_grammar(poems)
 
     # Count items by level
-    l1 = sum(1 for item in grammar["items"] if item["level"] == 1)
-    l2 = sum(1 for item in grammar["items"] if item["level"] == 2)
-    l3 = sum(1 for item in grammar["items"] if item["level"] == 3)
-    print(f"\n  Grammar items: {len(grammar['items'])} total ({l1} L1, {l2} L2, {l3} L3)")
+    l1 = sum(1 for item in grammar["nodes"] if node_depth(item, grammar["nodes"]) == 1)
+    l2 = sum(1 for item in grammar["nodes"] if node_depth(item, grammar["nodes"]) == 2)
+    l3 = sum(1 for item in grammar["nodes"] if node_depth(item, grammar["nodes"]) == 3)
+    print(f"\n  Grammar items: {len(grammar['nodes'])} total ({l1} L1, {l2} L2, {l3} L3)")
 
     # Write output
     os.makedirs(OUTPUT_DIR, exist_ok=True)

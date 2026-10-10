@@ -23,6 +23,7 @@ influence on English mysticism.
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SEED_PATH = os.path.join(os.path.dirname(__file__), '..', 'seeds', 'meister-eckhart-sermons.txt')
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), '..', 'grammars', 'meister-eckhart-sermons')
@@ -296,7 +297,6 @@ def build_items(text):
                     'name': ch['name'],
                     'sort_order': sort_order,
                     'category': ch['category'],
-                    'level': 1,
                     'sections': {
                         'Text': cleaned_text
                     },
@@ -319,7 +319,6 @@ def build_items(text):
                 'name': treatise['name'],
                 'sort_order': sort_order,
                 'category': 'treatise',
-                'level': 1,
                 'sections': {
                     'Text': cleaned_text,
                     'About': treatise['description'],
@@ -362,8 +361,7 @@ def build_l2_items(l1_items, sort_start):
         'name': 'Treatise I: Benjamin — The Way to Contemplation',
         'sort_order': sort_order,
         'category': 'treatise-group',
-        'level': 2,
-        'composite_of': benjamin_ids,
+        'parts': benjamin_ids,
         'relationship_type': 'emergence',
         'sections': {
             'About': "A paraphrase of Richard of St. Victor's Benjamin Minor, this is the longest and most systematic treatise in the collection. Using the allegory of Jacob's wives and children, it maps the soul's ascent through affection and reason toward contemplation. The twelve children of Jacob represent twelve spiritual virtues: dread, sorrow, hope, love, joy, hatred of sin, shame, abstinence, patience, discretion, and finally Benjamin -- contemplation itself, born at the cost of Rachel (reason). The treatise teaches that contemplation surpasses reason and cannot be reached by human effort alone.",
@@ -380,8 +378,7 @@ def build_l2_items(l1_items, sort_start):
         'name': 'Voices of the Women Mystics',
         'sort_order': sort_order,
         'category': 'thematic-group',
-        'level': 2,
-        'composite_of': ['catherine-doctrines', 'margery-kempe'],
+        'parts': ['catherine-doctrines', 'margery-kempe'],
         'relationship_type': 'emergence',
         'sections': {
             'About': "Two remarkable women's voices: Catherine of Siena (1347-1380), the Italian mystic who counseled popes and kings, and Margery Kempe of Lynn, the English anchoress whose intimate dialogues with Christ are among the most tender in medieval literature. Catherine teaches the fierce discipline of self-knowledge and holy hatred of sin; Margery receives the gentle assurance that contemplative love outweighs all outward devotion. Together they represent the full range of feminine mystical experience.",
@@ -399,8 +396,7 @@ def build_l2_items(l1_items, sort_start):
         'name': 'The Cloud of Unknowing School: Three Epistles',
         'sort_order': sort_order,
         'category': 'thematic-group',
-        'level': 2,
-        'composite_of': cloud_ids,
+        'parts': cloud_ids,
         'relationship_type': 'emergence',
         'sections': {
             'About': "Three treatises attributed to the anonymous author of the Cloud of Unknowing, the masterpiece of English mysticism. These epistles bring the Cloud's teaching down to practical guidance: how to pray (begin as if you will die before finishing), how to discern whether inner stirrings come from God or from the enemy, and how to distinguish the spirits of flesh, world, and malice from the Holy Spirit. Written with warmth, humor, and deep psychological insight.",
@@ -417,8 +413,7 @@ def build_l2_items(l1_items, sort_start):
         'name': 'Walter Hilton: The Song of Angels',
         'sort_order': sort_order,
         'category': 'thematic-group',
-        'level': 2,
-        'composite_of': ['song-of-angels'],
+        'parts': ['song-of-angels'],
         'relationship_type': 'emergence',
         'sections': {
             'About': "Walter Hilton's mystical treatise on the union of the soul with God, and how to distinguish true divine consolation from sensory delusion. Hilton teaches that the 'onehead' (union) with God requires the reformation of mind, reason, and affection -- a comprehensive transformation of the whole person. The 'song of angels' is not a literal sound but the soul's experience of being drawn into divine harmony.",
@@ -436,8 +431,7 @@ def build_l2_items(l1_items, sort_start):
         'name': 'Love and Self-Knowledge: The Heart of the Collection',
         'sort_order': sort_order,
         'category': 'thematic-group',
-        'level': 2,
-        'composite_of': ['benjamin-cap-1', 'benjamin-cap-4', 'catherine-doctrines', 'margery-kempe', 'epistle-of-prayer'],
+        'parts': ['benjamin-cap-1', 'benjamin-cap-4', 'catherine-doctrines', 'margery-kempe', 'epistle-of-prayer'],
         'relationship_type': 'emergence',
         'sections': {
             'About': "The unifying theme of the entire collection: the cell of self-knowledge, borrowed from St. Catherine of Siena. All seven treatises teach that the way to God begins with knowing oneself -- one's nothingness before God and one's capacity for divine love. Richard of St. Victor: 'Full knowledge of the rational spirit is a great and high mountain.' Catherine: 'Thou art she that art nought; and I am He that am ought.' The path from self-knowledge to divine love runs through every page.",
@@ -461,8 +455,7 @@ def build_l3_items(sort_start):
         'name': 'The Cell of Self-Knowledge',
         'sort_order': sort_order,
         'category': 'meta-theme',
-        'level': 3,
-        'composite_of': [
+        'parts': [
             'treatise-benjamin', 'women-mystics', 'cloud-school',
             'hilton-angels', 'love-and-self-knowledge'
         ],
@@ -502,11 +495,11 @@ def build_grammar():
 
     all_items = l1_items + l2_items + l3_items
 
-    # Validate composite_of references
+    # Validate parts references
     all_ids = {item['id'] for item in all_items}
     for item in all_items:
-        if 'composite_of' in item:
-            for ref in item['composite_of']:
+        if 'parts' in item:
+            for ref in item['parts']:
                 if ref not in all_ids:
                     print(f"WARNING: {item['id']} references non-existent id: {ref}")
 
@@ -545,7 +538,7 @@ def build_grammar():
         'shelves': ['wisdom'],
         'lineages': ['Linehan', 'Shrei'],
         'worldview': 'contemplative',
-        'items': all_items
+        'nodes': all_items
     }
 
     # Write output
@@ -554,9 +547,9 @@ def build_grammar():
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
     # Summary
-    l1_count = len([i for i in all_items if i['level'] == 1])
-    l2_count = len([i for i in all_items if i['level'] == 2])
-    l3_count = len([i for i in all_items if i['level'] == 3])
+    l1_count = len([i for i in all_items if node_depth(i, all_items) == 1])
+    l2_count = len([i for i in all_items if node_depth(i, all_items) == 2])
+    l3_count = len([i for i in all_items if node_depth(i, all_items) == 3])
     print(f"\nGrammar written to {OUTPUT_PATH}")
     print(f"  L1 items: {l1_count} (treatise sections)")
     print(f"  L2 items: {l2_count} (thematic groups)")

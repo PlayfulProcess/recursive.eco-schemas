@@ -27,6 +27,7 @@ Key text boundaries in the dialogue:
 import json
 import re
 from pathlib import Path
+from grammar_depth import node_depth
 
 SEED_PATH = Path(__file__).parent.parent / "seeds" / "phaedrus-plato.txt"
 OUTPUT_DIR = Path(__file__).parent.parent / "grammars" / "phaedrus-plato"
@@ -117,7 +118,6 @@ def build_grammar():
     add_item({
         "id": "opening-walk",
         "name": "The Walk to the Ilissus",
-        "level": 1,
         "category": "dialogue",
         "sections": {
             "Passage": ct(t),
@@ -135,7 +135,6 @@ def build_grammar():
     add_item({
         "id": "speech-lysias",
         "name": "The Speech of Lysias: In Praise of the Non-Lover",
-        "level": 1,
         "category": "speeches-on-love",
         "sections": {
             "Passage": ct(t),
@@ -153,7 +152,6 @@ def build_grammar():
     add_item({
         "id": "critique-transition",
         "name": "Socrates Challenges Lysias",
-        "level": 1,
         "category": "dialogue",
         "sections": {
             "Passage": ct(t),
@@ -171,7 +169,6 @@ def build_grammar():
     add_item({
         "id": "speech-socrates-first",
         "name": "Socrates' First Speech: The Lover as Madman",
-        "level": 1,
         "category": "speeches-on-love",
         "sections": {
             "Passage": ct(t),
@@ -189,7 +186,6 @@ def build_grammar():
     add_item({
         "id": "recantation-introduction",
         "name": "The Call to Recant: Socrates' Divine Sign",
-        "level": 1,
         "category": "speeches-on-love",
         "sections": {
             "Passage": ct(t),
@@ -207,7 +203,6 @@ def build_grammar():
     add_item({
         "id": "palinode-soul-chariot",
         "name": "The Great Speech: The Chariot of the Soul",
-        "level": 1,
         "category": "speeches-on-love",
         "sections": {
             "Passage": ct(t),
@@ -225,7 +220,6 @@ def build_grammar():
     add_item({
         "id": "palinode-love-beauty",
         "name": "Love as Recollection of Divine Beauty",
-        "level": 1,
         "category": "speeches-on-love",
         "sections": {
             "Passage": ct(t),
@@ -243,7 +237,6 @@ def build_grammar():
     add_item({
         "id": "transition-to-rhetoric",
         "name": "From Love to Rhetoric: What Makes a Good Speech?",
-        "level": 1,
         "category": "rhetoric",
         "sections": {
             "Passage": ct(t),
@@ -261,7 +254,6 @@ def build_grammar():
     add_item({
         "id": "art-of-rhetoric",
         "name": "True Rhetoric: Knowledge of the Soul",
-        "level": 1,
         "category": "rhetoric",
         "sections": {
             "Passage": ct(t),
@@ -279,7 +271,6 @@ def build_grammar():
     add_item({
         "id": "cicadas-rhetoric",
         "name": "The Myth of the Cicadas",
-        "level": 1,
         "category": "rhetoric",
         "sections": {
             "Passage": ct(t),
@@ -297,7 +288,6 @@ def build_grammar():
     add_item({
         "id": "allegory-theuth",
         "name": "The Allegory of Theuth: Writing and Memory",
-        "level": 1,
         "category": "rhetoric",
         "sections": {
             "Passage": ct(t),
@@ -315,7 +305,6 @@ def build_grammar():
     add_item({
         "id": "living-word",
         "name": "The Living Word: Writing in the Soul",
-        "level": 1,
         "category": "rhetoric",
         "sections": {
             "Passage": ct(t),
@@ -333,7 +322,6 @@ def build_grammar():
     add_item({
         "id": "prayer-to-pan",
         "name": "The Prayer to Pan",
-        "level": 1,
         "category": "dialogue",
         "sections": {
             "Passage": ct(t),
@@ -351,7 +339,6 @@ def build_grammar():
     add_item({
         "id": "theme-love-speeches",
         "name": "The Three Speeches on Love",
-        "level": 2,
         "category": "thematic-grouping",
         "sections": {
             "About": "The first half of the Phaedrus presents three speeches on love in ascending order of truth: Lysias argues for the non-lover (mere calculation), Socrates first argues against the lover (love as harmful madness), then recants with his Great Speech (love as divine madness that returns the soul to beauty). Together they enact the philosophical journey from surface cleverness to genuine wisdom.",
@@ -359,13 +346,12 @@ def build_grammar():
         },
         "keywords": ["love", "speeches", "eros", "progression", "wisdom"],
         "metadata": {},
-        "composite_of": ["speech-lysias", "speech-socrates-first", "recantation-introduction", "palinode-soul-chariot", "palinode-love-beauty"]
+        "parts": ["speech-lysias", "speech-socrates-first", "recantation-introduction", "palinode-soul-chariot", "palinode-love-beauty"]
     })
 
     add_item({
         "id": "theme-rhetoric-truth",
         "name": "Rhetoric, Dialectic, and the Written Word",
-        "level": 2,
         "category": "thematic-grouping",
         "sections": {
             "About": "The second half turns from love to rhetoric, but the connection is deep: both require genuine knowledge of the soul. True rhetoric is not manipulation but a form of love -- the desire to lead another soul toward truth. The discussion culminates in the myth of Theuth and the superiority of living dialogue over dead letters.",
@@ -373,13 +359,12 @@ def build_grammar():
         },
         "keywords": ["rhetoric", "dialectic", "writing", "truth", "soul", "philosophy"],
         "metadata": {},
-        "composite_of": ["transition-to-rhetoric", "art-of-rhetoric", "cicadas-rhetoric", "allegory-theuth", "living-word"]
+        "parts": ["transition-to-rhetoric", "art-of-rhetoric", "cicadas-rhetoric", "allegory-theuth", "living-word"]
     })
 
     add_item({
         "id": "theme-frame-setting",
         "name": "The Sacred Setting: Nature and Prayer",
-        "level": 2,
         "category": "thematic-grouping",
         "sections": {
             "About": "The dialogue is uniquely set outside the city walls, along the river Ilissus under a great plane tree. Socrates, who famously never leaves Athens, is drawn into nature by the promise of discourse about love. The setting is not mere backdrop -- the beauty of the natural world mirrors the beauty that love reveals in the soul. The closing prayer to Pan sanctifies the entire conversation.",
@@ -387,7 +372,7 @@ def build_grammar():
         },
         "keywords": ["nature", "ilissus", "plane-tree", "pan", "setting", "sacred"],
         "metadata": {},
-        "composite_of": ["opening-walk", "critique-transition", "prayer-to-pan"]
+        "parts": ["opening-walk", "critique-transition", "prayer-to-pan"]
     })
 
     # =========================================================================
@@ -397,7 +382,6 @@ def build_grammar():
     add_item({
         "id": "meta-love-and-truth",
         "name": "Love and Truth: The Unity of the Phaedrus",
-        "level": 3,
         "category": "meta-category",
         "sections": {
             "About": "The Phaedrus weaves together love, rhetoric, philosophy, and the soul into a single vision. Love is the experience of divine beauty; rhetoric is the art of soul-leading; philosophy is the discipline of truth; and the soul is the arena where all three meet. What unites them is the conviction that genuine relationship -- between lovers, between speaker and listener, between teacher and student -- requires knowledge of the other's soul and fidelity to truth.",
@@ -405,7 +389,7 @@ def build_grammar():
         },
         "keywords": ["unity", "love", "truth", "rhetoric", "soul", "philosophy", "plato"],
         "metadata": {},
-        "composite_of": ["theme-love-speeches", "theme-rhetoric-truth", "theme-frame-setting"]
+        "parts": ["theme-love-speeches", "theme-rhetoric-truth", "theme-frame-setting"]
     })
 
     # =========================================================================
@@ -431,7 +415,7 @@ def build_grammar():
         "shelves": ["wonder"],
         "lineages": ["Shrei", "Johnson"],
         "worldview": "non-dual",
-        "items": items
+        "nodes": items
     }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -441,7 +425,7 @@ def build_grammar():
     print(f"Built Phaedrus grammar: {len(items)} items")
     for item in items:
         passage = item["sections"].get("Passage", "")
-        print(f"  L{item['level']}: {item['id']} - {item['name']} ({len(passage)} chars)")
+        print(f"  L{node_depth(item, items)}: {item['id']} - {item['name']} ({len(passage)} chars)")
 
 
 if __name__ == "__main__":

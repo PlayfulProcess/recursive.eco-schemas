@@ -45,11 +45,10 @@
   "shelves": ["wisdom"],
   "lineages": ["Shrei", "Akomolafe"],
   "worldview": "non-dual",
-  "items": [
+  "nodes": [
     {
       "id": "ray-1-will",
       "name": "Ray I — Will or Power",
-      "level": 1,
       "category": "rays",
       "sort_order": 0,
       "keywords": ["will", "power", "destruction", "initiation", "purpose", "red"],
@@ -66,7 +65,6 @@
     {
       "id": "ray-2-love-wisdom",
       "name": "Ray II — Love-Wisdom",
-      "level": 1,
       "category": "rays",
       "sort_order": 1,
       "keywords": ["love", "wisdom", "compassion", "magnetism", "teaching", "blue"],
@@ -83,7 +81,6 @@
     {
       "id": "ray-3-active-intelligence",
       "name": "Ray III — Active Intelligence",
-      "level": 1,
       "category": "rays",
       "sort_order": 2,
       "keywords": ["intelligence", "activity", "adaptability", "creativity", "matter", "green"],
@@ -100,7 +97,6 @@
     {
       "id": "ray-4-harmony",
       "name": "Ray IV — Harmony through Conflict",
-      "level": 1,
       "category": "rays",
       "sort_order": 3,
       "keywords": ["harmony", "conflict", "beauty", "art", "bridge", "yellow"],
@@ -117,7 +113,6 @@
     {
       "id": "ray-5-knowledge",
       "name": "Ray V — Concrete Knowledge",
-      "level": 1,
       "category": "rays",
       "sort_order": 4,
       "keywords": ["knowledge", "science", "analysis", "precision", "truth", "orange"],
@@ -134,7 +129,6 @@
     {
       "id": "ray-6-devotion",
       "name": "Ray VI — Devotion and Idealism",
-      "level": 1,
       "category": "rays",
       "sort_order": 5,
       "keywords": ["devotion", "idealism", "faith", "aspiration", "yearning", "rose"],
@@ -151,7 +145,6 @@
     {
       "id": "ray-7-ceremonial-order",
       "name": "Ray VII — Ceremonial Order",
-      "level": 1,
       "category": "rays",
       "sort_order": 6,
       "keywords": ["order", "ritual", "magic", "manifestation", "synthesis", "violet"],
@@ -168,7 +161,6 @@
     {
       "id": "plane-1-adi",
       "name": "The First Plane — Adi (The Divine)",
-      "level": 1,
       "category": "planes",
       "sort_order": 7,
       "keywords": ["adi", "divine", "logoic", "first-plane", "source"],
@@ -183,7 +175,6 @@
     {
       "id": "plane-2-monadic",
       "name": "The Second Plane — Monadic",
-      "level": 1,
       "category": "planes",
       "sort_order": 8,
       "keywords": ["monadic", "second-plane", "unity", "spirit-matter"],
@@ -198,7 +189,6 @@
     {
       "id": "plane-3-atmic",
       "name": "The Third Plane — Atmic (Spiritual Will)",
-      "level": 1,
       "category": "planes",
       "sort_order": 9,
       "keywords": ["atmic", "atma", "spiritual-will", "third-plane"],
@@ -213,7 +203,6 @@
     {
       "id": "plane-4-buddhic",
       "name": "The Fourth Plane — Buddhic (Intuition)",
-      "level": 1,
       "category": "planes",
       "sort_order": 10,
       "keywords": ["buddhic", "intuition", "fourth-plane", "unity-consciousness"],
@@ -228,7 +217,6 @@
     {
       "id": "plane-5-mental",
       "name": "The Fifth Plane — Manas (Mental)",
-      "level": 1,
       "category": "planes",
       "sort_order": 11,
       "keywords": ["mental", "manas", "mind", "fifth-plane", "thought"],
@@ -243,7 +231,6 @@
     {
       "id": "plane-6-astral",
       "name": "The Sixth Plane — Astral (Desire-Emotion)",
-      "level": 1,
       "category": "planes",
       "sort_order": 12,
       "keywords": ["astral", "emotional", "desire", "sixth-plane", "kama"],
@@ -258,7 +245,6 @@
     {
       "id": "plane-7-physical",
       "name": "The Seventh Plane — Physical-Etheric",
-      "level": 1,
       "category": "planes",
       "sort_order": 13,
       "keywords": ["physical", "etheric", "dense", "seventh-plane", "sthula"],
@@ -273,7 +259,6 @@
     {
       "id": "the-one-light",
       "name": "The One Light — Before Differentiation",
-      "level": 1,
       "category": "cosmology",
       "sort_order": 14,
       "keywords": ["source", "unity", "parabrahman", "ein-sof", "one-light"],
@@ -288,7 +273,6 @@
     {
       "id": "suryas-chariot",
       "name": "Surya's Chariot — The Seven Horses of the Sun",
-      "level": 1,
       "category": "cosmology",
       "sort_order": 15,
       "keywords": ["surya", "vedic", "horses", "sun-chariot", "rig-veda"],
@@ -303,7 +287,6 @@
     {
       "id": "spirit-soul-body",
       "name": "Spirit, Soul, Body — The Three Threads",
-      "level": 1,
       "category": "cosmology",
       "sort_order": 16,
       "keywords": ["spirit", "soul", "body", "sutratma", "antahkarana", "trinity"],
@@ -318,7 +301,6 @@
     {
       "id": "three-gunas",
       "name": "The Three Gunas — Sattva, Rajas, Tamas",
-      "level": 1,
       "category": "cosmology",
       "sort_order": 17,
       "keywords": ["gunas", "sattva", "rajas", "tamas", "samkhya", "prakriti"],
@@ -334,7 +316,6 @@
     {
       "id": "sephiroth-mirror",
       "name": "The Seven Lower Sephiroth — A Kabbalistic Mirror",
-      "level": 1,
       "category": "cosmology",
       "sort_order": 18,
       "keywords": ["kabbalah", "sephiroth", "tree-of-life", "chesed", "gevurah"],
@@ -349,7 +330,6 @@
     {
       "id": "seven-factors-of-enlightenment",
       "name": "The Seven Factors of Enlightenment — Satta Bojjhanga",
-      "level": 1,
       "category": "cosmology",
       "sort_order": 19,
       "keywords": ["buddhism", "bojjhanga", "enlightenment", "mindfulness", "equanimity"],
@@ -364,11 +344,10 @@
     {
       "id": "three-rays-of-aspect",
       "name": "The Three Rays of Aspect",
-      "level": 2,
       "category": "emergence-rays",
       "sort_order": 20,
       "keywords": ["aspect", "trinity", "will", "love", "intelligence"],
-      "composite_of": ["ray-1-will", "ray-2-love-wisdom", "ray-3-active-intelligence"],
+      "parts": ["ray-1-will", "ray-2-love-wisdom", "ray-3-active-intelligence"],
       "relationship_type": "emergence",
       "metadata": {},
       "sections": {
@@ -381,11 +360,10 @@
     {
       "id": "four-rays-of-attribute",
       "name": "The Four Rays of Attribute",
-      "level": 2,
       "category": "emergence-rays",
       "sort_order": 21,
       "keywords": ["attribute", "quaternary", "harmony", "knowledge", "devotion", "order"],
-      "composite_of": ["ray-4-harmony", "ray-5-knowledge", "ray-6-devotion", "ray-7-ceremonial-order"],
+      "parts": ["ray-4-harmony", "ray-5-knowledge", "ray-6-devotion", "ray-7-ceremonial-order"],
       "relationship_type": "emergence",
       "metadata": {},
       "sections": {
@@ -398,11 +376,10 @@
     {
       "id": "the-formless-worlds",
       "name": "The Formless Worlds — Arupa",
-      "level": 2,
       "category": "emergence-planes",
       "sort_order": 22,
       "keywords": ["arupa", "formless", "spirit", "adi", "monadic", "atmic"],
-      "composite_of": ["plane-1-adi", "plane-2-monadic", "plane-3-atmic"],
+      "parts": ["plane-1-adi", "plane-2-monadic", "plane-3-atmic"],
       "relationship_type": "emergence",
       "metadata": {},
       "sections": {
@@ -415,11 +392,10 @@
     {
       "id": "the-worlds-of-form",
       "name": "The Worlds of Form — Rupa",
-      "level": 2,
       "category": "emergence-planes",
       "sort_order": 23,
       "keywords": ["rupa", "form", "matter", "buddhic", "mental", "astral", "physical"],
-      "composite_of": ["plane-4-buddhic", "plane-5-mental", "plane-6-astral", "plane-7-physical"],
+      "parts": ["plane-4-buddhic", "plane-5-mental", "plane-6-astral", "plane-7-physical"],
       "relationship_type": "emergence",
       "metadata": {},
       "sections": {
@@ -432,11 +408,10 @@
     {
       "id": "the-eastern-roots",
       "name": "The Eastern Roots — Vedic, Buddhist, Samkhya",
-      "level": 2,
       "category": "emergence-traditions",
       "sort_order": 24,
       "keywords": ["vedic", "buddhist", "samkhya", "eastern", "ancient"],
-      "composite_of": ["suryas-chariot", "three-gunas", "seven-factors-of-enlightenment"],
+      "parts": ["suryas-chariot", "three-gunas", "seven-factors-of-enlightenment"],
       "relationship_type": "emergence",
       "metadata": {},
       "sections": {
@@ -449,11 +424,10 @@
     {
       "id": "the-western-mirrors",
       "name": "The Western Mirrors — Kabbalah, Gnosis, Alchemy",
-      "level": 2,
       "category": "emergence-traditions",
       "sort_order": 25,
       "keywords": ["kabbalah", "gnostic", "alchemy", "western", "hermeticism"],
-      "composite_of": ["sephiroth-mirror", "the-one-light"],
+      "parts": ["sephiroth-mirror", "the-one-light"],
       "relationship_type": "emergence",
       "metadata": {},
       "sections": {
@@ -466,11 +440,10 @@
     {
       "id": "involution",
       "name": "Involution — Spirit Descending into Matter",
-      "level": 3,
       "category": "meta",
       "sort_order": 26,
       "keywords": ["involution", "descent", "differentiation", "creation"],
-      "composite_of": ["three-rays-of-aspect", "four-rays-of-attribute", "the-formless-worlds", "the-worlds-of-form"],
+      "parts": ["three-rays-of-aspect", "four-rays-of-attribute", "the-formless-worlds", "the-worlds-of-form"],
       "relationship_type": "emergence",
       "metadata": {},
       "sections": {
@@ -483,11 +456,10 @@
     {
       "id": "evolution",
       "name": "Evolution — Matter Ascending to Spirit",
-      "level": 3,
       "category": "meta",
       "sort_order": 27,
       "keywords": ["evolution", "ascent", "return", "liberation"],
-      "composite_of": ["the-worlds-of-form", "the-formless-worlds", "the-eastern-roots", "the-western-mirrors"],
+      "parts": ["the-worlds-of-form", "the-formless-worlds", "the-eastern-roots", "the-western-mirrors"],
       "relationship_type": "emergence",
       "metadata": {},
       "sections": {
@@ -500,11 +472,10 @@
     {
       "id": "the-synthesis",
       "name": "The Synthesis — All Rays as One Light",
-      "level": 3,
       "category": "meta",
       "sort_order": 28,
       "keywords": ["synthesis", "unity", "one-light", "beyond-seven"],
-      "composite_of": ["involution", "evolution", "the-one-light", "spirit-soul-body"],
+      "parts": ["involution", "evolution", "the-one-light", "spirit-soul-body"],
       "relationship_type": "emergence",
       "metadata": {},
       "sections": {

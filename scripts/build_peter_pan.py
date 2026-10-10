@@ -6,7 +6,7 @@ Source: Project Gutenberg eBook #16
 Structure: 17 chapters -> split into scenes within each chapter.
 Levels:
   L1: Individual scenes/passages within chapters
-  L2: Chapters (with composite_of referencing L1 scenes) + Thematic groups
+  L2: Chapters (with parts referencing L1 scenes) + Thematic groups
   L3: Meta-categories (The Story, Themes)
 """
 
@@ -14,6 +14,7 @@ import json
 import re
 import textwrap
 from pathlib import Path
+from grammar_depth import node_depth
 
 SEED_FILE = Path(__file__).parent.parent / "seeds" / "peter-pan.txt"
 OUTPUT_DIR = Path(__file__).parent.parent / "grammars" / "peter-pan"
@@ -407,7 +408,6 @@ def build_grammar():
                 "name": scene_name,
                 "sort_order": sort_order,
                 "category": f"chapter-{chapter_num:02d}",
-                "level": 1,
                 "sections": {
                     "Story": scene_text,
                     "Reflection": reflection,
@@ -451,9 +451,8 @@ def build_grammar():
             "name": f"Chapter {chapter_num} — {CHAPTER_TITLES[chapter_num]}",
             "sort_order": sort_order,
             "category": "chapter-summary",
-            "level": 2,
             "relationship_type": "emergence",
-            "composite_of": scene_ids,
+            "parts": scene_ids,
             "sections": {
                 "About": chapter_summaries.get(chapter_num, ""),
                 "For Parents": get_chapter_parent_note(chapter_num),
@@ -480,9 +479,8 @@ def build_grammar():
             "name": theme_data["name"],
             "sort_order": sort_order,
             "category": "theme",
-            "level": 2,
             "relationship_type": "emergence",
-            "composite_of": theme_scene_ids,
+            "parts": theme_scene_ids,
             "sections": {
                 "About": theme_data["description"],
                 "For Parents": theme_data["for_parents"],
@@ -502,9 +500,8 @@ def build_grammar():
         "name": "The Story",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "relationship_type": "emergence",
-        "composite_of": all_chapter_ids,
+        "parts": all_chapter_ids,
         "sections": {
             "About": "The complete narrative arc of Peter Pan, from the Darling nursery to Neverland and back again. Seventeen chapters trace the journey of Wendy, John, and Michael to the island where children never grow up — and the bittersweet return home that changes everything.",
             "For Parents": "Peter Pan is often thought of as a simple adventure story, but it is one of the most emotionally complex works in children's literature. Barrie wrote from deep personal loss — the death of his older brother David at age 13, and the way his mother clung to the memory of the boy who would never grow up. The story works on two levels: as a thrilling adventure for children, and as a meditation on time, memory, and what we lose when we leave childhood behind. Read it together and let it grow with your child.",
@@ -519,9 +516,8 @@ def build_grammar():
         "name": "Themes",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "relationship_type": "emergence",
-        "composite_of": all_theme_ids,
+        "parts": all_theme_ids,
         "sections": {
             "About": "The great themes woven through Peter Pan — adventure and flight, growing up, imagination, the meaning of home, and the nature of good and evil. These thematic groups cut across the chapters, revealing how Barrie returns again and again to the same deep questions.",
             "For Parents": "These thematic groupings help you explore Peter Pan beyond the plot. Each theme connects scenes from different chapters that share a common thread. If your child is captivated by the flying scenes, follow the Adventure thread. If they ask why Peter won't grow up, explore the Growing Up theme. The story rewards multiple readings from many angles.",
@@ -588,7 +584,7 @@ def build_grammar():
         "shelves": ["children", "wonder"],
         "lineages": ["Shrei", "Andreotti"],
         "worldview": "romantic",
-        "items": items,
+        "nodes": items,
     }
 
     return grammar
@@ -654,10 +650,10 @@ def main():
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
     # Print stats
-    items = grammar["items"]
-    l1 = [i for i in items if i["level"] == 1]
-    l2 = [i for i in items if i["level"] == 2]
-    l3 = [i for i in items if i["level"] == 3]
+    items = grammar["nodes"]
+    l1 = [i for i in items if node_depth(i, items) == 1]
+    l2 = [i for i in items if node_depth(i, items) == 2]
+    l3 = [i for i in items if node_depth(i, items) == 3]
 
     print(f"Grammar written to {OUTPUT_FILE}")
     print(f"  L1 scenes: {len(l1)}")
@@ -672,10 +668,10 @@ def main():
     if dupes:
         print(f"  WARNING: {dupes} duplicate IDs found!")
 
-    # Check composite_of references
+    # Check parts references
     broken = []
     for item in items:
-        for ref in item.get("composite_of", []):
+        for ref in item.get("parts", []):
             if ref not in id_set:
                 broken.append((item["id"], ref))
     if broken:

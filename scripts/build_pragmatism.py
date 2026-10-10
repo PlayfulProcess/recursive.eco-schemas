@@ -14,6 +14,7 @@ Structure:
 import json
 import re
 from pathlib import Path
+from grammar_depth import node_depth
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent
@@ -201,7 +202,6 @@ def build_grammar():
             "id": lec_id,
             "name": f"Lecture {lec['roman']}: {lec['title']}",
             "sort_order": sort_order,
-            "level": 1,
             "category": "lecture",
             "sections": {
                 "Text": lec['text'],
@@ -224,10 +224,9 @@ def build_grammar():
             "id": theme_id,
             "name": theme["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": theme["lectures"],
+            "parts": theme["lectures"],
             "sections": {
                 "About": theme["about"],
                 "For Readers": theme["for_readers"],
@@ -244,10 +243,9 @@ def build_grammar():
         "id": "pragmatism-complete",
         "name": "Pragmatism: A New Name for Some Old Ways of Thinking",
         "sort_order": sort_order,
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": all_theme_ids,
+        "parts": all_theme_ids,
         "sections": {
             "About": "William James's Pragmatism (1907) is the founding text of America's most distinctive contribution to world philosophy. Based on lectures delivered at the Lowell Institute in Boston and Columbia University in New York, it presents pragmatism as both a method for settling philosophical disputes and a theory of truth. James argues that the meaning of any idea lies in its practical consequences, and that truth is not a static property but a dynamic process — ideas become true as they are verified in experience. The book moves from a diagnosis of philosophy's temperamental divide (rationalism vs. empiricism) through applications to metaphysics, epistemology, and religion, arriving at a vision of meliorism: the world is genuinely 'in the making,' and human effort matters. Dedicated to John Stuart Mill, it draws on Charles Sanders Peirce, John Dewey, and F.C.S. Schiller while remaining entirely James's own — warm, witty, concrete, and passionately engaged.",
             "For Readers": "Pragmatism is one of the most readable works of serious philosophy ever written. James writes with humor, energy, and an extraordinary gift for concrete examples (the squirrel, the hotel corridor, the lost in the forest). Read it straight through — it builds an argument across eight lectures. Or start with Lecture II (What Pragmatism Means) for the method, then jump to Lecture VI (Pragmatism's Conception of Truth) for the theory that shook philosophy. James is the rare philosopher who makes you feel the stakes of abstract questions.",
@@ -277,16 +275,16 @@ def build_grammar():
         "shelves": ["mirror"],
         "lineages": ["Akomolafe"],
         "worldview": "dialectical",
-        "items": items,
+        "nodes": items,
     }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT_PATH}")
     print(f"  L1: {l1} lectures, L2: {l2} themes, L3: {l3} meta")
     print(f"  Total items: {len(items)}")

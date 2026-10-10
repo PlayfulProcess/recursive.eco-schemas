@@ -270,7 +270,6 @@ def build_l1_items(stories):
             "id": sdef["id"],
             "name": sdef["name"],
             "sort_order": sort_order,
-            "level": 1,
             "category": sdef["category"],
             "sections": sections,
             "keywords": sdef["keywords"],
@@ -391,14 +390,13 @@ def build_l2_items(l1_items):
             "id": group["id"],
             "name": group["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": group["category"],
             "sections": {
                 "About": group["about"],
                 "For Parents": group["for_parents"]
             },
             "keywords": group["keywords"],
-            "composite_of": group["member_ids"],
+            "parts": group["member_ids"],
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -409,14 +407,13 @@ def build_l2_items(l1_items):
             "id": group["id"],
             "name": group["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": group["category"],
             "sections": {
                 "About": group["about"],
                 "For Parents": group["for_parents"]
             },
             "keywords": group["keywords"],
-            "composite_of": group["member_ids"],
+            "parts": group["member_ids"],
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -437,7 +434,7 @@ def build_l3_items(start_sort_order):
             "category": "meta",
             "about": "The great currents running through Andersen's fairy tales: transformation, kindness, nature's wonder, the folly of vanity, the power of love, and the reality of death. Unlike the Grimms' sturdy peasant morality, Andersen's themes are deeply personal — shaped by his own loneliness, ambition, and longing for acceptance. His stories do not always end happily, but they always end honestly.",
             "how_to_use": "Browse by theme to find stories that match a mood, a question, or a teaching moment. The vanity tales are wonderful for humor and discussion. The death tales require more care and readiness. The nature tales are perfect for reading outdoors. Let the themes guide you to the story the moment calls for.",
-            "composite_of": [
+            "parts": [
                 "theme-transformation-and-redemption",
                 "theme-kindness-and-compassion",
                 "theme-nature-and-wonder",
@@ -453,7 +450,7 @@ def build_l3_items(start_sort_order):
             "category": "meta",
             "about": "The archetypal figures of Andersen's world: foolish royalty, clear-eyed children, lonely outcasts, and talking objects. Andersen populated his stories with characters drawn from every level of society and every corner of the material world. His royalty are satirical, his children are wise, his outcasts are heartbreaking, and his objects are philosophically absurd.",
             "how_to_use": "Browse by character type to discover patterns across the tales. Notice how Andersen treats royalty versus children, or how objects reveal what people cannot say about themselves. These groupings reveal Andersen's deepest sympathies — always with the small, the overlooked, and the honest.",
-            "composite_of": [
+            "parts": [
                 "characters-royalty-and-nobility",
                 "characters-children-and-innocence",
                 "characters-lonely-and-forgotten",
@@ -468,14 +465,13 @@ def build_l3_items(start_sort_order):
             "id": l3["id"],
             "name": l3["name"],
             "sort_order": sort_order,
-            "level": 3,
             "category": l3["category"],
             "sections": {
                 "About": l3["about"],
                 "How to Use": l3["how_to_use"]
             },
             "keywords": l3["keywords"],
-            "composite_of": l3["composite_of"],
+            "parts": l3["parts"],
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -530,7 +526,7 @@ def build_grammar(l1_items, l2_items, l3_items):
         "lineages": ["Shrei", "Andreotti"],
         "worldview": "devotional",
         "cover_image_url": "",
-        "items": l1_items + l2_items + l3_items
+        "nodes": l1_items + l2_items + l3_items
     }
 
     return grammar

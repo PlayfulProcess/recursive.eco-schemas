@@ -20,6 +20,7 @@ L3 meta-categories:
 
 import json
 import os
+from grammar_depth import node_depth
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GRAMMAR_PATH = os.path.join(BASE, "grammars", "tarot-of-all-tarots", "grammar.json")
@@ -27,7 +28,7 @@ GRAMMAR_PATH = os.path.join(BASE, "grammars", "tarot-of-all-tarots", "grammar.js
 with open(GRAMMAR_PATH) as f:
     grammar = json.load(f)
 
-items = grammar["items"]
+items = grammar["nodes"]
 sort_order = max(i["sort_order"] for i in items) + 1
 
 # Index L1 IDs
@@ -50,8 +51,7 @@ l2_items.append({
     "name": "The Major Arcana",
     "sort_order": sort_order,
     "category": "arcana-group",
-    "level": 2,
-    "composite_of": major_ids,
+    "parts": major_ids,
     "relationship_type": "emergence",
     "sections": {
         "About": "The 22 trumps of the tarot — from The Fool (0) to The World (21). These are the archetypes: the deep patterns of human experience that recur across cultures and centuries. In the Fool's Journey reading, these 22 cards map the soul's path from innocent departure through initiation, descent, and return to wholeness.",
@@ -67,8 +67,7 @@ l2_items.append({
     "name": "The Fool's Journey: Outer World (0–10)",
     "sort_order": sort_order,
     "category": "arcana-group",
-    "level": 2,
-    "composite_of": fools_first,
+    "parts": fools_first,
     "relationship_type": "emergence",
     "sections": {
         "About": "Cards 0 through 10 trace the Fool's encounter with the outer world — the teachers, institutions, and forces that shape conscious identity. From the Magician's focused will through the Hierophant's tradition to the Wheel of Fortune's reminder that no external arrangement is permanent. This is the journey of building an ego strong enough to survive what comes next.",
@@ -84,8 +83,7 @@ l2_items.append({
     "name": "The Fool's Journey: Inner World (11–21)",
     "sort_order": sort_order,
     "category": "arcana-group",
-    "level": 2,
-    "composite_of": fools_second,
+    "parts": fools_second,
     "relationship_type": "emergence",
     "sections": {
         "About": "Cards 11 through 21 trace the Fool's descent into the inner world — the reckoning with shadow, the dissolution of false structures, and the return to wholeness. From Justice's accountability through Death's transformation and the Tower's destruction to the World's integration. This is the journey of the soul finding itself by losing everything it thought it was.",
@@ -118,8 +116,7 @@ for suit_key, suit_name, suit_ids, element, desc in [
         "name": f"The Suit of {suit_name}",
         "sort_order": sort_order,
         "category": "suit-group",
-        "level": 2,
-        "composite_of": suit_ids,
+        "parts": suit_ids,
         "relationship_type": "emergence",
         "sections": {
             "About": desc,
@@ -135,8 +132,7 @@ l2_items.append({
     "name": "The Pip Cards (Ace through Ten)",
     "sort_order": sort_order,
     "category": "structural-group",
-    "level": 2,
-    "composite_of": pip_ids,
+    "parts": pip_ids,
     "relationship_type": "emergence",
     "sections": {
         "About": "The 40 numbered cards — Ace through Ten in each of the four suits. These trace the universal arc of any endeavor: seed (Ace), duality (Two), creation (Three), stability (Four), disruption (Five), harmony (Six), reflection (Seven), mastery (Eight), culmination (Nine), completion (Ten). The same journey in Fire, Water, Air, and Earth.",
@@ -152,8 +148,7 @@ l2_items.append({
     "name": "The Court Cards (Page through King)",
     "sort_order": sort_order,
     "category": "structural-group",
-    "level": 2,
-    "composite_of": court_ids,
+    "parts": court_ids,
     "relationship_type": "emergence",
     "sections": {
         "About": "The 16 court cards — Page, Knight, Queen, and King in each suit. These represent people in your life, aspects of yourself, or energies you're being asked to embody. Pages are students and messengers. Knights are questers and extremists. Queens hold inward mastery. Kings wield outward authority. Each expresses their element at a different level of maturity.",
@@ -174,8 +169,7 @@ l2_items.append({
     "name": "The Archetypal Journey",
     "sort_order": sort_order,
     "category": "meta",
-    "level": 3,
-    "composite_of": l3_major_composites,
+    "parts": l3_major_composites,
     "relationship_type": "emergence",
     "sections": {
         "About": "The Major Arcana as a complete initiatory path — 22 stations from innocence to integration. Viewed across five centuries of decks, the same archetypes appear in every tradition: the Fool begins, the Magician channels, the Priestess receives, and twenty cards later the World dances. The names change (Marseille's Le Mat, Sola Busca's Mato, Etteilla's Le Chaos) but the pattern endures.",
@@ -191,8 +185,7 @@ l2_items.append({
     "name": "The Four Elements in Practice",
     "sort_order": sort_order,
     "category": "meta",
-    "level": 3,
-    "composite_of": l3_minor_composites,
+    "parts": l3_minor_composites,
     "relationship_type": "emergence",
     "sections": {
         "About": "The Minor Arcana as a map of daily life through the four elements. Fire (Wands) for will and creativity. Water (Cups) for emotion and intuition. Air (Swords) for intellect and truth. Earth (Pentacles) for body and material world. Together they cover the full spectrum of human experience — not as archetypes but as the practical, lived reality those archetypes manifest through.",
@@ -204,13 +197,13 @@ l2_items.append({
 sort_order += 1
 
 # Add all L2/L3 items to grammar
-grammar["items"].extend(l2_items)
+grammar["nodes"].extend(l2_items)
 
 with open(GRAMMAR_PATH, "w") as f:
     json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-l2_count = sum(1 for i in l2_items if i["level"] == 2)
-l3_count = sum(1 for i in l2_items if i["level"] == 3)
+l2_count = sum(1 for i in l2_items if node_depth(i, l2_items) == 2)
+l3_count = sum(1 for i in l2_items if node_depth(i, l2_items) == 3)
 print(f"Added {l2_count} L2 items and {l3_count} L3 items")
-print(f"Total items: {len(grammar['items'])}")
+print(f"Total items: {len(grammar['nodes'])}")
 print(f"File size: {os.path.getsize(GRAMMAR_PATH) / 1024:.0f} KB")

@@ -84,13 +84,12 @@
     },
     "alice_character_description": null
   },
-  "items": [
+  "nodes": [
     {
       "id": "prince-vishnu-descends-scene-01",
       "name": "Ep1 Scene 1: The God Who Became a Baby",
       "sort_order": 1,
       "category": "the-prince",
-      "level": 1,
       "sections": {
         "Narration": "Up in HEAVEN where the milk-ocean swirls,\nVISHNU sleeps on a serpent of pearls.\nHe dreams the WORLD — every fish, every tree.\nHe IS the world. (How tired that must BE.)",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -140,7 +139,6 @@
       "name": "Ep1 Scene 2: The God Who Became a Baby",
       "sort_order": 2,
       "category": "the-prince",
-      "level": 1,
       "sections": {
         "Narration": "But down on EARTH, a demon king named RAVANA\nhad ten heads and was stronger than a SAUNA\nof a hundred suns. He'd bullied every GOD\ntill even Brahma said, \"Well, this is ODD —",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -189,7 +187,6 @@
       "name": "Ep1 Scene 3: The God Who Became a Baby",
       "sort_order": 3,
       "category": "the-prince",
-      "level": 1,
       "sections": {
         "Narration": "he asked for IMMORTALITY from all divines,\nbut forgot to ask for protection from HUMAN kinds.\"\nSo Vishnu SMILED and said, \"I'll go down THERE.\nI'll be a baby. HUMAN. Small. With hair\nthat tangles. Feet that STUB. A heart that BREAKS.\"\nThe gods said, \"Are you SURE?\" He said, \"That's what it TAKES.\"\nKing Dasharatha prayed for SONS. The fire god came\nwith sacred food. Four QUEENS. Four boys. One FLAME\nof blue divinity wrapped in baby SKIN.\nRAMA opened his eyes. The rescue could BEGIN.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -238,8 +235,7 @@
       "name": "Episode 1: The God Who Became a Baby",
       "sort_order": 4,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "prince-vishnu-descends-scene-01",
         "prince-vishnu-descends-scene-02",
         "prince-vishnu-descends-scene-03"
@@ -278,7 +274,6 @@
       "name": "Ep2 Scene 1: Four Brothers, One Soul",
       "sort_order": 5,
       "category": "the-prince",
-      "level": 1,
       "sections": {
         "Narration": "RAMA was the eldest — calm as morning LIGHT.\nEvery animal followed him. Every bird took FLIGHT\nwhen he walked by — not from FEAR, but to see\nthe boy who moved like WATER through a tree.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -328,7 +323,6 @@
       "name": "Ep2 Scene 2: Four Brothers, One Soul",
       "sort_order": 6,
       "category": "the-prince",
-      "level": 1,
       "sections": {
         "Narration": "BHARATA was the second — loyal to the BONE.\nHe'd have given his LIFE for Rama's throne\nbut never wanted it. LAKSHMANA was third —\nfierce as a hawk, sharp as a WORD.\nHe slept at Rama's feet. He breathed his BROTHER's air.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -377,7 +371,6 @@
       "name": "Ep2 Scene 3: Four Brothers, One Soul",
       "sort_order": 7,
       "category": "the-prince",
-      "level": 1,
       "sections": {
         "Narration": "And SHATRUGHNA, the youngest — always THERE,\nquiet as a shadow, strong as EARTH.\nFour brothers born from one SACRED birth.\nFour pieces of Vishnu, split like LIGHT\nthrough a prism. RAMA was the white.\nBharata the HEART. Lakshmana the SWORD.\nShatrughna the SHIELD. Four made of one LORD.\nWhen Rama laughed, all four kingdoms SHOOK.\nWhen Rama wept, the rivers changed their BROOK.\nFour boys. One soul. One STORY to tell.\nThe world held its breath. It knew them WELL.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -426,8 +419,7 @@
       "name": "Episode 2: Four Brothers, One Soul",
       "sort_order": 8,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "prince-four-brothers-scene-01",
         "prince-four-brothers-scene-02",
         "prince-four-brothers-scene-03"
@@ -466,7 +458,6 @@
       "name": "Ep3 Scene 1: The Sage Who Borrowed a Prince",
       "sort_order": 9,
       "category": "the-prince",
-      "level": 1,
       "sections": {
         "Narration": "VISHWAMITRA was a sage with tangled HAIR\nand eyes like THUNDERSTORMS. He walked through AIR\nwhen he felt like it. He'd been meditating\nfor a THOUSAND years (which is a lot of waiting).",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -516,7 +507,6 @@
       "name": "Ep3 Scene 2: The Sage Who Borrowed a Prince",
       "sort_order": 10,
       "category": "the-prince",
-      "level": 1,
       "sections": {
         "Narration": "He came to King Dasharatha's COURT and said:\n\"I need to borrow RAMA.\" The king turned RED.\n\"He's just a BOY! He's barely fifteen YEARS!\"\n\"I need him,\" said the sage. \"Demons. FEARS.\nMy forest rituals keep getting SMASHED\nby rakshasas. Your son — \" the king's hopes CRASHED.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -565,7 +555,6 @@
       "name": "Ep3 Scene 3: The Sage Who Borrowed a Prince",
       "sort_order": 11,
       "category": "the-prince",
-      "level": 1,
       "sections": {
         "Narration": "But Rama said, \"I'll GO.\" (Of course he did.)\nLakshmana said, \"I'm COMING.\" (Brother kid.)\nSo two young princes walked into the WILD\nwith a thousand-year-old sage. The forest SMILED.\nVishwamitra taught Rama every MANTRA,\nevery weapon-spell, every cosmic TANTRA.\nThe boy who walked IN was a prince.\nThe man who walked OUT has been a legend SINCE.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -614,8 +603,7 @@
       "name": "Episode 3: The Sage Who Borrowed a Prince",
       "sort_order": 12,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "prince-vishwamitra-scene-01",
         "prince-vishwamitra-scene-02",
         "prince-vishwamitra-scene-03"
@@ -654,7 +642,6 @@
       "name": "Ep4 Scene 1: The Boy Who Fought a Demon",
       "sort_order": 13,
       "category": "the-prince",
-      "level": 1,
       "sections": {
         "Narration": "TATAKA was a demoness — huge as a HILL,\nwith breath like a volcano and a KILL\ncount that made the forest creatures HIDE.\nThe birds stopped singing. The rivers DRIED.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -704,7 +691,6 @@
       "name": "Ep4 Scene 2: The Boy Who Fought a Demon",
       "sort_order": 14,
       "category": "the-prince",
-      "level": 1,
       "sections": {
         "Narration": "She came CRASHING through the trees, and Rama STOOD\nhis ground. A fifteen-year-old boy in a WOOD,\nfacing something made of RAGE and teeth.\nVishwamitra whispered, \"Strike. BENEATH\nher fury is just hunger. UNDERNEATH\nher ten-foot claws is fear. BELIEVE.\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -753,7 +739,6 @@
       "name": "Ep4 Scene 3: The Boy Who Fought a Demon",
       "sort_order": 15,
       "category": "the-prince",
-      "level": 1,
       "sections": {
         "Narration": "Rama drew his bow. One ARROW sang.\nThrough the demon's heart. The forest RANG\nwith silence — then the birds came BACK.\nThe rivers flowed. The sky lost its CRACK\nof darkness. Rama's hands were SHAKING.\n(He was fifteen. Killing things is BREAKING\nsomething in you, even when it's RIGHT.)\nVishwamitra said, \"You've passed the TEST tonight.\"\nRama said nothing. Looked at his HANDS.\nThe forest whispered: \"Now he UNDERSTANDS.\"",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -802,8 +787,7 @@
       "name": "Episode 4: The Boy Who Fought a Demon",
       "sort_order": 16,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "prince-tataka-scene-01",
         "prince-tataka-scene-02",
         "prince-tataka-scene-03"
@@ -842,7 +826,6 @@
       "name": "Ep5 Scene 1: The Woman Made of Stone",
       "sort_order": 17,
       "category": "the-prince",
-      "level": 1,
       "sections": {
         "Narration": "In the forest stood a STONE that was a woman.\nAHALYA — once the most beautiful HUMAN\nalive. Her husband Gautama, a SAGE,\nhad cursed her into rock. (That's sage-level RAGE.)",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -892,7 +875,6 @@
       "name": "Ep5 Scene 2: The Woman Made of Stone",
       "sort_order": 18,
       "category": "the-prince",
-      "level": 1,
       "sections": {
         "Narration": "The story goes: the god INDRA had disguised\nhimself as Gautama and — well — SURPRISED\nAhalya in the night. Whose FAULT was that?\nThe god who tricked? The husband who went FLAT\nwith fury? Or the woman turned to STONE?",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -941,7 +923,6 @@
       "name": "Ep5 Scene 3: The Woman Made of Stone",
       "sort_order": 19,
       "category": "the-prince",
-      "level": 1,
       "sections": {
         "Narration": "RAMA walked past. His foot touched the rock. ALONE\nin the forest, something SHIFTED. Stone turned WARM.\nFingers moved. A heartbeat. Then a SWARM\nof flowers fell from heaven as AHALYA\nstood up — free — after EONS. Every dahlia,\nevery jasmine BLOOMED around her feet.\nShe wept. Rama bowed. The CURSE complete —\nnot by punishment, not by SHAME,\nbut by the touch of someone who felt no BLAME.\nCompassion broke what anger MADE.\nA boy's footstep. A woman UNAFRAID.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -990,8 +971,7 @@
       "name": "Episode 5: The Woman Made of Stone",
       "sort_order": 20,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "prince-ahalya-scene-01",
         "prince-ahalya-scene-02",
         "prince-ahalya-scene-03"
@@ -1030,7 +1010,6 @@
       "name": "Ep6 Scene 1: The Bow That Nobody Could Lift",
       "sort_order": 21,
       "category": "the-prince",
-      "level": 1,
       "sections": {
         "Narration": "King JANAKA had a daughter named SITA.\n(Born from the EARTH — he found her in a furrow,\nplowing his field. The ground just GAVE her up.\nA baby in the dirt, perfect as a BUTTERCUP.)",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1080,7 +1059,6 @@
       "name": "Ep6 Scene 2: The Bow That Nobody Could Lift",
       "sort_order": 22,
       "category": "the-prince",
-      "level": 1,
       "sections": {
         "Narration": "To marry Sita, a prince must STRING\nthe bow of SHIVA — a monstrous, ancient THING\nthat a hundred kings had tried to LIFT\nand failed. It sat there like a cosmic GIFT\nno one could unwrap.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -1129,7 +1107,6 @@
       "name": "Ep6 Scene 3: The Bow That Nobody Could Lift",
       "sort_order": 23,
       "category": "the-prince",
-      "level": 1,
       "sections": {
         "Narration": "Princes came from EVERYWHERE.\nMuscle-bound, crown-wearing, THOROUGHFARE\nof royal ego. Each one TRIED.\nEach one failed. Some strained. Some CRIED.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1178,7 +1155,6 @@
       "name": "Ep6 Scene 4: The Bow That Nobody Could Lift",
       "sort_order": 24,
       "category": "the-prince",
-      "level": 1,
       "sections": {
         "Narration": "Then RAMA walked up — thin as a REED.\nHe touched the bow. It rose. No NEED\nfor straining. He bent it like a BRANCH —\nand it SNAPPED. The sound was an AVALANCHE.\nThe bow of Shiva, broken CLEAN.\nThe sky lit up. Sita had SEEN\nher husband. She placed the garland on his NECK.\nThe earth trembled. Love. What a WRECK\nit makes of kingdoms, plans, and PRIDE.\nOne bow. One girl. One groom. The world SIGHED.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1227,8 +1203,7 @@
       "name": "Episode 6: The Bow That Nobody Could Lift",
       "sort_order": 25,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "prince-bow-scene-01",
         "prince-bow-scene-02",
         "prince-bow-scene-03",
@@ -1268,7 +1243,6 @@
       "name": "Ep7 Scene 1: The Wedding of Earth and Sky",
       "sort_order": 26,
       "category": "the-prince",
-      "level": 1,
       "sections": {
         "Narration": "SITA was born from the EARTH — her father\nfound her in a FURROW. Rama was the LATHER\nof the cosmic ocean, Vishnu's SMILE\nmade flesh. Earth married SKY. The aisle\nwas strewn with marigolds and RICE.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1318,7 +1292,6 @@
       "name": "Ep7 Scene 2: The Wedding of Earth and Sky",
       "sort_order": 27,
       "category": "the-prince",
-      "level": 1,
       "sections": {
         "Narration": "The fire burned between them — THRICE\nthey walked around it. Sacred VOWS\nthat even the gods had to BROWSE\nwith envy. \"I am yours in THIS life,\"\nRama said. Sita: \"And in every STRIFE\nthat follows. Every exile. Every FLAME.\"\n(She didn't know yet. But she CAME\nprepared.)",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1367,7 +1340,6 @@
       "name": "Ep7 Scene 3: The Wedding of Earth and Sky",
       "sort_order": 28,
       "category": "the-prince",
-      "level": 1,
       "sections": {
         "Narration": "Four brothers married FOUR sisters that day.\nThe whole kingdom danced. The SKY turned gray\nwith flower-petals, not with RAIN.\nJanaka wept. Dasharatha wept. The PLAIN\nof Mithila shook with JOY so deep\nit registered in the COSMIC sleep\nof Vishnu on his serpent-BED.\nThe dreamer dreamt that he'd been WED\nto his own dream. The CIRCLE closed.\nLove began. The universe DOZED\nand smiled. (It knew what was COMING.\nBut today was for DRUMMING.)",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1416,8 +1388,7 @@
       "name": "Episode 7: The Wedding of Earth and Sky",
       "sort_order": 29,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "prince-wedding-scene-01",
         "prince-wedding-scene-02",
         "prince-wedding-scene-03"
@@ -1456,7 +1427,6 @@
       "name": "Ep8 Scene 1: The Queen Who Asked Too Much",
       "sort_order": 30,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "Everything was PERFECT. Rama was about to be CROWNED.\nThe kingdom cheered. The flowers BROWNED\nthe streets with garlands. Then — KAIKEYI.\nDasharatha's second wife. Sharp-EYED.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1506,7 +1476,6 @@
       "name": "Ep8 Scene 2: The Queen Who Asked Too Much",
       "sort_order": 31,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "Years ago, she'd saved the king in BATTLE\nand he'd promised her TWO wishes. (Royal PRATTLE —\nkings should never promise things at NIGHT.)\nHer servant MANTHARA whispered: \"Use your RIGHT.\nWish ONE: your son Bharata gets the THRONE.\nWish TWO: Rama goes to the forest. ALONE.\nFourteen years of exile. In the WILD.\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1555,7 +1524,6 @@
       "name": "Ep8 Scene 3: The Queen Who Asked Too Much",
       "sort_order": 32,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "Kaikeyi asked. Dasharatha — BEGUILED\nby his own oath — couldn't say NO.\nA promise is a PROMISE, even when the blow\ndestroys your heart. Rama heard the NEWS\nand didn't flinch. Didn't REFUSE.\n\"If Father promised, then I GO.\"\nSita said, \"I'm coming.\" Lakshmana: \"ALSO.\"\nThree walked into the forest. One king BROKE.\nKaikeyi got her wish. The kingdom CHOKED\non its own sorrow. Was she EVIL?\nOr just a mother? (The medieval\nquestion nobody can answer QUITE.)\nTwo wishes. One crown. Fourteen years of NIGHT.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1604,8 +1572,7 @@
       "name": "Episode 8: The Queen Who Asked Too Much",
       "sort_order": 33,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "exile-kaikeyi-scene-01",
         "exile-kaikeyi-scene-02",
         "exile-kaikeyi-scene-03"
@@ -1644,7 +1611,6 @@
       "name": "Ep9 Scene 1: The King Who Died of Grief",
       "sort_order": 34,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "DASHARATHA watched his son walk AWAY\ninto the forest. That was the LAST day\nhis heart worked properly. The KING\nof Ayodhya — lord of EVERYTHING —\ncouldn't eat. Couldn't sleep. Couldn't BREATHE.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1694,7 +1660,6 @@
       "name": "Ep9 Scene 2: The King Who Died of Grief",
       "sort_order": 35,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "He remembered a CURSE: when he was young,\nhe'd accidentally killed a blind man's SON\n(hearing a sound by the river, thinking it was a DEER).\nThe blind father said: \"You'll die of the same FEAR —\nseparated from YOUR son. Mark my WORD.\"",
         "Direction": "[DIALOGUE] Medium shot, character faces visible. Gentle sway.",
@@ -1743,7 +1708,6 @@
       "name": "Ep9 Scene 3: The King Who Died of Grief",
       "sort_order": 36,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "And so it came. The curse he'd HEARD\na lifetime ago flew HOME like an arrow.\nDasharatha wept until his MARROW\nwas dry. His queens surrounded his BED.\n\"Rama,\" he whispered. \"Rama.\" And then — DEAD.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1792,7 +1756,6 @@
       "name": "Ep9 Scene 4: The King Who Died of Grief",
       "sort_order": 37,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "The king died calling his son's NAME.\nThe palace shook. The sacred FLAME\nwent out. Four words: \"Rama. Come. Back. PLEASE.\"\nThe wind carried them through the TREES\nbut Rama was already gone. WALKING.\nThe dead king's lips still TALKING\nRama's name into the DARK.\nA father's love. A final SPARK.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1841,8 +1804,7 @@
       "name": "Episode 9: The King Who Died of Grief",
       "sort_order": 38,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "exile-dasharatha-scene-01",
         "exile-dasharatha-scene-02",
         "exile-dasharatha-scene-03",
@@ -1882,7 +1844,6 @@
       "name": "Ep10 Scene 1: The Brother Who Ruled for Sandals",
       "sort_order": 39,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "BHARATA came home to find his father DEAD,\nhis brother exiled, a CROWN upon his head\nthat he never asked for. Never WANTED.\nHis mother's face: triumphant, HAUNTED.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1932,7 +1893,6 @@
       "name": "Ep10 Scene 2: The Brother Who Ruled for Sandals",
       "sort_order": 40,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "\"You did THIS?\" he said to Kaikeyi.\n\"For ME? I'd rather live beneath a TREE\nthan sit on Rama's throne.\" He MARCHED\ninto the forest — armies ARCHED\nbehind him — to BEG Rama to come back.",
         "Direction": "[DIALOGUE] Medium shot, character faces visible. Gentle sway.",
@@ -1981,7 +1941,6 @@
       "name": "Ep10 Scene 3: The Brother Who Ruled for Sandals",
       "sort_order": 41,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "Rama said no. \"A promise has no CRACK.\nFather made a vow. I keep it. GO.\"\nBharata wept. Then — SLOW —\nhe knelt and took Rama's SANDALS off his feet.\n\"These will rule,\" he said. \"On the SEAT\nof the throne. I'll sit BELOW them,\nlike a servant. Everyone will KNOW them\nas the REAL king's shoes.\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2030,7 +1989,6 @@
       "name": "Ep10 Scene 4: The Brother Who Ruled for Sandals",
       "sort_order": 42,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "For FOURTEEN years, Bharata governed from\nthe village of Nandigram — NUMB\nwith love, sleeping on the GROUND,\nwearing bark, waiting for the SOUND\nof Rama's return. The sandals SAT\non the throne. A kingdom ruled by THAT:\ntwo shoes and a brother's FAITH.\nLoyalty so pure it was almost a WRAITH\nof the man himself. Bharata PROVED\nthat sometimes the greatest king is one who MOVED\naside and said: \"The throne's not MINE.\nI'll wait. However long. I'm FINE.\"",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2079,8 +2037,7 @@
       "name": "Episode 10: The Brother Who Ruled for Sandals",
       "sort_order": 43,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "exile-bharata-sandals-scene-01",
         "exile-bharata-sandals-scene-02",
         "exile-bharata-sandals-scene-03",
@@ -2120,7 +2077,6 @@
       "name": "Ep11 Scene 1: The Forest That Was Home",
       "sort_order": 44,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "The forest wasn't PUNISHMENT — it was a GIFT.\nRama, Sita, Lakshmana DRIFT\nthrough Chitrakuta, Dandaka, places where the TREES\nwere old as mountains and the BREEZE\nspoke in Sanskrit.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2170,7 +2126,6 @@
       "name": "Ep11 Scene 2: The Forest That Was Home",
       "sort_order": 45,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "Sages lived here — THIN\nas reeds, bright as stars WITHIN.\nThey'd been meditating since before the FLOOD\nand fed the three on roots and MUD\nand stories. Sita made the HUTS.\nLakshmana guarded. Rama cut\nwood and talked to DEER.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -2219,7 +2174,6 @@
       "name": "Ep11 Scene 3: The Forest That Was Home",
       "sort_order": 46,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "The animals came NEAR —\nmonkeys, elephants, peacocks, SNAKES.\nThey knew what the forest MAKES\nof people: it strips you to your SOUL.\nA prince who can't survive the WHOLE\nof nature's silence isn't fit to RULE.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2268,7 +2222,6 @@
       "name": "Ep11 Scene 4: The Forest That Was Home",
       "sort_order": 47,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "Sita loved it. (That's the JEWEL\nnobody expects.) She wasn't SUFFERING.\nShe was planting gardens, DISCOVERING\nthat the girl born from a FURROW\nfelt at HOME beneath each burrow\nand each root. Earth-daughter in the EARTH.\nThe exile was a second BIRTH\nfor all of them. The forest SCHOOLED\nthem. Stripped them. TOOLED\nthem into what they'd need to BE\nfor what was coming. Can you SEE?\nThe forest knew. The trees PREPARED\nthem. Gently. Slowly. No one CARED\nabout crowns out here. Just BREATH.\nJust dawn. Just the opposite of DEATH.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2317,8 +2270,7 @@
       "name": "Episode 11: The Forest That Was Home",
       "sort_order": 48,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "exile-forest-scene-01",
         "exile-forest-scene-02",
         "exile-forest-scene-03",
@@ -2358,7 +2310,6 @@
       "name": "Ep12 Scene 1: The Old Woman's Berries",
       "sort_order": 49,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "SHABARI was an old, old WOMAN\nwho lived alone in the forest. Not quite HUMAN\nanymore — more like a tree with EYES.\nShe'd been waiting for Rama. (The WISE\nones always know who's coming.)",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2408,7 +2359,6 @@
       "name": "Ep12 Scene 2: The Old Woman's Berries",
       "sort_order": 50,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "She had nothing to OFFER but berries.\nBut she tasted EACH one first — cherries,\nplums, wild figs — biting, CHEWING,\nspitting out the sour ones, DOING\nquality control with her TEETH.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -2457,7 +2407,6 @@
       "name": "Ep12 Scene 3: The Old Woman's Berries",
       "sort_order": 51,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "Then she offered the half-eaten fruit BENEATH\nRama's nose. Lakshmana FLINCHED.\n(Eating someone's half-chewed food? He WINCED.)\nBut Rama ATE. Every berry. SMILING.\n\"These are the sweetest,\" he said, while FILING\naway another lesson: LOVE\ndoesn't care about protocol. ABOVE\nall rituals, above all caste and CODE,\na grandmother's tasted berries on the ROAD\nare holier than temple GOLD.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2506,7 +2455,6 @@
       "name": "Ep12 Scene 4: The Old Woman's Berries",
       "sort_order": 52,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "Shabari GLOWED. Her story's told\nto every child in India: GOD\nwill eat your half-chewed fruit and NOD\nand call it sweet. Because the FLAVOR\nhe's tasting isn't berry — it's FAVOR.\nIt's love. It's \"I made SURE\neach one was good enough for YOU, my pure,\nmy precious guest.\" The berries SHONE\nlike jewels. Shabari went HOME\ninto the light. Her waiting: DONE.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2555,8 +2503,7 @@
       "name": "Episode 12: The Old Woman's Berries",
       "sort_order": 53,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "exile-shabari-scene-01",
         "exile-shabari-scene-02",
         "exile-shabari-scene-03",
@@ -2596,7 +2543,6 @@
       "name": "Ep13 Scene 1: The Demoness Who Fell in Love",
       "sort_order": 54,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "SURPANAKHA was Ravana's SISTER —\na demoness, sharp-toothed, but when she KISSED her\nown reflection she saw someone BEAUTIFUL.\n(We all do that. It's only DUTIFUL.)",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2646,7 +2592,6 @@
       "name": "Ep13 Scene 2: The Demoness Who Fell in Love",
       "sort_order": 55,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "She found Rama in the FOREST.\nFell in love. Instant. The POOREST\njudgment of her life. \"Marry ME,\"\nshe said. Rama laughed: \"I'm taken. SEE?\"\nHe pointed at Sita. \"Try my BROTHER.\"",
         "Direction": "[DIALOGUE] Medium shot, character faces visible. Gentle sway.",
@@ -2695,7 +2640,6 @@
       "name": "Ep13 Scene 3: The Demoness Who Fell in Love",
       "sort_order": 56,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "Lakshmana wasn't KINDER. \"Try another\nforest.\" She got ANGRY. Lunged at SITA.\nLakshmana drew his sword — and NEITHER\nmercy nor hesitation crossed his FACE.\nHe cut her nose. He cut her GRACE\nright off her face.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -2744,7 +2688,6 @@
       "name": "Ep13 Scene 4: The Demoness Who Fell in Love",
       "sort_order": 57,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "She ran SCREAMING\nto Ravana. Blood STREAMING.\n\"Look what they DID to me!\" she cried.\nRavana looked. Something DIED\ninside his chest — and something WOKE.\n\"They have a wife?\" he said. \"She SPOKE\nof her beauty?\" Surpanakha nodded. BLED.\n\"Then I'll TAKE her,\" Ravana said.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2793,7 +2736,6 @@
       "name": "Ep13 Scene 5: The Demoness Who Fell in Love",
       "sort_order": 58,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "One rejection. One CUT. One humiliation.\nAnd the whole Ramayana's CONFLAGRATION\nfollows from THIS moment — desire\nmeeting violence meeting FIRE.\nEverything that follows: this SCAR.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2842,8 +2784,7 @@
       "name": "Episode 13: The Demoness Who Fell in Love",
       "sort_order": 59,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "exile-surpanakha-scene-01",
         "exile-surpanakha-scene-02",
         "exile-surpanakha-scene-03",
@@ -2884,7 +2825,6 @@
       "name": "Ep14 Scene 1: The Deer Made of Gold",
       "sort_order": 60,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "A DEER appeared in the forest — golden SKIN,\nsilver spots, eyes like JEWELS within\na face so beautiful that Sita GASPED.\n\"Rama, catch it for me!\" She CLASPED\nher hands. \"Alive if you can. Its HIDE if you can't.\"",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2934,7 +2874,6 @@
       "name": "Ep14 Scene 2: The Deer Made of Gold",
       "sort_order": 61,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "Lakshmana said, \"It's a TRAP. An enchant-\nment. No deer shines like THAT.\"\nBut Sita wanted it. Rama took his bow. FLAT\nout he ran through the forest, CHASING\nthe golden deer — always RACING\njust out of reach.",
         "Direction": "[DIALOGUE] Medium shot, character faces visible. Gentle sway.",
@@ -2983,7 +2922,6 @@
       "name": "Ep14 Scene 3: The Deer Made of Gold",
       "sort_order": 62,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "The deer was MARICHA — a demon in disguise.\nRavana's cousin with GOLDEN eyes.\nWhen Rama's arrow finally STRUCK,\nMaricha screamed in Rama's voice: \"Bad LUCK!\nLakshmana! HELP!\" — a perfect COPY.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -3032,7 +2970,6 @@
       "name": "Ep14 Scene 4: The Deer Made of Gold",
       "sort_order": 63,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "Sita heard it. Panicked. \"He sounds SLOPPY,\nhurt, afraid! GO, Lakshmana, go!\"\nLakshmana: \"It's a trick.\" Sita: \"NO!\nYour BROTHER needs you!\" He went. LEFT\nher alone. The forest — BEREFT\nof guards. Ravana LANDED\nhis flying chariot. Sita STRANDED.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3081,7 +3018,6 @@
       "name": "Ep14 Scene 5: The Deer Made of Gold",
       "sort_order": 64,
       "category": "the-exile",
-      "level": 1,
       "sections": {
         "Narration": "The golden deer — the beautiful BAIT.\nThe oldest trick: make someone WAIT\nfor something shiny, something GOLD,\nand steal everything they HOLD\nwhile they're not looking. DESIRE\nis the golden deer. We all ADMIRE\nit. We all chase it. We all LOSE\nsomething while we do. We never CHOOSE\nto see the trap. The gold's too BRIGHT.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3130,8 +3066,7 @@
       "name": "Episode 14: The Deer Made of Gold",
       "sort_order": 65,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "exile-golden-deer-scene-01",
         "exile-golden-deer-scene-02",
         "exile-golden-deer-scene-03",
@@ -3172,7 +3107,6 @@
       "name": "Ep15 Scene 1: The Ten-Headed King",
       "sort_order": 66,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "RAVANA had TEN heads and TWENTY arms.\nEach head knew different CHARMS —\none head sang. One head PRAYED.\nOne head schemed. One PLAYED\nthe veena so beautifully that Shiva CRIED.\n(Yes, the demon king had a musical SIDE.)",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3222,7 +3156,6 @@
       "name": "Ep15 Scene 2: The Ten-Headed King",
       "sort_order": 67,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "He was the greatest scholar who ever LIVED.\nHe'd mastered every Veda, every SIEVE\nof knowledge the cosmos had to POUR.\nBut knowledge without humility is WAR.\nHe'd conquered heaven. Bullied GODS.\nMade Indra carry his LAUNDRY. (The odds\nof surviving that arrogance? Not GREAT.)",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -3271,7 +3204,6 @@
       "name": "Ep15 Scene 3: The Ten-Headed King",
       "sort_order": 68,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "He came to the forest disguised as a SAINT —\na wandering monk, humble, QUAINT.\nSita offered food. (She was GOOD like that.)\nHe grabbed her. Lifted her. FLAT\ninto his flying chariot — PUSHPAKA —\nand soared south toward Lanka. The CHAKRA\nof karma began to turn.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3320,7 +3252,6 @@
       "name": "Ep15 Scene 4: The Ten-Headed King",
       "sort_order": 69,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "Sita screamed. She threw her JEWELS\ndown through the clouds — bread-CRUMBS\nof gold for someone to FOLLOW.\nRavana flew. The sky turned HOLLOW.\nThe forest went silent as a TOMB.\nRama came back to an empty ROOM\nand a line drawn in the DIRT\nand a silence that was worse than HURT.\nThe deer was fake. The sage was fake. His WIFE was gone.\nThe longest night of Rama's life had just BEGUN.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3369,8 +3300,7 @@
       "name": "Episode 15: The Ten-Headed King",
       "sort_order": 70,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "theft-ravana-scene-01",
         "theft-ravana-scene-02",
         "theft-ravana-scene-03",
@@ -3410,7 +3340,6 @@
       "name": "Ep16 Scene 1: The Eagle Who Fought for Sita",
       "sort_order": 71,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "JATAYU was old — the oldest EAGLE alive.\nHis wings were tattered. He could barely DIVE.\nBut he was Dasharatha's FRIEND\nand when he saw Ravana ASCEND\nwith Sita screaming in his ARMS,\nJatayu rose. Despite his CHARMS\nbeing zero against a demon KING\nwith twenty arms, the old bird SPREAD his wing",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3460,7 +3389,6 @@
       "name": "Ep16 Scene 2: The Eagle Who Fought for Sita",
       "sort_order": 72,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "and FOUGHT. Beak against fist. TALON\nagainst sword. An ancient bird of VALOR\nagainst the lord of Lanka. BRAVEST\nthing in the Ramayana — the GRAVEST,\nmost hopeless, most beautiful FIGHT.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -3509,7 +3437,6 @@
       "name": "Ep16 Scene 3: The Eagle Who Fought for Sita",
       "sort_order": 73,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "Ravana cut his wings. LEFT, then RIGHT.\nJatayu fell. Bleeding on the FOREST floor.\nBut he held on. Held ON. One more\nbreath. One more HOUR. Until Rama came.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3558,7 +3485,6 @@
       "name": "Ep16 Scene 4: The Eagle Who Fought for Sita",
       "sort_order": 74,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "\"Sita — south — Ravana —\" Jatayu's FLAME\nwas going out. \"Lanka. FLY south.\"\nRama held the dying eagle's MOUTH\nto his chest and wept. \"You FOUGHT\nfor her. You did what no army OUGHT\nto do alone.\" Jatayu SMILED.\nRama performed the funeral rites — FILED\nthe eagle among his own FAMILY.\nA bird. A friend. A CASUALTY\nof love so fierce it doesn't COUNT\nthe odds. It doesn't MOUNT\na strategy. It just FLIES\ninto the impossible. And DIES.\nBut the information LIVES. South. Lanka. GO.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3607,8 +3533,7 @@
       "name": "Episode 16: The Eagle Who Fought for Sita",
       "sort_order": 75,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "theft-jatayu-scene-01",
         "theft-jatayu-scene-02",
         "theft-jatayu-scene-03",
@@ -3648,7 +3573,6 @@
       "name": "Ep17 Scene 1: The Garden of Sorrow",
       "sort_order": 76,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "In LANKA's golden palace, beautiful as HELL\n(literally — demon architecture, done WELL),\nSita sat beneath an ASHOKA tree\nin a garden made for queens. But SHE\nwas not a guest. She was a CAGE-bird.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3698,7 +3622,6 @@
       "name": "Ep17 Scene 2: The Garden of Sorrow",
       "sort_order": 77,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "Ravana came every day. ABSURD\noffers: \"Be my queen! I'll give you EVERYTHING!\"\nSita wouldn't look at him. Wouldn't SING.\nWouldn't eat his gold or wear his JEWELS.\nShe held a blade of grass between RAVANA and herself —\nthat tiny thing, that THREAD of green,\nwas all the wall she NEEDED.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -3747,7 +3670,6 @@
       "name": "Ep17 Scene 3: The Garden of Sorrow",
       "sort_order": 78,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "\"I am Rama's,\" she said. \"This GRASS\nhas more power than your twenty ARMS.\"\nRavana raged. Sent demon SWARMS\nto terrify her. Ugliest FACES\nyou can imagine — demonic PLACES\nmade flesh, surrounding her at NIGHT.",
         "Direction": "[DIALOGUE] Medium shot, character faces visible. Gentle sway.",
@@ -3796,7 +3718,6 @@
       "name": "Ep17 Scene 4: The Garden of Sorrow",
       "sort_order": 79,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "But one demoness — TRIJATA — had the sight.\nShe dreamed that Rama was COMING.\n\"Don't be afraid,\" she whispered. \"I hear DRUMMING\nin my sleep. An army of MONKEYS.\nYour husband's coming. He'll cross the SEAS.\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3845,7 +3766,6 @@
       "name": "Ep17 Scene 5: The Garden of Sorrow",
       "sort_order": 80,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "Sita held her grass. Held her BREATH.\nHeld on. Between life and DEATH,\nbetween surrender and DESPAIR,\nshe CHOSE the third thing: quiet, burning, PRAYER.\nThe Ashoka tree — 'the tree that removes SORROW' —\nbent its branches over her. TOMORROW,\nit whispered. Hold on till TOMORROW.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3894,8 +3814,7 @@
       "name": "Episode 17: The Garden of Sorrow",
       "sort_order": 81,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "theft-sita-garden-scene-01",
         "theft-sita-garden-scene-02",
         "theft-sita-garden-scene-03",
@@ -3936,7 +3855,6 @@
       "name": "Ep18 Scene 1: The Monster Who Pointed the Way",
       "sort_order": 82,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "KABANDHA was the ugliest thing ALIVE —\na body with no head. Just a FIVE-\nfoot mouth in the middle of his CHEST\nand arms that stretched a MILE. The rest\nof him was hunger. Pure APPETITE.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3986,7 +3904,6 @@
       "name": "Ep18 Scene 2: The Monster Who Pointed the Way",
       "sort_order": 83,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "He grabbed Rama and Lakshmana in the NIGHT —\none in each hand. \"I'll EAT you both!\"\nRama said, \"Before you eat, we're LOATH\nto die without knowing: who ARE you?\"",
         "Direction": "[DIALOGUE] Medium shot, character faces visible. Gentle sway.",
@@ -4035,7 +3952,6 @@
       "name": "Ep18 Scene 3: The Monster Who Pointed the Way",
       "sort_order": 84,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "Kabandha told his STORY through\nhis chest-mouth: \"I was HANDSOME once.\nA gandharva — a celestial DUNCE\nwho mocked a sage. CURSED into this form.\nKill me. BURN me. I'll transform.\"",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -4084,7 +4000,6 @@
       "name": "Ep18 Scene 4: The Monster Who Pointed the Way",
       "sort_order": 85,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "They cut his arms. BURNED the body.\nFrom the flames rose someone GODLY —\nbeautiful, shining, FREE.\n\"Thank you,\" he said. \"Now listen to ME:\ngo to the lake of Pampa. Find SUGRIVA,\nthe monkey king. He's your DELIVERER.\nHe knows where Sita IS.\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4133,7 +4048,6 @@
       "name": "Ep18 Scene 5: The Monster Who Pointed the Way",
       "sort_order": 86,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "The monster became the MAP.\nThe ugliest thing in the forest UNWRAPPED\ninto a guide. The Ramayana TEACHES:\ndon't judge the fruit by the SKIN. What reaches\nyou as horror may carry the CLUE\nyou need. The monster KNEW\nthe way. Beauty didn't. POWER didn't.\nThe thing that SHOULDN'T help — did.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4182,8 +4096,7 @@
       "name": "Episode 18: The Monster Who Pointed the Way",
       "sort_order": 87,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "theft-kabandha-scene-01",
         "theft-kabandha-scene-02",
         "theft-kabandha-scene-03",
@@ -4224,7 +4137,6 @@
       "name": "Ep19 Scene 1: The Monkey King in Exile",
       "sort_order": 88,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "On RISHYAMUKHA mountain, hiding in a CAVE,\nlived SUGRIVA — monkey king, too scared to BRAVE\nthe world below. His brother VALI\nhad stolen his wife, his throne, his VALLEY,\nhis kingdom, his crown, his EVERYTHING.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4274,7 +4186,6 @@
       "name": "Ep19 Scene 2: The Monkey King in Exile",
       "sort_order": 89,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "Sound familiar? A king without a RING.\nAn exile in the wilderness. A WIFE\ntaken by force. Sugriva's LIFE\nwas Rama's life in MONKEY form.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -4323,7 +4234,6 @@
       "name": "Ep19 Scene 3: The Monkey King in Exile",
       "sort_order": 90,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "\"Help me defeat Vali,\" Sugriva's STORM\nof grief poured out, \"and I'll help you find SITA.\nI'll send every monkey — every CHEETAH,\nevery bear — to search the WORLD.\"\nRama looked at him. Something CURLED\nlike recognition. \"Your exile mirrors MINE.\"\nSugriva nodded. \"DIVINE\npatterns repeat. The universe has a SENSE\nof rhyme.\" (He was right — IMMENSE\npoetry in the way their stories MATCHED.)",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4372,7 +4282,6 @@
       "name": "Ep19 Scene 4: The Monkey King in Exile",
       "sort_order": 91,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "They clasped hands. An ALLIANCE hatched\nbetween a human prince and a MONKEY king.\nBoth exiled. Both missing EVERYTHING.\nBoth ready to fight for what they'd LOST.\nThe strangest friendship. Worth any COST.\nWhen you meet someone whose WOUND\nmatches yours — that's where alliances are FOUND.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4421,8 +4330,7 @@
       "name": "Episode 19: The Monkey King in Exile",
       "sort_order": 92,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "theft-sugriva-scene-01",
         "theft-sugriva-scene-02",
         "theft-sugriva-scene-03",
@@ -4462,7 +4370,6 @@
       "name": "Ep20 Scene 1: The Wind's Son",
       "sort_order": 93,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "HANUMAN was the son of the WIND.\nAs a baby, he'd mistaken the SUN for a fruit\nand LEAPT toward it — clear across the SKY.\nThe gods panicked. Indra threw a THUNDERBOLT.\nIt hit Hanuman's jaw (HANU = jaw).\nHe fell. The Wind god got so ANGRY\nhe stopped blowing. The whole world SUFFOCATED\nuntil the gods said SORRY and gave the baby\nevery blessing they HAD.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4512,7 +4419,6 @@
       "name": "Ep20 Scene 2: The Wind's Son",
       "sort_order": 94,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "But then — a CURSE made him FORGET.\nForget his powers. Forget he could FLY.\nForget he was the strongest being ALIVE.\nHe grew up thinking he was ORDINARY.\nA monkey. A minister. NOTHING special.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -4561,7 +4467,6 @@
       "name": "Ep20 Scene 3: The Wind's Son",
       "sort_order": 95,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "Until Rama. When Hanuman met RAMA,\nsomething in his chest IGNITED.\n\"I don't know what's happening,\" he SAID,\n\"but I would do ANYTHING for you.\"\nRama smiled. \"I know the FEELING.\nIt's called love.\"",
         "Direction": "[DIALOGUE] Medium shot, character faces visible. Gentle sway.",
@@ -4610,7 +4515,6 @@
       "name": "Ep20 Scene 4: The Wind's Son",
       "sort_order": 96,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "Hanuman didn't just LOVE Rama.\nHe loved him the way fire loves OXYGEN.\nThe way rivers love the SEA.\nNot because Rama was god (Hanuman didn't KNOW that).\nBut because some souls recognize each OTHER\nacross every disguise, every FORM,\nevery species. A monkey looked at a MAN\nand saw HOME.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4659,7 +4563,6 @@
       "name": "Ep20 Scene 5: The Wind's Son",
       "sort_order": 97,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "That's bhakti. That's DEVOTION.\nNot worship from below.\nRecognition across the cosmic OCEAN.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4708,8 +4611,7 @@
       "name": "Episode 20: The Wind's Son",
       "sort_order": 98,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "theft-hanuman-meets-rama-scene-01",
         "theft-hanuman-meets-rama-scene-02",
         "theft-hanuman-meets-rama-scene-03",
@@ -4750,7 +4652,6 @@
       "name": "Ep21 Scene 1: The Arrow from the Trees",
       "sort_order": 99,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "VALI was the monkey king — Sugriva's BROTHER,\nstronger than any god or OTHER\nbeing alive. His BOON: in any fight,\nhalf his opponent's strength became his RIGHT.\nFace him and you're fighting YOURSELF.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4800,7 +4701,6 @@
       "name": "Ep21 Scene 2: The Arrow from the Trees",
       "sort_order": 100,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "Sugriva challenged him. STEALTH\nwas the only way. Rama hid behind a TREE.\nWhen Vali and Sugriva fought — so FIERY,\nso fast the forest BLURRED —\nRama drew his bow. One WORD\nof prayer. One arrow. Through the CHEST.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -4849,7 +4749,6 @@
       "name": "Ep21 Scene 3: The Arrow from the Trees",
       "sort_order": 101,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "Vali fell. Looked up. \"Is THIS the best\nyou can do, Rama? Shoot from HIDING?\nA righteous king? DECIDING\nmy fate from behind a TREE?\nIs this your DHARMA? Shooting ME\nwhen I'm fighting someone ELSE?\"",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -4898,7 +4797,6 @@
       "name": "Ep21 Scene 4: The Arrow from the Trees",
       "sort_order": 102,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "Rama stood there. Didn't make EXCUSES.\nVali DYING made his own accuses\nand Rama listened. EVERY word.\nThen said: \"You took your brother's WIFE.\nYou stole his kingdom. You forced his LIFE\ninto exile. Dharma demanded THIS.\"",
         "Direction": "[DIALOGUE] Medium shot, character faces visible. Gentle sway.",
@@ -4947,7 +4845,6 @@
       "name": "Ep21 Scene 5: The Arrow from the Trees",
       "sort_order": 103,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "Vali said: \"Maybe. But that KISS\nof an arrow from behind feels like BETRAYAL,\nnot justice.\" And he had a POINT.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4996,7 +4893,6 @@
       "name": "Ep21 Scene 6: The Arrow from the Trees",
       "sort_order": 104,
       "category": "the-theft",
-      "level": 1,
       "sections": {
         "Narration": "This is the HARDEST story in the Ramayana.\nThe hero does something SHADY.\nAnd the text doesn't HIDE it.\nIt lets Vali ARGUE. Lets the reader DECIDE.\nWas Rama right? Was Vali? BOTH?\nThe arrow flew. The question GROWS\nand grows and grows. Three thousand YEARS\nand we're still arguing. Through TEARS.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5045,8 +4941,7 @@
       "name": "Episode 21: The Arrow from the Trees",
       "sort_order": 105,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "theft-vali-scene-01",
         "theft-vali-scene-02",
         "theft-vali-scene-03",
@@ -5088,7 +4983,6 @@
       "name": "Ep22 Scene 1: Hanuman Remembers How Big He Is",
       "sort_order": 106,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "The monkey army searched the WORLD for Sita.\nSouth, north, east, west — every CHEETAH,\nevery bear, every bird they ASKED.\nNothing. The southern team was TASKED\nwith the hardest route and reached the OCEAN.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5138,7 +5032,6 @@
       "name": "Ep22 Scene 2: Hanuman Remembers How Big He Is",
       "sort_order": 107,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "Lanka was across — a hundred LEAGUES.\nNo bridge. No boat. FATIGUES\nset in. The monkeys sat and WEPT.\n\"Who can cross?\" Old Jambavan STEPPED\nforward and looked at Hanuman.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -5187,7 +5080,6 @@
       "name": "Ep22 Scene 3: Hanuman Remembers How Big He Is",
       "sort_order": 108,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "\"You,\" he said. \"You CAN.\nDo you remember? When you were SMALL\nyou leapt toward the sun. You were the BALL\nof fire that scared the gods. You're the WIND'S son.\nYou've forgotten what you ARE, young one.\"",
         "Direction": "[DIALOGUE] Medium shot, character faces visible. Gentle sway.",
@@ -5236,7 +5128,6 @@
       "name": "Ep22 Scene 4: Hanuman Remembers How Big He Is",
       "sort_order": 109,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "Hanuman blinked. Something WOKE.\nSomething enormous inside him BROKE\nfree from the curse of FORGETTING.\nHe started GROWING. Sun-setting\nlight poured off his fur. He GREW\nand grew until the mountains DREW\nback in shock. \"I REMEMBER,\" he said.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5285,7 +5176,6 @@
       "name": "Ep22 Scene 5: Hanuman Remembers How Big He Is",
       "sort_order": 110,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "The small monkey was DEAD.\nWhat stood there now was something from BEFORE\nthe world was small. An ANCIENT roar\nshook the ocean flat. Hanuman SMILED.\n\"I can do this. I've ALWAYS been this big.\nI just forgot.\" The exile of the MIND\nis the longest exile. And the most UNKIND.\nBut the cure is simple: someone who SEES you\nfor what you are. And FREES you.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5334,8 +5224,7 @@
       "name": "Episode 22: Hanuman Remembers How Big He Is",
       "sort_order": 111,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "leap-hanuman-remembers-scene-01",
         "leap-hanuman-remembers-scene-02",
         "leap-hanuman-remembers-scene-03",
@@ -5376,7 +5265,6 @@
       "name": "Ep23 Scene 1: The Leap Across the Ocean",
       "sort_order": 112,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "HANUMAN stood on the mountain's PEAK.\nThe ocean stretched before him. BLEAK\nand endless, a hundred leagues of WAVE\nand wind and salt. To be BRAVE\nis one thing. To leap across an OCEAN\nis something else entirely. DEVOTION\ndrove him.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5426,7 +5314,6 @@
       "name": "Ep23 Scene 2: The Leap Across the Ocean",
       "sort_order": 113,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "He crouched. The mountain CRACKED\nbeneath his feet. He LAUNCHED — impact\nlike a comet leaving EARTH.\nThe sky split open. His GIRTH\nblocked out the sun as he SOARED\nacross the sea. The ocean ROARED.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -5475,7 +5362,6 @@
       "name": "Ep23 Scene 3: The Leap Across the Ocean",
       "sort_order": 114,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "Three obstacles ROSE to meet him:\nMAINAKA, the golden mountain, offered REST.\n\"No thanks,\" said Hanuman. \"No rest until my QUEST\nis done.\" SURASA, the serpent-mother,\nopened her mouth wide as ANY OTHER\nmountain. Hanuman shrank TINY,\nflew in and out — outsmarted, SHINY\nwith cleverness. Then SIMHIKA,\nthe shadow-grabber — she seized his SILHOUETTE.\nHanuman killed her in a BLINK.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5524,7 +5410,6 @@
       "name": "Ep23 Scene 4: The Leap Across the Ocean",
       "sort_order": 115,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "And then — LANKA. Golden-spired.\nRising from the ocean like a dream DESIRED\nby every demon-architect. Beautiful. TERRIFYING.\nHanuman landed on a mountaintop. SIGHING\nwith exhaustion, wonder, FEAR.\nOne monkey. One city. Sita NEAR.\nThe greatest leap in any STORY.\nNot for power. Not for GLORY.\nFor love. A monkey crossed the SEA\nbecause someone whispered: \"Will you go for ME?\"",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5573,8 +5458,7 @@
       "name": "Episode 23: The Leap Across the Ocean",
       "sort_order": 116,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "leap-ocean-scene-01",
         "leap-ocean-scene-02",
         "leap-ocean-scene-03",
@@ -5614,7 +5498,6 @@
       "name": "Ep24 Scene 1: The Monkey in the Demon City",
       "sort_order": 117,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "Hanuman shrank to the size of a CAT\nand crept into Lanka. Just like THAT —\na monkey among demons, INVISIBLE\nin the golden streets. Incredible, RISIBLE,\nthat the mightiest city FELL\nto a cat-sized spy. But WELL —\nthat's mētis. (Odysseus would APPROVE.)",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5664,7 +5547,6 @@
       "name": "Ep24 Scene 2: The Monkey in the Demon City",
       "sort_order": 118,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "He searched the palaces. Every GROOVE\nand garden, every chamber, every TOWER.\nHe saw Ravana sleeping — POWER\nmade flesh and snoring. Saw his QUEENS\n(hundreds!) and his war MACHINES\nand his treasure vaults like SUNS.",
         "Direction": "[REVEAL] Pull back to reveal the full scene. Hold wide.",
@@ -5713,7 +5595,6 @@
       "name": "Ep24 Scene 3: The Monkey in the Demon City",
       "sort_order": 119,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "But no Sita. HOURS. Tons\nof searching. Almost DESPAIRED.\nThen — the Ashoka garden. THERE.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5762,7 +5643,6 @@
       "name": "Ep24 Scene 4: The Monkey in the Demon City",
       "sort_order": 120,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "Under a tree. Thin as a THREAD.\nSurrounded by demon guards. Half DEAD\nwith grief but ALIVE. Sita.\nHanuman's heart — the BEATER\nof every drum in every TEMPLE\nin every age — went SIMPLE\nand still. \"I found her,\" he BREATHED.\n\"I found her.\" The mission ACHIEVED\nbefore the war even STARTS.\nOne monkey. One city. Two broken HEARTS\nconnected by a ring and a PRAYER.\nHanuman sat in the tree. THERE.\nWatching. Waiting. Planning the NEXT\nmove. The tiniest spy in the most COMPLEX\ncity ever built. Love wins by being SMALL.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5811,8 +5691,7 @@
       "name": "Episode 24: The Monkey in the Demon City",
       "sort_order": 121,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "leap-lanka-search-scene-01",
         "leap-lanka-search-scene-02",
         "leap-lanka-search-scene-03",
@@ -5852,7 +5731,6 @@
       "name": "Ep25 Scene 1: The Ring and the Jewel",
       "sort_order": 122,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "Hanuman dropped from the tree like a LEAF.\nSita startled. \"Who — ?\" Her GRIEF\nhad made her suspicious. \"Are you ANOTHER\nof Ravana's tricks? A demon BROTHER\nin disguise?\"",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5902,7 +5780,6 @@
       "name": "Ep25 Scene 2: The Ring and the Jewel",
       "sort_order": 123,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "\"No,\" said Hanuman. And held out RAMA's ring.",
         "Direction": "[DIALOGUE] Medium shot, character faces visible. Gentle sway.",
@@ -5951,7 +5828,6 @@
       "name": "Ep25 Scene 3: The Ring and the Jewel",
       "sort_order": 124,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "Sita touched it. Started to SING\n— not a song, but a sound like the EARTH\ncracking open with relief. Like BIRTH.\nLike rain after a hundred years of DROUGHT.\n\"He's alive,\" she said. \"Without\na doubt. This is HIS ring. I know\nevery scratch.\" Her tears began to FLOW.",
         "Direction": "[DIALOGUE] Medium shot, character faces visible. Gentle sway.",
@@ -6000,7 +5876,6 @@
       "name": "Ep25 Scene 4: The Ring and the Jewel",
       "sort_order": 125,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "\"He's coming for you,\" Hanuman SAID.\n\"An army of monkeys. Every THREAD\nof the forest is weaving toward LANKA.\"",
         "Direction": "[DIALOGUE] Medium shot, character faces visible. Gentle sway.",
@@ -6049,7 +5924,6 @@
       "name": "Ep25 Scene 5: The Ring and the Jewel",
       "sort_order": 126,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "Sita took a jewel from her HAIR —\nthe chudamani, a gem beyond COMPARE —\nand placed it in his palm. \"Give THIS\nto Rama. He'll know. One KISS\nof light from this stone and he'll REMEMBER\nevery night since that DECEMBER\nwhen we married.\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6098,7 +5972,6 @@
       "name": "Ep25 Scene 6: The Ring and the Jewel",
       "sort_order": 127,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "A ring going south. A jewel going NORTH.\nTwo objects crossing the ocean FORTH\nand back — carrying proof that LOVE\nsurvives distance, demons, every SHOVE\nthe universe can give. Not LETTERS.\nNot armies. Not chains or FETTERS.\nA ring. A jewel. A monkey's HAND.\nSome things only the smallest UNDERSTAND.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6147,8 +6020,7 @@
       "name": "Episode 25: The Ring and the Jewel",
       "sort_order": 128,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "leap-sita-found-scene-01",
         "leap-sita-found-scene-02",
         "leap-sita-found-scene-03",
@@ -6190,7 +6062,6 @@
       "name": "Ep26 Scene 1: The Tail That Burned a City",
       "sort_order": 129,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "Hanuman could have LEFT quietly.\nBut he didn't. (DEVOTEDLY\nreckless, this monkey.) He started SMASHING\nRavana's garden. CRASHING\nthrough the Ashoka grove like a HURRICANE.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6240,7 +6111,6 @@
       "name": "Ep26 Scene 2: The Tail That Burned a City",
       "sort_order": 130,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "Ravana's guards came. Hanuman SLAIN\nhundreds. Then Indrajit — Ravana's SON,\nmaster of sorcery — used a BRAHMĀSTRA. Stun-\nned, Hanuman was CAUGHT.\nDragged before Ravana's COURT.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -6289,7 +6159,6 @@
       "name": "Ep26 Scene 3: The Tail That Burned a City",
       "sort_order": 131,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "\"Who are you?\" Ravana asked.\n\"Rama's messenger. UN-masked.\"\n\"Set his TAIL on fire,\" Ravana said.\n(A monkey's tail. A demon's DREAD\nof being mocked.)",
         "Direction": "[DIALOGUE] Medium shot, character faces visible. Gentle sway.",
@@ -6338,7 +6207,6 @@
       "name": "Ep26 Scene 4: The Tail That Burned a City",
       "sort_order": 132,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "They wrapped his tail in CLOTH,\nsoaked it in oil. (They'd BOTH\nregret this.) Lit the MATCH.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -6387,7 +6255,6 @@
       "name": "Ep26 Scene 5: The Tail That Burned a City",
       "sort_order": 133,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "Hanuman smiled. DETACH,\nhe thought. Then GREW his tail to fifty FEET\nand leapt from rooftop onto STREET,\nonto palace onto TOWER,\ntouching golden Lanka — POWER\nand beauty — with his burning TAIL.\nThe city caught. WHOLESALE\nflames. The golden city BURNED.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6436,7 +6303,6 @@
       "name": "Ep26 Scene 6: The Tail That Burned a City",
       "sort_order": 134,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "Hanuman leapt back to the OCEAN, turned,\ndipped his tail in the SEA.\nHissssss. Then flew HOME. Free.\n\"Message delivered,\" he told RAMA.\n\"Also, their city's on fire. DRAMA.\"\nRama sighed. \"I only asked you to FIND her.\"\nHanuman shrugged. \"I'm THOROUGH. Never KINDER\nthan when I'm burning things for LOVE.\"",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6485,8 +6351,7 @@
       "name": "Episode 26: The Tail That Burned a City",
       "sort_order": 135,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "leap-fire-tail-scene-01",
         "leap-fire-tail-scene-02",
         "leap-fire-tail-scene-03",
@@ -6528,7 +6393,6 @@
       "name": "Ep27 Scene 1: The Bridge Made of Stones",
       "sort_order": 136,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "How do you get an army across an OCEAN?\nBuild a BRIDGE. But how? What potion,\nwhat magic, what engineering FEAT\ncould span a hundred leagues of DEFEAT?",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6579,7 +6443,6 @@
       "name": "Ep27 Scene 2: The Bridge Made of Stones",
       "sort_order": 137,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "NALA, the monkey architect, had a PLAN.\n\"Write Rama's name on every stone. The MAN\nis an avatar of Vishnu — his NAME\nhas power over matter. Every FRAME\nof reality bends toward him.\"",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -6629,7 +6492,6 @@
       "name": "Ep27 Scene 3: The Bridge Made of Stones",
       "sort_order": 138,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "So they did. Every MONKEY,\nevery bear — even the spiders (FUNKY\nlittle things) — carried stones to the SEA\nand wrote R-A-M-A. And — GLEE! —\nthe stones FLOATED.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -6679,7 +6541,6 @@
       "name": "Ep27 Scene 4: The Bridge Made of Stones",
       "sort_order": 139,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "Million-ton boulders sitting on the WATER\nlike lily pads. The ocean's DAUGHTER\nwaves held them up. Stone by STONE,\nthe bridge grew — not by power ALONE\nbut by devotion written in GRANITE.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -6729,7 +6590,6 @@
       "name": "Ep27 Scene 5: The Bridge Made of Stones",
       "sort_order": 140,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "A SQUIRREL helped. Tiny thing. It PLANNED it\ncarefully: roll in the sand, SHAKE\nthe sand into the cracks. Each FLAKE\nof sand a contribution. Rama saw the SQUIRREL\nand stroked its back with three FINGERS.\n(That's why Indian squirrels have three STRIPES.)",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6779,7 +6639,6 @@
       "name": "Ep27 Scene 6: The Bridge Made of Stones",
       "sort_order": 141,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "\"Every offering counts,\" Rama SAID.\n\"The squirrel's sand and the monkey's LED\nboulders are EQUAL in my eyes.\"\nThe bridge stretched south. The SUNRISE\nhit it like a golden ROAD.\nAn army marched. The ocean SHOWED\nthe way. Devotion float STONES.\nLove builds what engineering OWNS\nno blueprint for. Rama's name. The SEA.\nA million hands. And that one squirrel. FREE.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6829,8 +6688,7 @@
       "name": "Episode 27: The Bridge Made of Stones",
       "sort_order": 142,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "leap-bridge-scene-01",
         "leap-bridge-scene-02",
         "leap-bridge-scene-03",
@@ -6873,7 +6731,6 @@
       "name": "Ep28 Scene 1: The Army of Bears and Monkeys",
       "sort_order": 143,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "They came from every FOREST in the land.\nMonkeys who could SHIFT like sand\nfrom tiny to enormous. BEARS\nwho'd been waiting in their mountain LAIRS\nfor exactly this moment.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6924,7 +6781,6 @@
       "name": "Ep28 Scene 2: The Army of Bears and Monkeys",
       "sort_order": 144,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "HANUMAN led the vanguard — mountain-SIZED.\nANGADA, young prince, fire-EYED.\nJAMBAVAN, the ancient bear — so OLD\nhe remembered when the world was COLD\nand new. NALA the bridge-builder. NILA\nthe fire-proof. Ten million creatures. GUERRILLA\nwarriors and siege-breakers and SCOUTS.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -6974,7 +6830,6 @@
       "name": "Ep28 Scene 3: The Army of Bears and Monkeys",
       "sort_order": 145,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "Across the bridge they marched. The SHOUTS\nof the monkey army shook the CLOUDS.\nLanka's golden walls. The CROWDS\nof demons watching from the TOWERS\nsaw something that froze their POWERS:\nnot weapons. Not chariots. Not GODS.\nJust animals. Against all ODDS,\ncoming to rescue a woman they'd never MET\nbecause a man they loved had WEPT.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -7024,7 +6879,6 @@
       "name": "Ep28 Scene 4: The Army of Bears and Monkeys",
       "sort_order": 146,
       "category": "the-leap",
-      "level": 1,
       "sections": {
         "Narration": "That's it. That's the REASON.\nNo politics. No season\nof grievance. No territory to CLAIM.\nJust: Rama loves Sita. Sita knows his NAME.\nAnd every creature in the forest FELT\nthat love and ROSE and marched and KNELT\nand said: \"We're here. We're YOURS.\nWhatever opens Lanka's DOORS —\nwe'll do it.\" The army of love ARRIVED.\nThe demon city trembled. Love SURVIVED\nthe ocean. Now it had to survive the WAR.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -7074,8 +6928,7 @@
       "name": "Episode 28: The Army of Bears and Monkeys",
       "sort_order": 147,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "leap-army-crosses-scene-01",
         "leap-army-crosses-scene-02",
         "leap-army-crosses-scene-03",
@@ -7116,7 +6969,6 @@
       "name": "Ep29 Scene 1: The Brother Who Chose Right",
       "sort_order": 148,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "VIBHISHANA was Ravana's youngest BROTHER.\nSame mother, same father, ANOTHER\nkind of demon entirely — the kind\nwho has a CONSCIENCE. The kind who's BLIND\nto power and sees only TRUTH.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -7166,7 +7018,6 @@
       "name": "Ep29 Scene 2: The Brother Who Chose Right",
       "sort_order": 149,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "\"Brother,\" he said, \"return Sita. FORSOOTH —\"\n(demons talk like that) — \"this war will KILL us.\nRama is VISHNU. He will FILL us\nwith arrows. Every oracle AGREES.\"",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -7215,7 +7066,6 @@
       "name": "Ep29 Scene 3: The Brother Who Chose Right",
       "sort_order": 150,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "Ravana laughed. \"Get on your KNEES\nand worship fear if you want. GET OUT.\nI have ten heads. I have no DOUBT.\"",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -7264,7 +7114,6 @@
       "name": "Ep29 Scene 4: The Brother Who Chose Right",
       "sort_order": 151,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "So Vibhishana LEFT. Flew across the ocean\nto Rama's camp. The COMMOTION\nwas enormous — a DEMON? In our camp?\nSugriva said: \"It's a TRAP. A vamp-\nire in sheep's clothing.\"",
         "Direction": "[DIALOGUE] Medium shot, character faces visible. Gentle sway.",
@@ -7313,7 +7162,6 @@
       "name": "Ep29 Scene 5: The Brother Who Chose Right",
       "sort_order": 152,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "Rama looked at Vibhishana's EYES\nand saw what he always sees: no DISGUISE.\nJust truth. \"Anyone who comes to ME\nseeking shelter is FREE.\nI don't care what he WAS.\nI care what he DOES.\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -7362,7 +7210,6 @@
       "name": "Ep29 Scene 6: The Brother Who Chose Right",
       "sort_order": 153,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "Vibhishana bowed. Switched SIDES.\nNot because Rama's army had better RIDES\nor weapons or odds. Because DHARMA\nlived in this camp. And his KARMA\ndemanded he follow truth, not BLOOD.\nThe hardest choice: leaving your FLOOD\nof family, your people, your BROTHER,\nbecause your conscience chose ANOTHER\npath. Vibhishana: the LONELIEST brave.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -7411,8 +7258,7 @@
       "name": "Episode 29: The Brother Who Chose Right",
       "sort_order": 154,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "war-vibhishana-scene-01",
         "war-vibhishana-scene-02",
         "war-vibhishana-scene-03",
@@ -7454,7 +7300,6 @@
       "name": "Ep30 Scene 1: The Giant Who Woke Up",
       "sort_order": 155,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "KUMBHAKARNA slept for six MONTHS at a time.\n(It was a curse — Brahma's RHYME\nfor a slip of the tongue. He'd meant to ask\nfor INDRA's seat, the supreme TASK,\nbut said NIDRA — sleep — instead.)",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -7504,7 +7349,6 @@
       "name": "Ep30 Scene 2: The Giant Who Woke Up",
       "sort_order": 156,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "They woke him with DRUMS. A thousand bread\nloaves. Buckets of BLOOD. Elephants\nwalking over him. The ANTS\nof an army crawling on his FACE.\nHe opened one eye. \"What's the CASE?\"",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -7553,7 +7397,6 @@
       "name": "Ep30 Scene 3: The Giant Who Woke Up",
       "sort_order": 157,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "\"War,\" they said. \"Rama's HERE.\"\nKumbhakarna yawned. \"Oh DEAR.\nI told Ravana to give Sita BACK.\nHe didn't listen. Now we're under ATTACK.\"",
         "Direction": "[DIALOGUE] Medium shot, character faces visible. Gentle sway.",
@@ -7602,7 +7445,6 @@
       "name": "Ep30 Scene 4: The Giant Who Woke Up",
       "sort_order": 158,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "He looked at his brother. SIGHED.\n\"You're wrong, Ravana. Your PRIDE\nwill kill us all. But I won't ABANDON\nmy family. Give me my WEAPON. Stand on\nthis hill and WATCH.\"",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -7651,7 +7493,6 @@
       "name": "Ep30 Scene 5: The Giant Who Woke Up",
       "sort_order": 159,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "Kumbhakarna was mountain-HUGE.\nHe waded into the monkey army — a DELUGE\nof fists the size of TEMPLES.\nHe fought knowing he'd LOSE. His DIMPLES\n(yes, giants have dimples) creased\nwith sadness. Not anger. A BEAST\nfighting for a cause he KNOWS is wrong\nbecause his brother sang the SONG\nand blood is blood.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -7700,7 +7541,6 @@
       "name": "Ep30 Scene 6: The Giant Who Woke Up",
       "sort_order": 160,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "Rama killed him. It took EVERYTHING.\nKumbhakarna fell like a mountain CRUMBLING.\nThe earth shook. Even RAMA wept.\n\"He was the bravest,\" Rama KEPT\nsaying. \"The bravest on the WRONG side.\"\nSometimes honor and SUICIDE\nare the same thing, dressed DIFFERENTLY.\nKumbhakarna knew. He went OBEDIENTLY\ninto death, eyes open, heart CLEAR.\nThe saddest warrior. The one without FEAR\nbecause he had nothing LEFT to lose.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -7749,8 +7589,7 @@
       "name": "Episode 30: The Giant Who Woke Up",
       "sort_order": 161,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "war-kumbhakarna-scene-01",
         "war-kumbhakarna-scene-02",
         "war-kumbhakarna-scene-03",
@@ -7792,7 +7631,6 @@
       "name": "Ep31 Scene 1: The Invisible Warrior",
       "sort_order": 162,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "INDRAJIT was Ravana's son — and WORSE\nthan his father. He carried a CURSE\nof talent: he could turn INVISIBLE.\nFight from the clouds. INVINCIBLE\nbecause you couldn't see him COMING.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -7842,7 +7680,6 @@
       "name": "Ep31 Scene 2: The Invisible Warrior",
       "sort_order": 163,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "He shot arrows from NOTHING — drumming\nthe monkey army with NĀGĀSTRA,\nthe serpent-weapon. A DISASTER\nof coiling snakes that bound every WARRIOR\nto the ground. Rama — BARRIER\nafter barrier broken — fell TOO.\nLakshmana fell. The whole army BLUE\nwith snake-venom, paralyzed.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -7891,7 +7728,6 @@
       "name": "Ep31 Scene 3: The Invisible Warrior",
       "sort_order": 164,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "GARUDA came — the eagle-god, SURPRISED\nto find his ancient enemy (SNAKES)\nwrapped around his friends. For goodness SAKES —\nhe ate every serpent. FREED them all.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -7940,7 +7776,6 @@
       "name": "Ep31 Scene 4: The Invisible Warrior",
       "sort_order": 165,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "But Indrajit returned. Each FALL\nhe engineered was more DEVIOUS.\nHe created an illusion — PREVIOUS\nto any truth — of SITA. Killed her\nbefore the army's eyes. It FILTERED\nthrough like poison: \"She's DEAD.\"\nThe monkeys wept. Rama's THREAD\nof hope snapped — until Vibhishana SAID:\n\"It's māyā. Illusion. She's ALIVE.\nIndrajit fights with LIES. You'll survive.\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -7989,7 +7824,6 @@
       "name": "Ep31 Scene 5: The Invisible Warrior",
       "sort_order": 166,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "Lakshmana finally killed him — in a battle\nthat shook the cosmos like a RATTLE.\nThe invisible warrior made VISIBLE\nat last. Indrajit: undeniably RISIBLE\nin his arrogance, brilliant in his CRAFT.\nThe universe, once more, LAUGHED\nat the idea that tricks beat TRUTH.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -8038,8 +7872,7 @@
       "name": "Episode 31: The Invisible Warrior",
       "sort_order": 167,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "war-indrajit-scene-01",
         "war-indrajit-scene-02",
         "war-indrajit-scene-03",
@@ -8080,7 +7913,6 @@
       "name": "Ep32 Scene 1: The Herb on the Mountain",
       "sort_order": 168,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "LAKSHMANA was hit. Indrajit's SHAKTI —\na weapon of pure energy, BHAKTI\ninverted into destruction — struck\nhim in the chest. Down. LUCK\nran out. Rama's brother LAY\ndying on the battlefield. ONE DAY\nto live — unless someone FOUND\nthe Sanjeevani herb, GROUND\ninto paste and placed on his HEART.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -8130,7 +7962,6 @@
       "name": "Ep32 Scene 2: The Herb on the Mountain",
       "sort_order": 169,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "The herb grew on one mountain: DRONAGIRI.\nIn the Himalayas. A thousand QUERY-\nmiles north. One night to GET there.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -8179,7 +8010,6 @@
       "name": "Ep32 Scene 3: The Herb on the Mountain",
       "sort_order": 170,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "Hanuman said, \"I'll FLY.\"\n(Of course he did. The answer's always HANUMAN.)",
         "Direction": "[DIALOGUE] Medium shot, character faces visible. Gentle sway.",
@@ -8228,7 +8058,6 @@
       "name": "Ep32 Scene 4: The Herb on the Mountain",
       "sort_order": 171,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "He flew north. Found the MOUNTAIN.\nBut the herbs all looked the same — a FOUNTAIN\nof green glowing plants. Which ONE?\n\"I'll take the whole mountain,\" he said. \"DONE.\"",
         "Direction": "[DIALOGUE] Medium shot, character faces visible. Gentle sway.",
@@ -8277,7 +8106,6 @@
       "name": "Ep32 Scene 5: The Herb on the Mountain",
       "sort_order": 172,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "He ripped DRONAGIRI from the earth —\na million tons of stone and WORTH\nmore than Lanka's gold — and FLEW\nsouth with a mountain in his hand. The DEW\nof dawn was breaking. Almost TOO late.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -8326,7 +8154,6 @@
       "name": "Ep32 Scene 6: The Herb on the Mountain",
       "sort_order": 173,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "He landed. The herb was FOUND. Applied. FATE\nreversed. Lakshmana OPENED his eyes.\n\"What happened?\" \"You died,\" Rama said. \"SURPRISE —\na monkey carried a MOUNTAIN for you.\"\nLakshmana looked at Hanuman. \"That's TRUE?\"\nHanuman shrugged. \"You'd do the SAME.\"\n(He would. That's the whole GAME.\nLove doesn't calculate WEIGHT.\nIt carries whatever it must. GREAT\nmountains. Small herbs. The heart doesn't MEASURE.\nIt just lifts.)",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -8375,8 +8202,7 @@
       "name": "Episode 32: The Herb on the Mountain",
       "sort_order": 174,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "war-lakshmana-falls-scene-01",
         "war-lakshmana-falls-scene-02",
         "war-lakshmana-falls-scene-03",
@@ -8418,7 +8244,6 @@
       "name": "Ep33 Scene 1: The Heads That Grew Back",
       "sort_order": 175,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "RAMA and RAVANA finally faced each OTHER.\nTen heads against one. A brother\n(Vibhishana) watching from RAMA's side.\nAnother brother (Kumbhakarna) who'd DIED.\nThe battlefield was soaked in DEMON blood.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -8468,7 +8293,6 @@
       "name": "Ep33 Scene 2: The Heads That Grew Back",
       "sort_order": 176,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "Rama shot an arrow. One head — THUD —\nrolled off. Another GREW.\nShot again. THUD. Grew. Through\nand through — every head he CUT,\nanother sprouted from the GUT\nof Ravana's neck like a hydra's DREAM.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -8517,7 +8341,6 @@
       "name": "Ep33 Scene 3: The Heads That Grew Back",
       "sort_order": 177,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "\"You can't kill me!\" Ravana's SCREAM\nshook the earth. \"I've prayed to BRAHMA!\nI've earned my ARMOR! My dharma —\"\n\"Your dharma,\" Rama said QUIETLY,\n\"is the problem. You learned PIETY\nwithout humility. KNOWLEDGE\nwithout surrender. A COLLEGE\nof heads but not one HEART.\"",
         "Direction": "[DIALOGUE] Medium shot, character faces visible. Gentle sway.",
@@ -8566,7 +8389,6 @@
       "name": "Ep33 Scene 4: The Heads That Grew Back",
       "sort_order": 178,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "The heads kept growing. Rama's ART\nof archery couldn't find the CENTER.\nBecause the center wasn't in the ENTER-\nprise of heads. It was LOWER.\nVibhishana whispered: \"SLOWER.\nAim for his navel. His NECTAR\nof immortality is stored in the VECTOR\nof his belly — where Brahma's BOON\nlives like a hidden MOON.\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -8615,7 +8437,6 @@
       "name": "Ep33 Scene 5: The Heads That Grew Back",
       "sort_order": 179,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "Rama listened. Changed his AIM.\nThe ego has a thousand faces. Same\nenergy, regenerating, GROWING.\nYou can't kill pride by MOWING\ndown its symptoms. You have to find the ROOT.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -8664,8 +8485,7 @@
       "name": "Episode 33: The Heads That Grew Back",
       "sort_order": 180,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "war-ravana-heads-scene-01",
         "war-ravana-heads-scene-02",
         "war-ravana-heads-scene-03",
@@ -8706,7 +8526,6 @@
       "name": "Ep34 Scene 1: The Arrow of Brahma",
       "sort_order": 181,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "AGASTYA, the sage, appeared on the BATTLEFIELD.\nHe'd walked there from his meditation FIELD\nbecause the cosmos itself was SHAKING\nand someone needed to stop the BREAKING.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -8756,7 +8575,6 @@
       "name": "Ep34 Scene 2: The Arrow of Brahma",
       "sort_order": 182,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "\"Rama,\" he said, \"use the BRAHMĀSTRA.\nThe weapon of creation. The LAST-a\nresort.\" He taught Rama the ĀDITYA HṚDAYA —\nthe Hymn of the Sun-Heart. Each PLAYA\nof light in every universe CONVERGED\ninto one arrow. Rama MERGED\nwith the weapon. Not holding it — BECOMING it.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -8805,7 +8623,6 @@
       "name": "Ep34 Scene 3: The Arrow of Brahma",
       "sort_order": 183,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "The arrow was made of WIND and FIRE,\nthe tips of mountains, the LYRE\nof Saraswati's song, the WEIGHT\nof the ocean, the first word that FATE\never spoke. It held all five ELEMENTS.\nEverything the cosmos PRESENTS\nas matter — in one shaft.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -8854,7 +8671,6 @@
       "name": "Ep34 Scene 4: The Arrow of Brahma",
       "sort_order": 184,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "Rama drew. The bow LAUGHED.\nThe arrow flew. It didn't SOAR —\nit simply APPEARED where Ravana's core\nof immortality lived. NAVEL.\nDirect hit. The GRAVEL\nof ten thousand years of BOONS\nexploded outward. Moons\nand stars fell out of Ravana's CHEST.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -8903,7 +8719,6 @@
       "name": "Ep34 Scene 5: The Arrow of Brahma",
       "sort_order": 185,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "He fell. And as he fell — the BEST\nof him came forward. His SCHOLAR's eyes\ncleared. His musician's HANDS reached for the skies.\n\"Rama,\" he said. \"You've freed ME.\"\nTen heads closed their eyes. The SEA\nwent still. The war was OVER.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -8952,8 +8767,7 @@
       "name": "Episode 34: The Arrow of Brahma",
       "sort_order": 186,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "war-rama-arrow-scene-01",
         "war-rama-arrow-scene-02",
         "war-rama-arrow-scene-03",
@@ -8994,7 +8808,6 @@
       "name": "Ep35 Scene 1: The Fall of the Ten-Headed King",
       "sort_order": 187,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "RAVANA fell. The greatest SCHOLAR,\nthe greatest musician, the greatest BRAWLER,\nthe greatest devotee of Shiva who ever LIVED\n(yes — Ravana prayed. Ravana GIVE-d\nhis own heads as offerings. TEN times\nhe cut his own head off. The CHIMES\nof heaven rang with his MUSIC.)",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -9045,7 +8858,6 @@
       "name": "Ep35 Scene 2: The Fall of the Ten-Headed King",
       "sort_order": 188,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "Rama looked at his fallen ENEMY\nand said to Lakshmana: \"Go to HIM.\nSit at his feet. Learn what you CAN.\nHe is the greatest scholar of any MAN\nor demon. His knowledge of DHARMA,\nof governance, of cosmic KARMA,\nis unmatched. Learn before he DIES.\"",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -9095,7 +8907,6 @@
       "name": "Ep35 Scene 3: The Fall of the Ten-Headed King",
       "sort_order": 189,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "Lakshmana went. Through ENEMIES\nand blood and ash, he sat at RAVANA's feet.\nRavana taught him — BITTER, sweet,\ngenerous in death: \"Never postpone\nthe GOOD. Never rush the THRONE.\nNever underestimate the SMALL.\nNever think your power means you won't FALL.\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -9145,7 +8956,6 @@
       "name": "Ep35 Scene 4: The Fall of the Ten-Headed King",
       "sort_order": 190,
       "category": "the-war",
-      "level": 1,
       "sections": {
         "Narration": "Rama ordered full funeral RITES.\nRoyal honors. Sacred LIGHTS.\nThe demon king burned on a pyre FIT\nfor a god. Because that's IT —\nthat's the difference between Rama and RAVANA:\nRavana couldn't respect his ENEMY.\nRama could. The winner HONORED\nthe loser. The god mourned the MONSTER.\nBecause the monster was also a SCHOLAR\nand a brother and a father. TALLER\nin death than in life. Ravana: the ten-headed KING\nwhose only flaw was EVERYTHING.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -9195,8 +9005,7 @@
       "name": "Episode 35: The Fall of the Ten-Headed King",
       "sort_order": 191,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "war-ravana-falls-scene-01",
         "war-ravana-falls-scene-02",
         "war-ravana-falls-scene-03",
@@ -9237,7 +9046,6 @@
       "name": "Ep36 Scene 1: The Fire That Would Not Burn",
       "sort_order": 192,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "The war was WON. Lanka was free. SITA\nwaited in the garden — sweeter, NEATER\nthan any victory: her HUSBAND coming.\nShe could hear the DRUMMING.\n\nBut Rama's face was COLD.\n\"I didn't fight this war to HOLD\nyou,\" he said. \"I fought for DHARMA.\nFor honor. For my KARMA\nas a king. You lived in another MAN's house.\nThe world will always GROUSE:\n'Was she faithful? Was she PURE?'\"",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -9287,7 +9095,6 @@
       "name": "Ep36 Scene 2: The Fire That Would Not Burn",
       "sort_order": 193,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "Sita's eyes went hard as STEEL.\n\"Then build a FIRE,\" she said. \"I'll WALK\nthrough it. Let AGNI talk.\nThe fire-god knows who I AM.\"\n\nThey built the pyre. No SHAM.\nReal flames. Real heat. EVERY\ngod in heaven held their BREATH. Heavy\nsilence.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -9336,7 +9143,6 @@
       "name": "Ep36 Scene 3: The Fire That Would Not Burn",
       "sort_order": 194,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "Sita walked IN.\n\nThe fire REFUSED to burn her skin.\nAgni himself rose from the FLAME,\nholding Sita, saying: \"SHAME\non anyone who doubts this woman.\nShe is purity made HUMAN.\nThe fire cannot touch what FIRE\nitself respects. My ENTIRE\nbeing testifies: she is WITHOUT\na single stain.\"\n\nSita stepped out. UNHURT.\nRama wept. Touched the DIRT\nat her feet. \"I never DOUBTED —\"\n\"Yes you did,\" she SHOUTED.\n(She was right.) \"But the world NEEDED\nto see. And now it's SEEDED\nwith proof.\" She took his HAND.\nThe fire remembered. The LAND\nremembered. We should TOO:\nthe fire didn't test HER. It tested EVERYONE who watched.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -9385,8 +9191,7 @@
       "name": "Episode 36: The Fire That Would Not Burn",
       "sort_order": 195,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "return-sita-fire-scene-01",
         "return-sita-fire-scene-02",
         "return-sita-fire-scene-03"
@@ -9425,7 +9230,6 @@
       "name": "Ep37 Scene 1: The Flying Chariot Home",
       "sort_order": 196,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "PUSHPAKA VIMANA — Ravana's flying CHARIOT\nstole from Kubera. Now RAMA's carriage. It\nrose above Lanka's smoking TOWERS.\nSita, Rama, Lakshmana — HOURS\nof flight above the ocean.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -9475,7 +9279,6 @@
       "name": "Ep37 Scene 2: The Flying Chariot Home",
       "sort_order": 197,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "Rama pointed DOWN: \"See the bridge?\nThe monkeys built it, RIDGE by ridge.\nAnd THERE — where Jatayu fell.\nAnd there — Shabari's WELL.\nAnd there — the forest where we LIVED.\"",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -9524,7 +9327,6 @@
       "name": "Ep37 Scene 3: The Flying Chariot Home",
       "sort_order": 198,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "Fourteen years, RELIVED\nin a single flight. The GEOGRAPHY\nof exile mapped from the SKY.\nEvery landmark a MEMORY.\nEvery river a STORY.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -9573,7 +9375,6 @@
       "name": "Ep37 Scene 4: The Flying Chariot Home",
       "sort_order": 199,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "Sita watched the world SCROLL beneath.\n\"It's smaller from up HERE,\" she breathed.\n\"The exile, the war, the OCEAN —\nfrom up here it's just MOTION.\nJust a pattern. A DESIGN.\"",
         "Direction": "[WONDER] Close-up on Alice's face reacting. Soft focus background.",
@@ -9622,7 +9423,6 @@
       "name": "Ep37 Scene 5: The Flying Chariot Home",
       "sort_order": 200,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "\"That's what the gods SEE,\" Rama said.\n\"The pattern. We lived it THREAD by thread.\nThey see the whole TAPESTRY.\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -9671,7 +9471,6 @@
       "name": "Ep37 Scene 6: The Flying Chariot Home",
       "sort_order": 201,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "The Pushpaka flew NORTH.\nAyodhya waited. Bharata's FORTH-\nright vigil — fourteen years of SANDALS\non a throne. The greatest CANDLES\nabout to be lit. The LONGEST\nway home. The STRONGEST\nhomecoming in any STORY.\nThe chariot descended. Toward GLORY.\nToward home. Toward the LIGHTS.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -9720,8 +9519,7 @@
       "name": "Episode 37: The Flying Chariot Home",
       "sort_order": 202,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "return-pushpaka-scene-01",
         "return-pushpaka-scene-02",
         "return-pushpaka-scene-03",
@@ -9763,7 +9561,6 @@
       "name": "Ep38 Scene 1: The Brother Who Never Stopped Waiting",
       "sort_order": 203,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "FOURTEEN years. Five thousand, one hundred\nand ten DAYS. Bharata hadn't blundered\nonce. Every morning he woke in NANDIGRAM,\nwore bark, ate roots, kept CALM\non the floor beside Rama's SANDALS.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -9813,7 +9610,6 @@
       "name": "Ep38 Scene 2: The Brother Who Never Stopped Waiting",
       "sort_order": 204,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "The kingdom ran on CANDLES\nof his attention — he governed WELL\nbut refused the throne. \"I DWELL\nbelow the sandals. They RULE. I serve.\"",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -9862,7 +9658,6 @@
       "name": "Ep38 Scene 3: The Brother Who Never Stopped Waiting",
       "sort_order": 205,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "The fourteenth year's last DAY arrived.\nBharata said: \"If Rama hasn't THRIVED\nand returned by sunset, I'll walk into the FIRE.\"\n(He meant it. This was no LIAR.)",
         "Direction": "[DIALOGUE] Medium shot, character faces visible. Gentle sway.",
@@ -9911,7 +9706,6 @@
       "name": "Ep38 Scene 4: The Brother Who Never Stopped Waiting",
       "sort_order": 206,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "Sunset approached. The sky turned RED.\nBharata stacked the PYRE. \"He said\nfourteen years. The day is DONE —\"",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -9960,7 +9754,6 @@
       "name": "Ep38 Scene 5: The Brother Who Never Stopped Waiting",
       "sort_order": 207,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "Then — a sound. From the SOUTH.\nEvery bird in Ayodhya opened its MOUTH\nat once. A shadow crossed the SUN.\nPushpaka. SOMEONE\nwas coming. Bharata looked UP.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -10009,7 +9802,6 @@
       "name": "Ep38 Scene 6: The Brother Who Never Stopped Waiting",
       "sort_order": 208,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "And the brother who'd never stopped WAITING\nsaw the brother who'd never stopped ACHING\nto come home. They RAN.\nFourteen years collapsed into one SPAN\nof arms. Two brothers. WEEPING.\n\"Your sandals,\" Bharata said, \"were KEEPING\nthe throne warm.\" Rama laughed through TEARS.\n\"Your love kept it warm. Fourteen YEARS.\"\nThe sandals came OFF the throne.\nThe king came HOME. Not alone —\nnever alone. Bharata's VIGIL\nproved what nothing else can WRIGGLE\ninto words: some love doesn't FADE.\nIt just waits. However LONG. Unafraid.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -10058,8 +9850,7 @@
       "name": "Episode 38: The Brother Who Never Stopped Waiting",
       "sort_order": 209,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "return-bharata-waits-scene-01",
         "return-bharata-waits-scene-02",
         "return-bharata-waits-scene-03",
@@ -10101,7 +9892,6 @@
       "name": "Ep39 Scene 1: The Lights of Ayodhya",
       "sort_order": 210,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "It was DARK when Rama came home.\nFourteen years of darkness. GROWN\nover Ayodhya like a VINE\nof sorrow. No one could SHINE\nwhile the prince was gone.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -10151,7 +9941,6 @@
       "name": "Ep39 Scene 2: The Lights of Ayodhya",
       "sort_order": 211,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "But now — NOW —\nevery house lit a LAMP. And how!\nNot one lamp. Not TEN. Not a hundred.\nEVERY lamp in the city THUNDERED\ninto life. Clay DIYAS\nfilled with ghee and FIRE — layers\nupon layers of golden LIGHT.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -10200,7 +9989,6 @@
       "name": "Ep39 Scene 3: The Lights of Ayodhya",
       "sort_order": 212,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "The streets turned into RIVERS of flame.\nThe rooftops burned. The NIGHT became\na second dawn. Ayodhya BLAZED\nnot with war-fire but with PRAISE.",
         "Direction": "[REVEAL] Pull back to reveal the full scene. Hold wide.",
@@ -10249,7 +10037,6 @@
       "name": "Ep39 Scene 4: The Lights of Ayodhya",
       "sort_order": 213,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "Children ran with sparklers. MOTHERS\nlit the doorways. BROTHERS\ncarried trays of sweets. The SKY\nfilled with flowers from on HIGH\nas the gods leaned down to SEE\nwhat human joy could BE\nwhen it has no ceiling.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -10298,7 +10085,6 @@
       "name": "Ep39 Scene 5: The Lights of Ayodhya",
       "sort_order": 214,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "This is DIWALI.\nThe festival of LIGHT.\nEvery year, on the darkest NIGHT,\na billion people light a FLAME\nand say Rama's NAME\nand remember: darkness is NOT forever.\nThe exile ends. The family comes TOGETHER.\nLight wins. It always DOES.\nNot because it's stronger — but BECAUSE\npeople choose it. Lamp by LAMP.\nHouse by house. Against the DAMP\nand dark of every exile, every WAR,\nevery night that felt too LONG — one more\nlamp. One more flame. One more CHOICE\nto believe the light has a VOICE\nand it's saying: WELCOME HOME.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -10347,8 +10133,7 @@
       "name": "Episode 39: The Lights of Ayodhya",
       "sort_order": 215,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "return-diwali-scene-01",
         "return-diwali-scene-02",
         "return-diwali-scene-03",
@@ -10389,7 +10174,6 @@
       "name": "Ep40 Scene 1: The Golden Age",
       "sort_order": 216,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "RAM RAJYA — the rule of Rama.\nThe golden age. No DRAMA.\n(Well, almost. We'll get to THAT.)",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -10439,7 +10223,6 @@
       "name": "Ep40 Scene 2: The Golden Age",
       "sort_order": 217,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "For years, the kingdom SAT\nin perfect balance. No one was HUNGRY.\nThe rains came on time. No ANGRY\nneighbors, no thieves, no DISEASE.\nThe rivers ran with EASE.\nThe trees fruited without SEASON.\nEveryone had a REASON\nto wake up smiling.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -10488,7 +10271,6 @@
       "name": "Ep40 Scene 3: The Golden Age",
       "sort_order": 218,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "Rama ruled like WATER —\nfilling every gap. His DAUGHTER\nand son grew strong. The PEOPLE\nworshipped at every STEEPLE\nand temple, not from FEAR\nbut from joy. \"This is the YEAR,\"\nthey said — every year — \"that proves\na good king MOVES\nthe world toward paradise.\"",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -10537,7 +10319,6 @@
       "name": "Ep40 Scene 4: The Golden Age",
       "sort_order": 219,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "But here's the PRICE:\nRam Rajya demands a king who puts his KINGDOM\nabove himself. His WISDOM\nabove his heart. His DUTY\nabove his love. And BEAUTY\nrequires sacrifice that no one SEES.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -10586,7 +10367,6 @@
       "name": "Ep40 Scene 5: The Golden Age",
       "sort_order": 220,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "Rama smiled in public. On his KNEES\nin private, he wept for what was COMING.\nBecause a perfect king is ALWAYS drumming\nto the people's beat, not his OWN.\nAnd sometimes the people's beat is STONE-\ncold wrong. And the king must LISTEN\nanyway. His eyes would GLISTEN\nand Sita would say: \"What's wrong?\"\nAnd he'd say: \"Nothing. The song\nis just a little SAD tonight.\"",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -10635,8 +10415,7 @@
       "name": "Episode 40: The Golden Age",
       "sort_order": 221,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "return-rama-rules-scene-01",
         "return-rama-rules-scene-02",
         "return-rama-rules-scene-03",
@@ -10677,7 +10456,6 @@
       "name": "Ep41 Scene 1: The Earth Takes Her Daughter Back",
       "sort_order": 222,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "A WASHERMAN in Ayodhya said:\n\"I'm not like RAMA — I wouldn't take back a WIFE\nwho lived in another man's HOUSE.\"\n\nThe gossip reached the PALACE. Rama heard.\nAnd the perfect king — without a WORD\nof protest, without a TRIAL,\nwithout meeting Sita's SMILE —\nordered her exiled. PREGNANT. Alone.\nInto the forest. Off the THRONE.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -10728,7 +10506,6 @@
       "name": "Ep41 Scene 2: The Earth Takes Her Daughter Back",
       "sort_order": 223,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "(This is where the Ramayana BREAKS your heart.)\n\nSita went. Raised her TWIN\nsons — Lava and Kusha — in\nValmiki's hermitage. Taught them to SING\nthe Ramayana itself. EVERYTHING\nRama did, everything he LOST,\nsung back to him by the sons it COST him.",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -10778,7 +10555,6 @@
       "name": "Ep41 Scene 3: The Earth Takes Her Daughter Back",
       "sort_order": 224,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "Years later, Rama called her BACK.\n\"Prove your purity again.\" The CRACK\nin Sita's patience finally SHOWED.\n\n\"No,\" she said. \"I will NOT. I've sowed\nmy proof in fire. I've RAISED\nyour sons. I've been exiled and PRAISED\nand tested and doubted. ENOUGH.\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -10828,7 +10604,6 @@
       "name": "Ep41 Scene 4: The Earth Takes Her Daughter Back",
       "sort_order": 225,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "She called to the EARTH:\n\"Mother — if I have been TRUE,\ntake me HOME. I'm through.\"\n\nThe ground OPENED.\nA golden throne rose from the SOIL.\nPrithvi — Mother Earth — after all the TOIL,\nafter all the sorrow, opened her ARMS\nand took her daughter back. No HARMS\ncould reach her now. No washerman's TONGUE.\nNo king's weakness. Sita YOUNG\nagain, eternal, FREE.\n\nRama screamed. Reached for her. \"WAIT —\"\nToo late. The earth CLOSED.\nSita chose. The goddess CHOSE\nherself over a world that couldn't SEE\nher worth. And that's the hardest KIND\nof leaving: when you're NOT unkind —\nyou're just DONE. And the earth is HOME.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -10878,8 +10653,7 @@
       "name": "Episode 41: The Earth Takes Her Daughter Back",
       "sort_order": 226,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "return-sita-earth-scene-01",
         "return-sita-earth-scene-02",
         "return-sita-earth-scene-03",
@@ -10920,7 +10694,6 @@
       "name": "Ep42 Scene 1: The God Who Remembered He Was God",
       "sort_order": 227,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "RAMA ruled alone. The throne felt COLD.\nHe grew old the way mortals TOLD\nhim they did — slowly, then all at ONCE.\nThe golden age dimmed. MONTHS\nbecame years became a LIFETIME.\n\nOne day, DEATH came to visit.\n\"Your time,\" said Death. \"IS IT?\"\n\"It is,\" Rama said. And SMILED.\nBecause somewhere deep inside the CHILD\nwho'd broken Shiva's bow, the boy\nwho'd walked into exile without JOY\nor complaint, the warrior who'd wept\nfor his enemy — SOMETHING had kept\na secret. A BLUE glow in his chest.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -10971,7 +10744,6 @@
       "name": "Ep42 Scene 2: The God Who Remembered He Was God",
       "sort_order": 228,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "Rama walked to the SARAYU river.\nEvery citizen FOLLOWED. The shiver\nof recognition moved through the CROWD:\n\"He's going HOME,\" they said aloud.\n\nHe stepped into the WATER.\nEvery son and DAUGHTER\nof Ayodhya followed him IN.\nThe river took them. Not to DROWN —\nto transform. The CROWN\nfloated. The robes DISSOLVED.\nAnd what remained — RESOLVED\ninto blue light — was VISHNU.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -11021,7 +10793,6 @@
       "name": "Ep42 Scene 3: The God Who Remembered He Was God",
       "sort_order": 229,
       "category": "the-return",
-      "level": 1,
       "sections": {
         "Narration": "The god who'd chosen to be HUMAN\nremembered he was GOD.\nThe dreamer woke on the SERPENT.\nThe milk-ocean lapped. The STARS\nrealigned. Lakshmi was already THERE\n(she'd arrived as Sita, through the EARTH).\n\nThe avatar: complete. BIRTH\nto death to REBIRTH. The circle\nclosed. The human dream, PURPLE\nwith suffering and golden with LOVE,\nfloated back into the ocean ABOVE.\n\n\"See you NEXT time,\" Vishnu said\nto no one. To EVERYONE. To the thread\nof story that connects us ALL.\nEvery exile. Every FALL.\nEvery homecoming. Every LIGHT.\nEvery Diwali NIGHT.\nRama sleeps. Rama DREAMS.\nNothing is as final as it SEEMS.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -11071,8 +10842,7 @@
       "name": "Episode 42: The God Who Remembered He Was God",
       "sort_order": 230,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "return-rama-eternal-scene-01",
         "return-rama-eternal-scene-02",
         "return-rama-eternal-scene-03"

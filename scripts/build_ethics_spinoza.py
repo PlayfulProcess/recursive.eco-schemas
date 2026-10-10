@@ -16,6 +16,7 @@ import json
 import re
 import os
 from pathlib import Path
+from grammar_depth import node_depth
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent
@@ -224,7 +225,6 @@ def build_grammar():
             "id": part['id'],
             "name": part['name'],
             "sort_order": sort_order,
-            "level": 1,
             "category": "part",
             "sections": {
                 "Text": part['text'],
@@ -248,10 +248,9 @@ def build_grammar():
             "id": theme_id,
             "name": theme["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": theme["parts"],
+            "parts": theme["parts"],
             "sections": {
                 "About": theme["about"],
                 "For Readers": theme["for_readers"],
@@ -268,10 +267,9 @@ def build_grammar():
         "id": "ethics-complete",
         "name": "Ethics: The Complete System",
         "sort_order": sort_order,
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": all_theme_ids,
+        "parts": all_theme_ids,
         "sections": {
             "About": "Baruch Spinoza's Ethics (Ethica Ordine Geometrico Demonstrata, published posthumously in 1677) is one of the most ambitious works in the history of philosophy. Written in geometric form — definitions, axioms, propositions, proofs — it attempts to derive the entire nature of reality, mind, emotion, and human freedom from a single starting point: the concept of substance. Spinoza's God is not a personal creator but Nature itself (Deus sive Natura), and his ethics are not commandments but a natural science of human flourishing. The work moves from metaphysics (Part I) through philosophy of mind (Part II), psychology of emotions (Part III), analysis of human bondage (Part IV), to the liberation of the understanding (Part V). Its influence runs through Hegel, Marx, Freud, Einstein, Deleuze, and contemporary neuroscience.",
             "For Readers": "The Ethics rewards patient, sequential reading — each part builds on what precedes it. But if you want to taste the work before committing, try the Appendix to Part I (Spinoza's devastating critique of teleology and superstition), the Scholia in Part III (his psychology of emotions), or the Appendix to Part IV (his practical ethics). Spinoza is often called the 'God-intoxicated philosopher' and the 'prince of philosophers.' Both titles are earned in this single, extraordinary book.",
@@ -306,16 +304,16 @@ def build_grammar():
         "shelves": ["mirror"],
         "lineages": ["Akomolafe", "Shrei"],
         "worldview": "rationalist",
-        "items": items,
+        "nodes": items,
     }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT_PATH}")
     print(f"  L1: {l1} parts, L2: {l2} themes, L3: {l3} meta")
     print(f"  Total items: {len(items)}")

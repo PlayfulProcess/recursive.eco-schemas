@@ -27,6 +27,21 @@ SOURCE_GRAMMAR = os.path.join(
 )
 OUTPUT_GRAMMAR = os.path.join(SCRIPT_DIR, "grammar.json")
 
+
+def node_depth(node, nodes, _seen=None):
+    """Depth from parts (format v2 stores no level): no parts -> 1, else 1 + the deepest part."""
+    parts = node.get("parts")
+    if not parts:
+        return 1
+    by_id = nodes if isinstance(nodes, dict) else {n["id"]: n for n in nodes}
+    seen = _seen if _seen is not None else set()
+    if node["id"] in seen:
+        return 1
+    seen.add(node["id"])
+    d = max([1] + [1 + node_depth(by_id[p], by_id, seen) for p in parts if p in by_id])
+    seen.discard(node["id"])
+    return d
+
 # ─── Trigram name → ID mapping ───
 
 TRIGRAM_MAP = {
@@ -47,7 +62,6 @@ LINE_ITEMS = [
         "id": "yang-line",
         "name": "Yang Line (陽爻)",
         "symbol": "⚊",
-        "level": 1,
         "category": "line",
         "sort_order": 0,
         "keywords": ["yang", "solid", "firm", "light", "creative", "heaven", "male"],
@@ -87,7 +101,6 @@ LINE_ITEMS = [
         "id": "yin-line",
         "name": "Yin Line (陰爻)",
         "symbol": "⚋",
-        "level": 1,
         "category": "line",
         "sort_order": 1,
         "keywords": ["yin", "broken", "yielding", "dark", "receptive", "earth", "female"],
@@ -129,11 +142,10 @@ TRIGRAM_ITEMS = [
         "id": "trigram-heaven",
         "name": "Heaven (乾 Qián)",
         "symbol": "☰",
-        "level": 2,
         "category": "trigram",
         "sort_order": 2,
         "relationship_type": "emergence",
-        "composite_of": ["yang-line"],
+        "parts": ["yang-line"],
         "keywords": ["creative", "strong", "heaven", "father", "initiating", "dragon", "power"],
         "metadata": {
             "chinese_name": "乾",
@@ -173,11 +185,10 @@ TRIGRAM_ITEMS = [
         "id": "trigram-earth",
         "name": "Earth (坤 Kūn)",
         "symbol": "☷",
-        "level": 2,
         "category": "trigram",
         "sort_order": 3,
         "relationship_type": "emergence",
-        "composite_of": ["yin-line"],
+        "parts": ["yin-line"],
         "keywords": ["receptive", "yielding", "earth", "mother", "nourishing", "mare", "devotion"],
         "metadata": {
             "chinese_name": "坤",
@@ -217,11 +228,10 @@ TRIGRAM_ITEMS = [
         "id": "trigram-thunder",
         "name": "Thunder (震 Zhèn)",
         "symbol": "☳",
-        "level": 2,
         "category": "trigram",
         "sort_order": 4,
         "relationship_type": "emergence",
-        "composite_of": ["yang-line", "yin-line"],
+        "parts": ["yang-line", "yin-line"],
         "keywords": ["arousing", "shock", "thunder", "eldest-son", "movement", "spring", "awakening"],
         "metadata": {
             "chinese_name": "震",
@@ -264,11 +274,10 @@ TRIGRAM_ITEMS = [
         "id": "trigram-water",
         "name": "Water (坎 Kǎn)",
         "symbol": "☵",
-        "level": 2,
         "category": "trigram",
         "sort_order": 5,
         "relationship_type": "emergence",
-        "composite_of": ["yang-line", "yin-line"],
+        "parts": ["yang-line", "yin-line"],
         "keywords": ["abysmal", "danger", "water", "middle-son", "depth", "flow", "pit"],
         "metadata": {
             "chinese_name": "坎",
@@ -313,11 +322,10 @@ TRIGRAM_ITEMS = [
         "id": "trigram-mountain",
         "name": "Mountain (艮 Gèn)",
         "symbol": "☶",
-        "level": 2,
         "category": "trigram",
         "sort_order": 6,
         "relationship_type": "emergence",
-        "composite_of": ["yang-line", "yin-line"],
+        "parts": ["yang-line", "yin-line"],
         "keywords": ["keeping-still", "mountain", "youngest-son", "stopping", "meditation", "boundary", "gate"],
         "metadata": {
             "chinese_name": "艮",
@@ -359,11 +367,10 @@ TRIGRAM_ITEMS = [
         "id": "trigram-wind",
         "name": "Wind (巽 Xùn)",
         "symbol": "☴",
-        "level": 2,
         "category": "trigram",
         "sort_order": 7,
         "relationship_type": "emergence",
-        "composite_of": ["yang-line", "yin-line"],
+        "parts": ["yang-line", "yin-line"],
         "keywords": ["gentle", "penetrating", "wind", "eldest-daughter", "wood", "gradual", "influence"],
         "metadata": {
             "chinese_name": "巽",
@@ -408,11 +415,10 @@ TRIGRAM_ITEMS = [
         "id": "trigram-fire",
         "name": "Fire (離 Lí)",
         "symbol": "☲",
-        "level": 2,
         "category": "trigram",
         "sort_order": 8,
         "relationship_type": "emergence",
-        "composite_of": ["yang-line", "yin-line"],
+        "parts": ["yang-line", "yin-line"],
         "keywords": ["clinging", "brightness", "fire", "middle-daughter", "clarity", "illumination", "sun"],
         "metadata": {
             "chinese_name": "離",
@@ -456,11 +462,10 @@ TRIGRAM_ITEMS = [
         "id": "trigram-lake",
         "name": "Lake (兌 Duì)",
         "symbol": "☱",
-        "level": 2,
         "category": "trigram",
         "sort_order": 9,
         "relationship_type": "emergence",
-        "composite_of": ["yang-line", "yin-line"],
+        "parts": ["yang-line", "yin-line"],
         "keywords": ["joyous", "lake", "youngest-daughter", "pleasure", "openness", "mouth", "gathering"],
         "metadata": {
             "chinese_name": "兌",
@@ -511,13 +516,12 @@ def transform_hexagrams(source_items):
     for i, item in enumerate(source_items):
         hex_item = deepcopy(item)
 
-        # Set to level 3
-        hex_item["level"] = 3
+        # A hexagram: its parts are its two trigrams (depth 3)
         hex_item["category"] = "hexagram"
         hex_item["relationship_type"] = "emergence"
         hex_item["sort_order"] = 10 + i
 
-        # Map trigram names to IDs for composite_of
+        # Map trigram names to IDs for parts
         trigram_above = item["metadata"].get("trigram_above", "")
         trigram_below = item["metadata"].get("trigram_below", "")
 
@@ -526,11 +530,11 @@ def transform_hexagrams(source_items):
 
         if above_id and below_id:
             # Lower trigram listed first (it's the foundation), upper second
-            hex_item["composite_of"] = [below_id, above_id]
+            hex_item["parts"] = [below_id, above_id]
         else:
             print(f"WARNING: Missing trigram mapping for {item['id']}: "
                   f"above={trigram_above}, below={trigram_below}")
-            hex_item["composite_of"] = []
+            hex_item["parts"] = []
 
         # Clean up fields that don't fit the new structure
         hex_item.pop("origin", None)
@@ -547,7 +551,7 @@ def build_grammar():
     source = load_source_grammar()
 
     # Transform hexagrams
-    hexagrams = transform_hexagrams(source["items"])
+    hexagrams = transform_hexagrams(source["nodes"])
 
     # Combine all items: lines + trigrams + hexagrams
     all_items = LINE_ITEMS + TRIGRAM_ITEMS + hexagrams
@@ -599,7 +603,7 @@ def build_grammar():
             "classical",
             "public-domain",
         ],
-        "items": all_items,
+        "nodes": all_items,
     }
 
     return grammar
@@ -607,26 +611,26 @@ def build_grammar():
 
 def validate_grammar(grammar):
     """Validate the grammar structure."""
-    items = grammar["items"]
+    items = grammar["nodes"]
 
     # Check total count
     assert len(items) == 74, f"Expected 74 items, got {len(items)}"
 
-    # Check level distribution
+    # Check depth distribution (computed from parts)
     levels = {}
     for item in items:
-        l = item["level"]
+        l = node_depth(item, items)
         levels[l] = levels.get(l, 0) + 1
-    assert levels == {1: 2, 2: 8, 3: 64}, f"Unexpected level distribution: {levels}"
+    assert levels == {1: 2, 2: 8, 3: 64}, f"Unexpected depth distribution: {levels}"
 
     # Check no duplicate IDs
     ids = [item["id"] for item in items]
     assert len(ids) == len(set(ids)), f"Duplicate IDs found: {[x for x in ids if ids.count(x) > 1]}"
 
-    # Check all composite_of references resolve
+    # Check all parts references resolve
     id_set = set(ids)
     for item in items:
-        for ref in item.get("composite_of", []):
+        for ref in item.get("parts", []):
             assert ref in id_set, f"Broken reference in {item['id']}: {ref} not found"
 
     # Check sort_order is sequential
@@ -634,16 +638,16 @@ def validate_grammar(grammar):
     assert sort_orders == list(range(74)), f"sort_order not sequential: {sort_orders[:15]}..."
 
     # Check all items have required fields
-    required = {"id", "name", "sections", "level", "category"}
+    required = {"id", "name", "sections", "category"}
     for item in items:
         missing = required - set(item.keys())
         assert not missing, f"Item {item['id']} missing fields: {missing}"
 
     print("✓ All validations passed!")
     print(f"  - {len(items)} total items")
-    print(f"  - Level distribution: L1={levels[1]}, L2={levels[2]}, L3={levels[3]}")
+    print(f"  - Depth distribution: L1={levels[1]}, L2={levels[2]}, L3={levels[3]}")
     print(f"  - No duplicate IDs")
-    print(f"  - All composite_of references valid")
+    print(f"  - All parts references valid")
     print(f"  - Sort order sequential (0-73)")
 
 

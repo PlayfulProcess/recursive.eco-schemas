@@ -34,12 +34,11 @@
     "classical",
     "public-domain"
   ],
-  "items": [
+  "nodes": [
     {
       "id": "yang-line",
       "name": "Yang Line (陽爻)",
       "symbol": "⚊",
-      "level": 1,
       "category": "line",
       "sort_order": 0,
       "keywords": [
@@ -67,7 +66,6 @@
       "id": "yin-line",
       "name": "Yin Line (陰爻)",
       "symbol": "⚋",
-      "level": 1,
       "category": "line",
       "sort_order": 1,
       "keywords": [
@@ -95,11 +93,10 @@
       "id": "trigram-heaven",
       "name": "Heaven (乾 Qián)",
       "symbol": "☰",
-      "level": 2,
       "category": "trigram",
       "sort_order": 2,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "yang-line"
       ],
       "keywords": [
@@ -132,11 +129,10 @@
       "id": "trigram-earth",
       "name": "Earth (坤 Kūn)",
       "symbol": "☷",
-      "level": 2,
       "category": "trigram",
       "sort_order": 3,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "yin-line"
       ],
       "keywords": [
@@ -169,11 +165,10 @@
       "id": "trigram-thunder",
       "name": "Thunder (震 Zhèn)",
       "symbol": "☳",
-      "level": 2,
       "category": "trigram",
       "sort_order": 4,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "yang-line",
         "yin-line"
       ],
@@ -207,11 +202,10 @@
       "id": "trigram-water",
       "name": "Water (坎 Kǎn)",
       "symbol": "☵",
-      "level": 2,
       "category": "trigram",
       "sort_order": 5,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "yang-line",
         "yin-line"
       ],
@@ -245,11 +239,10 @@
       "id": "trigram-mountain",
       "name": "Mountain (艮 Gèn)",
       "symbol": "☶",
-      "level": 2,
       "category": "trigram",
       "sort_order": 6,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "yang-line",
         "yin-line"
       ],
@@ -283,11 +276,10 @@
       "id": "trigram-wind",
       "name": "Wind (巽 Xùn)",
       "symbol": "☴",
-      "level": 2,
       "category": "trigram",
       "sort_order": 7,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "yang-line",
         "yin-line"
       ],
@@ -321,11 +313,10 @@
       "id": "trigram-fire",
       "name": "Fire (離 Lí)",
       "symbol": "☲",
-      "level": 2,
       "category": "trigram",
       "sort_order": 8,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "yang-line",
         "yin-line"
       ],
@@ -359,11 +350,10 @@
       "id": "trigram-lake",
       "name": "Lake (兌 Duì)",
       "symbol": "☱",
-      "level": 2,
       "category": "trigram",
       "sort_order": 9,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "yang-line",
         "yin-line"
       ],
@@ -396,7 +386,6 @@
     {
       "id": "hexagram-1",
       "name": "The Creative",
-      "level": 3,
       "symbol": "䷀",
       "category": "hexagram",
       "keywords": [],
@@ -421,7 +410,7 @@
       "questions": [],
       "sort_order": 10,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-heaven",
         "trigram-heaven"
       ]
@@ -429,7 +418,6 @@
     {
       "id": "hexagram-2",
       "name": "The Receptive",
-      "level": 3,
       "symbol": "䷁",
       "category": "hexagram",
       "keywords": [],
@@ -454,7 +442,7 @@
       "questions": [],
       "sort_order": 11,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-earth",
         "trigram-earth"
       ]
@@ -462,7 +450,6 @@
     {
       "id": "hexagram-3",
       "name": "Difficulty at the Beginning",
-      "level": 3,
       "symbol": "䷂",
       "category": "hexagram",
       "keywords": [],
@@ -487,7 +474,7 @@
       "questions": [],
       "sort_order": 12,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-water",
         "trigram-thunder"
       ]
@@ -495,7 +482,6 @@
     {
       "id": "hexagram-4",
       "name": "Youthful Folly",
-      "level": 3,
       "symbol": "䷃",
       "category": "hexagram",
       "keywords": [],
@@ -520,7 +506,7 @@
       "questions": [],
       "sort_order": 13,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-mountain",
         "trigram-water"
       ]
@@ -528,7 +514,6 @@
     {
       "id": "hexagram-5",
       "name": "Waiting",
-      "level": 3,
       "symbol": "䷄",
       "category": "hexagram",
       "keywords": [],
@@ -553,7 +538,7 @@
       "questions": [],
       "sort_order": 14,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-water",
         "trigram-heaven"
       ]
@@ -561,7 +546,6 @@
     {
       "id": "hexagram-6",
       "name": "Conflict",
-      "level": 3,
       "symbol": "䷅",
       "category": "hexagram",
       "keywords": [],
@@ -586,7 +570,7 @@
       "questions": [],
       "sort_order": 15,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-heaven",
         "trigram-water"
       ]
@@ -594,7 +578,6 @@
     {
       "id": "hexagram-7",
       "name": "The Army",
-      "level": 3,
       "symbol": "䷆",
       "category": "hexagram",
       "keywords": [],
@@ -619,7 +602,7 @@
       "questions": [],
       "sort_order": 16,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-earth",
         "trigram-water"
       ]
@@ -627,7 +610,6 @@
     {
       "id": "hexagram-8",
       "name": "Holding Together",
-      "level": 3,
       "symbol": "䷇",
       "category": "hexagram",
       "keywords": [],
@@ -652,7 +634,7 @@
       "questions": [],
       "sort_order": 17,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-water",
         "trigram-earth"
       ]
@@ -660,7 +642,6 @@
     {
       "id": "hexagram-9",
       "name": "Small Taming",
-      "level": 3,
       "symbol": "䷈",
       "category": "hexagram",
       "keywords": [],
@@ -685,7 +666,7 @@
       "questions": [],
       "sort_order": 18,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-wind",
         "trigram-heaven"
       ]
@@ -693,7 +674,6 @@
     {
       "id": "hexagram-10",
       "name": "Treading",
-      "level": 3,
       "symbol": "䷉",
       "category": "hexagram",
       "keywords": [],
@@ -718,7 +698,7 @@
       "questions": [],
       "sort_order": 19,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-heaven",
         "trigram-lake"
       ]
@@ -726,7 +706,6 @@
     {
       "id": "hexagram-11",
       "name": "Peace",
-      "level": 3,
       "symbol": "䷊",
       "category": "hexagram",
       "keywords": [],
@@ -751,7 +730,7 @@
       "questions": [],
       "sort_order": 20,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-earth",
         "trigram-heaven"
       ]
@@ -759,7 +738,6 @@
     {
       "id": "hexagram-12",
       "name": "Standstill",
-      "level": 3,
       "symbol": "䷋",
       "category": "hexagram",
       "keywords": [],
@@ -784,7 +762,7 @@
       "questions": [],
       "sort_order": 21,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-heaven",
         "trigram-earth"
       ]
@@ -792,7 +770,6 @@
     {
       "id": "hexagram-13",
       "name": "Fellowship",
-      "level": 3,
       "symbol": "䷌",
       "category": "hexagram",
       "keywords": [],
@@ -817,7 +794,7 @@
       "questions": [],
       "sort_order": 22,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-heaven",
         "trigram-fire"
       ]
@@ -825,7 +802,6 @@
     {
       "id": "hexagram-14",
       "name": "Great Possession",
-      "level": 3,
       "symbol": "䷍",
       "category": "hexagram",
       "keywords": [],
@@ -850,7 +826,7 @@
       "questions": [],
       "sort_order": 23,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-fire",
         "trigram-heaven"
       ]
@@ -858,7 +834,6 @@
     {
       "id": "hexagram-15",
       "name": "Modesty",
-      "level": 3,
       "symbol": "䷎",
       "category": "hexagram",
       "keywords": [],
@@ -883,7 +858,7 @@
       "questions": [],
       "sort_order": 24,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-earth",
         "trigram-mountain"
       ]
@@ -891,7 +866,6 @@
     {
       "id": "hexagram-16",
       "name": "Enthusiasm",
-      "level": 3,
       "symbol": "䷏",
       "category": "hexagram",
       "keywords": [],
@@ -916,7 +890,7 @@
       "questions": [],
       "sort_order": 25,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-thunder",
         "trigram-earth"
       ]
@@ -924,7 +898,6 @@
     {
       "id": "hexagram-17",
       "name": "Following",
-      "level": 3,
       "symbol": "䷐",
       "category": "hexagram",
       "keywords": [],
@@ -949,7 +922,7 @@
       "questions": [],
       "sort_order": 26,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-lake",
         "trigram-thunder"
       ]
@@ -957,7 +930,6 @@
     {
       "id": "hexagram-18",
       "name": "Work on the Decayed",
-      "level": 3,
       "symbol": "䷑",
       "category": "hexagram",
       "keywords": [],
@@ -982,7 +954,7 @@
       "questions": [],
       "sort_order": 27,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-mountain",
         "trigram-wind"
       ]
@@ -990,7 +962,6 @@
     {
       "id": "hexagram-19",
       "name": "Approach",
-      "level": 3,
       "symbol": "䷒",
       "category": "hexagram",
       "keywords": [],
@@ -1015,7 +986,7 @@
       "questions": [],
       "sort_order": 28,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-earth",
         "trigram-lake"
       ]
@@ -1023,7 +994,6 @@
     {
       "id": "hexagram-20",
       "name": "Contemplation",
-      "level": 3,
       "symbol": "䷓",
       "category": "hexagram",
       "keywords": [],
@@ -1048,7 +1018,7 @@
       "questions": [],
       "sort_order": 29,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-wind",
         "trigram-earth"
       ]
@@ -1056,7 +1026,6 @@
     {
       "id": "hexagram-21",
       "name": "Biting Through",
-      "level": 3,
       "symbol": "䷔",
       "category": "hexagram",
       "keywords": [],
@@ -1081,7 +1050,7 @@
       "questions": [],
       "sort_order": 30,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-fire",
         "trigram-thunder"
       ]
@@ -1089,7 +1058,6 @@
     {
       "id": "hexagram-22",
       "name": "Grace",
-      "level": 3,
       "symbol": "䷕",
       "category": "hexagram",
       "keywords": [],
@@ -1114,7 +1082,7 @@
       "questions": [],
       "sort_order": 31,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-mountain",
         "trigram-fire"
       ]
@@ -1122,7 +1090,6 @@
     {
       "id": "hexagram-23",
       "name": "Splitting Apart",
-      "level": 3,
       "symbol": "䷖",
       "category": "hexagram",
       "keywords": [],
@@ -1147,7 +1114,7 @@
       "questions": [],
       "sort_order": 32,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-mountain",
         "trigram-earth"
       ]
@@ -1155,7 +1122,6 @@
     {
       "id": "hexagram-24",
       "name": "Return",
-      "level": 3,
       "symbol": "䷗",
       "category": "hexagram",
       "keywords": [],
@@ -1180,7 +1146,7 @@
       "questions": [],
       "sort_order": 33,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-earth",
         "trigram-thunder"
       ]
@@ -1188,7 +1154,6 @@
     {
       "id": "hexagram-25",
       "name": "Innocence",
-      "level": 3,
       "symbol": "䷘",
       "category": "hexagram",
       "keywords": [],
@@ -1213,7 +1178,7 @@
       "questions": [],
       "sort_order": 34,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-heaven",
         "trigram-thunder"
       ]
@@ -1221,7 +1186,6 @@
     {
       "id": "hexagram-26",
       "name": "Great Taming",
-      "level": 3,
       "symbol": "䷙",
       "category": "hexagram",
       "keywords": [],
@@ -1246,7 +1210,7 @@
       "questions": [],
       "sort_order": 35,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-mountain",
         "trigram-heaven"
       ]
@@ -1254,7 +1218,6 @@
     {
       "id": "hexagram-27",
       "name": "Nourishment",
-      "level": 3,
       "symbol": "䷚",
       "category": "hexagram",
       "keywords": [],
@@ -1279,7 +1242,7 @@
       "questions": [],
       "sort_order": 36,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-mountain",
         "trigram-thunder"
       ]
@@ -1287,7 +1250,6 @@
     {
       "id": "hexagram-28",
       "name": "Great Excess",
-      "level": 3,
       "symbol": "䷛",
       "category": "hexagram",
       "keywords": [],
@@ -1312,7 +1274,7 @@
       "questions": [],
       "sort_order": 37,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-lake",
         "trigram-wind"
       ]
@@ -1320,7 +1282,6 @@
     {
       "id": "hexagram-29",
       "name": "The Abysmal",
-      "level": 3,
       "symbol": "䷜",
       "category": "hexagram",
       "keywords": [],
@@ -1345,7 +1306,7 @@
       "questions": [],
       "sort_order": 38,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-water",
         "trigram-water"
       ]
@@ -1353,7 +1314,6 @@
     {
       "id": "hexagram-30",
       "name": "The Clinging",
-      "level": 3,
       "symbol": "䷝",
       "category": "hexagram",
       "keywords": [],
@@ -1378,7 +1338,7 @@
       "questions": [],
       "sort_order": 39,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-fire",
         "trigram-fire"
       ]
@@ -1386,7 +1346,6 @@
     {
       "id": "hexagram-31",
       "name": "Influence",
-      "level": 3,
       "symbol": "䷞",
       "category": "hexagram",
       "keywords": [],
@@ -1411,7 +1370,7 @@
       "questions": [],
       "sort_order": 40,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-lake",
         "trigram-mountain"
       ]
@@ -1419,7 +1378,6 @@
     {
       "id": "hexagram-32",
       "name": "Duration",
-      "level": 3,
       "symbol": "䷟",
       "category": "hexagram",
       "keywords": [],
@@ -1444,7 +1402,7 @@
       "questions": [],
       "sort_order": 41,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-thunder",
         "trigram-wind"
       ]
@@ -1452,7 +1410,6 @@
     {
       "id": "hexagram-33",
       "name": "Retreat",
-      "level": 3,
       "symbol": "䷠",
       "category": "hexagram",
       "keywords": [],
@@ -1477,7 +1434,7 @@
       "questions": [],
       "sort_order": 42,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-heaven",
         "trigram-mountain"
       ]
@@ -1485,7 +1442,6 @@
     {
       "id": "hexagram-34",
       "name": "Great Power",
-      "level": 3,
       "symbol": "䷡",
       "category": "hexagram",
       "keywords": [],
@@ -1510,7 +1466,7 @@
       "questions": [],
       "sort_order": 43,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-thunder",
         "trigram-heaven"
       ]
@@ -1518,7 +1474,6 @@
     {
       "id": "hexagram-35",
       "name": "Progress",
-      "level": 3,
       "symbol": "䷢",
       "category": "hexagram",
       "keywords": [],
@@ -1543,7 +1498,7 @@
       "questions": [],
       "sort_order": 44,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-fire",
         "trigram-earth"
       ]
@@ -1551,7 +1506,6 @@
     {
       "id": "hexagram-36",
       "name": "Darkening of the Light",
-      "level": 3,
       "symbol": "䷣",
       "category": "hexagram",
       "keywords": [],
@@ -1576,7 +1530,7 @@
       "questions": [],
       "sort_order": 45,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-earth",
         "trigram-fire"
       ]
@@ -1584,7 +1538,6 @@
     {
       "id": "hexagram-37",
       "name": "The Family",
-      "level": 3,
       "symbol": "䷤",
       "category": "hexagram",
       "keywords": [],
@@ -1609,7 +1562,7 @@
       "questions": [],
       "sort_order": 46,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-wind",
         "trigram-fire"
       ]
@@ -1617,7 +1570,6 @@
     {
       "id": "hexagram-38",
       "name": "Opposition",
-      "level": 3,
       "symbol": "䷥",
       "category": "hexagram",
       "keywords": [],
@@ -1642,7 +1594,7 @@
       "questions": [],
       "sort_order": 47,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-fire",
         "trigram-lake"
       ]
@@ -1650,7 +1602,6 @@
     {
       "id": "hexagram-39",
       "name": "Obstruction",
-      "level": 3,
       "symbol": "䷦",
       "category": "hexagram",
       "keywords": [],
@@ -1675,7 +1626,7 @@
       "questions": [],
       "sort_order": 48,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-water",
         "trigram-mountain"
       ]
@@ -1683,7 +1634,6 @@
     {
       "id": "hexagram-40",
       "name": "Deliverance",
-      "level": 3,
       "symbol": "䷧",
       "category": "hexagram",
       "keywords": [],
@@ -1708,7 +1658,7 @@
       "questions": [],
       "sort_order": 49,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-thunder",
         "trigram-water"
       ]
@@ -1716,7 +1666,6 @@
     {
       "id": "hexagram-41",
       "name": "Decrease",
-      "level": 3,
       "symbol": "䷨",
       "category": "hexagram",
       "keywords": [],
@@ -1741,7 +1690,7 @@
       "questions": [],
       "sort_order": 50,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-mountain",
         "trigram-lake"
       ]
@@ -1749,7 +1698,6 @@
     {
       "id": "hexagram-42",
       "name": "Increase",
-      "level": 3,
       "symbol": "䷩",
       "category": "hexagram",
       "keywords": [],
@@ -1774,7 +1722,7 @@
       "questions": [],
       "sort_order": 51,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-wind",
         "trigram-thunder"
       ]
@@ -1782,7 +1730,6 @@
     {
       "id": "hexagram-43",
       "name": "Breakthrough",
-      "level": 3,
       "symbol": "䷪",
       "category": "hexagram",
       "keywords": [],
@@ -1807,7 +1754,7 @@
       "questions": [],
       "sort_order": 52,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-lake",
         "trigram-heaven"
       ]
@@ -1815,7 +1762,6 @@
     {
       "id": "hexagram-44",
       "name": "Coming to Meet",
-      "level": 3,
       "symbol": "䷫",
       "category": "hexagram",
       "keywords": [],
@@ -1840,7 +1786,7 @@
       "questions": [],
       "sort_order": 53,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-heaven",
         "trigram-wind"
       ]
@@ -1848,7 +1794,6 @@
     {
       "id": "hexagram-45",
       "name": "Gathering Together",
-      "level": 3,
       "symbol": "䷬",
       "category": "hexagram",
       "keywords": [],
@@ -1873,7 +1818,7 @@
       "questions": [],
       "sort_order": 54,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-lake",
         "trigram-earth"
       ]
@@ -1881,7 +1826,6 @@
     {
       "id": "hexagram-46",
       "name": "Pushing Upward",
-      "level": 3,
       "symbol": "䷭",
       "category": "hexagram",
       "keywords": [],
@@ -1906,7 +1850,7 @@
       "questions": [],
       "sort_order": 55,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-earth",
         "trigram-wind"
       ]
@@ -1914,7 +1858,6 @@
     {
       "id": "hexagram-47",
       "name": "Oppression",
-      "level": 3,
       "symbol": "䷮",
       "category": "hexagram",
       "keywords": [],
@@ -1939,7 +1882,7 @@
       "questions": [],
       "sort_order": 56,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-lake",
         "trigram-water"
       ]
@@ -1947,7 +1890,6 @@
     {
       "id": "hexagram-48",
       "name": "The Well",
-      "level": 3,
       "symbol": "䷯",
       "category": "hexagram",
       "keywords": [],
@@ -1972,7 +1914,7 @@
       "questions": [],
       "sort_order": 57,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-water",
         "trigram-wind"
       ]
@@ -1980,7 +1922,6 @@
     {
       "id": "hexagram-49",
       "name": "Revolution",
-      "level": 3,
       "symbol": "䷰",
       "category": "hexagram",
       "keywords": [],
@@ -2005,7 +1946,7 @@
       "questions": [],
       "sort_order": 58,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-lake",
         "trigram-fire"
       ]
@@ -2013,7 +1954,6 @@
     {
       "id": "hexagram-50",
       "name": "The Cauldron",
-      "level": 3,
       "symbol": "䷱",
       "category": "hexagram",
       "keywords": [],
@@ -2038,7 +1978,7 @@
       "questions": [],
       "sort_order": 59,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-fire",
         "trigram-wind"
       ]
@@ -2046,7 +1986,6 @@
     {
       "id": "hexagram-51",
       "name": "The Arousing",
-      "level": 3,
       "symbol": "䷲",
       "category": "hexagram",
       "keywords": [],
@@ -2071,7 +2010,7 @@
       "questions": [],
       "sort_order": 60,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-thunder",
         "trigram-thunder"
       ]
@@ -2079,7 +2018,6 @@
     {
       "id": "hexagram-52",
       "name": "Keeping Still",
-      "level": 3,
       "symbol": "䷳",
       "category": "hexagram",
       "keywords": [],
@@ -2104,7 +2042,7 @@
       "questions": [],
       "sort_order": 61,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-mountain",
         "trigram-mountain"
       ]
@@ -2112,7 +2050,6 @@
     {
       "id": "hexagram-53",
       "name": "Development",
-      "level": 3,
       "symbol": "䷴",
       "category": "hexagram",
       "keywords": [],
@@ -2137,7 +2074,7 @@
       "questions": [],
       "sort_order": 62,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-wind",
         "trigram-mountain"
       ]
@@ -2145,7 +2082,6 @@
     {
       "id": "hexagram-54",
       "name": "The Marrying Maiden",
-      "level": 3,
       "symbol": "䷵",
       "category": "hexagram",
       "keywords": [],
@@ -2170,7 +2106,7 @@
       "questions": [],
       "sort_order": 63,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-thunder",
         "trigram-lake"
       ]
@@ -2178,7 +2114,6 @@
     {
       "id": "hexagram-55",
       "name": "Abundance",
-      "level": 3,
       "symbol": "䷶",
       "category": "hexagram",
       "keywords": [],
@@ -2203,7 +2138,7 @@
       "questions": [],
       "sort_order": 64,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-thunder",
         "trigram-fire"
       ]
@@ -2211,7 +2146,6 @@
     {
       "id": "hexagram-56",
       "name": "The Wanderer",
-      "level": 3,
       "symbol": "䷷",
       "category": "hexagram",
       "keywords": [],
@@ -2236,7 +2170,7 @@
       "questions": [],
       "sort_order": 65,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-fire",
         "trigram-mountain"
       ]
@@ -2244,7 +2178,6 @@
     {
       "id": "hexagram-57",
       "name": "The Gentle",
-      "level": 3,
       "symbol": "䷸",
       "category": "hexagram",
       "keywords": [],
@@ -2269,7 +2202,7 @@
       "questions": [],
       "sort_order": 66,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-wind",
         "trigram-wind"
       ]
@@ -2277,7 +2210,6 @@
     {
       "id": "hexagram-58",
       "name": "The Joyous",
-      "level": 3,
       "symbol": "䷹",
       "category": "hexagram",
       "keywords": [],
@@ -2302,7 +2234,7 @@
       "questions": [],
       "sort_order": 67,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-lake",
         "trigram-lake"
       ]
@@ -2310,7 +2242,6 @@
     {
       "id": "hexagram-59",
       "name": "Dispersion",
-      "level": 3,
       "symbol": "䷺",
       "category": "hexagram",
       "keywords": [],
@@ -2335,7 +2266,7 @@
       "questions": [],
       "sort_order": 68,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-wind",
         "trigram-water"
       ]
@@ -2343,7 +2274,6 @@
     {
       "id": "hexagram-60",
       "name": "Limitation",
-      "level": 3,
       "symbol": "䷻",
       "category": "hexagram",
       "keywords": [],
@@ -2368,7 +2298,7 @@
       "questions": [],
       "sort_order": 69,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-water",
         "trigram-lake"
       ]
@@ -2376,7 +2306,6 @@
     {
       "id": "hexagram-61",
       "name": "Inner Truth",
-      "level": 3,
       "symbol": "䷼",
       "category": "hexagram",
       "keywords": [],
@@ -2401,7 +2330,7 @@
       "questions": [],
       "sort_order": 70,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-wind",
         "trigram-lake"
       ]
@@ -2409,7 +2338,6 @@
     {
       "id": "hexagram-62",
       "name": "Small Exceeding",
-      "level": 3,
       "symbol": "䷽",
       "category": "hexagram",
       "keywords": [],
@@ -2434,7 +2362,7 @@
       "questions": [],
       "sort_order": 71,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-thunder",
         "trigram-mountain"
       ]
@@ -2442,7 +2370,6 @@
     {
       "id": "hexagram-63",
       "name": "After Completion",
-      "level": 3,
       "symbol": "䷾",
       "category": "hexagram",
       "keywords": [],
@@ -2467,7 +2394,7 @@
       "questions": [],
       "sort_order": 72,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-water",
         "trigram-fire"
       ]
@@ -2475,7 +2402,6 @@
     {
       "id": "hexagram-64",
       "name": "Before Completion",
-      "level": 3,
       "symbol": "䷿",
       "category": "hexagram",
       "keywords": [],
@@ -2500,7 +2426,7 @@
       "questions": [],
       "sort_order": 73,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "trigram-fire",
         "trigram-water"
       ]

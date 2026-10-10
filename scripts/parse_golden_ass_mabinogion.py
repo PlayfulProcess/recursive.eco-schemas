@@ -4,6 +4,7 @@ Parse Golden Ass (Apuleius, Gutenberg #1666) and Mabinogion (Gutenberg).
 Two grammars in one script.
 """
 import json, re, os
+from grammar_depth import node_depth
 
 def truncate(text, limit=3000):
     if len(text) > limit:
@@ -103,7 +104,6 @@ for idx, (start_ln, heading, sid, name) in enumerate(book_positions):
         "name": name,
         "sort_order": sort_order,
         "category": "books",
-        "level": 1,
         "sections": {"Text": excerpt},
         "keywords": ["apuleius", "golden-ass", "metamorphoses", "roman"],
         "metadata": metadata
@@ -116,13 +116,12 @@ ga_items.append({
     "name": "The Tale of Cupid and Psyche",
     "sort_order": sort_order,
     "category": "cycles",
-    "level": 2,
     "sections": {
         "About": "Embedded in the center of the Golden Ass (Books IV-VI), the tale of Cupid and Psyche is one of the most influential stories in world literature — the prototype for Beauty and the Beast, Cinderella, and every fairy tale where love must survive impossible trials. Psyche (Soul) is so beautiful that Venus is jealous and sends Cupid (Desire) to make her fall in love with a monster. Instead, Cupid falls in love with her. He visits her only in darkness, forbidding her to see his face. When she lights a lamp and sees the god, he flees. She must complete four impossible tasks set by Venus — sorting seeds, gathering golden fleece, fetching water from the Styx, descending to the underworld — before she can be reunited with Love. Jung's favorite myth. The original sacred marriage.",
         "For Readers": "This is the story the Myths Through Many Eyes grammar calls myth-psyche-eros. Reading it in its full Apuleian context — told by an old woman to a kidnapped girl, inside a novel about a man turned into a donkey — adds layers that the mythological summary cannot capture. The tale is simultaneously a fairy tale, an allegory of the soul's journey, and a deeply funny story about the gods behaving badly."
     },
     "keywords": ["cupid", "psyche", "soul", "love", "trials", "sacred-marriage"],
-    "composite_of": ["book-4", "book-5", "book-6"],
+    "parts": ["book-4", "book-5", "book-6"],
     "relationship_type": "emergence",
     "metadata": {"astrology": {"planets": ["Venus", "Pluto"], "signs": ["Libra", "Scorpio"], "themes": ["soul-and-desire", "impossible-tasks", "sacred-marriage"]}}
 })
@@ -134,13 +133,12 @@ ga_items.append({
     "name": "The Isis Revelation: Salvation Through the Divine Feminine",
     "sort_order": sort_order,
     "category": "cycles",
-    "level": 2,
     "sections": {
         "About": "Book XI of the Golden Ass is unlike anything else in ancient literature — a genuine conversion narrative. After ten books of suffering, degradation, and comedy in the body of an ass, Lucius prays to the moon goddess and receives a vision of Isis, who tells him: eat the roses at tomorrow's procession and you will be restored. He does. He is transformed back into a man. He is initiated into the mysteries of Isis and Osiris. The novel ends not with laughter but with devotion. Scholars debate whether Apuleius himself was an Isis initiate; the passage's emotional sincerity suggests he was. This is the earliest surviving account of personal religious conversion in Western literature.",
         "For Readers": "Read this after the degradation of Books VII-X. The contrast is the point: the deeper the fall, the more powerful the redemption. Isis addresses Lucius by all her names — she is Minerva, Venus, Diana, Proserpina, Ceres, Juno, Bellona, Hecate, and the Queen of the Dead. She is every goddess, and her message is: I have watched your suffering, and now I come."
     },
     "keywords": ["isis", "salvation", "divine-feminine", "initiation", "mystery"],
-    "composite_of": ["book-10", "book-11"],
+    "parts": ["book-10", "book-11"],
     "relationship_type": "emergence",
     "metadata": {"astrology": {"planets": ["Moon", "Neptune"], "signs": ["Pisces", "Cancer"], "themes": ["divine-feminine-salvation", "mystery-initiation"]}}
 })
@@ -152,13 +150,12 @@ ga_items.append({
     "name": "Metamorphosis: The Body Knows What the Mind Forgets",
     "sort_order": sort_order,
     "category": "meta",
-    "level": 3,
     "sections": {
         "About": "The Golden Ass is the only complete Latin novel to survive from antiquity — and it is about transformation. Lucius, curious about magic, is turned into a donkey and must endure every form of human cruelty and comedy before being saved by Isis. Inside this frame, the tale of Cupid and Psyche tells the same story in mythic register: the soul, curious about the face of love, must descend to the underworld before being reunited with desire. Both stories say: you cannot know love, or truth, or the divine, without first being transformed into something you did not choose to be. The body of the ass is not punishment — it is education. The darkness in which Psyche loves Cupid is not ignorance — it is trust. Transformation precedes knowledge.",
         "Contemplation": "What are you becoming that you did not choose? What animal body has your curiosity earned you? And is there, somewhere ahead, a procession of roses?"
     },
     "keywords": ["metamorphosis", "transformation", "curiosity", "redemption"],
-    "composite_of": ["cycle-cupid-psyche", "cycle-isis"],
+    "parts": ["cycle-cupid-psyche", "cycle-isis"],
     "relationship_type": "emergence",
     "metadata": {}
 })
@@ -183,7 +180,7 @@ ga_grammar = {
     "shelves": ["wisdom", "wonder"],
     "lineages": ["Shrei"],
     "worldview": "devotional",
-    "items": ga_items
+    "nodes": ga_items
 }
 
 os.makedirs("grammars/golden-ass-apuleius", exist_ok=True)
@@ -192,8 +189,8 @@ with open("grammars/golden-ass-apuleius/grammar.json", "w") as f:
 
 ids = [i["id"] for i in ga_items]
 dupes = [x for x in ids if ids.count(x) > 1]
-bad_refs = [(i["id"], r) for i in ga_items for r in i.get("composite_of", []) if r not in ids]
-print(f"Golden Ass: {len(ga_items)} items, L1={sum(1 for i in ga_items if i['level']==1)}, L2={sum(1 for i in ga_items if i['level']==2)}, L3={sum(1 for i in ga_items if i['level']==3)}")
+bad_refs = [(i["id"], r) for i in ga_items for r in i.get("parts", []) if r not in ids]
+print(f"Golden Ass: {len(ga_items)} items, L1={sum(1 for i in ga_items if node_depth(i, ga_items)==1)}, L2={sum(1 for i in ga_items if node_depth(i, ga_items)==2)}, L3={sum(1 for i in ga_items if node_depth(i, ga_items)==3)}")
 print(f"  Dupes: {dupes}, Bad refs: {bad_refs}")
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -296,7 +293,6 @@ for idx, (start_ln, heading, sid, name) in enumerate(mab_positions):
         "name": name,
         "sort_order": sort_order,
         "category": "tales",
-        "level": 1,
         "sections": {"Text": excerpt},
         "keywords": ["mabinogion", "welsh", "celtic", "arthurian"],
         "metadata": metadata
@@ -309,13 +305,12 @@ mab_items.append({
     "name": "The Four Branches of the Mabinogi",
     "sort_order": sort_order,
     "category": "groups",
-    "level": 2,
     "sections": {
         "About": "The Four Branches of the Mabinogi — Pwyll, Branwen, Manawyddan, and Math — are the oldest Welsh prose tales, written down in the 12th-13th centuries but drawing on much older oral traditions. They form a loose cycle centered on the family of Llyr and the children of Dôn, moving between the human world and the Otherworld (Annwn). Themes: sovereignty and its obligations, shapeshifting and transformation, the cauldron of rebirth, women as agents of fate. These are the source texts for the Fisher King and Taliesin myths referenced in the Myths Through Many Eyes grammar.",
         "For Readers": "Read these four tales in order — they form a single arc from Pwyll's descent into Annwn through to Math's magical punishments. Notice the cauldron (it appears in Branwen — a cauldron that resurrects the dead), the shapeshifting (Math transforms his nephews into animals as punishment), and the sovereignty theme (the land's health depends on the ruler's virtue)."
     },
     "keywords": ["four-branches", "mabinogi", "welsh", "otherworld"],
-    "composite_of": ["pwyll", "branwen", "manawyddan", "math"],
+    "parts": ["pwyll", "branwen", "manawyddan", "math"],
     "relationship_type": "emergence",
     "metadata": {}
 })
@@ -327,13 +322,12 @@ mab_items.append({
     "name": "The Welsh Arthurian Romances",
     "sort_order": sort_order,
     "category": "groups",
-    "level": 2,
     "sections": {
         "About": "Three tales — The Lady of the Fountain, Peredur, and Geraint — that parallel the French romances of Chrétien de Troyes but preserve older, wilder elements. The Lady of the Fountain is the Welsh Ywain; Peredur is the Welsh Perceval (and contains a version of the Grail scene); Geraint is the Welsh Erec. Kilhwch and Olwen, the oldest Arthurian prose tale, contains the most archaic Arthur — not a chivalric king but a wild hunter-chieftain whose court includes men who can hear ants stirring fifty miles away.",
         "For Readers": "These are not medieval romances but something older and stranger. Pay attention to the lists — Kilhwch's invocation of Arthur's court names over 200 heroes, many of them magical. Peredur's Grail scene is not a chalice but a severed head on a platter. The Lady of the Fountain's magic ring makes you invisible. This is the deep Celtic stratum beneath the polished French surface."
     },
     "keywords": ["arthurian", "welsh", "grail", "romance"],
-    "composite_of": ["lady-fountain", "peredur", "geraint", "kilhwch-olwen"],
+    "parts": ["lady-fountain", "peredur", "geraint", "kilhwch-olwen"],
     "relationship_type": "emergence",
     "metadata": {}
 })
@@ -345,13 +339,12 @@ mab_items.append({
     "name": "The Welsh Otherworld: Where the Veil Is Thin",
     "sort_order": sort_order,
     "category": "meta",
-    "level": 3,
     "sections": {
         "About": "The Mabinogion is the gateway to the Celtic mythic imagination — a world where the boundary between this world and the Otherworld (Annwn) is thin as mist, where kings exchange shapes with their doubles, where a woman made of flowers becomes an owl, and where the severed head of Brân the Blessed continues to feast and talk for eighty years. This is the tradition that fed the Arthurian romances, the Grail quest, and — through the tale of Taliesin — the entire Western tradition of poetic inspiration as a divine gift earned through transformation. Shaw and Campbell both drew from this well: the cauldron of Ceridwen, the Wasteland of the Fisher King, the shapeshifting that earns wisdom.",
         "Contemplation": "The Welsh poets said that the Otherworld is not elsewhere — it is here, seen differently. Not a place you travel to but a way of perceiving the place you are in. Where in your ordinary world does the veil feel thin?"
     },
     "keywords": ["otherworld", "annwn", "welsh", "celtic", "veil", "transformation"],
-    "composite_of": ["group-four-branches", "group-arthurian"],
+    "parts": ["group-four-branches", "group-arthurian"],
     "relationship_type": "emergence",
     "metadata": {}
 })
@@ -374,7 +367,7 @@ mab_grammar = {
     "shelves": ["wisdom", "wonder"],
     "lineages": ["Shrei", "Akomolafe"],
     "worldview": "animist",
-    "items": mab_items
+    "nodes": mab_items
 }
 
 os.makedirs("grammars/mabinogion", exist_ok=True)
@@ -383,6 +376,6 @@ with open("grammars/mabinogion/grammar.json", "w") as f:
 
 ids = [i["id"] for i in mab_items]
 dupes = [x for x in ids if ids.count(x) > 1]
-bad_refs = [(i["id"], r) for i in mab_items for r in i.get("composite_of", []) if r not in ids]
-print(f"Mabinogion: {len(mab_items)} items, L1={sum(1 for i in mab_items if i['level']==1)}, L2={sum(1 for i in mab_items if i['level']==2)}, L3={sum(1 for i in mab_items if i['level']==3)}")
+bad_refs = [(i["id"], r) for i in mab_items for r in i.get("parts", []) if r not in ids]
+print(f"Mabinogion: {len(mab_items)} items, L1={sum(1 for i in mab_items if node_depth(i, mab_items)==1)}, L2={sum(1 for i in mab_items if node_depth(i, mab_items)==2)}, L3={sum(1 for i in mab_items if node_depth(i, mab_items)==3)}")
 print(f"  Dupes: {dupes}, Bad refs: {bad_refs}")

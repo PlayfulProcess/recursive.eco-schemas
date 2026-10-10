@@ -19,13 +19,12 @@
   "shelves": ["wonder", "earth"],
   "lineages": ["Kelty"],
   "worldview": "systems",
-  "items": [
+  "nodes": [
     {
       "id": "skull",
       "name": "The Skull",
       "sort_order": 1,
       "category": "skeletal",
-      "level": 1,
       "sections": {
         "What It Does": "The skull is a helmet of 22 interlocking bones that shields the brain, houses the sensory organs, and shapes the face. It absorbs impacts, anchors jaw muscles for chewing, and contains sinuses that warm and humidify the air you breathe.",
         "How It Connects": "The skull sits atop the spine at the atlas vertebra, forming a pivot joint that lets you nod and turn your head. Cranial nerves thread through tiny holes in its base, linking the brain to the eyes, ears, tongue, and face.",
@@ -40,7 +39,6 @@
       "name": "The Spine",
       "sort_order": 2,
       "category": "skeletal",
-      "level": 1,
       "sections": {
         "What It Does": "The spine is a flexible column of 33 vertebrae that supports the body's weight, protects the spinal cord, and allows bending, twisting, and upright posture. Cushioning discs between each vertebra absorb shock with every step.",
         "How It Connects": "The spine is the body's central axis. It connects to the skull above and the pelvis below, anchors the ribcage, and provides attachment points for dozens of muscles. The spinal cord runs through its hollow center, branching nerves to every region of the body.",
@@ -55,7 +53,6 @@
       "name": "The Ribcage",
       "sort_order": 3,
       "category": "skeletal",
-      "level": 1,
       "sections": {
         "What It Does": "The ribcage is a basket of 24 ribs that shields the heart and lungs while flexing with every breath. The upper ribs attach to the sternum via cartilage; the lower 'floating' ribs hang free, giving the torso flexibility.",
         "How It Connects": "Each rib articulates with the spine at the back and most connect to the sternum at the front. Intercostal muscles between the ribs expand and contract the chest during breathing. The diaphragm attaches to the lower ribs, making the ribcage the mechanical frame for respiration.",
@@ -70,7 +67,6 @@
       "name": "The Pelvis",
       "sort_order": 4,
       "category": "skeletal",
-      "level": 1,
       "sections": {
         "What It Does": "The pelvis is a basin-shaped ring of bone that transfers the weight of the upper body to the legs, supports the organs of the lower abdomen, and provides the socket for the hip joint. In pregnancy, it cradles and then delivers the baby.",
         "How It Connects": "The pelvis joins the spine at the sacroiliac joint and connects to the legs at the hip sockets. It anchors the largest muscles in the body — the gluteals — and supports the pelvic floor muscles that hold internal organs in place.",
@@ -85,7 +81,6 @@
       "name": "The Long Bones",
       "sort_order": 5,
       "category": "skeletal",
-      "level": 1,
       "sections": {
         "What It Does": "The long bones — femur, tibia, humerus, radius, ulna — are the levers that make movement possible. They bear weight, provide attachment points for muscles, and act as factories for blood cells in their marrow-filled centers.",
         "How It Connects": "Long bones connect at joints — knees, elbows, shoulders, hips — where cartilage cushions bone-on-bone contact. Tendons lash muscles to bone; ligaments bind bone to bone. Together, they form the body's system of pulleys and levers.",
@@ -100,7 +95,6 @@
       "name": "The Heart Muscle",
       "sort_order": 6,
       "category": "muscular",
-      "level": 1,
       "sections": {
         "What It Does": "Cardiac muscle is a unique tissue found only in the heart. Its cells are branched and interconnected, allowing them to contract in a coordinated wave that pumps blood. Unlike skeletal muscle, it never fatigues — it beats without rest for your entire life.",
         "How It Connects": "The heart muscle is controlled by its own internal pacemaker (the sinoatrial node) but modulated by the autonomic nervous system — adrenaline speeds it up, the vagus nerve slows it down. It depends on coronary arteries for its own blood supply.",
@@ -115,7 +109,6 @@
       "name": "The Skeletal Muscles",
       "sort_order": 7,
       "category": "muscular",
-      "level": 1,
       "sections": {
         "What It Does": "Over 600 skeletal muscles pull on bones to create every voluntary movement — walking, writing, smiling, breathing. They work in opposing pairs: biceps flex the arm, triceps extend it. They also generate heat, which is why you shiver when cold.",
         "How It Connects": "Skeletal muscles attach to bones via tendons and are controlled by motor neurons from the brain and spinal cord. They coordinate with the cerebellum for balance, with proprioceptors for body awareness, and with the skeletal system for leverage.",
@@ -130,7 +123,6 @@
       "name": "The Smooth Muscles",
       "sort_order": 8,
       "category": "muscular",
-      "level": 1,
       "sections": {
         "What It Does": "Smooth muscle lines the walls of hollow organs — stomach, intestines, blood vessels, bladder, uterus. It contracts slowly and rhythmically without conscious control, pushing food through the gut, regulating blood pressure, and emptying the bladder.",
         "How It Connects": "Smooth muscle is controlled by the autonomic nervous system and local hormones. In blood vessels, it responds to signals from the endothelium and sympathetic nerves. In the gut, it coordinates with the enteric nervous system — the 'second brain' embedded in intestinal walls.",
@@ -145,7 +137,6 @@
       "name": "The Diaphragm",
       "sort_order": 9,
       "category": "muscular",
-      "level": 1,
       "sections": {
         "What It Does": "The diaphragm is a dome-shaped muscle that separates the chest from the abdomen. When it contracts, it flattens downward, creating negative pressure that pulls air into the lungs. It is the primary engine of breathing.",
         "How It Connects": "The diaphragm attaches to the lower ribs, sternum, and spine. The phrenic nerve (from cervical vertebrae C3-C5) controls it — hence the medical saying 'C3, 4, 5 keeps the diaphragm alive.' The vagus nerve passes through it, linking brain to gut.",
@@ -160,7 +151,6 @@
       "name": "The Brain",
       "sort_order": 10,
       "category": "nervous",
-      "level": 1,
       "sections": {
         "What It Does": "The brain is the body's command center — roughly 86 billion neurons processing sensory input, generating thought, storing memory, coordinating movement, and regulating unconscious functions like breathing and temperature. It consumes 20% of the body's energy despite being only 2% of its weight.",
         "How It Connects": "The brain communicates with the body through the spinal cord and cranial nerves. It receives input from every sensory organ and sends commands to every muscle. It also talks to the endocrine system via the hypothalamus and monitors the body's internal state through the autonomic nervous system.",
@@ -175,7 +165,6 @@
       "name": "The Spinal Cord",
       "sort_order": 11,
       "category": "nervous",
-      "level": 1,
       "sections": {
         "What It Does": "The spinal cord is a cable of nerve fibers running from the brain through the vertebral column. It relays sensory information upward and motor commands downward. It also contains reflex circuits that can react to danger — like pulling your hand from a hot stove — before the signal even reaches the brain.",
         "How It Connects": "Thirty-one pairs of spinal nerves branch out between vertebrae, connecting to every region of the body. The cord is wrapped in three protective membranes (meninges) and bathed in cerebrospinal fluid. It is the sole highway between brain and body.",
@@ -190,7 +179,6 @@
       "name": "The Peripheral Nerves",
       "sort_order": 12,
       "category": "nervous",
-      "level": 1,
       "sections": {
         "What It Does": "Peripheral nerves are the body's wiring network — branching from the brain and spinal cord to reach every finger, toe, organ, and patch of skin. They carry sensory signals inward (touch, pain, temperature) and motor commands outward (muscle contraction, gland secretion).",
         "How It Connects": "Peripheral nerves emerge from the spinal cord through gaps between vertebrae and branch into increasingly fine fibers. The sciatic nerve — the body's thickest — runs from the lower spine down each leg. Cranial nerves connect the brain directly to the face and organs without passing through the spinal cord.",
@@ -205,7 +193,6 @@
       "name": "The Autonomic Nervous System",
       "sort_order": 13,
       "category": "nervous",
-      "level": 1,
       "sections": {
         "What It Does": "The autonomic nervous system (ANS) runs the body's background operations without conscious effort: heart rate, digestion, pupil dilation, sweating, arousal. Its two branches — sympathetic ('fight or flight') and parasympathetic ('rest and digest') — act as gas pedal and brake.",
         "How It Connects": "The sympathetic branch originates from the thoracic and lumbar spinal cord; the parasympathetic from the brainstem and sacral cord. The vagus nerve is the parasympathetic system's main highway. The ANS talks to the endocrine system through the adrenals and communicates with the gut's enteric nervous system.",
@@ -220,7 +207,6 @@
       "name": "The Eyes",
       "sort_order": 14,
       "category": "nervous",
-      "level": 1,
       "sections": {
         "What It Does": "The eyes convert light into electrical signals that the brain interprets as vision. The cornea and lens focus light onto the retina, where 120 million rod cells detect brightness and 6 million cone cells detect color. The optic nerve carries these signals to the visual cortex.",
         "How It Connects": "The eyes connect to the brain via the optic nerve (cranial nerve II) and are moved by six tiny muscles controlled by three other cranial nerves. Tear glands keep them moist and antibacterial. Pupil size is regulated by the autonomic nervous system — dilating in darkness or excitement, constricting in bright light.",
@@ -235,7 +221,6 @@
       "name": "The Ears",
       "sort_order": 15,
       "category": "nervous",
-      "level": 1,
       "sections": {
         "What It Does": "The ears serve two functions: hearing and balance. Sound waves vibrate the eardrum, which transmits vibrations through three tiny bones (the ossicles) to the fluid-filled cochlea, where hair cells convert vibrations to nerve signals. The semicircular canals detect head rotation for balance.",
         "How It Connects": "The auditory nerve (cranial nerve VIII) carries both hearing and balance signals to the brain. The Eustachian tube connects the middle ear to the throat, equalizing pressure. The vestibular system coordinates with the eyes and proprioceptors to maintain balance — which is why ear infections can cause dizziness.",
@@ -250,7 +235,6 @@
       "name": "The Heart",
       "sort_order": 16,
       "category": "circulatory",
-      "level": 1,
       "sections": {
         "What It Does": "The heart is a four-chambered pump the size of a fist. The right side pumps deoxygenated blood to the lungs; the left side pumps oxygenated blood to the body. Four valves ensure one-way flow. It pumps about 5 liters of blood per minute at rest — and up to 25 liters during intense exercise.",
         "How It Connects": "The heart sits in the chest between the lungs, protected by the ribcage. It receives deoxygenated blood from veins, sends it to the lungs, then pumps oxygenated blood through arteries to every tissue. Its rhythm is set by the sinoatrial node but modulated by the autonomic nervous system and hormones like adrenaline.",
@@ -265,7 +249,6 @@
       "name": "The Arteries",
       "sort_order": 17,
       "category": "circulatory",
-      "level": 1,
       "sections": {
         "What It Does": "Arteries carry oxygenated blood away from the heart under high pressure. Their thick, elastic walls stretch with each heartbeat and recoil between beats, smoothing pulsatile flow. The aorta — the body's largest artery — is about the diameter of a garden hose.",
         "How It Connects": "The aorta arches from the heart, branching into arteries that supply every region. Coronary arteries feed the heart itself. Carotid arteries supply the brain. Smooth muscle in arterial walls constricts or dilates under autonomic and hormonal control, regulating blood pressure and directing blood flow where it's needed.",
@@ -280,7 +263,6 @@
       "name": "The Veins",
       "sort_order": 18,
       "category": "circulatory",
-      "level": 1,
       "sections": {
         "What It Does": "Veins return deoxygenated blood from the body back to the heart under low pressure. They have thinner walls than arteries and contain one-way valves that prevent backflow. The body's veins hold about 70% of total blood volume at any time — they are the blood's reservoir.",
         "How It Connects": "Small venules collect blood from capillary beds and merge into progressively larger veins. The two largest — the superior and inferior vena cava — empty into the right atrium of the heart. Muscle contractions around veins squeeze blood upward against gravity; this 'muscle pump' is why sitting still for too long causes swollen ankles.",
@@ -295,7 +277,6 @@
       "name": "The Capillaries",
       "sort_order": 19,
       "category": "circulatory",
-      "level": 1,
       "sections": {
         "What It Does": "Capillaries are microscopic blood vessels — just one cell thick — where the real work of circulation happens. Oxygen and nutrients pass from blood through capillary walls into tissues; carbon dioxide and waste products pass back. Every cell in your body lies within a few cells' distance of a capillary.",
         "How It Connects": "Capillaries form dense networks (capillary beds) that connect the smallest arteries (arterioles) to the smallest veins (venules). In the lungs, they wrap around alveoli for gas exchange. In the kidneys, they form specialized filtering structures called glomeruli. In the brain, they create the blood-brain barrier.",
@@ -310,7 +291,6 @@
       "name": "The Blood",
       "sort_order": 20,
       "category": "circulatory",
-      "level": 1,
       "sections": {
         "What It Does": "Blood is a liquid tissue — about 5 liters in an adult — that transports oxygen, nutrients, hormones, and immune cells throughout the body. Red blood cells carry oxygen via hemoglobin. White blood cells fight infection. Platelets enable clotting. Plasma carries dissolved proteins, glucose, and waste products.",
         "How It Connects": "Blood touches every system. It delivers oxygen from the lungs, nutrients from the gut, and hormones from endocrine glands. It carries waste to the kidneys and liver for removal. It distributes heat from active muscles to the skin. It is the body's universal delivery and communication service.",
@@ -325,7 +305,6 @@
       "name": "The Lungs",
       "sort_order": 21,
       "category": "respiratory",
-      "level": 1,
       "sections": {
         "What It Does": "The lungs are paired organs that exchange gases between air and blood. With each breath, they pull in oxygen and release carbon dioxide. The right lung has three lobes, the left has two (making room for the heart). Together they process about 10,000 liters of air per day.",
         "How It Connects": "The lungs sit in the chest, protected by the ribcage, and are expanded by the diaphragm and intercostal muscles. Pulmonary arteries bring deoxygenated blood from the heart; pulmonary veins return oxygenated blood. The lungs also filter small blood clots and produce surfactant to keep alveoli from collapsing.",
@@ -340,7 +319,6 @@
       "name": "The Bronchi",
       "sort_order": 22,
       "category": "respiratory",
-      "level": 1,
       "sections": {
         "What It Does": "The bronchi are the airways that branch from the trachea into the lungs. They divide repeatedly — like an inverted tree — into smaller bronchioles, eventually reaching the tiny alveoli. Their walls are lined with mucus-producing cells and cilia that trap and sweep debris upward and out of the lungs.",
         "How It Connects": "The trachea splits into left and right main bronchi at a point called the carina. Smooth muscle in bronchial walls adjusts airway diameter under autonomic control — opening during exercise, constricting in response to irritants. The 'mucociliary escalator' coordinates with the immune system to remove inhaled particles.",
@@ -355,7 +333,6 @@
       "name": "The Alveoli",
       "sort_order": 23,
       "category": "respiratory",
-      "level": 1,
       "sections": {
         "What It Does": "Alveoli are tiny balloon-like air sacs — about 480 million of them — where oxygen and carbon dioxide are exchanged between air and blood. Their walls are just one cell thick, and each is wrapped in capillaries. This is where every breath actually does its work.",
         "How It Connects": "Alveoli sit at the terminal ends of the bronchial tree. Type I cells form the thin gas-exchange surface. Type II cells produce surfactant — a soapy substance that prevents the alveoli from collapsing. Macrophages (dust cells) patrol inside, eating bacteria and particles that make it past the bronchial defenses.",
@@ -370,7 +347,6 @@
       "name": "The Mouth",
       "sort_order": 24,
       "category": "digestive",
-      "level": 1,
       "sections": {
         "What It Does": "The mouth is where digestion begins. Teeth mechanically break food down while salivary glands release enzymes (amylase) that start digesting starches. The tongue mixes food with saliva, shapes it into a bolus, and pushes it toward the throat for swallowing.",
         "How It Connects": "The mouth connects to the esophagus for swallowing and to the respiratory system for breathing. Taste buds on the tongue communicate with the brain via cranial nerves. Saliva contains antibodies (IgA) that are part of the immune system's first line of defense. The oral microbiome is one of the body's most diverse microbial communities.",
@@ -385,7 +361,6 @@
       "name": "The Esophagus",
       "sort_order": 25,
       "category": "digestive",
-      "level": 1,
       "sections": {
         "What It Does": "The esophagus is a muscular tube about 25 centimeters long that moves food from the throat to the stomach through rhythmic contractions called peristalsis. A ring of muscle at the bottom (the lower esophageal sphincter) keeps stomach acid from flowing back up.",
         "How It Connects": "The esophagus passes behind the trachea and heart, through the diaphragm, to reach the stomach. It coordinates with the pharynx for swallowing — a complex reflex involving over 25 muscles. The vagus nerve controls its peristaltic motion.",
@@ -400,7 +375,6 @@
       "name": "The Stomach",
       "sort_order": 26,
       "category": "digestive",
-      "level": 1,
       "sections": {
         "What It Does": "The stomach is a muscular bag that churns food with hydrochloric acid and digestive enzymes, breaking it into a semi-liquid paste called chyme. Its acid is strong enough to dissolve metal — pH 1.5 to 3.5. It also kills most bacteria in food, serving as a chemical barrier against infection.",
         "How It Connects": "The stomach receives food from the esophagus and releases chyme into the small intestine through the pyloric sphincter. It communicates with the brain via the vagus nerve (the 'hunger' and 'full' signals). Hormones like gastrin regulate acid production. The stomach's enteric nervous system can coordinate contractions independently.",
@@ -415,7 +389,6 @@
       "name": "The Small Intestine",
       "sort_order": 27,
       "category": "digestive",
-      "level": 1,
       "sections": {
         "What It Does": "The small intestine is where most digestion and nearly all nutrient absorption happens. About 6 meters (20 feet) long, its three sections — duodenum, jejunum, and ileum — progressively break down food with enzymes and bile, then absorb nutrients through millions of tiny finger-like projections called villi.",
         "How It Connects": "The small intestine receives bile from the liver/gallbladder and enzymes from the pancreas via ducts into the duodenum. Absorbed nutrients enter the bloodstream and travel to the liver via the portal vein for processing. The gut's enteric nervous system — containing more neurons than the spinal cord — coordinates its movements independently.",
@@ -430,7 +403,6 @@
       "name": "The Large Intestine",
       "sort_order": 28,
       "category": "digestive",
-      "level": 1,
       "sections": {
         "What It Does": "The large intestine (colon) is about 1.5 meters long and absorbs water, electrolytes, and vitamins from indigestible food residue, compacting it into feces. It is home to the densest microbial community in the body — trillions of bacteria that ferment fiber, produce vitamins, and shape immune function.",
         "How It Connects": "The large intestine frames the small intestine in the abdomen, running up the right side (ascending colon), across (transverse colon), down the left (descending colon), and into the rectum. It communicates with the brain through the vagus nerve and the gut microbiome's influence on neurotransmitters — a major player in the gut-brain axis.",
@@ -445,7 +417,6 @@
       "name": "The Liver",
       "sort_order": 29,
       "category": "digestive",
-      "level": 1,
       "sections": {
         "What It Does": "The liver is the body's chemical factory — performing over 500 functions. It detoxifies blood, produces bile for fat digestion, stores glucose as glycogen, synthesizes proteins (including clotting factors), processes drugs, and recycles old red blood cells. It is the largest internal organ, weighing about 1.5 kilograms.",
         "How It Connects": "The liver receives nutrient-rich blood from the gut via the portal vein and oxygen-rich blood via the hepatic artery — it has a dual blood supply. It sends bile to the gallbladder and duodenum. It communicates with the endocrine system by metabolizing hormones and with the immune system through resident macrophages called Kupffer cells.",
@@ -460,7 +431,6 @@
       "name": "The Pancreas",
       "sort_order": 30,
       "category": "digestive",
-      "level": 1,
       "sections": {
         "What It Does": "The pancreas has two vital roles. As an exocrine gland, it produces digestive enzymes that break down fats, proteins, and carbohydrates in the small intestine. As an endocrine gland, its islets of Langerhans produce insulin and glucagon — the hormones that regulate blood sugar.",
         "How It Connects": "The pancreas sits behind the stomach and empties digestive enzymes into the duodenum through the pancreatic duct. Its insulin acts on virtually every cell in the body, telling them to absorb glucose. It coordinates with the liver to maintain blood sugar balance — the pancreas says 'store,' the liver stores; the pancreas says 'release,' the liver releases.",
@@ -475,7 +445,6 @@
       "name": "The Pituitary Gland",
       "sort_order": 31,
       "category": "endocrine",
-      "level": 1,
       "sections": {
         "What It Does": "The pituitary gland — pea-sized and nestled at the base of the brain — is called the 'master gland' because it controls most other endocrine glands. It releases hormones that regulate growth, thyroid function, adrenal activity, reproduction, and water balance.",
         "How It Connects": "The pituitary is controlled by the hypothalamus directly above it, forming the critical brain-endocrine bridge. Its anterior lobe releases hormones like growth hormone, TSH, ACTH, and FSH/LH. Its posterior lobe stores and releases oxytocin (bonding) and ADH (water retention) made by the hypothalamus.",
@@ -490,7 +459,6 @@
       "name": "The Thyroid",
       "sort_order": 32,
       "category": "endocrine",
-      "level": 1,
       "sections": {
         "What It Does": "The thyroid is a butterfly-shaped gland in the neck that sets the body's metabolic rate. Its hormones (T3 and T4) tell every cell how fast to burn energy. It influences heart rate, body temperature, weight, mood, and how quickly you think.",
         "How It Connects": "The thyroid is controlled by TSH from the pituitary, which is controlled by TRH from the hypothalamus — a three-level cascade. It requires dietary iodine to make its hormones. Calcitonin, a separate thyroid hormone, helps regulate calcium levels along with the parathyroid glands embedded in its surface.",
@@ -505,7 +473,6 @@
       "name": "The Adrenal Glands",
       "sort_order": 33,
       "category": "endocrine",
-      "level": 1,
       "sections": {
         "What It Does": "The adrenal glands sit atop each kidney and produce hormones for stress response and metabolism. The inner medulla releases adrenaline and noradrenaline for fight-or-flight. The outer cortex produces cortisol (stress and metabolism), aldosterone (blood pressure), and small amounts of sex hormones.",
         "How It Connects": "The adrenals are the bridge between the nervous and endocrine systems. The medulla is essentially a modified nerve ganglion, activated directly by sympathetic nerves during stress. The cortex is regulated by ACTH from the pituitary. Cortisol affects virtually every organ — immune, brain, muscle, fat, bone — making the adrenals a whole-body regulator.",
@@ -520,7 +487,6 @@
       "name": "The Pineal Gland",
       "sort_order": 34,
       "category": "endocrine",
-      "level": 1,
       "sections": {
         "What It Does": "The pineal gland is a tiny pinecone-shaped structure deep in the brain that produces melatonin, the hormone that regulates the sleep-wake cycle. It translates light information from the eyes into a chemical signal: darkness triggers melatonin release, light suppresses it.",
         "How It Connects": "Light hits the retina, signals travel to the suprachiasmatic nucleus (the brain's master clock), and from there to the pineal gland via a multi-step neural pathway. The pineal's melatonin rhythm synchronizes the body's circadian clocks — in the liver, gut, muscles, and immune system — keeping the whole body on the same daily schedule.",
@@ -535,7 +501,6 @@
       "name": "The Gonads",
       "sort_order": 35,
       "category": "endocrine",
-      "level": 1,
       "sections": {
         "What It Does": "The gonads — ovaries and testes — serve dual roles as reproductive organs and endocrine glands. They produce sex cells (eggs and sperm) and secrete sex hormones: estrogen and progesterone from ovaries, testosterone from testes. These hormones drive puberty, regulate the reproductive cycle, and influence bone density, mood, and muscle mass.",
         "How It Connects": "The gonads are controlled by FSH and LH from the pituitary, which is controlled by GnRH from the hypothalamus — forming the HPG axis. Their hormones feed back to the pituitary and hypothalamus, creating the monthly ovarian cycle in females and steady testosterone production in males. Sex hormones also affect the brain, bones, cardiovascular system, and immune function.",
@@ -550,7 +515,6 @@
       "name": "The White Blood Cells",
       "sort_order": 36,
       "category": "immune",
-      "level": 1,
       "sections": {
         "What It Does": "White blood cells (leukocytes) are the immune system's soldiers. Neutrophils engulf bacteria. Macrophages consume debris and present antigens. Lymphocytes (B cells and T cells) mount targeted attacks and create memory. Eosinophils fight parasites. Together they patrol the blood, tissues, and lymph for threats.",
         "How It Connects": "White blood cells are born in bone marrow, mature in the thymus (T cells) or marrow (B cells), and circulate through blood and lymph. They communicate through chemical signals called cytokines. They collaborate with the complement system (blood proteins) and coordinate with antibodies. Fever, inflammation, and swelling are signs of white blood cells at work.",
@@ -565,7 +529,6 @@
       "name": "The Lymph Nodes",
       "sort_order": 37,
       "category": "immune",
-      "level": 1,
       "sections": {
         "What It Does": "Lymph nodes are small, bean-shaped filters stationed throughout the body — about 600 of them. They filter lymph fluid (leaked plasma from capillaries), trap pathogens and foreign particles, and serve as meeting points where immune cells present antigens to T and B cells, activating targeted immune responses.",
         "How It Connects": "Lymph vessels collect interstitial fluid from tissues and channel it through chains of lymph nodes before returning it to the bloodstream. Major clusters sit in the neck, armpits, and groin — strategic gateways. When you feel swollen glands during illness, that's lymph nodes filling with activated immune cells and trapped pathogens.",
@@ -580,7 +543,6 @@
       "name": "The Spleen",
       "sort_order": 38,
       "category": "immune",
-      "level": 1,
       "sections": {
         "What It Does": "The spleen is a fist-sized organ in the upper left abdomen that filters blood, removes old or damaged red blood cells, stores platelets and white blood cells, and mounts immune responses against blood-borne pathogens. It is essentially a lymph node for the bloodstream.",
         "How It Connects": "Blood enters the spleen through the splenic artery, passes through a meshwork of immune tissue and filtering sinuses, and exits via the splenic vein to the liver. The spleen stores about a third of the body's platelets and a reserve of red blood cells it can release during hemorrhage.",
@@ -595,7 +557,6 @@
       "name": "The Thymus",
       "sort_order": 39,
       "category": "immune",
-      "level": 1,
       "sections": {
         "What It Does": "The thymus is a gland behind the sternum where T cells mature and learn to distinguish self from non-self. Immature T cells from bone marrow are tested here: those that can recognize foreign molecules graduate; those that react to the body's own tissues are destroyed. It is the immune system's school.",
         "How It Connects": "The thymus receives immature T cells from bone marrow via the blood and releases trained T cells into circulation. It produces hormones (thymosins) that promote T cell development. It is largest and most active during childhood, when the immune system is learning the most.",
@@ -610,7 +571,6 @@
       "name": "The Bone Marrow",
       "sort_order": 40,
       "category": "immune",
-      "level": 1,
       "sections": {
         "What It Does": "Bone marrow is the soft tissue inside bones that manufactures all blood cells — red cells, white cells, and platelets — from hematopoietic stem cells. Red marrow (in flat bones and vertebrae) is the production factory; yellow marrow (in long bone shafts) stores fat as a reserve that can convert back to red marrow if needed.",
         "How It Connects": "Bone marrow is where the immune and circulatory systems are born. It produces about 500 billion blood cells per day, releasing them into the bloodstream through sinusoidal capillaries. Hematopoietic stem cells respond to hormones like erythropoietin (from the kidneys) to increase red cell production when oxygen is low.",
@@ -625,7 +585,6 @@
       "name": "The Skin",
       "sort_order": 41,
       "category": "integumentary",
-      "level": 1,
       "sections": {
         "What It Does": "Skin is the body's largest organ — about 2 square meters and 3.6 kilograms in adults. It forms a waterproof, antimicrobial barrier, regulates temperature through sweating and blood flow, senses touch and pain, synthesizes vitamin D from sunlight, and prevents water loss from internal tissues.",
         "How It Connects": "Skin is densely wired with sensory nerves (touch, pain, temperature, pressure) connecting to the brain. Its blood vessels regulate temperature under autonomic control. Immune cells (Langerhans cells) patrol its layers. Sweat glands assist the kidneys in excreting waste. The skin microbiome covers its entire surface.",
@@ -640,7 +599,6 @@
       "name": "The Hair",
       "sort_order": 42,
       "category": "integumentary",
-      "level": 1,
       "sections": {
         "What It Does": "Hair protects, insulates, and senses. Scalp hair shields the head from UV radiation and heat loss. Eyebrows divert sweat from the eyes. Eyelashes protect against debris. Body hair acts as an early-warning sensor — each follicle is surrounded by nerve endings that detect movement before anything touches the skin itself.",
         "How It Connects": "Hair grows from follicles embedded in the dermis, nourished by blood vessels and controlled by hormones (androgens drive body and facial hair). The arrector pili muscle attached to each follicle creates goosebumps — a vestigial response from when our ancestors had enough fur for raised hair to trap warming air.",
@@ -655,7 +613,6 @@
       "name": "The Nails",
       "sort_order": 43,
       "category": "integumentary",
-      "level": 1,
       "sections": {
         "What It Does": "Nails are hard keratin plates that protect fingertips and toes, enhance fine touch sensation by providing a rigid backing, and serve as tools for scratching, picking, and prying. The nail bed beneath is richly supplied with blood vessels, making nails useful indicators of health.",
         "How It Connects": "Nails grow from the matrix (root) beneath the cuticle, pushed outward by new cell production. Blood supply to the nail bed gives nails their pink color. The nail plate is dead tissue, but the matrix and bed are living and sensitive. Nail growth is influenced by nutrition, hormones, and circulation.",
@@ -670,7 +627,6 @@
       "name": "The Kidneys",
       "sort_order": 44,
       "category": "urinary",
-      "level": 1,
       "sections": {
         "What It Does": "The kidneys are paired, bean-shaped organs that filter blood, remove waste products as urine, regulate electrolyte balance (sodium, potassium, calcium), control blood pressure via the renin-angiotensin system, and manage the body's acid-base balance. They process about 180 liters of blood per day.",
         "How It Connects": "Each kidney contains about 1 million nephrons — tiny filtering units with a glomerulus (capillary tuft) and tubule. The kidneys produce erythropoietin (EPO), stimulating red blood cell production in bone marrow. They activate vitamin D for calcium absorption. They communicate with the adrenals (sitting atop them) and respond to hormones from the pituitary (ADH) and heart (ANP).",
@@ -685,7 +641,6 @@
       "name": "The Bladder",
       "sort_order": 45,
       "category": "urinary",
-      "level": 1,
       "sections": {
         "What It Does": "The bladder is a hollow, muscular organ that stores urine until you're ready to urinate. It can stretch to hold about 400-600ml of urine. Its wall contains the detrusor muscle, which contracts during urination, and two sphincters — an internal one (involuntary) and an external one (voluntary) — that control release.",
         "How It Connects": "The bladder receives urine from the kidneys via two ureters and expels it through the urethra. Stretch receptors in its wall signal the brain when it's full. The pontine micturition center in the brainstem coordinates the act of urination — relaxing the sphincters while contracting the detrusor. The external sphincter gives you voluntary control.",
@@ -700,7 +655,6 @@
       "name": "The Ureters",
       "sort_order": 46,
       "category": "urinary",
-      "level": 1,
       "sections": {
         "What It Does": "The ureters are two narrow muscular tubes, each about 25-30 centimeters long, that transport urine from the kidneys to the bladder. They use peristaltic contractions — rhythmic waves of smooth muscle — to move urine downward, independent of gravity.",
         "How It Connects": "Each ureter connects a kidney's renal pelvis to the bladder, entering at an oblique angle that acts as a one-way valve, preventing urine from flowing backward when the bladder contracts. They run behind the peritoneum along the posterior abdominal wall, crossing over major blood vessels.",
@@ -715,7 +669,6 @@
       "name": "The Uterus",
       "sort_order": 47,
       "category": "reproductive",
-      "level": 1,
       "sections": {
         "What It Does": "The uterus is a pear-shaped muscular organ that nurtures a developing fetus during pregnancy. Its lining (endometrium) thickens each month in response to hormones, preparing to receive a fertilized egg. If none arrives, the lining sheds — menstruation. During pregnancy, it expands from fist-sized to accommodate a full-term baby.",
         "How It Connects": "The uterus connects to the ovaries via the fallopian tubes (where fertilization occurs) and opens to the outside via the cervix and vagina. Its growth and cycling are controlled by estrogen and progesterone from the ovaries, regulated by the pituitary-hypothalamic axis. Its powerful muscular contractions during labor are driven by oxytocin.",
@@ -730,7 +683,6 @@
       "name": "The Ovaries",
       "sort_order": 48,
       "category": "reproductive",
-      "level": 1,
       "sections": {
         "What It Does": "The ovaries are paired almond-sized organs that produce eggs (ova) and secrete estrogen and progesterone. Each month, one ovary typically releases a mature egg — ovulation. Over a lifetime, only about 400 of the original 1-2 million eggs will mature and ovulate.",
         "How It Connects": "The ovaries respond to FSH and LH from the pituitary gland. Released eggs enter the fallopian tubes, where fertilization may occur. Estrogen and progesterone from the ovaries regulate the uterine cycle, influence bone density, affect brain chemistry and mood, and maintain cardiovascular health. Menopause occurs when the ovaries' egg supply is depleted.",
@@ -745,7 +697,6 @@
       "name": "The Testes",
       "sort_order": 49,
       "category": "reproductive",
-      "level": 1,
       "sections": {
         "What It Does": "The testes are paired organs that produce sperm and secrete testosterone. About 1,500 sperm are produced every second in coiled seminiferous tubules. Testosterone drives male development during puberty, maintains muscle and bone mass, regulates libido, and influences mood and cognition throughout life.",
         "How It Connects": "The testes are regulated by FSH and LH from the pituitary. Testosterone feeds back to the hypothalamus and pituitary to regulate its own production. The testes hang outside the body in the scrotum because sperm production requires a temperature about 2°C below core body temperature — an elegant if vulnerable engineering solution.",
@@ -760,7 +711,6 @@
       "name": "The Placenta",
       "sort_order": 50,
       "category": "reproductive",
-      "level": 1,
       "sections": {
         "What It Does": "The placenta is a temporary organ that forms during pregnancy, serving as the interface between mother and fetus. It transfers oxygen and nutrients from maternal blood to the fetus, removes fetal waste products, produces hormones that maintain pregnancy, and acts as an immune barrier preventing maternal immune rejection of the genetically different fetus.",
         "How It Connects": "The placenta connects to the fetus via the umbilical cord (two arteries, one vein) and embeds into the uterine wall. Maternal and fetal blood never mix directly — exchange occurs across thin membranes in the placental villi. The placenta produces hCG (the hormone pregnancy tests detect), progesterone, estrogen, and human placental lactogen.",
@@ -775,7 +725,6 @@
       "name": "The Gut Microbiome",
       "sort_order": 51,
       "category": "microbiome",
-      "level": 1,
       "sections": {
         "What It Does": "The gut microbiome is a community of roughly 38 trillion microorganisms — bacteria, fungi, viruses, and archaea — living primarily in the large intestine. They ferment dietary fiber into short-chain fatty acids (fuel for colon cells), synthesize vitamins (K and B12), train the immune system, and produce neurotransmitters like serotonin.",
         "How It Connects": "The gut microbiome communicates with the brain via the gut-brain axis — through the vagus nerve, immune signaling, and microbial metabolites. It influences mood, appetite, and even behavior. It interacts with the immune system daily, teaching it to tolerate food and commensals while remaining vigilant against pathogens. Diet is its primary regulator.",
@@ -790,7 +739,6 @@
       "name": "The Skin Microbiome",
       "sort_order": 52,
       "category": "microbiome",
-      "level": 1,
       "sections": {
         "What It Does": "The skin microbiome is a diverse community of bacteria, fungi, and viruses living on and in the skin's surface. These microbes compete with pathogens for space and resources, produce antimicrobial substances, educate local immune cells, and help maintain the skin's acidic pH barrier.",
         "How It Connects": "The skin microbiome varies dramatically by body site — oily areas like the forehead host different species than moist areas like the armpit or dry areas like the forearm. It interacts with the skin's immune cells (Langerhans cells and resident T cells) and is influenced by hygiene, diet, environment, and hormones.",
@@ -805,7 +753,6 @@
       "name": "The Oral Microbiome",
       "sort_order": 53,
       "category": "microbiome",
-      "level": 1,
       "sections": {
         "What It Does": "The oral microbiome is the second most diverse microbial community in the body, hosting over 700 species of bacteria, plus fungi, viruses, and protozoa. These microbes form biofilms on teeth (dental plaque), help begin digestion, and maintain oral health by competing with disease-causing organisms.",
         "How It Connects": "The oral microbiome is the gateway community — it's the first microbiome food encounters and seeds the gut with swallowed bacteria daily. Oral bacteria can enter the bloodstream through inflamed gums, linking gum disease to cardiovascular disease and other systemic conditions. Saliva's antibodies and enzymes continuously regulate microbial balance.",
@@ -820,7 +767,6 @@
       "name": "The Vaginal Microbiome",
       "sort_order": 54,
       "category": "microbiome",
-      "level": 1,
       "sections": {
         "What It Does": "The vaginal microbiome is dominated by Lactobacillus species that produce lactic acid, maintaining an acidic pH (3.8-4.5) that inhibits pathogenic bacteria and yeast. This community protects against infections, supports reproductive health, and is the first microbiome a baby encounters during vaginal birth.",
         "How It Connects": "The vaginal microbiome is regulated by estrogen, which promotes glycogen storage in vaginal cells — fuel for Lactobacillus. It shifts composition during the menstrual cycle, pregnancy, and menopause. During vaginal birth, it seeds the infant's microbiome, influencing the child's immune development and health for years to come.",
@@ -835,7 +781,6 @@
       "name": "The Mitochondria",
       "sort_order": 55,
       "category": "microbiome",
-      "level": 1,
       "sections": {
         "What It Does": "Mitochondria are the energy factories inside nearly every human cell. They convert glucose and oxygen into ATP (adenosine triphosphate) — the molecule that powers virtually all cellular work. A single cell can contain hundreds to thousands of mitochondria, depending on its energy needs.",
         "How It Connects": "Mitochondria are essential to every energy-dependent process in the body — muscle contraction, nerve signaling, protein synthesis, cell division. The heart muscle is packed with mitochondria (about 40% of cell volume) because it needs constant energy. Mitochondria also play key roles in apoptosis (programmed cell death) and calcium signaling.",
@@ -850,7 +795,6 @@
       "name": "DNA",
       "sort_order": 56,
       "category": "special",
-      "level": 1,
       "sections": {
         "What It Does": "DNA (deoxyribonucleic acid) is the molecular instruction set for building and operating every cell in the body. Its double-helix structure stores information in sequences of four chemical bases (A, T, C, G). The human genome contains about 3 billion base pairs encoding roughly 20,000 genes — plus vast regulatory regions that control when and where genes are expressed.",
         "How It Connects": "DNA sits in the nucleus of nearly every cell, directing protein synthesis through RNA intermediaries. It coordinates with epigenetic markers (chemical tags that turn genes on or off without changing the sequence), responding to diet, stress, and environment. During cell division, the entire genome must be copied with extraordinary precision.",
@@ -865,7 +809,6 @@
       "name": "The Stem Cells",
       "sort_order": 57,
       "category": "special",
-      "level": 1,
       "sections": {
         "What It Does": "Stem cells are undifferentiated cells with the potential to become specialized cell types. Embryonic stem cells can become any cell in the body (pluripotent). Adult stem cells, found in bone marrow, skin, gut, and brain, replenish specific tissues throughout life. They are the body's reserve of raw potential.",
         "How It Connects": "Stem cells in bone marrow produce all blood and immune cells. Stem cells in the gut lining replace the intestinal surface every 3-5 days. Skin stem cells continuously regenerate the epidermis. Neural stem cells in the hippocampus create new neurons involved in memory. The niche (microenvironment) around each stem cell population regulates its behavior.",
@@ -880,7 +823,6 @@
       "name": "The Fascia",
       "sort_order": 58,
       "category": "special",
-      "level": 1,
       "sections": {
         "What It Does": "Fascia is a continuous web of connective tissue that wraps and connects every muscle, bone, organ, nerve, and blood vessel in the body. It provides structural support, transmits mechanical forces, and creates compartments that organize the body's internal architecture. It is the body's three-dimensional fabric.",
         "How It Connects": "Fascia is truly continuous — from the soles of your feet to the top of your head, one unbroken web. Deep fascia wraps muscles and transmits force across joints. Visceral fascia suspends and cushions organs. Superficial fascia lies under the skin, storing fat and allowing skin to slide over underlying structures. It contains more sensory nerve endings than muscles.",
@@ -895,7 +837,6 @@
       "name": "The Vagus Nerve",
       "sort_order": 59,
       "category": "special",
-      "level": 1,
       "sections": {
         "What It Does": "The vagus nerve is the longest cranial nerve, wandering from the brainstem through the neck and chest to the abdomen (vagus means 'wanderer' in Latin). It is the main highway of the parasympathetic nervous system — slowing heart rate, stimulating digestion, reducing inflammation, and promoting the 'rest and digest' state.",
         "How It Connects": "The vagus nerve connects the brain to the heart, lungs, gut, liver, spleen, and other organs. About 80% of its fibers are afferent (sensory) — carrying information from organs to the brain, not commands from brain to organs. It is the primary channel of the gut-brain axis, transmitting signals from gut microbes to the brain.",
@@ -910,7 +851,6 @@
       "name": "The Cerebrospinal Fluid",
       "sort_order": 60,
       "category": "special",
-      "level": 1,
       "sections": {
         "What It Does": "Cerebrospinal fluid (CSF) is a clear, colorless liquid that bathes the brain and spinal cord. It cushions the central nervous system against impacts (effectively reducing the brain's weight from 1.4 kg to about 25 grams through buoyancy), delivers nutrients, removes metabolic waste, and maintains stable chemical conditions for neural function.",
         "How It Connects": "CSF is produced by the choroid plexus in the brain's ventricles, circulates through and around the brain and spinal cord, and is reabsorbed into the venous blood. The glymphatic system — discovered in 2012 — uses CSF to flush waste from brain tissue during sleep, including amyloid-beta proteins implicated in Alzheimer's disease.",
@@ -926,8 +866,7 @@
       "name": "The Skeletal System: Architecture of Support",
       "sort_order": 61,
       "category": "body-systems",
-      "level": 2,
-      "composite_of": ["skull", "spine", "ribcage", "pelvis", "long-bones"],
+      "parts": ["skull", "spine", "ribcage", "pelvis", "long-bones"],
       "relationship_type": "emergence",
       "sections": {
         "About": "The skeletal system is the body's living framework — 206 bones in adults that protect vital organs, anchor muscles, store minerals, and manufacture blood cells. Far from being inert scaffolding, bone is dynamic tissue that constantly remodels itself in response to stress and use.",
@@ -942,8 +881,7 @@
       "name": "The Muscular System: The Engine of Movement",
       "sort_order": 62,
       "category": "body-systems",
-      "level": 2,
-      "composite_of": ["heart-muscle", "skeletal-muscles", "smooth-muscles", "diaphragm"],
+      "parts": ["heart-muscle", "skeletal-muscles", "smooth-muscles", "diaphragm"],
       "relationship_type": "emergence",
       "sections": {
         "About": "The muscular system converts chemical energy into motion. Three distinct muscle types — skeletal for voluntary movement, smooth for internal organ function, cardiac for heartbeat — together account for roughly 40% of body weight and generate all the force, heat, and motion that keep you alive.",
@@ -958,8 +896,7 @@
       "name": "The Nervous System: The Body's Internet",
       "sort_order": 63,
       "category": "body-systems",
-      "level": 2,
-      "composite_of": ["brain", "spinal-cord", "peripheral-nerves", "autonomic-nervous-system", "eyes", "ears"],
+      "parts": ["brain", "spinal-cord", "peripheral-nerves", "autonomic-nervous-system", "eyes", "ears"],
       "relationship_type": "emergence",
       "sections": {
         "About": "The nervous system is the body's communication network — processing information, generating consciousness, coordinating movement, and running background operations. From a single thought to a reflex withdrawal from pain, every experience is mediated by electrical and chemical signals flowing through neurons.",
@@ -974,8 +911,7 @@
       "name": "The Circulatory System: Rivers of Life",
       "sort_order": 64,
       "category": "body-systems",
-      "level": 2,
-      "composite_of": ["heart", "arteries", "veins", "capillaries", "blood"],
+      "parts": ["heart", "arteries", "veins", "capillaries", "blood"],
       "relationship_type": "emergence",
       "sections": {
         "About": "The circulatory system is the body's transport network — a closed loop of heart, arteries, veins, and capillaries carrying blood to every living cell. It delivers oxygen and nutrients, removes waste, distributes heat, and carries immune cells and hormones to where they're needed.",
@@ -990,8 +926,7 @@
       "name": "The Respiratory System: The Breath of Life",
       "sort_order": 65,
       "category": "body-systems",
-      "level": 2,
-      "composite_of": ["lungs", "bronchi", "alveoli"],
+      "parts": ["lungs", "bronchi", "alveoli"],
       "relationship_type": "emergence",
       "sections": {
         "About": "The respiratory system exchanges gases between the body and the atmosphere — bringing in oxygen for cellular energy and expelling carbon dioxide waste. It works every second of your life, processing about 10,000 liters of air daily, and connects intimately with the circulatory system at the alveolar-capillary interface.",
@@ -1006,8 +941,7 @@
       "name": "The Digestive System: The Inner Alchemist",
       "sort_order": 66,
       "category": "body-systems",
-      "level": 2,
-      "composite_of": ["mouth", "esophagus", "stomach", "small-intestine", "large-intestine", "liver", "pancreas"],
+      "parts": ["mouth", "esophagus", "stomach", "small-intestine", "large-intestine", "liver", "pancreas"],
       "relationship_type": "emergence",
       "sections": {
         "About": "The digestive system is a 9-meter processing pipeline that transforms food into molecular fuel. From the mechanical breakdown in the mouth to the chemical alchemy of the stomach, the absorptive genius of the small intestine, and the recycling plant of the large intestine — with the liver and pancreas as indispensable chemical partners — it extracts energy and building materials from everything you eat.",
@@ -1022,8 +956,7 @@
       "name": "The Endocrine System: Chemical Messengers",
       "sort_order": 67,
       "category": "body-systems",
-      "level": 2,
-      "composite_of": ["pituitary", "thyroid", "adrenals", "pineal", "gonads"],
+      "parts": ["pituitary", "thyroid", "adrenals", "pineal", "gonads"],
       "relationship_type": "emergence",
       "sections": {
         "About": "The endocrine system communicates through hormones — chemical messages released into the bloodstream that travel to target cells throughout the body. Where the nervous system sends fast, targeted signals, the endocrine system sends slow, widespread signals that regulate growth, metabolism, reproduction, mood, and the body's daily rhythms.",
@@ -1038,8 +971,7 @@
       "name": "The Immune System: The Body's Military",
       "sort_order": 68,
       "category": "body-systems",
-      "level": 2,
-      "composite_of": ["white-blood-cells", "lymph-nodes", "spleen", "thymus", "bone-marrow"],
+      "parts": ["white-blood-cells", "lymph-nodes", "spleen", "thymus", "bone-marrow"],
       "relationship_type": "emergence",
       "sections": {
         "About": "The immune system is a distributed defense network — no single organ, but a collaboration of cells, proteins, and tissues that identify and destroy threats while leaving the body's own cells unharmed. It has innate defenses (fast, general) and adaptive defenses (slow, targeted, with memory).",
@@ -1054,8 +986,7 @@
       "name": "The Integumentary System: The Living Envelope",
       "sort_order": 69,
       "category": "body-systems",
-      "level": 2,
-      "composite_of": ["skin", "hair", "nails"],
+      "parts": ["skin", "hair", "nails"],
       "relationship_type": "emergence",
       "sections": {
         "About": "The integumentary system is the body's outer boundary — skin, hair, and nails forming a continuous barrier between the internal world and the environment. It is simultaneously armor, sensor, thermostat, vitamin factory, and immune outpost. It is the organ system you can see and touch.",
@@ -1070,8 +1001,7 @@
       "name": "The Urinary System: The Great Purifier",
       "sort_order": 70,
       "category": "body-systems",
-      "level": 2,
-      "composite_of": ["kidneys", "bladder", "ureters"],
+      "parts": ["kidneys", "bladder", "ureters"],
       "relationship_type": "emergence",
       "sections": {
         "About": "The urinary system maintains the body's internal chemical environment — filtering blood, removing waste, balancing electrolytes, regulating blood pressure, and controlling fluid volume. It processes about 180 liters of blood filtrate per day, reclaiming 99% and excreting the rest as urine.",
@@ -1086,8 +1016,7 @@
       "name": "The Reproductive System: The Bridge Between Generations",
       "sort_order": 71,
       "category": "body-systems",
-      "level": 2,
-      "composite_of": ["uterus", "ovaries", "testes", "placenta"],
+      "parts": ["uterus", "ovaries", "testes", "placenta"],
       "relationship_type": "emergence",
       "sections": {
         "About": "The reproductive system is the only body system not necessary for individual survival — but essential for the survival of the species. It produces sex cells, enables fertilization, nurtures new life, and produces hormones that shape the body and brain from puberty through old age.",
@@ -1102,8 +1031,7 @@
       "name": "The Microbiome: The Invisible Ecosystem",
       "sort_order": 72,
       "category": "body-systems",
-      "level": 2,
-      "composite_of": ["gut-microbiome", "skin-microbiome", "oral-microbiome", "vaginal-microbiome", "mitochondria"],
+      "parts": ["gut-microbiome", "skin-microbiome", "oral-microbiome", "vaginal-microbiome", "mitochondria"],
       "relationship_type": "emergence",
       "sections": {
         "About": "The microbiome is the vast community of microorganisms that live on and in the human body — outnumbering human cells and carrying 150 times more genes. Far from passive hitchhikers, these microbes are active partners in digestion, immunity, mood regulation, and disease resistance. Mitochondria — once free-living bacteria — represent the oldest and most intimate symbiosis of all.",
@@ -1118,8 +1046,7 @@
       "name": "Special Structures: The Body's Hidden Genius",
       "sort_order": 73,
       "category": "body-systems",
-      "level": 2,
-      "composite_of": ["dna", "stem-cells", "fascia", "vagus-nerve", "cerebrospinal-fluid"],
+      "parts": ["dna", "stem-cells", "fascia", "vagus-nerve", "cerebrospinal-fluid"],
       "relationship_type": "emergence",
       "sections": {
         "About": "These five structures don't fit neatly into a single body system — they cross boundaries, connect systems, and reveal the body's deepest organizing principles. DNA is the blueprint, stem cells the raw potential, fascia the physical web, the vagus nerve the communication highway, and CSF the brain's protective medium.",
@@ -1135,8 +1062,7 @@
       "name": "The Moving Body",
       "sort_order": 74,
       "category": "meta",
-      "level": 3,
-      "composite_of": ["system-skeletal", "system-muscular", "system-nervous"],
+      "parts": ["system-skeletal", "system-muscular", "system-nervous"],
       "relationship_type": "emergence",
       "sections": {
         "About": "The Moving Body is the body you experience most directly — bones for structure, muscles for force, and nerves for control. These three systems evolved together, each shaping the others. The skeleton without muscles is an inert frame. Muscles without bones have nothing to pull against. Both without nerves have no coordination. Together they create the embodied self that walks, dances, speaks, and reaches for what it loves.",
@@ -1150,8 +1076,7 @@
       "name": "The Invisible Body",
       "sort_order": 75,
       "category": "meta",
-      "level": 3,
-      "composite_of": ["system-endocrine", "system-immune", "system-microbiome"],
+      "parts": ["system-endocrine", "system-immune", "system-microbiome"],
       "relationship_type": "emergence",
       "sections": {
         "About": "The Invisible Body operates beneath conscious awareness — hormones shaping mood and metabolism, immune cells patrolling for threats, and trillions of microbes digesting food and training defenses. You never see these systems work, yet they determine how you feel, how you heal, and how you respond to the world. The invisible body is the body that runs itself.",
@@ -1165,8 +1090,7 @@
       "name": "The Living Whole",
       "sort_order": 76,
       "category": "meta",
-      "level": 3,
-      "composite_of": ["system-skeletal", "system-muscular", "system-nervous", "system-circulatory", "system-respiratory", "system-digestive", "system-endocrine", "system-immune", "system-integumentary", "system-urinary", "system-reproductive", "system-microbiome", "system-special"],
+      "parts": ["system-skeletal", "system-muscular", "system-nervous", "system-circulatory", "system-respiratory", "system-digestive", "system-endocrine", "system-immune", "system-integumentary", "system-urinary", "system-reproductive", "system-microbiome", "system-special"],
       "relationship_type": "emergence",
       "sections": {
         "About": "The Living Whole is what emerges when all systems operate together — not a machine with parts, but a living symphony where every system depends on every other. The heart pumps blood that feeds the brain that controls the muscles that move the skeleton that protects the organs that sustain the heart. No beginning, no end — a circle of mutual dependence that we experience as being alive.",

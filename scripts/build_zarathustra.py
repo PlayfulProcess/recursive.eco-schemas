@@ -16,6 +16,7 @@ import json
 import re
 import os
 from pathlib import Path
+from grammar_depth import node_depth
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent
@@ -565,7 +566,6 @@ def build_grammar():
             "id": chapter_id,
             "name": ch['title'],
             "sort_order": sort_order,
-            "level": 1,
             "category": part_key,
             "sections": sections,
             "keywords": keywords,
@@ -588,9 +588,8 @@ def build_grammar():
             "id": part_id,
             "name": part_data['part_label'],
             "sort_order": sort_order,
-            "level": 2,
             "category": "parts",
-            "composite_of": part_data['chapters'],
+            "parts": part_data['chapters'],
             "relationship_type": "emergence",
             "sections": {
                 "About": part_data['description'],
@@ -617,9 +616,8 @@ def build_grammar():
             "id": f"theme-{theme_key}",
             "name": theme_data['name'],
             "sort_order": sort_order,
-            "level": 2,
             "category": "thematic-groups",
-            "composite_of": theme_data['ids'],
+            "parts": theme_data['ids'],
             "relationship_type": "emergence",
             "sections": {
                 "About": theme_data['about'],
@@ -640,9 +638,8 @@ def build_grammar():
             "id": "the-four-parts",
             "name": "The Four Parts of Zarathustra",
             "sort_order": sort_order,
-            "level": 3,
             "category": "meta-structure",
-            "composite_of": part_ids,
+            "parts": part_ids,
             "relationship_type": "emergence",
             "sections": {
                 "About": "Thus Spoke Zarathustra unfolds in four parts, each with its own character. Part One introduces the teaching. Part Two deepens it through song and confrontation. Part Three reaches the philosophical climax with the eternal recurrence. Part Four stages a dramatic gathering of seekers in Zarathustra's cave. The four parts mirror the four seasons, four phases of a life, four movements of a symphony.",
@@ -655,9 +652,8 @@ def build_grammar():
             "id": "thematic-arcs",
             "name": "Thematic Arcs of Zarathustra",
             "sort_order": sort_order + 1,
-            "level": 3,
             "category": "meta-themes",
-            "composite_of": theme_ids,
+            "parts": theme_ids,
             "relationship_type": "emergence",
             "sections": {
                 "About": "Eight thematic threads weave through the eighty speeches of Zarathustra. Self-overcoming is the central pillar. Eternal recurrence is the deepest challenge. The critique of society clears ground. Body and earth provide foundation. Solitude and return give rhythm. Companions provide drama. Will and power revalue all values. Art and song give wings. No single thread tells the whole story — together they form Nietzsche's philosophical symphony.",
@@ -716,7 +712,7 @@ def build_grammar():
         "lineages": ["Shrei", "Akomolafe", "Andreotti"],
         "worldview": "non-dual",
         "cover_image_url": "",
-        "items": items
+        "nodes": items
     }
 
     # Write output
@@ -725,9 +721,9 @@ def build_grammar():
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
     print(f"Generated {OUTPUT_PATH}")
-    print(f"  L1 items (speeches): {sum(1 for i in items if i['level'] == 1)}")
-    print(f"  L2 items (parts + themes): {sum(1 for i in items if i['level'] == 2)}")
-    print(f"  L3 items (meta-categories): {sum(1 for i in items if i['level'] == 3)}")
+    print(f"  L1 items (speeches): {sum(1 for i in items if node_depth(i, items) == 1)}")
+    print(f"  L2 items (parts + themes): {sum(1 for i in items if node_depth(i, items) == 2)}")
+    print(f"  L3 items (meta-categories): {sum(1 for i in items if node_depth(i, items) == 3)}")
     print(f"  Total items: {len(items)}")
 
 

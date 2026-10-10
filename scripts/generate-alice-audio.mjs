@@ -323,8 +323,8 @@ async function uploadToR2(key, buffer, contentType = 'audio/mpeg') {
 
 function loadChapters() {
   const grammar = JSON.parse(readFileSync(grammarPath, 'utf8'));
-  const l1Items = grammar.items.filter(it => it.level === 1);
-  const l2Items = grammar.items.filter(it => it.level === 2);
+  const l1Items = grammar.nodes.filter((it) => nodeDepth(it, grammar.nodes) === 1);
+  const l2Items = grammar.nodes.filter((it) => nodeDepth(it, grammar.nodes) === 2);
 
   const chapters = {};
   for (const item of l1Items) {
@@ -680,3 +680,20 @@ main().catch(err => {
   console.error('Fatal error:', err);
   process.exit(1);
 });
+
+// Depth from parts (grammar format v2 stores no level): a node with no parts is 1;
+// otherwise 1 + the deepest part. Cycle-safe. `nodes` is the nodes array or an id -> node Map.
+function nodeDepth(node, nodes, seen = new Set()) {
+  const parts = node && node.parts;
+  if (!parts || !parts.length) return 1;
+  const byId = nodes instanceof Map ? nodes : new Map(nodes.map((n) => [n.id, n]));
+  if (seen.has(node.id)) return 1;
+  seen.add(node.id);
+  let d = 1;
+  for (const id of parts) {
+    const c = byId.get(id);
+    if (c) d = Math.max(d, 1 + nodeDepth(c, byId, seen));
+  }
+  seen.delete(node.id);
+  return d;
+}

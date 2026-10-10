@@ -96,7 +96,7 @@ so = 0
 for slug, name, ital, icon, note in TRUMPS:
     items.append({
         "id": f"trump-{slug}", "name": name, "sort_order": so,
-        "category": "trump", "level": 1,
+        "category": "trump",
         "keywords": [name.lower().replace("the ", ""), ital.lower(), "bolognese", "tarocchino", "trionfi"],
         "metadata": {"arcana": "trump", "italian_name": ital, "tradition": "bolognese"},
         "sections": {"Iconography": icon, "In the Bolognese deck": note, "Tradition Note": NOTE},
@@ -108,7 +108,7 @@ for sid, sdisp, sital, element in SUITS:
         is_court = pip is None
         items.append({
             "id": f"{sid}-{rslug}", "name": f"{rname} of {sdisp}", "sort_order": so,
-            "category": f"suit-{sid}", "level": 1,
+            "category": f"suit-{sid}",
             "keywords": [sdisp.lower(), element.lower(), rslug, sital.lower(),
                          "court" if is_court else "pip"],
             "metadata": {"arcana": "minor", "suit": sdisp, "suit_italian": sital, "element": element,
@@ -151,8 +151,8 @@ for sid, sdisp, sital, element in SUITS:
                   f"four courts — the Bolognese 'stripping' of the low pips that gives the 62-card deck."}))
 for eid, ename, kids, sections in emgs:
     kids = [k for k in kids if k in all_ids]
-    items.append({"id": eid, "name": ename, "sort_order": so, "category": "emergence", "level": 2,
-                  "composite_of": kids, "relationship_type": "emergence",
+    items.append({"id": eid, "name": ename, "sort_order": so, "category": "emergence",
+                  "parts": kids, "relationship_type": "emergence",
                   "image_url": COVER, "metadata": {}, "sections": sections})
     so += 1
 
@@ -200,7 +200,7 @@ grammar = {
     "lineages": ["Andreotti"],
     "worldview": "historical",
     "is_published": False,
-    "items": items,
+    "nodes": items,
 }
 
 os.makedirs(OUT_DIR, exist_ok=True)

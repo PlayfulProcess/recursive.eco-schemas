@@ -11,6 +11,7 @@ Structure:
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SEED = os.path.join(SCRIPT_DIR, "..", "seeds", "the-prophet.txt")
@@ -196,7 +197,6 @@ def build_grammar(sections):
         items.append({
             "id": sec["id"],
             "name": sec["name"],
-            "level": 1,
             "category": "essay",
             "sort_order": sort_order,
             "sections": {
@@ -214,10 +214,9 @@ def build_grammar(sections):
         items.append({
             "id": theme["id"],
             "name": theme["name"],
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": theme["sections"],
+            "parts": theme["sections"],
             "sort_order": sort_order,
             "sections": {
                 "About": theme["about"],
@@ -232,10 +231,9 @@ def build_grammar(sections):
     items.append({
         "id": "meta-teachings",
         "name": "The Teachings of Almustafa: Five Dimensions of Wisdom",
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": [t["id"] for t in THEMES if t["id"] != "theme-narrative-frame"],
+        "parts": [t["id"] for t in THEMES if t["id"] != "theme-narrative-frame"],
         "sort_order": sort_order,
         "sections": {
             "About": "The Prophet's twenty-six essays weave together into five dimensions: the bonds of love, the depths of the inner life, the holiness of daily existence, the question of how to live together, and the mystery of the eternal. These dimensions do not compete but interpenetrate — work is love, love is freedom, freedom is prayer, prayer is death, death is life. The book is a single vision refracted through twenty-six facets.",
@@ -248,10 +246,9 @@ def build_grammar(sections):
     items.append({
         "id": "meta-complete-work",
         "name": "The Prophet: Departure as Revelation",
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": ["theme-narrative-frame", "meta-teachings"],
+        "parts": ["theme-narrative-frame", "meta-teachings"],
         "sort_order": sort_order,
         "sections": {
             "About": "The Prophet is a single gesture: a man leaving a city he has loved for twelve years, pouring out his wisdom in the hour of departure. The narrative frame is not decoration — it is the deepest teaching. All of Almustafa's words are spoken on the threshold, between presence and absence, between the known and the unknown. This is why the book resonates: we are all always departing, always on the edge of the ship, always speaking our truest words in the moment before silence.",
@@ -294,16 +291,16 @@ def main():
         "shelves": ["wisdom"],
         "lineages": ["Linehan", "Shrei"],
         "worldview": "non-dual",
-        "items": items,
+        "nodes": items,
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT}")
     print(f"  L1: {l1} essays, L2: {l2} emergent groups, L3: {l3} meta-categories")
     print(f"  Total items: {len(items)}")

@@ -29,11 +29,10 @@
     "source_url": "https://www.gutenberg.org/ebooks/11",
     "note": "Complete original text from Project Gutenberg. All 121 illustrations are public domain from 10+ artists and editions spanning 1864-1933."
   },
-  "items": [
+  "nodes": [
     {
       "id": "chapter01-down-the-rabbit-hole",
       "name": "DOWN THE RABBIT-HOLE",
-      "level": 1,
       "category": "chapter",
       "sort_order": 1,
       "sections": {
@@ -80,7 +79,6 @@
     {
       "id": "chapter02-the-pool-of-tears",
       "name": "THE POOL OF TEARS",
-      "level": 1,
       "category": "chapter",
       "sort_order": 2,
       "sections": {
@@ -113,7 +111,6 @@
     {
       "id": "chapter03-a-caucus-race-and-a-long-tale",
       "name": "A CAUCUS-RACE AND A LONG TALE",
-      "level": 1,
       "category": "chapter",
       "sort_order": 3,
       "sections": {
@@ -150,7 +147,6 @@
     {
       "id": "chapter04-the-rabbit-sends-in-a-little-bill",
       "name": "THE RABBIT SENDS IN A LITTLE BILL",
-      "level": 1,
       "category": "chapter",
       "sort_order": 4,
       "sections": {
@@ -187,7 +183,6 @@
     {
       "id": "chapter05-advice-from-a-caterpillar",
       "name": "ADVICE FROM A CATERPILLAR",
-      "level": 1,
       "category": "chapter",
       "sort_order": 5,
       "sections": {
@@ -222,7 +217,6 @@
     {
       "id": "chapter06-pig-and-pepper",
       "name": "PIG AND PEPPER",
-      "level": 1,
       "category": "chapter",
       "sort_order": 6,
       "sections": {
@@ -267,7 +261,6 @@
     {
       "id": "chapter07-a-mad-tea-party",
       "name": "A MAD TEA-PARTY",
-      "level": 1,
       "category": "chapter",
       "sort_order": 7,
       "sections": {
@@ -304,7 +297,6 @@
     {
       "id": "chapter08-the-queen-s-croquet-ground",
       "name": "THE QUEEN'S CROQUET-GROUND",
-      "level": 1,
       "category": "chapter",
       "sort_order": 8,
       "sections": {
@@ -349,7 +341,6 @@
     {
       "id": "chapter09-the-mock-turtle-s-story",
       "name": "THE MOCK TURTLE'S STORY",
-      "level": 1,
       "category": "chapter",
       "sort_order": 9,
       "sections": {
@@ -384,7 +375,6 @@
     {
       "id": "chapter10-the-lobster-quadrille",
       "name": "THE LOBSTER QUADRILLE",
-      "level": 1,
       "category": "chapter",
       "sort_order": 10,
       "sections": {
@@ -409,7 +399,6 @@
     {
       "id": "chapter11-who-stole-the-tarts",
       "name": "WHO STOLE THE TARTS?",
-      "level": 1,
       "category": "chapter",
       "sort_order": 11,
       "sections": {
@@ -438,7 +427,6 @@
     {
       "id": "chapter12-alice-s-evidence",
       "name": "ALICE'S EVIDENCE",
-      "level": 1,
       "category": "chapter",
       "sort_order": 12,
       "sections": {
@@ -471,10 +459,9 @@
     {
       "id": "group-beginning",
       "name": "THE BEGINNING",
-      "level": 2,
       "category": "group",
       "sort_order": 13,
-      "composite_of": [
+      "parts": [
         "chapter01-down-the-rabbit-hole",
         "chapter02-the-pool-of-tears",
         "chapter03-a-caucus-race-and-a-long-tale",
@@ -491,10 +478,9 @@
     {
       "id": "group-middle",
       "name": "THE MIDDLE",
-      "level": 2,
       "category": "group",
       "sort_order": 14,
-      "composite_of": [
+      "parts": [
         "chapter05-advice-from-a-caterpillar",
         "chapter06-pig-and-pepper",
         "chapter07-a-mad-tea-party",
@@ -511,10 +497,9 @@
     {
       "id": "group-ending",
       "name": "THE ENDING",
-      "level": 2,
       "category": "group",
       "sort_order": 15,
-      "composite_of": [
+      "parts": [
         "chapter09-the-mock-turtle-s-story",
         "chapter10-the-lobster-quadrille",
         "chapter11-who-stole-the-tarts",
@@ -531,10 +516,9 @@
     {
       "id": "alice-complete",
       "name": "ALL OF ALICE",
-      "level": 3,
       "category": "collection",
       "sort_order": 16,
-      "composite_of": [
+      "parts": [
         "group-beginning",
         "group-middle",
         "group-ending"

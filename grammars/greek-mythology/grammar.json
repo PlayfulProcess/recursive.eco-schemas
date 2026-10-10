@@ -28,11 +28,10 @@
     "heroes"
   ],
   "cover_image_url": "",
-  "items": [
+  "nodes": [
     {
       "id": "chaos",
       "name": "Chaos",
-      "level": 1,
       "category": "primordial",
       "sort_order": 0,
       "sections": {
@@ -58,7 +57,6 @@
     {
       "id": "gaia",
       "name": "Gaia",
-      "level": 1,
       "category": "primordial",
       "sort_order": 1,
       "sections": {
@@ -88,7 +86,6 @@
       "id": "uranus",
       "name": "Uranus",
       "symbol": "♅",
-      "level": 1,
       "category": "planet",
       "sort_order": 2,
       "sections": {
@@ -118,7 +115,6 @@
     {
       "id": "pontus",
       "name": "Pontus",
-      "level": 1,
       "category": "primordial",
       "sort_order": 3,
       "sections": {
@@ -144,7 +140,6 @@
     {
       "id": "tartarus",
       "name": "Tartarus",
-      "level": 1,
       "category": "primordial",
       "sort_order": 4,
       "sections": {
@@ -171,7 +166,6 @@
     {
       "id": "erebus",
       "name": "Erebus",
-      "level": 1,
       "category": "primordial",
       "sort_order": 5,
       "sections": {
@@ -198,7 +192,6 @@
     {
       "id": "nyx",
       "name": "Nyx",
-      "level": 1,
       "category": "primordial",
       "sort_order": 6,
       "sections": {
@@ -228,7 +221,6 @@
     {
       "id": "eros-primordial",
       "name": "Eros",
-      "level": 1,
       "category": "primordial",
       "sort_order": 7,
       "sections": {
@@ -257,10 +249,9 @@
       "id": "saturn",
       "name": "Saturn",
       "symbol": "♄",
-      "level": 2,
       "category": "planet",
       "sort_order": 8,
-      "composite_of": [
+      "parts": [
         "uranus",
         "gaia"
       ],
@@ -293,10 +284,9 @@
     {
       "id": "rhea",
       "name": "Rhea",
-      "level": 2,
       "category": "titan",
       "sort_order": 9,
-      "composite_of": [
+      "parts": [
         "uranus",
         "gaia"
       ],
@@ -327,10 +317,9 @@
     {
       "id": "oceanus",
       "name": "Oceanus",
-      "level": 2,
       "category": "titan",
       "sort_order": 10,
-      "composite_of": [
+      "parts": [
         "uranus",
         "gaia"
       ],
@@ -360,10 +349,9 @@
     {
       "id": "tethys",
       "name": "Tethys",
-      "level": 2,
       "category": "titan",
       "sort_order": 11,
-      "composite_of": [
+      "parts": [
         "uranus",
         "gaia"
       ],
@@ -393,10 +381,9 @@
     {
       "id": "hyperion",
       "name": "Hyperion",
-      "level": 2,
       "category": "titan",
       "sort_order": 12,
-      "composite_of": [
+      "parts": [
         "uranus",
         "gaia"
       ],
@@ -426,10 +413,9 @@
     {
       "id": "theia",
       "name": "Theia",
-      "level": 2,
       "category": "titan",
       "sort_order": 13,
-      "composite_of": [
+      "parts": [
         "uranus",
         "gaia"
       ],
@@ -461,10 +447,9 @@
     {
       "id": "coeus",
       "name": "Coeus",
-      "level": 2,
       "category": "titan",
       "sort_order": 14,
-      "composite_of": [
+      "parts": [
         "uranus",
         "gaia"
       ],
@@ -495,10 +480,9 @@
     {
       "id": "phoebe-titan",
       "name": "Phoebe",
-      "level": 2,
       "category": "titan",
       "sort_order": 15,
-      "composite_of": [
+      "parts": [
         "uranus",
         "gaia"
       ],
@@ -533,10 +517,9 @@
     {
       "id": "mnemosyne",
       "name": "Mnemosyne",
-      "level": 2,
       "category": "titan",
       "sort_order": 16,
-      "composite_of": [
+      "parts": [
         "uranus",
         "gaia"
       ],
@@ -567,10 +550,9 @@
     {
       "id": "themis",
       "name": "Themis",
-      "level": 2,
       "category": "titan",
       "sort_order": 17,
-      "composite_of": [
+      "parts": [
         "uranus",
         "gaia"
       ],
@@ -604,10 +586,9 @@
     {
       "id": "iapetus",
       "name": "Iapetus",
-      "level": 2,
       "category": "titan",
       "sort_order": 18,
-      "composite_of": [
+      "parts": [
         "uranus",
         "gaia"
       ],
@@ -639,10 +620,9 @@
     {
       "id": "aether",
       "name": "Aether",
-      "level": 2,
       "category": "primordial",
       "sort_order": 19,
-      "composite_of": [
+      "parts": [
         "erebus",
         "nyx"
       ],
@@ -671,10 +651,9 @@
     {
       "id": "nereus",
       "name": "Nereus",
-      "level": 2,
       "category": "primordial",
       "sort_order": 20,
-      "composite_of": [
+      "parts": [
         "pontus",
         "gaia"
       ],
@@ -703,10 +682,9 @@
     {
       "id": "typhon",
       "name": "Typhon",
-      "level": 2,
       "category": "primordial",
       "sort_order": 21,
-      "composite_of": [
+      "parts": [
         "tartarus",
         "gaia"
       ],
@@ -737,10 +715,9 @@
     {
       "id": "phanes",
       "name": "Phanes",
-      "level": 2,
       "category": "primordial",
       "sort_order": 22,
-      "composite_of": [
+      "parts": [
         "chaos",
         "eros-primordial"
       ],
@@ -771,10 +748,9 @@
     {
       "id": "latona",
       "name": "Latona",
-      "level": 3,
       "category": "titan",
       "sort_order": 23,
-      "composite_of": [
+      "parts": [
         "coeus",
         "phoebe-titan"
       ],
@@ -806,10 +782,9 @@
     {
       "id": "helios",
       "name": "Helios",
-      "level": 3,
       "category": "titan",
       "sort_order": 24,
-      "composite_of": [
+      "parts": [
         "hyperion",
         "theia"
       ],
@@ -840,10 +815,9 @@
     {
       "id": "selene",
       "name": "Selene",
-      "level": 3,
       "category": "titan",
       "sort_order": 25,
-      "composite_of": [
+      "parts": [
         "hyperion",
         "theia"
       ],
@@ -874,10 +848,9 @@
     {
       "id": "eos",
       "name": "Eos",
-      "level": 3,
       "category": "titan",
       "sort_order": 26,
-      "composite_of": [
+      "parts": [
         "hyperion",
         "theia"
       ],
@@ -908,10 +881,9 @@
     {
       "id": "prometheus",
       "name": "Prometheus",
-      "level": 3,
       "category": "titan",
       "sort_order": 27,
-      "composite_of": [
+      "parts": [
         "iapetus",
         "oceanus"
       ],
@@ -943,10 +915,9 @@
     {
       "id": "atlas",
       "name": "Atlas",
-      "level": 3,
       "category": "titan",
       "sort_order": 28,
-      "composite_of": [
+      "parts": [
         "iapetus",
         "oceanus"
       ],
@@ -979,10 +950,9 @@
       "id": "venus",
       "name": "Venus",
       "symbol": "♀",
-      "level": 3,
       "category": "planet",
       "sort_order": 29,
-      "composite_of": [
+      "parts": [
         "uranus",
         "nereus"
       ],
@@ -1019,10 +989,9 @@
       "id": "jupiter",
       "name": "Jupiter",
       "symbol": "♃",
-      "level": 3,
       "category": "planet",
       "sort_order": 30,
-      "composite_of": [
+      "parts": [
         "saturn",
         "rhea"
       ],
@@ -1056,10 +1025,9 @@
       "id": "neptune",
       "name": "Neptune",
       "symbol": "♆",
-      "level": 3,
       "category": "planet",
       "sort_order": 31,
-      "composite_of": [
+      "parts": [
         "saturn",
         "rhea"
       ],
@@ -1092,10 +1060,9 @@
       "id": "pluto",
       "name": "Pluto",
       "symbol": "♇",
-      "level": 3,
       "category": "planet",
       "sort_order": 32,
-      "composite_of": [
+      "parts": [
         "saturn",
         "rhea"
       ],
@@ -1127,10 +1094,9 @@
     {
       "id": "juno",
       "name": "Juno",
-      "level": 3,
       "category": "goddess",
       "sort_order": 33,
-      "composite_of": [
+      "parts": [
         "saturn",
         "rhea"
       ],
@@ -1160,10 +1126,9 @@
     {
       "id": "ceres",
       "name": "Ceres",
-      "level": 3,
       "category": "planet",
       "sort_order": 34,
-      "composite_of": [
+      "parts": [
         "saturn",
         "rhea"
       ],
@@ -1195,10 +1160,9 @@
     {
       "id": "vesta",
       "name": "Vesta",
-      "level": 3,
       "category": "goddess",
       "sort_order": 35,
-      "composite_of": [
+      "parts": [
         "saturn",
         "rhea"
       ],
@@ -1231,10 +1195,9 @@
       "id": "sun",
       "name": "Sun",
       "symbol": "☉",
-      "level": 4,
       "category": "planet",
       "sort_order": 36,
-      "composite_of": [
+      "parts": [
         "jupiter",
         "latona"
       ],
@@ -1272,10 +1235,9 @@
       "id": "moon",
       "name": "Moon",
       "symbol": "☽",
-      "level": 4,
       "category": "planet",
       "sort_order": 37,
-      "composite_of": [
+      "parts": [
         "jupiter",
         "latona"
       ],
@@ -1312,10 +1274,9 @@
       "id": "mars",
       "name": "Mars",
       "symbol": "♂",
-      "level": 4,
       "category": "planet",
       "sort_order": 38,
-      "composite_of": [
+      "parts": [
         "jupiter",
         "juno"
       ],
@@ -1349,10 +1310,9 @@
     {
       "id": "vulcan",
       "name": "Vulcan",
-      "level": 4,
       "category": "god",
       "sort_order": 39,
-      "composite_of": [
+      "parts": [
         "jupiter",
         "juno"
       ],
@@ -1386,10 +1346,9 @@
     {
       "id": "proserpine",
       "name": "Proserpine",
-      "level": 4,
       "category": "goddess",
       "sort_order": 40,
-      "composite_of": [
+      "parts": [
         "jupiter",
         "ceres"
       ],
@@ -1424,10 +1383,9 @@
       "id": "mercury",
       "name": "Mercury",
       "symbol": "☿",
-      "level": 4,
       "category": "planet",
       "sort_order": 41,
-      "composite_of": [
+      "parts": [
         "jupiter",
         "atlas"
       ],
@@ -1463,10 +1421,9 @@
     {
       "id": "minerva",
       "name": "Minerva",
-      "level": 4,
       "category": "goddess",
       "sort_order": 42,
-      "composite_of": [
+      "parts": [
         "jupiter",
         "oceanus"
       ],
@@ -1503,10 +1460,9 @@
     {
       "id": "bacchus",
       "name": "Bacchus",
-      "level": 4,
       "category": "god",
       "sort_order": 43,
-      "composite_of": [
+      "parts": [
         "jupiter",
         "venus"
       ],
@@ -1542,10 +1498,9 @@
     {
       "id": "cupid",
       "name": "Cupid",
-      "level": 5,
       "category": "god",
       "sort_order": 44,
-      "composite_of": [
+      "parts": [
         "venus",
         "mars"
       ],
@@ -1577,10 +1532,9 @@
     {
       "id": "hercules",
       "name": "Hercules",
-      "level": 5,
       "category": "hero",
       "sort_order": 45,
-      "composite_of": [
+      "parts": [
         "jupiter",
         "mars"
       ],
@@ -1612,10 +1566,9 @@
     {
       "id": "perseus",
       "name": "Perseus",
-      "level": 5,
       "category": "hero",
       "sort_order": 46,
-      "composite_of": [
+      "parts": [
         "jupiter",
         "minerva"
       ],
@@ -1645,10 +1598,9 @@
     {
       "id": "achilles",
       "name": "Achilles",
-      "level": 5,
       "category": "hero",
       "sort_order": 47,
-      "composite_of": [
+      "parts": [
         "mars",
         "nereus"
       ],
@@ -1680,10 +1632,9 @@
     {
       "id": "ulysses",
       "name": "Ulysses",
-      "level": 5,
       "category": "hero",
       "sort_order": 48,
-      "composite_of": [
+      "parts": [
         "minerva",
         "mercury"
       ],
@@ -1716,10 +1667,9 @@
     {
       "id": "theseus",
       "name": "Theseus",
-      "level": 5,
       "category": "hero",
       "sort_order": 49,
-      "composite_of": [
+      "parts": [
         "neptune",
         "minerva"
       ],
@@ -1751,10 +1701,9 @@
     {
       "id": "orpheus",
       "name": "Orpheus",
-      "level": 5,
       "category": "hero",
       "sort_order": 50,
-      "composite_of": [
+      "parts": [
         "sun",
         "venus"
       ],
@@ -1786,10 +1735,9 @@
     {
       "id": "jason",
       "name": "Jason",
-      "level": 5,
       "category": "hero",
       "sort_order": 51,
-      "composite_of": [
+      "parts": [
         "mars",
         "mercury"
       ],
@@ -1820,10 +1768,9 @@
     {
       "id": "atalanta",
       "name": "Atalanta",
-      "level": 5,
       "category": "hero",
       "sort_order": 52,
-      "composite_of": [
+      "parts": [
         "moon",
         "mars"
       ],
@@ -1855,10 +1802,9 @@
     {
       "id": "aeneas",
       "name": "Aeneas",
-      "level": 5,
       "category": "hero",
       "sort_order": 53,
-      "composite_of": [
+      "parts": [
         "venus",
         "mars"
       ],
@@ -1893,7 +1839,6 @@
       "id": "aries",
       "name": "Aries",
       "symbol": "♈",
-      "level": 1,
       "category": "sign",
       "sections": {
         "Profile": "The Golden Ram whose fleece shone like the sun. Sent by Mercury at Jupiter's command, the ram rescued the children Phrixus and Helle from their wicked stepmother. As the ram flew east over the sea, Helle fell into the strait now called the Hellespont. Phrixus reached Colchis safely and sacrificed the ram to Jupiter, hanging its golden fleece in a sacred grove guarded by a sleepless dragon. The fleece became the prize sought by Jason and the Argonauts. Jupiter placed the ram among the stars in honor of its heroism.",
@@ -1926,7 +1871,6 @@
       "id": "taurus",
       "name": "Taurus",
       "symbol": "♉",
-      "level": 1,
       "category": "sign",
       "sections": {
         "Profile": "The great white bull — Jupiter himself transformed. Enchanted by the Phoenician princess Europa, Jupiter took the form of a magnificent snow-white bull with horns like polished crescents. He lay among her father's herd, gentle as a lamb. When Europa climbed onto his back, the bull leapt into the sea and carried her across to Crete, where Jupiter revealed his true form. Their union produced Minos, king of Crete. Jupiter placed the bull's likeness among the stars — but only the front half rises above the horizon, as if still swimming through the waves.",
@@ -1959,7 +1903,6 @@
       "id": "gemini",
       "name": "Gemini",
       "symbol": "♊",
-      "level": 1,
       "category": "sign",
       "sections": {
         "Profile": "The Heavenly Twins — Castor and Pollux, sons of Jupiter and Leda. Castor was mortal, Pollux divine. Inseparable in life, they sailed with Jason on the Argo and fought in the Calydonian Hunt. When Castor was slain in battle, Pollux begged Jupiter to let him die rather than live without his brother. Jupiter, moved by this love, placed them together in the sky where they shine side by side forever — one star bright, one faint, mortality and immortality united.",
@@ -1992,7 +1935,6 @@
       "id": "cancer",
       "name": "Cancer",
       "symbol": "♋",
-      "level": 1,
       "category": "sign",
       "sections": {
         "Profile": "The Crab of Lerna — a humble creature that earned its place among the stars through loyalty. When Hercules battled the monstrous Hydra at the swamp of Lerna, Juno — who hated Hercules — sent a giant crab to distract him. The crab seized the hero's foot in its claws, but Hercules crushed it underfoot and returned to the fight. Juno, grateful for its sacrifice, placed the crab in the heavens as a constellation, though its stars are dim — a small soldier honored for courage, not victory.",
@@ -2025,7 +1967,6 @@
       "id": "leo",
       "name": "Leo",
       "symbol": "♌",
-      "level": 1,
       "category": "sign",
       "sections": {
         "Profile": "The Nemean Lion — an invulnerable beast whose hide could not be pierced by any weapon. Born of the Moon goddess Selene (some say of Typhon), this monstrous lion terrorized the valley of Nemea. Killing it was the first of Hercules' twelve labors. Finding that arrows, sword, and club all failed, Hercules wrestled the lion and strangled it with his bare hands. He wore its impenetrable skin as armor for the rest of his life. Jupiter — or the Moon herself — placed the lion in the sky as the brightest constellation of summer.",
@@ -2058,7 +1999,6 @@
       "id": "virgo",
       "name": "Virgo",
       "symbol": "♍",
-      "level": 1,
       "category": "sign",
       "sections": {
         "Profile": "Astraea, the Star-Maiden — last of the immortals to leave the earth. Daughter of Themis (Justice) and Jupiter, Astraea lived among mortals during the Golden Age, teaching righteousness and tending the harvest. As humanity declined through Silver and Bronze ages into wickedness and war, the gods withdrew one by one to Olympus. Astraea held on the longest, wandering the countryside pleading with mortals to return to virtue. When even she could bear humanity's cruelty no longer, she ascended to the heavens and became the constellation Virgo, still holding the sheaf of wheat — waiting for a new Golden Age.",
@@ -2091,7 +2031,6 @@
       "id": "libra",
       "name": "Libra",
       "symbol": "♎",
-      "level": 1,
       "category": "sign",
       "sections": {
         "Profile": "The Scales of Themis — the balance of divine justice. Themis, Titaness of law and custom, held golden scales that weighed the deeds of mortals. When Astraea (her daughter) departed the earth, the scales were placed beside her in the sky as the only non-living constellation — an instrument rather than a creature. Some say the scales belong to Astraea herself, representing the justice she longed to restore. Libra is the only zodiac sign depicted as an object, reflecting its nature as a principle rather than a personality.",
@@ -2124,7 +2063,6 @@
       "id": "scorpio",
       "name": "Scorpio",
       "symbol": "♏",
-      "level": 1,
       "category": "sign",
       "sections": {
         "Profile": "The Scorpion that slew Orion — sent by the Earth herself. Orion, the great hunter, boasted that no creature on earth could defeat him. Gaia, angered by his hubris, sent a scorpion from the ground. Its sting killed the mighty hunter. To prevent eternal conflict, Jupiter placed them on opposite sides of the sky — when Scorpio rises in the east, Orion sets in the west, forever fleeing. The scorpion's heart is the red star Antares, 'Rival of Mars,' burning with the intensity of the sign it anchors.",
@@ -2157,7 +2095,6 @@
       "id": "sagittarius",
       "name": "Sagittarius",
       "symbol": "♐",
-      "level": 1,
       "category": "sign",
       "sections": {
         "Profile": "Chiron the centaur archer — wisest of all beings, half horse, half man, wholly divine. Son of Saturn (who took the form of a horse to sire him), Chiron was immortal and unlike the savage centaurs: gentle, learned, a healer, musician, and prophet. He tutored Hercules, Achilles, Jason, and Asclepius. When accidentally struck by one of Hercules' poisoned arrows, Chiron suffered agony that could not end because he could not die. He willingly gave his immortality to free Prometheus, and Jupiter placed him in the sky — the archer aiming his arrow at the heart of Scorpio.",
@@ -2190,7 +2127,6 @@
       "id": "capricorn",
       "name": "Capricorn",
       "symbol": "♑",
-      "level": 1,
       "category": "sign",
       "sections": {
         "Profile": "Pan the sea-goat — the god of wild places who saved the Olympians. When the monstrous Typhon attacked the gods, Pan leapt into the Nile to escape. In his panic, only his lower half transformed into a fish while his upper half remained a goat — creating the sea-goat form. But Pan's shriek of terror (the origin of 'panic') warned the other gods, and his invention of the conch-shell trumpet rallied Jupiter to fight. Jupiter defeated Typhon and placed Pan's hybrid form in the sky in gratitude — the goat climbing the mountain with a fish's tail trailing in the deep.",
@@ -2223,7 +2159,6 @@
       "id": "aquarius",
       "name": "Aquarius",
       "symbol": "♒",
-      "level": 1,
       "category": "sign",
       "sections": {
         "Profile": "Ganymede the cup-bearer — the most beautiful mortal, taken to heaven by Jupiter. A Trojan prince tending his father's flocks on Mount Ida, Ganymede was so beautiful that Jupiter, in the form of an eagle, swooped down and carried him to Olympus. There Ganymede became cup-bearer to the gods, pouring the nectar of immortality. He represents the mortal elevated to serve the divine — the human who pours out blessings for all. Jupiter placed his image in the sky eternally pouring the waters of life.",
@@ -2256,7 +2191,6 @@
       "id": "pisces",
       "name": "Pisces",
       "symbol": "♓",
-      "level": 1,
       "category": "sign",
       "sections": {
         "Profile": "The Great Fish — Venus and Cupid transformed. When Typhon attacked Olympus, Venus and her son Cupid were walking along the Euphrates. To escape the monster, they transformed into fish and plunged into the river. They tied themselves together with a cord so they would not lose each other in the current. Minerva placed the image in the sky — two fish bound by a ribbon, swimming in opposite directions yet forever connected. The knot where the cord joins is the bright star Al Rischa, the tie that binds.",
@@ -2288,9 +2222,8 @@
     {
       "id": "birth-of-the-gods",
       "name": "Birth of the Gods",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "chaos",
         "gaia",
         "uranus"
@@ -2314,9 +2247,8 @@
     {
       "id": "the-titanomachy",
       "name": "The Titanomachy",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "jupiter",
         "saturn",
         "neptune",
@@ -2343,9 +2275,8 @@
     {
       "id": "prometheus-steals-fire",
       "name": "Prometheus Steals Fire",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "prometheus",
         "jupiter"
       ],
@@ -2369,9 +2300,8 @@
     {
       "id": "pandoras-box",
       "name": "Pandora's Box",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "epimetheus",
         "jupiter",
         "minerva",
@@ -2397,9 +2327,8 @@
     {
       "id": "judgment-of-paris",
       "name": "The Judgment of Paris",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "venus",
         "juno",
         "minerva",
@@ -2425,9 +2354,8 @@
     {
       "id": "achilles-and-hector",
       "name": "Achilles and Hector",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "achilles",
         "sun"
       ],
@@ -2451,9 +2379,8 @@
     {
       "id": "the-trojan-horse",
       "name": "The Trojan Horse",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "ulysses",
         "minerva"
       ],
@@ -2476,9 +2403,8 @@
     {
       "id": "return-to-ithaca",
       "name": "Return to Ithaca",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "ulysses",
         "neptune",
         "minerva"
@@ -2503,9 +2429,8 @@
     {
       "id": "orpheus-and-eurydice",
       "name": "Orpheus and Eurydice",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "orpheus",
         "pluto",
         "proserpine"
@@ -2530,9 +2455,8 @@
     {
       "id": "eros-and-psyche",
       "name": "Eros and Psyche",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "cupid",
         "venus"
       ],
@@ -2556,9 +2480,8 @@
     {
       "id": "echo-and-narcissus",
       "name": "Echo and Narcissus",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "juno",
         "venus"
       ],
@@ -2582,9 +2505,8 @@
     {
       "id": "daphne-and-apollo",
       "name": "Daphne and Apollo",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "sun",
         "cupid"
       ],
@@ -2608,9 +2530,8 @@
     {
       "id": "icarus-and-daedalus",
       "name": "Icarus and Daedalus",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "sun",
         "minerva"
       ],
@@ -2635,9 +2556,8 @@
     {
       "id": "arachne",
       "name": "Arachne",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "minerva"
       ],
       "sections": {
@@ -2660,9 +2580,8 @@
     {
       "id": "king-midas",
       "name": "King Midas",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "bacchus"
       ],
       "sections": {
@@ -2685,9 +2604,8 @@
     {
       "id": "abduction-of-persephone",
       "name": "The Abduction of Persephone",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "proserpine",
         "pluto",
         "ceres",
@@ -2714,9 +2632,8 @@
     {
       "id": "theseus-and-the-minotaur",
       "name": "Theseus and the Minotaur",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "theseus",
         "minerva"
       ],
@@ -2740,9 +2657,8 @@
     {
       "id": "oedipus-and-the-sphinx",
       "name": "Oedipus and the Sphinx",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "sun",
         "juno"
       ],
@@ -2767,9 +2683,8 @@
     {
       "id": "the-golden-ram",
       "name": "The Golden Ram",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "aries",
         "mercury",
         "jupiter"
@@ -2794,9 +2709,8 @@
     {
       "id": "europa-and-the-bull",
       "name": "Europa and the Bull",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "taurus",
         "jupiter"
       ],
@@ -2820,9 +2734,8 @@
     {
       "id": "the-heavenly-twins",
       "name": "The Heavenly Twins",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "gemini",
         "castor",
         "pollux",
@@ -2849,9 +2762,8 @@
     {
       "id": "the-crab-of-lerna",
       "name": "The Crab of Lerna",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "cancer",
         "juno",
         "hercules"
@@ -2876,9 +2788,8 @@
     {
       "id": "the-nemean-lion",
       "name": "The Nemean Lion",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "leo",
         "hercules",
         "moon"
@@ -2902,9 +2813,8 @@
     {
       "id": "astraeas-departure",
       "name": "Astraea's Departure",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "virgo",
         "themis",
         "jupiter"
@@ -2929,9 +2839,8 @@
     {
       "id": "the-scales-of-justice",
       "name": "The Scales of Justice",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "libra",
         "themis"
       ],
@@ -2954,9 +2863,8 @@
     {
       "id": "orions-doom",
       "name": "Orion's Doom",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "scorpio",
         "moon",
         "sun"
@@ -2981,9 +2889,8 @@
     {
       "id": "the-centaurs-wisdom",
       "name": "The Centaur's Wisdom",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "sagittarius",
         "chiron",
         "hercules"
@@ -3008,9 +2915,8 @@
     {
       "id": "pans-escape",
       "name": "Pan's Escape",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "capricorn",
         "pan",
         "jupiter"
@@ -3036,9 +2942,8 @@
     {
       "id": "the-cup-bearer",
       "name": "The Cup-Bearer",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "aquarius",
         "ganymede",
         "jupiter"
@@ -3064,9 +2969,8 @@
     {
       "id": "the-great-fish",
       "name": "The Great Fish",
-      "level": 6,
       "category": "myth",
-      "composite_of": [
+      "parts": [
         "pisces",
         "venus",
         "cupid"
@@ -3092,10 +2996,9 @@
     {
       "id": "epimetheus",
       "name": "Epimetheus",
-      "level": 3,
       "category": "titan",
       "sort_order": 96,
-      "composite_of": [
+      "parts": [
         "iapetus"
       ],
       "sections": {
@@ -3121,10 +3024,9 @@
     {
       "id": "chiron",
       "name": "Chiron",
-      "level": 3,
       "category": "titan",
       "sort_order": 97,
-      "composite_of": [
+      "parts": [
         "saturn"
       ],
       "sections": {
@@ -3152,10 +3054,9 @@
     {
       "id": "pan",
       "name": "Pan",
-      "level": 4,
       "category": "god",
       "sort_order": 98,
-      "composite_of": [
+      "parts": [
         "mercury"
       ],
       "sections": {
@@ -3182,10 +3083,9 @@
     {
       "id": "castor",
       "name": "Castor",
-      "level": 5,
       "category": "hero",
       "sort_order": 99,
-      "composite_of": [
+      "parts": [
         "jupiter"
       ],
       "sections": {
@@ -3210,10 +3110,9 @@
     {
       "id": "pollux",
       "name": "Pollux",
-      "level": 5,
       "category": "hero",
       "sort_order": 100,
-      "composite_of": [
+      "parts": [
         "jupiter"
       ],
       "sections": {
@@ -3238,10 +3137,9 @@
     {
       "id": "ganymede",
       "name": "Ganymede",
-      "level": 5,
       "category": "hero",
       "sort_order": 101,
-      "composite_of": [],
+      "parts": [],
       "sections": {
         "Profile": "The most beautiful mortal who ever lived — a Trojan prince carried to Olympus by Jupiter in the form of an eagle. Ganymede became the cup-bearer of the gods, pouring nectar at the divine table, replacing Hebe (Juno's daughter) in the role. His elevation from mortal shepherd to immortal servant of heaven represents the human soul lifted to serve the divine.",
         "Family": "Father: Tros, founder of Troy. Abductor/patron: Jupiter.",

@@ -5,7 +5,7 @@ const grammar = JSON.parse(fs.readFileSync(__dirname + '/grammar.json', 'utf8'))
 let updated = 0;
 let newlyIllustrated = 0;
 
-for (const item of grammar.items) {
+for (const item of grammar.nodes) {
   const newIlls = r2[item.id];
   if (!newIlls || newIlls.length === 0) continue;
 
@@ -38,14 +38,14 @@ for (const item of grammar.items) {
 fs.writeFileSync(__dirname + '/grammar.json', JSON.stringify(grammar, null, 2));
 console.log('Updated', updated, 'items (' + newlyIllustrated + ' newly illustrated)');
 
-const withIlls = grammar.items.filter(i => i.metadata && i.metadata.illustrations && i.metadata.illustrations.length > 0);
-const withImg = grammar.items.filter(i => i.image_url);
+const withIlls = grammar.nodes.filter(i => i.metadata && i.metadata.illustrations && i.metadata.illustrations.length > 0);
+const withImg = grammar.nodes.filter(i => i.image_url);
 const totalIlls = withIlls.reduce((sum, i) => sum + i.metadata.illustrations.length, 0);
-console.log('Items with illustrations:', withIlls.length, '/', grammar.items.length);
-console.log('Items with image_url:', withImg.length, '/', grammar.items.length);
+console.log('Items with illustrations:', withIlls.length, '/', grammar.nodes.length);
+console.log('Items with image_url:', withImg.length, '/', grammar.nodes.length);
 console.log('Total illustration entries:', totalIlls);
 
-const noIll = grammar.items.filter(i => !i.image_url);
+const noIll = grammar.nodes.filter(i => !i.image_url);
 if (noIll.length > 0) {
   console.log('\nStill missing:');
   noIll.forEach(i => console.log('  ' + i.id));

@@ -251,7 +251,7 @@ L3_DEFS = [
         "name": "The Celtic Imagination",
         "category": "meta",
         "about": "Celtic fairy tales spring from a world where the boundary between the seen and unseen is thin as morning mist. Fairies are not charming fantasies but real powers. Heroes quest through landscapes charged with enchantment. Humor and tragedy sit side by side, often in the same tale. Love demands sacrifice. Wit defeats strength. And the storyteller — the seanchai — holds a position of sacred importance. Joseph Jacobs gathered these twenty-six tales from Irish, Scottish, and Welsh traditions to reveal the unity and richness of the Celtic storytelling imagination. Five thematic streams — fairy encounters, heroic quests, comic wit, love and loyalty, and legendary figures — weave together into a tradition that has shaped the fairy tale heritage of the English-speaking world.",
-        "composite_of": [
+        "parts": [
             "theme-fairy-encounters",
             "theme-heroes-quests",
             "theme-wit-trickery",
@@ -418,7 +418,6 @@ def build_l1_items(stories):
             "id": sdef["id"],
             "name": sdef["name"],
             "sort_order": sort_order,
-            "level": 1,
             "category": "fairy-tale",
             "sections": {
                 "Story": story["text"],
@@ -441,14 +440,13 @@ def build_l2_items(l1_items):
             "id": group["id"],
             "name": group["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": group["category"],
             "sections": {
                 "About": group["about"],
                 "For Readers": group["for_readers"]
             },
             "keywords": group["keywords"],
-            "composite_of": group["member_ids"],
+            "parts": group["member_ids"],
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -464,13 +462,12 @@ def build_l3_items(start_sort_order):
             "id": l3["id"],
             "name": l3["name"],
             "sort_order": sort_order,
-            "level": 3,
             "category": l3["category"],
             "sections": {
                 "About": l3["about"]
             },
             "keywords": l3["keywords"],
-            "composite_of": l3["composite_of"],
+            "parts": l3["parts"],
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -523,7 +520,7 @@ def build_grammar(l1_items, l2_items, l3_items):
         "lineages": ["Shrei", "Andreotti"],
         "worldview": "animist",
         "cover_image_url": "",
-        "items": l1_items + l2_items + l3_items
+        "nodes": l1_items + l2_items + l3_items
     }
     return grammar
 

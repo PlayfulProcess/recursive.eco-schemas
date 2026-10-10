@@ -12,6 +12,7 @@ Structure: 10 essays interleaved with poems/stories/litanies, plus Credo and Pos
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SEED = os.path.join(SCRIPT_DIR, "..", "seeds", "darkwater.txt")
@@ -299,7 +300,6 @@ def build_grammar():
             item = {
                 "id": para_id,
                 "name": name,
-                "level": 1,
                 "category": slug,
                 "sort_order": sort_order,
                 "sections": {
@@ -324,14 +324,13 @@ def build_grammar():
         items.append({
             "id": f"piece-{slug}",
             "name": piece["title"],
-            "level": 2,
             "category": f"{piece['type']}-group",
             "sort_order": sort_order,
             "sections": {
                 "About": piece["summary"],
             },
             "keywords": [],
-            "composite_of": ids,
+            "parts": ids,
             "relationship_type": "emergence",
             "metadata": {"piece_type": piece["type"]},
         })
@@ -346,7 +345,6 @@ def build_grammar():
         items.append({
             "id": tg["id"],
             "name": tg["name"],
-            "level": 2,
             "category": "thematic-group",
             "sort_order": sort_order,
             "sections": {
@@ -354,7 +352,7 @@ def build_grammar():
                 "For Readers": tg["for_readers"],
             },
             "keywords": [],
-            "composite_of": composite_ids,
+            "parts": composite_ids,
             "relationship_type": "emergence",
             "metadata": {},
         })
@@ -368,7 +366,6 @@ def build_grammar():
     items.append({
         "id": "meta-voices-from-the-veil",
         "name": "Voices from Within the Veil",
-        "level": 3,
         "category": "meta-category",
         "sort_order": sort_order,
         "sections": {
@@ -376,7 +373,7 @@ def build_grammar():
             "For Readers": "Read in order to experience the alternation of argument and vision. Each essay-interlude pair is a unit: the essay analyzes, the poem or story feels. The book builds from autobiography through global analysis to utopian imagination.",
         },
         "keywords": ["the-veil", "polyphonic", "essays-and-poems"],
-        "composite_of": essay_ids + literary_ids,
+        "parts": essay_ids + literary_ids,
         "relationship_type": "emergence",
         "metadata": {},
     })
@@ -385,7 +382,6 @@ def build_grammar():
     items.append({
         "id": "meta-themes-of-darkwater",
         "name": "Themes of Darkwater",
-        "level": 3,
         "category": "meta-category",
         "sort_order": sort_order,
         "sections": {
@@ -393,7 +389,7 @@ def build_grammar():
             "For Readers": "These thematic groupings let you explore Darkwater by subject. The race and whiteness cluster gathers Du Bois's most radical analysis. The labor chapters connect economics to violence. The democracy chapters include his feminism. The literary interludes carry the emotional and imaginative weight.",
         },
         "keywords": ["themes", "the-veil", "global-color-line"],
-        "composite_of": thematic_ids,
+        "parts": thematic_ids,
         "relationship_type": "emergence",
         "metadata": {},
     })
@@ -420,16 +416,16 @@ def build_grammar():
         "shelves": ["resilience", "mirror"],
         "lineages": ["Akomolafe", "Andreotti"],
         "worldview": "dialectical",
-        "items": items,
+        "nodes": items,
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"Generated {len(items)} items: {l1} L1 + {l2} L2 + {l3} L3")
     print(f"Output: {OUTPUT}")
 

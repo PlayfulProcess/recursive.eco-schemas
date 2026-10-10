@@ -11,6 +11,7 @@ Structure:
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SEED = os.path.join(SCRIPT_DIR, "..", "seeds", "imitation-of-christ.txt")
@@ -287,7 +288,6 @@ def build_grammar(chapters):
         items.append({
             "id": ch_id,
             "name": f"Book {ch['book_num']}, Ch. {ch['chapter_num']}: {ch['title']}",
-            "level": 1,
             "category": f"book-{ch['book_num']}",
             "sort_order": sort_order,
             "sections": sections,
@@ -335,10 +335,9 @@ def build_grammar(chapters):
         items.append({
             "id": bd["id"],
             "name": bd["name"],
-            "level": 2,
             "category": "book",
             "relationship_type": "emergence",
-            "composite_of": composite,
+            "parts": composite,
             "sort_order": sort_order,
             "sections": {
                 "About": bd["about"],
@@ -362,10 +361,9 @@ def build_grammar(chapters):
         items.append({
             "id": theme["id"],
             "name": theme["name"],
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": unique_composite,
+            "parts": unique_composite,
             "sort_order": sort_order,
             "sections": {
                 "About": theme["description"],
@@ -380,10 +378,9 @@ def build_grammar(chapters):
     items.append({
         "id": "meta-four-books",
         "name": "The Four Books: A Journey Inward",
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": ["book-1", "book-2", "book-3", "book-4"],
+        "parts": ["book-1", "book-2", "book-3", "book-4"],
         "sort_order": sort_order,
         "sections": {
             "About": "The Imitation of Christ traces a spiral inward: from external conduct (Book 1) to interior disposition (Book 2) to mystical dialogue (Book 3) to sacramental union (Book 4). Each book presupposes the one before it. You cannot hear the voice of the Beloved until you have learned silence; you cannot receive the Sacrament truly until you have emptied yourself of self-will. The structure is itself a teaching: the spiritual life is not a set of beliefs but a progressive transformation of the whole person.",
@@ -396,10 +393,9 @@ def build_grammar(chapters):
     items.append({
         "id": "meta-themes",
         "name": "Seven Streams: The Inner Topography of Devotion",
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": [t["id"] for t in THEMES],
+        "parts": [t["id"] for t in THEMES],
         "sort_order": sort_order,
         "sections": {
             "About": "Seven thematic currents flow through The Imitation of Christ, crossing the boundaries of the four books. Humility and self-knowledge form the foundation; detachment clears the ground; silence opens the ear; suffering purifies; love ignites; grace transforms; and the Sacrament consummates. A single chapter may touch several themes at once — the book is woven, not divided. These groupings are doorways, not walls.",
@@ -443,16 +439,16 @@ def main():
         "shelves": ["wisdom"],
         "lineages": ["Linehan", "Shrei"],
         "worldview": "devotional",
-        "items": items,
+        "nodes": items,
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT}")
     print(f"  L1: {l1} chapters, L2: {l2} emergent groups, L3: {l3} meta-categories")
     print(f"  Total items: {len(items)}")

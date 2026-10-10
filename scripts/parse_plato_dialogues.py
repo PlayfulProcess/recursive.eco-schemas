@@ -4,6 +4,7 @@ Parse Plato's Phaedo (Gutenberg #1658) and Timaeus (Gutenberg #1572),
 both in Jowett translations. Outputs two grammar.json files.
 """
 import json, re, os
+from grammar_depth import node_depth
 
 
 def strip_gutenberg(text):
@@ -62,11 +63,11 @@ def validate_grammar(items, name):
     """Run standard validation checks."""
     ids = [i["id"] for i in items]
     dupes = [x for x in ids if ids.count(x) > 1]
-    bad_refs = [(i["id"], r) for i in items for r in i.get("composite_of", []) if r not in ids]
+    bad_refs = [(i["id"], r) for i in items for r in i.get("parts", []) if r not in ids]
     orders = [i["sort_order"] for i in items]
     placeholders = [(i["id"], k) for i in items for k, v in i.get("sections", {}).items() if v == "Placeholder."]
     print(f"\n=== {name} ===")
-    print(f"Items: {len(items)}, L1: {sum(1 for i in items if i['level']==1)}, L2: {sum(1 for i in items if i['level']==2)}, L3: {sum(1 for i in items if i['level']==3)}")
+    print(f"Items: {len(items)}, L1: {sum(1 for i in items if node_depth(i, items)==1)}, L2: {sum(1 for i in items if node_depth(i, items)==2)}, L3: {sum(1 for i in items if node_depth(i, items)==3)}")
     print(f"Sections: {sum(len(i.get('sections', {})) for i in items)}")
     print(f"Duplicate IDs: {dupes}")
     print(f"Bad refs: {bad_refs}")
@@ -198,7 +199,6 @@ def parse_phaedo():
         "name": "Introduction (Jowett)",
         "sort_order": sort_order,
         "category": "introduction",
-        "level": 1,
         "sections": {
             "Analysis": intro_excerpt,
             "Themes": "Jowett's introduction surveys the Phaedo's arguments for immortality, its dramatic setting on Socrates' last day, the relationship between philosophy and death, and the dialogue's place in Plato's philosophical development. He examines the four arguments for the soul's immortality and the myth of the afterlife."
@@ -225,7 +225,6 @@ def parse_phaedo():
             "name": sdef["name"],
             "sort_order": sort_order,
             "category": "dialogue",
-            "level": 1,
             "sections": {
                 "Dialogue": dialogue_excerpt,
                 "Themes": sdef["theme"],
@@ -243,7 +242,7 @@ def parse_phaedo():
         {
             "id": "group-arguments-for-immortality",
             "name": "The Arguments for Immortality",
-            "composite_of": ["argument-from-opposites", "theory-of-recollection", "argument-from-affinity"],
+            "parts": ["argument-from-opposites", "theory-of-recollection", "argument-from-affinity"],
             "about": "The philosophical core of the Phaedo presents four interconnected arguments for the soul's immortality. The Argument from Opposites shows that life and death generate each other in an eternal cycle. The Theory of Recollection proves the soul existed before birth by demonstrating that we possess knowledge of the Forms that could not have been acquired through the senses. The Argument from Affinity shows that the soul resembles the eternal and unchanging Forms rather than the perishable body. Finally, the argument from essential nature (within the Affinity section) demonstrates that the soul, whose essence is life, cannot admit its opposite — death. These arguments build upon each other, each addressing weaknesses in the previous one.",
             "for_readers": "These arguments represent some of the most influential reasoning in the history of philosophy. Whether or not one finds them convincing, they establish the method of philosophical argument about the nature of consciousness, personal identity, and what (if anything) survives death. The Theory of Recollection introduces Plato's theory of Forms in its most accessible form. The harmony objection raised by Simmias anticipates modern materialist views of consciousness.",
             "keywords": ["immortality", "soul", "forms", "arguments", "philosophy", "opposites", "recollection", "affinity"]
@@ -251,7 +250,7 @@ def parse_phaedo():
         {
             "id": "group-death-and-meaning",
             "name": "Death, Myth, and Meaning",
-            "composite_of": ["philosopher-and-death", "allegory-of-the-earth", "death-of-socrates"],
+            "parts": ["philosopher-and-death", "allegory-of-the-earth", "death-of-socrates"],
             "about": "The dramatic and mythological frame of the Phaedo. The dialogue opens with Socrates explaining why philosophers should welcome death — it is the liberation of the soul from the body's distractions. The Allegory of the Earth provides a cosmological vision of the soul's journey after death, with its haunting image of humanity living in hollows like creatures at the bottom of the sea. The death scene itself — Socrates calmly drinking the hemlock, comforting his weeping friends, speaking his enigmatic last words about owing a cock to Asclepius — is one of the most powerful scenes in all of literature.",
             "for_readers": "The Phaedo's emotional power comes from the tension between its philosophical arguments and its dramatic situation. Socrates is not arguing about death in the abstract — he is facing his own death in hours. The allegory of the earth anticipates later Platonic cosmology (the Myth of Er in the Republic). Socrates' last words remain debated: was the 'debt to Asclepius' (god of healing) gratitude for being cured of the disease of life?",
             "keywords": ["death", "myth", "allegory", "socrates", "hemlock", "meaning", "courage", "philosophy"]
@@ -264,13 +263,12 @@ def parse_phaedo():
             "name": grp["name"],
             "sort_order": sort_order,
             "category": "thematic-group",
-            "level": 2,
             "sections": {
                 "About": grp["about"],
                 "For Readers": grp["for_readers"]
             },
             "keywords": grp["keywords"],
-            "composite_of": grp["composite_of"],
+            "parts": grp["parts"],
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -282,13 +280,12 @@ def parse_phaedo():
         "name": "Phaedo: Complete",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "sections": {
             "About": "Plato's Phaedo dramatizes the last hours of Socrates' life — his final conversation with friends before drinking the hemlock in 399 BCE. It is at once a philosophical treatise on the immortality of the soul and one of the most moving death scenes in Western literature. Through four interconnected arguments, Socrates demonstrates that the soul is immortal: it existed before birth, it resembles the eternal Forms rather than the perishable body, and its essential nature as the principle of life makes it incapable of admitting death. But the Phaedo is more than arguments — it is a portrait of a man who lived his philosophy to the very end, facing death with calm courage and even humor. Socrates' last words — 'Crito, I owe a cock to Asclepius; will you remember to pay the debt?' — have haunted readers for 2,400 years.",
             "Contemplation": "The Phaedo asks the hardest question: what happens when we die? But its deeper question is about how to live. If philosophy is 'practice for death' — the separation of soul from body, of reason from appetite — then every moment of genuine thinking is a rehearsal for eternity. Socrates does not merely argue for immortality; he embodies it. His serenity in the face of death is itself the strongest argument that the soul is something more than a harmony of the body."
         },
         "keywords": ["plato", "phaedo", "socrates", "death", "immortality", "soul", "philosophy", "complete-work"],
-        "composite_of": ["group-arguments-for-immortality", "group-death-and-meaning"],
+        "parts": ["group-arguments-for-immortality", "group-death-and-meaning"],
         "relationship_type": "emergence",
         "metadata": {}
     })
@@ -305,7 +302,7 @@ def parse_phaedo():
         "shelves": ["wisdom"],
         "lineages": ["Linehan"],
         "worldview": "dialectical",
-        "items": items
+        "nodes": items
     }
 
     os.makedirs("grammars/phaedo-plato", exist_ok=True)
@@ -449,7 +446,6 @@ def parse_timaeus():
         "name": "Introduction and Analysis (Jowett)",
         "sort_order": sort_order,
         "category": "introduction",
-        "level": 1,
         "sections": {
             "Analysis": intro_excerpt,
             "Themes": "Jowett's extensive introduction surveys the Timaeus as the most influential yet most obscure of Plato's dialogues. He examines its cosmology, its relationship to Pre-Socratic philosophy, the mathematical structure of the World Soul, Plato's geometric atomism, his account of the human body and its diseases, and the dialogue's enormous influence on Neoplatonism, medieval philosophy, and early modern science."
@@ -476,7 +472,6 @@ def parse_timaeus():
             "name": sdef["name"],
             "sort_order": sort_order,
             "category": "dialogue",
-            "level": 1,
             "sections": {
                 "Dialogue": dialogue_excerpt,
                 "Themes": sdef["theme"],
@@ -494,7 +489,7 @@ def parse_timaeus():
         {
             "id": "group-cosmology",
             "name": "The Creation of the Cosmos",
-            "composite_of": ["demiurge-and-creation", "world-soul", "time-and-heavenly-bodies"],
+            "parts": ["demiurge-and-creation", "world-soul", "time-and-heavenly-bodies"],
             "about": "The first great movement of the Timaeus: the creation of the universe by the Demiurge. God is good, and being free from jealousy, created the best possible world — a single, spherical, living cosmos endowed with soul and intelligence. The World Soul, compounded from Being, Same, and Other in precise mathematical ratios, permeates the universe and gives it rational motion. Time is created as a 'moving image of eternity,' measured by the orbits of the sun, moon, and planets. This cosmic vision — of a mathematically ordered, living universe created by a rational craftsman — was the dominant cosmology of the Western world for nearly two thousand years.",
             "for_readers": "The Timaeus cosmology is the ancestor of both scientific cosmology and natural theology. The Demiurge is not the omnipotent creator of Genesis but a craftsman who works with pre-existing materials and is constrained by necessity. The World Soul passage, with its complex mathematical harmonies, influenced Kepler's search for the 'music of the spheres.' The doctrine that time is a 'moving image of eternity' remains one of the most profound things ever said about the nature of time.",
             "keywords": ["cosmology", "creation", "demiurge", "world-soul", "time", "eternity", "planets"]
@@ -502,7 +497,7 @@ def parse_timaeus():
         {
             "id": "group-physics-and-biology",
             "name": "Physics, Biology, and Medicine",
-            "composite_of": ["human-soul-and-body", "elements-and-matter", "diseases-and-health"],
+            "parts": ["human-soul-and-body", "elements-and-matter", "diseases-and-health"],
             "about": "The second great movement: the creation of humanity and the material world. Plato's geometric atomism derives all matter from two types of triangles, constructing the four elements as regular solids — an astonishing anticipation of the idea that physical reality has mathematical structure at its deepest level. The human being is a microcosm of the universe: the immortal soul in the head mirrors the World Soul, while the mortal soul in the chest mirrors the realm of becoming. Disease arises from disruption of natural processes; the cure is proportionate exercise of body (gymnastics) and soul (philosophy).",
             "for_readers": "Plato's geometric atomism is often dismissed as quaint, but its core insight — that the properties of matter arise from mathematical structure — is precisely what modern physics confirms. The triangle theory anticipates both Dalton's atomic theory and the Standard Model's derivation of particle properties from symmetry groups. The medical sections, though pre-scientific, establish the principle that bodily and mental health are inseparable — a view that modern medicine is only now recovering.",
             "keywords": ["physics", "biology", "medicine", "triangles", "elements", "body", "soul", "health", "disease"]
@@ -510,7 +505,7 @@ def parse_timaeus():
         {
             "id": "group-narrative-frame",
             "name": "Myth, History, and Frame",
-            "composite_of": ["atlantis-prelude"],
+            "parts": ["atlantis-prelude"],
             "about": "The dramatic and mythological frame of the Timaeus. The dialogue opens with Socrates summarizing his ideal state (from the Republic), then Critias tells the story of ancient Athens and Atlantis — the first and most famous account of the lost continent. The Atlantis prelude establishes the Timaeus as more than abstract cosmology: it is a story told by specific people on a specific day, grounded in the mythological traditions of Egypt and Greece. The connection to the Republic gives the entire cosmological account a political dimension: understanding how the universe is made helps us understand how human society should be ordered.",
             "for_readers": "The Atlantis story has generated more speculation than perhaps any other passage in ancient literature. Was it historical memory (of Thera/Santorini?), pure allegory, or political myth? Whatever its origin, it establishes one of the Timaeus's key themes: the relationship between cosmic order and political order. The universe is good because it is well-ordered; societies are good for the same reason.",
             "keywords": ["atlantis", "solon", "egypt", "myth", "republic", "frame", "narrative"]
@@ -523,13 +518,12 @@ def parse_timaeus():
             "name": grp["name"],
             "sort_order": sort_order,
             "category": "thematic-group",
-            "level": 2,
             "sections": {
                 "About": grp["about"],
                 "For Readers": grp["for_readers"]
             },
             "keywords": grp["keywords"],
-            "composite_of": grp["composite_of"],
+            "parts": grp["parts"],
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -541,13 +535,12 @@ def parse_timaeus():
         "name": "Timaeus: Complete",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "sections": {
             "About": "Plato's Timaeus is the most ambitious cosmological text of antiquity — an account of the creation of the universe, time, the human body, and the nature of matter. A divine Craftsman (Demiurge), being good and free from jealousy, fashions the cosmos as a living, intelligent being, endowed with a World Soul structured by mathematical harmonies. Time is a 'moving image of eternity.' Matter is composed of geometric triangles arranged as regular solids. The human being is a microcosm: immortal soul in the head, mortal soul in the chest, body as vehicle. Disease arises from disorder; the cure is philosophy and gymnastics. The dialogue also contains the earliest account of Atlantis. For nearly two thousand years, the Timaeus was the most widely read of Plato's works, shaping Neoplatonism, Islamic philosophy, medieval cosmology, and the birth of modern science.",
             "Contemplation": "The Timaeus is Plato's most daring work — an attempt to give a 'likely story' (eikos mythos) of everything: the origin of the cosmos, the structure of matter, the nature of time, the design of the human body. Plato insists that this can only be a probable account, not certain knowledge, because the physical world is always becoming, never fully being. Yet the attempt itself is magnificent. The Timaeus reminds us that the desire to understand the whole — to see the universe as a single, intelligible, beautiful creation — is the deepest impulse of philosophy."
         },
         "keywords": ["plato", "timaeus", "cosmology", "creation", "demiurge", "philosophy", "complete-work"],
-        "composite_of": ["group-cosmology", "group-physics-and-biology", "group-narrative-frame"],
+        "parts": ["group-cosmology", "group-physics-and-biology", "group-narrative-frame"],
         "relationship_type": "emergence",
         "metadata": {}
     })
@@ -564,7 +557,7 @@ def parse_timaeus():
         "shelves": ["wisdom"],
         "lineages": ["Shrei"],
         "worldview": "dialectical",
-        "items": items
+        "nodes": items
     }
 
     os.makedirs("grammars/timaeus-plato", exist_ok=True)

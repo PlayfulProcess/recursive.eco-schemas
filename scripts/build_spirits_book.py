@@ -21,6 +21,7 @@ import json
 import os
 import re
 import sys
+from grammar_depth import node_depth
 
 SEED_FILE = os.path.join(os.path.dirname(__file__), '..', 'seeds', 'kardec-spirits-book')
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), '..', 'grammars', 'spirits-book-kardec')
@@ -483,7 +484,6 @@ def build_grammar():
                 "id": item_id,
                 "name": chapter["title"],
                 "sort_order": sort_order,
-                "level": 1,
                 "category": book_key,
                 "sections": sections,
                 "keywords": [kw.strip().lower() for kw in chapter["subtopics"].split(";")],
@@ -533,9 +533,8 @@ def build_grammar():
             "id": bl2["id"],
             "name": bl2["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": bl2["category"],
-            "composite_of": bl2["chapters"],
+            "parts": bl2["chapters"],
             "relationship_type": "emergence",
             "sections": {
                 "About": bl2["about"],
@@ -559,9 +558,8 @@ def build_grammar():
         "id": "the-spirits-book",
         "name": "The Spirits' Book — Complete Work",
         "sort_order": sort_order,
-        "level": 3,
         "category": "complete-work",
-        "composite_of": ["book-one", "book-two", "book-three", "book-four"],
+        "parts": ["book-one", "book-two", "book-three", "book-four"],
         "relationship_type": "emergence",
         "sections": {
             "About": "The Spirits' Book (Le Livre des Esprits), first published in 1857 by Allan Kardec, is the foundational text of Spiritism. Structured as 1,019 questions posed to spirits of high degree and transmitted through various mediums, it systematically addresses the nature of God, the origin and destiny of spirits, reincarnation, moral law, and the afterlife. Kardec — the pen name of Hippolyte Leon Denizard Rivail, a French educator and polymath — compiled, organized, and annotated these communications into a coherent philosophical system that has influenced millions, particularly in Brazil where Spiritism remains a major spiritual movement. The work bridges Enlightenment rationalism with spiritual inquiry, presenting its teachings as a science of the spirit rather than a dogmatic religion.",
@@ -632,7 +630,7 @@ def build_grammar():
         ],
         "worldview": "spiritist",
         "cover_image_url": "",
-        "items": items
+        "nodes": items
     }
 
     return grammar
@@ -649,11 +647,11 @@ def main():
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
     # Validate
-    item_ids = [item["id"] for item in grammar["items"]]
-    print(f"\nGenerated {len(grammar['items'])} items:")
-    print(f"  L1 (chapters): {sum(1 for i in grammar['items'] if i['level'] == 1)}")
-    print(f"  L2 (books): {sum(1 for i in grammar['items'] if i['level'] == 2)}")
-    print(f"  L3 (complete): {sum(1 for i in grammar['items'] if i['level'] == 3)}")
+    item_ids = [item["id"] for item in grammar["nodes"]]
+    print(f"\nGenerated {len(grammar['nodes'])} items:")
+    print(f"  L1 (chapters): {sum(1 for i in grammar['nodes'] if node_depth(i, grammar['nodes']) == 1)}")
+    print(f"  L2 (books): {sum(1 for i in grammar['nodes'] if node_depth(i, grammar['nodes']) == 2)}")
+    print(f"  L3 (complete): {sum(1 for i in grammar['nodes'] if node_depth(i, grammar['nodes']) == 3)}")
 
     # Check for duplicate IDs
     seen = set()
@@ -667,18 +665,18 @@ def main():
     else:
         print("  No duplicate IDs.")
 
-    # Check composite_of references
+    # Check parts references
     id_set = set(item_ids)
     bad_refs = []
-    for item in grammar["items"]:
-        if "composite_of" in item:
-            for ref in item["composite_of"]:
+    for item in grammar["nodes"]:
+        if "parts" in item:
+            for ref in item["parts"]:
                 if ref not in id_set:
                     bad_refs.append((item["id"], ref))
     if bad_refs:
-        print(f"\n  WARNING: Broken composite_of references: {bad_refs}")
+        print(f"\n  WARNING: Broken parts references: {bad_refs}")
     else:
-        print("  All composite_of references valid.")
+        print("  All parts references valid.")
 
     print(f"\nGrammar written to {OUTPUT_FILE}")
     print(f"File size: {os.path.getsize(OUTPUT_FILE):,} bytes")

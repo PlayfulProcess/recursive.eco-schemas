@@ -3,6 +3,7 @@
 oceanic animism, music, and cultural traditions that inspired Disney's Moana."""
 
 import json, os
+from grammar_depth import node_depth
 
 grammar = {
     "_grammar_commons": {
@@ -30,7 +31,7 @@ grammar = {
     "shelves": ["children", "wonder", "wisdom"],
     "lineages": ["Akomolafe", "Shrei", "Andreotti"],
     "worldview": "animist",
-    "items": []
+    "nodes": []
 }
 
 items = []
@@ -280,7 +281,6 @@ maui_items = [
 for item in maui_items:
     sort += 1
     item["sort_order"] = sort
-    item["level"] = 1
     items.append(item)
 
 # =============================================================================
@@ -292,8 +292,7 @@ l2_items = [
         "id": "theme-maui-legends",
         "name": "The Adventures of Māui — Demigod of the Pacific",
         "category": "theme-collections",
-        "level": 2,
-        "composite_of": ["maui-born-of-ocean", "maui-slows-the-sun", "maui-fishes-up-islands", "maui-steals-fire", "maui-and-death"],
+        "parts": ["maui-born-of-ocean", "maui-slows-the-sun", "maui-fishes-up-islands", "maui-steals-fire", "maui-and-death"],
         "relationship_type": "emergence",
         "sections": {
             "About": "Māui is the great hero of Polynesian mythology — a trickster demigod who slowed the sun, fished up islands from the ocean floor, stole fire from the underworld, and died trying to defeat death itself. His stories are told across every Polynesian culture from New Zealand to Hawai'i, with local variations that reflect each island's identity. He's not a distant god on a mountaintop; he's messy, tricky, brave, and very human.",
@@ -306,8 +305,7 @@ l2_items = [
         "id": "theme-wayfinding",
         "name": "Finding the Way — Polynesian Navigation",
         "category": "theme-collections",
-        "level": 2,
-        "composite_of": ["star-compass", "reading-waves", "voyaging-canoe", "bird-signs"],
+        "parts": ["star-compass", "reading-waves", "voyaging-canoe", "bird-signs"],
         "relationship_type": "emergence",
         "sections": {
             "About": "Polynesian wayfinding is one of humanity's greatest intellectual achievements. Without instruments, writing, or metal tools, Pacific Islanders navigated millions of square miles of open ocean using stars, waves, birds, clouds, and deep embodied knowledge. They settled every habitable island in the Pacific — from Madagascar to Easter Island, from Hawai'i to New Zealand — in the greatest migration in human history.",
@@ -320,8 +318,7 @@ l2_items = [
         "id": "theme-animism",
         "name": "Everything Is Alive — Oceanic Animism",
         "category": "theme-collections",
-        "level": 2,
-        "composite_of": ["ocean-as-ancestor", "te-fiti-and-te-ka", "mana-and-tapu", "shapeshifting"],
+        "parts": ["ocean-as-ancestor", "te-fiti-and-te-ka", "mana-and-tapu", "shapeshifting"],
         "relationship_type": "emergence",
         "sections": {
             "About": "In Polynesian worldview, the ocean is a person, the land is a mother, fire is a grandmother, and your family tree includes sharks, owls, and taro plants. This isn't 'primitive belief' — it's a sophisticated relational framework where everything exists in kinship networks. Mana (spiritual power) and tapu (sacred restriction) create an ethical system that governs relationships between humans, nature, and the divine.",
@@ -334,8 +331,7 @@ l2_items = [
         "id": "theme-music-performance",
         "name": "The Living Library — Music, Dance, and Memory",
         "category": "theme-collections",
-        "level": 2,
-        "composite_of": ["hula-as-library", "pate-and-log-drums", "chanting-genealogy"],
+        "parts": ["hula-as-library", "pate-and-log-drums", "chanting-genealogy"],
         "relationship_type": "emergence",
         "sections": {
             "About": "In cultures without writing, music and dance ARE the library, the law books, the science journals, and the family records. Polynesian performing arts encode everything from navigation routes to genealogies to ecological knowledge in forms that can be memorized, performed, and passed down for generations. Every gesture in hula, every rhythm on a log drum, every line in a genealogy chant carries specific information.",
@@ -348,8 +344,7 @@ l2_items = [
         "id": "theme-ecology",
         "name": "Relatives, Not Resources — Polynesian Ecology",
         "category": "theme-collections",
-        "level": 2,
-        "composite_of": ["coral-reef-village", "taro-and-coconut", "tattoo-as-story"],
+        "parts": ["coral-reef-village", "taro-and-coconut", "tattoo-as-story"],
         "relationship_type": "emergence",
         "sections": {
             "About": "Polynesian ecology doesn't separate 'nature' from 'culture.' Taro is an older brother. The reef is a village. Coconut palms grew from a god's head. When your food and your ecosystem are your relatives, sustainability isn't an abstract concept — it's family obligation. The ahupua'a system, tattoo traditions, and food origin stories all encode the same message: you belong to the land; the land doesn't belong to you.",
@@ -374,8 +369,7 @@ l3_items = [
         "id": "meta-ocean-people",
         "name": "We Are Ocean People — The Heart of Polynesian Culture",
         "category": "meta",
-        "level": 3,
-        "composite_of": ["theme-maui-legends", "theme-wayfinding", "theme-animism", "theme-music-performance", "theme-ecology"],
+        "parts": ["theme-maui-legends", "theme-wayfinding", "theme-animism", "theme-music-performance", "theme-ecology"],
         "relationship_type": "emergence",
         "sections": {
             "About": "Polynesian culture is oceanic at every level: the myths are about sea gods and island-fishing, the science is wave-reading and star-navigation, the music is rhythm-driven like surf, the ecology is reef-centered, and identity itself is inseparable from the voyaging canoe. To understand any part, you must understand that the ocean isn't a barrier between islands — it's the highway that connects them all. Polynesians don't live on islands in the sea; they live in the sea with islands.",
@@ -391,7 +385,7 @@ for item in l3_items:
     item["sort_order"] = sort
     items.append(item)
 
-grammar["items"] = items
+grammar["nodes"] = items
 
 # Write output
 outdir = os.path.join(os.path.dirname(__file__), "..", "grammars", "roots-of-moana")
@@ -402,6 +396,6 @@ with open(outpath, "w") as f:
     json.dump(grammar, f, indent=2, ensure_ascii=False)
 
 print(f"Wrote {len(items)} items to {outpath}")
-print(f"  L1: {sum(1 for i in items if i['level'] == 1)}")
-print(f"  L2: {sum(1 for i in items if i['level'] == 2)}")
-print(f"  L3: {sum(1 for i in items if i['level'] == 3)}")
+print(f"  L1: {sum(1 for i in items if node_depth(i, items) == 1)}")
+print(f"  L2: {sum(1 for i in items if node_depth(i, items) == 2)}")
+print(f"  L3: {sum(1 for i in items if node_depth(i, items) == 3)}")

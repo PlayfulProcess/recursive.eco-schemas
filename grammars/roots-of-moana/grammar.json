@@ -71,7 +71,7 @@
     "Andreotti"
   ],
   "worldview": "animist",
-  "items": [
+  "nodes": [
     {
       "id": "maui-born-of-ocean",
       "name": "Māui: Born of the Ocean",
@@ -90,8 +90,7 @@
         "taranga",
         "rejected-child"
       ],
-      "sort_order": 1,
-      "level": 1
+      "sort_order": 1
     },
     {
       "id": "maui-slows-the-sun",
@@ -111,8 +110,7 @@
         "jawbone",
         "courage"
       ],
-      "sort_order": 2,
-      "level": 1
+      "sort_order": 2
     },
     {
       "id": "maui-fishes-up-islands",
@@ -132,8 +130,7 @@
         "creation",
         "greed"
       ],
-      "sort_order": 3,
-      "level": 1
+      "sort_order": 3
     },
     {
       "id": "maui-steals-fire",
@@ -153,8 +150,7 @@
         "underworld",
         "prometheus"
       ],
-      "sort_order": 4,
-      "level": 1
+      "sort_order": 4
     },
     {
       "id": "maui-and-death",
@@ -174,8 +170,7 @@
         "fantail",
         "hero"
       ],
-      "sort_order": 5,
-      "level": 1
+      "sort_order": 5
     },
     {
       "id": "star-compass",
@@ -195,8 +190,7 @@
         "wayfinding",
         "astronomy"
       ],
-      "sort_order": 6,
-      "level": 1
+      "sort_order": 6
     },
     {
       "id": "reading-waves",
@@ -215,8 +209,7 @@
         "marshall-islands",
         "embodied-knowledge"
       ],
-      "sort_order": 7,
-      "level": 1
+      "sort_order": 7
     },
     {
       "id": "voyaging-canoe",
@@ -236,8 +229,7 @@
         "sacred",
         "engineering"
       ],
-      "sort_order": 8,
-      "level": 1
+      "sort_order": 8
     },
     {
       "id": "bird-signs",
@@ -257,8 +249,7 @@
         "migration",
         "signs"
       ],
-      "sort_order": 9,
-      "level": 1
+      "sort_order": 9
     },
     {
       "id": "ocean-as-ancestor",
@@ -278,8 +269,7 @@
         "relationship",
         "sacred"
       ],
-      "sort_order": 10,
-      "level": 1
+      "sort_order": 10
     },
     {
       "id": "te-fiti-and-te-ka",
@@ -300,8 +290,7 @@
         "destruction",
         "papa"
       ],
-      "sort_order": 11,
-      "level": 1
+      "sort_order": 11
     },
     {
       "id": "mana-and-tapu",
@@ -321,8 +310,7 @@
         "power",
         "conservation"
       ],
-      "sort_order": 12,
-      "level": 1
+      "sort_order": 12
     },
     {
       "id": "shapeshifting",
@@ -341,8 +329,7 @@
         "kinship",
         "transformation"
       ],
-      "sort_order": 13,
-      "level": 1
+      "sort_order": 13
     },
     {
       "id": "hula-as-library",
@@ -362,8 +349,7 @@
         "kalakaua",
         "sacred"
       ],
-      "sort_order": 14,
-      "level": 1
+      "sort_order": 14
     },
     {
       "id": "pate-and-log-drums",
@@ -384,8 +370,7 @@
         "te-vaka",
         "rhythm"
       ],
-      "sort_order": 15,
-      "level": 1
+      "sort_order": 15
     },
     {
       "id": "chanting-genealogy",
@@ -405,8 +390,7 @@
         "ancestors",
         "identity"
       ],
-      "sort_order": 16,
-      "level": 1
+      "sort_order": 16
     },
     {
       "id": "coral-reef-village",
@@ -426,8 +410,7 @@
         "tangaroa",
         "sustainability"
       ],
-      "sort_order": 17,
-      "level": 1
+      "sort_order": 17
     },
     {
       "id": "taro-and-coconut",
@@ -447,8 +430,7 @@
         "sacred-food",
         "kinship"
       ],
-      "sort_order": 18,
-      "level": 1
+      "sort_order": 18
     },
     {
       "id": "tattoo-as-story",
@@ -468,15 +450,13 @@
         "identity",
         "rite-of-passage"
       ],
-      "sort_order": 19,
-      "level": 1
+      "sort_order": 19
     },
     {
       "id": "theme-maui-legends",
       "name": "The Adventures of Māui — Demigod of the Pacific",
       "category": "theme-collections",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "maui-born-of-ocean",
         "maui-slows-the-sun",
         "maui-fishes-up-islands",
@@ -502,8 +482,7 @@
       "id": "theme-wayfinding",
       "name": "Finding the Way — Polynesian Navigation",
       "category": "theme-collections",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "star-compass",
         "reading-waves",
         "voyaging-canoe",
@@ -528,8 +507,7 @@
       "id": "theme-animism",
       "name": "Everything Is Alive — Oceanic Animism",
       "category": "theme-collections",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "ocean-as-ancestor",
         "te-fiti-and-te-ka",
         "mana-and-tapu",
@@ -554,8 +532,7 @@
       "id": "theme-music-performance",
       "name": "The Living Library — Music, Dance, and Memory",
       "category": "theme-collections",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "hula-as-library",
         "pate-and-log-drums",
         "chanting-genealogy"
@@ -580,8 +557,7 @@
       "id": "theme-ecology",
       "name": "Relatives, Not Resources — Polynesian Ecology",
       "category": "theme-collections",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "coral-reef-village",
         "taro-and-coconut",
         "tattoo-as-story"
@@ -606,8 +582,7 @@
       "id": "meta-ocean-people",
       "name": "We Are Ocean People — The Heart of Polynesian Culture",
       "category": "meta",
-      "level": 3,
-      "composite_of": [
+      "parts": [
         "theme-maui-legends",
         "theme-wayfinding",
         "theme-animism",

@@ -13,6 +13,7 @@ COUSINS — both descend from the mid-1400s Italian trionfi — not parent and c
 import json
 import os
 import urllib.parse
+from grammar_depth import node_depth
 
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "grammars", "tree-of-tarot")
 COMMONS = "https://commons.wikimedia.org/wiki/Special:FilePath/"
@@ -195,7 +196,7 @@ for did, name, branch, when, what, lineage, status, derives, cover in D:
         "In this library": status,
     }
     it = {
-        "id": f"deck-{did}", "name": name, "sort_order": so, "category": "deck", "level": 1,
+        "id": f"deck-{did}", "name": name, "sort_order": so, "category": "deck",
         "keywords": ["tarot", "history", branch.replace("branch-", "")],
         "metadata": {"branch": branch, "derives_from": [f"deck-{d}" for d in derives], "when": when},
         "sections": sections,
@@ -210,8 +211,8 @@ for did, name, branch, when, what, lineage, status, derives, cover in D:
 for bid, bname, blurb in BRANCHES:
     kids = [it["id"] for it in items if it["metadata"].get("branch") == bid]
     items.append({
-        "id": bid, "name": bname, "sort_order": so, "category": "branch", "level": 2,
-        "composite_of": kids, "relationship_type": "emergence",
+        "id": bid, "name": bname, "sort_order": so, "category": "branch",
+        "parts": kids, "relationship_type": "emergence",
         "keywords": ["tarot", "branch", "history"],
         "metadata": {},
         "sections": {"About this branch": blurb,
@@ -221,8 +222,8 @@ for bid, bname, blurb in BRANCHES:
 
 # L3 root
 items.append({
-    "id": "root-tree-of-tarot", "name": "The Tree of Tarot", "sort_order": so, "category": "root", "level": 3,
-    "composite_of": [bid for bid, _, _ in BRANCHES], "relationship_type": "emergence",
+    "id": "root-tree-of-tarot", "name": "The Tree of Tarot", "sort_order": so, "category": "root",
+    "parts": [bid for bid, _, _ in BRANCHES], "relationship_type": "emergence",
     "keywords": ["tarot", "genealogy", "history", "tree"],
     "metadata": {},
     "sections": {
@@ -271,13 +272,13 @@ grammar = {
     "worldview": "historical",
     "default_preview": "tree",
     "is_published": False,
-    "items": items,
+    "nodes": items,
 }
 
 os.makedirs(OUT_DIR, exist_ok=True)
 with open(os.path.join(OUT_DIR, "grammar.json"), "w", encoding="utf-8") as f:
     json.dump(grammar, f, indent=2, ensure_ascii=False)
-n1 = sum(1 for it in items if it["level"] == 1)
-n2 = sum(1 for it in items if it["level"] == 2)
-n3 = sum(1 for it in items if it["level"] == 3)
+n1 = sum(1 for it in items if node_depth(it, items) == 1)
+n2 = sum(1 for it in items if node_depth(it, items) == 2)
+n3 = sum(1 for it in items if node_depth(it, items) == 3)
 print(f"Wrote tree-of-tarot/grammar.json — {len(items)} items (L1 decks {n1}, L2 branches {n2}, L3 root {n3})")

@@ -196,7 +196,7 @@ for num, slug, name, french, fn, icon, up, rev in MAJORS:
     u = img(fn)
     items.append({
         "id": f"major-{num:02d}-{slug}", "name": f"{num} — {name}", "sort_order": so,
-        "category": "major-arcana", "level": 1,
+        "category": "major-arcana",
         "keywords": [name.lower().replace("the ", ""), french.lower(), "major arcana", "marseille"],
         "image_url": u,
         "metadata": {
@@ -219,7 +219,7 @@ for sid, sdisp, sfr, element, theme in SUITS:
         u = img(fn)
         it = {
             "id": f"{sid}-{'ace' if n==1 else f'{n:02d}'}", "name": f"{word} of {sdisp}",
-            "sort_order": so, "category": f"suit-{sid}", "level": 1,
+            "sort_order": so, "category": f"suit-{sid}",
             "keywords": [sdisp.lower(), element.lower(), word.lower(), "minor arcana", sfr.lower()],
             "metadata": {"arcana": "minor", "suit": sdisp, "suit_french": sfr, "element": element,
                          "rank": word},
@@ -244,7 +244,7 @@ for sid, sdisp, sfr, element, theme in SUITS:
     for rid, rdisp, rfr, role in COURTS:
         items.append({
             "id": f"{sid}-{rid}", "name": f"{rdisp} of {sdisp}", "sort_order": so,
-            "category": f"suit-{sid}", "level": 1,
+            "category": f"suit-{sid}",
             "keywords": [sdisp.lower(), element.lower(), rdisp.lower(), "court card", rfr.lower()],
             "metadata": {"arcana": "minor", "suit": sdisp, "suit_french": sfr, "element": element,
                          "rank": rdisp, "court": True},
@@ -282,8 +282,8 @@ for sid, sdisp, sfr, element, theme in SUITS:
                   f"meanings rather than scene-reading."}))
 for eid, ename, kids, image_url, sections in emgs:
     kids = [k for k in kids if k in all_ids]
-    items.append({"id": eid, "name": ename, "sort_order": so, "category": "emergence", "level": 2,
-                  "composite_of": kids, "relationship_type": "emergence",
+    items.append({"id": eid, "name": ename, "sort_order": so, "category": "emergence",
+                  "parts": kids, "relationship_type": "emergence",
                   "image_url": image_url, "metadata": {}, "sections": sections})
     so += 1
 
@@ -338,7 +338,7 @@ grammar = {
     "lineages": ["Andreotti"],
     "worldview": "traditional",
     "is_published": False,
-    "items": items,
+    "nodes": items,
 }
 
 os.makedirs(OUT_DIR, exist_ok=True)

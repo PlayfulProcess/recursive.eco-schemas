@@ -4,6 +4,7 @@ Parse Sacred Books of the East — anthology edited by Epiphanius Wilson (1900).
 Includes Vedic Hymns, Zend-Avesta, Dhammapada, Upanishads, Koran selections, and Life of Buddha.
 """
 import json, re, os
+from grammar_depth import node_depth
 
 with open("seeds/sacred-books-east.txt", encoding="utf-8") as f:
     text = f.read()
@@ -114,7 +115,6 @@ for sec_idx, (sec_start, sec_name) in enumerate(major_bounds):
             "name": clean_name,
             "sort_order": sort_order,
             "category": item_id,
-            "level": 1,
             "sections": {"Text": truncate(section_text)},
             "keywords": ["sacred-texts", item_id]
         })
@@ -144,7 +144,6 @@ for sec_idx, (sec_start, sec_name) in enumerate(major_bounds):
                 "name": sub_name,
                 "sort_order": sort_order,
                 "category": parent_id,
-                "level": 1,
                 "sections": {
                     "Text": truncate(sub_text),
                     "Tradition": sec_name.title()
@@ -184,13 +183,12 @@ for trad, trad_ids in tradition_items.items():
         "name": tname,
         "sort_order": sort_order,
         "category": "tradition",
-        "level": 2,
         "sections": {
             "About": tdesc,
             "Texts": f"{len(trad_ids)} selections"
         },
         "keywords": ["sacred-texts", tname.lower().replace(" ", "-")],
-        "composite_of": trad_ids,
+        "parts": trad_ids,
         "relationship_type": "emergence"
     })
     l2_ids.append(l2_id)
@@ -202,13 +200,12 @@ items.append({
     "name": "Sacred Books of the East: Complete Anthology",
     "sort_order": sort_order,
     "category": "meta",
-    "level": 3,
     "sections": {
         "About": "An anthology of sacred literature from the world's major Eastern religious traditions, edited by Epiphanius Wilson (1900). Includes selections from the Vedic Hymns, Zend-Avesta (Zoroastrianism), Dhammapada (Buddhism), Upanishads (Hindu philosophy), the Koran (Islam), and the Life of Buddha.",
         "For Readers": "This anthology provides a gateway to the spiritual literature of Asia and the Middle East. Each tradition is represented by its most essential and accessible texts, making it an ideal starting point for comparative religion."
     },
     "keywords": ["sacred-texts", "anthology", "comparative-religion", "eastern-wisdom"],
-    "composite_of": l2_ids,
+    "parts": l2_ids,
     "relationship_type": "emergence"
 })
 
@@ -234,7 +231,7 @@ grammar = {
     "shelves": ["wisdom"],
     "lineages": ["Shrei", "Akomolafe"],
     "worldview": "non-dual",
-    "items": items
+    "nodes": items
 }
 
 os.makedirs("grammars/sacred-books-east", exist_ok=True)
@@ -242,4 +239,4 @@ with open("grammars/sacred-books-east/grammar.json", "w", encoding="utf-8") as f
     json.dump(grammar, f, indent=2, ensure_ascii=False)
 
 print(f"Generated {len(items)} items")
-print(f"L1: {sum(1 for i in items if i['level']==1)}, L2: {sum(1 for i in items if i['level']==2)}, L3: {sum(1 for i in items if i['level']==3)}")
+print(f"L1: {sum(1 for i in items if node_depth(i, items)==1)}, L2: {sum(1 for i in items if node_depth(i, items)==2)}, L3: {sum(1 for i in items if node_depth(i, items)==3)}")

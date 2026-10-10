@@ -69,13 +69,12 @@
     },
     "alice_character_description": null
   },
-  "items": [
+  "nodes": [
     {
       "id": "dreaming-before-scene-01",
       "name": "Ep1 Scene 1: Before the Dreaming",
       "sort_order": 1,
       "category": "the-dreaming",
-      "level": 1,
       "sections": {
         "Narration": "Before the first DAWN touched the land,\nBefore the SEA had kissed the sand,\nThe world lay quiet, dark, and DEEP —\nThe Ancestor Spirits were asleep.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -115,7 +114,6 @@
       "name": "Ep1 Scene 2: Before the Dreaming",
       "sort_order": 2,
       "category": "the-dreaming",
-      "level": 1,
       "sections": {
         "Narration": "No MOUNTAIN rose, no RIVER ran,\nNo songbird sang, no wind began,\nJust DARKNESS wrapped in endless rest,\nThe whole earth sleeping, unexpressed.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -154,7 +152,6 @@
       "name": "Ep1 Scene 3: Before the Dreaming",
       "sort_order": 3,
       "category": "the-dreaming",
-      "level": 1,
       "sections": {
         "Narration": "Beneath the GROUND they waited there,\nIn formless dark beyond compare,\nBut in their DREAMS the seeds were sown —\nOf every creature, tree, and STONE.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -193,8 +190,7 @@
       "name": "Episode 1: Before the Dreaming",
       "sort_order": 4,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "dreaming-before-scene-01",
         "dreaming-before-scene-02",
         "dreaming-before-scene-03"
@@ -232,7 +228,6 @@
       "name": "Ep2 Scene 1: The Ancestors Wake",
       "sort_order": 5,
       "category": "the-dreaming",
-      "level": 1,
       "sections": {
         "Narration": "Then something STIRRED beneath the clay,\nA HEARTBEAT pulsed — the Dreaming's way!\nThe Ancestor Spirits stretched and YAWNED,\nAnd all at once, the world was DAWNED.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -272,7 +267,6 @@
       "name": "Ep2 Scene 2: The Ancestors Wake",
       "sort_order": 6,
       "category": "the-dreaming",
-      "level": 1,
       "sections": {
         "Narration": "They ROSE up through the ancient ground,\nIn every shape — without a SOUND,\nSome walked as LIZARD, snake, or emu,\nSome took a form that no one KNEW.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -311,7 +305,6 @@
       "name": "Ep2 Scene 3: The Ancestors Wake",
       "sort_order": 7,
       "category": "the-dreaming",
-      "level": 1,
       "sections": {
         "Narration": "With EYES that held ten thousand years,\nThey shook away the dark like TEARS,\nAnd everywhere their BODIES pressed,\nThe earth took shape — the land was BLESSED.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -350,8 +343,7 @@
       "name": "Episode 2: The Ancestors Wake",
       "sort_order": 8,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "dreaming-ancestors-wake-scene-01",
         "dreaming-ancestors-wake-scene-02",
         "dreaming-ancestors-wake-scene-03"
@@ -389,7 +381,6 @@
       "name": "Ep3 Scene 1: Singing the Land",
       "sort_order": 9,
       "category": "the-dreaming",
-      "level": 1,
       "sections": {
         "Narration": "The Ancestors opened up their THROATS,\nAnd out came SONGS — the sweetest notes!\nThey SANG the grass, they sang the trees,\nThey sang the flowers and the BEES.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -429,7 +420,6 @@
       "name": "Ep3 Scene 2: Singing the Land",
       "sort_order": 10,
       "category": "the-dreaming",
-      "level": 1,
       "sections": {
         "Narration": "Each WORD they spoke became a thing —\nA WATERFALL, a bird's bright wing,\nThe DESERT red, the ocean blue,\nEach SONG made something fresh and new.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -468,7 +458,6 @@
       "name": "Ep3 Scene 3: Singing the Land",
       "sort_order": 11,
       "category": "the-dreaming",
-      "level": 1,
       "sections": {
         "Narration": "They sang in LANGUAGE old and deep,\nThat ECHOES still when children sleep,\nFor every PLACE upon this land,\nWas SUNG to life, not built by hand.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -507,8 +496,7 @@
       "name": "Episode 3: Singing the Land",
       "sort_order": 12,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "dreaming-singing-land-scene-01",
         "dreaming-singing-land-scene-02",
         "dreaming-singing-land-scene-03"
@@ -546,7 +534,6 @@
       "name": "Ep4 Scene 1: The Dreaming Paths",
       "sort_order": 13,
       "category": "the-dreaming",
-      "level": 1,
       "sections": {
         "Narration": "As Ancestors WALKED from coast to coast,\nThey left their TRACKS like lines of toast —\nCrisscrossing every PLAIN and hill,\nThose PATHS are in the landscape still.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -586,7 +573,6 @@
       "name": "Ep4 Scene 2: The Dreaming Paths",
       "sort_order": 14,
       "category": "the-dreaming",
-      "level": 1,
       "sections": {
         "Narration": "Each FOOTSTEP was a sacred site,\nEach RESTING place a campfire's light,\nThe paths they WALKED became the way\nThat people follow to this DAY.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -625,7 +611,6 @@
       "name": "Ep4 Scene 3: The Dreaming Paths",
       "sort_order": 15,
       "category": "the-dreaming",
-      "level": 1,
       "sections": {
         "Narration": "A WEB of tracks across the ground,\nConnecting STORIES, spreading sound,\nThe DREAMING PATHS that cross the land\nAre maps that feet can UNDERSTAND.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -664,8 +649,7 @@
       "name": "Episode 4: The Dreaming Paths",
       "sort_order": 16,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "dreaming-paths-scene-01",
         "dreaming-paths-scene-02",
         "dreaming-paths-scene-03"
@@ -703,7 +687,6 @@
       "name": "Ep5 Scene 1: How Mountains Were Born",
       "sort_order": 17,
       "category": "the-dreaming",
-      "level": 1,
       "sections": {
         "Narration": "An ANCESTOR, tired from the track,\nLay down to rest upon their BACK,\nTheir BODY rose up, strong and steep —\nA MOUNTAIN formed while fast asleep!",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -743,7 +726,6 @@
       "name": "Ep5 Scene 2: How Mountains Were Born",
       "sort_order": 18,
       "category": "the-dreaming",
-      "level": 1,
       "sections": {
         "Narration": "Another CURLED up on their side,\nTheir SPINE became a ridge so wide,\nTheir KNEES the foothills, smooth and round,\nTheir BREATH the wind across the ground.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -782,7 +764,6 @@
       "name": "Ep5 Scene 3: How Mountains Were Born",
       "sort_order": 19,
       "category": "the-dreaming",
-      "level": 1,
       "sections": {
         "Narration": "So every PEAK you see today,\nIs someone RESTING on their way,\nThe mountains are not rock and STONE —\nThey're ANCESTORS who found their home.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -821,8 +802,7 @@
       "name": "Episode 5: How Mountains Were Born",
       "sort_order": 20,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "dreaming-mountains-born-scene-01",
         "dreaming-mountains-born-scene-02",
         "dreaming-mountains-born-scene-03"
@@ -860,7 +840,6 @@
       "name": "Ep6 Scene 1: How Rivers Were Carved",
       "sort_order": 21,
       "category": "the-dreaming",
-      "level": 1,
       "sections": {
         "Narration": "A great SNAKE slithered through the night,\nIts belly GLOWING, silver-bright,\nIt pushed through ROCK, it pushed through clay,\nAnd where it went — a RIVERWAY!",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -900,7 +879,6 @@
       "name": "Ep6 Scene 2: How Rivers Were Carved",
       "sort_order": 22,
       "category": "the-dreaming",
-      "level": 1,
       "sections": {
         "Narration": "The WATER followed in its wake,\nEach twist and TURN the serpent'd make,\nIt carved the CREEKS, the pools, the bends,\nFrom mountain TOPS to ocean ends.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -939,7 +917,6 @@
       "name": "Ep6 Scene 3: How Rivers Were Carved",
       "sort_order": 23,
       "category": "the-dreaming",
-      "level": 1,
       "sections": {
         "Narration": "So every RIVER that you see,\nWas made by something wild and FREE,\nA SERPENT'S path from long ago,\nThat taught the WATER where to flow.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -978,8 +955,7 @@
       "name": "Episode 6: How Rivers Were Carved",
       "sort_order": 24,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "dreaming-rivers-carved-scene-01",
         "dreaming-rivers-carved-scene-02",
         "dreaming-rivers-carved-scene-03"
@@ -1017,7 +993,6 @@
       "name": "Ep7 Scene 1: Country Is Alive",
       "sort_order": 25,
       "category": "the-dreaming",
-      "level": 1,
       "sections": {
         "Narration": "The rocks can HEAR you when you speak,\nThe TREES lean in from peak to peak,\nThe RIVER listens to your song,\nThe WIND remembers all day long.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1057,7 +1032,6 @@
       "name": "Ep7 Scene 2: Country Is Alive",
       "sort_order": 26,
       "category": "the-dreaming",
-      "level": 1,
       "sections": {
         "Narration": "For COUNTRY is not dirt and stone,\nIt's not a thing you'll ever OWN,\nIt BREATHES, it watches, knows your name —\nSince Dreaming-time it's been the SAME.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1096,7 +1070,6 @@
       "name": "Ep7 Scene 3: Country Is Alive",
       "sort_order": 27,
       "category": "the-dreaming",
-      "level": 1,
       "sections": {
         "Narration": "So walk with CARE upon this ground,\nAnd LISTEN for the ancient sound,\nThe land is LIVING, wise, and old —\nWith STORIES only Country's told.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1135,8 +1108,7 @@
       "name": "Episode 7: Country Is Alive",
       "sort_order": 28,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "dreaming-country-alive-scene-01",
         "dreaming-country-alive-scene-02",
         "dreaming-country-alive-scene-03"
@@ -1174,7 +1146,6 @@
       "name": "Ep8 Scene 1: The Serpent Sleeps",
       "sort_order": 29,
       "category": "the-rainbow-serpent",
-      "level": 1,
       "sections": {
         "Narration": "Deep DOWN below the oldest ground,\nA SERPENT lay without a sound,\nIts body COILED a thousand miles,\nIts scales like RAINBOW-colored tiles.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1214,7 +1185,6 @@
       "name": "Ep8 Scene 2: The Serpent Sleeps",
       "sort_order": 30,
       "category": "the-rainbow-serpent",
-      "level": 1,
       "sections": {
         "Narration": "It SLEPT through silence, slept through dark,\nNo thunder CLAPPED, no dog would bark,\nThe world above was flat and DRY,\nNo river FLOWED beneath the sky.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1253,7 +1223,6 @@
       "name": "Ep8 Scene 3: The Serpent Sleeps",
       "sort_order": 31,
       "category": "the-rainbow-serpent",
-      "level": 1,
       "sections": {
         "Narration": "But in its BELLY, power grew,\nA RAINBOW waiting to break through,\nThe greatest SPIRIT, coiled so tight —\nJust WAITING for the time to fight.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1292,8 +1261,7 @@
       "name": "Episode 8: The Serpent Sleeps",
       "sort_order": 32,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "serpent-sleeping-scene-01",
         "serpent-sleeping-scene-02",
         "serpent-sleeping-scene-03"
@@ -1331,7 +1299,6 @@
       "name": "Ep9 Scene 1: The Serpent Wakes",
       "sort_order": 33,
       "category": "the-rainbow-serpent",
-      "level": 1,
       "sections": {
         "Narration": "One morning when the EARTH was still,\nA RUMBLE shook from hill to hill,\nThe SERPENT stirred, its great eyes WIDE —\nIt pushed the EARTH apart from inside!",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1371,7 +1338,6 @@
       "name": "Ep9 Scene 2: The Serpent Wakes",
       "sort_order": 34,
       "category": "the-rainbow-serpent",
-      "level": 1,
       "sections": {
         "Narration": "Its HEAD burst through the crusted ground,\nIts BODY made a thundering sound,\nIt STRETCHED from north to southern shore,\nThe biggest thing you EVER saw.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1410,7 +1376,6 @@
       "name": "Ep9 Scene 3: The Serpent Wakes",
       "sort_order": 35,
       "category": "the-rainbow-serpent",
-      "level": 1,
       "sections": {
         "Narration": "With RAINBOW scales that caught the light,\nIt turned the DARKNESS into bright,\nThe SERPENT rose, the serpent ROARED —\nAnd life across the land was POURED.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1449,8 +1414,7 @@
       "name": "Episode 9: The Serpent Wakes",
       "sort_order": 36,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "serpent-wakes-scene-01",
         "serpent-wakes-scene-02",
         "serpent-wakes-scene-03"
@@ -1488,7 +1452,6 @@
       "name": "Ep10 Scene 1: The Serpent Carves the Rivers",
       "sort_order": 37,
       "category": "the-rainbow-serpent",
-      "level": 1,
       "sections": {
         "Narration": "The SERPENT slithered east and west,\nIt never STOPPED, it never rest,\nIts BELLY carved the river beds,\nIts TAIL made pools where water spreads.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1528,7 +1491,6 @@
       "name": "Ep10 Scene 2: The Serpent Carves the Rivers",
       "sort_order": 38,
       "category": "the-rainbow-serpent",
-      "level": 1,
       "sections": {
         "Narration": "Where it turned LEFT, a creek was born,\nWhere RIGHT, the riverbank was torn,\nThe WATER followed in its track,\nAnd filled the PATHS — no turning back.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1567,7 +1529,6 @@
       "name": "Ep10 Scene 3: The Serpent Carves the Rivers",
       "sort_order": 39,
       "category": "the-rainbow-serpent",
-      "level": 1,
       "sections": {
         "Narration": "From DESERT dry to tropical green,\nThe RIVERS flowed where it had been,\nEach WATERHOLE, each sacred spring —\nA gift from the RAINBOW SERPENT king.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1606,8 +1567,7 @@
       "name": "Episode 10: The Serpent Carves the Rivers",
       "sort_order": 40,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "serpent-rivers-scene-01",
         "serpent-rivers-scene-02",
         "serpent-rivers-scene-03"
@@ -1645,7 +1605,6 @@
       "name": "Ep11 Scene 1: The Serpent Raises Mountains",
       "sort_order": 41,
       "category": "the-rainbow-serpent",
-      "level": 1,
       "sections": {
         "Narration": "The SERPENT dove beneath the plain,\nThen surged UP to the sky again,\nWhere it pushed HIGH, the mountains grew,\nWhere it dipped LOW, the valleys drew.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1685,7 +1644,6 @@
       "name": "Ep11 Scene 2: The Serpent Raises Mountains",
       "sort_order": 42,
       "category": "the-rainbow-serpent",
-      "level": 1,
       "sections": {
         "Narration": "It ARCHED its back — a mountain range!\nThe FLINDERS, Kimberleys took shape,\nEach PEAK and ridge, each cliff and ledge,\nWas serpent-body at the EDGE.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1724,7 +1682,6 @@
       "name": "Ep11 Scene 3: The Serpent Raises Mountains",
       "sort_order": 43,
       "category": "the-rainbow-serpent",
-      "level": 1,
       "sections": {
         "Narration": "The LAND now had its ups and downs,\nIts rocky CROWNS and dusty towns,\nAll SCULPTED by that rainbow might —\nThe SERPENT dancing day and night.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1763,8 +1720,7 @@
       "name": "Episode 11: The Serpent Raises Mountains",
       "sort_order": 44,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "serpent-mountains-scene-01",
         "serpent-mountains-scene-02",
         "serpent-mountains-scene-03"
@@ -1802,7 +1758,6 @@
       "name": "Ep12 Scene 1: The Serpent Makes the Law",
       "sort_order": 45,
       "category": "the-rainbow-serpent",
-      "level": 1,
       "sections": {
         "Narration": "The SERPENT looked at all it made,\nThe rivers, mountains, sun and SHADE,\nAnd said: 'This LAND needs rules to keep,\nOr everything will fall ASLEEP.'",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1842,7 +1797,6 @@
       "name": "Ep12 Scene 2: The Serpent Makes the Law",
       "sort_order": 46,
       "category": "the-rainbow-serpent",
-      "level": 1,
       "sections": {
         "Narration": "So it laid down the LAW of things:\n'Share WATER — even with the kings.\nProtect the COUNTRY — it's your kin.\nRespect the ELDERS — let them in.'",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1881,7 +1835,6 @@
       "name": "Ep12 Scene 3: The Serpent Makes the Law",
       "sort_order": 47,
       "category": "the-rainbow-serpent",
-      "level": 1,
       "sections": {
         "Narration": "The LAW was carved in rock and song,\nSo everyone would get ALONG,\nThe SERPENT'S rules still hold today —\nThe DREAMING never goes away.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1920,8 +1873,7 @@
       "name": "Episode 12: The Serpent Makes the Law",
       "sort_order": 48,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "serpent-law-scene-01",
         "serpent-law-scene-02",
         "serpent-law-scene-03"
@@ -1959,7 +1911,6 @@
       "name": "Ep13 Scene 1: The Serpent's Flood",
       "sort_order": 49,
       "category": "the-rainbow-serpent",
-      "level": 1,
       "sections": {
         "Narration": "Some people BROKE the Serpent's law,\nThey took too MUCH, they wanted more,\nThey DAMMED the creek, they hoarded fish,\nAnd thought that GREED could grant each wish.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1999,7 +1950,6 @@
       "name": "Ep13 Scene 2: The Serpent's Flood",
       "sort_order": 50,
       "category": "the-rainbow-serpent",
-      "level": 1,
       "sections": {
         "Narration": "The SERPENT felt the waters cry,\nIt raised its HEAD up to the sky,\nAnd SMASHED the dams with rainbow tail —\nThe FLOODS came pouring down the vale.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2038,7 +1988,6 @@
       "name": "Ep13 Scene 3: The Serpent's Flood",
       "sort_order": 51,
       "category": "the-rainbow-serpent",
-      "level": 1,
       "sections": {
         "Narration": "The greedy ones were SWEPT away,\nBut those who SHARED were safe that day,\nThe SERPENT guards the water still —\nBreak nature's LAW and nature will.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2077,8 +2026,7 @@
       "name": "Episode 13: The Serpent's Flood",
       "sort_order": 52,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "serpent-punishment-scene-01",
         "serpent-punishment-scene-02",
         "serpent-punishment-scene-03"
@@ -2116,7 +2064,6 @@
       "name": "Ep14 Scene 1: The Rainbow in the Sky",
       "sort_order": 53,
       "category": "the-rainbow-serpent",
-      "level": 1,
       "sections": {
         "Narration": "After the RAIN has washed the sky,\nLook UP and you will see on high\nThe SERPENT'S body, bright and wide,\nStretched like a BRIDGE from side to side.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2156,7 +2103,6 @@
       "name": "Ep14 Scene 2: The Rainbow in the Sky",
       "sort_order": 54,
       "category": "the-rainbow-serpent",
-      "level": 1,
       "sections": {
         "Narration": "Its COLORS shine: red, gold, and blue,\nOrange, violet, green comes THROUGH,\nIt ARCHES over all the land,\nA PROMISE only hearts understand.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2195,7 +2141,6 @@
       "name": "Ep14 Scene 3: The Rainbow in the Sky",
       "sort_order": 55,
       "category": "the-rainbow-serpent",
-      "level": 1,
       "sections": {
         "Narration": "The RAINBOW is the serpent's sign:\n'I'm WATCHING and the world is fine.\nI GUARD the water, guard the law —\nThe most BEAUTIFUL thing you ever saw.'",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2234,8 +2179,7 @@
       "name": "Episode 14: The Rainbow in the Sky",
       "sort_order": 56,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "serpent-rainbow-scene-01",
         "serpent-rainbow-scene-02",
         "serpent-rainbow-scene-03"
@@ -2273,7 +2217,6 @@
       "name": "Ep15 Scene 1: The Emu in the Sky",
       "sort_order": 57,
       "category": "the-sky-stories",
-      "level": 1,
       "sections": {
         "Narration": "Look UP between the stars at night,\nNot at the DOTS of silver light,\nBut at the DARK — the space between —\nThe biggest EMU you've ever seen!",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2313,7 +2256,6 @@
       "name": "Ep15 Scene 2: The Emu in the Sky",
       "sort_order": 58,
       "category": "the-sky-stories",
-      "level": 1,
       "sections": {
         "Narration": "Its NECK stretches across the sky,\nIts BODY wide, its legs held high,\nMade not of STARS but of the black,\nThe DARK shape on the Milky Way's track.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2352,7 +2294,6 @@
       "name": "Ep15 Scene 3: The Emu in the Sky",
       "sort_order": 59,
       "category": "the-sky-stories",
-      "level": 1,
       "sections": {
         "Narration": "When EMU dips toward the ground,\nThat's when real emus GATHER round\nTo LAY their eggs — the sky bird shows\nThe SEASON and the way time flows.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2391,8 +2332,7 @@
       "name": "Episode 15: The Emu in the Sky",
       "sort_order": 60,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "sky-emu-scene-01",
         "sky-emu-scene-02",
         "sky-emu-scene-03"
@@ -2430,7 +2370,6 @@
       "name": "Ep16 Scene 1: The Seven Sisters",
       "sort_order": 61,
       "category": "the-sky-stories",
-      "level": 1,
       "sections": {
         "Narration": "Seven SISTERS danced across the land,\nHolding tightly HAND in hand,\nA HUNTER chased them through the night,\nBut they were fast — they took to FLIGHT!",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2470,7 +2409,6 @@
       "name": "Ep16 Scene 2: The Seven Sisters",
       "sort_order": 62,
       "category": "the-sky-stories",
-      "level": 1,
       "sections": {
         "Narration": "They LEAPT up from a mountain peak,\nToo SWIFT for him, too quick to seek,\nThey FLEW into the sky so high,\nAnd became the STARS that never die.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2509,7 +2447,6 @@
       "name": "Ep16 Scene 3: The Seven Sisters",
       "sort_order": 63,
       "category": "the-sky-stories",
-      "level": 1,
       "sections": {
         "Narration": "Now every NIGHT they dance up there,\nSeven SISTERS beyond compare,\nStill TOGETHER, still holding tight —\nA CLUSTER burning silver-bright.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2548,8 +2485,7 @@
       "name": "Episode 16: The Seven Sisters",
       "sort_order": 64,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "sky-seven-sisters-scene-01",
         "sky-seven-sisters-scene-02",
         "sky-seven-sisters-scene-03"
@@ -2587,7 +2523,6 @@
       "name": "Ep17 Scene 1: The Southern Cross",
       "sort_order": 65,
       "category": "the-sky-stories",
-      "level": 1,
       "sections": {
         "Narration": "Five STARS arranged like precious gems,\nA CROSS that shines — the sky's best friend,\nBut LOOK again with Dreaming eyes:\nA STINGRAY swimming through the skies!",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2627,7 +2562,6 @@
       "name": "Ep17 Scene 2: The Southern Cross",
       "sort_order": 66,
       "category": "the-sky-stories",
-      "level": 1,
       "sections": {
         "Narration": "Or maybe it's an EAGLE'S claw,\nOr POSSUM tracks — depends who saw,\nFor every NATION sees its own\nTrue STORY in the stars that's shown.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2666,7 +2600,6 @@
       "name": "Ep17 Scene 3: The Southern Cross",
       "sort_order": 67,
       "category": "the-sky-stories",
-      "level": 1,
       "sections": {
         "Narration": "The POINTER stars show where to look,\nLike bookmarks in a STARRY book,\nThey helped the TRAVELERS find their way —\nA compass made of MILKY WAY.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2705,8 +2638,7 @@
       "name": "Episode 17: The Southern Cross",
       "sort_order": 68,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "sky-southern-cross-scene-01",
         "sky-southern-cross-scene-02",
         "sky-southern-cross-scene-03"
@@ -2744,7 +2676,6 @@
       "name": "Ep18 Scene 1: The Sun Woman",
       "sort_order": 69,
       "category": "the-sky-stories",
-      "level": 1,
       "sections": {
         "Narration": "The SUN is not a ball of fire,\nShe's a WOMAN climbing higher,\nEach MORNING she lights up her torch,\nAnd walks across the sky's great PORCH.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2784,7 +2715,6 @@
       "name": "Ep18 Scene 2: The Sun Woman",
       "sort_order": 70,
       "category": "the-sky-stories",
-      "level": 1,
       "sections": {
         "Narration": "She paints her FACE with red and gold —\nThat's DAWN, the story we are told,\nShe walks from EAST to where day ends,\nThen underground her JOURNEY wends.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2823,7 +2753,6 @@
       "name": "Ep18 Scene 3: The Sun Woman",
       "sort_order": 71,
       "category": "the-sky-stories",
-      "level": 1,
       "sections": {
         "Narration": "At DUSK she paints herself once more,\nRed OCHRE sunset, shore to shore,\nThen travels UNDERGROUND all night,\nTo start again with MORNING light.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2862,8 +2791,7 @@
       "name": "Episode 18: The Sun Woman",
       "sort_order": 72,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "sky-sun-woman-scene-01",
         "sky-sun-woman-scene-02",
         "sky-sun-woman-scene-03"
@@ -2901,7 +2829,6 @@
       "name": "Ep19 Scene 1: The Moon Man",
       "sort_order": 73,
       "category": "the-sky-stories",
-      "level": 1,
       "sections": {
         "Narration": "The MOON is an old man, thin and round,\nWho walks the SKY without a sound,\nHe starts each MONTH as slim as thread,\nThen eats too MUCH and grows instead!",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2941,7 +2868,6 @@
       "name": "Ep19 Scene 2: The Moon Man",
       "sort_order": 74,
       "category": "the-sky-stories",
-      "level": 1,
       "sections": {
         "Narration": "He gets so FAT and full and bright,\nHe lights the WHOLE world up at night,\nBut then he SHRINKS — he's eating less,\nUntil he's THIN again, I guess.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2980,7 +2906,6 @@
       "name": "Ep19 Scene 3: The Moon Man",
       "sort_order": 75,
       "category": "the-sky-stories",
-      "level": 1,
       "sections": {
         "Narration": "He DIES each month but comes back new,\nA lesson for both me and YOU:\nThat even when things FADE and end,\nThey ALWAYS, always come back, friend.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3019,8 +2944,7 @@
       "name": "Episode 19: The Moon Man",
       "sort_order": 76,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "sky-moon-man-scene-01",
         "sky-moon-man-scene-02",
         "sky-moon-man-scene-03"
@@ -3058,7 +2982,6 @@
       "name": "Ep20 Scene 1: The River in the Sky",
       "sort_order": 77,
       "category": "the-sky-stories",
-      "level": 1,
       "sections": {
         "Narration": "Look UP and see the river flow,\nA MILKY stream with silver glow,\nIt stretches far from end to END,\nThe sky-road where the spirits WEND.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3098,7 +3021,6 @@
       "name": "Ep20 Scene 2: The River in the Sky",
       "sort_order": 78,
       "category": "the-sky-stories",
-      "level": 1,
       "sections": {
         "Narration": "Some nations say it's CAMPFIRE smoke,\nFrom spirits' fires that never BROKE,\nThe ashes rising through the NIGHT,\nA billion campfires burning BRIGHT.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3137,7 +3059,6 @@
       "name": "Ep20 Scene 3: The River in the Sky",
       "sort_order": 79,
       "category": "the-sky-stories",
-      "level": 1,
       "sections": {
         "Narration": "Others say it's the great SKY RIVER,\nWhere spirit-fish forever QUIVER,\nA WATERWAY from here to there —\nConnecting EARTH to everywhere.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3176,8 +3097,7 @@
       "name": "Episode 20: The River in the Sky",
       "sort_order": 80,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "sky-milky-way-scene-01",
         "sky-milky-way-scene-02",
         "sky-milky-way-scene-03"
@@ -3215,7 +3135,6 @@
       "name": "Ep21 Scene 1: The Morning Star",
       "sort_order": 81,
       "category": "the-sky-stories",
-      "level": 1,
       "sections": {
         "Narration": "Before the SUN Woman starts her walk,\nA single STAR begins to talk,\nIt SHINES so bright, the brightest one,\nAnd whispers: 'WAKE! Here comes the sun!'",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3255,7 +3174,6 @@
       "name": "Ep21 Scene 2: The Morning Star",
       "sort_order": 82,
       "category": "the-sky-stories",
-      "level": 1,
       "sections": {
         "Narration": "The MORNING STAR is someone's soul,\nSent back to make the LIVING whole,\nA MESSAGE from the ones who've gone:\n'We love you still — keep CARRYING on.'",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3294,7 +3212,6 @@
       "name": "Ep21 Scene 3: The Morning Star",
       "sort_order": 83,
       "category": "the-sky-stories",
-      "level": 1,
       "sections": {
         "Narration": "It dangles on a STRING of light,\nBetween the DAY world and the night,\nA BRIDGE between the gone and here —\nThe ones we LOVE are always near.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3333,8 +3250,7 @@
       "name": "Episode 21: The Morning Star",
       "sort_order": 84,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "sky-morning-star-scene-01",
         "sky-morning-star-scene-02",
         "sky-morning-star-scene-03"
@@ -3372,7 +3288,6 @@
       "name": "Ep22 Scene 1: Tiddalick the Flood Frog",
       "sort_order": 85,
       "category": "the-animal-teachers",
-      "level": 1,
       "sections": {
         "Narration": "TIDDALICK the frog woke up one day,\nSo THIRSTY that he couldn't play,\nHe DRANK the rivers, drank the lakes,\nHe drank until the whole world ACHES!",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3412,7 +3327,6 @@
       "name": "Ep22 Scene 2: Tiddalick the Flood Frog",
       "sort_order": 86,
       "category": "the-animal-teachers",
-      "level": 1,
       "sections": {
         "Narration": "The ANIMALS had not a drop,\nThe fish were gasping — 'Make him STOP!'\nBut TIDDALICK just sat there, wide,\nWith ALL the water stored inside.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3451,7 +3365,6 @@
       "name": "Ep22 Scene 3: Tiddalick the Flood Frog",
       "sort_order": 87,
       "category": "the-animal-teachers",
-      "level": 1,
       "sections": {
         "Narration": "So NABUNUM the eel danced silly,\nSo FUNNY, wiggly, willy-nilly,\nThat TIDDALICK began to LAUGH —\nAnd OUT came water, creek and calf!",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3490,8 +3403,7 @@
       "name": "Episode 22: Tiddalick the Flood Frog",
       "sort_order": 88,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "animal-tiddalick-scene-01",
         "animal-tiddalick-scene-02",
         "animal-tiddalick-scene-03"
@@ -3529,7 +3441,6 @@
       "name": "Ep23 Scene 1: Why Kookaburra Laughs",
       "sort_order": 89,
       "category": "the-animal-teachers",
-      "level": 1,
       "sections": {
         "Narration": "When the first SUNRISE lit the sky,\nThe animals all BLINKED their eyes,\nBut no one knew if it would STAY,\nOr if the dark would STEAL the day.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3569,7 +3480,6 @@
       "name": "Ep23 Scene 2: Why Kookaburra Laughs",
       "sort_order": 90,
       "category": "the-animal-teachers",
-      "level": 1,
       "sections": {
         "Narration": "'We need a WAKE-UP call!' they cried,\n'A SIGNAL ringing far and wide!'\nSo KOOKABURRA threw back her head,\nAnd LAUGHED so loud the dark clouds fled!",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3608,7 +3518,6 @@
       "name": "Ep23 Scene 3: Why Kookaburra Laughs",
       "sort_order": 91,
       "category": "the-animal-teachers",
-      "level": 1,
       "sections": {
         "Narration": "Now every MORNING without fail,\nShe laughs across each hill and DALE,\nHer CACKLE tells the whole world: 'RISE!\nThe SUN is up! Open your eyes!'",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3647,8 +3556,7 @@
       "name": "Episode 23: Why Kookaburra Laughs",
       "sort_order": 92,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "animal-kookaburra-scene-01",
         "animal-kookaburra-scene-02",
         "animal-kookaburra-scene-03"
@@ -3686,7 +3594,6 @@
       "name": "Ep24 Scene 1: Crow and Eagle's Fire",
       "sort_order": 93,
       "category": "the-animal-teachers",
-      "level": 1,
       "sections": {
         "Narration": "CROW and EAGLE were friends of old,\nBut Crow was sly and Eagle BOLD,\nThey caught some FISH beside the stream,\nAnd Eagle said: 'Let's cook our DREAM!'",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3726,7 +3633,6 @@
       "name": "Ep24 Scene 2: Crow and Eagle's Fire",
       "sort_order": 94,
       "category": "the-animal-teachers",
-      "level": 1,
       "sections": {
         "Narration": "But CROW refused to share the fire,\nHe wanted all — his one DESIRE!\nSo EAGLE grabbed a burning stick,\nAnd threw it HIGH — a fiery trick!",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3765,7 +3671,6 @@
       "name": "Ep24 Scene 3: Crow and Eagle's Fire",
       "sort_order": 95,
       "category": "the-animal-teachers",
-      "level": 1,
       "sections": {
         "Narration": "The STICK became the sun above,\nAnd CROW turned black (he lost all love),\nWhile EAGLE soared on wings of pride —\nThe FIRE now belongs to every side.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3804,8 +3709,7 @@
       "name": "Episode 24: Crow and Eagle's Fire",
       "sort_order": 96,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "animal-crow-eagle-scene-01",
         "animal-crow-eagle-scene-02",
         "animal-crow-eagle-scene-03"
@@ -3843,7 +3747,6 @@
       "name": "Ep25 Scene 1: How Platypus Got Mixed Up",
       "sort_order": 97,
       "category": "the-animal-teachers",
-      "level": 1,
       "sections": {
         "Narration": "The ANIMALS all had a meeting day,\nThe LAND ones here, the WATER ones that way,\nThe BIRDS up there upon the trees —\nBut PLATYPUS said: 'What about me, please?'",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3883,7 +3786,6 @@
       "name": "Ep25 Scene 2: How Platypus Got Mixed Up",
       "sort_order": 98,
       "category": "the-animal-teachers",
-      "level": 1,
       "sections": {
         "Narration": "'I've got a BILL like any duck,\nA TAIL like beaver — what the cluck!\nI lay my EGGS but feed with milk,\nMy FUR is soft as spider silk.'",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3922,7 +3824,6 @@
       "name": "Ep25 Scene 3: How Platypus Got Mixed Up",
       "sort_order": 99,
       "category": "the-animal-teachers",
-      "level": 1,
       "sections": {
         "Narration": "Each group said: 'You're not ONE of us!'\nBut Platypus just smiled: 'No FUSS —\nI'm ALL of you and none the same,\nI don't need just a SINGLE name.'",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3961,8 +3862,7 @@
       "name": "Episode 25: How Platypus Got Mixed Up",
       "sort_order": 100,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "animal-platypus-scene-01",
         "animal-platypus-scene-02",
         "animal-platypus-scene-03"
@@ -4000,7 +3900,6 @@
       "name": "Ep26 Scene 1: Why Wombat Digs",
       "sort_order": 101,
       "category": "the-animal-teachers",
-      "level": 1,
       "sections": {
         "Narration": "When RAINS came down and floods spread wide,\nThe animals had NOWHERE to hide,\nBut WOMBAT said: 'Come follow me!\nI'll dig a BURROW — safe and free!'",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4040,7 +3939,6 @@
       "name": "Ep26 Scene 2: Why Wombat Digs",
       "sort_order": 102,
       "category": "the-animal-teachers",
-      "level": 1,
       "sections": {
         "Narration": "She DUG and dug with stubby claws,\nA tunnel with no WALLS or doors,\nSo BIG that everyone could fit —\nSnake, lizard, JOEY — every bit.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4079,7 +3977,6 @@
       "name": "Ep26 Scene 3: Why Wombat Digs",
       "sort_order": 103,
       "category": "the-animal-teachers",
-      "level": 1,
       "sections": {
         "Narration": "And when the FLOOD had washed away,\nThey thanked the WOMBAT for that day,\nNow WOMBAT always digs the ground,\nTo keep a SHELTER safe and sound.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4118,8 +4015,7 @@
       "name": "Episode 26: Why Wombat Digs",
       "sort_order": 104,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "animal-wombat-scene-01",
         "animal-wombat-scene-02",
         "animal-wombat-scene-03"
@@ -4157,7 +4053,6 @@
       "name": "Ep27 Scene 1: How Kangaroo Got Her Pouch",
       "sort_order": 105,
       "category": "the-animal-teachers",
-      "level": 1,
       "sections": {
         "Narration": "Old KANGAROO once had no pouch,\nHer joey had to HOP and crouch,\nAnd follow close on tiny FEET,\nThrough DESERT dust and summer heat.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4197,7 +4092,6 @@
       "name": "Ep27 Scene 2: How Kangaroo Got Her Pouch",
       "sort_order": 106,
       "category": "the-animal-teachers",
-      "level": 1,
       "sections": {
         "Narration": "One day she found a WOMBAT blind,\nSo old and LOST and left behind,\nShe CARRIED him upon her chest,\nAnd kept him warm against her BREAST.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4236,7 +4130,6 @@
       "name": "Ep27 Scene 3: How Kangaroo Got Her Pouch",
       "sort_order": 107,
       "category": "the-animal-teachers",
-      "level": 1,
       "sections": {
         "Narration": "The DREAMING saw her kindness true,\nAnd said: 'Here's something just for YOU —\nA POUCH to carry those in need,\nA gift for every GENTLE deed.'",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4275,8 +4168,7 @@
       "name": "Episode 27: How Kangaroo Got Her Pouch",
       "sort_order": 108,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "animal-kangaroo-scene-01",
         "animal-kangaroo-scene-02",
         "animal-kangaroo-scene-03"
@@ -4314,7 +4206,6 @@
       "name": "Ep28 Scene 1: Goanna and the Stolen Fire",
       "sort_order": 109,
       "category": "the-animal-teachers",
-      "level": 1,
       "sections": {
         "Narration": "The animals were COLD at night,\nNo warmth, no flame, no FIRELIGHT,\nBut GOANNA knew where fire hid —\nInside a STICK, beneath the lid!",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4354,7 +4245,6 @@
       "name": "Ep28 Scene 2: Goanna and the Stolen Fire",
       "sort_order": 110,
       "category": "the-animal-teachers",
-      "level": 1,
       "sections": {
         "Narration": "He rubbed two STICKS together fast,\nAnd SPARKS flew out — fire at last!\nBut selfish GOANNA wouldn't share,\nHe kept the FIRE without a care.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4393,7 +4283,6 @@
       "name": "Ep28 Scene 3: Goanna and the Stolen Fire",
       "sort_order": 111,
       "category": "the-animal-teachers",
-      "level": 1,
       "sections": {
         "Narration": "So all the ANIMALS gave chase,\nAnd GOANNA ran to his hiding place,\nHe SWALLOWED the fire down his throat —\nThat's why his TONGUE flickers, please note!",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4432,8 +4321,7 @@
       "name": "Episode 28: Goanna and the Stolen Fire",
       "sort_order": 112,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "animal-goanna-scene-01",
         "animal-goanna-scene-02",
         "animal-goanna-scene-03"
@@ -4471,7 +4359,6 @@
       "name": "Ep29 Scene 1: Walking the Country",
       "sort_order": 113,
       "category": "the-songlines",
-      "level": 1,
       "sections": {
         "Narration": "Put your FEET upon the ground,\nFeel the HEARTBEAT, feel the sound,\nEvery STEP you take out there,\nThe COUNTRY knows — the country cares.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4511,7 +4398,6 @@
       "name": "Ep29 Scene 2: Walking the Country",
       "sort_order": 114,
       "category": "the-songlines",
-      "level": 1,
       "sections": {
         "Narration": "Walk with PURPOSE, walk with grace,\nFeel the STORY of each place,\nThis ROCK here tells of serpent's rest,\nThat TREE there marks an eagle's nest.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4550,7 +4436,6 @@
       "name": "Ep29 Scene 3: Walking the Country",
       "sort_order": 115,
       "category": "the-songlines",
-      "level": 1,
       "sections": {
         "Narration": "The land is not just DIRT and dust,\nIt holds our STORIES, holds our trust,\nSo WALK it gently, walk it true —\nThe COUNTRY'S walking back through you.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4589,8 +4474,7 @@
       "name": "Episode 29: Walking the Country",
       "sort_order": 116,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "songline-walking-scene-01",
         "songline-walking-scene-02",
         "songline-walking-scene-03"
@@ -4628,7 +4512,6 @@
       "name": "Ep30 Scene 1: The Singing Path",
       "sort_order": 117,
       "category": "the-songlines",
-      "level": 1,
       "sections": {
         "Narration": "The ANCESTORS sang as they walked along,\nEach HILL and valley got its own song,\nA different TUNE for every bend,\nA different VERSE for every friend.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4668,7 +4551,6 @@
       "name": "Ep30 Scene 2: The Singing Path",
       "sort_order": 118,
       "category": "the-songlines",
-      "level": 1,
       "sections": {
         "Narration": "If you KNOW the song, you know the way,\nYou'll never be LOST, not night or day,\nThe MELODY shows you where to turn,\nWhich CREEK to cross, which bridge to burn.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4707,7 +4589,6 @@
       "name": "Ep30 Scene 3: The Singing Path",
       "sort_order": 119,
       "category": "the-songlines",
-      "level": 1,
       "sections": {
         "Narration": "The SONGS are maps you sing out loud,\nThey guide your FEET through dust and cloud,\nA SINGING PATH from here to there —\nThe oldest GPS ANYWHERE!",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4746,8 +4627,7 @@
       "name": "Episode 30: The Singing Path",
       "sort_order": 120,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "songline-singing-path-scene-01",
         "songline-singing-path-scene-02",
         "songline-singing-path-scene-03"
@@ -4785,7 +4665,6 @@
       "name": "Ep31 Scene 1: The Map Is a Song",
       "sort_order": 121,
       "category": "the-songlines",
-      "level": 1,
       "sections": {
         "Narration": "You don't need PAPER, pen, or phone,\nTo find your way when far from HOME,\nThe MAP of this great southern land\nIs MUSIC only hearts understand.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4825,7 +4704,6 @@
       "name": "Ep31 Scene 2: The Map Is a Song",
       "sort_order": 122,
       "category": "the-songlines",
-      "level": 1,
       "sections": {
         "Narration": "Each WATERHOLE has got a note,\nEach MOUNTAIN peak a line they wrote,\nThe DESERT hums a low bassoon,\nThe COAST sings high, a silver tune.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4864,7 +4742,6 @@
       "name": "Ep31 Scene 3: The Map Is a Song",
       "sort_order": 123,
       "category": "the-songlines",
-      "level": 1,
       "sections": {
         "Narration": "From east to WEST, from top to base,\nA SONG connects each sacred place,\nThe continent's a MUSIC SHEET —\nAnd every step's a DRUM-LIKE beat.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4903,8 +4780,7 @@
       "name": "Episode 31: The Map Is a Song",
       "sort_order": 124,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "songline-map-is-song-scene-01",
         "songline-map-is-song-scene-02",
         "songline-map-is-song-scene-03"
@@ -4942,7 +4818,6 @@
       "name": "Ep32 Scene 1: Country Speaks",
       "sort_order": 125,
       "category": "the-songlines",
-      "level": 1,
       "sections": {
         "Narration": "Be QUIET now and close your eyes,\nListen past the wind's DISGUISE,\nCan you hear the COUNTRY talk?\nA whisper in the red earth's WALK.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4982,7 +4857,6 @@
       "name": "Ep32 Scene 2: Country Speaks",
       "sort_order": 126,
       "category": "the-songlines",
-      "level": 1,
       "sections": {
         "Narration": "'I KNOW you,' says the ancient ground,\n'I've WATCHED you since your first-born sound,\nI FELT your tiny baby feet,\nI'll HOLD you when you're fast asleep.'",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5021,7 +4895,6 @@
       "name": "Ep32 Scene 3: Country Speaks",
       "sort_order": 127,
       "category": "the-songlines",
-      "level": 1,
       "sections": {
         "Narration": "The trees LEAN in to hear your name,\nThe RIVER calls you just the same,\nCountry SPEAKS to those who hear —\nJust LISTEN, and the words are clear.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5060,8 +4933,7 @@
       "name": "Episode 32: Country Speaks",
       "sort_order": 128,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "songline-country-speaks-scene-01",
         "songline-country-speaks-scene-02",
         "songline-country-speaks-scene-03"
@@ -5099,7 +4971,6 @@
       "name": "Ep33 Scene 1: Feet Remember",
       "sort_order": 129,
       "category": "the-songlines",
-      "level": 1,
       "sections": {
         "Narration": "Your FEET know things your head forgot,\nThey know each STONE, each sandy spot,\nThey walked this LAND ten thousand years,\nThrough joy and LAUGHTER, dust and tears.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5139,7 +5010,6 @@
       "name": "Ep33 Scene 2: Feet Remember",
       "sort_order": 130,
       "category": "the-songlines",
-      "level": 1,
       "sections": {
         "Narration": "Your GRANDMA'S grandma's grandma's feet,\nOnce danced right HERE upon this street,\nThe GROUND remembers every toe,\nFrom LONG, long, long, long time ago.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5178,7 +5048,6 @@
       "name": "Ep33 Scene 3: Feet Remember",
       "sort_order": 131,
       "category": "the-songlines",
-      "level": 1,
       "sections": {
         "Narration": "So take your SHOES off, feel the earth,\nThis GROUND has known you since your birth,\nYour FEET remember what to do —\nThe LAND is coming home to you.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5217,8 +5086,7 @@
       "name": "Episode 33: Feet Remember",
       "sort_order": 132,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "songline-feet-remember-scene-01",
         "songline-feet-remember-scene-02",
         "songline-feet-remember-scene-03"
@@ -5256,7 +5124,6 @@
       "name": "Ep34 Scene 1: Finding Water by Song",
       "sort_order": 133,
       "category": "the-songlines",
-      "level": 1,
       "sections": {
         "Narration": "In DESERT lands where nothing grows,\nWhere red DUST drifts and hot wind blows,\nHow do you FIND a drink of water?\nYou SING — the way your mother taught her.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5296,7 +5163,6 @@
       "name": "Ep34 Scene 2: Finding Water by Song",
       "sort_order": 134,
       "category": "the-songlines",
-      "level": 1,
       "sections": {
         "Narration": "The SONG describes a special tree,\nThen COUNT your steps — one, two, and three,\nTurn LEFT where rocks make serpent's shape,\nDig DOWN — and water! An escape!",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5335,7 +5201,6 @@
       "name": "Ep34 Scene 3: Finding Water by Song",
       "sort_order": 135,
       "category": "the-songlines",
-      "level": 1,
       "sections": {
         "Narration": "The SONGLINES hide the water's place,\nIn VERSE and rhythm, tune and grace,\nA SECRET map inside a song —\nThat's kept the PEOPLE safe and strong.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5374,8 +5239,7 @@
       "name": "Episode 34: Finding Water by Song",
       "sort_order": 136,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "songline-water-finding-scene-01",
         "songline-water-finding-scene-02",
         "songline-water-finding-scene-03"
@@ -5413,7 +5277,6 @@
       "name": "Ep35 Scene 1: The Meeting Place",
       "sort_order": 137,
       "category": "the-songlines",
-      "level": 1,
       "sections": {
         "Narration": "Where SONGLINES cross, the people meet,\nFrom north and SOUTH, a grand retreat,\nA hundred NATIONS, maybe more,\nAll gathering on the same SHORE.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5453,7 +5316,6 @@
       "name": "Ep35 Scene 2: The Meeting Place",
       "sort_order": 138,
       "category": "the-songlines",
-      "level": 1,
       "sections": {
         "Narration": "They TRADE their songs and share their art,\nThey dance and FEAST with open heart,\nThe MEETING PLACE is where paths cross —\nWhere no one's stranger, no one's BOSS.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5492,7 +5354,6 @@
       "name": "Ep35 Scene 3: The Meeting Place",
       "sort_order": 139,
       "category": "the-songlines",
-      "level": 1,
       "sections": {
         "Narration": "Like rivers JOINING at the sea,\nThe SONGLINES bring community,\nA place where DIFFERENT voices blend —\nWhere every STRANGER is a friend.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5531,8 +5392,7 @@
       "name": "Episode 35: The Meeting Place",
       "sort_order": 140,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "songline-meeting-place-scene-01",
         "songline-meeting-place-scene-02",
         "songline-meeting-place-scene-03"
@@ -5570,7 +5430,6 @@
       "name": "Ep36 Scene 1: The Elders Teach",
       "sort_order": 141,
       "category": "the-law",
-      "level": 1,
       "sections": {
         "Narration": "Sit DOWN beside the fire's glow,\nThe ELDERS have a thing to show,\nThey've WALKED this land since they were small,\nThey know the STORIES — every, all.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5610,7 +5469,6 @@
       "name": "Ep36 Scene 2: The Elders Teach",
       "sort_order": 142,
       "category": "the-law",
-      "level": 1,
       "sections": {
         "Narration": "They teach by TELLING, not by test,\nBy STORY, dance, and all the rest,\nThe YOUNG ones listen with their ears,\nAnd carry knowledge THROUGH the years.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5649,7 +5507,6 @@
       "name": "Ep36 Scene 3: The Elders Teach",
       "sort_order": 143,
       "category": "the-law",
-      "level": 1,
       "sections": {
         "Narration": "For WISDOM doesn't live in books,\nIt lives in VOICES, hands, and looks,\nThe ELDERS pass it, flame to flame —\nAnd nothing's EVER quite the same.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5688,8 +5545,7 @@
       "name": "Episode 36: The Elders Teach",
       "sort_order": 144,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "law-elders-teach-scene-01",
         "law-elders-teach-scene-02",
         "law-elders-teach-scene-03"
@@ -5727,7 +5583,6 @@
       "name": "Ep37 Scene 1: Listen to Country",
       "sort_order": 145,
       "category": "the-law",
-      "level": 1,
       "sections": {
         "Narration": "The first great LAW the Dreaming made:\n'LISTEN before you take or trade,\nBefore you HUNT or dig or build,\nAsk COUNTRY if it wants to be filled.'",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5767,7 +5622,6 @@
       "name": "Ep37 Scene 2: Listen to Country",
       "sort_order": 146,
       "category": "the-law",
-      "level": 1,
       "sections": {
         "Narration": "The BUSH will tell you what it needs,\nWhich PLANTS to pick, which soil for seeds,\nThe RIVER knows when fish are low,\nThe FOREST tells you when to go.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5806,7 +5660,6 @@
       "name": "Ep37 Scene 3: Listen to Country",
       "sort_order": 147,
       "category": "the-law",
-      "level": 1,
       "sections": {
         "Narration": "So LISTEN — that's the Law of laws,\nDon't rush AHEAD without a pause,\nFor COUNTRY speaks to those who wait —\nAnd listening keeps the world STRAIGHT.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5845,8 +5698,7 @@
       "name": "Episode 37: Listen to Country",
       "sort_order": 148,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "law-listen-to-country-scene-01",
         "law-listen-to-country-scene-02",
         "law-listen-to-country-scene-03"
@@ -5884,7 +5736,6 @@
       "name": "Ep38 Scene 1: The Fire-Stick Way",
       "sort_order": 149,
       "category": "the-law",
-      "level": 1,
       "sections": {
         "Narration": "The LAW says: burn the land with care,\nSmall FIRES here and fires there,\nA PATCH of ground, a strip of grass,\nSo new GREEN shoots can grow at last.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5924,7 +5775,6 @@
       "name": "Ep38 Scene 2: The Fire-Stick Way",
       "sort_order": 150,
       "category": "the-law",
-      "level": 1,
       "sections": {
         "Narration": "The FIRE-STICK farmers knew this trick:\nBurn SLOWLY with a little stick,\nThe OLD growth clears, the new comes through,\nAnd ANIMALS find food that's new.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5963,7 +5813,6 @@
       "name": "Ep38 Scene 3: The Fire-Stick Way",
       "sort_order": 151,
       "category": "the-law",
-      "level": 1,
       "sections": {
         "Narration": "Don't let the FIRE build and build,\nOr everything you LOVE gets killed,\nSmall BURNS protect the land from harm —\nThe oldest FIRE-STICK farming charm.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6002,8 +5851,7 @@
       "name": "Episode 38: The Fire-Stick Way",
       "sort_order": 152,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "law-fire-stick-scene-01",
         "law-fire-stick-scene-02",
         "law-fire-stick-scene-03"
@@ -6041,7 +5889,6 @@
       "name": "Ep39 Scene 1: The Law of Sharing",
       "sort_order": 153,
       "category": "the-law",
-      "level": 1,
       "sections": {
         "Narration": "In Dreaming LAW, there's one big rule,\nThey teach in every DREAMING school:\nWhatever FOOD or gifts you find,\nYou SHARE them — never leave behind.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6081,7 +5928,6 @@
       "name": "Ep39 Scene 2: The Law of Sharing",
       "sort_order": 154,
       "category": "the-law",
-      "level": 1,
       "sections": {
         "Narration": "The HUNTER shares with all the camp,\nFrom dry RED desert to the damp,\nThe FISHER gives the biggest fish,\nTo ELDERS first — that is the wish.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6120,7 +5966,6 @@
       "name": "Ep39 Scene 3: The Law of Sharing",
       "sort_order": 155,
       "category": "the-law",
-      "level": 1,
       "sections": {
         "Narration": "For no one STARVES when all give part,\nThis LAW lives in the people's heart,\nYou never EAT your catch alone —\nThe best of you is what you've SHOWN.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6159,8 +6004,7 @@
       "name": "Episode 39: The Law of Sharing",
       "sort_order": 156,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "law-sharing-scene-01",
         "law-sharing-scene-02",
         "law-sharing-scene-03"
@@ -6198,7 +6042,6 @@
       "name": "Ep40 Scene 1: The Ceremony",
       "sort_order": 157,
       "category": "the-law",
-      "level": 1,
       "sections": {
         "Narration": "When SEASONS turn and stars align,\nThe people GATHER — it is time,\nFor CEREMONY, paint, and song,\nWhere everyone and all BELONG.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6238,7 +6081,6 @@
       "name": "Ep40 Scene 2: The Ceremony",
       "sort_order": 158,
       "category": "the-law",
-      "level": 1,
       "sections": {
         "Narration": "The DANCERS paint their bodies bright,\nWith OCHRE red and chalk-dust white,\nThey move like ANIMALS and wind,\nRe-TELLING stories that have pinned.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6277,7 +6119,6 @@
       "name": "Ep40 Scene 3: The Ceremony",
       "sort_order": 159,
       "category": "the-law",
-      "level": 1,
       "sections": {
         "Narration": "The CEREMONY keeps things right,\nIt feeds the DREAMING through the night,\nWithout the DANCE, the songs would fade —\nAnd all the WORLD that Dreaming made.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6316,8 +6157,7 @@
       "name": "Episode 40: The Ceremony",
       "sort_order": 160,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "law-ceremony-scene-01",
         "law-ceremony-scene-02",
         "law-ceremony-scene-03"
@@ -6355,7 +6195,6 @@
       "name": "Ep41 Scene 1: Sorry Business",
       "sort_order": 161,
       "category": "the-law",
-      "level": 1,
       "sections": {
         "Narration": "When someone LEAVES and walks no more,\nThe people gather at the DOOR,\nThey CRY together, hold each other,\nEvery sister, every BROTHER.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6395,7 +6234,6 @@
       "name": "Ep41 Scene 2: Sorry Business",
       "sort_order": 162,
       "category": "the-law",
-      "level": 1,
       "sections": {
         "Narration": "This is SORRY BUSINESS time,\nA sacred GRIEF, a healing rhyme,\nThe name we LOVED, we will not speak,\nUntil the SORROW finds its peak.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6434,7 +6272,6 @@
       "name": "Ep41 Scene 3: Sorry Business",
       "sort_order": 163,
       "category": "the-law",
-      "level": 1,
       "sections": {
         "Narration": "For GRIEF needs space and grief needs days,\nWe honor THOSE who've gone always,\nThe SORRY BUSINESS holds us tight —\nUntil we're ready for the LIGHT.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6473,8 +6310,7 @@
       "name": "Episode 41: Sorry Business",
       "sort_order": 164,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "law-sorry-business-scene-01",
         "law-sorry-business-scene-02",
         "law-sorry-business-scene-03"
@@ -6512,7 +6348,6 @@
       "name": "Ep42 Scene 1: The Dreaming Continues",
       "sort_order": 165,
       "category": "the-law",
-      "level": 1,
       "sections": {
         "Narration": "The DREAMING didn't stop back then,\nIt's HAPPENING again, again,\nEach baby BORN is ancestor's gift,\nEach SUNRISE is the darkness lift.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6552,7 +6387,6 @@
       "name": "Ep42 Scene 2: The Dreaming Continues",
       "sort_order": 166,
       "category": "the-law",
-      "level": 1,
       "sections": {
         "Narration": "The LAW still holds, the songs still play,\nThe COUNTRY'S speaking every day,\nThe SERPENT watches, stars still turn,\nAnd there is ALWAYS more to learn.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6591,7 +6425,6 @@
       "name": "Ep42 Scene 3: The Dreaming Continues",
       "sort_order": 167,
       "category": "the-law",
-      "level": 1,
       "sections": {
         "Narration": "So close your EYES now, go to sleep,\nThe DREAMING'S yours — it's yours to keep,\nYou're PART of it, it's part of you —\nThe oldest STORY, always new.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6630,8 +6463,7 @@
       "name": "Episode 42: The Dreaming Continues",
       "sort_order": 168,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "law-dreaming-continues-scene-01",
         "law-dreaming-continues-scene-02",
         "law-dreaming-continues-scene-03"

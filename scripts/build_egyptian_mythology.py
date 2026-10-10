@@ -20,6 +20,7 @@ Followed by GLOSSARY AND INDEX (skipped).
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(SCRIPT_DIR)
@@ -185,7 +186,6 @@ def build_grammar():
             "name": f"Chapter {num}: {ch_name}",
             "sort_order": sort_order,
             "category": "chapter",
-            "level": 1,
             "sections": {
                 "Text": ch_text
             },
@@ -204,14 +204,13 @@ def build_grammar():
         "name": "History and Society",
         "sort_order": sort_order,
         "category": "theme",
-        "level": 2,
         "sections": {
             "About": "The foundations of Egyptian civilization: an introduction to the mythological worldview, the history of exploration and archaeological discovery in the Nile Valley, the customs and daily life of the ancient Egyptians, and the powerful priesthood that maintained the temples and mysteries. These chapters provide the essential context for understanding the gods, magic, and literature that follow.",
             "For Readers": "Start here to understand the world that produced Egyptian mythology. The religion of Egypt was not a static system but evolved over thousands of years, absorbing and transforming beliefs from many sources. The priesthood held enormous power, and the temples were not just places of worship but centers of learning, medicine, and political authority."
         },
         "keywords": ["history", "society", "priesthood", "temples", "customs", "nile"],
         "metadata": {},
-        "composite_of": ["chapter-1", "chapter-2", "chapter-3"],
+        "parts": ["chapter-1", "chapter-2", "chapter-3"],
         "relationship_type": "emergence"
     }
     l2_items.append(l2_history)
@@ -223,14 +222,13 @@ def build_grammar():
         "name": "The Gods of Egypt",
         "sort_order": sort_order,
         "category": "theme",
-        "level": 2,
         "sections": {
             "About": "The core mythology of ancient Egypt: the cult of Osiris — his murder by Set, the devotion of Isis, the resurrection and judgment of the dead — and the great gods of the Egyptian pantheon: Ra the sun god, Amen-Ra king of the gods, Ptah the creator, Thoth god of wisdom, Hathor goddess of love, and many others. These chapters contain the central mythological narratives that shaped Egyptian civilization for millennia.",
             "For Readers": "The Osiris myth is one of the most powerful stories in world mythology — a tale of betrayal, devotion, death, and resurrection that influenced Greek and Roman religion and echoes through Western culture to this day. The great gods of Egypt were not distant abstractions but living presences woven into every aspect of daily life, from agriculture to medicine to the journey after death."
         },
         "keywords": ["osiris", "isis", "ra", "horus", "set", "thoth", "hathor", "gods"],
         "metadata": {},
-        "composite_of": ["chapter-4", "chapter-5"],
+        "parts": ["chapter-4", "chapter-5"],
         "relationship_type": "emergence"
     }
     l2_items.append(l2_gods)
@@ -242,14 +240,13 @@ def build_grammar():
         "name": "Knowledge and Power",
         "sort_order": sort_order,
         "category": "theme",
-        "level": 2,
         "sections": {
             "About": "The intellectual and magical traditions of ancient Egypt: the rich literary heritage — from love poetry and adventure tales to wisdom literature and religious hymns — and the practice of magic, which was not separate from religion but deeply intertwined with it. Spells, amulets, and ritual words of power (heka) were used by priests, physicians, and ordinary people alike to navigate the seen and unseen worlds.",
             "For Readers": "Egyptian literature is far richer and more varied than most people realize, including the world's oldest known love poems and adventure stories alongside the famous funerary texts. Magic in Egypt was a technology of the sacred — not superstition but a systematic practice rooted in the belief that words, images, and rituals could shape reality. Understanding Egyptian magic helps explain why the culture was so deeply concerned with names, images, and the written word."
         },
         "keywords": ["literature", "magic", "spells", "poetry", "papyrus", "heka"],
         "metadata": {},
-        "composite_of": ["chapter-6", "chapter-7"],
+        "parts": ["chapter-6", "chapter-7"],
         "relationship_type": "emergence"
     }
     l2_items.append(l2_knowledge)
@@ -261,14 +258,13 @@ def build_grammar():
         "name": "The Late Period",
         "sort_order": sort_order,
         "category": "theme",
-        "level": 2,
         "sections": {
             "About": "The transformation of Egyptian religion in its later centuries: the foreign gods absorbed from conquered and conquering peoples, the sacred animal cults that became increasingly prominent, and the remarkable artistic tradition that produced some of the most iconic works in human history. These chapters trace how Egyptian civilization adapted, evolved, and ultimately influenced the cultures that succeeded it.",
             "For Readers": "The late period of Egyptian religion is fascinating precisely because it shows a living tradition absorbing new influences while maintaining its core identity. The animal gods — cats, bulls, crocodiles, ibises — were not primitive relics but sophisticated theological expressions. And Egyptian art, with its distinctive conventions and breathtaking craftsmanship, remains one of humanity's greatest aesthetic achievements."
         },
         "keywords": ["foreign-gods", "animal-gods", "art", "sculpture", "late-period"],
         "metadata": {},
-        "composite_of": ["chapter-8", "chapter-9"],
+        "parts": ["chapter-8", "chapter-9"],
         "relationship_type": "emergence"
     }
     l2_items.append(l2_late)
@@ -283,14 +279,13 @@ def build_grammar():
         "name": "Myths and Legends of Ancient Egypt",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "sections": {
             "About": "Myths and Legends of Ancient Egypt by Lewis Spence (1915) is a comprehensive survey of Egyptian mythology, religion, history, and culture. Spence, a Scottish journalist and folklorist, brought the methods of comparative mythology to bear on Egyptian religion, arguing that its animal gods, magical practices, and mythological narratives could be understood through the same frameworks used to study other world mythologies. The book covers the full sweep of Egyptian civilization: from the earliest dynastic period through the great age of the pharaohs to the late period of foreign influence and animal cults.",
             "For Readers": "This is a rich and opinionated guide to Egyptian mythology by a writer who took the gods seriously as mythological beings rather than treating them as mere historical curiosities. Spence's comparative approach — drawing connections between Egyptian myths and those of other cultures — makes this an excellent entry point for anyone interested in how mythological thinking works across civilizations. The illustrations by Evelyn Paul add a distinctive early-20th-century artistic dimension to the text."
         },
         "keywords": ["egypt", "mythology", "gods", "osiris", "ra", "isis", "magic", "art", "civilization"],
         "metadata": {},
-        "composite_of": all_l2_ids,
+        "parts": all_l2_ids,
         "relationship_type": "emergence"
     }
     items.append(meta_item)
@@ -313,16 +308,16 @@ def build_grammar():
         "shelves": ["wonder", "wisdom"],
         "lineages": ["Shrei"],
         "worldview": "animist",
-        "items": items
+        "nodes": items
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGenerated {OUTPUT_FILE}")
     print(f"  L1 items (chapters): {l1}")
     print(f"  L2 items (thematic groups): {l2}")

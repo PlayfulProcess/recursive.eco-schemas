@@ -169,7 +169,7 @@ for num, fnpart, sid, name, group, icon, meaning in TRUMPS:
     disp = "The Fool" if group == "fool" else f"{num} — {name}"
     items.append({
         "id": f"trump-{num:02d}-{sid}", "name": disp, "sort_order": so,
-        "category": f"trump-{group}", "level": 1,
+        "category": f"trump-{group}",
         "keywords": [name.lower(), group, "minchiate", "trionfi"],
         "image_url": u,
         "metadata": {"arcana": "trump", "trump_number": (None if group == "fool" else num),
@@ -188,7 +188,7 @@ for sid, sdisp, sital, element, fileword, theme in SUITS:
         u = img(fname)
         items.append({
             "id": f"{sid}-{n:02d}" if n > 1 else f"{sid}-ace", "name": f"{word} of {sdisp}",
-            "sort_order": so, "category": f"suit-{sid}", "level": 1,
+            "sort_order": so, "category": f"suit-{sid}",
             "keywords": [sdisp.lower(), element.lower(), word.lower(), "minor", sital.lower()],
             "image_url": u,
             "metadata": {"arcana": "minor", "suit": sdisp, "suit_italian": sital, "element": element, "rank": word,
@@ -207,7 +207,7 @@ for sid, sdisp, sital, element, fileword, theme in SUITS:
         u = img(fname)
         items.append({
             "id": f"{sid}-{rdisp.lower()}", "name": f"{rdisp} of {sdisp}", "sort_order": so,
-            "category": f"suit-{sid}", "level": 1,
+            "category": f"suit-{sid}",
             "keywords": [sdisp.lower(), element.lower(), rdisp.lower(), "court", rital.lower()],
             "image_url": u,
             "metadata": {"arcana": "minor", "suit": sdisp, "suit_italian": sital, "element": element,
@@ -268,8 +268,8 @@ for sid, sdisp, sital, element, fileword, theme in SUITS:
                   f"great cosmological trumps."}))
 for eid, ename, kids, image_url, sections in emgs:
     kids = [k for k in kids if k in all_ids]
-    items.append({"id": eid, "name": ename, "sort_order": so, "category": "emergence", "level": 2,
-                  "composite_of": kids, "relationship_type": "emergence",
+    items.append({"id": eid, "name": ename, "sort_order": so, "category": "emergence",
+                  "parts": kids, "relationship_type": "emergence",
                   "image_url": image_url, "metadata": {}, "sections": sections})
     so += 1
 
@@ -320,7 +320,7 @@ grammar = {
     "lineages": ["Andreotti"],
     "worldview": "historical",
     "is_published": False,
-    "items": items,
+    "nodes": items,
 }
 
 os.makedirs(OUT_DIR, exist_ok=True)

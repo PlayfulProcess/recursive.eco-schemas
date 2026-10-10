@@ -87,7 +87,7 @@ for i, (num, fr, en, icon, reading) in enumerate(CARDS):
     u = img(num)
     items.append({
         "id": f"atout-{num:02d}", "name": f"{num} — {en} ({fr})", "sort_order": i,
-        "category": "major-arcana", "level": 1,
+        "category": "major-arcana",
         "keywords": [en.lower().replace("the ", ""), fr.lower(), "court de gebelin", "egyptian", "esoteric"],
         "image_url": u,
         "metadata": {"arcana": "major", "number": num, "french_name": fr,
@@ -105,8 +105,8 @@ for i, (num, fr, en, icon, reading) in enumerate(CARDS):
 # L2 emergence
 items.append({
     "id": "emg-book-of-thoth", "name": "The 'Book of Thoth' — The Birth of Occult Tarot",
-    "sort_order": len(items), "category": "emergence", "level": 2,
-    "composite_of": [it["id"] for it in items if it["category"] == "major-arcana"],
+    "sort_order": len(items), "category": "emergence",
+    "parts": [it["id"] for it in items if it["category"] == "major-arcana"],
     "relationship_type": "emergence", "image_url": img(21),
     "metadata": {},
     "sections": {
@@ -164,7 +164,7 @@ grammar = {
     "lineages": ["Andreotti"],
     "worldview": "esoteric",
     "is_published": False,
-    "items": items,
+    "nodes": items,
 }
 
 os.makedirs(OUT_DIR, exist_ok=True)

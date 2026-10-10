@@ -14,6 +14,7 @@ import json
 import re
 import os
 from pathlib import Path
+from grammar_depth import node_depth
 
 ROOT = Path(__file__).parent.parent
 SEED = ROOT / "seeds" / "jungle-book.txt"
@@ -412,7 +413,6 @@ def build_items(sections):
             "id": meta["id"],
             "name": meta["name"],
             "sort_order": sort_order,
-            "level": 1,
             "category": meta["category"],
             "sections": section_dict,
             "keywords": meta["keywords"],
@@ -430,9 +430,8 @@ def build_items(sections):
         "id": "cycle-mowgli-stories",
         "name": "The Mowgli Stories",
         "sort_order": sort_order,
-        "level": 2,
         "category": "story-cycles",
-        "composite_of": ["mowglis-brothers", "kaas-hunting", "tiger-tiger"],
+        "parts": ["mowglis-brothers", "kaas-hunting", "tiger-tiger"],
         "relationship_type": "emergence",
         "sections": {
             "About": "The three Mowgli stories form a continuous narrative arc: a human child adopted by wolves, educated by the jungle's wisest teachers, and ultimately exiled from both worlds. Mowgli's Brothers introduces the man-cub to the wolf pack and establishes the conflict with Shere Khan. Kaa's Hunting tests Mowgli's allegiances when the lawless monkeys kidnap him. 'Tiger! Tiger!' brings the arc to its climax as Mowgli kills Shere Khan but is cast out by both village and jungle. Together they tell the oldest story: the one who belongs to two worlds and must forge an identity between them.",
@@ -448,9 +447,8 @@ def build_items(sections):
         "id": "cycle-mowgli-songs",
         "name": "Songs of the Mowgli Stories",
         "sort_order": sort_order,
-        "level": 2,
         "category": "story-cycles",
-        "composite_of": ["night-song-in-the-jungle", "hunting-song-of-the-seeonee-pack", "road-song-of-the-bandar-log", "mowglis-song"],
+        "parts": ["night-song-in-the-jungle", "hunting-song-of-the-seeonee-pack", "road-song-of-the-bandar-log", "mowglis-song"],
         "relationship_type": "emergence",
         "sections": {
             "About": "Each Mowgli story ends with a song or poem that distills its emotional core. The Night-Song opens the book with the jungle's predatory beauty. The Hunting-Song celebrates the wolf pack's unity. The Road-Song of the Bandar-Log satirizes the monkeys' empty boasting. Mowgli's Song is the most powerful -- a victory cry laced with sorrow, the voice of someone who has won everything and lost everything at once.",
@@ -466,9 +464,8 @@ def build_items(sections):
         "id": "cycle-standalone-stories",
         "name": "The Standalone Stories",
         "sort_order": sort_order,
-        "level": 2,
         "category": "story-cycles",
-        "composite_of": ["the-white-seal", "rikki-tikki-tavi", "toomai-of-the-elephants", "her-majestys-servants"],
+        "parts": ["the-white-seal", "rikki-tikki-tavi", "toomai-of-the-elephants", "her-majestys-servants"],
         "relationship_type": "emergence",
         "sections": {
             "About": "Four stories set outside the Mowgli universe, each in a distinct world: the seal beaches of the Bering Sea, a garden in colonial India, the elephant camps of the Indian jungle, and a British military encampment. Each features an animal (or animals) whose courage, perseverance, or service drives the narrative. While independent, they share Kipling's central fascination: the relationship between wild nature, trained discipline, and the mysterious borderland between them.",
@@ -484,9 +481,8 @@ def build_items(sections):
         "id": "cycle-standalone-songs",
         "name": "Songs of the Standalone Stories",
         "sort_order": sort_order,
-        "level": 2,
         "category": "story-cycles",
-        "composite_of": ["lukannon", "darzees-chaunt", "shiv-and-the-grasshopper", "parade-song-of-the-camp-animals"],
+        "parts": ["lukannon", "darzees-chaunt", "shiv-and-the-grasshopper", "parade-song-of-the-camp-animals"],
         "relationship_type": "emergence",
         "sections": {
             "About": "Each standalone story has its companion poem. Lukannon mourns the lost seal beaches. Darzee's Chaunt celebrates Rikki-tikki's victory in the garden. Shiv and the Grasshopper is a Hindu lullaby about divine providence. The Parade-Song gives voice to each camp animal in turn. Together they show Kipling's belief that every world has its own music.",
@@ -502,9 +498,8 @@ def build_items(sections):
         "id": "theme-courage-and-battle",
         "name": "Courage and Battle",
         "sort_order": sort_order,
-        "level": 2,
         "category": "themes",
-        "composite_of": ["tiger-tiger", "rikki-tikki-tavi", "the-white-seal", "mowglis-song", "darzees-chaunt"],
+        "parts": ["tiger-tiger", "rikki-tikki-tavi", "the-white-seal", "mowglis-song", "darzees-chaunt"],
         "relationship_type": "emergence",
         "sections": {
             "About": "Kipling's heroes fight -- not from bloodlust but from necessity. Mowgli faces Shere Khan to survive. Rikki-tikki battles the cobras to protect his family. Kotick fights the entire seal beach to save his people. These stories celebrate physical and moral courage: the willingness to face what must be faced, alone if necessary, and to see it through to the end.",
@@ -520,9 +515,8 @@ def build_items(sections):
         "id": "theme-belonging-and-identity",
         "name": "Belonging and Identity",
         "sort_order": sort_order,
-        "level": 2,
         "category": "themes",
-        "composite_of": ["mowglis-brothers", "tiger-tiger", "mowglis-song", "the-white-seal"],
+        "parts": ["mowglis-brothers", "tiger-tiger", "mowglis-song", "the-white-seal"],
         "relationship_type": "emergence",
         "sections": {
             "About": "The deepest current in The Jungle Book: who do you belong to? Mowgli is claimed by wolves but rejected by the pack, accepted by villagers but cast out as a sorcerer. Kotick is white among brown seals, a visionary among the contented. These are stories about being different, about the loneliness of seeing what others cannot see, and about the courage to forge your own path when no ready-made world will have you.",
@@ -538,9 +532,8 @@ def build_items(sections):
         "id": "theme-law-and-order",
         "name": "Law, Discipline, and the Pack",
         "sort_order": sort_order,
-        "level": 2,
         "category": "themes",
-        "composite_of": ["mowglis-brothers", "kaas-hunting", "her-majestys-servants", "road-song-of-the-bandar-log", "parade-song-of-the-camp-animals"],
+        "parts": ["mowglis-brothers", "kaas-hunting", "her-majestys-servants", "road-song-of-the-bandar-log", "parade-song-of-the-camp-animals"],
         "relationship_type": "emergence",
         "sections": {
             "About": "The Jungle Law runs through the book like a spine. The wolf pack lives by it. The Bandar-log are despised because they have none. The camp animals serve because they obey the chain of command. Kipling believed deeply in law as the foundation of community -- not law as oppression, but law as the agreement that makes trust possible. 'The strength of the pack is the wolf, and the strength of the wolf is the pack.'",
@@ -556,9 +549,8 @@ def build_items(sections):
         "id": "theme-wonder-and-mystery",
         "name": "Wonder and the Wild",
         "sort_order": sort_order,
-        "level": 2,
         "category": "themes",
-        "composite_of": ["toomai-of-the-elephants", "shiv-and-the-grasshopper", "night-song-in-the-jungle", "kaas-hunting"],
+        "parts": ["toomai-of-the-elephants", "shiv-and-the-grasshopper", "night-song-in-the-jungle", "kaas-hunting"],
         "relationship_type": "emergence",
         "sections": {
             "About": "Some moments in The Jungle Book reach beyond adventure into pure wonder. Little Toomai witnessing the secret elephant dance. The Night-Song's celebration of the predatory hour. Kaa's ancient, hypnotic power over the Bandar-log. Shiv's care for even the smallest grasshopper. These passages remind us that the natural world holds mysteries no human mind can fully contain -- and that witnessing them is a kind of initiation.",
@@ -575,9 +567,8 @@ def build_items(sections):
         "id": "meta-story-cycles",
         "name": "The Story Cycles",
         "sort_order": sort_order,
-        "level": 3,
         "category": "meta",
-        "composite_of": ["cycle-mowgli-stories", "cycle-mowgli-songs", "cycle-standalone-stories", "cycle-standalone-songs"],
+        "parts": ["cycle-mowgli-stories", "cycle-mowgli-songs", "cycle-standalone-stories", "cycle-standalone-songs"],
         "relationship_type": "emergence",
         "sections": {
             "About": "The Jungle Book is built as a series of paired stories and songs. Each prose tale is followed by a poem that reflects on it from a different angle -- sometimes celebratory, sometimes mournful, sometimes satirical. The Mowgli stories form a connected arc; the standalone stories are independent worlds. Together they create Kipling's vision of the animal kingdom as a mirror for human society: its laws, its courage, its cruelty, and its wonder.",
@@ -592,9 +583,8 @@ def build_items(sections):
         "id": "meta-themes",
         "name": "Themes of The Jungle Book",
         "sort_order": sort_order,
-        "level": 3,
         "category": "meta",
-        "composite_of": ["theme-courage-and-battle", "theme-belonging-and-identity", "theme-law-and-order", "theme-wonder-and-mystery"],
+        "parts": ["theme-courage-and-battle", "theme-belonging-and-identity", "theme-law-and-order", "theme-wonder-and-mystery"],
         "relationship_type": "emergence",
         "sections": {
             "About": "Beneath the adventure stories, The Jungle Book explores enduring human themes. Courage and battle: what it takes to face danger alone. Belonging and identity: the pain and freedom of living between worlds. Law and discipline: why communities need rules and what happens without them. Wonder and the wild: the mysteries of nature that humble and initiate us. These themes interweave throughout both the Mowgli cycle and the standalone tales, giving the book its depth and its lasting power.",
@@ -685,7 +675,7 @@ def build_grammar(items):
         "lineages": ["Akomolafe", "Andreotti"],
         "worldview": "animist",
         "cover_image_url": "",
-        "items": items
+        "nodes": items
     }
 
 
@@ -711,9 +701,9 @@ def main():
 
     print("Building items...")
     items = build_items(sections)
-    print(f"  Built {len(items)} items ({sum(1 for i in items if i['level']==1)} L1, "
-          f"{sum(1 for i in items if i['level']==2)} L2, "
-          f"{sum(1 for i in items if i['level']==3)} L3)")
+    print(f"  Built {len(items)} items ({sum(1 for i in items if node_depth(i, items)==1)} L1, "
+          f"{sum(1 for i in items if node_depth(i, items)==2)} L2, "
+          f"{sum(1 for i in items if node_depth(i, items)==3)} L3)")
 
     print("Assembling grammar...")
     grammar = build_grammar(items)
@@ -734,7 +724,7 @@ def main():
         print(f"  No duplicate IDs ({len(ids)} items)")
 
     for item in items:
-        for ref in item.get("composite_of", []):
+        for ref in item.get("parts", []):
             if ref not in id_set:
                 print(f"  WARNING: {item['id']} references missing ID: {ref}")
 

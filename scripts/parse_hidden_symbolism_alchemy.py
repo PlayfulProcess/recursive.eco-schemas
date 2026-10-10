@@ -4,6 +4,7 @@ Parse Hidden Symbolism of Alchemy and the Occult Arts (Herbert Silberer, Gutenbe
 3 parts × 10 sections → L1 items, with L2 parts + L3 meta.
 """
 import json, re, os
+from grammar_depth import node_depth
 
 with open("seeds/hidden-symbolism-alchemy.txt", encoding="utf-8") as f:
     text = f.read()
@@ -111,7 +112,6 @@ for idx, (pos, heading, sid, name, cat) in enumerate(positions):
         "name": name,
         "sort_order": sort_order,
         "category": cat,
-        "level": level,
         "sections": {"Text": excerpt},
         "keywords": ["alchemy", "symbolism", "silberer", "psychoanalysis"] + {
             "sec-parable": ["parable", "allegory", "wanderer"],
@@ -147,8 +147,7 @@ part_groups = [
         "id": "part-parable",
         "name": "Part I: The Parable",
         "category": "part",
-        "level": 2,
-        "composite_of": ["sec-parable", "sec-dream-myth"],
+        "parts": ["sec-parable", "sec-dream-myth"],
         "sections": {
             "About": "Part I presents a mysterious alchemical parable — the story of a wanderer who descends into the earth, encounters symbolic trials, and achieves transformation — then shows how dream interpretation and myth analysis can unlock its hidden meanings.",
             "For Readers": "Read the Parable first as a story, letting it work on you before you analyze it. Then read the Dream and Myth Interpretation section to see how Silberer unpacks the symbolic layers."
@@ -161,8 +160,7 @@ part_groups = [
         "id": "part-analytic",
         "name": "Part II: The Analytic Part",
         "category": "part",
-        "level": 2,
-        "composite_of": ["sec-psychoanalytic", "sec-alchemy", "sec-hermetic-art", "sec-rosicrucian", "sec-multiple-interp"],
+        "parts": ["sec-psychoanalytic", "sec-alchemy", "sec-hermetic-art", "sec-rosicrucian", "sec-multiple-interp"],
         "sections": {
             "About": "Part II analyzes the parable through multiple lenses: Freudian psychoanalysis, the history and practice of alchemy, Hermetic philosophy, Rosicrucianism and Freemasonry, and the problem of multiple valid interpretations of a single symbol.",
             "For Readers": "The Alchemy section (Section II) and Hermetic Art (Section III) are the most relevant for understanding alchemical symbolism. The Multiple Interpretation section is philosophically the most original — Silberer argues that symbols have simultaneous valid meanings at different levels."
@@ -175,8 +173,7 @@ part_groups = [
         "id": "part-synthetic",
         "name": "Part III: The Synthetic Part",
         "category": "part",
-        "level": 2,
-        "composite_of": ["sec-introversion", "sec-goal-of-work", "sec-royal-art"],
+        "parts": ["sec-introversion", "sec-goal-of-work", "sec-royal-art"],
         "sections": {
             "About": "Part III synthesizes the psychoanalytic and alchemical perspectives into a unified theory of spiritual development: introversion as the mechanism of psychological regeneration, the Philosopher's Stone as the goal of inner work, and the 'Royal Art' as the practice of conscious transformation.",
             "For Readers": "This is where Silberer's work most anticipates Jung's later psychology of individuation. The Royal Art section is the culmination — the union of psychological and spiritual development."
@@ -198,13 +195,12 @@ items.append({
     "name": "The Hidden Symbolism: Where Psychology Met Alchemy",
     "sort_order": sort_order,
     "category": "meta",
-    "level": 3,
     "sections": {
         "About": "Herbert Silberer's 'Hidden Symbolism of Alchemy and the Occult Arts' (1914) is a forgotten masterpiece — the first systematic attempt to read alchemical texts through the lens of psychoanalysis. Silberer was a member of Freud's circle but went beyond Freud by recognizing that symbols operate at multiple levels simultaneously: a sexual level, a spiritual level, and a cosmic level. His concept of 'anagogic' interpretation (reading upward from matter to spirit) directly influenced Jung's later work on alchemy and individuation. Silberer committed suicide in 1923, and his work was largely forgotten — but it remains the missing link between Freud and Jung.",
         "Contemplation": "The alchemists said: 'Our gold is not common gold.' Silberer showed that the Philosopher's Stone was never about chemistry — it was about the transformation of the psyche. When you read 'dissolve and coagulate,' read: let the old self dissolve so a new self can crystallize. The laboratory is you."
     },
     "keywords": ["alchemy", "psychoanalysis", "symbolism", "individuation", "transformation"],
-    "composite_of": [i["id"] for i in items if i["level"] == 1],
+    "parts": [i["id"] for i in items if node_depth(i, items) == 1],
     "relationship_type": "emergence",
     "metadata": {}
 })
@@ -229,7 +225,7 @@ grammar = {
     "shelves": ["wisdom", "mirror"],
     "lineages": ["Shrei", "Akomolafe"],
     "worldview": "dialectical",
-    "items": items
+    "nodes": items
 }
 
 os.makedirs("grammars/hidden-symbolism-alchemy", exist_ok=True)
@@ -238,8 +234,8 @@ with open("grammars/hidden-symbolism-alchemy/grammar.json", "w") as f:
 
 ids = [i["id"] for i in items]
 dupes = [x for x in ids if ids.count(x) > 1]
-bad_refs = [(i["id"], r) for i in items for r in i.get("composite_of", []) if r not in ids]
-print(f"Items: {len(items)}, L1: {sum(1 for i in items if i['level']==1)}, L2: {sum(1 for i in items if i['level']==2)}, L3: {sum(1 for i in items if i['level']==3)}")
+bad_refs = [(i["id"], r) for i in items for r in i.get("parts", []) if r not in ids]
+print(f"Items: {len(items)}, L1: {sum(1 for i in items if node_depth(i, items)==1)}, L2: {sum(1 for i in items if node_depth(i, items)==2)}, L3: {sum(1 for i in items if node_depth(i, items)==3)}")
 print(f"Sections: {sum(len(i.get('sections',{})) for i in items)}")
 print(f"Dupes: {dupes}, Bad refs: {bad_refs}")
 print(f"Sort OK: {[i['sort_order'] for i in items] == list(range(1, len(items)+1))}")

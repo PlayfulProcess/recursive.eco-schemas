@@ -18,6 +18,7 @@ import json
 import re
 import os
 from pathlib import Path
+from grammar_depth import node_depth
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent
@@ -203,7 +204,6 @@ def build_grammar():
             "id": chapter_id,
             "name": f"Chapter {ch['roman']}: {ch['title']}",
             "sort_order": sort_order,
-            "level": 1,
             "category": "chapter",
             "sections": {
                 "Text": ch['text'],
@@ -227,10 +227,9 @@ def build_grammar():
             "id": theme_id,
             "name": theme["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": theme["chapters"],
+            "parts": theme["chapters"],
             "sections": {
                 "About": theme["about"],
                 "For Readers": theme["for_readers"],
@@ -247,10 +246,9 @@ def build_grammar():
         "id": "principles-of-psychology-complete",
         "name": "The Principles of Psychology (Volume 1): The Complete Work",
         "sort_order": sort_order,
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": all_theme_ids,
+        "parts": all_theme_ids,
         "sections": {
             "About": "William James's The Principles of Psychology (1890) is the founding text of American psychology and one of the great intellectual achievements of the nineteenth century. Written over twelve years, it combines rigorous empirical science with philosophical depth and literary brilliance. Volume 1 covers sixteen chapters, from the scope and methods of psychology through the brain, habit, consciousness, the self, attention, and memory. James's central insight — that consciousness is not a thing but a process, a stream rather than a chain — revolutionized psychology, philosophy, and literature. His analysis of habit, the self, and attention remain startlingly contemporary.",
             "For Readers": "James is one of the great prose stylists of American philosophy — the Principles is a pleasure to read. Start with Chapter IX ('The Stream of Thought') for the most famous and influential chapter. Chapter IV ('Habit') is the most practically useful — its maxims still appear in self-help books. Chapter X ('The Consciousness of Self') is the most philosophically rich. For the neuroscience foundations, Chapters I-III are remarkably clear. James's characteristic move is to start with the physiological facts, then reveal their philosophical implications with dazzling insight.",
@@ -280,16 +278,16 @@ def build_grammar():
         "shelves": ["mirror"],
         "lineages": ["Linehan", "Gottman"],
         "worldview": "pragmatist",
-        "items": items,
+        "nodes": items,
     }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT_PATH}")
     print(f"  L1: {l1} chapters, L2: {l2} themes, L3: {l3} meta")
     print(f"  Total items: {len(items)}")

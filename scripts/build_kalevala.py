@@ -9,6 +9,7 @@ Parses 50 Runos (cantos) of the Finnish national epic.
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(SCRIPT_DIR)
@@ -248,7 +249,6 @@ def build_grammar():
             "name": "Proem: The Singer's Invocation",
             "sort_order": sort_order,
             "category": "proem",
-            "level": 1,
             "sections": {
                 "Verse": proem_text
             },
@@ -275,7 +275,6 @@ def build_grammar():
             "name": f"Rune {rune['num']}: {rune['title']}",
             "sort_order": sort_order,
             "category": f"rune",
-            "level": 1,
             "sections": {
                 "Verse": rune['text']
             },
@@ -299,14 +298,13 @@ def build_grammar():
             "name": cycle["name"],
             "sort_order": sort_order,
             "category": "cycle",
-            "level": 2,
             "sections": {
                 "About": cycle["about"],
                 "For Readers": cycle["for_readers"]
             },
             "keywords": [],
             "metadata": {},
-            "composite_of": composite,
+            "parts": composite,
             "relationship_type": "emergence"
         }
         items.append(item)
@@ -318,14 +316,13 @@ def build_grammar():
         "name": "The Kalevala: Epic Poem of Finland",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "sections": {
             "About": "The Kalevala is the Finnish national epic, compiled by Elias Lonnrot from oral folk poetry collected across Finland and Karelia. First published in 1835 (expanded 1849), it tells of the mythic heroes Wainamoinen (the eternal singer), Ilmarinen (the divine smith), and Lemminkainen (the reckless adventurer) in their struggles with Louhi, mistress of the dark Northland. The epic moves from cosmic creation through heroic quest to a twilight departure, and is the foundational text of Finnish identity.",
             "For Readers": "The Kalevala is best read aloud — its trochaic octameter (the same meter Longfellow borrowed for Hiawatha) creates a rolling, incantatory rhythm. It is not a single story but a tapestry of mythic cycles: creation, courtship, the forging of the Sampo, the tragedy of Kullervo, and the restoration of cosmic order. J.R.R. Tolkien considered it a primary inspiration for his own mythology."
         },
         "keywords": ["kalevala", "finnish", "epic", "mythology", "wainamoinen", "sampo", "creation"],
         "metadata": {},
-        "composite_of": cycle_ids,
+        "parts": cycle_ids,
         "relationship_type": "emergence"
     }
     items.append(meta_item)
@@ -348,16 +345,16 @@ def build_grammar():
         "shelves": ["earth"],
         "lineages": ["Shrei"],
         "worldview": "animist",
-        "items": items
+        "nodes": items
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"Generated {OUTPUT_FILE}")
     print(f"  L1 items (runos + proem): {l1}")
     print(f"  L2 items (cycles): {l2}")

@@ -18,15 +18,15 @@ This directory contains structured interpretive schemas for various divination a
 > conventions, and the three common mistakes that prevent grammars
 > from loading.
 
-Schemas use a level system to organize base items and their emergent combinations:
+Schemas use levels to organize base nodes and their emergent combinations. A level is not stored: it is the depth computed from `parts` (no parts = L1; otherwise 1 + the deepest part):
 
-- **L1 (level: 1)**: Base items (cards, hexagrams, planets, songs)
-- **L2 (level: 2)**: Emergent combinations of L1 items (spreads, zodiac signs, albums, yogas)
-- **L3 (level: 3)**: Meta-categories or higher-order groupings (organizing principles, artists)
+- **L1**: Base items (cards, hexagrams, planets, songs)
+- **L2**: Emergent combinations of L1 items (spreads, zodiac signs, albums, yogas)
+- **L3**: Meta-categories or higher-order groupings (organizing principles, artists)
 
-All levels live in the **same `items[]` array** at the top of the
-grammar. Composite items (L2/L3) are distinguished by the presence
-of a `composite_of` array. Do not put composite items in a separate
+All levels live in the **same `nodes[]` array** at the top of the
+grammar. Composite nodes (L2/L3) are distinguished by the presence
+of a `parts` array. Do not put composite items in a separate
 top-level `emergences[]` block — the editor and viewer do not
 support that shape.
 
@@ -36,18 +36,16 @@ support that shape.
 {
   "id": "album-example",
   "name": "Example Album",
-  "level": 2,
-  "composite_of": ["song-1", "song-2", "song-3"],
+  "parts": ["song-1", "song-2", "song-3"],
   "sections": {
     "Summary": "When these songs come together..."
   }
 }
 ```
 
-The `composite_of` array references the IDs of items at the level
-below, creating explicit emergence relationships. The `level` field
-itself is optional — the real signal is whether `composite_of` is
-present.
+The `parts` array references the IDs of the nodes it is made of (in
+order), creating explicit emergence relationships. There is no `level`
+field: the level is the depth computed from `parts`.
 
 ## Adding Schemas
 

@@ -19,13 +19,12 @@
   "shelves": ["contested", "mirror"],
   "lineages": ["Andreotti", "Akomolafe"],
   "worldview": "dialectical",
-  "items": [
+  "nodes": [
     {
       "id": "pt-judiacao",
       "name": "Judiação / Judiar — The Antisemitism in 'Mistreatment'",
       "sort_order": 1,
       "category": "portuguese-saying",
-      "level": 1,
       "sections": {
         "The Saying": "PORTUGUÊS: 'Que judiação!' / 'Para de judiar desse menino!' (Stop mistreating that boy!)\n\nENGLISH TRANSLATION: 'What cruelty!' / 'Stop mistreating that boy!'",
         "The Colonial Root": "'Judiar' comes directly from 'judeu' — Jew. The verb means to mistreat, to torment, to be cruel. It encodes the medieval Christian narrative that Jews are inherently cruel — torturers of Christ, poisoners of wells, abusers of children. Portugal expelled its Jewish population in 1497 (or forced conversion to 'cristãos-novos'), and the Inquisition hunted crypto-Jews for centuries. The expulsion ended. The language didn't. Every Brazilian who says 'judiação' without thinking is speaking the Inquisition's verdict into the air.",
@@ -41,7 +40,6 @@
       "name": "Denegrir — To Blacken Is to Defame",
       "sort_order": 2,
       "category": "portuguese-saying",
-      "level": 1,
       "sections": {
         "The Saying": "PORTUGUÊS: 'Não vou denegrir a imagem dele.' (I won't tarnish his image.)\n\nENGLISH TRANSLATION: 'I won't denigrate/blacken his image.'",
         "The Colonial Root": "'Denegrir' comes from 'negro' (black) via Latin 'denigrare' — to make black. In both Portuguese and English, the word equates blackness with moral corruption, dishonor, and stain. This is not ancient metaphor — it is the linguistic infrastructure of anti-Black racism, refined through centuries of Portuguese slave trading (Portugal was the first European nation to engage in the transatlantic slave trade, beginning in the 1440s). To 'blacken' someone's reputation is to make them darker. The language assumes whiteness as the default of honor.",
@@ -57,7 +55,6 @@
       "name": "A Coisa Tá Preta — When 'Things Are Black' Means 'Things Are Bad'",
       "sort_order": 3,
       "category": "portuguese-saying",
-      "level": 1,
       "sections": {
         "The Saying": "PORTUGUÊS: 'A coisa tá preta.' (Things are looking bad.) / 'A situação ficou preta.' (The situation turned dark/bad.)\n\nENGLISH TRANSLATION: 'Things are looking black/dark.' / 'The situation went dark.'",
         "The Colonial Root": "Brazil was the last country in the Americas to abolish slavery (1888 — the Lei Áurea) and received approximately 4.9 million enslaved Africans — more than any other nation. 'A coisa tá preta' is the linguistic residue of 400 years of slavery: when things get difficult, dangerous, or hopeless, they 'turn Black.' The expression maps the condition of enslaved people onto the concept of difficulty itself. Blackness = hardship. The language makes the enslaved person's skin the synonym for their suffering, as if the suffering were the color and not the chains.",
@@ -73,7 +70,6 @@
       "name": "Serviço de Preto — 'Black Person's Work' = Shoddy Work",
       "sort_order": 4,
       "category": "portuguese-saying",
-      "level": 1,
       "sections": {
         "The Saying": "PORTUGUÊS: 'Isso é serviço de preto.' (This is shoddy/bad work.) / 'Ficou um serviço de preto.' (It ended up being poor quality work.)\n\nENGLISH TRANSLATION: 'That's a hack job.' / 'That's sloppy work.'",
         "The Colonial Root": "For 400 years, enslaved Black people in Brazil were forced to do all the physical labor — building, farming, cooking, cleaning, carrying, constructing — under conditions designed to produce failure: insufficient tools, exhaustion, malnutrition, violence. When the work wasn't perfect (because how could it be?), the imperfection was attributed not to the conditions but to the race. 'Serviço de preto' encodes the slave-owner's logic: the enslaved person's forced labor is inferior because the enslaved person is inferior. The chains are invisible; the blame is visible.",
@@ -89,7 +85,6 @@
       "name": "Programa de Índio — When 'Indian Plans' Mean Boring Plans",
       "sort_order": 5,
       "category": "portuguese-saying",
-      "level": 1,
       "sections": {
         "The Saying": "PORTUGUÊS: 'Isso é programa de índio.' (That's a boring/bad plan.) / 'Que programa de índio!' (What a lame activity!)\n\nENGLISH TRANSLATION: 'That's a lame plan.' / 'How boring!'",
         "The Colonial Root": "The expression reduces the entire existence of Brazil's indigenous peoples — over 300 distinct nations, hundreds of languages, millennia of sophisticated ecological knowledge, complex social structures, astronomical observation, agricultural engineering — to 'boring.' The colonial logic: indigenous life has no entertainment value, no complexity, no interest. It is the blank space on the map. The expression inherits the colonial gaze that saw the Amazon as 'empty' — ignoring the people who had shaped it into the most biodiverse forest on Earth through thousands of years of intentional cultivation.",
@@ -105,7 +100,6 @@
       "name": "Criado-Mudo — The Nightstand Is a 'Mute Servant'",
       "sort_order": 6,
       "category": "portuguese-saying",
-      "level": 1,
       "sections": {
         "The Saying": "PORTUGUÊS: 'Põe o copo no criado-mudo.' (Put the glass on the nightstand.)\n\nENGLISH TRANSLATION: 'Put the glass on the nightstand.' (Literal: 'Put the glass on the mute servant.')",
         "The Colonial Root": "The 'criado-mudo' — the small table beside the bed — is named for the enslaved person who stood silently beside the master's bed, holding a tray, a candle, a glass of water, throughout the night. The servant had to be 'mudo' — mute, silent, a piece of furniture that breathed. When the human was replaced by wood, the name stayed. Every Brazilian who says 'criado-mudo' is naming a piece of furniture after the enslaved person it replaced. The table inherited the slave's function and their silence.",
@@ -121,7 +115,6 @@
       "name": "Mulata — From 'Mula' (Mule): The Word That Breeds You Out of Humanity",
       "sort_order": 7,
       "category": "portuguese-saying",
-      "level": 1,
       "sections": {
         "The Saying": "PORTUGUÊS: 'Ela é uma mulata bonita.' (She's a beautiful mulata.) / 'A mulata brasileira.' (The Brazilian mulata.)\n\nENGLISH TRANSLATION: 'She's a beautiful mixed-race woman.' (Literal root: 'She's a beautiful mule.')",
         "The Colonial Root": "'Mulato/a' derives from 'mula' (mule) — the sterile offspring of a horse and a donkey. The word was created by colonial zoological logic: if a white person and a Black person produce offspring, the child is a hybrid, like a mule — mixed, unnatural, categorically unstable. The word animalizes mixed-race people by placing them in a taxonomy of breeding, not of humanity. In Brazil, 'mulata' has been sexualized and commodified into a cultural brand — Carnival 'mulatas,' the 'mulata exportação' (export-grade mulata), the 'mulata' as Brazil's erotic national symbol. The animal metaphor became a sexual commodity.",
@@ -137,7 +130,6 @@
       "name": "Vixi Maria / Virgem Maria — The Catholic Colony in Every Gasp",
       "sort_order": 8,
       "category": "portuguese-saying",
-      "level": 1,
       "sections": {
         "The Saying": "PORTUGUÊS: 'Vixi Maria!' / 'Virgem Maria!' / 'Nossa Senhora!' / 'Ave Maria!' / 'Cruz credo!' / 'Se Deus quiser!' / 'Graças a Deus!'\n\nENGLISH TRANSLATION: 'Oh my Virgin Mary!' / 'Our Lady!' / 'Hail Mary!' / 'Cross and creed!' / 'God willing!' / 'Thank God!'",
         "The Colonial Root": "Portuguese colonization was inseparable from Catholic evangelization — the two arrived on the same ships. The Padroado (the agreement between the Portuguese crown and the Vatican) meant that colonizing was literally Christianizing: every territory claimed was a territory to be converted. Indigenous religions were 'paganism.' African religions brought by enslaved people were 'witchcraft.' The Inquisition operated in Brazil. Catholic vocabulary saturated the language so completely that it became invisible — you can't express surprise, relief, hope, or fear in Brazilian Portuguese without invoking Catholic theology. 'Vixi' is a contraction of 'Virgem' (Virgin). 'Cruz credo' was the Inquisition's creed formula. Your gasp is a prayer you didn't choose.\n\nNOTE: Not all religious expressions are equally colonial. 'Se Deus quiser' (God willing) and 'Graças a Deus' (Thank God) express a universal human impulse — humility before the unknown, gratitude for survival — that exists across cultures and religions. 'Inshallah' (Arabic), 'Deo volente' (Latin), 'b'ezrat Hashem' (Hebrew) carry the same meaning. The impulse is human; the specific God invoked is where the colonial question begins. 'Se Deus quiser' may be genuinely neutral — an expression of faith that transcends any single religion's colonial history. The colonial charge is strongest in the specifically Catholic markers: 'Virgem Maria,' 'Nossa Senhora,' 'Cruz credo' — these are not universal prayers but brand identifiers of the particular church that arrived with the ships.",
@@ -153,7 +145,6 @@
       "name": "Sold Down the River — The Slave Trade in Your Vocabulary",
       "sort_order": 9,
       "category": "english-saying",
-      "level": 1,
       "sections": {
         "The Saying": "ENGLISH: 'He was sold down the river by his own partners.'\n\nPORTUGUÊS: 'Ele foi traído pelos próprios sócios.' (He was betrayed by his own partners.)",
         "The Colonial Root": "To be 'sold down the river' literally meant to be sold from the upper South (Virginia, Kentucky) to the cotton and sugar plantations of the Deep South (Mississippi, Louisiana) via the Mississippi River. This was the most feared fate for enslaved people — the Deep South's plantations were death camps with higher mortality rates, more brutal conditions, and further from any possibility of escape or family contact. To be 'sold down the river' was not a metaphor. It was a specific, documented, routine horror of American slavery.",
@@ -169,7 +160,6 @@
       "name": "Eeny Meeny Miny Moe — The N-Word in the Nursery",
       "sort_order": 10,
       "category": "english-saying",
-      "level": 1,
       "sections": {
         "The Saying": "ENGLISH: 'Eeny, meeny, miny, moe / Catch a tiger by the toe / If he hollers, let him go / Eeny, meeny, miny, moe.'\n\nPORTUGUÊS: 'Uni, duni, tê / Salamê, minguê / O sorvete colorê / Uni, duni, tê.' (The Brazilian counting rhyme — different content, same function.)",
         "The Colonial Root": "The version every American child now learns says 'catch a tiger by the toe.' The version that existed from the mid-19th century through the mid-20th century said 'catch a n***** by the toe.' 'If he hollers, let him go' — the 'hollering' was not a tiger's roar but an enslaved person's scream. The rhyme is a counting game about catching a runaway slave. The 'tiger' substitution happened gradually in the mid-20th century, but millions of Americans alive today learned the original version in their childhood. The sanitization is recent; the wound is deep.",
@@ -185,7 +175,6 @@
       "name": "Grandfathered In — The Voting Booth as Colonial Architecture",
       "sort_order": 11,
       "category": "english-saying",
-      "level": 1,
       "sections": {
         "The Saying": "ENGLISH: 'That policy was grandfathered in.' / 'You're grandfathered into the old pricing.'\n\nPORTUGUÊS: 'Essa regra foi mantida por direito adquirido.' (That rule was maintained as an acquired right.)",
         "The Colonial Root": "'Grandfather clause' was a legal mechanism used in the post-Reconstruction American South (1890s-1910s) to prevent Black people from voting while allowing illiterate and poor white people to vote. The laws required voters to pass literacy tests and pay poll taxes — but exempted anyone whose grandfather had been eligible to vote before the Civil War. Since no enslaved person's grandfather could have voted, the clause was a perfect racial filter disguised as a neutral, family-based exemption. It was Jim Crow's most elegant tool: racist without ever mentioning race.",
@@ -201,7 +190,6 @@
       "name": "Peanut Gallery — The Cheap Seats and the Bodies That Filled Them",
       "sort_order": 12,
       "category": "english-saying",
-      "level": 1,
       "sections": {
         "The Saying": "ENGLISH: 'No comments from the peanut gallery!' (Stop heckling / No unsolicited opinions!)\n\nPORTUGUÊS: 'A galera do fundão que se cale!' (The back-row crowd should shut up!)",
         "The Colonial Root": "The 'peanut gallery' was the uppermost balcony in vaudeville and minstrel-show theaters — the cheapest seats, typically the only ones available to Black audience members under segregation. The name came from the peanuts sold as cheap snacks in these sections (and sometimes thrown at performers). To dismiss someone's opinion as coming from 'the peanut gallery' is to invoke the segregated theater's architecture: the people up there — the Black people, the poor people — their opinions don't count. Heckling from the peanut gallery was the only form of critique available to those who couldn't sit where power sat.",
@@ -217,7 +205,6 @@
       "name": "Uppity — The Word That Polices Rising",
       "sort_order": 13,
       "category": "english-saying",
-      "level": 1,
       "sections": {
         "The Saying": "ENGLISH: 'She's getting a bit uppity.' / 'Don't get uppity with me.'\n\nPORTUGUÊS: 'Ela tá se achando.' / 'Não se acha não.' (She's getting full of herself. / Don't get above yourself.)",
         "The Colonial Root": "'Uppity' emerged in the post-Reconstruction American South as a specifically racial adjective: an 'uppity Negro' was a Black person who didn't 'know their place' — who acted as if they deserved the same rights, spaces, or respect as white people. The word was a warning shot: you are rising above your station, and rising has consequences. Emmett Till was murdered at 14 for being 'uppity' — for allegedly whistling at a white woman. The word is an execution order disguised as a social observation.",
@@ -233,7 +220,6 @@
       "name": "Thug — From Hindi Temple to Black Criminalization",
       "sort_order": 14,
       "category": "english-saying",
-      "level": 1,
       "sections": {
         "The Saying": "ENGLISH: 'Those thugs need to be locked up.' / 'Thug life.'\n\nPORTUGUÊS: 'Esses bandidos precisam ser presos.' / 'Marginal.' / 'Vagabundo.'",
         "The Colonial Root": "'Thug' comes from the Hindi 'thag' (ठग) — a member of organized bands of robbers in colonial India who were said to strangle travelers as devotees of the goddess Kali. The British colonial administration sensationalized and likely exaggerated the 'Thuggee' phenomenon to justify the Thuggee and Dacoity Suppression Act (1836) — one of the tools of British control over Indian populations. The word traveled from Hindi to English as a colonial trophy: proof that India was dangerous and needed British 'civilization.' In 20th-century America, 'thug' was transferred from Indians to Black people, becoming the media's preferred euphemism for the n-word — 'thug' meant 'Black criminal' without requiring anyone to say the quiet part loud.",
@@ -249,7 +235,6 @@
       "name": "A Barata Diz Que Tem — The Cockroach Who Lies About Being Rich",
       "sort_order": 15,
       "category": "children-song-pt",
-      "level": 1,
       "sections": {
         "The Saying": "PORTUGUÊS: 'A Barata diz que tem / Sete saias de filó / É mentira da Barata / Ela tem é uma só / Ah ah ah / Oh oh oh / Ela tem é uma só!'\n\n(The Cockroach says she has / Seven tulle skirts / It's a lie from the Cockroach / She only has one / Ha ha ha / Ho ho ho / She only has one!)\n\n'A Barata diz que tem / Um sapato de veludo / É mentira da Barata / O pé dela é peludo!'\n\n(The Cockroach says she has / A velvet shoe / It's a lie from the Cockroach / Her foot is hairy!)",
         "The Colonial Root": "This children's song teaches class surveillance from the cradle. The 'Barata' (cockroach) is a poor creature who pretends to have the markers of wealth — silk skirts, velvet shoes, a diamond ring — and is publicly humiliated for the pretension. The song is a communal shaming ritual: 'Ha ha ha! She only has one!' The children laugh together at someone who tried to rise above their station. The cockroach is the 'uppity' poor person, the servant who wears the mistress's castoffs, the favela child in a knock-off brand. The song teaches: know your place, and if you try to leave it, we will laugh at you.",
@@ -265,7 +250,6 @@
       "name": "Atirei o Pau no Gato — I Threw a Stick at the Cat",
       "sort_order": 16,
       "category": "children-song-pt",
-      "level": 1,
       "sections": {
         "The Saying": "PORTUGUÊS: 'Atirei o pau no gato-to / Mas o gato-to / Não morreu-reu-reu / Dona Chica-ca / Admirou-se-se / Do berro, do berro que o gato deu: / Miau!'\n\n(I threw a stick at the cat / But the cat / Didn't die / Dona Chica / Was amazed / By the scream, the scream the cat gave: / Meow!)",
         "The Colonial Root": "A children's song about attempted animal murder, sung cheerfully. The narrator throws a stick at a cat — an act of casual violence — and the punchline is not remorse but surprise that the cat survived. 'Dona Chica' (a wealthy woman — 'Dona' is the title of a lady of the house) is 'amazed' not by the cruelty but by the noise. The entire moral architecture is colonial-patriarchal: violence is entertainment, survival is comedy, and the woman of the house is a spectator to cruelty she doesn't interrupt.",
@@ -281,7 +265,6 @@
       "name": "Escravos de Jó — Slaves of Job (The Slavery Game)",
       "sort_order": 17,
       "category": "children-song-pt",
-      "level": 1,
       "sections": {
         "The Saying": "PORTUGUÊS: 'Escravos de Jó / Jogavam caxangá / Tira, põe / Deixa ficar / Guerreiros com guerreiros / Fazem zigue-zigue-zá / Guerreiros com guerreiros / Fazem zigue-zigue-zá.'\n\n(Slaves of Job / Played caxangá / Take out, put in / Leave it be / Warriors with warriors / Make zig-zag-za / Warriors with warriors / Make zig-zag-za.)",
         "The Colonial Root": "Children sit in a circle passing objects (stones, cups) to the rhythm of a song that literally begins with the word 'Escravos' — slaves. 'Caxangá' may derive from a Bantu word for a type of game played by enslaved Africans. The song preserves the memory of enslaved people's recreation — the games they played in the senzala (slave quarters) — but strips it of context, transforms it into entertainment, and puts it in the mouths of children who don't know they're reenacting the leisure of the enslaved. The 'guerreiros' (warriors) may reference the Palmares quilombo or other resistance movements, now reduced to a hand-clapping pattern.",
@@ -297,7 +280,6 @@
       "name": "Boi da Cara Preta — The Black-Faced Bull (Scaring Children with Blackness)",
       "sort_order": 18,
       "category": "children-song-pt",
-      "level": 1,
       "sections": {
         "The Saying": "PORTUGUÊS: 'Boi, boi, boi / Boi da cara preta / Pega essa menina / Que tem medo de careta.'\n\n(Bull, bull, bull / Black-faced bull / Grab that girl / Who's afraid of scary faces.)",
         "The Colonial Root": "A lullaby that threatens children with a black-faced creature that will 'pegar' (grab/catch) them if they don't behave. The 'cara preta' (black face) is the source of fear. The song belongs to the same family as 'bicho-papão' (bogeyman) threats, but with the specific chromatic coding of Brazilian racism: the scary thing is black. The threatening thing has a black face. Behave, or the black face will come for you. The lullaby teaches fear of blackness before the child can walk.",
@@ -313,7 +295,6 @@
       "name": "Sambalelê — Broken Head and Deserved Beating",
       "sort_order": 19,
       "category": "children-song-pt",
-      "level": 1,
       "sections": {
         "The Saying": "PORTUGUÊS: 'Sambalelê tá doente / Tá com a cabeça quebrada / Sambalelê precisava / De umas dezoito lambadas / Samba, samba, Sambalelê / Pisa na barra da saia, Sambalelê!'\n\n(Sambalelê is sick / Has a broken head / Sambalelê needed / About eighteen whippings / Samba, samba, Sambalelê / Step on the hem of the skirt, Sambalelê!)",
         "The Colonial Root": "A children's song prescribing physical violence as medicine: Sambalelê is sick (broken head) and the cure is 'dezoito lambadas' — eighteen lashes. 'Lambada' in this context means a beating, a whipping. The name 'Sambalelê' has African-Brazilian roots (possibly from samba or Bantu origins). The song normalizes: (1) violence as discipline, (2) beating as cure, (3) the specific word 'lambada' (lash/whip) — the instrument of plantation punishment — applied cheerfully to a character with a name that codes as Black/poor. The song is the plantation logic set to a samba beat.",
@@ -329,7 +310,6 @@
       "name": "Rock-a-Bye Baby — The Lullaby That Drops the Child",
       "sort_order": 20,
       "category": "children-song-en",
-      "level": 1,
       "sections": {
         "The Saying": "ENGLISH: 'Rock-a-bye baby, on the treetop / When the wind blows, the cradle will rock / When the bough breaks, the cradle will fall / And down will come baby, cradle and all.'\n\nPORTUGUÊS: 'Nana, nenê / Que a cuca vai pegar / Papai foi pra roça / Mamãe foi trabalhar.' (Sleep, baby / The cuca monster will get you / Daddy went to the farm / Mommy went to work.)",
         "The Colonial Root": "The English-speaking world's most famous lullaby describes an infant in a treetop cradle that falls when the branch breaks. The child plummets. That's the song. We sing this to babies to make them sleep. The Brazilian 'Nana Nenê' threatens with the 'cuca' (a monster from indigenous/African folklore, colonized into a bogeyman), then explains that both parents are absent — working. The child is alone with the monster. Both lullabies share the same structure: your protectors are gone, danger is real, sleep is your only escape.",
@@ -345,8 +325,7 @@
       "name": "The Antisemitic Tongue — When Cruelty Speaks Yiddish",
       "sort_order": 21,
       "category": "thematic-group",
-      "level": 2,
-      "composite_of": ["pt-judiacao"],
+      "parts": ["pt-judiacao"],
       "relationship_type": "emergence",
       "sections": {
         "About": "'Judiar' in Portuguese, 'gypped' in English — both languages turned persecuted peoples into verbs for bad behavior. The antisemitic tongue doesn't require the speaker to be antisemitic. It only requires them to speak the language without questioning it. The verb does the work. The speaker provides the breath. The Inquisition ended; the conjugation didn't.",
@@ -361,8 +340,7 @@
       "name": "The Anti-Black Tongue — When Darkness Means Danger",
       "sort_order": 22,
       "category": "thematic-group",
-      "level": 2,
-      "composite_of": ["pt-denegrir", "pt-coisa-preta", "pt-servico-de-preto", "pt-mulata", "en-sold-down-river", "en-eeny-meeny", "en-peanut-gallery", "en-uppity", "en-thug", "song-pt-boi-cara-preta", "song-pt-sambalele"],
+      "parts": ["pt-denegrir", "pt-coisa-preta", "pt-servico-de-preto", "pt-mulata", "en-sold-down-river", "en-eeny-meeny", "en-peanut-gallery", "en-uppity", "en-thug", "song-pt-boi-cara-preta", "song-pt-sambalele"],
       "relationship_type": "emergence",
       "sections": {
         "About": "The largest group in this grammar — because anti-Blackness is the largest colonial project in both Portuguese and English. From 'denegrir' to 'sold down the river,' from 'Boi da Cara Preta' to 'Eeny Meeny,' both languages are saturated with the equation: Black = bad, dark = dangerous, white = pure, light = good. The chromatic code runs so deep that it shapes not just racial language but all moral language. You can't describe evil in either language without invoking blackness. The slave trade ended. The vocabulary it left behind is still working.",
@@ -377,8 +355,7 @@
       "name": "The Nursery — Where Colonialism Learns to Walk",
       "sort_order": 23,
       "category": "thematic-group",
-      "level": 2,
-      "composite_of": ["song-pt-barata", "song-pt-atirei-pau", "song-pt-escravos-de-jo", "song-pt-boi-cara-preta", "song-pt-sambalele", "song-en-rock-a-bye", "en-eeny-meeny"],
+      "parts": ["song-pt-barata", "song-pt-atirei-pau", "song-pt-escravos-de-jo", "song-pt-boi-cara-preta", "song-pt-sambalele", "song-en-rock-a-bye", "en-eeny-meeny"],
       "relationship_type": "emergence",
       "sections": {
         "About": "The most dangerous colonial language is the one that enters through the lullaby. Children's songs bypass the critical mind entirely — they go straight into the body through rhythm, repetition, and the warmth of the singing voice. By the time a child can understand the words of 'Escravos de Jó' or 'Eeny Meeny Miny Moe,' the song already lives in their muscle memory as joy. The colonial move is complete before the child can object: slavery is a game, violence is a melody, class hierarchy is a punchline, and blackness is the monster under the bed.",
@@ -393,8 +370,7 @@
       "name": "The Sacred Tongue — When Faith Becomes Monopoly",
       "sort_order": 24,
       "category": "thematic-group",
-      "level": 2,
-      "composite_of": ["pt-vixi-maria"],
+      "parts": ["pt-vixi-maria"],
       "relationship_type": "emergence",
       "sections": {
         "About": "This is the grammar's most nuanced group, because faith is not colonialism — but the enforced monopoly of one faith's vocabulary is. 'Se Deus quiser' (God willing) may be genuinely sacred, expressing a universal human humility before the unknown that appears in Arabic ('Inshallah'), Hebrew ('b'ezrat Hashem'), and a dozen other traditions. The colonial charge is not in invoking the divine but in which divine gets to be the default. 'Vixi Maria' and 'Cruz credo' are not universal prayers — they are brand identifiers of the specific church that arrived on the colonizer's ships. The decolonial ear learns to distinguish between the sacred impulse (human, universal, beautiful) and the sacred monopoly (colonial, imposed, suffocating).",
@@ -409,8 +385,7 @@
       "name": "The Portuguese Colonial Tongue — 500 Years in Every Syllable",
       "sort_order": 25,
       "category": "meta",
-      "level": 3,
-      "composite_of": ["pt-judiacao", "pt-denegrir", "pt-coisa-preta", "pt-servico-de-preto", "pt-programa-de-indio", "pt-criado-mudo", "pt-mulata", "pt-vixi-maria", "song-pt-barata", "song-pt-atirei-pau", "song-pt-escravos-de-jo", "song-pt-boi-cara-preta", "song-pt-sambalele"],
+      "parts": ["pt-judiacao", "pt-denegrir", "pt-coisa-preta", "pt-servico-de-preto", "pt-programa-de-indio", "pt-criado-mudo", "pt-mulata", "pt-vixi-maria", "song-pt-barata", "song-pt-atirei-pau", "song-pt-escravos-de-jo", "song-pt-boi-cara-preta", "song-pt-sambalele"],
       "relationship_type": "emergence",
       "sections": {
         "About": "Brazilian Portuguese is perhaps the world's most colonial language disguised as the world's most beautiful one. It carries the Portuguese empire (1415-1999), the Atlantic slave trade (the largest forced migration in human history), the extermination of indigenous peoples (from millions to hundreds of thousands), the Inquisition, and Catholic evangelization — all in its daily idioms, its furniture names, its children's songs, its exclamations. Brazil is the country that says 'we don't have racism' in a language where 'to blacken' means 'to defame' and the nightstand is named after a slave.",
@@ -425,8 +400,7 @@
       "name": "The English Colonial Tongue — The Empire's Favorite Language",
       "sort_order": 26,
       "category": "meta",
-      "level": 3,
-      "composite_of": ["en-sold-down-river", "en-eeny-meeny", "en-grandfathered-in", "en-peanut-gallery", "en-uppity", "en-thug", "song-en-rock-a-bye"],
+      "parts": ["en-sold-down-river", "en-eeny-meeny", "en-grandfathered-in", "en-peanut-gallery", "en-uppity", "en-thug", "song-en-rock-a-bye"],
       "relationship_type": "emergence",
       "sections": {
         "About": "English is the world's dominant language because it was the language of the world's dominant empires — British and American. It carries the slave trade ('sold down the river'), Jim Crow ('grandfathered in,' 'uppity,' 'peanut gallery'), British colonial India ('thug,' 'loot,' 'jungle,' 'veranda'), settler colonialism ('Indian giver,' 'off the reservation'), and the ongoing project of American global hegemony (English as the 'default' language of business, science, and the internet). The language's global dominance is itself the colonial achievement — you're reading this grammar in English because empire made it so.",
@@ -441,8 +415,7 @@
       "name": "The Bilingual Mirror — Two Tongues, One Colony",
       "sort_order": 27,
       "category": "meta",
-      "level": 3,
-      "composite_of": ["meta-portuguese-tongue", "meta-english-tongue", "group-antisemitic", "group-anti-black", "group-children-songs", "group-sacred-tongue"],
+      "parts": ["meta-portuguese-tongue", "meta-english-tongue", "group-antisemitic", "group-anti-black", "group-children-songs", "group-sacred-tongue"],
       "relationship_type": "emergence",
       "sections": {
         "About": "Portuguese and English are not the same language. But they share the same colonial grammar. Both equate darkness with evil. Both turn persecuted peoples into verbs. Both hide slavery in everyday expressions. Both sing violence to children. Both saturate emotional vocabulary with Christian theology. The bilingual mirror reveals that colonialism is not a language but a structure — it speaks through any mouth, in any tongue, wherever power has organized the world into center and periphery, white and dark, master and servant, silk and rags.",

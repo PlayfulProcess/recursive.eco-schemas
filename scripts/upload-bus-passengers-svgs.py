@@ -110,7 +110,7 @@ def patch_grammar_json(uploaded_ids: list[str]):
     """Update image_url in grammar.json to point at R2 public URLs."""
     grammar = json.loads(GRAMMAR_JSON.read_text(encoding="utf-8"))
     changed = 0
-    for item in grammar.get("items", []):
+    for item in grammar.get("nodes", []):
         item_id = item.get("id")
         if item_id not in uploaded_ids:
             continue

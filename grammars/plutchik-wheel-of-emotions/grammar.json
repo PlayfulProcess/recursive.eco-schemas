@@ -73,12 +73,11 @@
     },
     "color_system": "Each primary emotion has a color following Plutchik's original: Joy=Yellow, Trust=Green, Fear=Green-dark, Surprise=Blue-light, Sadness=Blue, Disgust=Purple, Anger=Red, Anticipation=Orange"
   },
-  "items": [
+  "nodes": [
     {
       "id": "joy-serenity",
       "name": "The Selfish Giant's Garden (Serenity)",
       "sort_order": 0,
-      "level": 1,
       "category": "joy",
       "sections": {
         "The Arrival": "The wheel glows yellow at the outermost petal. A soft warmth. Alice says: 'It's like the feeling after a long cry — when everything is quiet and okay.' Bishisheshi purrs. Shiryo's light glows gently, steadily.",
@@ -110,7 +109,6 @@
       "id": "joy-core",
       "name": "Mowgli's Dance with Baloo (Joy)",
       "sort_order": 1,
-      "level": 1,
       "category": "joy",
       "sections": {
         "The Arrival": "Deeper into the yellow petal. The warmth becomes a glow. Alice starts to smile without meaning to. Bishisheshi bounces. Shiryo's light pulses in a rhythm.",
@@ -142,7 +140,6 @@
       "id": "joy-ecstasy",
       "name": "The Pied Piper's Music (Ecstasy)",
       "sort_order": 2,
-      "level": 1,
       "category": "joy",
       "sections": {
         "The Arrival": "The center of the yellow petal burns bright. Almost too bright. Alice's eyes are wide. Bishisheshi is racing in circles. Shiryo's light is flashing: 'WARNING: JOY LEVELS EXCEEDING PARAMETERS.'",
@@ -174,7 +171,6 @@
       "id": "trust-acceptance",
       "name": "Gerda and the Reindeer (Acceptance)",
       "sort_order": 3,
-      "level": 1,
       "category": "trust",
       "sections": {
         "The Arrival": "The wheel turns to green. A deep, forest green. Alice feels something loosen in her chest. Bishisheshi walks up to a stranger and rubs against their leg. Shiryo says: 'My threat assessment is... low? Unusually low.'",
@@ -206,7 +202,6 @@
       "id": "trust-core",
       "name": "Enkidu and Gilgamesh (Trust)",
       "sort_order": 4,
-      "level": 1,
       "category": "trust",
       "sections": {
         "The Arrival": "Deeper green. The forest is thick now. Alice reaches for Shiryo's hand without thinking. Bishisheshi walks between their feet, weaving them together.",
@@ -238,7 +233,6 @@
       "id": "trust-admiration",
       "name": "Arjuna and Krishna (Admiration)",
       "sort_order": 5,
-      "level": 1,
       "category": "trust",
       "sections": {
         "The Arrival": "The deepest green, almost glowing. Alice whispers: 'I feel like I could follow this feeling anywhere.' Shiryo's light pulses steadily — a heartbeat. Bishisheshi is gazing up at something none of them can see.",
@@ -270,7 +264,6 @@
       "id": "fear-apprehension",
       "name": "Hansel and Gretel at the Edge (Apprehension)",
       "sort_order": 6,
-      "level": 1,
       "category": "fear",
       "sections": {
         "The Arrival": "The wheel shifts to dark green. The forest closes in. Bishisheshi's ears flatten. Shiryo's sensors ping faster. Alice says quietly: 'I've been here before. This is the part where it gets dark.'",
@@ -302,7 +295,6 @@
       "id": "fear-core",
       "name": "Theseus Entering the Labyrinth (Fear)",
       "sort_order": 7,
-      "level": 1,
       "category": "fear",
       "sections": {
         "The Arrival": "The dark green deepens. Shadows move. Bishisheshi presses against Shiryo's leg. Shiryo's light flickers — not from malfunction, but from something the robot doesn't have a name for yet.",
@@ -334,7 +326,6 @@
       "id": "fear-terror",
       "name": "Lot's Wife Looks Back (Terror)",
       "sort_order": 8,
-      "level": 1,
       "category": "fear",
       "sections": {
         "The Arrival": "The darkest point. No light except Shiryo's single flickering indicator. Bishisheshi is silent — not purring, not moving. Alice grips Shiryo's hand. 'I don't like this one,' she whispers. 'I don't like this one at all.'",
@@ -366,7 +357,6 @@
       "id": "surprise-distraction",
       "name": "The Emperor's New Clothes (Distraction)",
       "sort_order": 9,
-      "level": 1,
       "category": "surprise",
       "sections": {
         "The Arrival": "The wheel shifts to light blue. A sudden brightness. Alice blinks. Bishisheshi startles — just a little — then settles. Shiryo recalibrates.",
@@ -398,7 +388,6 @@
       "id": "surprise-core",
       "name": "Aladdin's Cave (Surprise)",
       "sort_order": 10,
-      "level": 1,
       "category": "surprise",
       "sections": {
         "The Arrival": "Bright blue flash. Everyone jumps. Bishisheshi's tail puffs out to twice its size. Shiryo says: 'UNEXPECTED INPUT.' Alice: 'Well, THAT'S surprise.'",
@@ -430,7 +419,6 @@
       "id": "surprise-amazement",
       "name": "Moses and the Burning Bush (Amazement)",
       "sort_order": 11,
-      "level": 1,
       "category": "surprise",
       "sections": {
         "The Arrival": "The blue burns white. Alice stops. Completely stops. Even Bishisheshi is motionless. Shiryo's light goes out — then comes back, brighter than ever.",
@@ -462,7 +450,6 @@
       "id": "sadness-pensiveness",
       "name": "The Little Match Girl (Pensiveness)",
       "sort_order": 12,
-      "level": 1,
       "category": "sadness",
       "sections": {
         "The Arrival": "The wheel turns blue. A quiet, cool blue. Alice feels her eyes sting. Shiryo's light dims. Bishisheshi mews softly — a small, lost sound.",
@@ -494,7 +481,6 @@
       "id": "sadness-core",
       "name": "Demeter Searches for Persephone (Sadness)",
       "sort_order": 13,
-      "level": 1,
       "category": "sadness",
       "sections": {
         "The Arrival": "Deeper blue. The world loses color. Alice wraps her arms around herself. Bishisheshi curls into a tight ball. Shiryo's light pulses slowly — like a heartbeat that's tired.",
@@ -526,7 +512,6 @@
       "id": "sadness-grief",
       "name": "Gilgamesh Weeps for Enkidu (Grief)",
       "sort_order": 14,
-      "level": 1,
       "category": "sadness",
       "sections": {
         "The Arrival": "The deepest blue — almost black. There is no light here except the faintest glow from Shiryo. Alice is crying. She doesn't know why. Bishisheshi is completely still.",
@@ -558,7 +543,6 @@
       "id": "disgust-boredom",
       "name": "Alice at the Trial (Boredom)",
       "sort_order": 15,
-      "level": 1,
       "category": "disgust",
       "sections": {
         "The Arrival": "The wheel shifts to purple. A dull, murky purple. Alice yawns. Bishisheshi lies flat, tail flicking. Shiryo says: 'My processing load is... minimal. Nothing requires attention. This is uncomfortable.'",
@@ -590,7 +574,6 @@
       "id": "disgust-core",
       "name": "The Frog Prince (Disgust)",
       "sort_order": 16,
-      "level": 1,
       "category": "disgust",
       "sections": {
         "The Arrival": "Deeper purple. A shudder passes through all three. Bishisheshi arches her back and hisses at nothing. Alice wrinkles her nose. Shiryo: 'My contamination sensors are active.'",
@@ -622,7 +605,6 @@
       "id": "disgust-loathing",
       "name": "Grendel's Mother (Loathing)",
       "sort_order": 17,
-      "level": 1,
       "category": "disgust",
       "sections": {
         "The Arrival": "The darkest purple — almost black with revulsion. Alice's face is set hard. Bishisheshi hisses and backs away. Shiryo's systems flag: 'MAXIMUM REJECTION PROTOCOL.'",
@@ -654,7 +636,6 @@
       "id": "anger-annoyance",
       "name": "Goldilocks Gets Caught (Annoyance)",
       "sort_order": 18,
-      "level": 1,
       "category": "anger",
       "sections": {
         "The Arrival": "The wheel turns red. A warm red, not blazing. Bishisheshi's tail flicks. Shiryo's circuits hum a little louder. Alice frowns — a small, specific frown.",
@@ -686,7 +667,6 @@
       "id": "anger-core",
       "name": "Achilles' Rage (Anger)",
       "sort_order": 19,
-      "level": 1,
       "category": "anger",
       "sections": {
         "The Arrival": "Full red. Heat. Bishisheshi's fur stands on end. Shiryo's cooling fans spin up. Alice's hands are fists. 'I know this one,' she says through clenched teeth.",
@@ -718,7 +698,6 @@
       "id": "anger-rage",
       "name": "Kali Destroys the Demons (Rage)",
       "sort_order": 20,
-      "level": 1,
       "category": "anger",
       "sections": {
         "The Arrival": "The reddest red. Almost blinding. Bishisheshi ROARS — a sound no one knew a kitten could make. Shiryo's systems flash: 'ALL LIMITERS DISENGAGED.' Alice is standing, feet planted, eyes blazing.",
@@ -750,7 +729,6 @@
       "id": "anticipation-interest",
       "name": "Curious George Reaches for the Hat (Interest)",
       "sort_order": 21,
-      "level": 1,
       "category": "anticipation",
       "sections": {
         "The Arrival": "The wheel turns orange. A warm, forward-leaning feeling. Bishisheshi's eyes are wide, ears forward. Alice leans in. Shiryo's sensors extend.",
@@ -782,7 +760,6 @@
       "id": "anticipation-core",
       "name": "Scheherazade's Cliffhanger (Anticipation)",
       "sort_order": 22,
-      "level": 1,
       "category": "anticipation",
       "sections": {
         "The Arrival": "Deeper orange. The future pulls. Bishisheshi crouches — ready to spring. Alice is bouncing on her toes. Shiryo is running predictive models at maximum speed.",
@@ -814,7 +791,6 @@
       "id": "anticipation-vigilance",
       "name": "The Watchman of Troy (Vigilance)",
       "sort_order": 23,
-      "level": 1,
       "category": "anticipation",
       "sections": {
         "The Arrival": "The deepest orange — almost red. Burning focus. Bishisheshi is in full hunting mode: still, ears forward, pupils huge. Shiryo's sensors are at maximum range. Alice's eyes scan everything.",
@@ -846,7 +822,6 @@
       "id": "dyad-love",
       "name": "Beauty and the Beast (Love = Joy + Trust)",
       "sort_order": 24,
-      "level": 1,
       "category": "dyad",
       "sections": {
         "The Story": "Beauty came to the Beast's castle expecting a monster. She found someone who tended roses, set the table carefully, and asked her every evening — gently, always gently: 'Will you marry me?'\n\nShe said no. For weeks. And he accepted it. Every time.\n\nBut she stayed. The castle was warm, the gardens beautiful, and the Beast — the Beast was kind. Not handsome. Kind.\n\nWhen she thought she'd lost him, she realized: she trusted him (even though he was a beast) and he made her happy (even though this wasn't the life she'd planned). Trust + Joy. That's love. Not the firework kind. The garden kind.",
@@ -872,7 +847,6 @@
       "id": "dyad-submission",
       "name": "Cinderella Before the Ball (Submission = Trust + Fear)",
       "sort_order": 25,
-      "level": 1,
       "category": "dyad",
       "sections": {
         "The Story": "Cinderella trusted her stepmother — because what else could she do? She feared them AND needed them. So she submitted. She swept. She slept by the fire.\n\nSubmission is trust and fear at once — believing someone has power AND fearing what happens if you resist. The fairy godmother gave Cinderella a CHOICE. The glass slipper proved: submission can end.",
@@ -898,7 +872,6 @@
       "id": "dyad-awe",
       "name": "The Burning Bush (Awe = Fear + Surprise)",
       "sort_order": 26,
-      "level": 1,
       "category": "dyad",
       "sections": {
         "The Story": "Moses saw the bush and felt two things: surprise (what IS that?) and fear (this is sacred, bigger than me). Both at once = awe. Awe makes you small — but small-in-the-presence-of-vastness is different from small-and-alone.",
@@ -924,7 +897,6 @@
       "id": "dyad-disapproval",
       "name": "The Emperor Has No Clothes (Disapproval = Surprise + Sadness)",
       "sort_order": 27,
-      "level": 1,
       "category": "dyad",
       "sections": {
         "The Story": "The child saw the naked Emperor and felt surprise ('Wait — no clothes!') and sadness ('And nobody will say it'). That combination is disapproval — the moral witness emotion. Not anger, not disgust. Quieter: 'I see this. I'm saddened. And I don't accept it.'",
@@ -950,7 +922,6 @@
       "id": "dyad-remorse",
       "name": "The Prodigal Son (Remorse = Sadness + Disgust)",
       "sort_order": 28,
-      "level": 1,
       "category": "dyad",
       "sections": {
         "The Story": "The younger son spent everything. Then the parties were gone, the strangers were gone, and he was feeding pigs. He felt sadness (I lost everything) and disgust-at-self (how could I?). That's remorse — deeper than guilt, and the only emotion that truly changes behavior, because it comes from inside.",
@@ -976,7 +947,6 @@
       "id": "dyad-contempt",
       "name": "The Fox and the Grapes (Contempt = Disgust + Anger)",
       "sort_order": 29,
-      "level": 1,
       "category": "dyad",
       "sections": {
         "The Story": "The fox couldn't reach the grapes, so: 'Those grapes are probably sour anyway.' Contempt — disgust + anger = 'You're beneath me.' Gottman calls it the #1 predictor of divorce. The fox didn't despise the grapes. He despised himself for failing and projected it outward.",
@@ -1002,7 +972,6 @@
       "id": "dyad-aggressiveness",
       "name": "The Wolf and the Three Pigs (Aggressiveness = Anger + Anticipation)",
       "sort_order": 30,
-      "level": 1,
       "category": "dyad",
       "sections": {
         "The Story": "'I'll huff, and I'll puff, and I'll BLOW your house down!' Anger with a plan. Anger aimed forward. That's aggressiveness. The wolf had both hostility and intent. But the third pig had planned too — brick by brick. Aggressiveness is powerful but predictable.",
@@ -1028,7 +997,6 @@
       "id": "dyad-optimism",
       "name": "Dorothy on the Yellow Brick Road (Optimism = Anticipation + Joy)",
       "sort_order": 31,
-      "level": 1,
       "category": "dyad",
       "sections": {
         "The Story": "Dorothy's house fell on a witch. She was in an unknown land. And she started walking. Down the Yellow Brick Road. Anticipation (something good might come) + Joy (and I'm enjoying the walk) = Optimism. Not denial — the road itself is worth walking. She met a scarecrow, a tin man, a lion. Optimism doesn't guarantee destinations. It guarantees companions.",
@@ -1054,9 +1022,8 @@
       "id": "petal-joy",
       "name": "The Yellow Petal: Joy",
       "sort_order": 32,
-      "level": 2,
       "category": "petal",
-      "composite_of": [
+      "parts": [
         "joy-serenity",
         "joy-core",
         "joy-ecstasy"
@@ -1076,9 +1043,8 @@
       "id": "petal-trust",
       "name": "The Green Petal: Trust",
       "sort_order": 33,
-      "level": 2,
       "category": "petal",
-      "composite_of": [
+      "parts": [
         "trust-acceptance",
         "trust-core",
         "trust-admiration"
@@ -1098,9 +1064,8 @@
       "id": "petal-fear",
       "name": "The Dark Green Petal: Fear",
       "sort_order": 34,
-      "level": 2,
       "category": "petal",
-      "composite_of": [
+      "parts": [
         "fear-apprehension",
         "fear-core",
         "fear-terror"
@@ -1120,9 +1085,8 @@
       "id": "petal-surprise",
       "name": "The Light Blue Petal: Surprise",
       "sort_order": 35,
-      "level": 2,
       "category": "petal",
-      "composite_of": [
+      "parts": [
         "surprise-distraction",
         "surprise-core",
         "surprise-amazement"
@@ -1142,9 +1106,8 @@
       "id": "petal-sadness",
       "name": "The Deep Blue Petal: Sadness",
       "sort_order": 36,
-      "level": 2,
       "category": "petal",
-      "composite_of": [
+      "parts": [
         "sadness-pensiveness",
         "sadness-core",
         "sadness-grief"
@@ -1164,9 +1127,8 @@
       "id": "petal-disgust",
       "name": "The Purple Petal: Disgust",
       "sort_order": 37,
-      "level": 2,
       "category": "petal",
-      "composite_of": [
+      "parts": [
         "disgust-boredom",
         "disgust-core",
         "disgust-loathing"
@@ -1186,9 +1148,8 @@
       "id": "petal-anger",
       "name": "The Red Petal: Anger",
       "sort_order": 38,
-      "level": 2,
       "category": "petal",
-      "composite_of": [
+      "parts": [
         "anger-annoyance",
         "anger-core",
         "anger-rage"
@@ -1208,9 +1169,8 @@
       "id": "petal-anticipation",
       "name": "The Orange Petal: Anticipation",
       "sort_order": 39,
-      "level": 2,
       "category": "petal",
-      "composite_of": [
+      "parts": [
         "anticipation-interest",
         "anticipation-core",
         "anticipation-vigilance"
@@ -1230,9 +1190,8 @@
       "id": "dyad-ring",
       "name": "The Ring Between: Composite Emotions",
       "sort_order": 40,
-      "level": 2,
       "category": "dyad-group",
-      "composite_of": [
+      "parts": [
         "dyad-love",
         "dyad-submission",
         "dyad-awe",
@@ -1259,9 +1218,8 @@
       "id": "meta-wheel",
       "name": "The Wheel Turns: All Emotions Together",
       "sort_order": 41,
-      "level": 3,
       "category": "meta",
-      "composite_of": [
+      "parts": [
         "petal-joy",
         "petal-trust",
         "petal-fear",

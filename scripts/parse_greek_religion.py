@@ -7,6 +7,7 @@ Parse four Greek religion/ritual seed files into grammars:
 4. Myths of Greece and Rome (Otto Seemann, Gutenberg #61901)
 """
 import json, re, os
+from grammar_depth import node_depth
 
 def read_seed(path):
     with open(path, encoding="utf-8") as f:
@@ -46,13 +47,13 @@ def write_grammar(grammar, path):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'w', encoding='utf-8') as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
-    items = grammar['items']
+    items = grammar['nodes']
     ids = [i['id'] for i in items]
     dupes = [x for x in ids if ids.count(x) > 1]
-    bad_refs = [(i['id'], r) for i in items for r in i.get('composite_of', []) if r not in ids]
+    bad_refs = [(i['id'], r) for i in items for r in i.get('parts', []) if r not in ids]
     orders = [i['sort_order'] for i in items]
     print(f"\n{path}:")
-    print(f"  Items: {len(items)}, L1: {sum(1 for i in items if i['level']==1)}, L2: {sum(1 for i in items if i['level']==2)}, L3: {sum(1 for i in items if i['level']==3)}")
+    print(f"  Items: {len(items)}, L1: {sum(1 for i in items if node_depth(i, items)==1)}, L2: {sum(1 for i in items if node_depth(i, items)==2)}, L3: {sum(1 for i in items if node_depth(i, items)==3)}")
     print(f"  Sections: {sum(len(i.get('sections',{})) for i in items)}")
     print(f"  Duplicate IDs: {dupes}")
     print(f"  Bad refs: {bad_refs}")
@@ -136,7 +137,6 @@ def parse_five_stages():
             "name": name,
             "sort_order": sort_order,
             "category": "preface",
-            "level": 1,
             "sections": {"Preface": content},
             "keywords": ["preface", "introduction"],
             "metadata": {}
@@ -182,7 +182,6 @@ def parse_five_stages():
             "name": name,
             "sort_order": sort_order,
             "category": "chapter",
-            "level": 1,
             "sections": {"Chapter": content},
             "keywords": [w.lower() for w in title.split() if len(w) > 3],
             "metadata": {}
@@ -218,7 +217,6 @@ def parse_five_stages():
             "name": "Appendix: Sallustius - On the Gods and the World",
             "sort_order": sort_order,
             "category": "appendix",
-            "level": 1,
             "sections": {"Text": sall_text},
             "keywords": ["sallustius", "neoplatonism", "theology", "gods", "appendix"],
             "metadata": {}
@@ -252,8 +250,7 @@ def parse_five_stages():
             "name": gname,
             "sort_order": sort_order,
             "category": "theme",
-            "level": 2,
-            "composite_of": valid_refs,
+            "parts": valid_refs,
             "relationship_type": "emergence",
             "sections": {
                 "About": about,
@@ -270,8 +267,7 @@ def parse_five_stages():
         "name": "The Evolution of Greek Religious Consciousness",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
-        "composite_of": [g[0] for g in l2_groups],
+        "parts": [g[0] for g in l2_groups],
         "relationship_type": "emergence",
         "sections": {
             "About": "Murray's central thesis: Greek religion was not a fixed system but a living organism that evolved through five distinct stages, from primitive earth-worship through Olympian rationalism to Hellenistic mysticism. Each stage preserved elements of the previous ones, creating layers of belief that coexisted uneasily. The final stage saw Christianity absorb and transform the Greek religious inheritance.",
@@ -294,7 +290,7 @@ def parse_five_stages():
         "description": "Gilbert Murray's classic study of the evolution of Greek religious thought, from primitive fertility rites through Olympian theology, classical philosophy, Hellenistic mysticism, and the final pagan resistance to Christianity. A foundational text in the history of religion.\n\nSource: Project Gutenberg eBook #30250 (https://www.gutenberg.org/ebooks/30250)",
         **base_meta(),
         "tags": ["greek-religion", "philosophy", "ritual", "paganism", "history-of-religion"],
-        "items": items
+        "nodes": items
     }
 
     write_grammar(grammar, "grammars/five-stages-greek-religion/grammar.json")
@@ -363,7 +359,6 @@ def parse_eleusinian():
             "name": name,
             "sort_order": sort_order,
             "category": cat,
-            "level": 1,
             "sections": {section_name: content},
             "keywords": [w.lower() for w in name.split() if len(w) > 3 and w not in ("The", "Their")],
             "metadata": {}
@@ -394,8 +389,7 @@ def parse_eleusinian():
             "name": gname,
             "sort_order": sort_order,
             "category": "theme",
-            "level": 2,
-            "composite_of": valid_refs,
+            "parts": valid_refs,
             "relationship_type": "emergence",
             "sections": {
                 "About": about,
@@ -412,8 +406,7 @@ def parse_eleusinian():
         "name": "The Sacred Secret: Death and Rebirth at Eleusis",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
-        "composite_of": [g[0] for g in l2_groups],
+        "parts": [g[0] for g in l2_groups],
         "relationship_type": "emergence",
         "sections": {
             "About": "For nearly two thousand years, the Eleusinian Mysteries offered initiates a direct experience of the cycle of death and rebirth. Rooted in the myth of Demeter's grief and Persephone's return, the rites transformed participants through fasting, procession, darkness, terror, and final revelation. The secret was never betrayed; what remains is the testimony of those who emerged changed. Wright's study reconstructs what can be known of this transformative tradition.",
@@ -435,7 +428,7 @@ def parse_eleusinian():
         "description": "Dudley Wright's study of the most famous mystery cult of the ancient world: the Eleusinian Mysteries sacred to Demeter and Persephone. Covers the founding myth, ritual programme, initiatory rites, and mystical significance of a tradition that endured for nearly two millennia.\n\nSource: Project Gutenberg eBook #35087 (https://www.gutenberg.org/ebooks/35087)",
         **base_meta(),
         "tags": ["mysteries", "greek-religion", "ritual", "initiation", "esoteric"],
-        "items": items
+        "nodes": items
     }
 
     write_grammar(grammar, "grammars/eleusinian-mysteries/grammar.json")
@@ -480,7 +473,6 @@ def parse_ancient_art():
             "name": "Prefatory Note",
             "sort_order": sort_order,
             "category": "preface",
-            "level": 1,
             "sections": {"Preface": content},
             "keywords": ["preface", "introduction", "ritual", "art"],
             "metadata": {}
@@ -526,7 +518,6 @@ def parse_ancient_art():
             "name": name,
             "sort_order": sort_order,
             "category": "chapter",
-            "level": 1,
             "sections": {"Chapter": content},
             "keywords": [w.lower() for w in title.split() if len(w) > 3],
             "metadata": {}
@@ -557,8 +548,7 @@ def parse_ancient_art():
             "name": gname,
             "sort_order": sort_order,
             "category": "theme",
-            "level": 2,
-            "composite_of": valid_refs,
+            "parts": valid_refs,
             "relationship_type": "emergence",
             "sections": {
                 "About": about,
@@ -575,8 +565,7 @@ def parse_ancient_art():
         "name": "From Dromenon to Drama: The Birth of Art",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
-        "composite_of": [g[0] for g in l2_groups],
+        "parts": [g[0] for g in l2_groups],
         "relationship_type": "emergence",
         "sections": {
             "About": "Jane Ellen Harrison's central insight: art is not born from aesthetic contemplation but from the urgency of ritual action. Before there were spectators, there were participants. Before there was drama, there was the dromenon — the thing done, the sacred act. Greek tragedy emerged when the chorus stepped back and someone stepped forward to speak, transforming collective ritual into individual art. This grammar traces that revolutionary transition.",
@@ -598,7 +587,7 @@ def parse_ancient_art():
         "description": "Jane Ellen Harrison's groundbreaking study of the connection between ritual and art, tracing how Greek drama emerged from primitive seasonal rites. A founding text of the Cambridge Ritualist school that transformed classical studies.\n\nSource: Project Gutenberg eBook #17087 (https://www.gutenberg.org/ebooks/17087)",
         **base_meta(),
         "tags": ["ritual", "art", "greek-religion", "anthropology", "origins-of-art"],
-        "items": items
+        "nodes": items
     }
 
     write_grammar(grammar, "grammars/ancient-art-ritual/grammar.json")
@@ -962,7 +951,6 @@ def parse_myths_greece_rome():
             "name": name,
             "sort_order": sort_order,
             "category": cat,
-            "level": 1,
             "sections": {"Text": content},
             "keywords": kws,
             "metadata": {}
@@ -1008,8 +996,7 @@ def parse_myths_greece_rome():
             "name": gname,
             "sort_order": sort_order,
             "category": "theme",
-            "level": 2,
-            "composite_of": valid_refs,
+            "parts": valid_refs,
             "relationship_type": "emergence",
             "sections": {
                 "About": about,
@@ -1041,8 +1028,7 @@ def parse_myths_greece_rome():
             "name": gname,
             "sort_order": sort_order,
             "category": "meta",
-            "level": 3,
-            "composite_of": valid_refs,
+            "parts": valid_refs,
             "relationship_type": "emergence",
             "sections": {
                 "About": about,
@@ -1065,7 +1051,7 @@ def parse_myths_greece_rome():
         "description": "Otto Seemann's comprehensive guide to the mythology of Greece and Rome, with special reference to its use in art. Covers the entire pantheon from the Olympian gods through sea deities, earth spirits, and underworld powers, plus the great heroic legends from Heracles to the Trojan War.\n\nSource: Project Gutenberg eBook #61901 (https://www.gutenberg.org/ebooks/61901)",
         **base_meta(),
         "tags": ["greek-mythology", "roman-mythology", "gods", "heroes", "classical-art"],
-        "items": items
+        "nodes": items
     }
 
     write_grammar(grammar, "grammars/myth-greece-rome/grammar.json")

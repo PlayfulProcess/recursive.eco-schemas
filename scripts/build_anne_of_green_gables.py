@@ -6,13 +6,14 @@ Source: Project Gutenberg eBook #45
 Structure: 38 chapters
 Levels:
   L1: Individual chapters (full text)
-  L2: Thematic groupings with composite_of + chapter summaries
+  L2: Thematic groupings with parts + chapter summaries
   L3: Meta-categories (The Story, Themes)
 """
 
 import json
 import re
 from pathlib import Path
+from grammar_depth import node_depth
 
 SEED_FILE = Path(__file__).parent.parent / "seeds" / "anne-of-green-gables.txt"
 OUTPUT_DIR = Path(__file__).parent.parent / "grammars" / "anne-of-green-gables"
@@ -357,7 +358,6 @@ def build_grammar():
             "name": f"Chapter {chapter_num}: {CHAPTER_TITLES[chapter_num]}",
             "sort_order": sort_order,
             "category": f"chapter-{chapter_num:02d}",
-            "level": 1,
             "sections": {
                 "Story": chapter_text,
                 "Reflection": CHAPTER_REFLECTIONS.get(chapter_num, "What does this chapter make you think about?"),
@@ -381,9 +381,8 @@ def build_grammar():
             "name": f"Summary: {CHAPTER_TITLES[chapter_num]}",
             "sort_order": sort_order,
             "category": "chapter-summary",
-            "level": 2,
             "relationship_type": "emergence",
-            "composite_of": [chapter_ids[chapter_num]],
+            "parts": [chapter_ids[chapter_num]],
             "sections": {
                 "About": CHAPTER_SUMMARIES.get(chapter_num, ""),
                 "For Parents": CHAPTER_PARENT_NOTES.get(chapter_num, ""),
@@ -407,9 +406,8 @@ def build_grammar():
             "name": theme_data["name"],
             "sort_order": sort_order,
             "category": "theme",
-            "level": 2,
             "relationship_type": "emergence",
-            "composite_of": theme_chapter_ids,
+            "parts": theme_chapter_ids,
             "sections": {
                 "About": theme_data["description"],
                 "For Parents": theme_data["for_parents"],
@@ -429,9 +427,8 @@ def build_grammar():
         "name": "The Story",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "relationship_type": "emergence",
-        "composite_of": all_summary_ids,
+        "parts": all_summary_ids,
         "sections": {
             "About": "The complete narrative of Anne of Green Gables: an unwanted orphan girl arrives at a Prince Edward Island farm, transforms the lives of everyone she meets through the sheer force of her imagination and love, and grows from a wild, talkative child into a young woman who chooses love over ambition. Thirty-eight chapters trace Anne Shirley's journey from the train station to the bend in the road, carried by her fierce imagination, her hunger for belonging, and her refusal to be anyone other than herself.",
             "For Parents": "Anne of Green Gables has endured for over a century because it tells the truth about childhood — the intensity, the drama, the scrapes, and the growth. Montgomery respects children's feelings without patronizing them. The book argues that difficult children are often gifted children, that imagination is a survival skill, and that love can be quiet and still be fierce. Read it together and trust the story to do its work.",
@@ -446,9 +443,8 @@ def build_grammar():
         "name": "Themes",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "relationship_type": "emergence",
-        "composite_of": all_theme_ids,
+        "parts": all_theme_ids,
         "sections": {
             "About": "The great themes of Anne of Green Gables — belonging and identity, imagination and beauty, scrapes and growing pains, quiet love, rivalry and friendship, and ambition and sacrifice. These groupings reveal how Montgomery weaves together the personal and the universal, making one girl's story into a mirror for every reader.",
             "For Parents": "These thematic groupings help you explore the novel beyond the plot. Each theme connects chapters that share a common thread. If your child identifies with Anne's outsider status, start with 'Belonging and Identity.' If they love Anne's disasters, 'Scrapes and Growing Pains' provides the laughs and the lessons. The story speaks to every reader differently — let your child find their own way in.",
@@ -515,7 +511,7 @@ def build_grammar():
         "shelves": ["children"],
         "lineages": ["Linehan", "Andreotti"],
         "worldview": "imaginative",
-        "items": items,
+        "nodes": items,
     }
 
     return grammar
@@ -530,10 +526,10 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    items = grammar["items"]
-    l1 = [i for i in items if i["level"] == 1]
-    l2 = [i for i in items if i["level"] == 2]
-    l3 = [i for i in items if i["level"] == 3]
+    items = grammar["nodes"]
+    l1 = [i for i in items if node_depth(i, items) == 1]
+    l2 = [i for i in items if node_depth(i, items) == 2]
+    l3 = [i for i in items if node_depth(i, items) == 3]
 
     print(f"Grammar written to {OUTPUT_FILE}")
     print(f"  L1 chapters: {len(l1)}")
@@ -550,7 +546,7 @@ def main():
 
     broken = []
     for item in items:
-        for ref in item.get("composite_of", []):
+        for ref in item.get("parts", []):
             if ref not in id_set:
                 broken.append((item["id"], ref))
     if broken:

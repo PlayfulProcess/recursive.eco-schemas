@@ -9,6 +9,7 @@ Build grammar.json for Legends of Old Honolulu from seeds/hawaiian-legends.txt
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(SCRIPT_DIR)
@@ -233,7 +234,6 @@ def build_grammar():
             "name": ch["title"],
             "sort_order": sort_order,
             "category": "legend",
-            "level": 1,
             "sections": {
                 "Legend": ch["text"]
             },
@@ -251,14 +251,13 @@ def build_grammar():
             "name": theme["name"],
             "sort_order": sort_order,
             "category": "theme",
-            "level": 2,
             "sections": {
                 "About": theme["about"],
                 "For Readers": theme["for_readers"]
             },
             "keywords": [],
             "metadata": {},
-            "composite_of": composite,
+            "parts": composite,
             "relationship_type": "emergence"
         })
         theme_ids.append(theme["id"])
@@ -270,14 +269,13 @@ def build_grammar():
         "name": "Legends of Old Honolulu",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "sections": {
             "About": "Legends of Old Honolulu, collected and translated from the Hawaiian by W.D. Westervelt (1916). Twenty-five legends rooted in the places, gods, and heroes of Honolulu and the island of Oahu — from the great Polynesian migration to the exploits of Kamapuaa the hog-god. These are the myths that live in the landscape: every valley, reef, spring, and hill in Honolulu carries a story of gods, shapeshifters, ghost dancers, and ancestral heroes.",
             "For Readers": "Westervelt gathered these legends from Hawaiian-language newspapers and from elders who still remembered the old stories. They reveal a world where the natural and supernatural are inseparable, where animals are ancestors, where water is sacred, and where the spirits of the dead walk the hills at night. Read them with a map of Honolulu beside you — the places are real, and the legends still inhabit them."
         },
         "keywords": ["hawaiian", "polynesian", "honolulu", "oahu", "mythology", "legends"],
         "metadata": {},
-        "composite_of": theme_ids,
+        "parts": theme_ids,
         "relationship_type": "emergence"
     }
     items.append(meta_item)
@@ -300,16 +298,16 @@ def build_grammar():
         "shelves": ["earth"],
         "lineages": ["Shrei"],
         "worldview": "animist",
-        "items": items
+        "nodes": items
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"Generated {OUTPUT_FILE}")
     print(f"  L1 items (legends): {l1}")
     print(f"  L2 items (themes): {l2}")

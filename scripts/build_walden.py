@@ -18,6 +18,7 @@ import json
 import re
 import os
 from pathlib import Path
+from grammar_depth import node_depth
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent
@@ -257,7 +258,6 @@ def build_grammar():
             "id": chapter_id,
             "name": ch['name'],
             "sort_order": sort_order,
-            "level": 1,
             "category": "chapter",
             "sections": {
                 "Text": ch['text'],
@@ -280,10 +280,9 @@ def build_grammar():
             "id": theme_id,
             "name": theme["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": theme["chapters"],
+            "parts": theme["chapters"],
             "sections": {
                 "About": theme["about"],
                 "For Readers": theme["for_readers"],
@@ -301,10 +300,9 @@ def build_grammar():
         "id": "walden-complete",
         "name": "Walden: Life in the Woods",
         "sort_order": sort_order,
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": all_theme_ids,
+        "parts": all_theme_ids,
         "sections": {
             "About": "Henry David Thoreau's Walden (1854) is the record of two years, two months, and two days spent living in a self-built cabin on the shore of Walden Pond near Concord, Massachusetts. It is at once an experiment in radical simplicity, a work of natural history, a spiritual autobiography, and a critique of American economic life. Thoreau compresses his two years into the cycle of a single year — from summer through winter to spring — making the book itself a meditation on renewal. The 18 chapters move from the practical (building a house, growing beans, keeping warm) to the transcendent (awakening, morning, the meaning of life), with nature observation threading through everything.",
             "For Readers": "Walden rewards both sequential reading and browsing. Read it straight through to feel Thoreau's seasonal arc — the descent into winter solitude and the ecstatic return of spring. Or dip in: Economy for the philosophy of simplicity, Where I Lived for the famous manifesto, The Ponds for pure nature writing, Conclusion for the parting wisdom. Thoreau is funnier and more practical than his reputation suggests. He is also more radical.",
@@ -334,16 +332,16 @@ def build_grammar():
         "shelves": ["earth"],
         "lineages": ["Andreotti"],
         "worldview": "naturalist",
-        "items": items,
+        "nodes": items,
     }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT_PATH}")
     print(f"  L1: {l1} chapters, L2: {l2} themes, L3: {l3} meta")
     print(f"  Total items: {len(items)}")

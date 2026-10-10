@@ -8,6 +8,7 @@ Source: Project Gutenberg eBook #66048, translated by A. A. Brill (1913).
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SEED_FILE = os.path.join(os.path.dirname(__file__), '..', 'seeds', 'interpretation-of-dreams.txt')
 OUTPUT_FILE = os.path.join(os.path.dirname(__file__), '..', 'grammars', 'interpretation-of-dreams', 'grammar.json')
@@ -82,7 +83,7 @@ L2_GROUPS = [
         "name": "Theory of Dreams",
         "category": "thematic-group",
         "keywords": ["dream theory", "wish fulfillment", "dream psychology", "unconscious"],
-        "composite_of": ["chapter-1-scientific-literature", "chapter-3-wish-fulfilment", "chapter-4-distortion", "chapter-7-psychology-of-dream-activities"],
+        "parts": ["chapter-1-scientific-literature", "chapter-3-wish-fulfilment", "chapter-4-distortion", "chapter-7-psychology-of-dream-activities"],
         "about": "These chapters present Freud's theoretical framework for understanding dreams. Beginning with a comprehensive survey of prior dream research (Chapter I), Freud establishes the central thesis that every dream represents the fulfillment of a wish (Chapter III), explains the mechanisms of disguise and censorship that obscure dream meaning (Chapter IV), and concludes with a sweeping model of the psychic apparatus and the role of the unconscious in dream formation (Chapter VII). Together they form the philosophical and psychological backbone of psychoanalytic dream theory.",
         "how_to_use": "Read these chapters to understand Freud's core argument: that dreams are meaningful psychological products, not random neural firings. Chapter I provides historical context, Chapter III the thesis, Chapter IV the first complication (why dreams aren't obviously wish-fulfilling), and Chapter VII the full theoretical synthesis. These chapters reward slow reading and re-reading.",
     },
@@ -91,7 +92,7 @@ L2_GROUPS = [
         "name": "The Dream-Work",
         "category": "thematic-group",
         "keywords": ["condensation", "displacement", "symbolism", "dream mechanisms", "representation"],
-        "composite_of": ["chapter-6-dream-work"],
+        "parts": ["chapter-6-dream-work"],
         "about": "Chapter VI is the longest and most technically detailed chapter in the book, comprising nearly a third of the entire text. It describes the four mechanisms by which latent dream-thoughts are transformed into the manifest dream content: condensation (combining multiple ideas into one image), displacement (shifting emotional emphasis), representability (translating abstract thoughts into visual images), and secondary elaboration (the mind's attempt to impose narrative coherence on the dream). This chapter is the operational heart of Freud's dream theory.",
         "how_to_use": "This chapter is essential for anyone who wants to actually interpret dreams using Freud's method. Each mechanism is illustrated with detailed dream examples. Read it as a practical manual alongside the theoretical chapters.",
     },
@@ -100,7 +101,7 @@ L2_GROUPS = [
         "name": "Clinical Method and Dream Material",
         "category": "thematic-group",
         "keywords": ["clinical method", "free association", "dream examples", "case studies", "dream sources"],
-        "composite_of": ["introductory-remarks", "chapter-2-method-of-interpretation", "chapter-5-material-and-sources"],
+        "parts": ["introductory-remarks", "chapter-2-method-of-interpretation", "chapter-5-material-and-sources"],
         "about": "These chapters demonstrate Freud's clinical approach to dreams. The Introductory Remarks frame the work's therapeutic origins. Chapter II introduces the method of free association through the famous 'Dream of Irma's Injection' — the first complete dream analysis ever published. Chapter V explores where dreams get their raw material: recent experiences, childhood memories, and bodily sensations, including a rich catalogue of 'typical dreams' (falling, flying, nakedness, death of loved ones, examinations). Together they show psychoanalytic dream interpretation in practice.",
         "how_to_use": "Start with Chapter II for the clearest demonstration of Freud's method. Chapter V is the most accessible and entertaining chapter, full of vivid dream examples. These chapters are the best entry point for readers new to Freud.",
     },
@@ -242,7 +243,6 @@ def main():
                 "name": "Introductory Remarks and Prefaces",
                 "sort_order": sort_order,
                 "category": "preface",
-                "level": 1,
                 "sections": {
                     "Text": truncated,
                     "About": "Freud's introductory remarks and prefaces to the first three editions of The Interpretation of Dreams. He explains why he had to use his own dreams as primary material — patient dreams were complicated by neurotic features, and using his own required painful self-exposure. The prefaces to later editions note the book's growing recognition and Freud's conviction that it contains his most valuable discoveries.",
@@ -258,7 +258,6 @@ def main():
                 "name": ch["name"],
                 "sort_order": sort_order,
                 "category": "chapter",
-                "level": 1,
                 "sections": {
                     "Text": truncated,
                     "Keywords": ", ".join(ch["keywords"]),
@@ -315,8 +314,7 @@ def main():
             "name": group["name"],
             "sort_order": sort_order,
             "category": group["category"],
-            "level": 2,
-            "composite_of": group["composite_of"],
+            "parts": group["parts"],
             "relationship_type": "emergence",
             "sections": {
                 "About": group["about"],
@@ -335,8 +333,7 @@ def main():
         "name": "The Interpretation of Dreams — Complete Work",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
-        "composite_of": ["theory-of-dreams", "dream-work-chapters", "clinical-chapters"],
+        "parts": ["theory-of-dreams", "dream-work-chapters", "clinical-chapters"],
         "relationship_type": "emergence",
         "sections": {
             "About": "Sigmund Freud's The Interpretation of Dreams (Die Traumdeutung, 1900) is the founding text of psychoanalysis and one of the most influential books of the twentieth century. Freud argues that dreams are not meaningless by-products of sleep but meaningful psychological acts — specifically, the disguised fulfilment of repressed wishes. Through meticulous analysis of his own dreams and those of his patients, he develops a systematic method of interpretation based on free association and introduces concepts that have become part of the common intellectual heritage: the unconscious, repression, the dream-work (condensation, displacement, symbolism), and the distinction between manifest and latent dream content. The book culminates in a speculative model of the psychic apparatus that prefigures Freud's later structural theory of id, ego, and superego.",
@@ -395,16 +392,16 @@ def main():
         "shelves": ["mirror"],
         "lineages": ["Linehan"],
         "worldview": "rationalist",
-        "items": items
+        "nodes": items
     }
 
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
     print(f"\nWrote {len(items)} items to {OUTPUT_FILE}")
-    print(f"  L1: {sum(1 for i in items if i['level'] == 1)}")
-    print(f"  L2: {sum(1 for i in items if i['level'] == 2)}")
-    print(f"  L3: {sum(1 for i in items if i['level'] == 3)}")
+    print(f"  L1: {sum(1 for i in items if node_depth(i, items) == 1)}")
+    print(f"  L2: {sum(1 for i in items if node_depth(i, items) == 2)}")
+    print(f"  L3: {sum(1 for i in items if node_depth(i, items) == 3)}")
 
 
 if __name__ == "__main__":

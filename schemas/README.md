@@ -11,11 +11,11 @@ This directory contains structured interpretive schemas for various divination a
 
 ## Level System for Emergence
 
-Schemas use a level system to organize base items and their emergent combinations:
+Schemas use levels to organize base nodes and their emergent combinations. A level is not stored: it is the depth computed from `parts` (no parts = L1; otherwise 1 + the deepest part):
 
-- **L1 (level: 1)**: Base items (cards, hexagrams, planets, songs)
-- **L2 (level: 2)**: Emergent combinations of L1 items (spreads, zodiac signs, albums, yogas)
-- **L3 (level: 3)**: Meta-categories or higher-order groupings (organizing principles, artists)
+- **L1**: Base items (cards, hexagrams, planets, songs)
+- **L2**: Emergent combinations of L1 items (spreads, zodiac signs, albums, yogas)
+- **L3**: Meta-categories or higher-order groupings (organizing principles, artists)
 
 ### Example Structure
 
@@ -23,15 +23,14 @@ Schemas use a level system to organize base items and their emergent combination
 {
   "id": "album-example",
   "name": "Example Album",
-  "level": 2,
-  "composite_of": ["song-1", "song-2", "song-3"],
+  "parts": ["song-1", "song-2", "song-3"],
   "sections": {
     "Summary": "When these songs come together..."
   }
 }
 ```
 
-The `composite_of` array references the IDs of items at the level below, creating explicit emergence relationships.
+The `parts` array references the IDs of the nodes it is made of (in order), creating explicit emergence relationships.
 
 ## Adding Schemas
 

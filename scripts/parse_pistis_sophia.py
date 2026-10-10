@@ -4,6 +4,7 @@ Parse Pistis Sophia (Gnostic text, Gutenberg #76266).
 5 documents + introduction sections → L1 items, with L2 groups + L3 meta.
 """
 import json, re, os
+from grammar_depth import node_depth
 
 with open("seeds/pistis-sophia.txt", encoding="utf-8") as f:
     text = f.read()
@@ -104,7 +105,6 @@ for idx, (pos, heading, sid, name, cat) in enumerate(positions):
         "name": name,
         "sort_order": sort_order,
         "category": cat,
-        "level": level,
         "sections": {"Text": excerpt},
         "keywords": ["gnostic", "pistis-sophia", "coptic", "jesus", "mary-magdalene"] + {
             "intro-manuscript": ["manuscript", "british-museum", "coptic"],
@@ -139,8 +139,7 @@ groups = [
         "id": "group-introduction",
         "name": "Introduction: The Manuscript and Its World",
         "category": "introduction",
-        "level": 2,
-        "composite_of": ["intro-manuscript", "intro-documents", "intro-purpose", "intro-authorship"],
+        "parts": ["intro-manuscript", "intro-documents", "intro-purpose", "intro-authorship"],
         "sections": {
             "About": "Francis Legge's scholarly introduction to the Pistis Sophia manuscript — its discovery, its structure (five documents of varying date and authorship), its place in Gnostic literature, and the question of who wrote it and when. Essential context for understanding the most complete Gnostic scripture that survives.",
             "For Readers": "Read the Introduction sections before diving into the Documents — they explain the complex cosmology and terminology that the text assumes the reader already knows."
@@ -153,8 +152,7 @@ groups = [
         "id": "group-sophia-drama",
         "name": "The Drama of Sophia: Fall and Redemption",
         "category": "sophia-drama",
-        "level": 2,
-        "composite_of": ["doc-1", "doc-2"],
+        "parts": ["doc-1", "doc-2"],
         "sections": {
             "About": "The central narrative of the Pistis Sophia: the divine feminine principle (Sophia/Wisdom) falls from the realm of light, is tormented by the archons (cosmic rulers), and cries out in thirteen repentances — each linked to a Psalm. Jesus descends to rescue her and restore her to her place in the light. This is the Gnostic myth that underlies all later Western mysticism about the exiled soul.",
             "For Readers": "The First Document contains Sophia's thirteen repentances — the emotional heart of the text. Read them as poetry, as the cry of the soul lost in matter yearning for return to the light."
@@ -167,8 +165,7 @@ groups = [
         "id": "group-mysteries-teaching",
         "name": "The Mysteries: Salvation Through Knowledge",
         "category": "teaching",
-        "level": 2,
-        "composite_of": ["doc-3", "doc-4", "doc-5"],
+        "parts": ["doc-3", "doc-4", "doc-5"],
         "sections": {
             "About": "The later Documents shift from narrative to instruction: the mysteries of baptism and salvation, the fate of souls after death (including a complex system of reincarnation and punishment), and Jesus's final teachings to the apostles. Mary Magdalene emerges as the most perceptive disciple, asking the deepest questions.",
             "For Readers": "Document 3 describes the mystery of baptism — not the water ceremony but a spiritual transformation through light. Document 4 is the most challenging, with its detailed cosmology of archons and aeons."
@@ -190,13 +187,12 @@ items.append({
     "name": "Pistis Sophia: The Exiled Soul's Cry for Light",
     "sort_order": sort_order,
     "category": "meta",
-    "level": 3,
     "sections": {
         "About": "The Pistis Sophia is the most complete Gnostic scripture to survive — a Coptic text from 3rd-4th century Egypt, now in the British Museum. It records the resurrected Jesus teaching his disciples for eleven years after the resurrection, revealing the mysteries of the cosmos. At its center is the myth of Sophia (Wisdom) — a divine being who falls from the realm of light, is trapped by hostile cosmic powers, and cries out in thirteen repentances until Jesus descends to rescue her. This myth — the exile of the divine feminine, the soul lost in matter, the longing for return to the light — became the template for all subsequent Western mysticism, from Kabbalah to alchemy to Romanticism.",
         "Contemplation": "Sophia fell because she desired to know the Light — and that desire itself became her prison. The Gnostics saw this as the human condition: we are fragments of light trapped in matter, remembering something we cannot name. Is this a pathology to be cured, or a sacred homesickness that drives all creativity, all love, all seeking?"
     },
     "keywords": ["gnostic", "sophia", "divine-feminine", "light", "gnosis", "redemption"],
-    "composite_of": [i["id"] for i in items if i["level"] == 1],
+    "parts": [i["id"] for i in items if node_depth(i, items) == 1],
     "relationship_type": "emergence",
     "metadata": {}
 })
@@ -221,7 +217,7 @@ grammar = {
     "shelves": ["wisdom"],
     "lineages": ["Shrei"],
     "worldview": "non-dual",
-    "items": items
+    "nodes": items
 }
 
 os.makedirs("grammars/pistis-sophia", exist_ok=True)
@@ -230,8 +226,8 @@ with open("grammars/pistis-sophia/grammar.json", "w") as f:
 
 ids = [i["id"] for i in items]
 dupes = [x for x in ids if ids.count(x) > 1]
-bad_refs = [(i["id"], r) for i in items for r in i.get("composite_of", []) if r not in ids]
-print(f"Items: {len(items)}, L1: {sum(1 for i in items if i['level']==1)}, L2: {sum(1 for i in items if i['level']==2)}, L3: {sum(1 for i in items if i['level']==3)}")
+bad_refs = [(i["id"], r) for i in items for r in i.get("parts", []) if r not in ids]
+print(f"Items: {len(items)}, L1: {sum(1 for i in items if node_depth(i, items)==1)}, L2: {sum(1 for i in items if node_depth(i, items)==2)}, L3: {sum(1 for i in items if node_depth(i, items)==3)}")
 print(f"Sections: {sum(len(i.get('sections',{})) for i in items)}")
 print(f"Dupes: {dupes}, Bad refs: {bad_refs}")
 print(f"Sort OK: {[i['sort_order'] for i in items] == list(range(1, len(items)+1))}")

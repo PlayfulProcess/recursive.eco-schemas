@@ -27,7 +27,7 @@ const bookletGrammar = JSON.parse(readFileSync(bookletGrammarPath, 'utf8'));
 
 // Build page text
 const chapters = {};
-for (const item of bookletGrammar.items) {
+for (const item of bookletGrammar.nodes) {
   const ch = item.metadata?.source_chapter;
   if (!ch) continue;
   chapters[ch] = { name: item.name, pages: {} };

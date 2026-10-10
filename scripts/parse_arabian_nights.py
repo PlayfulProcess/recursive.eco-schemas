@@ -4,6 +4,7 @@ Parse Arabian Nights (Andrew Lang edition, Gutenberg #128) into grammar.json.
 Creates L1 items for each story, L2 for story cycles, L3 for meta.
 """
 import json, re
+from grammar_depth import node_depth
 
 BASE_GRAMMAR_URL = "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/"
 
@@ -126,7 +127,6 @@ for idx, (heading, sid, name, cat, kw, pos) in enumerate(heading_positions):
         "name": name,
         "sort_order": sort_order,
         "category": cat,
-        "level": 1,
         "sections": {
             "Story": story_section
         },
@@ -188,13 +188,12 @@ for cat_id, cycle in cycles.items():
         "name": cycle["name"],
         "sort_order": sort_order,
         "category": "cycles",
-        "level": 2,
         "sections": {
             "About": cycle["about"],
             "For Readers": f"Read the stories in this cycle in order — the nesting is the point. Each tale is told by a character within the previous tale, creating the fractal structure that defines the Nights. Notice how each story earns something: time, a life, a pardon. Narrative is never free in the Nights — it always costs or saves."
         },
         "keywords": ["arabian-nights", "cycle", cat_id],
-        "composite_of": cycle["ids"],
+        "parts": cycle["ids"],
         "relationship_type": "emergence",
         "metadata": {}
     })
@@ -209,13 +208,12 @@ items.append({
     "name": "The Frame Tale: Story as Survival",
     "sort_order": sort_order,
     "category": "meta",
-    "level": 3,
     "sections": {
         "About": "Every story in the Nights exists because Scheherazade is telling it to stay alive. This frame is not decoration — it is the deepest statement the collection makes: narrative is a survival technology. The king kills because he has been traumatized (his wife's betrayal); Scheherazade heals because she tells stories. The thousand and one nights are a therapy session measured in cliffhangers. Marina Warner reads this as the archetypal demonstration of women's narrative power; the structure itself — stories within stories within stories — is Scheherazade's argument that the world is inexhaustible, and therefore worth living in.",
         "Contemplation": "When have you told a story to save something — a relationship, a mood, a child's bedtime? The Nights says all storytelling is this. We narrate to postpone the ending. We listen because we are not ready for dawn."
     },
     "keywords": ["frame-tale", "scheherazade", "survival", "narrative-power"],
-    "composite_of": [f"cycle-{c}" for c in cycles],
+    "parts": [f"cycle-{c}" for c in cycles],
     "relationship_type": "emergence",
     "metadata": {}
 })
@@ -226,13 +224,12 @@ items.append({
     "name": "Nested Worlds: The Fractal Architecture of the Nights",
     "sort_order": sort_order,
     "category": "meta",
-    "level": 3,
     "sections": {
         "About": "The Arabian Nights invented a narrative structure that would not be rediscovered in Western literature until Borges: the mise en abyme, the story within the story within the story. The Fisherman tells the Genie a story. Within that story, the Greek King tells a story. Within that story, a parrot tells a story. This is not mere cleverness — it is a cosmology. The Nights proposes that reality itself is nested: every person contains stories, every story contains persons, and there is no bottom level. To read the Nights is to experience the vertigo of infinite regression — and to realize that this vertigo is the human condition.",
         "Contemplation": "You are inside a story right now — the story of your life, which is inside the story of your family, which is inside the story of your culture. How many levels deep can you see? And who is telling the outermost story?"
     },
     "keywords": ["nested", "fractal", "mise-en-abyme", "infinity"],
-    "composite_of": ["cycle-merchants-genies", "cycle-fisherman-cycle", "cycle-calenders-cycle", "cycle-sindbad-cycle"],
+    "parts": ["cycle-merchants-genies", "cycle-fisherman-cycle", "cycle-calenders-cycle", "cycle-sindbad-cycle"],
     "relationship_type": "emergence",
     "metadata": {}
 })
@@ -260,7 +257,7 @@ grammar = {
     "shelves": ["wisdom", "wonder"],
     "lineages": ["Warner", "Shrei"],
     "worldview": "narrative",
-    "items": items
+    "nodes": items
 }
 
 # Save
@@ -269,8 +266,8 @@ os.makedirs("grammars/arabian-nights", exist_ok=True)
 with open("grammars/arabian-nights/grammar.json", "w") as f:
     json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-print(f"Stories extracted: {sum(1 for i in items if i['level'] == 1)}")
-print(f"Cycles (L2): {sum(1 for i in items if i['level'] == 2)}")
-print(f"Meta (L3): {sum(1 for i in items if i['level'] == 3)}")
+print(f"Stories extracted: {sum(1 for i in items if node_depth(i, items) == 1)}")
+print(f"Cycles (L2): {sum(1 for i in items if node_depth(i, items) == 2)}")
+print(f"Meta (L3): {sum(1 for i in items if node_depth(i, items) == 3)}")
 print(f"Total items: {len(items)}")
 print(f"Sections: {sum(len(i.get('sections', {})) for i in items)}")

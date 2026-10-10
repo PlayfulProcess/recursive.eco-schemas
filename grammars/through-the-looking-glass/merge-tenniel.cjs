@@ -11,7 +11,7 @@ const grammar = JSON.parse(fs.readFileSync(__dirname + '/grammar.json', 'utf8'))
 let replaced = 0;
 let added = 0;
 
-for (const item of grammar.items) {
+for (const item of grammar.nodes) {
   const newIlls = tenniel[item.id];
   if (!newIlls || newIlls.length === 0) continue;
 
@@ -59,16 +59,16 @@ console.log(`Replaced ${replaced} cross-referenced duplicates with unique Tennie
 console.log(`Added Tenniel as additional illustration to ${added} items`);
 
 // Verify
-const withIlls = grammar.items.filter(i => i.metadata && i.metadata.illustrations && i.metadata.illustrations.length > 0);
-const withImg = grammar.items.filter(i => i.image_url);
+const withIlls = grammar.nodes.filter(i => i.metadata && i.metadata.illustrations && i.metadata.illustrations.length > 0);
+const withImg = grammar.nodes.filter(i => i.image_url);
 const totalIlls = withIlls.reduce((sum, i) => sum + i.metadata.illustrations.length, 0);
-console.log(`\nItems with illustrations: ${withIlls.length} / ${grammar.items.length}`);
-console.log(`Items with image_url: ${withImg.length} / ${grammar.items.length}`);
+console.log(`\nItems with illustrations: ${withIlls.length} / ${grammar.nodes.length}`);
+console.log(`Items with image_url: ${withImg.length} / ${grammar.nodes.length}`);
 console.log(`Total illustration entries: ${totalIlls}`);
 
 // Check for any remaining duplicates
 const urlCounts = {};
-grammar.items.forEach(i => {
+grammar.nodes.forEach(i => {
   if (i.image_url) {
     urlCounts[i.image_url] = (urlCounts[i.image_url] || 0) + 1;
   }
@@ -77,7 +77,7 @@ const dupes = Object.entries(urlCounts).filter(([_, count]) => count > 1);
 if (dupes.length > 0) {
   console.log(`\nRemaining duplicate image_urls (${dupes.length}):`);
   dupes.forEach(([url, count]) => {
-    const items = grammar.items.filter(i => i.image_url === url);
+    const items = grammar.nodes.filter(i => i.image_url === url);
     console.log(`  ${count}x: ${items.map(i => i.id).join(', ')}`);
   });
 } else {

@@ -19,11 +19,10 @@
     "Constellation": "emergence",
     "Zodiac": "emergence"
   },
-  "items": [
+  "nodes": [
     {
       "id": "star-sirius",
       "name": "Sirius",
-      "level": 1,
       "category": "Stars",
       "sort_order": 1,
       "metadata": {
@@ -42,7 +41,6 @@
     {
       "id": "star-betelgeuse",
       "name": "Betelgeuse",
-      "level": 1,
       "category": "Stars",
       "sort_order": 2,
       "metadata": {
@@ -61,7 +59,6 @@
     {
       "id": "star-rigel",
       "name": "Rigel",
-      "level": 1,
       "category": "Stars",
       "sort_order": 3,
       "metadata": {
@@ -80,7 +77,6 @@
     {
       "id": "star-aldebaran",
       "name": "Aldebaran",
-      "level": 1,
       "category": "Stars",
       "sort_order": 4,
       "metadata": {
@@ -99,7 +95,6 @@
     {
       "id": "star-pleiades",
       "name": "The Pleiades",
-      "level": 1,
       "category": "Stars",
       "sort_order": 5,
       "metadata": {
@@ -118,7 +113,6 @@
     {
       "id": "star-castor",
       "name": "Castor",
-      "level": 1,
       "category": "Stars",
       "sort_order": 6,
       "metadata": {
@@ -137,7 +131,6 @@
     {
       "id": "star-pollux",
       "name": "Pollux",
-      "level": 1,
       "category": "Stars",
       "sort_order": 7,
       "metadata": {
@@ -156,7 +149,6 @@
     {
       "id": "star-regulus",
       "name": "Regulus",
-      "level": 1,
       "category": "Stars",
       "sort_order": 8,
       "metadata": {
@@ -175,7 +167,6 @@
     {
       "id": "star-spica",
       "name": "Spica",
-      "level": 1,
       "category": "Stars",
       "sort_order": 9,
       "metadata": {
@@ -194,7 +185,6 @@
     {
       "id": "star-arcturus",
       "name": "Arcturus",
-      "level": 1,
       "category": "Stars",
       "sort_order": 10,
       "metadata": {
@@ -213,7 +203,6 @@
     {
       "id": "star-antares",
       "name": "Antares",
-      "level": 1,
       "category": "Stars",
       "sort_order": 11,
       "metadata": {
@@ -232,7 +221,6 @@
     {
       "id": "star-vega",
       "name": "Vega",
-      "level": 1,
       "category": "Stars",
       "sort_order": 12,
       "metadata": {
@@ -251,7 +239,6 @@
     {
       "id": "star-altair",
       "name": "Altair",
-      "level": 1,
       "category": "Stars",
       "sort_order": 13,
       "metadata": {
@@ -270,7 +257,6 @@
     {
       "id": "star-deneb",
       "name": "Deneb",
-      "level": 1,
       "category": "Stars",
       "sort_order": 14,
       "metadata": {
@@ -289,7 +275,6 @@
     {
       "id": "star-fomalhaut",
       "name": "Fomalhaut",
-      "level": 1,
       "category": "Stars",
       "sort_order": 15,
       "metadata": {
@@ -308,7 +293,6 @@
     {
       "id": "star-polaris",
       "name": "Polaris",
-      "level": 1,
       "category": "Stars",
       "sort_order": 16,
       "metadata": {
@@ -327,7 +311,6 @@
     {
       "id": "star-algol",
       "name": "Algol",
-      "level": 1,
       "category": "Stars",
       "sort_order": 17,
       "metadata": {
@@ -346,7 +329,6 @@
     {
       "id": "star-capella",
       "name": "Capella",
-      "level": 1,
       "category": "Stars",
       "sort_order": 18,
       "metadata": {
@@ -365,7 +347,6 @@
     {
       "id": "star-procyon",
       "name": "Procyon",
-      "level": 1,
       "category": "Stars",
       "sort_order": 19,
       "metadata": {
@@ -385,10 +366,9 @@
     {
       "id": "constellation-orion",
       "name": "Orion the Hunter",
-      "level": 2,
       "category": "Constellation",
       "sort_order": 100,
-      "composite_of": ["star-betelgeuse", "star-rigel"],
+      "parts": ["star-betelgeuse", "star-rigel"],
       "metadata": {
         "zodiac_region": "Gemini",
         "best_seen": "Winter",
@@ -403,10 +383,9 @@
     {
       "id": "constellation-taurus",
       "name": "Taurus the Bull",
-      "level": 2,
       "category": "Constellation",
       "sort_order": 101,
-      "composite_of": ["star-aldebaran", "star-pleiades"],
+      "parts": ["star-aldebaran", "star-pleiades"],
       "metadata": {
         "zodiac_region": "Taurus",
         "best_seen": "Winter",
@@ -421,10 +400,9 @@
     {
       "id": "constellation-gemini",
       "name": "Gemini the Twins",
-      "level": 2,
       "category": "Constellation",
       "sort_order": 102,
-      "composite_of": ["star-castor", "star-pollux"],
+      "parts": ["star-castor", "star-pollux"],
       "metadata": {
         "zodiac_region": "Gemini",
         "best_seen": "Winter",
@@ -439,10 +417,9 @@
     {
       "id": "constellation-canis-major",
       "name": "Canis Major",
-      "level": 2,
       "category": "Constellation",
       "sort_order": 103,
-      "composite_of": ["star-sirius"],
+      "parts": ["star-sirius"],
       "metadata": {
         "zodiac_region": "Cancer",
         "best_seen": "Winter",
@@ -457,10 +434,9 @@
     {
       "id": "constellation-leo",
       "name": "Leo the Lion",
-      "level": 2,
       "category": "Constellation",
       "sort_order": 104,
-      "composite_of": ["star-regulus"],
+      "parts": ["star-regulus"],
       "metadata": {
         "zodiac_region": "Leo",
         "best_seen": "Spring",
@@ -475,10 +451,9 @@
     {
       "id": "constellation-virgo",
       "name": "Virgo the Maiden",
-      "level": 2,
       "category": "Constellation",
       "sort_order": 105,
-      "composite_of": ["star-spica"],
+      "parts": ["star-spica"],
       "metadata": {
         "zodiac_region": "Virgo",
         "best_seen": "Spring",
@@ -493,10 +468,9 @@
     {
       "id": "constellation-bootes",
       "name": "Boötes the Herdsman",
-      "level": 2,
       "category": "Constellation",
       "sort_order": 106,
-      "composite_of": ["star-arcturus"],
+      "parts": ["star-arcturus"],
       "metadata": {
         "zodiac_region": "Libra",
         "best_seen": "Spring",
@@ -511,10 +485,9 @@
     {
       "id": "constellation-scorpius",
       "name": "Scorpius the Scorpion",
-      "level": 2,
       "category": "Constellation",
       "sort_order": 107,
-      "composite_of": ["star-antares"],
+      "parts": ["star-antares"],
       "metadata": {
         "zodiac_region": "Scorpio",
         "best_seen": "Summer",
@@ -529,10 +502,9 @@
     {
       "id": "constellation-lyra",
       "name": "Lyra the Lyre",
-      "level": 2,
       "category": "Constellation",
       "sort_order": 108,
-      "composite_of": ["star-vega"],
+      "parts": ["star-vega"],
       "metadata": {
         "zodiac_region": "Capricorn",
         "best_seen": "Summer",
@@ -547,10 +519,9 @@
     {
       "id": "constellation-aquila",
       "name": "Aquila the Eagle",
-      "level": 2,
       "category": "Constellation",
       "sort_order": 109,
-      "composite_of": ["star-altair"],
+      "parts": ["star-altair"],
       "metadata": {
         "zodiac_region": "Aquarius",
         "best_seen": "Summer",
@@ -565,10 +536,9 @@
     {
       "id": "constellation-cygnus",
       "name": "Cygnus the Swan",
-      "level": 2,
       "category": "Constellation",
       "sort_order": 110,
-      "composite_of": ["star-deneb"],
+      "parts": ["star-deneb"],
       "metadata": {
         "zodiac_region": "Aquarius",
         "best_seen": "Summer",
@@ -583,10 +553,9 @@
     {
       "id": "constellation-perseus",
       "name": "Perseus the Hero",
-      "level": 2,
       "category": "Constellation",
       "sort_order": 111,
-      "composite_of": ["star-algol"],
+      "parts": ["star-algol"],
       "metadata": {
         "zodiac_region": "Aries",
         "best_seen": "Autumn",
@@ -601,10 +570,9 @@
     {
       "id": "constellation-auriga",
       "name": "Auriga the Charioteer",
-      "level": 2,
       "category": "Constellation",
       "sort_order": 112,
-      "composite_of": ["star-capella"],
+      "parts": ["star-capella"],
       "metadata": {
         "zodiac_region": "Taurus",
         "best_seen": "Winter",
@@ -619,10 +587,9 @@
     {
       "id": "constellation-ursa-minor",
       "name": "Ursa Minor",
-      "level": 2,
       "category": "Constellation",
       "sort_order": 113,
-      "composite_of": ["star-polaris"],
+      "parts": ["star-polaris"],
       "metadata": {
         "zodiac_region": "Circumpolar",
         "best_seen": "Year-round",
@@ -637,10 +604,9 @@
     {
       "id": "constellation-canis-minor",
       "name": "Canis Minor",
-      "level": 2,
       "category": "Constellation",
       "sort_order": 114,
-      "composite_of": ["star-procyon"],
+      "parts": ["star-procyon"],
       "metadata": {
         "zodiac_region": "Cancer",
         "best_seen": "Winter",
@@ -655,10 +621,9 @@
     {
       "id": "constellation-piscis-austrinus",
       "name": "Piscis Austrinus",
-      "level": 2,
       "category": "Constellation",
       "sort_order": 115,
-      "composite_of": ["star-fomalhaut"],
+      "parts": ["star-fomalhaut"],
       "metadata": {
         "zodiac_region": "Aquarius",
         "best_seen": "Autumn",
@@ -674,10 +639,9 @@
     {
       "id": "zodiac-aries",
       "name": "Aries Region",
-      "level": 3,
       "category": "Zodiac",
       "sort_order": 200,
-      "composite_of": ["constellation-perseus"],
+      "parts": ["constellation-perseus"],
       "sections": {
         "Summary": "The region of the Ram, where Perseus holds aloft the Gorgon's head. Here heroes learn to carry their conquered fears as weapons. The spring equinox once rose here—the beginning of the astrological year.",
         "Theme": "Courage, beginnings, transformation of fear into power"
@@ -687,10 +651,9 @@
     {
       "id": "zodiac-taurus",
       "name": "Taurus Region",
-      "level": 3,
       "category": "Zodiac",
       "sort_order": 201,
-      "composite_of": ["constellation-taurus", "constellation-auriga"],
+      "parts": ["constellation-taurus", "constellation-auriga"],
       "sections": {
         "Summary": "The region of the Bull, where Zeus in disguise pursues Europa, where the Pleiades flee, where Capella remembers nursing the infant king of gods. A region of desire, pursuit, and humble origins of great power.",
         "Theme": "Desire, pursuit, nourishment, hidden divinity"
@@ -700,10 +663,9 @@
     {
       "id": "zodiac-gemini",
       "name": "Gemini Region",
-      "level": 3,
       "category": "Zodiac",
       "sort_order": 202,
-      "composite_of": ["constellation-gemini", "constellation-orion"],
+      "parts": ["constellation-gemini", "constellation-orion"],
       "sections": {
         "Summary": "The region of the Twins, where Castor and Pollux shine in eternal brotherhood, where Orion hunts with red shoulder and blue foot. Here love negotiates with death, and the hunter pursues across the winter sky.",
         "Theme": "Brotherhood, hunting, love transcending mortality"
@@ -713,10 +675,9 @@
     {
       "id": "zodiac-cancer",
       "name": "Cancer Region",
-      "level": 3,
       "category": "Zodiac",
       "sort_order": 203,
-      "composite_of": ["constellation-canis-major", "constellation-canis-minor"],
+      "parts": ["constellation-canis-major", "constellation-canis-minor"],
       "sections": {
         "Summary": "The region of the Crab, where the faithful dogs of Orion run—Sirius blazing brightest of all stars, Procyon running ahead as herald. A region of loyalty, companionship, and faithful service.",
         "Theme": "Loyalty, companionship, faithful service, heralds"
@@ -726,10 +687,9 @@
     {
       "id": "zodiac-leo",
       "name": "Leo Region",
-      "level": 3,
       "category": "Zodiac",
       "sort_order": 204,
-      "composite_of": ["constellation-leo"],
+      "parts": ["constellation-leo"],
       "sections": {
         "Summary": "The region of the Lion, where the Nemean beast prowls with Regulus as its heart. Invincible to weapons, it yielded only to Hercules' embrace. A region of courage, strength, and victory through direct engagement.",
         "Theme": "Courage, strength, invincibility overcome, heart"
@@ -739,10 +699,9 @@
     {
       "id": "zodiac-virgo",
       "name": "Virgo Region",
-      "level": 3,
       "category": "Zodiac",
       "sort_order": 205,
-      "composite_of": ["constellation-virgo"],
+      "parts": ["constellation-virgo"],
       "sections": {
         "Summary": "The region of the Maiden, where Astraea holds her ear of wheat, last goddess to leave earth, still hoping for humanity's return to virtue. A region of justice, harvest, and hope that what is planted will rise.",
         "Theme": "Justice, harvest, hope, patient waiting"
@@ -752,10 +711,9 @@
     {
       "id": "zodiac-libra",
       "name": "Libra Region",
-      "level": 3,
       "category": "Zodiac",
       "sort_order": 206,
-      "composite_of": ["constellation-bootes"],
+      "parts": ["constellation-bootes"],
       "sections": {
         "Summary": "The region of the Scales, where Boötes the guardian follows the bears around the pole. Arcturus watches over what he almost destroyed. A region of balance, vigilance, and redemption through eternal care.",
         "Theme": "Balance, vigilance, guardianship, near-tragedy redeemed"
@@ -765,10 +723,9 @@
     {
       "id": "zodiac-scorpio",
       "name": "Scorpio Region",
-      "level": 3,
       "category": "Zodiac",
       "sort_order": 207,
-      "composite_of": ["constellation-scorpius"],
+      "parts": ["constellation-scorpius"],
       "sections": {
         "Summary": "The region of the Scorpion, Orion's killer placed opposite him forever. Antares burns red at its heart, rival of Mars. A region of necessary distance, eternal conflict held in check by cosmic arrangement.",
         "Theme": "Danger, distance, eternal opposition, red heart"
@@ -778,10 +735,9 @@
     {
       "id": "zodiac-sagittarius",
       "name": "Sagittarius Region",
-      "level": 3,
       "category": "Zodiac",
       "sort_order": 208,
-      "composite_of": [],
+      "parts": [],
       "sections": {
         "Summary": "The region of the Archer, pointing toward the center of our galaxy. Here Chiron the wise centaur was placed—teacher of heroes, healer wounded by poison he could not cure. A region of wisdom, teaching, and the wound that opens understanding.",
         "Theme": "Wisdom, teaching, the wounded healer, galactic center"
@@ -791,10 +747,9 @@
     {
       "id": "zodiac-capricorn",
       "name": "Capricorn Region",
-      "level": 3,
       "category": "Zodiac",
       "sort_order": 209,
-      "composite_of": ["constellation-lyra"],
+      "parts": ["constellation-lyra"],
       "sections": {
         "Summary": "The region of the Sea-Goat, where Orpheus' lyre plays on through Vega's light. Pan transformed here, fleeing Typhon, becoming the hybrid creature that adapts to survive. A region of transformation, music, and art that outlasts its maker.",
         "Theme": "Transformation, music, survival through adaptation"
@@ -804,10 +759,9 @@
     {
       "id": "zodiac-aquarius",
       "name": "Aquarius Region",
-      "level": 3,
       "category": "Zodiac",
       "sort_order": 210,
-      "composite_of": ["constellation-aquila", "constellation-cygnus", "constellation-piscis-austrinus"],
+      "parts": ["constellation-aquila", "constellation-cygnus", "constellation-piscis-austrinus"],
       "sections": {
         "Summary": "The region of the Water-Bearer, where eagle and swan fly through the Milky Way, where the lonely fish drinks from heaven's stream. Jupiter's birds soar here—the eagle that carried Ganymede, the swan that visited Leda. A region of divine visitation and solitary nourishment.",
         "Theme": "Divine descent, aftermath of sacred encounter, solitary sustenance"
@@ -817,10 +771,9 @@
     {
       "id": "zodiac-pisces",
       "name": "Pisces Region",
-      "level": 3,
       "category": "Zodiac",
       "sort_order": 211,
-      "composite_of": [],
+      "parts": [],
       "sections": {
         "Summary": "The region of the Fishes, where Venus and Cupid fled Typhon by transforming into fish tied together. The cord that binds them represents love that holds even through transformation and flight. A region of escape, connection, and love's persistence.",
         "Theme": "Escape, transformation, bonds of love, persistence"
@@ -830,10 +783,9 @@
     {
       "id": "zodiac-circumpolar",
       "name": "Circumpolar Realm",
-      "level": 3,
       "category": "Zodiac",
       "sort_order": 212,
-      "composite_of": ["constellation-ursa-minor"],
+      "parts": ["constellation-ursa-minor"],
       "sections": {
         "Summary": "The region that never sets, circling the pole while all other stars rise and fall. Here Callisto the bear is forever pursued by her son who almost killed her. Polaris holds still while creation wheels around it. What was exile became the fixed point of navigation.",
         "Theme": "Stillness amid motion, eternal vigilance, transformation into guidance"

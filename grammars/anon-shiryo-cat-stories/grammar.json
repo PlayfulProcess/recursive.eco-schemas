@@ -106,12 +106,11 @@
       }
     ]
   },
-  "items": [
+  "nodes": [
     {
       "id": "story-01-asking",
       "name": "Shiryo Learns to Ask",
       "symbol": "🤲",
-      "level": 1,
       "category": "story-cover",
       "sort_order": 1,
       "sections": {
@@ -161,7 +160,6 @@
       "id": "story-02-gratitude",
       "name": "Shiryo Learns to Say Thank You",
       "symbol": "🌱",
-      "level": 1,
       "category": "story-cover",
       "sort_order": 2,
       "sections": {
@@ -211,8 +209,7 @@
       "id": "series-cover",
       "name": "Anon's Robot Stories — Series Cover",
       "symbol": "🏠",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "story-01-asking",
         "story-02-gratitude",
         "story-06-being",

@@ -78,13 +78,12 @@
     },
     "alice_character_description": null
   },
-  "items": [
+  "nodes": [
     {
       "id": "creation-nun-scene-01",
       "name": "Ep1 Scene 1: Before the Beginning",
       "sort_order": 1,
       "category": "the-first-sunrise",
-      "level": 1,
       "sections": {
         "Narration": "Before ANYTHING, there was WATER.\nNot ocean water — darker, DEEPER, stranger.\nWater that had no BOTTOM and no top,\nNo shore, no wave, no fish, no DANGER.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -133,7 +132,6 @@
       "name": "Ep1 Scene 2: Before the Beginning",
       "sort_order": 2,
       "category": "the-first-sunrise",
-      "level": 1,
       "sections": {
         "Narration": "Just NUN. The great dark water. ENDLESS.\nNo light had ever touched its FACE.\nNo word had ever crossed its SURFACE.\nNo THOUGHT had ever filled this place.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -181,7 +179,6 @@
       "name": "Ep1 Scene 3: Before the Beginning",
       "sort_order": 3,
       "category": "the-first-sunrise",
-      "level": 1,
       "sections": {
         "Narration": "And somewhere in that darkness, something STIRRED.\nA SPARK. A hum. A golden EGG.\nSomething that was NOTHING — becoming SOMETHING.\nThe whole universe, before it learned to BEG.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -229,8 +226,7 @@
       "name": "Episode 1: Before the Beginning",
       "sort_order": 4,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "creation-nun-scene-01",
         "creation-nun-scene-02",
         "creation-nun-scene-03"
@@ -268,7 +264,6 @@
       "name": "Ep2 Scene 1: Ra Rises from the Water",
       "sort_order": 5,
       "category": "the-first-sunrise",
-      "level": 1,
       "sections": {
         "Narration": "And then — a LIGHT.\nNot from above, not from the SIDE,\nBut from INSIDE the water. Rising UP.\nA golden god who could no longer HIDE.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -318,7 +313,6 @@
       "name": "Ep2 Scene 2: Ra Rises from the Water",
       "sort_order": 6,
       "category": "the-first-sunrise",
-      "level": 1,
       "sections": {
         "Narration": "RA. The sun. The first of EVERYTHING.\nHe rose from NUN like a LOTUS flower\nOpening on the surface of a POND,\nAnd the darkness broke apart with the force of his POWER.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -367,7 +361,6 @@
       "name": "Ep2 Scene 3: Ra Rises from the Water",
       "sort_order": 7,
       "category": "the-first-sunrise",
-      "level": 1,
       "sections": {
         "Narration": "He stood on a MOUND — the first dry land —\nAnd opened his MOUTH and spoke the world AWAKE.\nEvery word he said became a THING:\nSky, wind, water — real, not FAKE.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -416,8 +409,7 @@
       "name": "Episode 2: Ra Rises from the Water",
       "sort_order": 8,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "creation-ra-emerges-scene-01",
         "creation-ra-emerges-scene-02",
         "creation-ra-emerges-scene-03"
@@ -456,7 +448,6 @@
       "name": "Ep3 Scene 1: Ra's First Children",
       "sort_order": 9,
       "category": "the-first-sunrise",
-      "level": 1,
       "sections": {
         "Narration": "Ra was ALONE on his little mound of LAND.\nAlone in all the universe. So he CRIED.\nOr sneezed. Or SPAT — the stories can't agree,\nBut something burst from DEEP inside.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -506,7 +497,6 @@
       "name": "Ep3 Scene 2: Ra's First Children",
       "sort_order": 10,
       "category": "the-first-sunrise",
-      "level": 1,
       "sections": {
         "Narration": "SHU came first — the god of AIR.\nInvisible but STRONG, like breath, like BREEZE.\nThen TEFNUT — goddess of the RAIN,\nWho carried moisture in her hands with EASE.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -555,7 +545,6 @@
       "name": "Ep3 Scene 3: Ra's First Children",
       "sort_order": 11,
       "category": "the-first-sunrise",
-      "level": 1,
       "sections": {
         "Narration": "Air and water. BREATH and rain.\nThe two things every living CREATURE needs.\nRa's loneliness became two GODS,\nAnd his tears of solitude became the world's first SEEDS.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -604,8 +593,7 @@
       "name": "Episode 3: Ra's First Children",
       "sort_order": 12,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "creation-shu-tefnut-scene-01",
         "creation-shu-tefnut-scene-02",
         "creation-shu-tefnut-scene-03"
@@ -644,7 +632,6 @@
       "name": "Ep4 Scene 1: The Earth and the Sky in Love",
       "sort_order": 13,
       "category": "the-first-sunrise",
-      "level": 1,
       "sections": {
         "Narration": "Shu and Tefnut had CHILDREN of their own:\nGEB, the earth — a god who lay down FLAT,\nAnd NUT, the sky — a goddess who stretched ABOVE him,\nArching over everything, just LIKE that.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -695,7 +682,6 @@
       "name": "Ep4 Scene 2: The Earth and the Sky in Love",
       "sort_order": 14,
       "category": "the-first-sunrise",
-      "level": 1,
       "sections": {
         "Narration": "They loved each other SO much they held on TIGHT.\nGeb below and Nut above, EMBRACING.\nBut Ra said, 'No! If sky and earth stay LOCKED,\nThere's no room for LIFE. No breathing SPACE.'",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -745,7 +731,6 @@
       "name": "Ep4 Scene 3: The Earth and the Sky in Love",
       "sort_order": 15,
       "category": "the-first-sunrise",
-      "level": 1,
       "sections": {
         "Narration": "So SHU — their father, the god of AIR —\nLifted Nut up HIGH, away from Geb below.\nHe HELD the sky above the earth FOREVER.\nAnd in the space between? That's where WE grow.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -795,8 +780,7 @@
       "name": "Episode 4: The Earth and the Sky in Love",
       "sort_order": 16,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "creation-geb-nut-scene-01",
         "creation-geb-nut-scene-02",
         "creation-geb-nut-scene-03"
@@ -836,7 +820,6 @@
       "name": "Ep5 Scene 1: Thoth and the Moon",
       "sort_order": 17,
       "category": "the-first-sunrise",
-      "level": 1,
       "sections": {
         "Narration": "Ra made the SUN, but nights were DARK.\nThe world needed gentler light for SLEEPING.\nSo THOTH stepped forward — ibis-headed, CLEVER,\nThe god of wisdom, counting, SECRET-keeping.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -886,7 +869,6 @@
       "name": "Ep5 Scene 2: Thoth and the Moon",
       "sort_order": 18,
       "category": "the-first-sunrise",
-      "level": 1,
       "sections": {
         "Narration": "Thoth GAMBLED with the moon for extra light.\nHe played a game of SENET (Egyptian chess)\nAnd WON five extra days of moonlight,\nFive extra days the calendar could BLESS.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -935,7 +917,6 @@
       "name": "Ep5 Scene 3: Thoth and the Moon",
       "sort_order": 19,
       "category": "the-first-sunrise",
-      "level": 1,
       "sections": {
         "Narration": "Now the MOON rises silver every NIGHT,\nThoth's gift to everyone who's SCARED of dark.\nHe wrote down everything — the first LIBRARIAN —\nAnd his PEN was the universe's opening MARK.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -984,8 +965,7 @@
       "name": "Episode 5: Thoth and the Moon",
       "sort_order": 20,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "creation-thoth-moon-scene-01",
         "creation-thoth-moon-scene-02",
         "creation-thoth-moon-scene-03"
@@ -1024,7 +1004,6 @@
       "name": "Ep6 Scene 1: Ma'at and the Balance",
       "sort_order": 21,
       "category": "the-first-sunrise",
-      "level": 1,
       "sections": {
         "Narration": "When Ra made the world, he set a RULE —\nNot a law in a book, but a FEELING in the bones.\nA balance. A RIGHTNESS. A way things should BE.\nHe called her MA'AT, and she wore a FEATHER — all alone.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1074,7 +1053,6 @@
       "name": "Ep6 Scene 2: Ma'at and the Balance",
       "sort_order": 22,
       "category": "the-first-sunrise",
-      "level": 1,
       "sections": {
         "Narration": "One FEATHER. That's it. Not a crown of GOLD,\nNot a sword, not a SHIELD, not a thunderbolt.\nJust one small OSTRICH feather on her head,\nLight enough to float — but strong as a BOLT.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1123,7 +1101,6 @@
       "name": "Ep6 Scene 3: Ma'at and the Balance",
       "sort_order": 23,
       "category": "the-first-sunrise",
-      "level": 1,
       "sections": {
         "Narration": "Ma'at means TRUTH. Means BALANCE. Means the right amount.\nNot too much, not too LITTLE, not too fast.\nShe's the reason seasons TURN, the Nile floods on TIME,\nAnd the stars stay in their PATHS from first to last.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1172,8 +1149,7 @@
       "name": "Episode 6: Ma'at and the Balance",
       "sort_order": 24,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "creation-maat-scene-01",
         "creation-maat-scene-02",
         "creation-maat-scene-03"
@@ -1212,7 +1188,6 @@
       "name": "Ep7 Scene 1: The First Morning",
       "sort_order": 25,
       "category": "the-first-sunrise",
-      "level": 1,
       "sections": {
         "Narration": "And then the first MORNING came.\nThe sky turned PINK, then gold, then blazing WHITE.\nRa sailed across the sky in his BOAT —\nYes, a BOAT — because even gods need to RIDE.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1262,7 +1237,6 @@
       "name": "Ep7 Scene 2: The First Morning",
       "sort_order": 26,
       "category": "the-first-sunrise",
-      "level": 1,
       "sections": {
         "Narration": "Below him, the NILE began to flow.\nPalm trees stretched their FINGERS to the sun.\nIbises waded. Hippos YAWNED.\nCrocodiles grinned. The world had BEGUN.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1311,7 +1285,6 @@
       "name": "Ep7 Scene 3: The First Morning",
       "sort_order": 27,
       "category": "the-first-sunrise",
-      "level": 1,
       "sections": {
         "Narration": "And every MORNING since — four billion years —\nThe sun does it AGAIN. It rises. It RETURNS.\nThe Egyptians knew: the world is not a THING.\nIt's a VERB. A daily miracle that BURNS.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1360,8 +1333,7 @@
       "name": "Episode 7: The First Morning",
       "sort_order": 28,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "creation-first-morning-scene-01",
         "creation-first-morning-scene-02",
         "creation-first-morning-scene-03"
@@ -1400,7 +1372,6 @@
       "name": "Ep8 Scene 1: Osiris the Kind King",
       "sort_order": 29,
       "category": "osiris-and-isis",
-      "level": 1,
       "sections": {
         "Narration": "OSIRIS was the first king of EGYPT.\nNot because he CONQUERED or he FOUGHT,\nBut because he TAUGHT. He taught the people EVERYTHING:\nHow to plant wheat. How to make BREAD. How a river ought",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1450,7 +1421,6 @@
       "name": "Ep8 Scene 2: Osiris the Kind King",
       "sort_order": 30,
       "category": "osiris-and-isis",
-      "level": 1,
       "sections": {
         "Narration": "To be used — not WASTED, not FEARED,\nBut channeled into fields of golden GRAIN.\nHe showed them music. Showed them DANCING.\nShowed them how to BUILD and not complain.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1499,7 +1469,6 @@
       "name": "Ep8 Scene 3: Osiris the Kind King",
       "sort_order": 31,
       "category": "osiris-and-isis",
-      "level": 1,
       "sections": {
         "Narration": "Osiris was GREEN — green like the crops he GREW,\nGreen like the Nile when the FLOOD is coming in.\nHe was the king who fed his PEOPLE,\nAnd his crown held both the FEATHER and the PIN.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1548,8 +1517,7 @@
       "name": "Episode 8: Osiris the Kind King",
       "sort_order": 32,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "osiris-teacher-scene-01",
         "osiris-teacher-scene-02",
         "osiris-teacher-scene-03"
@@ -1588,7 +1556,6 @@
       "name": "Ep9 Scene 1: The Brother Who Burned",
       "sort_order": 33,
       "category": "osiris-and-isis",
-      "level": 1,
       "sections": {
         "Narration": "But Osiris had a BROTHER. His name was SET.\nAnd Set was made of DESERT — dry and RED.\nWhile Osiris made things GROW,\nSet watched and burned and wished his brother DEAD.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1638,7 +1605,6 @@
       "name": "Ep9 Scene 2: The Brother Who Burned",
       "sort_order": 34,
       "category": "osiris-and-isis",
-      "level": 1,
       "sections": {
         "Narration": "Set was the god of STORMS, of shifting SAND,\nOf everything that BITES and stings and harms.\nNot evil — not exactly — but JEALOUS.\nA wildfire with a grudge, with open ARMS",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1687,7 +1653,6 @@
       "name": "Ep9 Scene 3: The Brother Who Burned",
       "sort_order": 35,
       "category": "osiris-and-isis",
-      "level": 1,
       "sections": {
         "Narration": "For chaos. He WANTED what Osiris had:\nThe crown, the people's LOVE, the green, the rain.\nAnd when you want what someone ELSE has — truly,\nDeeply want it — it becomes a kind of PAIN.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1736,8 +1701,7 @@
       "name": "Episode 9: The Brother Who Burned",
       "sort_order": 36,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "osiris-set-jealousy-scene-01",
         "osiris-set-jealousy-scene-02",
         "osiris-set-jealousy-scene-03"
@@ -1776,7 +1740,6 @@
       "name": "Ep10 Scene 1: The Beautiful Coffin",
       "sort_order": 37,
       "category": "osiris-and-isis",
-      "level": 1,
       "sections": {
         "Narration": "Set made a PLAN. A terrible, clever plan.\nHe built a COFFIN — but beautiful, covered in GOLD,\nInlaid with jewels and painted with STARS.\nThe most gorgeous box the world had ever been TOLD",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1826,7 +1789,6 @@
       "name": "Ep10 Scene 2: The Beautiful Coffin",
       "sort_order": 38,
       "category": "osiris-and-isis",
-      "level": 1,
       "sections": {
         "Narration": "About. And at a FEAST, he showed it off:\n'Whoever FITS inside this box may KEEP it!'\nOne by one the gods lay DOWN inside.\nToo tall. Too short. Too WIDE. None could SLEEP in it.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1875,7 +1837,6 @@
       "name": "Ep10 Scene 3: The Beautiful Coffin",
       "sort_order": 39,
       "category": "osiris-and-isis",
-      "level": 1,
       "sections": {
         "Narration": "But when OSIRIS lay down — perfect FIT.\nBecause Set had built it to his BROTHER'S size.\nSLAM. Sealed with LEAD. Thrown in the NILE.\nThe kind king vanished. Only Isis heard his CRIES.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1924,8 +1885,7 @@
       "name": "Episode 10: The Beautiful Coffin",
       "sort_order": 40,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "osiris-coffin-trap-scene-01",
         "osiris-coffin-trap-scene-02",
         "osiris-coffin-trap-scene-03"
@@ -1964,7 +1924,6 @@
       "name": "Ep11 Scene 1: Isis Searches the World",
       "sort_order": 41,
       "category": "osiris-and-isis",
-      "level": 1,
       "sections": {
         "Narration": "ISIS would not rest. She would NOT stop.\nHer husband was gone but she would FIND him.\nShe cut her HAIR — the sign of deepest grief —\nAnd walked the world with nothing LEFT behind him",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2014,7 +1973,6 @@
       "name": "Ep11 Scene 2: Isis Searches the World",
       "sort_order": 42,
       "category": "osiris-and-isis",
-      "level": 1,
       "sections": {
         "Narration": "But love. She asked every PERSON, every BIRD,\nEvery child playing by the river SHORE.\n'Have you seen a golden COFFIN floating past?'\nAnd they all pointed south, then north. Then south once MORE.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2063,7 +2021,6 @@
       "name": "Ep11 Scene 3: Isis Searches the World",
       "sort_order": 43,
       "category": "osiris-and-isis",
-      "level": 1,
       "sections": {
         "Narration": "She walked through DESERTS. Crossed the SEA.\nAsked STRANGERS in a foreign land for help.\nBecause when Isis LOVED, she loved like FIRE:\nUnstoppable. A goddess who would never YELP.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2112,8 +2069,7 @@
       "name": "Episode 11: Isis Searches the World",
       "sort_order": 44,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "osiris-isis-search-scene-01",
         "osiris-isis-search-scene-02",
         "osiris-isis-search-scene-03"
@@ -2152,7 +2108,6 @@
       "name": "Ep12 Scene 1: Isis Finds Osiris",
       "sort_order": 45,
       "category": "osiris-and-isis",
-      "level": 1,
       "sections": {
         "Narration": "She found him. Inside a TREE.\nThe coffin had washed ashore and a GREAT tree grew\nAround it, swallowing the golden BOX\nInto its trunk. The KING nearby never knew",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2202,7 +2157,6 @@
       "name": "Ep12 Scene 2: Isis Finds Osiris",
       "sort_order": 46,
       "category": "osiris-and-isis",
-      "level": 1,
       "sections": {
         "Narration": "That inside his palace PILLAR, carved from that tree,\nA dead god LAY. But Isis knew. She ALWAYS knew.\nShe asked the king for the PILLAR. He said yes.\nShe split the wood. She pulled Osiris THROUGH.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2251,7 +2205,6 @@
       "name": "Ep12 Scene 3: Isis Finds Osiris",
       "sort_order": 47,
       "category": "osiris-and-isis",
-      "level": 1,
       "sections": {
         "Narration": "She held him. Breathed on him. Spread her WINGS —\nFor Isis had WINGS, like a kite-bird, fierce and WIDE —\nAnd with her breath and magic and her LOVE,\nShe brought him back. Just for a MOMENT. Back from the other side.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2300,8 +2253,7 @@
       "name": "Episode 12: Isis Finds Osiris",
       "sort_order": 48,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "osiris-isis-finds-scene-01",
         "osiris-isis-finds-scene-02",
         "osiris-isis-finds-scene-03"
@@ -2340,7 +2292,6 @@
       "name": "Ep13 Scene 1: Set Tears Osiris Apart",
       "sort_order": 49,
       "category": "osiris-and-isis",
-      "level": 1,
       "sections": {
         "Narration": "But SET found out. And this time he was WORSE.\nHe tore Osiris into FOURTEEN PIECES\nAnd scattered them across all EGYPT —\nIn the river, in the desert, in the CREASES",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2390,7 +2341,6 @@
       "name": "Ep13 Scene 2: Set Tears Osiris Apart",
       "sort_order": 50,
       "category": "osiris-and-isis",
-      "level": 1,
       "sections": {
         "Narration": "Of the mountains. An arm HERE, a leg THERE.\nThe heart in one place, the head in ANOTHER.\nSet thought: 'She can't find ALL of them.'\nBut he didn't know his brother's LOVER.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2439,7 +2389,6 @@
       "name": "Ep13 Scene 3: Set Tears Osiris Apart",
       "sort_order": 51,
       "category": "osiris-and-isis",
-      "level": 1,
       "sections": {
         "Narration": "Because ISIS? She found EVERY piece.\nShe sailed the Nile from start to END,\nAnd everywhere she found a piece of Osiris,\nA TEMPLE grew — a holy place to MEND.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2488,8 +2437,7 @@
       "name": "Episode 13: Set Tears Osiris Apart",
       "sort_order": 52,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "osiris-scattered-scene-01",
         "osiris-scattered-scene-02",
         "osiris-scattered-scene-03"
@@ -2528,7 +2476,6 @@
       "name": "Ep14 Scene 1: The First Mummy",
       "sort_order": 53,
       "category": "osiris-and-isis",
-      "level": 1,
       "sections": {
         "Narration": "Isis and her sister NEPHTHYS\nLaid the fourteen pieces side by SIDE.\nAnubis — jackal-headed god of WRAPPING —\nBound them together. Washed them. DRIED",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2578,7 +2525,6 @@
       "name": "Ep14 Scene 2: The First Mummy",
       "sort_order": 54,
       "category": "osiris-and-isis",
-      "level": 1,
       "sections": {
         "Narration": "And wrapped them in white LINEN, tight and careful.\nThe first MUMMY. The original. The ONE\nThat all the others copy. Every bandaged BODY\nIn every tomb is Osiris — death UNDONE.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2627,7 +2573,6 @@
       "name": "Ep14 Scene 3: The First Mummy",
       "sort_order": 55,
       "category": "osiris-and-isis",
-      "level": 1,
       "sections": {
         "Narration": "And Osiris BREATHED again — but differently.\nNot alive the way he WAS before.\nHe became the king of the UNDERWORLD,\nThe lord of everyone who's walked through death's DOOR.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2676,8 +2621,7 @@
       "name": "Episode 14: The First Mummy",
       "sort_order": 56,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "osiris-reassembled-scene-01",
         "osiris-reassembled-scene-02",
         "osiris-reassembled-scene-03"
@@ -2716,7 +2660,6 @@
       "name": "Ep15 Scene 1: The Baby in the Reeds",
       "sort_order": 57,
       "category": "horus-the-avenger",
-      "level": 1,
       "sections": {
         "Narration": "After Osiris went below, Isis had a SECRET.\nA baby growing inside her, tiny, BRIGHT.\nShe hid in the marshes of the NILE —\nTall reeds and papyrus, thick as NIGHT.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2766,7 +2709,6 @@
       "name": "Ep15 Scene 2: The Baby in the Reeds",
       "sort_order": 58,
       "category": "horus-the-avenger",
-      "level": 1,
       "sections": {
         "Narration": "HORUS. Golden-eyed. A falcon PRINCE.\nBorn in hiding, born in MUD and green,\nBorn where the crocodiles could GUARD him\nAnd the reeds kept him UNSEEN.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2815,7 +2757,6 @@
       "name": "Ep15 Scene 3: The Baby in the Reeds",
       "sort_order": 59,
       "category": "horus-the-avenger",
-      "level": 1,
       "sections": {
         "Narration": "Set searched EVERYWHERE. He wanted that child DEAD.\nBut Isis whispered to the SNAKES and scorpions:\n'PROTECT my son. Hide him in the MARSH.\nAnd when he's grown — he'll settle the QUESTION.'",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2864,8 +2805,7 @@
       "name": "Episode 15: The Baby in the Reeds",
       "sort_order": 60,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "horus-born-scene-01",
         "horus-born-scene-02",
         "horus-born-scene-03"
@@ -2904,7 +2844,6 @@
       "name": "Ep16 Scene 1: The Scorpion Bodyguards",
       "sort_order": 61,
       "category": "horus-the-avenger",
-      "level": 1,
       "sections": {
         "Narration": "Seven SCORPIONS walked with Isis everywhere.\nSeven! Tails up, stingers READY.\nThey guarded baby Horus day and NIGHT,\nTheir tiny legs precise and STEADY.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2954,7 +2893,6 @@
       "name": "Ep16 Scene 2: The Scorpion Bodyguards",
       "sort_order": 62,
       "category": "horus-the-avenger",
-      "level": 1,
       "sections": {
         "Narration": "Once a rich woman SLAMMED her door on Isis.\n'Go AWAY, you beggar with your bugs!'\nSo the scorpions snuck inside and STUNG her child.\nIsis healed the boy — forgiveness, not SHRUGS.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3003,7 +2941,6 @@
       "name": "Ep16 Scene 3: The Scorpion Bodyguards",
       "sort_order": 63,
       "category": "horus-the-avenger",
-      "level": 1,
       "sections": {
         "Narration": "Because Isis knew: EVERY child matters.\nEven the child of someone CRUEL.\nShe spoke the magic words. The VENOM drained.\nA goddess used her power as a TOOL for good.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3052,8 +2989,7 @@
       "name": "Episode 16: The Scorpion Bodyguards",
       "sort_order": 64,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "horus-isis-protects-scene-01",
         "horus-isis-protects-scene-02",
         "horus-isis-protects-scene-03"
@@ -3092,7 +3028,6 @@
       "name": "Ep17 Scene 1: The Prince in the Mud",
       "sort_order": 65,
       "category": "horus-the-avenger",
-      "level": 1,
       "sections": {
         "Narration": "Horus grew up WILD in the marshes.\nHe learned to CATCH fish with his bare hands.\nHe learned to READ the river — when it rises,\nWhen it FALLS, what the water DEMANDS.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3142,7 +3077,6 @@
       "name": "Ep17 Scene 2: The Prince in the Mud",
       "sort_order": 66,
       "category": "horus-the-avenger",
-      "level": 1,
       "sections": {
         "Narration": "He played with CROCODILE babies (carefully).\nHe raced the IBIS birds across the sky.\nHe grew STRONG. He grew TALL. He grew ANGRY.\nBecause his mother told him WHY.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3191,7 +3125,6 @@
       "name": "Ep17 Scene 3: The Prince in the Mud",
       "sort_order": 67,
       "category": "horus-the-avenger",
-      "level": 1,
       "sections": {
         "Narration": "'Your FATHER was a king. A GOOD king.\nYour UNCLE killed him, stole his THRONE.\nWhen you're ready — when you're TRULY ready —\nYou'll take back what is YOURS. But not alone.'",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3240,8 +3173,7 @@
       "name": "Episode 17: The Prince in the Mud",
       "sort_order": 68,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "horus-growing-scene-01",
         "horus-growing-scene-02",
         "horus-growing-scene-03"
@@ -3280,7 +3212,6 @@
       "name": "Ep18 Scene 1: The Battle of the Falcon and the Beast",
       "sort_order": 69,
       "category": "horus-the-avenger",
-      "level": 1,
       "sections": {
         "Narration": "When Horus was GROWN, he came for Set.\nFALCON against BEAST. Sky against SAND.\nThey fought for EIGHTY YEARS — yes, eighty! —\nAcross the sea, the desert, and the LAND.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3330,7 +3261,6 @@
       "name": "Ep18 Scene 2: The Battle of the Falcon and the Beast",
       "sort_order": 70,
       "category": "horus-the-avenger",
-      "level": 1,
       "sections": {
         "Narration": "Set turned into a HIPPO. Horus HARPOONED him.\nHorus turned into a FALCON — claws like STEEL.\nThey fought as animals, as storms, as MOUNTAINS.\nThe whole earth SHOOK beneath them like a wheel.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3379,7 +3309,6 @@
       "name": "Ep18 Scene 3: The Battle of the Falcon and the Beast",
       "sort_order": 71,
       "category": "horus-the-avenger",
-      "level": 1,
       "sections": {
         "Narration": "Neither could WIN. That's the terrifying truth.\nGood and chaos are EQUALLY strong.\nThe universe doesn't automatically FIX things.\nSomeone has to FIGHT — and the fight is LONG.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3428,8 +3357,7 @@
       "name": "Episode 18: The Battle of the Falcon and the Beast",
       "sort_order": 72,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "horus-battle-scene-01",
         "horus-battle-scene-02",
         "horus-battle-scene-03"
@@ -3468,7 +3396,6 @@
       "name": "Ep19 Scene 1: The Eye of Horus",
       "sort_order": 73,
       "category": "horus-the-avenger",
-      "level": 1,
       "sections": {
         "Narration": "In the battle, Set RIPPED OUT Horus's eye.\nTore it right from his head — crunch, GONE.\nSet ripped it into SIX pieces and scattered them\nAcross the desert. Victory. DONE. (Or so he thought.)",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3518,7 +3445,6 @@
       "name": "Ep19 Scene 2: The Eye of Horus",
       "sort_order": 74,
       "category": "horus-the-avenger",
-      "level": 1,
       "sections": {
         "Narration": "But THOTH — wise, patient Thoth the scribe —\nFound every piece and PUT them back together.\nSix fragments, healed into one WHOLE eye.\nThe Wedjat. Brighter now than EVER.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3567,7 +3493,6 @@
       "name": "Ep19 Scene 3: The Eye of Horus",
       "sort_order": 75,
       "category": "horus-the-avenger",
-      "level": 1,
       "sections": {
         "Narration": "And that EYE — the Eye of Horus — became\nThe most powerful symbol in all of EGYPT.\nIt means HEALING. It means what was broken\nCan be made WHOLE. Nothing is too ripped.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3616,8 +3541,7 @@
       "name": "Episode 19: The Eye of Horus",
       "sort_order": 76,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "horus-eye-scene-01",
         "horus-eye-scene-02",
         "horus-eye-scene-03"
@@ -3656,7 +3580,6 @@
       "name": "Ep20 Scene 1: The Court of the Gods",
       "sort_order": 77,
       "category": "horus-the-avenger",
-      "level": 1,
       "sections": {
         "Narration": "Since FIGHTING couldn't settle it, the gods held COURT.\nAll of them — Ra on the THRONE, Thoth taking NOTES.\nSet argued: 'I'm STRONGER. Strength should RULE.'\nHorus said: 'I'm the rightful heir.' The gods cast VOTES.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3707,7 +3630,6 @@
       "name": "Ep20 Scene 2: The Court of the Gods",
       "sort_order": 78,
       "category": "horus-the-avenger",
-      "level": 1,
       "sections": {
         "Narration": "They argued for AGES. Isis tricked them. Set BLUSTERED.\nFinally they wrote a LETTER to Osiris in the underworld.\nOsiris wrote BACK: 'Give my son his throne,\nOr I'll send the DEAD.' The threat UNFURLED.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3757,7 +3679,6 @@
       "name": "Ep20 Scene 3: The Court of the Gods",
       "sort_order": 79,
       "category": "horus-the-avenger",
-      "level": 1,
       "sections": {
         "Narration": "And that SETTLED it. Horus became KING.\nNot because he was strongest — Set was STRONGER.\nBut because he was RIGHT. Because Ma'at was on his side.\nJustice won. It just took a little LONGER.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3807,8 +3728,7 @@
       "name": "Episode 20: The Court of the Gods",
       "sort_order": 80,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "horus-judgment-scene-01",
         "horus-judgment-scene-02",
         "horus-judgment-scene-03"
@@ -3848,7 +3768,6 @@
       "name": "Ep21 Scene 1: The Living Horus",
       "sort_order": 81,
       "category": "horus-the-avenger",
-      "level": 1,
       "sections": {
         "Narration": "HORUS took the throne. The falcon SOARED.\nHe wore the double CROWN — white and red combined.\nUpper Egypt and LOWER, north and south,\nTwo lands in ONE, perfectly aligned.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3898,7 +3817,6 @@
       "name": "Ep21 Scene 2: The Living Horus",
       "sort_order": 82,
       "category": "horus-the-avenger",
-      "level": 1,
       "sections": {
         "Narration": "And here's the SECRET the Egyptians knew:\nEvery pharaoh IS Horus. Every KING\nWho sits on Egypt's throne becomes the FALCON.\nThe living god. The EVERYTHING.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3947,7 +3865,6 @@
       "name": "Ep21 Scene 3: The Living Horus",
       "sort_order": 83,
       "category": "horus-the-avenger",
-      "level": 1,
       "sections": {
         "Narration": "And when that pharaoh DIES? He becomes OSIRIS.\nKing of the living becomes king of the DEAD.\nFather and son. FOREVER. In a circle.\nThe crown moves from the body to the HEAD of the next Horus waiting.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3996,8 +3913,7 @@
       "name": "Episode 21: The Living Horus",
       "sort_order": 84,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "horus-king-scene-01",
         "horus-king-scene-02",
         "horus-king-scene-03"
@@ -4036,7 +3952,6 @@
       "name": "Ep22 Scene 1: Ra's Boat of a Million Years",
       "sort_order": 85,
       "category": "the-journey-through-night",
-      "level": 1,
       "sections": {
         "Narration": "Every EVENING, when the sun goes down,\nRa doesn't DISAPPEAR. He climbs into a BOAT.\nA golden boat — the MANDJET — made of sunlight,\nAnd sails toward the darkness. Stays AFLOAT",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4086,7 +4001,6 @@
       "name": "Ep22 Scene 2: Ra's Boat of a Million Years",
       "sort_order": 86,
       "category": "the-journey-through-night",
-      "level": 1,
       "sections": {
         "Narration": "On an underground RIVER that runs beneath the world.\nTwelve HOURS of night. Twelve GATES to pass through.\nThe dead are waiting. MONSTERS lurk. And somewhere\nIn the deepest dark, the chaos SERPENT waits for you.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4135,7 +4049,6 @@
       "name": "Ep22 Scene 3: Ra's Boat of a Million Years",
       "sort_order": 87,
       "category": "the-journey-through-night",
-      "level": 1,
       "sections": {
         "Narration": "But Ra goes ANYWAY. Every single NIGHT.\nNot because it's SAFE but because it MUST be done.\nThe world needs TOMORROW. And tomorrow needs\nSomeone brave enough to CARRY the sun.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4184,8 +4097,7 @@
       "name": "Episode 22: Ra's Boat of a Million Years",
       "sort_order": 88,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "duat-barque-scene-01",
         "duat-barque-scene-02",
         "duat-barque-scene-03"
@@ -4224,7 +4136,6 @@
       "name": "Ep23 Scene 1: The Twelve Gates of Night",
       "sort_order": 89,
       "category": "the-journey-through-night",
-      "level": 1,
       "sections": {
         "Narration": "TWELVE hours of darkness. TWELVE gates to unlock.\nEach gate has a GUARDIAN — a snake, a god, a FLAME.\nRa has to know their SECRET NAMES\nBecause in Egypt, knowing someone's name is the GAME.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4274,7 +4185,6 @@
       "name": "Ep23 Scene 2: The Twelve Gates of Night",
       "sort_order": 90,
       "category": "the-journey-through-night",
-      "level": 1,
       "sections": {
         "Narration": "Hour One: the western HORIZON. Still some light.\nHour Four: the desert of SOKAR — sand and BONE.\nHour Seven: the deepest point. The WORST.\nHour Twelve: almost HOME. The eastern STONE.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4323,7 +4233,6 @@
       "name": "Ep23 Scene 3: The Twelve Gates of Night",
       "sort_order": 91,
       "category": "the-journey-through-night",
-      "level": 1,
       "sections": {
         "Narration": "Each hour has its TERROR, each its GIFT.\nThe dead cheer when Ra's light passes BY.\nFor one brief moment, they feel WARM again.\nRa is the nightlight for everyone who's DIED.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4372,8 +4281,7 @@
       "name": "Episode 23: The Twelve Gates of Night",
       "sort_order": 92,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "duat-twelve-hours-scene-01",
         "duat-twelve-hours-scene-02",
         "duat-twelve-hours-scene-03"
@@ -4412,7 +4320,6 @@
       "name": "Ep24 Scene 1: Apophis the Chaos Serpent",
       "sort_order": 93,
       "category": "the-journey-through-night",
-      "level": 1,
       "sections": {
         "Narration": "In the DEEPEST hour, the seventh gate,\nSomething enormous MOVES in the dark.\nAPOPHIS. The serpent of CHAOS.\nBigger than the world. Blacker than the DARK.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4462,7 +4369,6 @@
       "name": "Ep24 Scene 2: Apophis the Chaos Serpent",
       "sort_order": 94,
       "category": "the-journey-through-night",
-      "level": 1,
       "sections": {
         "Narration": "He wants to SWALLOW the sun. To eat the LIGHT.\nTo drag the universe back into NUN —\nBack to the formless, soundless NOTHING\nBefore creation had BEGUN.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4511,7 +4417,6 @@
       "name": "Ep24 Scene 3: Apophis the Chaos Serpent",
       "sort_order": 95,
       "category": "the-journey-through-night",
-      "level": 1,
       "sections": {
         "Narration": "Every night, EVERY night, Ra fights him.\nEvery night the serpent tries to WIN.\nEvery night the crew cuts him to PIECES.\nAnd every night he grows back. Starts AGAIN.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4560,8 +4465,7 @@
       "name": "Episode 24: Apophis the Chaos Serpent",
       "sort_order": 96,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "duat-apophis-scene-01",
         "duat-apophis-scene-02",
         "duat-apophis-scene-03"
@@ -4600,7 +4504,6 @@
       "name": "Ep25 Scene 1: The Crew of the Sun Boat",
       "sort_order": 97,
       "category": "the-journey-through-night",
-      "level": 1,
       "sections": {
         "Narration": "Ra doesn't sail ALONE. He has a CREW!\nThoth is there with his moon-bright BRAIN.\nISIS stands at the prow, her magic READY.\nSET — yes, SET! — fights the serpent like a TRAIN",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4651,7 +4554,6 @@
       "name": "Ep25 Scene 2: The Crew of the Sun Boat",
       "sort_order": 98,
       "category": "the-journey-through-night",
-      "level": 1,
       "sections": {
         "Narration": "Smashing through the dark. Because HERE'S the twist:\nSet the VILLAIN is also the serpent's greatest FOE.\nThe god of chaos fights the serpent of CHAOS.\nFire against fire. BLOW for blow.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4701,7 +4603,6 @@
       "name": "Ep25 Scene 3: The Crew of the Sun Boat",
       "sort_order": 99,
       "category": "the-journey-through-night",
-      "level": 1,
       "sections": {
         "Narration": "And HU — the god of sacred SPEECH —\nShouts the words that make the darkness PART.\nAnd SIA — the god of WISDOM —\nNavIGATES by thinking with his heart.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4751,8 +4652,7 @@
       "name": "Episode 25: The Crew of the Sun Boat",
       "sort_order": 100,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "duat-crew-scene-01",
         "duat-crew-scene-02",
         "duat-crew-scene-03"
@@ -4792,7 +4692,6 @@
       "name": "Ep26 Scene 1: The Dead Who Ride with Ra",
       "sort_order": 101,
       "category": "the-journey-through-night",
-      "level": 1,
       "sections": {
         "Narration": "As Ra passes through each HOUR,\nThe DEAD reach out from the darkness — 'Take us WITH you!'\nMummies wrapped in linen, SPIRITS floating,\nPeople who were once as alive as me and YOU.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4842,7 +4741,6 @@
       "name": "Ep26 Scene 2: The Dead Who Ride with Ra",
       "sort_order": 102,
       "category": "the-journey-through-night",
-      "level": 1,
       "sections": {
         "Narration": "And Ra's light WAKES them — just for a moment.\nThey open their EYES. They feel the SUN.\nThey cheer. They SING. They praise the light.\nThen Ra moves on, and their moment's DONE.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4891,7 +4789,6 @@
       "name": "Ep26 Scene 3: The Dead Who Ride with Ra",
       "sort_order": 103,
       "category": "the-journey-through-night",
-      "level": 1,
       "sections": {
         "Narration": "But in that ONE moment, they're ALIVE again.\nWarm. Remembered. SEEN.\nThat's what Ra does every night —\nHe visits the dead. The best king there's ever BEEN.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4940,8 +4837,7 @@
       "name": "Episode 26: The Dead Who Ride with Ra",
       "sort_order": 104,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "duat-dead-join-scene-01",
         "duat-dead-join-scene-02",
         "duat-dead-join-scene-03"
@@ -4980,7 +4876,6 @@
       "name": "Ep27 Scene 1: The Dawn Gate",
       "sort_order": 105,
       "category": "the-journey-through-night",
-      "level": 1,
       "sections": {
         "Narration": "Hour TWELVE. The last gate. The eastern HORIZON.\nNut — the sky goddess — opens her MOUTH wide.\nRa sails through her body like a RIVER\nAnd emerges, GOLDEN, on the other side.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5031,7 +4926,6 @@
       "name": "Ep27 Scene 2: The Dawn Gate",
       "sort_order": 106,
       "category": "the-journey-through-night",
-      "level": 1,
       "sections": {
         "Narration": "He's a BABY again. Brand new. REBORN.\nThe old Ra died in the darkness — this is the NEW one.\nSame sun, different DAY. Same light, new MORNING.\nEvery sunrise is the very FIRST one.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5081,7 +4975,6 @@
       "name": "Ep27 Scene 3: The Dawn Gate",
       "sort_order": 107,
       "category": "the-journey-through-night",
-      "level": 1,
       "sections": {
         "Narration": "And the world EXHALES. The birds start SINGING.\nThe Nile turns gold. The farmers PRAY.\nAnother night survived. Another SERPENT beaten.\nAnother chance. Another DAY.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5131,8 +5024,7 @@
       "name": "Episode 27: The Dawn Gate",
       "sort_order": 108,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "duat-dawn-scene-01",
         "duat-dawn-scene-02",
         "duat-dawn-scene-03"
@@ -5172,7 +5064,6 @@
       "name": "Ep28 Scene 1: The Scarab's Promise",
       "sort_order": 109,
       "category": "the-journey-through-night",
-      "level": 1,
       "sections": {
         "Narration": "Look at a SCARAB beetle. Small and BLACK.\nRolling a ball of DIRT across the ground.\nInside that ball — EGGS. Inside those eggs — LIFE.\nFrom something DEAD and dirty, life is FOUND.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5222,7 +5113,6 @@
       "name": "Ep28 Scene 2: The Scarab's Promise",
       "sort_order": 110,
       "category": "the-journey-through-night",
-      "level": 1,
       "sections": {
         "Narration": "That's KHEPRI — Ra in his morning FORM.\nThe god who pushes the sun up the SKY\nLike a beetle pushes a ball of EARTH.\nSmall and strong and never asking WHY.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5271,7 +5161,6 @@
       "name": "Ep28 Scene 3: The Scarab's Promise",
       "sort_order": 111,
       "category": "the-journey-through-night",
-      "level": 1,
       "sections": {
         "Narration": "Every morning. Push. Push. PUSH.\nThe sun rolls UP. The darkness falls away.\nAnd the smallest, humblest CREATURE\nIs the one that brings the DAY.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5320,8 +5209,7 @@
       "name": "Episode 28: The Scarab's Promise",
       "sort_order": 112,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "duat-ra-reborn-scene-01",
         "duat-ra-reborn-scene-02",
         "duat-ra-reborn-scene-03"
@@ -5360,7 +5248,6 @@
       "name": "Ep29 Scene 1: Thoth the Ibis",
       "sort_order": 113,
       "category": "the-animal-gods",
-      "level": 1,
       "sections": {
         "Narration": "THOTH has the head of an IBIS bird —\nLong curved beak, like a PEN made of bone.\nHe INVENTED writing. INVENTED counting.\nInvented the CALENDAR. All on his OWN.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5410,7 +5297,6 @@
       "name": "Ep29 Scene 2: Thoth the Ibis",
       "sort_order": 114,
       "category": "the-animal-gods",
-      "level": 1,
       "sections": {
         "Narration": "He writes down EVERYTHING that happens.\nEvery birth, every death, every DEED.\nHe stands at the scales when your HEART is weighed\nAnd writes the VERDICT. That's all you need",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5459,7 +5345,6 @@
       "name": "Ep29 Scene 3: Thoth the Ibis",
       "sort_order": 115,
       "category": "the-animal-gods",
-      "level": 1,
       "sections": {
         "Narration": "To understand THOTH: he is the RECORD.\nThe god who says, 'This HAPPENED. This is TRUE.'\nWithout him, nothing is REMEMBERED.\nWithout memory — who are you?",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5508,8 +5393,7 @@
       "name": "Episode 29: Thoth the Ibis",
       "sort_order": 116,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "animal-thoth-scene-01",
         "animal-thoth-scene-02",
         "animal-thoth-scene-03"
@@ -5548,7 +5432,6 @@
       "name": "Ep30 Scene 1: Anubis the Jackal",
       "sort_order": 117,
       "category": "the-animal-gods",
-      "level": 1,
       "sections": {
         "Narration": "ANUBIS has the head of a JACKAL —\nBlack as night, with EARS that point up straight.\nHe's the god of the DEAD, but don't be scared.\nHe's not the one who kills you — he's the one who'll WAIT",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5598,7 +5481,6 @@
       "name": "Ep30 Scene 2: Anubis the Jackal",
       "sort_order": 118,
       "category": "the-animal-gods",
-      "level": 1,
       "sections": {
         "Narration": "At the door to the AFTERLIFE and take your hand.\n'Come WITH me,' he says, gentle and CALM.\n'I'll guide you through the DARKNESS.\nI'll keep you SAFE from harm.'",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5647,7 +5529,6 @@
       "name": "Ep30 Scene 3: Anubis the Jackal",
       "sort_order": 119,
       "category": "the-animal-gods",
-      "level": 1,
       "sections": {
         "Narration": "Anubis WRAPPED the first mummy — Osiris.\nHe invented EMBALMING, the art of careful CARE.\nHe treats the dead like TREASURES.\nThe gentlest god with the scariest HAIR.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5696,8 +5577,7 @@
       "name": "Episode 30: Anubis the Jackal",
       "sort_order": 120,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "animal-anubis-scene-01",
         "animal-anubis-scene-02",
         "animal-anubis-scene-03"
@@ -5736,7 +5616,6 @@
       "name": "Ep31 Scene 1: Bastet the Cat",
       "sort_order": 121,
       "category": "the-animal-gods",
-      "level": 1,
       "sections": {
         "Narration": "BASTET is a CAT. A sleek, green-eyed cat\nWho sits in a sunbeam, PERFECTLY still.\nShe's the goddess of HOME — of warmth, of music,\nOf dancing, of perfume, of GOODWILL.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5786,7 +5665,6 @@
       "name": "Ep31 Scene 2: Bastet the Cat",
       "sort_order": 122,
       "category": "the-animal-gods",
-      "level": 1,
       "sections": {
         "Narration": "The Egyptians LOVED cats. Like, REALLY loved them.\nWhen a family cat DIED, they shaved their eyebrows. WEPT.\nThey made tiny CAT MUMMIES, dressed in linen,\nAnd buried them in tombs where thousands SLEPT.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5835,7 +5713,6 @@
       "name": "Ep31 Scene 3: Bastet the Cat",
       "sort_order": 123,
       "category": "the-animal-gods",
-      "level": 1,
       "sections": {
         "Narration": "Because BASTET protects the home at NIGHT.\nShe sees in the DARK. She hears every SOUND.\nYour cat sitting at the foot of your BED?\nThat's Bastet's magic. SAFE and sound.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5884,8 +5761,7 @@
       "name": "Episode 31: Bastet the Cat",
       "sort_order": 124,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "animal-bastet-scene-01",
         "animal-bastet-scene-02",
         "animal-bastet-scene-03"
@@ -5924,7 +5800,6 @@
       "name": "Ep32 Scene 1: Sobek the Crocodile",
       "sort_order": 125,
       "category": "the-animal-gods",
-      "level": 1,
       "sections": {
         "Narration": "SOBEK is a CROCODILE — and not a nice one.\nTeeth like daggers, eyes like STONE.\nHe lives in the NILE, where the water runs fastest,\nAnd guards the river as if it were his THRONE.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5974,7 +5849,6 @@
       "name": "Ep32 Scene 2: Sobek the Crocodile",
       "sort_order": 126,
       "category": "the-animal-gods",
-      "level": 1,
       "sections": {
         "Narration": "But here's the thing: the Nile is EVERYTHING.\nNo Nile, no Egypt. No WATER, no wheat.\nSobek isn't scary because he's BAD.\nHe's scary because the river's HEARTBEAT",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6023,7 +5897,6 @@
       "name": "Ep32 Scene 3: Sobek the Crocodile",
       "sort_order": 127,
       "category": "the-animal-gods",
-      "level": 1,
       "sections": {
         "Narration": "Is scary. The FLOOD that feeds you could also DROWN you.\nThe water that grows your GRAIN can take your child.\nSobek is the TRUTH about nature:\nBeautiful. Essential. WILD.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6072,8 +5945,7 @@
       "name": "Episode 32: Sobek the Crocodile",
       "sort_order": 128,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "animal-sobek-scene-01",
         "animal-sobek-scene-02",
         "animal-sobek-scene-03"
@@ -6112,7 +5984,6 @@
       "name": "Ep33 Scene 1: Khepri the Scarab",
       "sort_order": 129,
       "category": "the-animal-gods",
-      "level": 1,
       "sections": {
         "Narration": "We met KHEPRI already — the scarab BEETLE.\nBut let's look CLOSER. Watch him on the ground.\nHe finds a ball of DUNG — yes, poo — and ROLLS it\nAcross the desert. Round and ROUND.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6162,7 +6033,6 @@
       "name": "Ep33 Scene 2: Khepri the Scarab",
       "sort_order": 130,
       "category": "the-animal-gods",
-      "level": 1,
       "sections": {
         "Narration": "Inside that ball: his EGGS. His future CHILDREN.\nBorn from what everyone else calls WASTE.\nThe Egyptians watched and saw a MIRACLE:\nLife from death. Something PRECIOUS from disgrace.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6211,7 +6081,6 @@
       "name": "Ep33 Scene 3: Khepri the Scarab",
       "sort_order": 131,
       "category": "the-animal-gods",
-      "level": 1,
       "sections": {
         "Narration": "Khepri means 'to BECOME.' To transform.\nTo take what's LOW and make it HIGH.\nEvery morning the BEETLE rolls the sun\nAcross the belly of the SKY.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6260,8 +6129,7 @@
       "name": "Episode 33: Khepri the Scarab",
       "sort_order": 132,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "animal-khepri-scene-01",
         "animal-khepri-scene-02",
         "animal-khepri-scene-03"
@@ -6300,7 +6168,6 @@
       "name": "Ep34 Scene 1: Hathor the Golden",
       "sort_order": 133,
       "category": "the-animal-gods",
-      "level": 1,
       "sections": {
         "Narration": "HATHOR is the cow-goddess. Don't LAUGH.\nIn Egypt, cows were BEAUTIFUL — gentle, warm, and GIVING.\nHathor gave MILK to the pharaoh, music to the PEOPLE,\nLove to everyone who was LIVING.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6351,7 +6218,6 @@
       "name": "Ep34 Scene 2: Hathor the Golden",
       "sort_order": 134,
       "category": "the-animal-gods",
-      "level": 1,
       "sections": {
         "Narration": "She carries the SUN between her horns —\nTwo great curved horns with a golden DISK.\nShe's the goddess of DANCING, of beer, of JOY,\nOf every beautiful, beautiful RISK.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6401,7 +6267,6 @@
       "name": "Ep34 Scene 3: Hathor the Golden",
       "sort_order": 135,
       "category": "the-animal-gods",
-      "level": 1,
       "sections": {
         "Narration": "When you hear MUSIC that makes you want to move,\nThat's Hathor SHAKING her sacred rattle — SISTRUM.\nWhen you feel LOVE flooding through your heart,\nThat's Hathor. She NEVER missed one.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6451,8 +6316,7 @@
       "name": "Episode 34: Hathor the Golden",
       "sort_order": 136,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "animal-hathor-scene-01",
         "animal-hathor-scene-02",
         "animal-hathor-scene-03"
@@ -6492,7 +6356,6 @@
       "name": "Ep35 Scene 1: Sekhmet the Lioness",
       "sort_order": 137,
       "category": "the-animal-gods",
-      "level": 1,
       "sections": {
         "Narration": "SEKHMET. The lioness. FIRE-breathing.\nHer name means 'The POWERFUL One' — and she IS.\nWhen the world goes WRONG, when people lie and cheat,\nRa sends SEKHMET. And nothing goes AMISS.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6542,7 +6405,6 @@
       "name": "Ep35 Scene 2: Sekhmet the Lioness",
       "sort_order": 138,
       "category": "the-animal-gods",
-      "level": 1,
       "sections": {
         "Narration": "She ROARS across the desert, eyes like FLAME.\nHer breath is the hot wind that SCORCHES the sand.\nShe's not evil — she's JUSTICE when justice must be FIERCE.\nShe's the punishment you feel but UNDERSTAND.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6591,7 +6453,6 @@
       "name": "Ep35 Scene 3: Sekhmet the Lioness",
       "sort_order": 139,
       "category": "the-animal-gods",
-      "level": 1,
       "sections": {
         "Narration": "But remember: Sekhmet IS Hathor.\nThe dancer and the lion are the SAME.\nThe hand that plays the music\nIs the paw that brings the FLAME.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6640,8 +6501,7 @@
       "name": "Episode 35: Sekhmet the Lioness",
       "sort_order": 140,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "animal-sekhmet-scene-01",
         "animal-sekhmet-scene-02",
         "animal-sekhmet-scene-03"
@@ -6680,7 +6540,6 @@
       "name": "Ep36 Scene 1: The Book Nobody Reads Alive",
       "sort_order": 141,
       "category": "the-weighing-of-the-heart",
-      "level": 1,
       "sections": {
         "Narration": "The Egyptians made a BOOK — the most important BOOK\nIn all of history. Not to READ while living —\nBut to BURY with you when you die.\nA guidebook for the dead. A MAP for giving",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6729,7 +6588,6 @@
       "name": "Ep36 Scene 2: The Book Nobody Reads Alive",
       "sort_order": 142,
       "category": "the-weighing-of-the-heart",
-      "level": 1,
       "sections": {
         "Narration": "You directions through the UNDERWORLD.\nSpells to say. Monsters to AVOID.\nPasswords for the GATES. Names of the SNAKES.\nEverything you need so you're not DESTROYED.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6777,7 +6635,6 @@
       "name": "Ep36 Scene 3: The Book Nobody Reads Alive",
       "sort_order": 143,
       "category": "the-weighing-of-the-heart",
-      "level": 1,
       "sections": {
         "Narration": "They wrote it on PAPYRUS — long, long scrolls —\nAnd tucked it in between the WRAPPINGS of the dead.\nYour afterlife instruction MANUAL,\nSlipped between the linen near your HEAD.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6825,8 +6682,7 @@
       "name": "Episode 36: The Book Nobody Reads Alive",
       "sort_order": 144,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "heart-book-of-dead-scene-01",
         "heart-book-of-dead-scene-02",
         "heart-book-of-dead-scene-03"
@@ -6864,7 +6720,6 @@
       "name": "Ep37 Scene 1: Getting Ready to Die",
       "sort_order": 145,
       "category": "the-weighing-of-the-heart",
-      "level": 1,
       "sections": {
         "Narration": "In Egypt, getting READY to die\nWas as normal as getting ready for SCHOOL.\nYou packed your TOMB like a suitcase —\nFood, clothes, games, and every TOOL",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6914,7 +6769,6 @@
       "name": "Ep37 Scene 2: Getting Ready to Die",
       "sort_order": 146,
       "category": "the-weighing-of-the-heart",
-      "level": 1,
       "sections": {
         "Narration": "You might need in the afterlife. Your FAVORITE things.\nA board game! (Senet — they LOVED senet.)\nLittle statues called SHABTI — servants made of clay\nTo do your CHORES when you're dead, so you can just let",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6963,7 +6817,6 @@
       "name": "Ep37 Scene 3: Getting Ready to Die",
       "sort_order": 147,
       "category": "the-weighing-of-the-heart",
-      "level": 1,
       "sections": {
         "Narration": "Someone else do the WORK. (Smart, right?)\nAnd AMULETS — magical charms for every PART\nOf the journey. The scarab for TRANSFORMATION.\nThe djed pillar for BACKBONE. The tyet for HEART.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -7012,8 +6865,7 @@
       "name": "Episode 37: Getting Ready to Die",
       "sort_order": 148,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "heart-preparation-scene-01",
         "heart-preparation-scene-02",
         "heart-preparation-scene-03"
@@ -7052,7 +6904,6 @@
       "name": "Ep38 Scene 1: The Hall of Two Truths",
       "sort_order": 149,
       "category": "the-weighing-of-the-heart",
-      "level": 1,
       "sections": {
         "Narration": "After you die, after the WRAPPING and the SPELLS,\nYou walk into the biggest ROOM you've ever seen.\nThe HALL OF TWO TRUTHS. Pillars to the ceiling.\nForty-two JUDGES sitting tall and lean.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -7102,7 +6953,6 @@
       "name": "Ep38 Scene 2: The Hall of Two Truths",
       "sort_order": 150,
       "category": "the-weighing-of-the-heart",
-      "level": 1,
       "sections": {
         "Narration": "Osiris on his throne — green-faced, WRAPPED in white.\nIsis and Nephthys standing at his SIDE.\nAnubis waiting at the SCALE.\nThoth with his pen. Nowhere to HIDE.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -7151,7 +7001,6 @@
       "name": "Ep38 Scene 3: The Hall of Two Truths",
       "sort_order": 151,
       "category": "the-weighing-of-the-heart",
-      "level": 1,
       "sections": {
         "Narration": "And in the middle of it ALL —\nA golden scale. Two pans. One FEATHER.\nThe feather of MA'AT. Light as truth.\nAnd your HEART. About to be weighed. Together.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -7200,8 +7049,7 @@
       "name": "Episode 38: The Hall of Two Truths",
       "sort_order": 152,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "heart-hall-of-truths-scene-01",
         "heart-hall-of-truths-scene-02",
         "heart-hall-of-truths-scene-03"
@@ -7240,7 +7088,6 @@
       "name": "Ep39 Scene 1: The Forty-Two Denials",
       "sort_order": 153,
       "category": "the-weighing-of-the-heart",
-      "level": 1,
       "sections": {
         "Narration": "Before the weighing, you must SPEAK.\nForty-two statements. Forty-two 'I DID NOTS.'\n'I did not STEAL. I did not LIE.\nI did not make anyone CRY. I did not cast LOTS",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -7290,7 +7137,6 @@
       "name": "Ep39 Scene 2: The Forty-Two Denials",
       "sort_order": 154,
       "category": "the-weighing-of-the-heart",
-      "level": 1,
       "sections": {
         "Narration": "Against the innocent. I did not WASTE water.\nI did not BLOCK the river's flow.\nI did not KILL a sacred animal.\nI did not speak with ANGER.' On you go.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -7339,7 +7185,6 @@
       "name": "Ep39 Scene 3: The Forty-Two Denials",
       "sort_order": 155,
       "category": "the-weighing-of-the-heart",
-      "level": 1,
       "sections": {
         "Narration": "Forty-two things you DIDN'T do.\nNot what you DID — what you HELD back from.\nBeing good in Egypt meant RESTRAINT.\nNot a trophy — a PSALM.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -7388,8 +7233,7 @@
       "name": "Episode 39: The Forty-Two Denials",
       "sort_order": 156,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "heart-confessions-scene-01",
         "heart-confessions-scene-02",
         "heart-confessions-scene-03"
@@ -7428,7 +7272,6 @@
       "name": "Ep40 Scene 1: The Feather and the Heart",
       "sort_order": 157,
       "category": "the-weighing-of-the-heart",
-      "level": 1,
       "sections": {
         "Narration": "Now the MOMENT. Anubis takes your HEART —\nYour actual, real, still-beating HEART —\nAnd places it on the LEFT side of the scale.\nOn the RIGHT: the feather of Ma'at. The ART",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -7478,7 +7321,6 @@
       "name": "Ep40 Scene 2: The Feather and the Heart",
       "sort_order": 158,
       "category": "the-weighing-of-the-heart",
-      "level": 1,
       "sections": {
         "Narration": "Of truth. One feather. LIGHTER than light.\nIf your heart is LIGHT — if you lived with truth —\nThe scale BALANCES. The feather and the heart\nWeigh the SAME. And that's the proof.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -7527,7 +7369,6 @@
       "name": "Ep40 Scene 3: The Feather and the Heart",
       "sort_order": 159,
       "category": "the-weighing-of-the-heart",
-      "level": 1,
       "sections": {
         "Narration": "But if your heart is HEAVY — full of lies,\nOf cruelty, of greed, of stolen THINGS —\nIt sinks. The feather RISES. The scale TIPS.\nAnd what happens next? The MONSTER brings...",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -7576,8 +7417,7 @@
       "name": "Episode 40: The Feather and the Heart",
       "sort_order": 160,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "heart-weighing-scene-01",
         "heart-weighing-scene-02",
         "heart-weighing-scene-03"
@@ -7616,7 +7456,6 @@
       "name": "Ep41 Scene 1: The Devourer",
       "sort_order": 161,
       "category": "the-weighing-of-the-heart",
-      "level": 1,
       "sections": {
         "Narration": "If your heart is HEAVY — if the scale tips DOWN —\nSomething HORRIBLE waits beside the scale.\nAMMIT. The Devourer. Part CROCODILE,\nPart LION, part HIPPO. Beyond the pale.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -7666,7 +7505,6 @@
       "name": "Ep41 Scene 2: The Devourer",
       "sort_order": 162,
       "category": "the-weighing-of-the-heart",
-      "level": 1,
       "sections": {
         "Narration": "She eats your HEART. And when your heart is EATEN,\nYou don't go to the AFTERLIFE. You don't go ANYWHERE.\nYou just... STOP. No more you. No more ANYTHING.\nNot even darkness. Not even THERE.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -7715,7 +7553,6 @@
       "name": "Ep41 Scene 3: The Devourer",
       "sort_order": 163,
       "category": "the-weighing-of-the-heart",
-      "level": 1,
       "sections": {
         "Narration": "The Egyptians didn't fear PUNISHMENT after death.\nThey feared something WORSE: being completely ERASED.\nNo memory. No name. No TRACE.\nAs if you'd never even FACED the world.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -7764,8 +7601,7 @@
       "name": "Episode 41: The Devourer",
       "sort_order": 164,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "heart-ammit-scene-01",
         "heart-ammit-scene-02",
         "heart-ammit-scene-03"
@@ -7804,7 +7640,6 @@
       "name": "Ep42 Scene 1: The Field of Reeds",
       "sort_order": 165,
       "category": "the-weighing-of-the-heart",
-      "level": 1,
       "sections": {
         "Narration": "But if your heart is LIGHT — if the feather BALANCES —\nOh, what waits for you on the OTHER side!\nThe FIELD OF REEDS. Aaru. PARADISE.\nA land of golden wheat, stretching WIDE.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -7854,7 +7689,6 @@
       "name": "Ep42 Scene 2: The Field of Reeds",
       "sort_order": 166,
       "category": "the-weighing-of-the-heart",
-      "level": 1,
       "sections": {
         "Narration": "The Nile flows through it — but PERFECTLY.\nNo floods too HIGH, no droughts too DRY.\nYour family is THERE. Your pets. Your FRIENDS.\nEveryone you loved who already DIED.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -7903,7 +7737,6 @@
       "name": "Ep42 Scene 3: The Field of Reeds",
       "sort_order": 167,
       "category": "the-weighing-of-the-heart",
-      "level": 1,
       "sections": {
         "Narration": "And you can farm and SING and play senet FOREVER.\nThe wheat grows tall. The beer is COLD.\nThe sun is warm but never BURNS.\nThe Field of Reeds: where good hearts grow OLD.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -7952,8 +7785,7 @@
       "name": "Episode 42: The Field of Reeds",
       "sort_order": 168,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "heart-field-of-reeds-scene-01",
         "heart-field-of-reeds-scene-02",
         "heart-field-of-reeds-scene-03"

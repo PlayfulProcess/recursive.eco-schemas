@@ -15,6 +15,7 @@ Usage: python3 scripts/add_original_sections_generic.py <grammar-name> <seed-fil
 import json
 import re
 import sys
+from grammar_depth import node_depth
 
 
 def read_text(filepath):
@@ -209,8 +210,8 @@ def main():
     skipped = 0
     failed = 0
 
-    for item in grammar["items"]:
-        if item.get("level", 1) != 1:
+    for item in grammar["nodes"]:
+        if node_depth(item, grammar["nodes"]) != 1:
             continue
 
         if "Original" in item.get("sections", {}):

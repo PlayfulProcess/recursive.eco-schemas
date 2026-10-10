@@ -7,6 +7,7 @@ Parse four mythology/folklore seed files into grammar.json files:
 4. Myths and Legends of Ancient Egypt (Spence, Gutenberg #43662)
 """
 import json, re, os, sys
+from grammar_depth import node_depth
 
 
 def read_seed(path):
@@ -70,7 +71,7 @@ def build_grammar(name, description, tags, roots, shelves, lineages, worldview,
         "shelves": shelves,
         "lineages": lineages,
         "worldview": worldview,
-        "items": items
+        "nodes": items
     }
 
 
@@ -79,21 +80,21 @@ def write_grammar(output_dir, grammar):
     path = os.path.join(output_dir, "grammar.json")
     with open(path, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
-    print(f"  Wrote {path} ({len(grammar['items'])} items)")
+    print(f"  Wrote {path} ({len(grammar['nodes'])} items)")
     return path
 
 
 def validate_grammar(path):
     with open(path) as f:
         g = json.load(f)
-    items = g['items']
+    items = g['nodes']
     ids = [i['id'] for i in items]
     dupes = list(set(x for x in ids if ids.count(x) > 1))
-    bad_refs = [(i['id'], r) for i in items for r in i.get('composite_of', []) if r not in ids]
+    bad_refs = [(i['id'], r) for i in items for r in i.get('parts', []) if r not in ids]
     orders = [i['sort_order'] for i in items]
-    l1 = sum(1 for i in items if i['level'] == 1)
-    l2 = sum(1 for i in items if i['level'] == 2)
-    l3 = sum(1 for i in items if i['level'] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     sections = sum(len(i.get('sections', {})) for i in items)
     seq = orders == list(range(1, len(items) + 1))
     print(f"  Items: {len(items)}, L1: {l1}, L2: {l2}, L3: {l3}, Sections: {sections}")
@@ -148,7 +149,6 @@ def parse_hero_myths_british():
             "name": title.title() if title == title.upper() else title,
             "sort_order": 0,
             "category": "legends",
-            "level": 1,
             "sections": {
                 "Story": text
             },
@@ -212,12 +212,11 @@ def parse_hero_myths_british():
                 "name": group['name'],
                 "sort_order": 0,
                 "category": "cultural-cycles",
-                "level": 2,
                 "sections": {
                     "About": group['about'],
                     "For Readers": "These stories can be read individually or as a cycle. Look for recurring themes of loyalty, sacrifice, and the relationship between mortal heroes and the supernatural world."
                 },
-                "composite_of": valid_refs,
+                "parts": valid_refs,
                 "relationship_type": "emergence",
                 "keywords": group['keywords'],
                 "metadata": {}
@@ -229,12 +228,11 @@ def parse_hero_myths_british():
         "name": "The British Heroic Tradition",
         "sort_order": 0,
         "category": "meta",
-        "level": 3,
         "sections": {
             "About": "The full sweep of British heroic legend, from Anglo-Saxon warriors through Celtic myth to medieval outlaws. These stories span nearly a thousand years and weave together Germanic, Celtic, Norman, and Christian traditions into the fabric of British identity.",
             "For Readers": "Read across cultural cycles to see how the idea of heroism evolves — from Beowulf's monster-slaying to Robin Hood's social justice. Each era redefines what it means to be a hero."
         },
-        "composite_of": [g for g in GROUPS.keys()],
+        "parts": [g for g in GROUPS.keys()],
         "relationship_type": "emergence",
         "keywords": ["british", "heroism", "mythology", "legends"],
         "metadata": {}
@@ -338,7 +336,6 @@ def parse_tibetan_tales():
             "name": title.title() if title == title.upper() else title,
             "sort_order": 0,
             "category": "tales",
-            "level": 1,
             "sections": {
                 "Story": text
             },
@@ -400,12 +397,11 @@ def parse_tibetan_tales():
                 "name": group['name'],
                 "sort_order": 0,
                 "category": "thematic-groups",
-                "level": 2,
                 "sections": {
                     "About": group['about'],
                     "For Readers": "These tales can be read individually or as a thematic collection. Look for recurring motifs and moral patterns that connect them."
                 },
-                "composite_of": refs,
+                "parts": refs,
                 "relationship_type": "emergence",
                 "keywords": group['keywords'],
                 "metadata": {}
@@ -419,12 +415,11 @@ def parse_tibetan_tales():
             "name": "Other Tales",
             "sort_order": 0,
             "category": "thematic-groups",
-            "level": 2,
             "sections": {
                 "About": "Additional tales from the Kah-gyur that weave together themes of human nature, moral consequence, and the interplay of worldly and spiritual life.",
                 "For Readers": "Each tale stands alone as a complete story, often with a pointed moral or unexpected twist."
             },
-            "composite_of": unassigned,
+            "parts": unassigned,
             "relationship_type": "emergence",
             "keywords": ["tales", "miscellaneous", "tibetan"],
             "metadata": {}
@@ -436,12 +431,11 @@ def parse_tibetan_tales():
         "name": "Tibetan Tales from the Kah-Gyur",
         "sort_order": 0,
         "category": "meta",
-        "level": 3,
         "sections": {
             "About": "Fifty tales translated from the Tibetan Kah-gyur (the 'Translated Word' of the Buddha), themselves derived from Sanskrit originals. These stories — Jatakas, animal fables, moral tales, and legends — form part of the vast Buddhist narrative tradition that travelled from India to Tibet along the Silk Road.",
             "For Readers": "Read these tales as windows into the Buddhist moral universe. Whether featuring kings or jackals, devoted wives or cunning thieves, each story illuminates a facet of dharma — karma, compassion, wisdom, and the consequences of action."
         },
-        "composite_of": [item['id'] for item in l2_items],
+        "parts": [item['id'] for item in l2_items],
         "relationship_type": "emergence",
         "keywords": ["tibetan", "buddhist", "kah-gyur", "jataka"],
         "metadata": {}
@@ -543,7 +537,6 @@ def parse_folk_tales_tibet():
             "name": display_title,
             "sort_order": 0,
             "category": "folk-tales",
-            "level": 1,
             "sections": {
                 "Story": text
             },
@@ -587,12 +580,11 @@ def parse_folk_tales_tibet():
                 "name": group['name'],
                 "sort_order": 0,
                 "category": "thematic-groups",
-                "level": 2,
                 "sections": {
                     "About": group['about'],
                     "For Readers": "These tales were collected by Captain W. F. O'Connor during his time in Tibet (1904-1906), told by village headmen, monks, servants, and traders. Read them as living folklore, told around fires in a land of high plateaus and ancient monasteries."
                 },
-                "composite_of": refs,
+                "parts": refs,
                 "relationship_type": "emergence",
                 "keywords": group['keywords'],
                 "metadata": {}
@@ -606,12 +598,11 @@ def parse_folk_tales_tibet():
             "name": "Other Folk Tales",
             "sort_order": 0,
             "category": "thematic-groups",
-            "level": 2,
             "sections": {
                 "About": "Additional folk tales from Tibet that blend animal and human worlds, magic and morality.",
                 "For Readers": "Each tale stands alone as a window into Tibetan folk imagination."
             },
-            "composite_of": unassigned,
+            "parts": unassigned,
             "relationship_type": "emergence",
             "keywords": ["tibet", "folk-tales"],
             "metadata": {}
@@ -623,12 +614,11 @@ def parse_folk_tales_tibet():
         "name": "Folk Tales from Tibet",
         "sort_order": 0,
         "category": "meta",
-        "level": 3,
         "sections": {
             "About": "Twenty-two folk tales collected and translated by Captain W. F. O'Connor during the British Mission to Lhasa (1904). Told by village headmen, monks, servants, and traders across Tibet, these stories preserve the folk imagination of a people whose oral traditions were largely unknown to the outside world.",
             "For Readers": "These tales are windows into Tibetan folk culture at the turn of the twentieth century — a world of clever hares, magical princes, and moral lessons woven through with Buddhist sensibility and the dry humor of the high plateau."
         },
-        "composite_of": [item['id'] for item in l2_items],
+        "parts": [item['id'] for item in l2_items],
         "relationship_type": "emergence",
         "keywords": ["tibet", "folk-tales", "oral-tradition", "buddhism"],
         "metadata": {}
@@ -702,7 +692,6 @@ def parse_myths_legends_egypt():
             "name": display_title,
             "sort_order": 0,
             "category": "chapters",
-            "level": 1,
             "sections": {
                 "Content": text
             },
@@ -757,12 +746,11 @@ def parse_myths_legends_egypt():
                 "name": group['name'],
                 "sort_order": 0,
                 "category": "thematic-groups",
-                "level": 2,
                 "sections": {
                     "About": group['about'],
                     "For Readers": "Read these chapters together to build a comprehensive picture of this aspect of Egyptian civilization. Cross-reference with other groups for deeper understanding."
                 },
-                "composite_of": valid_refs,
+                "parts": valid_refs,
                 "relationship_type": "emergence",
                 "keywords": group['keywords'],
                 "metadata": {}
@@ -774,12 +762,11 @@ def parse_myths_legends_egypt():
         "name": "Myths and Legends of Ancient Egypt",
         "sort_order": 0,
         "category": "meta",
-        "level": 3,
         "sections": {
             "About": "Lewis Spence's comprehensive survey of Egyptian mythology, religion, and culture (1915), written in the light of modern comparative mythology. From the creation myths of Heliopolis to the magical papyri of the Late Period, this work traces the full arc of Egyptian sacred imagination.",
             "For Readers": "Use the thematic groups to navigate — begin with History & Context for grounding, explore the Gods and their myths, then delve into the ritual and magical dimensions. Spence writes as a mythologist, not just an Egyptologist, drawing connections to universal patterns in world mythology."
         },
-        "composite_of": [item['id'] for item in l2_items],
+        "parts": [item['id'] for item in l2_items],
         "relationship_type": "emergence",
         "keywords": ["egypt", "mythology", "gods", "ancient-religion"],
         "metadata": {}

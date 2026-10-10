@@ -7,6 +7,7 @@ from Butler's prose translations of the Iliad and Odyssey.
 import json
 import re
 import sys
+from grammar_depth import node_depth
 
 ILIAD_PATH = "seeds/iliad-butler.txt"
 ODYSSEY_PATH = "seeds/odyssey-butler.txt"
@@ -177,8 +178,8 @@ def main():
     skipped = 0
     failed = 0
 
-    for item in grammar["items"]:
-        if item.get("level", 1) != 1:
+    for item in grammar["nodes"]:
+        if node_depth(item, grammar["nodes"]) != 1:
             continue
 
         item_id = item["id"]

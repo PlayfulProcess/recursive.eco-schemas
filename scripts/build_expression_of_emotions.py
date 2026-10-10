@@ -15,6 +15,7 @@ Structure:
 import json
 import re
 from pathlib import Path
+from grammar_depth import node_depth
 
 SEED_PATH = Path(__file__).parent.parent / "seeds" / "expression-of-emotions.txt"
 OUTPUT_DIR = Path(__file__).parent.parent / "grammars" / "expression-of-emotions"
@@ -228,7 +229,6 @@ def build_grammar():
         add_item({
             "id": ch["id"],
             "name": ch["title"],
-            "level": 1,
             "category": "chapter",
             "sections": {
                 "Text": ct(chapter_text),
@@ -246,7 +246,6 @@ def build_grammar():
     add_item({
         "id": "theme-foundations",
         "name": "The Three Principles and Animal Expression",
-        "level": 2,
         "category": "thematic-grouping",
         "sections": {
             "About": "The first five chapters establish Darwin's theoretical framework: three principles explain virtually all expressions in humans and animals. (1) Serviceable Associated Habits: actions useful in one context become habitual and persist even when not useful. (2) Antithesis: opposite mental states produce opposite bodily movements. (3) Direct Nervous Discharge: excess nerve-force overflows into trembling, sweating, and other involuntary effects. These principles are then demonstrated across the animal kingdom.",
@@ -254,13 +253,12 @@ def build_grammar():
         },
         "keywords": ["principles", "habits", "antithesis", "nervous-discharge", "animals", "evolution"],
         "metadata": {},
-        "composite_of": ["introduction", "chapter-1-principles", "chapter-2-antithesis", "chapter-3-nervous-discharge", "chapter-4-animal-expression", "chapter-5-animal-special"]
+        "parts": ["introduction", "chapter-1-principles", "chapter-2-antithesis", "chapter-3-nervous-discharge", "chapter-4-animal-expression", "chapter-5-animal-special"]
     })
 
     add_item({
         "id": "theme-dark-emotions",
         "name": "The Dark Emotions: Suffering, Grief, Anger, Fear",
-        "level": 2,
         "category": "thematic-grouping",
         "sections": {
             "About": "Darwin's exploration of painful emotions -- from the tears of suffering through the slumped posture of grief to the clenched fists of anger and the wide eyes of terror. These chapters are remarkable for their combination of precise anatomical description and deep empathy. Darwin sees in every grimace and tremor both a biological mechanism and a window into the universal experience of being alive.",
@@ -268,13 +266,12 @@ def build_grammar():
         },
         "keywords": ["suffering", "grief", "anger", "fear", "horror", "tears", "rage"],
         "metadata": {},
-        "composite_of": ["chapter-6-suffering-weeping", "chapter-7-low-spirits", "chapter-10-hatred-anger", "chapter-12-surprise-fear"]
+        "parts": ["chapter-6-suffering-weeping", "chapter-7-low-spirits", "chapter-10-hatred-anger", "chapter-12-surprise-fear"]
     })
 
     add_item({
         "id": "theme-social-emotions",
         "name": "The Social Emotions: Joy, Love, Shame, and Blushing",
-        "level": 2,
         "category": "thematic-grouping",
         "sections": {
             "About": "Darwin's exploration of emotions that arise specifically in social context -- the bright eyes of joy, the tender gaze of love, the averted eyes of guilt, and above all, the uniquely human phenomenon of blushing. These chapters reveal Darwin at his most original: blushing, he argues, is evidence that human consciousness is fundamentally social. We flush not from heat or exertion but from the mere thought that others are looking at us.",
@@ -282,7 +279,7 @@ def build_grammar():
         },
         "keywords": ["joy", "love", "shame", "blushing", "pride", "social", "self-consciousness"],
         "metadata": {},
-        "composite_of": ["chapter-8-joy-love", "chapter-9-reflection-determination", "chapter-11-disdain-contempt", "chapter-13-blushing", "chapter-14-conclusion"]
+        "parts": ["chapter-8-joy-love", "chapter-9-reflection-determination", "chapter-11-disdain-contempt", "chapter-13-blushing", "chapter-14-conclusion"]
     })
 
     # =========================================================================
@@ -292,7 +289,6 @@ def build_grammar():
     add_item({
         "id": "meta-expression-emotions",
         "name": "The Expression of the Emotions: Darwin's Human Science",
-        "level": 3,
         "category": "meta-category",
         "sections": {
             "About": "Published in 1872, The Expression of the Emotions in Man and Animals is Darwin's most humanistic work. While On the Origin of Species established evolution as a biological fact, this book extends it into the realm of feeling, arguing that our most intimate emotional experiences -- grief, joy, love, shame -- are continuous with those of other animals and are universal across all human cultures. Darwin's three principles of expression remain foundational in affective science, and his method of combining cross-cultural observation, infant studies, photography, and animal behavior set the pattern for modern emotion research.",
@@ -300,7 +296,7 @@ def build_grammar():
         },
         "keywords": ["darwin", "evolution", "emotion", "expression", "universality", "animals", "humans", "science"],
         "metadata": {},
-        "composite_of": ["theme-foundations", "theme-dark-emotions", "theme-social-emotions"]
+        "parts": ["theme-foundations", "theme-dark-emotions", "theme-social-emotions"]
     })
 
     # =========================================================================
@@ -325,7 +321,7 @@ def build_grammar():
         "shelves": ["mirror"],
         "lineages": ["Gottman", "Johnson"],
         "worldview": "rationalist",
-        "items": items
+        "nodes": items
     }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -335,7 +331,7 @@ def build_grammar():
     print(f"Built Expression of Emotions grammar: {len(items)} items")
     for item in items:
         text_len = len(item["sections"].get("Text", ""))
-        print(f"  L{item['level']}: {item['id']} - {item['name']} ({text_len} chars)")
+        print(f"  L{node_depth(item, items)}: {item['id']} - {item['name']} ({text_len} chars)")
 
 
 if __name__ == "__main__":

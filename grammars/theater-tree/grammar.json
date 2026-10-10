@@ -24,13 +24,12 @@
     "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/modern-dance-breaking-ground",
     "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/indian-classical-dance"
   ],
-  "items": [
+  "nodes": [
     {
       "id": "stanislavski",
       "name": "Konstantin Stanislavski — The System",
       "sort_order": 1,
       "category": "practitioner",
-      "level": 1,
       "sections": {
         "The Practice": "Stanislavski's 'System' (he disliked the word 'method') asks: how can an actor create truthful behavior in the imaginary circumstances of a play? His answer evolved over decades at the Moscow Art Theatre (founded 1898): begin with the 'given circumstances' (who am I, where am I, what do I want?), pursue an 'objective' (what does my character need in this scene?), use 'emotional memory' (recalling personal experiences to fuel emotional truth), and find the 'super-objective' (the character's deepest drive across the whole play). Late in life, Stanislavski shifted emphasis from emotional recall to 'the method of physical actions' — discovering emotion through doing rather than remembering.",
         "The Insight": "Acting is not pretending. Before Stanislavski, European acting was largely declamatory — beautiful voices and grand gestures signifying emotion without embodying it. Stanislavski demanded that actors actually experience what their characters experience: if you need to cry, you don't fake tears; you find a real reason to cry within the imaginary world of the play. This sounds obvious now — it was revolutionary in 1898. His deeper insight was that human behavior is driven by wants: every person in every moment is pursuing an objective, and truth in acting means pursuing that objective with the same urgency as in life.",
@@ -45,7 +44,6 @@
       "name": "Vsevolod Meyerhold — Biomechanics",
       "sort_order": 2,
       "category": "practitioner",
-      "level": 1,
       "sections": {
         "The Practice": "Meyerhold's Biomechanics is a system of actor training based on the premise that emotion follows action, not the other way around. Where Stanislavski asked actors to feel, Meyerhold asked them to move. His training exercises (études) are precise physical sequences — a throw, a slap, a leap — performed with gymnastic exactness: preparation (the coiling before action), action (the explosive movement itself), and reaction (the body's response to its own action). The stage was stripped of illusion: constructivist sets of platforms, ramps, and wheels replaced painted backdrops. Actors were physical workers, not emotional vessels.",
         "The Insight": "The body knows before the mind understands. Meyerhold, trained as Stanislavski's student, rebelled against psychological realism by recognizing that an actor who executes a precise physical action will generate the corresponding emotion more reliably than one who tries to summon emotion from memory. Strike the table with the right quality of force and anger arrives. Cower with the right quality of contraction and fear arrives. This was not anti-emotion but anti-psychology — a conviction that the actor's instrument is the body, and the body must be trained like an athlete's or an acrobat's before it can serve any expressive purpose.",
@@ -60,7 +58,6 @@
       "name": "Bertolt Brecht — The Alienation Effect",
       "sort_order": 3,
       "category": "practitioner",
-      "level": 1,
       "sections": {
         "The Practice": "Brecht's Epic Theater demands that the audience think rather than feel. His key tool is the Verfremdungseffekt (alienation or estrangement effect): techniques that break theatrical illusion to remind the audience that they are watching a constructed event, not reality. Actors step out of character to address the audience. Songs interrupt the action to comment on it. Placards announce what will happen before it happens (destroying suspense to focus attention on how and why). The concept of Gestus — a physical attitude that reveals social relationships — asks actors to show their characters' social position, not just their individual psychology. Brecht wanted theater that was entertaining AND politically instructive.",
         "The Insight": "Catharsis is politically dangerous. Brecht watched audiences weep at Stanislavskian productions and leave the theater feeling purified but unchanged. His insight: if the theater satisfies your emotions, it drains your desire to change the world. By alienating the audience — keeping them at a critical distance, making the familiar strange — Brecht aimed to create a theater that sent people out angry and motivated rather than satisfied and spent. The deeper insight is about theater's relationship to ideology: realistic theater presents the world as natural and inevitable; Epic Theater presents it as constructed and changeable.",
@@ -75,7 +72,6 @@
       "name": "Antonin Artaud — Theatre of Cruelty",
       "sort_order": 4,
       "category": "practitioner",
-      "level": 1,
       "sections": {
         "The Practice": "Artaud's Theatre of Cruelty is less a practice than a vision — one that he articulated brilliantly in The Theatre and Its Double (1938) but never fully realized on stage. His 'cruelty' is not sadism but rigor: the determination to strip theater of its literary safety and restore its power to affect the audience's nervous system directly. He envisioned a theater of sensation — sound, light, breath, space, and the actor's physical presence replacing the primacy of the written text. The audience would be surrounded, not seated; assaulted, not entertained; transformed, not merely moved. Theater should function like plague: it should spread through the body politic and change everything it touches.",
         "The Insight": "Western theater has been enslaved by the text. Artaud's central argument is that European theater subordinated all its elements — body, sound, space, light — to the written word, and in doing so killed the art form. True theater, he argued, should be more like ritual, more like Balinese temple dance (which he witnessed at the 1931 Paris Colonial Exposition and which transformed his thinking), more like a dream that operates directly on the senses without the mediation of rational language. The cruelty is the cruelty of necessity: the determination to confront audiences with experiences so overwhelming that intellectual defenses collapse.",
@@ -90,7 +86,6 @@
       "name": "Jerzy Grotowski — Poor Theatre",
       "sort_order": 5,
       "category": "practitioner",
-      "level": 1,
       "sections": {
         "The Practice": "Grotowski's Poor Theatre strips away everything that is not essential: no sets, no costumes, no makeup, no lighting effects. What remains is the actor's body in relationship to the spectator. The actor trains through via negativa — not the accumulation of skills but the elimination of blocks. The goal is not to learn how to act but to remove everything that prevents the actor from being totally present, totally exposed, totally alive. Training involves extreme physical exercises (derived from yoga, martial arts, and acrobatics), vocal work exploring the body's full resonance, and the cultivation of what Grotowski called the 'total act' — a moment of complete self-revelation where the actor holds nothing back.",
         "The Insight": "The actor is the theater. Everything else is supplementary. Grotowski arrived at this conclusion by systematically asking: what can theater do that film and television cannot? Not spectacle (cinema does it better), not storytelling (literature does it better), not realism (the camera does it better). What theater uniquely offers is the live encounter between a human being who performs an act of self-revelation and a human being who witnesses it. This is why Grotowski called his ideal performer the 'holy actor' — not in a religious sense, but in the sense of one who makes a sacrifice: offering their own psychological and physical truth without the protection of character, set, or technique.",
@@ -105,7 +100,6 @@
       "name": "Peter Brook — The Empty Space",
       "sort_order": 6,
       "category": "practitioner",
-      "level": 1,
       "sections": {
         "The Practice": "Brook's practice begins with his famous taxonomy of theater: Deadly Theater (conventional, predictable, respectable, dead), Holy Theater (Artaud's vision of transcendence through ritual intensity), Rough Theater (Brecht's arena of popular entertainment and political wit), and Immediate Theater (the synthesis Brook pursues — alive, present, direct). His work at the International Centre for Theatre Research (Paris, founded 1970) brought together performers from radically different cultures — African, Japanese, Persian, European — to discover what theatrical communication looks like when stripped of shared language and cultural reference. The result: a theater of elemental simplicity, performed on carpets, with sticks and fabric, seeking the most direct possible connection between performer and audience.",
         "The Insight": "The empty space is the condition of all theater. 'I can take any empty space and call it a bare stage. A man walks across this empty space whilst someone else is watching him, and this is all that is needed for an act of theatre to be engaged.' Brook's genius is in this reduction: by identifying the absolute minimum requirement for theater (a performer, a spectator, and a space), he freed the art form from its dependency on buildings, budgets, and bureaucracies. His deeper insight is that culture-specific theatrical traditions are surface variations on universal human capacities: the capacity to watch, to be watched, to be present, to transform.",
@@ -120,7 +114,6 @@
       "name": "Lee Strasberg — The Method",
       "sort_order": 7,
       "category": "practitioner",
-      "level": 1,
       "sections": {
         "The Practice": "The Method, as developed by Strasberg at the Actors Studio (from 1951), intensifies Stanislavski's emotional memory work into the central technique of actor training. The actor accesses personal traumatic or emotionally charged memories and uses them to fuel the character's emotional life. Relaxation exercises precede memory work — the body must be free of tension before emotional recall can operate. Sense memory exercises (recreating the sensory details of a past experience — the texture of a surface, the smell of a room, the quality of light) are the pathway to emotional truth. The goal: behavior on stage so real that the boundary between actor and character becomes genuinely porous.",
         "The Insight": "The actor's deepest personal truth is the most powerful theatrical material. Strasberg believed that the great performances — Brando in Streetcar, Dean in East of Eden, Page in Sweet Bird of Youth — came not from technical skill but from the actor's willingness to use their own psychological material. This is both the Method's power and its danger: it produces performances of extraordinary emotional intensity, but it can also trap actors in their own trauma, blur the line between art and therapy, and create a culture of suffering as credential. The debate about whether this constitutes 'real' acting or psychological self-harm remains unresolved.",
@@ -135,7 +128,6 @@
       "name": "Sanford Meisner — The Reality of Doing",
       "sort_order": 8,
       "category": "practitioner",
-      "level": 1,
       "sections": {
         "The Practice": "Meisner's technique begins with the Repetition Exercise: two actors face each other and repeat a simple observation back and forth ('You're wearing a blue shirt.' 'I'm wearing a blue shirt.' 'You're wearing a blue shirt.' ...) until the repetition becomes automatic and the actors begin responding to each other's behavior rather than to the words. Shifts in tone, pace, and emphasis emerge not from decision but from genuine response to the partner. From this foundation, Meisner builds toward his core principle: 'Acting is living truthfully under imaginary circumstances.' The emphasis is always on the other person — on listening, responding, being affected — rather than on generating emotion from within.",
         "The Insight": "Get out of your head. Where Strasberg sends actors inward (to personal memory), Meisner sends them outward (to the partner). His central insight: self-consciousness is the enemy of truthful behavior. When an actor is monitoring their own performance — checking whether they look emotional enough, sound convincing enough — they are not acting; they are directing themselves. The Repetition Exercise is designed to break this habit by making the actor's attention so fully occupied by the partner that self-monitoring becomes impossible. What emerges is behavior that is genuinely spontaneous, genuinely responsive, and therefore genuinely alive.",
@@ -150,7 +142,6 @@
       "name": "Stella Adler — The Imagination",
       "sort_order": 9,
       "category": "practitioner",
-      "level": 1,
       "sections": {
         "The Practice": "Adler's approach centers on imagination rather than personal memory. She returned from studying with Stanislavski in 1934 with his later teaching: the actor should not mine their own trauma but should use their creative imagination to fully inhabit the character's circumstances. Her technique emphasizes rigorous script analysis (understanding the world of the play in its social, historical, and economic context), the primacy of action (what the character DOES, not what the character FEELS), and the development of a rich imaginative life that allows the actor to believe fully in circumstances they have never experienced. 'Your talent is in your choice,' she taught — meaning the actor's creative decisions about the character's inner life.",
         "The Insight": "You don't need to have suffered to act suffering. Adler's rejection of emotional memory was not just technical but ethical: she believed it was irresponsible to ask actors to relive personal trauma nightly, and unnecessary — the human imagination is powerful enough to create truthful emotional responses to fictional circumstances without psychological strip-mining. Her deeper insight is about the actor's responsibility to the play: the text provides a world, and the actor's job is to understand that world with scholarly depth and inhabit it with imaginative fullness. The character's feelings belong to the character, not to the actor.",
@@ -165,7 +156,6 @@
       "name": "Viola Spolin — Theater Games",
       "sort_order": 10,
       "category": "practitioner",
-      "level": 1,
       "sections": {
         "The Practice": "Spolin's Theater Games are structured improvisational exercises designed to develop spontaneity, ensemble awareness, and theatrical skill through play rather than instruction. Each game has a 'point of concentration' — a specific focus that occupies the rational mind (counting, mirroring, maintaining an imaginary object) while the creative self operates freely. The games progress from simple (Mirror Exercise, Space Walk) to complex (scenes built through gibberish, transformation of relationships). The teacher/director serves as a side-coach, calling out instructions during the game ('See the color!' 'Where are you?') to redirect attention without stopping the action. Everything is in service of what Spolin called 'the intuitive' — the intelligence that operates faster than conscious thought.",
         "The Insight": "Spontaneity is blocked by the desire to be right. Spolin observed that the greatest enemy of creative performance is 'approval/disapproval' — the internalized critic that monitors performance against an imagined standard. Her games are designed to make self-consciousness impossible by giving the rational mind a task so engaging that it cannot simultaneously judge the work. When the judge falls asleep, the player wakes up. This is why her work begins with children's games: the game format is the most reliable technology for accessing a state of unselfconscious creativity. 'Everyone can act,' she insisted — the capacity for spontaneous theatrical behavior is universal; it only needs to be unlocked.",
@@ -180,7 +170,6 @@
       "name": "Augusto Boal — Theatre of the Oppressed",
       "sort_order": 11,
       "category": "practitioner",
-      "level": 1,
       "sections": {
         "The Practice": "Boal's Theatre of the Oppressed is a toolkit for using theater as a rehearsal for social change. The foundational form is Forum Theater: a short scene depicting an act of oppression is performed, then replayed. This time, any audience member (whom Boal calls 'spect-actors') can shout 'Stop!', replace the protagonist, and try a different strategy for resisting the oppression. The scene continues with the intervener acting live against the other performers. Multiple spect-actors can try different approaches, generating a group exploration of possible responses to real-world power dynamics. Other forms include Image Theater (sculpting bodies into frozen images of social relationships), Invisible Theater (performances in public spaces where the audience does not know they are watching theater), and Rainbow of Desire (therapeutic applications).",
         "The Insight": "The spectator is an oppressed person — in theater as in life. Boal, influenced by Paulo Freire's Pedagogy of the Oppressed, recognized that conventional theater mirrors oppressive social structures: a few people act (have agency) while everyone else watches (is passive). By transforming spectators into spect-actors, Boal breaks this hierarchy. His deeper insight: if you can rehearse resistance in the theater — if you can practice saying 'no' to an oppressor in a safe, fictional space — you are more likely to say 'no' in real life. Theater is not a mirror that reflects reality; it is a rehearsal space where reality can be reimagined and practiced.",
@@ -195,7 +184,6 @@
       "name": "Tadashi Suzuki — The Grammar of the Feet",
       "sort_order": 12,
       "category": "practitioner",
-      "level": 1,
       "sections": {
         "The Practice": "The Suzuki Method of Actor Training is built on the relationship between the feet and the earth. Actors perform demanding exercises — stomping, shuffling, sitting in extreme stillness — designed to develop what Suzuki calls 'animal energy': the raw physical power and alertness that modern life has dulled. The signature exercise involves speaking text while executing precise, exhausting footwork: stamping in place with increasing speed, then freezing into absolute stillness mid-sentence, then exploding again. The body is driven to extremity so that the voice, the words, the intention must fight through physical resistance to be heard. Nothing is decorative. Everything costs.",
         "The Insight": "Modern civilization has disconnected human beings from their bodies — specifically from their feet, from the ground, from gravity. Suzuki traces this disconnection through the history of human seating: from sitting on the floor (where the whole body supports itself) to chairs (where the legs become passive) to cars and escalators (where the feet become vestigial). His training is designed to restore the actor's awareness of the ground as a source of energy and expression. The stamping, the stillness, the violence of the exercises are all in service of this reconnection. An actor who has lost their feet has lost their power.",
@@ -210,7 +198,6 @@
       "name": "Jacques Lecoq — Le Jeu",
       "sort_order": 13,
       "category": "practitioner",
-      "level": 1,
       "sections": {
         "The Practice": "Lecoq's pedagogy at his Paris school (founded 1956) moves through a precise two-year journey. Year one begins with the Neutral Mask — a symmetrical, expressionless mask that strips away the actor's personal mannerisms and reveals their capacity for pure movement. Students explore elemental forces (water, fire, air, earth), animals, materials (wood, metal, paper), and colors through physical improvisation. Year two introduces expressive territories: melodrama, commedia dell'arte, bouffons (grotesque satirical characters), tragedy, and clown. The word 'le jeu' (play/game) is central: Lecoq insists that all theater begins in the spirit of play — the body's delight in movement, mimicry, and transformation.",
         "The Insight": "The body is the primary creative instrument, and it can do far more than psychology allows. Lecoq's insight is that the human body carries within it the capacity to become anything — a wave, a forest fire, a cathedral, a machine, a piece of paper in the wind. This is not mime (which represents absent objects) but something deeper: the body's capacity for mimodynamics — taking on the internal dynamic of any phenomenon. When a Lecoq-trained actor 'becomes' the sea, they do not wave their arms; they find in their body the rhythm, weight, resistance, and restlessness that IS the sea's essential movement quality.",
@@ -225,7 +212,6 @@
       "name": "Anne Bogart — Viewpoints",
       "sort_order": 14,
       "category": "practitioner",
-      "level": 1,
       "sections": {
         "The Practice": "Viewpoints is a technique for composing performance through awareness of time and space. The temporal Viewpoints are: Tempo (speed), Duration (how long something lasts), Kinesthetic Response (spontaneous reaction to movement around you), and Repetition (repeating your own or others' movement). The spatial Viewpoints are: Shape, Gesture, Architecture (the physical environment), Spatial Relationship (distance between bodies), Topography (the floor pattern), and Floor Pattern. In training, performers move through a space attending to these Viewpoints as compositional elements, discovering theatrical material through the body's response to space and to other bodies rather than through text or directorial instruction. Bogart also developed Composition — structured improvisations that become the raw material for devised performance.",
         "The Insight": "Theater happens in time and space — before it happens in text, before it happens in emotion, before it happens in meaning. Bogart's Viewpoints provide a shared vocabulary for what the body does on stage: its speed, its shape, its distance from other bodies, its response to architecture. This vocabulary liberates actors from the tyranny of psychological motivation ('Why am I crossing the stage?') by offering formal reasons ('I am responding to the spatial relationship'). The deeper insight: when performers attend to the spatial and temporal dimensions of performance with genuine awareness, meaning and emotion emerge naturally — they do not need to be imposed.",
@@ -240,7 +226,6 @@
       "name": "Ariane Mnouchkine — Théâtre du Soleil",
       "sort_order": 15,
       "category": "practitioner",
-      "level": 1,
       "sections": {
         "The Practice": "Mnouchkine's Théâtre du Soleil (founded 1964) is organized as a cooperative — everyone shares equally in decisions and income, from lead actors to carpenters. Productions are created collectively over months or years of research, improvisation, and rehearsal. The company draws freely on Asian theatrical forms (Kabuki, Kathakali, Noh, Beijing Opera) to tell stories of vast political and historical scope — the French Revolution (1789), Shakespeare's history plays, Greek tragedy, the contemporary refugee crisis (Le Dernier Caravansérail). The Cartoucherie, a former ammunition factory in the Bois de Vincennes, serves as their permanent home — audiences enter through shared meals, breaking the boundary between life and theater.",
         "The Insight": "Theater is a collective act or it is nothing. Mnouchkine's refusal of hierarchical theater-making is not merely political — it is aesthetic. She believes that the energy of genuine collective creation produces a quality of performance that no single director's vision can achieve. Her use of Asian theatrical forms is not appropriation (though it has been debated) but an argument: that Western naturalism has impoverished the stage by reducing theatrical language to the imitation of everyday behavior, and that Asian traditions preserve a vocabulary of theatricality — stylized movement, mask-like makeup, direct audience address — that the West abandoned at its peril.",
@@ -255,7 +240,6 @@
       "name": "Eugenio Barba — Theatre Anthropology",
       "sort_order": 16,
       "category": "practitioner",
-      "level": 1,
       "sections": {
         "The Practice": "Barba's Theatre Anthropology studies the 'pre-expressive' level of performance — the principles that make a performer's body interesting to watch before any character, emotion, or story is engaged. Through decades of cross-cultural research at ISTA (International School of Theatre Anthropology), Barba identified recurring principles across Asian and Western performance traditions: altered balance (the body held in a state of dynamic imbalance), opposition (every force countered by its complement), consistent inconsistency (a quality of energy different from everyday behavior), and the 'decided body' (a body that has committed to its presence). Odin Teatret, his ensemble (founded 1964 in Denmark), trains through these principles daily.",
         "The Insight": "All great performers, regardless of tradition, share certain body techniques that make them compelling to watch — and these techniques are the opposite of everyday behavior. Where daily life seeks efficiency and energy conservation, performance demands 'luxury balance' — extra energy, extra effort, extra risk. A Noh actor walks by pushing through the floor with invisible force. A ballet dancer defies gravity through relentless muscular effort. A Kathakali performer maintains a deep squat for hours. These traditions know nothing of each other, yet they converge on the same principle: the performing body must be extraordinary — not in what it expresses, but in how it stands, walks, and breathes.",
@@ -270,7 +254,6 @@
       "name": "Rudolf Laban — Movement Analysis",
       "sort_order": 17,
       "category": "practitioner",
-      "level": 1,
       "sections": {
         "The Practice": "Laban Movement Analysis (LMA) provides a comprehensive vocabulary for describing and understanding human movement through four categories: Body (what moves), Effort (how it moves), Shape (what form it takes), and Space (where it moves). The Effort system is the most widely adopted in actor training: every movement can be analyzed along four continua — Weight (light to strong), Time (sustained to sudden), Space (indirect to direct), and Flow (free to bound). These four factors combine into eight basic 'effort actions': punching (strong/sudden/direct), floating (light/sustained/indirect), pressing, flicking, wringing, dabbing, slashing, and gliding. Each effort quality corresponds to a psychological state and a way of engaging with the world.",
         "The Insight": "Movement reveals character more truthfully than words. Laban's fundamental insight is that the quality of a person's movement — not what they do but HOW they do it — expresses their inner state more accurately than anything they say. A character who punches (strong, sudden, direct effort) engages with the world differently from one who floats (light, sustained, indirect effort). By giving actors a precise vocabulary for movement quality, Laban made it possible to build character from the body outward — deciding the character's effort preferences and letting the psychology emerge from the physical choices, rather than the reverse.",
@@ -285,7 +268,6 @@
       "name": "Michael Chekhov — The Psychological Gesture",
       "sort_order": 18,
       "category": "practitioner",
-      "level": 1,
       "sections": {
         "The Practice": "Michael Chekhov's technique centers on the Psychological Gesture (PG): a single, whole-body movement that captures the essence of a character's inner life. A character dominated by greed might be expressed through a grasping, pulling-inward PG. A character driven by generosity might be expressed through an opening, expansive PG. The actor discovers this gesture through exploration, performs it fully and repeatedly, then gradually internalizes it until it becomes invisible — the gesture remains in the body's memory and colors everything the character does. Chekhov also developed work with 'atmosphere' (the invisible emotional quality that fills a space), 'radiation' (the actor's capacity to project energy beyond the physical body), and 'imaginary body' (performing as if inhabiting a body different from one's own).",
         "The Insight": "Character lives in the body, not in biography. Where Stanislavski asked 'What happened to this person before the play begins?' and Strasberg asked 'What happened to ME that feels like what happened to this person?', Chekhov asks: 'What is the essential movement quality of this being?' His approach bypasses psychology entirely — the Psychological Gesture is not a representation of the character's feelings but a direct embodiment of their archetypal energy. This makes Chekhov's technique particularly powerful for non-realistic work: heightened styles, mythology, fantasy, and any role that exceeds the actor's personal experience.",
@@ -300,7 +282,6 @@
       "name": "The Greek Chorus — The Voice of the Community",
       "sort_order": 19,
       "category": "ancient-form",
-      "level": 1,
       "sections": {
         "The Practice": "The Greek chorus is Western theater's origin point: a group of twelve to fifteen performer-citizens who sang, chanted, and danced in unison in the orchestra (the circular dancing floor) below the stage. The chorus commented on the action, warned the protagonist, mourned the dead, praised the gods, and represented the voice of the ordinary community watching extraordinary events unfold. Their movement was choreographed (the word 'choreography' comes from the Greek chorea, dance) to the rhythms of the poetry. Before the first actor stepped forward from the chorus (Thespis, around 534 BCE), there was only the chorus — theater WAS collective singing and dancing in honor of Dionysus.",
         "The Insight": "Theater begins not in the individual but in the group. The Greek chorus reminds us that the original theatrical event was not a solo performance but a communal ritual — a circle of bodies moving and speaking together, processing collective experience through shared rhythm. This has radical implications: it means that the actor stepping out of the chorus to speak as an individual (the origin of 'protagonist') was not the beginning of theater but a disruption of it. What was disrupted? The undifferentiated voice of the community. Every development in Western theater since — the rise of the individual character, psychological realism, the monologue — is a movement away from this origin. And every practitioner who returns to choral work (Mnouchkine, Brook, Suzuki) is moving back toward it.",
@@ -315,7 +296,6 @@
       "name": "Noh Theatre — The Flower of Stillness",
       "sort_order": 20,
       "category": "ancient-form",
-      "level": 1,
       "sections": {
         "The Practice": "Noh is a theater of radical slowness. Developed in 14th-century Japan by Kan'ami and his son Zeami, Noh performance reduces theatrical means to their essence: a bare cypress-wood stage, a painted pine tree, a chorus of chanters, a small orchestra (flute and three drums), and an actor in a carved wooden mask who moves with excruciating deliberateness. A typical Noh play lasts an hour; a single walk across the stage may take five minutes. The shite (main actor) enters already transformed — the mask is not a costume but a technology of inhabitation. The performer does not 'act' the character; by putting on the mask and executing the precise kata (movement patterns), the performer becomes a vessel for the spirit being channeled.",
         "The Insight": "Zeami's concept of 'the flower' (hana) is the deepest aesthetic theory in world theater. The flower is the quality that makes a performance truly alive — and it cannot be possessed permanently. A young actor has the flower of youth (temporary and unearned). A mature actor must cultivate the flower of mastery (rare and hard-won). The greatest flower is the one that surprises — the familiar made strange through depth of practice. Zeami also articulated yūgen — the beauty of what is suggested, hidden, and half-revealed. In Noh, the most powerful moments are the stillest: the mask tilted slightly downward (expressing grief), a single gesture toward a fan (representing the fall of a great house). Less is infinitely more.",
@@ -330,7 +310,6 @@
       "name": "Kabuki — The Art of Transformation",
       "sort_order": 21,
       "category": "ancient-form",
-      "level": 1,
       "sections": {
         "The Practice": "Kabuki is theater as total spectacle — combining acting, dance, music, acrobatics, and visual splendor in a popular art form that has thrilled Japanese audiences since the early 17th century. Its signature techniques include the mie (a dramatic frozen pose with crossed eyes, held to musical accompaniment — the ancestor of every action-movie freeze-frame), the hanamichi (a runway through the audience that brings the actor into the crowd's space), onnagata (male actors specializing in female roles, who dedicate their entire lives to embodying femininity), and elaborate stage machinery including revolving stages and trapdoors. Kabuki actors begin training in childhood and are typically born into acting dynasties.",
         "The Insight": "Theatricality IS reality. Kabuki makes no attempt at realism — its conventions are openly artificial, brazenly spectacular, and powerfully emotional despite (or because of) their artifice. The mie is not a realistic gesture; it is a distillation of emotion into pure form, held long enough for the audience to absorb its full impact. The onnagata does not try to 'pass' as a woman; the stylization reveals something about femininity that a naturalistic performance might miss. Kabuki's insight — shared with opera, with circus, with drag — is that heightened artifice can access emotional truths that naturalism, with its commitment to the ordinary, cannot reach.",
@@ -345,7 +324,6 @@
       "name": "Commedia dell'Arte — The Masked Improvisation",
       "sort_order": 22,
       "category": "ancient-form",
-      "level": 1,
       "sections": {
         "The Practice": "Commedia dell'Arte is structured improvisation through masked stock characters. Each character has a fixed mask, a fixed set of physical attributes, and a fixed social position: Arlecchino (the clever servant — acrobatic, hungry, mischievous), Pantalone (the rich old merchant — bent over, grasping, suspicious), Il Dottore (the pedantic scholar — pompous, round-bellied, spouting nonsense), Il Capitano (the cowardly braggart soldier), and the Lovers (unmasked, beautiful, hopeless). The scenario (plot outline) is posted backstage; the dialogue is entirely improvised. Lazzi (rehearsed comic routines — a hunger lazzi, a madness lazzi, a fright lazzi) can be inserted at appropriate moments like jazz riffs into a chord progression.",
         "The Insight": "The mask does not conceal — it reveals. Commedia's central discovery is that a fixed mask, by removing the actor's facial expressiveness, forces the entire body to become the instrument of communication. Put on the Arlecchino mask and your body must do all the work: your hunger shows in your walk, your cunning shows in the angle of your spine, your joy shows in the way you leap. This liberation through constraint is Commedia's paradox: by limiting the face, you expand the body. By fixing the character type, you free the actor to improvise endlessly within it. The same principle operates in jazz, in sonnet form, in any art where structure enables rather than restricts spontaneity.",
@@ -360,7 +338,6 @@
       "name": "Chinese Opera — The Total Art",
       "sort_order": 23,
       "category": "ancient-form",
-      "level": 1,
       "sections": {
         "The Practice": "Chinese opera (particularly Beijing/Peking Opera) is the most complete synthesis of theater arts in world performance: singing, speaking, acting, and acrobatic fighting (the 'four skills') combined with dance-movement (the 'five methods' of hands, eyes, body, footwork, and steps). Every gesture is codified: entering a room, riding a horse, opening a door, crossing a river — all are performed through stylized movements that the audience reads as fluently as words. A riding crop represents a horse. A circle around the stage represents a journey of a thousand miles. The face is painted in symbolic colors: red for loyalty, white for treachery, black for honesty. Training begins in childhood and is extraordinarily rigorous — acrobatic, vocal, and physical training for seven or more years.",
         "The Insight": "Convention IS communication. Chinese opera achieves what Western naturalism cannot: the ability to represent any reality — vast battles, supernatural transformations, journeys across continents — on a bare stage with a few performers, because the audience shares the performance's symbolic language. When Brecht saw Mei Lanfang perform in Moscow (1935), he recognized a performer who demonstrated rather than embodied his character — showing the audience a woman rather than becoming one — and this observation became the foundation of Brechtian alienation. Chinese opera proved to Brecht that the Western assumption (good acting = invisible technique) was not universal but culturally specific.",
@@ -375,7 +352,6 @@
       "name": "The Clown — The Most Vulnerable Performer",
       "sort_order": 24,
       "category": "archetype",
-      "level": 1,
       "sections": {
         "The Practice": "The theatrical clown (distinct from the circus clown or party clown) is the performer stripped to their most vulnerable, ridiculous, truthful self. In Lecoq's tradition, finding your clown means finding the part of you that is foolish, that fails, that cannot hide behind competence. The red nose — 'the smallest mask in the world' — does not create a character; it exposes the performer. The clown does not know they are funny; they are earnest, hopeful, and catastrophically incompetent. Their failures are our failures, magnified and made lovable. The art is in the performer's willingness to be truly, painfully, joyfully stupid in front of an audience — without the protection of character, skill, or ironic distance.",
         "The Insight": "Vulnerability is the most powerful thing on stage. The clown reverses every other theatrical value: where actors strive for competence, the clown fails; where actors maintain control, the clown loses it; where actors protect themselves, the clown is naked. And yet the clown is the most captivating performer in any show. This is because the audience recognizes in the clown their own fear of failure, their own desperate desire to be loved, their own knowledge that they are ridiculous — and the clown's willingness to embody all of this without shame creates a bond of extraordinary intimacy. The laughter the clown generates is not mockery; it is relief. Someone has finally said what we all know: we are all foolish, and that is okay.",
@@ -390,7 +366,6 @@
       "name": "Mask Work — Becoming Other",
       "sort_order": 25,
       "category": "archetype",
-      "level": 1,
       "sections": {
         "The Practice": "Mask work encompasses several distinct practices, each transformative. The Neutral Mask (developed by Copeau, refined by Lecoq) is a symmetrical, expressionless face that strips away the performer's personal habits and reveals their capacity for essential, archetypal movement. Character masks (half-masks, full masks) impose specific physical lives: put on the mask of an old man and your body must discover that old man's walk, breath, and relationship to gravity. Larval masks (primitive, pre-human shapes) access something even deeper — movement that is not human, not animal, but something in between. In all cases, the principle is the same: the mask removes the face's options and forces the entire body to speak.",
         "The Insight": "The face is a liar. We spend our entire lives learning to manage our facial expressions — smiling when we are angry, looking composed when we are terrified, performing confidence we do not feel. The mask removes this capability and the performer discovers that the body, freed from the face's management, is far more truthful and far more expressive than they imagined. This is why mask training often produces breakthroughs in performers who have been 'stuck' in habitual patterns: the mask makes their usual tricks impossible, and something new — rawer, more physical, more alive — emerges in the absence of facial control.",
@@ -405,7 +380,6 @@
       "name": "Devised Theater — Making It Together",
       "sort_order": 26,
       "category": "method",
-      "level": 1,
       "sections": {
         "The Practice": "Devised theater is performance created collectively by an ensemble rather than interpreted from a pre-existing script. The process varies enormously: some companies begin with a theme (homelessness, migration, memory), others with a physical task (explore what the body does in confined spaces), others with found text (interviews, documents, letters). What unites devised work is the absence of a single author's controlling vision — the material emerges through improvisation, research, discussion, and experimentation. The director (if there is one) serves as editor and shaper rather than as interpreter. The final product often combines text, movement, music, visual art, and technology in configurations that no individual playwright would conceive.",
         "The Insight": "The collective is smarter than the individual — if you create conditions for genuine collaboration. Devised theater challenges the Western assumption that art requires a singular creative genius. The best devised work (Complicité's Mnemonic, Forced Entertainment's durational performances, The Wooster Group's media-layered productions) achieves a complexity, a multi-perspectival richness, that reflects the genuine difficulty of human experience more honestly than any single author's vision. The danger: without the discipline of a clear vision, devised work can devolve into democratic mush. The art is in the balance — collective creation with rigorous editorial judgment.",
@@ -420,7 +394,6 @@
       "name": "Verbatim Theater — The Words of the Living",
       "sort_order": 27,
       "category": "method",
-      "level": 1,
       "sections": {
         "The Practice": "Verbatim theater uses the exact words of real people — gathered through interviews, court transcripts, public testimony, or recordings — as its primary text. The performers speak the words of actual individuals, often using headphone technique (listening to recordings during performance and reproducing the speakers' exact rhythms, pauses, and vocal qualities). The form ranges from documentary journalism (tribunal plays reconstructing public inquiries) to intimate community work (a neighborhood's stories performed by its own residents). The selection and arrangement of material is the creative act — choosing which voices to include, how to juxtapose them, what order reveals meaning.",
         "The Insight": "Real words carry a weight that invented dialogue cannot match. When an audience hears the actual words of a torture survivor, a wrongly convicted prisoner, or a grieving parent — spoken by a performer who has committed to reproducing those words with absolute fidelity — the theatrical frame creates a unique kind of attention. It is not journalism (which aspires to objectivity) and it is not fiction (which aspires to imaginative truth). It is something in between: a space where real testimony gains the focused attention and emotional resonance that only live performance can provide. The ethical demands are significant: whose words, gathered how, presented for whom, with what consent?",
@@ -435,7 +408,6 @@
       "name": "Site-Specific Theater — The Place Performs",
       "sort_order": 28,
       "category": "method",
-      "level": 1,
       "sections": {
         "The Practice": "Site-specific theater removes performance from the theater building and places it in locations whose history, architecture, and atmosphere become the primary scenography. A play about industrial labor performed in a factory. A ghost story performed in the basement of the building where it happened. A piece about migration performed along a border. The audience often moves through the space, discovering scenes in different rooms or locations, their own physical journey becoming part of the theatrical experience. Immersive theater (Punchdrunk's Sleep No More being the most commercially successful example) pushes further: audiences move freely through elaborate environments, choosing their own path through simultaneous scenes.",
         "The Insight": "Every space tells a story before the actors arrive. A hospital corridor, a forest, an abandoned school, a parking garage — each has an atmosphere, a history, and a set of associations that no stage set can replicate. By placing performance in these spaces, site-specific theater accesses something that the purpose-built theater building (with its neutral black walls and controlled lighting) deliberately eliminates: the disorienting, enriching friction between fiction and reality. When you watch a scene about loss performed in a real church, the architecture does half the emotional work. When you hear testimony about factory conditions while standing in a factory, the floor under your feet is evidence.",
@@ -450,7 +422,6 @@
       "name": "Forum Theater — The Rehearsal for Revolution",
       "sort_order": 29,
       "category": "method",
-      "level": 1,
       "sections": {
         "The Practice": "Forum Theater is Boal's most widely practiced technique. A short scene (the 'anti-model') depicts an act of oppression — workplace harassment, police violence, domestic abuse, institutional racism — performed to its unhappy conclusion. The audience watches once. Then the scene replays. This time, any audience member can shout 'Stop!', step onto the stage, replace the protagonist (the person being oppressed), and try a different strategy. The other actors stay in character, responding as the oppressor realistically would. If the intervention fails, another spect-actor can try. The Joker (facilitator) manages the process, probing why interventions succeed or fail, and preventing magical solutions ('I pull out a gun and solve everything').",
         "The Insight": "The most dangerous thing in the world is a rehearsal. If you can practice resistance — if you can try saying 'no' to a boss, confronting a bully, asserting a boundary — in a space where failure has no real consequences, you are more likely to do it when it matters. Forum Theater is not therapy (though it can be therapeutic) and not entertainment (though it can be entertaining). It is a rehearsal for reality — a laboratory where communities can collectively explore, test, and refine strategies for resisting the specific forms of oppression they face. The collective dimension is crucial: it is not one person's solution but a community's shared investigation.",
@@ -465,8 +436,7 @@
       "name": "The Realist Line — Truth on Stage",
       "sort_order": 30,
       "category": "lineage",
-      "level": 2,
-      "composite_of": ["stanislavski", "strasberg", "meisner", "adler", "chekhov-michael"],
+      "parts": ["stanislavski", "strasberg", "meisner", "adler", "chekhov-michael"],
       "sections": {
         "About": "The Realist Line runs from Stanislavski through all three branches of American acting training: Strasberg's Method (go inward to personal memory), Meisner's Repetition (go outward to the partner), and Adler's Imagination (go outward to the world of the play). Michael Chekhov adds a fourth branch — go to the archetype through the body. Despite their fierce disagreements, all four share Stanislavski's foundational commitment: the actor must create truthful behavior under imaginary circumstances. Truth, in this lineage, means behavior so real that the audience forgets they are watching a performance. The debate is about how to get there, not about where 'there' is.",
         "The Through-Line": "The question that runs through the entire Realist Line is: where does truth come from? Stanislavski said: from emotional memory and physical actions. Strasberg doubled down on emotional memory. Adler said: from imagination and script analysis. Meisner said: from listening and response. Chekhov said: from the body's archetypal gestures. Each teacher watched the others' students produce extraordinary performances and concluded that their own approach was right. The audience rarely cares which approach was used — they recognize truth when they see it. The through-line is the commitment to truth itself, however reached.",
@@ -480,8 +450,7 @@
       "name": "The Body Line — Flesh Before Words",
       "sort_order": 31,
       "category": "lineage",
-      "level": 2,
-      "composite_of": ["meyerhold", "grotowski", "suzuki", "lecoq", "barba", "laban"],
+      "parts": ["meyerhold", "grotowski", "suzuki", "lecoq", "barba", "laban"],
       "sections": {
         "About": "The Body Line places the actor's physical instrument before text, before psychology, before meaning. Meyerhold built actors like machines. Grotowski stripped them to their essential physicality through via negativa. Suzuki reconnected them to the earth through punishing foot exercises. Lecoq taught them to become water, fire, wood, and wind. Barba discovered the 'pre-expressive' principles that make any body theatrical. Laban gave the world a vocabulary for how bodies move. Together, these practitioners constitute an argument: that the body knows things the mind does not, that physical training is not supplementary to acting but foundational, and that the most powerful theatrical moments arise from bodies fully committed to presence.",
         "The Through-Line": "The Body Line asks: what can the body do that words cannot? Meyerhold answered: convey emotion through physical action more reliably than through psychological recall. Grotowski answered: achieve a state of complete presence that transcends performance. Suzuki answered: generate power from the ground that makes the actor's voice and presence fill a space. Lecoq answered: transform into anything — an element, an animal, a machine — through the body's mimetic intelligence. The through-line is a progressive deepening of trust in the body as an instrument of knowledge, communication, and transformation.",
@@ -495,8 +464,7 @@
       "name": "The Political Line — Theater as Weapon",
       "sort_order": 32,
       "category": "lineage",
-      "level": 2,
-      "composite_of": ["brecht", "boal", "forum-theater", "verbatim-theater"],
+      "parts": ["brecht", "boal", "forum-theater", "verbatim-theater"],
       "sections": {
         "About": "The Political Line uses theater as a tool for social change. Brecht invented a theatrical form (Epic Theater) designed to make audiences think critically rather than feel complacently. Boal turned audiences into actors (spect-actors) who rehearse resistance to oppression. Forum Theater provides communities with a laboratory for testing strategies against the specific power dynamics they face. Verbatim theater gives voice to real people whose stories are erased or distorted by mainstream media. What unites these practices is the conviction that theater is not a luxury but a necessity — a tool for understanding and transforming the world.",
         "The Through-Line": "The Political Line asks: what is theater FOR? Brecht's answer: to reveal that the world is changeable. Boal's answer: to rehearse the change. Forum Theater's answer: to let the oppressed discover their own strategies. Verbatim theater's answer: to bear witness. The through-line is a movement from critical awareness (Brecht: see the world clearly) to active intervention (Boal: act in the world differently). Each development gives the audience more agency — from passive recipient of Brechtian critique to active spect-actor in Boal's forum — tracking a political conviction that liberation cannot be given but must be practiced.",
@@ -510,8 +478,7 @@
       "name": "The Ritual Line — Theater as Ceremony",
       "sort_order": 33,
       "category": "lineage",
-      "level": 2,
-      "composite_of": ["artaud", "grotowski", "brook", "mnouchkine"],
+      "parts": ["artaud", "grotowski", "brook", "mnouchkine"],
       "sections": {
         "About": "The Ritual Line seeks to restore theater's connection to its sacred origins. Artaud dreamed of a theater that would function like plague — spreading through the audience's nervous system, destroying psychological defenses, producing transformation. Grotowski pursued this through the 'holy actor' — a performer willing to sacrifice their own privacy and self-protection in an act of total self-revelation. Brook synthesized ritual intensity with intercultural theatrical language, seeking universal forms of human connection across cultural boundaries. Mnouchkine's epic collective creations draw on Asian ritual performance traditions to achieve a theatrical intensity that Western naturalism has abandoned.",
         "The Through-Line": "The Ritual Line asks: can theater be a genuine transformative experience — not entertainment, not instruction, but something closer to ceremony? Artaud's answer was theoretical and visionary. Grotowski attempted it practically and eventually left theater altogether for pure ritual. Brook found a middle path: performances that aspire to holy theater's intensity within a secular, intercultural frame. Mnouchkine achieves it through the scale and commitment of her collective process. The through-line is a progressive attempt to recover what was lost when theater separated from religion — not belief, but the capacity for genuine encounter between performer and witness.",
@@ -525,8 +492,7 @@
       "name": "The Play Line — Improvisation and Joy",
       "sort_order": 34,
       "category": "lineage",
-      "level": 2,
-      "composite_of": ["spolin", "lecoq", "commedia", "clown", "mask-work"],
+      "parts": ["spolin", "lecoq", "commedia", "clown", "mask-work"],
       "sections": {
         "About": "The Play Line trusts that the body's capacity for spontaneous, joyful, game-like behavior is theater's most fundamental resource. Spolin's Theater Games unlock spontaneity by giving the rational mind a task while the creative self plays. Lecoq's le jeu begins in physical delight — the body's pleasure in movement, transformation, and mimicry. Commedia dell'Arte proves that structured improvisation through stock characters can produce infinite variety. The Clown discovers that the performer's most vulnerable, ridiculous self is their most captivating. Mask work reveals that covering the face opens the body. What unites this lineage is the conviction that play is not the opposite of seriousness but its deepest form.",
         "The Through-Line": "The Play Line asks: what happens when you stop trying? Spolin's answer: spontaneity emerges when self-consciousness disappears. Lecoq's answer: the body becomes a creative instrument when it discovers its capacity for play. Commedia's answer: character and story arise from structured improvisation. The Clown's answer: truth arrives when you stop protecting yourself. The through-line is a progressive stripping away of the performer's defenses — the desire to be good, to be right, to be in control — to reveal the creative intelligence that operates when those defenses fall.",
@@ -540,8 +506,7 @@
       "name": "The Ancient Roots — Where Theater Begins",
       "sort_order": 35,
       "category": "lineage",
-      "level": 2,
-      "composite_of": ["greek-chorus", "noh", "kabuki", "commedia", "chinese-opera"],
+      "parts": ["greek-chorus", "noh", "kabuki", "commedia", "chinese-opera"],
       "sections": {
         "About": "Every modern theatrical innovation is a reinvention of something ancient. The Greek chorus is the origin of ensemble performance. Noh theater perfected the art of presence through stillness six centuries ago. Kabuki demonstrated that spectacular artifice and profound emotion are not opposites. Commedia dell'Arte proved that improvisation within structure produces inexhaustible creativity. Chinese opera synthesized singing, acting, acrobatics, and dance into the most complete performance form in world culture. These are not museum pieces — they are living traditions whose accumulated wisdom about performance, audience, and the human body far exceeds anything the modern West has developed on its own.",
         "The Through-Line": "The Ancient Roots share a quality that modern Western theater has largely abandoned: the understanding that theater is not realistic but theatrical. Greek actors wore masks. Noh performers move in slow motion. Kabuki actors freeze in poses with crossed eyes. Commedia characters are archetypes, not individuals. Chinese opera replaces sets with gestures. In each case, the tradition trusts that the audience's imagination, guided by formal convention, creates a richer theatrical experience than any amount of realistic detail. The through-line is a commitment to theatricality itself — the art of making visible what reality hides.",
@@ -555,8 +520,7 @@
       "name": "Contemporary Making — The Ensemble Speaks",
       "sort_order": 36,
       "category": "lineage",
-      "level": 2,
-      "composite_of": ["bogart", "devised-theater", "site-specific", "verbatim-theater"],
+      "parts": ["bogart", "devised-theater", "site-specific", "verbatim-theater"],
       "sections": {
         "About": "Contemporary making encompasses the methods that have emerged since the 1980s for creating new performance outside the traditional playwright-director-actor hierarchy. Bogart's Viewpoints provides a shared language for composing in time and space. Devised theater invests creative authority in the ensemble rather than a single author. Site-specific work escapes the theater building to discover performance in the world. Verbatim theater grounds theatrical fiction in documentary reality. These approaches share a commitment to process over product, to ensemble over hierarchy, and to the belief that how you make theater is as important as what you make.",
         "The Through-Line": "Contemporary making asks: who gets to create? The traditional model (playwright writes, director interprets, actors perform) concentrates creative authority in individual artists. Contemporary methods distribute it: Viewpoints gives every performer compositional agency; devised work makes creation collective; site-specific theater makes the space a collaborator; verbatim theater makes real people the authors. The through-line is a progressive democratization of theatrical creation — not because hierarchy is inherently wrong, but because distributed authorship produces a quality of work that reflects the complexity of collective human experience.",
@@ -570,8 +534,7 @@
       "name": "Catharsis — Theater Heals",
       "sort_order": 37,
       "category": "meta-question",
-      "level": 3,
-      "composite_of": ["line-realist", "line-ritual", "line-ancient"],
+      "parts": ["line-realist", "line-ritual", "line-ancient"],
       "sections": {
         "About": "Aristotle named it catharsis — the purification of emotions through pity and fear. For two and a half thousand years, the Western theater tradition has argued about what he meant. Does catharsis heal individuals (watching Oedipus suffer our fear of the unknown somehow cleanses us)? Does it heal communities (processing collective trauma through shared ritual)? Is it an emotional release (we cry and feel better) or an intellectual clarification (we understand something we did not understand before)? The Realist Line pursues catharsis through empathy — feeling with the character so deeply that we experience their suffering as our own and emerge purified. The Ritual Line pursues it through intensity — creating experiences so overwhelming that ordinary consciousness shatters and something new can form in the wreckage.",
         "The Body Speaks": "Catharsis is a body event before it is a psychological concept. The audience member who weeps at Lear's death, who gasps at Oedipus's revelation, who sits stunned and trembling after a Grotowski performance — these are somatic experiences, not intellectual conclusions. The actor pursuing catharsis must access something in their own body (through Stanislavski's memory, through Meisner's listening, through Grotowski's via negativa) real enough to produce a somatic response in the audience's body. This is the mystery at the heart of theater: how does one person's physical/emotional truth cross the space between bodies and produce a physical/emotional response in another? We do not know. But we have been doing it for millennia.",
@@ -585,8 +548,7 @@
       "name": "Alienation — Theater Wakes You Up",
       "sort_order": 38,
       "category": "meta-question",
-      "level": 3,
-      "composite_of": ["line-political", "line-body"],
+      "parts": ["line-political", "line-body"],
       "sections": {
         "About": "If catharsis asks theater to heal, alienation asks theater to disturb. Brecht's Verfremdungseffekt is designed to prevent the audience from losing themselves in the story and instead to see it critically — to ask 'Why is this happening? Who benefits? How could it be different?' The Body Line contributes to alienation differently: by making the body strange, by revealing physical conventions as constructions rather than natural behaviors, physical theater denaturalizes the world the audience takes for granted. Together, these lineages pursue a theater that wakes people up — that makes the familiar strange, the natural arbitrary, and the inevitable changeable.",
         "The Body Speaks": "Alienation is also a body event, though a different one from catharsis. The audience member who leans forward when a Brechtian song interrupts the action, who sits up straighter when a Meyerhold-trained actor breaks into Biomechanical movement in the middle of a realistic scene, who feels the comfortable distance of empathy collapse when a Boal Joker asks them to enter the stage — these are physical responses of heightened alertness, the body waking up from the trance of passive spectatorship. The alienated body is the thinking body: muscles slightly tensed, attention sharpened, the critical faculty engaged alongside (not instead of) the emotional faculty.",
@@ -600,8 +562,7 @@
       "name": "Communion — Theater Connects",
       "sort_order": 39,
       "category": "meta-question",
-      "level": 3,
-      "composite_of": ["line-ritual", "line-play", "line-contemporary"],
+      "parts": ["line-ritual", "line-play", "line-contemporary"],
       "sections": {
         "About": "Beyond healing (catharsis) and beyond critique (alienation), there is a third possibility: communion — the moment when the separation between performer and audience dissolves and both share a single present-tense experience that neither could have alone. Grotowski pursued this through the holy actor's total self-revelation. The Play Line achieves it through the shared vulnerability of clown and improv. Contemporary making creates it through ensemble processes that invite the audience into collaborative creation. Communion is the rarest and most fragile theatrical experience — it cannot be manufactured, only prepared for. But when it happens, everyone in the room knows it, and the room is not the same afterward.",
         "The Body Speaks": "Communion is the moment when breath synchronizes — when the audience exhales together, when the performer's body and the audience's bodies enter the same rhythm. Grotowski spent his career trying to create the conditions for this synchronization. The clown achieves it through shared laughter — the convulsion of the body in recognition of shared ridiculousness. Contact improvisation (Steve Paxton's contribution to the Play Line) achieves it between two bodies through sustained physical listening. In every case, communion is a somatic event: the body recognizes another body as present, as alive, as real, and something opens that language cannot name.",
@@ -615,8 +576,7 @@
       "name": "Liberation — Theater Frees",
       "sort_order": 40,
       "category": "meta-question",
-      "level": 3,
-      "composite_of": ["line-political", "line-play"],
+      "parts": ["line-political", "line-play"],
       "sections": {
         "About": "Theater heals (catharsis), theater wakes you up (alienation), theater connects (communion) — and theater frees. Liberation is the Political Line's deepest aspiration: the conviction that theater can be a tool for genuine social transformation, not through propaganda (which tells people what to think) but through practice (which gives people the experience of acting differently). Boal's Forum Theater is the most developed technology for this: it literally puts the tools of theatrical action in the hands of the oppressed and lets them rehearse their own liberation. But the Play Line contributes too: Spolin's games liberate performers from self-consciousness, the Clown liberates from the tyranny of competence, and improvisation liberates from the authority of the script.",
         "The Body Speaks": "Liberation in theater is always embodied — it happens in the body before it happens in the mind. The spect-actor who steps onto the Forum Theater stage to confront an oppressor feels liberation in their legs (standing up), their voice (speaking back), their hands (gesturing resistance). The improviser who says 'yes, and' for the first time feels liberation in their chest (the release of self-judgment). The clown who stands in front of an audience with nothing feels liberation in their face (the permission to be ridiculous). These are not metaphors — they are somatic experiences of freedom that, once felt in the body, become available in life.",

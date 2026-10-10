@@ -97,7 +97,7 @@ def main():
     )
 
     g = json.loads(GRAMMAR_PATH.read_text(encoding='utf-8'))
-    items = g.get('items', [])
+    items = g.get('nodes', [])
     print(f'Loaded {len(items)} items from {GRAMMAR_PATH.name}')
 
     # Also handle the top-level cover_image_url

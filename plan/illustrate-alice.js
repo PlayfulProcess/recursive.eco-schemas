@@ -94,7 +94,7 @@ const imageMap = {
 // Apply images
 let mapped = 0;
 let unmapped = [];
-g.items.forEach(item => {
+g.nodes.forEach(item => {
   const img = imageMap[item.id];
   if (img) {
     item.image_url = img.url;
@@ -115,7 +115,7 @@ g.attribution.note = "Complete original text from Project Gutenberg eBook #11. I
 
 g.cover_image_url = 'https://drive.google.com/uc?export=view&id=1d2Mw4qrzjOR6JL8Dup3Va9TBS08d-4di';
 
-console.log('Mapped:', mapped, 'of', g.items.length);
+console.log('Mapped:', mapped, 'of', g.nodes.length);
 if (unmapped.length) console.log('Unmapped:', unmapped);
 
 fs.writeFileSync(grammarPath, JSON.stringify(g, null, 2));

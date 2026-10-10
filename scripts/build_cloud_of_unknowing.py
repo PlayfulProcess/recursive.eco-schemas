@@ -26,6 +26,7 @@ import json
 import re
 import os
 import sys
+from grammar_depth import node_depth
 
 SEED_PATH = os.path.join(os.path.dirname(__file__), '..', 'seeds', 'cloud-of-unknowing.txt')
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), '..', 'grammars', 'cloud-of-unknowing')
@@ -161,7 +162,6 @@ def build_grammar(chapters):
             'name': name,
             'sort_order': sort_order,
             'category': 'chapter',
-            'level': 1,
             'sections': {'Text': ch['text']},
             'keywords': keywords[:6],
             'metadata': {'chapter_number': num}
@@ -180,8 +180,7 @@ def build_grammar(chapters):
             'name': 'The Call to Contemplation',
             'sort_order': sort_order,
             'category': 'thematic-group',
-            'level': 2,
-            'composite_of': early,
+            'parts': early,
             'relationship_type': 'emergence',
             'sections': {
                 'About': "The opening chapters establish the central teaching: that God is to be approached not through knowledge but through love. The author instructs his student to put all created things beneath a 'cloud of forgetting' and reach toward God through the 'cloud of unknowing' with a 'naked intent' of love.",
@@ -198,8 +197,7 @@ def build_grammar(chapters):
             'name': 'The Practice of Unknowing',
             'sort_order': sort_order,
             'category': 'thematic-group',
-            'level': 2,
-            'composite_of': middle,
+            'parts': middle,
             'relationship_type': 'emergence',
             'sections': {
                 'About': "The practical heart of the book: detailed instruction on how to practice contemplative prayer, how to handle distractions, the role of humility, and the difference between the active and contemplative lives. The author teaches the use of short prayer-words and the discipline of repeatedly returning attention to the simple intent of love.",
@@ -216,8 +214,7 @@ def build_grammar(chapters):
             'name': 'Advanced Teaching: Discernment and Grace',
             'sort_order': sort_order,
             'category': 'thematic-group',
-            'level': 2,
-            'composite_of': later,
+            'parts': later,
             'relationship_type': 'emergence',
             'sections': {
                 'About': "The later chapters address more advanced topics: the relationship between contemplation and knowledge, warnings against spiritual pride and false mystical experiences, the necessity of grace, and the signs of genuine spiritual progress. The author balances encouragement with caution.",
@@ -229,15 +226,14 @@ def build_grammar(chapters):
         sort_order += 1
 
     # L3
-    l2_ids = [i['id'] for i in items if i['level'] == 2]
+    l2_ids = [i['id'] for i in items if node_depth(i, items) == 2]
     if l2_ids:
         items.append({
             'id': 'the-cloud',
             'name': 'The Cloud of Unknowing',
             'sort_order': sort_order,
             'category': 'meta-theme',
-            'level': 3,
-            'composite_of': l2_ids,
+            'parts': l2_ids,
             'relationship_type': 'emergence',
             'sections': {
                 'About': "The Cloud of Unknowing is one of the masterpieces of Western mystical literature -- a 14th-century guide to contemplative prayer that teaches approaching God not through thought but through love. Its central image -- the 'cloud of unknowing' between the soul and God, penetrated only by the 'sharp dart of longing love' -- has influenced contemplatives for six centuries. The anonymous author writes with extraordinary warmth, humor, and psychological insight.",
@@ -276,7 +272,7 @@ def build_grammar(chapters):
         'shelves': ['wisdom'],
         'lineages': ['Linehan', 'Shrei'],
         'worldview': 'contemplative',
-        'items': items
+        'nodes': items
     }
 
     return grammar
@@ -315,14 +311,14 @@ def main():
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
     item_counts = {}
-    for item in grammar['items']:
-        level = item['level']
+    for item in grammar['nodes']:
+        level = node_depth(item, grammar['nodes'])
         item_counts[level] = item_counts.get(level, 0) + 1
 
     print(f"\nGrammar written to {OUTPUT_PATH}")
     for level in sorted(item_counts):
         print(f"  L{level} items: {item_counts[level]}")
-    print(f"  Total: {len(grammar['items'])} items")
+    print(f"  Total: {len(grammar['nodes'])} items")
 
 
 if __name__ == '__main__':

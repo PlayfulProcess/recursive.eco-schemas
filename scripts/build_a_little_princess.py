@@ -6,13 +6,14 @@ Source: Project Gutenberg eBook #146
 Structure: 19 chapters
 Levels:
   L1: Individual chapters (full text)
-  L2: Thematic groupings with composite_of
+  L2: Thematic groupings with parts
   L3: Meta-categories (The Story, Themes)
 """
 
 import json
 import re
 from pathlib import Path
+from grammar_depth import node_depth
 
 SEED_FILE = Path(__file__).parent.parent / "seeds" / "a-little-princess.txt"
 OUTPUT_DIR = Path(__file__).parent.parent / "grammars" / "a-little-princess"
@@ -226,7 +227,6 @@ def build_grammar():
             "name": f"Chapter {chapter_num}: {CHAPTER_TITLES[chapter_num]}",
             "sort_order": sort_order,
             "category": f"chapter-{chapter_num:02d}",
-            "level": 1,
             "sections": {
                 "Story": chapter_text,
                 "Reflection": CHAPTER_REFLECTIONS.get(chapter_num, "What does this chapter make you think about?"),
@@ -250,9 +250,8 @@ def build_grammar():
             "name": f"Summary: {CHAPTER_TITLES[chapter_num]}",
             "sort_order": sort_order,
             "category": "chapter-summary",
-            "level": 2,
             "relationship_type": "emergence",
-            "composite_of": [chapter_ids[chapter_num]],
+            "parts": [chapter_ids[chapter_num]],
             "sections": {
                 "About": CHAPTER_SUMMARIES.get(chapter_num, ""),
                 "For Parents": CHAPTER_PARENT_NOTES.get(chapter_num, ""),
@@ -276,9 +275,8 @@ def build_grammar():
             "name": theme_data["name"],
             "sort_order": sort_order,
             "category": "theme",
-            "level": 2,
             "relationship_type": "emergence",
-            "composite_of": theme_chapter_ids,
+            "parts": theme_chapter_ids,
             "sections": {
                 "About": theme_data["description"],
                 "For Parents": theme_data["for_parents"],
@@ -298,9 +296,8 @@ def build_grammar():
         "name": "The Story",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "relationship_type": "emergence",
-        "composite_of": all_summary_ids,
+        "parts": all_summary_ids,
         "sections": {
             "About": "The complete narrative of A Little Princess: Sara Crewe's journey from pampered pupil to abused servant and back to heiress. Nineteen chapters trace how imagination, kindness, and inner dignity survive the cruelest reversals of fortune. At its heart, this is a story about what it means to be a princess — not by birth or wealth, but by the quality of one's character.",
             "For Parents": "A Little Princess works on multiple levels. For younger children, it's a Cinderella story with a satisfying ending. For older children, it raises profound questions about wealth, class, identity, and what defines a person's worth. Burnett wrote from her own experience of poverty and wealth, and the book's emotional truth runs deep. Read it together and let the conversations about fairness, imagination, and character unfold naturally.",
@@ -315,9 +312,8 @@ def build_grammar():
         "name": "Themes",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "relationship_type": "emergence",
-        "composite_of": all_theme_ids,
+        "parts": all_theme_ids,
         "sections": {
             "About": "The great themes woven through A Little Princess — imagination as survival, kindness across boundaries, the reversal of fortune, the magic of compassion, and the inner princess. These groupings reveal how Burnett returns again and again to questions of character versus circumstance.",
             "For Parents": "These thematic groupings help you explore the novel beyond the plot. Each theme connects chapters that share a common thread. If your child is drawn to Sara's storytelling, explore 'Imagination as Survival.' If they're troubled by Miss Minchin's cruelty, 'Reversal of Fortune' provides context. The story rewards re-reading from many angles.",
@@ -382,7 +378,7 @@ def build_grammar():
         "shelves": ["children"],
         "lineages": ["Linehan"],
         "worldview": "imaginative",
-        "items": items,
+        "nodes": items,
     }
 
     return grammar
@@ -423,10 +419,10 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    items = grammar["items"]
-    l1 = [i for i in items if i["level"] == 1]
-    l2 = [i for i in items if i["level"] == 2]
-    l3 = [i for i in items if i["level"] == 3]
+    items = grammar["nodes"]
+    l1 = [i for i in items if node_depth(i, items) == 1]
+    l2 = [i for i in items if node_depth(i, items) == 2]
+    l3 = [i for i in items if node_depth(i, items) == 3]
 
     print(f"Grammar written to {OUTPUT_FILE}")
     print(f"  L1 chapters: {len(l1)}")
@@ -443,7 +439,7 @@ def main():
 
     broken = []
     for item in items:
-        for ref in item.get("composite_of", []):
+        for ref in item.get("parts", []):
             if ref not in id_set:
                 broken.append((item["id"], ref))
     if broken:

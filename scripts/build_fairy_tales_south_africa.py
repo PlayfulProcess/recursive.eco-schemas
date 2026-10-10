@@ -231,7 +231,7 @@ L3_DEFS = [
         "name": "Themes and Teachings",
         "category": "meta",
         "about": "The thematic landscape of South African fairy tales: transformation and disguise as the dominant motif, the ever-present fairy world woven into nature, heroes on quests for kingdoms, the dark truths of family cruelty balanced by justice, and princesses whose extraordinary beauty is a supernatural force. These tales, collected from Swazi, Zulu, Shangani, and Msuto storytellers, preserve a rich oral tradition that shares deep roots with fairy tales worldwide while remaining distinctly African in setting, character, and spiritual sensibility.",
-        "composite_of": [
+        "parts": [
             "theme-transformation-and-disguise", "theme-magic-and-fairy-world",
             "theme-hero-quests", "theme-family-and-morals",
             "theme-princesses-and-beauty"
@@ -409,7 +409,6 @@ def build_l1_items(stories):
             "id": sdef["id"],
             "name": sdef["name"],
             "sort_order": sort_order,
-            "level": 1,
             "category": sdef["category"],
             "sections": sections,
             "keywords": sdef["keywords"],
@@ -430,14 +429,13 @@ def build_l2_items(l1_items):
             "id": group["id"],
             "name": group["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": group["category"],
             "sections": {
                 "About": group["about"],
                 "For Readers": group["for_readers"]
             },
             "keywords": group["keywords"],
-            "composite_of": group["member_ids"],
+            "parts": group["member_ids"],
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -455,11 +453,10 @@ def build_l3_items(start_sort_order):
             "id": l3["id"],
             "name": l3["name"],
             "sort_order": sort_order,
-            "level": 3,
             "category": l3["category"],
             "sections": {"About": l3["about"]},
             "keywords": l3["keywords"],
-            "composite_of": l3["composite_of"],
+            "parts": l3["parts"],
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -512,7 +509,7 @@ def build_grammar(l1_items, l2_items, l3_items):
         "lineages": ["Akomolafe", "Andreotti"],
         "worldview": "animist",
         "cover_image_url": "",
-        "items": l1_items + l2_items + l3_items
+        "nodes": l1_items + l2_items + l3_items
     }
     return grammar
 

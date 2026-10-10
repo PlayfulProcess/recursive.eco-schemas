@@ -485,7 +485,6 @@ def passenger_to_item(p, idx):
     return {
         "id": p["id"],
         "name": p["name"],
-        "level": 1,
         "sort_order": idx,
         "category": f"tier-{p['tier']}",
         "subcategory": TIER_NAMES[p["tier"]],
@@ -515,10 +514,9 @@ def make_tier_emergence_items(passengers):
         out.append({
             "id": f"tier-{tier}",
             "name": TIER_NAMES[tier],
-            "level": 2,
             "sort_order": 100 + tier,
             "category": "tier",
-            "composite_of": composite,
+            "parts": composite,
             "relationship_type": "emergence",
             "image_url": "",
             "keywords": [],
@@ -602,7 +600,7 @@ def make_grammar(passengers):
         "shelves": ["wisdom", "mirror"],
         "lineages": ["Andreotti", "Akomolafe", "Linehan"],
         "worldview": "decolonial",
-        "items": items,
+        "nodes": items,
     }
 
 

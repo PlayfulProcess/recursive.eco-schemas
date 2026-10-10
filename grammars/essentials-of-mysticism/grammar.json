@@ -36,11 +36,10 @@
     "Shrei"
   ],
   "worldview": "contemplative",
-  "items": [
+  "nodes": [
     {
       "id": "essentials-of-mysticism",
       "name": "The Essentials of Mysticism",
-      "level": 1,
       "category": "essay",
       "sort_order": 1,
       "sections": {
@@ -58,7 +57,6 @@
     {
       "id": "mystic-and-corporate-life",
       "name": "The Mystic and the Corporate Life",
-      "level": 1,
       "category": "essay",
       "sort_order": 2,
       "sections": {
@@ -76,7 +74,6 @@
     {
       "id": "mysticism-doctrine-atonement",
       "name": "Mysticism and the Doctrine of Atonement",
-      "level": 1,
       "category": "essay",
       "sort_order": 3,
       "sections": {
@@ -94,7 +91,6 @@
     {
       "id": "mystic-as-creative-artist",
       "name": "The Mystic as Creative Artist",
-      "level": 1,
       "category": "essay",
       "sort_order": 4,
       "sections": {
@@ -112,7 +108,6 @@
     {
       "id": "education-of-spirit",
       "name": "The Education of the Spirit",
-      "level": 1,
       "category": "essay",
       "sort_order": 5,
       "sections": {
@@ -129,7 +124,6 @@
     {
       "id": "will-intellect-feeling-prayer",
       "name": "The Place of Will, Intellect, and Feeling in Prayer",
-      "level": 1,
       "category": "essay",
       "sort_order": 6,
       "sections": {
@@ -147,7 +141,6 @@
     {
       "id": "mysticism-of-plotinus",
       "name": "The Mysticism of Plotinus",
-      "level": 1,
       "category": "essay",
       "sort_order": 7,
       "sections": {
@@ -165,7 +158,6 @@
     {
       "id": "mirror-of-simple-souls",
       "name": "The Mirror of Simple Souls",
-      "level": 1,
       "category": "essay",
       "sort_order": 8,
       "sections": {
@@ -183,7 +175,6 @@
     {
       "id": "blessed-angela-of-foligno",
       "name": "The Blessed Angela of Foligno",
-      "level": 1,
       "category": "essay",
       "sort_order": 9,
       "sections": {
@@ -201,7 +192,6 @@
     {
       "id": "julian-of-norwich",
       "name": "Julian of Norwich",
-      "level": 1,
       "category": "essay",
       "sort_order": 10,
       "sections": {
@@ -219,7 +209,6 @@
     {
       "id": "soeur-therese",
       "name": "Soeur Thérèse de l'Enfant-Jésus",
-      "level": 1,
       "category": "essay",
       "sort_order": 11,
       "sections": {
@@ -237,7 +226,6 @@
     {
       "id": "lucie-christine",
       "name": "Lucie-Christine",
-      "level": 1,
       "category": "essay",
       "sort_order": 12,
       "sections": {
@@ -255,7 +243,6 @@
     {
       "id": "charles-peguy",
       "name": "Charles Péguy",
-      "level": 1,
       "category": "essay",
       "sort_order": 13,
       "sections": {
@@ -273,10 +260,9 @@
     {
       "id": "theme-theory-practice",
       "name": "Theory and Practice of Mysticism",
-      "level": 2,
       "category": "theme",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "essentials-of-mysticism",
         "mystic-and-corporate-life",
         "mysticism-doctrine-atonement",
@@ -297,10 +283,9 @@
     {
       "id": "theme-historical-mystics",
       "name": "The Historical Mystics",
-      "level": 2,
       "category": "theme",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "mysticism-of-plotinus",
         "mirror-of-simple-souls",
         "blessed-angela-of-foligno",
@@ -322,10 +307,9 @@
     {
       "id": "theme-medieval-mystics",
       "name": "Three Medieval Mystics",
-      "level": 2,
       "category": "theme",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "mirror-of-simple-souls",
         "blessed-angela-of-foligno",
         "julian-of-norwich"
@@ -343,10 +327,9 @@
     {
       "id": "theme-modern-france",
       "name": "Mysticism in Modern France",
-      "level": 2,
       "category": "theme",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "soeur-therese",
         "lucie-christine",
         "charles-peguy"
@@ -364,10 +347,9 @@
     {
       "id": "meta-complete-work",
       "name": "The Essentials of Mysticism: Theory and Lives",
-      "level": 3,
       "category": "meta",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "theme-theory-practice",
         "theme-historical-mystics"
       ],
@@ -381,10 +363,9 @@
     {
       "id": "meta-women-mystics",
       "name": "Women's Voices in the Mystical Tradition",
-      "level": 3,
       "category": "meta",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "theme-medieval-mystics",
         "theme-modern-france"
       ],

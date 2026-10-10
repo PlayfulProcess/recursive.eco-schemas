@@ -11,6 +11,7 @@ describing her visions of divine love received during a near-death illness in 13
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SEED_PATH = os.path.join(os.path.dirname(__file__), '..', 'seeds', 'revelations-divine-love.txt')
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), '..', 'grammars', 'revelations-divine-love')
@@ -297,7 +298,6 @@ def build_items(chapters):
             'name': name,
             'sort_order': sort_order,
             'category': category,
-            'level': 1,
             'sections': {
                 'Text': ch['text']
             },
@@ -326,8 +326,7 @@ def build_l2_items(chapters, sort_start):
         'name': 'Preamble: The Three Desires',
         'sort_order': sort_order,
         'category': 'structural-group',
-        'level': 2,
-        'composite_of': ['chapter-1', 'chapter-2', 'chapter-3'],
+        'parts': ['chapter-1', 'chapter-2', 'chapter-3'],
         'relationship_type': 'emergence',
         'sections': {
             'About': "Julian's autobiographical introduction to the Sixteen Shewings. She describes the three gifts she desired from God: a vivid sense of Christ's Passion, a bodily sickness unto death at age thirty, and three spiritual wounds (contrition, compassion, and longing for God). The sickness came as asked, and during it the visions were granted.",
@@ -351,8 +350,7 @@ def build_l2_items(chapters, sort_start):
             'name': REVELATION_TITLES[rev_num],
             'sort_order': sort_order,
             'category': 'revelation',
-            'level': 2,
-            'composite_of': rev_chapters,
+            'parts': rev_chapters,
             'relationship_type': 'emergence',
             'sections': {
                 'About': REVELATION_DESCRIPTIONS[rev_num],
@@ -369,8 +367,7 @@ def build_l2_items(chapters, sort_start):
         'name': 'Autobiographical Interludes: Assaying of Faith',
         'sort_order': sort_order,
         'category': 'structural-group',
-        'level': 2,
-        'composite_of': ['chapter-66', 'chapter-69'],
+        'parts': ['chapter-66', 'chapter-69'],
         'relationship_type': 'emergence',
         'sections': {
             'About': "Two deeply honest autobiographical chapters in which Julian describes her falls into doubt after the Shewings. In Chapter 66, she recounts how she fell through frailty into questioning whether the whole experience was delirium; in Chapter 69, she describes a terrifying dream of fiends. Both times she was rescued by grace. These chapters ground the mystical visions in lived human experience.",
@@ -388,8 +385,7 @@ def build_l2_items(chapters, sort_start):
         'name': 'The Life of Faith: Charity, Hope, and the Meaning',
         'sort_order': sort_order,
         'category': 'structural-group',
-        'level': 2,
-        'composite_of': faith_chapters,
+        'parts': faith_chapters,
         'relationship_type': 'emergence',
         'sections': {
             'About': "The extended meditation that follows the Sixteen Revelations, in which Julian reflects on the life of faith as kept by Charity and led by Hope. These chapters integrate the visions into a coherent theology of love, addressing sin, suffering, prayer, and the soul's relationship to God. They culminate in the luminous Chapter 86: 'Love was His meaning.'",
@@ -406,8 +402,7 @@ def build_l2_items(chapters, sort_start):
         'name': '"Love Was His Meaning"',
         'sort_order': sort_order,
         'category': 'structural-group',
-        'level': 2,
-        'composite_of': ['chapter-86'],
+        'parts': ['chapter-86'],
         'relationship_type': 'emergence',
         'sections': {
             'About': "The luminous final chapter in which Julian receives the key to her entire Revelation, fifteen years after the visions themselves: 'Wouldst thou learn thy Lord's meaning in this thing? Learn it well: Love was His meaning. Who shewed it thee? Love. What shewed He thee? Love. Wherefore shewed it He? For Love.' This is the heart of the whole book.",
@@ -424,8 +419,7 @@ def build_l2_items(chapters, sort_start):
         'name': 'All Shall Be Well: Julian on Sin and Redemption',
         'sort_order': sort_order,
         'category': 'thematic-group',
-        'level': 2,
-        'composite_of': [
+        'parts': [
             'chapter-11', 'chapter-27', 'chapter-29', 'chapter-30',
             'chapter-31', 'chapter-32', 'chapter-33', 'chapter-35',
             'chapter-38', 'chapter-39', 'chapter-40', 'chapter-85', 'chapter-86'
@@ -445,8 +439,7 @@ def build_l2_items(chapters, sort_start):
         'name': 'God as Mother: Julian on Divine Motherhood',
         'sort_order': sort_order,
         'category': 'thematic-group',
-        'level': 2,
-        'composite_of': [
+        'parts': [
             'chapter-25', 'chapter-52', 'chapter-57', 'chapter-58',
             'chapter-59', 'chapter-60', 'chapter-61', 'chapter-62', 'chapter-63'
         ],
@@ -465,8 +458,7 @@ def build_l2_items(chapters, sort_start):
         'name': 'Prayer and Seeking: The Soul Before God',
         'sort_order': sort_order,
         'category': 'thematic-group',
-        'level': 2,
-        'composite_of': [
+        'parts': [
             'chapter-5', 'chapter-6', 'chapter-41', 'chapter-42',
             'chapter-43', 'chapter-44', 'chapter-45', 'chapter-46'
         ],
@@ -493,8 +485,7 @@ def build_l3_items(sort_start):
         'name': 'The Sixteen Revelations',
         'sort_order': sort_order,
         'category': 'meta-theme',
-        'level': 3,
-        'composite_of': [f'revelation-{i}' for i in range(1, 17)],
+        'parts': [f'revelation-{i}' for i in range(1, 17)],
         'relationship_type': 'emergence',
         'sections': {
             'About': "The sixteen visions or 'Shewings' granted to Julian of Norwich on May 13, 1373, during a near-fatal illness. They came in rapid succession over about five hours, with a final confirming vision the following night. Together they form one of the most profound and coherent mystical documents in the English language -- a sustained meditation on divine love as the ground and meaning of all existence.",
@@ -510,8 +501,7 @@ def build_l3_items(sort_start):
         'name': "Julian's Theology of Love",
         'sort_order': sort_order,
         'category': 'meta-theme',
-        'level': 3,
-        'composite_of': [
+        'parts': [
             'all-shall-be-well', 'god-as-mother', 'prayer-and-seeking',
             'love-was-his-meaning', 'autobiographical-interludes', 'faith-and-life'
         ],
@@ -547,11 +537,11 @@ def build_grammar():
 
     all_items = l1_items + l2_items + l3_items
 
-    # Validate composite_of references
+    # Validate parts references
     all_ids = {item['id'] for item in all_items}
     for item in all_items:
-        if 'composite_of' in item:
-            for ref in item['composite_of']:
+        if 'parts' in item:
+            for ref in item['parts']:
                 if ref not in all_ids:
                     print(f"WARNING: {item['id']} references non-existent id: {ref}")
 
@@ -587,7 +577,7 @@ def build_grammar():
         'shelves': ['wisdom'],
         'lineages': ['Linehan'],
         'worldview': 'contemplative',
-        'items': all_items
+        'nodes': all_items
     }
 
     # Write output
@@ -596,9 +586,9 @@ def build_grammar():
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
     # Summary
-    l1_count = len([i for i in all_items if i['level'] == 1])
-    l2_count = len([i for i in all_items if i['level'] == 2])
-    l3_count = len([i for i in all_items if i['level'] == 3])
+    l1_count = len([i for i in all_items if node_depth(i, all_items) == 1])
+    l2_count = len([i for i in all_items if node_depth(i, all_items) == 2])
+    l3_count = len([i for i in all_items if node_depth(i, all_items) == 3])
     print(f"\nGrammar written to {OUTPUT_PATH}")
     print(f"  L1 items: {l1_count} (chapters)")
     print(f"  L2 items: {l2_count} (revelations + thematic groups)")

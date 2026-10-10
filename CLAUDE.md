@@ -70,7 +70,7 @@ Every `grammar.json` follows this structure:
   "shelves": ["wisdom"],
   "lineages": ["Linehan", "Shrei"],
   "worldview": "non-dual",
-  "items": [...]
+  "nodes": [...]
 }
 ```
 
@@ -83,7 +83,7 @@ These fields connect each grammar to the library's many perspectives:
 - `lineages` — Modern thinkers this feeds: `Linehan`, `Akomolafe`, `Shrei`, `Andreotti`, `Gottman`, `Johnson`, `Kelty`
 - `worldview` — Epistemic stance: `animist`, `rationalist`, `devotional`, `dialectical`, `non-dual`, etc.
 
-### Item Format
+### Node Format (grammar format v2, Oct 2026)
 
 ```json
 {
@@ -91,7 +91,6 @@ These fields connect each grammar to the library's many perspectives:
   "name": "Display Name",
   "sort_order": 0,
   "category": "grouping-key",
-  "level": 1,
   "sections": {
     "SectionName": "Content text..."
   },
@@ -102,9 +101,11 @@ These fields connect each grammar to the library's many perspectives:
 
 ### Emergence Levels
 
-- **L1** (level 1): Base items — individual cards, passages, fables, verses
-- **L2** (level 2): Emergent combinations — chapters, acts, archetypal dynamics. Use `composite_of: ["id1", "id2"]` and `relationship_type: "emergence"`
-- **L3** (level 3): Meta-categories — plays, individuation stages, macro-themes
+A node's level is not stored (format v2 has no `level` field): it is the depth computed from `parts` — a node with no parts is L1; otherwise 1 + its deepest part.
+
+- **L1**: Base items — individual cards, passages, fables, verses
+- **L2**: Emergent combinations — chapters, acts, archetypal dynamics. Use `parts: ["id1", "id2"]` and `relationship_type: "emergence"`
+- **L3**: Meta-categories — plays, individuation stages, macro-themes
 
 ### Creating Emergence When None Exists Naturally
 
@@ -115,7 +116,7 @@ These fields connect each grammar to the library's many perspectives:
 - **By natural chapters**: When a text has book/chapter divisions, always create L2 items for them with descriptive summaries.
 - **Multiple classification axes**: A grammar can have BOTH animal groups AND moral themes at L2, with L3 meta-categories for each axis (e.g., "The Animal Kingdom" and "Life Lessons").
 
-L2 items should have `composite_of` referencing all L1 items in the group, a descriptive "About" section explaining what the group represents, and a practical "For Parents" / "For Readers" / "How to Use" section.
+L2 nodes should have `parts` referencing all L1 nodes in the group, a descriptive "About" section explaining what the group represents, and a practical "For Parents" / "For Readers" / "How to Use" section.
 
 ### Grammar Types
 
@@ -144,22 +145,22 @@ L2 items should have `composite_of` referencing all L1 items in the group, a des
 ## Meta-Grammars & Reference Items (a grammar of grammars)
 
 A grammar's items can **point at other grammars** instead of holding content, which
-makes a "grammar of grammars" possible. On a `UnifiedItem`:
+makes a "grammar of grammars" possible. On a node:
 
-- `item_type: "reference"` + `ref_document_id` — the item opens another
-  `user_document` (the viewer renders it as a `/play?id=…` link).
+- `node_type: "reference"` + `ref_grammar_id` (and optionally `ref_node_id`) — the node opens another
+  grammar (the viewer renders it as a `/play?id=…` link).
 - `ref_preview: "grammar" | "study" | "altar"` — how the target opens.
 - `grammars: [id, …]` — multi-link to connected grammars.
 
 At the grammar root, `default_preview: "tree"` opens the recursive.eco **tree-viewer**
-(`pages/tree-viewer.html?type=custom&id=…`), which draws the L1/L2/L3 `composite_of`
+(`pages/tree-viewer.html?type=custom&id=…`), which draws the L1/L2/L3 `parts`
 emergence as a tree with connecting edges.
 
 **Live example — the genealogy of tarot:** `grammars/tree-of-tarot/grammar.json` is a
 meta-grammar whose **L1** leaves are the tarot decks, **L2** are the branches (Michael
 Dummett's A/B/C trump-orders + the occult reframing + sui-generis offshoots), and
 **L3** is the root. It sets `default_preview: "tree"`. After the decks are imported to
-Supabase, each leaf's `ref_document_id` is set so clicking it opens that deck.
+Supabase, each leaf's `ref_grammar_id` is set so clicking it opens that deck.
 
 This is recursion **by reference** — items are NOT merged into the grammar type.
 (Full item/grammar type-unification is deliberately NOT done — too deep a refactor over
@@ -197,7 +198,7 @@ This is needed because the cloud environment cannot access external URLs directl
 ### From Memory
 1. Plan the taxonomy (list all items at each level) before writing content
 2. Write content for each item with appropriate sections
-3. Validate referential integrity (`composite_of` references must exist)
+3. Validate referential integrity (`parts` references must exist)
 
 ### Key Conventions
 - IDs: lowercase, hyphenated, hierarchical (e.g., `book-4-17`, `hamlet-act1-scene1`)
@@ -364,7 +365,7 @@ Priorities include:
 Run `python3 scripts/validate.py` to check all grammars, or validate manually:
 1. Valid JSON (`python3 -c "import json; json.load(open('grammar.json'))"`)
 2. No duplicate IDs
-3. All `composite_of` references point to existing item IDs
+3. All `parts` references point to existing node IDs
 4. `sort_order` is sequential
-5. All items have `id`, `name`, `sections`, `level`, `category`
+5. All nodes have `id`, `name`, `sections` (no `level`: depth comes from `parts`)
 6. Attribution metadata is present in `_grammar_commons`

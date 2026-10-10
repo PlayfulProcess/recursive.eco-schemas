@@ -20,6 +20,7 @@ import json
 import re
 import os
 from pathlib import Path
+from grammar_depth import node_depth
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent
@@ -251,7 +252,6 @@ def build_grammar():
             "id": div['key'],
             "name": div['name'],
             "sort_order": sort_order,
-            "level": 1,
             "category": "division",
             "sections": {
                 "Text": div['text'],
@@ -272,10 +272,9 @@ def build_grammar():
             "id": theme_id,
             "name": theme["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": theme["chapters"],
+            "parts": theme["chapters"],
             "sections": {
                 "About": theme["about"],
                 "For Readers": theme["for_readers"],
@@ -292,10 +291,9 @@ def build_grammar():
         "id": "critique-pure-reason-complete",
         "name": "The Critique of Pure Reason: The Complete Work",
         "sort_order": sort_order,
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": all_theme_ids,
+        "parts": all_theme_ids,
         "sections": {
             "About": "Immanuel Kant's Critique of Pure Reason (Kritik der reinen Vernunft, 1781; second edition 1787) is the founding text of modern philosophy. Kant's 'Copernican revolution' argues that the mind does not passively receive reality but actively structures experience through forms of sensibility (space and time) and categories of understanding (causality, substance, etc.). This makes objective science possible but also means that reason, when it tries to know things beyond experience — the soul, the cosmos as a whole, God — inevitably falls into illusion. The Critique thus draws the boundaries of human knowledge: we can know phenomena (things as they appear to us) but never noumena (things in themselves). Within these boundaries, science is secure; beyond them, only practical reason (morality) can guide us.",
             "For Readers": "The Critique is one of the most difficult and most rewarding books in the Western canon. Start with the Second Preface for the Copernican revolution. The Introduction defines synthetic a priori knowledge. The Transcendental Aesthetic (space and time) is the most accessible section. The Analytic is the hardest but most important — the categories and their deduction. The Dialectic is the most dramatic — the antinomies are breathtaking philosophical theatre. The Doctrine of Method contains Kant's most humane writing, especially the Canon's three questions: What can I know? What ought I to do? What may I hope?",
@@ -330,16 +328,16 @@ def build_grammar():
         "shelves": ["mirror"],
         "lineages": ["Andreotti"],
         "worldview": "rationalist",
-        "items": items,
+        "nodes": items,
     }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT_PATH}")
     print(f"  L1: {l1} divisions, L2: {l2} themes, L3: {l3} meta")
     print(f"  Total items: {len(items)}")

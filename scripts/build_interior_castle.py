@@ -35,6 +35,7 @@ import json
 import re
 import os
 import sys
+from grammar_depth import node_depth
 
 SEED_PATH = os.path.join(os.path.dirname(__file__), '..', 'seeds', 'interior-castle.txt')
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), '..', 'grammars', 'interior-castle')
@@ -210,7 +211,6 @@ def build_grammar(parsed_items):
             'name': name,
             'sort_order': sort_order,
             'category': f'mansion-{pi["mansion"]}',
-            'level': 1,
             'sections': {'Text': pi['text']},
             'keywords': keywords[:6],
             'metadata': {'mansion': pi['mansion'], 'chapter': pi['chapter']}
@@ -226,8 +226,7 @@ def build_grammar(parsed_items):
                 'name': MANSION_NAMES.get(m, f'Mansion {m}'),
                 'sort_order': sort_order,
                 'category': 'mansion',
-                'level': 2,
-                'composite_of': mansion_ids,
+                'parts': mansion_ids,
                 'relationship_type': 'emergence',
                 'sections': {
                     'About': MANSION_DESCRIPTIONS.get(m, ''),
@@ -248,8 +247,7 @@ def build_grammar(parsed_items):
             'name': 'The Outer Mansions: Human Effort and the Active Life',
             'sort_order': sort_order,
             'category': 'thematic-group',
-            'level': 2,
-            'composite_of': outer_ids,
+            'parts': outer_ids,
             'relationship_type': 'emergence',
             'sections': {
                 'About': "The first three mansions represent the soul's active work: self-knowledge, perseverance in prayer, and the cultivation of virtue. Here the soul labors with its own powers, and God cooperates. Teresa calls these the 'mansions of humility.' The danger is stopping here and mistaking moral goodness for spiritual maturity.",
@@ -266,8 +264,7 @@ def build_grammar(parsed_items):
             'name': 'The Inner Mansions: Divine Gift and the Contemplative Life',
             'sort_order': sort_order,
             'category': 'thematic-group',
-            'level': 2,
-            'composite_of': inner_ids,
+            'parts': inner_ids,
             'relationship_type': 'emergence',
             'sections': {
                 'About': "From the Fourth Mansion onward, the initiative passes from the soul to God. Supernatural prayer begins, the soul is progressively purified and transformed, and the journey culminates in the Seventh Mansion's 'spiritual marriage' -- permanent, peaceful union with God. Teresa insists this is not withdrawal from the world but the foundation for extraordinary love and service.",
@@ -279,15 +276,14 @@ def build_grammar(parsed_items):
         sort_order += 1
 
     # L3
-    l2_ids = [i['id'] for i in items if i['level'] == 2]
+    l2_ids = [i['id'] for i in items if node_depth(i, items) == 2]
     if l2_ids:
         items.append({
             'id': 'the-interior-castle',
             'name': 'The Interior Castle',
             'sort_order': sort_order,
             'category': 'meta-theme',
-            'level': 3,
-            'composite_of': l2_ids,
+            'parts': l2_ids,
             'relationship_type': 'emergence',
             'sections': {
                 'About': "St. Teresa of Avila's Interior Castle (1577) is the supreme masterpiece of mystical psychology -- a complete map of the soul's journey from the outermost rooms of self-knowledge to the innermost chamber where God dwells. Written at the command of her confessor when Teresa was sixty-two, it draws on decades of contemplative experience to describe, with extraordinary precision, warmth, and humor, the seven 'mansions' or stages of the spiritual life. The governing image -- the soul as a crystal castle with God at its center -- is one of the most powerful in spiritual literature.",
@@ -327,7 +323,7 @@ def build_grammar(parsed_items):
         'shelves': ['wisdom'],
         'lineages': ['Linehan'],
         'worldview': 'contemplative',
-        'items': items
+        'nodes': items
     }
 
     return grammar
@@ -364,14 +360,14 @@ def main():
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
     item_counts = {}
-    for item in grammar['items']:
-        level = item['level']
+    for item in grammar['nodes']:
+        level = node_depth(item, grammar['nodes'])
         item_counts[level] = item_counts.get(level, 0) + 1
 
     print(f"\nGrammar written to {OUTPUT_PATH}")
     for level in sorted(item_counts):
         print(f"  L{level} items: {item_counts[level]}")
-    print(f"  Total: {len(grammar['items'])} items")
+    print(f"  Total: {len(grammar['nodes'])} items")
 
 
 if __name__ == '__main__':

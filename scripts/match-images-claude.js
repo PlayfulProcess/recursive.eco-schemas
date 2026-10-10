@@ -92,7 +92,7 @@ async function matchAll(imageDescriptions, items) {
     id: item.id,
     name: item.name,
     sort_order: item.sort_order,
-    level: item.level,
+    level: nodeDepth(item, items),
     chapter: item.metadata?.chapter_name || item.category,
     scene_number: item.metadata?.scene_number,
     // first section text, truncated
@@ -178,7 +178,7 @@ Requires ANTHROPIC_API_KEY in .env or environment.
     .sort();
 
   console.log(`Found ${files.length} images in ${imgDir}`);
-  console.log(`Grammar: ${grammar.name} (${grammar.items.length} items)\n`);
+  console.log(`Grammar: ${grammar.name} (${grammar.nodes.length} items)\n`);
 
   // ── Phase 1 ──
   const descPath = path.join(path.dirname(grammarPath), 'image-descriptions.json');
@@ -231,7 +231,7 @@ Requires ANTHROPIC_API_KEY in .env or environment.
 
     // ── Phase 2 ──
     console.log('\nPhase 2: Matching images to grammar items...');
-    const matchResult = await matchAll(descriptions, grammar.items);
+    const matchResult = await matchAll(descriptions, grammar.nodes);
     fs.writeFileSync(matchPath, matchResult);
     console.log(`Saved: ${matchPath}`);
     console.log('\nReview the matches, then run again with --apply to update the grammar.');
@@ -255,7 +255,7 @@ Requires ANTHROPIC_API_KEY in .env or environment.
       continue;
     }
 
-    const item = grammar.items.find((i) => i.id === match.item_id);
+    const item = grammar.nodes.find((i) => i.id === match.item_id);
     if (!item) {
       console.warn(`  Item not found: ${match.item_id}`);
       continue;
@@ -291,3 +291,20 @@ main().catch((err) => {
   console.error('Error:', err.message);
   process.exit(1);
 });
+
+// Depth from parts (grammar format v2 stores no level): a node with no parts is 1;
+// otherwise 1 + the deepest part. Cycle-safe. `nodes` is the nodes array or an id -> node Map.
+function nodeDepth(node, nodes, seen = new Set()) {
+  const parts = node && node.parts;
+  if (!parts || !parts.length) return 1;
+  const byId = nodes instanceof Map ? nodes : new Map(nodes.map((n) => [n.id, n]));
+  if (seen.has(node.id)) return 1;
+  seen.add(node.id);
+  let d = 1;
+  for (const id of parts) {
+    const c = byId.get(id);
+    if (c) d = Math.max(d, 1 + nodeDepth(c, byId, seen));
+  }
+  seen.delete(node.id);
+  return d;
+}

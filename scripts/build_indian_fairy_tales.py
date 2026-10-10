@@ -319,7 +319,7 @@ L3_DEFS = [
         "name": "Themes and Traditions",
         "category": "meta",
         "about": "Indian fairy tales draw from the world's oldest story traditions — the Jatakas of Buddhist scripture, the great Sanskrit collections, and the living folk memory of the Indian subcontinent. Seven thematic streams — animal fables, wisdom tales, quests, wit, love, magic, and family — flow together to create a literary tradition of extraordinary richness. Joseph Jacobs called this collection 'a sort of Indian Grimm' — and he was right. These are the tales from which much of the world's fairy tale tradition ultimately springs.",
-        "composite_of": [
+        "parts": [
             "theme-animal-fables",
             "theme-wisdom",
             "theme-quest-tales",
@@ -452,7 +452,6 @@ def build_l1_items(stories):
             "id": sdef["id"],
             "name": sdef["name"],
             "sort_order": sort_order,
-            "level": 1,
             "category": "fairy-tale",
             "sections": {
                 "Story": story["text"],
@@ -475,14 +474,13 @@ def build_l2_items(l1_items):
             "id": group["id"],
             "name": group["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": group["category"],
             "sections": {
                 "About": group["about"],
                 "For Readers": group["for_readers"]
             },
             "keywords": group["keywords"],
-            "composite_of": group["member_ids"],
+            "parts": group["member_ids"],
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -498,13 +496,12 @@ def build_l3_items(start_sort_order):
             "id": l3["id"],
             "name": l3["name"],
             "sort_order": sort_order,
-            "level": 3,
             "category": l3["category"],
             "sections": {
                 "About": l3["about"]
             },
             "keywords": l3["keywords"],
-            "composite_of": l3["composite_of"],
+            "parts": l3["parts"],
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -558,7 +555,7 @@ def build_grammar(l1_items, l2_items, l3_items):
         "lineages": ["Shrei", "Andreotti"],
         "worldview": "animist",
         "cover_image_url": "",
-        "items": l1_items + l2_items + l3_items
+        "nodes": l1_items + l2_items + l3_items
     }
     return grammar
 

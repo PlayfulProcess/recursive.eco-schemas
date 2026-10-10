@@ -9,6 +9,7 @@ Stories organized into 5 tribal groups: Tinguian, Igorot, Wild Tribes of Mindana
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(SCRIPT_DIR)
@@ -314,7 +315,6 @@ def build_grammar():
             "name": story["title"],
             "sort_order": sort_order,
             "category": story["group"],
-            "level": 1,
             "sections": {
                 "Story": story["text"],
                 "Tribal Source": f"{story['sub']} people of the Philippines"
@@ -339,14 +339,13 @@ def build_grammar():
             "name": group_def["name"],
             "sort_order": sort_order,
             "category": "tribal-group",
-            "level": 2,
             "sections": {
                 "About": group_def["about"],
                 "For Readers": group_def["for_readers"]
             },
             "keywords": [],
             "metadata": {},
-            "composite_of": composite,
+            "parts": composite,
             "relationship_type": "emergence"
         })
         sort_order += 1
@@ -362,14 +361,13 @@ def build_grammar():
         "name": "Creation and Origin Stories",
         "sort_order": sort_order,
         "category": "theme",
-        "level": 2,
         "sections": {
             "About": "Creation and origin stories from across the Philippine archipelago — how the world was made, how the flood came, how the moon got her scars, how monkeys came from children, and where the people themselves originated. Comparing these tales across tribes reveals shared Austronesian creation patterns while showing each people's unique imagination.",
             "For Readers": "Read these creation stories side by side to see how different peoples answer the same fundamental questions: Where did we come from? Why is the world the way it is? Notice the recurring flood motif — found in nearly every Philippine tribe — and the theme of transformation between human and animal forms."
         },
         "keywords": ["creation", "origin", "flood", "cosmogony"],
         "metadata": {},
-        "composite_of": creation_ids,
+        "parts": creation_ids,
         "relationship_type": "emergence"
     })
     l2_ids.append("theme-creation-origins")
@@ -385,14 +383,13 @@ def build_grammar():
         "name": "Animal Fables and Trickster Tales",
         "sort_order": sort_order,
         "category": "theme",
-        "level": 2,
         "sections": {
             "About": "Animal fables from across the Philippines — the monkey's tricks, the turtle's patience, the hawk's bargain with the hen, the spider's trap for the fly. These stories are told to amuse children and teach moral lessons, and many show connections to fable traditions across Southeast Asia and even Europe.",
             "For Readers": "These are the lightest and most entertaining tales in the collection. Many feature a contest between cleverness and brute force, or between patience and greed. They are perfect for reading aloud to children, and for comparing with Aesop's Fables or the Jataka tales."
         },
         "keywords": ["animals", "fable", "trickster", "moral"],
         "metadata": {},
-        "composite_of": animal_ids,
+        "parts": animal_ids,
         "relationship_type": "emergence"
     })
     l2_ids.append("theme-animal-fables")
@@ -404,14 +401,13 @@ def build_grammar():
         "name": "Philippine Folk Tales",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "sections": {
             "About": "Philippine Folk Tales, compiled and annotated by Mabel Cook Cole (1916), drawn from four years of fieldwork among the wild tribes and Christianized peoples of the Philippine Islands. Sixty-two tales from five cultural groups — Tinguian, Igorot, the Wild Tribes of Mindanao (Bukidnon, Bagobo, Bilaan, Mandaya, Subanun), Moro, and the Christianized coastal tribes (Ilocano, Tagalog, Visayan). A remarkable collection spanning creation myths, epic hero tales, origin legends, and animal fables from one of the world's most culturally diverse archipelagos.",
             "For Readers": "This collection maps the extraordinary diversity of Philippine oral tradition — from the shamanic epics of the Tinguian mountain people to the courtly romance of the Moro to the trickster fables of the Christianized coast. Read it as a journey through the islands: north to south, mountain to sea, ancient to modern. The tales reveal a world where spirits inhabit every tree and stone, where heroes fly through the air and talk with jars, and where the boundary between human and animal is always permeable."
         },
         "keywords": ["philippine", "folklore", "tinguian", "igorot", "moro", "creation-myth", "fables"],
         "metadata": {},
-        "composite_of": l2_ids,
+        "parts": l2_ids,
         "relationship_type": "emergence"
     }
     items.append(meta_item)
@@ -434,16 +430,16 @@ def build_grammar():
         "shelves": ["earth"],
         "lineages": ["Shrei"],
         "worldview": "animist",
-        "items": items
+        "nodes": items
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"Generated {OUTPUT_FILE}")
     print(f"  L1 items (stories): {l1}")
     print(f"  L2 items (groups + themes): {l2}")

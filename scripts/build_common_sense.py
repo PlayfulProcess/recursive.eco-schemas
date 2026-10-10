@@ -12,6 +12,7 @@ Structure:
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SEED = os.path.join(SCRIPT_DIR, "..", "seeds", "common-sense.txt")
@@ -226,7 +227,7 @@ def build_grammar(chapters):
     items = []
     sort_order = 0
 
-    # Track all L1 ids per chapter for chapter-level L2 composite_of
+    # Track all L1 ids per chapter for chapter-level L2 parts
     chapter_item_ids = {}
 
     # L1: Paragraphs within each chapter
@@ -242,7 +243,6 @@ def build_grammar(chapters):
             items.append({
                 "id": para_id,
                 "name": name,
-                "level": 1,
                 "category": ch["slug"],
                 "sort_order": sort_order,
                 "sections": {
@@ -297,10 +297,9 @@ def build_grammar(chapters):
         items.append({
             "id": f"chapter-{ch['slug']}",
             "name": ch["title"],
-            "level": 2,
             "category": "chapter",
             "relationship_type": "emergence",
-            "composite_of": ids,
+            "parts": ids,
             "sort_order": sort_order,
             "sections": sections,
             "keywords": [],
@@ -312,7 +311,7 @@ def build_grammar(chapters):
     # L2: Thematic groups
     # We need to assign specific paragraph IDs to each theme.
     # We'll do this by searching paragraph text for relevant content.
-    all_l1 = [item for item in items if item["level"] == 1]
+    all_l1 = [item for item in items if node_depth(item, items) == 1]
 
     def find_paragraphs_matching(patterns):
         """Find L1 item IDs whose passage text matches any of the given patterns."""
@@ -423,10 +422,9 @@ def build_grammar(chapters):
         items.append({
             "id": theme["id"],
             "name": theme["name"],
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": composite,
+            "parts": composite,
             "sort_order": sort_order,
             "sections": {
                 "About": theme["about"],
@@ -440,14 +438,13 @@ def build_grammar(chapters):
 
     # L3: Common Sense meta connecting all L2 items
     sort_order += 1
-    all_l2_ids = [item["id"] for item in items if item["level"] == 2]
+    all_l2_ids = [item["id"] for item in items if node_depth(item, items) == 2]
     items.append({
         "id": "meta-common-sense",
         "name": "Common Sense",
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": all_l2_ids,
+        "parts": all_l2_ids,
         "sort_order": sort_order,
         "sections": {
             "About": "Thomas Paine's Common Sense is the most influential political pamphlet in American history. Published anonymously in January 1776, it sold 500,000 copies in a colonial population of 2.5 million -- the equivalent of 60 million copies today. Paine did what no one else had dared: he argued not merely for better treatment from Britain, but for complete independence. And he did it in plain language that any farmer, tradesman, or sailor could understand. The pamphlet moves from philosophical foundations (government is a necessary evil) through historical demolition (monarchy is an absurdity) to strategic urgency (the time is NOW) to practical planning (here is what a navy costs). Each chapter builds on the last, constructing an argument so cumulative and so plainly stated that by the end, independence seems not radical but obvious. 'We have it in our power to begin the world over again.'",
@@ -503,39 +500,39 @@ def main():
         "shelves": ["resilience"],
         "lineages": ["Kelty"],
         "worldview": "rationalist",
-        "items": items,
+        "nodes": items,
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT}")
     print(f"  L1: {l1} paragraphs, L2: {l2} groups ({len(CHAPTERS)} chapters + {len(THEMATIC_GROUPS)} themes), L3: {l3} meta")
     print(f"  Total items: {len(items)}")
 
-    # Validate: check composite_of references
+    # Validate: check parts references
     all_ids = {item["id"] for item in items}
     errors = 0
     for item in items:
-        if "composite_of" in item:
-            for ref in item["composite_of"]:
+        if "parts" in item:
+            for ref in item["parts"]:
                 if ref not in all_ids:
                     print(f"  ERROR: {item['id']} references non-existent {ref}")
                     errors += 1
     if errors == 0:
-        print("  All composite_of references valid.")
+        print("  All parts references valid.")
     else:
         print(f"  {errors} reference errors found!")
 
     # Report thematic group sizes
     print("\nThematic group sizes:")
     for item in items:
-        if item["level"] == 2 and item["category"] == "theme":
-            print(f"  {item['name']}: {len(item['composite_of'])} passages")
+        if node_depth(item, items) == 2 and item["category"] == "theme":
+            print(f"  {item['name']}: {len(item['parts'])} passages")
 
 
 if __name__ == "__main__":

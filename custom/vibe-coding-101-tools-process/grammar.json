@@ -12,11 +12,10 @@
     "self-reflection"
   ],
   "grammar_type": "custom",
-  "items": [
+  "nodes": [
     {
       "id": "stoic-original",
       "name": "Stoic Self-Improvement — Original (the seed)",
-      "level": 1,
       "category": "starting-point",
       "grammars": [
         "https://claude.ai/public/artifacts/94fdc893-2eb6-4b08-b2e9-e269055dbc60"
@@ -38,7 +37,6 @@
     {
       "id": "stoic-adapted",
       "name": "Stoic Self-Improvement — Adapted (the first draft)",
-      "level": 1,
       "category": "adapted",
       "grammars": [
         "https://claude.ai/public/artifacts/9b003d0c-1f4c-4975-a3b8-be1e792d2065"
@@ -60,7 +58,6 @@
     {
       "id": "dbt-nvc-stoic-chatbot",
       "name": "DBT + NVC + Stoic Reflection Chatbot (from-scratch in Section 2)",
-      "level": 1,
       "category": "from-scratch",
       "keywords": [
         "dbt",
@@ -80,7 +77,6 @@
     {
       "id": "ten-prompts-sonnet",
       "name": "10 Journaling Prompts — Sonnet free tier (Section 3 example)",
-      "level": 1,
       "category": "from-scratch",
       "grammars": [
         "https://claude.ai/public/artifacts/fc00d2ce-143a-46b8-9644-fd8e2ca0ba1b"
@@ -103,7 +99,6 @@
     {
       "id": "ten-prompts-opus",
       "name": "10 Journaling Prompts — Opus single-shot (comparison)",
-      "level": 1,
       "category": "comparison",
       "grammars": [
         "https://claude.ai/public/artifacts/107aaa42-9c9c-4285-9534-3cfafe21c8dd"
@@ -124,7 +119,6 @@
     {
       "id": "swot-deep-time-committee",
       "name": "SWOT — Deep Time Committee reviews Project Homo sapiens",
-      "level": 1,
       "category": "beyond-journaling",
       "grammars": [
         "https://claude.ai/public/artifacts/ccf43262-11d5-464c-8c70-f0dd44546caf"
@@ -145,7 +139,6 @@
     {
       "id": "business-canvas-recursive-eco",
       "name": "Business Model Canvas — recursive.eco itself (meta)",
-      "level": 1,
       "category": "beyond-journaling",
       "grammars": [
         "https://claude.ai/public/artifacts/4ff97176-48e7-48fd-b86a-7a4d63a069d3"
@@ -167,7 +160,6 @@
     {
       "id": "weekly-agenda-ics",
       "name": "Weekly Agenda — with .ics + screenshot import",
-      "level": 1,
       "category": "beyond-journaling",
       "grammars": [
         "https://claude.ai/public/artifacts/72b53082-e78c-4df1-9b83-fd55b3f45230"
@@ -189,7 +181,6 @@
     {
       "id": "eisenhower-matrix",
       "name": "Eisenhower Matrix — Urgent × Important",
-      "level": 1,
       "category": "beyond-journaling",
       "grammars": [
         "https://claude.ai/public/artifacts/54a05634-8a6e-4aa9-b372-1cfc5bce09ac"
@@ -209,7 +200,6 @@
     {
       "id": "habit-tracker-week",
       "name": "Habit Tracker — 7-day grid (no persistence)",
-      "level": 1,
       "category": "beyond-journaling",
       "grammars": [
         "https://claude.ai/public/artifacts/629b36ad-d4e2-421e-8254-d7ecc5042de9"
@@ -229,7 +219,6 @@
     {
       "id": "decision-matrix-weighted",
       "name": "Decision Matrix — weighted options × criteria",
-      "level": 1,
       "category": "beyond-journaling",
       "grammars": [
         "https://claude.ai/public/artifacts/d52c9c40-9eda-43b7-8f02-0ed5d8b7560e"

@@ -253,7 +253,7 @@ L3_DEFS = [
         "name": "Themes of the Great Plains",
         "category": "meta",
         "about": "The myths and legends of the Great Plains flow from a world of vast skies, rolling prairies, thunderstorms, and buffalo herds. The nine thematic streams — creation, ceremony, trickery, buffalo, spirits, birds, animals, weather, and heroism — together form a complete cosmology: a way of understanding the world as alive, interconnected, and sacred. These are not stories from the past but living teachings about how to be human in a world of infinite relationships.",
-        "composite_of": [
+        "parts": [
             "theme-creation-cosmology",
             "theme-sacred-ceremony",
             "theme-trickster",
@@ -423,7 +423,6 @@ def build_l1_items(stories):
             "id": sdef["id"],
             "name": sdef["name"],
             "sort_order": sort_order,
-            "level": 1,
             "category": "myth-legend",
             "sections": sections,
             "keywords": sdef["keywords"],
@@ -446,14 +445,13 @@ def build_l2_items(l1_items):
             "id": group["id"],
             "name": group["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": group["category"],
             "sections": {
                 "About": group["about"],
                 "For Readers": group["for_readers"]
             },
             "keywords": group["keywords"],
-            "composite_of": group["member_ids"],
+            "parts": group["member_ids"],
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -472,13 +470,12 @@ def build_l3_items(start_sort_order):
             "id": l3["id"],
             "name": l3["name"],
             "sort_order": sort_order,
-            "level": 3,
             "category": l3["category"],
             "sections": {
                 "About": l3["about"]
             },
             "keywords": l3["keywords"],
-            "composite_of": l3["composite_of"],
+            "parts": l3["parts"],
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -535,7 +532,7 @@ def build_grammar(l1_items, l2_items, l3_items):
         "lineages": ["Shrei", "Andreotti"],
         "worldview": "animist",
         "cover_image_url": "",
-        "items": l1_items + l2_items + l3_items
+        "nodes": l1_items + l2_items + l3_items
     }
     return grammar
 

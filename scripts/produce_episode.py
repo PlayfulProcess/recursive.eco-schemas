@@ -30,6 +30,7 @@ import time
 import argparse
 import base64
 from pathlib import Path
+from grammar_depth import node_depth
 
 
 # ─── Configuration ───────────────────────────────────────────────────────────
@@ -243,8 +244,8 @@ def process_episode(grammar, episode_id, output_dir, openai_client, fal_client,
     """Process all scenes in an episode."""
     # Find the L2 episode item
     episode = None
-    for item in grammar["items"]:
-        if item.get("level") == 2 and item["id"] == episode_id:
+    for item in grammar["nodes"]:
+        if node_depth(item, grammar["nodes"]) == 2 and item["id"] == episode_id:
             episode = item
             break
 
@@ -252,8 +253,8 @@ def process_episode(grammar, episode_id, output_dir, openai_client, fal_client,
         print(f"Episode '{episode_id}' not found", file=sys.stderr)
         return None
 
-    scene_ids = episode.get("composite_of", [])
-    scenes = [i for i in grammar["items"] if i["id"] in scene_ids and i.get("level") == 1]
+    scene_ids = episode.get("parts", [])
+    scenes = [i for i in grammar["nodes"] if i["id"] in scene_ids and node_depth(i, grammar["nodes"]) == 1]
     scenes.sort(key=lambda x: x["sort_order"])
 
     print(f"\n{'='*60}", file=sys.stderr)
@@ -315,8 +316,8 @@ def main():
 
     # If --manifest, just output the production plan as JSON
     if args.manifest:
-        episodes = [i for i in grammar["items"] if i.get("level") == 2]
-        scenes = [i for i in grammar["items"] if i.get("level") == 1]
+        episodes = [i for i in grammar["nodes"] if node_depth(i, grammar["nodes"]) == 2]
+        scenes = [i for i in grammar["nodes"] if node_depth(i, grammar["nodes"]) == 1]
         manifest = {
             "grammar": grammar_slug,
             "total_episodes": len(episodes),
@@ -328,7 +329,7 @@ def main():
             manifest["episodes"].append({
                 "id": ep["id"],
                 "name": ep["name"],
-                "scenes": len(ep.get("composite_of", [])),
+                "scenes": len(ep.get("parts", [])),
                 "duration_seconds": ep["metadata"].get("total_seconds", 0),
                 "duration_minutes": ep["metadata"].get("total_minutes", 0),
             })
@@ -344,7 +345,7 @@ def main():
         fal_client = None
 
     # Find episodes to process
-    episodes = [i for i in grammar["items"] if i.get("level") == 2]
+    episodes = [i for i in grammar["nodes"] if node_depth(i, grammar["nodes"]) == 2]
 
     if args.episode:
         episode_ids = [args.episode if args.episode.startswith("episode-") else f"episode-{args.episode}"]

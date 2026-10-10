@@ -28,7 +28,7 @@ const bookletGrammar = JSON.parse(readFileSync(bookletGrammarPath, 'utf8'));
 
 // Build full page text lookup
 const pageTextByChapter = {};
-for (const item of bookletGrammar.items) {
+for (const item of bookletGrammar.nodes) {
   const chNum = item.metadata?.source_chapter;
   if (!chNum) continue;
   pageTextByChapter[chNum] = {};
@@ -40,7 +40,7 @@ for (const item of bookletGrammar.items) {
 
 // Build chapter names
 const chapterNames = {};
-for (const item of bookletGrammar.items) {
+for (const item of bookletGrammar.nodes) {
   const chNum = item.metadata?.source_chapter;
   if (chNum) chapterNames[chNum] = item.name;
 }

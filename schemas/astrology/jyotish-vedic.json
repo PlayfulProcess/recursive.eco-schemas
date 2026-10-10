@@ -16,12 +16,11 @@
     "dashas",
     "yogas"
   ],
-  "items": [
+  "nodes": [
     {
       "id": "graha-surya",
       "name": "Surya",
       "symbol": "☉",
-      "level": 1,
       "category": "graha",
       "subcategory": "luminary",
       "keywords": [
@@ -64,7 +63,6 @@
       "id": "graha-chandra",
       "name": "Chandra",
       "symbol": "☽",
-      "level": 1,
       "category": "graha",
       "subcategory": "luminary",
       "keywords": [
@@ -107,7 +105,6 @@
       "id": "graha-mangala",
       "name": "Mangala",
       "symbol": "♂",
-      "level": 1,
       "category": "graha",
       "subcategory": "inner",
       "keywords": [
@@ -151,7 +148,6 @@
       "id": "graha-budha",
       "name": "Budha",
       "symbol": "☿",
-      "level": 1,
       "category": "graha",
       "subcategory": "inner",
       "keywords": [
@@ -194,7 +190,6 @@
       "id": "graha-guru",
       "name": "Guru",
       "symbol": "♃",
-      "level": 1,
       "category": "graha",
       "subcategory": "outer",
       "keywords": [
@@ -238,7 +233,6 @@
       "id": "graha-shukra",
       "name": "Shukra",
       "symbol": "♀",
-      "level": 1,
       "category": "graha",
       "subcategory": "inner",
       "keywords": [
@@ -282,7 +276,6 @@
       "id": "graha-shani",
       "name": "Shani",
       "symbol": "♄",
-      "level": 1,
       "category": "graha",
       "subcategory": "outer",
       "keywords": [
@@ -326,7 +319,6 @@
       "id": "graha-rahu",
       "name": "Rahu",
       "symbol": "☊",
-      "level": 1,
       "category": "graha",
       "subcategory": "shadow",
       "keywords": [
@@ -368,7 +360,6 @@
       "id": "graha-ketu",
       "name": "Ketu",
       "symbol": "☋",
-      "level": 1,
       "category": "graha",
       "subcategory": "shadow",
       "keywords": [
@@ -410,7 +401,6 @@
       "id": "rashi-mesha",
       "name": "Mesha",
       "symbol": "♈",
-      "level": 1,
       "category": "rashi",
       "subcategory": "fire",
       "keywords": [
@@ -452,7 +442,6 @@
       "id": "rashi-vrishabha",
       "name": "Vrishabha",
       "symbol": "♉",
-      "level": 1,
       "category": "rashi",
       "subcategory": "earth",
       "keywords": [
@@ -494,7 +483,6 @@
       "id": "rashi-mithuna",
       "name": "Mithuna",
       "symbol": "♊",
-      "level": 1,
       "category": "rashi",
       "subcategory": "air",
       "keywords": [
@@ -536,7 +524,6 @@
       "id": "rashi-karka",
       "name": "Karka",
       "symbol": "♋",
-      "level": 1,
       "category": "rashi",
       "subcategory": "water",
       "keywords": [
@@ -578,7 +565,6 @@
       "id": "rashi-simha",
       "name": "Simha",
       "symbol": "♌",
-      "level": 1,
       "category": "rashi",
       "subcategory": "fire",
       "keywords": [
@@ -620,7 +606,6 @@
       "id": "rashi-kanya",
       "name": "Kanya",
       "symbol": "♍",
-      "level": 1,
       "category": "rashi",
       "subcategory": "earth",
       "keywords": [
@@ -663,7 +648,6 @@
       "id": "rashi-tula",
       "name": "Tula",
       "symbol": "♎",
-      "level": 1,
       "category": "rashi",
       "subcategory": "air",
       "keywords": [
@@ -706,7 +690,6 @@
       "id": "rashi-vrishchika",
       "name": "Vrishchika",
       "symbol": "♏",
-      "level": 1,
       "category": "rashi",
       "subcategory": "water",
       "keywords": [
@@ -749,7 +732,6 @@
       "id": "rashi-dhanu",
       "name": "Dhanu",
       "symbol": "♐",
-      "level": 1,
       "category": "rashi",
       "subcategory": "fire",
       "keywords": [
@@ -792,7 +774,6 @@
       "id": "rashi-makara",
       "name": "Makara",
       "symbol": "♑",
-      "level": 1,
       "category": "rashi",
       "subcategory": "earth",
       "keywords": [
@@ -835,7 +816,6 @@
       "id": "rashi-kumbha",
       "name": "Kumbha",
       "symbol": "♒",
-      "level": 1,
       "category": "rashi",
       "subcategory": "air",
       "keywords": [
@@ -878,7 +858,6 @@
       "id": "rashi-meena",
       "name": "Meena",
       "symbol": "♓",
-      "level": 1,
       "category": "rashi",
       "subcategory": "water",
       "keywords": [
@@ -921,7 +900,6 @@
       "id": "bhava-1",
       "name": "Lagna Bhava",
       "symbol": "I",
-      "level": 1,
       "category": "bhava",
       "subcategory": "kendra",
       "keywords": [
@@ -955,7 +933,6 @@
       "id": "bhava-2",
       "name": "Dhana Bhava",
       "symbol": "II",
-      "level": 1,
       "category": "bhava",
       "subcategory": "panapara",
       "keywords": [
@@ -989,7 +966,6 @@
       "id": "bhava-3",
       "name": "Sahaja Bhava",
       "symbol": "III",
-      "level": 1,
       "category": "bhava",
       "subcategory": "upachaya",
       "keywords": [
@@ -1023,7 +999,6 @@
       "id": "bhava-4",
       "name": "Sukha Bhava",
       "symbol": "IV",
-      "level": 1,
       "category": "bhava",
       "subcategory": "kendra",
       "keywords": [
@@ -1057,7 +1032,6 @@
       "id": "bhava-5",
       "name": "Putra Bhava",
       "symbol": "V",
-      "level": 1,
       "category": "bhava",
       "subcategory": "trikona",
       "keywords": [
@@ -1091,7 +1065,6 @@
       "id": "bhava-6",
       "name": "Ripu Bhava",
       "symbol": "VI",
-      "level": 1,
       "category": "bhava",
       "subcategory": "dusthana",
       "keywords": [
@@ -1125,7 +1098,6 @@
       "id": "bhava-7",
       "name": "Kalatra Bhava",
       "symbol": "VII",
-      "level": 1,
       "category": "bhava",
       "subcategory": "kendra",
       "keywords": [
@@ -1159,7 +1131,6 @@
       "id": "bhava-8",
       "name": "Randhra Bhava",
       "symbol": "VIII",
-      "level": 1,
       "category": "bhava",
       "subcategory": "dusthana",
       "keywords": [
@@ -1193,7 +1164,6 @@
       "id": "bhava-9",
       "name": "Dharma Bhava",
       "symbol": "IX",
-      "level": 1,
       "category": "bhava",
       "subcategory": "trikona",
       "keywords": [
@@ -1227,7 +1197,6 @@
       "id": "bhava-10",
       "name": "Karma Bhava",
       "symbol": "X",
-      "level": 1,
       "category": "bhava",
       "subcategory": "kendra",
       "keywords": [
@@ -1261,7 +1230,6 @@
       "id": "bhava-11",
       "name": "Labha Bhava",
       "symbol": "XI",
-      "level": 1,
       "category": "bhava",
       "subcategory": "upachaya",
       "keywords": [
@@ -1295,7 +1263,6 @@
       "id": "bhava-12",
       "name": "Vyaya Bhava",
       "symbol": "XII",
-      "level": 1,
       "category": "bhava",
       "subcategory": "dusthana",
       "keywords": [
@@ -1329,7 +1296,6 @@
       "id": "nakshatra-ashwini",
       "name": "Ashwini",
       "symbol": "🐴",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "deva",
       "keywords": [
@@ -1366,7 +1332,6 @@
       "id": "nakshatra-bharani",
       "name": "Bharani",
       "symbol": "🔻",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "manushya",
       "keywords": [
@@ -1403,7 +1368,6 @@
       "id": "nakshatra-krittika",
       "name": "Krittika",
       "symbol": "🔥",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "rakshasa",
       "keywords": [
@@ -1440,7 +1404,6 @@
       "id": "nakshatra-rohini",
       "name": "Rohini",
       "symbol": "🐂",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "manushya",
       "keywords": [
@@ -1477,7 +1440,6 @@
       "id": "nakshatra-mrigashira",
       "name": "Mrigashira",
       "symbol": "🦌",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "deva",
       "keywords": [
@@ -1514,7 +1476,6 @@
       "id": "nakshatra-ardra",
       "name": "Ardra",
       "symbol": "💧",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "manushya",
       "keywords": [
@@ -1551,7 +1512,6 @@
       "id": "nakshatra-punarvasu",
       "name": "Punarvasu",
       "symbol": "🏠",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "deva",
       "keywords": [
@@ -1588,7 +1548,6 @@
       "id": "nakshatra-pushya",
       "name": "Pushya",
       "symbol": "🌸",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "deva",
       "keywords": [
@@ -1625,7 +1584,6 @@
       "id": "nakshatra-ashlesha",
       "name": "Ashlesha",
       "symbol": "🐍",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "rakshasa",
       "keywords": [
@@ -1662,7 +1620,6 @@
       "id": "nakshatra-magha",
       "name": "Magha",
       "symbol": "👑",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "rakshasa",
       "keywords": [
@@ -1699,7 +1656,6 @@
       "id": "nakshatra-purvaphalguni",
       "name": "Purva Phalguni",
       "symbol": "🛏️",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "manushya",
       "keywords": [
@@ -1736,7 +1692,6 @@
       "id": "nakshatra-uttaraphalguni",
       "name": "Uttara Phalguni",
       "symbol": "☀️",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "manushya",
       "keywords": [
@@ -1773,7 +1728,6 @@
       "id": "nakshatra-hasta",
       "name": "Hasta",
       "symbol": "✋",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "deva",
       "keywords": [
@@ -1810,7 +1764,6 @@
       "id": "nakshatra-chitra",
       "name": "Chitra",
       "symbol": "💎",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "rakshasa",
       "keywords": [
@@ -1847,7 +1800,6 @@
       "id": "nakshatra-swati",
       "name": "Swati",
       "symbol": "🌱",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "deva",
       "keywords": [
@@ -1884,7 +1836,6 @@
       "id": "nakshatra-vishakha",
       "name": "Vishakha",
       "symbol": "🌳",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "rakshasa",
       "keywords": [
@@ -1921,7 +1872,6 @@
       "id": "nakshatra-anuradha",
       "name": "Anuradha",
       "symbol": "⭐",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "deva",
       "keywords": [
@@ -1957,7 +1907,6 @@
       "id": "nakshatra-jyeshtha",
       "name": "Jyeshtha",
       "symbol": "☔",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "rakshasa",
       "keywords": [
@@ -1994,7 +1943,6 @@
       "id": "nakshatra-mula",
       "name": "Mula",
       "symbol": "🌿",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "rakshasa",
       "keywords": [
@@ -2031,7 +1979,6 @@
       "id": "nakshatra-purvaashadha",
       "name": "Purva Ashadha",
       "symbol": "🌊",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "manushya",
       "keywords": [
@@ -2068,7 +2015,6 @@
       "id": "nakshatra-uttaraashadha",
       "name": "Uttara Ashadha",
       "symbol": "🐘",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "manushya",
       "keywords": [
@@ -2104,7 +2050,6 @@
       "id": "nakshatra-shravana",
       "name": "Shravana",
       "symbol": "👂",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "deva",
       "keywords": [
@@ -2141,7 +2086,6 @@
       "id": "nakshatra-dhanishtha",
       "name": "Dhanishtha",
       "symbol": "🥁",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "rakshasa",
       "keywords": [
@@ -2178,7 +2122,6 @@
       "id": "nakshatra-shatabhisha",
       "name": "Shatabhisha",
       "symbol": "⭕",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "rakshasa",
       "keywords": [
@@ -2215,7 +2158,6 @@
       "id": "nakshatra-purvabhadrapada",
       "name": "Purva Bhadrapada",
       "symbol": "⚡",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "manushya",
       "keywords": [
@@ -2252,7 +2194,6 @@
       "id": "nakshatra-uttarabhadrapada",
       "name": "Uttara Bhadrapada",
       "symbol": "🛏️",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "manushya",
       "keywords": [
@@ -2289,7 +2230,6 @@
       "id": "nakshatra-revati",
       "name": "Revati",
       "symbol": "🐟",
-      "level": 1,
       "category": "nakshatra",
       "subcategory": "deva",
       "keywords": [
@@ -2325,7 +2265,6 @@
       "id": "dignity-swakshetra",
       "name": "Swakshetra (Own Sign)",
       "symbol": "🏠",
-      "level": 1,
       "category": "dignity",
       "subcategory": "strength",
       "keywords": [
@@ -2352,7 +2291,6 @@
       "id": "dignity-uchcha",
       "name": "Uchcha (Exaltation)",
       "symbol": "⬆️",
-      "level": 1,
       "category": "dignity",
       "subcategory": "strength",
       "keywords": [
@@ -2379,7 +2317,6 @@
       "id": "dignity-neecha",
       "name": "Neecha (Debilitation)",
       "symbol": "⬇️",
-      "level": 1,
       "category": "dignity",
       "subcategory": "weakness",
       "keywords": [
@@ -2406,7 +2343,6 @@
       "id": "dignity-moolatrikona",
       "name": "Moolatrikona",
       "symbol": "🔺",
-      "level": 1,
       "category": "dignity",
       "subcategory": "strength",
       "keywords": [
@@ -2433,7 +2369,6 @@
       "id": "position-kendra",
       "name": "Kendra (Angular)",
       "symbol": "◆",
-      "level": 1,
       "category": "position",
       "subcategory": "power",
       "keywords": [
@@ -2467,7 +2402,6 @@
       "id": "position-trikona",
       "name": "Trikona (Trine)",
       "symbol": "△",
-      "level": 1,
       "category": "position",
       "subcategory": "fortune",
       "keywords": [
@@ -2500,7 +2434,6 @@
       "id": "position-dusthana",
       "name": "Dusthana (Difficult)",
       "symbol": "⚠️",
-      "level": 1,
       "category": "position",
       "subcategory": "challenge",
       "keywords": [
@@ -2532,7 +2465,6 @@
       "id": "position-upachaya",
       "name": "Upachaya (Growing)",
       "symbol": "📈",
-      "level": 1,
       "category": "position",
       "subcategory": "growth",
       "keywords": [
@@ -2564,7 +2496,6 @@
     {
       "id": "yoga-ruchaka",
       "name": "Ruchaka Yoga",
-      "level": 2,
       "category": "pancha-mahapurusha",
       "keywords": [
         "mars",
@@ -2575,7 +2506,7 @@
         "leadership"
       ],
       "sort_order": 100,
-      "composite_of": [
+      "parts": [
         "graha-mangala",
         "dignity-swakshetra",
         "dignity-uchcha",
@@ -2603,7 +2534,6 @@
     {
       "id": "yoga-bhadra",
       "name": "Bhadra Yoga",
-      "level": 2,
       "category": "pancha-mahapurusha",
       "keywords": [
         "mercury",
@@ -2614,7 +2544,7 @@
         "communication"
       ],
       "sort_order": 101,
-      "composite_of": [
+      "parts": [
         "graha-budha",
         "dignity-swakshetra",
         "dignity-uchcha",
@@ -2642,7 +2572,6 @@
     {
       "id": "yoga-hamsa",
       "name": "Hamsa Yoga",
-      "level": 2,
       "category": "pancha-mahapurusha",
       "keywords": [
         "jupiter",
@@ -2653,7 +2582,7 @@
         "spirituality"
       ],
       "sort_order": 102,
-      "composite_of": [
+      "parts": [
         "graha-guru",
         "dignity-swakshetra",
         "dignity-uchcha",
@@ -2681,7 +2610,6 @@
     {
       "id": "yoga-malavya",
       "name": "Malavya Yoga",
-      "level": 2,
       "category": "pancha-mahapurusha",
       "keywords": [
         "venus",
@@ -2692,7 +2620,7 @@
         "spouse"
       ],
       "sort_order": 103,
-      "composite_of": [
+      "parts": [
         "graha-shukra",
         "dignity-swakshetra",
         "dignity-uchcha",
@@ -2720,7 +2648,6 @@
     {
       "id": "yoga-shasha",
       "name": "Shasha Yoga",
-      "level": 2,
       "category": "pancha-mahapurusha",
       "keywords": [
         "saturn",
@@ -2731,7 +2658,7 @@
         "administration"
       ],
       "sort_order": 104,
-      "composite_of": [
+      "parts": [
         "graha-shani",
         "dignity-swakshetra",
         "dignity-uchcha",
@@ -2759,7 +2686,6 @@
     {
       "id": "yoga-gajakesari",
       "name": "Gajakesari Yoga",
-      "level": 2,
       "category": "lunar-yoga",
       "keywords": [
         "moon",
@@ -2770,7 +2696,7 @@
         "respect"
       ],
       "sort_order": 105,
-      "composite_of": [
+      "parts": [
         "graha-chandra",
         "graha-guru"
       ],
@@ -2793,7 +2719,6 @@
     {
       "id": "yoga-chandra-mangala",
       "name": "Chandra-Mangala Yoga",
-      "level": 2,
       "category": "lunar-yoga",
       "keywords": [
         "moon",
@@ -2804,7 +2729,7 @@
         "enterprise"
       ],
       "sort_order": 106,
-      "composite_of": [
+      "parts": [
         "graha-chandra",
         "graha-mangala"
       ],
@@ -2827,7 +2752,6 @@
     {
       "id": "yoga-budhaditya",
       "name": "Budhaditya Yoga",
-      "level": 2,
       "category": "solar-yoga",
       "keywords": [
         "sun",
@@ -2838,7 +2762,7 @@
         "authority"
       ],
       "sort_order": 107,
-      "composite_of": [
+      "parts": [
         "graha-surya",
         "graha-budha"
       ],
@@ -2861,7 +2785,6 @@
     {
       "id": "yoga-viparita-harsha",
       "name": "Harsha Yoga (Viparita Raja)",
-      "level": 2,
       "category": "viparita-raja",
       "keywords": [
         "6th lord",
@@ -2871,7 +2794,7 @@
         "obstacles overcome"
       ],
       "sort_order": 108,
-      "composite_of": [
+      "parts": [
         "bhava-6",
         "position-dusthana"
       ],
@@ -2895,7 +2818,6 @@
     {
       "id": "yoga-viparita-sarala",
       "name": "Sarala Yoga (Viparita Raja)",
-      "level": 2,
       "category": "viparita-raja",
       "keywords": [
         "8th lord",
@@ -2905,7 +2827,7 @@
         "occult"
       ],
       "sort_order": 109,
-      "composite_of": [
+      "parts": [
         "bhava-8",
         "position-dusthana"
       ],
@@ -2929,7 +2851,6 @@
     {
       "id": "yoga-viparita-vimala",
       "name": "Vimala Yoga (Viparita Raja)",
-      "level": 2,
       "category": "viparita-raja",
       "keywords": [
         "12th lord",
@@ -2939,7 +2860,7 @@
         "spirituality"
       ],
       "sort_order": 110,
-      "composite_of": [
+      "parts": [
         "bhava-12",
         "position-dusthana"
       ],
@@ -2963,7 +2884,6 @@
     {
       "id": "yoga-kemadruma",
       "name": "Kemadruma Yoga",
-      "level": 2,
       "category": "lunar-yoga",
       "keywords": [
         "moon",
@@ -2973,7 +2893,7 @@
         "cancelled by aspects"
       ],
       "sort_order": 111,
-      "composite_of": [
+      "parts": [
         "graha-chandra"
       ],
       "sections": {
@@ -2992,7 +2912,6 @@
     {
       "id": "yoga-sunapha",
       "name": "Sunapha Yoga",
-      "level": 2,
       "category": "lunar-yoga",
       "keywords": [
         "moon",
@@ -3002,7 +2921,7 @@
         "intelligence"
       ],
       "sort_order": 112,
-      "composite_of": [
+      "parts": [
         "graha-chandra"
       ],
       "sections": {
@@ -3020,7 +2939,6 @@
     {
       "id": "yoga-anapha",
       "name": "Anapha Yoga",
-      "level": 2,
       "category": "lunar-yoga",
       "keywords": [
         "moon",
@@ -3030,7 +2948,7 @@
         "enjoyment"
       ],
       "sort_order": 113,
-      "composite_of": [
+      "parts": [
         "graha-chandra"
       ],
       "sections": {
@@ -3048,7 +2966,6 @@
     {
       "id": "yoga-durudhara",
       "name": "Durudhara Yoga",
-      "level": 2,
       "category": "lunar-yoga",
       "keywords": [
         "moon",
@@ -3059,7 +2976,7 @@
         "support"
       ],
       "sort_order": 114,
-      "composite_of": [
+      "parts": [
         "graha-chandra"
       ],
       "sections": {
@@ -3077,7 +2994,6 @@
     {
       "id": "yoga-adhi",
       "name": "Adhi Yoga",
-      "level": 2,
       "category": "lunar-yoga",
       "keywords": [
         "moon",
@@ -3088,7 +3004,7 @@
         "king"
       ],
       "sort_order": 115,
-      "composite_of": [
+      "parts": [
         "graha-chandra",
         "graha-budha",
         "graha-guru",
@@ -3118,7 +3034,6 @@
     {
       "id": "emergence-nakshatra-deva",
       "name": "Deva Gana Nakshatras",
-      "level": 2,
       "category": "nakshatra-group",
       "keywords": [
         "divine",
@@ -3128,7 +3043,7 @@
         "compatibility"
       ],
       "sort_order": 120,
-      "composite_of": [
+      "parts": [
         "nakshatra-ashwini",
         "nakshatra-mrigashira",
         "nakshatra-punarvasu",
@@ -3154,7 +3069,6 @@
     {
       "id": "emergence-nakshatra-manushya",
       "name": "Manushya Gana Nakshatras",
-      "level": 2,
       "category": "nakshatra-group",
       "keywords": [
         "human",
@@ -3164,7 +3078,7 @@
         "practical"
       ],
       "sort_order": 121,
-      "composite_of": [
+      "parts": [
         "nakshatra-bharani",
         "nakshatra-rohini",
         "nakshatra-ardra",
@@ -3190,7 +3104,6 @@
     {
       "id": "emergence-nakshatra-rakshasa",
       "name": "Rakshasa Gana Nakshatras",
-      "level": 2,
       "category": "nakshatra-group",
       "keywords": [
         "demon",
@@ -3200,7 +3113,7 @@
         "transformative"
       ],
       "sort_order": 122,
-      "composite_of": [
+      "parts": [
         "nakshatra-krittika",
         "nakshatra-ashlesha",
         "nakshatra-magha",
@@ -3226,7 +3139,6 @@
     {
       "id": "yoga-raja-kendra-trikona",
       "name": "Raja Yoga (Kendra-Trikona)",
-      "level": 3,
       "category": "raja-yoga",
       "keywords": [
         "kingship",
@@ -3237,7 +3149,7 @@
         "achievement"
       ],
       "sort_order": 200,
-      "composite_of": [
+      "parts": [
         "position-kendra",
         "position-trikona"
       ],
@@ -3268,7 +3180,6 @@
     {
       "id": "yoga-dharma-karma-adhipati",
       "name": "Dharma-Karma Adhipati Yoga",
-      "level": 3,
       "category": "raja-yoga",
       "keywords": [
         "9th lord",
@@ -3278,7 +3189,7 @@
         "highest raja yoga"
       ],
       "sort_order": 201,
-      "composite_of": [
+      "parts": [
         "bhava-9",
         "bhava-10",
         "position-kendra",
@@ -3304,7 +3215,6 @@
     {
       "id": "yoga-dhana-2-11",
       "name": "Dhana Yoga (2nd-11th Lords)",
-      "level": 3,
       "category": "dhana-yoga",
       "keywords": [
         "wealth",
@@ -3314,7 +3224,7 @@
         "prosperity"
       ],
       "sort_order": 210,
-      "composite_of": [
+      "parts": [
         "bhava-2",
         "bhava-11"
       ],
@@ -3338,7 +3248,6 @@
     {
       "id": "yoga-dhana-lakshmi",
       "name": "Lakshmi Yoga",
-      "level": 3,
       "category": "dhana-yoga",
       "keywords": [
         "wealth",
@@ -3349,7 +3258,7 @@
         "goddess"
       ],
       "sort_order": 211,
-      "composite_of": [
+      "parts": [
         "graha-shukra"
       ],
       "sections": {
@@ -3371,7 +3280,6 @@
     {
       "id": "yoga-neecha-bhanga-raja",
       "name": "Neecha Bhanga Raja Yoga",
-      "level": 3,
       "category": "raja-yoga",
       "keywords": [
         "debilitation cancelled",
@@ -3381,7 +3289,7 @@
         "strength through weakness"
       ],
       "sort_order": 220,
-      "composite_of": [
+      "parts": [
         "dignity-neecha",
         "position-kendra"
       ],
@@ -3402,7 +3310,6 @@
     {
       "id": "yoga-kahala",
       "name": "Kahala Yoga",
-      "level": 3,
       "category": "special-yoga",
       "keywords": [
         "bold",
@@ -3413,7 +3320,7 @@
         "stubbornness"
       ],
       "sort_order": 230,
-      "composite_of": [
+      "parts": [
         "bhava-4",
         "bhava-9",
         "position-kendra",
@@ -3438,7 +3345,6 @@
     {
       "id": "yoga-saraswati",
       "name": "Saraswati Yoga",
-      "level": 3,
       "category": "special-yoga",
       "keywords": [
         "learning",
@@ -3450,7 +3356,7 @@
         "education"
       ],
       "sort_order": 231,
-      "composite_of": [
+      "parts": [
         "graha-guru",
         "graha-shukra",
         "graha-budha"
@@ -3476,7 +3382,6 @@
     {
       "id": "yoga-amala",
       "name": "Amala Yoga",
-      "level": 3,
       "category": "special-yoga",
       "keywords": [
         "reputation",
@@ -3487,7 +3392,7 @@
         "lasting"
       ],
       "sort_order": 232,
-      "composite_of": [
+      "parts": [
         "graha-chandra"
       ],
       "sections": {
@@ -3511,7 +3416,6 @@
     {
       "id": "yoga-kala-sarpa",
       "name": "Kala Sarpa Yoga",
-      "level": 3,
       "category": "special-yoga",
       "keywords": [
         "rahu",
@@ -3523,7 +3427,7 @@
         "controversial"
       ],
       "sort_order": 240,
-      "composite_of": [
+      "parts": [
         "graha-rahu",
         "graha-ketu"
       ],
@@ -3545,7 +3449,6 @@
     {
       "id": "yoga-pancha-mahapurusha-multiple",
       "name": "Multiple Mahapurusha Yogas",
-      "level": 3,
       "category": "combined-yoga",
       "keywords": [
         "multiple yogas",
@@ -3554,7 +3457,7 @@
         "great person"
       ],
       "sort_order": 250,
-      "composite_of": [
+      "parts": [
         "yoga-ruchaka",
         "yoga-bhadra",
         "yoga-hamsa",

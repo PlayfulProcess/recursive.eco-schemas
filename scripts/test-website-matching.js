@@ -28,7 +28,7 @@ const files = fs.readdirSync(imgDir)
   .filter(f => EXTS.includes(path.extname(f).toLowerCase()))
   .map((f, i) => ({ id: `file-${i}`, name: f }));
 
-console.log(`Grammar items: ${grammar.items.length}`);
+console.log(`Grammar items: ${grammar.nodes.length}`);
 console.log(`Image files: ${files.length}\n`);
 
 // --- Simulate DriveImageMatcher matching ---
@@ -36,7 +36,7 @@ const usedFiles = new Set();
 const matched = [];
 const unmatched = [];
 
-grammar.items.forEach((item, cardIndex) => {
+grammar.nodes.forEach((item, cardIndex) => {
   const card = {
     id: item.id,
     name: item.name,
@@ -109,7 +109,7 @@ grammar.items.forEach((item, cardIndex) => {
   unmatched.push(card.name);
 });
 
-console.log(`=== MATCHED: ${matched.length} of ${grammar.items.length} ===`);
+console.log(`=== MATCHED: ${matched.length} of ${grammar.nodes.length} ===`);
 const byStrategy = {};
 matched.forEach(m => { byStrategy[m.strategy] = (byStrategy[m.strategy] || 0) + 1; });
 Object.entries(byStrategy).forEach(([s, c]) => console.log(`  ${s}: ${c}`));

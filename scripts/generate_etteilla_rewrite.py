@@ -277,12 +277,12 @@ SHARED_DESC = (
 def main():
     # cosmogony sections shared across editions (sourced from deck I)
     deck1 = json.load(open(os.path.join(SCRATCH, "deck-I.json"), encoding="utf-8"))[0]["document_data"]
-    cosmo = build_cosmo_map(deck1["items"])
+    cosmo = build_cosmo_map(deck1["nodes"])
 
     for ed, meta in EDITIONS.items():
         dd = json.load(open(os.path.join(SCRATCH, f"deck-{ed}.json"), encoding="utf-8"))[0]["document_data"]
         items = []
-        for it in dd["items"]:
+        for it in dd["nodes"]:
             md = it.get("metadata", {})
             try:
                 num = int(md.get("number"))
@@ -295,7 +295,6 @@ def main():
                 "name": it["name"],
                 "sort_order": it.get("sort_order", len(items)),
                 "category": arcana if arcana else "major",
-                "level": 1,
                 "keywords": it.get("keywords", []),
                 "metadata": md,
                 "sections": card_sections(num, arcana, suit, cosmo) if num is not None else it.get("sections", {}),
@@ -331,7 +330,7 @@ def main():
             "lineages": ["Andreotti"],
             "worldview": "esoteric",
             "is_published": False,
-            "items": items,
+            "nodes": items,
         }
         out_dir = os.path.join(GRAMMARS, meta["slug"])
         os.makedirs(out_dir, exist_ok=True)

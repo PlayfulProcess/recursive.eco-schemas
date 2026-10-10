@@ -5,6 +5,7 @@ Parse two Chinese literature seed files into grammar.json files:
 2. Chinese Literature Anthology - Gutenberg #10056
 """
 import json, re, os
+from grammar_depth import node_depth
 
 # ═══════════════════════════════════════════════════════════════════════════
 # UTILITIES
@@ -64,7 +65,7 @@ def write_grammar(grammar, outdir):
     outpath = os.path.join(outdir, "grammar.json")
     with open(outpath, 'w', encoding='utf-8') as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
-    print(f"Wrote {outpath}: {len(grammar['items'])} items")
+    print(f"Wrote {outpath}: {len(grammar['nodes'])} items")
 
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -231,7 +232,6 @@ def parse_shih_king():
             "name": display_name,
             "sort_order": sort_order,
             "category": part_cat,
-            "level": 1,
             "sections": sections,
             "keywords": keywords,
             "metadata": {
@@ -259,13 +259,12 @@ def parse_shih_king():
             "name": pname,
             "sort_order": sort_order,
             "category": "parts",
-            "level": 2,
             "sections": {
                 "About": part_descriptions.get(pcat, f"Collection of odes from {pname}."),
                 "For Readers": f"This section contains {len(part_odes)} odes. Browse them to explore the themes and concerns of ancient Chinese poetry in this tradition."
             },
             "keywords": ["collection", "chinese-poetry", "ancient-china"],
-            "composite_of": part_odes,
+            "parts": part_odes,
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -295,7 +294,7 @@ def parse_shih_king():
     }
 
     for theme_id, theme_info in themes.items():
-        matching = [item['id'] for item in items if item['level'] == 1
+        matching = [item['id'] for item in items if node_depth(item, items) == 1
                    and any(kw in item['keywords'] for kw in theme_info['keywords_match'])]
         if len(matching) < 2:
             continue
@@ -305,13 +304,12 @@ def parse_shih_king():
             "name": theme_info['name'],
             "sort_order": sort_order,
             "category": "themes",
-            "level": 2,
             "sections": {
                 "About": theme_info['desc'],
                 "For Readers": f"This thematic grouping contains {len(matching)} odes that share a common concern with {theme_info['name'].lower()}."
             },
             "keywords": ["theme", "chinese-poetry"],
-            "composite_of": matching,
+            "parts": matching,
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -327,13 +325,12 @@ def parse_shih_king():
             "name": "The Four Traditional Divisions",
             "sort_order": sort_order,
             "category": "meta",
-            "level": 3,
             "sections": {
                 "About": "The Shih King is traditionally divided into four parts: the Sung (Temple Odes), Hsiao Ya (Minor Odes), Ta Ya (Major Odes), and Kwo Fang (Lessons from the States). This division dates back to before Confucius and reflects a progression from the most sacred and public poetry to the most personal and local.",
                 "For Readers": "Start with the Lessons from the States for the most accessible folk poetry, then explore the Odes for court and ritual perspectives."
             },
             "keywords": ["structure", "tradition"],
-            "composite_of": part_ids,
+            "parts": part_ids,
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -345,13 +342,12 @@ def parse_shih_king():
             "name": "Thematic Landscape",
             "sort_order": sort_order,
             "category": "meta",
-            "level": 3,
             "sections": {
                 "About": "Cross-cutting themes that run through all four divisions of the Shih King: love, governance, ritual, and hardship. These themes show the continuity of human concerns across sacred and secular registers.",
                 "For Readers": "Use these thematic groupings to explore how similar human experiences are expressed differently in folk songs, court odes, and temple hymns."
             },
             "keywords": ["themes", "structure"],
-            "composite_of": theme_ids,
+            "parts": theme_ids,
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -378,7 +374,7 @@ def parse_shih_king():
         "shelves": ["wisdom"],
         "lineages": ["Linehan"],
         "worldview": "dialectical",
-        "items": items
+        "nodes": items
     }
 
     write_grammar(grammar, "grammars/shih-king")
@@ -471,7 +467,6 @@ def parse_chinese_literature():
             "name": f"Analects Book {bnum}: {title}",
             "sort_order": sort_order,
             "category": "analects",
-            "level": 1,
             "sections": {
                 "Text": text if text.strip() else "(Text not available)",
                 "Context": f"Book {bnum} of the Analects of Confucius. Translated by William Jennings."
@@ -512,7 +507,6 @@ def parse_chinese_literature():
             "name": f"Mencius Book {bnum}: {title}",
             "sort_order": sort_order,
             "category": "mencius",
-            "level": 1,
             "sections": {
                 "Text": text if text.strip() else "(Text not available)",
                 "Context": f"Book {bnum} of the Sayings of Mencius. Translated by James Legge."
@@ -605,7 +599,6 @@ def parse_chinese_literature():
             "name": ptitle,
             "sort_order": sort_order,
             "category": "shi-king",
-            "level": 1,
             "sections": {
                 "Verse": text if text.strip() else "(Text not available)",
                 "Context": f"From the Shi-King selections: {part_ctx}. Translated by Sir John Francis Davis."
@@ -660,7 +653,6 @@ def parse_chinese_literature():
             "name": f"Fa-Hien Ch. {cnum}: {title}",
             "sort_order": sort_order,
             "category": "fahien",
-            "level": 1,
             "sections": {
                 "Text": text if text.strip() else "(Text not available)",
                 "Context": f"Chapter {cnum} of The Travels of Fa-Hien. Translated by James Legge."
@@ -707,7 +699,6 @@ def parse_chinese_literature():
             "name": f"The Sorrows of Han: {aname}",
             "sort_order": sort_order,
             "category": "sorrows-of-han",
-            "level": 1,
             "sections": {
                 "Text": text if text.strip() else "(Text not available)",
                 "Context": f"{aname} of The Sorrows of Han (Han Koong Tsew). Translated by Sir John Francis Davis."
@@ -745,13 +736,12 @@ def parse_chinese_literature():
             "name": wname,
             "sort_order": sort_order,
             "category": "works",
-            "level": 2,
             "sections": {
                 "About": wdesc,
                 "For Readers": f"This work contains {len(work_items)} sections. Each can be read independently, though reading in sequence reveals the full arc of the text."
             },
             "keywords": wkw + ["chinese-literature"],
-            "composite_of": work_items,
+            "parts": work_items,
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -770,7 +760,7 @@ def parse_chinese_literature():
     ]
 
     for tid, tname, tdesc, matcher in theme_groups:
-        matching = [it['id'] for it in items if it['level'] == 1 and matcher(it)]
+        matching = [it['id'] for it in items if node_depth(it, items) == 1 and matcher(it)]
         if len(matching) < 2:
             continue
         sort_order += 1
@@ -779,13 +769,12 @@ def parse_chinese_literature():
             "name": tname,
             "sort_order": sort_order,
             "category": "themes",
-            "level": 2,
             "sections": {
                 "About": tdesc,
                 "For Readers": f"This thematic grouping draws together {len(matching)} pieces from across the anthology."
             },
             "keywords": ["theme", "chinese-literature"],
-            "composite_of": matching,
+            "parts": matching,
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -801,13 +790,12 @@ def parse_chinese_literature():
             "name": "The Five Works",
             "sort_order": sort_order,
             "category": "meta",
-            "level": 3,
             "sections": {
                 "About": "This anthology brings together five foundational works of Chinese literature spanning over a thousand years: the philosophical dialogues of Confucius and Mencius (5th-3rd century BCE), the ancient poetry of the Shi-King (11th-7th century BCE), the Buddhist travel narrative of Fa-Hien (5th century CE), and the dramatic tragedy of The Sorrows of Han (13th century CE). Together they represent the breadth of Chinese literary achievement.",
                 "For Readers": "Each work offers a different window into Chinese civilization. Start with the Analects for philosophical wisdom, the Shi-King for lyric beauty, Fa-Hien for adventure, or The Sorrows of Han for dramatic intensity."
             },
             "keywords": ["chinese-literature", "anthology", "structure"],
-            "composite_of": work_ids,
+            "parts": work_ids,
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -819,13 +807,12 @@ def parse_chinese_literature():
             "name": "Cross-Work Themes",
             "sort_order": sort_order,
             "category": "meta",
-            "level": 3,
             "sections": {
                 "About": "Thematic currents that flow through all five works of this anthology, connecting ancient poetry to philosophical dialogue, travel narrative to tragedy. These groupings reveal the deep continuities in Chinese literary and moral imagination.",
                 "For Readers": "These themes cut across the five individual works, showing how governance, spiritual seeking, and human emotion appear in very different literary forms."
             },
             "keywords": ["themes", "structure", "chinese-literature"],
-            "composite_of": theme_ids,
+            "parts": theme_ids,
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -857,7 +844,7 @@ def parse_chinese_literature():
         "shelves": ["wisdom"],
         "lineages": ["Linehan"],
         "worldview": "dialectical",
-        "items": items
+        "nodes": items
     }
 
     write_grammar(grammar, "grammars/chinese-literature-anthology")

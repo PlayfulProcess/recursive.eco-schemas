@@ -110,7 +110,7 @@ for num, slug, name, ital, fn, icon, hist, reading in CARDS:
     is_court = slug == "page-swords"
     items.append({
         "id": f"card-{slug}", "name": (name if num is None else f"{num} — {name}"), "sort_order": so,
-        "category": ("court" if is_court else "trump"), "level": 1,
+        "category": ("court" if is_court else "trump"),
         "keywords": [name.lower(), ital.lower(), "charles-vi", "trionfi", "ferrara"],
         "image_url": u,
         "metadata": {"arcana": ("minor" if is_court else "trump"),
@@ -128,7 +128,7 @@ for num, slug, name, ital, fn, icon, hist, reading in CARDS:
 trump_ids = [it["id"] for it in items if it["category"] == "trump"]
 items.append({
     "id": "emg-surviving-trumps", "name": "The 16 Surviving Trumps", "sort_order": so,
-    "category": "emergence", "level": 2, "composite_of": trump_ids, "relationship_type": "emergence",
+    "category": "emergence", "parts": trump_ids, "relationship_type": "emergence",
     "image_url": img("Death tarot charles6.jpeg"),
     "metadata": {},
     "sections": {
@@ -181,7 +181,7 @@ grammar = {
     "lineages": ["Andreotti"],
     "worldview": "historical",
     "is_published": False,
-    "items": items,
+    "nodes": items,
 }
 
 os.makedirs(OUT_DIR, exist_ok=True)

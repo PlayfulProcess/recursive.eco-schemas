@@ -18,6 +18,7 @@ import json
 import re
 import os
 from pathlib import Path
+from grammar_depth import node_depth
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent
@@ -301,7 +302,6 @@ def build_grammar():
             "id": chapter_id,
             "name": f"Chapter {gn}: {info['title']}",
             "sort_order": sort_order,
-            "level": 1,
             "category": "chapter",
             "sections": {
                 "Text": ch['text'],
@@ -327,10 +327,9 @@ def build_grammar():
             "id": vol_id,
             "name": vg["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": "volume",
             "relationship_type": "emergence",
-            "composite_of": chapter_ids,
+            "parts": chapter_ids,
             "sections": {
                 "About": vg["about"],
                 "For Readers": vg["for_readers"],
@@ -353,10 +352,9 @@ def build_grammar():
             "id": theme_id,
             "name": theme["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": chapter_ids,
+            "parts": chapter_ids,
             "sections": {
                 "About": theme["about"],
                 "For Readers": theme["for_readers"],
@@ -373,10 +371,9 @@ def build_grammar():
         "id": "emma-complete",
         "name": "Emma: The Complete Novel",
         "sort_order": sort_order,
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": all_volume_ids,
+        "parts": all_volume_ids,
         "sections": {
             "About": "Jane Austen's Emma (1815) is the story of a young woman who thinks she understands the human heart better than anyone in her small world — and learns, through a series of comic and painful mistakes, that she has been blind to the hearts closest to her own. Set in the village of Highbury, it follows Emma Woodhouse's misguided matchmaking, her entanglement with the charming Frank Churchill, and her slow recognition that the man she has known longest — Mr. Knightley — is the one she truly loves. Austen called Emma 'a heroine whom no one but myself will much like,' but readers have loved her for two centuries. The novel is at once a comedy of manners, a detective story about hidden feelings, and one of the most penetrating studies of self-deception ever written.",
             "For Readers": "Emma rewards rereading more than almost any novel in English. The first time through, you share Emma's surprises — Elton's proposal, Frank's secret, her own feelings for Knightley. The second time, you see what Austen saw: every clue was there from the beginning. The novel is structured in three volumes that map an emotional arc: confidence, complication, and recognition. Read it for the comedy, stay for the psychology — Austen understood relationship dynamics two centuries before relationship science existed.",
@@ -390,10 +387,9 @@ def build_grammar():
         "id": "emma-thematic-arcs",
         "name": "Thematic Arcs of Emma",
         "sort_order": sort_order,
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": all_theme_ids,
+        "parts": all_theme_ids,
         "sections": {
             "About": "Six thematic threads weave through Emma, each illuminating a different facet of Austen's vision. Matchmaking and Misjudgment traces Emma's pattern of projecting her fantasies onto others. Class and Social Standing maps Highbury's rigid hierarchies and the characters who navigate or challenge them. Secrecy and Revelation structures the novel as a mystery of hidden feelings. Language and Miscommunication examines how words fail, deceive, and occasionally heal. Self-Knowledge and Moral Growth follows Emma's painful journey to honesty. Community and Care reveals the web of relationships that sustains — and is threatened by — individual self-absorption.",
             "For Readers": "These themes don't operate in isolation — they interlock like a fugue. Emma's matchmaking failures (Theme 1) stem from class prejudice (Theme 2) and feed on secrets (Theme 3) expressed through failed communication (Theme 4). Her moral growth (Theme 5) is measured by her return to genuine care for the community (Theme 6). Reading across themes reveals how tightly Austen constructed her apparently effortless comedy.",
@@ -423,16 +419,16 @@ def build_grammar():
         "shelves": ["mirror"],
         "lineages": ["Gottman", "Johnson"],
         "worldview": "realist",
-        "items": items,
+        "nodes": items,
     }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT_PATH}")
     print(f"  L1: {l1} chapters, L2: {l2} (volumes + themes), L3: {l3} meta")
     print(f"  Total items: {len(items)}")

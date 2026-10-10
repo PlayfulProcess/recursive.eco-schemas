@@ -4,6 +4,7 @@ elemental spirits, Scandinavian folklore, and musical traditions that inspired
 Disney's Frozen II."""
 
 import json, os
+from grammar_depth import node_depth
 
 grammar = {
     "_grammar_commons": {
@@ -31,7 +32,7 @@ grammar = {
     "shelves": ["children", "wonder", "wisdom"],
     "lineages": ["Akomolafe", "Shrei", "Andreotti"],
     "worldview": "animist",
-    "items": []
+    "nodes": []
 }
 
 items = []
@@ -268,7 +269,6 @@ l1_items = [
 for item in l1_items:
     sort += 1
     item["sort_order"] = sort
-    item["level"] = 1
     items.append(item)
 
 # =============================================================================
@@ -280,8 +280,7 @@ l2_items = [
         "id": "theme-sami-culture",
         "name": "The Sámi — Living with the Land for 10,000 Years",
         "category": "theme-collections",
-        "level": 2,
-        "composite_of": ["who-are-the-sami", "reindeer-partnership", "joik-singing", "sami-gakti"],
+        "parts": ["who-are-the-sami", "reindeer-partnership", "joik-singing", "sami-gakti"],
         "relationship_type": "emergence",
         "sections": {
             "About": "The Sámi people are the indigenous inhabitants of northern Scandinavia — reindeer herders, fishermen, and joik singers whose culture is among the oldest continuous traditions in Europe. Their worldview is animist: the land, the reindeer, and the Northern Lights are all relatives. After centuries of forced assimilation, Sámi culture is experiencing a powerful revival.",
@@ -294,8 +293,7 @@ l2_items = [
         "id": "theme-elements",
         "name": "The Living Elements — Nordic Elemental Spirits",
         "category": "theme-collections",
-        "level": 2,
-        "composite_of": ["four-spirits", "the-nokk", "frost-giants", "fire-salamander", "northern-lights"],
+        "parts": ["four-spirits", "the-nokk", "frost-giants", "fire-salamander", "northern-lights"],
         "relationship_type": "emergence",
         "sections": {
             "About": "In the Nordic worldview, the four elements — water, fire, earth, and air — aren't just physics; they're communities of living beings. Water has its Nøkken, earth has its trolls and giants, fire has its salamanders and Surtr, and the air carries the Northern Lights and the breath of gods. Each element demands respect and relationship, not domination.",
@@ -308,8 +306,7 @@ l2_items = [
         "id": "theme-folklore",
         "name": "The Enchanted Forest — Scandinavian Folk Belief",
         "category": "theme-collections",
-        "level": 2,
-        "composite_of": ["enchanted-forest", "trolls-and-huldre", "dam-and-memory"],
+        "parts": ["enchanted-forest", "trolls-and-huldre", "dam-and-memory"],
         "relationship_type": "emergence",
         "sections": {
             "About": "Scandinavian folklore creates a world where the forest is a boundary between human and spirit realms, where trolls are grumpy neighbors rather than monsters, and where the hidden people live in a parallel world just behind the rocks. But this enchanted tradition has a shadow: the real history of colonialism against the Sámi, including the dams that destroyed their land, adds a layer of truth to the fairytale idea that human arrogance can break the natural order.",
@@ -322,8 +319,7 @@ l2_items = [
         "id": "theme-norse-mythology",
         "name": "The Old Gods — Norse Cosmology",
         "category": "theme-collections",
-        "level": 2,
-        "composite_of": ["yggdrasil", "ahtohallan-memory-river", "ragnarok-renewal"],
+        "parts": ["yggdrasil", "ahtohallan-memory-river", "ragnarok-renewal"],
         "relationship_type": "emergence",
         "sections": {
             "About": "Norse mythology provides the cosmic architecture for Frozen II's world: a World Tree connecting realms, wells of memory and wisdom, and a cycle of destruction and renewal that gives the story its structure. Unlike many mythologies where good defeats evil forever, the Norse accepted that even gods die — but the world is reborn. This gave Scandinavian culture a unique blend of fatalism and hope.",
@@ -336,8 +332,7 @@ l2_items = [
         "id": "theme-music-arts",
         "name": "Songs from the Cold — Nordic Musical Traditions",
         "category": "theme-collections",
-        "level": 2,
-        "composite_of": ["hardanger-fiddle", "nordic-lullabies", "runes-and-symbols"],
+        "parts": ["hardanger-fiddle", "nordic-lullabies", "runes-and-symbols"],
         "relationship_type": "emergence",
         "sections": {
             "About": "Nordic music and symbolic arts — from the haunting Hardanger fiddle to the dark comfort of Scandinavian lullabies to the magical runic alphabet — share a common quality: they embrace darkness as part of beauty. The shimmering sympathetic strings of the fiddle echo in empty valleys. The lullabies acknowledge wolves and winter while promising safety. The runes carry both information and power. In a land of extreme seasons, art doesn't pretend winter doesn't exist — it makes winter beautiful.",
@@ -362,8 +357,7 @@ l3_items = [
         "id": "meta-into-the-unknown",
         "name": "Into the Unknown — The Nordic Spirit Behind Frozen II",
         "category": "meta",
-        "level": 3,
-        "composite_of": ["theme-sami-culture", "theme-elements", "theme-folklore", "theme-norse-mythology", "theme-music-arts"],
+        "parts": ["theme-sami-culture", "theme-elements", "theme-folklore", "theme-norse-mythology", "theme-music-arts"],
         "relationship_type": "emergence",
         "sections": {
             "About": "Frozen II draws from one of the world's richest cultural wells: the interwoven traditions of Norse mythology, Scandinavian folklore, and Sámi indigenous culture. These aren't three separate things — they're layers of the same landscape. The Norse myths provide cosmic structure (World Tree, elemental forces, cycles of destruction and renewal). Scandinavian folklore fills the forests with spirits, trolls, and enchanted places. And Sámi culture grounds it all in a living, present-day indigenous tradition of animism, joik singing, and partnership with the reindeer and the land.",
@@ -379,7 +373,7 @@ for item in l3_items:
     item["sort_order"] = sort
     items.append(item)
 
-grammar["items"] = items
+grammar["nodes"] = items
 
 # Write output
 outdir = os.path.join(os.path.dirname(__file__), "..", "grammars", "roots-of-frozen-ii")
@@ -390,6 +384,6 @@ with open(outpath, "w") as f:
     json.dump(grammar, f, indent=2, ensure_ascii=False)
 
 print(f"Wrote {len(items)} items to {outpath}")
-print(f"  L1: {sum(1 for i in items if i['level'] == 1)}")
-print(f"  L2: {sum(1 for i in items if i['level'] == 2)}")
-print(f"  L3: {sum(1 for i in items if i['level'] == 3)}")
+print(f"  L1: {sum(1 for i in items if node_depth(i, items) == 1)}")
+print(f"  L2: {sum(1 for i in items if node_depth(i, items) == 2)}")
+print(f"  L3: {sum(1 for i in items if node_depth(i, items) == 3)}")

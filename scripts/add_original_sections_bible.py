@@ -7,6 +7,7 @@ using exact quotes from the KJV Bible (seeds/king-james-bible.txt).
 import json
 import re
 import sys
+from grammar_depth import node_depth
 
 KJV_PATH = "seeds/king-james-bible.txt"
 GRAMMAR_PATH = "grammars/biblical-stories-kids/grammar.json"
@@ -242,8 +243,8 @@ def main():
     skipped = 0
     failed = 0
 
-    for item in grammar["items"]:
-        if item.get("level", 1) != 1:
+    for item in grammar["nodes"]:
+        if node_depth(item, grammar["nodes"]) != 1:
             continue
 
         ref = item.get("metadata", {}).get("bible_reference")

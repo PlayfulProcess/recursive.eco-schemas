@@ -60,18 +60,17 @@ def make_grammar_commons(attribution):
     }
 
 
-def make_item(id_, name, sort_order, category, level, sections, keywords, composite_of=None, metadata=None):
+def make_item(id_, name, sort_order, category, level, sections, keywords, parts=None, metadata=None):
     item = {
         "id": id_,
         "name": name,
         "sort_order": sort_order,
         "category": category,
-        "level": level,
         "sections": sections,
         "keywords": keywords
     }
-    if composite_of:
-        item["composite_of"] = composite_of
+    if parts:
+        item["parts"] = parts
         item["relationship_type"] = "emergence"
     if metadata:
         item["metadata"] = metadata
@@ -200,7 +199,7 @@ def parse_kybalion():
                 "For Readers": "Read these chapters together to understand how the Hermetic principles interrelate and build upon each other."
             },
             keywords=kw,
-            composite_of=refs
+            parts=refs
         ))
         sort_order += 1
 
@@ -213,7 +212,7 @@ def parse_kybalion():
             "How to Use": "Begin with the Foundations to understand the tradition, then explore The All to grasp the metaphysical framework, then study each principle individually, and finally integrate them through the Hermetic Axioms."
         },
         keywords=["hermeticism", "hermetic-philosophy", "seven-principles", "meta"],
-        composite_of=["foundations", "nature-of-the-all", "seven-principles-applied", "synthesis"]
+        parts=["foundations", "nature-of-the-all", "seven-principles-applied", "synthesis"]
     ))
 
     grammar = {
@@ -230,7 +229,7 @@ def parse_kybalion():
         "shelves": ["wisdom"],
         "lineages": ["Shrei"],
         "worldview": "animist",
-        "items": items
+        "nodes": items
     }
 
     out_dir = os.path.join(REPO, "grammars", "kybalion")
@@ -389,7 +388,7 @@ def parse_alchemy():
                 "For Readers": "These chapters work as a unit to build understanding of the alchemical tradition from theory through practice to modern legacy."
             },
             keywords=kw,
-            composite_of=refs
+            parts=refs
         ))
         sort_order += 1
 
@@ -402,7 +401,7 @@ def parse_alchemy():
             "How to Use": "Start with the Foundations to understand what alchemy really meant, then explore the lives of the Alchemists, and finally trace the surprising thread from ancient transmutation to modern nuclear physics."
         },
         keywords=["alchemy", "history", "transmutation", "meta"],
-        composite_of=["foundations-of-alchemy", "the-great-alchemists", "alchemy-to-chemistry"]
+        parts=["foundations-of-alchemy", "the-great-alchemists", "alchemy-to-chemistry"]
     ))
 
     grammar = {
@@ -419,7 +418,7 @@ def parse_alchemy():
         "shelves": ["wisdom"],
         "lineages": ["Shrei"],
         "worldview": "animist",
-        "items": items
+        "nodes": items
     }
 
     out_dir = os.path.join(REPO, "grammars", "alchemy-ancient-modern")
@@ -568,7 +567,7 @@ def parse_natural_supernatural():
                 "For Readers": "These chapters reveal the alchemical worldview where metals are living beings animated by planetary spirits, each carrying a unique tincture toward perfection."
             },
             keywords=kw,
-            composite_of=refs
+            parts=refs
         ))
         sort_order += 1
 
@@ -582,7 +581,7 @@ def parse_natural_supernatural():
             "How to Use": "Begin with the Foundations to understand the natural/supernatural framework, then explore each Planetary Metal to see how the seven classical metals correspond to the seven planets. The Supplementary Works offer practical applications of these principles."
         },
         keywords=["basilius-valentinus", "alchemy", "metals", "transmutation", "meta"],
-        composite_of=["foundations-natural", "planetary-metals", "supplementary-works"]
+        parts=["foundations-natural", "planetary-metals", "supplementary-works"]
     ))
 
     grammar = {
@@ -600,7 +599,7 @@ def parse_natural_supernatural():
         "shelves": ["wisdom"],
         "lineages": ["Shrei"],
         "worldview": "animist",
-        "items": items
+        "nodes": items
     }
 
     out_dir = os.path.join(REPO, "grammars", "natural-supernatural-things")

@@ -15,6 +15,7 @@ import json
 import re
 import os
 from pathlib import Path
+from grammar_depth import node_depth
 
 SEED_FILE = Path(__file__).parent.parent / "seeds" / "metamorphoses-ovid.txt"
 OUTPUT_FILE = Path(__file__).parent.parent / "grammars" / "metamorphoses-ovid" / "grammar.json"
@@ -473,7 +474,6 @@ def build_l1_items(books):
                 "id": item_id,
                 "name": name,
                 "sort_order": sort_order,
-                "level": 1,
                 "category": f"book-{fable['book']}",
                 "sections": sections,
                 "keywords": keywords,
@@ -585,9 +585,8 @@ def build_l2_book_items(books, l1_items):
             "id": f"book-{book_num}",
             "name": info["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": "books",
-            "composite_of": book_item_ids,
+            "parts": book_item_ids,
             "relationship_type": "emergence",
             "sections": {
                 "About": info["about"],
@@ -623,9 +622,8 @@ def build_l2_theme_items(l1_items, sort_start):
             "id": f"theme-{theme_key}",
             "name": theme_info["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": "themes",
-            "composite_of": theme_item_ids,
+            "parts": theme_item_ids,
             "relationship_type": "emergence",
             "sections": {
                 "About": theme_info["about"],
@@ -654,9 +652,8 @@ def build_l3_items(l2_items, sort_start):
             "id": "meta-books",
             "name": "The Fifteen Books (I-VII)",
             "sort_order": sort_start,
-            "level": 3,
             "category": "meta",
-            "composite_of": book_ids,
+            "parts": book_ids,
             "relationship_type": "emergence",
             "sections": {
                 "About": "Ovid organized his Metamorphoses into fifteen books, of which this grammar contains the first seven (as translated by Henry T. Riley). Each book flows seamlessly into the next, creating a continuous narrative river from the creation of the world through the founding myths of Greece. The book divisions provide natural resting points in what is really one unbroken song of change.",
@@ -671,9 +668,8 @@ def build_l3_items(l2_items, sort_start):
             "id": "meta-themes",
             "name": "Threads of Transformation",
             "sort_order": sort_start + 1,
-            "level": 3,
             "category": "meta",
-            "composite_of": theme_ids,
+            "parts": theme_ids,
             "relationship_type": "emergence",
             "sections": {
                 "About": "Across all seven books, certain themes recur like threads in a vast tapestry: creation and cosmos, divine punishment, love's transforming power, the grief of loss, the founding of civilizations, and the deeds of heroes. These thematic groupings cut across Ovid's book structure to reveal deeper patterns -- the same forces acting again and again in different forms. Which is, of course, exactly what metamorphosis means.",
@@ -755,7 +751,7 @@ def build_grammar(books):
         "lineages": ["Shrei", "Andreotti"],
         "worldview": "animist",
         "cover_image_url": "",
-        "items": all_items
+        "nodes": all_items
     }
 
     return grammar
@@ -786,10 +782,10 @@ def main():
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    total_items = len(grammar['items'])
-    l1_count = sum(1 for item in grammar['items'] if item['level'] == 1)
-    l2_count = sum(1 for item in grammar['items'] if item['level'] == 2)
-    l3_count = sum(1 for item in grammar['items'] if item['level'] == 3)
+    total_items = len(grammar['nodes'])
+    l1_count = sum(1 for item in grammar['nodes'] if node_depth(item, grammar['nodes']) == 1)
+    l2_count = sum(1 for item in grammar['nodes'] if node_depth(item, grammar['nodes']) == 2)
+    l3_count = sum(1 for item in grammar['nodes'] if node_depth(item, grammar['nodes']) == 3)
     print(f"\nDone! Total items: {total_items} (L1: {l1_count}, L2: {l2_count}, L3: {l3_count})")
 
 

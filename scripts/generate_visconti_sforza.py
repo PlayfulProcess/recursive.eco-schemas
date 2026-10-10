@@ -219,7 +219,6 @@ for num, slug, name, ital, fn, hand, icon, hist, reading in MAJORS:
         "name": f"{num} — {name}",
         "sort_order": sort_order,
         "category": "major-arcana",
-        "level": 1,
         "keywords": [name.lower().replace("the ", ""), "trionfi", "major arcana", ital.lower()],
         "metadata": {
             "arcana": "major",
@@ -280,7 +279,6 @@ for sid, sdisp, sital, element, filestem, emb_s, emb_p, theme in SUITS:
             "name": cardname,
             "sort_order": sort_order,
             "category": f"suit-{sid}",
-            "level": 1,
             "keywords": [sdisp.lower(), element.lower(), word.lower(), "minor arcana", sital.lower()],
             "metadata": {
                 "arcana": "minor", "suit": sdisp, "suit_italian": sital,
@@ -321,7 +319,6 @@ for sid, sdisp, sital, element, filestem, emb_s, emb_p, theme in SUITS:
             "name": cardname,
             "sort_order": sort_order,
             "category": f"suit-{sid}",
-            "level": 1,
             "keywords": [sdisp.lower(), element.lower(), rdisp.lower(), "court card", rital.lower()],
             "metadata": {
                 "arcana": "minor", "suit": sdisp, "suit_italian": sital, "element": element,
@@ -451,8 +448,7 @@ for eid, ename, rel, children, image_url, sections in emergences:
         "name": ename,
         "sort_order": sort_order,
         "category": "emergence",
-        "level": 2,
-        "composite_of": children,
+        "parts": children,
         "relationship_type": rel,
         "sections": sections,
         "metadata": {},
@@ -517,7 +513,7 @@ grammar = {
     "lineages": ["Andreotti"],
     "worldview": "historical",
     "is_published": False,
-    "items": items,
+    "nodes": items,
 }
 
 os.makedirs(OUT_DIR, exist_ok=True)

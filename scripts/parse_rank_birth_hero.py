@@ -4,6 +4,7 @@ Parse The Myth of the Birth of the Hero (Otto Rank, 1914, Gutenberg #66192).
 15 hero myths + introduction + interpretation chapters.
 """
 import json, re, os
+from grammar_depth import node_depth
 
 with open("seeds/myth-birth-hero-rank.txt", encoding="utf-8") as f:
     text = f.read()
@@ -164,7 +165,6 @@ for idx, (pos, heading, sid, name) in enumerate(positions):
         "name": name,
         "sort_order": sort_order,
         "category": cat,
-        "level": level,
         "sections": {
             "Text": excerpt
         },
@@ -179,13 +179,12 @@ items.append({
     "name": "The Hero Pattern: Why the Same Birth Story?",
     "sort_order": sort_order,
     "category": "meta",
-    "level": 3,
     "sections": {
         "About": "Otto Rank identified a single pattern recurring across fifteen hero myths spanning Babylonian, Hebrew, Indian, Greek, Persian, Celtic, Roman, Germanic, and Christian traditions: the hero is born of distinguished parents (often a king); his birth is preceded by a prophecy warning the father; the infant is exposed (in water, in a chest, on a mountain); he is rescued by humble folk (shepherds, fishermen, animals); he grows up to discover his true identity, takes revenge on the father, and achieves greatness. The pattern is too consistent to be coincidence. Rank's psychoanalytic interpretation: the myth is the child's fantasy — the 'family romance' in which the disappointing real parents are replaced by noble, divine ones, and the child imagines himself abandoned and rescued, secretly royal. The myth is the dream of every child who has ever felt: I don't belong here. I must be from somewhere else.",
         "Contemplation": "Rank's fifteen heroes were all exposed and rescued, all discovered their true parentage, all achieved greatness. What if the pattern is not about kings and gods but about you — about the universal experience of being born into a world that does not recognize who you are, and the long journey to claim your own name?"
     },
     "keywords": ["hero-pattern", "family-romance", "exposure", "rescue", "identity"],
-    "composite_of": [i["id"] for i in items if i["level"] == 1],
+    "parts": [i["id"] for i in items if node_depth(i, items) == 1],
     "relationship_type": "emergence",
     "metadata": {}
 })
@@ -211,7 +210,7 @@ grammar = {
     "shelves": ["mirror", "wisdom"],
     "lineages": ["Shrei", "Akomolafe"],
     "worldview": "dialectical",
-    "items": items
+    "nodes": items
 }
 
 os.makedirs("grammars/myth-birth-hero-rank", exist_ok=True)
@@ -221,7 +220,7 @@ with open("grammars/myth-birth-hero-rank/grammar.json", "w") as f:
 # Validate
 ids = [i["id"] for i in items]
 dupes = [x for x in ids if ids.count(x) > 1]
-bad_refs = [(i["id"], r) for i in items for r in i.get("composite_of", []) if r not in ids]
-print(f"Items: {len(items)}, L1: {sum(1 for i in items if i['level']==1)}, L2: {sum(1 for i in items if i['level']==2)}, L3: {sum(1 for i in items if i['level']==3)}")
+bad_refs = [(i["id"], r) for i in items for r in i.get("parts", []) if r not in ids]
+print(f"Items: {len(items)}, L1: {sum(1 for i in items if node_depth(i, items)==1)}, L2: {sum(1 for i in items if node_depth(i, items)==2)}, L3: {sum(1 for i in items if node_depth(i, items)==3)}")
 print(f"Dupes: {dupes}, Bad refs: {bad_refs}")
 print(f"Sort OK: {[i['sort_order'] for i in items] == list(range(1, len(items)+1))}")

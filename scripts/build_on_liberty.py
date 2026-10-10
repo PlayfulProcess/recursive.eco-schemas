@@ -15,6 +15,7 @@ which we skip -- we start from Mill's own Chapter I.
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SEED = os.path.join(SCRIPT_DIR, "..", "seeds", "on-liberty.txt")
@@ -288,7 +289,6 @@ def build_grammar(chapters):
             items.append({
                 "id": para_id,
                 "name": name,
-                "level": 1,
                 "category": ch["slug"],
                 "sort_order": sort_order,
                 "sections": {
@@ -311,10 +311,9 @@ def build_grammar(chapters):
         items.append({
             "id": f"chapter-{ch['slug']}",
             "name": ch["title"],
-            "level": 2,
             "category": "chapter",
             "relationship_type": "emergence",
-            "composite_of": ids,
+            "parts": ids,
             "sort_order": sort_order,
             "sections": {
                 "About": about_data.get("about", f"Chapter: {ch['title']}"),
@@ -327,7 +326,7 @@ def build_grammar(chapters):
         })
 
     # L2: Thematic groups
-    all_l1 = [item for item in items if item["level"] == 1]
+    all_l1 = [item for item in items if node_depth(item, items) == 1]
 
     def find_paragraphs_matching(patterns):
         matched = []
@@ -347,10 +346,9 @@ def build_grammar(chapters):
         items.append({
             "id": theme["id"],
             "name": theme["name"],
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": composite,
+            "parts": composite,
             "sort_order": sort_order,
             "sections": {
                 "About": theme["about"],
@@ -364,14 +362,13 @@ def build_grammar(chapters):
 
     # L3: Meta
     sort_order += 1
-    all_l2_ids = [item["id"] for item in items if item["level"] == 2]
+    all_l2_ids = [item["id"] for item in items if node_depth(item, items) == 2]
     items.append({
         "id": "meta-on-liberty",
         "name": "On Liberty",
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": all_l2_ids,
+        "parts": all_l2_ids,
         "sort_order": sort_order,
         "sections": {
             "About": "John Stuart Mill's On Liberty (1859) is the foundational text of modern liberalism. Written in collaboration with his wife Harriet Taylor, it argues that individual freedom is not merely a political right but an essential condition of human flourishing. Mill's 'one very simple principle' -- that the only legitimate reason to restrict individual liberty is to prevent harm to others -- remains the touchstone of every debate about censorship, drug policy, hate speech, and personal freedom. The essay moves from the philosophical foundation (Chapter I) through the case for free speech (Chapter II), the value of individuality (Chapter III), the limits of social authority (Chapter IV), to practical applications (Chapter V). Its central warning -- that 'the tyranny of the majority' can be more oppressive than any despot -- grows more urgent with every passing year.",
@@ -427,16 +424,16 @@ def main():
         "shelves": ["mirror"],
         "lineages": ["Kelty"],
         "worldview": "rationalist",
-        "items": items,
+        "nodes": items,
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT}")
     print(f"  L1: {l1} paragraphs, L2: {l2} groups, L3: {l3} meta")
     print(f"  Total items: {len(items)}")
@@ -444,20 +441,20 @@ def main():
     all_ids = {item["id"] for item in items}
     errors = 0
     for item in items:
-        if "composite_of" in item:
-            for ref in item["composite_of"]:
+        if "parts" in item:
+            for ref in item["parts"]:
                 if ref not in all_ids:
                     print(f"  ERROR: {item['id']} references non-existent {ref}")
                     errors += 1
     if errors == 0:
-        print("  All composite_of references valid.")
+        print("  All parts references valid.")
     else:
         print(f"  {errors} reference errors found!")
 
     print("\nThematic group sizes:")
     for item in items:
-        if item["level"] == 2 and item["category"] == "theme":
-            print(f"  {item['name']}: {len(item['composite_of'])} passages")
+        if node_depth(item, items) == 2 and item["category"] == "theme":
+            print(f"  {item['name']}: {len(item['parts'])} passages")
 
 
 if __name__ == "__main__":

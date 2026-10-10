@@ -45,7 +45,7 @@ def fix_buggy_romanization(text, raw_name, clean_name):
 def main():
     raw = json.loads(RAW.read_text(encoding="utf-8"))
     meta_grammar = json.loads(META_SOURCE.read_text(encoding="utf-8"))
-    meta_by_number = {item["metadata"]["number"]: item for item in meta_grammar["items"]}
+    meta_by_number = {item["metadata"]["number"]: item for item in meta_grammar["nodes"]}
 
     items = []
     for h in raw:
@@ -99,7 +99,6 @@ def main():
         items.append({
             "id": f"hexagram-{n}",
             "name": meta.get("name") or clean_name or f"Hexagram {n}",
-            "level": 1,
             "sort_order": n - 1,
             "category": "trigram",
             "subcategory": m.get("subcategory") or "",
@@ -186,7 +185,7 @@ def main():
         "shelves": ["wisdom"],
         "lineages": [],
         "worldview": "non-dual",
-        "items": items,
+        "nodes": items,
     }
 
     OUT.parent.mkdir(parents=True, exist_ok=True)

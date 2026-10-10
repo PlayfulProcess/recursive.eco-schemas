@@ -4,6 +4,7 @@ Parse Plato's Republic (Gutenberg #1497, Jowett translation).
 Extracts Introduction, Books I-X, L2 thematic groups, L3 meta item.
 """
 import json, re, os
+from grammar_depth import node_depth
 
 with open("seeds/republic-plato.txt", encoding="utf-8") as f:
     text = f.read()
@@ -151,7 +152,6 @@ items.append({
     "name": "Introduction and Analysis (Jowett)",
     "sort_order": sort_order,
     "category": "introduction",
-    "level": 1,
     "sections": {
         "Analysis": intro_excerpt,
         "Themes": "Jowett's introduction surveys the Republic's central arguments: the nature of justice, the ideal state, the education of guardians, the theory of Forms, the philosopher-king, the tripartite soul, the critique of poetry, and the myth of Er. He places the Republic within Plato's broader philosophical project and traces its influence on Western political and ethical thought."
@@ -172,7 +172,6 @@ for idx, (start_ln, heading, bid, bname) in enumerate(book_positions):
         "name": bname,
         "sort_order": sort_order,
         "category": "dialogue",
-        "level": 1,
         "sections": {
             "Dialogue": dialogue_excerpt,
             "Themes": book_themes[bid],
@@ -192,7 +191,7 @@ l2_groups = [
         "id": "group-justice-individual",
         "name": "Justice and the Individual (Books I-IV)",
         "category": "thematic-group",
-        "composite_of": ["book-1", "book-2", "book-3", "book-4"],
+        "parts": ["book-1", "book-2", "book-3", "book-4"],
         "about": "The first movement of the Republic asks: what is justice? Socrates dismantles conventional definitions (paying debts, helping friends, the advantage of the stronger), then builds a city in speech to find justice writ large. The ideal city requires guardian-warriors educated through carefully censored music and poetry. Justice emerges as each part — whether of the city or the soul — performing its proper function. The tripartite soul (reason, spirit, appetite) mirrors the tripartite city (rulers, auxiliaries, producers).",
         "for_readers": "These books establish the Republic's method: building a political theory to illuminate psychology, and vice versa. The refutation of Thrasymachus in Book I is a masterclass in Socratic method. The Ring of Gyges in Book II remains one of philosophy's greatest thought experiments. The tripartite soul in Book IV is the ancestor of Freud's id/ego/superego.",
         "keywords": ["justice", "tripartite-soul", "ideal-city", "education", "ring-of-gyges", "thrasymachus"]
@@ -201,7 +200,7 @@ l2_groups = [
         "id": "group-philosopher-vision",
         "name": "The Philosopher's Vision (Books V-VII)",
         "category": "thematic-group",
-        "composite_of": ["book-5", "book-6", "book-7"],
+        "parts": ["book-5", "book-6", "book-7"],
         "about": "The philosophical heart of the Republic. Socrates makes three 'waves' of controversial proposals: women as guardians, community of families, and philosopher-kings. The distinction between knowledge and opinion grounds the philosopher's authority. The sun analogy and the Divided Line establish the metaphysics of the Forms, culminating in the Allegory of the Cave — perhaps the most famous passage in all of Western philosophy. Education is reconceived as turning the soul from shadows to sunlight.",
         "for_readers": "The Cave allegory resonates far beyond philosophy — it's a parable of awakening applicable to any domain where received opinion substitutes for direct experience. The sun analogy and Divided Line reward careful study: they contain Plato's entire epistemology in compressed form. The argument for philosopher-kings remains provocatively relevant to democratic politics.",
         "keywords": ["philosopher-kings", "allegory-of-cave", "forms", "idea-of-good", "sun-analogy", "divided-line", "education"]
@@ -210,7 +209,7 @@ l2_groups = [
         "id": "group-decline-soul",
         "name": "Decline and the Soul (Books VIII-X)",
         "category": "thematic-group",
-        "composite_of": ["book-8", "book-9", "book-10"],
+        "parts": ["book-8", "book-9", "book-10"],
         "about": "The final movement traces political and psychological degeneration. Four corrupt regimes — timocracy, oligarchy, democracy, tyranny — each correspond to a soul type, each arising from the excess of its predecessor's virtue. The tyrant, enslaved by lawless appetites, is proved the most wretched. Poetry is banished as thrice removed from truth. The Allegory of Er closes the work with a cosmic vision: souls choosing their next lives after death, a final argument that justice matters beyond this life.",
         "for_readers": "The cycle of political decay in Book VIII reads like a commentary on contemporary politics — the passage from democratic excess to tyranny has been cited by political theorists for 2,400 years. The banishment of poetry in Book X is deliberately provocative: Plato, himself a supreme literary artist, argues against the art form that made his culture. The Myth of Er is a strange, beautiful coda — part eschatology, part moral psychology.",
         "keywords": ["political-decay", "tyranny", "democracy", "poetry", "allegory-of-er", "afterlife", "immortality"]
@@ -223,13 +222,12 @@ for grp in l2_groups:
         "name": grp["name"],
         "sort_order": sort_order,
         "category": grp["category"],
-        "level": 2,
         "sections": {
             "About": grp["about"],
             "For Readers": grp["for_readers"]
         },
         "keywords": grp["keywords"],
-        "composite_of": grp["composite_of"],
+        "parts": grp["parts"],
         "relationship_type": "emergence",
         "metadata": {}
     })
@@ -244,13 +242,12 @@ items.append({
     "name": "The Republic: Complete",
     "sort_order": sort_order,
     "category": "meta",
-    "level": 3,
     "sections": {
         "About": "Plato's Republic is the foundational text of Western political philosophy and one of the most influential works ever written. Composed as a Socratic dialogue around 375 BCE, it asks a deceptively simple question — what is justice? — and follows it through politics, psychology, education, metaphysics, aesthetics, and eschatology. The ideal city, the tripartite soul, the philosopher-king, the Allegory of the Cave, the theory of Forms, the critique of democracy, the banishment of poetry, the Myth of Er — these ideas have shaped every subsequent generation of Western thought. The Republic is not a utopian blueprint but a thought experiment: what would a perfectly just society require, and what does that tell us about the human soul?",
         "Contemplation": "Plato wrote the Republic as a dialogue — not a treatise, not a set of doctrines, but a conversation. Socrates does not simply state the truth; he leads others to discover it through questioning. The form is the message: philosophy is not a body of knowledge to be memorized but a practice of thinking together. When you read the Republic, you are not receiving Plato's conclusions — you are being invited into the same conversation."
     },
     "keywords": ["plato", "republic", "justice", "philosophy", "complete-work", "western-canon"],
-    "composite_of": ["group-justice-individual", "group-philosopher-vision", "group-decline-soul"],
+    "parts": ["group-justice-individual", "group-philosopher-vision", "group-decline-soul"],
     "relationship_type": "emergence",
     "metadata": {}
 })
@@ -278,7 +275,7 @@ grammar = {
     "shelves": ["wisdom"],
     "lineages": ["Linehan"],
     "worldview": "dialectical",
-    "items": items
+    "nodes": items
 }
 
 os.makedirs("grammars/republic-plato", exist_ok=True)
@@ -288,9 +285,9 @@ with open("grammars/republic-plato/grammar.json", "w") as f:
 # Validation
 ids = [i["id"] for i in items]
 dupes = [x for x in ids if ids.count(x) > 1]
-bad_refs = [(i["id"], r) for i in items for r in i.get("composite_of", []) if r not in ids]
+bad_refs = [(i["id"], r) for i in items for r in i.get("parts", []) if r not in ids]
 orders = [i["sort_order"] for i in items]
-print(f"\nItems: {len(items)}, L1: {sum(1 for i in items if i['level']==1)}, L2: {sum(1 for i in items if i['level']==2)}, L3: {sum(1 for i in items if i['level']==3)}")
+print(f"\nItems: {len(items)}, L1: {sum(1 for i in items if node_depth(i, items)==1)}, L2: {sum(1 for i in items if node_depth(i, items)==2)}, L3: {sum(1 for i in items if node_depth(i, items)==3)}")
 print(f"Sections: {sum(len(i.get('sections', {})) for i in items)}")
 print(f"Duplicate IDs: {dupes}")
 print(f"Bad refs: {bad_refs}")

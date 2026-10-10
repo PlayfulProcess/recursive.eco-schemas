@@ -156,7 +156,7 @@ for num in range(1, 51):
     u = img(num)
     items.append({
         "id": f"plate-{num:02d}", "name": f"{num} — {name}", "sort_order": so,
-        "category": f"series-{grp}", "level": 1,
+        "category": f"series-{grp}",
         "keywords": [name.lower(), ital.lower(), "mantegna", "e-series", grp, "not-a-tarot"],
         "image_url": u,
         "metadata": {"series_number": num, "italian_name": ital, "series_group": grp,
@@ -178,8 +178,8 @@ all_ids = {it["id"] for it in items}
 for grp, gname, blurb in GROUPS:
     kids = [it["id"] for it in items if it["category"] == f"series-{grp}"]
     items.append({
-        "id": f"emg-{grp}", "name": gname, "sort_order": so, "category": "emergence", "level": 2,
-        "composite_of": kids, "relationship_type": "emergence",
+        "id": f"emg-{grp}", "name": gname, "sort_order": so, "category": "emergence",
+        "parts": kids, "relationship_type": "emergence",
         "image_url": img(items_min := min(int(it["id"].split("-")[1]) for it in items if it["category"] == f"series-{grp}")),
         "metadata": {}, "sections": {"About this series": blurb},
     })
@@ -188,8 +188,8 @@ for grp, gname, blurb in GROUPS:
 # L3 root — the whole ladder
 items.append({
     "id": "root-the-ladder", "name": "The Ladder of Being (all 50)", "sort_order": so,
-    "category": "root", "level": 3,
-    "composite_of": [f"emg-{g[0]}" for g in GROUPS], "relationship_type": "emergence",
+    "category": "root",
+    "parts": [f"emg-{g[0]}" for g in GROUPS], "relationship_type": "emergence",
     "image_url": img(50),
     "metadata": {},
     "sections": {
@@ -244,7 +244,7 @@ grammar = {
     "lineages": ["Andreotti"],
     "worldview": "historical",
     "is_published": False,
-    "items": items,
+    "nodes": items,
 }
 
 os.makedirs(OUT_DIR, exist_ok=True)

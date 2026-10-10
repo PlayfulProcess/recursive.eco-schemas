@@ -40,11 +40,10 @@
   "shelves": ["wisdom", "mirror"],
   "lineages": ["Shrei", "Akomolafe"],
   "worldview": "non-dual",
-  "items": [
+  "nodes": [
     {
       "id": "ray-1-profile",
       "name": "Ray I — The Destroyer-Creator",
-      "level": 1,
       "category": "ray-profiles",
       "sort_order": 0,
       "keywords": ["will", "power", "leadership", "statesmanship", "politics", "vulcan", "pluto"],
@@ -61,7 +60,6 @@
     {
       "id": "ray-2-profile",
       "name": "Ray II — The Teacher-Healer",
-      "level": 1,
       "category": "ray-profiles",
       "sort_order": 1,
       "keywords": ["love", "wisdom", "teaching", "initiation", "religion", "jupiter", "sun"],
@@ -78,7 +76,6 @@
     {
       "id": "ray-3-profile",
       "name": "Ray III — The Weaver-Strategist",
-      "level": 1,
       "category": "ray-profiles",
       "sort_order": 2,
       "keywords": ["intelligence", "communication", "money", "economy", "saturn", "earth"],
@@ -95,7 +92,6 @@
     {
       "id": "ray-4-profile",
       "name": "Ray IV — The Artist-Mediator",
-      "level": 1,
       "category": "ray-profiles",
       "sort_order": 3,
       "keywords": ["harmony", "conflict", "art", "masonry", "architecture", "mercury", "moon"],
@@ -112,7 +108,6 @@
     {
       "id": "ray-5-profile",
       "name": "Ray V — The Scientist-Investigator",
-      "level": 1,
       "category": "ray-profiles",
       "sort_order": 4,
       "keywords": ["knowledge", "science", "psychology", "education", "venus"],
@@ -129,7 +124,6 @@
     {
       "id": "ray-6-profile",
       "name": "Ray VI — The Devotee-Idealist",
-      "level": 1,
       "category": "ray-profiles",
       "sort_order": 5,
       "keywords": ["devotion", "idealism", "christianity", "religion", "mars", "neptune"],
@@ -146,7 +140,6 @@
     {
       "id": "ray-7-profile",
       "name": "Ray VII — The Ritualist-Organizer",
-      "level": 1,
       "category": "ray-profiles",
       "sort_order": 6,
       "keywords": ["order", "ceremony", "magic", "spiritualism", "uranus"],
@@ -163,7 +156,6 @@
     {
       "id": "ray-1-shadow",
       "name": "The Shadow of Will — Tyranny",
-      "level": 1,
       "category": "shadows",
       "sort_order": 7,
       "keywords": ["tyranny", "isolation", "destruction", "control", "domination"],
@@ -178,7 +170,6 @@
     {
       "id": "ray-2-shadow",
       "name": "The Shadow of Love — Possessiveness",
-      "level": 1,
       "category": "shadows",
       "sort_order": 8,
       "keywords": ["possessiveness", "dependency", "over-sensitivity", "martyrdom"],
@@ -193,7 +184,6 @@
     {
       "id": "ray-3-shadow",
       "name": "The Shadow of Intelligence — Manipulation",
-      "level": 1,
       "category": "shadows",
       "sort_order": 9,
       "keywords": ["manipulation", "scheming", "busy-ness", "deception", "materialism"],
@@ -208,7 +198,6 @@
     {
       "id": "ray-4-shadow",
       "name": "The Shadow of Harmony — Perpetual Crisis",
-      "level": 1,
       "category": "shadows",
       "sort_order": 10,
       "keywords": ["drama", "instability", "indecision", "self-destruction", "chaos"],
@@ -223,7 +212,6 @@
     {
       "id": "ray-5-shadow",
       "name": "The Shadow of Knowledge — Cold Detachment",
-      "level": 1,
       "category": "shadows",
       "sort_order": 11,
       "keywords": ["detachment", "arrogance", "reductionism", "skepticism", "isolation"],
@@ -238,7 +226,6 @@
     {
       "id": "ray-6-shadow",
       "name": "The Shadow of Devotion — Fanaticism",
-      "level": 1,
       "category": "shadows",
       "sort_order": 12,
       "keywords": ["fanaticism", "zealotry", "intolerance", "martyrdom", "blind-faith"],
@@ -253,7 +240,6 @@
     {
       "id": "ray-7-shadow",
       "name": "The Shadow of Order — Rigid Formalism",
-      "level": 1,
       "category": "shadows",
       "sort_order": 13,
       "keywords": ["rigidity", "formalism", "superstition", "bureaucracy", "materialism"],
@@ -268,11 +254,10 @@
     {
       "id": "three-rays-of-power",
       "name": "The Three Rays of Power",
-      "level": 2,
       "category": "emergence",
       "sort_order": 14,
       "keywords": ["power", "governance", "economy", "will", "love", "intelligence"],
-      "composite_of": ["ray-1-profile", "ray-2-profile", "ray-3-profile"],
+      "parts": ["ray-1-profile", "ray-2-profile", "ray-3-profile"],
       "relationship_type": "emergence",
       "metadata": {},
       "sections": {
@@ -285,11 +270,10 @@
     {
       "id": "four-rays-of-culture",
       "name": "The Four Rays of Culture",
-      "level": 2,
       "category": "emergence",
       "sort_order": 15,
       "keywords": ["culture", "art", "science", "religion", "magic"],
-      "composite_of": ["ray-4-profile", "ray-5-profile", "ray-6-profile", "ray-7-profile"],
+      "parts": ["ray-4-profile", "ray-5-profile", "ray-6-profile", "ray-7-profile"],
       "relationship_type": "emergence",
       "metadata": {},
       "sections": {
@@ -302,11 +286,10 @@
     {
       "id": "the-sacred-planets",
       "name": "The Sacred Planets — Seven Lords",
-      "level": 2,
       "category": "emergence",
       "sort_order": 16,
       "keywords": ["planets", "vulcan", "jupiter", "saturn", "mercury", "venus", "mars", "uranus"],
-      "composite_of": ["ray-1-profile", "ray-2-profile", "ray-3-profile", "ray-4-profile", "ray-5-profile", "ray-6-profile", "ray-7-profile"],
+      "parts": ["ray-1-profile", "ray-2-profile", "ray-3-profile", "ray-4-profile", "ray-5-profile", "ray-6-profile", "ray-7-profile"],
       "relationship_type": "emergence",
       "metadata": {},
       "sections": {
@@ -319,11 +302,10 @@
     {
       "id": "the-human-constitution",
       "name": "The Human Constitution — Three Ray Levels",
-      "level": 2,
       "category": "emergence",
       "sort_order": 17,
       "keywords": ["personality", "soul", "monad", "constitution", "self-knowledge"],
-      "composite_of": ["ray-1-profile", "ray-2-profile", "ray-3-profile", "ray-4-profile", "ray-5-profile", "ray-6-profile", "ray-7-profile"],
+      "parts": ["ray-1-profile", "ray-2-profile", "ray-3-profile", "ray-4-profile", "ray-5-profile", "ray-6-profile", "ray-7-profile"],
       "relationship_type": "emergence",
       "metadata": {},
       "sections": {
@@ -337,11 +319,10 @@
     {
       "id": "the-ray-cycles",
       "name": "The Ray Cycles — Ages and Transitions",
-      "level": 2,
       "category": "emergence",
       "sort_order": 18,
       "keywords": ["cycles", "ages", "aquarian", "piscean", "transition"],
-      "composite_of": ["ray-6-profile", "ray-7-profile", "ray-6-shadow", "ray-7-shadow"],
+      "parts": ["ray-6-profile", "ray-7-profile", "ray-6-shadow", "ray-7-shadow"],
       "relationship_type": "emergence",
       "metadata": {},
       "sections": {
@@ -354,11 +335,10 @@
     {
       "id": "the-dance-of-rays",
       "name": "The Dance of Rays — Finding Your Pattern",
-      "level": 3,
       "category": "meta",
       "sort_order": 19,
       "keywords": ["synthesis", "self-recognition", "combination", "pattern"],
-      "composite_of": ["the-human-constitution", "the-ray-cycles", "three-rays-of-power", "four-rays-of-culture"],
+      "parts": ["the-human-constitution", "the-ray-cycles", "three-rays-of-power", "four-rays-of-culture"],
       "relationship_type": "emergence",
       "metadata": {},
       "sections": {
@@ -371,11 +351,10 @@
     {
       "id": "the-shadow-council",
       "name": "The Shadow Council — When Rays Distort",
-      "level": 3,
       "category": "meta",
       "sort_order": 20,
       "keywords": ["shadow", "distortion", "integration", "healing"],
-      "composite_of": ["ray-1-shadow", "ray-2-shadow", "ray-3-shadow", "ray-4-shadow", "ray-5-shadow", "ray-6-shadow", "ray-7-shadow"],
+      "parts": ["ray-1-shadow", "ray-2-shadow", "ray-3-shadow", "ray-4-shadow", "ray-5-shadow", "ray-6-shadow", "ray-7-shadow"],
       "relationship_type": "emergence",
       "metadata": {},
       "sections": {

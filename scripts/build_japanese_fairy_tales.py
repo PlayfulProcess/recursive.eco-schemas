@@ -304,7 +304,6 @@ def build_l1_items(stories):
             "id": sdef["id"],
             "name": sdef["name"],
             "sort_order": sort_order,
-            "level": 1,
             "category": sdef["category"],
             "sections": sections,
             "keywords": sdef["keywords"],
@@ -425,14 +424,13 @@ def build_l2_items(l1_items):
             "id": group["id"],
             "name": group["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": group["category"],
             "sections": {
                 "About": group["about"],
                 "For Parents": group["for_parents"]
             },
             "keywords": group["keywords"],
-            "composite_of": group["member_ids"],
+            "parts": group["member_ids"],
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -443,14 +441,13 @@ def build_l2_items(l1_items):
             "id": group["id"],
             "name": group["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": group["category"],
             "sections": {
                 "About": group["about"],
                 "For Parents": group["for_parents"]
             },
             "keywords": group["keywords"],
-            "composite_of": group["member_ids"],
+            "parts": group["member_ids"],
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -470,7 +467,7 @@ def build_l3_items(start_sort_order):
             "name": "Themes and Morals",
             "category": "meta",
             "about": "The great moral and thematic currents that run through Japanese fairy tales: courage, kindness, the supernatural, cleverness, love, and the origins of things. These groupings reveal the values and worldview embedded in Japanese folklore — a culture that prizes loyalty, humility, and harmony with nature.",
-            "composite_of": [
+            "parts": [
                 "theme-courage-and-heroism",
                 "theme-kindness-and-greed",
                 "theme-supernatural-realms",
@@ -485,7 +482,7 @@ def build_l3_items(start_sort_order):
             "name": "Character Types",
             "category": "meta",
             "about": "The archetypal characters of Japanese fairy tales: clever animals, brave warriors, graceful princesses, and wise (or foolish) elders. These character types reflect the social world of old Japan and carry universal human qualities that resonate across all cultures.",
-            "composite_of": [
+            "parts": [
                 "characters-animal-stories",
                 "characters-warriors-and-heroes",
                 "characters-princesses-and-maidens",
@@ -500,13 +497,12 @@ def build_l3_items(start_sort_order):
             "id": l3["id"],
             "name": l3["name"],
             "sort_order": sort_order,
-            "level": 3,
             "category": l3["category"],
             "sections": {
                 "About": l3["about"]
             },
             "keywords": l3["keywords"],
-            "composite_of": l3["composite_of"],
+            "parts": l3["parts"],
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -562,7 +558,7 @@ def build_grammar(l1_items, l2_items, l3_items):
         "lineages": ["Shrei", "Akomolafe"],
         "worldview": "animist",
         "cover_image_url": "",
-        "items": l1_items + l2_items + l3_items
+        "nodes": l1_items + l2_items + l3_items
     }
 
     return grammar

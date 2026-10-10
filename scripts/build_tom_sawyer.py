@@ -6,13 +6,14 @@ Source: Project Gutenberg eBook #74
 Structure: 35 chapters + Preface + Conclusion
 Levels:
   L1: Individual chapters
-  L2: Story arcs + thematic groups (with composite_of referencing L1)
+  L2: Story arcs + thematic groups (with parts referencing L1)
   L3: Meta-categories
 """
 
 import json
 import re
 from pathlib import Path
+from grammar_depth import node_depth
 
 SEED_FILE = Path(__file__).parent.parent / "seeds" / "tom-sawyer.txt"
 OUTPUT_DIR = Path(__file__).parent.parent / "grammars" / "tom-sawyer"
@@ -356,7 +357,6 @@ def build_grammar():
             "name": "Preface",
             "sort_order": sort_order,
             "category": "preface",
-            "level": 1,
             "sections": {
                 "Story": preface_text,
                 "About": "Twain's brief preface, stating that the characters are drawn from real people and that most of the adventures really occurred. He notes that the book is 'intended mainly for the entertainment of boys and girls' but hopes adults will enjoy it too.",
@@ -377,7 +377,6 @@ def build_grammar():
             "name": f"Chapter {chapter_num} — {CHAPTER_TITLES.get(chapter_num, '')}",
             "sort_order": sort_order,
             "category": f"chapter-{chapter_num:02d}",
-            "level": 1,
             "sections": {
                 "Story": chapters[chapter_num],
                 "About": CHAPTER_SUMMARIES.get(chapter_num, ""),
@@ -398,7 +397,6 @@ def build_grammar():
             "name": "Conclusion",
             "sort_order": sort_order,
             "category": "conclusion",
-            "level": 1,
             "sections": {
                 "Story": conclusion_text,
                 "About": "Twain's brief conclusion, noting that the story must stop here because it's 'strictly a history of a boy' and going further would make it 'the history of a man.' He hints at a sequel following the characters into adulthood.",
@@ -417,9 +415,8 @@ def build_grammar():
             "name": arc_data["name"],
             "sort_order": sort_order,
             "category": "story-arc",
-            "level": 2,
             "relationship_type": "emergence",
-            "composite_of": composite,
+            "parts": composite,
             "sections": {
                 "About": arc_data["about"],
                 "For Parents": arc_data["for_parents"],
@@ -437,9 +434,8 @@ def build_grammar():
             "name": theme_data["name"],
             "sort_order": sort_order,
             "category": "theme",
-            "level": 2,
             "relationship_type": "emergence",
-            "composite_of": composite,
+            "parts": composite,
             "sections": {
                 "About": theme_data["about"],
                 "For Parents": theme_data["for_parents"],
@@ -458,9 +454,8 @@ def build_grammar():
         "name": "The Story",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "relationship_type": "emergence",
-        "composite_of": all_arc_ids,
+        "parts": all_arc_ids,
         "sections": {
             "About": "The complete narrative of The Adventures of Tom Sawyer in six movements: village life and childhood schemes, the graveyard murder and the burden of guilt, the pirate adventure on Jackson's Island, Tom and Becky's relationship, the trial of Muff Potter, and the treasure hunt in the cave. Thirty-five chapters tracing a summer in the life of a boy in a Mississippi River town before the Civil War.",
             "For Parents": "The Adventures of Tom Sawyer (1876) is often read as a nostalgic comedy, but Twain packed it with moral complexity. Tom witnesses murder, grapples with conscience, risks his life for justice, and confronts real evil in Injun Joe. The book celebrates boyhood freedom while honestly showing its limits. It is also a product of its time: the character of Injun Joe reflects racial attitudes that demand critical discussion.\n\nNote on racial content: Twain's portrayal of Injun Joe draws on harmful stereotypes of Native Americans. The character is presented as the story's villain in ways that reflect 19th-century prejudices. This is an opportunity for important conversations about how stories can both entertain and perpetuate harmful ideas.",
@@ -475,9 +470,8 @@ def build_grammar():
         "name": "Themes",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "relationship_type": "emergence",
-        "composite_of": all_theme_ids,
+        "parts": all_theme_ids,
         "sections": {
             "About": "The great themes of Tom Sawyer: conscience and moral courage, freedom and rebellion, performance and identity, and the strange power of superstition and imagination. These themes run through the entire novel, connecting the comedy of the early chapters to the genuine moral drama of the later ones.",
             "For Parents": "These thematic groupings help you explore Tom Sawyer beyond the plot. If your child is drawn to the whitewashing scene, follow the Performance and Identity thread. If they're disturbed by the graveyard murder, explore Conscience and Courage. If they love the Jackson's Island adventure, discuss Freedom and Rebellion. The book grows richer with each re-reading.",
@@ -547,7 +541,7 @@ def build_grammar():
         "shelves": ["children", "wonder", "contested"],
         "lineages": ["universal"],
         "worldview": "imaginative",
-        "items": items,
+        "nodes": items,
     }
 
     return grammar
@@ -562,10 +556,10 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    items = grammar["items"]
-    l1 = [i for i in items if i["level"] == 1]
-    l2 = [i for i in items if i["level"] == 2]
-    l3 = [i for i in items if i["level"] == 3]
+    items = grammar["nodes"]
+    l1 = [i for i in items if node_depth(i, items) == 1]
+    l2 = [i for i in items if node_depth(i, items) == 2]
+    l3 = [i for i in items if node_depth(i, items) == 3]
 
     print(f"Grammar written to {OUTPUT_FILE}")
     print(f"  L1 chapters: {len(l1)}")
@@ -581,7 +575,7 @@ def main():
 
     broken = []
     for item in items:
-        for ref in item.get("composite_of", []):
+        for ref in item.get("parts", []):
             if ref not in id_set:
                 broken.append((item["id"], ref))
     if broken:

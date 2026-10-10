@@ -9,6 +9,7 @@ Parses 4 Conversations and 15 Letters from the seed text.
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SEED_PATH = os.path.join(os.path.dirname(__file__), '..', 'seeds', 'practice-presence-of-god.txt')
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), '..', 'grammars', 'practice-presence-of-god')
@@ -145,7 +146,6 @@ def build_items(sections):
             'name': name,
             'sort_order': sort_order,
             'category': category,
-            'level': 1,
             'sections': {
                 'Text': sec['text']
             },
@@ -169,8 +169,7 @@ def build_l2_items(sort_start):
         'name': 'The Conversations',
         'sort_order': sort_order,
         'category': 'thematic-group',
-        'level': 2,
-        'composite_of': ['conversation-1', 'conversation-2', 'conversation-3', 'conversation-4'],
+        'parts': ['conversation-1', 'conversation-2', 'conversation-3', 'conversation-4'],
         'relationship_type': 'emergence',
         'sections': {
             'About': 'Four recorded conversations between Joseph de Beaufort and Brother Lawrence, conducted when Brother Lawrence was in his late fifties. De Beaufort, representative and counsel to the local archbishop, interviewed the crippled friar who had become renowned for his extraordinary peace and joy. These conversations capture Brother Lawrence\'s method in his own words — how he found God not through elaborate devotions but through simple, continuous attention to the divine presence in every moment.',
@@ -187,8 +186,7 @@ def build_l2_items(sort_start):
         'name': 'The Letters',
         'sort_order': sort_order,
         'category': 'thematic-group',
-        'level': 2,
-        'composite_of': [f'letter-{i:02d}' for i in range(1, 16)],
+        'parts': [f'letter-{i:02d}' for i in range(1, 16)],
         'relationship_type': 'emergence',
         'sections': {
             'About': 'Fifteen letters written during the last ten years of Brother Lawrence\'s life, mostly to long-time friends including a Carmelite sister and a sister at a nearby convent. These letters are the heart and soul of the work — direct spiritual counsel from a man who had practiced God\'s presence for over forty years. They range from detailed descriptions of his method to tender encouragement of those suffering illness and spiritual dryness.',
@@ -205,8 +203,7 @@ def build_l2_items(sort_start):
         'name': 'Finding God in Kitchen Work',
         'sort_order': sort_order,
         'category': 'thematic-group',
-        'level': 2,
-        'composite_of': [
+        'parts': [
             'conversation-1', 'conversation-2', 'conversation-4',
             'letter-01', 'letter-05', 'letter-06', 'letter-07'
         ],
@@ -226,8 +223,7 @@ def build_l2_items(sort_start):
         'name': 'The Dark Night and Perseverance',
         'sort_order': sort_order,
         'category': 'thematic-group',
-        'level': 2,
-        'composite_of': [
+        'parts': [
             'conversation-2', 'conversation-3',
             'letter-01', 'letter-02', 'letter-06',
             'letter-11', 'letter-12', 'letter-13', 'letter-14'
@@ -248,8 +244,7 @@ def build_l2_items(sort_start):
         'name': 'Continuous Prayer',
         'sort_order': sort_order,
         'category': 'thematic-group',
-        'level': 2,
-        'composite_of': [
+        'parts': [
             'conversation-1', 'conversation-2', 'conversation-3', 'conversation-4',
             'letter-01', 'letter-02', 'letter-04', 'letter-05',
             'letter-06', 'letter-08', 'letter-09', 'letter-10', 'letter-15'
@@ -274,8 +269,7 @@ def build_l3_item(sort_order):
         'name': 'The Practice',
         'sort_order': sort_order,
         'category': 'meta-theme',
-        'level': 3,
-        'composite_of': [
+        'parts': [
             'the-conversations', 'the-letters',
             'finding-god-in-kitchen-work', 'dark-night-and-perseverance',
             'continuous-prayer'
@@ -315,11 +309,11 @@ def build_grammar():
 
     all_items = l1_items + l2_items + [l3_item]
 
-    # Validate composite_of references
+    # Validate parts references
     all_ids = {item['id'] for item in all_items}
     for item in all_items:
-        if 'composite_of' in item:
-            for ref in item['composite_of']:
+        if 'parts' in item:
+            for ref in item['parts']:
                 if ref not in all_ids:
                     print(f"WARNING: {item['id']} references non-existent id: {ref}")
 
@@ -351,7 +345,7 @@ def build_grammar():
         'shelves': ['wisdom'],
         'lineages': ['Linehan'],
         'worldview': 'devotional',
-        'items': all_items
+        'nodes': all_items
     }
 
     # Write output
@@ -360,9 +354,9 @@ def build_grammar():
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
     # Summary
-    l1_count = len([i for i in all_items if i['level'] == 1])
-    l2_count = len([i for i in all_items if i['level'] == 2])
-    l3_count = len([i for i in all_items if i['level'] == 3])
+    l1_count = len([i for i in all_items if node_depth(i, all_items) == 1])
+    l2_count = len([i for i in all_items if node_depth(i, all_items) == 2])
+    l3_count = len([i for i in all_items if node_depth(i, all_items) == 3])
     print(f"\nGrammar written to {OUTPUT_PATH}")
     print(f"  L1 items: {l1_count} ({len(conversations)} conversations + {len(letters)} letters)")
     print(f"  L2 items: {l2_count}")

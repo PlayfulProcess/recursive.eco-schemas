@@ -385,7 +385,7 @@ L3_DEFS = [
         "name": "Themes and Teachings",
         "category": "meta",
         "about": "The thematic landscape of West African folk tales: the trickster genius of Anansi, the origin stories that explain the natural world, the moral lessons about wisdom and greed, the supernatural forces that permeate daily life, and the strategies for survival in a world of unequal power. Together, these themes reveal a rich intellectual tradition that has influenced storytelling across three continents — from the Gold Coast to the Caribbean to the American South.",
-        "composite_of": [
+        "parts": [
             "theme-anansi-trickster", "theme-why-things-are",
             "theme-wisdom-and-folly", "theme-magic-and-transformation",
             "theme-power-and-survival"
@@ -505,7 +505,6 @@ def build_l1_items(stories):
             "id": sdef["id"],
             "name": sdef["name"],
             "sort_order": sort_order,
-            "level": 1,
             "category": sdef["category"],
             "sections": sections,
             "keywords": sdef["keywords"],
@@ -526,14 +525,13 @@ def build_l2_items(l1_items):
             "id": group["id"],
             "name": group["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": group["category"],
             "sections": {
                 "About": group["about"],
                 "For Readers": group["for_readers"]
             },
             "keywords": group["keywords"],
-            "composite_of": group["member_ids"],
+            "parts": group["member_ids"],
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -551,11 +549,10 @@ def build_l3_items(start_sort_order):
             "id": l3["id"],
             "name": l3["name"],
             "sort_order": sort_order,
-            "level": 3,
             "category": l3["category"],
             "sections": {"About": l3["about"]},
             "keywords": l3["keywords"],
-            "composite_of": l3["composite_of"],
+            "parts": l3["parts"],
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -603,7 +600,7 @@ def build_grammar(l1_items, l2_items, l3_items):
         "lineages": ["Akomolafe", "Andreotti"],
         "worldview": "animist",
         "cover_image_url": "",
-        "items": l1_items + l2_items + l3_items
+        "nodes": l1_items + l2_items + l3_items
     }
     return grammar
 

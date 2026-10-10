@@ -17,6 +17,7 @@ import json
 import re
 import os
 import sys
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SEED = os.path.join(SCRIPT_DIR, "..", "seeds", "sadhana.txt")
@@ -238,7 +239,6 @@ def build_grammar(chapters):
         items.append({
             "id": ch["id"],
             "name": f"Chapter {ch['chapter_number']}: {ch['name']}",
-            "level": 1,
             "category": "essay",
             "sort_order": sort_order,
             "sections": {
@@ -256,10 +256,9 @@ def build_grammar(chapters):
         items.append({
             "id": theme["id"],
             "name": theme["name"],
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": theme["chapters"],
+            "parts": theme["chapters"],
             "sort_order": sort_order,
             "sections": {
                 "About": theme["about"],
@@ -274,10 +273,9 @@ def build_grammar(chapters):
     items.append({
         "id": "meta-complete-work",
         "name": "Sadhana: From Separation to Unity",
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": ["theme-self-and-cosmos", "theme-problem-and-resolution", "theme-realisation"],
+        "parts": ["theme-self-and-cosmos", "theme-problem-and-resolution", "theme-realisation"],
         "sort_order": sort_order,
         "sections": {
             "About": "Sadhana traces a single arc: from the recognition of the individual's relation to the universe, through the obstacles that obscure that relation (evil and egoism), to the four paths by which it is realised (love, action, beauty, and the Infinite). The word 'sadhana' itself means spiritual practice or discipline — the daily work of turning toward reality. Tagore's genius is to make this ancient Vedantic vision feel immediate, personal, and universal. These are not doctrines to be believed but experiences to be lived.",
@@ -290,10 +288,9 @@ def build_grammar(chapters):
     items.append({
         "id": "meta-east-meets-west",
         "name": "East and West: Tagore's Bridge",
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": [ch["id"] for ch in chapters],
+        "parts": [ch["id"] for ch in chapters],
         "sort_order": sort_order,
         "sections": {
             "About": "Sadhana was originally delivered as lectures at Harvard University in 1913, the year Tagore won the Nobel Prize in Literature. These essays represent one of the earliest and most eloquent attempts to translate Upanishadic philosophy for a Western audience. Tagore does not simplify or exoticize; he meets Western thought on its own terms, engaging with Kant, the Romantics, and modern science while drawing from the Isha Upanishad, the Mundaka Upanishad, and the devotional poetry of Kabir and the Bauls. The result is a genuine synthesis — not East explaining itself to West, but a single human voice speaking from the place where all traditions converge.",
@@ -352,16 +349,16 @@ def main():
         "shelves": ["wisdom"],
         "lineages": ["Linehan", "Shrei"],
         "worldview": "non-dual",
-        "items": items,
+        "nodes": items,
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT}")
     print(f"  L1: {l1} chapters, L2: {l2} emergent groups, L3: {l3} meta-categories")
     print(f"  Total items: {len(items)}")

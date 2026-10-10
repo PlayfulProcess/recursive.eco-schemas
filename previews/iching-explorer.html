@@ -691,7 +691,7 @@ function setupFileUpload() {
 function addOverlayGrammar(data) {
   const name = data.name || "Overlay";
   const hexMap = {};
-  (data.items || []).forEach(item => {
+  (data.nodes || []).forEach(item => {
     // Match by metadata.number or by ID pattern
     let num = item.metadata?.number;
     if (!num) {

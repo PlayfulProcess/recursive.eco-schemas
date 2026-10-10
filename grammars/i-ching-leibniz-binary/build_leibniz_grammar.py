@@ -34,6 +34,21 @@ SOURCE_GRAMMAR = os.path.join(
 )
 OUTPUT_GRAMMAR = os.path.join(SCRIPT_DIR, "grammar.json")
 
+
+def node_depth(node, nodes, _seen=None):
+    """Depth from parts (format v2 stores no level): no parts -> 1, else 1 + the deepest part."""
+    parts = node.get("parts")
+    if not parts:
+        return 1
+    by_id = nodes if isinstance(nodes, dict) else {n["id"]: n for n in nodes}
+    seen = _seen if _seen is not None else set()
+    if node["id"] in seen:
+        return 1
+    seen.add(node["id"])
+    d = max([1] + [1 + node_depth(by_id[p], by_id, seen) for p in parts if p in by_id])
+    seen.discard(node["id"])
+    return d
+
 # ─── Trigram binary → info mapping (Leibniz order) ───
 
 TRIGRAM_INFO = {
@@ -54,7 +69,6 @@ FOUNDATION_LINES = [
         "id": "yang-line",
         "name": "Yang Line (陽爻)",
         "symbol": "⚊",
-        "level": 1,
         "category": "foundation",
         "sort_order": 0,
         "keywords": ["yang", "solid", "firm", "light", "creative", "heaven", "male", "one"],
@@ -93,7 +107,6 @@ FOUNDATION_LINES = [
         "id": "yin-line",
         "name": "Yin Line (陰爻)",
         "symbol": "⚋",
-        "level": 1,
         "category": "foundation",
         "sort_order": 1,
         "keywords": ["yin", "broken", "yielding", "dark", "receptive", "earth", "female", "zero"],
@@ -153,7 +166,7 @@ TRIGRAM_SECTIONS = {
             "三陰 — Three yin lines. Binary 000. Pure receptive force."
         ),
         "keywords": ["receptive", "yielding", "earth", "mother", "nourishing", "mare", "devotion"],
-        "composite_of": ["yin-line"],
+        "parts": ["yin-line"],
         "family_role": "母 (Mother)", "element": "地 (Earth)",
         "direction": "西南 (Southwest)", "body": "腹 (Belly)", "animal": "牛 (Ox)",
     },
@@ -181,7 +194,7 @@ TRIGRAM_SECTIONS = {
             "一陽止二陰上 — One yang atop two yin. Binary 001."
         ),
         "keywords": ["keeping-still", "mountain", "youngest-son", "stopping", "meditation", "boundary", "gate"],
-        "composite_of": ["yang-line", "yin-line"],
+        "parts": ["yang-line", "yin-line"],
         "family_role": "少男 (Youngest Son)", "element": "山 (Mountain)",
         "direction": "東北 (Northeast)", "body": "手 (Hand)", "animal": "狗 (Dog)",
     },
@@ -212,7 +225,7 @@ TRIGRAM_SECTIONS = {
             "一陽陷二陰 — One yang between two yin. Binary 010."
         ),
         "keywords": ["abysmal", "danger", "water", "middle-son", "depth", "flow", "pit"],
-        "composite_of": ["yang-line", "yin-line"],
+        "parts": ["yang-line", "yin-line"],
         "family_role": "中男 (Middle Son)", "element": "水 (Water)",
         "direction": "北 (North)", "body": "耳 (Ear)", "animal": "豕 (Pig)",
     },
@@ -243,7 +256,7 @@ TRIGRAM_SECTIONS = {
             "一陰入二陽下 — One yin beneath two yang. Binary 011."
         ),
         "keywords": ["gentle", "penetrating", "wind", "eldest-daughter", "wood", "gradual", "influence"],
-        "composite_of": ["yang-line", "yin-line"],
+        "parts": ["yang-line", "yin-line"],
         "family_role": "長女 (Eldest Daughter)", "element": "風/木 (Wind/Wood)",
         "direction": "東南 (Southeast)", "body": "股 (Thigh)", "animal": "雞 (Rooster)",
     },
@@ -272,7 +285,7 @@ TRIGRAM_SECTIONS = {
             "一陽二陰 — One yang rising beneath two yin. Binary 100."
         ),
         "keywords": ["arousing", "shock", "thunder", "eldest-son", "movement", "spring", "awakening"],
-        "composite_of": ["yang-line", "yin-line"],
+        "parts": ["yang-line", "yin-line"],
         "family_role": "長男 (Eldest Son)", "element": "雷 (Thunder)",
         "direction": "東 (East)", "body": "足 (Foot)", "animal": "龍 (Dragon)",
     },
@@ -301,7 +314,7 @@ TRIGRAM_SECTIONS = {
             "一陰麗二陽中 — One yin between two yang. Binary 101."
         ),
         "keywords": ["clinging", "brightness", "fire", "middle-daughter", "clarity", "illumination", "sun"],
-        "composite_of": ["yang-line", "yin-line"],
+        "parts": ["yang-line", "yin-line"],
         "family_role": "中女 (Middle Daughter)", "element": "火 (Fire)",
         "direction": "南 (South)", "body": "目 (Eye)", "animal": "雉 (Pheasant)",
     },
@@ -327,7 +340,7 @@ TRIGRAM_SECTIONS = {
             "一陰悅二陽上 — One yin opening above two yang. Binary 110."
         ),
         "keywords": ["joyous", "lake", "youngest-daughter", "pleasure", "openness", "mouth", "gathering"],
-        "composite_of": ["yang-line", "yin-line"],
+        "parts": ["yang-line", "yin-line"],
         "family_role": "少女 (Youngest Daughter)", "element": "澤 (Lake/Marsh)",
         "direction": "西 (West)", "body": "口 (Mouth)", "animal": "羊 (Sheep)",
     },
@@ -353,7 +366,7 @@ TRIGRAM_SECTIONS = {
             "三陽 — Three yang lines. Binary 111. Pure creative force."
         ),
         "keywords": ["creative", "strong", "heaven", "father", "initiating", "dragon", "power"],
-        "composite_of": ["yang-line"],
+        "parts": ["yang-line"],
         "family_role": "父 (Father)", "element": "天 (Heaven)",
         "direction": "西北 (Northwest)", "body": "首 (Head)", "animal": "馬 (Horse)",
     },
@@ -570,10 +583,9 @@ def build_trigram_items():
             "id": info["id"],
             "name": f"{info['name'].title()} ({info['chinese']} {info['pinyin']})",
             "symbol": info["symbol"],
-            "level": 2,
             "category": "trigram",
             "relationship_type": "emergence",
-            "composite_of": sections_data["composite_of"],
+            "parts": sections_data["parts"],
             "keywords": sections_data["keywords"],
             "metadata": {
                 "chinese_name": info["chinese"],
@@ -644,7 +656,6 @@ def build_line_items(source_items, binary_to_item):
                 "id": f"hexagram-{hex_num}-line-{line_pos}",
                 "name": f"{hex_chinese} {trad_name} · {hex_name} Line {line_pos}",
                 "symbol": line_symbol,
-                "level": 1,
                 "category": "line",
                 "keywords": [
                     line_type,
@@ -704,13 +715,12 @@ def build_hexagram_items(source_items, binary_to_item, palace_map,
         lower_info = TRIGRAM_INFO[lower_binary]
         upper_info = TRIGRAM_INFO[upper_binary]
 
-        # Set level and category
-        item["level"] = 3
+        # Set category
         item["category"] = "hexagram"
         item["relationship_type"] = "emergence"
 
-        # composite_of → the 6 specific line IDs
-        item["composite_of"] = [
+        # parts → the 6 specific line IDs
+        item["parts"] = [
             f"hexagram-{hex_num}-line-{pos}" for pos in range(1, 7)
         ]
 
@@ -825,7 +835,7 @@ def assign_sort_orders(foundation, lines, trigrams, hexagrams):
 def build_grammar():
     """Build the complete Leibniz binary emergent grammar."""
     source = load_source()
-    binary_to_item = build_lookups(source["items"])
+    binary_to_item = build_lookups(source["nodes"])
 
     # Build relationship maps
     palace_map = build_palace_map()
@@ -834,10 +844,10 @@ def build_grammar():
 
     # Build all item groups
     foundation = deepcopy(FOUNDATION_LINES)
-    lines = build_line_items(source["items"], binary_to_item)
+    lines = build_line_items(source["nodes"], binary_to_item)
     trigrams = build_trigram_items()
     hexagrams = build_hexagram_items(
-        source["items"], binary_to_item, palace_map, mawangdui_map, zagua_lookup
+        source["nodes"], binary_to_item, palace_map, mawangdui_map, zagua_lookup
     )
 
     # Assign sort orders
@@ -957,7 +967,7 @@ def build_grammar():
             "zagua",
             "relationships",
         ],
-        "items": all_items,
+        "nodes": all_items,
     }
 
     return grammar
@@ -965,31 +975,31 @@ def build_grammar():
 
 def validate_grammar(grammar):
     """Comprehensive validation."""
-    items = grammar["items"]
+    items = grammar["nodes"]
 
     # 1. Total count
     assert len(items) == 458, f"Expected 458 items, got {len(items)}"
 
-    # 2. Level distribution
+    # 2. Depth distribution (depth from parts: a hexagram is made of its 6 lines)
     levels = {}
     for item in items:
-        l = item["level"]
+        l = node_depth(item, items)
         levels[l] = levels.get(l, 0) + 1
-    assert levels == {1: 386, 2: 8, 3: 64}, f"Unexpected levels: {levels}"
+    assert levels == {1: 386, 2: 72}, f"Unexpected depths: {levels}"
 
     # 3. No duplicate IDs
     ids = [item["id"] for item in items]
     dupes = [x for x in ids if ids.count(x) > 1]
     assert len(ids) == len(set(ids)), f"Duplicate IDs: {set(dupes)}"
 
-    # 4. All composite_of references resolve
+    # 4. All parts references resolve
     id_set = set(ids)
     for item in items:
-        for ref in item.get("composite_of", []):
+        for ref in item.get("parts", []):
             assert ref in id_set, f"Broken ref in {item['id']}: {ref}"
 
     # 5. All transforms_to references resolve
-    hex_ids = {item["id"] for item in items if item["level"] == 3}
+    hex_ids = {item["id"] for item in items if item["category"] == "hexagram"}
     for item in items:
         target = item.get("metadata", {}).get("transforms_to")
         if target:
@@ -997,8 +1007,8 @@ def validate_grammar(grammar):
 
     # 6. Each hexagram has exactly 6 line children
     for item in items:
-        if item["level"] == 3:
-            refs = item.get("composite_of", [])
+        if item["category"] == "hexagram":
+            refs = item.get("parts", [])
             assert len(refs) == 6, f"{item['id']} has {len(refs)} line refs, expected 6"
             for ref in refs:
                 assert ref in id_set, f"Broken line ref in {item['id']}: {ref}"
@@ -1013,19 +1023,19 @@ def validate_grammar(grammar):
     trigram_leibniz = [
         item["metadata"]["leibniz_number"]
         for item in items
-        if item["level"] == 2
+        if item["category"] == "trigram"
     ]
     assert trigram_leibniz == list(range(8)), f"Trigrams not in Leibniz order: {trigram_leibniz}"
 
     hex_leibniz = [
         item["metadata"]["leibniz_number"]
         for item in items
-        if item["level"] == 3
+        if item["category"] == "hexagram"
     ]
     assert hex_leibniz == list(range(64)), f"Hexagrams not in Leibniz order: {hex_leibniz[:10]}..."
 
     # 9. Verify transformation symmetry: if hex A line N → hex B, then hex B line N → hex A
-    line_items = [item for item in items if item["level"] == 1 and "transforms_to" in item.get("metadata", {})]
+    line_items = [item for item in items if node_depth(item, items) == 1 and "transforms_to" in item.get("metadata", {})]
     transform_map = {}
     for item in line_items:
         m = item["metadata"]
@@ -1046,7 +1056,7 @@ def validate_grammar(grammar):
 
     # ─── Validate 7 Historical Relationship Systems ───
 
-    hex_items = [item for item in items if item["level"] == 3]
+    hex_items = [item for item in items if item["category"] == "hexagram"]
     hex_id_to_item = {item["id"]: item for item in hex_items}
     hex_id_to_binary = {}
     for item in hex_items:
@@ -1158,9 +1168,9 @@ def validate_grammar(grammar):
 
     print("✓ All validations passed!")
     print(f"  - {len(items)} total items (2 foundation + 384 lines + 8 trigrams + 64 hexagrams)")
-    print(f"  - Level distribution: L1={levels[1]}, L2={levels[2]}, L3={levels[3]}")
+    print(f"  - Depth distribution: L1={levels[1]}, L2={levels[2]}")
     print(f"  - No duplicate IDs")
-    print(f"  - All composite_of and transforms_to references valid")
+    print(f"  - All parts and transforms_to references valid")
     print(f"  - Transformation symmetry verified (A→B implies B→A)")
     print(f"  - Leibniz ordering verified (trigrams 0-7, hexagrams 0-63)")
     print(f"  - Sort order sequential (0-457)")

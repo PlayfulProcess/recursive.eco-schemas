@@ -257,8 +257,8 @@ function splitTextIntoPages(text, targetChars) {
 
 // ── Grammar Processing ───────────────────────────────────────────────
 
-const l1Items = grammar.items.filter(item => item.level === 1);
-const l2Items = grammar.items.filter(item => item.level === 2);
+const l1Items = grammar.nodes.filter((item) => nodeDepth(item, grammar.nodes) === 1);
+const l2Items = grammar.nodes.filter((item) => nodeDepth(item, grammar.nodes) === 2);
 
 const chapterMap = {};
 for (const scene of l1Items) {
@@ -811,7 +811,7 @@ const bookletGrammarPath = resolve(__dirname, '../grammars/alice-5-minute-storie
 let bookletTextData = {};
 if (existsSync(bookletGrammarPath)) {
   const bookletGrammar = JSON.parse(readFileSync(bookletGrammarPath, 'utf8'));
-  for (const item of bookletGrammar.items) {
+  for (const item of bookletGrammar.nodes) {
     const ch = item.metadata?.source_chapter;
     if (!ch) continue;
     bookletTextData[ch] = { name: item.name, pages: {} };
@@ -854,7 +854,7 @@ for (const ch of allChaptersData) {
 }
 
 // Gather all available illustration URLs from the grammar
-for (const item of grammar.items) {
+for (const item of grammar.nodes) {
   if (!item.metadata?.illustrations) continue;
   for (const ill of item.metadata.illustrations) {
     if (ill.url && !usedIllUrls.has(ill.url)) {
@@ -3354,3 +3354,20 @@ console.log(`  ${globalPageNum} total pages, ${totalContentPages} content pages,
 console.log(`  Audio: ${isUnifiedAudio ? 'unified (1 file)' : 'per-chapter'}`);
 console.log(`  Mode: ${USE_CAPS ? 'ALL CAPS' : 'lowercase'}${USE_REMAP ? ' + REMAP' : ''}`);
 console.log(`\nDone!`);
+
+// Depth from parts (grammar format v2 stores no level): a node with no parts is 1;
+// otherwise 1 + the deepest part. Cycle-safe. `nodes` is the nodes array or an id -> node Map.
+function nodeDepth(node, nodes, seen = new Set()) {
+  const parts = node && node.parts;
+  if (!parts || !parts.length) return 1;
+  const byId = nodes instanceof Map ? nodes : new Map(nodes.map((n) => [n.id, n]));
+  if (seen.has(node.id)) return 1;
+  seen.add(node.id);
+  let d = 1;
+  for (const id of parts) {
+    const c = byId.get(id);
+    if (c) d = Math.max(d, 1 + nodeDepth(c, byId, seen));
+  }
+  seen.delete(node.id);
+  return d;
+}

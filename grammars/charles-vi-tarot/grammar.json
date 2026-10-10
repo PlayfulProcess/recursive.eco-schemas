@@ -55,13 +55,12 @@
   ],
   "worldview": "historical",
   "is_published": false,
-  "items": [
+  "nodes": [
     {
       "id": "card-fool",
       "name": "0 — The Fool",
       "sort_order": 0,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "the fool",
         "il matto",
@@ -103,7 +102,6 @@
       "name": "4 — The Emperor",
       "sort_order": 1,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "the emperor",
         "l'imperatore",
@@ -145,7 +143,6 @@
       "name": "5 — The Pope",
       "sort_order": 2,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "the pope",
         "il papa",
@@ -187,7 +184,6 @@
       "name": "6 — The Lovers",
       "sort_order": 3,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "the lovers",
         "l'amore",
@@ -229,7 +225,6 @@
       "name": "7 — The Chariot",
       "sort_order": 4,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "the chariot",
         "il carro",
@@ -271,7 +266,6 @@
       "name": "8 — Justice",
       "sort_order": 5,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "justice",
         "la giustizia",
@@ -313,7 +307,6 @@
       "name": "9 — The Hermit (Time)",
       "sort_order": 6,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "the hermit (time)",
         "il tempo",
@@ -355,7 +348,6 @@
       "name": "11 — Strength",
       "sort_order": 7,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "strength",
         "la forza",
@@ -397,7 +389,6 @@
       "name": "12 — The Hanged Man",
       "sort_order": 8,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "the hanged man",
         "l'appeso",
@@ -439,7 +430,6 @@
       "name": "13 — Death",
       "sort_order": 9,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "death",
         "la morte",
@@ -481,7 +471,6 @@
       "name": "14 — Temperance",
       "sort_order": 10,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "temperance",
         "la temperanza",
@@ -523,7 +512,6 @@
       "name": "16 — The Tower (House of the Devil)",
       "sort_order": 11,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "the tower (house of the devil)",
         "la casa del diavolo",
@@ -565,7 +553,6 @@
       "name": "18 — The Moon",
       "sort_order": 12,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "the moon",
         "la luna",
@@ -607,7 +594,6 @@
       "name": "19 — The Sun",
       "sort_order": 13,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "the sun",
         "il sole",
@@ -649,7 +635,6 @@
       "name": "20 — Judgement",
       "sort_order": 14,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "judgement",
         "il giudizio",
@@ -691,7 +676,6 @@
       "name": "21 — The World",
       "sort_order": 15,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "the world",
         "il mondo",
@@ -733,7 +717,6 @@
       "name": "Page of Swords",
       "sort_order": 16,
       "category": "court",
-      "level": 1,
       "keywords": [
         "page of swords",
         "fante di spade",
@@ -774,8 +757,7 @@
       "name": "The 16 Surviving Trumps",
       "sort_order": 17,
       "category": "emergence",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "card-fool",
         "card-emperor",
         "card-pope",

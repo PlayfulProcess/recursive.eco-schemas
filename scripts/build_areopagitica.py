@@ -16,6 +16,7 @@ create thematic groupings at L2.
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SEED = os.path.join(SCRIPT_DIR, "..", "seeds", "areopagitica.txt")
@@ -204,7 +205,6 @@ def build_grammar(paragraphs):
         items.append({
             "id": para_id,
             "name": name,
-            "level": 1,
             "category": "essay",
             "sort_order": sort_order,
             "sections": {
@@ -222,10 +222,9 @@ def build_grammar(paragraphs):
     items.append({
         "id": "essay-areopagitica",
         "name": "Areopagitica: The Complete Essay",
-        "level": 2,
         "category": "essay-whole",
         "relationship_type": "emergence",
-        "composite_of": para_ids,
+        "parts": para_ids,
         "sort_order": sort_order,
         "sections": {
             "About": "John Milton's Areopagitica (1644) as a continuous argument. The essay moves from an address to Parliament, through a history of censorship, a defense of books and learning, a theological argument for tested virtue, a practical case against licensing, to a prophetic vision of England as a nation of free inquiry. Each section builds on the last: censorship has ignoble origins, destroys precious things, prevents true virtue, cannot achieve its goals, and betrays England's revolutionary promise.",
@@ -238,7 +237,7 @@ def build_grammar(paragraphs):
     })
 
     # L2: Thematic groups
-    all_l1 = [item for item in items if item["level"] == 1]
+    all_l1 = [item for item in items if node_depth(item, items) == 1]
 
     def find_paragraphs_matching(patterns):
         matched = []
@@ -258,10 +257,9 @@ def build_grammar(paragraphs):
         items.append({
             "id": theme["id"],
             "name": theme["name"],
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": composite,
+            "parts": composite,
             "sort_order": sort_order,
             "sections": {
                 "About": theme["about"],
@@ -275,14 +273,13 @@ def build_grammar(paragraphs):
 
     # L3: Meta
     sort_order += 1
-    all_l2_ids = [item["id"] for item in items if item["level"] == 2]
+    all_l2_ids = [item["id"] for item in items if node_depth(item, items) == 2]
     items.append({
         "id": "meta-areopagitica",
         "name": "Areopagitica",
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": all_l2_ids,
+        "parts": all_l2_ids,
         "sort_order": sort_order,
         "sections": {
             "About": "John Milton's Areopagitica (1644) is the foundational text of free press doctrine. Written as an unlicensed pamphlet addressed to the English Parliament, it argues against the Licensing Order of 1643 that required all books to be approved by a government censor before publication. Milton's argument moves through multiple registers: historical (censorship was invented by the Inquisition), philosophical (virtue requires the knowledge of evil), practical (licensing is impossible to enforce), and prophetic (England is destined for intellectual greatness). His most famous passages -- 'a good book is the precious life-blood of a master spirit'; 'I cannot praise a fugitive and cloistered virtue'; 'Let Truth and Falsehood grapple' -- established the intellectual framework that underlies the First Amendment, Mill's On Liberty, and every subsequent argument for freedom of the press.",
@@ -325,16 +322,16 @@ def main():
         "shelves": ["resilience"],
         "lineages": ["Kelty"],
         "worldview": "rationalist",
-        "items": items,
+        "nodes": items,
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT}")
     print(f"  L1: {l1} paragraphs, L2: {l2} groups, L3: {l3} meta")
     print(f"  Total items: {len(items)}")
@@ -342,20 +339,20 @@ def main():
     all_ids = {item["id"] for item in items}
     errors = 0
     for item in items:
-        if "composite_of" in item:
-            for ref in item["composite_of"]:
+        if "parts" in item:
+            for ref in item["parts"]:
                 if ref not in all_ids:
                     print(f"  ERROR: {item['id']} references non-existent {ref}")
                     errors += 1
     if errors == 0:
-        print("  All composite_of references valid.")
+        print("  All parts references valid.")
     else:
         print(f"  {errors} reference errors found!")
 
     print("\nThematic group sizes:")
     for item in items:
-        if item["level"] == 2 and item["category"] == "theme":
-            print(f"  {item['name']}: {len(item['composite_of'])} passages")
+        if node_depth(item, items) == 2 and item["category"] == "theme":
+            print(f"  {item['name']}: {len(item['parts'])} passages")
 
 
 if __name__ == "__main__":

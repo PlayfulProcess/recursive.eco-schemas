@@ -13,6 +13,7 @@ import json
 import re
 import os
 import textwrap
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(SCRIPT_DIR)
@@ -507,7 +508,6 @@ def build_grammar(chapters_text):
             item = {
                 "id": item_id,
                 "name": name,
-                "level": 1,
                 "category": f"chapter-{ch_num:02d}",
                 "sort_order": sort_order,
                 "sections": sections,
@@ -531,7 +531,6 @@ def build_grammar(chapters_text):
         item = {
             "id": f"chapter-{ch_num:02d}" if ch_num > 0 else "chapter-intro",
             "name": f"{ch['short']}",
-            "level": 2,
             "category": "chapter",
             "sort_order": sort_order,
             "sections": {
@@ -543,7 +542,7 @@ def build_grammar(chapters_text):
                 "chapter_number": ch_num,
                 "chapter_name": ch["title"],
             },
-            "composite_of": child_ids,
+            "parts": child_ids,
             "relationship_type": "emergence"
         }
         items.append(item)
@@ -559,7 +558,6 @@ def build_grammar(chapters_text):
         item = {
             "id": arc["id"],
             "name": arc["name"],
-            "level": 3,
             "category": "arc",
             "sort_order": sort_order,
             "sections": {
@@ -568,7 +566,7 @@ def build_grammar(chapters_text):
             },
             "keywords": [],
             "metadata": {},
-            "composite_of": chapter_ids,
+            "parts": chapter_ids,
             "relationship_type": "emergence"
         }
         items.append(item)
@@ -613,7 +611,7 @@ def build_grammar(chapters_text):
         "shelves": ["wisdom", "earth"],
         "lineages": ["Akomolafe"],
         "worldview": "rationalist",
-        "items": items
+        "nodes": items
     }
 
     return grammar
@@ -621,8 +619,8 @@ def build_grammar(chapters_text):
 
 def enrich_with_quotes(grammar, chapters_text):
     """Second pass: add Darwin quotes to L1 items that are missing them."""
-    for item in grammar["items"]:
-        if item["level"] != 1:
+    for item in grammar["nodes"]:
+        if node_depth(item, grammar["nodes"]) != 1:
             continue
         if "Darwin's Words" in item["sections"] and len(item["sections"]["Darwin's Words"]) > 100:
             continue
@@ -658,9 +656,9 @@ def main():
     enrich_with_quotes(grammar, chapters)
 
     # Count items by level
-    l1 = sum(1 for i in grammar["items"] if i["level"] == 1)
-    l2 = sum(1 for i in grammar["items"] if i["level"] == 2)
-    l3 = sum(1 for i in grammar["items"] if i["level"] == 3)
+    l1 = sum(1 for i in grammar["nodes"] if node_depth(i, grammar["nodes"]) == 1)
+    l2 = sum(1 for i in grammar["nodes"] if node_depth(i, grammar["nodes"]) == 2)
+    l3 = sum(1 for i in grammar["nodes"] if node_depth(i, grammar["nodes"]) == 3)
     print(f"  L1: {l1} cards, L2: {l2} chapters, L3: {l3} arcs")
 
     # Ensure output directory exists
@@ -676,28 +674,28 @@ def main():
 
     # Validate basics
     print("\nValidation:")
-    ids = [i["id"] for i in grammar["items"]]
+    ids = [i["id"] for i in grammar["nodes"]]
     dupes = [x for x in ids if ids.count(x) > 1]
     if dupes:
         print(f"  FAIL Duplicate IDs: {set(dupes)}")
     else:
         print(f"  OK No duplicate IDs")
 
-    # Check composite_of references
+    # Check parts references
     id_set = set(ids)
     bad_refs = []
-    for item in grammar["items"]:
-        for ref in item.get("composite_of", []):
+    for item in grammar["nodes"]:
+        for ref in item.get("parts", []):
             if ref not in id_set:
                 bad_refs.append((item["id"], ref))
     if bad_refs:
         print(f"  FAIL Broken references: {bad_refs}")
     else:
-        print(f"  OK All composite_of references valid")
+        print(f"  OK All parts references valid")
 
     # Check Darwin's Words coverage
-    missing_quotes = [i["id"] for i in grammar["items"]
-                      if i["level"] == 1 and "Darwin's Words" not in i["sections"]]
+    missing_quotes = [i["id"] for i in grammar["nodes"]
+                      if node_depth(i, grammar["nodes"]) == 1 and "Darwin's Words" not in i["sections"]]
     if missing_quotes:
         print(f"  WARN {len(missing_quotes)} L1 items missing Darwin's Words: {missing_quotes[:5]}...")
     else:

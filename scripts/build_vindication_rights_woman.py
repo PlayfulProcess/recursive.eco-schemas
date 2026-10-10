@@ -17,6 +17,7 @@ Structure:
 import json
 import re
 from pathlib import Path
+from grammar_depth import node_depth
 
 SEED_PATH = Path(__file__).parent.parent / "seeds" / "vindication-rights-woman.txt"
 OUTPUT_DIR = Path(__file__).parent.parent / "grammars" / "vindication-rights-woman"
@@ -239,7 +240,6 @@ def build_grammar():
         add_item({
             "id": ch["id"],
             "name": f"{ch['title']}",
-            "level": 1,
             "category": "chapter",
             "sections": {
                 "Text": ct(chapter_text),
@@ -257,7 +257,6 @@ def build_grammar():
     add_item({
         "id": "theme-philosophical-foundations",
         "name": "Philosophical Foundations: Reason, Rights, and the Nature Argument",
-        "level": 2,
         "category": "thematic-grouping",
         "sections": {
             "About": "The first three chapters establish Wollstonecraft's philosophical framework. Drawing on Enlightenment rationalism, she argues that reason is the common inheritance of all humans, that rights derive from rational capacity, and that the entire tradition of 'feminine nature' is a construct designed to maintain male power. Her targets are formidable -- Rousseau, Milton, the Bible as interpreted by patriarchy -- and her weapon is rigorous logic.",
@@ -265,13 +264,12 @@ def build_grammar():
         },
         "keywords": ["reason", "rights", "nature", "philosophy", "enlightenment", "rousseau"],
         "metadata": {},
-        "composite_of": ["introduction", "chapter-1-rights-duties", "chapter-2-sexual-character", "chapter-3-same-continued"]
+        "parts": ["introduction", "chapter-1-rights-duties", "chapter-2-sexual-character", "chapter-3-same-continued"]
     })
 
     add_item({
         "id": "theme-critique-of-culture",
         "name": "Critique of Culture: Education, Writers, and the Degradation of Women",
-        "level": 2,
         "category": "thematic-grouping",
         "sections": {
             "About": "Chapters 4 through 8 analyze how culture systematically degrades women: through miseducation, through conduct books that teach cunning over honesty, through the association of modesty with ignorance, and through a moral system that values reputation over character. Wollstonecraft reads the entire culture as a machine for producing decorative incompetence.",
@@ -279,13 +277,12 @@ def build_grammar():
         },
         "keywords": ["culture", "education", "writers", "degradation", "conduct", "critique"],
         "metadata": {},
-        "composite_of": ["chapter-4-degradation", "chapter-5-writers", "chapter-6-association", "chapter-7-modesty", "chapter-8-reputation"]
+        "parts": ["chapter-4-degradation", "chapter-5-writers", "chapter-6-association", "chapter-7-modesty", "chapter-8-reputation"]
     })
 
     add_item({
         "id": "theme-vision-of-reform",
         "name": "Vision of Reform: Society, Family, and National Education",
-        "level": 2,
         "category": "thematic-grouping",
         "sections": {
             "About": "The final five chapters turn from critique to construction. Wollstonecraft examines the institutions that need reform -- class structure, family, parental authority, and above all education. Her plan for co-educational public schooling is remarkably detailed and forward-looking. The book ends with a call to revolution: reform women's education and you transform society.",
@@ -293,7 +290,7 @@ def build_grammar():
         },
         "keywords": ["reform", "education", "society", "family", "co-education", "revolution"],
         "metadata": {},
-        "composite_of": ["chapter-9-unnatural-distinctions", "chapter-10-parental-affection", "chapter-11-duty-parents", "chapter-12-national-education", "chapter-13-folly-ignorance"]
+        "parts": ["chapter-9-unnatural-distinctions", "chapter-10-parental-affection", "chapter-11-duty-parents", "chapter-12-national-education", "chapter-13-folly-ignorance"]
     })
 
     # =========================================================================
@@ -303,7 +300,6 @@ def build_grammar():
     add_item({
         "id": "meta-vindication",
         "name": "A Vindication of the Rights of Woman: The Founding Text of Feminism",
-        "level": 3,
         "category": "meta-category",
         "sections": {
             "About": "Published in 1792, A Vindication of the Rights of Woman is the foundational text of feminist philosophy. Writing in the white heat of the French Revolution, Wollstonecraft applied Enlightenment principles of reason, rights, and equality to the situation of women with devastating force. Her central argument -- that women appear inferior only because they are denied equal education -- remains the bedrock of feminist thought. The book is at once a philosophical treatise, a work of cultural criticism, an educational manifesto, and a passionate plea for human dignity.",
@@ -311,7 +307,7 @@ def build_grammar():
         },
         "keywords": ["feminism", "wollstonecraft", "rights", "reason", "education", "equality", "revolution", "enlightenment"],
         "metadata": {},
-        "composite_of": ["theme-philosophical-foundations", "theme-critique-of-culture", "theme-vision-of-reform"]
+        "parts": ["theme-philosophical-foundations", "theme-critique-of-culture", "theme-vision-of-reform"]
     })
 
     # =========================================================================
@@ -336,7 +332,7 @@ def build_grammar():
         "shelves": ["mirror"],
         "lineages": ["Gottman", "Andreotti"],
         "worldview": "rationalist",
-        "items": items
+        "nodes": items
     }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -346,7 +342,7 @@ def build_grammar():
     print(f"Built Vindication grammar: {len(items)} items")
     for item in items:
         text_len = len(item["sections"].get("Text", ""))
-        print(f"  L{item['level']}: {item['id']} - {item['name']} ({text_len} chars)")
+        print(f"  L{node_depth(item, items)}: {item['id']} - {item['name']} ({text_len} chars)")
 
 
 if __name__ == "__main__":

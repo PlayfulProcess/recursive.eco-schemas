@@ -28,7 +28,7 @@ RWS_PATH = os.path.join(HERE, "..", "grammars", "rider-waite-smith-tarot", "gram
 rws = json.load(open(RWS_PATH, encoding="utf-8"))
 IMG_MAJOR = {}   # number -> url
 IMG_MINOR = {}   # (suit, number) -> url
-for it in rws["items"]:
+for it in rws["nodes"]:
     m = it.get("metadata", {})
     u = it.get("image_url")
     if not u:
@@ -235,7 +235,7 @@ for num, slug, name, (lt, tr, mn), path, astro, gdt, up, rev in MAJORS:
     u = IMG_MAJOR.get(num)
     items.append({
         "id": f"major-{num:02d}-{slug}", "name": f"{num} — {name}", "sort_order": so,
-        "category": "major-arcana", "level": 1,
+        "category": "major-arcana",
         "keywords": [name.lower().replace("the ", ""), "major arcana", "golden dawn", tr.lower(), astro.lower()],
         "image_url": u,
         "metadata": {
@@ -260,7 +260,7 @@ for sid, sdisp, element, world in SUITS:
     up, rev = ACE_MEAN[sdisp]
     items.append({
         "id": f"{sid}-ace", "name": f"Ace of {sdisp}", "sort_order": so,
-        "category": f"suit-{sid}", "level": 1,
+        "category": f"suit-{sid}",
         "keywords": [sdisp.lower(), element.lower(), "ace", "minor arcana", "golden dawn"],
         "image_url": u,
         "metadata": {"arcana": "minor", "suit": sdisp, "element": element, "rank": "Ace",
@@ -284,7 +284,7 @@ for sid, sdisp, element, world in SUITS:
         u = IMG_MINOR.get((sid, n))
         items.append({
             "id": f"{sid}-{n:02d}", "name": f"{['','','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten'][n]} of {sdisp}",
-            "sort_order": so, "category": f"suit-{sid}", "level": 1,
+            "sort_order": so, "category": f"suit-{sid}",
             "keywords": [sdisp.lower(), element.lower(), decan.lower(), "minor arcana", "decan", "golden dawn"],
             "image_url": u,
             "metadata": {"arcana": "minor", "suit": sdisp, "element": element, "number": n,
@@ -310,7 +310,7 @@ for sid, sdisp, element, world in SUITS:
         role = RANK_ROLE[gd_rank]
         items.append({
             "id": f"{sid}-{rws_rank.lower()}", "name": f"{rws_rank} of {sdisp}",
-            "sort_order": so, "category": f"suit-{sid}", "level": 1,
+            "sort_order": so, "category": f"suit-{sid}",
             "keywords": [sdisp.lower(), element.lower(), rws_rank.lower(), gd_rank.lower(), "court card", "golden dawn"],
             "image_url": u,
             "metadata": {"arcana": "minor", "suit": sdisp, "element": element, "rank": rws_rank,
@@ -361,8 +361,8 @@ for sid, sdisp, element, world in SUITS:
                   f"potential into the fully realised world."}))
 for eid, ename, kids, image_url, sections in emgs:
     kids = [k for k in kids if k in all_ids]
-    items.append({"id": eid, "name": ename, "sort_order": so, "category": "emergence", "level": 2,
-                  "composite_of": kids, "relationship_type": "emergence",
+    items.append({"id": eid, "name": ename, "sort_order": so, "category": "emergence",
+                  "parts": kids, "relationship_type": "emergence",
                   "image_url": image_url, "metadata": {}, "sections": sections})
     so += 1
 
@@ -410,7 +410,7 @@ grammar = {
     "lineages": ["Andreotti"],
     "worldview": "esoteric",
     "is_published": False,
-    "items": items,
+    "nodes": items,
 }
 
 os.makedirs(OUT_DIR, exist_ok=True)

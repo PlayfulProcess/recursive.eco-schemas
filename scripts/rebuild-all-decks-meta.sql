@@ -11,7 +11,7 @@
 --   decks. An inlined snapshot DRIFTS when a source deck changes. So the meta is
 --   a *generated artifact*, not hand-maintained data. Never hand-edit it — fix
 --   the source decks (or this script) and RE-RUN. It is idempotent: it fully
---   replaces document_data->'items' each run.
+--   replaces document_data->'nodes' each run.
 --
 -- ORDER MATTERS: rehost a deck's Wikimedia images to R2 (scripts/r2-rehost.mjs)
 --   BEFORE rebuilding, so the meta inherits R2 URLs, not 429-prone Wikimedia.
@@ -24,16 +24,16 @@
 --   axis-age    "By Age"                ─ 5 era nodes  ─ cards    (orthogonal lens)
 --   axis-number "By Rank — across all suits" ─ 14 cross-suit rank nodes ─ cards
 --                                       (numerology: every Ace/Two/…/King across suits)
---   Depth is computed by the tree-viewer from composite_of (computeLevel), so a
+--   Depth is computed from parts (grammar format v2 stores no level), so a
 --   card legitimately appears under several parents (its within-suit rank, its
 --   cross-suit rank, its deck, its era).
 --
 --   NOTE: augmented trumps (number > 21, e.g. Arlecchino) and suitless customs
 --   have no archetype/rank node, so they appear only under By Deck / By Age.
 --
--- EACH CARD CARRIES: ref_document_id/ref_item_id/ref_preview (click through to the
+-- EACH CARD CARRIES: ref_grammar_id/ref_node_id/ref_preview (click through to the
 --   source deck for full meaning), metadata.editorial {date,maker,patron,context,
---   print,orientation}, metadata.source_deck_id/source_item_id, and readable
+--   print,orientation}, metadata.source_deck_id/source_node_id, and readable
 --   sections.Origin + "Find the meaning" (so the Journal AI can narrate origin).
 --   Click-through resolves only for PUBLIC source decks (or the owner).
 --
@@ -88,7 +88,7 @@ src AS (
     it->>'name' AS cname, it->>'image_url' AS image_url, it->'metadata'->>'number' AS num_raw,
     e.ed_date,e.ed_maker,e.ed_patron,e.ed_context,e.ed_print,e.ed_orient
   FROM decks d JOIN user_documents ud ON ud.id=d.deck_id LEFT JOIN ed e ON e.deck_id=d.deck_id
-  CROSS JOIN LATERAL jsonb_array_elements(ud.document_data->'items') WITH ORDINALITY AS t(it,ord)
+  CROSS JOIN LATERAL jsonb_array_elements(ud.document_data->'nodes') WITH ORDINALITY AS t(it,ord)
 ),
 cards AS (
   SELECT 'card-'||replace(deck_id::text,'-','')||'-'||ord AS card_id,
@@ -108,71 +108,71 @@ cards AS (
   FROM src
 ),
 card_items AS (
-  SELECT 0 grp, ord::int so, jsonb_build_object('id',card_id,'name',cname||' — '||label,'level',1,'category','card',
-    'ref_document_id',deck_id::text,'ref_item_id',src_item_id,'ref_preview','study',
+  SELECT 0 grp, ord::int so, jsonb_build_object('id',card_id,'name',cname||' — '||label,'category','card',
+    'ref_grammar_id',deck_id::text,'ref_node_id',src_item_id,'ref_preview','study',
     'metadata',jsonb_strip_nulls(jsonb_build_object('deck',label,'arcana',arcana,'suit',suit_norm,'number',coalesce(major_num,rank_num),
-      'source_deck_id',deck_id::text,'source_item_id',src_item_id,
+      'source_deck_id',deck_id::text,'source_node_id',src_item_id,
       'editorial',jsonb_strip_nulls(jsonb_build_object('date',ed_date,'maker',ed_maker,'patron',NULLIF(ed_patron,'—'),'context',ed_context,'print',ed_print,'orientation',ed_orient)))),
     'sections',jsonb_build_object('Origin',coalesce(label||' · '||ed_date||' · '||ed_maker||'. '||ed_context||'. Print: '||ed_print||'. Made for: '||ed_orient||'.',label),
       'Find the meaning','From '||label||'. Click through to the source deck for this card''s full interpretation.'),
     'image_url',image_url,'sort_order',ord) item FROM cards
 ),
 deck_nodes AS (
-  SELECT 1 grp, era_sort*100 so, jsonb_build_object('id','deck-'||replace(deck_id::text,'-',''),'name',label,'level',2,'category','deck',
-    'ref_document_id',deck_id::text,'ref_preview','cards','sections',jsonb_build_object('What it is',label||' — '||coalesce(max(ed_date),'')||'. Every card in this deck.'),
-    'sort_order',1000+era_sort*20,'composite_of',jsonb_agg(card_id ORDER BY ord)) item FROM cards GROUP BY deck_id,label,era_sort
+  SELECT 1 grp, era_sort*100 so, jsonb_build_object('id','deck-'||replace(deck_id::text,'-',''),'name',label,'category','deck',
+    'ref_grammar_id',deck_id::text,'ref_preview','cards','sections',jsonb_build_object('What it is',label||' — '||coalesce(max(ed_date),'')||'. Every card in this deck.'),
+    'sort_order',1000+era_sort*20,'parts',jsonb_agg(card_id ORDER BY ord)) item FROM cards GROUP BY deck_id,label,era_sort
 ),
 era_nodes AS (
-  SELECT 2 grp, era_sort so, jsonb_build_object('id','era-'||era_sort,'name',era,'level',2,'category','era',
+  SELECT 2 grp, era_sort so, jsonb_build_object('id','era-'||era_sort,'name',era,'category','era',
     'sections',jsonb_build_object('What it is','All cards from decks of this era: '||era||'.'),'sort_order',6000+era_sort,
-    'composite_of',jsonb_agg(card_id ORDER BY card_id)) item FROM cards GROUP BY era,era_sort
+    'parts',jsonb_agg(card_id ORDER BY card_id)) item FROM cards GROUP BY era,era_sort
 ),
 wsr_nodes AS (
-  SELECT 3 grp, 0 so, jsonb_build_object('id','wsr-'||lower(c.suit_norm)||'-'||c.rank_num,'name',rn.rname||' of '||c.suit_norm||' (all decks)','level',2,'category','rank',
+  SELECT 3 grp, 0 so, jsonb_build_object('id','wsr-'||lower(c.suit_norm)||'-'||c.rank_num,'name',rn.rname||' of '||c.suit_norm||' (all decks)','category','rank',
     'sections',jsonb_build_object('What it is','The '||rn.rname||' of '||c.suit_norm||' across every deck.'),'sort_order',3000+so2.sord*20+c.rank_num,
-    'composite_of',jsonb_agg(c.card_id ORDER BY c.card_id)) item
+    'parts',jsonb_agg(c.card_id ORDER BY c.card_id)) item
   FROM cards c JOIN ranknames rn ON rn.r=c.rank_num JOIN suit_ord so2 ON so2.suit_norm=c.suit_norm
   WHERE c.suit_norm IS NOT NULL AND c.rank_num IS NOT NULL GROUP BY c.suit_norm, c.rank_num, rn.rname, so2.sord
 ),
 suit_ranks AS (SELECT DISTINCT suit_norm, rank_num FROM cards WHERE suit_norm IS NOT NULL AND rank_num IS NOT NULL),
 suit_nodes AS (
-  SELECT 4 grp, so2.sord so, jsonb_build_object('id','suit-'||lower(so2.suit_norm),'name',so2.suit_norm,'level',3,'category','suit',
+  SELECT 4 grp, so2.sord so, jsonb_build_object('id','suit-'||lower(so2.suit_norm),'name',so2.suit_norm,'category','suit',
     'sections',jsonb_build_object('What it is','The suit of '||so2.suit_norm||' (names normalized: Wands=Batons=Bastoni, Coins=Pentacles=Deniers, Cups=Coupes, Swords=Épées) — Ace through King across every deck.'),
-    'sort_order',2900+so2.sord,'composite_of',(SELECT jsonb_agg('wsr-'||lower(sr.suit_norm)||'-'||sr.rank_num ORDER BY sr.rank_num) FROM suit_ranks sr WHERE sr.suit_norm=so2.suit_norm)) item
+    'sort_order',2900+so2.sord,'parts',(SELECT jsonb_agg('wsr-'||lower(sr.suit_norm)||'-'||sr.rank_num ORDER BY sr.rank_num) FROM suit_ranks sr WHERE sr.suit_norm=so2.suit_norm)) item
   FROM suit_ord so2 WHERE EXISTS (SELECT 1 FROM suit_ranks sr WHERE sr.suit_norm=so2.suit_norm)
 ),
 majnum_nodes AS (
-  SELECT 5 grp, m.n so, jsonb_build_object('id','num-major-'||m.n,'name',m.n||' — '||m.cname,'level',2,'category','archetype',
+  SELECT 5 grp, m.n so, jsonb_build_object('id','num-major-'||m.n,'name',m.n||' — '||m.cname,'category','archetype',
     'sections',jsonb_build_object('What it is',m.cname||' — Arcanum '||m.n||' — across the decks.'),'sort_order',4000+m.n,
-    'composite_of',jsonb_agg(c.card_id ORDER BY c.card_id)) item FROM majnames m JOIN cards c ON c.major_num=m.n GROUP BY m.n,m.cname
+    'parts',jsonb_agg(c.card_id ORDER BY c.card_id)) item FROM majnames m JOIN cards c ON c.major_num=m.n GROUP BY m.n,m.cname
 ),
 xrank_nodes AS (
-  SELECT 6 grp, r.r so, jsonb_build_object('id','num-rank-'||r.r,'name',r.rname||'s (every suit, all decks)','level',2,'category','rank-cross',
+  SELECT 6 grp, r.r so, jsonb_build_object('id','num-rank-'||r.r,'name',r.rname||'s (every suit, all decks)','category','rank-cross',
     'sections',jsonb_build_object('What it is','Every '||r.rname||' across all four suits and every deck — cross-suit numerology.'),'sort_order',7000+r.r,
-    'composite_of',jsonb_agg(c.card_id ORDER BY c.card_id)) item
+    'parts',jsonb_agg(c.card_id ORDER BY c.card_id)) item
   FROM ranknames r JOIN cards c ON c.rank_num=r.r AND c.suit_norm IS NOT NULL GROUP BY r.r,r.rname
 ),
 arcana_nodes AS (
-  SELECT 7 grp, 1 so, jsonb_build_object('id','arc-major','name','Major Arcana','level',3,'category','arcana',
+  SELECT 7 grp, 1 so, jsonb_build_object('id','arc-major','name','Major Arcana','category','arcana',
     'sections',jsonb_build_object('What it is','The 22 trumps (0–21), each composed of that archetype across every deck.'),'sort_order',2801,
-    'composite_of',(SELECT jsonb_agg('num-major-'||n ORDER BY n) FROM (SELECT DISTINCT major_num n FROM cards WHERE major_num IS NOT NULL) a)) item
-  UNION ALL SELECT 7,2, jsonb_build_object('id','arc-minor','name','Minor Arcana','level',4,'category','arcana',
+    'parts',(SELECT jsonb_agg('num-major-'||n ORDER BY n) FROM (SELECT DISTINCT major_num n FROM cards WHERE major_num IS NOT NULL) a)) item
+  UNION ALL SELECT 7,2, jsonb_build_object('id','arc-minor','name','Minor Arcana','category','arcana',
     'sections',jsonb_build_object('What it is','The four suits, each composed of its ranks Ace–King across every deck.'),'sort_order',2802,
-    'composite_of',(SELECT jsonb_agg('suit-'||lower(suit_norm) ORDER BY sord) FROM suit_ord so2 WHERE EXISTS (SELECT 1 FROM suit_ranks sr WHERE sr.suit_norm=so2.suit_norm)))
+    'parts',(SELECT jsonb_agg('suit-'||lower(suit_norm) ORDER BY sord) FROM suit_ord so2 WHERE EXISTS (SELECT 1 FROM suit_ranks sr WHERE sr.suit_norm=so2.suit_norm)))
 ),
 root_nodes AS (
-  SELECT 8 grp, 1 so, jsonb_build_object('id','root-arcana','name','The Tarot — by Arcana · Suit · Number','level',5,'category','root',
+  SELECT 8 grp, 1 so, jsonb_build_object('id','root-arcana','name','The Tarot — by Arcana · Suit · Number','category','root',
     'sections',jsonb_build_object('What it is','The canonical tarot tree: Major Arcana by number, and Minor Arcana decomposing into four suits, each into its ranks Ace–King — every leaf gathered across all decks.'),'sort_order',9000,
-    'composite_of',jsonb_build_array('arc-major','arc-minor')) item
-  UNION ALL SELECT 8,2, jsonb_build_object('id','axis-deck','name','By Deck','level',3,'category','axis','render_as','pill-group','sort_order',9010,
+    'parts',jsonb_build_array('arc-major','arc-minor')) item
+  UNION ALL SELECT 8,2, jsonb_build_object('id','axis-deck','name','By Deck','category','axis','render_as','pill-group','sort_order',9010,
     'sections',jsonb_build_object('What it is','Browse every card grouped by its source deck.'),
-    'composite_of',(SELECT jsonb_agg('deck-'||replace(deck_id::text,'-','') ORDER BY era_sort,label) FROM decks))
-  UNION ALL SELECT 8,3, jsonb_build_object('id','axis-age','name','By Age','level',3,'category','axis','render_as','pill-group','sort_order',9020,
+    'parts',(SELECT jsonb_agg('deck-'||replace(deck_id::text,'-','') ORDER BY era_sort,label) FROM decks))
+  UNION ALL SELECT 8,3, jsonb_build_object('id','axis-age','name','By Age','category','axis','render_as','pill-group','sort_order',9020,
     'sections',jsonb_build_object('What it is','Five centuries of decks, grouped by era.'),
-    'composite_of',(SELECT jsonb_agg('era-'||era_sort ORDER BY era_sort) FROM (SELECT DISTINCT era_sort FROM decks) e))
-  UNION ALL SELECT 8,4, jsonb_build_object('id','axis-number','name','By Rank — across all suits','level',3,'category','axis','render_as','pill-group','sort_order',9030,
+    'parts',(SELECT jsonb_agg('era-'||era_sort ORDER BY era_sort) FROM (SELECT DISTINCT era_sort FROM decks) e))
+  UNION ALL SELECT 8,4, jsonb_build_object('id','axis-number','name','By Rank — across all suits','category','axis','render_as','pill-group','sort_order',9030,
     'sections',jsonb_build_object('What it is','Cross-suit numerology: every Ace, every Two … every King, gathered across all four suits and every deck.'),
-    'composite_of',(SELECT jsonb_agg('num-rank-'||r ORDER BY r) FROM (SELECT DISTINCT rank_num r FROM cards WHERE rank_num IS NOT NULL AND suit_norm IS NOT NULL) a))
+    'parts',(SELECT jsonb_agg('num-rank-'||r ORDER BY r) FROM (SELECT DISTINCT rank_num r FROM cards WHERE rank_num IS NOT NULL AND suit_norm IS NOT NULL) a))
 ),
 all_items AS (
   SELECT * FROM card_items UNION ALL SELECT * FROM deck_nodes UNION ALL SELECT * FROM era_nodes
@@ -181,7 +181,7 @@ all_items AS (
 ),
 agg AS (SELECT jsonb_agg(item ORDER BY grp,so) items, count(*) n FROM all_items)
 UPDATE user_documents ud
-SET document_data = jsonb_strip_nulls(ud.document_data || jsonb_build_object('items',agg.items)
+SET document_data = jsonb_strip_nulls(ud.document_data || jsonb_build_object('nodes',agg.items)
   || jsonb_build_object('name','The Tarot — All Decks, Many Lenses (meta)','default_view','tree','default_preview','tree',
        '_generated',true,'_do_not_hand_edit',true,'_rebuilt_at',now()::text,
        '_rebuild_note','Nested taxonomy: root-arcana -> Major/Minor -> Suit -> Rank -> card; plus By Deck and By Age. Generated by scripts/rebuild-all-decks-meta.sql.'))
@@ -189,7 +189,7 @@ FROM agg WHERE ud.id='b03937bf-92be-414b-bd23-a85fe9be39eb'
 RETURNING agg.n AS total_items;
 
 -- Post-run sanity (optional): expect dangling_refs=0, top-level = root-arcana/axis-deck/axis-age
--- WITH it AS (SELECT jsonb_array_elements(document_data->'items') i FROM user_documents WHERE id='b03937bf-92be-414b-bd23-a85fe9be39eb'),
+-- WITH it AS (SELECT jsonb_array_elements(document_data->'nodes') i FROM user_documents WHERE id='b03937bf-92be-414b-bd23-a85fe9be39eb'),
 --   ids AS (SELECT i->>'id' id FROM it),
---   refs AS (SELECT jsonb_array_elements_text(i->'composite_of') r FROM it WHERE i ? 'composite_of')
+--   refs AS (SELECT jsonb_array_elements_text(i->'parts') r FROM it WHERE i ? 'parts')
 -- SELECT (SELECT count(*) FROM refs r LEFT JOIN ids ON ids.id=r.r WHERE ids.id IS NULL) dangling_refs;

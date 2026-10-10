@@ -13,7 +13,7 @@ console.log('=== ALL ILLUSTRATIONS IN GRAMMAR ===');
 let totalIlls = 0;
 const allIlls = [];
 const byArtist = {};
-for (const item of g.items) {
+for (const item of g.nodes) {
   if (!item.metadata?.illustrations) continue;
   for (const ill of item.metadata.illustrations) {
     totalIlls++;

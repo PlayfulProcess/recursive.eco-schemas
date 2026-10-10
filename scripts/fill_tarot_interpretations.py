@@ -419,7 +419,7 @@ def main():
         grammar = json.load(f)
 
     filled = 0
-    for item in grammar["items"]:
+    for item in grammar["nodes"]:
         arcana = item["metadata"].get("arcana", "")
         if arcana == "major":
             fill_major(item)
@@ -432,7 +432,7 @@ def main():
 
     # Verify
     stubs_remaining = 0
-    for item in grammar["items"]:
+    for item in grammar["nodes"]:
         for k, v in item["sections"].items():
             if "[To be written" in str(v):
                 stubs_remaining += 1

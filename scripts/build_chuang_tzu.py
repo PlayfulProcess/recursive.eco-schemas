@@ -24,6 +24,7 @@ import json
 import re
 import os
 import sys
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SEED = os.path.join(SCRIPT_DIR, "..", "seeds", "chuang-tzu.txt")
@@ -161,13 +162,13 @@ META_CATEGORIES = [
     {
         "id": "meta-way-of-chuang-tzu",
         "name": "The Way of Chuang Tzu",
-        "composite_of": [t["id"] for t in THEMES],
+        "parts": [t["id"] for t in THEMES],
         "about": "The Chuang Tzu is not a treatise but a living thing — a collection of parables, dialogues, meditations, and cosmic jokes that dissolve the reader's certainties one by one. Its method is not argument but transformation: by the time you finish, you are no longer sure what is real and what is dream, what is useful and what is useless, what is life and what is death. This is precisely the point. The Way of Chuang Tzu is the way of radical freedom — freedom from fixed perspectives, from the tyranny of conventional knowledge, from the prison of the ego. It is the oldest and most eloquent expression of the insight that the Tao which can be named is not the eternal Tao.",
     },
     {
         "id": "meta-complete-chuang-tzu",
         "name": "Chuang Tzu and the Tao",
-        "composite_of": ["chapter-{:02d}".format(i) for i in range(1, 34)],
+        "parts": ["chapter-{:02d}".format(i) for i in range(1, 34)],
         "about": "The complete Chuang Tzu in Herbert Giles' 1889 translation — all thirty-three chapters, from the soaring Leviathan of Chapter 1 to the philosophical survey of Chapter 33. This is one of the foundational texts of world philosophy, standing alongside the Tao Te Ching as the twin pillar of Taoist thought. Where Lao Tzu is terse and enigmatic, Chuang Tzu is expansive and playful. Where Lao Tzu speaks in the voice of the sage, Chuang Tzu gives voice to butchers, wheelwrights, cicadas, butterflies, and the skull by the roadside. Together they constitute one of humanity's deepest investigations into the nature of reality, knowledge, and the good life.",
     },
 ]
@@ -356,7 +357,6 @@ def build_grammar(chapters):
         items.append({
             "id": chapter_id(ch["num"]),
             "name": f"Chapter {ch['num']}: {ch['title']}",
-            "level": 1,
             "category": section_label,
             "sort_order": sort_order,
             "sections": sections,
@@ -373,10 +373,9 @@ def build_grammar(chapters):
         items.append({
             "id": theme["id"],
             "name": theme["name"],
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": [chapter_id(n) for n in theme["chapter_nums"]],
+            "parts": [chapter_id(n) for n in theme["chapter_nums"]],
             "sort_order": sort_order,
             "sections": {
                 "About": theme["about"],
@@ -392,10 +391,9 @@ def build_grammar(chapters):
         items.append({
             "id": meta["id"],
             "name": meta["name"],
-            "level": 3,
             "category": "meta",
             "relationship_type": "emergence",
-            "composite_of": meta["composite_of"],
+            "parts": meta["parts"],
             "sort_order": sort_order,
             "sections": {
                 "About": meta["about"],
@@ -489,16 +487,16 @@ def main():
         "shelves": ["wisdom"],
         "lineages": ["Shrei", "Akomolafe"],
         "worldview": "non-dual",
-        "items": items,
+        "nodes": items,
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT}")
     print(f"  L1: {l1} chapters, L2: {l2} emergent groups, L3: {l3} meta-categories")
     print(f"  Total items: {len(items)}")

@@ -20,7 +20,7 @@
   "description": "A grammar of planetary cycles and their archetypal meanings for world events and personal transformation, based on the work of Richard Tarnas. Not prediction — pattern recognition across history, culture, and psyche.",
   "grammar_type": "astrology",
   "tags": ["astrology", "archetypal", "cosmology", "tarnas", "world-transits", "cycles"],
-  "items": [
+  "nodes": [
     {
       "id": "archetype-saturn",
       "name": "Saturn",
@@ -177,7 +177,7 @@
         "Current Relevance": "The 2020 conjunction in Capricorn seeded a new 33-year cycle. We are in the early phase — the themes of that conjunction (pandemic, institutional crisis, authoritarian temptation, collective mortality awareness) will continue to unfold."
       },
       "keywords": ["conservative empowerment", "moral seriousness", "civilizational test", "pandemic", "authoritarianism", "endurance", "destruction and rebuilding"],
-      "composite_of": ["archetype-saturn", "archetype-pluto"],
+      "parts": ["archetype-saturn", "archetype-pluto"],
       "metadata": {
         "cycle_length": "33–38 years",
         "scope": "civilizational",
@@ -206,7 +206,7 @@
         "Current Relevance": "The 2020–2023 waning square was the crisis phase of the 1988 cycle. The next conjunction (~2032 in Gemini) will begin a new 45-year cycle — the themes emerging now will seed that future."
       },
       "keywords": ["old vs new", "tradition vs revolution", "culture war", "reform", "freedom vs order", "generation gap", "creative tension"],
-      "composite_of": ["archetype-saturn", "archetype-uranus"],
+      "parts": ["archetype-saturn", "archetype-uranus"],
       "metadata": {
         "cycle_length": "44–46 years",
         "scope": "societal",
@@ -234,7 +234,7 @@
         "Current Relevance": "The conjunction of 2025–2026 (in Aries) is the defining transit of this period. It signals the dissolution of old certainties and the birth of new visions. The last time Saturn met Neptune in Aries was 1846 — the year that seeded both Marxism and the Baha'i Faith. We are at an equivalent seed-moment."
       },
       "keywords": ["dissolution of structures", "incarnation of vision", "disillusionment", "utopia", "propaganda", "spiritual materialism", "meaning crisis"],
-      "composite_of": ["archetype-saturn", "archetype-neptune"],
+      "parts": ["archetype-saturn", "archetype-neptune"],
       "metadata": {
         "cycle_length": "35–37 years",
         "scope": "civilizational",
@@ -264,7 +264,7 @@
         "Current Relevance": "The 2023–2029 sextile is a supportive background aspect enabling new creative and spiritual forms. It is the 'enabling condition' for the harder transits (Saturn–Neptune, etc.) — providing the imaginative raw material that the conjunctions and squares will shape."
       },
       "keywords": ["visionary breakthrough", "spiritual technology", "creative revolution", "enchantment", "digital mysticism", "collective imagination"],
-      "composite_of": ["archetype-uranus", "archetype-neptune"],
+      "parts": ["archetype-uranus", "archetype-neptune"],
       "metadata": {
         "cycle_length": "171 years",
         "scope": "generational",
@@ -293,7 +293,7 @@
         "Current Relevance": "The sextile (1943–2037) is the constant background hum beneath all other transits. It provides the substrate — the deep evolutionary current — that gives the shorter cycles their ultimate significance. When Saturn meets Neptune in 2025, it does so within this much larger Neptune–Pluto field. The AI revolution, the meaning crisis, the psychedelic renaissance — all expressions of this deepest cycle."
       },
       "keywords": ["civilizational evolution", "collective unconscious", "deep transformation", "the numinous", "epochal shift", "beyond individual"],
-      "composite_of": ["archetype-neptune", "archetype-pluto"],
+      "parts": ["archetype-neptune", "archetype-pluto"],
       "metadata": {
         "cycle_length": "492 years",
         "scope": "civilizational",
@@ -322,7 +322,7 @@
         "Current Relevance": "The 2007–2020 waning square produced the populist upheavals, social justice movements, and technological disruptions of our era. We are now in a quieter phase, but the next conjunction (~2104) is being seeded. The movements born in the square phase are still unfolding."
       },
       "keywords": ["revolutionary empowerment", "mass movements", "creative destruction", "liberation", "upheaval", "radical transformation"],
-      "composite_of": ["archetype-uranus", "archetype-pluto"],
+      "parts": ["archetype-uranus", "archetype-pluto"],
       "metadata": {
         "cycle_length": "127–142 years",
         "scope": "generational",
@@ -352,7 +352,7 @@
         "Current Relevance": "The 2020 conjunction in Aquarius (0°) began a major shift: the Great Conjunction moved from earth signs (where it had been since 1802) to air signs. This is a ~200-year element shift — from the material/industrial age to the informational/network age. We are at the very beginning of this new era."
       },
       "keywords": ["social cycles", "20-year chapters", "expansion vs contraction", "institutional formation", "great conjunction", "era shifts"],
-      "composite_of": ["archetype-jupiter", "archetype-saturn"],
+      "parts": ["archetype-jupiter", "archetype-saturn"],
       "metadata": {
         "cycle_length": "19.86 years",
         "scope": "societal",
@@ -382,7 +382,7 @@
         "Current Relevance": "The 2020 triple conjunction in Capricorn (amplified by Saturn–Pluto) was the astrological signature of the pandemic. The next conjunction is ~2033 in Aquarius."
       },
       "keywords": ["amplified power", "titanic ambition", "plutocracy", "mass transformation", "pandemic", "exponential growth"],
-      "composite_of": ["archetype-jupiter", "archetype-pluto"],
+      "parts": ["archetype-jupiter", "archetype-pluto"],
       "metadata": {
         "cycle_length": "12–13 years",
         "scope": "societal",

@@ -79,7 +79,7 @@ for cid, name, num, fn, icon, note in CARDS:
         md["rank"], md["suit"] = r.strip(), s.strip()
     items.append({
         "id": f"card-{cid}", "name": name, "sort_order": so,
-        "category": ("minor" if is_minor else "trump"), "level": 1,
+        "category": ("minor" if is_minor else "trump"),
         "keywords": [name.lower(), "besancon", "1jj", "swiss", "marseille-variant"],
         "image_url": u, "metadata": md,
         "sections": {"Iconography": icon, "The Besançon variant": note, "Tradition Note": NOTE},
@@ -88,7 +88,7 @@ for cid, name, num, fn, icon, note in CARDS:
 
 items.append({
     "id": "emg-juno-jupiter", "name": "Juno & Jupiter — The Besançon Substitution", "sort_order": so,
-    "category": "emergence", "level": 2, "composite_of": ["card-junon", "card-jupiter"],
+    "category": "emergence", "parts": ["card-junon", "card-jupiter"],
     "relationship_type": "emergence", "image_url": img("Tarot 1JJ - Jupiter.png"),
     "metadata": {},
     "sections": {
@@ -138,7 +138,7 @@ grammar = {
     "lineages": ["Andreotti"],
     "worldview": "historical",
     "is_published": False,
-    "items": items,
+    "nodes": items,
 }
 
 os.makedirs(OUT_DIR, exist_ok=True)

@@ -18,6 +18,7 @@ import json
 import re
 import os
 from pathlib import Path
+from grammar_depth import node_depth
 
 SEED_PATH = Path(__file__).parent.parent / "seeds" / "discourses-epictetus.txt"
 OUTPUT_DIR = Path(__file__).parent.parent / "grammars" / "discourses-epictetus"
@@ -392,7 +393,7 @@ def build_grammar():
     items = []
     sort_order = 0
 
-    # Track IDs for L2 composite_of
+    # Track IDs for L2 parts
     discourse_ids = []
     theme_to_ids = {k: [] for k in THEMATIC_GROUPS}
     encheiridion_ids = []
@@ -416,7 +417,6 @@ def build_grammar():
             'name': disc['title'],
             'sort_order': sort_order,
             'category': 'discourses',
-            'level': 1,
             'sections': {
                 'Teaching': disc['body'],
                 'Reflection': reflection,
@@ -442,7 +442,6 @@ def build_grammar():
             'name': f"Encheiridion {ch['roman']}",
             'sort_order': sort_order,
             'category': 'encheiridion',
-            'level': 1,
             'sections': {
                 'Teaching': ch['body'],
                 'Reflection': reflection,
@@ -467,8 +466,7 @@ def build_grammar():
             'name': theme_info['name'],
             'sort_order': sort_order,
             'category': 'thematic-groups',
-            'level': 2,
-            'composite_of': member_ids,
+            'parts': member_ids,
             'relationship_type': 'emergence',
             'sections': {
                 'About': theme_info['about'],
@@ -487,8 +485,7 @@ def build_grammar():
         'name': 'The Encheiridion (Manual)',
         'sort_order': sort_order,
         'category': 'sections',
-        'level': 2,
-        'composite_of': encheiridion_ids,
+        'parts': encheiridion_ids,
         'relationship_type': 'emergence',
         'sections': {
             'About': 'The Encheiridion (Greek: Enchiridion, meaning "handbook" or "manual") is a short compilation of Epictetus\' core teachings, assembled by his student Arrian. While the Discourses record extended lectures and dialogues, the Encheiridion distills the essential principles into brief, memorable maxims meant to be kept close at hand — a portable guide to Stoic practice. It opens with the most fundamental distinction in Stoic ethics: some things are in our power, and others are not.',
@@ -507,8 +504,7 @@ def build_grammar():
         'name': 'The Discourses (Selected)',
         'sort_order': sort_order,
         'category': 'sections',
-        'level': 2,
-        'composite_of': discourse_ids,
+        'parts': discourse_ids,
         'relationship_type': 'emergence',
         'sections': {
             'About': 'The Discourses (Diatribai) of Epictetus were recorded by his student Arrian of Nicomedia, who attended his lectures at Nicopolis around 108 CE. Originally in eight books, only four survive. This selection by George Long draws from the surviving books, presenting the most essential teachings on freedom, desire, judgment, duty, and the philosophic life. The discourses are informal, conversational, and often sharp — Epictetus challenges, mocks, and exhorts his students like a Stoic Socrates.',
@@ -529,8 +525,7 @@ def build_grammar():
         'name': 'The Three Disciplines of Stoic Practice',
         'sort_order': sort_order,
         'category': 'meta',
-        'level': 3,
-        'composite_of': thematic_ids,
+        'parts': thematic_ids,
         'relationship_type': 'emergence',
         'sections': {
             'About': 'Epictetus organizes Stoic practice around three disciplines (topoi): the Discipline of Desire (what to want and what to avoid), the Discipline of Action (how to act rightly in relationships and roles), and the Discipline of Assent (how to judge impressions correctly). Every discourse and every chapter of the Encheiridion addresses one or more of these disciplines. The thematic groups in this grammar map roughly to this framework: Desire and Aversion and Facing Adversity train the first discipline; Social Roles and Duty train the second; Judgment and Impressions and Freedom and the Will train the third.',
@@ -546,8 +541,7 @@ def build_grammar():
         'name': 'The Complete Teaching of Epictetus',
         'sort_order': sort_order,
         'category': 'meta',
-        'level': 3,
-        'composite_of': ['section-discourses', 'section-encheiridion'],
+        'parts': ['section-discourses', 'section-encheiridion'],
         'relationship_type': 'emergence',
         'sections': {
             'About': 'Epictetus (c. 50-135 CE) was born a slave in Hierapolis, Phrygia. He studied under Musonius Rufus in Rome, gained his freedom, and after the philosophers were expelled by Domitian in 89 CE, established a school at Nicopolis in Epirus. He taught until old age, never writing a word — everything we have was recorded by his devoted student Arrian. This grammar contains the two surviving works: a selection from the Discourses (extended lectures) and the complete Encheiridion (a handbook of essential teachings). Together they form the most complete and accessible expression of late Stoic philosophy.',
@@ -622,7 +616,7 @@ def build_grammar():
         'lineages': ['Linehan'],
         'worldview': 'rationalist',
         'cover_image_url': '',
-        'items': items,
+        'nodes': items,
     }
 
     return grammar
@@ -639,10 +633,10 @@ def main():
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
     # Summary
-    items = grammar['items']
-    l1 = [i for i in items if i['level'] == 1]
-    l2 = [i for i in items if i['level'] == 2]
-    l3 = [i for i in items if i['level'] == 3]
+    items = grammar['nodes']
+    l1 = [i for i in items if node_depth(i, items) == 1]
+    l2 = [i for i in items if node_depth(i, items) == 2]
+    l3 = [i for i in items if node_depth(i, items) == 3]
     print(f"\nGrammar written to {OUTPUT_PATH}")
     print(f"  L1 items: {len(l1)} ({len([i for i in l1 if i['category'] == 'discourses'])} discourses, {len([i for i in l1 if i['category'] == 'encheiridion'])} encheiridion)")
     print(f"  L2 items: {len(l2)} ({len([i for i in l2 if i['category'] == 'thematic-groups'])} thematic groups, {len([i for i in l2 if i['category'] == 'sections'])} sections)")

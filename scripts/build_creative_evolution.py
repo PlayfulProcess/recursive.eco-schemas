@@ -16,6 +16,7 @@ import json
 import re
 import os
 from pathlib import Path
+from grammar_depth import node_depth
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent
@@ -215,7 +216,6 @@ def build_grammar():
             "id": sec['key'],
             "name": sec['name'],
             "sort_order": sort_order,
-            "level": 1,
             "category": "chapter",
             "sections": {
                 "Text": sec['text'],
@@ -238,10 +238,9 @@ def build_grammar():
             "id": theme_id,
             "name": theme["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": theme["chapters"],
+            "parts": theme["chapters"],
             "sections": {
                 "About": theme["about"],
                 "For Readers": theme["for_readers"],
@@ -258,10 +257,9 @@ def build_grammar():
         "id": "creative-evolution-complete",
         "name": "Creative Evolution: The Complete Work",
         "sort_order": sort_order,
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": all_theme_ids,
+        "parts": all_theme_ids,
         "sections": {
             "About": "Henri Bergson's Creative Evolution (L'Évolution créatrice, 1907) is one of the most influential philosophical works of the twentieth century, winning Bergson the Nobel Prize in Literature in 1927. Against both mechanistic science and teleological design, Bergson argues that life is driven by a vital impetus (élan vital) — a creative force that flows through matter like a current, splitting into divergent tendencies (plant, insect, human) as it encounters obstacles. The book's central insight is that our intellect, having evolved to manipulate solid matter, systematically distorts reality by spatializing time and freezing becoming into static snapshots — what Bergson brilliantly calls 'the cinematographical mechanism of thought.' Only intuition — a philosophical method that enters into the flow of duration — can grasp life's creative movement from within.",
             "For Readers": "Creative Evolution rewards patient reading. The Introduction is one of the great openings in philosophy — read it first for the vision. Chapters I and II build the biological argument with remarkable erudition. Chapter III is the most difficult but philosophically richest — Bergson's theory of knowledge. Chapter IV is the most dazzling — a compressed history of Western philosophy as a series of failed attempts to think real becoming. Bergson writes with extraordinary clarity for a philosopher; the prose itself demonstrates the fluid thinking he advocates.",
@@ -296,16 +294,16 @@ def build_grammar():
         "shelves": ["mirror"],
         "lineages": ["Akomolafe"],
         "worldview": "process",
-        "items": items,
+        "nodes": items,
     }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT_PATH}")
     print(f"  L1: {l1} chapters, L2: {l2} themes, L3: {l3} meta")
     print(f"  Total items: {len(items)}")

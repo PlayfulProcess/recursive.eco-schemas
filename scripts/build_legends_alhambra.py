@@ -19,6 +19,7 @@ import re
 import os
 import unicodedata
 from pathlib import Path
+from grammar_depth import node_depth
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent
@@ -569,7 +570,6 @@ def build_grammar():
             "id": item_id,
             "name": ch['display_name'],
             "sort_order": sort_order,
-            "level": 1,
             "category": ch['category'],
             "sections": {
                 "Text": ch['text'],
@@ -590,10 +590,9 @@ def build_grammar():
             "id": theme["id"],
             "name": theme["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": composite,
+            "parts": composite,
             "sections": {
                 "About": theme["about"],
                 "For Readers": theme["for_readers"],
@@ -611,10 +610,9 @@ def build_grammar():
         "id": "alhambra-complete",
         "name": "The Alhambra: Between History and Legend",
         "sort_order": sort_order,
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": theme_ids,
+        "parts": theme_ids,
         "sections": {
             "About": "Washington Irving's The Alhambra (1832, revised 1851) is the book that introduced the English-speaking world to the magic of Moorish Spain. Part travel journal, part historical sketch, part fairy-tale collection, it records Irving's months living in the crumbling palace of the Alhambra in Granada -- exploring its halls, befriending its eccentric inhabitants, and gathering the legends that clung to its walls. Irving blurs the line between the real palace and the dream palace, between documented history and fireside tale, creating a book that is itself a kind of enchantment. The 41 chapters move between close observation of daily life, passionate recovery of Moorish history and culture, and retelling of legends in which treasure hunters stumble on Moorish gold, princesses escape from towers, enchanted soldiers stand guard on midsummer eve, and love breaks every spell.",
             "For Readers": "The Alhambra can be read straight through as a travel narrative with an enchanted arc -- arrival, settlement, exploration, legend, farewell. Or browse by mood: the travel chapters for Irving's comic, humane voice; the history chapters for the tragedy of Moorish Spain; the legends for pure storytelling magic. Irving's prose is lucid and unhurried, the ideal companion for an afternoon in any garden. This book created the romantic image of the Alhambra that persists to this day.",
@@ -644,16 +642,16 @@ def build_grammar():
         "shelves": ["wonder"],
         "lineages": ["Andreotti"],
         "worldview": "romantic",
-        "items": items,
+        "nodes": items,
     }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT_PATH}")
     print(f"  L1: {l1} chapters/legends, L2: {l2} themes, L3: {l3} meta")
     print(f"  Total items: {len(items)}")

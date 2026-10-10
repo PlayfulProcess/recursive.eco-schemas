@@ -75,7 +75,7 @@ def extract_rank_from_name(name):
 def index_by_number_and_suit(deck):
     """Index cards by (arcana, rank_within_suit, normalized_suit) tuple."""
     idx = {}
-    for item in deck["items"]:
+    for item in deck["nodes"]:
         meta = item.get("metadata", {})
         arcana = meta.get("arcana", item.get("category", ""))
         number = meta.get("number")
@@ -437,7 +437,6 @@ for number, name in MAJOR_ARCANA:
         "name": name,
         "sort_order": sort_order,
         "category": "major-arcana",
-        "level": 1,
         "sections": sections,
         "keywords": rws_card.get("keywords", []) if rws_card else [],
         "metadata": {
@@ -503,7 +502,6 @@ for suit_key, suit_display in SUITS:
             "name": card_name,
             "sort_order": sort_order,
             "category": f"minor-arcana-{suit_display.lower()}",
-            "level": 1,
             "sections": sections,
             "keywords": rws_card.get("keywords", []) if rws_card else [],
             "metadata": {
@@ -592,7 +590,7 @@ grammar = {
     "shelves": ["wisdom", "mirror"],
     "lineages": ["Shrei"],
     "worldview": "non-dual",
-    "items": items,
+    "nodes": items,
 }
 
 # ─── Write output ─────────────────────────────────────────────────────────────

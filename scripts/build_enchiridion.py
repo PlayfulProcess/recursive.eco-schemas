@@ -12,6 +12,7 @@ Structure:
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SEED = os.path.join(SCRIPT_DIR, "..", "seeds", "enchiridion.txt")
@@ -214,7 +215,6 @@ def build_grammar(sections):
         items.append({
             "id": f"maxim-{sec['number']:02d}",
             "name": f"Maxim {sec['number']}: {first_line}",
-            "level": 1,
             "category": "maxim",
             "sort_order": sort_order,
             "sections": {
@@ -233,10 +233,9 @@ def build_grammar(sections):
         items.append({
             "id": theme["id"],
             "name": theme["name"],
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": composite,
+            "parts": composite,
             "sort_order": sort_order,
             "sections": {
                 "About": theme["about"],
@@ -254,10 +253,9 @@ def build_grammar(sections):
     items.append({
         "id": "meta-stoic-path",
         "name": "The Stoic Path",
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": [t["id"] for t in THEMES],
+        "parts": [t["id"] for t in THEMES],
         "sort_order": sort_order,
         "sections": {
             "About": "The Enchiridion is a single path with many aspects. The dichotomy of control is the foundation; managing desire and aversion is the daily practice; social relations are the testing ground; examining appearances is the method; accepting fate is the disposition; and becoming a philosopher is the goal. These six themes are not separate teachings but facets of one discipline: living in accordance with nature, maintaining inner freedom regardless of external circumstances, and finding tranquility through the exercise of reason and virtue. Epictetus distilled decades of Stoic teaching into this compact manual — a handbook small enough to carry into battle, into the forum, into grief. Twenty centuries later, it remains the most practical introduction to the examined life.",
@@ -305,16 +303,16 @@ def main():
         "shelves": ["resilience"],
         "lineages": ["Linehan"],
         "worldview": "rationalist",
-        "items": items,
+        "nodes": items,
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"Grammar written to {OUTPUT}")
     print(f"  L1: {l1} maxims, L2: {l2} thematic groups, L3: {l3} meta-categories")
     print(f"  Total items: {len(items)}")

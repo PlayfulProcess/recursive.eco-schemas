@@ -17,6 +17,8 @@ import sys
 from pathlib import Path
 from collections import defaultdict
 
+from grammar_depth import node_depth
+
 GRAMMARS_DIR = Path(__file__).parent.parent / "grammars"
 OUTPUT = Path(__file__).parent.parent / "manifest.json"
 
@@ -27,14 +29,14 @@ def load_grammar(grammar_path):
         data = json.load(f)
 
     folder_name = grammar_path.parent.name
-    item_count = len(data.get("items", []))
+    nodes = data.get("nodes", [])
+    item_count = len(nodes)
 
-    # Extract levels
+    # Depths, computed from parts (format v2 stores no level)
     levels = set()
     categories = set()
-    for item in data.get("items", []):
-        if "level" in item:
-            levels.add(item["level"])
+    for item in nodes:
+        levels.add(node_depth(item, nodes))
         if "category" in item:
             categories.add(item["category"])
 

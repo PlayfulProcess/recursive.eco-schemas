@@ -556,7 +556,6 @@ def build_l1_items(chapters):
             "name": CHAPTER_TITLES.get(chapter_num, f"Chapter {chapter_num}"),
             "sort_order": chapter_num - 1,
             "category": section_id,
-            "level": 1,
             "sections": sections,
             "keywords": CHAPTER_KEYWORDS.get(chapter_num, []),
             "metadata": {
@@ -676,8 +675,7 @@ def build_l2_items(l1_items):
             "name": info["name"],
             "sort_order": sort_order,
             "category": info["category"],
-            "level": 2,
-            "composite_of": composite_ids,
+            "parts": composite_ids,
             "relationship_type": "emergence",
             "sections": {
                 "About": info["about"],
@@ -750,8 +748,7 @@ def build_l3_items(l1_items, l2_items):
             "name": info["name"],
             "sort_order": sort_order,
             "category": info["category"],
-            "level": 3,
-            "composite_of": composite_ids,
+            "parts": composite_ids,
             "relationship_type": "emergence",
             "sections": {
                 "About": info["about"],
@@ -815,7 +812,7 @@ def build_grammar(chapters):
         "shelves": ["wisdom"],
         "lineages": ["Linehan", "Akomolafe", "Shrei"],
         "worldview": "non-dual",
-        "items": all_items,
+        "nodes": all_items,
     }
 
     return grammar
@@ -849,7 +846,7 @@ def main():
     with open(OUTPUT_DIR / "grammar.json", "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    total_items = len(grammar["items"])
+    total_items = len(grammar["nodes"])
     print(f"Done! {total_items} total items written.")
 
 

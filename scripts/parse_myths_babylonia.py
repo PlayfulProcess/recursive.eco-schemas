@@ -4,6 +4,7 @@ Parse Myths of Babylonia and Assyria (Donald A. Mackenzie, Gutenberg #16653).
 20 chapters + preface + introduction → L1 items, grouped into L2 thematic clusters + L3 meta.
 """
 import json, re, os
+from grammar_depth import node_depth
 
 with open("seeds/myths-babylonia-assyria.txt", encoding="utf-8") as f:
     text = f.read()
@@ -116,7 +117,6 @@ for idx, (pos, heading, sid, name, cat, kw) in enumerate(positions):
         "name": name,
         "sort_order": sort_order,
         "category": cat,
-        "level": level,
         "sections": {"Text": excerpt},
         "keywords": ["babylonia", "assyria", "mesopotamia", "mackenzie"] + kw,
         "metadata": {}
@@ -144,8 +144,7 @@ groups = [
         "id": "group-gods-myths",
         "name": "Gods, Myths, and the Otherworld",
         "category": "thematic-group",
-        "level": 2,
-        "composite_of": ["ch02-land-rivers-god-deep", "ch03-rival-pantheons", "ch04-demons-fairies-ghosts",
+        "parts": ["ch02-land-rivers-god-deep", "ch03-rival-pantheons", "ch04-demons-fairies-ghosts",
                          "ch05-tammuz-ishtar", "ch07-creation-merodach", "ch08-etana-gilgamesh", "ch09-deluge-hades"],
         "sections": {
             "About": "The mythological core of Mesopotamian civilization: the great gods (Ea, Enlil, Anu, Ishtar, Marduk, Ashur), the spirits and demons that populated the invisible world, and the epic stories — the descent of Ishtar, the creation battle against Tiamat, the wanderings of Gilgamesh, and the great flood. These myths shaped every subsequent Western mythology.",
@@ -159,8 +158,7 @@ groups = [
         "id": "group-history-empire",
         "name": "Empire, History, and the Rise and Fall of Powers",
         "category": "thematic-group",
-        "level": 2,
-        "composite_of": ["ch01-races-civilization", "ch06-wars-city-states", "ch10-buildings-laws", "ch11-golden-age",
+        "parts": ["ch01-races-civilization", "ch06-wars-city-states", "ch10-buildings-laws", "ch11-golden-age",
                          "ch12-hittites-kassites", "ch15-trade-supremacy", "ch16-race-movements",
                          "ch17-hebrews-assyria", "ch18-semiramis", "ch19-splendour", "ch20-last-days"],
         "sections": {
@@ -175,8 +173,7 @@ groups = [
         "id": "group-astrology-wisdom",
         "name": "Stars, Wisdom, and Sacred Knowledge",
         "category": "thematic-group",
-        "level": 2,
-        "composite_of": ["ch13-astrology-astronomy", "ch14-ashur"],
+        "parts": ["ch13-astrology-astronomy", "ch14-ashur"],
         "sections": {
             "About": "Babylonian astrology and astronomy — the origin of the zodiac, planetary divination, and the relationship between celestial observation and religious authority. Includes the theology of Ashur, Assyria's supreme god who merged stellar and martial symbolism.",
             "For Readers": "Chapter XIII is essential reading for anyone interested in the origins of astrology — the Babylonians created the system that still underlies Western astrology today."
@@ -198,13 +195,12 @@ items.append({
     "name": "Mesopotamia: Where Civilization Wrote Its Dreams",
     "sort_order": sort_order,
     "category": "meta",
-    "level": 3,
     "sections": {
         "About": "Donald A. Mackenzie's 'Myths of Babylonia and Assyria' (1915) is a comprehensive survey of Mesopotamian mythology and history — from the creation epic Enuma Elish to the fall of Babylon to Cyrus the Great. Mackenzie weaves together the great myths (Tammuz and Ishtar's descent, Gilgamesh's quest for immortality, Marduk's battle against the chaos-dragon Tiamat) with three millennia of political history. This is the civilization that invented writing, the zodiac, the seven-day week, and the flood story that echoes in Genesis. Every Western mythology carries Mesopotamian DNA.",
         "Contemplation": "The Babylonians looked at the same sky we look at and saw the same patterns — but they saw gods where we see physics. Their astrology became our astronomy. Their flood story became Noah. Their Ishtar became Aphrodite became Venus. What does it mean that our most 'modern' ideas are thirty centuries old?"
     },
     "keywords": ["mesopotamia", "civilization", "mythology", "astrology", "creation"],
-    "composite_of": [i["id"] for i in items if i["level"] == 1],
+    "parts": [i["id"] for i in items if node_depth(i, items) == 1],
     "relationship_type": "emergence",
     "metadata": {}
 })
@@ -229,7 +225,7 @@ grammar = {
     "shelves": ["wisdom"],
     "lineages": ["Shrei", "Akomolafe"],
     "worldview": "animist",
-    "items": items
+    "nodes": items
 }
 
 os.makedirs("grammars/myths-babylonia-assyria", exist_ok=True)
@@ -239,8 +235,8 @@ with open("grammars/myths-babylonia-assyria/grammar.json", "w") as f:
 # Validate
 ids = [i["id"] for i in items]
 dupes = [x for x in ids if ids.count(x) > 1]
-bad_refs = [(i["id"], r) for i in items for r in i.get("composite_of", []) if r not in ids]
-print(f"Items: {len(items)}, L1: {sum(1 for i in items if i['level']==1)}, L2: {sum(1 for i in items if i['level']==2)}, L3: {sum(1 for i in items if i['level']==3)}")
+bad_refs = [(i["id"], r) for i in items for r in i.get("parts", []) if r not in ids]
+print(f"Items: {len(items)}, L1: {sum(1 for i in items if node_depth(i, items)==1)}, L2: {sum(1 for i in items if node_depth(i, items)==2)}, L3: {sum(1 for i in items if node_depth(i, items)==3)}")
 print(f"Sections: {sum(len(i.get('sections',{})) for i in items)}")
 print(f"Dupes: {dupes}, Bad refs: {bad_refs}")
 print(f"Sort OK: {[i['sort_order'] for i in items] == list(range(1, len(items)+1))}")

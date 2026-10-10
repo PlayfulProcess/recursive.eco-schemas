@@ -35,7 +35,7 @@ function resolvePath(p) {
 
 // Load grammar
 const grammar = JSON.parse(readFileSync(resolvePath(config.grammar), 'utf8'));
-console.log(`Grammar: ${grammar.name} (${grammar.items.length} items)`);
+console.log(`Grammar: ${grammar.name} (${grammar.nodes.length} items)`);
 
 // Load illustrations CSV
 const illustrations = loadIllustrationsCsv(resolvePath(config.illustrations));
@@ -338,8 +338,8 @@ function splitTextIntoPages(text, targetChars) {
 // ── Grammar Processing ──────────────────────────────────────────────
 
 const textSection = config.textSection || 'Story (Original Text)';
-const l1Items = grammar.items.filter(item => item.level === 1);
-const l2Items = grammar.items.filter(item => item.level === 2);
+const l1Items = grammar.nodes.filter((item) => nodeDepth(item, grammar.nodes) === 1);
+const l2Items = grammar.nodes.filter((item) => nodeDepth(item, grammar.nodes) === 2);
 
 const chapterMap = {};
 for (const scene of l1Items) {
@@ -1670,4 +1670,21 @@ document.getElementById('navToggle').addEventListener('click', function() {
   }
 })();
 `;
+}
+
+// Depth from parts (grammar format v2 stores no level): a node with no parts is 1;
+// otherwise 1 + the deepest part. Cycle-safe. `nodes` is the nodes array or an id -> node Map.
+function nodeDepth(node, nodes, seen = new Set()) {
+  const parts = node && node.parts;
+  if (!parts || !parts.length) return 1;
+  const byId = nodes instanceof Map ? nodes : new Map(nodes.map((n) => [n.id, n]));
+  if (seen.has(node.id)) return 1;
+  seen.add(node.id);
+  let d = 1;
+  for (const id of parts) {
+    const c = byId.get(id);
+    if (c) d = Math.max(d, 1 + nodeDepth(c, byId, seen));
+  }
+  seen.delete(node.id);
+  return d;
 }

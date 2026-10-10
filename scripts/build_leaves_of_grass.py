@@ -13,6 +13,7 @@ import json
 import re
 import os
 from pathlib import Path
+from grammar_depth import node_depth
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_DIR = SCRIPT_DIR.parent
@@ -450,7 +451,6 @@ def build_grammar():
                 'id': poem_id,
                 'name': title,
                 'sort_order': sort_order,
-                'level': 1,
                 'category': category_slug,
                 'sections': sections,
                 'keywords': keywords if keywords else ['poetry', 'whitman'],
@@ -523,9 +523,8 @@ def build_grammar():
             'id': l2_id,
             'name': f'{cluster_name}',
             'sort_order': sort_order,
-            'level': 2,
             'category': 'book-clusters',
-            'composite_of': poem_ids,
+            'parts': poem_ids,
             'relationship_type': 'emergence',
             'sections': {
                 'About': description,
@@ -544,7 +543,7 @@ def build_grammar():
         sort_order += 1
 
     # Build L2 items: Thematic groupings
-    all_item_ids = {item['id'] for item in items if item['level'] == 1}
+    all_item_ids = {item['id'] for item in items if node_depth(item, items) == 1}
     thematic_l2_ids = []
 
     for theme_id, theme_info in THEMATIC_GROUPS.items():
@@ -564,7 +563,7 @@ def build_grammar():
 
         # Also scan all poems for keyword matches
         for item in items:
-            if item['level'] != 1:
+            if node_depth(item, items) != 1:
                 continue
             item_keywords = item.get('keywords', [])
             theme_keywords = theme_info.get('keywords', [])
@@ -588,9 +587,8 @@ def build_grammar():
             'id': theme_id,
             'name': theme_info['name'],
             'sort_order': sort_order,
-            'level': 2,
             'category': 'thematic-groups',
-            'composite_of': matched_ids,
+            'parts': matched_ids,
             'relationship_type': 'emergence',
             'sections': {
                 'About': theme_info['about'],
@@ -615,9 +613,8 @@ def build_grammar():
             'id': 'meta-whitman-architecture',
             'name': 'Whitman\'s Architecture: The Books of Leaves of Grass',
             'sort_order': sort_order,
-            'level': 3,
             'category': 'meta-categories',
-            'composite_of': book_cluster_ids,
+            'parts': book_cluster_ids,
             'relationship_type': 'emergence',
             'sections': {
                 'About': 'The 35 books of Leaves of Grass as Whitman arranged them in his final "deathbed" edition of 1891-92. This structure represents his life\'s work in its definitive form — from the opening Inscriptions through the great central poems to the late annexes. The architecture is both chronological (early, middle, late work) and thematic (the self, love, war, death, farewell).',
@@ -630,9 +627,8 @@ def build_grammar():
             'id': 'meta-thematic-currents',
             'name': 'Thematic Currents: The Great Themes of Whitman',
             'sort_order': sort_order + 1,
-            'level': 3,
             'category': 'meta-categories',
-            'composite_of': thematic_l2_ids,
+            'parts': thematic_l2_ids,
             'relationship_type': 'emergence',
             'sections': {
                 'About': 'The great themes that flow through Leaves of Grass, cutting across the book structure. These thematic groupings reveal how Whitman returns again and again to his core preoccupations: the self, democracy, the body, nature, war, death, comradeship, and the sea. A single poem may belong to several currents.',
@@ -699,7 +695,7 @@ def build_grammar():
         'lineages': ['Shrei', 'Akomolafe', 'Kelty'],
         'worldview': 'non-dual',
         'cover_image_url': '',
-        'items': items,
+        'nodes': items,
     }
 
     return grammar
@@ -710,14 +706,14 @@ def main():
     grammar = build_grammar()
 
     # Count levels
-    l1 = sum(1 for item in grammar['items'] if item['level'] == 1)
-    l2 = sum(1 for item in grammar['items'] if item['level'] == 2)
-    l3 = sum(1 for item in grammar['items'] if item['level'] == 3)
+    l1 = sum(1 for item in grammar['nodes'] if node_depth(item, grammar['nodes']) == 1)
+    l2 = sum(1 for item in grammar['nodes'] if node_depth(item, grammar['nodes']) == 2)
+    l3 = sum(1 for item in grammar['nodes'] if node_depth(item, grammar['nodes']) == 3)
 
     print(f"  L1 poems: {l1}")
     print(f"  L2 groupings: {l2}")
     print(f"  L3 meta-categories: {l3}")
-    print(f"  Total items: {len(grammar['items'])}")
+    print(f"  Total items: {len(grammar['nodes'])}")
 
     # Write output
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
@@ -727,24 +723,24 @@ def main():
     print(f"  Written to: {OUTPUT_FILE}")
 
     # Quick validation
-    ids = [item['id'] for item in grammar['items']]
+    ids = [item['id'] for item in grammar['nodes']]
     id_set = set(ids)
     dupes = [x for x in ids if ids.count(x) > 1]
     if dupes:
         print(f"  WARNING: Duplicate IDs: {set(dupes)}")
 
-    # Check composite_of references
+    # Check parts references
     bad_refs = []
-    for item in grammar['items']:
-        for ref in item.get('composite_of', []):
+    for item in grammar['nodes']:
+        for ref in item.get('parts', []):
             if ref not in id_set:
                 bad_refs.append((item['id'], ref))
     if bad_refs:
-        print(f"  WARNING: Bad composite_of references:")
+        print(f"  WARNING: Bad parts references:")
         for item_id, ref in bad_refs[:10]:
             print(f"    {item_id} -> {ref}")
     else:
-        print("  All composite_of references valid.")
+        print("  All parts references valid.")
 
 
 if __name__ == '__main__':

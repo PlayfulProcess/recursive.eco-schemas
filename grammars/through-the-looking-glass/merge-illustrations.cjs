@@ -3,7 +3,7 @@ const r2 = JSON.parse(fs.readFileSync(__dirname + '/r2-illustrations.json', 'utf
 const grammar = JSON.parse(fs.readFileSync(__dirname + '/grammar.json', 'utf8'));
 
 let updated = 0;
-for (const item of grammar.items) {
+for (const item of grammar.nodes) {
   const newIlls = r2[item.id];
   if (!newIlls || newIlls.length === 0) continue;
 
@@ -33,10 +33,10 @@ for (const item of grammar.items) {
 fs.writeFileSync(__dirname + '/grammar.json', JSON.stringify(grammar, null, 2));
 console.log('Updated', updated, 'items with illustrations');
 
-const withIlls = grammar.items.filter(i => i.metadata && i.metadata.illustrations && i.metadata.illustrations.length > 0);
-const withImg = grammar.items.filter(i => i.image_url);
+const withIlls = grammar.nodes.filter(i => i.metadata && i.metadata.illustrations && i.metadata.illustrations.length > 0);
+const withImg = grammar.nodes.filter(i => i.image_url);
 const totalIlls = withIlls.reduce((sum, i) => sum + i.metadata.illustrations.length, 0);
-console.log('Items with illustrations:', withIlls.length, '/', grammar.items.length);
+console.log('Items with illustrations:', withIlls.length, '/', grammar.nodes.length);
 console.log('Items with image_url:', withImg.length);
 console.log('Total illustration entries:', totalIlls);
 console.log('Average per item:', (totalIlls / withIlls.length).toFixed(1));

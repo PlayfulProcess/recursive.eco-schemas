@@ -4,6 +4,7 @@ Parse Indian Myth and Legend (Donald A. Mackenzie, Gutenberg #47228).
 26 chapters → L1 items, grouped into L2 thematic clusters + L3 meta.
 """
 import json, re, os
+from grammar_depth import node_depth
 
 with open("seeds/indian-myth-legend.txt", encoding="utf-8") as f:
     text = f.read()
@@ -107,7 +108,6 @@ for idx, (pos, heading, sid, name, cat, kw) in enumerate(positions):
         "name": name,
         "sort_order": sort_order,
         "category": cat,
-        "level": 1,
         "sections": {"Text": excerpt},
         "keywords": ["india", "hindu", "mackenzie", "mythology"] + kw,
         "metadata": {}
@@ -134,8 +134,7 @@ groups = [
         "id": "group-vedic-gods",
         "name": "The Vedic Gods: Powers of Heaven and Earth",
         "category": "thematic-group",
-        "level": 2,
-        "composite_of": ["ch01-indra", "ch02-vedic-deities", "ch03-yama", "ch04-demons-giants", "ch05-vedic-age", "ch06-creation-ages"],
+        "parts": ["ch01-indra", "ch02-vedic-deities", "ch03-yama", "ch04-demons-giants", "ch05-vedic-age", "ch06-creation-ages"],
         "sections": {
             "About": "The earliest stratum of Indian mythology: the Vedic gods — Indra the thunder-wielder, Agni the fire, Varuna the cosmic law, Yama the first man to die and become king of the dead. Plus the creation myths, the world ages (yugas), and the doctrine of soul-wandering (samsara) that would become central to all Indian thought.",
             "For Readers": "Start with Chapter I (Indra) for the most vivid Vedic mythology, then Chapter VI (Creation) for the profound cosmological vision that underlies Hinduism and Buddhism."
@@ -148,8 +147,7 @@ groups = [
         "id": "group-mahabharata",
         "name": "The Mahābhārata: The Great Bharata War",
         "category": "thematic-group",
-        "level": 2,
-        "composite_of": ["ch09-bharata-prelude", "ch10-pandavas-kauravas", "ch11-tournament", "ch12-first-exile",
+        "parts": ["ch09-bharata-prelude", "ch10-pandavas-kauravas", "ch11-tournament", "ch12-first-exile",
                          "ch13-draupadi", "ch14-pandava-triumph", "ch15-gambling", "ch16-second-exile",
                          "ch17-defiance", "ch18-battle", "ch19-atonement"],
         "sections": {
@@ -164,8 +162,7 @@ groups = [
         "id": "group-ramayana",
         "name": "The Rāmāyaṇa: The Story of Rama",
         "category": "thematic-group",
-        "level": 2,
-        "composite_of": ["ch24-rama-sita-won", "ch25-abduction-sita", "ch26-rama-fulfilled"],
+        "parts": ["ch24-rama-sita-won", "ch25-abduction-sita", "ch26-rama-fulfilled"],
         "sections": {
             "About": "India's second great epic: the story of Rama, prince of Ayodhya, who wins the princess Sita by bending the bow of Shiva, loses her to the demon king Ravana, and wages war across the sea to rescue her — aided by the monkey god Hanuman and the bear king Jambavan.",
             "For Readers": "Read all three chapters in sequence for the complete story. This is the most beloved narrative in Indian culture, performed in festivals throughout South and Southeast Asia."
@@ -178,8 +175,7 @@ groups = [
         "id": "group-nala",
         "name": "Nala and Damayantí: A Love Story Within the Epic",
         "category": "thematic-group",
-        "level": 2,
-        "composite_of": ["ch20-nala-damayanti", "ch21-wanderings-forest", "ch22-nala-exile", "ch23-homecoming"],
+        "parts": ["ch20-nala-damayanti", "ch21-wanderings-forest", "ch22-nala-exile", "ch23-homecoming"],
         "sections": {
             "About": "The story of Nala and Damayantí — one of the most beautiful love stories in world literature, embedded within the Mahābhārata. King Nala, cursed by a demon through a gambling match, loses his kingdom and wanders in exile, separated from his devoted wife, until fate brings them back together.",
             "For Readers": "This tale mirrors the main Mahābhārata story (gambling, exile, reunion) but on a human, domestic scale. It's a complete romance that can be read independently."
@@ -201,13 +197,12 @@ items.append({
     "name": "Indian Myth: The Longest Story Ever Told",
     "sort_order": sort_order,
     "category": "meta",
-    "level": 3,
     "sections": {
         "About": "Donald A. Mackenzie's 'Indian Myth and Legend' (1913) retells the vast mythology of India — from the thunder-god Indra and the Vedic fire-sacrifice to the cosmic war of the Mahābhārata and the quest of Rama. Mackenzie covers the full arc: Vedic gods and demons, the creation of the world through cosmic ages (yugas), the rise of Vishnu, Shiva, and the Goddess, the complete Mahābhārata including the Bhagavad Gita, and the Rāmāyaṇa. This is mythology on an epic scale — the Mahābhārata alone is seven times longer than the Iliad and Odyssey combined.",
         "Contemplation": "India's mythology is unique in world literature: it contains everything. Comedy and tragedy, philosophy and war, human love and cosmic dissolution. The Bhagavad Gita is embedded in the middle of a battlefield. The most tender love story (Nala and Damayantí) is told to console an exiled king. What does it mean that the deepest wisdom always arrives in the middle of the worst crisis?"
     },
     "keywords": ["india", "hindu", "mythology", "mahabharata", "ramayana", "vedic"],
-    "composite_of": [i["id"] for i in items if i["level"] == 1],
+    "parts": [i["id"] for i in items if node_depth(i, items) == 1],
     "relationship_type": "emergence",
     "metadata": {}
 })
@@ -231,7 +226,7 @@ grammar = {
     "shelves": ["wisdom"],
     "lineages": ["Shrei", "Akomolafe"],
     "worldview": "devotional",
-    "items": items
+    "nodes": items
 }
 
 os.makedirs("grammars/indian-myth-legend", exist_ok=True)
@@ -240,8 +235,8 @@ with open("grammars/indian-myth-legend/grammar.json", "w") as f:
 
 ids = [i["id"] for i in items]
 dupes = [x for x in ids if ids.count(x) > 1]
-bad_refs = [(i["id"], r) for i in items for r in i.get("composite_of", []) if r not in ids]
-print(f"Items: {len(items)}, L1: {sum(1 for i in items if i['level']==1)}, L2: {sum(1 for i in items if i['level']==2)}, L3: {sum(1 for i in items if i['level']==3)}")
+bad_refs = [(i["id"], r) for i in items for r in i.get("parts", []) if r not in ids]
+print(f"Items: {len(items)}, L1: {sum(1 for i in items if node_depth(i, items)==1)}, L2: {sum(1 for i in items if node_depth(i, items)==2)}, L3: {sum(1 for i in items if node_depth(i, items)==3)}")
 print(f"Sections: {sum(len(i.get('sections',{})) for i in items)}")
 print(f"Dupes: {dupes}, Bad refs: {bad_refs}")
 print(f"Sort OK: {[i['sort_order'] for i in items] == list(range(1, len(items)+1))}")

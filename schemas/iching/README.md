@@ -40,11 +40,11 @@ Each hexagram schema should include:
 
 ## Level System for Emergence
 
-Schemas use a level system to organize base items and their emergent combinations:
+Schemas use levels to organize base nodes and their emergent combinations. A level is not stored: it is the depth computed from `parts` (no parts = L1; otherwise 1 + the deepest part):
 
-- **L1 (level: 1)**: Base items (64 hexagrams)
-- **L2 (level: 2)**: Emergent groupings (zodiac signs, chakras, trigrams as organizing lenses)
-- **L3 (level: 3)**: Meta-categories (l3-signs, l3-chakras, l3-trigrams)
+- **L1**: Base items (64 hexagrams)
+- **L2**: Emergent groupings (zodiac signs, chakras, trigrams as organizing lenses)
+- **L3**: Meta-categories (l3-signs, l3-chakras, l3-trigrams)
 
 ### Example: Zodiac Sign Emergence
 
@@ -52,8 +52,7 @@ Schemas use a level system to organize base items and their emergent combination
 {
   "id": "sign-aries",
   "name": "Aries: Initiation Through Challenge",
-  "level": 2,
-  "composite_of": ["hex-25", "hex-17", "hex-21", "hex-51", "hex-42"],
+  "parts": ["hex-25", "hex-17", "hex-21", "hex-51", "hex-42"],
   "sections": {
     "Summary": "Aries gates embody innocence, following guidance, control...",
     "gift": "Natural courage for new beginnings...",
@@ -68,15 +67,14 @@ Schemas use a level system to organize base items and their emergent combination
 {
   "id": "l3-signs",
   "name": "Zodiac Signs",
-  "level": 3,
-  "composite_of": ["sign-aries", "sign-taurus", "sign-gemini", ...],
+  "parts": ["sign-aries", "sign-taurus", "sign-gemini", ...],
   "sections": {
     "Philosophy": "The zodiac lens organizes the 64 hexagrams around the wheel of the year..."
   }
 }
 ```
 
-The `composite_of` array references the IDs of items at the level below, creating explicit emergence relationships.
+The `parts` array references the IDs of the nodes it is made of (in order), creating explicit emergence relationships.
 
 ## Contributing
 

@@ -142,7 +142,7 @@ const bookletPath = resolve(__dirname, '../grammars/alice-5-minute-stories/gramm
 const booklet = JSON.parse(readFileSync(bookletPath, 'utf8'));
 
 const pageTextByChapter = {};
-for (const item of booklet.items) {
+for (const item of booklet.nodes) {
   const ch = item.metadata?.source_chapter;
   if (!ch) continue;
   pageTextByChapter[ch] = {};

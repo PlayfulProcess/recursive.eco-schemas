@@ -8,13 +8,14 @@ Expand Myths Through Many Eyes grammar:
 5. Recalculate sort_orders
 """
 import json
+from grammar_depth import node_depth
 
 BASE = "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/"
 
 with open("grammars/myths-through-many-eyes/grammar.json") as f:
     g = json.load(f)
 
-items = g["items"]
+items = g["nodes"]
 
 # ═══════════════════════════════════════════════════════════════════════════
 # 1. GRAMMARS LINKS + ASTROLOGY METADATA FOR EXISTING ITEMS
@@ -147,7 +148,6 @@ new_myths = [
         "name": "Dionysus: The God Who Dies and Returns",
         "sort_order": 0,
         "category": "myths",
-        "level": 1,
         "sections": {
             "The Story": "Born of Zeus and a mortal woman, Semele, who was tricked by jealous Hera into demanding to see Zeus in his true form — and was incinerated by the sight. Zeus snatched the unborn child from her womb and sewed him into his own thigh until he was ready to be born. Dionysus grew up in secret, raised by nymphs, already showing his power: wine flowed from the ground where he walked, ivy grew from his thyrsus, and animals came wild-eyed to follow him. But the Titans — ancient enemies of the Olympians — tore the infant god to pieces and devoured him. Only his heart survived, from which he was reborn. Grown to godhood, Dionysus traveled the world with his wild procession — maenads, satyrs, panthers — teaching the vine and the ecstatic rites. Those who accepted him found liberation and joy. Those who resisted — King Pentheus of Thebes, who tried to imprison him — were torn apart by the god's own followers, by their own mothers made mad with divine frenzy.",
             "Source": "Euripides, The Bacchae (405 BCE). Ovid, Metamorphoses. Hesiod, Theogony. Orphic Hymns. Nonnus, Dionysiaca. Public domain translations available from multiple sources.",
@@ -166,7 +166,6 @@ new_myths = [
         "name": "Medusa: The Gaze That Turns to Stone",
         "sort_order": 0,
         "category": "myths",
-        "level": 1,
         "sections": {
             "The Story": "In the oldest telling, Medusa was not always a monster. She was a beautiful priestess of Athena, ravished by Poseidon in Athena's own temple. The goddess, furious — not at Poseidon but at Medusa — transformed her: her hair became writhing serpents, her gaze turned any living thing to stone, and she was banished to a cave at the edge of the world with her two Gorgon sisters. There she lived in exile until Perseus came. Armed with gifts from the gods — Athena's polished shield, Hermes' winged sandals, Hades' cap of invisibility — he approached the sleeping Medusa backward, watching her reflection in the mirror-shield, and cut off her head with a sickle. From her severed neck sprang two beings: Pegasus the winged horse and Chrysaor the golden warrior — children of Poseidon, long trapped in her monstrous body. Perseus carried the head as a weapon, turning his enemies to stone, before giving it to Athena, who mounted it on her shield — the aegis.",
             "Source": "Hesiod, Theogony. Ovid, Metamorphoses IV. Pindar, Pythian Ode XII. Apollodorus, Bibliotheca. Multiple public domain translations.",
@@ -185,7 +184,6 @@ new_myths = [
         "name": "Circe: The Witch Who Transforms",
         "sort_order": 0,
         "category": "myths",
-        "level": 1,
         "sections": {
             "The Story": "On the island of Aeaea, surrounded by wolves and lions who were once men, lives Circe — daughter of the sun god Helios and the ocean nymph Perse, aunt of Medea, sister of the sorcerer king Aeëtes. When Odysseus's sailors arrive on her shore, she welcomes them warmly — feasts them, gives them wine laced with honey and cheese. Then she touches them with her wand, and they become pigs: their bodies swinish, their minds still human, weeping in pig-form. Odysseus, warned by Hermes and armed with the herb moly, resists the transformation. When Circe's wand fails against him, she is shocked — then admiring. He demands she restore his men. She does. He stays a year — not as her prisoner but as her lover and student. She teaches him what he cannot learn from battle: how to speak with the dead, how to navigate by the underworld, how to listen. When he finally leaves, she gives him the knowledge that will get him home.",
             "Source": "Homer, Odyssey X-XII. Ovid, Metamorphoses XIV. Apollonius Rhodius, Argonautica. Public domain translations by Fagles, Butler, Lattimore, and others.",
@@ -204,7 +202,6 @@ new_myths = [
         "name": "Amaterasu Hides in the Cave",
         "sort_order": 0,
         "category": "myths",
-        "level": 1,
         "sections": {
             "The Story": "Amaterasu, the sun goddess, ruler of the High Plain of Heaven, had a brother — Susanoo, the storm god, wild and destructive. After a series of outrages — he destroyed her rice paddies, defecated in her palace, hurled a flayed horse through the roof of her weaving hall, killing one of her maidens — Amaterasu withdrew. She sealed herself inside the Rock Cave of Heaven and barred the door. The world went dark. Without the sun, nothing grew. Evil spirits multiplied. The eight hundred gods gathered in panic. They tried everything: roosters crowing, offerings, prayers. Nothing worked. Then Ame-no-Uzume, the goddess of dawn and mirth, overturned a tub before the cave, climbed on top, and began to dance. She pulled open her robes, exposed herself, and danced with wild abandon. The gods erupted in laughter — eight hundred divine beings roaring with mirth in the darkness. Amaterasu, bewildered that anyone could laugh while the world was dark, cracked the door to look. The gods had placed a mirror outside. She saw her own radiance reflected back. As she reached toward it, a strong god pulled her out. They sealed the cave. Light returned to the world.",
             "Source": "Kojiki (Record of Ancient Matters, 712 CE), translated by Basil Hall Chamberlain (1882, public domain). Nihon Shoki (Chronicles of Japan, 720 CE). Both are foundational texts of Shinto mythology.",
@@ -223,7 +220,6 @@ new_myths = [
         "name": "Sedna: Mother of the Sea",
         "sort_order": 0,
         "category": "myths",
-        "level": 1,
         "sections": {
             "The Story": "Sedna was a girl who refused to marry. Every suitor her father brought, she rejected. Finally a mysterious stranger appeared — handsome, wearing fine furs — and she went with him. Across the water, she discovered he was not human but a bird-spirit, a fulmar in disguise, and his fine home was a nest of fish skins and feathers on a barren rock. She wept. When her father came to rescue her in his kayak, the bird-spirit raised a terrible storm. Terrified for his own life, the father threw Sedna overboard to appease the spirit. She clung to the gunwale. He chopped off her fingers, joint by joint. The first joints became seals. The second joints became walruses. The third became whales. Sedna sank to the bottom of the sea, where she became Nuliajuk, Mother of the Sea Beasts, ruler of the ocean floor. All the animals that feed the Inuit come from her mutilated hands. When humans violate taboos — waste meat, mistreat animals, break sacred rules — Sedna's hair becomes tangled with filth, and she withholds the animals. The shaman must journey to the sea floor, comb her hair, and soothe her rage before the animals return.",
             "Source": "Collected from Central Inuit (Baffin Island, Igloolik) communities by Franz Boas (1888), Knud Rasmussen (1929), and others. Multiple variants across the Arctic. Public domain ethnographic sources.",
@@ -242,7 +238,6 @@ new_myths = [
         "name": "Coyote the Trickster",
         "sort_order": 0,
         "category": "myths",
-        "level": 1,
         "sections": {
             "The Story": "There is no one Coyote story — there are thousands, told by hundreds of nations across North America, and Coyote is never the same twice. He is the one who stole fire from the Fire People and brought it to humans (Klamath). He is the one who scattered the stars carelessly across the sky because he got bored of placing them carefully (Navajo). He is the one who challenged the river to a race and lost, and that is why rivers are winding (many nations). He tried to fly with the birds and fell. He tried to catch his own shadow. He tried to seduce the chief's daughter by disguising himself as a baby. He died — many times — and came back, because Coyote cannot stay dead. In some stories he shapes the world: he pushed apart the sky and earth, he named the animals, he stole daylight. In other stories he is simply hungry, foolish, lecherous, and unlucky. He is both creator and buffoon, and the traditions that tell his stories insist: he is both at the same time.",
             "Source": "Oral traditions of Navajo, Crow, Blackfoot, Nez Perce, Klamath, Paiute, Maidu, and many other nations. Collected by Boas, Lowie, Sapir, Ramsey, and others. Barry Lopez, Giving Birth to Thunder, Sleeping with His Daughter (1977) is an accessible compilation. Public domain ethnographic collections in the Smithsonian's Annual Reports.",
@@ -261,7 +256,6 @@ new_myths = [
         "name": "The Handless Maiden",
         "sort_order": 0,
         "category": "myths",
-        "level": 1,
         "sections": {
             "The Story": "A miller, tricked by the devil, promises 'what stands behind your mill' — thinking it is only the apple tree. But his daughter is standing there. The devil comes to collect. The girl weeps so much over her hands that her tears purify them, and the devil cannot touch her. He demands the father cut off her hands. The father, in agonized obedience, does it. The handless maiden wanders into the world, weeping. She comes to a royal orchard and, guided by an angel (or the wind, or her own desperate hunger), eats a pear from the king's tree. The king sees her, loves her, and marries her, making her silver hands. But the devil forges letters that make the king believe she has given birth to a monster. More letters: the king orders her killed. She flees with her baby into the forest. For seven years she lives in the wild, cared for by a spirit of the woods. At a spring in the forest, her real hands grow back. The king searches the world for her, finds her whole, and they are reunited.",
             "Source": "Brothers Grimm, 'The Girl Without Hands' (KHM 31). Variants across Europe, the Middle East, and North Africa (ATU tale type 706). Over 100 versions collected. Estés and Shaw both make this a central teaching story.",
@@ -280,7 +274,6 @@ new_myths = [
         "name": "Pandora: The First Woman Opens the Jar",
         "sort_order": 0,
         "category": "myths",
-        "level": 1,
         "sections": {
             "The Story": "After Prometheus stole fire, Zeus devised a punishment — not for Prometheus (who was already chained) but for humanity. He ordered Hephaestus to fashion a woman from earth and water, beautiful beyond mortal measure. Athena dressed her and taught her weaving. Aphrodite gave her beauty and desire. Hermes gave her a cunning mind and a lying tongue, and named her Pandora — 'All-Gifted.' Zeus sent her to Epimetheus, Prometheus's slow-witted brother, as a gift. She carried with her a great jar (pithos — mistranslated as 'box' since the Renaissance). Though warned never to open it, Pandora lifted the lid. Out flew every evil: disease, famine, war, death, old age, sorrow. She slammed it shut. Inside, trapped under the rim, remained one thing: Hope (Elpis). Whether hope's imprisonment is mercy or the cruelest evil of all has been debated for three thousand years.",
             "Source": "Hesiod, Works and Days (c. 700 BCE) and Theogony. Apollodorus, Bibliotheca. Public domain translations by Evelyn-White, Lattimore, and others.",
@@ -299,7 +292,6 @@ new_myths = [
         "name": "Quetzalcoatl: The Feathered Serpent",
         "sort_order": 0,
         "category": "myths",
-        "level": 1,
         "sections": {
             "The Story": "Quetzalcoatl — the Feathered Serpent, the Plumed Dragon — existed before the world. With his rival-twin Tezcatlipoca (the Smoking Mirror), he created humanity, the sun, and the calendar. As god, he descended to the underworld Mictlan to recover the bones of the ancient dead, sprinkled them with his own blood, and from them made the present race of humans — the Fifth Sun's people. As priest-king of Tula, he was the ideal ruler: teaching arts, agriculture, the calendar, and prohibiting human sacrifice. But Tezcatlipoca tricked him: showed him a mirror (his own face, aged and mortal), gave him pulque until he was drunk, and lured him into incest with his own sister. Shattered by shame, Quetzalcoatl burned himself on a funeral pyre and rose as Venus, the Morning Star. Or: he sailed east on a raft of serpents, promising to return. The Aztecs awaited his return. When Cortés arrived from the east in 1519, the question of whether Moctezuma believed he was the returning Quetzalcoatl became one of history's most contested legends.",
             "Source": "Aztec and Toltec oral traditions recorded in the Florentine Codex (Bernardino de Sahagún, 1577), Annals of Cuauhtitlan, and other post-Conquest Nahuatl sources. Popol Vuh contains related Mesoamerican creation mythology. Public domain colonial-era translations.",
@@ -318,7 +310,6 @@ new_myths = [
         "name": "Oedipus: The Man Who Solved the Riddle",
         "sort_order": 0,
         "category": "myths",
-        "level": 1,
         "sections": {
             "The Story": "An oracle told King Laius of Thebes that his son would kill him and marry his wife. When a son was born, Laius pierced the infant's ankles (Oedipus means 'swollen foot') and ordered him exposed on a mountainside. A shepherd saved him. Raised by the king and queen of Corinth, believing they were his parents, Oedipus grew up brilliant, restless, and tormented by a rumor that he was adopted. He consulted the oracle at Delphi, which told him only this: you will kill your father and marry your mother. Horrified, he fled Corinth — running straight toward Thebes. At a crossroads he quarreled with an old man and killed him: Laius, his father. At Thebes, a sphinx terrorized the city with a riddle: What walks on four legs in the morning, two at noon, three in the evening? Oedipus answered: Man. The sphinx died. Thebes made him king and gave him the widowed queen: Jocasta, his mother. Years of prosperity. Children. A plague. Investigation. Discovery. Jocasta hanged herself. Oedipus put out his own eyes and wandered blind for the rest of his life.",
             "Source": "Sophocles, Oedipus Rex (c. 429 BCE) and Oedipus at Colonus (401 BCE). Homer, Odyssey XI. Apollodorus, Bibliotheca. Euripides, The Phoenician Women. Public domain translations by Jebb, Fagles, Grene, and others.",
@@ -337,7 +328,6 @@ new_myths = [
         "name": "Ariadne and the Thread",
         "sort_order": 0,
         "category": "myths",
-        "level": 1,
         "sections": {
             "The Story": "Ariadne was the daughter of King Minos of Crete and Pasiphaë, and half-sister of the Minotaur — the bull-headed monster born of her mother's unnatural union with a divine bull. The Minotaur lived at the center of the Labyrinth, built by Daedalus, and every year Athens sent seven young men and seven young women to be devoured. When Theseus came as one of the sacrificial youths, Ariadne saw him and loved him. She gave him a ball of thread — the clew — telling him to fasten one end at the entrance and unwind it as he went. He found the Minotaur, killed it, and followed the thread back to the light. She had saved him. He promised to take her with him, to marry her. They sailed together. At the island of Naxos, he abandoned her — left her sleeping on the shore and sailed away. She woke alone. But Dionysus found her there, weeping on the beach, and made her his bride. He placed her wedding crown among the stars as the constellation Corona Borealis.",
             "Source": "Ovid, Metamorphoses VIII and Heroides X. Plutarch, Life of Theseus. Catullus, Poem 64. Apollodorus, Bibliotheca. Homer, Odyssey and Iliad (brief references). Public domain translations.",
@@ -356,7 +346,6 @@ new_myths = [
         "name": "Tammuz and Ishtar: The Dying Consort",
         "sort_order": 0,
         "category": "myths",
-        "level": 1,
         "sections": {
             "The Story": "Tammuz (Sumerian: Dumuzi) was the shepherd-king, the young husband of Inanna-Ishtar, goddess of love and war. When Inanna descended to the underworld and was held there, the price of her release was a substitute — someone must take her place. She returned to the upper world to find Tammuz sitting on her throne, dressed in fine garments, showing no grief for her absence. In rage, she fixed on him the eye of death: 'Take him.' The galla demons dragged Tammuz to the underworld. His sister Geshtinanna wept and volunteered to share his fate. The compromise: Tammuz would spend half the year below and half above, alternating with his sister. In summer, the land is green — Tammuz is above. In autumn, the women of Mesopotamia wept for Tammuz as the vegetation died, singing laments at the temple gates. He is the green that goes brown, the seed that enters the ground, the husband who pays the price for the wife's ambition and power.",
             "Source": "Sumerian texts: 'Inanna's Descent to the Netherworld,' 'Dumuzi's Dream,' and the Dumuzi-Inanna love songs (c. 2100-1600 BCE). Akkadian: 'Ishtar's Descent to the Netherworld.' Translated by Samuel Noah Kramer and Thorkild Jacobsen. Ezekiel 8:14 records women 'weeping for Tammuz' at the temple gates in Jerusalem.",
@@ -403,7 +392,7 @@ thread_new_refs = {
 
 for item in items:
     if item["id"] in thread_new_refs and thread_new_refs[item["id"]]:
-        item["composite_of"].extend(thread_new_refs[item["id"]])
+        item["parts"].extend(thread_new_refs[item["id"]])
 
 # ═══════════════════════════════════════════════════════════════════════════
 # 5. UPDATE CULTURES
@@ -418,7 +407,7 @@ culture_new_refs = {
 
 for item in items:
     if item["id"] in culture_new_refs:
-        item["composite_of"].extend(culture_new_refs[item["id"]])
+        item["parts"].extend(culture_new_refs[item["id"]])
 
 # Add new culture card for Indigenous Americas (Sedna, Coyote, + existing Hero Twins, Raven)
 # Find insertion point after culture-african-arabian
@@ -428,14 +417,13 @@ items.insert(african_idx + 1, {
     "name": "Indigenous Americas: Tricksters, Sea Mothers, and the Living Land",
     "sort_order": 0,
     "category": "cultures",
-    "level": 2,
     "sections": {
         "The World": "From the Arctic ice to the Amazon basin, the indigenous peoples of the Americas developed mythologies rooted in reciprocity with the land, the animals, and the spirits. There is no single 'Native American mythology' — there are hundreds of distinct traditions. But certain patterns recur: the trickster (Coyote, Raven, Anansi-influenced Br'er Rabbit) as world-maker and sacred fool. The animal-people who existed before humans and whose stories explain why the world is as it is. The sea and earth mothers (Sedna, Spider Woman, Corn Mother) whose bodies are the source of sustenance. The ball game between life and death (the Hero Twins in Xibalba). The understanding that the land is not a resource but a relative — that mountains, rivers, and animals are persons, and mythology is the record of relationships between persons of different kinds.",
         "What Makes It Unique": "The indigenous American contribution to world mythology is ecological personhood — the radical idea that the non-human world is composed of persons (animal persons, plant persons, river persons, stone persons) with whom humans exist in ongoing relationship. Myths are not stories about the past — they are protocols for maintaining these relationships. When Sedna's hair tangles, the shaman combs it: this is not metaphor but diplomacy. When Coyote steals fire, the theft creates an obligation. The Hero Twins' ball game in the underworld is not adventure but negotiation. Akomolafe and Shaw both draw deeply from this understanding: myth as ecology, story as kinship.",
         "Contemplation": "These traditions ask a question the Western mythic imagination rarely poses: what do we owe the animals? What do we owe the river? If the land is a person, what does it mean that we have treated it as property?"
     },
     "keywords": ["indigenous", "americas", "trickster", "ecological", "reciprocity", "land"],
-    "composite_of": [
+    "parts": [
         "myth-raven-steals-light",
         "myth-hero-twins",
         "myth-coyote",
@@ -465,7 +453,7 @@ interp_new_refs = {
 
 for item in items:
     if item["id"] in interp_new_refs:
-        item["composite_of"].extend(interp_new_refs[item["id"]])
+        item["parts"].extend(interp_new_refs[item["id"]])
 
 # ═══════════════════════════════════════════════════════════════════════════
 # 7. UPDATE META-COLLECTIVE-UNCONSCIOUS
@@ -494,7 +482,7 @@ if "astrology" not in g["tags"]:
 for i, item in enumerate(items):
     item["sort_order"] = i + 1
 
-g["items"] = items
+g["nodes"] = items
 
 with open("grammars/myths-through-many-eyes/grammar.json", "w") as f:
     json.dump(g, f, indent=2, ensure_ascii=False)
@@ -502,7 +490,7 @@ with open("grammars/myths-through-many-eyes/grammar.json", "w") as f:
 # Report
 from collections import Counter
 cats = Counter(i["category"] for i in items)
-levels = Counter(i["level"] for i in items)
+levels = Counter(node_depth(i, items) for i in items)
 has_grammars = sum(1 for i in items if i.get("grammars"))
 has_astrology = sum(1 for i in items if i.get("metadata", {}).get("astrology"))
 

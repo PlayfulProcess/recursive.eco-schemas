@@ -5,6 +5,7 @@ so bio items have a proper parent rather than being standalone.
 """
 import json
 import os
+from grammar_depth import node_depth
 
 PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'grammars', 'walt-whitman', 'grammar.json')
 PATH = os.path.abspath(PATH)
@@ -12,10 +13,10 @@ PATH = os.path.abspath(PATH)
 with open(PATH, encoding='utf-8') as f:
     g = json.load(f)
 
-items = g['items']
+items = g['nodes']
 
 # Find phase anchor ids
-phase_ids = {it['id'] for it in items if it.get('level') == 2}
+phase_ids = {it['id'] for it in items if node_depth(it, items) == 2}
 print(f'Phase anchors: {phase_ids}')
 
 # Add a biographical L2 anchor if missing
@@ -25,7 +26,6 @@ if not any(it['id'] == bio_anchor_id for it in items):
         'id': bio_anchor_id,
         'name': 'Biographical Anchors',
         'sort_order': 49,
-        'level': 2,
         'category': 'phase',
         'sections': {
             'Phase': 'Life Moments',
@@ -57,7 +57,7 @@ if not any(it['id'] == bio_anchor_id for it in items):
 # For every L1 item, set parent_id = its current category (which references phase id)
 fixed = 0
 for it in items:
-    if it.get('level') == 1:
+    if node_depth(it, items) == 1:
         cat = it.get('category', '')
         if cat in phase_ids:
             it['parent_id'] = cat
@@ -78,7 +78,7 @@ print(f'Total items: {len(items)}')
 # Verify
 with open(PATH, encoding='utf-8') as f:
     check = json.load(f)
-l2 = [it for it in check['items'] if it.get('level') == 2]
-l1 = [it for it in check['items'] if it.get('level') == 1]
+l2 = [it for it in check['nodes'] if node_depth(it, check['nodes']) == 2]
+l1 = [it for it in check['nodes'] if node_depth(it, check['nodes']) == 1]
 l1_with_parent = [it for it in l1 if it.get('parent_id')]
 print(f'L2 items (roots): {len(l2)}  | L1 items: {len(l1)}  | L1 with parent_id: {len(l1_with_parent)}')

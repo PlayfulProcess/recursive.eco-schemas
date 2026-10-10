@@ -11,6 +11,7 @@ Structure:
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SEED = os.path.join(SCRIPT_DIR, "..", "seeds", "essentials-of-mysticism.txt")
@@ -246,7 +247,6 @@ def build_grammar(essays):
         items.append({
             "id": essay["id"],
             "name": essay["name"],
-            "level": 1,
             "category": "essay",
             "sort_order": sort_order,
             "sections": {
@@ -262,10 +262,9 @@ def build_grammar(essays):
         items.append({
             "id": theme["id"],
             "name": theme["name"],
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": theme["essays"],
+            "parts": theme["essays"],
             "sort_order": sort_order,
             "sections": {
                 "About": theme["about"],
@@ -280,10 +279,9 @@ def build_grammar(essays):
     items.append({
         "id": "meta-complete-work",
         "name": "The Essentials of Mysticism: Theory and Lives",
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": ["theme-theory-practice", "theme-historical-mystics"],
+        "parts": ["theme-theory-practice", "theme-historical-mystics"],
         "sort_order": sort_order,
         "sections": {
             "About": "Underhill's collection moves from theory to biography, from the question 'What is mysticism?' to the question 'Who are the mystics?' The structure is itself an argument: mysticism cannot be understood through abstract definition alone. It must be seen in lives. The first half lays down principles; the second half tests them against the irreducible particularity of seven human beings who touched the Real. The whole is greater than either half — a complete introduction to the mystical life as both science and art.",
@@ -296,10 +294,9 @@ def build_grammar(essays):
     items.append({
         "id": "meta-women-mystics",
         "name": "Women's Voices in the Mystical Tradition",
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": ["theme-medieval-mystics", "theme-modern-france"],
+        "parts": ["theme-medieval-mystics", "theme-modern-france"],
         "sort_order": sort_order,
         "sections": {
             "About": "Of the seven mystics Underhill profiles, five are women — and this is no accident. Underhill herself was the foremost woman scholar of mysticism in the English-speaking world, and she consistently championed female voices that the academic establishment overlooked. From Marguerite Porete (executed for her radical theology) to Lucie-Christine (a wife and mother living the contemplative life in secret), these women demonstrate that the mystical vocation has always belonged as much to women as to men, often against institutional resistance.",
@@ -342,16 +339,16 @@ def main():
         "shelves": ["wisdom"],
         "lineages": ["Linehan", "Shrei"],
         "worldview": "contemplative",
-        "items": items,
+        "nodes": items,
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT}")
     print(f"  L1: {l1} essays, L2: {l2} emergent groups, L3: {l3} meta-categories")
     print(f"  Total items: {len(items)}")

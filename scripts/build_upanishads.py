@@ -12,6 +12,7 @@ import json
 import re
 import sys
 from pathlib import Path
+from grammar_depth import node_depth
 
 SEEDS_DIR = Path(__file__).parent.parent / "seeds"
 OUTPUT_DIR = Path(__file__).parent.parent / "grammars" / "upanishads"
@@ -258,7 +259,6 @@ def build_grammar():
             "name": "Isha Upanishad: Peace Chant",
             "sort_order": sort_order,
             "category": "isha",
-            "level": 1,
             "sections": sections_dict,
             "keywords": extract_keywords(pc['verse_text']),
             "metadata": {"upanishad": "Isha", "section": "Peace Chant"}
@@ -283,7 +283,6 @@ def build_grammar():
             "name": name,
             "sort_order": sort_order,
             "category": "isha",
-            "level": 1,
             "sections": sections_dict,
             "keywords": extract_keywords(v['verse_text'] + ' ' + v.get('commentary', '')),
             "metadata": {
@@ -312,7 +311,6 @@ def build_grammar():
             "name": "Katha Upanishad: Peace Chant",
             "sort_order": sort_order,
             "category": "katha",
-            "level": 1,
             "sections": sections_dict,
             "keywords": extract_keywords(pc['verse_text']),
             "metadata": {"upanishad": "Katha", "section": "Peace Chant"}
@@ -338,7 +336,6 @@ def build_grammar():
             "name": name,
             "sort_order": sort_order,
             "category": "katha",
-            "level": 1,
             "sections": sections_dict,
             "keywords": extract_keywords(v['verse_text'] + ' ' + v.get('commentary', '')),
             "metadata": {
@@ -368,7 +365,6 @@ def build_grammar():
             "name": "Kena Upanishad: Peace Chant",
             "sort_order": sort_order,
             "category": "kena",
-            "level": 1,
             "sections": sections_dict,
             "keywords": extract_keywords(pc['verse_text']),
             "metadata": {"upanishad": "Kena", "section": "Peace Chant"}
@@ -394,7 +390,6 @@ def build_grammar():
             "name": name,
             "sort_order": sort_order,
             "category": "kena",
-            "level": 1,
             "sections": sections_dict,
             "keywords": extract_keywords(v['verse_text'] + ' ' + v.get('commentary', '')),
             "metadata": {
@@ -419,8 +414,7 @@ def build_grammar():
         "name": "The Isha Upanishad",
         "sort_order": sort_order,
         "category": "upanishad-group",
-        "level": 2,
-        "composite_of": isha_ids,
+        "parts": isha_ids,
         "relationship_type": "emergence",
         "sections": {
             "About": "The Isha Upanishad (also Isha-Vasya, 'God-covered') opens with the radical declaration that everything in the universe should be 'covered by the Lord.' In just 18 verses it presents the complete Vedantic teaching: the identity of Brahman and Atman, the reconciliation of knowledge and action, the transcendence of duality. It forms the closing chapter of the Shukla Yajur-Veda and is considered one of the most concise and powerful expressions of non-dual philosophy.",
@@ -443,8 +437,7 @@ def build_grammar():
         "name": "The Katha Upanishad",
         "sort_order": sort_order,
         "category": "upanishad-group",
-        "level": 2,
-        "composite_of": all_katha_l1,
+        "parts": all_katha_l1,
         "relationship_type": "emergence",
         "sections": {
             "About": "The Katha Upanishad presents a dramatic dialogue between the boy Nachiketas and Yama, the Ruler of Death. After his father rashly gives him to Death, Nachiketas waits three days at Death's door and earns three boons. He uses the third to ask the ultimate question: what happens after death? Yama's answer unfolds across six parts, progressing from the distinction between the pleasant and the good, through the famous chariot metaphor of the Self, to the nature of Brahman, Yoga, and the path to immortality. It is the most widely known and frequently translated of all Upanishads.",
@@ -467,8 +460,7 @@ def build_grammar():
         "name": "The Kena Upanishad",
         "sort_order": sort_order,
         "category": "upanishad-group",
-        "level": 2,
-        "composite_of": all_kena_l1,
+        "parts": all_kena_l1,
         "relationship_type": "emergence",
         "sections": {
             "About": "The Kena Upanishad ('By whom?') is the most analytical and metaphysical of the three, opening with the fundamental inquiry: By whom directed does the mind go forth? What power enables speech, sight, hearing? The answer leads to the profound teaching that Brahman is 'the ear of the ear, the mind of the mind' — the invisible power behind all faculties. Parts 3-4 present the famous parable of the Devas and Brahman, where even the gods of Fire, Wind, and Lightning discover they have no power independent of the Absolute.",
@@ -508,8 +500,7 @@ def build_grammar():
             "name": f"Katha Upanishad: {title}",
             "sort_order": sort_order,
             "category": "katha-part",
-            "level": 2,
-            "composite_of": part_l1_ids,
+            "parts": part_l1_ids,
             "relationship_type": "emergence",
             "sections": {
                 "About": about,
@@ -546,8 +537,7 @@ def build_grammar():
             "name": f"Kena Upanishad: {title}",
             "sort_order": sort_order,
             "category": "kena-part",
-            "level": 2,
-            "composite_of": part_l1_ids,
+            "parts": part_l1_ids,
             "relationship_type": "emergence",
             "sections": {
                 "About": about,
@@ -567,7 +557,7 @@ def build_grammar():
     # Theme: Nature of Brahman/Atman (identity of Self and God)
     brahman_verses = []
     for item in items:
-        if item['level'] == 1 and any(k in item.get('keywords', [])
+        if node_depth(item, items) == 1 and any(k in item.get('keywords', [])
                                        for k in ['brahman', 'atman', 'self', 'purusha']):
             brahman_verses.append(item['id'])
 
@@ -577,8 +567,7 @@ def build_grammar():
         "name": "Theme: The Nature of Brahman and Atman",
         "sort_order": sort_order,
         "category": "theme",
-        "level": 2,
-        "composite_of": brahman_verses,
+        "parts": brahman_verses,
         "relationship_type": "emergence",
         "sections": {
             "About": "The central teaching of the Upanishads is the identity of Brahman (the Absolute, ultimate reality) and Atman (the individual Self). 'Tat tvam asi' — That thou art. These verses explore what Brahman is, what the Self is, and how they are one and the same. From the Isha's declaration that all is covered by the Lord, through the Katha's progressive unveiling of the Self beyond senses and mind, to the Kena's inquiry into the power behind all perception — the teaching converges on one truth: there is only One.",
@@ -593,7 +582,7 @@ def build_grammar():
     # Theme: Death and Immortality
     death_verses = []
     for item in items:
-        if item['level'] == 1 and any(k in item.get('keywords', [])
+        if node_depth(item, items) == 1 and any(k in item.get('keywords', [])
                                        for k in ['death', 'immortality']):
             death_verses.append(item['id'])
 
@@ -603,8 +592,7 @@ def build_grammar():
         "name": "Theme: Death and Immortality",
         "sort_order": sort_order,
         "category": "theme",
-        "level": 2,
-        "composite_of": death_verses,
+        "parts": death_verses,
         "relationship_type": "emergence",
         "sections": {
             "About": "The question that drives Nachiketas to the Ruler of Death is humanity's oldest question: what happens when we die? The Upanishads' answer is radical: death is real only for the body; the Self is never born and never dies. Immortality is not a future state but a present realization — the recognition of one's identity with the deathless Brahman. These verses trace the teaching from the Isha's warning about 'killing the Self' through the Katha's complete journey with Death to the Kena's teaching that the wise become immortal by knowing the Self.",
@@ -619,7 +607,7 @@ def build_grammar():
     # Theme: The Path of Knowledge vs. the Path of Pleasure
     path_verses = []
     for item in items:
-        if item['level'] == 1:
+        if node_depth(item, items) == 1:
             text_combined = ' '.join(item.get('sections', {}).values())
             if any(term in text_combined for term in ['pleasant', 'good', 'Vidya', 'Avidya', 'ignorance', 'desire', 'discrimination']):
                 if any(k in item.get('keywords', []) for k in ['wisdom', 'knowledge', 'ignorance', 'desire', 'vidya', 'avidya']):
@@ -631,8 +619,7 @@ def build_grammar():
         "name": "Theme: Knowledge vs. Pleasure",
         "sort_order": sort_order,
         "category": "theme",
-        "level": 2,
-        "composite_of": path_verses,
+        "parts": path_verses,
         "relationship_type": "emergence",
         "sections": {
             "About": "A persistent teaching across all three Upanishads: the path of the good (shreyas) and the path of the pleasant (preyas) lead in opposite directions. The Isha reconciles knowledge and works. The Katha's Yama teaches that the wise choose the good over the pleasant. The Kena warns that thinking one 'knows' Brahman through intellect alone is itself a form of ignorance. True discrimination (viveka) is the faculty that distinguishes the real from the unreal.",
@@ -647,7 +634,7 @@ def build_grammar():
     # Theme: Yoga and Practice
     yoga_verses = []
     for item in items:
-        if item['level'] == 1:
+        if node_depth(item, items) == 1:
             text_combined = ' '.join(item.get('sections', {}).values())
             if any(term in text_combined for term in ['Yoga', 'senses', 'control', 'meditation', 'chariot', 'reins', 'horses']):
                 if any(k in item.get('keywords', []) for k in ['yoga', 'senses', 'mind', 'meditation', 'intellect']):
@@ -659,8 +646,7 @@ def build_grammar():
         "name": "Theme: Yoga and the Mastery of the Senses",
         "sort_order": sort_order,
         "category": "theme",
-        "level": 2,
-        "composite_of": yoga_verses,
+        "parts": yoga_verses,
         "relationship_type": "emergence",
         "sections": {
             "About": "The Upanishads do not merely philosophize — they prescribe a path. The Katha Upanishad contains one of the earliest definitions of Yoga ('the firm holding back of the senses') and the famous chariot metaphor: the Self as lord, body as chariot, intellect as driver, mind as reins, senses as horses. The Kena Upanishad adds the practical foundation: tapas (self-discipline), dama (sense-control), and karma (right action). These verses map the inner technology of liberation.",
@@ -675,7 +661,7 @@ def build_grammar():
     # Theme: The Limits of Knowledge and Language
     limits_verses = []
     for item in items:
-        if item['level'] == 1:
+        if node_depth(item, items) == 1:
             text_combined = ' '.join(item.get('sections', {}).values())
             if any(term in text_combined for term in ['cannot be known', 'beyond', 'unknow', 'speech does not', 'eye does not', 'not seen', 'not heard']):
                 limits_verses.append(item['id'])
@@ -686,8 +672,7 @@ def build_grammar():
         "name": "Theme: Beyond Words and Mind",
         "sort_order": sort_order,
         "category": "theme",
-        "level": 2,
-        "composite_of": limits_verses,
+        "parts": limits_verses,
         "relationship_type": "emergence",
         "sections": {
             "About": "The Upanishads repeatedly insist that ultimate reality cannot be captured by language, thought, or sensory perception. The Kena Upanishad builds its entire first part on this theme: 'There the eye does not go, nor speech, nor mind.' The Katha teaches that the Self is 'subtler than the subtle.' These verses point toward a mode of knowing that transcends the intellect — what the tradition calls prajna or direct spiritual perception.",
@@ -710,8 +695,7 @@ def build_grammar():
         "name": "The Three Upanishads",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
-        "composite_of": l2_upanishad_ids + l2_katha_part_ids + l2_kena_part_ids,
+        "parts": l2_upanishad_ids + l2_katha_part_ids + l2_kena_part_ids,
         "relationship_type": "emergence",
         "sections": {
             "About": "Three Upanishads, three approaches to the same truth. The Isha is direct proclamation: 18 verses that state the non-dual truth with the force of revelation. The Katha is dramatic dialogue: a boy confronts Death and receives the complete teaching through story, metaphor, and progressive revelation across six parts. The Kena is philosophical inquiry: questions that strip away every assumption until only Brahman remains. Together they form a complete spiritual education — from declaration to narrative to analysis, from 'All this is covered by the Lord' to 'He who knows this becomes established in the highest abode of Brahman.'",
@@ -729,8 +713,7 @@ def build_grammar():
         "name": "Thematic Threads Across the Upanishads",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
-        "composite_of": l2_thematic_ids,
+        "parts": l2_thematic_ids,
         "relationship_type": "emergence",
         "sections": {
             "About": "Five great themes weave through all three Upanishads like threads in a tapestry: the nature of Brahman and Atman, death and immortality, knowledge versus pleasure, yoga and practice, and the limits of language and thought. Each Upanishad addresses all these themes but emphasizes different facets. Following a single thread across all three texts reveals how the same truth can be approached from multiple angles — and how the Vedantic vision holds together as a unified whole.",
@@ -782,11 +765,11 @@ def build_grammar():
         "shelves": ["wisdom"],
         "lineages": ["Shrei", "Akomolafe"],
         "worldview": "non-dual",
-        "items": items,
+        "nodes": items,
     }
 
     # Fix sort_order to be sequential starting at 1
-    for i, item in enumerate(grammar['items']):
+    for i, item in enumerate(grammar['nodes']):
         item['sort_order'] = i + 1
 
     return grammar
@@ -797,25 +780,25 @@ def main():
 
     # Stats
     levels = {}
-    for item in grammar['items']:
-        lvl = item['level']
+    for item in grammar['nodes']:
+        lvl = node_depth(item, grammar['nodes'])
         levels[lvl] = levels.get(lvl, 0) + 1
 
     print(f"Built Upanishads grammar:")
-    print(f"  Total items: {len(grammar['items'])}")
+    print(f"  Total items: {len(grammar['nodes'])}")
     for lvl in sorted(levels):
         print(f"  L{lvl}: {levels[lvl]}")
 
     # Verify no duplicate IDs
-    ids = [item['id'] for item in grammar['items']]
+    ids = [item['id'] for item in grammar['nodes']]
     dupes = [x for x in ids if ids.count(x) > 1]
     if dupes:
         print(f"  WARNING: Duplicate IDs: {set(dupes)}")
 
-    # Verify composite_of references
+    # Verify parts references
     id_set = set(ids)
-    for item in grammar['items']:
-        for ref in item.get('composite_of', []):
+    for item in grammar['nodes']:
+        for ref in item.get('parts', []):
             if ref not in id_set:
                 print(f"  WARNING: {item['id']} references missing ID: {ref}")
 

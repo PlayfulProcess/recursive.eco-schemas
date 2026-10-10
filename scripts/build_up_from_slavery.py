@@ -11,6 +11,7 @@ Structure:
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SEED = os.path.join(SCRIPT_DIR, "..", "seeds", "up-from-slavery.txt")
@@ -271,7 +272,6 @@ def build_grammar():
             item = {
                 "id": para_id,
                 "name": name,
-                "level": 1,
                 "category": slug,
                 "sort_order": sort_order,
                 "sections": {"Passage": para},
@@ -306,12 +306,11 @@ def build_grammar():
         items.append({
             "id": f"chapter-{slug}",
             "name": title,
-            "level": 2,
             "category": "chapter-group",
             "sort_order": sort_order,
             "sections": {"About": about},
             "keywords": [],
-            "composite_of": ids,
+            "parts": ids,
             "relationship_type": "emergence",
             "metadata": {},
         })
@@ -326,7 +325,6 @@ def build_grammar():
         items.append({
             "id": tg["id"],
             "name": tg["name"],
-            "level": 2,
             "category": "thematic-group",
             "sort_order": sort_order,
             "sections": {
@@ -334,7 +332,7 @@ def build_grammar():
                 "For Readers": tg["for_readers"],
             },
             "keywords": [],
-            "composite_of": composite_ids,
+            "parts": composite_ids,
             "relationship_type": "emergence",
             "metadata": {},
         })
@@ -347,7 +345,6 @@ def build_grammar():
     items.append({
         "id": "meta-arc-of-uplift",
         "name": "The Arc of Uplift",
-        "level": 3,
         "category": "meta-category",
         "sort_order": sort_order,
         "sections": {
@@ -355,7 +352,7 @@ def build_grammar():
             "For Readers": "Read in order to experience Washington's narrative strategy. The book builds from poverty to triumph, from local to national to international. Each chapter adds another layer of achievement. But notice what is left out: the violence, the political disenfranchisement, the rage. Washington's silence on these subjects is as revealing as Douglass's eloquence about them.",
         },
         "keywords": ["autobiography", "uplift", "self-help"],
-        "composite_of": chapter_l2_ids,
+        "parts": chapter_l2_ids,
         "relationship_type": "emergence",
         "metadata": {},
     })
@@ -364,7 +361,6 @@ def build_grammar():
     items.append({
         "id": "meta-themes-of-uplift",
         "name": "Themes of Self-Reliance",
-        "level": 3,
         "category": "meta-category",
         "sort_order": sort_order,
         "sections": {
@@ -372,7 +368,7 @@ def build_grammar():
             "For Readers": "These thematic groupings help navigate Washington's argument by subject. The education chapters explain his philosophy. The Tuskegee chapters show it in practice. The Atlanta chapters reveal its political implications. The race relations chapters expose its limitations and its logic.",
         },
         "keywords": ["themes", "self-reliance", "industrial-education"],
-        "composite_of": thematic_l2_ids,
+        "parts": thematic_l2_ids,
         "relationship_type": "emergence",
         "metadata": {},
     })
@@ -399,16 +395,16 @@ def build_grammar():
         "shelves": ["resilience"],
         "lineages": ["Akomolafe", "Andreotti"],
         "worldview": "testimonial",
-        "items": items,
+        "nodes": items,
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"Generated {len(items)} items: {l1} L1 + {l2} L2 + {l3} L3")
     print(f"Output: {OUTPUT}")
 

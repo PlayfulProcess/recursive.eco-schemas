@@ -346,7 +346,7 @@ L3_DEFS = [
         "name": "Themes and Teachings",
         "category": "meta",
         "about": "The great thematic currents running through North American Indian folklore: the trickster's cosmic comedy, the thin veil between living and dead, the fluid boundaries of identity, the wildness of love, the nature of heroism, and the living spirit of the natural world. These groupings reveal a cosmology in which everything is connected, everything is alive, and every story carries medicine for the soul.",
-        "composite_of": [
+        "parts": [
             "theme-trickster-tales",
             "theme-spirit-world",
             "theme-creation-and-origins",
@@ -462,7 +462,6 @@ def build_l1_items(stories):
             "id": sdef["id"],
             "name": sdef["name"],
             "sort_order": sort_order,
-            "level": 1,
             "category": "folk-tale",
             "sections": {
                 "Story": story["text"],
@@ -487,14 +486,13 @@ def build_l2_items(l1_items):
             "id": group["id"],
             "name": group["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": group["category"],
             "sections": {
                 "About": group["about"],
                 "For Readers": group["for_readers"]
             },
             "keywords": group["keywords"],
-            "composite_of": group["member_ids"],
+            "parts": group["member_ids"],
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -513,13 +511,12 @@ def build_l3_items(start_sort_order):
             "id": l3["id"],
             "name": l3["name"],
             "sort_order": sort_order,
-            "level": 3,
             "category": l3["category"],
             "sections": {
                 "About": l3["about"]
             },
             "keywords": l3["keywords"],
-            "composite_of": l3["composite_of"],
+            "parts": l3["parts"],
             "relationship_type": "emergence",
             "metadata": {}
         })
@@ -569,7 +566,7 @@ def build_grammar(l1_items, l2_items, l3_items):
         "lineages": ["Shrei", "Andreotti"],
         "worldview": "animist",
         "cover_image_url": "",
-        "items": l1_items + l2_items + l3_items
+        "nodes": l1_items + l2_items + l3_items
     }
     return grammar
 

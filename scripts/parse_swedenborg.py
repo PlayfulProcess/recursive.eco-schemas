@@ -14,6 +14,7 @@ The text divides into three major parts:
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SEED_FILE = os.path.join(os.path.dirname(__file__), '..', 'seeds', 'swedenborg-heaven-hell.txt')
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), '..', 'grammars', 'swedenborg-heaven-hell')
@@ -295,7 +296,6 @@ def build_grammar():
             "name": "Introduction",
             "sort_order": sort_order,
             "category": "heaven",
-            "level": 1,
             "sections": {
                 "Text": intro_text,
                 "About": "Swedenborg's opening statement explaining the purpose of his revelations about heaven and hell, based on thirteen years of spiritual experience."
@@ -325,7 +325,6 @@ def build_grammar():
             "name": f"{roman}. {title}",
             "sort_order": sort_order,
             "category": part,
-            "level": 1,
             "sections": {
                 "Text": ch_text,
                 "About": f"Chapter {roman} of Heaven and Hell, sections {sec_num}-{end_sec}. {title}."
@@ -364,14 +363,13 @@ def build_grammar():
             "name": part_name,
             "sort_order": sort_order,
             "category": part_key,
-            "level": 2,
             "sections": {
                 "About": about,
                 "Summary": summary,
                 "For Readers": f"This section groups all chapters belonging to {part_name}. Read sequentially for Swedenborg's complete vision, or explore individual chapters by topic."
             },
             "keywords": [part_key, "swedenborg", "afterlife"],
-            "composite_of": composite,
+            "parts": composite,
             "relationship_type": "emergence",
             "metadata": {"part": part_key}
         })
@@ -383,14 +381,13 @@ def build_grammar():
         "name": "Heaven and Hell: The Complete Vision",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "sections": {
             "About": "Emanuel Swedenborg's 'Heaven and its Wonders and Hell' (De Caelo et ejus Mirabilibus et de Inferno, 1758) is one of the most influential visionary accounts of the afterlife in Western literature. Based on what Swedenborg claimed were thirteen years of direct spiritual experience, the work systematically describes the structure and nature of heaven, the intermediate world of spirits, and hell. Unlike medieval visions of torment, Swedenborg's afterlife is psychological: heaven and hell are states of being determined by one's inner loves and character, not external rewards or punishments.",
             "Summary": "The work is divided into three parts: Heaven (43 chapters on angelic life, correspondences, and the structure of heavenly societies), The World of Spirits (12 chapters on the transition after death), and Hell (8 chapters on infernal states and the equilibrium that preserves human freedom). The text profoundly influenced William Blake, Ralph Waldo Emerson, Helen Keller, Jorge Luis Borges, and the founding of the Swedenborgian Church.",
             "For Readers": "This grammar presents each of Swedenborg's 63 chapters as individual items, grouped into three major parts. The text is rich with specific visionary detail — Swedenborg describes angelic garments, heavenly architecture, the speech of angels, and the psychology of infernal spirits with the precision of a scientist cataloguing a newly discovered world."
         },
         "keywords": ["swedenborg", "afterlife", "heaven", "hell", "complete-work", "mysticism"],
-        "composite_of": ["heaven-part", "world-of-spirits-part", "hell-part"],
+        "parts": ["heaven-part", "world-of-spirits-part", "hell-part"],
         "relationship_type": "emergence",
         "metadata": {"part": "meta"}
     })
@@ -426,7 +423,7 @@ def build_grammar():
         "shelves": ["wisdom"],
         "lineages": ["Shrei"],
         "worldview": "devotional",
-        "items": items
+        "nodes": items
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -435,9 +432,9 @@ def build_grammar():
 
     print(f"Grammar written to {OUTPUT_FILE}")
     print(f"Total items: {len(items)}")
-    print(f"  L1: {sum(1 for i in items if i['level'] == 1)}")
-    print(f"  L2: {sum(1 for i in items if i['level'] == 2)}")
-    print(f"  L3: {sum(1 for i in items if i['level'] == 3)}")
+    print(f"  L1: {sum(1 for i in items if node_depth(i, items) == 1)}")
+    print(f"  L2: {sum(1 for i in items if node_depth(i, items) == 2)}")
+    print(f"  L3: {sum(1 for i in items if node_depth(i, items) == 3)}")
 
 
 if __name__ == '__main__':

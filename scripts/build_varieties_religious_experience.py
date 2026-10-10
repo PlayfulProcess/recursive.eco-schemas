@@ -17,6 +17,7 @@ We treat each heading as one L1 item.
 import json
 import re
 from pathlib import Path
+from grammar_depth import node_depth
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent
@@ -197,7 +198,6 @@ def build_grammar():
             "id": sec['id'],
             "name": sec['name'],
             "sort_order": sort_order,
-            "level": 1,
             "category": "lecture",
             "sections": {
                 "Text": sec['text'],
@@ -220,10 +220,9 @@ def build_grammar():
             "id": theme_id,
             "name": theme["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": theme["sections"],
+            "parts": theme["sections"],
             "sections": {
                 "About": theme["about"],
                 "For Readers": theme["for_readers"],
@@ -240,10 +239,9 @@ def build_grammar():
         "id": "varieties-complete",
         "name": "The Varieties of Religious Experience: A Study in Human Nature",
         "sort_order": sort_order,
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": all_theme_ids,
+        "parts": all_theme_ids,
         "sections": {
             "About": "William James's The Varieties of Religious Experience (1902) is the founding text of the psychology of religion and one of the most influential books of the twentieth century. Based on the Gifford Lectures delivered at Edinburgh in 1901-1902, it takes a radical empirical approach to religious experience: instead of arguing for or against religion's truth, James collects and examines the most intense first-person accounts of religious states — conversion, mysticism, saintliness, the 'sick soul,' the 'divided self.' His method is descriptive and pragmatic: what are these experiences like? What effects do they produce? The book develops a typology (healthy-minded vs. sick souls, once-born vs. twice-born), a psychology (the subliminal self as gateway to the transcendent), and a philosophy (pragmatic pluralism). James concludes that religious experience points to a 'wider self' beyond ordinary consciousness, though he refuses to specify its ultimate nature. The book remains astonishingly fresh — its case studies are vivid, its analysis subtle, and its conclusions open-ended in a way that neither believers nor skeptics find entirely comfortable.",
             "For Readers": "The Varieties rewards both sequential and selective reading. For the full arc, read straight through — James builds his case carefully across twenty lectures. For highlights: start with Lectures I-II (method and definition), then Lectures VI-VII (the sick soul — James's most powerful writing), then Lectures XVI-XVII (mysticism), and finally Lecture XX (conclusions). James writes with warmth, wit, and extraordinary psychological acuity. He is that rarest of things: a rigorous thinker who takes subjective experience seriously without sentimentality.",
@@ -273,16 +271,16 @@ def build_grammar():
         "shelves": ["mirror"],
         "lineages": ["Linehan", "Shrei"],
         "worldview": "dialectical",
-        "items": items,
+        "nodes": items,
     }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT_PATH}")
     print(f"  L1: {l1} lectures, L2: {l2} themes, L3: {l3} meta")
     print(f"  Total items: {len(items)}")

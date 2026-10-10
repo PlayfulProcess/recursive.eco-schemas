@@ -4,6 +4,7 @@ Parse Myths of China and Japan (Donald A. Mackenzie, Gutenberg #67344).
 21 chapters → L1 items, grouped into L2 thematic clusters + L3 meta.
 """
 import json, re, os
+from grammar_depth import node_depth
 
 with open("seeds/myths-china-japan.txt", encoding="utf-8") as f:
     text = f.read()
@@ -98,7 +99,6 @@ for idx, (pos, heading, sid, name, cat, kw) in enumerate(positions):
         "name": name,
         "sort_order": sort_order,
         "category": cat,
-        "level": 1,
         "sections": {"Text": excerpt},
         "keywords": ["china", "japan", "east-asia", "mackenzie"] + kw,
         "metadata": {}
@@ -124,8 +124,7 @@ groups = [
         "id": "group-chinese-mythology",
         "name": "Chinese Mythology: Dragons, Jade, and the Tao",
         "category": "thematic-group",
-        "level": 2,
-        "composite_of": ["ch05-dragon-lore", "ch06-bird-serpent", "ch07-dragon-folk-stories", "ch08-kingdom-under-sea",
+        "parts": ["ch05-dragon-lore", "ch06-bird-serpent", "ch07-dragon-folk-stories", "ch08-kingdom-under-sea",
                          "ch09-islands-blest", "ch10-mother-goddess", "ch11-tree-herb-stone", "ch13-jade-symbolism",
                          "ch14-creation-myths", "ch15-mythical-kings", "ch16-taoism"],
         "sections": {
@@ -140,8 +139,7 @@ groups = [
         "id": "group-japanese-mythology",
         "name": "Japanese Mythology: Kami, Sun, and Storm",
         "category": "thematic-group",
-        "level": 2,
-        "composite_of": ["ch17-japan-culture", "ch18-japanese-gods", "ch19-rival-deities", "ch20-dragon-slayer", "ch21-ancient-mikados"],
+        "parts": ["ch17-japan-culture", "ch18-japanese-gods", "ch19-rival-deities", "ch20-dragon-slayer", "ch21-ancient-mikados"],
         "sections": {
             "About": "Japanese mythology from the Kojiki and Nihon Shoki: the creation by Izanagi and Izanami, the sun goddess Amaterasu's withdrawal into the cave (plunging the world into darkness), the storm god Susanoo's wild deeds, the hero Yamato-takeru, and the divine origins of the imperial line.",
             "For Readers": "Chapter XIX (Rival Deities) tells the central myth — Amaterasu vs Susanoo — that still shapes Japanese culture and Shinto practice today."
@@ -154,8 +152,7 @@ groups = [
         "id": "group-cultural-origins",
         "name": "Cultural Origins: Trade, Technology, and Diffusion",
         "category": "thematic-group",
-        "level": 2,
-        "composite_of": ["ch01-dawn-civilization", "ch02-far-travelled-invention", "ch03-ancient-mariners", "ch04-search-wealth", "ch12-copper-culture"],
+        "parts": ["ch01-dawn-civilization", "ch02-far-travelled-invention", "ch03-ancient-mariners", "ch04-search-wealth", "ch12-copper-culture"],
         "sections": {
             "About": "Mackenzie's argument that East Asian civilization was not isolated but connected to wider patterns of cultural diffusion — through trade routes, maritime exploration, and the spread of metallurgy. A product of its era's diffusionist theories, but contains valuable comparative mythology.",
             "For Readers": "These chapters provide historical context but are the most dated part of the book. Skip to the mythology chapters unless you're interested in early 20th-century theories of cultural diffusion."
@@ -177,13 +174,12 @@ items.append({
     "name": "Myths of China and Japan: Where the Dragon Meets the Sun",
     "sort_order": sort_order,
     "category": "meta",
-    "level": 3,
     "sections": {
         "About": "Donald A. Mackenzie's 'Myths of China and Japan' (1923) surveys the mythologies of East Asia — from Chinese dragon lore and Taoist immortals to Japanese kami and the sun goddess Amaterasu. Mackenzie traces connections between East Asian myths and those of other civilizations, exploring how ideas about dragons, jade, the mother-goddess, and the otherworld traveled along ancient trade routes.",
         "Contemplation": "In China the dragon brings rain and blessing. In Europe the dragon hoards treasure and must be slain. Same creature, opposite meanings. What does this tell us about how cultures dream? And what happens when the myths finally meet — as they have in our globalized world?"
     },
     "keywords": ["china", "japan", "dragon", "amaterasu", "taoism", "mythology"],
-    "composite_of": [i["id"] for i in items if i["level"] == 1],
+    "parts": [i["id"] for i in items if node_depth(i, items) == 1],
     "relationship_type": "emergence",
     "metadata": {}
 })
@@ -207,7 +203,7 @@ grammar = {
     "shelves": ["wisdom", "wonder"],
     "lineages": ["Shrei"],
     "worldview": "animist",
-    "items": items
+    "nodes": items
 }
 
 os.makedirs("grammars/myths-china-japan", exist_ok=True)
@@ -216,8 +212,8 @@ with open("grammars/myths-china-japan/grammar.json", "w") as f:
 
 ids = [i["id"] for i in items]
 dupes = [x for x in ids if ids.count(x) > 1]
-bad_refs = [(i["id"], r) for i in items for r in i.get("composite_of", []) if r not in ids]
-print(f"Items: {len(items)}, L1: {sum(1 for i in items if i['level']==1)}, L2: {sum(1 for i in items if i['level']==2)}, L3: {sum(1 for i in items if i['level']==3)}")
+bad_refs = [(i["id"], r) for i in items for r in i.get("parts", []) if r not in ids]
+print(f"Items: {len(items)}, L1: {sum(1 for i in items if node_depth(i, items)==1)}, L2: {sum(1 for i in items if node_depth(i, items)==2)}, L3: {sum(1 for i in items if node_depth(i, items)==3)}")
 print(f"Sections: {sum(len(i.get('sections',{})) for i in items)}")
 print(f"Dupes: {dupes}, Bad refs: {bad_refs}")
 print(f"Sort OK: {[i['sort_order'] for i in items] == list(range(1, len(items)+1))}")

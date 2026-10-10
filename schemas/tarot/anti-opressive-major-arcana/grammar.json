@@ -41,14 +41,13 @@
   "grammar_type": "tarot",
   "tags": ["social working", "decolonial", "analeptic", "Chapman Withers", "Eisler", "Wicked", "more-than-human", "Bayo Akomolafe"],
   "image_url": "https://drive.google.com/file/d/1p847gJt6ACnO2zrVAQSaBZQ9KJP7wkm5/view?usp=drive_link",
-  "items": [
+  "nodes": [
     {
       "id": "suit-standard-account",
       "name": "Standard Account",
-      "level": 2,
       "sort_order": 0,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "jane-addams", "mary-richmond", "katherine-bement-davis", "josephine-shaw-lowell",
         "richard-henry-pratt", "albert-rose", "abraham-flexner", "oscar-mcculloch",
         "jj-kelso", "jeffery-brackett", "simon-patten", "philip-c-garrett",
@@ -64,10 +63,9 @@
     {
       "id": "suit-erased-voices",
       "name": "Erased Voices",
-      "level": 2,
       "sort_order": 0,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "ida-b-wells", "web-du-bois", "maggie-l-walker", "zaynab-al-ghazali",
         "janie-porter-barrett", "mary-ann-shadd-cary", "george-edmund-haynes",
         "reverdy-cassius-ransom", "henry-bibb", "booker-t-washington", "frederick-douglass",
@@ -84,10 +82,9 @@
     {
       "id": "suit-the-cracks",
       "name": "The Cracks",
-      "level": 2,
       "sort_order": 0,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "the-grandmother", "the-mother", "the-friend", "the-doula",
         "preto-velho", "caboclo", "pai-mae-de-santo",
         "neighbor-who-brings-food", "child-who-asks-why"
@@ -101,10 +98,9 @@
     {
       "id": "suit-contemporary-witnesses",
       "name": "Contemporary Witnesses",
-      "level": 2,
       "sort_order": 0,
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "bayo-akomolafe", "vanessa-andreotti", "josh-shrei",
         "sam-harris", "neil-degrasse-tyson", "luiza-lian"
       ],
@@ -117,7 +113,6 @@
     {
       "id": "jane-addams",
       "name": "Jane Addams",
-      "level": 1,
       "sort_order": 1,
       "category": "standard_account",
       "sections": {
@@ -132,7 +127,6 @@
     {
       "id": "mary-richmond",
       "name": "Mary Richmond",
-      "level": 1,
       "sort_order": 2,
       "category": "standard_account",
       "sections": {
@@ -147,7 +141,6 @@
     {
       "id": "katherine-bement-davis",
       "name": "Katherine Bement Davis",
-      "level": 1,
       "sort_order": 3,
       "category": "standard_account",
       "sections": {
@@ -162,7 +155,6 @@
     {
       "id": "josephine-shaw-lowell",
       "name": "Josephine Shaw Lowell",
-      "level": 1,
       "sort_order": 4,
       "category": "standard_account",
       "sections": {
@@ -177,7 +169,6 @@
     {
       "id": "richard-henry-pratt",
       "name": "Richard Henry Pratt",
-      "level": 1,
       "sort_order": 5,
       "category": "standard_account",
       "sections": {
@@ -192,7 +183,6 @@
     {
       "id": "albert-rose",
       "name": "Albert Rose",
-      "level": 1,
       "sort_order": 6,
       "category": "standard_account",
       "sections": {
@@ -206,7 +196,6 @@
     {
       "id": "abraham-flexner",
       "name": "Abraham Flexner",
-      "level": 1,
       "sort_order": 7,
       "category": "standard_account",
       "sections": {
@@ -220,7 +209,6 @@
     {
       "id": "oscar-mcculloch",
       "name": "Oscar McCulloch",
-      "level": 1,
       "sort_order": 8,
       "category": "standard_account",
       "sections": {
@@ -235,7 +223,6 @@
     {
       "id": "jj-kelso",
       "name": "J.J. Kelso",
-      "level": 1,
       "sort_order": 9,
       "category": "standard_account",
       "sections": {
@@ -250,7 +237,6 @@
     {
       "id": "jeffery-brackett",
       "name": "Jeffery Brackett",
-      "level": 1,
       "sort_order": 10,
       "category": "standard_account",
       "sections": {
@@ -263,7 +249,6 @@
     {
       "id": "simon-patten",
       "name": "Simon Patten",
-      "level": 1,
       "sort_order": 11,
       "category": "standard_account",
       "sections": {
@@ -277,7 +262,6 @@
     {
       "id": "philip-c-garrett",
       "name": "Philip C. Garrett",
-      "level": 1,
       "sort_order": 12,
       "category": "standard_account",
       "sections": {
@@ -290,7 +274,6 @@
     {
       "id": "theodore-roosevelt",
       "name": "Theodore Roosevelt",
-      "level": 1,
       "sort_order": 13,
       "category": "standard_account",
       "sections": {
@@ -304,7 +287,6 @@
     {
       "id": "sir-francis-galton",
       "name": "Sir Francis Galton",
-      "level": 1,
       "sort_order": 14,
       "category": "standard_account",
       "sections": {
@@ -319,7 +301,6 @@
     {
       "id": "john-edward-lloyd",
       "name": "John Edward Lloyd",
-      "level": 1,
       "sort_order": 15,
       "category": "standard_account",
       "sections": {
@@ -333,7 +314,6 @@
     {
       "id": "reverend-william-baldwin",
       "name": "Reverend William Baldwin",
-      "level": 1,
       "sort_order": 16,
       "category": "standard_account",
       "sections": {
@@ -347,7 +327,6 @@
     {
       "id": "emma-goldman",
       "name": "Emma Goldman",
-      "level": 1,
       "sort_order": 17,
       "category": "standard_account",
       "sections": {
@@ -362,7 +341,6 @@
     {
       "id": "ida-b-wells",
       "name": "Ida B. Wells",
-      "level": 1,
       "sort_order": 18,
       "category": "erased_voices",
       "sections": {
@@ -377,7 +355,6 @@
     {
       "id": "web-du-bois",
       "name": "W.E.B. Du Bois",
-      "level": 1,
       "sort_order": 19,
       "category": "erased_voices",
       "sections": {
@@ -391,7 +368,6 @@
     {
       "id": "maggie-l-walker",
       "name": "Maggie L. Walker",
-      "level": 1,
       "sort_order": 20,
       "category": "erased_voices",
       "sections": {
@@ -405,7 +381,6 @@
     {
       "id": "zaynab-al-ghazali",
       "name": "Zaynab al-Ghazali",
-      "level": 1,
       "sort_order": 21,
       "category": "erased_voices",
       "sections": {
@@ -419,7 +394,6 @@
     {
       "id": "janie-porter-barrett",
       "name": "Janie Porter Barrett",
-      "level": 1,
       "sort_order": 22,
       "category": "erased_voices",
       "sections": {
@@ -432,7 +406,6 @@
     {
       "id": "mary-ann-shadd-cary",
       "name": "Mary Ann Shadd Cary",
-      "level": 1,
       "sort_order": 23,
       "category": "erased_voices",
       "sections": {
@@ -446,7 +419,6 @@
     {
       "id": "george-edmund-haynes",
       "name": "George Edmund Haynes",
-      "level": 1,
       "sort_order": 24,
       "category": "erased_voices",
       "sections": {
@@ -460,7 +432,6 @@
     {
       "id": "reverdy-cassius-ransom",
       "name": "Reverdy Cassius Ransom",
-      "level": 1,
       "sort_order": 25,
       "category": "erased_voices",
       "sections": {
@@ -473,7 +444,6 @@
     {
       "id": "henry-bibb",
       "name": "Henry Bibb",
-      "level": 1,
       "sort_order": 26,
       "category": "erased_voices",
       "sections": {
@@ -487,7 +457,6 @@
     {
       "id": "booker-t-washington",
       "name": "Booker T. Washington",
-      "level": 1,
       "sort_order": 27,
       "category": "erased_voices",
       "sections": {
@@ -501,7 +470,6 @@
     {
       "id": "frederick-douglass",
       "name": "Frederick Douglass",
-      "level": 1,
       "sort_order": 28,
       "category": "erased_voices",
       "sections": {
@@ -515,7 +483,6 @@
     {
       "id": "claudette-colvin",
       "name": "Claudette Colvin",
-      "level": 1,
       "sort_order": 29,
       "category": "erased_voices",
       "sections": {
@@ -530,7 +497,6 @@
     {
       "id": "rosa-parks",
       "name": "Rosa Parks",
-      "level": 1,
       "sort_order": 30,
       "category": "erased_voices",
       "sections": {
@@ -544,7 +510,6 @@
     {
       "id": "viola-desmond",
       "name": "Viola Desmond",
-      "level": 1,
       "sort_order": 31,
       "category": "erased_voices",
       "sections": {
@@ -559,7 +524,6 @@
     {
       "id": "aaron-pa-carvery",
       "name": "Aaron 'Pa' Carvery",
-      "level": 1,
       "sort_order": 32,
       "category": "erased_voices",
       "sections": {
@@ -573,7 +537,6 @@
     {
       "id": "elizabeth-shadd-shreve",
       "name": "Elizabeth Williams Shadd Shreve",
-      "level": 1,
       "sort_order": 33,
       "category": "erased_voices",
       "sections": {
@@ -586,7 +549,6 @@
     {
       "id": "bayard-rustin",
       "name": "Bayard Rustin",
-      "level": 1,
       "sort_order": 34,
       "category": "erased_voices",
       "sections": {
@@ -600,7 +562,6 @@
     {
       "id": "james-baldwin",
       "name": "James Baldwin",
-      "level": 1,
       "sort_order": 35,
       "category": "erased_voices",
       "sections": {
@@ -615,7 +576,6 @@
     {
       "id": "huey-newton",
       "name": "Huey Newton",
-      "level": 1,
       "sort_order": 36,
       "category": "erased_voices",
       "sections": {
@@ -629,7 +589,6 @@
     {
       "id": "malcolm-x",
       "name": "Malcolm X",
-      "level": 1,
       "sort_order": 37,
       "category": "erased_voices",
       "sections": {
@@ -643,7 +602,6 @@
     {
       "id": "martin-luther-king-jr",
       "name": "Martin Luther King Jr",
-      "level": 1,
       "sort_order": 38,
       "category": "erased_voices",
       "sections": {
@@ -657,7 +615,6 @@
     {
       "id": "mohandas-gandhi",
       "name": "Mohandas Gandhi",
-      "level": 1,
       "sort_order": 39,
       "category": "erased_voices",
       "sections": {
@@ -671,7 +628,6 @@
     {
       "id": "che-guevara",
       "name": "Ernesto 'Che' Guevara",
-      "level": 1,
       "sort_order": 40,
       "category": "erased_voices",
       "sections": {
@@ -685,7 +641,6 @@
     {
       "id": "the-grandmother",
       "name": "The Grandmother",
-      "level": 1,
       "sort_order": 41,
       "category": "the_cracks",
       "sections": {
@@ -699,7 +654,6 @@
     {
       "id": "the-mother",
       "name": "The Mother",
-      "level": 1,
       "sort_order": 42,
       "category": "the_cracks",
       "sections": {
@@ -712,7 +666,6 @@
     {
       "id": "the-friend",
       "name": "The Friend",
-      "level": 1,
       "sort_order": 43,
       "category": "the_cracks",
       "sections": {
@@ -725,7 +678,6 @@
     {
       "id": "the-doula",
       "name": "The Doula",
-      "level": 1,
       "sort_order": 44,
       "category": "the_cracks",
       "sections": {
@@ -738,7 +690,6 @@
     {
       "id": "preto-velho",
       "name": "Preto Velho",
-      "level": 1,
       "sort_order": 45,
       "category": "the_cracks",
       "sections": {
@@ -751,7 +702,6 @@
     {
       "id": "caboclo",
       "name": "Caboclo",
-      "level": 1,
       "sort_order": 46,
       "category": "the_cracks",
       "sections": {
@@ -764,7 +714,6 @@
     {
       "id": "pai-mae-de-santo",
       "name": "Pai de Santo / Mãe de Santo",
-      "level": 1,
       "sort_order": 47,
       "category": "the_cracks",
       "sections": {
@@ -777,7 +726,6 @@
     {
       "id": "neighbor-who-brings-food",
       "name": "The Neighbor Who Brings Food",
-      "level": 1,
       "sort_order": 48,
       "category": "the_cracks",
       "sections": {
@@ -790,7 +738,6 @@
     {
       "id": "child-who-asks-why",
       "name": "The Child Who Asks Why",
-      "level": 1,
       "sort_order": 49,
       "category": "the_cracks",
       "sections": {
@@ -803,7 +750,6 @@
     {
       "id": "bayo-akomolafe",
       "name": "Bayo Akomolafe",
-      "level": 1,
       "sort_order": 50,
       "category": "contemporary_witnesses",
       "sections": {
@@ -817,7 +763,6 @@
     {
       "id": "vanessa-andreotti",
       "name": "Vanessa Andreotti",
-      "level": 1,
       "sort_order": 51,
       "category": "contemporary_witnesses",
       "sections": {
@@ -830,7 +775,6 @@
     {
       "id": "josh-shrei",
       "name": "Josh Shrei",
-      "level": 1,
       "sort_order": 52,
       "category": "contemporary_witnesses",
       "sections": {
@@ -843,7 +787,6 @@
     {
       "id": "sam-harris",
       "name": "Sam Harris",
-      "level": 1,
       "sort_order": 53,
       "category": "contemporary_witnesses",
       "sections": {
@@ -857,7 +800,6 @@
     {
       "id": "neil-degrasse-tyson",
       "name": "Neil deGrasse Tyson",
-      "level": 1,
       "sort_order": 54,
       "category": "contemporary_witnesses",
       "sections": {
@@ -871,7 +813,6 @@
     {
       "id": "luiza-lian",
       "name": "Luiza Lian",
-      "level": 1,
       "sort_order": 55,
       "category": "contemporary_witnesses",
       "sections": {
@@ -884,7 +825,6 @@
     {
       "id": "l-frank-baum",
       "name": "L. Frank Baum",
-      "level": 1,
       "sort_order": 56,
       "category": "wicked_history",
       "sections": {
@@ -899,7 +839,6 @@
     {
       "id": "judy-garland",
       "name": "Judy Garland",
-      "level": 1,
       "sort_order": 57,
       "category": "wicked_history",
       "sections": {
@@ -914,7 +853,6 @@
     {
       "id": "charlie-smalls",
       "name": "Charlie Smalls",
-      "level": 1,
       "sort_order": 58,
       "category": "wicked_history",
       "sections": {
@@ -928,7 +866,6 @@
     {
       "id": "diana-ross",
       "name": "Diana Ross",
-      "level": 1,
       "sort_order": 59,
       "category": "wicked_history",
       "sections": {
@@ -942,7 +879,6 @@
     {
       "id": "michael-jackson",
       "name": "Michael Jackson",
-      "level": 1,
       "sort_order": 60,
       "category": "wicked_history",
       "sections": {
@@ -957,7 +893,6 @@
     {
       "id": "quincy-jones",
       "name": "Quincy Jones",
-      "level": 1,
       "sort_order": 61,
       "category": "wicked_history",
       "sections": {
@@ -971,7 +906,6 @@
     {
       "id": "gregory-maguire",
       "name": "Gregory Maguire",
-      "level": 1,
       "sort_order": 62,
       "category": "wicked_history",
       "sections": {
@@ -986,7 +920,6 @@
     {
       "id": "stephen-schwartz",
       "name": "Stephen Schwartz",
-      "level": 1,
       "sort_order": 63,
       "category": "wicked_history",
       "sections": {
@@ -1000,7 +933,6 @@
     {
       "id": "idina-menzel",
       "name": "Idina Menzel",
-      "level": 1,
       "sort_order": 64,
       "category": "wicked_history",
       "sections": {
@@ -1015,7 +947,6 @@
     {
       "id": "animal-kingdom",
       "name": "The Animal Kingdom",
-      "level": 1,
       "sort_order": 65,
       "category": "rest_of_worlds",
       "sections": {
@@ -1029,7 +960,6 @@
     {
       "id": "plant-kingdom",
       "name": "The Plant Kingdom",
-      "level": 1,
       "sort_order": 66,
       "category": "rest_of_worlds",
       "sections": {
@@ -1044,7 +974,6 @@
     {
       "id": "mineral-kingdom",
       "name": "The Mineral Kingdom",
-      "level": 1,
       "sort_order": 67,
       "category": "rest_of_worlds",
       "sections": {
@@ -1058,7 +987,6 @@
     {
       "id": "fungi-kingdom",
       "name": "The Fungi Kingdom",
-      "level": 1,
       "sort_order": 68,
       "category": "rest_of_worlds",
       "sections": {
@@ -1073,7 +1001,6 @@
     {
       "id": "element-water",
       "name": "Water",
-      "level": 1,
       "sort_order": 69,
       "category": "rest_of_worlds",
       "sections": {
@@ -1088,7 +1015,6 @@
     {
       "id": "element-fire",
       "name": "Fire",
-      "level": 1,
       "sort_order": 70,
       "category": "rest_of_worlds",
       "sections": {
@@ -1102,7 +1028,6 @@
     {
       "id": "element-air",
       "name": "Air",
-      "level": 1,
       "sort_order": 71,
       "category": "rest_of_worlds",
       "sections": {
@@ -1116,7 +1041,6 @@
     {
       "id": "element-earth",
       "name": "Earth",
-      "level": 1,
       "sort_order": 72,
       "category": "rest_of_worlds",
       "sections": {
@@ -1130,7 +1054,6 @@
     {
       "id": "spirit",
       "name": "Spirit",
-      "level": 1,
       "sort_order": 73,
       "category": "rest_of_worlds",
       "sections": {
@@ -1144,7 +1067,6 @@
     {
       "id": "matter",
       "name": "Matter",
-      "level": 1,
       "sort_order": 74,
       "category": "rest_of_worlds",
       "sections": {
@@ -1158,7 +1080,6 @@
     {
       "id": "science",
       "name": "Science",
-      "level": 1,
       "sort_order": 75,
       "category": "rest_of_worlds",
       "sections": {
@@ -1172,7 +1093,6 @@
     {
       "id": "religion",
       "name": "Religion",
-      "level": 1,
       "sort_order": 76,
       "category": "rest_of_worlds",
       "sections": {
@@ -1186,10 +1106,9 @@
     {
       "id": "l2-wizard-of-oz",
       "name": "The Wizard of Oz",
-      "level": 2,
       "sort_order": 0,
       "relationship_type": "emergence",
-      "composite_of": ["l-frank-baum", "judy-garland"],
+      "parts": ["l-frank-baum", "judy-garland"],
       "sections": {
         "Description": "The canonical American fairy tale (1900/1939). The 'standard account' of Oz—white Kansas girl's journey. Beloved. Also: written by a man who called for Native genocide.",
         "Reflection": "What genocides hide behind our beloved stories?"
@@ -1199,10 +1118,9 @@
     {
       "id": "l2-the-wiz",
       "name": "The Wiz",
-      "level": 2,
       "sort_order": 0,
       "relationship_type": "emergence",
-      "composite_of": ["charlie-smalls", "diana-ross", "michael-jackson", "quincy-jones"],
+      "parts": ["charlie-smalls", "diana-ross", "michael-jackson", "quincy-jones"],
       "sections": {
         "Description": "Black cultural reimagining (1975/1978). Kansas becomes Harlem. Yellow Brick Road becomes 'Ease on Down.' 7 Tony Awards. Then the composer dies forgotten.",
         "Reflection": "What Black genius is celebrated then erased?"
@@ -1212,10 +1130,9 @@
     {
       "id": "l2-wicked",
       "name": "Wicked",
-      "level": 2,
       "sort_order": 0,
       "relationship_type": "emergence",
-      "composite_of": ["gregory-maguire", "stephen-schwartz", "idina-menzel"],
+      "parts": ["gregory-maguire", "stephen-schwartz", "idina-menzel"],
       "sections": {
         "Description": "The villain's perspective (1995/2003). Elphaba wasn't wicked—she was different, fighting oppression, painted green and monstrous by those in power. 'No one is born wicked.'",
         "Reflection": "What if the villain was right all along?"
@@ -1225,10 +1142,9 @@
     {
       "id": "l2-kingdoms",
       "name": "The Kingdoms",
-      "level": 2,
       "sort_order": 0,
       "relationship_type": "emergence",
-      "composite_of": ["animal-kingdom", "plant-kingdom", "mineral-kingdom", "fungi-kingdom"],
+      "parts": ["animal-kingdom", "plant-kingdom", "mineral-kingdom", "fungi-kingdom"],
       "sections": {
         "Description": "Animal, Plant, Mineral, Fungi. The more-than-human worlds that were social working before humans existed. Cooperation, decomposition, deep time.",
         "Reflection": "What did the other kingdoms know before we forgot?"
@@ -1238,10 +1154,9 @@
     {
       "id": "l2-elements",
       "name": "The Elements",
-      "level": 2,
       "sort_order": 0,
       "relationship_type": "emergence",
-      "composite_of": ["element-water", "element-fire", "element-air", "element-earth"],
+      "parts": ["element-water", "element-fire", "element-air", "element-earth"],
       "sections": {
         "Description": "Water, Fire, Air, Earth. The classical elements that predate chemistry. Metaphors for aspects of existence that science alone cannot capture.",
         "Reflection": "What element are you avoiding?"
@@ -1251,10 +1166,9 @@
     {
       "id": "l2-non-duality",
       "name": "Non-Duality",
-      "level": 2,
       "sort_order": 0,
       "relationship_type": "emergence",
-      "composite_of": ["spirit", "matter"],
+      "parts": ["spirit", "matter"],
       "sections": {
         "Description": "Spirit and Matter—the split that defines Western metaphysics. But what if they were never separate? What if the split itself is the problem?",
         "Reflection": "What would it mean to stop dividing spirit from matter?"
@@ -1264,10 +1178,9 @@
     {
       "id": "l2-epistemologies",
       "name": "Epistemologies",
-      "level": 2,
       "sort_order": 0,
       "relationship_type": "emergence",
-      "composite_of": ["science", "religion"],
+      "parts": ["science", "religion"],
       "sections": {
         "Description": "Science and Religion—two ways of knowing, each blind to what the other sees. Both have been weapons. Both have been medicine.",
         "Reflection": "What can neither science nor religion alone understand?"
@@ -1277,10 +1190,9 @@
     {
       "id": "l2-umbanda",
       "name": "Umbanda",
-      "level": 2,
       "sort_order": 0,
       "relationship_type": "emergence",
-      "composite_of": ["preto-velho", "caboclo", "pai-mae-de-santo"],
+      "parts": ["preto-velho", "caboclo", "pai-mae-de-santo"],
       "sections": {
         "Description": "Afro-Brazilian spiritual tradition. Ancestral spirits—Preto Velho (enslaved elders), Caboclo (Indigenous spirits). ROLES, not named individuals. What partnership societies preserved.",
         "Source": "Eisler: in partnership societies, roles survived, not names. The Grandmother, not a specific grandmother.",
@@ -1291,10 +1203,9 @@
     {
       "id": "l2-everyday-roles",
       "name": "Everyday Roles",
-      "level": 2,
       "sort_order": 0,
       "relationship_type": "emergence",
-      "composite_of": ["the-grandmother", "the-mother", "the-friend", "the-doula", "neighbor-who-brings-food", "child-who-asks-why"],
+      "parts": ["the-grandmother", "the-mother", "the-friend", "the-doula", "neighbor-who-brings-food", "child-who-asks-why"],
       "sections": {
         "Description": "The roles that do social working without credentials: Grandmother, Mother, Friend, Doula, Neighbor, Child. As Bayo Akomolafe says: 'Decolonization might be more about grandmothers than about systems.'",
         "Source": "Eisler's insight: in partnership societies, individual names didn't survive—only ROLES. The Chalice and the Blade.",
@@ -1305,10 +1216,9 @@
     {
       "id": "l3-violent-history",
       "name": "The Violent History",
-      "level": 3,
       "sort_order": 0,
       "relationship_type": "emergence",
-      "composite_of": ["suit-standard-account", "suit-erased-voices"],
+      "parts": ["suit-standard-account", "suit-erased-voices"],
       "sections": {
         "Description": "Chapman & Withers' 40 names: the Standard Account (Jane Addams, Mary Richmond) and those Erased from it (Ida B. Wells, Claudette Colvin). Professional social work history—complicit figures, all.",
         "Source": "A Violent History of Benevolence (2019): 'The mainstream has never run clean.'",
@@ -1319,10 +1229,9 @@
     {
       "id": "l3-partnership-way",
       "name": "The Partnership Way",
-      "level": 3,
       "sort_order": 0,
       "relationship_type": "emergence",
-      "composite_of": ["l2-umbanda", "l2-everyday-roles"],
+      "parts": ["l2-umbanda", "l2-everyday-roles"],
       "sections": {
         "Description": "Eisler's insight from The Chalice and the Blade: the opposite of patriarchy isn't matriarchy—it's partnership (gylany). In partnership societies, ROLES survived, not names. The Grandmother, not Jane Addams.",
         "Source": "Riane Eisler (1987): dominator vs. partnership models. The chalice (partnership) vs. the blade (domination).",
@@ -1333,10 +1242,9 @@
     {
       "id": "l3-wicked-history",
       "name": "Wicked History",
-      "level": 3,
       "sort_order": 0,
       "relationship_type": "emergence",
-      "composite_of": ["l2-wizard-of-oz", "l2-the-wiz", "l2-wicked", "suit-contemporary-witnesses"],
+      "parts": ["l2-wizard-of-oz", "l2-the-wiz", "l2-wicked", "suit-contemporary-witnesses"],
       "sections": {
         "Description": "Cultural memory that dwarfs the standard account. Google Trends: Jane Addams is a flat line; Wicked explodes. The Oz-to-Wiz-to-Wicked arc: canonical story → Black reimagining → villain's perspective. What actually lives in collective imagination.",
         "Source": "Google Trends data shows what matters: MLK spikes annually, Wicked peaks in 2024, Jane Addams barely registers.",
@@ -1347,10 +1255,9 @@
     {
       "id": "l3-rest-of-worlds",
       "name": "The Rest of the Worlds",
-      "level": 3,
       "sort_order": 0,
       "relationship_type": "emergence",
-      "composite_of": ["l2-kingdoms", "l2-elements", "l2-non-duality", "l2-epistemologies"],
+      "parts": ["l2-kingdoms", "l2-elements", "l2-non-duality", "l2-epistemologies"],
       "sections": {
         "Description": "More-than-human social working. The Kingdoms (Animal, Plant, Mineral, Fungi), The Elements (Water, Fire, Air, Earth), Non-Duality (Spirit/Matter), Epistemologies (Science/Religion). Social working was happening for billions of years before humans named it.",
         "Reflection": "What would it mean to learn social working from fungi?"
@@ -1360,10 +1267,9 @@
     {
       "id": "l4-social-working",
       "name": "Social Working",
-      "level": 4,
       "sort_order": 0,
       "relationship_type": "emergence",
-      "composite_of": ["l3-violent-history", "l3-partnership-way", "l3-wicked-history", "l3-rest-of-worlds"],
+      "parts": ["l3-violent-history", "l3-partnership-way", "l3-wicked-history", "l3-rest-of-worlds"],
       "sections": {
         "Description": "Not social work (noun, profession, colonial)—social working (verb, what all beings do). Closing analysis in 'social work as profession' is already colonizing. Decolonizing means putting social work in a social working perspective. This deck is an analeptic exploration: holding contradictions without resolving them, dredging the mainstream that has never run clean.",
         "Source": "Analepsis: from Chapman & Withers' call for 'a persistent dredging operation' of history. The mainstream has never run clean, perhaps never can.",

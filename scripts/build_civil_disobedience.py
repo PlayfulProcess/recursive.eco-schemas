@@ -11,6 +11,7 @@ Structure:
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SEED = os.path.join(SCRIPT_DIR, "..", "seeds", "civil-disobedience.txt")
@@ -213,7 +214,6 @@ def build_grammar(paragraphs):
         items.append({
             "id": para_id,
             "name": first_sentence,
-            "level": 1,
             "category": "paragraph",
             "sort_order": sort_order,
             "sections": {
@@ -240,10 +240,9 @@ def build_grammar(paragraphs):
         items.append({
             "id": theme_id,
             "name": theme["name"],
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": composite,
+            "parts": composite,
             "sort_order": sort_order,
             "sections": {
                 "About": theme["about"],
@@ -261,10 +260,9 @@ def build_grammar(paragraphs):
     items.append({
         "id": "civil-disobedience",
         "name": "Civil Disobedience",
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": all_theme_ids,
+        "parts": all_theme_ids,
         "sort_order": sort_order,
         "sections": {
             "About": "Henry David Thoreau's 'Civil Disobedience' (1849) is a single continuous essay that flows from abstract political philosophy through specific moral outrage to personal narrative and back to visionary philosophy. Written after a night in jail for refusing to pay a poll tax that supported slavery and the Mexican-American War, it argues that the individual conscience is the highest authority — higher than any government, any majority, any law. This essay directly inspired Gandhi's satyagraha, Martin Luther King Jr.'s civil rights strategy, the Danish resistance to the Nazis, and every nonviolent resistance movement since. Its central claim — that compliance with injustice is itself injustice — remains the moral foundation of civil disobedience worldwide.",
@@ -312,16 +310,16 @@ def main():
         "shelves": ["resilience"],
         "lineages": ["Kelty"],
         "worldview": "rationalist",
-        "items": items,
+        "nodes": items,
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT}")
     print(f"  L1: {l1} paragraphs, L2: {l2} thematic groups, L3: {l3} meta")
     print(f"  Total items: {len(items)}")

@@ -24,11 +24,10 @@
     "source_url": "https://www.gutenberg.org/ebooks/2017",
     "note": "English translation by F. Max Muller from The Sacred Books of the East, Vol. X, Part I (1881). Text from Project Gutenberg eBook #2017."
   },
-  "items": [
+  "nodes": [
     {
       "id": "verse-001",
       "name": "Verse 1: All that we are is the result of what we have thought: it is...",
-      "level": 1,
       "category": "verse",
       "sort_order": 1,
       "sections": {
@@ -45,7 +44,6 @@
     {
       "id": "verse-002",
       "name": "Verse 2: All that we are is the result of what we have thought: it is...",
-      "level": 1,
       "category": "verse",
       "sort_order": 2,
       "sections": {
@@ -62,7 +60,6 @@
     {
       "id": "verse-003",
       "name": "Verse 3: \"He abused me, he beat me, he defeated me, he robbed me,\"--in...",
-      "level": 1,
       "category": "verse",
       "sort_order": 3,
       "sections": {
@@ -79,7 +76,6 @@
     {
       "id": "verse-004",
       "name": "Verse 4: \"He abused me, he beat me, he defeated me, he robbed me,\"--in...",
-      "level": 1,
       "category": "verse",
       "sort_order": 4,
       "sections": {
@@ -96,7 +92,6 @@
     {
       "id": "verse-005",
       "name": "Verse 5: For hatred does not cease by hatred at any time: hatred ceases...",
-      "level": 1,
       "category": "verse",
       "sort_order": 5,
       "sections": {
@@ -113,7 +108,6 @@
     {
       "id": "verse-006",
       "name": "Verse 6: The world does not know that we must all come to an end...",
-      "level": 1,
       "category": "verse",
       "sort_order": 6,
       "sections": {
@@ -130,7 +124,6 @@
     {
       "id": "verse-007",
       "name": "Verse 7: He who lives looking for pleasures only, his senses...",
-      "level": 1,
       "category": "verse",
       "sort_order": 7,
       "sections": {
@@ -147,7 +140,6 @@
     {
       "id": "verse-008",
       "name": "Verse 8: He who lives without looking for pleasures, his senses well...",
-      "level": 1,
       "category": "verse",
       "sort_order": 8,
       "sections": {
@@ -164,7 +156,6 @@
     {
       "id": "verse-009",
       "name": "Verse 9: He who wishes to put on the yellow dress without having cleansed...",
-      "level": 1,
       "category": "verse",
       "sort_order": 9,
       "sections": {
@@ -181,7 +172,6 @@
     {
       "id": "verse-010",
       "name": "Verse 10: But he who has cleansed himself from sin, is well grounded in...",
-      "level": 1,
       "category": "verse",
       "sort_order": 10,
       "sections": {
@@ -198,7 +188,6 @@
     {
       "id": "verse-011",
       "name": "Verse 11: They who imagine truth in untruth, and see untruth in truth,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 11,
       "sections": {
@@ -215,7 +204,6 @@
     {
       "id": "verse-012",
       "name": "Verse 12: They who know truth in truth, and untruth in untruth, arrive at...",
-      "level": 1,
       "category": "verse",
       "sort_order": 12,
       "sections": {
@@ -232,7 +220,6 @@
     {
       "id": "verse-013",
       "name": "Verse 13: As rain breaks through an ill-thatched house, passion will break...",
-      "level": 1,
       "category": "verse",
       "sort_order": 13,
       "sections": {
@@ -249,7 +236,6 @@
     {
       "id": "verse-014",
       "name": "Verse 14: As rain does not break through a well-thatched house, passion...",
-      "level": 1,
       "category": "verse",
       "sort_order": 14,
       "sections": {
@@ -266,7 +252,6 @@
     {
       "id": "verse-015",
       "name": "Verse 15: The evil-doer mourns in this world, and he mourns in the next;...",
-      "level": 1,
       "category": "verse",
       "sort_order": 15,
       "sections": {
@@ -283,7 +268,6 @@
     {
       "id": "verse-016",
       "name": "Verse 16: The virtuous man delights in this world, and he delights in the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 16,
       "sections": {
@@ -300,7 +284,6 @@
     {
       "id": "verse-017",
       "name": "Verse 17: The evil-doer suffers in this world, and he suffers in the next;...",
-      "level": 1,
       "category": "verse",
       "sort_order": 17,
       "sections": {
@@ -317,7 +300,6 @@
     {
       "id": "verse-018",
       "name": "Verse 18: The virtuous man is happy in this world, and he is happy in the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 18,
       "sections": {
@@ -334,7 +316,6 @@
     {
       "id": "verse-019",
       "name": "Verse 19: The thoughtless man, even if he can recite a large portion (of...",
-      "level": 1,
       "category": "verse",
       "sort_order": 19,
       "sections": {
@@ -351,7 +332,6 @@
     {
       "id": "verse-020",
       "name": "Verse 20: The follower of the law, even if he can recite only a small...",
-      "level": 1,
       "category": "verse",
       "sort_order": 20,
       "sections": {
@@ -369,10 +349,9 @@
       "id": "chapter-01",
       "name": "Chapter I: The Twin-Verses",
       "symbol": "I",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-001",
         "verse-002",
         "verse-003",
@@ -409,7 +388,6 @@
     {
       "id": "verse-021",
       "name": "Verse 21: Earnestness is the path of immortality (Nirvana),...",
-      "level": 1,
       "category": "verse",
       "sort_order": 22,
       "sections": {
@@ -426,7 +404,6 @@
     {
       "id": "verse-022",
       "name": "Verse 22: Those who are advanced in earnestness, having understood this...",
-      "level": 1,
       "category": "verse",
       "sort_order": 23,
       "sections": {
@@ -443,7 +420,6 @@
     {
       "id": "verse-023",
       "name": "Verse 23: These wise people, meditative, steady, always possessed of...",
-      "level": 1,
       "category": "verse",
       "sort_order": 24,
       "sections": {
@@ -460,7 +436,6 @@
     {
       "id": "verse-024",
       "name": "Verse 24: If an earnest person has roused himself, if he is not forgetful,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 25,
       "sections": {
@@ -477,7 +452,6 @@
     {
       "id": "verse-025",
       "name": "Verse 25: By rousing himself, by earnestness, by restraint and control,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 26,
       "sections": {
@@ -494,7 +468,6 @@
     {
       "id": "verse-026",
       "name": "Verse 26: Fools follow after vanity, men of evil wisdom. The wise man...",
-      "level": 1,
       "category": "verse",
       "sort_order": 27,
       "sections": {
@@ -511,7 +484,6 @@
     {
       "id": "verse-027",
       "name": "Verse 27: Follow not after vanity, nor after the enjoyment of love and...",
-      "level": 1,
       "category": "verse",
       "sort_order": 28,
       "sections": {
@@ -528,7 +500,6 @@
     {
       "id": "verse-028",
       "name": "Verse 28: When the learned man drives away vanity by earnestness, he, the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 29,
       "sections": {
@@ -545,7 +516,6 @@
     {
       "id": "verse-029",
       "name": "Verse 29: Earnest among the thoughtless, awake among the sleepers, the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 30,
       "sections": {
@@ -562,7 +532,6 @@
     {
       "id": "verse-030",
       "name": "Verse 30: By earnestness did Maghavan (Indra) rise to the lordship of the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 31,
       "sections": {
@@ -579,7 +548,6 @@
     {
       "id": "verse-031",
       "name": "Verse 31: A Bhikshu (mendicant) who delights in earnestness, who looks...",
-      "level": 1,
       "category": "verse",
       "sort_order": 32,
       "sections": {
@@ -596,7 +564,6 @@
     {
       "id": "verse-032",
       "name": "Verse 32: A Bhikshu (mendicant) who delights in reflection, who looks with...",
-      "level": 1,
       "category": "verse",
       "sort_order": 33,
       "sections": {
@@ -614,10 +581,9 @@
       "id": "chapter-02",
       "name": "Chapter II: On Earnestness",
       "symbol": "II",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-021",
         "verse-022",
         "verse-023",
@@ -646,7 +612,6 @@
     {
       "id": "verse-033",
       "name": "Verse 33: As a fletcher makes straight his arrow, a wise man makes...",
-      "level": 1,
       "category": "verse",
       "sort_order": 35,
       "sections": {
@@ -663,7 +628,6 @@
     {
       "id": "verse-034",
       "name": "Verse 34: As a fish taken from his watery home and thrown on dry ground,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 36,
       "sections": {
@@ -680,7 +644,6 @@
     {
       "id": "verse-035",
       "name": "Verse 35: It is good to tame the mind, which is difficult to hold in and...",
-      "level": 1,
       "category": "verse",
       "sort_order": 37,
       "sections": {
@@ -697,7 +660,6 @@
     {
       "id": "verse-036",
       "name": "Verse 36: Let the wise man guard his thoughts, for they are difficult to...",
-      "level": 1,
       "category": "verse",
       "sort_order": 38,
       "sections": {
@@ -714,7 +676,6 @@
     {
       "id": "verse-037",
       "name": "Verse 37: Those who bridle their mind which travels far, moves about...",
-      "level": 1,
       "category": "verse",
       "sort_order": 39,
       "sections": {
@@ -731,7 +692,6 @@
     {
       "id": "verse-038",
       "name": "Verse 38: If a man's thoughts are unsteady, if he does not know the true...",
-      "level": 1,
       "category": "verse",
       "sort_order": 40,
       "sections": {
@@ -748,7 +708,6 @@
     {
       "id": "verse-039",
       "name": "Verse 39: If a man's thoughts are not dissipated, if his mind is not...",
-      "level": 1,
       "category": "verse",
       "sort_order": 41,
       "sections": {
@@ -765,7 +724,6 @@
     {
       "id": "verse-040",
       "name": "Verse 40: Knowing that this body is (fragile) like a jar, and making this...",
-      "level": 1,
       "category": "verse",
       "sort_order": 42,
       "sections": {
@@ -782,7 +740,6 @@
     {
       "id": "verse-041",
       "name": "Verse 41: Before long, alas! this body will lie on the earth, despised,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 43,
       "sections": {
@@ -799,7 +756,6 @@
     {
       "id": "verse-042",
       "name": "Verse 42: Whatever a hater may do to a hater, or an enemy to an enemy, a...",
-      "level": 1,
       "category": "verse",
       "sort_order": 44,
       "sections": {
@@ -816,7 +772,6 @@
     {
       "id": "verse-043",
       "name": "Verse 43: Not a mother, not a father will do so much, nor any other...",
-      "level": 1,
       "category": "verse",
       "sort_order": 45,
       "sections": {
@@ -834,10 +789,9 @@
       "id": "chapter-03",
       "name": "Chapter III: Thought",
       "symbol": "III",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-033",
         "verse-034",
         "verse-035",
@@ -865,7 +819,6 @@
     {
       "id": "verse-044",
       "name": "Verse 44: Who shall overcome this earth, and the world of Yama (the lord...",
-      "level": 1,
       "category": "verse",
       "sort_order": 47,
       "sections": {
@@ -882,7 +835,6 @@
     {
       "id": "verse-045",
       "name": "Verse 45: The disciple will overcome the earth, and the world of Yama, and...",
-      "level": 1,
       "category": "verse",
       "sort_order": 48,
       "sections": {
@@ -899,7 +851,6 @@
     {
       "id": "verse-046",
       "name": "Verse 46: He who knows that this body is like froth, and has learnt that...",
-      "level": 1,
       "category": "verse",
       "sort_order": 49,
       "sections": {
@@ -916,7 +867,6 @@
     {
       "id": "verse-047",
       "name": "Verse 47: Death carries off a man who is gathering flowers and whose mind...",
-      "level": 1,
       "category": "verse",
       "sort_order": 50,
       "sections": {
@@ -933,7 +883,6 @@
     {
       "id": "verse-048",
       "name": "Verse 48: Death subdues a man who is gathering flowers, and whose mind is...",
-      "level": 1,
       "category": "verse",
       "sort_order": 51,
       "sections": {
@@ -950,7 +899,6 @@
     {
       "id": "verse-049",
       "name": "Verse 49: As the bee collects nectar and departs without injuring the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 52,
       "sections": {
@@ -967,7 +915,6 @@
     {
       "id": "verse-050",
       "name": "Verse 50: Not the perversities of others, not their sins of commission or...",
-      "level": 1,
       "category": "verse",
       "sort_order": 53,
       "sections": {
@@ -984,7 +931,6 @@
     {
       "id": "verse-051",
       "name": "Verse 51: Like a beautiful flower, full of colour, but without scent, are...",
-      "level": 1,
       "category": "verse",
       "sort_order": 54,
       "sections": {
@@ -1001,7 +947,6 @@
     {
       "id": "verse-052",
       "name": "Verse 52: But, like a beautiful flower, full of colour and full of scent,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 55,
       "sections": {
@@ -1018,7 +963,6 @@
     {
       "id": "verse-053",
       "name": "Verse 53: As many kinds of wreaths can be made from a heap of flowers, so...",
-      "level": 1,
       "category": "verse",
       "sort_order": 56,
       "sections": {
@@ -1035,7 +979,6 @@
     {
       "id": "verse-054",
       "name": "Verse 54: The scent of flowers does not travel against the wind, nor (that...",
-      "level": 1,
       "category": "verse",
       "sort_order": 57,
       "sections": {
@@ -1052,7 +995,6 @@
     {
       "id": "verse-055",
       "name": "Verse 55: Sandal-wood or Tagara, a lotus-flower, or a Vassiki, among these...",
-      "level": 1,
       "category": "verse",
       "sort_order": 58,
       "sections": {
@@ -1069,7 +1011,6 @@
     {
       "id": "verse-056",
       "name": "Verse 56: Mean is the scent that comes from Tagara and sandal-wood;--the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 59,
       "sections": {
@@ -1086,7 +1027,6 @@
     {
       "id": "verse-057",
       "name": "Verse 57: Of the people who possess these virtues, who live without...",
-      "level": 1,
       "category": "verse",
       "sort_order": 60,
       "sections": {
@@ -1104,10 +1044,9 @@
       "id": "chapter-04",
       "name": "Chapter IV: Flowers",
       "symbol": "IV",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-044",
         "verse-045",
         "verse-046",
@@ -1138,7 +1077,6 @@
     {
       "id": "verse-060",
       "name": "Verse 60: Long is the night to him who is awake; long is a mile to him who...",
-      "level": 1,
       "category": "verse",
       "sort_order": 62,
       "sections": {
@@ -1155,7 +1093,6 @@
     {
       "id": "verse-061",
       "name": "Verse 61: If a traveller does not meet with one who is his better, or his...",
-      "level": 1,
       "category": "verse",
       "sort_order": 63,
       "sections": {
@@ -1172,7 +1109,6 @@
     {
       "id": "verse-062",
       "name": "Verse 62: \"These sons belong to me, and this wealth belongs to me,\" with...",
-      "level": 1,
       "category": "verse",
       "sort_order": 64,
       "sections": {
@@ -1189,7 +1125,6 @@
     {
       "id": "verse-063",
       "name": "Verse 63: The fool who knows his foolishness, is wise at least so far. But...",
-      "level": 1,
       "category": "verse",
       "sort_order": 65,
       "sections": {
@@ -1206,7 +1141,6 @@
     {
       "id": "verse-064",
       "name": "Verse 64: If a fool be associated with a wise man even all his life, he...",
-      "level": 1,
       "category": "verse",
       "sort_order": 66,
       "sections": {
@@ -1223,7 +1157,6 @@
     {
       "id": "verse-065",
       "name": "Verse 65: If an intelligent man be associated for one minute only with a...",
-      "level": 1,
       "category": "verse",
       "sort_order": 67,
       "sections": {
@@ -1240,7 +1173,6 @@
     {
       "id": "verse-066",
       "name": "Verse 66: Fools of little understanding have themselves for their greatest...",
-      "level": 1,
       "category": "verse",
       "sort_order": 68,
       "sections": {
@@ -1257,7 +1189,6 @@
     {
       "id": "verse-067",
       "name": "Verse 67: That deed is not well done of which a man must repent, and the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 69,
       "sections": {
@@ -1274,7 +1205,6 @@
     {
       "id": "verse-068",
       "name": "Verse 68: No, that deed is well done of which a man does not repent, and...",
-      "level": 1,
       "category": "verse",
       "sort_order": 70,
       "sections": {
@@ -1291,7 +1221,6 @@
     {
       "id": "verse-069",
       "name": "Verse 69: As long as the evil deed done does not bear fruit, the fool...",
-      "level": 1,
       "category": "verse",
       "sort_order": 71,
       "sections": {
@@ -1308,7 +1237,6 @@
     {
       "id": "verse-070",
       "name": "Verse 70: Let a fool month after month eat his food (like an ascetic) with...",
-      "level": 1,
       "category": "verse",
       "sort_order": 72,
       "sections": {
@@ -1325,7 +1253,6 @@
     {
       "id": "verse-071",
       "name": "Verse 71: An evil deed, like newly-drawn milk, does not turn (suddenly);...",
-      "level": 1,
       "category": "verse",
       "sort_order": 73,
       "sections": {
@@ -1342,7 +1269,6 @@
     {
       "id": "verse-072",
       "name": "Verse 72: And when the evil deed, after it has become known, brings sorrow...",
-      "level": 1,
       "category": "verse",
       "sort_order": 74,
       "sections": {
@@ -1359,7 +1285,6 @@
     {
       "id": "verse-073",
       "name": "Verse 73: Let the fool wish for a false reputation, for precedence among...",
-      "level": 1,
       "category": "verse",
       "sort_order": 75,
       "sections": {
@@ -1376,7 +1301,6 @@
     {
       "id": "verse-074",
       "name": "Verse 74: \"May both the layman and he who has left the world think that...",
-      "level": 1,
       "category": "verse",
       "sort_order": 76,
       "sections": {
@@ -1393,7 +1317,6 @@
     {
       "id": "verse-075",
       "name": "Verse 75: \"One is the road that leads to wealth, another the road that...",
-      "level": 1,
       "category": "verse",
       "sort_order": 77,
       "sections": {
@@ -1411,10 +1334,9 @@
       "id": "chapter-05",
       "name": "Chapter V: The Fool",
       "symbol": "V",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-060",
         "verse-061",
         "verse-062",
@@ -1447,7 +1369,6 @@
     {
       "id": "verse-076",
       "name": "Verse 76: If you see an intelligent man who tells you where true treasures...",
-      "level": 1,
       "category": "verse",
       "sort_order": 79,
       "sections": {
@@ -1464,7 +1385,6 @@
     {
       "id": "verse-077",
       "name": "Verse 77: Let him admonish, let him teach, let him forbid what is...",
-      "level": 1,
       "category": "verse",
       "sort_order": 80,
       "sections": {
@@ -1481,7 +1401,6 @@
     {
       "id": "verse-078",
       "name": "Verse 78: Do not have evil-doers for friends, do not have low people for...",
-      "level": 1,
       "category": "verse",
       "sort_order": 81,
       "sections": {
@@ -1498,7 +1417,6 @@
     {
       "id": "verse-079",
       "name": "Verse 79: He who drinks in the law lives happily with a serene mind: the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 82,
       "sections": {
@@ -1515,7 +1433,6 @@
     {
       "id": "verse-080",
       "name": "Verse 80: Well-makers lead the water (wherever they like); fletchers bend...",
-      "level": 1,
       "category": "verse",
       "sort_order": 83,
       "sections": {
@@ -1532,7 +1449,6 @@
     {
       "id": "verse-081",
       "name": "Verse 81: As a solid rock is not shaken by the wind, wise people falter...",
-      "level": 1,
       "category": "verse",
       "sort_order": 84,
       "sections": {
@@ -1549,7 +1465,6 @@
     {
       "id": "verse-082",
       "name": "Verse 82: Wise people, after they have listened to the laws, become...",
-      "level": 1,
       "category": "verse",
       "sort_order": 85,
       "sections": {
@@ -1566,7 +1481,6 @@
     {
       "id": "verse-083",
       "name": "Verse 83: Good people walk on whatever befall, the good do not prattle,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 86,
       "sections": {
@@ -1583,7 +1497,6 @@
     {
       "id": "verse-084",
       "name": "Verse 84: If, whether for his own sake, or for the sake of others, a man...",
-      "level": 1,
       "category": "verse",
       "sort_order": 87,
       "sections": {
@@ -1600,7 +1513,6 @@
     {
       "id": "verse-085",
       "name": "Verse 85: Few are there among men who arrive at the other shore (become...",
-      "level": 1,
       "category": "verse",
       "sort_order": 88,
       "sections": {
@@ -1617,7 +1529,6 @@
     {
       "id": "verse-086",
       "name": "Verse 86: But those who, when the law has been well preached to them,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 89,
       "sections": {
@@ -1634,7 +1545,6 @@
     {
       "id": "verse-089",
       "name": "Verse 89: Those whose mind is well grounded in the (seven) elements of...",
-      "level": 1,
       "category": "verse",
       "sort_order": 90,
       "sections": {
@@ -1652,10 +1562,9 @@
       "id": "chapter-06",
       "name": "Chapter VI: The Wise Man (Pandita)",
       "symbol": "VI",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-076",
         "verse-077",
         "verse-078",
@@ -1684,7 +1593,6 @@
     {
       "id": "verse-090",
       "name": "Verse 90: There is no suffering for him who has finished his journey, and...",
-      "level": 1,
       "category": "verse",
       "sort_order": 92,
       "sections": {
@@ -1701,7 +1609,6 @@
     {
       "id": "verse-091",
       "name": "Verse 91: They depart with their thoughts well-collected, they are not...",
-      "level": 1,
       "category": "verse",
       "sort_order": 93,
       "sections": {
@@ -1718,7 +1625,6 @@
     {
       "id": "verse-092",
       "name": "Verse 92: Men who have no riches, who live on recognised food, who have...",
-      "level": 1,
       "category": "verse",
       "sort_order": 94,
       "sections": {
@@ -1735,7 +1641,6 @@
     {
       "id": "verse-093",
       "name": "Verse 93: He whose appetites are stilled, who is not absorbed in...",
-      "level": 1,
       "category": "verse",
       "sort_order": 95,
       "sections": {
@@ -1752,7 +1657,6 @@
     {
       "id": "verse-094",
       "name": "Verse 94: The gods even envy him whose senses, like horses well broken in...",
-      "level": 1,
       "category": "verse",
       "sort_order": 96,
       "sections": {
@@ -1769,7 +1673,6 @@
     {
       "id": "verse-095",
       "name": "Verse 95: Such a one who does his duty is tolerant like the earth, like...",
-      "level": 1,
       "category": "verse",
       "sort_order": 97,
       "sections": {
@@ -1786,7 +1689,6 @@
     {
       "id": "verse-096",
       "name": "Verse 96: His thought is quiet, quiet are his word and deed, when he has...",
-      "level": 1,
       "category": "verse",
       "sort_order": 98,
       "sections": {
@@ -1803,7 +1705,6 @@
     {
       "id": "verse-097",
       "name": "Verse 97: The man who is free from credulity, but knows the uncreated, who...",
-      "level": 1,
       "category": "verse",
       "sort_order": 99,
       "sections": {
@@ -1820,7 +1721,6 @@
     {
       "id": "verse-098",
       "name": "Verse 98: In a hamlet or in a forest, in the deep water or on the dry...",
-      "level": 1,
       "category": "verse",
       "sort_order": 100,
       "sections": {
@@ -1837,7 +1737,6 @@
     {
       "id": "verse-099",
       "name": "Verse 99: Forests are delightful; where the world finds no delight, there...",
-      "level": 1,
       "category": "verse",
       "sort_order": 101,
       "sections": {
@@ -1855,10 +1754,9 @@
       "id": "chapter-07",
       "name": "Chapter VII: The Venerable (Arhat)",
       "symbol": "VII",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-090",
         "verse-091",
         "verse-092",
@@ -1885,7 +1783,6 @@
     {
       "id": "verse-100",
       "name": "Verse 100: Even though a speech be a thousand (of words), but made up of...",
-      "level": 1,
       "category": "verse",
       "sort_order": 103,
       "sections": {
@@ -1902,7 +1799,6 @@
     {
       "id": "verse-101",
       "name": "Verse 101: Even though a Gatha (poem) be a thousand (of words), but made up...",
-      "level": 1,
       "category": "verse",
       "sort_order": 104,
       "sections": {
@@ -1919,7 +1815,6 @@
     {
       "id": "verse-102",
       "name": "Verse 102: Though a man recite a hundred Gathas made up of senseless words,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 105,
       "sections": {
@@ -1936,7 +1831,6 @@
     {
       "id": "verse-103",
       "name": "Verse 103: If one man conquer in battle a thousand times thousand men, and...",
-      "level": 1,
       "category": "verse",
       "sort_order": 106,
       "sections": {
@@ -1953,7 +1847,6 @@
     {
       "id": "verse-106",
       "name": "Verse 106: If a man for a hundred years sacrifice month after month with a...",
-      "level": 1,
       "category": "verse",
       "sort_order": 107,
       "sections": {
@@ -1970,7 +1863,6 @@
     {
       "id": "verse-107",
       "name": "Verse 107: If a man for a hundred years worship Agni (fire) in the forest,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 108,
       "sections": {
@@ -1987,7 +1879,6 @@
     {
       "id": "verse-108",
       "name": "Verse 108: Whatever a man sacrifice in this world as an offering or as an...",
-      "level": 1,
       "category": "verse",
       "sort_order": 109,
       "sections": {
@@ -2004,7 +1895,6 @@
     {
       "id": "verse-109",
       "name": "Verse 109: He who always greets and constantly reveres the aged, four...",
-      "level": 1,
       "category": "verse",
       "sort_order": 110,
       "sections": {
@@ -2021,7 +1911,6 @@
     {
       "id": "verse-110",
       "name": "Verse 110: But he who lives a hundred years, vicious and unrestrained, a...",
-      "level": 1,
       "category": "verse",
       "sort_order": 111,
       "sections": {
@@ -2038,7 +1927,6 @@
     {
       "id": "verse-111",
       "name": "Verse 111: And he who lives a hundred years, ignorant and unrestrained, a...",
-      "level": 1,
       "category": "verse",
       "sort_order": 112,
       "sections": {
@@ -2055,7 +1943,6 @@
     {
       "id": "verse-112",
       "name": "Verse 112: And he who lives a hundred years, idle and weak, a life of one...",
-      "level": 1,
       "category": "verse",
       "sort_order": 113,
       "sections": {
@@ -2072,7 +1959,6 @@
     {
       "id": "verse-113",
       "name": "Verse 113: And he who lives a hundred years, not seeing beginning and end,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 114,
       "sections": {
@@ -2089,7 +1975,6 @@
     {
       "id": "verse-114",
       "name": "Verse 114: And he who lives a hundred years, not seeing the immortal place,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 115,
       "sections": {
@@ -2106,7 +1991,6 @@
     {
       "id": "verse-115",
       "name": "Verse 115: And he who lives a hundred years, not seeing the highest law, a...",
-      "level": 1,
       "category": "verse",
       "sort_order": 116,
       "sections": {
@@ -2124,10 +2008,9 @@
       "id": "chapter-08",
       "name": "Chapter VIII: The Thousands",
       "symbol": "VIII",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-100",
         "verse-101",
         "verse-102",
@@ -2158,7 +2041,6 @@
     {
       "id": "verse-116",
       "name": "Verse 116: If a man would hasten towards the good, he should keep his...",
-      "level": 1,
       "category": "verse",
       "sort_order": 118,
       "sections": {
@@ -2175,7 +2057,6 @@
     {
       "id": "verse-117",
       "name": "Verse 117: If a man commits a sin, let him not do it again; let him not...",
-      "level": 1,
       "category": "verse",
       "sort_order": 119,
       "sections": {
@@ -2192,7 +2073,6 @@
     {
       "id": "verse-118",
       "name": "Verse 118: If a man does what is good, let him do it again; let him delight...",
-      "level": 1,
       "category": "verse",
       "sort_order": 120,
       "sections": {
@@ -2209,7 +2089,6 @@
     {
       "id": "verse-119",
       "name": "Verse 119: Even an evil-doer sees happiness as long as his evil deed has...",
-      "level": 1,
       "category": "verse",
       "sort_order": 121,
       "sections": {
@@ -2226,7 +2105,6 @@
     {
       "id": "verse-120",
       "name": "Verse 120: Even a good man sees evil days, as long as his good deed has not...",
-      "level": 1,
       "category": "verse",
       "sort_order": 122,
       "sections": {
@@ -2243,7 +2121,6 @@
     {
       "id": "verse-121",
       "name": "Verse 121: Let no man think lightly of evil, saying in his heart, It will...",
-      "level": 1,
       "category": "verse",
       "sort_order": 123,
       "sections": {
@@ -2260,7 +2137,6 @@
     {
       "id": "verse-122",
       "name": "Verse 122: Let no man think lightly of good, saying in his heart, It will...",
-      "level": 1,
       "category": "verse",
       "sort_order": 124,
       "sections": {
@@ -2277,7 +2153,6 @@
     {
       "id": "verse-123",
       "name": "Verse 123: Let a man avoid evil deeds, as a merchant, if he has few...",
-      "level": 1,
       "category": "verse",
       "sort_order": 125,
       "sections": {
@@ -2294,7 +2169,6 @@
     {
       "id": "verse-124",
       "name": "Verse 124: He who has no wound on his hand, may touch poison with his hand;...",
-      "level": 1,
       "category": "verse",
       "sort_order": 126,
       "sections": {
@@ -2311,7 +2185,6 @@
     {
       "id": "verse-125",
       "name": "Verse 125: If a man offend a harmless, pure, and innocent person, the evil...",
-      "level": 1,
       "category": "verse",
       "sort_order": 127,
       "sections": {
@@ -2328,7 +2201,6 @@
     {
       "id": "verse-126",
       "name": "Verse 126: Some people are born again; evil-doers go to hell; righteous...",
-      "level": 1,
       "category": "verse",
       "sort_order": 128,
       "sections": {
@@ -2345,7 +2217,6 @@
     {
       "id": "verse-127",
       "name": "Verse 127: Not in the sky, not in the midst of the sea, not if we enter...",
-      "level": 1,
       "category": "verse",
       "sort_order": 129,
       "sections": {
@@ -2362,7 +2233,6 @@
     {
       "id": "verse-128",
       "name": "Verse 128: Not in the sky, not in the midst of the sea, not if we enter...",
-      "level": 1,
       "category": "verse",
       "sort_order": 130,
       "sections": {
@@ -2380,10 +2250,9 @@
       "id": "chapter-09",
       "name": "Chapter IX: Evil",
       "symbol": "IX",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-116",
         "verse-117",
         "verse-118",
@@ -2413,7 +2282,6 @@
     {
       "id": "verse-129",
       "name": "Verse 129: All men tremble at punishment, all men fear death; remember that...",
-      "level": 1,
       "category": "verse",
       "sort_order": 132,
       "sections": {
@@ -2430,7 +2298,6 @@
     {
       "id": "verse-130",
       "name": "Verse 130: All men tremble at punishment, all men love life; remember that...",
-      "level": 1,
       "category": "verse",
       "sort_order": 133,
       "sections": {
@@ -2447,7 +2314,6 @@
     {
       "id": "verse-131",
       "name": "Verse 131: He who seeking his own happiness punishes or kills beings who...",
-      "level": 1,
       "category": "verse",
       "sort_order": 134,
       "sections": {
@@ -2464,7 +2330,6 @@
     {
       "id": "verse-132",
       "name": "Verse 132: He who seeking his own happiness does not punish or kill beings...",
-      "level": 1,
       "category": "verse",
       "sort_order": 135,
       "sections": {
@@ -2481,7 +2346,6 @@
     {
       "id": "verse-133",
       "name": "Verse 133: Do not speak harshly to anybody; those who are spoken to will...",
-      "level": 1,
       "category": "verse",
       "sort_order": 136,
       "sections": {
@@ -2498,7 +2362,6 @@
     {
       "id": "verse-134",
       "name": "Verse 134: If, like a shattered metal plate (gong), thou utter not, then...",
-      "level": 1,
       "category": "verse",
       "sort_order": 137,
       "sections": {
@@ -2515,7 +2378,6 @@
     {
       "id": "verse-135",
       "name": "Verse 135: As a cowherd with his staff drives his cows into the stable, so...",
-      "level": 1,
       "category": "verse",
       "sort_order": 138,
       "sections": {
@@ -2532,7 +2394,6 @@
     {
       "id": "verse-136",
       "name": "Verse 136: A fool does not know when he commits his evil deeds: but the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 139,
       "sections": {
@@ -2549,7 +2410,6 @@
     {
       "id": "verse-137",
       "name": "Verse 137: He who inflicts pain on innocent and harmless persons, will soon...",
-      "level": 1,
       "category": "verse",
       "sort_order": 140,
       "sections": {
@@ -2566,7 +2426,6 @@
     {
       "id": "verse-138",
       "name": "Verse 138: He will have cruel suffering, loss, injury of the body, heavy...",
-      "level": 1,
       "category": "verse",
       "sort_order": 141,
       "sections": {
@@ -2583,7 +2442,6 @@
     {
       "id": "verse-139",
       "name": "Verse 139: Or a misfortune coming from the king, or a fearful accusation,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 142,
       "sections": {
@@ -2600,7 +2458,6 @@
     {
       "id": "verse-140",
       "name": "Verse 140: Or lightning-fire will burn his houses; and when his body is...",
-      "level": 1,
       "category": "verse",
       "sort_order": 143,
       "sections": {
@@ -2617,7 +2474,6 @@
     {
       "id": "verse-141",
       "name": "Verse 141: Not nakedness, not platted hair, not dirt, not fasting, or lying...",
-      "level": 1,
       "category": "verse",
       "sort_order": 144,
       "sections": {
@@ -2634,7 +2490,6 @@
     {
       "id": "verse-142",
       "name": "Verse 142: He who, though dressed in fine apparel, exercises tranquillity,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 145,
       "sections": {
@@ -2651,7 +2506,6 @@
     {
       "id": "verse-143",
       "name": "Verse 143: Is there in this world any man so restrained by humility that he...",
-      "level": 1,
       "category": "verse",
       "sort_order": 146,
       "sections": {
@@ -2668,7 +2522,6 @@
     {
       "id": "verse-144",
       "name": "Verse 144: Like a well-trained horse when touched by the whip, be ye active...",
-      "level": 1,
       "category": "verse",
       "sort_order": 147,
       "sections": {
@@ -2685,7 +2538,6 @@
     {
       "id": "verse-145",
       "name": "Verse 145: Well-makers lead the water (wherever they like); fletchers bend...",
-      "level": 1,
       "category": "verse",
       "sort_order": 148,
       "sections": {
@@ -2703,10 +2555,9 @@
       "id": "chapter-10",
       "name": "Chapter X: Punishment",
       "symbol": "X",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-129",
         "verse-130",
         "verse-131",
@@ -2740,7 +2591,6 @@
     {
       "id": "verse-146",
       "name": "Verse 146: How is there laughter, how is there joy, as this world is always...",
-      "level": 1,
       "category": "verse",
       "sort_order": 150,
       "sections": {
@@ -2757,7 +2607,6 @@
     {
       "id": "verse-147",
       "name": "Verse 147: Look at this dressed-up lump, covered with wounds, joined...",
-      "level": 1,
       "category": "verse",
       "sort_order": 151,
       "sections": {
@@ -2774,7 +2623,6 @@
     {
       "id": "verse-148",
       "name": "Verse 148: This body is wasted, full of sickness, and frail; this heap of...",
-      "level": 1,
       "category": "verse",
       "sort_order": 152,
       "sections": {
@@ -2791,7 +2639,6 @@
     {
       "id": "verse-149",
       "name": "Verse 149: Those white bones, like gourds thrown away in the autumn, what...",
-      "level": 1,
       "category": "verse",
       "sort_order": 153,
       "sections": {
@@ -2808,7 +2655,6 @@
     {
       "id": "verse-150",
       "name": "Verse 150: After a stronghold has been made of the bones, it is covered...",
-      "level": 1,
       "category": "verse",
       "sort_order": 154,
       "sections": {
@@ -2825,7 +2671,6 @@
     {
       "id": "verse-151",
       "name": "Verse 151: The brilliant chariots of kings are destroyed, the body also...",
-      "level": 1,
       "category": "verse",
       "sort_order": 155,
       "sections": {
@@ -2842,7 +2687,6 @@
     {
       "id": "verse-152",
       "name": "Verse 152: A man who has learnt little, grows old like an ox; his flesh...",
-      "level": 1,
       "category": "verse",
       "sort_order": 156,
       "sections": {
@@ -2859,7 +2703,6 @@
     {
       "id": "verse-155",
       "name": "Verse 155: Men who have not observed proper discipline, and have not gained...",
-      "level": 1,
       "category": "verse",
       "sort_order": 157,
       "sections": {
@@ -2876,7 +2719,6 @@
     {
       "id": "verse-156",
       "name": "Verse 156: Men who have not observed proper discipline, and have not gained...",
-      "level": 1,
       "category": "verse",
       "sort_order": 158,
       "sections": {
@@ -2894,10 +2736,9 @@
       "id": "chapter-11",
       "name": "Chapter XI: Old Age",
       "symbol": "XI",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-146",
         "verse-147",
         "verse-148",
@@ -2923,7 +2764,6 @@
     {
       "id": "verse-157",
       "name": "Verse 157: If a man hold himself dear, let him watch himself carefully;...",
-      "level": 1,
       "category": "verse",
       "sort_order": 160,
       "sections": {
@@ -2940,7 +2780,6 @@
     {
       "id": "verse-158",
       "name": "Verse 158: Let each man direct himself first to what is proper, then let...",
-      "level": 1,
       "category": "verse",
       "sort_order": 161,
       "sections": {
@@ -2957,7 +2796,6 @@
     {
       "id": "verse-159",
       "name": "Verse 159: If a man make himself as he teaches others to be, then, being...",
-      "level": 1,
       "category": "verse",
       "sort_order": 162,
       "sections": {
@@ -2974,7 +2812,6 @@
     {
       "id": "verse-160",
       "name": "Verse 160: Self is the lord of self, who else could be the lord? With self...",
-      "level": 1,
       "category": "verse",
       "sort_order": 163,
       "sections": {
@@ -2991,7 +2828,6 @@
     {
       "id": "verse-161",
       "name": "Verse 161: The evil done by oneself, self-begotten, self-bred, crushes the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 164,
       "sections": {
@@ -3008,7 +2844,6 @@
     {
       "id": "verse-162",
       "name": "Verse 162: He whose wickedness is very great brings himself down to that...",
-      "level": 1,
       "category": "verse",
       "sort_order": 165,
       "sections": {
@@ -3025,7 +2860,6 @@
     {
       "id": "verse-163",
       "name": "Verse 163: Bad deeds, and deeds hurtful to ourselves, are easy to do; what...",
-      "level": 1,
       "category": "verse",
       "sort_order": 166,
       "sections": {
@@ -3042,7 +2876,6 @@
     {
       "id": "verse-164",
       "name": "Verse 164: The foolish man who scorns the rule of the venerable (Arahat),...",
-      "level": 1,
       "category": "verse",
       "sort_order": 167,
       "sections": {
@@ -3059,7 +2892,6 @@
     {
       "id": "verse-165",
       "name": "Verse 165: By oneself the evil is done, by oneself one suffers; by oneself...",
-      "level": 1,
       "category": "verse",
       "sort_order": 168,
       "sections": {
@@ -3076,7 +2908,6 @@
     {
       "id": "verse-166",
       "name": "Verse 166: Let no one forget his own duty for the sake of another's,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 169,
       "sections": {
@@ -3094,10 +2925,9 @@
       "id": "chapter-12",
       "name": "Chapter XII: Self",
       "symbol": "XII",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-157",
         "verse-158",
         "verse-159",
@@ -3124,7 +2954,6 @@
     {
       "id": "verse-167",
       "name": "Verse 167: Do not follow the evil law! Do not live on in thoughtlessness!...",
-      "level": 1,
       "category": "verse",
       "sort_order": 171,
       "sections": {
@@ -3141,7 +2970,6 @@
     {
       "id": "verse-168",
       "name": "Verse 168: Rouse thyself! do not be idle! Follow the law of virtue! The...",
-      "level": 1,
       "category": "verse",
       "sort_order": 172,
       "sections": {
@@ -3158,7 +2986,6 @@
     {
       "id": "verse-169",
       "name": "Verse 169: Follow the law of virtue; do not follow that of sin. The...",
-      "level": 1,
       "category": "verse",
       "sort_order": 173,
       "sections": {
@@ -3175,7 +3002,6 @@
     {
       "id": "verse-170",
       "name": "Verse 170: Look upon the world as a bubble, look upon it as a mirage: the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 174,
       "sections": {
@@ -3192,7 +3018,6 @@
     {
       "id": "verse-171",
       "name": "Verse 171: Come, look at this glittering world, like unto a royal chariot;...",
-      "level": 1,
       "category": "verse",
       "sort_order": 175,
       "sections": {
@@ -3209,7 +3034,6 @@
     {
       "id": "verse-172",
       "name": "Verse 172: He who formerly was reckless and afterwards became sober,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 176,
       "sections": {
@@ -3226,7 +3050,6 @@
     {
       "id": "verse-173",
       "name": "Verse 173: He whose evil deeds are covered by good deeds, brightens up this...",
-      "level": 1,
       "category": "verse",
       "sort_order": 177,
       "sections": {
@@ -3243,7 +3066,6 @@
     {
       "id": "verse-174",
       "name": "Verse 174: This world is dark, few only can see here; a few only go to...",
-      "level": 1,
       "category": "verse",
       "sort_order": 178,
       "sections": {
@@ -3260,7 +3082,6 @@
     {
       "id": "verse-175",
       "name": "Verse 175: The swans go on the path of the sun, they go through the ether...",
-      "level": 1,
       "category": "verse",
       "sort_order": 179,
       "sections": {
@@ -3277,7 +3098,6 @@
     {
       "id": "verse-176",
       "name": "Verse 176: If a man has transgressed one law, and speaks lies, and scoffs...",
-      "level": 1,
       "category": "verse",
       "sort_order": 180,
       "sections": {
@@ -3294,7 +3114,6 @@
     {
       "id": "verse-177",
       "name": "Verse 177: The uncharitable do not go to the world of the gods; fools only...",
-      "level": 1,
       "category": "verse",
       "sort_order": 181,
       "sections": {
@@ -3311,7 +3130,6 @@
     {
       "id": "verse-178",
       "name": "Verse 178: Better than sovereignty over the earth, better than going to...",
-      "level": 1,
       "category": "verse",
       "sort_order": 182,
       "sections": {
@@ -3329,10 +3147,9 @@
       "id": "chapter-13",
       "name": "Chapter XIII: The World",
       "symbol": "XIII",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-167",
         "verse-168",
         "verse-169",
@@ -3361,7 +3178,6 @@
     {
       "id": "verse-179",
       "name": "Verse 179: He whose conquest is not conquered again, into whose conquest no...",
-      "level": 1,
       "category": "verse",
       "sort_order": 184,
       "sections": {
@@ -3378,7 +3194,6 @@
     {
       "id": "verse-180",
       "name": "Verse 180: He whom no desire with its snares and poisons can lead astray,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 185,
       "sections": {
@@ -3395,7 +3210,6 @@
     {
       "id": "verse-181",
       "name": "Verse 181: Even the gods envy those who are awakened and not forgetful, who...",
-      "level": 1,
       "category": "verse",
       "sort_order": 186,
       "sections": {
@@ -3412,7 +3226,6 @@
     {
       "id": "verse-182",
       "name": "Verse 182: Difficult (to obtain) is the conception of men, difficult is the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 187,
       "sections": {
@@ -3429,7 +3242,6 @@
     {
       "id": "verse-183",
       "name": "Verse 183: Not to commit any sin, to do good, and to purify one's mind,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 188,
       "sections": {
@@ -3446,7 +3258,6 @@
     {
       "id": "verse-184",
       "name": "Verse 184: The Awakened call patience the highest penance, long-suffering...",
-      "level": 1,
       "category": "verse",
       "sort_order": 189,
       "sections": {
@@ -3463,7 +3274,6 @@
     {
       "id": "verse-185",
       "name": "Verse 185: Not to blame, not to strike, to live restrained under the law,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 190,
       "sections": {
@@ -3480,7 +3290,6 @@
     {
       "id": "verse-186",
       "name": "Verse 186: There is no satisfying lusts, even by a shower of gold pieces;...",
-      "level": 1,
       "category": "verse",
       "sort_order": 191,
       "sections": {
@@ -3497,7 +3306,6 @@
     {
       "id": "verse-187",
       "name": "Verse 187: Even in heavenly pleasures he finds no satisfaction, the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 192,
       "sections": {
@@ -3514,7 +3322,6 @@
     {
       "id": "verse-188",
       "name": "Verse 188: Men, driven by fear, go to many a refuge, to mountains and...",
-      "level": 1,
       "category": "verse",
       "sort_order": 193,
       "sections": {
@@ -3531,7 +3338,6 @@
     {
       "id": "verse-189",
       "name": "Verse 189: But that is not a safe refuge, that is not the best refuge; a...",
-      "level": 1,
       "category": "verse",
       "sort_order": 194,
       "sections": {
@@ -3548,7 +3354,6 @@
     {
       "id": "verse-190",
       "name": "Verse 190: He who takes refuge with Buddha, the Law, and the Church; he...",
-      "level": 1,
       "category": "verse",
       "sort_order": 195,
       "sections": {
@@ -3565,7 +3370,6 @@
     {
       "id": "verse-191",
       "name": "Verse 191: Viz. pain, the origin of pain, the destruction of pain, and the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 196,
       "sections": {
@@ -3582,7 +3386,6 @@
     {
       "id": "verse-192",
       "name": "Verse 192: That is the safe refuge, that is the best refuge; having gone to...",
-      "level": 1,
       "category": "verse",
       "sort_order": 197,
       "sections": {
@@ -3599,7 +3402,6 @@
     {
       "id": "verse-193",
       "name": "Verse 193: A supernatural person (a Buddha) is not easily found, he is not...",
-      "level": 1,
       "category": "verse",
       "sort_order": 198,
       "sections": {
@@ -3616,7 +3418,6 @@
     {
       "id": "verse-194",
       "name": "Verse 194: Happy is the arising of the awakened, happy is the teaching of...",
-      "level": 1,
       "category": "verse",
       "sort_order": 199,
       "sections": {
@@ -3634,10 +3435,9 @@
       "id": "chapter-14",
       "name": "Chapter XIV: The Buddha (The Awakened)",
       "symbol": "XIV",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-179",
         "verse-180",
         "verse-181",
@@ -3670,7 +3470,6 @@
     {
       "id": "verse-197",
       "name": "Verse 197: Let us live happily then, not hating those who hate us! among...",
-      "level": 1,
       "category": "verse",
       "sort_order": 201,
       "sections": {
@@ -3687,7 +3486,6 @@
     {
       "id": "verse-198",
       "name": "Verse 198: Let us live happily then, free from ailments among the ailing!...",
-      "level": 1,
       "category": "verse",
       "sort_order": 202,
       "sections": {
@@ -3704,7 +3502,6 @@
     {
       "id": "verse-199",
       "name": "Verse 199: Let us live happily then, free from greed among the greedy!...",
-      "level": 1,
       "category": "verse",
       "sort_order": 203,
       "sections": {
@@ -3721,7 +3518,6 @@
     {
       "id": "verse-200",
       "name": "Verse 200: Let us live happily then, though we call nothing our own! We...",
-      "level": 1,
       "category": "verse",
       "sort_order": 204,
       "sections": {
@@ -3738,7 +3534,6 @@
     {
       "id": "verse-201",
       "name": "Verse 201: Victory breeds hatred, for the conquered is unhappy. He who has...",
-      "level": 1,
       "category": "verse",
       "sort_order": 205,
       "sections": {
@@ -3755,7 +3550,6 @@
     {
       "id": "verse-202",
       "name": "Verse 202: There is no fire like passion; there is no losing throw like...",
-      "level": 1,
       "category": "verse",
       "sort_order": 206,
       "sections": {
@@ -3772,7 +3566,6 @@
     {
       "id": "verse-203",
       "name": "Verse 203: Hunger is the worst of diseases, the body the greatest of pains;...",
-      "level": 1,
       "category": "verse",
       "sort_order": 207,
       "sections": {
@@ -3789,7 +3582,6 @@
     {
       "id": "verse-204",
       "name": "Verse 204: Health is the greatest of gifts, contentedness the best riches;...",
-      "level": 1,
       "category": "verse",
       "sort_order": 208,
       "sections": {
@@ -3806,7 +3598,6 @@
     {
       "id": "verse-205",
       "name": "Verse 205: He who has tasted the sweetness of solitude and tranquillity, is...",
-      "level": 1,
       "category": "verse",
       "sort_order": 209,
       "sections": {
@@ -3823,7 +3614,6 @@
     {
       "id": "verse-206",
       "name": "Verse 206: The sight of the elect (Arya) is good, to live with them is...",
-      "level": 1,
       "category": "verse",
       "sort_order": 210,
       "sections": {
@@ -3840,7 +3630,6 @@
     {
       "id": "verse-207",
       "name": "Verse 207: He who walks in the company of fools suffers a long way; company...",
-      "level": 1,
       "category": "verse",
       "sort_order": 211,
       "sections": {
@@ -3857,7 +3646,6 @@
     {
       "id": "verse-208",
       "name": "Verse 208: Therefore, one ought to follow the wise, the intelligent, the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 212,
       "sections": {
@@ -3875,10 +3663,9 @@
       "id": "chapter-15",
       "name": "Chapter XV: Happiness",
       "symbol": "XV",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-197",
         "verse-198",
         "verse-199",
@@ -3907,7 +3694,6 @@
     {
       "id": "verse-209",
       "name": "Verse 209: He who gives himself to vanity, and does not give himself to...",
-      "level": 1,
       "category": "verse",
       "sort_order": 214,
       "sections": {
@@ -3924,7 +3710,6 @@
     {
       "id": "verse-210",
       "name": "Verse 210: Let no man ever look for what is pleasant, or what is...",
-      "level": 1,
       "category": "verse",
       "sort_order": 215,
       "sections": {
@@ -3941,7 +3726,6 @@
     {
       "id": "verse-211",
       "name": "Verse 211: Let, therefore, no man love anything; loss of the beloved is...",
-      "level": 1,
       "category": "verse",
       "sort_order": 216,
       "sections": {
@@ -3958,7 +3742,6 @@
     {
       "id": "verse-212",
       "name": "Verse 212: From pleasure comes grief, from pleasure comes fear; he who is...",
-      "level": 1,
       "category": "verse",
       "sort_order": 217,
       "sections": {
@@ -3975,7 +3758,6 @@
     {
       "id": "verse-213",
       "name": "Verse 213: From affection comes grief, from affection comes fear; he who is...",
-      "level": 1,
       "category": "verse",
       "sort_order": 218,
       "sections": {
@@ -3992,7 +3774,6 @@
     {
       "id": "verse-214",
       "name": "Verse 214: From lust comes grief, from lust comes fear; he who is free from...",
-      "level": 1,
       "category": "verse",
       "sort_order": 219,
       "sections": {
@@ -4009,7 +3790,6 @@
     {
       "id": "verse-215",
       "name": "Verse 215: From love comes grief, from love comes fear; he who is free from...",
-      "level": 1,
       "category": "verse",
       "sort_order": 220,
       "sections": {
@@ -4026,7 +3806,6 @@
     {
       "id": "verse-216",
       "name": "Verse 216: From greed comes grief, from greed comes fear; he who is free...",
-      "level": 1,
       "category": "verse",
       "sort_order": 221,
       "sections": {
@@ -4043,7 +3822,6 @@
     {
       "id": "verse-217",
       "name": "Verse 217: He who possesses virtue and intelligence, who is just, speaks...",
-      "level": 1,
       "category": "verse",
       "sort_order": 222,
       "sections": {
@@ -4060,7 +3838,6 @@
     {
       "id": "verse-218",
       "name": "Verse 218: He in whom a desire for the Ineffable (Nirvana) has sprung up,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 223,
       "sections": {
@@ -4077,7 +3854,6 @@
     {
       "id": "verse-219",
       "name": "Verse 219: Kinsmen, friends, and lovers salute a man who has been long...",
-      "level": 1,
       "category": "verse",
       "sort_order": 224,
       "sections": {
@@ -4094,7 +3870,6 @@
     {
       "id": "verse-220",
       "name": "Verse 220: In like manner his good works receive him who has done good, and...",
-      "level": 1,
       "category": "verse",
       "sort_order": 225,
       "sections": {
@@ -4112,10 +3887,9 @@
       "id": "chapter-16",
       "name": "Chapter XVI: Pleasure",
       "symbol": "XVI",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-209",
         "verse-210",
         "verse-211",
@@ -4144,7 +3918,6 @@
     {
       "id": "verse-221",
       "name": "Verse 221: Let a man leave anger, let him forsake pride, let him overcome...",
-      "level": 1,
       "category": "verse",
       "sort_order": 227,
       "sections": {
@@ -4161,7 +3934,6 @@
     {
       "id": "verse-222",
       "name": "Verse 222: He who holds back rising anger like a rolling chariot, him I...",
-      "level": 1,
       "category": "verse",
       "sort_order": 228,
       "sections": {
@@ -4178,7 +3950,6 @@
     {
       "id": "verse-223",
       "name": "Verse 223: Let a man overcome anger by love, let him overcome evil by good;...",
-      "level": 1,
       "category": "verse",
       "sort_order": 229,
       "sections": {
@@ -4195,7 +3966,6 @@
     {
       "id": "verse-224",
       "name": "Verse 224: Speak the truth, do not yield to anger; give, if thou art asked...",
-      "level": 1,
       "category": "verse",
       "sort_order": 230,
       "sections": {
@@ -4212,7 +3982,6 @@
     {
       "id": "verse-225",
       "name": "Verse 225: The sages who injure nobody, and who always control their body,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 231,
       "sections": {
@@ -4229,7 +3998,6 @@
     {
       "id": "verse-226",
       "name": "Verse 226: Those who are ever watchful, who study day and night, and who...",
-      "level": 1,
       "category": "verse",
       "sort_order": 232,
       "sections": {
@@ -4246,7 +4014,6 @@
     {
       "id": "verse-227",
       "name": "Verse 227: This is an old saying, O Atula, this is not only of to-day:...",
-      "level": 1,
       "category": "verse",
       "sort_order": 233,
       "sections": {
@@ -4263,7 +4030,6 @@
     {
       "id": "verse-228",
       "name": "Verse 228: There never was, there never will be, nor is there now, a man...",
-      "level": 1,
       "category": "verse",
       "sort_order": 234,
       "sections": {
@@ -4280,7 +4046,6 @@
     {
       "id": "verse-231",
       "name": "Verse 231: Beware of bodily anger, and control thy body! Leave the sins of...",
-      "level": 1,
       "category": "verse",
       "sort_order": 235,
       "sections": {
@@ -4297,7 +4062,6 @@
     {
       "id": "verse-232",
       "name": "Verse 232: Beware of the anger of the tongue, and control thy tongue! Leave...",
-      "level": 1,
       "category": "verse",
       "sort_order": 236,
       "sections": {
@@ -4314,7 +4078,6 @@
     {
       "id": "verse-233",
       "name": "Verse 233: Beware of the anger of the mind, and control thy mind! Leave the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 237,
       "sections": {
@@ -4331,7 +4094,6 @@
     {
       "id": "verse-234",
       "name": "Verse 234: The wise who control their body, who control their tongue, the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 238,
       "sections": {
@@ -4349,10 +4111,9 @@
       "id": "chapter-17",
       "name": "Chapter XVII: Anger",
       "symbol": "XVII",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-221",
         "verse-222",
         "verse-223",
@@ -4381,7 +4142,6 @@
     {
       "id": "verse-235",
       "name": "Verse 235: Thou art now like a sear leaf, the messengers of death (Yama)...",
-      "level": 1,
       "category": "verse",
       "sort_order": 240,
       "sections": {
@@ -4398,7 +4158,6 @@
     {
       "id": "verse-236",
       "name": "Verse 236: Make thyself an island, work hard, be wise! When thy impurities...",
-      "level": 1,
       "category": "verse",
       "sort_order": 241,
       "sections": {
@@ -4415,7 +4174,6 @@
     {
       "id": "verse-237",
       "name": "Verse 237: Thy life has come to an end, thou art come near to death (Yama),...",
-      "level": 1,
       "category": "verse",
       "sort_order": 242,
       "sections": {
@@ -4432,7 +4190,6 @@
     {
       "id": "verse-238",
       "name": "Verse 238: Make thyself an island, work hard, be wise! When thy impurities...",
-      "level": 1,
       "category": "verse",
       "sort_order": 243,
       "sections": {
@@ -4449,7 +4206,6 @@
     {
       "id": "verse-239",
       "name": "Verse 239: Let a wise man blow off the impurities of his self, as a smith...",
-      "level": 1,
       "category": "verse",
       "sort_order": 244,
       "sections": {
@@ -4466,7 +4222,6 @@
     {
       "id": "verse-240",
       "name": "Verse 240: As the impurity which springs from the iron, when it springs...",
-      "level": 1,
       "category": "verse",
       "sort_order": 245,
       "sections": {
@@ -4483,7 +4238,6 @@
     {
       "id": "verse-241",
       "name": "Verse 241: The taint of prayers is non-repetition; the taint of houses,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 246,
       "sections": {
@@ -4500,7 +4254,6 @@
     {
       "id": "verse-242",
       "name": "Verse 242: Bad conduct is the taint of woman, greediness the taint of a...",
-      "level": 1,
       "category": "verse",
       "sort_order": 247,
       "sections": {
@@ -4517,7 +4270,6 @@
     {
       "id": "verse-243",
       "name": "Verse 243: But there is a taint worse than all taints,--ignorance is the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 248,
       "sections": {
@@ -4534,7 +4286,6 @@
     {
       "id": "verse-244",
       "name": "Verse 244: Life is easy to live for a man who is without shame, a crow...",
-      "level": 1,
       "category": "verse",
       "sort_order": 249,
       "sections": {
@@ -4551,7 +4302,6 @@
     {
       "id": "verse-245",
       "name": "Verse 245: But life is hard to live for a modest man, who always looks for...",
-      "level": 1,
       "category": "verse",
       "sort_order": 250,
       "sections": {
@@ -4568,7 +4318,6 @@
     {
       "id": "verse-246",
       "name": "Verse 246: He who destroys life, who speaks untruth, who in this world...",
-      "level": 1,
       "category": "verse",
       "sort_order": 251,
       "sections": {
@@ -4585,7 +4334,6 @@
     {
       "id": "verse-247",
       "name": "Verse 247: And the man who gives himself to drinking intoxicating liquors,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 252,
       "sections": {
@@ -4602,7 +4350,6 @@
     {
       "id": "verse-248",
       "name": "Verse 248: O man, know this, that the unrestrained are in a bad state; take...",
-      "level": 1,
       "category": "verse",
       "sort_order": 253,
       "sections": {
@@ -4619,7 +4366,6 @@
     {
       "id": "verse-249",
       "name": "Verse 249: The world gives according to their faith or according to their...",
-      "level": 1,
       "category": "verse",
       "sort_order": 254,
       "sections": {
@@ -4636,7 +4382,6 @@
     {
       "id": "verse-250",
       "name": "Verse 250: He in whom that feeling is destroyed, and taken out with the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 255,
       "sections": {
@@ -4653,7 +4398,6 @@
     {
       "id": "verse-251",
       "name": "Verse 251: There is no fire like passion, there is no shark like hatred,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 256,
       "sections": {
@@ -4670,7 +4414,6 @@
     {
       "id": "verse-252",
       "name": "Verse 252: The fault of others is easily perceived, but that of oneself is...",
-      "level": 1,
       "category": "verse",
       "sort_order": 257,
       "sections": {
@@ -4687,7 +4430,6 @@
     {
       "id": "verse-253",
       "name": "Verse 253: If a man looks after the faults of others, and is always...",
-      "level": 1,
       "category": "verse",
       "sort_order": 258,
       "sections": {
@@ -4704,7 +4446,6 @@
     {
       "id": "verse-254",
       "name": "Verse 254: There is no path through the air, a man is not a Samana by...",
-      "level": 1,
       "category": "verse",
       "sort_order": 259,
       "sections": {
@@ -4721,7 +4462,6 @@
     {
       "id": "verse-255",
       "name": "Verse 255: There is no path through the air, a man is not a Samana by...",
-      "level": 1,
       "category": "verse",
       "sort_order": 260,
       "sections": {
@@ -4739,10 +4479,9 @@
       "id": "chapter-18",
       "name": "Chapter XVIII: Impurity",
       "symbol": "XVIII",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-235",
         "verse-236",
         "verse-237",
@@ -4780,7 +4519,6 @@
     {
       "id": "verse-258",
       "name": "Verse 258: A man is not learned because he talks much; he who is patient,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 262,
       "sections": {
@@ -4797,7 +4535,6 @@
     {
       "id": "verse-259",
       "name": "Verse 259: A man is not a supporter of the law because he talks much; even...",
-      "level": 1,
       "category": "verse",
       "sort_order": 263,
       "sections": {
@@ -4814,7 +4551,6 @@
     {
       "id": "verse-260",
       "name": "Verse 260: A man is not an elder because his head is grey; his age may be...",
-      "level": 1,
       "category": "verse",
       "sort_order": 264,
       "sections": {
@@ -4831,7 +4567,6 @@
     {
       "id": "verse-261",
       "name": "Verse 261: He in whom there is truth, virtue, love, restraint, moderation,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 265,
       "sections": {
@@ -4848,7 +4583,6 @@
     {
       "id": "verse-262",
       "name": "Verse 262: An envious greedy, dishonest man does not become respectable by...",
-      "level": 1,
       "category": "verse",
       "sort_order": 266,
       "sections": {
@@ -4865,7 +4599,6 @@
     {
       "id": "verse-263",
       "name": "Verse 263: He in whom all this is destroyed, and taken out with the very...",
-      "level": 1,
       "category": "verse",
       "sort_order": 267,
       "sections": {
@@ -4882,7 +4615,6 @@
     {
       "id": "verse-264",
       "name": "Verse 264: Not by tonsure does an undisciplined man who speaks falsehood...",
-      "level": 1,
       "category": "verse",
       "sort_order": 268,
       "sections": {
@@ -4899,7 +4631,6 @@
     {
       "id": "verse-265",
       "name": "Verse 265: He who always quiets the evil, whether small or large, he is...",
-      "level": 1,
       "category": "verse",
       "sort_order": 269,
       "sections": {
@@ -4916,7 +4647,6 @@
     {
       "id": "verse-266",
       "name": "Verse 266: A man is not a mendicant (Bhikshu) simply because he asks others...",
-      "level": 1,
       "category": "verse",
       "sort_order": 270,
       "sections": {
@@ -4933,7 +4663,6 @@
     {
       "id": "verse-267",
       "name": "Verse 267: He who is above good and evil, who is chaste, who with knowledge...",
-      "level": 1,
       "category": "verse",
       "sort_order": 271,
       "sections": {
@@ -4950,7 +4679,6 @@
     {
       "id": "verse-270",
       "name": "Verse 270: A man is not an elect (Ariya) because he injures living...",
-      "level": 1,
       "category": "verse",
       "sort_order": 272,
       "sections": {
@@ -4968,10 +4696,9 @@
       "id": "chapter-19",
       "name": "Chapter XIX: The Just",
       "symbol": "XIX",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-258",
         "verse-259",
         "verse-260",
@@ -4999,7 +4726,6 @@
     {
       "id": "verse-273",
       "name": "Verse 273: The best of ways is the eightfold; the best of truths the four...",
-      "level": 1,
       "category": "verse",
       "sort_order": 274,
       "sections": {
@@ -5016,7 +4742,6 @@
     {
       "id": "verse-274",
       "name": "Verse 274: This is the way, there is no other that leads to the purifying...",
-      "level": 1,
       "category": "verse",
       "sort_order": 275,
       "sections": {
@@ -5033,7 +4758,6 @@
     {
       "id": "verse-275",
       "name": "Verse 275: If you go on this way, you will make an end of pain! The way was...",
-      "level": 1,
       "category": "verse",
       "sort_order": 276,
       "sections": {
@@ -5050,7 +4774,6 @@
     {
       "id": "verse-276",
       "name": "Verse 276: You yourself must make an effort. The Tathagatas (Buddhas) are...",
-      "level": 1,
       "category": "verse",
       "sort_order": 277,
       "sections": {
@@ -5067,7 +4790,6 @@
     {
       "id": "verse-277",
       "name": "Verse 277: `All created things perish,' he who knows and sees this becomes...",
-      "level": 1,
       "category": "verse",
       "sort_order": 278,
       "sections": {
@@ -5084,7 +4806,6 @@
     {
       "id": "verse-278",
       "name": "Verse 278: `All created things are grief and pain,' he who knows and sees...",
-      "level": 1,
       "category": "verse",
       "sort_order": 279,
       "sections": {
@@ -5101,7 +4822,6 @@
     {
       "id": "verse-279",
       "name": "Verse 279: `All forms are unreal,' he who knows and sees this becomes...",
-      "level": 1,
       "category": "verse",
       "sort_order": 280,
       "sections": {
@@ -5118,7 +4838,6 @@
     {
       "id": "verse-280",
       "name": "Verse 280: He who does not rouse himself when it is time to rise, who,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 281,
       "sections": {
@@ -5135,7 +4854,6 @@
     {
       "id": "verse-281",
       "name": "Verse 281: Watching his speech, well restrained in mind, let a man never...",
-      "level": 1,
       "category": "verse",
       "sort_order": 282,
       "sections": {
@@ -5152,7 +4870,6 @@
     {
       "id": "verse-282",
       "name": "Verse 282: Through zeal knowledge is gotten, through lack of zeal knowledge...",
-      "level": 1,
       "category": "verse",
       "sort_order": 283,
       "sections": {
@@ -5169,7 +4886,6 @@
     {
       "id": "verse-283",
       "name": "Verse 283: Cut down the whole forest (of lust), not a tree only! Danger...",
-      "level": 1,
       "category": "verse",
       "sort_order": 284,
       "sections": {
@@ -5186,7 +4902,6 @@
     {
       "id": "verse-284",
       "name": "Verse 284: So long as the love of man towards women, even the smallest, is...",
-      "level": 1,
       "category": "verse",
       "sort_order": 285,
       "sections": {
@@ -5203,7 +4918,6 @@
     {
       "id": "verse-285",
       "name": "Verse 285: Cut out the love of self, like an autumn lotus, with thy hand!...",
-      "level": 1,
       "category": "verse",
       "sort_order": 286,
       "sections": {
@@ -5220,7 +4934,6 @@
     {
       "id": "verse-286",
       "name": "Verse 286: `Here I shall dwell in the rain, here in winter and summer,'...",
-      "level": 1,
       "category": "verse",
       "sort_order": 287,
       "sections": {
@@ -5237,7 +4950,6 @@
     {
       "id": "verse-287",
       "name": "Verse 287: Death comes and carries off that man, praised for his children...",
-      "level": 1,
       "category": "verse",
       "sort_order": 288,
       "sections": {
@@ -5254,7 +4966,6 @@
     {
       "id": "verse-288",
       "name": "Verse 288: Sons are no help, nor a father, nor relations; there is no help...",
-      "level": 1,
       "category": "verse",
       "sort_order": 289,
       "sections": {
@@ -5271,7 +4982,6 @@
     {
       "id": "verse-289",
       "name": "Verse 289: A wise and good man who knows the meaning of this, should...",
-      "level": 1,
       "category": "verse",
       "sort_order": 290,
       "sections": {
@@ -5289,10 +4999,9 @@
       "id": "chapter-20",
       "name": "Chapter XX: The Way",
       "symbol": "XX",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-273",
         "verse-274",
         "verse-275",
@@ -5326,7 +5035,6 @@
     {
       "id": "verse-290",
       "name": "Verse 290: If by leaving a small pleasure one sees a great pleasure, let a...",
-      "level": 1,
       "category": "verse",
       "sort_order": 292,
       "sections": {
@@ -5343,7 +5051,6 @@
     {
       "id": "verse-291",
       "name": "Verse 291: He who, by causing pain to others, wishes to obtain pleasure for...",
-      "level": 1,
       "category": "verse",
       "sort_order": 293,
       "sections": {
@@ -5360,7 +5067,6 @@
     {
       "id": "verse-292",
       "name": "Verse 292: What ought to be done is neglected, what ought not to be done is...",
-      "level": 1,
       "category": "verse",
       "sort_order": 294,
       "sections": {
@@ -5377,7 +5083,6 @@
     {
       "id": "verse-293",
       "name": "Verse 293: But they whose whole watchfulness is always directed to their...",
-      "level": 1,
       "category": "verse",
       "sort_order": 295,
       "sections": {
@@ -5394,7 +5099,6 @@
     {
       "id": "verse-294",
       "name": "Verse 294: A true Brahmana goes scatheless, though he have killed father...",
-      "level": 1,
       "category": "verse",
       "sort_order": 296,
       "sections": {
@@ -5411,7 +5115,6 @@
     {
       "id": "verse-295",
       "name": "Verse 295: A true Brahmana goes scatheless, though he have killed father...",
-      "level": 1,
       "category": "verse",
       "sort_order": 297,
       "sections": {
@@ -5428,7 +5131,6 @@
     {
       "id": "verse-296",
       "name": "Verse 296: The disciples of Gotama (Buddha) are always well awake, and...",
-      "level": 1,
       "category": "verse",
       "sort_order": 298,
       "sections": {
@@ -5445,7 +5147,6 @@
     {
       "id": "verse-297",
       "name": "Verse 297: The disciples of Gotama are always well awake, and their...",
-      "level": 1,
       "category": "verse",
       "sort_order": 299,
       "sections": {
@@ -5462,7 +5163,6 @@
     {
       "id": "verse-298",
       "name": "Verse 298: The disciples of Gotama are always well awake, and their...",
-      "level": 1,
       "category": "verse",
       "sort_order": 300,
       "sections": {
@@ -5479,7 +5179,6 @@
     {
       "id": "verse-299",
       "name": "Verse 299: The disciples of Gotama are always well awake, and their...",
-      "level": 1,
       "category": "verse",
       "sort_order": 301,
       "sections": {
@@ -5496,7 +5195,6 @@
     {
       "id": "verse-300",
       "name": "Verse 300: The disciples of Gotama are always well awake, and their mind...",
-      "level": 1,
       "category": "verse",
       "sort_order": 302,
       "sections": {
@@ -5513,7 +5211,6 @@
     {
       "id": "verse-301",
       "name": "Verse 301: The disciples of Gotama are always well awake, and their mind...",
-      "level": 1,
       "category": "verse",
       "sort_order": 303,
       "sections": {
@@ -5530,7 +5227,6 @@
     {
       "id": "verse-302",
       "name": "Verse 302: It is hard to leave the world (to become a friar), it is hard to...",
-      "level": 1,
       "category": "verse",
       "sort_order": 304,
       "sections": {
@@ -5547,7 +5243,6 @@
     {
       "id": "verse-303",
       "name": "Verse 303: Whatever place a faithful, virtuous, celebrated, and wealthy man...",
-      "level": 1,
       "category": "verse",
       "sort_order": 305,
       "sections": {
@@ -5564,7 +5259,6 @@
     {
       "id": "verse-304",
       "name": "Verse 304: Good people shine from afar, like the snowy mountains; bad...",
-      "level": 1,
       "category": "verse",
       "sort_order": 306,
       "sections": {
@@ -5581,7 +5275,6 @@
     {
       "id": "verse-305",
       "name": "Verse 305: He alone who, without ceasing, practises the duty of sitting...",
-      "level": 1,
       "category": "verse",
       "sort_order": 307,
       "sections": {
@@ -5599,10 +5292,9 @@
       "id": "chapter-21",
       "name": "Chapter XXI: Miscellaneous",
       "symbol": "XXI",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-290",
         "verse-291",
         "verse-292",
@@ -5635,7 +5327,6 @@
     {
       "id": "verse-306",
       "name": "Verse 306: He who says what is not, goes to hell; he also who, having done...",
-      "level": 1,
       "category": "verse",
       "sort_order": 309,
       "sections": {
@@ -5652,7 +5343,6 @@
     {
       "id": "verse-307",
       "name": "Verse 307: Many men whose shoulders are covered with the yellow gown are...",
-      "level": 1,
       "category": "verse",
       "sort_order": 310,
       "sections": {
@@ -5669,7 +5359,6 @@
     {
       "id": "verse-308",
       "name": "Verse 308: Better it would be to swallow a heated iron ball, like flaring...",
-      "level": 1,
       "category": "verse",
       "sort_order": 311,
       "sections": {
@@ -5686,7 +5375,6 @@
     {
       "id": "verse-309",
       "name": "Verse 309: Four things does a wreckless man gain who covets his neighbour's...",
-      "level": 1,
       "category": "verse",
       "sort_order": 312,
       "sections": {
@@ -5703,7 +5391,6 @@
     {
       "id": "verse-310",
       "name": "Verse 310: There is bad reputation, and the evil way (to hell), there is...",
-      "level": 1,
       "category": "verse",
       "sort_order": 313,
       "sections": {
@@ -5720,7 +5407,6 @@
     {
       "id": "verse-311",
       "name": "Verse 311: As a grass-blade, if badly grasped, cuts the arm,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 314,
       "sections": {
@@ -5737,7 +5423,6 @@
     {
       "id": "verse-312",
       "name": "Verse 312: An act carelessly performed, a broken vow, and hesitating...",
-      "level": 1,
       "category": "verse",
       "sort_order": 315,
       "sections": {
@@ -5754,7 +5439,6 @@
     {
       "id": "verse-313",
       "name": "Verse 313: If anything is to be done, let a man do it, let him attack it...",
-      "level": 1,
       "category": "verse",
       "sort_order": 316,
       "sections": {
@@ -5771,7 +5455,6 @@
     {
       "id": "verse-314",
       "name": "Verse 314: An evil deed is better left undone, for a man repents of it...",
-      "level": 1,
       "category": "verse",
       "sort_order": 317,
       "sections": {
@@ -5788,7 +5471,6 @@
     {
       "id": "verse-315",
       "name": "Verse 315: Like a well-guarded frontier fort, with defences within and...",
-      "level": 1,
       "category": "verse",
       "sort_order": 318,
       "sections": {
@@ -5805,7 +5487,6 @@
     {
       "id": "verse-316",
       "name": "Verse 316: They who are ashamed of what they ought not to be ashamed of,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 319,
       "sections": {
@@ -5822,7 +5503,6 @@
     {
       "id": "verse-317",
       "name": "Verse 317: They who fear when they ought not to fear, and fear not when...",
-      "level": 1,
       "category": "verse",
       "sort_order": 320,
       "sections": {
@@ -5839,7 +5519,6 @@
     {
       "id": "verse-318",
       "name": "Verse 318: They who forbid when there is nothing to be forbidden, and...",
-      "level": 1,
       "category": "verse",
       "sort_order": 321,
       "sections": {
@@ -5856,7 +5535,6 @@
     {
       "id": "verse-319",
       "name": "Verse 319: They who know what is forbidden as forbidden, and what is not...",
-      "level": 1,
       "category": "verse",
       "sort_order": 322,
       "sections": {
@@ -5874,10 +5552,9 @@
       "id": "chapter-22",
       "name": "Chapter XXII: The Downward Course",
       "symbol": "XXII",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-306",
         "verse-307",
         "verse-308",
@@ -5908,7 +5585,6 @@
     {
       "id": "verse-320",
       "name": "Verse 320: Silently shall I endure abuse as the elephant in battle endures...",
-      "level": 1,
       "category": "verse",
       "sort_order": 324,
       "sections": {
@@ -5925,7 +5601,6 @@
     {
       "id": "verse-321",
       "name": "Verse 321: They lead a tamed elephant to battle, the king mounts a tamed...",
-      "level": 1,
       "category": "verse",
       "sort_order": 325,
       "sections": {
@@ -5942,7 +5617,6 @@
     {
       "id": "verse-322",
       "name": "Verse 322: Mules are good, if tamed, and noble Sindhu horses, and elephants...",
-      "level": 1,
       "category": "verse",
       "sort_order": 326,
       "sections": {
@@ -5959,7 +5633,6 @@
     {
       "id": "verse-323",
       "name": "Verse 323: For with these animals does no man reach the untrodden country...",
-      "level": 1,
       "category": "verse",
       "sort_order": 327,
       "sections": {
@@ -5976,7 +5649,6 @@
     {
       "id": "verse-324",
       "name": "Verse 324: The elephant called Dhanapalaka, his temples running with sap,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 328,
       "sections": {
@@ -5993,7 +5665,6 @@
     {
       "id": "verse-325",
       "name": "Verse 325: If a man becomes fat and a great eater, if he is sleepy and...",
-      "level": 1,
       "category": "verse",
       "sort_order": 329,
       "sections": {
@@ -6010,7 +5681,6 @@
     {
       "id": "verse-326",
       "name": "Verse 326: This mind of mine went formerly wandering about as it liked, as...",
-      "level": 1,
       "category": "verse",
       "sort_order": 330,
       "sections": {
@@ -6027,7 +5697,6 @@
     {
       "id": "verse-327",
       "name": "Verse 327: Be not thoughtless, watch your thoughts! Draw yourself out of...",
-      "level": 1,
       "category": "verse",
       "sort_order": 331,
       "sections": {
@@ -6044,7 +5713,6 @@
     {
       "id": "verse-328",
       "name": "Verse 328: If a man find a prudent companion who walks with him, is wise,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 332,
       "sections": {
@@ -6061,7 +5729,6 @@
     {
       "id": "verse-329",
       "name": "Verse 329: If a man find no prudent companion who walks with him, is wise,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 333,
       "sections": {
@@ -6078,7 +5745,6 @@
     {
       "id": "verse-330",
       "name": "Verse 330: It is better to live alone, there is no companionship with a...",
-      "level": 1,
       "category": "verse",
       "sort_order": 334,
       "sections": {
@@ -6095,7 +5761,6 @@
     {
       "id": "verse-331",
       "name": "Verse 331: If an occasion arises, friends are pleasant; enjoyment is...",
-      "level": 1,
       "category": "verse",
       "sort_order": 335,
       "sections": {
@@ -6112,7 +5777,6 @@
     {
       "id": "verse-332",
       "name": "Verse 332: Pleasant in the world is the state of a mother, pleasant the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 336,
       "sections": {
@@ -6129,7 +5793,6 @@
     {
       "id": "verse-333",
       "name": "Verse 333: Pleasant is virtue lasting to old age, pleasant is a faith...",
-      "level": 1,
       "category": "verse",
       "sort_order": 337,
       "sections": {
@@ -6147,10 +5810,9 @@
       "id": "chapter-23",
       "name": "Chapter XXIII: The Elephant",
       "symbol": "XXIII",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-320",
         "verse-321",
         "verse-322",
@@ -6181,7 +5843,6 @@
     {
       "id": "verse-334",
       "name": "Verse 334: The thirst of a thoughtless man grows like a creeper; he runs...",
-      "level": 1,
       "category": "verse",
       "sort_order": 339,
       "sections": {
@@ -6198,7 +5859,6 @@
     {
       "id": "verse-335",
       "name": "Verse 335: Whomsoever this fierce thirst overcomes, full of poison, in this...",
-      "level": 1,
       "category": "verse",
       "sort_order": 340,
       "sections": {
@@ -6215,7 +5875,6 @@
     {
       "id": "verse-336",
       "name": "Verse 336: He who overcomes this fierce thirst, difficult to be conquered...",
-      "level": 1,
       "category": "verse",
       "sort_order": 341,
       "sections": {
@@ -6232,7 +5891,6 @@
     {
       "id": "verse-337",
       "name": "Verse 337: This salutary word I tell you, `Do ye, as many as are here...",
-      "level": 1,
       "category": "verse",
       "sort_order": 342,
       "sections": {
@@ -6249,7 +5907,6 @@
     {
       "id": "verse-338",
       "name": "Verse 338: As a tree, even though it has been cut down, is firm so long as...",
-      "level": 1,
       "category": "verse",
       "sort_order": 343,
       "sections": {
@@ -6266,7 +5923,6 @@
     {
       "id": "verse-339",
       "name": "Verse 339: He whose thirst running towards pleasure is exceeding strong in...",
-      "level": 1,
       "category": "verse",
       "sort_order": 344,
       "sections": {
@@ -6283,7 +5939,6 @@
     {
       "id": "verse-340",
       "name": "Verse 340: The channels run everywhere, the creeper (of passion) stands...",
-      "level": 1,
       "category": "verse",
       "sort_order": 345,
       "sections": {
@@ -6300,7 +5955,6 @@
     {
       "id": "verse-341",
       "name": "Verse 341: A creature's pleasures are extravagant and luxurious; sunk in...",
-      "level": 1,
       "category": "verse",
       "sort_order": 346,
       "sections": {
@@ -6317,7 +5971,6 @@
     {
       "id": "verse-342",
       "name": "Verse 342: Men, driven on by thirst, run about like a snared hare; held in...",
-      "level": 1,
       "category": "verse",
       "sort_order": 347,
       "sections": {
@@ -6334,7 +5987,6 @@
     {
       "id": "verse-343",
       "name": "Verse 343: Men, driven on by thirst, run about like a snared hare; let...",
-      "level": 1,
       "category": "verse",
       "sort_order": 348,
       "sections": {
@@ -6351,7 +6003,6 @@
     {
       "id": "verse-344",
       "name": "Verse 344: He who having got rid of the forest (of lust) (i.e. after having...",
-      "level": 1,
       "category": "verse",
       "sort_order": 349,
       "sections": {
@@ -6368,7 +6019,6 @@
     {
       "id": "verse-345",
       "name": "Verse 345: Wise people do not call that a strong fetter which is made of...",
-      "level": 1,
       "category": "verse",
       "sort_order": 350,
       "sections": {
@@ -6385,7 +6035,6 @@
     {
       "id": "verse-346",
       "name": "Verse 346: That fetter wise people call strong which drags down, yields,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 351,
       "sections": {
@@ -6402,7 +6051,6 @@
     {
       "id": "verse-347",
       "name": "Verse 347: Those who are slaves to passions, run down with the stream (of...",
-      "level": 1,
       "category": "verse",
       "sort_order": 352,
       "sections": {
@@ -6419,7 +6067,6 @@
     {
       "id": "verse-348",
       "name": "Verse 348: Give up what is before, give up what is behind, give up what is...",
-      "level": 1,
       "category": "verse",
       "sort_order": 353,
       "sections": {
@@ -6436,7 +6083,6 @@
     {
       "id": "verse-349",
       "name": "Verse 349: If a man is tossed about by doubts, full of strong passions, and...",
-      "level": 1,
       "category": "verse",
       "sort_order": 354,
       "sections": {
@@ -6453,7 +6099,6 @@
     {
       "id": "verse-350",
       "name": "Verse 350: If a man delights in quieting doubts, and, always reflecting,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 355,
       "sections": {
@@ -6470,7 +6115,6 @@
     {
       "id": "verse-351",
       "name": "Verse 351: He who has reached the consummation, who does not tremble, who...",
-      "level": 1,
       "category": "verse",
       "sort_order": 356,
       "sections": {
@@ -6487,7 +6131,6 @@
     {
       "id": "verse-352",
       "name": "Verse 352: He who is without thirst and without affection, who understands...",
-      "level": 1,
       "category": "verse",
       "sort_order": 357,
       "sections": {
@@ -6504,7 +6147,6 @@
     {
       "id": "verse-353",
       "name": "Verse 353: `I have conquered all, I know all, in all conditions of life I...",
-      "level": 1,
       "category": "verse",
       "sort_order": 358,
       "sections": {
@@ -6521,7 +6163,6 @@
     {
       "id": "verse-354",
       "name": "Verse 354: The gift of the law exceeds all gifts; the sweetness of the law...",
-      "level": 1,
       "category": "verse",
       "sort_order": 359,
       "sections": {
@@ -6538,7 +6179,6 @@
     {
       "id": "verse-355",
       "name": "Verse 355: Pleasures destroy the foolish, if they look not for the other...",
-      "level": 1,
       "category": "verse",
       "sort_order": 360,
       "sections": {
@@ -6555,7 +6195,6 @@
     {
       "id": "verse-356",
       "name": "Verse 356: The fields are damaged by weeds, mankind is damaged by passion:...",
-      "level": 1,
       "category": "verse",
       "sort_order": 361,
       "sections": {
@@ -6572,7 +6211,6 @@
     {
       "id": "verse-357",
       "name": "Verse 357: The fields are damaged by weeds, mankind is damaged by hatred:...",
-      "level": 1,
       "category": "verse",
       "sort_order": 362,
       "sections": {
@@ -6589,7 +6227,6 @@
     {
       "id": "verse-358",
       "name": "Verse 358: The fields are damaged by weeds, mankind is damaged by vanity:...",
-      "level": 1,
       "category": "verse",
       "sort_order": 363,
       "sections": {
@@ -6606,7 +6243,6 @@
     {
       "id": "verse-359",
       "name": "Verse 359: The fields are damaged by weeds, mankind is damaged by lust:...",
-      "level": 1,
       "category": "verse",
       "sort_order": 364,
       "sections": {
@@ -6624,10 +6260,9 @@
       "id": "chapter-24",
       "name": "Chapter XXIV: Thirst",
       "symbol": "XXIV",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-334",
         "verse-335",
         "verse-336",
@@ -6670,7 +6305,6 @@
     {
       "id": "verse-360",
       "name": "Verse 360: Restraint in the eye is good, good is restraint in the ear, in...",
-      "level": 1,
       "category": "verse",
       "sort_order": 366,
       "sections": {
@@ -6687,7 +6321,6 @@
     {
       "id": "verse-361",
       "name": "Verse 361: In the body restraint is good, good is restraint in speech, in...",
-      "level": 1,
       "category": "verse",
       "sort_order": 367,
       "sections": {
@@ -6704,7 +6337,6 @@
     {
       "id": "verse-362",
       "name": "Verse 362: He who controls his hand, he who controls his feet, he who...",
-      "level": 1,
       "category": "verse",
       "sort_order": 368,
       "sections": {
@@ -6721,7 +6353,6 @@
     {
       "id": "verse-363",
       "name": "Verse 363: The Bhikshu who controls his mouth, who speaks wisely and...",
-      "level": 1,
       "category": "verse",
       "sort_order": 369,
       "sections": {
@@ -6738,7 +6369,6 @@
     {
       "id": "verse-364",
       "name": "Verse 364: He who dwells in the law, delights in the law, meditates on the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 370,
       "sections": {
@@ -6755,7 +6385,6 @@
     {
       "id": "verse-365",
       "name": "Verse 365: Let him not despise what he has received, nor ever envy others:...",
-      "level": 1,
       "category": "verse",
       "sort_order": 371,
       "sections": {
@@ -6772,7 +6401,6 @@
     {
       "id": "verse-366",
       "name": "Verse 366: A Bhikshu who, though he receives little, does not despise what...",
-      "level": 1,
       "category": "verse",
       "sort_order": 372,
       "sections": {
@@ -6789,7 +6417,6 @@
     {
       "id": "verse-367",
       "name": "Verse 367: He who never identifies himself with name and form, and does not...",
-      "level": 1,
       "category": "verse",
       "sort_order": 373,
       "sections": {
@@ -6806,7 +6433,6 @@
     {
       "id": "verse-368",
       "name": "Verse 368: The Bhikshu who acts with kindness, who is calm in the doctrine...",
-      "level": 1,
       "category": "verse",
       "sort_order": 374,
       "sections": {
@@ -6823,7 +6449,6 @@
     {
       "id": "verse-369",
       "name": "Verse 369: O Bhikshu, empty this boat! if emptied, it will go quickly;...",
-      "level": 1,
       "category": "verse",
       "sort_order": 375,
       "sections": {
@@ -6840,7 +6465,6 @@
     {
       "id": "verse-370",
       "name": "Verse 370: Cut off the five (senses), leave the five, rise above the five....",
-      "level": 1,
       "category": "verse",
       "sort_order": 376,
       "sections": {
@@ -6857,7 +6481,6 @@
     {
       "id": "verse-371",
       "name": "Verse 371: Meditate, O Bhikshu, and be not heedless! Do not direct thy...",
-      "level": 1,
       "category": "verse",
       "sort_order": 377,
       "sections": {
@@ -6874,7 +6497,6 @@
     {
       "id": "verse-372",
       "name": "Verse 372: Without knowledge there is no meditation, without meditation...",
-      "level": 1,
       "category": "verse",
       "sort_order": 378,
       "sections": {
@@ -6891,7 +6513,6 @@
     {
       "id": "verse-373",
       "name": "Verse 373: A Bhikshu who has entered his empty house, and whose mind is...",
-      "level": 1,
       "category": "verse",
       "sort_order": 379,
       "sections": {
@@ -6908,7 +6529,6 @@
     {
       "id": "verse-374",
       "name": "Verse 374: As soon as he has considered the origin and destruction of the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 380,
       "sections": {
@@ -6925,7 +6545,6 @@
     {
       "id": "verse-375",
       "name": "Verse 375: And this is the beginning here for a wise Bhikshu: watchfulness...",
-      "level": 1,
       "category": "verse",
       "sort_order": 381,
       "sections": {
@@ -6942,7 +6561,6 @@
     {
       "id": "verse-376",
       "name": "Verse 376: Let him live in charity, let him be perfect in his duties; then...",
-      "level": 1,
       "category": "verse",
       "sort_order": 382,
       "sections": {
@@ -6959,7 +6577,6 @@
     {
       "id": "verse-377",
       "name": "Verse 377: As the Vassika plant sheds its withered flowers, men should shed...",
-      "level": 1,
       "category": "verse",
       "sort_order": 383,
       "sections": {
@@ -6976,7 +6593,6 @@
     {
       "id": "verse-378",
       "name": "Verse 378: The Bhikshu whose body and tongue and mind are quieted, who is...",
-      "level": 1,
       "category": "verse",
       "sort_order": 384,
       "sections": {
@@ -6993,7 +6609,6 @@
     {
       "id": "verse-379",
       "name": "Verse 379: Rouse thyself by thyself, examine thyself by thyself, thus...",
-      "level": 1,
       "category": "verse",
       "sort_order": 385,
       "sections": {
@@ -7010,7 +6625,6 @@
     {
       "id": "verse-380",
       "name": "Verse 380: For self is the lord of self, self is the refuge of self;...",
-      "level": 1,
       "category": "verse",
       "sort_order": 386,
       "sections": {
@@ -7027,7 +6641,6 @@
     {
       "id": "verse-381",
       "name": "Verse 381: The Bhikshu, full of delight, who is calm in the doctrine of...",
-      "level": 1,
       "category": "verse",
       "sort_order": 387,
       "sections": {
@@ -7044,7 +6657,6 @@
     {
       "id": "verse-382",
       "name": "Verse 382: He who, even as a young Bhikshu, applies himself to the doctrine...",
-      "level": 1,
       "category": "verse",
       "sort_order": 388,
       "sections": {
@@ -7062,10 +6674,9 @@
       "id": "chapter-25",
       "name": "Chapter XXV: The Bhikshu (Mendicant)",
       "symbol": "XXV",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-360",
         "verse-361",
         "verse-362",
@@ -7105,7 +6716,6 @@
     {
       "id": "verse-383",
       "name": "Verse 383: Stop the stream valiantly, drive away the desires, O Brahmana!...",
-      "level": 1,
       "category": "verse",
       "sort_order": 390,
       "sections": {
@@ -7122,7 +6732,6 @@
     {
       "id": "verse-384",
       "name": "Verse 384: If the Brahmana has reached the other shore in both laws (in...",
-      "level": 1,
       "category": "verse",
       "sort_order": 391,
       "sections": {
@@ -7139,7 +6748,6 @@
     {
       "id": "verse-385",
       "name": "Verse 385: He for whom there is neither this nor that shore, nor both, him,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 392,
       "sections": {
@@ -7156,7 +6764,6 @@
     {
       "id": "verse-386",
       "name": "Verse 386: He who is thoughtful, blameless, settled, dutiful, without...",
-      "level": 1,
       "category": "verse",
       "sort_order": 393,
       "sections": {
@@ -7173,7 +6780,6 @@
     {
       "id": "verse-387",
       "name": "Verse 387: The sun is bright by day, the moon shines by night, the warrior...",
-      "level": 1,
       "category": "verse",
       "sort_order": 394,
       "sections": {
@@ -7190,7 +6796,6 @@
     {
       "id": "verse-388",
       "name": "Verse 388: Because a man is rid of evil, therefore he is called Brahmana;...",
-      "level": 1,
       "category": "verse",
       "sort_order": 395,
       "sections": {
@@ -7207,7 +6812,6 @@
     {
       "id": "verse-389",
       "name": "Verse 389: No one should attack a Brahmana, but no Brahmana (if attacked)...",
-      "level": 1,
       "category": "verse",
       "sort_order": 396,
       "sections": {
@@ -7224,7 +6828,6 @@
     {
       "id": "verse-390",
       "name": "Verse 390: It advantages a Brahmana not a little if he holds his mind back...",
-      "level": 1,
       "category": "verse",
       "sort_order": 397,
       "sections": {
@@ -7241,7 +6844,6 @@
     {
       "id": "verse-391",
       "name": "Verse 391: Him I call indeed a Brahmana who does not offend by body, word,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 398,
       "sections": {
@@ -7258,7 +6860,6 @@
     {
       "id": "verse-392",
       "name": "Verse 392: After a man has once understood the law as taught by the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 399,
       "sections": {
@@ -7275,7 +6876,6 @@
     {
       "id": "verse-393",
       "name": "Verse 393: A man does not become a Brahmana by his platted hair, by his...",
-      "level": 1,
       "category": "verse",
       "sort_order": 400,
       "sections": {
@@ -7292,7 +6892,6 @@
     {
       "id": "verse-394",
       "name": "Verse 394: What is the use of platted hair, O fool! what of the raiment of...",
-      "level": 1,
       "category": "verse",
       "sort_order": 401,
       "sections": {
@@ -7309,7 +6908,6 @@
     {
       "id": "verse-395",
       "name": "Verse 395: The man who wears dirty raiments, who is emaciated and covered...",
-      "level": 1,
       "category": "verse",
       "sort_order": 402,
       "sections": {
@@ -7326,7 +6924,6 @@
     {
       "id": "verse-396",
       "name": "Verse 396: I do not call a man a Brahmana because of his origin or of his...",
-      "level": 1,
       "category": "verse",
       "sort_order": 403,
       "sections": {
@@ -7343,7 +6940,6 @@
     {
       "id": "verse-397",
       "name": "Verse 397: Him I call indeed a Brahmana who has cut all fetters, who never...",
-      "level": 1,
       "category": "verse",
       "sort_order": 404,
       "sections": {
@@ -7360,7 +6956,6 @@
     {
       "id": "verse-398",
       "name": "Verse 398: Him I call indeed a Brahmana who has cut the strap and the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 405,
       "sections": {
@@ -7377,7 +6972,6 @@
     {
       "id": "verse-399",
       "name": "Verse 399: Him I call indeed a Brahmana who, though he has committed no...",
-      "level": 1,
       "category": "verse",
       "sort_order": 406,
       "sections": {
@@ -7394,7 +6988,6 @@
     {
       "id": "verse-400",
       "name": "Verse 400: Him I call indeed a Brahmana who is free from anger, dutiful,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 407,
       "sections": {
@@ -7411,7 +7004,6 @@
     {
       "id": "verse-401",
       "name": "Verse 401: Him I call indeed a Brahmana who does not cling to pleasures,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 408,
       "sections": {
@@ -7428,7 +7020,6 @@
     {
       "id": "verse-402",
       "name": "Verse 402: Him I call indeed a Brahmana who, even here, knows the end of...",
-      "level": 1,
       "category": "verse",
       "sort_order": 409,
       "sections": {
@@ -7445,7 +7036,6 @@
     {
       "id": "verse-403",
       "name": "Verse 403: Him I call indeed a Brahmana whose knowledge is deep, who...",
-      "level": 1,
       "category": "verse",
       "sort_order": 410,
       "sections": {
@@ -7462,7 +7052,6 @@
     {
       "id": "verse-404",
       "name": "Verse 404: Him I call indeed a Brahmana who keeps aloof both from laymen...",
-      "level": 1,
       "category": "verse",
       "sort_order": 411,
       "sections": {
@@ -7479,7 +7068,6 @@
     {
       "id": "verse-405",
       "name": "Verse 405: Him I call indeed a Brahmana who finds no fault with other...",
-      "level": 1,
       "category": "verse",
       "sort_order": 412,
       "sections": {
@@ -7496,7 +7084,6 @@
     {
       "id": "verse-406",
       "name": "Verse 406: Him I call indeed a Brahmana who is tolerant with the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 413,
       "sections": {
@@ -7513,7 +7100,6 @@
     {
       "id": "verse-407",
       "name": "Verse 407: Him I call indeed a Brahmana from whom anger and hatred, pride...",
-      "level": 1,
       "category": "verse",
       "sort_order": 414,
       "sections": {
@@ -7530,7 +7116,6 @@
     {
       "id": "verse-408",
       "name": "Verse 408: Him I call indeed a Brahmana who utters true speech, instructive...",
-      "level": 1,
       "category": "verse",
       "sort_order": 415,
       "sections": {
@@ -7547,7 +7132,6 @@
     {
       "id": "verse-409",
       "name": "Verse 409: Him I call indeed a Brahmana who takes nothing in the world that...",
-      "level": 1,
       "category": "verse",
       "sort_order": 416,
       "sections": {
@@ -7564,7 +7148,6 @@
     {
       "id": "verse-410",
       "name": "Verse 410: Him I call indeed a Brahmana who fosters no desires for this...",
-      "level": 1,
       "category": "verse",
       "sort_order": 417,
       "sections": {
@@ -7581,7 +7164,6 @@
     {
       "id": "verse-411",
       "name": "Verse 411: Him I call indeed a Brahmana who has no interests, and when he...",
-      "level": 1,
       "category": "verse",
       "sort_order": 418,
       "sections": {
@@ -7598,7 +7180,6 @@
     {
       "id": "verse-412",
       "name": "Verse 412: Him I call indeed a Brahmana who in this world is above good and...",
-      "level": 1,
       "category": "verse",
       "sort_order": 419,
       "sections": {
@@ -7615,7 +7196,6 @@
     {
       "id": "verse-413",
       "name": "Verse 413: Him I call indeed a Brahmana who is bright like the moon, pure,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 420,
       "sections": {
@@ -7632,7 +7212,6 @@
     {
       "id": "verse-414",
       "name": "Verse 414: Him I call indeed a Brahmana who has traversed this miry road,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 421,
       "sections": {
@@ -7649,7 +7228,6 @@
     {
       "id": "verse-415",
       "name": "Verse 415: Him I call indeed a Brahmana who in this world, leaving all...",
-      "level": 1,
       "category": "verse",
       "sort_order": 422,
       "sections": {
@@ -7666,7 +7244,6 @@
     {
       "id": "verse-416",
       "name": "Verse 416: Him I call indeed a Brahmana who, leaving all longings, travels...",
-      "level": 1,
       "category": "verse",
       "sort_order": 423,
       "sections": {
@@ -7683,7 +7260,6 @@
     {
       "id": "verse-417",
       "name": "Verse 417: Him I call indeed a Brahmana who, after leaving all bondage to...",
-      "level": 1,
       "category": "verse",
       "sort_order": 424,
       "sections": {
@@ -7700,7 +7276,6 @@
     {
       "id": "verse-418",
       "name": "Verse 418: Him I call indeed a Brahmana who has left what gives pleasure...",
-      "level": 1,
       "category": "verse",
       "sort_order": 425,
       "sections": {
@@ -7717,7 +7292,6 @@
     {
       "id": "verse-419",
       "name": "Verse 419: Him I call indeed a Brahmana who knows the destruction and the...",
-      "level": 1,
       "category": "verse",
       "sort_order": 426,
       "sections": {
@@ -7734,7 +7308,6 @@
     {
       "id": "verse-420",
       "name": "Verse 420: Him I call indeed a Brahmana whose path the gods do not know,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 427,
       "sections": {
@@ -7751,7 +7324,6 @@
     {
       "id": "verse-421",
       "name": "Verse 421: Him I call indeed a Brahmana who calls nothing his own, whether...",
-      "level": 1,
       "category": "verse",
       "sort_order": 428,
       "sections": {
@@ -7768,7 +7340,6 @@
     {
       "id": "verse-422",
       "name": "Verse 422: Him I call indeed a Brahmana, the manly, the noble, the hero,...",
-      "level": 1,
       "category": "verse",
       "sort_order": 429,
       "sections": {
@@ -7785,7 +7356,6 @@
     {
       "id": "verse-423",
       "name": "Verse 423: Him I call indeed a Brahmana who knows his former abodes, who...",
-      "level": 1,
       "category": "verse",
       "sort_order": 430,
       "sections": {
@@ -7803,10 +7373,9 @@
       "id": "chapter-26",
       "name": "Chapter XXVI: The Brahmana (Arhat)",
       "symbol": "XXVI",
-      "level": 2,
       "category": "chapter",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "verse-383",
         "verse-384",
         "verse-385",

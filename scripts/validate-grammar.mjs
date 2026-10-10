@@ -7,7 +7,7 @@
  *
  * For every grammar.json changed in the PR it checks:
  *   1. valid JSON;
- *   2. required fields present (name: non-empty string, items: array);
+ *   2. required fields present (name: non-empty string, nodes: array);
  *   3. NO top-level field present on the base branch is missing in the PR head
  *      — the silent-overwrite guard (the Visconti-Sforza bug). New files skip (3).
  * Exits non-zero on any failure so the PR check goes red.
@@ -51,7 +51,7 @@ for (const file of changed) {
   }
   // (2) required fields
   if (typeof head.name !== 'string' || !head.name.trim()) errors.push(`${file}: missing required "name"`);
-  if (!Array.isArray(head.items)) errors.push(`${file}: "items" must be an array`);
+  if (!Array.isArray(head.nodes)) errors.push(`${file}: "nodes" must be an array`);
 
   // (3) dropped-field guard vs base
   let base = null;

@@ -22,6 +22,7 @@ L3: Meta-categories
 import json
 import re
 from pathlib import Path
+from grammar_depth import node_depth
 
 SEED_PATH = Path(__file__).parent.parent / "seeds" / "art-of-love-ovid.txt"
 OUTPUT_DIR = Path(__file__).parent.parent / "grammars" / "art-of-love-ovid"
@@ -186,7 +187,6 @@ def build_grammar():
         add_item({
             "id": item_id,
             "name": b1_titles[i],
-            "level": 1,
             "category": "book-1-finding",
             "sections": {
                 "Verse": ct(passage),
@@ -234,7 +234,6 @@ def build_grammar():
         add_item({
             "id": item_id,
             "name": b2_titles[i],
-            "level": 1,
             "category": "book-2-keeping",
             "sections": {
                 "Verse": ct(passage),
@@ -282,7 +281,6 @@ def build_grammar():
         add_item({
             "id": item_id,
             "name": b3_titles[i],
-            "level": 1,
             "category": "book-3-women",
             "sections": {
                 "Verse": ct(passage),
@@ -300,7 +298,6 @@ def build_grammar():
     add_item({
         "id": "book-1-the-hunt",
         "name": "Book I: The Hunt -- Finding Love in Rome",
-        "level": 2,
         "category": "book-grouping",
         "sections": {
             "About": "The first book addresses young men and maps the geography of desire across Augustan Rome. Ovid treats the city as a vast theatre of erotic possibility -- every temple, portico, racecourse, and banquet is a potential scene of encounter. His advice is pragmatic, witty, and subversively democratic: love is an art anyone can learn.",
@@ -308,13 +305,12 @@ def build_grammar():
         },
         "keywords": ["rome", "finding", "pursuit", "spectacle", "men"],
         "metadata": {},
-        "composite_of": b1_ids
+        "parts": b1_ids
     })
 
     add_item({
         "id": "book-2-the-garden",
         "name": "Book II: The Garden -- Cultivating Lasting Love",
-        "level": 2,
         "category": "book-grouping",
         "sections": {
             "About": "Book II shifts from conquest to cultivation. Love, once won, must be tended like a garden -- with patience, skill, and willingness to adapt. The myth of Daedalus frames the central lesson: find the middle way between too much and too little. Ovid's advice here is surprisingly modern: listen, adapt, forgive, and never stop paying attention.",
@@ -322,13 +318,12 @@ def build_grammar():
         },
         "keywords": ["keeping", "cultivation", "patience", "adaptation", "moderation"],
         "metadata": {},
-        "composite_of": b2_ids
+        "parts": b2_ids
     })
 
     add_item({
         "id": "book-3-the-mirror",
         "name": "Book III: The Mirror -- A Woman's Art of Love",
-        "level": 2,
         "category": "book-grouping",
         "sections": {
             "About": "The boldest book: Ovid arms the other side. In a culture that prescribed passivity for women, he teaches them active artistry in love. While much of his advice concerns appearance, he also champions intellectual cultivation -- reading, music, conversation. The final lesson on mutual pleasure is remarkably egalitarian for its era.",
@@ -336,7 +331,7 @@ def build_grammar():
         },
         "keywords": ["women", "equality", "cultivation", "pleasure", "subversion"],
         "metadata": {},
-        "composite_of": b3_ids
+        "parts": b3_ids
     })
 
     # =========================================================================
@@ -346,7 +341,6 @@ def build_grammar():
     add_item({
         "id": "meta-art-of-love",
         "name": "The Art of Love: Wit, Wisdom, and Subversion",
-        "level": 3,
         "category": "meta-category",
         "sections": {
             "About": "Ovid's Ars Amatoria is at once a handbook, a comedy, a social satire, and a meditation on the nature of desire. Written in the last years of the Roman Republic's cultural flowering, it treats love as a learnable art -- democratic, playful, and endlessly renewable. Its frank celebration of pleasure and its egalitarian spirit ultimately got Ovid exiled from Rome, but the poem survived to influence troubadour poetry, Renaissance literature, and the entire Western tradition of writing about love.",
@@ -354,7 +348,7 @@ def build_grammar():
         },
         "keywords": ["ovid", "art", "love", "rome", "wit", "wisdom", "subversion", "exile"],
         "metadata": {},
-        "composite_of": ["book-1-the-hunt", "book-2-the-garden", "book-3-the-mirror"]
+        "parts": ["book-1-the-hunt", "book-2-the-garden", "book-3-the-mirror"]
     })
 
     # =========================================================================
@@ -380,7 +374,7 @@ def build_grammar():
         "shelves": ["mirror"],
         "lineages": ["Gottman"],
         "worldview": "dialectical",
-        "items": items
+        "nodes": items
     }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -390,7 +384,7 @@ def build_grammar():
     print(f"Built Art of Love grammar: {len(items)} items")
     for item in items:
         verse = item["sections"].get("Verse", "")
-        print(f"  L{item['level']}: {item['id']} - {item['name']} ({len(verse)} chars)")
+        print(f"  L{node_depth(item, items)}: {item['id']} - {item['name']} ({len(verse)} chars)")
 
 
 if __name__ == "__main__":

@@ -22,11 +22,10 @@
     "source_url": "https://www.gutenberg.org/ebooks/100",
     "note": "Text from Project Gutenberg eBook #100. Plays selected: Hamlet, Romeo and Juliet, Macbeth, Othello, King Lear, Julius Caesar, The Tempest, A Midsummer Night's Dream, The Merchant of Venice, Twelfth Night."
   },
-  "items": [
+  "nodes": [
     {
       "id": "romeo-and-juliet-act1-scene1",
       "name": "Act I, Scene I: A public place",
-      "level": 1,
       "category": "scene",
       "sort_order": 1,
       "sections": {
@@ -45,7 +44,6 @@
     {
       "id": "romeo-and-juliet-act1-scene2",
       "name": "Act I, Scene II: A Street",
-      "level": 1,
       "category": "scene",
       "sort_order": 2,
       "sections": {
@@ -64,7 +62,6 @@
     {
       "id": "romeo-and-juliet-act1-scene3",
       "name": "Act I, Scene III: Room in Capulet’s House",
-      "level": 1,
       "category": "scene",
       "sort_order": 3,
       "sections": {
@@ -83,7 +80,6 @@
     {
       "id": "romeo-and-juliet-act1-scene4",
       "name": "Act I, Scene IV: A Street",
-      "level": 1,
       "category": "scene",
       "sort_order": 4,
       "sections": {
@@ -102,7 +98,6 @@
     {
       "id": "romeo-and-juliet-act1-scene5",
       "name": "Act I, Scene V: A Hall in Capulet’s House",
-      "level": 1,
       "category": "scene",
       "sort_order": 5,
       "sections": {
@@ -122,10 +117,9 @@
       "id": "romeo-and-juliet-act1",
       "name": "Romeo and Juliet — Act I",
       "symbol": "I",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "romeo-and-juliet-act1-scene1",
         "romeo-and-juliet-act1-scene2",
         "romeo-and-juliet-act1-scene3",
@@ -147,7 +141,6 @@
     {
       "id": "romeo-and-juliet-act2-scene1",
       "name": "Act II, Scene I: An open place adjoining Capulet’s Garden",
-      "level": 1,
       "category": "scene",
       "sort_order": 7,
       "sections": {
@@ -166,7 +159,6 @@
     {
       "id": "romeo-and-juliet-act2-scene2",
       "name": "Act II, Scene II: Capulet’s Garden",
-      "level": 1,
       "category": "scene",
       "sort_order": 8,
       "sections": {
@@ -185,7 +177,6 @@
     {
       "id": "romeo-and-juliet-act2-scene3",
       "name": "Act II, Scene III: Friar Lawrence’s Cell",
-      "level": 1,
       "category": "scene",
       "sort_order": 9,
       "sections": {
@@ -204,7 +195,6 @@
     {
       "id": "romeo-and-juliet-act2-scene4",
       "name": "Act II, Scene IV: A Street",
-      "level": 1,
       "category": "scene",
       "sort_order": 10,
       "sections": {
@@ -223,7 +213,6 @@
     {
       "id": "romeo-and-juliet-act2-scene5",
       "name": "Act II, Scene V: Capulet’s Garden",
-      "level": 1,
       "category": "scene",
       "sort_order": 11,
       "sections": {
@@ -242,7 +231,6 @@
     {
       "id": "romeo-and-juliet-act2-scene6",
       "name": "Act II, Scene VI: Friar Lawrence’s Cell",
-      "level": 1,
       "category": "scene",
       "sort_order": 12,
       "sections": {
@@ -262,10 +250,9 @@
       "id": "romeo-and-juliet-act2",
       "name": "Romeo and Juliet — Act II",
       "symbol": "II",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "romeo-and-juliet-act2-scene1",
         "romeo-and-juliet-act2-scene2",
         "romeo-and-juliet-act2-scene3",
@@ -288,7 +275,6 @@
     {
       "id": "romeo-and-juliet-act3-scene1",
       "name": "Act III, Scene I: A public Place",
-      "level": 1,
       "category": "scene",
       "sort_order": 14,
       "sections": {
@@ -307,7 +293,6 @@
     {
       "id": "romeo-and-juliet-act3-scene2",
       "name": "Act III, Scene II: A Room in Capulet’s House",
-      "level": 1,
       "category": "scene",
       "sort_order": 15,
       "sections": {
@@ -326,7 +311,6 @@
     {
       "id": "romeo-and-juliet-act3-scene3",
       "name": "Act III, Scene III: Friar Lawrence’s cell",
-      "level": 1,
       "category": "scene",
       "sort_order": 16,
       "sections": {
@@ -345,7 +329,6 @@
     {
       "id": "romeo-and-juliet-act3-scene4",
       "name": "Act III, Scene IV: A Room in Capulet’s House",
-      "level": 1,
       "category": "scene",
       "sort_order": 17,
       "sections": {
@@ -364,7 +347,6 @@
     {
       "id": "romeo-and-juliet-act3-scene5",
       "name": "Act III, Scene V: An open Gallery to Juliet’s Chamber, overlooking the Garden",
-      "level": 1,
       "category": "scene",
       "sort_order": 18,
       "sections": {
@@ -384,10 +366,9 @@
       "id": "romeo-and-juliet-act3",
       "name": "Romeo and Juliet — Act III",
       "symbol": "III",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "romeo-and-juliet-act3-scene1",
         "romeo-and-juliet-act3-scene2",
         "romeo-and-juliet-act3-scene3",
@@ -409,7 +390,6 @@
     {
       "id": "romeo-and-juliet-act4-scene1",
       "name": "Act IV, Scene I: Friar Lawrence’s Cell",
-      "level": 1,
       "category": "scene",
       "sort_order": 20,
       "sections": {
@@ -428,7 +408,6 @@
     {
       "id": "romeo-and-juliet-act4-scene2",
       "name": "Act IV, Scene II: Hall in Capulet’s House",
-      "level": 1,
       "category": "scene",
       "sort_order": 21,
       "sections": {
@@ -447,7 +426,6 @@
     {
       "id": "romeo-and-juliet-act4-scene3",
       "name": "Act IV, Scene III: Juliet’s Chamber",
-      "level": 1,
       "category": "scene",
       "sort_order": 22,
       "sections": {
@@ -466,7 +444,6 @@
     {
       "id": "romeo-and-juliet-act4-scene4",
       "name": "Act IV, Scene IV: Hall in Capulet’s House",
-      "level": 1,
       "category": "scene",
       "sort_order": 23,
       "sections": {
@@ -485,7 +462,6 @@
     {
       "id": "romeo-and-juliet-act4-scene5",
       "name": "Act IV, Scene V: Juliet’s Chamber; Juliet on the bed",
-      "level": 1,
       "category": "scene",
       "sort_order": 24,
       "sections": {
@@ -505,10 +481,9 @@
       "id": "romeo-and-juliet-act4",
       "name": "Romeo and Juliet — Act IV",
       "symbol": "IV",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "romeo-and-juliet-act4-scene1",
         "romeo-and-juliet-act4-scene2",
         "romeo-and-juliet-act4-scene3",
@@ -530,7 +505,6 @@
     {
       "id": "romeo-and-juliet-act5-scene1",
       "name": "Act V, Scene I: Mantua. A Street",
-      "level": 1,
       "category": "scene",
       "sort_order": 26,
       "sections": {
@@ -549,7 +523,6 @@
     {
       "id": "romeo-and-juliet-act5-scene2",
       "name": "Act V, Scene II: Friar Lawrence’s Cell",
-      "level": 1,
       "category": "scene",
       "sort_order": 27,
       "sections": {
@@ -568,7 +541,6 @@
     {
       "id": "romeo-and-juliet-act5-scene3",
       "name": "Act V, Scene III: A churchyard; in it a Monument belonging to the Capulets",
-      "level": 1,
       "category": "scene",
       "sort_order": 28,
       "sections": {
@@ -588,10 +560,9 @@
       "id": "romeo-and-juliet-act5",
       "name": "Romeo and Juliet — Act V",
       "symbol": "V",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "romeo-and-juliet-act5-scene1",
         "romeo-and-juliet-act5-scene2",
         "romeo-and-juliet-act5-scene3"
@@ -611,10 +582,9 @@
     {
       "id": "romeo-and-juliet",
       "name": "Romeo and Juliet",
-      "level": 3,
       "category": "play",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "romeo-and-juliet-act1",
         "romeo-and-juliet-act2",
         "romeo-and-juliet-act3",
@@ -636,7 +606,6 @@
     {
       "id": "hamlet-act1-scene1",
       "name": "Act I, Scene I: Elsinore. A platform before the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 31,
       "sections": {
@@ -655,7 +624,6 @@
     {
       "id": "hamlet-act1-scene2",
       "name": "Act I, Scene II: Elsinore. A room of state in the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 32,
       "sections": {
@@ -674,7 +642,6 @@
     {
       "id": "hamlet-act1-scene3",
       "name": "Act I, Scene III: A room in Polonius’s house",
-      "level": 1,
       "category": "scene",
       "sort_order": 33,
       "sections": {
@@ -693,7 +660,6 @@
     {
       "id": "hamlet-act1-scene4",
       "name": "Act I, Scene IV: The platform",
-      "level": 1,
       "category": "scene",
       "sort_order": 34,
       "sections": {
@@ -712,7 +678,6 @@
     {
       "id": "hamlet-act1-scene5",
       "name": "Act I, Scene V: A more remote part of the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 35,
       "sections": {
@@ -732,10 +697,9 @@
       "id": "hamlet-act1",
       "name": "Hamlet — Act I",
       "symbol": "I",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "hamlet-act1-scene1",
         "hamlet-act1-scene2",
         "hamlet-act1-scene3",
@@ -757,7 +721,6 @@
     {
       "id": "hamlet-act2-scene1",
       "name": "Act II, Scene I: A room in Polonius’s house",
-      "level": 1,
       "category": "scene",
       "sort_order": 37,
       "sections": {
@@ -776,7 +739,6 @@
     {
       "id": "hamlet-act2-scene2",
       "name": "Act II, Scene II: A room in the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 38,
       "sections": {
@@ -796,10 +758,9 @@
       "id": "hamlet-act2",
       "name": "Hamlet — Act II",
       "symbol": "II",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "hamlet-act2-scene1",
         "hamlet-act2-scene2"
       ],
@@ -818,7 +779,6 @@
     {
       "id": "hamlet-act3-scene1",
       "name": "Act III, Scene I: A room in the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 40,
       "sections": {
@@ -837,7 +797,6 @@
     {
       "id": "hamlet-act3-scene2",
       "name": "Act III, Scene II: A hall in the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 41,
       "sections": {
@@ -856,7 +815,6 @@
     {
       "id": "hamlet-act3-scene3",
       "name": "Act III, Scene III: A room in the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 42,
       "sections": {
@@ -875,7 +833,6 @@
     {
       "id": "hamlet-act3-scene4",
       "name": "Act III, Scene IV: Another room in the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 43,
       "sections": {
@@ -895,10 +852,9 @@
       "id": "hamlet-act3",
       "name": "Hamlet — Act III",
       "symbol": "III",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "hamlet-act3-scene1",
         "hamlet-act3-scene2",
         "hamlet-act3-scene3",
@@ -919,7 +875,6 @@
     {
       "id": "hamlet-act4-scene1",
       "name": "Act IV, Scene I: A room in the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 45,
       "sections": {
@@ -938,7 +893,6 @@
     {
       "id": "hamlet-act4-scene2",
       "name": "Act IV, Scene II: Another room in the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 46,
       "sections": {
@@ -957,7 +911,6 @@
     {
       "id": "hamlet-act4-scene3",
       "name": "Act IV, Scene III: Another room in the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 47,
       "sections": {
@@ -976,7 +929,6 @@
     {
       "id": "hamlet-act4-scene4",
       "name": "Act IV, Scene IV: A plain in Denmark",
-      "level": 1,
       "category": "scene",
       "sort_order": 48,
       "sections": {
@@ -995,7 +947,6 @@
     {
       "id": "hamlet-act4-scene5",
       "name": "Act IV, Scene V: Elsinore. A room in the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 49,
       "sections": {
@@ -1014,7 +965,6 @@
     {
       "id": "hamlet-act4-scene6",
       "name": "Act IV, Scene VI: Another room in the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 50,
       "sections": {
@@ -1033,7 +983,6 @@
     {
       "id": "hamlet-act4-scene7",
       "name": "Act IV, Scene VII: Another room in the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 51,
       "sections": {
@@ -1053,10 +1002,9 @@
       "id": "hamlet-act4",
       "name": "Hamlet — Act IV",
       "symbol": "IV",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "hamlet-act4-scene1",
         "hamlet-act4-scene2",
         "hamlet-act4-scene3",
@@ -1080,7 +1028,6 @@
     {
       "id": "hamlet-act5-scene1",
       "name": "Act V, Scene I: A churchyard",
-      "level": 1,
       "category": "scene",
       "sort_order": 53,
       "sections": {
@@ -1099,7 +1046,6 @@
     {
       "id": "hamlet-act5-scene2",
       "name": "Act V, Scene II: A hall in the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 54,
       "sections": {
@@ -1119,10 +1065,9 @@
       "id": "hamlet-act5",
       "name": "Hamlet — Act V",
       "symbol": "V",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "hamlet-act5-scene1",
         "hamlet-act5-scene2"
       ],
@@ -1141,10 +1086,9 @@
     {
       "id": "hamlet",
       "name": "Hamlet",
-      "level": 3,
       "category": "play",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "hamlet-act1",
         "hamlet-act2",
         "hamlet-act3",
@@ -1166,7 +1110,6 @@
     {
       "id": "macbeth-act1-scene1",
       "name": "Act I, Scene I: An open Place",
-      "level": 1,
       "category": "scene",
       "sort_order": 57,
       "sections": {
@@ -1185,7 +1128,6 @@
     {
       "id": "macbeth-act1-scene2",
       "name": "Act I, Scene II: A Camp near Forres",
-      "level": 1,
       "category": "scene",
       "sort_order": 58,
       "sections": {
@@ -1204,7 +1146,6 @@
     {
       "id": "macbeth-act1-scene3",
       "name": "Act I, Scene III: A heath",
-      "level": 1,
       "category": "scene",
       "sort_order": 59,
       "sections": {
@@ -1223,7 +1164,6 @@
     {
       "id": "macbeth-act1-scene4",
       "name": "Act I, Scene IV: Forres. A Room in the Palace",
-      "level": 1,
       "category": "scene",
       "sort_order": 60,
       "sections": {
@@ -1242,7 +1182,6 @@
     {
       "id": "macbeth-act1-scene5",
       "name": "Act I, Scene V: Inverness. A Room in Macbeth’s Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 61,
       "sections": {
@@ -1261,7 +1200,6 @@
     {
       "id": "macbeth-act1-scene6",
       "name": "Act I, Scene VI: The same. Before the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 62,
       "sections": {
@@ -1280,7 +1218,6 @@
     {
       "id": "macbeth-act1-scene7",
       "name": "Act I, Scene VII: The same. A Lobby in the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 63,
       "sections": {
@@ -1300,10 +1237,9 @@
       "id": "macbeth-act1",
       "name": "Macbeth — Act I",
       "symbol": "I",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "macbeth-act1-scene1",
         "macbeth-act1-scene2",
         "macbeth-act1-scene3",
@@ -1327,7 +1263,6 @@
     {
       "id": "macbeth-act2-scene1",
       "name": "Act II, Scene I: Inverness. Court within the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 65,
       "sections": {
@@ -1346,7 +1281,6 @@
     {
       "id": "macbeth-act2-scene2",
       "name": "Act II, Scene II: The same",
-      "level": 1,
       "category": "scene",
       "sort_order": 66,
       "sections": {
@@ -1365,7 +1299,6 @@
     {
       "id": "macbeth-act2-scene3",
       "name": "Act II, Scene III: The same",
-      "level": 1,
       "category": "scene",
       "sort_order": 67,
       "sections": {
@@ -1384,7 +1317,6 @@
     {
       "id": "macbeth-act2-scene4",
       "name": "Act II, Scene IV: The same. Without the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 68,
       "sections": {
@@ -1404,10 +1336,9 @@
       "id": "macbeth-act2",
       "name": "Macbeth — Act II",
       "symbol": "II",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "macbeth-act2-scene1",
         "macbeth-act2-scene2",
         "macbeth-act2-scene3",
@@ -1428,7 +1359,6 @@
     {
       "id": "macbeth-act3-scene1",
       "name": "Act III, Scene I: Forres. A Room in the Palace",
-      "level": 1,
       "category": "scene",
       "sort_order": 70,
       "sections": {
@@ -1447,7 +1377,6 @@
     {
       "id": "macbeth-act3-scene2",
       "name": "Act III, Scene II: The same. Another Room in the Palace",
-      "level": 1,
       "category": "scene",
       "sort_order": 71,
       "sections": {
@@ -1466,7 +1395,6 @@
     {
       "id": "macbeth-act3-scene3",
       "name": "Act III, Scene III: The same. A Park or Lawn, with a gate leading to the Palace",
-      "level": 1,
       "category": "scene",
       "sort_order": 72,
       "sections": {
@@ -1485,7 +1413,6 @@
     {
       "id": "macbeth-act3-scene4",
       "name": "Act III, Scene IV: The same. A Room of state in the Palace",
-      "level": 1,
       "category": "scene",
       "sort_order": 73,
       "sections": {
@@ -1504,7 +1431,6 @@
     {
       "id": "macbeth-act3-scene5",
       "name": "Act III, Scene V: The heath",
-      "level": 1,
       "category": "scene",
       "sort_order": 74,
       "sections": {
@@ -1523,7 +1449,6 @@
     {
       "id": "macbeth-act3-scene6",
       "name": "Act III, Scene VI: Forres. A Room in the Palace",
-      "level": 1,
       "category": "scene",
       "sort_order": 75,
       "sections": {
@@ -1543,10 +1468,9 @@
       "id": "macbeth-act3",
       "name": "Macbeth — Act III",
       "symbol": "III",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "macbeth-act3-scene1",
         "macbeth-act3-scene2",
         "macbeth-act3-scene3",
@@ -1569,7 +1493,6 @@
     {
       "id": "macbeth-act4-scene1",
       "name": "Act IV, Scene I: A dark Cave. In the middle, a Cauldron Boiling",
-      "level": 1,
       "category": "scene",
       "sort_order": 77,
       "sections": {
@@ -1588,7 +1511,6 @@
     {
       "id": "macbeth-act4-scene2",
       "name": "Act IV, Scene II: Fife. A Room in Macduff’s Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 78,
       "sections": {
@@ -1607,7 +1529,6 @@
     {
       "id": "macbeth-act4-scene3",
       "name": "Act IV, Scene III: England. Before the King’s Palace",
-      "level": 1,
       "category": "scene",
       "sort_order": 79,
       "sections": {
@@ -1627,10 +1548,9 @@
       "id": "macbeth-act4",
       "name": "Macbeth — Act IV",
       "symbol": "IV",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "macbeth-act4-scene1",
         "macbeth-act4-scene2",
         "macbeth-act4-scene3"
@@ -1650,7 +1570,6 @@
     {
       "id": "macbeth-act5-scene1",
       "name": "Act V, Scene I: Dunsinane. A Room in the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 81,
       "sections": {
@@ -1669,7 +1588,6 @@
     {
       "id": "macbeth-act5-scene2",
       "name": "Act V, Scene II: The Country near Dunsinane",
-      "level": 1,
       "category": "scene",
       "sort_order": 82,
       "sections": {
@@ -1688,7 +1606,6 @@
     {
       "id": "macbeth-act5-scene3",
       "name": "Act V, Scene III: Dunsinane. A Room in the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 83,
       "sections": {
@@ -1707,7 +1624,6 @@
     {
       "id": "macbeth-act5-scene4",
       "name": "Act V, Scene IV: Country near Dunsinane: a Wood in view",
-      "level": 1,
       "category": "scene",
       "sort_order": 84,
       "sections": {
@@ -1726,7 +1642,6 @@
     {
       "id": "macbeth-act5-scene5",
       "name": "Act V, Scene V: Dunsinane. Within the castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 85,
       "sections": {
@@ -1745,7 +1660,6 @@
     {
       "id": "macbeth-act5-scene6",
       "name": "Act V, Scene VI: The same. A Plain before the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 86,
       "sections": {
@@ -1764,7 +1678,6 @@
     {
       "id": "macbeth-act5-scene7",
       "name": "Act V, Scene VII: The same. Another part of the Plain",
-      "level": 1,
       "category": "scene",
       "sort_order": 87,
       "sections": {
@@ -1783,7 +1696,6 @@
     {
       "id": "macbeth-act5-scene8",
       "name": "Act V, Scene VIII: The same. Another part of the field",
-      "level": 1,
       "category": "scene",
       "sort_order": 88,
       "sections": {
@@ -1803,10 +1715,9 @@
       "id": "macbeth-act5",
       "name": "Macbeth — Act V",
       "symbol": "V",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "macbeth-act5-scene1",
         "macbeth-act5-scene2",
         "macbeth-act5-scene3",
@@ -1831,10 +1742,9 @@
     {
       "id": "macbeth",
       "name": "Macbeth",
-      "level": 3,
       "category": "play",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "macbeth-act1",
         "macbeth-act2",
         "macbeth-act3",
@@ -1856,7 +1766,6 @@
     {
       "id": "othello-act1-scene1",
       "name": "Act I, Scene I: Venice. A street",
-      "level": 1,
       "category": "scene",
       "sort_order": 91,
       "sections": {
@@ -1875,7 +1784,6 @@
     {
       "id": "othello-act1-scene2",
       "name": "Act I, Scene II: Venice. Another street",
-      "level": 1,
       "category": "scene",
       "sort_order": 92,
       "sections": {
@@ -1894,7 +1802,6 @@
     {
       "id": "othello-act1-scene3",
       "name": "Act I, Scene III: Venice. A council chamber",
-      "level": 1,
       "category": "scene",
       "sort_order": 93,
       "sections": {
@@ -1914,10 +1821,9 @@
       "id": "othello-act1",
       "name": "Othello — Act I",
       "symbol": "I",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "othello-act1-scene1",
         "othello-act1-scene2",
         "othello-act1-scene3"
@@ -1937,7 +1843,6 @@
     {
       "id": "othello-act2-scene1",
       "name": "Act II, Scene I: A seaport in Cyprus. A Platform",
-      "level": 1,
       "category": "scene",
       "sort_order": 95,
       "sections": {
@@ -1956,7 +1861,6 @@
     {
       "id": "othello-act2-scene2",
       "name": "Act II, Scene II: A street",
-      "level": 1,
       "category": "scene",
       "sort_order": 96,
       "sections": {
@@ -1975,7 +1879,6 @@
     {
       "id": "othello-act2-scene3",
       "name": "Act II, Scene III: A Hall in the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 97,
       "sections": {
@@ -1995,10 +1898,9 @@
       "id": "othello-act2",
       "name": "Othello — Act II",
       "symbol": "II",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "othello-act2-scene1",
         "othello-act2-scene2",
         "othello-act2-scene3"
@@ -2018,7 +1920,6 @@
     {
       "id": "othello-act3-scene1",
       "name": "Act III, Scene I: Cyprus. Before the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 99,
       "sections": {
@@ -2037,7 +1938,6 @@
     {
       "id": "othello-act3-scene2",
       "name": "Act III, Scene II: Cyprus. A Room in the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 100,
       "sections": {
@@ -2056,7 +1956,6 @@
     {
       "id": "othello-act3-scene3",
       "name": "Act III, Scene III: Cyprus. The Garden of the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 101,
       "sections": {
@@ -2075,7 +1974,6 @@
     {
       "id": "othello-act3-scene4",
       "name": "Act III, Scene IV: Cyprus. Before the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 102,
       "sections": {
@@ -2095,10 +1993,9 @@
       "id": "othello-act3",
       "name": "Othello — Act III",
       "symbol": "III",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "othello-act3-scene1",
         "othello-act3-scene2",
         "othello-act3-scene3",
@@ -2119,7 +2016,6 @@
     {
       "id": "othello-act4-scene1",
       "name": "Act IV, Scene I: Cyprus. Before the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 104,
       "sections": {
@@ -2138,7 +2034,6 @@
     {
       "id": "othello-act4-scene2",
       "name": "Act IV, Scene II: Cyprus. A Room in the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 105,
       "sections": {
@@ -2157,7 +2052,6 @@
     {
       "id": "othello-act4-scene3",
       "name": "Act IV, Scene III: Cyprus. Another Room in the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 106,
       "sections": {
@@ -2177,10 +2071,9 @@
       "id": "othello-act4",
       "name": "Othello — Act IV",
       "symbol": "IV",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "othello-act4-scene1",
         "othello-act4-scene2",
         "othello-act4-scene3"
@@ -2200,7 +2093,6 @@
     {
       "id": "othello-act5-scene1",
       "name": "Act V, Scene I: Cyprus. A Street",
-      "level": 1,
       "category": "scene",
       "sort_order": 108,
       "sections": {
@@ -2219,7 +2111,6 @@
     {
       "id": "othello-act5-scene2",
       "name": "Act V, Scene II: Cyprus. A Bedchamber in the castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 109,
       "sections": {
@@ -2239,10 +2130,9 @@
       "id": "othello-act5",
       "name": "Othello — Act V",
       "symbol": "V",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "othello-act5-scene1",
         "othello-act5-scene2"
       ],
@@ -2261,10 +2151,9 @@
     {
       "id": "othello",
       "name": "Othello",
-      "level": 3,
       "category": "play",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "othello-act1",
         "othello-act2",
         "othello-act3",
@@ -2286,7 +2175,6 @@
     {
       "id": "king-lear-act1-scene1",
       "name": "Act I, Scene I: A Room of State in King Lear’s Palace",
-      "level": 1,
       "category": "scene",
       "sort_order": 112,
       "sections": {
@@ -2305,7 +2193,6 @@
     {
       "id": "king-lear-act1-scene2",
       "name": "Act I, Scene II: A Hall in the Earl of Gloucester’s Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 113,
       "sections": {
@@ -2324,7 +2211,6 @@
     {
       "id": "king-lear-act1-scene3",
       "name": "Act I, Scene III: A Room in the Duke of Albany’s Palace",
-      "level": 1,
       "category": "scene",
       "sort_order": 114,
       "sections": {
@@ -2343,7 +2229,6 @@
     {
       "id": "king-lear-act1-scene4",
       "name": "Act I, Scene IV: A Hall in Albany’s Palace",
-      "level": 1,
       "category": "scene",
       "sort_order": 115,
       "sections": {
@@ -2362,7 +2247,6 @@
     {
       "id": "king-lear-act1-scene5",
       "name": "Act I, Scene V: Court before the Duke of Albany’s Palace",
-      "level": 1,
       "category": "scene",
       "sort_order": 116,
       "sections": {
@@ -2382,10 +2266,9 @@
       "id": "king-lear-act1",
       "name": "King Lear — Act I",
       "symbol": "I",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "king-lear-act1-scene1",
         "king-lear-act1-scene2",
         "king-lear-act1-scene3",
@@ -2407,7 +2290,6 @@
     {
       "id": "king-lear-act2-scene1",
       "name": "Act II, Scene I: A court within the Castle of the Earl of Gloucester",
-      "level": 1,
       "category": "scene",
       "sort_order": 118,
       "sections": {
@@ -2426,7 +2308,6 @@
     {
       "id": "king-lear-act2-scene2",
       "name": "Act II, Scene II: Before Gloucester’s Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 119,
       "sections": {
@@ -2445,7 +2326,6 @@
     {
       "id": "king-lear-act2-scene3",
       "name": "Act II, Scene III: The open Country",
-      "level": 1,
       "category": "scene",
       "sort_order": 120,
       "sections": {
@@ -2464,7 +2344,6 @@
     {
       "id": "king-lear-act2-scene4",
       "name": "Act II, Scene IV: Before Gloucester’s Castle; Kent in the stocks",
-      "level": 1,
       "category": "scene",
       "sort_order": 121,
       "sections": {
@@ -2484,10 +2363,9 @@
       "id": "king-lear-act2",
       "name": "King Lear — Act II",
       "symbol": "II",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "king-lear-act2-scene1",
         "king-lear-act2-scene2",
         "king-lear-act2-scene3",
@@ -2508,7 +2386,6 @@
     {
       "id": "king-lear-act3-scene1",
       "name": "Act III, Scene I: A Heath",
-      "level": 1,
       "category": "scene",
       "sort_order": 123,
       "sections": {
@@ -2527,7 +2404,6 @@
     {
       "id": "king-lear-act3-scene2",
       "name": "Act III, Scene II: Another part of the heath",
-      "level": 1,
       "category": "scene",
       "sort_order": 124,
       "sections": {
@@ -2546,7 +2422,6 @@
     {
       "id": "king-lear-act3-scene3",
       "name": "Act III, Scene III: A Room in Gloucester’s Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 125,
       "sections": {
@@ -2565,7 +2440,6 @@
     {
       "id": "king-lear-act3-scene4",
       "name": "Act III, Scene IV: A part of the Heath with a Hovel",
-      "level": 1,
       "category": "scene",
       "sort_order": 126,
       "sections": {
@@ -2584,7 +2458,6 @@
     {
       "id": "king-lear-act3-scene5",
       "name": "Act III, Scene V: A Room in Gloucester’s Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 127,
       "sections": {
@@ -2603,7 +2476,6 @@
     {
       "id": "king-lear-act3-scene6",
       "name": "Act III, Scene VI: A Chamber in a Farmhouse adjoining the Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 128,
       "sections": {
@@ -2622,7 +2494,6 @@
     {
       "id": "king-lear-act3-scene7",
       "name": "Act III, Scene VII: A Room in Gloucester’s Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 129,
       "sections": {
@@ -2642,10 +2513,9 @@
       "id": "king-lear-act3",
       "name": "King Lear — Act III",
       "symbol": "III",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "king-lear-act3-scene1",
         "king-lear-act3-scene2",
         "king-lear-act3-scene3",
@@ -2669,7 +2539,6 @@
     {
       "id": "king-lear-act4-scene1",
       "name": "Act IV, Scene I: The heath",
-      "level": 1,
       "category": "scene",
       "sort_order": 131,
       "sections": {
@@ -2688,7 +2557,6 @@
     {
       "id": "king-lear-act4-scene2",
       "name": "Act IV, Scene II: Before the Duke of Albany’s Palace",
-      "level": 1,
       "category": "scene",
       "sort_order": 132,
       "sections": {
@@ -2707,7 +2575,6 @@
     {
       "id": "king-lear-act4-scene3",
       "name": "Act IV, Scene III: The French camp near Dover",
-      "level": 1,
       "category": "scene",
       "sort_order": 133,
       "sections": {
@@ -2726,7 +2593,6 @@
     {
       "id": "king-lear-act4-scene4",
       "name": "Act IV, Scene IV: The French camp. A Tent",
-      "level": 1,
       "category": "scene",
       "sort_order": 134,
       "sections": {
@@ -2745,7 +2611,6 @@
     {
       "id": "king-lear-act4-scene5",
       "name": "Act IV, Scene V: A Room in Gloucester’s Castle",
-      "level": 1,
       "category": "scene",
       "sort_order": 135,
       "sections": {
@@ -2764,7 +2629,6 @@
     {
       "id": "king-lear-act4-scene6",
       "name": "Act IV, Scene VI: The country near Dover",
-      "level": 1,
       "category": "scene",
       "sort_order": 136,
       "sections": {
@@ -2783,7 +2647,6 @@
     {
       "id": "king-lear-act4-scene7",
       "name": "Act IV, Scene VII: A Tent in the French Camp",
-      "level": 1,
       "category": "scene",
       "sort_order": 137,
       "sections": {
@@ -2803,10 +2666,9 @@
       "id": "king-lear-act4",
       "name": "King Lear — Act IV",
       "symbol": "IV",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "king-lear-act4-scene1",
         "king-lear-act4-scene2",
         "king-lear-act4-scene3",
@@ -2830,7 +2692,6 @@
     {
       "id": "king-lear-act5-scene1",
       "name": "Act V, Scene I: The Camp of the British Forces near Dover",
-      "level": 1,
       "category": "scene",
       "sort_order": 139,
       "sections": {
@@ -2849,7 +2710,6 @@
     {
       "id": "king-lear-act5-scene2",
       "name": "Act V, Scene II: A field between the two Camps",
-      "level": 1,
       "category": "scene",
       "sort_order": 140,
       "sections": {
@@ -2868,7 +2728,6 @@
     {
       "id": "king-lear-act5-scene3",
       "name": "Act V, Scene III: The British Camp near Dover",
-      "level": 1,
       "category": "scene",
       "sort_order": 141,
       "sections": {
@@ -2888,10 +2747,9 @@
       "id": "king-lear-act5",
       "name": "King Lear — Act V",
       "symbol": "V",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "king-lear-act5-scene1",
         "king-lear-act5-scene2",
         "king-lear-act5-scene3"
@@ -2911,10 +2769,9 @@
     {
       "id": "king-lear",
       "name": "King Lear",
-      "level": 3,
       "category": "play",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "king-lear-act1",
         "king-lear-act2",
         "king-lear-act3",
@@ -2936,7 +2793,6 @@
     {
       "id": "a-midsummer-nights-dream-act1-scene1",
       "name": "Act I, Scene I: Athens. A room in the Palace of Theseus",
-      "level": 1,
       "category": "scene",
       "sort_order": 144,
       "sections": {
@@ -2955,7 +2811,6 @@
     {
       "id": "a-midsummer-nights-dream-act1-scene2",
       "name": "Act I, Scene II: The Same. A Room in a Cottage",
-      "level": 1,
       "category": "scene",
       "sort_order": 145,
       "sections": {
@@ -2975,10 +2830,9 @@
       "id": "a-midsummer-nights-dream-act1",
       "name": "A Midsummer Night's Dream — Act I",
       "symbol": "I",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "a-midsummer-nights-dream-act1-scene1",
         "a-midsummer-nights-dream-act1-scene2"
       ],
@@ -2997,7 +2851,6 @@
     {
       "id": "a-midsummer-nights-dream-act2-scene1",
       "name": "Act II, Scene I: A wood near Athens",
-      "level": 1,
       "category": "scene",
       "sort_order": 147,
       "sections": {
@@ -3016,7 +2869,6 @@
     {
       "id": "a-midsummer-nights-dream-act2-scene2",
       "name": "Act II, Scene II: Another part of the wood",
-      "level": 1,
       "category": "scene",
       "sort_order": 148,
       "sections": {
@@ -3036,10 +2888,9 @@
       "id": "a-midsummer-nights-dream-act2",
       "name": "A Midsummer Night's Dream — Act II",
       "symbol": "II",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "a-midsummer-nights-dream-act2-scene1",
         "a-midsummer-nights-dream-act2-scene2"
       ],
@@ -3058,7 +2909,6 @@
     {
       "id": "a-midsummer-nights-dream-act3-scene1",
       "name": "Act III, Scene I: The Wood",
-      "level": 1,
       "category": "scene",
       "sort_order": 150,
       "sections": {
@@ -3077,7 +2927,6 @@
     {
       "id": "a-midsummer-nights-dream-act3-scene2",
       "name": "Act III, Scene II: Another part of the wood",
-      "level": 1,
       "category": "scene",
       "sort_order": 151,
       "sections": {
@@ -3097,10 +2946,9 @@
       "id": "a-midsummer-nights-dream-act3",
       "name": "A Midsummer Night's Dream — Act III",
       "symbol": "III",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "a-midsummer-nights-dream-act3-scene1",
         "a-midsummer-nights-dream-act3-scene2"
       ],
@@ -3119,7 +2967,6 @@
     {
       "id": "a-midsummer-nights-dream-act4-scene1",
       "name": "Act IV, Scene I: The Wood",
-      "level": 1,
       "category": "scene",
       "sort_order": 153,
       "sections": {
@@ -3138,7 +2985,6 @@
     {
       "id": "a-midsummer-nights-dream-act4-scene2",
       "name": "Act IV, Scene II: Athens. A Room in Quince’s House",
-      "level": 1,
       "category": "scene",
       "sort_order": 154,
       "sections": {
@@ -3158,10 +3004,9 @@
       "id": "a-midsummer-nights-dream-act4",
       "name": "A Midsummer Night's Dream — Act IV",
       "symbol": "IV",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "a-midsummer-nights-dream-act4-scene1",
         "a-midsummer-nights-dream-act4-scene2"
       ],
@@ -3180,7 +3025,6 @@
     {
       "id": "a-midsummer-nights-dream-act5-scene1",
       "name": "Act V, Scene I: Athens. An Apartment in the Palace of Theseus",
-      "level": 1,
       "category": "scene",
       "sort_order": 156,
       "sections": {
@@ -3200,10 +3044,9 @@
       "id": "a-midsummer-nights-dream-act5",
       "name": "A Midsummer Night's Dream — Act V",
       "symbol": "V",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "a-midsummer-nights-dream-act5-scene1"
       ],
       "sort_order": 157,
@@ -3221,10 +3064,9 @@
     {
       "id": "a-midsummer-nights-dream",
       "name": "A Midsummer Night's Dream",
-      "level": 3,
       "category": "play",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "a-midsummer-nights-dream-act1",
         "a-midsummer-nights-dream-act2",
         "a-midsummer-nights-dream-act3",
@@ -3246,7 +3088,6 @@
     {
       "id": "the-tempest-act1-scene1",
       "name": "Act I, Scene I: On a ship at sea; a tempestuous noise of thunder and lightning",
-      "level": 1,
       "category": "scene",
       "sort_order": 159,
       "sections": {
@@ -3265,7 +3106,6 @@
     {
       "id": "the-tempest-act1-scene2",
       "name": "Act I, Scene II: The Island. Before the cell of Prospero",
-      "level": 1,
       "category": "scene",
       "sort_order": 160,
       "sections": {
@@ -3285,10 +3125,9 @@
       "id": "the-tempest-act1",
       "name": "The Tempest — Act I",
       "symbol": "I",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "the-tempest-act1-scene1",
         "the-tempest-act1-scene2"
       ],
@@ -3307,7 +3146,6 @@
     {
       "id": "the-tempest-act2-scene1",
       "name": "Act II, Scene I: Another part of the island",
-      "level": 1,
       "category": "scene",
       "sort_order": 162,
       "sections": {
@@ -3326,7 +3164,6 @@
     {
       "id": "the-tempest-act2-scene2",
       "name": "Act II, Scene II: Another part of the island",
-      "level": 1,
       "category": "scene",
       "sort_order": 163,
       "sections": {
@@ -3346,10 +3183,9 @@
       "id": "the-tempest-act2",
       "name": "The Tempest — Act II",
       "symbol": "II",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "the-tempest-act2-scene1",
         "the-tempest-act2-scene2"
       ],
@@ -3368,7 +3204,6 @@
     {
       "id": "the-tempest-act3-scene1",
       "name": "Act III, Scene I: Before Prospero’s cell",
-      "level": 1,
       "category": "scene",
       "sort_order": 165,
       "sections": {
@@ -3387,7 +3222,6 @@
     {
       "id": "the-tempest-act3-scene2",
       "name": "Act III, Scene II: Another part of the island",
-      "level": 1,
       "category": "scene",
       "sort_order": 166,
       "sections": {
@@ -3406,7 +3240,6 @@
     {
       "id": "the-tempest-act3-scene3",
       "name": "Act III, Scene III: Another part of the island",
-      "level": 1,
       "category": "scene",
       "sort_order": 167,
       "sections": {
@@ -3426,10 +3259,9 @@
       "id": "the-tempest-act3",
       "name": "The Tempest — Act III",
       "symbol": "III",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "the-tempest-act3-scene1",
         "the-tempest-act3-scene2",
         "the-tempest-act3-scene3"
@@ -3449,7 +3281,6 @@
     {
       "id": "the-tempest-act4-scene1",
       "name": "Act IV, Scene I: Before Prospero’s cell",
-      "level": 1,
       "category": "scene",
       "sort_order": 169,
       "sections": {
@@ -3469,10 +3300,9 @@
       "id": "the-tempest-act4",
       "name": "The Tempest — Act IV",
       "symbol": "IV",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "the-tempest-act4-scene1"
       ],
       "sort_order": 170,
@@ -3490,7 +3320,6 @@
     {
       "id": "the-tempest-act5-scene1",
       "name": "Act V, Scene I: Before the cell of Prospero",
-      "level": 1,
       "category": "scene",
       "sort_order": 171,
       "sections": {
@@ -3510,10 +3339,9 @@
       "id": "the-tempest-act5",
       "name": "The Tempest — Act V",
       "symbol": "V",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "the-tempest-act5-scene1"
       ],
       "sort_order": 172,
@@ -3531,10 +3359,9 @@
     {
       "id": "the-tempest",
       "name": "The Tempest",
-      "level": 3,
       "category": "play",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "the-tempest-act1",
         "the-tempest-act2",
         "the-tempest-act3",
@@ -3556,7 +3383,6 @@
     {
       "id": "julius-caesar-act1-scene1",
       "name": "Act I, Scene I: Rome. A street",
-      "level": 1,
       "category": "scene",
       "sort_order": 174,
       "sections": {
@@ -3575,7 +3401,6 @@
     {
       "id": "julius-caesar-act1-scene2",
       "name": "Act I, Scene II: The same. A public place",
-      "level": 1,
       "category": "scene",
       "sort_order": 175,
       "sections": {
@@ -3594,7 +3419,6 @@
     {
       "id": "julius-caesar-act1-scene3",
       "name": "Act I, Scene III: The same. A street",
-      "level": 1,
       "category": "scene",
       "sort_order": 176,
       "sections": {
@@ -3614,10 +3438,9 @@
       "id": "julius-caesar-act1",
       "name": "Julius Caesar — Act I",
       "symbol": "I",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "julius-caesar-act1-scene1",
         "julius-caesar-act1-scene2",
         "julius-caesar-act1-scene3"
@@ -3637,7 +3460,6 @@
     {
       "id": "julius-caesar-act2-scene1",
       "name": "Act II, Scene I: Rome. Brutus’ orchard",
-      "level": 1,
       "category": "scene",
       "sort_order": 178,
       "sections": {
@@ -3656,7 +3478,6 @@
     {
       "id": "julius-caesar-act2-scene2",
       "name": "Act II, Scene II: A room in Caesar’s palace",
-      "level": 1,
       "category": "scene",
       "sort_order": 179,
       "sections": {
@@ -3675,7 +3496,6 @@
     {
       "id": "julius-caesar-act2-scene3",
       "name": "Act II, Scene III: A street near the Capitol",
-      "level": 1,
       "category": "scene",
       "sort_order": 180,
       "sections": {
@@ -3694,7 +3514,6 @@
     {
       "id": "julius-caesar-act2-scene4",
       "name": "Act II, Scene IV: Another part of the same street, before the house of Brutus",
-      "level": 1,
       "category": "scene",
       "sort_order": 181,
       "sections": {
@@ -3714,10 +3533,9 @@
       "id": "julius-caesar-act2",
       "name": "Julius Caesar — Act II",
       "symbol": "II",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "julius-caesar-act2-scene1",
         "julius-caesar-act2-scene2",
         "julius-caesar-act2-scene3",
@@ -3738,7 +3556,6 @@
     {
       "id": "julius-caesar-act3-scene1",
       "name": "Act III, Scene I: Rome. Before the Capitol; the Senate sitting",
-      "level": 1,
       "category": "scene",
       "sort_order": 183,
       "sections": {
@@ -3757,7 +3574,6 @@
     {
       "id": "julius-caesar-act3-scene2",
       "name": "Act III, Scene II: The same. The Forum",
-      "level": 1,
       "category": "scene",
       "sort_order": 184,
       "sections": {
@@ -3776,7 +3592,6 @@
     {
       "id": "julius-caesar-act3-scene3",
       "name": "Act III, Scene III: The same. A street",
-      "level": 1,
       "category": "scene",
       "sort_order": 185,
       "sections": {
@@ -3796,10 +3611,9 @@
       "id": "julius-caesar-act3",
       "name": "Julius Caesar — Act III",
       "symbol": "III",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "julius-caesar-act3-scene1",
         "julius-caesar-act3-scene2",
         "julius-caesar-act3-scene3"
@@ -3819,7 +3633,6 @@
     {
       "id": "julius-caesar-act4-scene1",
       "name": "Act IV, Scene I: Rome. A room in Antony’s house",
-      "level": 1,
       "category": "scene",
       "sort_order": 187,
       "sections": {
@@ -3838,7 +3651,6 @@
     {
       "id": "julius-caesar-act4-scene2",
       "name": "Act IV, Scene II: Before Brutus’ tent, in the camp near Sardis",
-      "level": 1,
       "category": "scene",
       "sort_order": 188,
       "sections": {
@@ -3857,7 +3669,6 @@
     {
       "id": "julius-caesar-act4-scene3",
       "name": "Act IV, Scene III: Within the tent of Brutus",
-      "level": 1,
       "category": "scene",
       "sort_order": 189,
       "sections": {
@@ -3877,10 +3688,9 @@
       "id": "julius-caesar-act4",
       "name": "Julius Caesar — Act IV",
       "symbol": "IV",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "julius-caesar-act4-scene1",
         "julius-caesar-act4-scene2",
         "julius-caesar-act4-scene3"
@@ -3900,7 +3710,6 @@
     {
       "id": "julius-caesar-act5-scene1",
       "name": "Act V, Scene I: The plains of Philippi",
-      "level": 1,
       "category": "scene",
       "sort_order": 191,
       "sections": {
@@ -3919,7 +3728,6 @@
     {
       "id": "julius-caesar-act5-scene2",
       "name": "Act V, Scene II: The same. The field of battle",
-      "level": 1,
       "category": "scene",
       "sort_order": 192,
       "sections": {
@@ -3938,7 +3746,6 @@
     {
       "id": "julius-caesar-act5-scene3",
       "name": "Act V, Scene III: Another part of the field",
-      "level": 1,
       "category": "scene",
       "sort_order": 193,
       "sections": {
@@ -3957,7 +3764,6 @@
     {
       "id": "julius-caesar-act5-scene4",
       "name": "Act V, Scene IV: Another part of the field",
-      "level": 1,
       "category": "scene",
       "sort_order": 194,
       "sections": {
@@ -3976,7 +3782,6 @@
     {
       "id": "julius-caesar-act5-scene5",
       "name": "Act V, Scene V: Another part of the field",
-      "level": 1,
       "category": "scene",
       "sort_order": 195,
       "sections": {
@@ -3996,10 +3801,9 @@
       "id": "julius-caesar-act5",
       "name": "Julius Caesar — Act V",
       "symbol": "V",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "julius-caesar-act5-scene1",
         "julius-caesar-act5-scene2",
         "julius-caesar-act5-scene3",
@@ -4021,10 +3825,9 @@
     {
       "id": "julius-caesar",
       "name": "Julius Caesar",
-      "level": 3,
       "category": "play",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "julius-caesar-act1",
         "julius-caesar-act2",
         "julius-caesar-act3",
@@ -4046,7 +3849,6 @@
     {
       "id": "the-merchant-of-venice-act1-scene1",
       "name": "Act I, Scene I: Venice. A street",
-      "level": 1,
       "category": "scene",
       "sort_order": 198,
       "sections": {
@@ -4065,7 +3867,6 @@
     {
       "id": "the-merchant-of-venice-act1-scene2",
       "name": "Act I, Scene II: Belmont. A room in Portia’s house",
-      "level": 1,
       "category": "scene",
       "sort_order": 199,
       "sections": {
@@ -4084,7 +3885,6 @@
     {
       "id": "the-merchant-of-venice-act1-scene3",
       "name": "Act I, Scene III: Venice. A public place",
-      "level": 1,
       "category": "scene",
       "sort_order": 200,
       "sections": {
@@ -4104,10 +3904,9 @@
       "id": "the-merchant-of-venice-act1",
       "name": "The Merchant of Venice — Act I",
       "symbol": "I",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "the-merchant-of-venice-act1-scene1",
         "the-merchant-of-venice-act1-scene2",
         "the-merchant-of-venice-act1-scene3"
@@ -4127,7 +3926,6 @@
     {
       "id": "the-merchant-of-venice-act2-scene1",
       "name": "Act II, Scene I: Belmont. A room in Portia’s house",
-      "level": 1,
       "category": "scene",
       "sort_order": 202,
       "sections": {
@@ -4146,7 +3944,6 @@
     {
       "id": "the-merchant-of-venice-act2-scene2",
       "name": "Act II, Scene II: Venice. A street",
-      "level": 1,
       "category": "scene",
       "sort_order": 203,
       "sections": {
@@ -4165,7 +3962,6 @@
     {
       "id": "the-merchant-of-venice-act2-scene3",
       "name": "Act II, Scene III: The same. A room in Shylock’s house",
-      "level": 1,
       "category": "scene",
       "sort_order": 204,
       "sections": {
@@ -4184,7 +3980,6 @@
     {
       "id": "the-merchant-of-venice-act2-scene4",
       "name": "Act II, Scene IV: The same. A street",
-      "level": 1,
       "category": "scene",
       "sort_order": 205,
       "sections": {
@@ -4203,7 +3998,6 @@
     {
       "id": "the-merchant-of-venice-act2-scene5",
       "name": "Act II, Scene V: The same. Before Shylock’s house",
-      "level": 1,
       "category": "scene",
       "sort_order": 206,
       "sections": {
@@ -4222,7 +4016,6 @@
     {
       "id": "the-merchant-of-venice-act2-scene6",
       "name": "Act II, Scene VI: The same",
-      "level": 1,
       "category": "scene",
       "sort_order": 207,
       "sections": {
@@ -4241,7 +4034,6 @@
     {
       "id": "the-merchant-of-venice-act2-scene7",
       "name": "Act II, Scene VII: Belmont. A room in Portia’s house",
-      "level": 1,
       "category": "scene",
       "sort_order": 208,
       "sections": {
@@ -4260,7 +4052,6 @@
     {
       "id": "the-merchant-of-venice-act2-scene8",
       "name": "Act II, Scene VIII: Venice. A street",
-      "level": 1,
       "category": "scene",
       "sort_order": 209,
       "sections": {
@@ -4279,7 +4070,6 @@
     {
       "id": "the-merchant-of-venice-act2-scene9",
       "name": "Act II, Scene IX: Belmont. A room in Portia’s house",
-      "level": 1,
       "category": "scene",
       "sort_order": 210,
       "sections": {
@@ -4299,10 +4089,9 @@
       "id": "the-merchant-of-venice-act2",
       "name": "The Merchant of Venice — Act II",
       "symbol": "II",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "the-merchant-of-venice-act2-scene1",
         "the-merchant-of-venice-act2-scene2",
         "the-merchant-of-venice-act2-scene3",
@@ -4328,7 +4117,6 @@
     {
       "id": "the-merchant-of-venice-act3-scene1",
       "name": "Act III, Scene I: Venice. A street",
-      "level": 1,
       "category": "scene",
       "sort_order": 212,
       "sections": {
@@ -4347,7 +4135,6 @@
     {
       "id": "the-merchant-of-venice-act3-scene2",
       "name": "Act III, Scene II: Belmont. A room in Portia’s house",
-      "level": 1,
       "category": "scene",
       "sort_order": 213,
       "sections": {
@@ -4366,7 +4153,6 @@
     {
       "id": "the-merchant-of-venice-act3-scene3",
       "name": "Act III, Scene III: Venice. A street",
-      "level": 1,
       "category": "scene",
       "sort_order": 214,
       "sections": {
@@ -4385,7 +4171,6 @@
     {
       "id": "the-merchant-of-venice-act3-scene4",
       "name": "Act III, Scene IV: Belmont. A room in Portia’s house",
-      "level": 1,
       "category": "scene",
       "sort_order": 215,
       "sections": {
@@ -4404,7 +4189,6 @@
     {
       "id": "the-merchant-of-venice-act3-scene5",
       "name": "Act III, Scene V: The same. A garden",
-      "level": 1,
       "category": "scene",
       "sort_order": 216,
       "sections": {
@@ -4424,10 +4208,9 @@
       "id": "the-merchant-of-venice-act3",
       "name": "The Merchant of Venice — Act III",
       "symbol": "III",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "the-merchant-of-venice-act3-scene1",
         "the-merchant-of-venice-act3-scene2",
         "the-merchant-of-venice-act3-scene3",
@@ -4449,7 +4232,6 @@
     {
       "id": "the-merchant-of-venice-act4-scene1",
       "name": "Act IV, Scene I: Venice. A court of justice",
-      "level": 1,
       "category": "scene",
       "sort_order": 218,
       "sections": {
@@ -4468,7 +4250,6 @@
     {
       "id": "the-merchant-of-venice-act4-scene2",
       "name": "Act IV, Scene II: The same. A street",
-      "level": 1,
       "category": "scene",
       "sort_order": 219,
       "sections": {
@@ -4488,10 +4269,9 @@
       "id": "the-merchant-of-venice-act4",
       "name": "The Merchant of Venice — Act IV",
       "symbol": "IV",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "the-merchant-of-venice-act4-scene1",
         "the-merchant-of-venice-act4-scene2"
       ],
@@ -4510,7 +4290,6 @@
     {
       "id": "the-merchant-of-venice-act5-scene1",
       "name": "Act V, Scene I: Belmont. The avenue to Portia’s house",
-      "level": 1,
       "category": "scene",
       "sort_order": 221,
       "sections": {
@@ -4530,10 +4309,9 @@
       "id": "the-merchant-of-venice-act5",
       "name": "The Merchant of Venice — Act V",
       "symbol": "V",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "the-merchant-of-venice-act5-scene1"
       ],
       "sort_order": 222,
@@ -4551,10 +4329,9 @@
     {
       "id": "the-merchant-of-venice",
       "name": "The Merchant of Venice",
-      "level": 3,
       "category": "play",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "the-merchant-of-venice-act1",
         "the-merchant-of-venice-act2",
         "the-merchant-of-venice-act3",
@@ -4576,7 +4353,6 @@
     {
       "id": "twelfth-night-act1-scene1",
       "name": "Act I, Scene I: An Apartment in the Duke’s Palace",
-      "level": 1,
       "category": "scene",
       "sort_order": 224,
       "sections": {
@@ -4595,7 +4371,6 @@
     {
       "id": "twelfth-night-act1-scene2",
       "name": "Act I, Scene II: The sea-coast",
-      "level": 1,
       "category": "scene",
       "sort_order": 225,
       "sections": {
@@ -4614,7 +4389,6 @@
     {
       "id": "twelfth-night-act1-scene3",
       "name": "Act I, Scene III: A Room in Olivia’s House",
-      "level": 1,
       "category": "scene",
       "sort_order": 226,
       "sections": {
@@ -4633,7 +4407,6 @@
     {
       "id": "twelfth-night-act1-scene4",
       "name": "Act I, Scene IV: A Room in the Duke’s Palace",
-      "level": 1,
       "category": "scene",
       "sort_order": 227,
       "sections": {
@@ -4652,7 +4425,6 @@
     {
       "id": "twelfth-night-act1-scene5",
       "name": "Act I, Scene V: A Room in Olivia’s House",
-      "level": 1,
       "category": "scene",
       "sort_order": 228,
       "sections": {
@@ -4672,10 +4444,9 @@
       "id": "twelfth-night-act1",
       "name": "Twelfth Night — Act I",
       "symbol": "I",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "twelfth-night-act1-scene1",
         "twelfth-night-act1-scene2",
         "twelfth-night-act1-scene3",
@@ -4697,7 +4468,6 @@
     {
       "id": "twelfth-night-act2-scene1",
       "name": "Act II, Scene I: The sea-coast",
-      "level": 1,
       "category": "scene",
       "sort_order": 230,
       "sections": {
@@ -4716,7 +4486,6 @@
     {
       "id": "twelfth-night-act2-scene2",
       "name": "Act II, Scene II: A street",
-      "level": 1,
       "category": "scene",
       "sort_order": 231,
       "sections": {
@@ -4735,7 +4504,6 @@
     {
       "id": "twelfth-night-act2-scene3",
       "name": "Act II, Scene III: A Room in Olivia’s House",
-      "level": 1,
       "category": "scene",
       "sort_order": 232,
       "sections": {
@@ -4754,7 +4522,6 @@
     {
       "id": "twelfth-night-act2-scene4",
       "name": "Act II, Scene IV: A Room in the Duke’s Palace",
-      "level": 1,
       "category": "scene",
       "sort_order": 233,
       "sections": {
@@ -4773,7 +4540,6 @@
     {
       "id": "twelfth-night-act2-scene5",
       "name": "Act II, Scene V: Olivia’s garden",
-      "level": 1,
       "category": "scene",
       "sort_order": 234,
       "sections": {
@@ -4793,10 +4559,9 @@
       "id": "twelfth-night-act2",
       "name": "Twelfth Night — Act II",
       "symbol": "II",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "twelfth-night-act2-scene1",
         "twelfth-night-act2-scene2",
         "twelfth-night-act2-scene3",
@@ -4818,7 +4583,6 @@
     {
       "id": "twelfth-night-act3-scene1",
       "name": "Act III, Scene I: Olivia’s garden",
-      "level": 1,
       "category": "scene",
       "sort_order": 236,
       "sections": {
@@ -4837,7 +4601,6 @@
     {
       "id": "twelfth-night-act3-scene2",
       "name": "Act III, Scene II: A Room in Olivia’s House",
-      "level": 1,
       "category": "scene",
       "sort_order": 237,
       "sections": {
@@ -4856,7 +4619,6 @@
     {
       "id": "twelfth-night-act3-scene3",
       "name": "Act III, Scene III: A street",
-      "level": 1,
       "category": "scene",
       "sort_order": 238,
       "sections": {
@@ -4875,7 +4637,6 @@
     {
       "id": "twelfth-night-act3-scene4",
       "name": "Act III, Scene IV: Olivia’s garden",
-      "level": 1,
       "category": "scene",
       "sort_order": 239,
       "sections": {
@@ -4895,10 +4656,9 @@
       "id": "twelfth-night-act3",
       "name": "Twelfth Night — Act III",
       "symbol": "III",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "twelfth-night-act3-scene1",
         "twelfth-night-act3-scene2",
         "twelfth-night-act3-scene3",
@@ -4919,7 +4679,6 @@
     {
       "id": "twelfth-night-act4-scene1",
       "name": "Act IV, Scene I: The Street before Olivia’s House",
-      "level": 1,
       "category": "scene",
       "sort_order": 241,
       "sections": {
@@ -4938,7 +4697,6 @@
     {
       "id": "twelfth-night-act4-scene2",
       "name": "Act IV, Scene II: A Room in Olivia’s House",
-      "level": 1,
       "category": "scene",
       "sort_order": 242,
       "sections": {
@@ -4957,7 +4715,6 @@
     {
       "id": "twelfth-night-act4-scene3",
       "name": "Act IV, Scene III: Olivia’s Garden",
-      "level": 1,
       "category": "scene",
       "sort_order": 243,
       "sections": {
@@ -4977,10 +4734,9 @@
       "id": "twelfth-night-act4",
       "name": "Twelfth Night — Act IV",
       "symbol": "IV",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "twelfth-night-act4-scene1",
         "twelfth-night-act4-scene2",
         "twelfth-night-act4-scene3"
@@ -5000,7 +4756,6 @@
     {
       "id": "twelfth-night-act5-scene1",
       "name": "Act V, Scene I: The Street before Olivia’s House",
-      "level": 1,
       "category": "scene",
       "sort_order": 245,
       "sections": {
@@ -5020,10 +4775,9 @@
       "id": "twelfth-night-act5",
       "name": "Twelfth Night — Act V",
       "symbol": "V",
-      "level": 2,
       "category": "act",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "twelfth-night-act5-scene1"
       ],
       "sort_order": 246,
@@ -5041,10 +4795,9 @@
     {
       "id": "twelfth-night",
       "name": "Twelfth Night",
-      "level": 3,
       "category": "play",
       "relationship_type": "emergence",
-      "composite_of": [
+      "parts": [
         "twelfth-night-act1",
         "twelfth-night-act2",
         "twelfth-night-act3",

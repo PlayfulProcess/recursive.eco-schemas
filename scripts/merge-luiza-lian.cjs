@@ -79,7 +79,7 @@ const SETE_ESTRELAS_NAME_MAP = {
 
 // Build schema lookup by ID
 const schemaById = {};
-for (const item of schema.items) {
+for (const item of schema.nodes) {
   schemaById[item.id] = item;
 }
 
@@ -143,13 +143,15 @@ const orixaIndex = {};
 let merged = 0;
 const unmatched = [];
 
-for (const dItem of deployed.items) {
-  if (dItem.level === 2) {
+for (const dItem of deployed.nodes) {
+  // Depth comes from parts (v2); the meta-emergences are told apart by category,
+  // since a meta made of songs has the same depth as an album.
+  if (dItem.category === 'meta-emergence') {
+    continue; // Skip old L3 meta-emergences — we recreate them fresh below
+  }
+  if (nodeDepth(dItem, deployed.nodes) >= 2) {
     enrichedItems.push(dItem); // Keep L2 emergences as-is
     continue;
-  }
-  if (dItem.level === 3) {
-    continue; // Skip old L3 meta-emergences — we recreate them fresh below
   }
 
   // Find matching schema item
@@ -195,9 +197,9 @@ for (const dItem of deployed.items) {
   if (sItem?.category === 'Oyá Tempo') album = 'Oyá Tempo (2017)';
   if (sItem?.category === 'Azul Moderno') album = 'Azul Moderno (2018)';
   if (sItem?.category === '7 Estrelas') album = '7 Estrelas (2023)';
-  // Check by composite_of in L2 emergences
-  for (const em of deployed.items.filter(i => i.level === 2)) {
-    if (em.composite_of?.includes(dItem.id)) {
+  // Check by parts in L2 emergences
+  for (const em of deployed.nodes.filter((i) => i.category !== 'meta-emergence' && nodeDepth(i, deployed.nodes) >= 2)) {
+    if (em.parts?.includes(dItem.id)) {
       if (em.name.includes('Oya')) album = 'Oyá Tempo (2017)';
       if (em.name.includes('Azul')) album = 'Azul Moderno (2018)';
       if (em.name.includes('7 Estrelas')) album = '7 Estrelas (2023)';
@@ -234,7 +236,6 @@ for (const dItem of deployed.items) {
   enrichedItems.push({
     id: dItem.id,
     name: clean,
-    level: 1,
     category: album,
     sort_order: dItem.sort_order,
     origin: dItem.origin,
@@ -264,7 +265,6 @@ const yabaIds = [...new Set([
 metas.push({
   id: 'meta-yaba',
   name: 'Yabá — The Feminine Divine',
-  level: 3,
   category: 'meta-emergence',
   sort_order: 200,
   keywords: ['Yabá', 'feminine divine', 'orixá', 'queen mother'],
@@ -277,7 +277,7 @@ metas.push({
     'Reflection': 'Which Yabá speaks loudest in your life right now? Are you in an Oxum season (beauty, diplomacy, inner gold)? An Oyá season (destruction, transformation, letting go)? A Yemanjá season (mothering, oceanic grief, vast holding)?',
   },
   image_url: '',
-  composite_of: yabaIds,
+  parts: yabaIds,
   relationship_type: 'emergence',
 });
 
@@ -289,7 +289,6 @@ const waterIds = [...new Set([
 metas.push({
   id: 'meta-sacred-waters',
   name: 'Águas Sagradas — Sacred Waters',
-  level: 3,
   category: 'meta-emergence',
   sort_order: 201,
   keywords: ['Oxum', 'Yemanjá', 'water', 'ocean', 'river', 'cachoeira', 'Iara'],
@@ -303,7 +302,7 @@ metas.push({
     'Reflection': 'Where does your inner river meet the sea? What is the difference between your fresh-water self (intimate, golden, close) and your salt-water self (vast, deep, borderless)?',
   },
   image_url: '',
-  composite_of: waterIds,
+  parts: waterIds,
   relationship_type: 'emergence',
 });
 
@@ -313,7 +312,6 @@ if (crossIds.length > 0) {
   metas.push({
     id: 'meta-crossroads',
     name: 'Encruzilhada — The Crossroads',
-    level: 3,
     category: 'meta-emergence',
     sort_order: 202,
     keywords: ['Exu', 'Pomba Gira', 'crossroads', 'Jurema', 'desire'],
@@ -324,7 +322,7 @@ if (crossIds.length > 0) {
       'Reflection': 'What crossroads are you standing at? What choice keeps presenting itself? And what would Pomba Gira do — she who never asks permission?',
     },
     image_url: '',
-    composite_of: crossIds,
+    parts: crossIds,
     relationship_type: 'emergence',
   });
 }
@@ -335,7 +333,6 @@ if (stormIds.length > 0) {
   metas.push({
     id: 'meta-storms',
     name: 'Tempestade — Storm & Transformation',
-    level: 3,
     category: 'meta-emergence',
     sort_order: 203,
     keywords: ['Oyá', 'Iansã', 'storm', 'transformation', 'wind', 'death'],
@@ -346,7 +343,7 @@ if (stormIds.length > 0) {
       'Reflection': 'What storm are you — not surviving — but actually being? What transformation would happen if you stopped sheltering and started blowing?',
     },
     image_url: '',
-    composite_of: stormIds,
+    parts: stormIds,
     relationship_type: 'emergence',
   });
 }
@@ -357,7 +354,6 @@ if (cabocloIds.length > 0) {
   metas.push({
     id: 'meta-caboclos',
     name: 'Caboclos — Indigenous Spirit Guides',
-    level: 3,
     category: 'meta-emergence',
     sort_order: 204,
     keywords: ['caboclo', 'boiadeiro', 'marinheiro', 'indigenous', 'Jurema'],
@@ -368,7 +364,7 @@ if (cabocloIds.length > 0) {
       'Reflection': 'What indigenous wisdom of your own land have you forgotten? What spirits of place are singing underneath your concrete?',
     },
     image_url: '',
-    composite_of: cabocloIds,
+    parts: cabocloIds,
     relationship_type: 'emergence',
   });
 }
@@ -404,10 +400,10 @@ Produced by Charles Tixier. Co-produced by Tim Bernardes (O Terno). Released on 
 fs.writeFileSync(outputPath, JSON.stringify(grammar, null, 2));
 
 console.log(`\n=== Luiza Lian Grammar Merge ===`);
-console.log(`L1 songs: ${enrichedItems.filter(i => i.level === 1).length}`);
-console.log(`L2 album emergences: ${enrichedItems.filter(i => i.level === 2).length}`);
-console.log(`L3 meta-emergences: ${enrichedItems.filter(i => i.level === 3).length}`);
-console.log(`Merged with Yoruba English: ${merged}/${enrichedItems.filter(i => i.level === 1).length}`);
+console.log(`L1 songs: ${enrichedItems.filter((i) => nodeDepth(i, enrichedItems) === 1).length}`);
+console.log(`L2 album emergences: ${enrichedItems.filter((i) => i.category !== 'meta-emergence' && nodeDepth(i, enrichedItems) >= 2).length}`);
+console.log(`L3 meta-emergences: ${enrichedItems.filter((i) => i.category === 'meta-emergence').length}`);
+console.log(`Merged with Yoruba English: ${merged}/${enrichedItems.filter((i) => nodeDepth(i, enrichedItems) === 1).length}`);
 if (unmatched.length > 0) {
   console.log(`Without translations: ${unmatched.join(', ')}`);
 }
@@ -416,3 +412,20 @@ for (const [o, ids] of Object.entries(orixaIndex)) {
   console.log(`  ${o}: ${ids.length} songs`);
 }
 console.log(`\n✓ Written to ${outputPath}`);
+
+// Depth from parts (grammar format v2 stores no level): a node with no parts is 1;
+// otherwise 1 + the deepest part. Cycle-safe. `nodes` is the nodes array or an id -> node Map.
+function nodeDepth(node, nodes, seen = new Set()) {
+  const parts = node && node.parts;
+  if (!parts || !parts.length) return 1;
+  const byId = nodes instanceof Map ? nodes : new Map(nodes.map((n) => [n.id, n]));
+  if (seen.has(node.id)) return 1;
+  seen.add(node.id);
+  let d = 1;
+  for (const id of parts) {
+    const c = byId.get(id);
+    if (c) d = Math.max(d, 1 + nodeDepth(c, byId, seen));
+  }
+  seen.delete(node.id);
+  return d;
+}

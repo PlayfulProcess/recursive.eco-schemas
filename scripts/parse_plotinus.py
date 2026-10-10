@@ -6,6 +6,7 @@ Vol 1: seeds/plotinus-enneads-v1.txt
 Vol 2: seeds/plotinus-enneads-v2.txt
 """
 import json, re, os
+from grammar_depth import node_depth
 
 def truncate(text, limit=2800):
     if len(text) > limit:
@@ -127,7 +128,6 @@ for t in unique_tractates:
         "name": name,
         "sort_order": sort_order,
         "category": f"ennead-{t['ennead']}",
-        "level": 1,
         "sections": {
             "Text": truncate(t["text"]),
             "Ennead": f"Ennead {t['ennead']}: {ennead_info.get(t['ennead'], ('',''))[0]}"
@@ -150,13 +150,12 @@ for en in range(1, 7):
         "name": f"Ennead {en}: {en_name}",
         "sort_order": sort_order,
         "category": "ennead",
-        "level": 2,
         "sections": {
             "About": f"The {['', 'First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth'][en]} Ennead covers {en_desc}.",
             "Tractates": f"{len(ennead_item_ids[en])} tractates"
         },
         "keywords": ["neoplatonism", "plotinus", en_name.lower().replace(" ", "-")],
-        "composite_of": ennead_item_ids[en],
+        "parts": ennead_item_ids[en],
         "relationship_type": "emergence"
     })
     ennead_l2_ids.append(l2_id)
@@ -168,13 +167,12 @@ items.append({
     "name": "The Enneads: Complete Works of Plotinus",
     "sort_order": sort_order,
     "category": "meta",
-    "level": 3,
     "sections": {
         "About": "The complete Enneads of Plotinus — the foundational text of Neoplatonism. Plotinus (204-270 CE) developed a philosophical system centered on three hypostases: the One (the transcendent source), Nous (divine intellect), and Soul (the world-soul). His thought profoundly influenced Augustine, medieval mysticism, and the entire Platonic tradition.",
         "The Three Hypostases": "The One: the ineffable, transcendent source beyond being. Nous (Intelligence): the realm of Forms, the first emanation. Soul: the mediator between intellect and matter, source of the physical world."
     },
     "keywords": ["neoplatonism", "plotinus", "complete", "metaphysics", "the-one", "nous", "soul"],
-    "composite_of": ennead_l2_ids,
+    "parts": ennead_l2_ids,
     "relationship_type": "emergence"
 })
 
@@ -201,7 +199,7 @@ grammar = {
     "shelves": ["wisdom"],
     "lineages": ["Shrei", "Linehan"],
     "worldview": "non-dual",
-    "items": items
+    "nodes": items
 }
 
 os.makedirs("grammars/plotinus-enneads", exist_ok=True)
@@ -209,6 +207,6 @@ with open("grammars/plotinus-enneads/grammar.json", "w", encoding="utf-8") as f:
     json.dump(grammar, f, indent=2, ensure_ascii=False)
 
 print(f"\nGenerated {len(items)} items")
-print(f"L1: {sum(1 for i in items if i['level']==1)}")
-print(f"L2: {sum(1 for i in items if i['level']==2)}")
-print(f"L3: {sum(1 for i in items if i['level']==3)}")
+print(f"L1: {sum(1 for i in items if node_depth(i, items)==1)}")
+print(f"L2: {sum(1 for i in items if node_depth(i, items)==2)}")
+print(f"L3: {sum(1 for i in items if node_depth(i, items)==3)}")

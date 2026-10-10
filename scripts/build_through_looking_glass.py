@@ -482,7 +482,6 @@ def build_l1_items(chapters):
                 "id": scene_id,
                 "name": scene["name"],
                 "sort_order": sort_order,
-                "level": 1,
                 "category": f"chapter-{ch_num}",
                 "sections": {
                     "Story": scene["text"],
@@ -579,9 +578,8 @@ def build_l2_chapter_items(chapters, scene_ids_by_chapter, sort_order):
             "id": ch_id,
             "name": f"Chapter {chapter['roman']}. {chapter['title']}",
             "sort_order": sort_order,
-            "level": 2,
             "category": "chapters",
-            "composite_of": scene_ids,
+            "parts": scene_ids,
             "relationship_type": "emergence",
             "sections": {
                 "About": desc["about"],
@@ -608,7 +606,7 @@ def build_l2_thematic_groups(scene_ids_by_chapter, sort_order):
         {
             "id": "theme-language-wordplay",
             "name": "Language and Wordplay",
-            "composite_of": [
+            "parts": [
                 "ch1-jabberwocky",
                 "ch3-looking-glass-insects",
                 "ch6-the-meaning-of-words",
@@ -622,7 +620,7 @@ def build_l2_thematic_groups(scene_ids_by_chapter, sort_order):
         {
             "id": "theme-chess-game",
             "name": "The Chess Game",
-            "composite_of": [
+            "parts": [
                 "ch1-the-living-chess-pieces",
                 "ch2-meeting-the-red-queen",
                 "ch2-running-to-stay-in-place",
@@ -637,7 +635,7 @@ def build_l2_thematic_groups(scene_ids_by_chapter, sort_order):
         {
             "id": "theme-identity",
             "name": "Identity and Existence",
-            "composite_of": [
+            "parts": [
                 "ch3-the-wood-where-things-have-no-names",
                 "ch4-the-red-kings-dream",
                 "ch6-meeting-humpty-dumpty",
@@ -650,7 +648,7 @@ def build_l2_thematic_groups(scene_ids_by_chapter, sort_order):
         {
             "id": "theme-mirrors-reversal",
             "name": "Mirrors and Reversal",
-            "composite_of": [
+            "parts": [
                 "ch1-lets-pretend",
                 "ch1-through-the-glass",
                 "ch2-the-contrary-path",
@@ -666,7 +664,7 @@ def build_l2_thematic_groups(scene_ids_by_chapter, sort_order):
         {
             "id": "theme-authority-rules",
             "name": "Authority and Absurd Rules",
-            "composite_of": [
+            "parts": [
                 "ch2-meeting-the-red-queen",
                 "ch3-the-railway-carriage",
                 "ch5-the-white-queens-shawl",
@@ -681,7 +679,7 @@ def build_l2_thematic_groups(scene_ids_by_chapter, sort_order):
         {
             "id": "theme-poetry-songs",
             "name": "Poetry and Songs",
-            "composite_of": [
+            "parts": [
                 "ch1-jabberwocky",
                 "ch4-the-walrus-and-the-carpenter",
                 "ch6-humpty-dumptys-song-and-fall",
@@ -698,9 +696,8 @@ def build_l2_thematic_groups(scene_ids_by_chapter, sort_order):
             "id": theme["id"],
             "name": theme["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": "themes",
-            "composite_of": theme["composite_of"],
+            "parts": theme["parts"],
             "relationship_type": "emergence",
             "sections": {
                 "About": theme["about"],
@@ -726,14 +723,14 @@ def build_l3_items(chapter_item_ids, thematic_ids, sort_order):
         {
             "id": "meta-narrative-journey",
             "name": "The Narrative Journey",
-            "composite_of": chapter_item_ids,
+            "parts": chapter_item_ids,
             "about": "Through the Looking-Glass follows Alice's journey across a giant chessboard, from Pawn to Queen, through twelve chapters that mirror the structure of a chess game. Each chapter is a square on the board, each encounter a move. The narrative is simultaneously a children's adventure, a chess problem, a philosophical inquiry, and a love letter from an aging mathematician to a child who is growing up.",
             "keywords": ["narrative", "journey", "chess", "chapters", "structure"],
         },
         {
             "id": "meta-themes-ideas",
             "name": "Themes and Ideas",
-            "composite_of": thematic_ids,
+            "parts": thematic_ids,
             "about": "Beneath its playful surface, Through the Looking-Glass explores themes that have occupied philosophers for centuries: the nature of identity, the relationship between language and meaning, the experience of time, the arbitrariness of authority, and the question of what is real. Carroll approaches these themes through nonsense, paradox, and wordplay -- making them accessible to children while remaining genuinely profound for adults.",
             "keywords": ["themes", "philosophy", "ideas", "language", "identity", "meaning"],
         },
@@ -744,9 +741,8 @@ def build_l3_items(chapter_item_ids, thematic_ids, sort_order):
             "id": l3["id"],
             "name": l3["name"],
             "sort_order": sort_order,
-            "level": 3,
             "category": "meta",
-            "composite_of": l3["composite_of"],
+            "parts": l3["parts"],
             "relationship_type": "emergence",
             "sections": {
                 "About": l3["about"],
@@ -848,7 +844,7 @@ def build_grammar():
         "shelves": ["children", "wonder"],
         "lineages": ["Shrei", "Andreotti"],
         "worldview": "dialectical",
-        "items": all_items,
+        "nodes": all_items,
     }
 
     # Write output

@@ -49,13 +49,12 @@
   "worldview": "historical",
   "default_preview": "tree",
   "is_published": false,
-  "items": [
+  "nodes": [
     {
       "id": "deck-visconti-sforza",
       "name": "Visconti-Sforza Tarot",
       "sort_order": 0,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -79,7 +78,6 @@
       "name": "Cary-Yale (Visconti di Modrone)",
       "sort_order": 1,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -103,7 +101,6 @@
       "name": "Brera-Brambilla",
       "sort_order": 2,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -126,7 +123,6 @@
       "name": "Tarocchino di Bologna",
       "sort_order": 3,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -152,7 +148,6 @@
       "name": "Minchiate (Florence)",
       "sort_order": 4,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -178,7 +173,6 @@
       "name": "Tarocco Siciliano",
       "sort_order": 5,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -203,7 +197,6 @@
       "name": "'Charles VI' / Gringonneur",
       "sort_order": 6,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -229,7 +222,6 @@
       "name": "d'Este Tarot",
       "sort_order": 7,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -254,7 +246,6 @@
       "name": "Tarot de Marseille — Conver 1760",
       "sort_order": 8,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -280,7 +271,6 @@
       "name": "Marseille Type I — Noblet / Dodal",
       "sort_order": 9,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -305,7 +295,6 @@
       "name": "Tarot de Besançon / Swiss 1JJ",
       "sort_order": 10,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -331,7 +320,6 @@
       "name": "Belgian / Vandenborre Tarot",
       "sort_order": 11,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -356,7 +344,6 @@
       "name": "Tarocco Piemontese",
       "sort_order": 12,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -381,7 +368,6 @@
       "name": "Court de Gébelin's Plates",
       "sort_order": 13,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -407,7 +393,6 @@
       "name": "Etteilla I — Livre de Thot",
       "sort_order": 14,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -433,7 +418,6 @@
       "name": "Etteilla II & III (editions)",
       "sort_order": 15,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -458,7 +442,6 @@
       "name": "Éliphas Lévi",
       "sort_order": 16,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -483,7 +466,6 @@
       "name": "Papus — Tarot des Bohémiens",
       "sort_order": 17,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -508,7 +490,6 @@
       "name": "Oswald Wirth Tarot",
       "sort_order": 18,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -535,7 +516,6 @@
       "name": "Golden Dawn — Book T",
       "sort_order": 19,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -562,7 +542,6 @@
       "name": "Rider-Waite-Smith",
       "sort_order": 20,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -588,7 +567,6 @@
       "name": "Thoth (Crowley–Harris)",
       "sort_order": 21,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -613,7 +591,6 @@
       "name": "Sola Busca",
       "sort_order": 22,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -638,7 +615,6 @@
       "name": "Mantegna 'Tarocchi'",
       "sort_order": 23,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -662,7 +638,6 @@
       "name": "Modern Derivative Decks",
       "sort_order": 24,
       "category": "deck",
-      "level": 1,
       "keywords": [
         "tarot",
         "history",
@@ -688,8 +663,7 @@
       "name": "Roots — The First Tarots (Milan, c. 1440s)",
       "sort_order": 25,
       "category": "branch",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "deck-visconti-sforza",
         "deck-cary-yale",
         "deck-brera-brambilla"
@@ -711,8 +685,7 @@
       "name": "A-Order — Bologna & Florence (the South)",
       "sort_order": 26,
       "category": "branch",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "deck-tarocchino-bologna",
         "deck-minchiate",
         "deck-tarocco-siciliano"
@@ -734,8 +707,7 @@
       "name": "B-Order — Ferrara (the East)",
       "sort_order": 27,
       "category": "branch",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "deck-charles-vi",
         "deck-este"
       ],
@@ -756,8 +728,7 @@
       "name": "C-Order — Milan & the West → the Printed Standard",
       "sort_order": 28,
       "category": "branch",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "deck-marseille-conver",
         "deck-marseille-type1",
         "deck-besancon",
@@ -781,8 +752,7 @@
       "name": "The Occult Reframing (France → England, 1781→)",
       "sort_order": 29,
       "category": "branch",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "deck-court-de-gebelin",
         "deck-etteilla-i",
         "deck-etteilla-iii",
@@ -810,8 +780,7 @@
       "name": "Sui Generis & Relatives",
       "sort_order": 30,
       "category": "branch",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "deck-sola-busca",
         "deck-mantegna",
         "deck-modern-derivatives"
@@ -833,8 +802,7 @@
       "name": "The Tree of Tarot",
       "sort_order": 31,
       "category": "root",
-      "level": 3,
-      "composite_of": [
+      "parts": [
         "branch-roots",
         "branch-a",
         "branch-b",

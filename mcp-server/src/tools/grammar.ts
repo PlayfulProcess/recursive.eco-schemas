@@ -9,11 +9,10 @@ interface GrammarItem {
   name: string;
   sort_order?: number;
   category?: string;
-  level?: number;
   sections: Record<string, string>;
   keywords?: string[];
   metadata?: Record<string, unknown>;
-  composite_of?: string[];
+  parts?: string[];
   relationship_type?: string;
   image_url?: string;
 }
@@ -33,7 +32,33 @@ interface Grammar {
   shelves?: string[];
   lineages?: string[];
   worldview?: string;
-  items: GrammarItem[];
+  nodes: GrammarItem[];
+}
+
+// Depth from parts (format v2 stores no level): a node with no parts is 1;
+// otherwise 1 + the deepest part. Cycle-safe.
+function nodeDepth(node: GrammarItem, byId: Map<string, GrammarItem>, seen = new Set<string>()): number {
+  const parts = node.parts;
+  if (!parts || !parts.length) return 1;
+  if (seen.has(node.id)) return 1;
+  seen.add(node.id);
+  let d = 1;
+  for (const id of parts) {
+    const c = byId.get(id);
+    if (c) d = Math.max(d, 1 + nodeDepth(c, byId, seen));
+  }
+  seen.delete(node.id);
+  return d;
+}
+
+function depthCounts(nodes: GrammarItem[]): Record<number, number> {
+  const byId = new Map(nodes.map((n) => [n.id, n] as [string, GrammarItem]));
+  const counts: Record<number, number> = {};
+  for (const n of nodes) {
+    const d = nodeDepth(n, byId);
+    counts[d] = (counts[d] || 0) + 1;
+  }
+  return counts;
 }
 
 function validateGrammar(grammar: Grammar): string[] {
@@ -55,7 +80,7 @@ function validateGrammar(grammar: Grammar): string[] {
       errors.push("Missing '_grammar_commons.attribution'");
   }
 
-  const items = grammar.items || [];
+  const items = grammar.nodes || [];
   if (items.length === 0) {
     errors.push("No items found");
     return errors;
@@ -81,20 +106,19 @@ function validateGrammar(grammar: Grammar): string[] {
       errors.push(`Item '${item.id}': missing or empty 'sections'`);
   }
 
-  // composite_of referential integrity
+  // parts referential integrity
   for (const item of items) {
-    if (item.composite_of) {
-      for (const ref of item.composite_of) {
+    if (item.parts) {
+      for (const ref of item.parts) {
         if (!ids.has(ref)) {
-          errors.push(`Item '${item.id}': composite_of references non-existent ID '${ref}'`);
+          errors.push(`Item '${item.id}': parts references non-existent ID '${ref}'`);
         }
       }
     }
   }
 
-  // Emergence levels check
-  const levels = new Set(items.map((i) => i.level).filter(Boolean));
-  if (!levels.has(2) && items.length > 5) {
+  // Emergence check (depth computed from parts)
+  if (!depthCounts(items)[2] && items.length > 5) {
     errors.push(
       "Warning: No L2 emergence items. Every grammar should have L2/L3 items for grouping."
     );
@@ -113,7 +137,7 @@ function slugify(name: string): string {
 export function registerGrammarTools(server: McpServer) {
   server.tool(
     "validate_grammar",
-    "Validate a grammar JSON object against the recursive.eco schema. Checks: required fields, duplicate IDs, composite_of referential integrity, attribution, and emergence levels.",
+    "Validate a grammar JSON object against the recursive.eco schema. Checks: required fields, duplicate IDs, parts referential integrity, attribution, and emergence depth.",
     {
       grammar_json: z.string().describe("The grammar JSON string to validate"),
     },
@@ -123,14 +147,15 @@ export function registerGrammarTools(server: McpServer) {
         const errors = validateGrammar(grammar);
 
         if (errors.length === 0) {
+          const depths = depthCounts(grammar.nodes);
           return {
             content: [{
               type: "text" as const,
               text: `Grammar "${grammar.name}" is valid.\n\n` +
-                `Items: ${grammar.items.length}\n` +
-                `L1: ${grammar.items.filter((i) => i.level === 1).length}\n` +
-                `L2: ${grammar.items.filter((i) => i.level === 2).length}\n` +
-                `L3: ${grammar.items.filter((i) => i.level === 3).length}\n` +
+                `Items: ${grammar.nodes.length}\n` +
+                `L1: ${depths[1] || 0}\n` +
+                `L2: ${depths[2] || 0}\n` +
+                `L3: ${depths[3] || 0}\n` +
                 `Type: ${grammar.grammar_type}\n` +
                 `Tags: ${grammar.tags?.join(", ") || "none"}`,
             }],
@@ -206,7 +231,7 @@ export function registerGrammarTools(server: McpServer) {
         const outPath = resolve(outDir, "grammar.json");
 
         // Re-number sort_order
-        grammar.items.forEach((item, idx) => {
+        grammar.nodes.forEach((item, idx) => {
           item.sort_order = idx;
         });
 
@@ -214,14 +239,15 @@ export function registerGrammarTools(server: McpServer) {
         await writeFile(outPath, formatted, "utf-8");
 
         const warnings = errors.filter((e) => e.startsWith("Warning:"));
+        const depths = depthCounts(grammar.nodes);
 
         return {
           content: [{
             type: "text" as const,
             text: `Saved grammar "${grammar.name}" to:\n  ${outPath}\n\n` +
-              `Items: ${grammar.items.length} (L1: ${grammar.items.filter((i) => i.level === 1).length}, ` +
-              `L2: ${grammar.items.filter((i) => i.level === 2).length}, ` +
-              `L3: ${grammar.items.filter((i) => i.level === 3).length})\n` +
+              `Items: ${grammar.nodes.length} (L1: ${depths[1] || 0}, ` +
+              `L2: ${depths[2] || 0}, ` +
+              `L3: ${depths[3] || 0})\n` +
               `Slug: ${slug}\n` +
               `Size: ${(formatted.length / 1024).toFixed(1)} KB` +
               (warnings.length ? `\n\nWarnings:\n${warnings.map((e) => `  - ${e}`).join("\n")}` : ""),
@@ -271,7 +297,7 @@ export function registerGrammarTools(server: McpServer) {
               slug: dir,
               name: g.name,
               type: g.grammar_type,
-              items: g.items?.length || 0,
+              items: g.nodes?.length || 0,
               tags: g.tags?.slice(0, 3) || [],
             });
           } catch {

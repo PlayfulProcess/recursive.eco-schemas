@@ -17,10 +17,10 @@ const dups = Object.entries(counts).filter(([, v]) => v > 1);
 
 // Missing items
 const matchedIds = new Set(matched.map(x => x.item_id));
-const missing = g.items.filter(i => !matchedIds.has(i.id));
+const missing = g.nodes.filter(i => !matchedIds.has(i.id));
 
 console.log('=== MATCHING RESULTS ===');
-console.log('Matched:', matched.length, 'images to', items.size, 'of', g.items.length, 'items');
+console.log('Matched:', matched.length, 'images to', items.size, 'of', g.nodes.length, 'items');
 console.log('High confidence:', high.length);
 console.log('Medium confidence:', med.length);
 console.log('');

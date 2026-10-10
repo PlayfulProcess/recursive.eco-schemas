@@ -12,6 +12,7 @@ Structure:
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SEED = os.path.join(SCRIPT_DIR, "..", "seeds", "frederick-douglass.txt")
@@ -303,7 +304,6 @@ def build_grammar():
             item = {
                 "id": para_id,
                 "name": name,
-                "level": 1,
                 "category": slug,
                 "sort_order": sort_order,
                 "sections": {
@@ -401,12 +401,11 @@ def build_grammar():
         item = {
             "id": f"chapter-{slug}",
             "name": title,
-            "level": 2,
             "category": "chapter-group",
             "sort_order": sort_order,
             "sections": sections_dict,
             "keywords": [],
-            "composite_of": ids,
+            "parts": ids,
             "relationship_type": "emergence",
             "metadata": {},
         }
@@ -423,7 +422,6 @@ def build_grammar():
         items.append({
             "id": tg["id"],
             "name": tg["name"],
-            "level": 2,
             "category": "thematic-group",
             "sort_order": sort_order,
             "sections": {
@@ -431,7 +429,7 @@ def build_grammar():
                 "For Readers": tg["for_readers"],
             },
             "keywords": [],
-            "composite_of": composite_ids,
+            "parts": composite_ids,
             "relationship_type": "emergence",
             "metadata": {},
         })
@@ -444,7 +442,6 @@ def build_grammar():
     items.append({
         "id": "meta-arc-of-liberation",
         "name": "The Arc of Liberation",
-        "level": 3,
         "category": "meta-category",
         "sort_order": sort_order,
         "sections": {
@@ -452,7 +449,7 @@ def build_grammar():
             "For Readers": "Read the chapters in order to experience the Narrative as Douglass structured it — a carefully shaped argument in the form of a life. Each chapter builds on the last: ignorance gives way to knowledge, submission to resistance, bondage to freedom. The arc is not merely personal but political: Douglass's individual liberation is presented as evidence against the entire system.",
         },
         "keywords": ["autobiography", "liberation", "chronology"],
-        "composite_of": chapter_l2_ids,
+        "parts": chapter_l2_ids,
         "relationship_type": "emergence",
         "metadata": {},
     })
@@ -461,7 +458,6 @@ def build_grammar():
     items.append({
         "id": "meta-themes-of-witness",
         "name": "Themes of Witness",
-        "level": 3,
         "category": "meta-category",
         "sort_order": sort_order,
         "sections": {
@@ -469,7 +465,7 @@ def build_grammar():
             "For Readers": "These thematic groupings let you explore the Narrative by subject rather than sequence. Want to understand how Douglass thinks about education? Start with 'Education and Awakening.' Want to confront slavery's violence? 'Bondage and Dehumanization' gathers the testimony. Each theme connects passages from across the Narrative, revealing patterns that the chronological reading may obscure.",
         },
         "keywords": ["themes", "witness", "testimony"],
-        "composite_of": thematic_l2_ids,
+        "parts": thematic_l2_ids,
         "relationship_type": "emergence",
         "metadata": {},
     })
@@ -522,7 +518,7 @@ def build_grammar():
             "Andreotti"
         ],
         "worldview": "dialectical",
-        "items": items,
+        "nodes": items,
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -530,9 +526,9 @@ def build_grammar():
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
     # Print summary
-    l1_count = sum(1 for item in items if item["level"] == 1)
-    l2_count = sum(1 for item in items if item["level"] == 2)
-    l3_count = sum(1 for item in items if item["level"] == 3)
+    l1_count = sum(1 for item in items if node_depth(item, items) == 1)
+    l2_count = sum(1 for item in items if node_depth(item, items) == 2)
+    l3_count = sum(1 for item in items if node_depth(item, items) == 3)
     print(f"Generated {len(items)} items: {l1_count} L1 + {l2_count} L2 + {l3_count} L3")
     print(f"Output: {OUTPUT}")
 

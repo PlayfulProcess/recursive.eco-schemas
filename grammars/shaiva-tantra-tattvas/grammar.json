@@ -48,11 +48,10 @@
     "Abhinavagupta"
   ],
   "worldview": "non-dual",
-  "items": [
+  "nodes": [
     {
       "id": "shakti-cit",
       "name": "Cit Shakti — The Power of Awareness",
-      "level": 3,
       "category": "shakti",
       "sort_order": 0,
       "sections": {
@@ -77,7 +76,6 @@
     {
       "id": "shakti-ananda",
       "name": "Ānanda Shakti — The Power of Bliss",
-      "level": 3,
       "category": "shakti",
       "sort_order": 1,
       "sections": {
@@ -103,7 +101,6 @@
     {
       "id": "shakti-iccha",
       "name": "Icchā Shakti — The Power of Will",
-      "level": 3,
       "category": "shakti",
       "sort_order": 2,
       "sections": {
@@ -129,7 +126,6 @@
     {
       "id": "shakti-jnana",
       "name": "Jñāna Shakti — The Power of Knowing",
-      "level": 3,
       "category": "shakti",
       "sort_order": 3,
       "sections": {
@@ -155,7 +151,6 @@
     {
       "id": "shakti-kriya",
       "name": "Kriyā Shakti — The Power of Action",
-      "level": 3,
       "category": "shakti",
       "sort_order": 4,
       "sections": {
@@ -181,7 +176,6 @@
     {
       "id": "tattva-01",
       "name": "Shiva Tattva — Pure Awareness",
-      "level": 2,
       "category": "pure-tattva",
       "sort_order": 5,
       "parent_id": "shakti-cit",
@@ -211,7 +205,6 @@
     {
       "id": "tattva-02",
       "name": "Shakti Tattva — The Bliss of Existence",
-      "level": 2,
       "category": "pure-tattva",
       "sort_order": 6,
       "parent_id": "shakti-ananda",
@@ -241,7 +234,6 @@
     {
       "id": "tattva-03",
       "name": "Sadāshiva Tattva — The Arising of Will",
-      "level": 2,
       "category": "pure-tattva",
       "sort_order": 7,
       "parent_id": "shakti-iccha",
@@ -271,7 +263,6 @@
     {
       "id": "tattva-04",
       "name": "Īshvara Tattva — The Clarity of Knowing",
-      "level": 2,
       "category": "pure-tattva",
       "sort_order": 8,
       "parent_id": "shakti-jnana",
@@ -301,7 +292,6 @@
     {
       "id": "tattva-05",
       "name": "Shuddha Vidyā — Pure Knowledge in Action",
-      "level": 2,
       "category": "pure-tattva",
       "sort_order": 9,
       "parent_id": "shakti-kriya",
@@ -331,7 +321,6 @@
     {
       "id": "tattva-06",
       "name": "Māyā — The Great Forgetting",
-      "level": 2,
       "category": "covering",
       "sort_order": 10,
       "sections": {
@@ -361,7 +350,6 @@
     {
       "id": "tattva-07",
       "name": "Kalā — Limited Agency",
-      "level": 1,
       "category": "covering",
       "sort_order": 11,
       "parent_id": "shakti-kriya",
@@ -390,7 +378,6 @@
     {
       "id": "tattva-08",
       "name": "Vidyā — Limited Knowledge",
-      "level": 1,
       "category": "covering",
       "sort_order": 12,
       "parent_id": "shakti-jnana",
@@ -419,7 +406,6 @@
     {
       "id": "tattva-09",
       "name": "Rāga — Attachment",
-      "level": 1,
       "category": "covering",
       "sort_order": 13,
       "parent_id": "shakti-ananda",
@@ -448,7 +434,6 @@
     {
       "id": "tattva-10",
       "name": "Kāla — Time",
-      "level": 1,
       "category": "covering",
       "sort_order": 14,
       "parent_id": "shakti-cit",
@@ -477,7 +462,6 @@
     {
       "id": "tattva-11",
       "name": "Niyati — Causality",
-      "level": 1,
       "category": "covering",
       "sort_order": 15,
       "parent_id": "shakti-iccha",
@@ -506,7 +490,6 @@
     {
       "id": "tattva-12",
       "name": "Purusha — The Limited Self",
-      "level": 2,
       "category": "covering",
       "sort_order": 16,
       "sections": {
@@ -535,7 +518,6 @@
     {
       "id": "tattva-13",
       "name": "Prakriti — Primordial Nature",
-      "level": 2,
       "category": "material",
       "sort_order": 17,
       "sections": {
@@ -564,7 +546,6 @@
     {
       "id": "tattva-14",
       "name": "Buddhi — Discernment",
-      "level": 1,
       "category": "inner-instrument",
       "sort_order": 18,
       "parent_id": "tattva-13",
@@ -593,7 +574,6 @@
     {
       "id": "tattva-15",
       "name": "Ahamkāra — The I-Maker",
-      "level": 1,
       "category": "inner-instrument",
       "sort_order": 19,
       "parent_id": "tattva-13",
@@ -622,7 +602,6 @@
     {
       "id": "tattva-16",
       "name": "Manas — Conceptual Mind",
-      "level": 1,
       "category": "inner-instrument",
       "sort_order": 20,
       "parent_id": "tattva-13",
@@ -651,7 +630,6 @@
     {
       "id": "tattva-17",
       "name": "Shrotra — Hearing",
-      "level": 1,
       "category": "perception",
       "sort_order": 21,
       "parent_id": "shakti-cit",
@@ -681,7 +659,6 @@
     {
       "id": "tattva-18",
       "name": "Tvak — Touch",
-      "level": 1,
       "category": "perception",
       "sort_order": 22,
       "parent_id": "shakti-jnana",
@@ -711,7 +688,6 @@
     {
       "id": "tattva-19",
       "name": "Chakshu — Sight",
-      "level": 1,
       "category": "perception",
       "sort_order": 23,
       "parent_id": "shakti-iccha",
@@ -741,7 +717,6 @@
     {
       "id": "tattva-20",
       "name": "Rasanā — Taste",
-      "level": 1,
       "category": "perception",
       "sort_order": 24,
       "parent_id": "shakti-ananda",
@@ -771,7 +746,6 @@
     {
       "id": "tattva-21",
       "name": "Ghrāna — Smell",
-      "level": 1,
       "category": "perception",
       "sort_order": 25,
       "parent_id": "shakti-kriya",
@@ -801,7 +775,6 @@
     {
       "id": "tattva-22",
       "name": "Vāk — Speech",
-      "level": 1,
       "category": "action",
       "sort_order": 26,
       "sections": {
@@ -832,7 +805,6 @@
     {
       "id": "tattva-23",
       "name": "Pāni — Grasping",
-      "level": 1,
       "category": "action",
       "sort_order": 27,
       "sections": {
@@ -863,7 +835,6 @@
     {
       "id": "tattva-24",
       "name": "Pāda — Locomotion",
-      "level": 1,
       "category": "action",
       "sort_order": 28,
       "sections": {
@@ -894,7 +865,6 @@
     {
       "id": "tattva-25",
       "name": "Pāyu — Elimination",
-      "level": 1,
       "category": "action",
       "sort_order": 29,
       "sections": {
@@ -925,7 +895,6 @@
     {
       "id": "tattva-26",
       "name": "Upastha — Procreation",
-      "level": 1,
       "category": "action",
       "sort_order": 30,
       "sections": {
@@ -956,7 +925,6 @@
     {
       "id": "tattva-27",
       "name": "Shabda Tanmātra — Subtle Sound",
-      "level": 1,
       "category": "subtle-element",
       "sort_order": 31,
       "sections": {
@@ -983,7 +951,6 @@
     {
       "id": "tattva-28",
       "name": "Sparsha Tanmātra — Subtle Touch",
-      "level": 1,
       "category": "subtle-element",
       "sort_order": 32,
       "sections": {
@@ -1010,7 +977,6 @@
     {
       "id": "tattva-29",
       "name": "Rūpa Tanmātra — Subtle Form",
-      "level": 1,
       "category": "subtle-element",
       "sort_order": 33,
       "sections": {
@@ -1037,7 +1003,6 @@
     {
       "id": "tattva-30",
       "name": "Rasa Tanmātra — Subtle Flavor",
-      "level": 1,
       "category": "subtle-element",
       "sort_order": 34,
       "sections": {
@@ -1064,7 +1029,6 @@
     {
       "id": "tattva-31",
       "name": "Gandha Tanmātra — Subtle Scent",
-      "level": 1,
       "category": "subtle-element",
       "sort_order": 35,
       "sections": {
@@ -1091,7 +1055,6 @@
     {
       "id": "tattva-32",
       "name": "Ākāsha — Space",
-      "level": 1,
       "category": "gross-element",
       "sort_order": 36,
       "parent_id": "shakti-cit",
@@ -1122,7 +1085,6 @@
     {
       "id": "tattva-33",
       "name": "Vāyu — Air",
-      "level": 1,
       "category": "gross-element",
       "sort_order": 37,
       "parent_id": "shakti-jnana",
@@ -1153,7 +1115,6 @@
     {
       "id": "tattva-34",
       "name": "Tejas — Fire",
-      "level": 1,
       "category": "gross-element",
       "sort_order": 38,
       "parent_id": "shakti-iccha",
@@ -1185,7 +1146,6 @@
     {
       "id": "tattva-35",
       "name": "Jala — Water",
-      "level": 1,
       "category": "gross-element",
       "sort_order": 39,
       "parent_id": "shakti-ananda",
@@ -1216,7 +1176,6 @@
     {
       "id": "tattva-36",
       "name": "Prithvī — Earth",
-      "level": 1,
       "category": "gross-element",
       "sort_order": 40,
       "parent_id": "shakti-kriya",
@@ -1247,10 +1206,9 @@
     {
       "id": "realm-pure",
       "name": "Shuddhādhvan — The Pure Universe",
-      "level": 2,
       "category": "realm",
       "sort_order": 100,
-      "composite_of": [
+      "parts": [
         "tattva-01",
         "tattva-02",
         "tattva-03",
@@ -1278,10 +1236,9 @@
     {
       "id": "realm-coverings",
       "name": "The Kañcukas — Garments of Forgetting",
-      "level": 2,
       "category": "realm",
       "sort_order": 101,
-      "composite_of": [
+      "parts": [
         "tattva-06",
         "tattva-07",
         "tattva-08",
@@ -1311,10 +1268,9 @@
     {
       "id": "realm-psyche",
       "name": "Antaḥkaraṇa — The Inner Instrument",
-      "level": 2,
       "category": "realm",
       "sort_order": 102,
-      "composite_of": [
+      "parts": [
         "tattva-14",
         "tattva-15",
         "tattva-16"
@@ -1340,10 +1296,9 @@
     {
       "id": "realm-senses",
       "name": "The Ten Sense Powers",
-      "level": 2,
       "category": "realm",
       "sort_order": 103,
-      "composite_of": [
+      "parts": [
         "tattva-17",
         "tattva-18",
         "tattva-19",
@@ -1376,10 +1331,9 @@
     {
       "id": "realm-elements",
       "name": "Pañca Mahābhūta — The Great Elements",
-      "level": 2,
       "category": "realm",
       "sort_order": 104,
-      "composite_of": [
+      "parts": [
         "tattva-27",
         "tattva-28",
         "tattva-29",
@@ -1412,7 +1366,6 @@
     {
       "id": "concept-trinity",
       "name": "Shiva-Shakti-Nara — The Sacred Trinity",
-      "level": 2,
       "category": "concept",
       "sort_order": 105,
       "sections": {
@@ -1436,7 +1389,6 @@
     {
       "id": "concept-spanda",
       "name": "Spanda — The Divine Pulsation",
-      "level": 2,
       "category": "concept",
       "sort_order": 106,
       "sections": {
@@ -1461,7 +1413,6 @@
     {
       "id": "concept-pratyabhijna",
       "name": "Pratyabhijñā — Recognition",
-      "level": 2,
       "category": "concept",
       "sort_order": 107,
       "sections": {
@@ -1484,7 +1435,6 @@
     {
       "id": "concept-svatantrya",
       "name": "Svātantrya — Absolute Freedom",
-      "level": 2,
       "category": "concept",
       "sort_order": 108,
       "sections": {
@@ -1508,7 +1458,6 @@
     {
       "id": "concept-three-malas",
       "name": "The Three Malas — Impurities of Forgetting",
-      "level": 2,
       "category": "concept",
       "sort_order": 109,
       "sections": {
@@ -1533,7 +1482,6 @@
     {
       "id": "concept-three-upayas",
       "name": "The Three Upāyas — Means of Practice",
-      "level": 2,
       "category": "concept",
       "sort_order": 110,
       "sections": {

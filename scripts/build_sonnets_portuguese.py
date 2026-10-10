@@ -193,7 +193,6 @@ def build_grammar(sonnets):
             "name": name,
             "sort_order": num,
             "category": "sonnet",
-            "level": 1,
             "sections": {
                 "Verse": poem_text
             },
@@ -263,8 +262,7 @@ def build_grammar(sonnets):
             "name": group["name"],
             "sort_order": group["sort_order"],
             "category": "theme",
-            "level": 2,
-            "composite_of": composite_ids,
+            "parts": composite_ids,
             "relationship_type": "emergence",
             "sections": {
                 "About": group["about"],
@@ -281,8 +279,7 @@ def build_grammar(sonnets):
         "name": "A Love Story in Sonnets",
         "sort_order": 51,
         "category": "arc",
-        "level": 3,
-        "composite_of": l3_composite,
+        "parts": l3_composite,
         "relationship_type": "emergence",
         "sections": {
             "About": "The forty-four Sonnets from the Portuguese trace one of literature's great love stories from first trembling to full-throated declaration. Elizabeth Barrett Browning wrote them in secret during her courtship with Robert Browning (1845-1846), and they were published in 1850 under the fiction that they were translations from Portuguese — a private joke, since Robert called Elizabeth 'my little Portuguese' after her poem 'Catarina to Camoens.' The arc moves through six phases: the shock of love arriving to a woman who expected only death; her fierce resistance and eventual surrender; the slow, brave work of learning to trust; love in full bloom; the confrontation with permanence and mortality; and finally, the celebration of the beloved himself. Read as a sequence, they form a complete narrative of transformation — from isolation to communion, from grief to gratitude, from silence to song.",
@@ -309,7 +306,7 @@ def build_grammar(sonnets):
         "shelves": ["wonder"],
         "lineages": ["Johnson"],
         "worldview": "devotional",
-        "items": items
+        "nodes": items
     }
 
     return grammar
@@ -374,7 +371,7 @@ def main():
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
     print(f"\nWrote {OUTPUT_FILE}")
-    print(f"Total items: {len(grammar['items'])} (44 L1 + 6 L2 + 1 L3)")
+    print(f"Total items: {len(grammar['nodes'])} (44 L1 + 6 L2 + 1 L3)")
 
 
 if __name__ == "__main__":

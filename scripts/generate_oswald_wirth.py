@@ -251,7 +251,6 @@ for i, (num, slug, name, french, (heb, translit, meaning), astro, sym, up, rev) 
         "name": f"{num} — {name}",
         "sort_order": i,
         "category": "major-arcana",
-        "level": 1,
         "keywords": [name.lower().replace("the ", ""), french.lower(), translit.lower(),
                      "major arcana", "esoteric"],
         "image_url": u,
@@ -278,8 +277,7 @@ items.append({
     "name": "The Major Arcana as the Great Work",
     "sort_order": len(items),
     "category": "emergence",
-    "level": 2,
-    "composite_of": [it["id"] for it in items if it["category"] == "major-arcana"],
+    "parts": [it["id"] for it in items if it["category"] == "major-arcana"],
     "relationship_type": "emergence",
     "image_url": img("Les 22 Arcanes du Tarot Kabbalistique.jpg"),
     "metadata": {},
@@ -347,7 +345,7 @@ grammar = {
     "lineages": ["Andreotti"],
     "worldview": "esoteric",
     "is_published": False,
-    "items": items,
+    "nodes": items,
 }
 
 os.makedirs(OUT_DIR, exist_ok=True)

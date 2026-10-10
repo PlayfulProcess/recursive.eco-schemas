@@ -81,7 +81,7 @@ Grammars aren't sorted into categories — the Dhammapada isn't a "classic" and 
 
 ## Grammar JSON Format — The Unified Items Standard
 
-Every grammar is a JSON file using the **unified items format**. This is the current standard — the editor always saves with an `items[]` array containing flexible `sections: Record<string, string>`.
+Every grammar is a JSON file using the **unified nodes format** (grammar format v2). This is the current standard — the editor always saves with a `nodes[]` array containing flexible `sections: Record<string, string>`.
 
 ```json
 {
@@ -99,7 +99,7 @@ Every grammar is a JSON file using the **unified items format**. This is the cur
   "creator_name": "Your Name",
   "tags": ["tag1", "tag2"],
   "cover_image_url": "https://...",
-  "items": [...]
+  "nodes": [...]
 }
 ```
 
@@ -107,12 +107,12 @@ Every grammar is a JSON file using the **unified items format**. This is the cur
 
 Both formats work — the system handles both automatically.
 
-**Unified items format (current standard):** The editor always saves with `items[]` array, using flexible `sections: Record<string, string>`. This is what all new grammars use. The `grammar_type` can be `'custom'`, `'astrology'`, `'tarot'`, `'iching'`, etc.
+**Unified nodes format (current standard, grammar format v2 since Oct 2026):** The editor always saves with a `nodes[]` array, using flexible `sections: Record<string, string>`. This is what all new grammars use. The `grammar_type` can be `'custom'`, `'astrology'`, `'tarot'`, `'iching'`, etc.
 
 **Legacy `interpretations[]` arrays still work.** The loading code (e.g., in AstrologyOracle) checks three fields in order:
 
 1. `_unified_items` (old field name from early unified migration)
-2. `items` (current standard)
+2. `nodes` (current standard)
 3. `interpretations` (legacy fallback)
 
 If it finds unified items, it converts them on-the-fly via `convertUnifiedToInterpretations()` which maps flexible sections (`Story`, `Light`, `Shadow`, `Core Meaning`, `Interpretation`, `Mantra`, etc.) into the fixed interpretation fields. It also handles Vedic/Jyotish tradition names (`graha`→planet, `rashi`→sign, `bhava`→house) via `metadata.english_name`.
@@ -121,7 +121,7 @@ If it finds unified items, it converts them on-the-fly via `convertUnifiedToInte
 
 ### Grammar Type
 
-`grammar_type` determines how Flow renders your grammar when someone uses it for a reading. All types use the same unified `items[]` format.
+`grammar_type` determines how Flow renders your grammar when someone uses it for a reading. All types use the same unified `nodes[]` format.
 
 | Value | Flow renders it as | Notes |
 |-------|-------------------|-------|
@@ -134,9 +134,9 @@ If you set `grammar_type: "iching"` but your grammar doesn't have 64 hexagrams w
 
 The `custom` type is not a second-class citizen — it's fully supported for chapter books, poetry collections, video sequences, folk tales, courses, and anything else that doesn't need oracle integration.
 
-### Items
+### Nodes
 
-Each item in the `items` array represents one element — a card, hexagram, planet, video, chapter, etc.
+Each node in the `nodes` array represents one element — a card, hexagram, planet, video, chapter, etc.
 
 ```json
 {
@@ -145,7 +145,6 @@ Each item in the `items` array represents one element — a card, hexagram, plan
   "symbol": "🃏",
   "sort_order": 0,
   "category": "major_arcana",
-  "level": 1,
   "sections": {
     "Interpretation": "The beginning of all journeys...",
     "Reversed": "Fear of the unknown...",
@@ -168,7 +167,7 @@ Each item in the `items` array represents one element — a card, hexagram, plan
 **Optional fields:**
 - `symbol` — Unicode character (♈, ☰, ☉, etc.)
 - `category` — Grouping label (see [Categories](#categories) below)
-- `level` — 1 for base items, 2+ for emergences (default: 1)
+- `parts` — Array of node IDs this node is made of (emergences; see below)
 - `keywords` — Array of strings
 - `questions` — Reflective prompts
 - `quotes` — Short quotes (max 125 chars each, auto-formatted with quotation marks in viewers)
@@ -272,7 +271,7 @@ Categories group items within a grammar (e.g., "major_arcana" vs "minor_arcana",
 
 ### Emergence Levels
 
-Items can have levels representing layers of meaning:
+Nodes form layers of meaning. A node's level (its depth) is not stored: it is computed from `parts` (a node with no parts is level 1; otherwise 1 + its deepest part):
 
 - **Level 1** — Base items (a card, a planet, a hexagram)
 - **Level 2** — Emergent combinations (a spread, a yoga, an aspect)
@@ -282,8 +281,7 @@ Items can have levels representing layers of meaning:
 {
   "id": "sun-in-aries",
   "name": "Sun in Aries",
-  "level": 2,
-  "composite_of": ["sun", "aries"],
+  "parts": ["sun", "aries"],
   "category": "placement",
   "sections": {
     "Interpretation": "The pioneer spirit..."
@@ -291,7 +289,7 @@ Items can have levels representing layers of meaning:
 }
 ```
 
-L2 items must include `composite_of` — an array of IDs referencing the items they combine. These IDs must exist in the grammar.
+Emergent nodes must include `parts` — an array of IDs referencing the nodes they combine, in order. These IDs must exist in the grammar. There is no `level` field.
 
 All levels are displayed in the grammar viewer with level badges (L2, L3). Users can filter by level.
 
@@ -325,7 +323,7 @@ All levels are displayed in the grammar viewer with level badges (L2, L3). Users
 
 ### Vedic Astrology Grammars
 
-Vedic/Jyotish grammars should use the unified `items[]` format with `grammar_type: 'astrology'` (or `'custom'`). The `convertUnifiedToInterpretations()` function handles mapping Vedic categories automatically.
+Vedic/Jyotish grammars should use the unified `nodes[]` format with `grammar_type: 'astrology'` (or `'custom'`). The `convertUnifiedToInterpretations()` function handles mapping Vedic categories automatically.
 
 Each item needs a proper `category` (e.g., `'graha'`, `'rashi'`, `'bhava'`) and optionally `metadata.english_name` for Western chart matching:
 
@@ -445,7 +443,7 @@ Before submitting:
 
 - [ ] Valid JSON (no trailing commas, unclosed brackets)
 - [ ] Every item has a unique `id`
-- [ ] All `composite_of` references point to existing item IDs
+- [ ] All `parts` references point to existing node IDs
 - [ ] `grammar_type` matches your content
 - [ ] I Ching grammars: line data in `lines` property (not just individual section keys)
 - [ ] Attribution metadata included

@@ -29,7 +29,7 @@ def main():
 
     # Build Chinese line text lookup: number → {Line 1..6, Judgment, Image}
     chinese_texts = {}
-    for item in chinese["items"]:
+    for item in chinese["nodes"]:
         num = item["metadata"]["number"]
         texts = {}
         for key in ["Judgment", "Image", "Line 1", "Line 2", "Line 3",
@@ -40,8 +40,8 @@ def main():
 
     # Extract trigrams
     trigrams = []
-    for item in leibniz["items"]:
-        if item["level"] == 2:
+    for item in leibniz["nodes"]:
+        if item.get("category") == "trigram":
             trigrams.append({
                 "id": item["id"],
                 "name": item["name"],
@@ -56,8 +56,8 @@ def main():
 
     # Extract hexagrams
     hexagrams = []
-    for item in leibniz["items"]:
-        if item["level"] != 3:
+    for item in leibniz["nodes"]:
+        if item.get("category") != "hexagram":
             continue
         m = item["metadata"]
         num = m["number"]

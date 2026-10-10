@@ -10,7 +10,7 @@ const grammarPath = path.join(__dirname, '..', 'grammars', 'alice-in-wonderland-
 const g = JSON.parse(fs.readFileSync(grammarPath, 'utf8'));
 
 let updated = 0;
-g.items.forEach(item => {
+g.nodes.forEach(item => {
   // If image_url looks like a filename (not a URL), move it to image_filename
   if (item.image_url && !item.image_url.startsWith('http')) {
     item.image_filename = item.image_url;

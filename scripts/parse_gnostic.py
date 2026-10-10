@@ -10,6 +10,7 @@ Both are short texts with clear section structure.
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 TRUNCATE_LIMIT = 2800
 
@@ -181,7 +182,6 @@ def parse_gnosis_of_light(seed_path):
             "name": item_name,
             "sort_order": sort_order,
             "category": "introduction",
-            "level": 1,
             "sections": {
                 "Text": truncate_text(section_text)
             },
@@ -271,7 +271,6 @@ def parse_gnosis_of_light(seed_path):
             "name": name,
             "sort_order": sort_order,
             "category": "gnosis-text",
-            "level": 1,
             "sections": {
                 "Text": truncate_text(section_text)
             },
@@ -296,7 +295,6 @@ def parse_gnosis_of_light(seed_path):
                     "name": f"Passage {chunk_num}",
                     "sort_order": sort_order,
                     "category": "gnosis-text",
-                    "level": 1,
                     "sections": {"Text": truncate_text(combined)},
                     "keywords": ["gnosis", "light", "pleroma"],
                     "metadata": {}
@@ -312,7 +310,6 @@ def parse_gnosis_of_light(seed_path):
                 "name": f"Passage {chunk_num}",
                 "sort_order": sort_order,
                 "category": "gnosis-text",
-                "level": 1,
                 "sections": {"Text": truncate_text('\n\n'.join(chunk))},
                 "keywords": ["gnosis", "light", "pleroma"],
                 "metadata": {}
@@ -356,7 +353,6 @@ def parse_gnosis_of_light(seed_path):
             "name": f"Note {note_num}",
             "sort_order": sort_order,
             "category": "notes",
-            "level": 1,
             "sections": {
                 "Commentary": truncate_text(note_content)
             },
@@ -375,8 +371,7 @@ def parse_gnosis_of_light(seed_path):
         "name": "Introduction: The Nature of Gnosis",
         "sort_order": sort_order,
         "category": "thematic-grouping",
-        "level": 2,
-        "composite_of": intro_ids,
+        "parts": intro_ids,
         "sections": {
             "About": "Lamplugh's introduction to the Codex Brucianus, explaining the nature of Gnosis as direct knowledge of God received through contemplation, the method of symbolic teaching used by Gnostic schools, and the concept of the Body of Stars or spiritual body that is awakened through the mysteries.",
             "Key Themes": "Gnosis as direct knowledge vs. faith (Pistis); the Body of Stars and spiritual transformation; the Codex Brucianus as a second-century Egyptian mystical text; the relationship between Gnostic, Christian, and Platonic traditions."
@@ -395,8 +390,7 @@ def parse_gnosis_of_light(seed_path):
             "name": "The Divine Hierarchy: From Father to Monad",
             "sort_order": sort_order,
             "category": "thematic-grouping",
-            "level": 2,
-            "composite_of": cosmology_ids,
+            "parts": cosmology_ids,
             "sections": {
                 "About": "The emanation of the divine realms from the unknowable Father through the Second Space (Logos), the Twelve Deeps, the Temple of the Pleroma, Setheus (the AEon of AEons), the Alone-Begotten Word, and the Monad. Each level of being contains and reflects all others in an infinite recursion of divine light.",
                 "Key Themes": "The Father beyond all names; the Logos as Second Creator; the Twelve Deeps as universal principles (Wisdom, Mystery, Gnosis, Purity, etc.); the Temple of the Pleroma as cosmic architecture; Setheus as the manifested Sun of Eternity; the Dark Ray of the Alone-Begotten."
@@ -415,8 +409,7 @@ def parse_gnosis_of_light(seed_path):
             "name": "The Light-Spark: Descent and Crown",
             "sort_order": sort_order,
             "category": "thematic-grouping",
-            "level": 2,
-            "composite_of": descent_ids,
+            "parts": descent_ids,
             "sections": {
                 "About": "The descent of the Light-Spark from the Pleroma into the lower regions, bringing form and knowledge to those without. The Indivisible Queen (Mother) who crowns all dominion, and the Five Powers of the Immeasurable Deep: Love, Hope, Faith, Gnosis, and Peace.",
                 "Key Themes": "The incarnation of divine light in matter; the captivity of the Light-Spark; the Crown of Life; the Five Powers as stages of spiritual realization; the Gate of God."
@@ -435,8 +428,7 @@ def parse_gnosis_of_light(seed_path):
             "name": "The Re-Ordering: From Matter to Spirit",
             "sort_order": sort_order,
             "category": "thematic-grouping",
-            "level": 2,
-            "composite_of": reorder_ids,
+            "parts": reorder_ids,
             "sections": {
                 "About": "The cosmic re-ordering after the descent of the Light-Spark. The Triple-Power and Logos Demiourgos establish order, the Robe of Power separates being from non-being, and three great hierarchs (Propator, Autopator, Protogennetor) are established to guide souls from matter back to spirit.",
                 "Key Themes": "Separation of that-which-is from that-which-is-not; the Propator as purification; the Autopator as illumination; the Protogennetor as union; Jerusalem as the incorruptible world; the brooding over matter like a bird over eggs."
@@ -455,8 +447,7 @@ def parse_gnosis_of_light(seed_path):
             "name": "Hymns and Prayers of the Gnosis",
             "sort_order": sort_order,
             "category": "thematic-grouping",
-            "level": 2,
-            "composite_of": hymn_ids,
+            "parts": hymn_ids,
             "sections": {
                 "About": "The devotional heart of the text: the Mother's hymn to the Boundless One, the prayer of the Births of Matter for spiritual bodies, and the culminating Hymn to the Light praising the Alone-Begotten through twenty-seven invocations.",
                 "Key Themes": "Divine prayer as cosmic invocation; the yearning of matter for spirit; the Mother as intercessor; the Hymn to the Light as a litany of divine attributes."
@@ -473,8 +464,7 @@ def parse_gnosis_of_light(seed_path):
             "name": "Commentary Notes by F. Lamplugh",
             "sort_order": sort_order,
             "category": "thematic-grouping",
-            "level": 2,
-            "composite_of": note_ids,
+            "parts": note_ids,
             "sections": {
                 "About": "Lamplugh's explanatory notes illuminating the symbolism of the Gnostic text. These cover the meaning of the City/Monad, the vibratory formula IAO, the Cosmic Cross, the Temple of the Pleroma, the Dark Ray, the Star-Body (Astroeides), and the nature of Gnostic initiation.",
                 "Key Themes": "Symbolism of the Cross; the IAO formula; the Body of Stars (Astroeides); the three paths of Purgation, Illumination, and Union; connections to Platonic and Hermetic traditions."
@@ -494,8 +484,7 @@ def parse_gnosis_of_light(seed_path):
         "name": "The Gnosis of the Light: Complete Work",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
-        "composite_of": all_main_ids,
+        "parts": all_main_ids,
         "sections": {
             "About": "The complete Gnosis of the Light (Untitled Apocalypse) from the Codex Brucianus, with Lamplugh's introduction and notes. A second-century Gnostic masterwork describing the emanation of divine realms from the unknowable Father, the descent of the Light-Spark into matter, and the cosmic re-ordering that guides souls back to their source in the Pleroma of Light.",
             "Significance": "Schmidt called it 'a magnificently conceived work by an old Gnostic philosopher' dating to the period of Basilides and Valentinus (c. 160-200 AD). Its philosophical basis is Alexandrian Platonism, and it shows marked affinities with the Gospel of Mary. The text was likely used to prepare candidates for the 'Baptism of Light' in an Egyptian school of contemplation."
@@ -551,7 +540,6 @@ def parse_gnostic_crucifixion(seed_path):
         "name": "Preface",
         "sort_order": sort_order,
         "category": "preface",
-        "level": 1,
         "sections": {
             "Text": truncate_text(preface_text)
         },
@@ -627,7 +615,6 @@ def parse_gnostic_crucifixion(seed_path):
                 "name": group_name,
                 "sort_order": sort_order,
                 "category": "vision",
-                "level": 1,
                 "sections": {
                     "Text": truncate_text(combined)
                 },
@@ -678,7 +665,6 @@ def parse_gnostic_crucifixion(seed_path):
             "name": "Introduction to the Comments",
             "sort_order": sort_order,
             "category": "commentary",
-            "level": 1,
             "sections": {
                 "Commentary": truncate_text('\n\n'.join(intro_comments))
             },
@@ -711,7 +697,6 @@ def parse_gnostic_crucifixion(seed_path):
                 "name": group_name,
                 "sort_order": sort_order,
                 "category": "commentary",
-                "level": 1,
                 "sections": {
                     "Commentary": truncate_text(combined)
                 },
@@ -727,7 +712,6 @@ def parse_gnostic_crucifixion(seed_path):
         "name": "Postscript: The Cross of Light",
         "sort_order": sort_order,
         "category": "postscript",
-        "level": 1,
         "sections": {
             "Text": truncate_text(postscript_text)
         },
@@ -744,8 +728,7 @@ def parse_gnostic_crucifixion(seed_path):
         "name": "The Vision of the Cross: Complete Text",
         "sort_order": sort_order,
         "category": "thematic-grouping",
-        "level": 2,
-        "composite_of": [vid for vid in vision_l1_ids if any(i["id"] == vid for i in items)],
+        "parts": [vid for vid in vision_l1_ids if any(i["id"] == vid for i in items)],
         "sections": {
             "About": "The complete Vision of the Cross from the Acts of John, in which the disciple John, having fled the physical crucifixion, receives on the Mount of Olives a vision of the Cross of Light. The Lord reveals that the Cross is called by many names (Word, Mind, Jesus, Christ, Door, Way, Bread, Seed, Resurrection) and that His true suffering is not what the multitude below perceives.",
             "Key Themes": "The Cross of Light as the master-symbol; the many names of the Cross; the paradox of suffering and non-suffering; the distinction between the wood cross and the living Cross; the gathering of the Race."
@@ -760,8 +743,7 @@ def parse_gnostic_crucifixion(seed_path):
         "name": "Mead's Commentary: Interpreting the Mystery",
         "sort_order": sort_order,
         "category": "thematic-grouping",
-        "level": 2,
-        "composite_of": [cid for cid in comment_ids] + (["comments-intro"] if intro_comments else []),
+        "parts": [cid for cid in comment_ids] + (["comments-intro"] if intro_comments else []),
         "sections": {
             "About": "G.R.S. Mead's detailed commentary on each verse of the Vision, drawing on Valentinian, Naassene, Docetic, and Hermetic sources. He interprets the Cross as the principle of separation and union, the Batos as the medium of transmission between Light and Darkness, and the Race as the upper nature of humanity awakening to its divine origin.",
             "Key Themes": "The Batos as Tree of Life and medium of passage; the Cross as Boundary (Horos) of the Pleroma; the Race of the Logos; the Limbs of the Ineffable; the mystery of simultaneous joy and sorrow; the Osiric tradition of scattered and gathered limbs."
@@ -776,8 +758,7 @@ def parse_gnostic_crucifixion(seed_path):
         "name": "The Cross in Gnostic Literature",
         "sort_order": sort_order,
         "category": "thematic-grouping",
-        "level": 2,
-        "composite_of": ["preface", "postscript"],
+        "parts": ["preface", "postscript"],
         "sections": {
             "About": "The framing material: Mead's preface establishing the early date of the text through the miracle of the loaves, and his postscript tracing the mystery of the Cross through the Acts of Philip, the Acts of Andrew, the Martyrdom of Peter, the Docetic baptism doctrine, and the Valentinian interpretation of Ephesians. The reversed crucifixion of Peter symbolizes the man of generation; the upright crucifixion of Christ symbolizes the regenerate man.",
             "Key Themes": "Dating evidence from the miracle of the loaves; the Address of Andrew to the Cross; Peter crucified head-downwards; the Docetic body of baptism; the Valentinian Cross as Boundary of the Pleroma."
@@ -794,8 +775,7 @@ def parse_gnostic_crucifixion(seed_path):
         "name": "The Gnostic Crucifixion: Complete Work",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
-        "composite_of": l2_ids,
+        "parts": l2_ids,
         "sections": {
             "About": "G.R.S. Mead's complete study of the Gnostic interpretation of the crucifixion, based on the newly-found fragments of the Acts of John. The Vision of the Cross reveals the crucifixion as a cosmic rather than merely historical event: the Cross of Light is the master-symbol uniting all opposites, the means by which the Logos 'cross-beams' all things, simultaneously separating and joining the generable and ingenerable.",
             "Significance": "Published in 1907 as Volume VII of 'Echoes from the Gnosis,' this work is one of the earliest modern studies to take Gnostic Christianity seriously on its own terms. Mead draws on Valentinian, Naassene, Docetic, and Hermetic sources to reconstruct a coherent mystical theology of the Cross that predates and differs radically from orthodox Christianity's emphasis on substitutionary atonement."
@@ -825,7 +805,7 @@ def build_grammar(name, description, tags, items, attribution, gutenberg_num, gu
         "shelves": ["wisdom"],
         "lineages": ["Shrei"],
         "worldview": "non-dual",
-        "items": items
+        "nodes": items
     }
 
 
@@ -856,7 +836,7 @@ def main():
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(gnosis_grammar, f, indent=2, ensure_ascii=False)
     print(f"  Written to {output_path}")
-    print(f"  Items: {len(gnosis_items)}, L1: {sum(1 for i in gnosis_items if i['level']==1)}, L2: {sum(1 for i in gnosis_items if i['level']==2)}, L3: {sum(1 for i in gnosis_items if i['level']==3)}")
+    print(f"  Items: {len(gnosis_items)}, L1: {sum(1 for i in gnosis_items if node_depth(i, gnosis_items)==1)}, L2: {sum(1 for i in gnosis_items if node_depth(i, gnosis_items)==2)}, L3: {sum(1 for i in gnosis_items if node_depth(i, gnosis_items)==3)}")
 
     # === Grammar 2: Gnostic Crucifixion ===
     print("\nParsing The Gnostic Crucifixion...")
@@ -880,7 +860,7 @@ def main():
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(crucifixion_grammar, f, indent=2, ensure_ascii=False)
     print(f"  Written to {output_path}")
-    print(f"  Items: {len(crucifixion_items)}, L1: {sum(1 for i in crucifixion_items if i['level']==1)}, L2: {sum(1 for i in crucifixion_items if i['level']==2)}, L3: {sum(1 for i in crucifixion_items if i['level']==3)}")
+    print(f"  Items: {len(crucifixion_items)}, L1: {sum(1 for i in crucifixion_items if node_depth(i, crucifixion_items)==1)}, L2: {sum(1 for i in crucifixion_items if node_depth(i, crucifixion_items)==2)}, L3: {sum(1 for i in crucifixion_items if node_depth(i, crucifixion_items)==3)}")
 
 
 if __name__ == "__main__":

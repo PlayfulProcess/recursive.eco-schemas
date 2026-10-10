@@ -18,7 +18,7 @@
     "license": "Public Domain",
     "license_url": "https://commons.wikimedia.org/wiki/File:Plutchik-wheel.svg"
   },
-  "items": [
+  "nodes": [
     {
       "id": "ecstasy",
       "name": "Ecstasy",
@@ -600,7 +600,7 @@
       "name": "Love",
       "symbol": "❤️",
       "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
-      "composite_of": ["joy", "trust"],
+      "parts": ["joy", "trust"],
       "sections": {
         "Interpretation": "Love emerges when joy and trust combine. We feel happy with someone AND safe with them. This is Plutchik's formula for love - not just attraction but trust-infused joy.",
         "Reversed": "Love without trust becomes infatuation. Trust without joy becomes duty. Both are needed for this compound to form.",
@@ -623,7 +623,7 @@
       "name": "Submission",
       "symbol": "🙇",
       "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
-      "composite_of": ["trust", "fear"],
+      "parts": ["trust", "fear"],
       "sections": {
         "Interpretation": "Submission combines trust with fear. We defer to something greater than ourselves. This can be healthy surrender or unhealthy capitulation. Examine what you're submitting to.",
         "Reversed": "Submission without trust is coercion. Trust without appropriate fear may lack respect. What are you yielding to, and is it worthy?",
@@ -646,7 +646,7 @@
       "name": "Awe",
       "symbol": "✨",
       "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
-      "composite_of": ["fear", "surprise"],
+      "parts": ["fear", "surprise"],
       "sections": {
         "Interpretation": "Awe blends fear with surprise. Something vast and unexpected stops us in our tracks. This emotion connects us to the sublime. Awe reminds us we are small - and that's okay.",
         "Reversed": "Awe avoided through cynicism. Or awe that paralyzes rather than inspires. Let awe move through you toward wonder, not terror.",
@@ -669,7 +669,7 @@
       "name": "Disapproval",
       "symbol": "👎",
       "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
-      "composite_of": ["surprise", "sadness"],
+      "parts": ["surprise", "sadness"],
       "sections": {
         "Interpretation": "Disapproval combines surprise with sadness. Someone or something fell below expectations. This emotion judges - sometimes rightly, sometimes harshly. Examine your standards.",
         "Reversed": "Chronic disapproval poisons relationships. Disapproval of self destroys confidence. Is your disapproval proportionate and useful?",
@@ -692,7 +692,7 @@
       "name": "Remorse",
       "symbol": "💔",
       "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
-      "composite_of": ["sadness", "disgust"],
+      "parts": ["sadness", "disgust"],
       "sections": {
         "Interpretation": "Remorse blends sadness with self-disgust. You regret something you did. This painful compound motivates change - remorse is the seed of repair.",
         "Reversed": "Remorse without action is self-punishment. Remorse avoided becomes shame. Let remorse move you toward amends, then release it.",
@@ -715,7 +715,7 @@
       "name": "Contempt",
       "symbol": "😤",
       "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
-      "composite_of": ["disgust", "anger"],
+      "parts": ["disgust", "anger"],
       "sections": {
         "Interpretation": "Contempt combines disgust with anger. You reject someone AND feel hostile toward them. This is relationship poison - contempt predicts divorce. Handle with extreme care.",
         "Reversed": "Contempt corrodes the container who holds it. Contempt masks vulnerability. What hurt or fear lives beneath this contempt?",
@@ -738,7 +738,7 @@
       "name": "Aggressiveness",
       "symbol": "💥",
       "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
-      "composite_of": ["anger", "anticipation"],
+      "parts": ["anger", "anticipation"],
       "sections": {
         "Interpretation": "Aggressiveness combines anger with anticipation. You're angry AND mobilizing toward action. This energy can fight for justice or cause harm. Channel with consciousness.",
         "Reversed": "Aggressiveness without direction becomes violence. Aggressiveness suppressed becomes passive-aggression. What constructive action would serve?",
@@ -761,7 +761,7 @@
       "name": "Optimism",
       "symbol": "🌈",
       "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg",
-      "composite_of": ["anticipation", "joy"],
+      "parts": ["anticipation", "joy"],
       "sections": {
         "Interpretation": "Optimism blends anticipation with joy. You expect good things. This compound energizes action and attracts support. Optimism is a self-fulfilling prophecy - mostly.",
         "Reversed": "Toxic optimism denies reality. Optimism without grounding becomes delusion. Can you hold optimism AND see clearly?",

@@ -24,13 +24,12 @@
     "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/anthropological-dance",
     "https://github.com/PlayfulProcess/recursive.eco-schemas/tree/main/grammars/human-body"
   ],
-  "items": [
+  "nodes": [
     {
       "id": "locomotion",
       "name": "Locomotion — Getting from Here to There",
       "sort_order": 1,
       "category": "capacity",
-      "level": 1,
       "sections": {
         "The Practice": "Locomotion is the body's most fundamental capacity: moving through space. Walking, running, crawling, climbing, swimming, rolling — every way the body has of getting from here to there. In Movement Culture, locomotion is practiced in its full range: quadrupedal crawling (lizard, bear, crab), running at various speeds, climbing walls and trees, rolling across the ground. The modern human who only walks and occasionally jogs is using a fraction of their locomotion vocabulary.",
         "Why It Matters": "Human evolution was shaped by locomotion demands: bipedal walking freed the hands, running made persistence hunting possible, climbing provided food and safety, swimming crossed barriers. Every locomotion pattern activates different muscle chains, coordination patterns, and neurological pathways. A body that only walks is a body whose locomotion software is mostly dormant. Reactivating the full range — crawling, climbing, rolling — wakes up the nervous system in ways that no gym machine can replicate.",
@@ -45,7 +44,6 @@
       "name": "Manipulation — Hanging, Swinging, Carrying",
       "sort_order": 2,
       "category": "capacity",
-      "level": 1,
       "sections": {
         "The Practice": "Manipulation is the body's relationship to objects and overhead structures: hanging, swinging, pulling, pushing, carrying, throwing, catching. Our primate heritage gave us shoulders designed for brachiation (swinging through trees), hands designed for gripping, and a spine designed to bear loads. The modern human who never hangs from anything, never carries heavy objects over distance, never swings or climbs, has abandoned one of the body's most powerful and ancient capacities.",
         "Why It Matters": "Shoulder health, grip strength, and upper body function depend on hanging and swinging — capacities that modern life has almost entirely eliminated. The body that never hangs loses the shoulder decompression that keeps joints healthy, the grip strength that correlates with longevity (grip strength is one of the strongest predictors of all-cause mortality), and the proprioceptive awareness of the body in suspension. Carrying heavy objects develops the core, the grip, and the cardiovascular system in ways that isolated exercises cannot.",
@@ -60,7 +58,6 @@
       "name": "Fighting — The Martial Body",
       "sort_order": 3,
       "category": "capacity",
-      "level": 1,
       "sections": {
         "The Practice": "Fighting capacity encompasses striking (punching, kicking, elbowing), grappling (wrestling, clinching, ground control), and the integration of both. It is the body's capacity for physical confrontation — an ability deeply wired into our neurology and one that every human culture has formalized into martial arts. Movement Culture includes fighting not to promote violence but because the martial body develops qualities available no other way: reflexive speed, comfort with pressure, the ability to think while under physical stress.",
         "Why It Matters": "The body that has never fought is a body that has never been fully tested. Martial practice develops peripheral vision, reaction time, spatial awareness under duress, proprioception in unusual positions, and the psychological capacity to remain calm when challenged. It also develops a relationship with fear and aggression — not suppressing them but channeling them. The martial practitioner is not more violent but more complete: they have integrated the body's fighting capacity rather than pretending it doesn't exist.",
@@ -75,7 +72,6 @@
       "name": "Balancing — The Conversation with Gravity",
       "sort_order": 4,
       "category": "capacity",
-      "level": 1,
       "sections": {
         "The Practice": "Balancing is the body's ongoing conversation with gravity — the constant micro-adjustments that keep us upright, amplified and explored through practice on reduced, elevated, or unstable surfaces. Handstands, single-leg balances, slackline walking, balance beam, rail walking — each challenges the vestibular system and proprioceptive network in different ways. Balance is not a static state but a dynamic process: the body is always falling and catching itself, dozens of times per second.",
         "Why It Matters": "Balance declines with age faster than almost any other physical capacity — and its loss has devastating consequences (falls are a leading cause of death in the elderly). But balance is also one of the most trainable capacities at any age. The vestibular system and proprioceptive network respond to challenge: practice balancing and the body becomes more stable, more confident, more capable of recovering from perturbation. The handstand — balance inverted — develops extraordinary body awareness and upper-body strength simultaneously.",
@@ -90,7 +86,6 @@
       "name": "Jumping and Landing — The Elastic Body",
       "sort_order": 5,
       "category": "capacity",
-      "level": 1,
       "sections": {
         "The Practice": "Jumping and landing is the body's relationship with flight and impact — the capacity to leave the ground and return safely. Vertical jumps, broad jumps, depth drops, box jumps, precision landings (landing on a specific spot), and the ability to absorb impact softly through progressive joint flexion. The capacity includes both the explosive power to launch and the eccentric strength to land without injury.",
         "Why It Matters": "Modern life has largely eliminated jumping from adult movement — and with it, the bone density, tendon resilience, and reactive strength that jumping develops. Bones and tendons respond to impact by becoming stronger (Wolff's law), but only if they receive impact. A body that never jumps develops fragile bones and stiff tendons. Conversely, regular jumping practice maintains bone density, tendon elasticity, and the neuromuscular coordination needed for explosive movement. Landing well — softly, quietly, on target — is a skill that prevents injuries across all physical activities.",
@@ -105,7 +100,6 @@
       "name": "Floorwork — The Ground Is Your Partner",
       "sort_order": 6,
       "category": "capacity",
-      "level": 1,
       "sections": {
         "The Practice": "Floorwork is the body's relationship with the ground as a partner rather than merely a surface to stand on. Rolling, crawling, sitting transitions, get-ups, ground-to-standing transfers, and the capacity to move fluidly at various levels — from lying flat to squatting to standing and back down. Modern humans spend almost all their movement time upright; floorwork reclaims the enormous vocabulary of ground-level movement that we practiced daily as children and then abandoned.",
         "Why It Matters": "The ability to get up and down from the floor without using hands correlates strongly with longevity (the sitting-rising test). Floorwork develops the ability to fall safely (which prevents injuries), maintain comfort in ground positions (which many cultures use for sitting, working, and socializing), and transition smoothly between levels. It also develops the proprioceptive awareness of the entire body surface — when you roll on the floor, every part of the body becomes an interface with the environment.",
@@ -120,7 +114,6 @@
       "name": "Spinal Movement — The Central Wave",
       "sort_order": 7,
       "category": "capacity",
-      "level": 1,
       "sections": {
         "The Practice": "The spine is the body's central axis — 33 vertebrae that can flex, extend, rotate, and laterally bend in combinations of extraordinary complexity. Spinal movement practice develops segmental control: the ability to move one vertebra at a time, to send a wave through the spine from sacrum to skull, to initiate movement from the center of the body rather than the limbs. In many ways, the spine IS the body — the limbs are accessories to its central intelligence.",
         "Why It Matters": "Modern sedentary life freezes the spine into a few habitual positions. The thoracic spine (mid-back) loses its ability to extend and rotate; the lumbar spine compensates by overworking; the cervical spine (neck) locks into forward-head position from screen use. Restoring spinal movement addresses back pain (the world's leading cause of disability), improves breathing (the thoracic spine houses the ribs), enhances athletic performance (all rotational power originates in the spine), and improves emotional wellbeing (the spine's position directly affects mood and energy).",
@@ -135,7 +128,6 @@
       "name": "Improvisation — Moving Without a Script",
       "sort_order": 8,
       "category": "capacity",
-      "level": 1,
       "sections": {
         "The Practice": "Improvisation is the capacity to move without a script — to respond in real time to music, space, other bodies, or internal impulses. It is the highest capacity in Movement Culture because it integrates all others: the improviser draws on locomotion, balance, floorwork, spinal movement, and whatever else the moment requires. It is also the most honest: you cannot fake improvisation. What comes out is what the body actually knows, not what it has been told to perform.",
         "Why It Matters": "Improvisation develops the body's creative intelligence — the ability to solve movement problems in real time, to find new pathways, to surprise itself. It is also the bridge between training and life: real-world movement is always improvised (navigating a crowd, catching a falling child, playing with a dog). A body that can only execute prescribed movements is like a speaker who can only read from a script. Improvisation is fluency — the ability to speak the language of movement spontaneously.",
@@ -150,7 +142,6 @@
       "name": "The Deep Squat — The Position We Forgot",
       "sort_order": 9,
       "category": "practice",
-      "level": 1,
       "sections": {
         "The Practice": "The deep squat — feet flat, hips below knees, spine upright — is the natural human resting position. Two-thirds of the world's population uses it daily for sitting, eating, socializing, and working. The other third (mostly the industrialized West) lost it to chairs and toilets. Ido Portal's 30-Day Squat Challenge (accumulate 30 minutes in a deep squat daily for 30 days) became one of the most viral movement practices online, introducing millions to the simple idea that this fundamental position had been stolen by modern furniture.",
         "Why It Matters": "The deep squat maintains ankle mobility, hip flexibility, pelvic floor health, and spinal alignment. It decompresses the lower back, stretches the Achilles tendons, and promotes healthy digestion (the squat position opens the ileocecal valve more effectively than sitting). Losing the squat — which typically happens in childhood when we start sitting in chairs — begins a cascade of postural compensations that contribute to knee pain, hip tightness, and lower back problems throughout life.",
@@ -165,7 +156,6 @@
       "name": "The Hanging Challenge — Reclaiming the Shoulders",
       "sort_order": 10,
       "category": "practice",
-      "level": 1,
       "sections": {
         "The Practice": "The Hanging Challenge (another Portal-popularized practice): accumulate 7 minutes of daily hanging time for 30 days. Dead hangs, active hangs, one-arm hangs, swinging, brachiating — any time spent with the body suspended from the hands counts. The simplicity is the point: find a bar, hang from it. The body does the rest, guided by gravity and the ancient architecture of the primate shoulder.",
         "Why It Matters": "The human shoulder evolved for brachiation — swinging through trees — and retains the range of motion that makes this possible. But without regular hanging, the shoulder joint loses its decompression (the hanging body creates traction that opens the joint space), the rotator cuff muscles atrophy, and the grip weakens. Shoulder impingement, frozen shoulder, and rotator cuff tears are epidemic in the modern world; regular hanging is perhaps the single most effective preventive practice for all of them.",
@@ -180,7 +170,6 @@
       "name": "The Lizard Crawl — Rebuilding Coordination",
       "sort_order": 11,
       "category": "practice",
-      "level": 1,
       "sections": {
         "The Practice": "The lizard crawl: low to the ground, body moving in a contralateral pattern (right hand and left foot move together, then left hand and right foot). It is one of the most demanding and developmental movement patterns in Movement Culture — a full-body exercise that develops coordination, core stability, shoulder strength, hip mobility, and cardiovascular endurance simultaneously. Five minutes of lizard crawl will humble most gym athletes.",
         "Why It Matters": "Crawling is a developmental pattern — every human learns to crawl before walking, and that crawling phase builds the contralateral coordination (opposite arm and leg working together) that underlies all subsequent movement. Adults who return to crawling often find it rebuilds coordination patterns that have degraded: the contralateral timing sharpens, the core activates reflexively, and the shoulders and hips learn to work as an integrated system rather than isolated joints.",
@@ -195,7 +184,6 @@
       "name": "Movement Flow — Connecting Everything",
       "sort_order": 12,
       "category": "practice",
-      "level": 1,
       "sections": {
         "The Practice": "Movement flow is the practice of linking diverse movements into continuous, improvised sequences — transitions between crawling, standing, balancing, rolling, jumping, and everything else, without pause. It is Movement Culture's creative synthesis: the place where all the capacities come together into a personal movement language. A flow might move from a lizard crawl into a roll into a handstand into a squat into a spinal wave into a dance — whatever the body wants, linked without stopping.",
         "Why It Matters": "Flow develops the transitions between movements — which is where most injuries happen in real life (the stumble between walking and catching yourself, the awkward twist between sitting and standing). It also develops creative expression: the mover who can flow is the mover who has internalized the vocabulary deeply enough to use it spontaneously. Flow is to Movement Culture what jazz improvisation is to music: the proof that the practitioner has absorbed the fundamentals well enough to forget them.",
@@ -210,7 +198,6 @@
       "name": "Gymnastics — The Acrobatic Body",
       "sort_order": 13,
       "category": "source-tradition",
-      "level": 1,
       "sections": {
         "The Practice": "Gymnastics develops the acrobatic body: handstands, cartwheels, flips, tumbling, and apparatus work (rings, bars, beam, vault). It is arguably the most physically demanding of all movement disciplines, requiring extraordinary strength-to-weight ratio, flexibility, coordination, spatial awareness, and courage. Movement Culture draws heavily on gymnastic elements — particularly handstands, rings, and tumbling — as tools for developing the body's full physical potential.",
         "Why It Matters": "Gymnastics teaches the body to be upside down, airborne, and spinning — three states that most adults avoid entirely. This avoidance shrinks the body's confidence in space. The gymnastic practitioner is comfortable in any orientation, which transfers to every other movement domain: the person who can do a handstand is more confident climbing, jumping, and falling. Gymnastics also develops the absolute strength and control that make all other movement easier.",
@@ -225,7 +212,6 @@
       "name": "Martial Arts — The Fighting Traditions",
       "sort_order": 14,
       "category": "source-tradition",
-      "level": 1,
       "sections": {
         "The Practice": "The martial arts are humanity's oldest codified movement systems — every culture developed ways of fighting, and most formalized those ways into transmissible traditions. From the striking arts (boxing, karate, Muay Thai, kung fu) to the grappling arts (wrestling, judo, Brazilian Jiu-Jitsu, sambo) to the weapon arts (kendo, fencing, Filipino martial arts), the martial traditions offer an immense vocabulary of movement organized around the most urgent possible purpose: survival under threat.",
         "Why It Matters": "Martial arts develop qualities that no other practice develops as efficiently: reflexive speed, comfort under pressure, tactical thinking in real time, and the willingness to engage with another body's resistance. They also develop specific physical capacities — rotational power, grip strength, hip mobility, cardiovascular endurance — through the most motivating possible training context. Movement Culture draws on martial arts as the source tradition for the fighting capacity.",
@@ -240,7 +226,6 @@
       "name": "Parkour — The Urban Path",
       "sort_order": 15,
       "category": "source-tradition",
-      "level": 1,
       "sections": {
         "The Practice": "Parkour (from parcours, path) is the art of moving through any environment using only the body — vaulting walls, climbing buildings, jumping gaps, rolling on landings. Founded by David Belle in the 1990s (building on his father Raymond Belle's military training and Hébert's Méthode Naturelle), parkour strips movement to its most functional: how do I get from here to there as efficiently as possible, using whatever the environment offers? Freerunning (developed by Sébastien Foucan) adds aesthetic and acrobatic elements.",
         "Why It Matters": "Parkour reclaims the urban environment as a movement playground — every wall is something to climb, every railing something to vault, every gap something to jump. It develops all the fundamental capacities (locomotion, jumping, climbing, balancing, landing) in real-world contexts with real consequences. The parkour practitioner develops not just physical skills but perceptual skills: they see movement possibilities in the environment that non-practitioners literally cannot perceive.",
@@ -255,7 +240,6 @@
       "name": "Yoga — The Contemplative Body",
       "sort_order": 16,
       "category": "source-tradition",
-      "level": 1,
       "sections": {
         "The Practice": "Yoga — in Movement Culture context — is valued as a source tradition for flexibility, spinal health, breath awareness, and contemplative movement. The asana practice develops range of motion in every joint, the pranayama practice develops breath control and awareness, and the meditative aspects develop the internal attention that makes all movement more conscious. Movement Culture draws from yoga selectively, integrating its tools into a broader physical practice rather than adopting its full philosophical system.",
         "Why It Matters": "Yoga offers what most Western movement practices lack: systematic flexibility training, breath awareness, and the integration of physical practice with internal attention. The yoga-trained body is supple, aware, and capable of sustained attention — qualities that enhance every other movement capacity. The deep squat, the spinal wave, and the meditative quality of movement flow all have roots in yogic practice.",
@@ -270,7 +254,6 @@
       "name": "Capoeira — The Game of Movement",
       "sort_order": 17,
       "category": "source-tradition",
-      "level": 1,
       "sections": {
         "The Practice": "Capoeira is the Afro-Brazilian art that fuses martial arts, dance, acrobatics, and music into a game (jogo) played inside a circle of musicians (roda). Developed by enslaved Africans in Brazil, it disguised fighting practice as dance to evade colonial prohibition. Its movement vocabulary — the swinging ginga (base movement), the au (cartwheel), the meia lua (crescent kick), the esquiva (dodge) — is a flowing, continuous dialogue between two players, accompanied by berimbau, pandeiro, and atabaque.",
         "Why It Matters": "Capoeira integrates more movement capacities than almost any other single practice: acrobatics, fighting, dance, floorwork, balance, improvisation, rhythm, and social play — all in one art form. It is also the source tradition that most clearly embodies Movement Culture's philosophy of the generalist body: the capoeirista must be athlete, dancer, musician, and improviser simultaneously. Its cultural depth (resistance, liberation, community) gives physical practice a historical and political dimension.",
@@ -285,7 +268,6 @@
       "name": "Dance — The Expressive Body",
       "sort_order": 18,
       "category": "source-tradition",
-      "level": 1,
       "sections": {
         "The Practice": "Dance — in the broadest sense — is movement organized by rhythm, expression, and aesthetic intention. Movement Culture draws from dance not as a performance art but as a movement capacity: the ability to move with musicality, expressiveness, and flow. Partner dance (salsa, tango, contact improvisation), solo improvisation (to music or in silence), and the quality of moving beautifully rather than merely functionally — these are dance's contributions to the generalist body.",
         "Why It Matters": "Dance develops the expressive dimension of movement that other source traditions often neglect. A body that can fight, climb, and do handstands but cannot dance is an incomplete instrument — it can do but it cannot say. Dance trains the ear (musicality), the social body (partner awareness), the creative body (improvisation), and the aesthetic sense (the difference between efficient movement and beautiful movement). It is also the most joyful of the source traditions.",
@@ -300,7 +282,6 @@
       "name": "Méthode Naturelle — Hébert's Natural Method",
       "sort_order": 19,
       "category": "source-tradition",
-      "level": 1,
       "sections": {
         "The Practice": "Georges Hébert (1875-1957) developed La Méthode Naturelle — the Natural Method — after observing indigenous peoples in Africa moving with a physical competence that no European athlete could match. His system identified ten fundamental movement families: walking, running, jumping, quadrupedal movement, climbing, balancing, throwing, lifting, swimming, and self-defense. His training courses were conducted outdoors, in natural terrain, using whatever the environment provided. He is the direct ancestor of both parkour and Movement Culture.",
         "Why It Matters": "Hébert's insight predates the modern fitness industry by a century: the human body evolved for generalist movement, and any training that specializes too narrowly produces a body that is strong in one dimension and weak in all others. His famous motto — 'être fort pour être utile' (be strong to be useful) — captures the ethical dimension of physical practice: the purpose of fitness is not aesthetics but the capacity to help others. This moral framework still animates parkour and Movement Culture.",
@@ -315,7 +296,6 @@
       "name": "Ido Portal — The Movement Teacher",
       "sort_order": 20,
       "category": "figure",
-      "level": 1,
       "sections": {
         "The Practice": "Ido Portal (b. 1978) is the Israeli movement teacher who popularized the term 'Movement Culture' and the philosophy of the generalist body. His background includes Capoeira, gymnastics, martial arts, and dance, and his teaching synthesizes these into a practice-of-practices that resists categorization. He is best known for his viral movement challenges (30-day squat challenge, hanging challenge), his work with MMA fighters (most famously Conor McGregor), and his social media presence that introduced millions to the idea of movement as a unified practice.",
         "Why It Matters": "Portal's contribution is primarily philosophical: the articulation of a coherent framework for why generalism matters. His core arguments — that specialization creates physical monocultures, that the body's intelligence exceeds any single discipline, that movement itself (not fitness, not sport, not dance) is the fundamental practice — gave a name and a framework to what many practitioners were already intuiting. He is a polarizing figure (critics find him vague and self-aggrandizing), but the conversation he started is real and important.",
@@ -330,8 +310,7 @@
       "name": "The Movement Tree — What the Body Can Do",
       "sort_order": 21,
       "category": "framework",
-      "level": 2,
-      "composite_of": ["locomotion", "manipulation", "fighting", "balancing", "jumping-landing", "floorwork", "spinal-movement", "improvisation"],
+      "parts": ["locomotion", "manipulation", "fighting", "balancing", "jumping-landing", "floorwork", "spinal-movement", "improvisation"],
       "sections": {
         "About": "The eight movement capacities — locomotion, manipulation, fighting, balancing, jumping/landing, floorwork, spinal movement, and improvisation — form a map of what the human body can do. They are not exercises or skills but categories of movement that every human body is designed for. A body that practices all eight is a complete instrument; a body that practices only one or two is a specialist that has sacrificed range for depth. The movement tree is not a hierarchy but an ecosystem: each capacity feeds the others.",
         "The Body Speaks": "Each capacity develops different physical qualities and different kinds of intelligence. Locomotion develops cardiovascular endurance and coordination. Manipulation develops grip strength and shoulder health. Fighting develops reflexive speed and tactical thinking. Balancing develops proprioception and presence. Jumping develops power and tendon resilience. Floorwork develops whole-body coordination and fall safety. Spinal movement develops flexibility and core awareness. Improvisation develops creativity and integration. Together, they produce a body that is prepared for anything.",
@@ -345,8 +324,7 @@
       "name": "The Practice Containers — Daily Movement",
       "sort_order": 22,
       "category": "framework",
-      "level": 2,
-      "composite_of": ["squat", "hanging", "lizard-crawl", "movement-flow"],
+      "parts": ["squat", "hanging", "lizard-crawl", "movement-flow"],
       "sections": {
         "About": "The practice containers — the deep squat, the hanging challenge, the lizard crawl, and movement flow — are the entry points into Movement Culture. Each is simple enough to start today, demanding enough to develop for years, and transformative enough to change how the body functions. They are not exercises to be completed but practices to be maintained — daily, consistently, progressively. The 30-day challenge format is the gateway: commit to one practice for one month and see what changes.",
         "The Body Speaks": "Each practice container addresses a specific deficit of modern life. The squat restores hip and ankle mobility lost to chairs. Hanging restores shoulder health lost to desk work. Crawling restores contralateral coordination lost to bipedal-only movement. Flow restores creative movement lost to the repetitive routines of gym and commute. Together, they form a minimal effective practice — the least you can do to keep the body functioning as a complete instrument.",
@@ -360,8 +338,7 @@
       "name": "Movement Ancestors — The Traditions That Feed",
       "sort_order": 23,
       "category": "framework",
-      "level": 2,
-      "composite_of": ["source-gymnastics", "source-martial-arts", "source-parkour", "source-yoga", "source-capoeira", "source-dance", "source-methode-naturelle"],
+      "parts": ["source-gymnastics", "source-martial-arts", "source-parkour", "source-yoga", "source-capoeira", "source-dance", "source-methode-naturelle"],
       "sections": {
         "About": "The seven source traditions — gymnastics, martial arts, parkour, yoga, Capoeira, dance, and Méthode Naturelle — are the rivers that feed Movement Culture's ocean. Each tradition developed over centuries to explore a specific dimension of human movement: gymnastics explores the acrobatic body, martial arts explore the fighting body, parkour explores the environmental body, yoga explores the contemplative body, Capoeira explores the playful body, dance explores the expressive body, and Méthode Naturelle explores the natural body. None is complete alone; together, they map the full territory.",
         "The Body Speaks": "Each source tradition trains the body differently: the gymnast's body is light and explosive, the martial artist's body is reactive and resilient, the yogi's body is flexible and aware, the Capoeirista's body is flowing and musical. The generalist body draws from all of them, not to master any single tradition but to develop a physical intelligence that no single tradition can provide. The question is not 'which tradition is best?' but 'which capacities are missing from my current practice, and which tradition develops them?'",
@@ -375,8 +352,7 @@
       "name": "The Generalist Philosophy — Move or Be Moved",
       "sort_order": 24,
       "category": "philosophy",
-      "level": 3,
-      "composite_of": ["group-capacities", "group-sources", "ido-portal"],
+      "parts": ["group-capacities", "group-sources", "ido-portal"],
       "sections": {
         "About": "The generalist philosophy is Movement Culture's central argument: that the human body evolved as a generalist — capable of walking, running, climbing, swimming, fighting, dancing, and playing — and that modern culture's emphasis on specialization has impoverished our physical lives. The specialist athlete (the marathon runner, the powerlifter, the yogi) develops extraordinary capacity in one domain at the cost of incompetence in all others. The generalist practitioner develops competence across the full range of human movement, sacrificing peak performance for breadth and resilience.",
         "The Body Speaks": "The generalist body looks different from the specialist body: it is neither the bulky body of the lifter nor the lean body of the runner nor the flexible body of the yogi. It is a capable body — one that can do a handstand, run five miles, wrestle a friend, dance at a party, carry a heavy load, and play on the floor with a child, all in the same week. It is the body that is ready for life rather than optimized for a single measurable output. In an evolutionary context, this is the body that survives — the adaptable generalist, not the fragile specialist.",
@@ -390,8 +366,7 @@
       "name": "The Practice of Practices — Never Arriving",
       "sort_order": 25,
       "category": "philosophy",
-      "level": 3,
-      "composite_of": ["group-practices", "group-capacities"],
+      "parts": ["group-practices", "group-capacities"],
       "sections": {
         "About": "Movement culture rejects the idea of mastery as a destination. There is no black belt moment, no final pose, no routine so polished it never needs revision. Instead, the practice itself is the point — the daily return to the body as a site of inquiry. Ido Portal calls this 'the practice of practices': not loyalty to any single discipline, but a commitment to the process of physical questioning. You study gymnastics not to become a gymnast but to understand what gymnastics knows about the body. You train fighting not to fight but to discover what combat reveals about timing, fear, and presence. The practitioner is perpetually a beginner somewhere, perpetually humbled by some new domain. This is not dilettantism — it requires going deep enough in each practice to extract its principles before moving on or weaving it in. The goal is not to collect skills like trophies but to let each practice reshape how you move, think, and inhabit your body.",
         "The Body Speaks": "Watch someone deep in this philosophy and you see a peculiar quality: comfort with incompetence. They will attempt a capoeira movement they cannot do, laugh at their failure, adjust, try again — with the same focus they bring to movements they have trained for years. Their warm-up might include deep squats, hanging, crawling, handstand attempts, and dance improvisation in a single session. They move between modalities without the identity crisis that plagues specialists. There is a lightness to it — play as method, curiosity as discipline. But underneath the playfulness is rigorous self-honesty. They know exactly where their weaknesses live because they visit them daily. The body becomes a journal of questions rather than a trophy case of answers.",

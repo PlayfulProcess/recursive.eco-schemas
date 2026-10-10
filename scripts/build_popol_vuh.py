@@ -9,6 +9,7 @@ Parses the four narrative books, skips Spence's commentary sections.
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(SCRIPT_DIR)
@@ -169,7 +170,6 @@ def build_grammar():
                 "name": name,
                 "sort_order": sort_order,
                 "category": category,
-                "level": 1,
                 "sections": {
                     "Passage": para_text
                 },
@@ -189,14 +189,13 @@ def build_grammar():
             "name": book_l2_names[book_idx],
             "sort_order": sort_order,
             "category": category,
-            "level": 2,
             "sections": {
                 "About": book_l2_abouts[book_idx],
                 "For Readers": "Read these passages as a connected narrative. The Popol Vuh was an oral tradition before it was written — let the rhythm of retelling carry you."
             },
             "keywords": [],
             "metadata": {},
-            "composite_of": book_item_ids[book_idx],
+            "parts": book_item_ids[book_idx],
             "relationship_type": "emergence"
         }
         items.append(item)
@@ -211,7 +210,7 @@ def build_grammar():
     # Creation and Destruction — Book 1 passages about creation/destruction + Book 3 creation
     creation_ids = []
     for item in items:
-        if item["level"] != 1:
+        if node_depth(item, items) != 1:
             continue
         text_lower = item["sections"]["Passage"].lower()
         if item["category"] == "book-1" and any(w in text_lower for w in ["creat", "destroy", "flood", "mannikin", "clay", "wood", "hurakan", "gucumatz"]):
@@ -222,7 +221,7 @@ def build_grammar():
     # Descent to Xibalba — Book 2 passages about Xibalba
     xibalba_ids = []
     for item in items:
-        if item["level"] != 1:
+        if node_depth(item, items) != 1:
             continue
         text_lower = item["sections"]["Passage"].lower()
         if any(w in text_lower for w in ["xibalba", "underworld", "lords of death", "hun-came", "vukub-came"]):
@@ -231,7 +230,7 @@ def build_grammar():
     # Maize and Humanity — passages about maize and human creation
     maize_ids = []
     for item in items:
-        if item["level"] != 1:
+        if node_depth(item, items) != 1:
             continue
         text_lower = item["sections"]["Passage"].lower()
         if any(w in text_lower for w in ["maize", "corn", "yellow and white", "balam-quitz"]):
@@ -266,34 +265,32 @@ def build_grammar():
             "name": group["name"],
             "sort_order": sort_order,
             "category": "thematic",
-            "level": 2,
             "sections": {
                 "About": group["about"],
                 "For Readers": "These passages are gathered by theme across the four books. Read them together to see how the Popol Vuh weaves its central concerns through the entire narrative."
             },
             "keywords": [],
             "metadata": {},
-            "composite_of": group["ids"],
+            "parts": group["ids"],
             "relationship_type": "emergence"
         }
         items.append(item)
         sort_order += 1
 
     # L3: Meta
-    all_l2_ids = [item["id"] for item in items if item["level"] == 2]
+    all_l2_ids = [item["id"] for item in items if node_depth(item, items) == 2]
     meta_item = {
         "id": "popol-vuh-meta",
         "name": "The Popol Vuh",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "sections": {
             "About": "The Popol Vuh ('Book of the Community'), the creation myth of the K'iche' Maya. From the primordial waters through the Hero Twins' triumph over death to the founding of nations — the most complete surviving mythology of pre-Columbian Mesoamerica.",
             "For Readers": "The Popol Vuh moves from cosmic creation to human history in four books. It can be read as mythology, as philosophy of repeated creation-through-failure, or as the origin story of a people who understood themselves as literally made of corn."
         },
         "keywords": ["popol-vuh", "maya", "creation-myth", "hero-twins", "xibalba", "maize"],
         "metadata": {},
-        "composite_of": all_l2_ids,
+        "parts": all_l2_ids,
         "relationship_type": "emergence"
     }
     items.append(meta_item)
@@ -316,7 +313,7 @@ def build_grammar():
         "shelves": ["earth"],
         "lineages": ["Andreotti", "Shrei"],
         "worldview": "animist",
-        "items": items
+        "nodes": items
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -324,9 +321,9 @@ def build_grammar():
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
     # Summary
-    l1_count = sum(1 for i in items if i["level"] == 1)
-    l2_count = sum(1 for i in items if i["level"] == 2)
-    l3_count = sum(1 for i in items if i["level"] == 3)
+    l1_count = sum(1 for i in items if node_depth(i, items) == 1)
+    l2_count = sum(1 for i in items if node_depth(i, items) == 2)
+    l3_count = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"Generated {OUTPUT_FILE}")
     print(f"  L1 items (passages): {l1_count}")
     print(f"  L2 items (emergence): {l2_count}")

@@ -86,7 +86,7 @@ def make_grammar(name, description, tags, items, gutenberg_id, gutenberg_title):
         "shelves": ["wisdom"],
         "lineages": ["Shrei"],
         "worldview": "animist",
-        "items": items
+        "nodes": items
     }
 
 
@@ -164,7 +164,6 @@ def parse_book_of_dead():
             "name": cname,
             "sort_order": sort_order,
             "category": "chapters",
-            "level": 1,
             "sections": {
                 "Text": text,
                 "About": cdesc
@@ -180,7 +179,7 @@ def parse_book_of_dead():
             "id": "theme-origins",
             "name": "Origins and Authorship",
             "category": "themes",
-            "composite_of": ["chapter-1", "chapter-3", "chapter-4"],
+            "parts": ["chapter-1", "chapter-3", "chapter-4"],
             "about": "The origins, naming, and divine authorship of the Book of the Dead. These chapters trace the text from its modern title through its ancient Egyptian name 'Per-t em Hru' (Coming Forth by Day) to its attributed author, the god Thoth.",
             "keywords": ["origins", "thoth", "authorship", "history"]
         },
@@ -188,7 +187,7 @@ def parse_book_of_dead():
             "id": "theme-preservation",
             "name": "Mummification and Protection",
             "category": "themes",
-            "composite_of": ["chapter-2", "chapter-5"],
+            "parts": ["chapter-2", "chapter-5"],
             "about": "The preservation of the body and the divine partnership of Thoth and Osiris in protecting the dead. Mummification was not merely physical preservation but a magical act, sustained by the words of power that Thoth provided.",
             "keywords": ["mummification", "protection", "thoth", "osiris"]
         },
@@ -196,7 +195,7 @@ def parse_book_of_dead():
             "id": "theme-judgment",
             "name": "Judgment and the Afterlife",
             "category": "themes",
-            "composite_of": ["chapter-6", "chapter-7", "chapter-8", "chapter-9"],
+            "parts": ["chapter-6", "chapter-7", "chapter-8", "chapter-9"],
             "about": "The judgment of the dead before Osiris and the blessed afterlife that awaits those who pass. The Weighing of the Heart, the 42 Negative Confessions, and the paradise of the Sekhet-Aaru (Field of Reeds) form the climactic sequence of the Egyptian funerary journey.",
             "keywords": ["judgment", "afterlife", "osiris", "sekhet-aaru"]
         },
@@ -208,8 +207,7 @@ def parse_book_of_dead():
             "name": g["name"],
             "sort_order": sort_order,
             "category": g["category"],
-            "level": 2,
-            "composite_of": g["composite_of"],
+            "parts": g["parts"],
             "relationship_type": "emergence",
             "sections": {
                 "About": g["about"]
@@ -225,8 +223,7 @@ def parse_book_of_dead():
         "name": "The Egyptian Book of the Dead",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
-        "composite_of": ["theme-origins", "theme-preservation", "theme-judgment"],
+        "parts": ["theme-origins", "theme-preservation", "theme-judgment"],
         "relationship_type": "emergence",
         "sections": {
             "About": "E.A. Wallis Budge's introduction to the Book of the Dead -- the great collection of funerary texts that the ancient Egyptians called 'Per-t em Hru,' the Chapters of Coming Forth by Day. These nine chapters trace the origin and purpose of the spells, the role of Thoth as their divine author, the judgment of the dead before Osiris, and the paradise that awaited the justified soul in the Sekhet-Aaru (Field of Reeds). Together they form a complete guide to the Egyptian understanding of death, judgment, and immortality."
@@ -358,7 +355,6 @@ def parse_legends_of_gods():
             "name": sec_name,
             "sort_order": sort_order,
             "category": "introduction",
-            "level": 1,
             "sections": {
                 "Introduction": text,
                 "About": f"Budge's scholarly introduction to {sec_name.lower()}, discussing the sources, context, and significance of the ancient Egyptian text."
@@ -473,7 +469,6 @@ def parse_legends_of_gods():
             "name": ldef["name"],
             "sort_order": sort_order,
             "category": "legend-texts",
-            "level": 1,
             "sections": {
                 "Text": text,
                 "About": f"The translated text of {ldef['name'].replace(' (Translation)', '')} from the ancient Egyptian original."
@@ -522,7 +517,6 @@ def parse_legends_of_gods():
             "name": "Isis and Osiris According to Plutarch (Translation)",
             "sort_order": sort_order,
             "category": "legend-texts",
-            "level": 1,
             "sections": {
                 "Text": text,
                 "About": "Plutarch's De Iside et Osiride, the most complete classical account of the Isis and Osiris myth, as translated and annotated by Budge."
@@ -537,28 +531,28 @@ def parse_legends_of_gods():
         {
             "id": "theme-creation-cosmos",
             "name": "Creation and Cosmic Order",
-            "composite_of": ["intro-creation", "intro-destruction", "text-destruction"],
+            "parts": ["intro-creation", "intro-destruction", "text-destruction"],
             "about": "The creation of the world by the self-begotten god Neb-er-tcher (Khepera) and the near-destruction of humanity when Ra grew old and humans rebelled. These legends establish the cosmic order: the world emerged from the primordial waters of Nu through the power of divine speech, and humanity exists only because Ra relented from total annihilation.",
             "keywords": ["creation", "destruction", "neb-er-tcher", "ra", "cosmic-order"]
         },
         {
             "id": "theme-divine-power",
             "name": "Divine Knowledge and Magic",
-            "composite_of": ["intro-ra-isis", "text-ra-isis", "intro-khensu", "intro-khnemu"],
+            "parts": ["intro-ra-isis", "text-ra-isis", "intro-khensu", "intro-khnemu"],
             "about": "The secret names of the gods and the magical power of divine knowledge. Isis tricks Ra into revealing his secret name, gaining supreme magical authority. Khensu heals the Princess of Bekhten through his divine presence. Khnemu controls the Nile's flood. These legends reveal how the Egyptians understood divine power as operating through knowledge, names, and ritual.",
             "keywords": ["isis", "ra", "magic", "secret-name", "divine-power"]
         },
         {
             "id": "theme-horus-battles",
             "name": "The Wars of Horus",
-            "composite_of": ["intro-horus-winged-disk", "intro-birth-horus", "text-horus-winged-disk", "intro-death-horus", "text-death-horus"],
+            "parts": ["intro-horus-winged-disk", "intro-birth-horus", "text-horus-winged-disk", "intro-death-horus", "text-death-horus"],
             "about": "The cycle of Horus -- his miraculous birth to Isis and the dead Osiris, his death by scorpion sting and resurrection through Thoth, and his great battles against Set and the enemies of Ra. The Winged Disk legend is the most martial Egyptian myth, depicting Horus as the champion of cosmic order against chaos.",
             "keywords": ["horus", "set", "battle", "birth", "resurrection"]
         },
         {
             "id": "theme-isis-osiris",
             "name": "The Isis and Osiris Cycle",
-            "composite_of": ["intro-isis-osiris", "text-isis-osiris-plutarch"],
+            "parts": ["intro-isis-osiris", "text-isis-osiris-plutarch"],
             "about": "The central myth of Egyptian religion: Osiris the good king is murdered and dismembered by his brother Set; Isis searches the world for his body, reassembles it, and conceives Horus; Osiris becomes lord of the afterlife. Plutarch's De Iside et Osiride provides the most complete version of this story, here presented alongside Budge's introduction.",
             "keywords": ["isis", "osiris", "set", "death", "resurrection", "plutarch"]
         },
@@ -570,8 +564,7 @@ def parse_legends_of_gods():
             "name": g["name"],
             "sort_order": sort_order,
             "category": "themes",
-            "level": 2,
-            "composite_of": g["composite_of"],
+            "parts": g["parts"],
             "relationship_type": "emergence",
             "sections": {
                 "About": g["about"]
@@ -587,8 +580,7 @@ def parse_legends_of_gods():
         "name": "Legends of the Egyptian Gods",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
-        "composite_of": ["theme-creation-cosmos", "theme-divine-power", "theme-horus-battles", "theme-isis-osiris"],
+        "parts": ["theme-creation-cosmos", "theme-divine-power", "theme-horus-battles", "theme-isis-osiris"],
         "relationship_type": "emergence",
         "sections": {
             "About": "E.A. Wallis Budge's collection of the foundational myths of ancient Egypt: the creation of the world from the primordial waters, Ra's near-destruction of humanity, Isis's theft of Ra's secret name, the birth, death, and resurrection of Horus, and the great myth of Isis and Osiris as told by Plutarch. These legends span from the earliest Egyptian religious texts to classical Greek retellings, forming a complete portrait of Egyptian mythological thought."
@@ -694,7 +686,6 @@ def parse_egyptian_ideas():
             "name": ch_name,
             "sort_order": sort_order,
             "category": "chapters",
-            "level": 1,
             "sections": {
                 "Text": text,
                 "About": ch_desc
@@ -709,21 +700,21 @@ def parse_egyptian_ideas():
         {
             "id": "theme-theology",
             "name": "Egyptian Theology",
-            "composite_of": ["chapter-1", "chapter-3"],
+            "parts": ["chapter-1", "chapter-3"],
             "about": "The theological foundations of Egyptian religion: the belief in one supreme, self-existent God (Neter) alongside the multiplicity of divine forms. Budge argues that the Egyptians held a sophisticated monotheism beneath their apparent polytheism -- the many gods were aspects or manifestations of the One.",
             "keywords": ["theology", "monotheism", "polytheism", "neter"]
         },
         {
             "id": "theme-osiris-judgment",
             "name": "Osiris and the Judgment",
-            "composite_of": ["chapter-2", "chapter-4"],
+            "parts": ["chapter-2", "chapter-4"],
             "about": "The myth of Osiris as the foundation of Egyptian afterlife beliefs, and the great scene of judgment in the Hall of Maati (Truth). Osiris conquered death and thereby guaranteed resurrection to all who followed him; but first the dead must pass the Weighing of the Heart against the feather of Maat.",
             "keywords": ["osiris", "judgment", "maati", "weighing-of-heart"]
         },
         {
             "id": "theme-immortality",
             "name": "The Doctrine of Immortality",
-            "composite_of": ["chapter-2", "chapter-5"],
+            "parts": ["chapter-2", "chapter-5"],
             "about": "The Egyptian understanding of resurrection, the multiple souls (ka, ba, khu, sekhem), and the mechanics of eternal life. The dead were not merely spirits -- they required a preserved body, sustenance in the tomb, and magical texts to navigate the afterlife and achieve union with Osiris.",
             "keywords": ["resurrection", "immortality", "ka", "ba", "khu", "soul"]
         },
@@ -735,8 +726,7 @@ def parse_egyptian_ideas():
             "name": g["name"],
             "sort_order": sort_order,
             "category": "themes",
-            "level": 2,
-            "composite_of": g["composite_of"],
+            "parts": g["parts"],
             "relationship_type": "emergence",
             "sections": {
                 "About": g["about"]
@@ -752,8 +742,7 @@ def parse_egyptian_ideas():
         "name": "Egyptian Ideas of the Future Life",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
-        "composite_of": ["theme-theology", "theme-osiris-judgment", "theme-immortality"],
+        "parts": ["theme-theology", "theme-osiris-judgment", "theme-immortality"],
         "relationship_type": "emergence",
         "sections": {
             "About": "E.A. Wallis Budge's comprehensive account of ancient Egyptian beliefs about God, the gods, death, judgment, and the afterlife. From the sublime monotheism underlying Egyptian polytheism, through the Osiris myth and the Weighing of the Heart, to the doctrines of the ka, ba, and khu -- this work reveals how the Egyptians understood the journey from death to eternal life in the kingdom of Osiris."

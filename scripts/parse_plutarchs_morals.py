@@ -4,6 +4,7 @@ Parse Plutarch's Morals (Moralia) — Gutenberg #23639.
 A collection of moral essays on virtue, anger, contentment, education, etc.
 """
 import json, re, os
+from grammar_depth import node_depth
 
 with open("seeds/plutarchs-morals.txt", encoding="utf-8") as f:
     text = f.read()
@@ -126,7 +127,6 @@ for idx, (start_line, heading) in enumerate(essay_starts):
         "name": name,
         "sort_order": sort_order,
         "category": cat,
-        "level": 1,
         "sections": {
             "Essay": truncate(essay_text),
             "Theme": f"Category: {cat.title()}"
@@ -169,13 +169,12 @@ for cat, cat_ids in categories.items():
         "name": cat_names.get(cat, cat.title()),
         "sort_order": sort_order,
         "category": "thematic-group",
-        "level": 2,
         "sections": {
             "About": f"Essays in Plutarch's Moralia on the theme of {cat_names.get(cat, cat).lower()}.",
             "Essays": f"{len(cat_ids)} essays"
         },
         "keywords": ["plutarch", "moralia", cat],
-        "composite_of": cat_ids,
+        "parts": cat_ids,
         "relationship_type": "emergence"
     })
     l2_ids.append(l2_id)
@@ -187,13 +186,12 @@ items.append({
     "name": "Plutarch's Moralia: Complete",
     "sort_order": sort_order,
     "category": "meta",
-    "level": 3,
     "sections": {
         "About": "The Moralia (Moral Essays) of Plutarch — a vast collection of essays, dialogues, and reflections on ethics, education, marriage, anger, fortune, and the good life. Written in the 1st-2nd century CE, these essays complement Plutarch's more famous Parallel Lives and reveal a mind concerned with practical wisdom and the cultivation of character.",
         "For Readers": "Each essay stands alone as a meditation on a specific aspect of human life. Start with 'On Contentedness of Mind' for Stoic-influenced serenity, 'On Restraining Anger' for practical psychology, or 'Conjugal Precepts' for ancient wisdom on partnership."
     },
     "keywords": ["plutarch", "moralia", "complete", "ethics", "wisdom"],
-    "composite_of": l2_ids,
+    "parts": l2_ids,
     "relationship_type": "emergence"
 })
 
@@ -220,7 +218,7 @@ grammar = {
     "shelves": ["wisdom"],
     "lineages": ["Linehan", "Gottman", "Johnson"],
     "worldview": "dialectical",
-    "items": items
+    "nodes": items
 }
 
 os.makedirs("grammars/plutarchs-morals", exist_ok=True)
@@ -228,4 +226,4 @@ with open("grammars/plutarchs-morals/grammar.json", "w", encoding="utf-8") as f:
     json.dump(grammar, f, indent=2, ensure_ascii=False)
 
 print(f"Generated {len(items)} items")
-print(f"L1: {sum(1 for i in items if i['level']==1)}, L2: {sum(1 for i in items if i['level']==2)}, L3: {sum(1 for i in items if i['level']==3)}")
+print(f"L1: {sum(1 for i in items if node_depth(i, items)==1)}, L2: {sum(1 for i in items if node_depth(i, items)==2)}, L3: {sum(1 for i in items if node_depth(i, items)==3)}")

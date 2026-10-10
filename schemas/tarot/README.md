@@ -40,11 +40,11 @@ Each card schema should include:
 
 ## Level System for Emergence
 
-Schemas use a level system to organize base items and their emergent combinations:
+Schemas use levels to organize base nodes and their emergent combinations. A level is not stored: it is the depth computed from `parts` (no parts = L1; otherwise 1 + the deepest part):
 
-- **L1 (level: 1)**: Base items (individual cards, songs)
-- **L2 (level: 2)**: Emergent combinations (spreads, albums, card pairings)
-- **L3 (level: 3)**: Meta-categories (deck collections, artists)
+- **L1**: Base items (individual cards, songs)
+- **L2**: Emergent combinations (spreads, albums, card pairings)
+- **L3**: Meta-categories (deck collections, artists)
 
 ### Example: Music/Poetry Deck
 
@@ -52,8 +52,7 @@ Schemas use a level system to organize base items and their emergent combination
 {
   "id": "album-example",
   "name": "Album Name",
-  "level": 2,
-  "composite_of": ["song-01", "song-02", "song-03"],
+  "parts": ["song-01", "song-02", "song-03"],
   "sections": {
     "Summary": "Thematic description of the album...",
     "Themes": "Key themes explored across these songs"
@@ -67,15 +66,14 @@ Schemas use a level system to organize base items and their emergent combination
 {
   "id": "spread-celtic-cross",
   "name": "Celtic Cross",
-  "level": 2,
-  "composite_of": ["position-1", "position-2", "position-3"],
+  "parts": ["position-1", "position-2", "position-3"],
   "sections": {
     "Interpretation": "How to read cards in these positions together..."
   }
 }
 ```
 
-The `composite_of` array references the IDs of items at the level below, creating explicit emergence relationships.
+The `parts` array references the IDs of the nodes it is made of (in order), creating explicit emergence relationships.
 
 ## Contributing
 

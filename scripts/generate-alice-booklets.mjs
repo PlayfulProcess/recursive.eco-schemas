@@ -251,8 +251,8 @@ function splitTextIntoPages(text, targetChars) {
 
 // ── Grammar Processing ───────────────────────────────────────────────
 
-const l1Items = grammar.items.filter(item => item.level === 1);
-const l2Items = grammar.items.filter(item => item.level === 2);
+const l1Items = grammar.nodes.filter((item) => nodeDepth(item, grammar.nodes) === 1);
+const l2Items = grammar.nodes.filter((item) => nodeDepth(item, grammar.nodes) === 2);
 
 const chapterMap = {};
 for (const scene of l1Items) {
@@ -1990,3 +1990,20 @@ if (!USE_REMAP) {
 
 console.log(`\nDone! 12 booklets, ${grandTotalPages} total pages, ${grandTotalIll} illustrations.`);
 console.log(`Mode: ${caseLabel}${USE_REMAP ? ' + REMAP' : ''}. Use --lowercase flag for normal case${USE_REMAP ? '' : ', --remap for custom illustrations'}.`);
+
+// Depth from parts (grammar format v2 stores no level): a node with no parts is 1;
+// otherwise 1 + the deepest part. Cycle-safe. `nodes` is the nodes array or an id -> node Map.
+function nodeDepth(node, nodes, seen = new Set()) {
+  const parts = node && node.parts;
+  if (!parts || !parts.length) return 1;
+  const byId = nodes instanceof Map ? nodes : new Map(nodes.map((n) => [n.id, n]));
+  if (seen.has(node.id)) return 1;
+  seen.add(node.id);
+  let d = 1;
+  for (const id of parts) {
+    const c = byId.get(id);
+    if (c) d = Math.max(d, 1 + nodeDepth(c, byId, seen));
+  }
+  seen.delete(node.id);
+  return d;
+}

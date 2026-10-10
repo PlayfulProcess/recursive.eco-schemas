@@ -412,7 +412,7 @@ ILLUSTRATIONS = {
 
 def apply():
     applied = 0
-    for item in g['items']:
+    for item in g['nodes']:
         iid = item['id']
         if iid in ILLUSTRATIONS:
             illus = ILLUSTRATIONS[iid]
@@ -433,9 +433,9 @@ with open(PATH, 'w', encoding='utf-8') as f:
 # Verify
 with open(PATH, encoding='utf-8') as f:
     check = json.load(f)
-with_illus = [it for it in check['items'] if 'illustrations' in it.get('metadata', {})]
-with_url = [it for it in check['items'] if it.get('image_url')]
+with_illus = [it for it in check['nodes'] if 'illustrations' in it.get('metadata', {})]
+with_url = [it for it in check['nodes'] if it.get('image_url')]
 print(f'Items with illustration metadata: {len(with_illus)}')
 print(f'Items with image_url: {len(with_url)}')
-print(f'Total items: {len(check["items"])}')
+print(f'Total items: {len(check["nodes"])}')
 print(f'File size: {os.path.getsize(PATH):,} bytes')

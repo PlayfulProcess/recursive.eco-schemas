@@ -15,6 +15,7 @@ Structure:
 import json
 import re
 from pathlib import Path
+from grammar_depth import node_depth
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent
@@ -173,7 +174,6 @@ def build_grammar():
             "id": sec['id'],
             "name": sec['name'],
             "sort_order": sort_order,
-            "level": 1,
             "category": "chapter",
             "sections": {
                 "Text": sec['text'],
@@ -196,10 +196,9 @@ def build_grammar():
             "id": theme_id,
             "name": theme["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": theme["sections"],
+            "parts": theme["sections"],
             "sections": {
                 "About": theme["about"],
                 "For Readers": theme["for_readers"],
@@ -216,10 +215,9 @@ def build_grammar():
         "id": "beyond-good-and-evil-complete",
         "name": "Beyond Good and Evil: Prelude to a Philosophy of the Future",
         "sort_order": sort_order,
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": all_theme_ids,
+        "parts": all_theme_ids,
         "sections": {
             "About": "Friedrich Nietzsche's Beyond Good and Evil (Jenseits von Gut und Bose, 1886) is his most systematic attempt to revalue all values. Written in a mixture of sustained argument and brilliant aphorism, it attacks the philosophical tradition (especially Plato and Kant), develops the concepts of will to power and the free spirit, analyzes the psychology of morality and religion, and introduces the master-slave morality distinction that would become one of the most influential ideas in modern thought. The book moves from a critique of philosophy's prejudices through an account of the free spirit's independence, a natural history of morals, and a vision of a new aristocratic order of rank among souls. It is at once a philosophical treatise, a work of literary art, and a provocation designed to disturb every comfortable assumption.",
             "For Readers": "Beyond Good and Evil can be read straight through or browsed — Nietzsche's aphoristic style means every section is relatively self-contained. For the philosophical core, focus on Chapters I, V, and IX. For pleasure and provocation, try Chapter IV (the aphorisms). For cultural commentary, Chapter VIII. The Preface is one of the finest openings in philosophy. Nietzsche writes to be re-read: sentences that seem outrageous on first encounter often reveal unsuspected depths on return. Helen Zimmern's translation, done under Nietzsche's own supervision, remains remarkably vivid.",
@@ -254,16 +252,16 @@ def build_grammar():
         "shelves": ["mirror"],
         "lineages": ["Akomolafe"],
         "worldview": "dialectical",
-        "items": items,
+        "nodes": items,
     }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT_PATH}")
     print(f"  L1: {l1} sections, L2: {l2} themes, L3: {l3} meta")
     print(f"  Total items: {len(items)}")

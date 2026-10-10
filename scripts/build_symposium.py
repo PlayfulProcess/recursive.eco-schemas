@@ -14,6 +14,7 @@ Structure:
 import json
 import re
 from pathlib import Path
+from grammar_depth import node_depth
 
 SEED_PATH = Path(__file__).parent.parent / "seeds" / "symposium-plato.txt"
 OUTPUT_PATH = Path(__file__).parent.parent / "grammars" / "symposium-plato" / "grammar.json"
@@ -113,7 +114,6 @@ def build_grammar():
     add_item({
         "id": "frame-apollodorus",
         "name": "Apollodorus Sets the Scene",
-        "level": 1,
         "category": "frame-narrative",
         "sections": {
             "Passage": ct(t),
@@ -131,7 +131,6 @@ def build_grammar():
     add_item({
         "id": "setting-banquet",
         "name": "The Banquet Begins",
-        "level": 1,
         "category": "frame-narrative",
         "sections": {
             "Passage": ct(t),
@@ -159,7 +158,6 @@ def build_grammar():
     add_item({
         "id": "speech-phaedrus",
         "name": "Speech of Phaedrus: Love as the Eldest God",
-        "level": 1,
         "category": "speeches",
         "sections": {
             "Speech": ct(full_phaedrus),
@@ -178,7 +176,6 @@ def build_grammar():
     add_item({
         "id": "speech-pausanias",
         "name": "Speech of Pausanias: The Two Loves",
-        "level": 1,
         "category": "speeches",
         "sections": {
             "Speech": ct(t),
@@ -197,7 +194,6 @@ def build_grammar():
     add_item({
         "id": "interlude-hiccough",
         "name": "Aristophanes' Hiccough",
-        "level": 1,
         "category": "interludes",
         "sections": {
             "Passage": ct(t),
@@ -215,7 +211,6 @@ def build_grammar():
     add_item({
         "id": "speech-eryximachus",
         "name": "Speech of Eryximachus: Love as Cosmic Harmony",
-        "level": 1,
         "category": "speeches",
         "sections": {
             "Speech": ct(t),
@@ -234,7 +229,6 @@ def build_grammar():
     add_item({
         "id": "speech-aristophanes",
         "name": "Speech of Aristophanes: The Origin of Love",
-        "level": 1,
         "category": "speeches",
         "sections": {
             "Speech": ct(t),
@@ -254,7 +248,6 @@ def build_grammar():
         add_item({
             "id": "interlude-pre-agathon",
             "name": "Before Agathon Speaks",
-            "level": 1,
             "category": "interludes",
             "sections": {
                 "Passage": ct(t),
@@ -272,7 +265,6 @@ def build_grammar():
     add_item({
         "id": "speech-agathon",
         "name": "Speech of Agathon: Love as the Fairest God",
-        "level": 1,
         "category": "speeches",
         "sections": {
             "Speech": ct(t),
@@ -291,7 +283,6 @@ def build_grammar():
     add_item({
         "id": "speech-socrates-questioning",
         "name": "Socrates Questions Agathon",
-        "level": 1,
         "category": "speeches",
         "sections": {
             "Passage": ct(t),
@@ -311,7 +302,6 @@ def build_grammar():
     add_item({
         "id": "speech-diotima-nature",
         "name": "Diotima's Teaching: Love as Daimon",
-        "level": 1,
         "category": "speeches",
         "sections": {
             "Speech": ct(t),
@@ -334,7 +324,6 @@ def build_grammar():
     add_item({
         "id": "speech-diotima-immortality",
         "name": "Diotima's Teaching: Love and Immortality",
-        "level": 1,
         "category": "speeches",
         "sections": {
             "Speech": ct(t),
@@ -357,7 +346,6 @@ def build_grammar():
     add_item({
         "id": "speech-diotima-ladder",
         "name": "Diotima's Teaching: The Ladder of Beauty",
-        "level": 1,
         "category": "speeches",
         "sections": {
             "Speech": ct(t),
@@ -376,7 +364,6 @@ def build_grammar():
     add_item({
         "id": "speech-socrates-conclusion",
         "name": "Socrates' Conclusion: Honour Love",
-        "level": 1,
         "category": "speeches",
         "sections": {
             "Passage": ct(t),
@@ -394,7 +381,6 @@ def build_grammar():
     add_item({
         "id": "arrival-alcibiades",
         "name": "The Arrival of Alcibiades",
-        "level": 1,
         "category": "alcibiades",
         "sections": {
             "Passage": ct(t),
@@ -412,7 +398,6 @@ def build_grammar():
     add_item({
         "id": "speech-alcibiades-silenus",
         "name": "Alcibiades' Praise: Socrates as Silenus and Marsyas",
-        "level": 1,
         "category": "alcibiades",
         "sections": {
             "Speech": ct(t),
@@ -431,7 +416,6 @@ def build_grammar():
     add_item({
         "id": "speech-alcibiades-personal",
         "name": "Alcibiades' Praise: The Attempted Seduction",
-        "level": 1,
         "category": "alcibiades",
         "sections": {
             "Speech": ct(t),
@@ -450,7 +434,6 @@ def build_grammar():
     add_item({
         "id": "speech-alcibiades-military",
         "name": "Alcibiades' Praise: Socrates in Battle",
-        "level": 1,
         "category": "alcibiades",
         "sections": {
             "Speech": ct(t),
@@ -469,7 +452,6 @@ def build_grammar():
     add_item({
         "id": "closing-scene",
         "name": "The Night Ends: Comedy and Tragedy Are One",
-        "level": 1,
         "category": "frame-narrative",
         "sections": {
             "Passage": ct(t),
@@ -489,9 +471,8 @@ def build_grammar():
     add_item({
         "id": "speaker-phaedrus",
         "name": "Phaedrus on Love",
-        "level": 2,
         "category": "by-speaker",
-        "composite_of": ["speech-phaedrus"],
+        "parts": ["speech-phaedrus"],
         "relationship_type": "emergence",
         "sections": {
             "About": "Phaedrus, who initiated the idea of speeches in praise of Love, offers the first and most mythological speech. He sees Love as the eldest god and the source of courage and honour. His approach is ethical and traditional, drawing on Homer and Hesiod.",
@@ -504,9 +485,8 @@ def build_grammar():
     add_item({
         "id": "speaker-pausanias",
         "name": "Pausanias on Love",
-        "level": 2,
         "category": "by-speaker",
-        "composite_of": ["speech-pausanias"],
+        "parts": ["speech-pausanias"],
         "relationship_type": "emergence",
         "sections": {
             "About": "Pausanias introduces the crucial distinction between Heavenly and Common love. His speech is more analytical than Phaedrus', separating noble love (of the mind and character) from base love (of the body). He is the political speaker, concerned with social customs and laws.",
@@ -519,9 +499,8 @@ def build_grammar():
     add_item({
         "id": "speaker-eryximachus",
         "name": "Eryximachus on Love",
-        "level": 2,
         "category": "by-speaker",
-        "composite_of": ["interlude-hiccough", "speech-eryximachus"],
+        "parts": ["interlude-hiccough", "speech-eryximachus"],
         "relationship_type": "emergence",
         "sections": {
             "About": "Eryximachus the physician extends love beyond the human into a cosmic principle. Influenced by Heraclitus, he sees love as the harmony of opposites that governs medicine, music, astronomy, and all the arts. His speech is the most 'scientific' -- the physician's attempt to find love in nature itself.",
@@ -534,9 +513,8 @@ def build_grammar():
     add_item({
         "id": "speaker-aristophanes",
         "name": "Aristophanes on Love",
-        "level": 2,
         "category": "by-speaker",
-        "composite_of": ["interlude-hiccough", "speech-aristophanes"],
+        "parts": ["interlude-hiccough", "speech-aristophanes"],
         "relationship_type": "emergence",
         "sections": {
             "About": "The comic playwright delivers the most famous speech: the myth of the split humans. Originally whole and powerful, humans were cleaved in two by Zeus. Love is the longing to restore our original wholeness. Comic in form, deeply serious in substance -- Aristophanes touches the universal experience of incompleteness and the desire for reunion.",
@@ -552,9 +530,8 @@ def build_grammar():
     add_item({
         "id": "speaker-agathon",
         "name": "Agathon on Love",
-        "level": 2,
         "category": "by-speaker",
-        "composite_of": agathon_refs,
+        "parts": agathon_refs,
         "relationship_type": "emergence",
         "sections": {
             "About": "The tragic poet and host delivers a virtuoso poetic performance. Agathon's Love is young, beautiful, and the source of all the virtues. His speech is deliberate rhetoric -- beautiful but, as Socrates will show, not quite true. Yet Agathon contributes the key insight that Love must be distinguished from Love's works.",
@@ -567,9 +544,8 @@ def build_grammar():
     add_item({
         "id": "speaker-socrates",
         "name": "Socrates and Diotima on Love",
-        "level": 2,
         "category": "by-speaker",
-        "composite_of": [
+        "parts": [
             "speech-socrates-questioning",
             "speech-diotima-nature",
             "speech-diotima-immortality",
@@ -588,9 +564,8 @@ def build_grammar():
     add_item({
         "id": "speaker-alcibiades",
         "name": "Alcibiades on Socrates",
-        "level": 2,
         "category": "by-speaker",
-        "composite_of": [
+        "parts": [
             "arrival-alcibiades",
             "speech-alcibiades-silenus",
             "speech-alcibiades-personal",
@@ -612,9 +587,8 @@ def build_grammar():
     add_item({
         "id": "theme-nature-of-love",
         "name": "What Is Love?",
-        "level": 2,
         "category": "by-theme",
-        "composite_of": [
+        "parts": [
             "speech-phaedrus", "speech-pausanias", "speech-eryximachus",
             "speech-aristophanes", "speech-agathon", "speech-socrates-questioning",
             "speech-diotima-nature"
@@ -631,9 +605,8 @@ def build_grammar():
     add_item({
         "id": "theme-love-and-beauty",
         "name": "Love and Beauty",
-        "level": 2,
         "category": "by-theme",
-        "composite_of": [
+        "parts": [
             "speech-agathon", "speech-socrates-questioning", "speech-diotima-ladder"
         ],
         "relationship_type": "emergence",
@@ -648,9 +621,8 @@ def build_grammar():
     add_item({
         "id": "theme-love-and-mortality",
         "name": "Love and Immortality",
-        "level": 2,
         "category": "by-theme",
-        "composite_of": [
+        "parts": [
             "speech-phaedrus", "speech-aristophanes", "speech-diotima-immortality"
         ],
         "relationship_type": "emergence",
@@ -665,9 +637,8 @@ def build_grammar():
     add_item({
         "id": "theme-portrait-of-socrates",
         "name": "The Portrait of Socrates",
-        "level": 2,
         "category": "by-theme",
-        "composite_of": [
+        "parts": [
             "setting-banquet", "speech-socrates-questioning",
             "speech-alcibiades-silenus", "speech-alcibiades-personal",
             "speech-alcibiades-military", "closing-scene"
@@ -688,9 +659,8 @@ def build_grammar():
     add_item({
         "id": "meta-speeches",
         "name": "The Seven Speeches on Love",
-        "level": 3,
         "category": "meta",
-        "composite_of": [
+        "parts": [
             "speaker-phaedrus", "speaker-pausanias", "speaker-eryximachus",
             "speaker-aristophanes", "speaker-agathon", "speaker-socrates",
             "speaker-alcibiades"
@@ -707,9 +677,8 @@ def build_grammar():
     add_item({
         "id": "meta-themes",
         "name": "Great Themes of the Symposium",
-        "level": 3,
         "category": "meta",
-        "composite_of": [
+        "parts": [
             "theme-nature-of-love", "theme-love-and-beauty",
             "theme-love-and-mortality", "theme-portrait-of-socrates"
         ],
@@ -730,9 +699,8 @@ def build_grammar():
     add_item({
         "id": "meta-dramatic-structure",
         "name": "The Dramatic Structure",
-        "level": 3,
         "category": "meta",
-        "composite_of": pre_agathon_refs,
+        "parts": pre_agathon_refs,
         "relationship_type": "emergence",
         "sections": {
             "About": "The Symposium is not just philosophy but supreme dramatic art. The frame narrative (Apollodorus retelling a story from Aristodemus) creates deliberate distance. The setting at a victory banquet grounds the philosophy in life. Comic interludes punctuate the serious speeches. The closing -- Socrates arguing that comedy and tragedy are one, while the poets fall asleep -- is one of the most extraordinary endings in literature.",
@@ -786,7 +754,7 @@ def build_grammar():
         "shelves": ["wisdom"],
         "lineages": ["Shrei", "Andreotti"],
         "worldview": "dialectical",
-        "items": items
+        "nodes": items
     }
 
     return grammar
@@ -800,15 +768,15 @@ def main():
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in grammar["items"] if i["level"] == 1)
-    l2 = sum(1 for i in grammar["items"] if i["level"] == 2)
-    l3 = sum(1 for i in grammar["items"] if i["level"] == 3)
+    l1 = sum(1 for i in grammar["nodes"] if node_depth(i, grammar["nodes"]) == 1)
+    l2 = sum(1 for i in grammar["nodes"] if node_depth(i, grammar["nodes"]) == 2)
+    l3 = sum(1 for i in grammar["nodes"] if node_depth(i, grammar["nodes"]) == 3)
     print(f"Written to {OUTPUT_PATH}")
-    print(f"Total items: {len(grammar['items'])} (L1: {l1}, L2: {l2}, L3: {l3})")
+    print(f"Total items: {len(grammar['nodes'])} (L1: {l1}, L2: {l2}, L3: {l3})")
 
     # Check for empty content
     warnings = 0
-    for item in grammar["items"]:
+    for item in grammar["nodes"]:
         for section_name, section_text in item.get("sections", {}).items():
             if section_name in ("Speech", "Passage") and len(section_text.strip()) < 50:
                 print(f"  WARNING: {item['id']} has short {section_name} ({len(section_text.strip())} chars)")

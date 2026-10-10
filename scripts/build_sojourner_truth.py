@@ -12,6 +12,7 @@ Structure:
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SEED = os.path.join(SCRIPT_DIR, "..", "seeds", "sojourner-truth.txt")
@@ -291,7 +292,6 @@ def build_grammar():
         item = {
             "id": item_id,
             "name": ch["display_name"],
-            "level": 1,
             "category": category,
             "sort_order": sort_order,
             "sections": {
@@ -318,7 +318,6 @@ def build_grammar():
         item = {
             "id": tg["id"],
             "name": tg["name"],
-            "level": 2,
             "category": "thematic-group",
             "sort_order": sort_order,
             "sections": {
@@ -326,7 +325,7 @@ def build_grammar():
                 "For Readers": tg["for_readers"],
             },
             "keywords": tg["keywords"],
-            "composite_of": composite_ids,
+            "parts": composite_ids,
             "relationship_type": "emergence",
             "metadata": {},
         }
@@ -338,7 +337,6 @@ def build_grammar():
     items.append({
         "id": "meta-isabella-to-sojourner-truth",
         "name": "The Journey from Isabella to Sojourner Truth",
-        "level": 3,
         "category": "meta-category",
         "sort_order": sort_order,
         "sections": {
@@ -346,7 +344,7 @@ def build_grammar():
             "For Readers": "Read this narrative as the story of a woman who literally renamed herself Truth. The arc moves from powerlessness to prophecy, from being owned to owning her own voice. Each thematic grouping represents a stage in this transformation: the wound of childhood slavery, the grief of losing family, the endurance of daily suffering, the courage of escape and legal action, the fire of spiritual awakening, the hard lessons of false religion, and finally the emergence of one of America's most powerful moral voices. Sojourner Truth's story is not just historical testimony — it is a living grammar of liberation.",
         },
         "keywords": ["autobiography", "liberation", "transformation", "prophecy", "resilience"],
-        "composite_of": thematic_l2_ids,
+        "parts": thematic_l2_ids,
         "relationship_type": "emergence",
         "metadata": {},
     })
@@ -417,7 +415,7 @@ def build_grammar():
             "Andreotti"
         ],
         "worldview": "prophetic",
-        "items": items,
+        "nodes": items,
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -425,9 +423,9 @@ def build_grammar():
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
     # Print summary
-    l1_count = sum(1 for item in items if item["level"] == 1)
-    l2_count = sum(1 for item in items if item["level"] == 2)
-    l3_count = sum(1 for item in items if item["level"] == 3)
+    l1_count = sum(1 for item in items if node_depth(item, items) == 1)
+    l2_count = sum(1 for item in items if node_depth(item, items) == 2)
+    l3_count = sum(1 for item in items if node_depth(item, items) == 3)
     print(f"Generated {len(items)} items: {l1_count} L1 + {l2_count} L2 + {l3_count} L3")
     print(f"Output: {OUTPUT}")
 

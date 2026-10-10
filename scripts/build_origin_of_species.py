@@ -15,6 +15,7 @@ import json
 import re
 import os
 from pathlib import Path
+from grammar_depth import node_depth
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent
@@ -287,7 +288,6 @@ def build_grammar():
             "id": chapter_id,
             "name": chapter_name,
             "sort_order": sort_order,
-            "level": 1,
             "category": "chapter",
             "sections": {
                 "Text": ch['text'],
@@ -310,10 +310,9 @@ def build_grammar():
             "id": theme_id,
             "name": theme["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": theme["chapters"],
+            "parts": theme["chapters"],
             "sections": {
                 "About": theme["about"],
                 "For Readers": theme["for_readers"],
@@ -330,10 +329,9 @@ def build_grammar():
         "id": "frame-introduction-conclusion",
         "name": "The Frame: Introduction and Conclusion",
         "sort_order": sort_order,
-        "level": 2,
         "category": "structure",
         "relationship_type": "emergence",
-        "composite_of": ["introduction", "recapitulation-and-conclusion"],
+        "parts": ["introduction", "recapitulation-and-conclusion"],
         "sections": {
             "About": "Darwin's opening and closing frame the entire argument. The Introduction modestly states the plan and the problem. The Recapitulation and Conclusion restates the argument with the confidence of having made the case, ending with one of the most famous passages in scientific writing: 'There is grandeur in this view of life, with its several powers, having been originally breathed into a few forms or into one; and that, whilst this planet has gone cycling on according to the fixed law of gravity, from so simple a beginning endless forms most beautiful and most wonderful have been, and are being, evolved.'",
             "For Readers": "Read the Introduction first and last. On first reading, it sets the stage. After you have read the full argument, return to it and see how Darwin carefully prepared the ground. The Conclusion is the emotional climax — read it slowly.",
@@ -348,10 +346,9 @@ def build_grammar():
         "id": "origin-of-species-complete",
         "name": "On the Origin of Species",
         "sort_order": sort_order,
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": all_theme_ids + ["frame-introduction-conclusion"],
+        "parts": all_theme_ids + ["frame-introduction-conclusion"],
         "sections": {
             "About": "Charles Darwin's On the Origin of Species (1859) is arguably the most important scientific book ever written. In a single volume, Darwin presented the theory of evolution by natural selection — the idea that species are not immutable creations but the products of variation, inheritance, competition, and differential survival over vast stretches of time. The book's power lies not in a single flash of insight but in the patient accumulation of evidence from domestication, biogeography, paleontology, embryology, and comparative anatomy. Darwin knew his argument would be controversial, so he built it like a legal case: premise, evidence, objections confronted, alternative explanations ruled out, convergent proof. The result changed biology, philosophy, and humanity's understanding of its own place in nature.",
             "For Readers": "The Origin rewards careful sequential reading — Darwin designed it as a cumulative argument. But you can also approach it thematically: variation and selection for the mechanism, difficulties and objections for Darwin's intellectual honesty, geology for deep time, geography and classification for convergent evidence. The prose is Victorian but remarkably clear. Darwin writes as a naturalist who has spent decades observing, and his examples (pigeons, barnacles, bees, Galapagos finches) make abstract ideas vivid.",
@@ -381,16 +378,16 @@ def build_grammar():
         "shelves": ["earth"],
         "lineages": ["Akomolafe"],
         "worldview": "naturalist",
-        "items": items,
+        "nodes": items,
     }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT_PATH}")
     print(f"  L1: {l1} chapters, L2: {l2} themes, L3: {l3} meta")
     print(f"  Total items: {len(items)}")

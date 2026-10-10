@@ -11,6 +11,7 @@ Structure:
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SEED = os.path.join(SCRIPT_DIR, "..", "seeds", "tao-te-ching.txt")
@@ -208,7 +209,6 @@ def build_grammar(chapters):
         items.append({
             "id": f"ch-{ch['number']:02d}",
             "name": f"Chapter {ch['number']}: {first_line}",
-            "level": 1,
             "category": "verse",
             "sort_order": sort_order,
             "sections": {
@@ -229,10 +229,9 @@ def build_grammar(chapters):
         items.append({
             "id": theme["id"],
             "name": theme["name"],
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": composite,
+            "parts": composite,
             "sort_order": sort_order,
             "sections": {
                 "About": theme["about"],
@@ -253,10 +252,9 @@ def build_grammar(chapters):
     items.append({
         "id": "part-1-tao",
         "name": "Part 1: Tao (The Way)",
-        "level": 2,
         "category": "part",
         "relationship_type": "emergence",
-        "composite_of": part1_ids,
+        "parts": part1_ids,
         "sort_order": sort_order,
         "sections": {
             "About": "The first 37 chapters focus on the Tao itself — its nature, its namelessness, its relationship to the ten thousand things. This is the metaphysical foundation: what is the source of reality, and how does it move?",
@@ -269,10 +267,9 @@ def build_grammar(chapters):
     items.append({
         "id": "part-2-te",
         "name": "Part 2: Te (Virtue / Power)",
-        "level": 2,
         "category": "part",
         "relationship_type": "emergence",
-        "composite_of": part2_ids,
+        "parts": part2_ids,
         "sort_order": sort_order,
         "sections": {
             "About": "The final 44 chapters shift from metaphysics to application — how the sage lives, governs, and embodies the Tao. Te is often translated as 'virtue' or 'power,' but it means something closer to 'the Tao expressed through a person.' This is praxis.",
@@ -286,10 +283,9 @@ def build_grammar(chapters):
     items.append({
         "id": "meta-tao-and-te",
         "name": "The Tao and Its Virtue: Source and Expression",
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": ["part-1-tao", "part-2-te"],
+        "parts": ["part-1-tao", "part-2-te"],
         "sort_order": sort_order,
         "sections": {
             "About": "The Tao Te Ching is structured as two books: Tao (the nameless source) and Te (its expression through virtue). This mirrors the fundamental movement of reality itself — from the formless to the formed, from silence to speech, from the one to the ten thousand things. The text is a single breath: inhale (Tao) and exhale (Te).",
@@ -302,10 +298,9 @@ def build_grammar(chapters):
     items.append({
         "id": "meta-themes",
         "name": "Eight Streams: Thematic Currents in the Tao Te Ching",
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": [t["id"] for t in THEMES],
+        "parts": [t["id"] for t in THEMES],
         "sort_order": sort_order,
         "sections": {
             "About": "Eight thematic currents flow through the Tao Te Ching, overlapping and interweaving like streams in a river delta. A single chapter may belong to several currents simultaneously — Chapter 2 is about wu wei AND paradox AND opposition. This multiplicity is not a flaw in the classification but a feature of the text: the Tao does not divide neatly. These groupings are entry points, not enclosures.",
@@ -351,16 +346,16 @@ def main():
         "shelves": ["wisdom"],
         "lineages": ["Linehan", "Akomolafe", "Shrei"],
         "worldview": "non-dual",
-        "items": items,
+        "nodes": items,
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"Grammar written to {OUTPUT}")
     print(f"  L1: {l1} chapters, L2: {l2} emergent groups, L3: {l3} meta-categories")
     print(f"  Total items: {len(items)}")

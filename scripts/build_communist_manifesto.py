@@ -13,6 +13,7 @@ Structure:
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SEED = os.path.join(SCRIPT_DIR, "..", "seeds", "communist-manifesto.txt")
@@ -278,7 +279,6 @@ def build_grammar():
                 "name": name,
                 "sort_order": sort_order,
                 "category": slug,
-                "level": 1,
                 "sections": {
                     "Passage": para
                 },
@@ -372,7 +372,6 @@ def build_grammar():
             "name": title,
             "sort_order": sort_order,
             "category": "chapters",
-            "level": 2,
             "sections": {
                 "About": chapter_about[slug],
                 "How to Read": "Each paragraph is a self-contained argument or rhetorical move. Read them in sequence to follow the dialectical logic, or browse individually to find the famous passages."
@@ -381,7 +380,7 @@ def build_grammar():
             "metadata": {
                 "relationship_type": "emergence"
             },
-            "composite_of": chapter_paragraph_ids[slug]
+            "parts": chapter_paragraph_ids[slug]
         }
         items.append(item)
         sort_order += 1
@@ -409,7 +408,6 @@ def build_grammar():
                 "name": info['name'],
                 "sort_order": sort_order,
                 "category": "chapter-3-subsections",
-                "level": 2,
                 "sections": {
                     "About": info['about']
                 },
@@ -417,7 +415,7 @@ def build_grammar():
                 "metadata": {
                     "relationship_type": "emergence"
                 },
-                "composite_of": ch3_subsection_ids[sub_key]
+                "parts": ch3_subsection_ids[sub_key]
             }
             items.append(item)
             sort_order += 1
@@ -453,7 +451,6 @@ def build_grammar():
                 "name": info['name'],
                 "sort_order": sort_order,
                 "category": "themes",
-                "level": 2,
                 "sections": {
                     "About": info['about'],
                     "How to Read": info['how_to_read']
@@ -462,7 +459,7 @@ def build_grammar():
                 "metadata": {
                     "relationship_type": "emergence"
                 },
-                "composite_of": thematic_ids[theme_key]
+                "parts": thematic_ids[theme_key]
             }
             items.append(item)
             sort_order += 1
@@ -477,7 +474,6 @@ def build_grammar():
         "name": "The Communist Manifesto",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "sections": {
             "About": "The Communist Manifesto (1848) by Karl Marx and Friedrich Engels is arguably the most influential political pamphlet ever written. In roughly 12,000 words, it lays out a theory of history as class struggle, a devastating analysis of capitalism's revolutionary dynamism, a program for communist revolution, and a polemic against rival socialisms. Its influence on the 20th century — for both liberation and oppression — is incalculable.",
             "Why It's on the 'Contested' Shelf": "This text is placed on the 'contested' shelf because intellectual honesty demands it. The Manifesto contains brilliant insights about capitalism's dynamics that remain relevant today — globalization, creative destruction, the commodification of everything. It also provided the theoretical framework for regimes that killed tens of millions. Both truths coexist. Reading it critically, with full awareness of its legacy, is more valuable than either uncritical embrace or reflexive dismissal.",
@@ -487,7 +483,7 @@ def build_grammar():
         "metadata": {
             "relationship_type": "emergence"
         },
-        "composite_of": all_l2_ids
+        "parts": all_l2_ids
     }
     items.append(l3_item)
 
@@ -510,7 +506,7 @@ def build_grammar():
         "shelves": ["contested"],
         "lineages": ["Kelty", "Andreotti"],
         "worldview": "dialectical",
-        "items": items
+        "nodes": items
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -518,9 +514,9 @@ def build_grammar():
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
     # Print summary
-    l1_items = [i for i in items if i['level'] == 1]
-    l2_items = [i for i in items if i['level'] == 2]
-    l3_items = [i for i in items if i['level'] == 3]
+    l1_items = [i for i in items if node_depth(i, items) == 1]
+    l2_items = [i for i in items if node_depth(i, items) == 2]
+    l3_items = [i for i in items if node_depth(i, items) == 3]
 
     print(f"Total items: {len(items)}")
     print(f"  L1 paragraphs: {len(l1_items)}")

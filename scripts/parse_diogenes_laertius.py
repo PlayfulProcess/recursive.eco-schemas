@@ -4,6 +4,7 @@ Parse Diogenes Laertius - Lives and Opinions of Eminent Philosophers.
 Gutenberg #57342 (C.D. Yonge translation, 1915).
 """
 import json, re, os
+from grammar_depth import node_depth
 
 with open("seeds/diogenes-laertius.txt", encoding="utf-8") as f:
     text = f.read()
@@ -96,7 +97,6 @@ if intro_line is not None:
         "name": "Introduction: The Origins of Philosophy",
         "sort_order": sort_order,
         "category": "introduction",
-        "level": 1,
         "sections": {
             "Text": truncate(intro_text),
             "Themes": "The origins of philosophy among Greeks and barbarians. The division into Ionian and Italian schools. The meaning of 'philosopher' and 'sophist'. The succession of philosophical schools."
@@ -168,7 +168,6 @@ for idx, (line_num, name) in enumerate(life_sections):
         "name": display_name,
         "sort_order": sort_order,
         "category": f"book-{book.lower()}",
-        "level": 1,
         "sections": {
             "Life": truncate(philosopher_text),
             "School": f"Book {book}: {book_name}"
@@ -211,7 +210,7 @@ for i, item in enumerate(items):
 # L2 items - one per Book
 l1_ids_by_book = {}
 for item in items:
-    if item["level"] == 1 and "metadata" in item and "book" in item["metadata"]:
+    if node_depth(item, items) == 1 and "metadata" in item and "book" in item["metadata"]:
         book = item["metadata"]["book"]
         if book not in l1_ids_by_book:
             l1_ids_by_book[book] = []
@@ -232,13 +231,12 @@ for book_num in ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"]:
         "name": f"Book {book_num}: {bname}",
         "sort_order": sort_order,
         "category": "book",
-        "level": 2,
         "sections": {
             "About": f"Book {book_num} of Diogenes Laertius covers {bdesc}.",
             "Philosophers": ", ".join(l1_ids_by_book[book_num])
         },
         "keywords": ["book", bname.lower().replace(" ", "-")],
-        "composite_of": l1_ids_by_book[book_num],
+        "parts": l1_ids_by_book[book_num],
         "relationship_type": "emergence"
     })
     book_l2_ids.append(l2_id)
@@ -250,13 +248,12 @@ items.append({
     "name": "Lives and Opinions of Eminent Philosophers: Complete",
     "sort_order": sort_order,
     "category": "meta",
-    "level": 3,
     "sections": {
         "About": "The complete work of Diogenes Laertius, covering the lives, doctrines, and sayings of ancient Greek philosophers across ten books. From the Seven Sages through the Stoics, Epicureans, and Skeptics, this is our primary source for many ancient philosophers whose original works are lost.",
         "Structure": "Book I: The Seven Sages. Book II: The Ionian School & Socrates. Book III: Plato. Book IV: The Academy. Book V: The Peripatetics. Book VI: The Cynics. Book VII: The Stoics. Book VIII: The Pythagoreans. Book IX: The Pre-Socratics & Skeptics. Book X: Epicurus."
     },
     "keywords": ["philosophy", "biography", "ancient-greece", "complete"],
-    "composite_of": book_l2_ids,
+    "parts": book_l2_ids,
     "relationship_type": "emergence"
 })
 
@@ -290,7 +287,7 @@ grammar = {
     "shelves": ["wisdom"],
     "lineages": ["Linehan", "Andreotti"],
     "worldview": "dialectical",
-    "items": items
+    "nodes": items
 }
 
 os.makedirs("grammars/diogenes-laertius", exist_ok=True)
@@ -298,6 +295,6 @@ with open("grammars/diogenes-laertius/grammar.json", "w", encoding="utf-8") as f
     json.dump(grammar, f, indent=2, ensure_ascii=False)
 
 print(f"Generated {len(items)} items")
-print(f"L1: {sum(1 for i in items if i['level']==1)}")
-print(f"L2: {sum(1 for i in items if i['level']==2)}")
-print(f"L3: {sum(1 for i in items if i['level']==3)}")
+print(f"L1: {sum(1 for i in items if node_depth(i, items)==1)}")
+print(f"L2: {sum(1 for i in items if node_depth(i, items)==2)}")
+print(f"L3: {sum(1 for i in items if node_depth(i, items)==3)}")

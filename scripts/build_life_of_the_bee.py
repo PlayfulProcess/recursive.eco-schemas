@@ -23,6 +23,7 @@ import json
 import re
 import sys
 from pathlib import Path
+from grammar_depth import node_depth
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent
@@ -235,7 +236,6 @@ def build_grammar():
             "id": chapter_id,
             "name": chapter_name,
             "sort_order": sort_order,
-            "level": 1,
             "category": "chapter",
             "sections": {
                 "Text": ch['text'],
@@ -254,17 +254,16 @@ def build_grammar():
         sort_order += 1
         theme_id = theme["id"]
         all_theme_ids.append(theme_id)
-        # Only include composite_of references that exist
+        # Only include parts references that exist
         valid_refs = [c for c in theme["chapters"] if c in existing_ids]
 
         items.append({
             "id": theme_id,
             "name": theme["name"],
             "sort_order": sort_order,
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": valid_refs,
+            "parts": valid_refs,
             "sections": {
                 "About": theme["about"],
                 "For Readers": theme["for_readers"],
@@ -281,10 +280,9 @@ def build_grammar():
         "id": "life-of-the-bee-complete",
         "name": "The Life of the Bee",
         "sort_order": sort_order,
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": all_theme_ids,
+        "parts": all_theme_ids,
         "sections": {
             "About": "Maurice Maeterlinck's The Life of the Bee (1901) is a philosophical meditation on the honeybee colony — one of the most extraordinary works of nature writing ever produced. Part natural history, part philosophy, part prose-poem, Maeterlinck describes the architecture of the comb, the drama of the swarm, the deadly succession of queens, the ecstatic nuptial flight, and the autumn massacre of the drones. Throughout, he asks what the 'spirit of the hive' — the mysterious intelligence that governs the colony — can teach us about consciousness, cooperation, sacrifice, and the meaning of life. Translated by Alfred Sutro, the book won Maeterlinck the Nobel Prize in Literature (1911).",
             "For Readers": "Read this book slowly. Maeterlinck writes in long, meditative paragraphs that reward attention. The narrative arc follows the lifecycle of the hive through a single season: from the threshold observation through the swarm, the building of a new city, the daily life of workers, the rearing of queens, the mating flight, and the final expulsion of the drones. Each chapter deepens the philosophical questions. The writing is luminous and strange — a Belgian symbolist poet looking into a beehive and finding the universe.",
@@ -319,16 +317,16 @@ def build_grammar():
         "shelves": ["earth"],
         "lineages": ["Kelty"],
         "worldview": "naturalist",
-        "items": items,
+        "nodes": items,
     }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT_PATH}")
     print(f"  L1: {l1} chapters, L2: {l2} themes, L3: {l3} meta")
     print(f"  Total items: {len(items)}")

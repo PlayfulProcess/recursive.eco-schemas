@@ -15,6 +15,7 @@ Friendship, Prudence, Heroism, The Over-Soul, Circles, Intellect, Art.
 import json
 import re
 import os
+from grammar_depth import node_depth
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SEED = os.path.join(SCRIPT_DIR, "..", "seeds", "essays-emerson.txt")
@@ -398,7 +399,6 @@ def build_grammar(essays_data):
             items.append({
                 "id": para_id,
                 "name": name,
-                "level": 1,
                 "category": essay["slug"],
                 "sort_order": sort_order,
                 "sections": {
@@ -421,10 +421,9 @@ def build_grammar(essays_data):
         items.append({
             "id": f"essay-{essay['slug']}",
             "name": essay["title"],
-            "level": 2,
             "category": "essay",
             "relationship_type": "emergence",
-            "composite_of": ids,
+            "parts": ids,
             "sort_order": sort_order,
             "sections": {
                 "About": about_data.get("about", f"Essay: {essay['title']}"),
@@ -437,7 +436,7 @@ def build_grammar(essays_data):
         })
 
     # L2: Thematic groups
-    all_l1 = [item for item in items if item["level"] == 1]
+    all_l1 = [item for item in items if node_depth(item, items) == 1]
 
     def find_paragraphs_matching(patterns):
         matched = []
@@ -457,10 +456,9 @@ def build_grammar(essays_data):
         items.append({
             "id": theme["id"],
             "name": theme["name"],
-            "level": 2,
             "category": "theme",
             "relationship_type": "emergence",
-            "composite_of": composite,
+            "parts": composite,
             "sort_order": sort_order,
             "sections": {
                 "About": theme["about"],
@@ -474,14 +472,13 @@ def build_grammar(essays_data):
 
     # L3: Meta
     sort_order += 1
-    all_l2_ids = [item["id"] for item in items if item["level"] == 2]
+    all_l2_ids = [item["id"] for item in items if node_depth(item, items) == 2]
     items.append({
         "id": "meta-essays-emerson",
         "name": "Essays: First Series",
-        "level": 3,
         "category": "meta",
         "relationship_type": "emergence",
-        "composite_of": all_l2_ids,
+        "parts": all_l2_ids,
         "sort_order": sort_order,
         "sections": {
             "About": "Ralph Waldo Emerson's Essays: First Series (1841) is the founding document of American Transcendentalism and one of the most influential works of philosophy in the English language. Across twelve essays -- from the famous Self-Reliance to the mystical Over-Soul to the restless Circles -- Emerson develops his vision of the individual soul as a direct channel to the universal mind. His message is at once simple and radical: trust yourself, for what is true for you is true for all. No institution, no tradition, no authority is higher than the individual's own deepest intuition. The essays move between practical counsel (Prudence), moral philosophy (Compensation, Heroism), metaphysics (The Over-Soul, Circles), and aesthetics (Art), united by Emerson's conviction that the universe is fundamentally spiritual, fundamentally just, and fundamentally knowable through the individual soul.",
@@ -536,16 +533,16 @@ def main():
         "shelves": ["mirror"],
         "lineages": ["Linehan"],
         "worldview": "non-dual",
-        "items": items,
+        "nodes": items,
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT}")
     print(f"  L1: {l1} paragraphs, L2: {l2} groups, L3: {l3} meta")
     print(f"  Total items: {len(items)}")
@@ -553,20 +550,20 @@ def main():
     all_ids = {item["id"] for item in items}
     errors = 0
     for item in items:
-        if "composite_of" in item:
-            for ref in item["composite_of"]:
+        if "parts" in item:
+            for ref in item["parts"]:
                 if ref not in all_ids:
                     print(f"  ERROR: {item['id']} references non-existent {ref}")
                     errors += 1
     if errors == 0:
-        print("  All composite_of references valid.")
+        print("  All parts references valid.")
     else:
         print(f"  {errors} reference errors found!")
 
     print("\nThematic group sizes:")
     for item in items:
-        if item["level"] == 2 and item["category"] == "theme":
-            print(f"  {item['name']}: {len(item['composite_of'])} passages")
+        if node_depth(item, items) == 2 and item["category"] == "theme":
+            print(f"  {item['name']}: {len(item['parts'])} passages")
 
 
 if __name__ == "__main__":

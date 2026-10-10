@@ -6,13 +6,14 @@ Source: Project Gutenberg eBook #500, translated by Carol Della Chiesa.
 Structure: 36 chapters
 Levels:
   L1: Individual chapters
-  L2: Story arcs + thematic groups (with composite_of referencing L1)
+  L2: Story arcs + thematic groups (with parts referencing L1)
   L3: Meta-categories
 """
 
 import json
 import re
 from pathlib import Path
+from grammar_depth import node_depth
 
 SEED_FILE = Path(__file__).parent.parent / "seeds" / "adventures-of-pinocchio.txt"
 OUTPUT_DIR = Path(__file__).parent.parent / "grammars" / "adventures-of-pinocchio"
@@ -305,7 +306,6 @@ def build_grammar():
             "name": f"Chapter {chapter_num} — {CHAPTER_TITLES.get(chapter_num, '')}",
             "sort_order": sort_order,
             "category": f"chapter-{chapter_num:02d}",
-            "level": 1,
             "sections": {
                 "Story": chapters[chapter_num],
                 "About": CHAPTER_SUMMARIES.get(chapter_num, ""),
@@ -327,9 +327,8 @@ def build_grammar():
             "name": arc_data["name"],
             "sort_order": sort_order,
             "category": "story-arc",
-            "level": 2,
             "relationship_type": "emergence",
-            "composite_of": composite,
+            "parts": composite,
             "sections": {
                 "About": arc_data["about"],
                 "For Parents": arc_data["for_parents"],
@@ -347,9 +346,8 @@ def build_grammar():
             "name": theme_data["name"],
             "sort_order": sort_order,
             "category": "theme",
-            "level": 2,
             "relationship_type": "emergence",
-            "composite_of": composite,
+            "parts": composite,
             "sections": {
                 "About": theme_data["about"],
                 "For Parents": theme_data["for_parents"],
@@ -368,9 +366,8 @@ def build_grammar():
         "name": "The Story",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "relationship_type": "emergence",
-        "composite_of": all_arc_ids,
+        "parts": all_arc_ids,
         "sections": {
             "About": "The complete adventure of Pinocchio in five movements: birth and first lessons, the theater and the tricksters, the Fairy and new chances, temptation and transformation, and redemption. Thirty-six chapters tracing a puppet's long, painful, often hilarious journey from wood to flesh, from selfishness to love.",
             "For Parents": "The Adventures of Pinocchio (1883) is far darker and funnier than the Disney adaptation suggests. Collodi wrote it as a serial cautionary tale -- he originally killed Pinocchio in Chapter 15. Readers demanded his resurrection, and the story grew into something much richer: a picaresque epic about becoming fully human. It is the Italian Pilgrim's Progress, an odyssey of moral growth through suffering. Read it with your children and let them discover that the original Pinocchio is wilder, scarier, and more moving than they expect.",
@@ -385,9 +382,8 @@ def build_grammar():
         "name": "Themes",
         "sort_order": sort_order,
         "category": "meta",
-        "level": 3,
         "relationship_type": "emergence",
-        "composite_of": all_theme_ids,
+        "parts": all_theme_ids,
         "sections": {
             "About": "The great themes of Pinocchio: conscience versus temptation, love expressed through sacrifice, the long road to becoming real, and the corrupt world of tricksters and unjust laws. These themes weave through all thirty-six chapters, connecting scenes from different parts of the story.",
             "For Parents": "These thematic groupings let you explore Pinocchio from different angles. If your child is fascinated by the growing nose, follow the Conscience thread. If they ask why Geppetto sells his coat, explore Love and Sacrifice. If the Land of Toys captivates them, discuss what 'becoming real' truly means.",
@@ -462,7 +458,7 @@ def build_grammar():
         "shelves": ["children", "wonder"],
         "lineages": ["universal"],
         "worldview": "imaginative",
-        "items": items,
+        "nodes": items,
     }
 
     return grammar
@@ -477,10 +473,10 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    items = grammar["items"]
-    l1 = [i for i in items if i["level"] == 1]
-    l2 = [i for i in items if i["level"] == 2]
-    l3 = [i for i in items if i["level"] == 3]
+    items = grammar["nodes"]
+    l1 = [i for i in items if node_depth(i, items) == 1]
+    l2 = [i for i in items if node_depth(i, items) == 2]
+    l3 = [i for i in items if node_depth(i, items) == 3]
 
     print(f"Grammar written to {OUTPUT_FILE}")
     print(f"  L1 chapters: {len(l1)}")
@@ -496,7 +492,7 @@ def main():
 
     broken = []
     for item in items:
-        for ref in item.get("composite_of", []):
+        for ref in item.get("parts", []):
             if ref not in id_set:
                 broken.append((item["id"], ref))
     if broken:

@@ -78,13 +78,12 @@
     },
     "alice_character_description": null
   },
-  "items": [
+  "nodes": [
     {
       "id": "silence-before-scene-01",
       "name": "Ep1 Scene 1: The Great Silence",
       "sort_order": 1,
       "category": "the-silence",
-      "level": 1,
       "sections": {
         "Narration": "Before the WORLD, before the LIGHT,\nBefore the stars came out at NIGHT,\nThere was no EARTH, there was no SKY,\nJust SILENCE stretching, still and HIGH.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -124,7 +123,6 @@
       "name": "Ep1 Scene 2: The Great Silence",
       "sort_order": 2,
       "category": "the-silence",
-      "level": 1,
       "sections": {
         "Narration": "No BIRD to sing, no WIND to blow,\nNo RIVER running far BELOW,\nNo MOUNTAIN rising from the GROUND —\nJust STILLNESS. Not a single SOUND.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -163,7 +161,6 @@
       "name": "Ep1 Scene 3: The Great Silence",
       "sort_order": 3,
       "category": "the-silence",
-      "level": 1,
       "sections": {
         "Narration": "The SEA lay flat. The SKY was bare.\nOnly WATER everywhere.\nAnd hidden in that quiet DEEP,\nThe GODS were thinking in their SLEEP.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -202,8 +199,7 @@
       "name": "Episode 1: The Great Silence",
       "sort_order": 4,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "silence-before-scene-01",
         "silence-before-scene-02",
         "silence-before-scene-03"
@@ -241,7 +237,6 @@
       "name": "Ep2 Scene 1: The Plumed Serpent Waits",
       "sort_order": 5,
       "category": "the-silence",
-      "level": 1,
       "sections": {
         "Narration": "Deep in the WATER, green and BRIGHT,\nA SERPENT glowed with feathered LIGHT.\nHis name was Q'UKUMATZ — the PLUMED,\nWith emerald SCALES, in quetzal PLUMED.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -281,7 +276,6 @@
       "name": "Ep2 Scene 2: The Plumed Serpent Waits",
       "sort_order": 6,
       "category": "the-silence",
-      "level": 1,
       "sections": {
         "Narration": "He floated there with HURRICANE —\nThe Heart of Sky, who BRINGS the rain.\nTwo GODS together, still as STONE,\nWaiting in the dark ALONE.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -320,7 +314,6 @@
       "name": "Ep2 Scene 3: The Plumed Serpent Waits",
       "sort_order": 7,
       "category": "the-silence",
-      "level": 1,
       "sections": {
         "Narration": "They THOUGHT. They DREAMED. They planned it RIGHT.\nThe serpent in the WATER bright,\nThe hurricane up in the SKY —\nBoth WONDERING: what if we TRY?",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -359,8 +352,7 @@
       "name": "Episode 2: The Plumed Serpent Waits",
       "sort_order": 8,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "silence-plumed-serpent-scene-01",
         "silence-plumed-serpent-scene-02",
         "silence-plumed-serpent-scene-03"
@@ -398,7 +390,6 @@
       "name": "Ep3 Scene 1: The First Words Spoken",
       "sort_order": 9,
       "category": "the-silence",
-      "level": 1,
       "sections": {
         "Narration": "'Let it be DONE!' the two gods CRIED.\n'Let the WATER pull aside!\nLet the EARTH come rising UP!\nLet the world fill like a CUP!'",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -439,7 +430,6 @@
       "name": "Ep3 Scene 2: The First Words Spoken",
       "sort_order": 10,
       "category": "the-silence",
-      "level": 1,
       "sections": {
         "Narration": "And when they SPOKE, the mountains GREW.\nThe RIVERS found their paths and FLEW.\nThe VALLEYS opened, wide and GREEN.\nThe most amazing thing you've SEEN.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -479,7 +469,6 @@
       "name": "Ep3 Scene 3: The First Words Spoken",
       "sort_order": 11,
       "category": "the-silence",
-      "level": 1,
       "sections": {
         "Narration": "The WORD made everything appear —\nA FOREST there, a CANYON here.\nThe gods said 'EARTH!' and earth OBEYED.\nThat's how the whole wide WORLD was made.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -519,8 +508,7 @@
       "name": "Episode 3: The First Words Spoken",
       "sort_order": 12,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "silence-first-words-scene-01",
         "silence-first-words-scene-02",
         "silence-first-words-scene-03"
@@ -559,7 +547,6 @@
       "name": "Ep4 Scene 1: The People Made of Mud",
       "sort_order": 13,
       "category": "the-silence",
-      "level": 1,
       "sections": {
         "Narration": "The gods tried FIRST to make a RACE\nOf people with a HUMAN face.\nThey scooped up MUD from river BANKS\nAnd shaped a body — no one THANKS.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -599,7 +586,6 @@
       "name": "Ep4 Scene 2: The People Made of Mud",
       "sort_order": 14,
       "category": "the-silence",
-      "level": 1,
       "sections": {
         "Narration": "The mud-folk CRUMBLED in the RAIN.\nTheir words were MUSH, they had no BRAIN.\nThey couldn't TURN their heads to PRAY,\nAnd when the water came — they WASHED away.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -638,7 +624,6 @@
       "name": "Ep4 Scene 3: The People Made of Mud",
       "sort_order": 15,
       "category": "the-silence",
-      "level": 1,
       "sections": {
         "Narration": "'That DIDN'T work,' the makers SAID.\n'They can't even hold up their own HEAD.\nWe need a BETTER kind of stuff\nTo make a person STRONG enough.'",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -677,8 +662,7 @@
       "name": "Episode 4: The People Made of Mud",
       "sort_order": 16,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "silence-mud-people-scene-01",
         "silence-mud-people-scene-02",
         "silence-mud-people-scene-03"
@@ -716,7 +700,6 @@
       "name": "Ep5 Scene 1: The People Made of Wood",
       "sort_order": 17,
       "category": "the-silence",
-      "level": 1,
       "sections": {
         "Narration": "Next the gods carved folk from WOOD —\nThey WALKED and TALKED, which felt so GOOD!\nThey built their HOMES, they had their KIDS,\nThey did exactly what the carving DID.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -756,7 +739,6 @@
       "name": "Ep5 Scene 2: The People Made of Wood",
       "sort_order": 18,
       "category": "the-silence",
-      "level": 1,
       "sections": {
         "Narration": "But something MISSING. Something WRONG.\nTheir hearts were HOLLOW all day LONG.\nThey couldn't FEEL. They couldn't LOVE.\nThey never looked up at the stars ABOVE.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -795,7 +777,6 @@
       "name": "Ep5 Scene 3: The People Made of Wood",
       "sort_order": 19,
       "category": "the-silence",
-      "level": 1,
       "sections": {
         "Narration": "Wood people WORKED but never CARED.\nThey ATE their food but never SHARED.\nThey used their TOOLS but never PRAYED.\nA world of robots, wooden-MADE.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -834,8 +815,7 @@
       "name": "Episode 5: The People Made of Wood",
       "sort_order": 20,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "silence-wood-people-scene-01",
         "silence-wood-people-scene-02",
         "silence-wood-people-scene-03"
@@ -873,7 +853,6 @@
       "name": "Ep6 Scene 1: The Great Flood",
       "sort_order": 21,
       "category": "the-silence",
-      "level": 1,
       "sections": {
         "Narration": "The gods sent RAIN to wash them OUT.\nA FLOOD of darkness, scream and SHOUT!\nThe wood-folk's COOKING POTS rose up:\n'You BURNED us!' cried each angry CUP.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -914,7 +893,6 @@
       "name": "Ep6 Scene 2: The Great Flood",
       "sort_order": 22,
       "category": "the-silence",
-      "level": 1,
       "sections": {
         "Narration": "Their GRINDING stones began to SPEAK:\n'You CRUSHED us every day this WEEK!'\nTheir DOGS growled: 'You never fed us RIGHT!'\nEverything REBELLED that night.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -954,7 +932,6 @@
       "name": "Ep6 Scene 3: The Great Flood",
       "sort_order": 23,
       "category": "the-silence",
-      "level": 1,
       "sections": {
         "Narration": "The WOOD-FOLK ran but had no PLACE.\nThey tried to climb but fell from GRACE.\nThe few that lived became the MONKEYS —\nSwinging through the trees like furry FLUNKIES.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -994,8 +971,7 @@
       "name": "Episode 6: The Great Flood",
       "sort_order": 24,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "silence-flood-scene-01",
         "silence-flood-scene-02",
         "silence-flood-scene-03"
@@ -1034,7 +1010,6 @@
       "name": "Ep7 Scene 1: The Animals Have Their Say",
       "sort_order": 25,
       "category": "the-silence",
-      "level": 1,
       "sections": {
         "Narration": "The world was QUIET once again.\nNo people now — just BIRDS and WREN,\nJust JAGUAR prowling, DEER at play,\nThe animals had their OWN day.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1075,7 +1050,6 @@
       "name": "Ep7 Scene 2: The Animals Have Their Say",
       "sort_order": 26,
       "category": "the-silence",
-      "level": 1,
       "sections": {
         "Narration": "The gods said: 'SPEAK! Say our great NAMES!\nPraise us like WIND praises FLAMES!'\nBut animals could only CRY:\nSQUAWK and HOWL beneath the sky.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1115,7 +1089,6 @@
       "name": "Ep7 Scene 3: The Animals Have Their Say",
       "sort_order": 27,
       "category": "the-silence",
-      "level": 1,
       "sections": {
         "Narration": "'They cannot PRAISE. They cannot PRAY.\nThey'll be the FOOD for those who MAY.'\nThe gods still NEEDED someone who could THINK.\nSomeone who could stand at CREATION's brink.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1155,8 +1128,7 @@
       "name": "Episode 7: The Animals Have Their Say",
       "sort_order": 28,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "silence-animals-speak-scene-01",
         "silence-animals-speak-scene-02",
         "silence-animals-speak-scene-03"
@@ -1195,7 +1167,6 @@
       "name": "Ep8 Scene 1: The Bird Who Called Himself the Sun",
       "sort_order": 29,
       "category": "seven-macaw",
-      "level": 1,
       "sections": {
         "Narration": "Before the TRUE sun lit the sky,\nA MACAW flew outrageously HIGH.\nHis feathers BLAZED with gold and GREEN,\nThe brightest bird you've ever SEEN.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1235,7 +1206,6 @@
       "name": "Ep8 Scene 2: The Bird Who Called Himself the Sun",
       "sort_order": 30,
       "category": "seven-macaw",
-      "level": 1,
       "sections": {
         "Narration": "SEVEN MACAW! He puffed his CHEST:\n'I am the SUN! I am the BEST!\nMy TEETH are jewels, my EYES are bright,\nI light the WORLD with my own LIGHT!'",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1274,7 +1244,6 @@
       "name": "Ep8 Scene 3: The Bird Who Called Himself the Sun",
       "sort_order": 31,
       "category": "seven-macaw",
-      "level": 1,
       "sections": {
         "Narration": "But he was LYING — just a BIRD\nWho wanted everyone's last WORD.\nA FAKE sun shining, proud and VAIN,\nWhile the real world waited, dark as RAIN.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1313,8 +1282,7 @@
       "name": "Episode 8: The Bird Who Called Himself the Sun",
       "sort_order": 32,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "macaw-false-sun-scene-01",
         "macaw-false-sun-scene-02",
         "macaw-false-sun-scene-03"
@@ -1352,7 +1320,6 @@
       "name": "Ep9 Scene 1: The Jeweled Teeth",
       "sort_order": 33,
       "category": "seven-macaw",
-      "level": 1,
       "sections": {
         "Narration": "His TEETH were made of precious STONE,\nTurquoise, jade — he LOVED to moan:\n'Look at ME! My smile so BRIGHT!\nI am the MORNING and the NIGHT!'",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1393,7 +1360,6 @@
       "name": "Ep9 Scene 2: The Jeweled Teeth",
       "sort_order": 34,
       "category": "seven-macaw",
-      "level": 1,
       "sections": {
         "Narration": "He built a THRONE up in the TREES,\nWhere everyone could bow on KNEES.\nHis NEST was like a palace GRAND,\nThe shiniest spot in all the LAND.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1433,7 +1399,6 @@
       "name": "Ep9 Scene 3: The Jeweled Teeth",
       "sort_order": 35,
       "category": "seven-macaw",
-      "level": 1,
       "sections": {
         "Narration": "Two BOYS watched from the forest FLOOR.\nThey'd seen this kind of thing BEFORE.\n'He's NOT the sun,' the brothers SAID.\n'Let's knock that CROWN right off his head.'",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1473,8 +1438,7 @@
       "name": "Episode 9: The Jeweled Teeth",
       "sort_order": 36,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "macaw-jeweled-teeth-scene-01",
         "macaw-jeweled-teeth-scene-02",
         "macaw-jeweled-teeth-scene-03"
@@ -1513,7 +1477,6 @@
       "name": "Ep10 Scene 1: Two Boys with Blowguns",
       "sort_order": 37,
       "category": "seven-macaw",
-      "level": 1,
       "sections": {
         "Narration": "HUNAHPU and XBALANQUE —\nTwo brothers, quick as MONKEYS play.\nThey lived with GRANDMA in a HOUSE\nAs quiet as a little MOUSE.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1554,7 +1517,6 @@
       "name": "Ep10 Scene 2: Two Boys with Blowguns",
       "sort_order": 38,
       "category": "seven-macaw",
-      "level": 1,
       "sections": {
         "Narration": "But these boys weren't ORDINARY kids.\nThey had a SECRET that their grandma HID.\nTheir FATHER was a god who DIED,\nPlaying ball on the UNDERWORLD's dark side.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1594,7 +1556,6 @@
       "name": "Ep10 Scene 3: Two Boys with Blowguns",
       "sort_order": 39,
       "category": "seven-macaw",
-      "level": 1,
       "sections": {
         "Narration": "They picked up BLOWGUNS, strong and LONG,\nAnd aimed at everything that's WRONG.\n'That bird's a LIAR,' Hunahpu said.\n'Let's teach him TRUTH instead of DREAD.'",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1634,8 +1595,7 @@
       "name": "Episode 10: Two Boys with Blowguns",
       "sort_order": 40,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "macaw-twins-born-scene-01",
         "macaw-twins-born-scene-02",
         "macaw-twins-born-scene-03"
@@ -1674,7 +1634,6 @@
       "name": "Ep11 Scene 1: The Shot That Broke His Jaw",
       "sort_order": 41,
       "category": "seven-macaw",
-      "level": 1,
       "sections": {
         "Narration": "Seven Macaw sat in his TREE,\nEating fruit for all to SEE.\nHunahpu AIMED his blowgun HIGH\nAnd shot a dart into the SKY.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1715,7 +1674,6 @@
       "name": "Ep11 Scene 2: The Shot That Broke His Jaw",
       "sort_order": 42,
       "category": "seven-macaw",
-      "level": 1,
       "sections": {
         "Narration": "CRACK! It hit the macaw's JAW!\nThe biggest bird you ever SAW\nCame TUMBLING, screaming, from his NEST —\nBut grabbed the boy's ARM from his chest!",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1755,7 +1713,6 @@
       "name": "Ep11 Scene 3: The Shot That Broke His Jaw",
       "sort_order": 43,
       "category": "seven-macaw",
-      "level": 1,
       "sections": {
         "Narration": "He TORE the arm right off, oh NO!\nAnd carried it back to his SHOW.\n'I'll ROAST this arm above my FIRE!'\nBut the twins had tricks that reached much HIGHER.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1795,8 +1752,7 @@
       "name": "Episode 11: The Shot That Broke His Jaw",
       "sort_order": 44,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "macaw-blowgun-scene-01",
         "macaw-blowgun-scene-02",
         "macaw-blowgun-scene-03"
@@ -1835,7 +1791,6 @@
       "name": "Ep12 Scene 1: Zipacná the Mountain-Maker",
       "sort_order": 45,
       "category": "seven-macaw",
-      "level": 1,
       "sections": {
         "Narration": "Seven Macaw had sons — oh DEAR.\nZIPACNÁ was the one to FEAR.\nHe lifted MOUNTAINS on his BACK\nAnd set them down with a thunderous CRACK.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1876,7 +1831,6 @@
       "name": "Ep12 Scene 2: Zipacná the Mountain-Maker",
       "sort_order": 46,
       "category": "seven-macaw",
-      "level": 1,
       "sections": {
         "Narration": "'I MADE the mountains!' Zipacná ROARED.\nFour hundred BOYS he nearly FLOORED\nWhen they tried to DROP a log on his HEAD.\nHe let them think that he was DEAD.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1916,7 +1870,6 @@
       "name": "Ep12 Scene 3: Zipacná the Mountain-Maker",
       "sort_order": 47,
       "category": "seven-macaw",
-      "level": 1,
       "sections": {
         "Narration": "But the Twins were SMARTER than brute FORCE.\nThey made a fake CRAB, of course!\nZipacná LOVED to eat crab MEAT —\nHe crawled inside and met DEFEAT.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1956,8 +1909,7 @@
       "name": "Episode 12: Zipacná the Mountain-Maker",
       "sort_order": 48,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "macaw-zipacna-scene-01",
         "macaw-zipacna-scene-02",
         "macaw-zipacna-scene-03"
@@ -1996,7 +1948,6 @@
       "name": "Ep13 Scene 1: Earthquake, the Other Son",
       "sort_order": 49,
       "category": "seven-macaw",
-      "level": 1,
       "sections": {
         "Narration": "CABRACÁN was Seven Macaw's other BOY.\nHe liked to SHAKE the earth for JOY.\nMountains TREMBLED when he WALKED,\nThe ground would RUMBLE when he talked.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2037,7 +1988,6 @@
       "name": "Ep13 Scene 2: Earthquake, the Other Son",
       "sort_order": 50,
       "category": "seven-macaw",
-      "level": 1,
       "sections": {
         "Narration": "'I am the EARTHQUAKE!' he would BOAST.\n'I can destroy what matters MOST!\nOne STOMP and every mountain FALLS!'\nHe knocked down peaks like bowling BALLS.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2077,7 +2027,6 @@
       "name": "Ep13 Scene 3: Earthquake, the Other Son",
       "sort_order": 51,
       "category": "seven-macaw",
-      "level": 1,
       "sections": {
         "Narration": "The Twins said: 'Try THIS bird instead —'\nA poisoned TREAT to knock him DEAD.\nThey roasted bird with SPECIAL clay\nAnd Earthquake CRUMBLED that same day.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2117,8 +2066,7 @@
       "name": "Episode 13: Earthquake, the Other Son",
       "sort_order": 52,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "macaw-earthquake-scene-01",
         "macaw-earthquake-scene-02",
         "macaw-earthquake-scene-03"
@@ -2157,7 +2105,6 @@
       "name": "Ep14 Scene 1: Seven Macaw Falls",
       "sort_order": 53,
       "category": "seven-macaw",
-      "level": 1,
       "sections": {
         "Narration": "The Twins found healers — wise and OLD.\n(Actually THEMSELVES, in disguise so BOLD!)\n'We'll FIX your jaw!' they told the bird.\n'We're doctors!' — and he believed each WORD.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2198,7 +2145,6 @@
       "name": "Ep14 Scene 2: Seven Macaw Falls",
       "sort_order": 54,
       "category": "seven-macaw",
-      "level": 1,
       "sections": {
         "Narration": "They pulled his JEWELED teeth right OUT\nAnd put in corn instead — no CLOUT.\nThey dimmed his SHINING eyes to GREY.\nThe false sun FADED, dark as clay.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2238,7 +2184,6 @@
       "name": "Ep14 Scene 3: Seven Macaw Falls",
       "sort_order": 55,
       "category": "seven-macaw",
-      "level": 1,
       "sections": {
         "Narration": "Seven Macaw, no longer BRIGHT,\nLost all his POWER, lost his MIGHT.\nThe FAKE sun set. The sky went DIM.\nAnd the world stopped believing HIM.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2278,8 +2223,7 @@
       "name": "Episode 14: Seven Macaw Falls",
       "sort_order": 56,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "macaw-falls-scene-01",
         "macaw-falls-scene-02",
         "macaw-falls-scene-03"
@@ -2318,7 +2262,6 @@
       "name": "Ep15 Scene 1: The First Ballplayers",
       "sort_order": 57,
       "category": "the-fathers",
-      "level": 1,
       "sections": {
         "Narration": "ONE HUNAHPU and SEVEN HUNAHPU too —\nTwo brothers who knew what they loved to DO.\nThey played the BALLGAME every single DAY,\nOn a court of stone where the mountains PLAY.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2358,7 +2301,6 @@
       "name": "Ep15 Scene 2: The First Ballplayers",
       "sort_order": 58,
       "category": "the-fathers",
-      "level": 1,
       "sections": {
         "Narration": "The RUBBER ball bounced hard and FAST.\nThey hit it with their HIPS — a mighty BLAST!\nNo hands, no feet — just BODY strong,\nBouncing that ball the whole day LONG.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2397,7 +2339,6 @@
       "name": "Ep15 Scene 3: The First Ballplayers",
       "sort_order": 59,
       "category": "the-fathers",
-      "level": 1,
       "sections": {
         "Narration": "The SOUND of bouncing echoed DEEP,\nDown through the EARTH where dark things SLEEP.\nDown to XIBALBA — the place BELOW,\nWhere the lords of DEATH put on their show.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2436,8 +2377,7 @@
       "name": "Episode 15: The First Ballplayers",
       "sort_order": 60,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "fathers-ballplayers-scene-01",
         "fathers-ballplayers-scene-02",
         "fathers-ballplayers-scene-03"
@@ -2475,7 +2415,6 @@
       "name": "Ep16 Scene 1: The Ball That Woke the Dead",
       "sort_order": 61,
       "category": "the-fathers",
-      "level": 1,
       "sections": {
         "Narration": "BOUNCE! BOUNCE! BOUNCE! upon the COURT.\nThe brothers played their favorite SPORT.\nBut every THUMP went underground,\nA RUMBLING, tumbling, thumping SOUND.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2515,7 +2454,6 @@
       "name": "Ep16 Scene 2: The Ball That Woke the Dead",
       "sort_order": 62,
       "category": "the-fathers",
-      "level": 1,
       "sections": {
         "Narration": "Down in XIBALBA, dark and DIM,\nThe DEATH LORDS stirred on every LIMB.\nOne Death and Seven DEATH woke up —\n'WHO is bouncing on our ROOF? SHUT UP!'",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2554,7 +2492,6 @@
       "name": "Ep16 Scene 3: The Ball That Woke the Dead",
       "sort_order": 63,
       "category": "the-fathers",
-      "level": 1,
       "sections": {
         "Narration": "They sent a MESSAGE flying HIGH:\n'Come DOWN and play — or say GOODBYE.\nWe CHALLENGE you to play OUR game,\nIn OUR court — where nothing's quite the SAME.'",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2593,8 +2530,7 @@
       "name": "Episode 16: The Ball That Woke the Dead",
       "sort_order": 64,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "fathers-ball-bouncing-scene-01",
         "fathers-ball-bouncing-scene-02",
         "fathers-ball-bouncing-scene-03"
@@ -2632,7 +2568,6 @@
       "name": "Ep17 Scene 1: The Message from Below",
       "sort_order": 65,
       "category": "the-fathers",
-      "level": 1,
       "sections": {
         "Narration": "Four OWLS flew up from underground —\nMessenger birds without a SOUND.\nThey carried words from death's dark THRONE:\n'Come PLAY with us. Don't come ALONE.'",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2673,7 +2608,6 @@
       "name": "Ep17 Scene 2: The Message from Below",
       "sort_order": 66,
       "category": "the-fathers",
-      "level": 1,
       "sections": {
         "Narration": "The brothers READ the summons twice.\nThe words were COLD as winter ice.\n'We must GO,' said One Hunahpu BRAVE.\n'A challenge is a challenge — we can't just WAVE.'",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2713,7 +2647,6 @@
       "name": "Ep17 Scene 3: The Message from Below",
       "sort_order": 67,
       "category": "the-fathers",
-      "level": 1,
       "sections": {
         "Narration": "'But bring your GEAR,' the owls hooted LOW.\n'Your rubber BALL, your yokes — let's GO.'\nThe brothers left their GEAR above,\nTucked safely in the RAFTERS of their home they love.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2753,8 +2686,7 @@
       "name": "Episode 17: The Message from Below",
       "sort_order": 68,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "fathers-xibalba-calls-scene-01",
         "fathers-xibalba-calls-scene-02",
         "fathers-xibalba-calls-scene-03"
@@ -2793,7 +2725,6 @@
       "name": "Ep18 Scene 1: The Road to Xibalba",
       "sort_order": 69,
       "category": "the-fathers",
-      "level": 1,
       "sections": {
         "Narration": "Down, DOWN they went through caverns DEEP,\nDown STAIRS so steep they couldn't SLEEP.\nThey crossed a RIVER made of PUSS,\nAnother one of BLOOD — no fuss.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2834,7 +2765,6 @@
       "name": "Ep18 Scene 2: The Road to Xibalba",
       "sort_order": 70,
       "category": "the-fathers",
-      "level": 1,
       "sections": {
         "Narration": "A river made of SCORPIONS — YIKES!\nAnd pointed rocks like iron SPIKES.\nAt every CROSSROADS they went WRONG,\nThe path to death was dark and LONG.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2874,7 +2804,6 @@
       "name": "Ep18 Scene 3: The Road to Xibalba",
       "sort_order": 71,
       "category": "the-fathers",
-      "level": 1,
       "sections": {
         "Narration": "They reached a place where ROADS divide:\nBlack road, white road, RED and wide.\n'This WAY,' the black road seemed to CALL.\nAnd the brothers walked right into XIBALBA's hall.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2914,8 +2843,7 @@
       "name": "Episode 18: The Road to Xibalba",
       "sort_order": 72,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "fathers-descend-scene-01",
         "fathers-descend-scene-02",
         "fathers-descend-scene-03"
@@ -2954,7 +2882,6 @@
       "name": "Ep19 Scene 1: The First Test: Dark House",
       "sort_order": 73,
       "category": "the-fathers",
-      "level": 1,
       "sections": {
         "Narration": "The DEATH LORDS laughed: 'Welcome, FRIENDS!\nHere in Xibalba, the FUN never ends!\nFirst test: DARK HOUSE — here's a TORCH.\nKeep it BURNING on this porch.'",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2995,7 +2922,6 @@
       "name": "Ep19 Scene 2: The First Test: Dark House",
       "sort_order": 74,
       "category": "the-fathers",
-      "level": 1,
       "sections": {
         "Narration": "But the torch was NOT to be BURNED through!\n'Return it WHOLE — that's what you DO.\nIf it's GONE by morning light,\nYou LOSE the game. Goodnight, GOODNIGHT.'",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3035,7 +2961,6 @@
       "name": "Ep19 Scene 3: The First Test: Dark House",
       "sort_order": 75,
       "category": "the-fathers",
-      "level": 1,
       "sections": {
         "Narration": "The brothers LIT the torch — oh NO.\nThey watched it BURN down, soft and SLOW.\nBy morning it was ASHES, black.\nThey'd failed the test. No going BACK.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3075,8 +3000,7 @@
       "name": "Episode 19: The First Test: Dark House",
       "sort_order": 76,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "fathers-dark-house-scene-01",
         "fathers-dark-house-scene-02",
         "fathers-dark-house-scene-03"
@@ -3115,7 +3039,6 @@
       "name": "Ep20 Scene 1: The Fathers Fall",
       "sort_order": 77,
       "category": "the-fathers",
-      "level": 1,
       "sections": {
         "Narration": "They LOST the ballgame, dark and SORE.\nThe Death Lords won — they wanted MORE.\nThey took the brothers' LIVES that night,\nSnuffed them out like CANDLE light.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3156,7 +3079,6 @@
       "name": "Ep20 Scene 2: The Fathers Fall",
       "sort_order": 78,
       "category": "the-fathers",
-      "level": 1,
       "sections": {
         "Narration": "One Hunahpu's HEAD they cut off CLEAN\nAnd hung it up where it could be SEEN —\nIn a CALABASH tree, round and DRY,\nA skull among the fruit, hung HIGH.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3196,7 +3118,6 @@
       "name": "Ep20 Scene 3: The Fathers Fall",
       "sort_order": 79,
       "category": "the-fathers",
-      "level": 1,
       "sections": {
         "Narration": "The Death Lords LAUGHED: 'Let this be a SIGN!\nNo one PLAYS in courts of MINE!'\nBut they didn't know what SKULLS can do\nWhen the right young WOMAN wanders through.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3236,8 +3157,7 @@
       "name": "Episode 20: The Fathers Fall",
       "sort_order": 80,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "fathers-defeated-scene-01",
         "fathers-defeated-scene-02",
         "fathers-defeated-scene-03"
@@ -3276,7 +3196,6 @@
       "name": "Ep21 Scene 1: The Skull in the Tree",
       "sort_order": 81,
       "category": "the-fathers",
-      "level": 1,
       "sections": {
         "Narration": "The SKULL sat in the tree and WAITED.\nAmong the gourds, it CONTEMPLATED.\nOne day a MAIDEN wandered near —\nXQUIC, the Blood Moon, without FEAR.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3317,7 +3236,6 @@
       "name": "Ep21 Scene 2: The Skull in the Tree",
       "sort_order": 82,
       "category": "the-fathers",
-      "level": 1,
       "sections": {
         "Narration": "'Don't TOUCH the fruit!' the Death Lords SAID.\nBut Xquic reached up — the SKULL turned its head!\nIt SPAT into her open HAND,\nAnd something grew she hadn't PLANNED.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3357,7 +3275,6 @@
       "name": "Ep21 Scene 3: The Skull in the Tree",
       "sort_order": 83,
       "category": "the-fathers",
-      "level": 1,
       "sections": {
         "Narration": "Inside her belly, LIFE began.\nTwo tiny HEARTBEATS — that's the plan!\nThe SKULL had planted something BRIGHT:\nThe Hero TWINS — the coming LIGHT.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3397,8 +3314,7 @@
       "name": "Episode 21: The Skull in the Tree",
       "sort_order": 84,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "fathers-skull-tree-scene-01",
         "fathers-skull-tree-scene-02",
         "fathers-skull-tree-scene-03"
@@ -3437,7 +3353,6 @@
       "name": "Ep22 Scene 1: The Blood Moon Maiden Escapes",
       "sort_order": 85,
       "category": "the-twins",
-      "level": 1,
       "sections": {
         "Narration": "When XQUIC's belly began to GROW,\nHer FATHER raged: 'This cannot be SO!\nWho is the FATHER? Tell me TRUE!'\nBut Xquic said: 'The tree — it's TRUE!'",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3478,7 +3393,6 @@
       "name": "Ep22 Scene 2: The Blood Moon Maiden Escapes",
       "sort_order": 86,
       "category": "the-twins",
-      "level": 1,
       "sections": {
         "Narration": "Her father sent the OWLS to kill —\n'Bring back her HEART upon this GRILL!'\nBut Xquic was CLEVER, smart and FAST.\nShe tricked the owls with SAP at last.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3518,7 +3432,6 @@
       "name": "Ep22 Scene 3: The Blood Moon Maiden Escapes",
       "sort_order": 87,
       "category": "the-twins",
-      "level": 1,
       "sections": {
         "Narration": "Red tree SAP that looked like BLOOD —\nA heart of RESIN, thick as MUD.\nThe owls brought BACK the dripping fake,\nAnd Xquic escaped for her children's SAKE.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3558,8 +3471,7 @@
       "name": "Episode 22: The Blood Moon Maiden Escapes",
       "sort_order": 88,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "twins-blood-maiden-scene-01",
         "twins-blood-maiden-scene-02",
         "twins-blood-maiden-scene-03"
@@ -3598,7 +3510,6 @@
       "name": "Ep23 Scene 1: The Hero Twins Are Born",
       "sort_order": 89,
       "category": "the-twins",
-      "level": 1,
       "sections": {
         "Narration": "Xquic climbed UP to the world of LIGHT\nAnd found the grandmother — what a SIGHT!\nOld XMUCANE, wrinkled and STERN:\n'WHO are you? You've a lot to LEARN!'",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3639,7 +3550,6 @@
       "name": "Ep23 Scene 2: The Hero Twins Are Born",
       "sort_order": 90,
       "category": "the-twins",
-      "level": 1,
       "sections": {
         "Narration": "But Xquic stayed and proved her WORTH,\nAnd soon she gave the twins their BIRTH.\nHUNAHPU first — bright as the SUN.\nXBALANQUE next — the jaguar's SON.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3679,7 +3589,6 @@
       "name": "Ep23 Scene 3: The Hero Twins Are Born",
       "sort_order": 91,
       "category": "the-twins",
-      "level": 1,
       "sections": {
         "Narration": "Two baby BOYS with cosmic FIRE.\nThey cried so LOUD they'd never TIRE.\nGrandmother GRUMBLED but she KNEW:\nThese boys would do what gods MUST do.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3719,8 +3628,7 @@
       "name": "Episode 23: The Hero Twins Are Born",
       "sort_order": 92,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "twins-born-scene-01",
         "twins-born-scene-02",
         "twins-born-scene-03"
@@ -3759,7 +3667,6 @@
       "name": "Ep24 Scene 1: The Twins and Their Blowguns",
       "sort_order": 93,
       "category": "the-twins",
-      "level": 1,
       "sections": {
         "Narration": "The twins grew UP on tricks and PLAY.\nThey hunted BIRDS the blowgun WAY.\nEvery morning, out they'd GO,\nShooting darts at things BELOW.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3800,7 +3707,6 @@
       "name": "Ep24 Scene 2: The Twins and Their Blowguns",
       "sort_order": 94,
       "category": "the-twins",
-      "level": 1,
       "sections": {
         "Narration": "They brought home BIRDS for grandma's POT,\nBut their half-brothers liked them NOT.\nOne MONKEY and one HOWLER — mean,\nThe JEALOUS brothers on the scene.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3840,7 +3746,6 @@
       "name": "Ep24 Scene 3: The Twins and Their Blowguns",
       "sort_order": 95,
       "category": "the-twins",
-      "level": 1,
       "sections": {
         "Narration": "The twins played TRICKS on those two BRATS.\n'Climb UP and get the birds!' — just THAT.\nThe monkeys climbed but COULDN'T come down.\nThey stayed in trees — the forest's CLOWN.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3880,8 +3785,7 @@
       "name": "Episode 24: The Twins and Their Blowguns",
       "sort_order": 96,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "twins-blowguns-scene-01",
         "twins-blowguns-scene-02",
         "twins-blowguns-scene-03"
@@ -3920,7 +3824,6 @@
       "name": "Ep25 Scene 1: The Rat's Secret",
       "sort_order": 97,
       "category": "the-twins",
-      "level": 1,
       "sections": {
         "Narration": "One day a RAT was caught for DINNER.\n'Don't EAT me!' squeaked the little SINNER.\n'I know a SECRET — listen WELL:\nYour FATHER'S gear has a story to TELL!'",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3961,7 +3864,6 @@
       "name": "Ep25 Scene 2: The Rat's Secret",
       "sort_order": 98,
       "category": "the-twins",
-      "level": 1,
       "sections": {
         "Narration": "Up in the RAFTERS, hidden HIGH,\nYour father's BALLGAME gear sits DRY.\nRubber BALL and leather YOKE,\nHidden since before the SMOKE.'",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4001,7 +3903,6 @@
       "name": "Ep25 Scene 3: The Rat's Secret",
       "sort_order": 99,
       "category": "the-twins",
-      "level": 1,
       "sections": {
         "Narration": "The twins looked UP and found it TRUE —\nBall, yoke, arm-guard, gloves — brand NEW!\nTheir father's GEAR, waiting in the DARK.\n'We were BORN to play,' they said. 'Let's SPARK.'",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4041,8 +3942,7 @@
       "name": "Episode 25: The Rat's Secret",
       "sort_order": 100,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "twins-rat-secret-scene-01",
         "twins-rat-secret-scene-02",
         "twins-rat-secret-scene-03"
@@ -4081,7 +3981,6 @@
       "name": "Ep26 Scene 1: The Garden That Tended Itself",
       "sort_order": 101,
       "category": "the-twins",
-      "level": 1,
       "sections": {
         "Narration": "The twins wanted TIME to play their BALL,\nBut grandma said: 'First GARDEN — that's the CALL!\nClear the FIELD and plant the CORN,\nOr no ball-playing until MORN!'",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4122,7 +4021,6 @@
       "name": "Ep26 Scene 2: The Garden That Tended Itself",
       "sort_order": 102,
       "category": "the-twins",
-      "level": 1,
       "sections": {
         "Narration": "So the twins asked ANIMALS for HELP.\n'You DIG!' they told each furry WHELP.\nThe rabbit CLEARED, the fox he PLOWED,\nThe coati PLANTED — quite a crowd!",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4162,7 +4060,6 @@
       "name": "Ep26 Scene 3: The Garden That Tended Itself",
       "sort_order": 103,
       "category": "the-twins",
-      "level": 1,
       "sections": {
         "Narration": "Grandma CHECKED and — what a SIGHT!\nThe garden grew up OVERNIGHT!\n'Good BOYS,' she smiled, not knowing HOW.\nThe twins just grinned and took a BOW.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4202,8 +4099,7 @@
       "name": "Episode 26: The Garden That Tended Itself",
       "sort_order": 104,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "twins-garden-trick-scene-01",
         "twins-garden-trick-scene-02",
         "twins-garden-trick-scene-03"
@@ -4242,7 +4138,6 @@
       "name": "Ep27 Scene 1: The Twins Find the Ballcourt",
       "sort_order": 105,
       "category": "the-twins",
-      "level": 1,
       "sections": {
         "Narration": "With father's GEAR strapped on and TIGHT,\nThe twins went looking for the SITE.\nThey found the COURT — the ancient GROUND\nWhere father's ball once made its SOUND.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4283,7 +4178,6 @@
       "name": "Ep27 Scene 2: The Twins Find the Ballcourt",
       "sort_order": 106,
       "category": "the-twins",
-      "level": 1,
       "sections": {
         "Narration": "They BOUNCED the ball. BOOM! BOOM! BOOM!\nThe same old BEAT, the same old TUNE.\nDown in Xibalba, DEATH woke up:\n'NOT AGAIN! Those kids won't SHUT UP!'",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4323,7 +4217,6 @@
       "name": "Ep27 Scene 3: The Twins Find the Ballcourt",
       "sort_order": 107,
       "category": "the-twins",
-      "level": 1,
       "sections": {
         "Narration": "The Death Lords FUMED: 'Send owls ONCE MORE!\nWe'll beat these boys just like BEFORE!'\nBut these twins had TRICKS their father LACKED.\nThey'd go to death — and they'd come BACK.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4363,8 +4256,7 @@
       "name": "Episode 27: The Twins Find the Ballcourt",
       "sort_order": 108,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "twins-ballcourt-found-scene-01",
         "twins-ballcourt-found-scene-02",
         "twins-ballcourt-found-scene-03"
@@ -4403,7 +4295,6 @@
       "name": "Ep28 Scene 1: The Twins Go Down",
       "sort_order": 109,
       "category": "the-twins",
-      "level": 1,
       "sections": {
         "Narration": "But FIRST the twins were extra SMART.\nThey sent a MOSQUITO to play a PART:\n'Fly DOWN ahead and bite each LORD.\nWhen they say their NAMES — we'll keep a RECORD.'",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4444,7 +4335,6 @@
       "name": "Ep28 Scene 2: The Twins Go Down",
       "sort_order": 110,
       "category": "the-twins",
-      "level": 1,
       "sections": {
         "Narration": "The mosquito BIT them, one by ONE.\n'Ouch!' cried Blood Gatherer. 'OW!' said Pus — done!\nEach lord YELPED and said their NAME,\nAnd the mosquito memorized each in the GAME.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4484,7 +4374,6 @@
       "name": "Ep28 Scene 3: The Twins Go Down",
       "sort_order": 111,
       "category": "the-twins",
-      "level": 1,
       "sections": {
         "Narration": "Now the twins knew every lord by SIGHT.\nThey wouldn't bow to STATUES in the night.\nThey wouldn't sit on burning CHAIRS.\nThey'd walk through Xibalba PREPARED for its snares.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4524,8 +4413,7 @@
       "name": "Episode 28: The Twins Go Down",
       "sort_order": 112,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "twins-descend-scene-01",
         "twins-descend-scene-02",
         "twins-descend-scene-03"
@@ -4564,7 +4452,6 @@
       "name": "Ep29 Scene 1: Dark House: The Firefly Trick",
       "sort_order": 113,
       "category": "the-ballcourt",
-      "level": 1,
       "sections": {
         "Narration": "DARK HOUSE again — the same old TEST.\n'Keep this TORCH burning! Do your best!\nReturn it WHOLE by morning light,\nOr you'll stay here the rest of NIGHT!'",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4605,7 +4492,6 @@
       "name": "Ep29 Scene 2: Dark House: The Firefly Trick",
       "sort_order": 114,
       "category": "the-ballcourt",
-      "level": 1,
       "sections": {
         "Narration": "But the twins were READY. Oh so SLY.\nThey caught some FIREFLIES buzzing by\nAnd tied them to the TORCH's tip —\nGlowing bright without a DRIP!",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4645,7 +4531,6 @@
       "name": "Ep29 Scene 3: Dark House: The Firefly Trick",
       "sort_order": 115,
       "category": "the-ballcourt",
-      "level": 1,
       "sections": {
         "Narration": "By MORNING, torch untouched, still NEW.\nThe Death Lords GASPED: 'How'd they get THROUGH?!'\nThe twins just SMILED and played it COOL:\n'You can't trick someone who CHANGES the rule.'",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4685,8 +4570,7 @@
       "name": "Episode 29: Dark House: The Firefly Trick",
       "sort_order": 116,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "ballcourt-dark-house-scene-01",
         "ballcourt-dark-house-scene-02",
         "ballcourt-dark-house-scene-03"
@@ -4725,7 +4609,6 @@
       "name": "Ep30 Scene 1: Razor House: The Ant Army",
       "sort_order": 117,
       "category": "the-ballcourt",
-      "level": 1,
       "sections": {
         "Narration": "RAZOR HOUSE was next — a room of BLADES!\nKnives that moved in the cold dark SHADES.\nThe walls were SHARP, the floor was KEEN,\nThe meanest room you've ever SEEN.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4766,7 +4649,6 @@
       "name": "Ep30 Scene 2: Razor House: The Ant Army",
       "sort_order": 118,
       "category": "the-ballcourt",
-      "level": 1,
       "sections": {
         "Narration": "'Cut them UP!' the death lords CHEERED.\nBut the twins weren't even slightly FEARED.\nThey spoke to the BLADES: 'Be still! Be NICE!\nYour job is cutting MEAT, not slicing TWICE.'",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4806,7 +4688,6 @@
       "name": "Ep30 Scene 3: Razor House: The Ant Army",
       "sort_order": 119,
       "category": "the-ballcourt",
-      "level": 1,
       "sections": {
         "Narration": "Then ANTS came marching through the door,\nCarrying FLOWERS from the forest FLOOR.\nThe Death Lords wanted proof of PAIN —\nThe twins sent FLOWERS. Death went insane.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4846,8 +4727,7 @@
       "name": "Episode 30: Razor House: The Ant Army",
       "sort_order": 120,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "ballcourt-razor-house-scene-01",
         "ballcourt-razor-house-scene-02",
         "ballcourt-razor-house-scene-03"
@@ -4886,7 +4766,6 @@
       "name": "Ep31 Scene 1: Cold House: Dancing Warm",
       "sort_order": 121,
       "category": "the-ballcourt",
-      "level": 1,
       "sections": {
         "Narration": "Then COLD HOUSE — frozen, icy BLUE.\nA BLIZZARD howling right on through.\nThe Death Lords hoped they'd freeze to BONE,\nTurned into twins of ICE and STONE.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4927,7 +4806,6 @@
       "name": "Ep31 Scene 2: Cold House: Dancing Warm",
       "sort_order": 122,
       "category": "the-ballcourt",
-      "level": 1,
       "sections": {
         "Narration": "But the brothers DANCED to stay alive!\nThey jumped, they SPUN, they kicked, they JIVED!\nThey piled up OLD pine logs inside\nAnd made a FIRE — warm and wide.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4967,7 +4845,6 @@
       "name": "Ep31 Scene 3: Cold House: Dancing Warm",
       "sort_order": 123,
       "category": "the-ballcourt",
-      "level": 1,
       "sections": {
         "Narration": "By MORNING, not a shiver, not a SHAKE.\nThe Death Lords groaned: 'Oh for goodness' SAKE!\nThese BOYS won't freeze, they won't hold STILL!'\n'That's RIGHT,' the twins grinned. 'And we never WILL.'",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5007,8 +4884,7 @@
       "name": "Episode 31: Cold House: Dancing Warm",
       "sort_order": 124,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "ballcourt-cold-house-scene-01",
         "ballcourt-cold-house-scene-02",
         "ballcourt-cold-house-scene-03"
@@ -5047,7 +4923,6 @@
       "name": "Ep32 Scene 1: Jaguar House: Bones for Cats",
       "sort_order": 125,
       "category": "the-ballcourt",
-      "level": 1,
       "sections": {
         "Narration": "JAGUAR HOUSE was full of CATS —\nBig spotted cats with TEETH like bats!\nThey SNARLED and POUNCED and showed their CLAWS.\nThe twins could feel their hot JAWS.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5088,7 +4963,6 @@
       "name": "Ep32 Scene 2: Jaguar House: Bones for Cats",
       "sort_order": 126,
       "category": "the-ballcourt",
-      "level": 1,
       "sections": {
         "Narration": "'Eat THESE instead!' the brothers CRIED,\nAnd threw some BONES to the beasts inside.\nThe jaguars CRUNCHED the bones with GLEE,\nForgetting all about their human SPREE.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5128,7 +5002,6 @@
       "name": "Ep32 Scene 3: Jaguar House: Bones for Cats",
       "sort_order": 127,
       "category": "the-ballcourt",
-      "level": 1,
       "sections": {
         "Narration": "By DAWN the cats were purring, FED.\n'We're STILL alive!' the hero twins said.\nThe Death Lords PUNCHED the wall in RAGE:\n'These boys escape from every CAGE!'",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5168,8 +5041,7 @@
       "name": "Episode 32: Jaguar House: Bones for Cats",
       "sort_order": 128,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "ballcourt-jaguar-house-scene-01",
         "ballcourt-jaguar-house-scene-02",
         "ballcourt-jaguar-house-scene-03"
@@ -5208,7 +5080,6 @@
       "name": "Ep33 Scene 1: Fire House: Not Even Singed",
       "sort_order": 129,
       "category": "the-ballcourt",
-      "level": 1,
       "sections": {
         "Narration": "FIRE HOUSE blazed with orange FLAME.\nThe Death Lords thought: 'THIS ends the game!'\nNo firefly TRICK, no bones to THROW,\nJust FIRE raging, row on ROW.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5248,7 +5119,6 @@
       "name": "Ep33 Scene 2: Fire House: Not Even Singed",
       "sort_order": 130,
       "category": "the-ballcourt",
-      "level": 1,
       "sections": {
         "Narration": "But the twins walked IN and said: 'How NICE!\nA warm-up after Cold House ICE!'\nThe flames DANCED but didn't BITE.\nThe twins walked through the FIRE that night.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5287,7 +5157,6 @@
       "name": "Ep33 Scene 3: Fire House: Not Even Singed",
       "sort_order": 131,
       "category": "the-ballcourt",
-      "level": 1,
       "sections": {
         "Narration": "By MORNING, not a burn, not a SCAR.\nThe twins shone bright as a MORNING star.\n'IMPOSSIBLE!' the Death Lords CRIED.\nThe twins just laughed and said: 'We TRIED.'",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5326,8 +5195,7 @@
       "name": "Episode 33: Fire House: Not Even Singed",
       "sort_order": 132,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "ballcourt-fire-house-scene-01",
         "ballcourt-fire-house-scene-02",
         "ballcourt-fire-house-scene-03"
@@ -5365,7 +5233,6 @@
       "name": "Ep34 Scene 1: Bat House: The Head That Rolled",
       "sort_order": 133,
       "category": "the-ballcourt",
-      "level": 1,
       "sections": {
         "Narration": "BAT HOUSE was the worst of ALL.\nShrieking BATS from wall to WALL.\nCamazotz — the KILLER bat —\nWith razor WINGS and teeth like THAT.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5406,7 +5273,6 @@
       "name": "Ep34 Scene 2: Bat House: The Head That Rolled",
       "sort_order": 134,
       "category": "the-ballcourt",
-      "level": 1,
       "sections": {
         "Narration": "The twins hid INSIDE their blowguns tight,\nCurled up small throughout the NIGHT.\nBut Hunahpu PEEKED — just one quick LOOK —\nAnd Camazotz his head right TOOK!",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5446,7 +5312,6 @@
       "name": "Ep34 Scene 3: Bat House: The Head That Rolled",
       "sort_order": 135,
       "category": "the-ballcourt",
-      "level": 1,
       "sections": {
         "Narration": "Snip SNAP! The head went rolling DOWN.\nThe Death Lords grabbed it with a FROWN:\n'Tomorrow's BALL will be this head!'\nBut Xbalanque thought: 'He's not quite DEAD.'",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5486,8 +5351,7 @@
       "name": "Episode 34: Bat House: The Head That Rolled",
       "sort_order": 136,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "ballcourt-bat-house-scene-01",
         "ballcourt-bat-house-scene-02",
         "ballcourt-bat-house-scene-03"
@@ -5526,7 +5390,6 @@
       "name": "Ep35 Scene 1: The Squash-Head and the Rabbit",
       "sort_order": 137,
       "category": "the-ballcourt",
-      "level": 1,
       "sections": {
         "Narration": "Xbalanque had a PLAN — so bold!\nHe carved a SQUASH like a face of GOLD.\nHe put it on his brother's NECK:\n'This GOURD-HEAD's going to pass the check!'",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5567,7 +5430,6 @@
       "name": "Ep35 Scene 2: The Squash-Head and the Rabbit",
       "sort_order": 138,
       "category": "the-ballcourt",
-      "level": 1,
       "sections": {
         "Narration": "Next day the Death Lords used the REAL head\nAs a BALL — they thought Hunahpu was DEAD.\nBut a RABBIT bounced across the court — hop HOP!\nThe lords chased it and couldn't STOP!",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5607,7 +5469,6 @@
       "name": "Ep35 Scene 3: The Squash-Head and the Rabbit",
       "sort_order": 139,
       "category": "the-ballcourt",
-      "level": 1,
       "sections": {
         "Narration": "While they ran, Xbalanque SWAPPED the ball —\nThe squash-head for the real head — that's ALL!\nHunahpu's head went back in PLACE.\nThe twins stood up with a GRIN on each face.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5647,8 +5508,7 @@
       "name": "Episode 35: The Squash-Head and the Rabbit",
       "sort_order": 140,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "ballcourt-trick-death-scene-01",
         "ballcourt-trick-death-scene-02",
         "ballcourt-trick-death-scene-03"
@@ -5687,7 +5547,6 @@
       "name": "Ep36 Scene 1: The Dancing Tricksters",
       "sort_order": 141,
       "category": "the-corn",
-      "level": 1,
       "sections": {
         "Narration": "The twins had a PLAN — the greatest trick YET.\nThey became wandering PERFORMERS — don't forget!\nThey DANCED and JUGGLED, put on a SHOW,\nDoing magic tricks wherever they'd GO.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5728,7 +5587,6 @@
       "name": "Ep36 Scene 2: The Dancing Tricksters",
       "sort_order": 142,
       "category": "the-corn",
-      "level": 1,
       "sections": {
         "Narration": "They burned a HOUSE and rebuilt it FAST.\nThey KILLED a dog and brought it back — AGHAST!\nThe Death Lords HEARD about this act:\n'Bring those DANCERS here! That's a FACT!'",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5768,7 +5626,6 @@
       "name": "Ep36 Scene 3: The Dancing Tricksters",
       "sort_order": 143,
       "category": "the-corn",
-      "level": 1,
       "sections": {
         "Narration": "The twins came IN with painted FACE,\nDancing wildly all over the PLACE.\n'Show us MORE!' the death lords SCREAMED.\n'Oh, we will,' the twins BEAMED.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5808,8 +5665,7 @@
       "name": "Episode 36: The Dancing Tricksters",
       "sort_order": 144,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "corn-twins-dance-scene-01",
         "corn-twins-dance-scene-02",
         "corn-twins-dance-scene-03"
@@ -5848,7 +5704,6 @@
       "name": "Ep37 Scene 1: The Twins Die on Purpose",
       "sort_order": 145,
       "category": "the-corn",
-      "level": 1,
       "sections": {
         "Narration": "'SACRIFICE each other!' Death Lords CRIED.\n'Cut one up — bring him BACK ALIVE!'\nSo Xbalanque cut Hunahpu APART —\nArms, legs, HEAD — then his beating HEART.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5889,7 +5744,6 @@
       "name": "Ep37 Scene 2: The Twins Die on Purpose",
       "sort_order": 146,
       "category": "the-corn",
-      "level": 1,
       "sections": {
         "Narration": "Then he put him back TOGETHER — snap!\nHunahpu stood up — not a SCRATCH, no gap!\nThe Death Lords CHEERED: 'Now DO US! DO US!\nSACRIFICE us too — right THROUGH us!'",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5929,7 +5783,6 @@
       "name": "Ep37 Scene 3: The Twins Die on Purpose",
       "sort_order": 147,
       "category": "the-corn",
-      "level": 1,
       "sections": {
         "Narration": "'Are you SURE?' the twins asked, sweet and SLY.\n'Oh YES!' said One Death. 'We want to DIE!\nAnd then you'll BRING US back to life!'\nThe biggest TRICK — sharper than a KNIFE.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5969,8 +5822,7 @@
       "name": "Episode 37: The Twins Die on Purpose",
       "sort_order": 148,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "corn-twins-die-scene-01",
         "corn-twins-die-scene-02",
         "corn-twins-die-scene-03"
@@ -6009,7 +5861,6 @@
       "name": "Ep38 Scene 1: Death Lords Fall Forever",
       "sort_order": 149,
       "category": "the-corn",
-      "level": 1,
       "sections": {
         "Narration": "The twins CUT UP the Death Lords — SLICE!\nOne Death fell. Seven Death fell TWICE.\nBut this time — NO coming back.\nThe twins left them in a STACK.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6050,7 +5901,6 @@
       "name": "Ep38 Scene 2: Death Lords Fall Forever",
       "sort_order": 150,
       "category": "the-corn",
-      "level": 1,
       "sections": {
         "Narration": "'You asked for THIS,' the brothers SAID.\n'You WANTED to be cut up dead.\nBut WE decide who comes back WHOLE.\nAnd death lords DON'T get to re-ROLL.'",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6090,7 +5940,6 @@
       "name": "Ep38 Scene 3: Death Lords Fall Forever",
       "sort_order": 151,
       "category": "the-corn",
-      "level": 1,
       "sections": {
         "Narration": "All of Xibalba TREMBLED and SHOOK.\n'We SURRENDER!' every demon TOOK\nA knee before the twins that DAY.\nAnd death's great POWER faded away.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6130,8 +5979,7 @@
       "name": "Episode 38: Death Lords Fall Forever",
       "sort_order": 152,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "corn-twins-rise-scene-01",
         "corn-twins-rise-scene-02",
         "corn-twins-rise-scene-03"
@@ -6170,7 +6018,6 @@
       "name": "Ep39 Scene 1: The Twins Become Sun and Moon",
       "sort_order": 153,
       "category": "the-corn",
-      "level": 1,
       "sections": {
         "Narration": "The twins rose UP from Xibalba's FLOOR,\nThrough caves and rivers, through death's DOOR.\nThey climbed and CLIMBED until they BROKE\nThrough the earth like LIGHT through smoke.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6211,7 +6058,6 @@
       "name": "Ep39 Scene 2: The Twins Become Sun and Moon",
       "sort_order": 154,
       "category": "the-corn",
-      "level": 1,
       "sections": {
         "Narration": "Hunahpu became the SUN — so bright!\nXbalanque the MOON — the gentle night!\nThey rose into the SKY together,\nTwo brothers shining now FOREVER.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6251,7 +6097,6 @@
       "name": "Ep39 Scene 3: The Twins Become Sun and Moon",
       "sort_order": 155,
       "category": "the-corn",
-      "level": 1,
       "sections": {
         "Narration": "And the Four Hundred BOYS they'd known?\nThose who Zipacná had OVERTHROWN?\nThey became the STARS around the moon —\nA glittering, twinkling, silver TUNE.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6291,8 +6136,7 @@
       "name": "Episode 39: The Twins Become Sun and Moon",
       "sort_order": 156,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "corn-sun-moon-scene-01",
         "corn-sun-moon-scene-02",
         "corn-sun-moon-scene-03"
@@ -6331,7 +6175,6 @@
       "name": "Ep40 Scene 1: The Mountain of Corn",
       "sort_order": 157,
       "category": "the-corn",
-      "level": 1,
       "sections": {
         "Narration": "Now the gods were READY, finally PREPARED.\nThe world had SUN, the world had MOON — they cared!\nBut PEOPLE — where would people come FROM?\nWhat STUFF should make the human kingdom?",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6372,7 +6215,6 @@
       "name": "Ep40 Scene 2: The Mountain of Corn",
       "sort_order": 158,
       "category": "the-corn",
-      "level": 1,
       "sections": {
         "Narration": "A FOX, a coyote, a PARROT, and a CROW\nFound a MOUNTAIN split open — whoa!\nInside was CORN — yellow and WHITE,\nGlowing golden in the new LIGHT.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6412,7 +6254,6 @@
       "name": "Ep40 Scene 3: The Mountain of Corn",
       "sort_order": 159,
       "category": "the-corn",
-      "level": 1,
       "sections": {
         "Narration": "The gods took CORN and ground it FINE.\nThey mixed it with WATER — so divine!\nAnd from that DOUGH, those sacred SEEDS,\nThey shaped the humans the whole world NEEDS.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6452,8 +6293,7 @@
       "name": "Episode 40: The Mountain of Corn",
       "sort_order": 160,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "corn-mountain-scene-01",
         "corn-mountain-scene-02",
         "corn-mountain-scene-03"
@@ -6492,7 +6332,6 @@
       "name": "Ep41 Scene 1: The Corn People",
       "sort_order": 161,
       "category": "the-corn",
-      "level": 1,
       "sections": {
         "Narration": "The first corn-people OPENED their eyes.\nThey looked at the WORLD with happy SURPRISE.\nThey could THINK! They could FEEL! They could PRAY!\nThey remembered the gods' names EVERY day.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6533,7 +6372,6 @@
       "name": "Ep41 Scene 2: The Corn People",
       "sort_order": 162,
       "category": "the-corn",
-      "level": 1,
       "sections": {
         "Narration": "Four MEN were made: Jaguar Quitze,\nJaguar NIGHT, Not Right Now, and DARK Jaguar — hey!\nThey could see EVERYTHING — far and WIDE,\nThe whole universe, nothing to HIDE.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6573,7 +6411,6 @@
       "name": "Ep41 Scene 3: The Corn People",
       "sort_order": 163,
       "category": "the-corn",
-      "level": 1,
       "sections": {
         "Narration": "'Too MUCH!' the gods cried. 'They see like US!\nThey'll become our EQUALS — what a fuss!'\nSo the gods breathed MIST upon their eyes,\nAnd humans saw just earth and SKIES.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6613,8 +6450,7 @@
       "name": "Episode 41: The Corn People",
       "sort_order": 164,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "corn-people-scene-01",
         "corn-people-scene-02",
         "corn-people-scene-03"
@@ -6653,7 +6489,6 @@
       "name": "Ep42 Scene 1: The World Begins for Real",
       "sort_order": 165,
       "category": "the-corn",
-      "level": 1,
       "sections": {
         "Narration": "The corn-people PRAYED beneath the STARS.\nThey watched for VENUS — not yet MARS.\nThey waited for the FIRST sunrise,\nThe REAL sun — Hunahpu in disguise.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6695,7 +6530,6 @@
       "name": "Ep42 Scene 2: The World Begins for Real",
       "sort_order": 166,
       "category": "the-corn",
-      "level": 1,
       "sections": {
         "Narration": "And when the LIGHT broke through the NIGHT,\nEverything was golden BRIGHT.\nThe people WEPT with joy and AWE.\nThe most beautiful MORNING the world ever saw.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6736,7 +6570,6 @@
       "name": "Ep42 Scene 3: The World Begins for Real",
       "sort_order": 167,
       "category": "the-corn",
-      "level": 1,
       "sections": {
         "Narration": "That's the STORY of how it all BEGAN:\nSilence, serpents, mud, and then the PLAN.\nTricks and balls and CORN and light —\nThe Maya said: 'At last — it's RIGHT.'",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6777,8 +6610,7 @@
       "name": "Episode 42: The World Begins for Real",
       "sort_order": 168,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "corn-world-begins-scene-01",
         "corn-world-begins-scene-02",
         "corn-world-begins-scene-03"

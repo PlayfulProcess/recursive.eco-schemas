@@ -40,7 +40,7 @@
     "jung",
     "mythology"
   ],
-  "items": [
+  "nodes": [
     {
       "id": "sun",
       "name": "The Sun — The Central Self",
@@ -62,7 +62,6 @@
         "creativity"
       ],
       "sort_order": 0,
-      "level": 1,
       "metadata": {}
     },
     {
@@ -86,7 +85,6 @@
         "unconscious"
       ],
       "sort_order": 1,
-      "level": 1,
       "metadata": {}
     },
     {
@@ -110,7 +108,6 @@
         "intellect"
       ],
       "sort_order": 2,
-      "level": 1,
       "metadata": {}
     },
     {
@@ -134,7 +131,6 @@
         "pleasure"
       ],
       "sort_order": 3,
-      "level": 1,
       "metadata": {}
     },
     {
@@ -158,7 +154,6 @@
         "force"
       ],
       "sort_order": 4,
-      "level": 1,
       "metadata": {}
     },
     {
@@ -182,7 +177,6 @@
         "growth"
       ],
       "sort_order": 5,
-      "level": 1,
       "metadata": {}
     },
     {
@@ -206,7 +200,6 @@
         "maturity"
       ],
       "sort_order": 6,
-      "level": 1,
       "metadata": {}
     },
     {
@@ -230,7 +223,6 @@
         "genius"
       ],
       "sort_order": 7,
-      "level": 1,
       "metadata": {}
     },
     {
@@ -254,7 +246,6 @@
         "dreams"
       ],
       "sort_order": 8,
-      "level": 1,
       "metadata": {}
     },
     {
@@ -278,14 +269,13 @@
         "evolution"
       ],
       "sort_order": 9,
-      "level": 1,
       "metadata": {}
     },
     {
       "id": "saturn-pluto",
       "name": "Saturn–Pluto — The Hard Reckoning",
       "category": "outer-planet-cycles",
-      "composite_of": [
+      "parts": [
         "saturn",
         "pluto"
       ],
@@ -305,7 +295,6 @@
         "rebuilding"
       ],
       "sort_order": 10,
-      "level": 2,
       "relationship_type": "emergence",
       "metadata": {}
     },
@@ -313,7 +302,7 @@
       "id": "uranus-pluto",
       "name": "Uranus–Pluto — The Revolutionary Fire",
       "category": "outer-planet-cycles",
-      "composite_of": [
+      "parts": [
         "uranus",
         "pluto"
       ],
@@ -333,7 +322,6 @@
         "radicalism"
       ],
       "sort_order": 11,
-      "level": 2,
       "relationship_type": "emergence",
       "metadata": {}
     },
@@ -341,7 +329,7 @@
       "id": "jupiter-uranus",
       "name": "Jupiter–Uranus — The Breakthrough",
       "category": "outer-planet-cycles",
-      "composite_of": [
+      "parts": [
         "jupiter",
         "uranus"
       ],
@@ -361,7 +349,6 @@
         "adventure"
       ],
       "sort_order": 12,
-      "level": 2,
       "relationship_type": "emergence",
       "metadata": {}
     },
@@ -369,7 +356,7 @@
       "id": "saturn-neptune",
       "name": "Saturn–Neptune — The Dissolving Wall",
       "category": "outer-planet-cycles",
-      "composite_of": [
+      "parts": [
         "saturn",
         "neptune"
       ],
@@ -389,7 +376,6 @@
         "collapse"
       ],
       "sort_order": 13,
-      "level": 2,
       "relationship_type": "emergence",
       "metadata": {}
     },
@@ -397,7 +383,7 @@
       "id": "saturn-uranus",
       "name": "Saturn–Uranus — The Tension of Change",
       "category": "outer-planet-cycles",
-      "composite_of": [
+      "parts": [
         "saturn",
         "uranus"
       ],
@@ -417,7 +403,6 @@
         "change"
       ],
       "sort_order": 14,
-      "level": 2,
       "relationship_type": "emergence",
       "metadata": {}
     },
@@ -425,7 +410,7 @@
       "id": "venus-mars",
       "name": "Venus–Mars — The Erotic Dance",
       "category": "personal-cycles",
-      "composite_of": [
+      "parts": [
         "venus",
         "mars"
       ],
@@ -445,7 +430,6 @@
         "passion"
       ],
       "sort_order": 15,
-      "level": 2,
       "relationship_type": "emergence",
       "metadata": {}
     },
@@ -453,7 +437,7 @@
       "id": "jupiter-saturn",
       "name": "Jupiter–Saturn — The Great Conjunction",
       "category": "social-cycles",
-      "composite_of": [
+      "parts": [
         "jupiter",
         "saturn"
       ],
@@ -473,7 +457,6 @@
         "balance"
       ],
       "sort_order": 16,
-      "level": 2,
       "relationship_type": "emergence",
       "metadata": {}
     },
@@ -481,7 +464,7 @@
       "id": "neptune-pluto",
       "name": "Neptune–Pluto — The Civilizational Depth",
       "category": "outer-planet-cycles",
-      "composite_of": [
+      "parts": [
         "neptune",
         "pluto"
       ],
@@ -501,7 +484,6 @@
         "spiritual-transformation"
       ],
       "sort_order": 17,
-      "level": 2,
       "relationship_type": "emergence",
       "metadata": {}
     },
@@ -509,7 +491,7 @@
       "id": "sun-saturn",
       "name": "Sun–Saturn — The Test of Character",
       "category": "personal-cycles",
-      "composite_of": [
+      "parts": [
         "sun",
         "saturn"
       ],
@@ -528,7 +510,6 @@
         "maturity"
       ],
       "sort_order": 18,
-      "level": 2,
       "relationship_type": "emergence",
       "metadata": {}
     },
@@ -536,7 +517,7 @@
       "id": "moon-pluto",
       "name": "Moon–Pluto — The Emotional Depths",
       "category": "personal-cycles",
-      "composite_of": [
+      "parts": [
         "moon",
         "pluto"
       ],
@@ -555,7 +536,6 @@
         "transformation"
       ],
       "sort_order": 19,
-      "level": 2,
       "relationship_type": "emergence",
       "metadata": {}
     },
@@ -564,8 +544,7 @@
       "name": "The Planetary Archetypes",
       "sort_order": 20,
       "category": "meta",
-      "level": 3,
-      "composite_of": [
+      "parts": [
         "sun",
         "moon",
         "mercury",
@@ -594,8 +573,7 @@
       "name": "The World Transits",
       "sort_order": 21,
       "category": "meta",
-      "level": 3,
-      "composite_of": [
+      "parts": [
         "saturn-pluto",
         "uranus-pluto",
         "jupiter-uranus",
@@ -623,8 +601,7 @@
       "name": "Personal Dynamics",
       "sort_order": 22,
       "category": "meta",
-      "level": 3,
-      "composite_of": [
+      "parts": [
         "venus-mars",
         "sun-saturn",
         "moon-pluto"

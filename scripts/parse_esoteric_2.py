@@ -56,18 +56,17 @@ def make_grammar_commons(attribution):
     }
 
 
-def make_item(id_, name, sort_order, category, level, sections, keywords, composite_of=None, metadata=None):
+def make_item(id_, name, sort_order, category, level, sections, keywords, parts=None, metadata=None):
     item = {
         "id": id_,
         "name": name,
         "sort_order": sort_order,
         "category": category,
-        "level": level,
         "sections": sections,
         "keywords": keywords
     }
-    if composite_of:
-        item["composite_of"] = composite_of
+    if parts:
+        item["parts"] = parts
         item["relationship_type"] = "emergence"
     if metadata:
         item["metadata"] = metadata
@@ -320,7 +319,7 @@ def parse_history_of_magic():
                 "For Readers": f"Read the chapters of Book {book_roman} in sequence to follow Levi's argument about {book_title.lower()}."
             },
             keywords=["magic", "history", book_title.lower().replace(" ", "-")],
-            composite_of=refs
+            parts=refs
         ))
         l2_ids.append(l2_id)
         sort_order += 1
@@ -337,7 +336,7 @@ def parse_history_of_magic():
             "How to Use": "Read these books to understand Levi's thesis: that magic is the ancient and universal science of Nature, preserved through the Kabalah and Hermeticism, confirmed rather than destroyed by Christianity."
         },
         keywords=["ancient-magic", "origins", "kabbalah", "hermeticism"],
-        composite_of=early_books
+        parts=early_books
     ))
     sort_order += 1
 
@@ -349,7 +348,7 @@ def parse_history_of_magic():
             "How to Use": "Follow the thread from medieval sorcery and alchemy through the Enlightenment to Levi's own era. Note how magic transforms from a persecuted art to an intellectual tradition, and how Levi positions himself as its modern interpreter."
         },
         keywords=["medieval-magic", "alchemy", "freemasonry", "modern-magic"],
-        composite_of=later_books
+        parts=later_books
     ))
     sort_order += 1
 
@@ -368,7 +367,7 @@ def parse_history_of_magic():
         "shelves": ["wisdom"],
         "lineages": ["Shrei"],
         "worldview": "animist",
-        "items": items
+        "nodes": items
     }
 
     out_dir = os.path.join(REPO, "grammars", "history-of-magic-levi")
@@ -709,7 +708,7 @@ def parse_mirror_of_alchimy():
                 "For Readers": "Read these chapters in sequence to follow the alchemical argument from principles through practice."
             },
             keywords=kw,
-            composite_of=refs
+            parts=refs
         ))
         l2_ids.append(id_)
         sort_order += 1
@@ -724,7 +723,7 @@ def parse_mirror_of_alchimy():
             "How to Use": "Begin with the Mirror of Alchimy for Bacon's systematic introduction to alchemical principles. Then read the Emerald Tablet — the foundational text of Hermetic alchemy — with Hortulanus's commentary. Follow with Calid's practical Secrets, and conclude with Bacon's philosophical discourse on Art and Nature."
         },
         keywords=["alchemy", "roger-bacon", "hermes", "calid", "medieval", "meta"],
-        composite_of=all_l2
+        parts=all_l2
     ))
 
     grammar = {
@@ -744,7 +743,7 @@ def parse_mirror_of_alchimy():
         "shelves": ["wisdom"],
         "lineages": ["Shrei"],
         "worldview": "animist",
-        "items": items
+        "nodes": items
     }
 
     out_dir = os.path.join(REPO, "grammars", "mirror-of-alchimy")
@@ -889,7 +888,7 @@ def parse_rosicrucian_mysteries():
                 "For Readers": "Read these chapters together to build a progressive understanding of the Rosicrucian worldview, from its institutional origins through its metaphysical cosmology to its vision of the afterlife."
             },
             keywords=kw,
-            composite_of=refs
+            parts=refs
         ))
         l2_ids.append(id_)
         sort_order += 1
@@ -903,7 +902,7 @@ def parse_rosicrucian_mysteries():
             "How to Use": "Begin with the Foundations to understand the Order and the fundamental problem of life. Then explore the Invisible Worlds and Constitution of Man to grasp the cosmological framework. Finally, study Life, Death, and Rebirth to understand the Rosicrucian vision of the soul's journey."
         },
         keywords=["rosicrucian", "max-heindel", "esoteric", "cosmology", "meta"],
-        composite_of=l2_ids
+        parts=l2_ids
     ))
 
     grammar = {
@@ -920,7 +919,7 @@ def parse_rosicrucian_mysteries():
         "shelves": ["wisdom"],
         "lineages": ["Shrei"],
         "worldview": "animist",
-        "items": items
+        "nodes": items
     }
 
     out_dir = os.path.join(REPO, "grammars", "rosicrucian-mysteries")

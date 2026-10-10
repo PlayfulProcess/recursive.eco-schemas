@@ -15,6 +15,7 @@ import json
 import re
 import os
 from pathlib import Path
+from grammar_depth import node_depth
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent
@@ -286,7 +287,6 @@ def build_grammar():
                 "id": sec_id,
                 "name": sec_name,
                 "sort_order": sort_order,
-                "level": 1,
                 "category": f"book-{book_num}",
                 "sections": {
                     "Text": sec["text"],
@@ -313,10 +313,9 @@ def build_grammar():
                 "id": sp_id,
                 "name": sp["name"],
                 "sort_order": sort_order,
-                "level": 2,
                 "category": f"book-{book_num}-sub-parva",
                 "relationship_type": "emergence",
-                "composite_of": composite,
+                "parts": composite,
                 "sections": {
                     "About": sp["about"],
                 },
@@ -335,10 +334,9 @@ def build_grammar():
             "id": f"book-{book_num}-{slugify(book_info['name'])}",
             "name": book_info["full_name"],
             "sort_order": sort_order,
-            "level": 3,
             "category": "book",
             "relationship_type": "emergence",
-            "composite_of": book_subparva_ids[book_num],
+            "parts": book_subparva_ids[book_num],
             "sections": {
                 "About": book_info["about"],
                 "For Readers": book_info["for_readers"],
@@ -375,16 +373,16 @@ def build_grammar():
         "shelves": ["earth"],
         "lineages": ["Shrei"],
         "worldview": "devotional",
-        "items": items,
+        "nodes": items,
     }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(grammar, f, indent=2, ensure_ascii=False)
 
-    l1 = sum(1 for i in items if i["level"] == 1)
-    l2 = sum(1 for i in items if i["level"] == 2)
-    l3 = sum(1 for i in items if i["level"] == 3)
+    l1 = sum(1 for i in items if node_depth(i, items) == 1)
+    l2 = sum(1 for i in items if node_depth(i, items) == 2)
+    l3 = sum(1 for i in items if node_depth(i, items) == 3)
     print(f"\nGrammar written to {OUTPUT_PATH}")
     print(f"  L1: {l1} sections, L2: {l2} sub-parvas, L3: {l3} books")
     print(f"  Total items: {len(items)}")

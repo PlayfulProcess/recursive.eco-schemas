@@ -76,13 +76,12 @@
     "Shrei"
   ],
   "worldview": "non-dual",
-  "items": [
+  "nodes": [
     {
       "id": "the-fool",
       "name": "The Fool",
       "sort_order": 0,
       "category": "major-arcana",
-      "level": 1,
       "sections": {
         "Archetype": "The eternal beginner. Zero contains everything and nothing — the void before creation, the leap before the landing. Every journey begins with the Fool's willingness to step into the unknown without a map. This is not ignorance but a radical openness that the experienced have forgotten.",
         "Professional": "You are being called to begin something without guarantee of success. The Fool in career readings says: take the leap. Start the business, change the field, propose the idea that scares you. Your lack of experience is actually your advantage — you'll see what the experts can't.",
@@ -118,7 +117,6 @@
       "name": "The Magician",
       "sort_order": 1,
       "category": "major-arcana",
-      "level": 1,
       "sections": {
         "Archetype": "The channel between above and below, the one who makes the invisible visible. The Magician doesn't create from nothing — they arrange what's already present into new configurations. One hand points to heaven, the other to earth: 'As above, so below.' This is the archetype of conscious creation through focused will.",
         "Professional": "You have all the tools you need — they're on the table in front of you. The Magician says: stop gathering resources and start combining them. Communication, initiative, and skill converge now. A powerful time for pitching, presenting, or launching.",
@@ -154,7 +152,6 @@
       "name": "The High Priestess",
       "sort_order": 2,
       "category": "major-arcana",
-      "level": 1,
       "sections": {
         "Archetype": "The keeper of hidden knowledge. She sits between the pillars of light and dark, holding a scroll she doesn't show you — not because you can't see it, but because some truths must be approached through silence. The High Priestess is intuition before it becomes thought, knowing before it becomes words.",
         "Professional": "Trust your gut. The data is incomplete, the rational analysis falls short, but something in you knows. The High Priestess in career matters says: listen to what isn't being said in the meeting, read between the lines of the contract, pay attention to the unease you can't explain.",
@@ -189,7 +186,6 @@
       "name": "The Empress",
       "sort_order": 3,
       "category": "major-arcana",
-      "level": 1,
       "sections": {
         "Archetype": "The Great Mother — not domesticated, not gentle, but fecund and wild. The Empress is nature's intelligence expressing through you: the body's wisdom, the creative impulse, the urge to nurture what you've brought into being. She is abundance without apology.",
         "Professional": "A fertile period for creative work. Projects grow naturally now — nurture them with attention but don't over-manage. The Empress in career says: create beauty, tend to the workplace environment, lead through abundance rather than scarcity.",
@@ -224,7 +220,6 @@
       "name": "The Emperor",
       "sort_order": 4,
       "category": "major-arcana",
-      "level": 1,
       "sections": {
         "Archetype": "Structure that serves life. The Emperor builds the walls that protect the garden — without him, the Empress's abundance has no form. This is the archetype of benevolent authority: rules that create freedom, boundaries that enable growth, power exercised for the common good.",
         "Professional": "Take charge. Build systems. Establish the structure that will sustain your vision long-term. The Emperor in career says: write the business plan, set the budget, hire the team, define the roles. Vision without structure is just daydreaming.",
@@ -260,7 +255,6 @@
       "name": "The Hierophant",
       "sort_order": 5,
       "category": "major-arcana",
-      "level": 1,
       "sections": {
         "Archetype": "The bridge between the human and the divine — not through private mysticism but through shared tradition. The Hierophant represents teaching, initiation, and the living transmission of wisdom through community. He is the structure of spiritual practice itself.",
         "Professional": "Mentorship, institutional knowledge, and established paths. The Hierophant in career says: find a teacher, follow the proven method, respect the tradition before you innovate. Sometimes the conventional path IS the right path.",
@@ -296,7 +290,6 @@
       "name": "The Lovers",
       "sort_order": 6,
       "category": "major-arcana",
-      "level": 1,
       "sections": {
         "Archetype": "The moment of choice that defines everything after. The Lovers is not merely romance — it's the archetype of conscious choice, of values clarified through the experience of desire. When you choose one path, you release all others. This is the card of commitment born from genuine attraction.",
         "Professional": "A significant choice that will define your professional identity. Partnerships, mergers, or value-based decisions. The Lovers in career says: choose what you love, not what's safe. But choose — ambivalence is its own decision.",
@@ -331,7 +324,6 @@
       "name": "The Chariot",
       "sort_order": 7,
       "category": "major-arcana",
-      "level": 1,
       "sections": {
         "Archetype": "Directed will moving through the world. The Chariot doesn't meander — it chooses a direction and moves with the full force of aligned intention. The sphinxes pulling it represent opposing forces (light/dark, conscious/unconscious) held in dynamic tension by the charioteer's mastery.",
         "Professional": "Momentum and determination. The Chariot in career says: you know what you want — now go get it. Overcome obstacles through sheer force of will and strategic direction. This is the energy of the product launch, the campaign push, the finishing sprint.",
@@ -366,7 +358,6 @@
       "name": "Strength",
       "sort_order": 8,
       "category": "major-arcana",
-      "level": 1,
       "sections": {
         "Archetype": "Courage that comes from compassion, not conquest. Strength is not the warrior's brute force but the calm hand on the lion's jaw — the power to face what is wild and fierce (in the world, in yourself) with gentleness. True strength bends without breaking.",
         "Professional": "Quiet persistence through difficulty. Strength in career says: this isn't a problem you can solve with force or cleverness — it requires patience, endurance, and inner fortitude. Lead through calm presence, not loud authority.",
@@ -402,7 +393,6 @@
       "name": "The Hermit",
       "sort_order": 9,
       "category": "major-arcana",
-      "level": 1,
       "sections": {
         "Archetype": "The lamp in the darkness, carried by one who walks alone. The Hermit has left the marketplace not to escape the world but to find something the world can't give — the inner light that only solitude reveals. This is the archetype of the seeker, the sage, the introvert's deepest gift.",
         "Professional": "Step back from the noise. The Hermit in career says: you need time alone to think. The answer won't come from another meeting or more data — it will come from quiet reflection. Take the retreat, close the door, do the deep work.",
@@ -437,7 +427,6 @@
       "name": "Wheel of Fortune",
       "sort_order": 10,
       "category": "major-arcana",
-      "level": 1,
       "sections": {
         "Archetype": "The turning point that no one controls. The Wheel of Fortune is the great leveler — what goes up comes down, what falls will rise, and the only constant is change itself. This is fate, karma, the impersonal cycles of existence. Your job is not to stop the wheel but to find the still point at its center.",
         "Professional": "Change is coming whether you plan for it or not. The Wheel in career says: ride the upswings with gratitude and the downswings with grace. Position yourself at the center of change rather than clinging to the rim.",
@@ -472,7 +461,6 @@
       "name": "Justice",
       "sort_order": 11,
       "category": "major-arcana",
-      "level": 1,
       "sections": {
         "Archetype": "The reckoning that cannot be avoided. Justice is not punishment but natural consequence — the universe's way of maintaining balance. What you have sown, you will reap. This card asks not 'are you innocent?' but 'are you honest?' The scales weigh truth, not intention.",
         "Professional": "Legal matters, contracts, and accountability. Justice in career says: be scrupulously honest — every shortcut will be found, every promise will be tested. Fairness in negotiations creates lasting partnerships.",
@@ -507,7 +495,6 @@
       "name": "The Hanged Man",
       "sort_order": 12,
       "category": "major-arcana",
-      "level": 1,
       "sections": {
         "Archetype": "The wisdom that comes only from surrender. The Hanged Man hangs willingly — not tortured but transformed by choosing to see the world from a completely different angle. What looks like sacrifice from outside is revelation from within. The ego's loss is the soul's gain.",
         "Professional": "Pause. The Hanged Man in career says: stop pushing. The answer will come not from more effort but from a radical change of perspective. Sometimes the most productive thing you can do is nothing at all.",
@@ -542,7 +529,6 @@
       "name": "Death",
       "sort_order": 13,
       "category": "major-arcana",
-      "level": 1,
       "sections": {
         "Archetype": "The great transformation that clears the way for new life. Death is not an ending but a threshold — the compost from which new growth emerges. What dies is the form, not the essence. The skeleton rides forward because Death never looks back. This is the most misunderstood and most necessary card in the deck.",
         "Professional": "Something in your career is ending — a role, a project, a way of working. Death in career says: let it go. The job that served you for years no longer does. The business model needs to die for the new one to be born. Grieve, then move.",
@@ -578,7 +564,6 @@
       "name": "Temperance",
       "sort_order": 14,
       "category": "major-arcana",
-      "level": 1,
       "sections": {
         "Archetype": "The art of finding the middle way. Temperance is the alchemist's card — mixing opposites into something greater than either. Fire and water, heaven and earth, patience and passion: this angel holds them all in balance. Not compromise (which weakens both) but integration (which strengthens both).",
         "Professional": "Balance and integration in work life. Temperance in career says: the extremes aren't working. Find the middle path between overwork and disengagement, between vision and pragmatism, between innovation and reliability.",
@@ -613,7 +598,6 @@
       "name": "The Devil",
       "sort_order": 15,
       "category": "major-arcana",
-      "level": 1,
       "sections": {
         "Archetype": "The chains you've chosen to wear. The Devil doesn't bind you — look closely and the chains are loose enough to remove. This is the archetype of addiction, materialism, and shadow contracts: the bargains you've made with parts of yourself you'd rather not acknowledge. Liberation begins with seeing the chains clearly.",
         "Professional": "Golden handcuffs, toxic work cultures, and addictive patterns. The Devil in career says: what are you tolerating because you're afraid to lose the paycheck, the status, the security? Name the chain before you try to break it.",
@@ -648,7 +632,6 @@
       "name": "The Tower",
       "sort_order": 16,
       "category": "major-arcana",
-      "level": 1,
       "sections": {
         "Archetype": "The lightning strike that destroys false structures. The Tower is the most feared card in the deck — and the most liberating. What falls was built on shaky foundations. The crown blown off the top represents ego-structures, false beliefs, and institutions that served their time. Truth doesn't always knock politely.",
         "Professional": "Sudden disruption — layoffs, market crashes, revelations that change everything. The Tower in career says: the old structure is falling. You can't stop it, but you can choose how you respond. Sometimes the building must come down so something true can be built.",
@@ -683,7 +666,6 @@
       "name": "The Star",
       "sort_order": 17,
       "category": "major-arcana",
-      "level": 1,
       "sections": {
         "Archetype": "Hope after the storm. The Star appears after the Tower's destruction — naked, vulnerable, and pouring water onto the earth and back into the pool. This is the archetype of renewal, grace, and the quiet confidence that emerges after you've survived the worst. The Star doesn't shout. She shines.",
         "Professional": "Inspiration and renewed purpose after difficulty. The Star in career says: the crisis is over. Now is the time for vision, creativity, and gentle rebuilding. Trust your gifts — they survived the storm for a reason.",
@@ -718,7 +700,6 @@
       "name": "The Moon",
       "sort_order": 18,
       "category": "major-arcana",
-      "level": 1,
       "sections": {
         "Archetype": "The journey through the unconscious. The Moon illuminates not by revealing but by casting shadows — everything looks different in moonlight, and the path forward is unclear. This is the archetype of the dreamworld, of anxiety, of the imagination's power to create monsters and miracles from the same raw material.",
         "Professional": "Confusion, uncertainty, and the need to navigate by intuition rather than logic. The Moon in career says: things aren't what they seem. Don't make major decisions now — wait for clarity. Trust your instincts when the data is unreliable.",
@@ -753,7 +734,6 @@
       "name": "The Sun",
       "sort_order": 19,
       "category": "major-arcana",
-      "level": 1,
       "sections": {
         "Archetype": "Joy without condition. The Sun shines on everyone equally — it doesn't ask whether you deserve it. This is the archetype of vitality, clarity, childlike delight, and the simple happiness of being alive. After the Moon's confusion, the Sun says: the world is exactly as beautiful as it looks right now.",
         "Professional": "Success, visibility, and recognition. The Sun in career says: your work is being seen and appreciated. Enjoy the moment. Collaborate openly, share credit generously, and let your natural enthusiasm inspire others.",
@@ -789,7 +769,6 @@
       "name": "Judgement",
       "sort_order": 20,
       "category": "major-arcana",
-      "level": 1,
       "sections": {
         "Archetype": "The call you cannot refuse. Judgement is resurrection — the moment when everything buried rises to the surface for final accounting. This is not punishment but clarification: at last, you see your whole life clearly and can say 'yes' or 'no' to who you've been. The trumpet calls you to your truest self.",
         "Professional": "A pivotal evaluation — of your career, your choices, your direction. Judgement in career says: everything you've done has led to this moment of reckoning. Be honest about what's working and what isn't. This is the time for radical career honesty.",
@@ -824,7 +803,6 @@
       "name": "The World",
       "sort_order": 21,
       "category": "major-arcana",
-      "level": 1,
       "sections": {
         "Archetype": "The dance of completion. The World is wholeness — not perfection but integration. All four elements, all four directions, all the lessons of the major arcana gathered into a single moment of knowing: you are complete, you are whole, and the journey continues. The World is both ending and beginning, both arrival and departure.",
         "Professional": "A major cycle complete. The World in career says: celebrate what you've accomplished. This is graduation, the successful project, the vision realized. Savor it — and know that the Fool's next journey is already calling.",
@@ -859,7 +837,6 @@
       "name": "Ace of Wands",
       "sort_order": 22,
       "category": "minor-arcana-wands",
-      "level": 1,
       "sections": {
         "Archetype": "The seed, pure potential, the gift offered of Fire. A card of creation, willpower, inspiration and desire that reflects the Fire element characteristics of the wands suit. Keywords: creation, willpower, inspiration, desire.",
         "Professional": "A new opportunity arrives — raw and unformed. This is the spark before the plan, the offer before the negotiation. Accept it before your mind talks you out of it. In the Fire suit (entrepreneurship, creative projects, leadership, initiative), this energy manifests as: creation, willpower, inspiration, desire.",
@@ -891,7 +868,6 @@
       "name": "Two of Wands",
       "sort_order": 23,
       "category": "minor-arcana-wands",
-      "level": 1,
       "sections": {
         "Archetype": "The duality, balance, choice, partnership of Fire. A card of planning, making decisions and leaving home that reflects the Fire element characteristics of the wands suit. Keywords: planning, making decisions, leaving home.",
         "Professional": "A decision between two paths. Partnerships and negotiations. The need to weigh options carefully before committing resources. In the Fire suit (entrepreneurship, creative projects, leadership, initiative), this energy manifests as: planning, making decisions, leaving home.",
@@ -922,7 +898,6 @@
       "name": "Three of Wands",
       "sort_order": 24,
       "category": "minor-arcana-wands",
-      "level": 1,
       "sections": {
         "Archetype": "The creation, expression, initial fruition, collaboration of Fire. A card of looking ahead, expansion and rapid growth that reflects the Fire element characteristics of the wands suit. Keywords: looking ahead, expansion, rapid growth.",
         "Professional": "First results from collaboration. Creative output becomes visible. Teamwork produces something none could make alone. In the Fire suit (entrepreneurship, creative projects, leadership, initiative), this energy manifests as: looking ahead, expansion, rapid growth.",
@@ -953,7 +928,6 @@
       "name": "Four of Wands",
       "sort_order": 25,
       "category": "minor-arcana-wands",
-      "level": 1,
       "sections": {
         "Archetype": "The structure, stability, foundation, consolidation of Fire. A card of community, home and celebration that reflects the Fire element characteristics of the wands suit. Keywords: community, home, celebration.",
         "Professional": "Building solid foundations. Establishing systems and routines. The work isn't exciting, but it's essential. Structure enables future growth. In the Fire suit (entrepreneurship, creative projects, leadership, initiative), this energy manifests as: community, home, celebration.",
@@ -984,7 +958,6 @@
       "name": "Five of Wands",
       "sort_order": 26,
       "category": "minor-arcana-wands",
-      "level": 1,
       "sections": {
         "Archetype": "The disruption, conflict, change, crisis as teacher of Fire. A card of competition, rivalry and conflict that reflects the Fire element characteristics of the wands suit. Keywords: competition, rivalry, conflict.",
         "Professional": "Disruption and challenge. Plans are tested. Loss may precede necessary change. The question isn't whether difficulty comes, but what you learn from it. In the Fire suit (entrepreneurship, creative projects, leadership, initiative), this energy manifests as: competition, rivalry, conflict.",
@@ -1015,7 +988,6 @@
       "name": "Six of Wands",
       "sort_order": 27,
       "category": "minor-arcana-wands",
-      "level": 1,
       "sections": {
         "Archetype": "The harmony, reciprocity, generosity, equilibrium restored of Fire. A card of victory, success and public reward that reflects the Fire element characteristics of the wands suit. Keywords: victory, success, public reward.",
         "Professional": "Generosity and fair exchange. Giving and receiving in balance. Success shared with others. Mentorship and earned reward. In the Fire suit (entrepreneurship, creative projects, leadership, initiative), this energy manifests as: victory, success, public reward.",
@@ -1046,7 +1018,6 @@
       "name": "Seven of Wands",
       "sort_order": 28,
       "category": "minor-arcana-wands",
-      "level": 1,
       "sections": {
         "Archetype": "The reflection, assessment, inner work, perseverance of Fire. A card of perseverance, being defensive and maintaining control that reflects the Fire element characteristics of the wands suit. Keywords: perseverance, defensive, maintaining control.",
         "Professional": "Strategic patience. Assessing progress before the next move. Not everything yields to effort — some things require faith and waiting. In the Fire suit (entrepreneurship, creative projects, leadership, initiative), this energy manifests as: perseverance, defensive, maintaining control.",
@@ -1077,7 +1048,6 @@
       "name": "Eight of Wands",
       "sort_order": 29,
       "category": "minor-arcana-wands",
-      "level": 1,
       "sections": {
         "Archetype": "The mastery, movement, power, acceleration of Fire. A card of rapid action, movement and quick decisions that reflects the Fire element characteristics of the wands suit. Keywords: rapid action, movement, quick decisions.",
         "Professional": "Rapid development. Skills coming together. Mastery through repetition and dedication. Things are moving fast — stay focused. In the Fire suit (entrepreneurship, creative projects, leadership, initiative), this energy manifests as: rapid action, movement, quick decisions.",
@@ -1108,7 +1078,6 @@
       "name": "Nine of Wands",
       "sort_order": 30,
       "category": "minor-arcana-wands",
-      "level": 1,
       "sections": {
         "Archetype": "The culmination, near-completion, wisdom earned, solitude of Fire. A card of resilience, grit and last stand that reflects the Fire element characteristics of the wands suit. Keywords: resilience, grit, last stand.",
         "Professional": "Near the summit. Most of the work is done. A time for final refinement rather than new initiatives. The wisdom of experience. In the Fire suit (entrepreneurship, creative projects, leadership, initiative), this energy manifests as: resilience, grit, last stand.",
@@ -1139,7 +1108,6 @@
       "name": "Ten of Wands",
       "sort_order": 31,
       "category": "minor-arcana-wands",
-      "level": 1,
       "sections": {
         "Archetype": "The completion, legacy, fullness, the cycle turning of Fire. A card of accomplishment, responsibility and burden that reflects the Fire element characteristics of the wands suit. Keywords: accomplishment, responsibility, burden.",
         "Professional": "A cycle complete. Legacy and inheritance — what you've built will outlast the effort. But completion also means a new beginning approaches. In the Fire suit (entrepreneurship, creative projects, leadership, initiative), this energy manifests as: accomplishment, responsibility, burden.",
@@ -1170,7 +1138,6 @@
       "name": "Page of Wands",
       "sort_order": 32,
       "category": "minor-arcana-wands",
-      "level": 1,
       "sections": {
         "Archetype": "The Page of Wands — student, messenger, beginner, the young explorer. In the element of Fire (will, passion, creativity, ambition), this figure embodies exploration, exciting, freedom. A card of exploration, excitement and freedom that reflects the Fire element characteristics of the wands suit.",
         "Professional": "A new student or apprentice energy. Fresh ideas, willingness to learn, a message arriving about opportunities. The courage to begin without mastery. In the Fire suit, this specifically concerns entrepreneurship, creative projects, leadership, initiative.",
@@ -1201,7 +1168,6 @@
       "name": "Knight of Wands",
       "sort_order": 33,
       "category": "minor-arcana-wands",
-      "level": 1,
       "sections": {
         "Archetype": "The Knight of Wands — quester, champion, extremist, the one who charges. In the element of Fire (will, passion, creativity, ambition), this figure embodies action, adventure, fearlessness. A card of action, adventure and fearlessness that reflects the Fire element characteristics of the wands suit.",
         "Professional": "Charging toward a goal with single-minded focus. The energy is intense and directional. Great for launching, risky for nuance. In the Fire suit, this specifically concerns entrepreneurship, creative projects, leadership, initiative.",
@@ -1232,7 +1198,6 @@
       "name": "Queen of Wands",
       "sort_order": 34,
       "category": "minor-arcana-wands",
-      "level": 1,
       "sections": {
         "Archetype": "The Queen of Wands — nurturer, embodiment, inward mastery, the one who holds. In the element of Fire (will, passion, creativity, ambition), this figure embodies courage, determination, joy. A card of courage, determination and joy that reflects the Fire element characteristics of the wands suit.",
         "Professional": "Mastery expressed through nurturing — building teams, creating culture, holding space for others' growth. Influence through presence, not force. In the Fire suit, this specifically concerns entrepreneurship, creative projects, leadership, initiative.",
@@ -1263,7 +1228,6 @@
       "name": "King of Wands",
       "sort_order": 35,
       "category": "minor-arcana-wands",
-      "level": 1,
       "sections": {
         "Archetype": "The King of Wands — sovereign, outward mastery, authority, the one who commands. In the element of Fire (will, passion, creativity, ambition), this figure embodies big picture, leader, overcoming challenges. A card of vision, leadership and overcoming challenges that reflects the Fire element characteristics of the wands suit.",
         "Professional": "Full authority and competence. Leadership from experience. The responsibility to wield power wisely and for others' benefit. In the Fire suit, this specifically concerns entrepreneurship, creative projects, leadership, initiative.",
@@ -1294,7 +1258,6 @@
       "name": "Ace of Cups",
       "sort_order": 36,
       "category": "minor-arcana-cups",
-      "level": 1,
       "sections": {
         "Archetype": "The seed, pure potential, the gift offered of Water. A card of new feelings, spirituality and intuition that reflects the Water element characteristics of the cups suit. Keywords: new feelings, spirituality, intuition.",
         "Professional": "A new opportunity arrives — raw and unformed. This is the spark before the plan, the offer before the negotiation. Accept it before your mind talks you out of it. In the Water suit (emotional intelligence, team harmony, creative flow, empathy in leadership), this energy manifests as: new feelings, spirituality, intuition.",
@@ -1325,7 +1288,6 @@
       "name": "Two of Cups",
       "sort_order": 37,
       "category": "minor-arcana-cups",
-      "level": 1,
       "sections": {
         "Archetype": "The duality, balance, choice, partnership of Water. A card of unity, partnership and connection that reflects the Water element characteristics of the cups suit. Keywords: unity, partnership, connection.",
         "Professional": "A decision between two paths. Partnerships and negotiations. The need to weigh options carefully before committing resources. In the Water suit (emotional intelligence, team harmony, creative flow, empathy in leadership), this energy manifests as: unity, partnership, connection.",
@@ -1356,7 +1318,6 @@
       "name": "Three of Cups",
       "sort_order": 38,
       "category": "minor-arcana-cups",
-      "level": 1,
       "sections": {
         "Archetype": "The creation, expression, initial fruition, collaboration of Water. A card of friendship, community and happiness that reflects the Water element characteristics of the cups suit. Keywords: friendship, community, happiness.",
         "Professional": "First results from collaboration. Creative output becomes visible. Teamwork produces something none could make alone. In the Water suit (emotional intelligence, team harmony, creative flow, empathy in leadership), this energy manifests as: friendship, community, happiness.",
@@ -1387,7 +1348,6 @@
       "name": "Four of Cups",
       "sort_order": 39,
       "category": "minor-arcana-cups",
-      "level": 1,
       "sections": {
         "Archetype": "The structure, stability, foundation, consolidation of Water. A card of apathy, contemplation and disconnectedness that reflects the Water element characteristics of the cups suit. Keywords: apathy, contemplation, disconnectedness.",
         "Professional": "Building solid foundations. Establishing systems and routines. The work isn't exciting, but it's essential. Structure enables future growth. In the Water suit (emotional intelligence, team harmony, creative flow, empathy in leadership), this energy manifests as: apathy, contemplation, disconnectedness.",
@@ -1418,7 +1378,6 @@
       "name": "Five of Cups",
       "sort_order": 40,
       "category": "minor-arcana-cups",
-      "level": 1,
       "sections": {
         "Archetype": "The disruption, conflict, change, crisis as teacher of Water. A card of loss, grief and self-pity, highlighting the need to confront these emotions on the path to healing. Keywords: loss, grief, self-pity.",
         "Professional": "Disruption and challenge. Plans are tested. Loss may precede necessary change. The question isn't whether difficulty comes, but what you learn from it. In the Water suit (emotional intelligence, team harmony, creative flow, empathy in leadership), this energy manifests as: loss, grief, self-pity.",
@@ -1449,7 +1408,6 @@
       "name": "Six of Cups",
       "sort_order": 41,
       "category": "minor-arcana-cups",
-      "level": 1,
       "sections": {
         "Archetype": "The harmony, reciprocity, generosity, equilibrium restored of Water. A card of familiarity, happy memories and healing that reflects the Water element characteristics of the cups suit. Keywords: familiarity, happy memories, healing.",
         "Professional": "Generosity and fair exchange. Giving and receiving in balance. Success shared with others. Mentorship and earned reward. In the Water suit (emotional intelligence, team harmony, creative flow, empathy in leadership), this energy manifests as: familiarity, happy memories, healing.",
@@ -1480,7 +1438,6 @@
       "name": "Seven of Cups",
       "sort_order": 42,
       "category": "minor-arcana-cups",
-      "level": 1,
       "sections": {
         "Archetype": "The reflection, assessment, inner work, perseverance of Water. A card of searching for purpose, choices and daydreaming that reflects the Water element characteristics of the cups suit. Keywords: searching for purpose, choices, daydreaming.",
         "Professional": "Strategic patience. Assessing progress before the next move. Not everything yields to effort — some things require faith and waiting. In the Water suit (emotional intelligence, team harmony, creative flow, empathy in leadership), this energy manifests as: searching for purpose, choices, daydreaming.",
@@ -1511,7 +1468,6 @@
       "name": "Eight of Cups",
       "sort_order": 43,
       "category": "minor-arcana-cups",
-      "level": 1,
       "sections": {
         "Archetype": "The mastery, movement, power, acceleration of Water. A card of walking away, disillusionment and leaving behind that reflects the Water element characteristics of the cups suit. Keywords: walking away, disillusionment, leaving behind.",
         "Professional": "Rapid development. Skills coming together. Mastery through repetition and dedication. Things are moving fast — stay focused. In the Water suit (emotional intelligence, team harmony, creative flow, empathy in leadership), this energy manifests as: walking away, disillusionment, leaving behind.",
@@ -1542,7 +1498,6 @@
       "name": "Nine of Cups",
       "sort_order": 44,
       "category": "minor-arcana-cups",
-      "level": 1,
       "sections": {
         "Archetype": "The culmination, near-completion, wisdom earned, solitude of Water. A card of satisfaction, emotional stability and luxury that reflects the Water element characteristics of the cups suit. Keywords: satisfaction, emotional stability, luxury.",
         "Professional": "Near the summit. Most of the work is done. A time for final refinement rather than new initiatives. The wisdom of experience. In the Water suit (emotional intelligence, team harmony, creative flow, empathy in leadership), this energy manifests as: satisfaction, emotional stability, luxury.",
@@ -1573,7 +1528,6 @@
       "name": "Ten of Cups",
       "sort_order": 45,
       "category": "minor-arcana-cups",
-      "level": 1,
       "sections": {
         "Archetype": "The completion, legacy, fullness, the cycle turning of Water. A card of inner happiness, fulfillment and dreams coming true that reflects the Water element characteristics of the cups suit. Keywords: inner happiness, fulfillment, dreams coming true.",
         "Professional": "A cycle complete. Legacy and inheritance — what you've built will outlast the effort. But completion also means a new beginning approaches. In the Water suit (emotional intelligence, team harmony, creative flow, empathy in leadership), this energy manifests as: inner happiness, fulfillment, dreams coming true.",
@@ -1604,7 +1558,6 @@
       "name": "Page of Cups",
       "sort_order": 46,
       "category": "minor-arcana-cups",
-      "level": 1,
       "sections": {
         "Archetype": "The Page of Cups — student, messenger, beginner, the young explorer. In the element of Water (emotion, intuition, love, the unconscious), this figure embodies happy surprise, dreamer, sensitivity. A card of happy surprise, dreamer and sensitivity that reflects the Water element characteristics of the cups suit.",
         "Professional": "A new student or apprentice energy. Fresh ideas, willingness to learn, a message arriving about opportunities. The courage to begin without mastery. In the Water suit, this specifically concerns emotional intelligence, team harmony, creative flow, empathy in leadership.",
@@ -1635,7 +1588,6 @@
       "name": "Knight of Cups",
       "sort_order": 47,
       "category": "minor-arcana-cups",
-      "level": 1,
       "sections": {
         "Archetype": "The Knight of Cups — quester, champion, extremist, the one who charges. In the element of Water (emotion, intuition, love, the unconscious), this figure embodies following the heart, idealist, romantic. A card of following the heart, idealism and romance that reflects the Water element characteristics of the cups suit.",
         "Professional": "Charging toward a goal with single-minded focus. The energy is intense and directional. Great for launching, risky for nuance. In the Water suit, this specifically concerns emotional intelligence, team harmony, creative flow, empathy in leadership.",
@@ -1666,7 +1618,6 @@
       "name": "Queen of Cups",
       "sort_order": 48,
       "category": "minor-arcana-cups",
-      "level": 1,
       "sections": {
         "Archetype": "The Queen of Cups — nurturer, embodiment, inward mastery, the one who holds. In the element of Water (emotion, intuition, love, the unconscious), this figure embodies compassion, calm, comfort. A card of compassion, calm and comfort that reflects the Water element characteristics of the cups suit.",
         "Professional": "Mastery expressed through nurturing — building teams, creating culture, holding space for others' growth. Influence through presence, not force. In the Water suit, this specifically concerns emotional intelligence, team harmony, creative flow, empathy in leadership.",
@@ -1697,7 +1648,6 @@
       "name": "King of Cups",
       "sort_order": 49,
       "category": "minor-arcana-cups",
-      "level": 1,
       "sections": {
         "Archetype": "The King of Cups — sovereign, outward mastery, authority, the one who commands. In the element of Water (emotion, intuition, love, the unconscious), this figure embodies compassion, control, balance. A card of compassion, control and balance that reflects the Water element characteristics of the cups suit.",
         "Professional": "Full authority and competence. Leadership from experience. The responsibility to wield power wisely and for others' benefit. In the Water suit, this specifically concerns emotional intelligence, team harmony, creative flow, empathy in leadership.",
@@ -1728,7 +1678,6 @@
       "name": "Ace of Swords",
       "sort_order": 50,
       "category": "minor-arcana-swords",
-      "level": 1,
       "sections": {
         "Archetype": "The seed, pure potential, the gift offered of Air. A card of breakthrough, clarity and sharp mind that reflects the Air element characteristics of the swords suit. Keywords: breakthrough, clarity, sharp mind.",
         "Professional": "A new opportunity arrives — raw and unformed. This is the spark before the plan, the offer before the negotiation. Accept it before your mind talks you out of it. In the Air suit (analysis, strategy, difficult decisions, honest communication), this energy manifests as: breakthrough, clarity, sharp mind.",
@@ -1759,7 +1708,6 @@
       "name": "Two of Swords",
       "sort_order": 51,
       "category": "minor-arcana-swords",
-      "level": 1,
       "sections": {
         "Archetype": "The duality, balance, choice, partnership of Air. A card of difficult choices, indecision and stalemate that reflects the Air element characteristics of the swords suit. Keywords: difficult choices, indecision, stalemate.",
         "Professional": "A decision between two paths. Partnerships and negotiations. The need to weigh options carefully before committing resources. In the Air suit (analysis, strategy, difficult decisions, honest communication), this energy manifests as: difficult choices, indecision, stalemate.",
@@ -1790,7 +1738,6 @@
       "name": "Three of Swords",
       "sort_order": 52,
       "category": "minor-arcana-swords",
-      "level": 1,
       "sections": {
         "Archetype": "The creation, expression, initial fruition, collaboration of Air. A card of heartbreak, suffering and grief, representing the pain that must be acknowledged before healing can begin. Keywords: heartbreak, suffering, grief.",
         "Professional": "First results from collaboration. Creative output becomes visible. Teamwork produces something none could make alone. In the Air suit (analysis, strategy, difficult decisions, honest communication), this energy manifests as: heartbreak, suffering, grief.",
@@ -1821,7 +1768,6 @@
       "name": "Four of Swords",
       "sort_order": 53,
       "category": "minor-arcana-swords",
-      "level": 1,
       "sections": {
         "Archetype": "The structure, stability, foundation, consolidation of Air. A card of rest, restoration and contemplation that reflects the Air element characteristics of the swords suit. Keywords: rest, restoration, contemplation.",
         "Professional": "Building solid foundations. Establishing systems and routines. The work isn't exciting, but it's essential. Structure enables future growth. In the Air suit (analysis, strategy, difficult decisions, honest communication), this energy manifests as: rest, restoration, contemplation.",
@@ -1852,7 +1798,6 @@
       "name": "Five of Swords",
       "sort_order": 54,
       "category": "minor-arcana-swords",
-      "level": 1,
       "sections": {
         "Archetype": "The disruption, conflict, change, crisis as teacher of Air. A card of unbridled ambition, winning at all costs and sneakiness, highlighting conflict and its personal toll. Keywords: unbridled ambition, win at all costs, sneakiness.",
         "Professional": "Disruption and challenge. Plans are tested. Loss may precede necessary change. The question isn't whether difficulty comes, but what you learn from it. In the Air suit (analysis, strategy, difficult decisions, honest communication), this energy manifests as: unbridled ambition, win at all costs, sneakiness.",
@@ -1883,7 +1828,6 @@
       "name": "Six of Swords",
       "sort_order": 55,
       "category": "minor-arcana-swords",
-      "level": 1,
       "sections": {
         "Archetype": "The harmony, reciprocity, generosity, equilibrium restored of Air. A card of transition, leaving behind and moving on that reflects the Air element characteristics of the swords suit. Keywords: transition, leaving behind, moving on.",
         "Professional": "Generosity and fair exchange. Giving and receiving in balance. Success shared with others. Mentorship and earned reward. In the Air suit (analysis, strategy, difficult decisions, honest communication), this energy manifests as: transition, leaving behind, moving on.",
@@ -1914,7 +1858,6 @@
       "name": "Seven of Swords",
       "sort_order": 56,
       "category": "minor-arcana-swords",
-      "level": 1,
       "sections": {
         "Archetype": "The reflection, assessment, inner work, perseverance of Air. A card of deception, trickery and strategy that reflects the Air element characteristics of the swords suit. Keywords: deception, trickery, tactics and strategy.",
         "Professional": "Strategic patience. Assessing progress before the next move. Not everything yields to effort — some things require faith and waiting. In the Air suit (analysis, strategy, difficult decisions, honest communication), this energy manifests as: deception, trickery, tactics and strategy.",
@@ -1945,7 +1888,6 @@
       "name": "Eight of Swords",
       "sort_order": 57,
       "category": "minor-arcana-swords",
-      "level": 1,
       "sections": {
         "Archetype": "The mastery, movement, power, acceleration of Air. A card of imprisonment, entrapment and self-victimization, indicating feeling stuck due to limiting beliefs or fear. Keywords: imprisonment, entrapment, self-victimization.",
         "Professional": "Rapid development. Skills coming together. Mastery through repetition and dedication. Things are moving fast — stay focused. In the Air suit (analysis, strategy, difficult decisions, honest communication), this energy manifests as: imprisonment, entrapment, self-victimization.",
@@ -1976,7 +1918,6 @@
       "name": "Nine of Swords",
       "sort_order": 58,
       "category": "minor-arcana-swords",
-      "level": 1,
       "sections": {
         "Archetype": "The culmination, near-completion, wisdom earned, solitude of Air. A card of anxiety, hopelessness and trauma – symbolizing the dark night of the mind and the weight of worries. Keywords: anxiety, hopelessness, trauma.",
         "Professional": "Near the summit. Most of the work is done. A time for final refinement rather than new initiatives. The wisdom of experience. In the Air suit (analysis, strategy, difficult decisions, honest communication), this energy manifests as: anxiety, hopelessness, trauma.",
@@ -2007,7 +1948,6 @@
       "name": "Ten of Swords",
       "sort_order": 59,
       "category": "minor-arcana-swords",
-      "level": 1,
       "sections": {
         "Archetype": "The completion, legacy, fullness, the cycle turning of Air. A card of failure, collapse and defeat, marking a painful ending but also the bottoming-out before a new dawn. Keywords: failure, collapse, defeat.",
         "Professional": "A cycle complete. Legacy and inheritance — what you've built will outlast the effort. But completion also means a new beginning approaches. In the Air suit (analysis, strategy, difficult decisions, honest communication), this energy manifests as: failure, collapse, defeat.",
@@ -2038,7 +1978,6 @@
       "name": "Page of Swords",
       "sort_order": 60,
       "category": "minor-arcana-swords",
-      "level": 1,
       "sections": {
         "Archetype": "The Page of Swords — student, messenger, beginner, the young explorer. In the element of Air (intellect, truth, conflict, clarity), this figure embodies curiosity, restlessness, mental energy. A card of curiosity, restlessness and mental energy that reflects the Air element characteristics of the swords suit.",
         "Professional": "A new student or apprentice energy. Fresh ideas, willingness to learn, a message arriving about opportunities. The courage to begin without mastery. In the Air suit, this specifically concerns analysis, strategy, difficult decisions, honest communication.",
@@ -2069,7 +2008,6 @@
       "name": "Knight of Swords",
       "sort_order": 61,
       "category": "minor-arcana-swords",
-      "level": 1,
       "sections": {
         "Archetype": "The Knight of Swords — quester, champion, extremist, the one who charges. In the element of Air (intellect, truth, conflict, clarity), this figure embodies action, impulsiveness, defending beliefs. A card of action, impulsiveness and defending beliefs that reflects the Air element characteristics of the swords suit.",
         "Professional": "Charging toward a goal with single-minded focus. The energy is intense and directional. Great for launching, risky for nuance. In the Air suit, this specifically concerns analysis, strategy, difficult decisions, honest communication.",
@@ -2100,7 +2038,6 @@
       "name": "Queen of Swords",
       "sort_order": 62,
       "category": "minor-arcana-swords",
-      "level": 1,
       "sections": {
         "Archetype": "The Queen of Swords — nurturer, embodiment, inward mastery, the one who holds. In the element of Air (intellect, truth, conflict, clarity), this figure embodies complexity, perceptiveness, clear mindedness. A card of complexity, perceptiveness and clear-mindedness that reflects the Air element characteristics of the swords suit.",
         "Professional": "Mastery expressed through nurturing — building teams, creating culture, holding space for others' growth. Influence through presence, not force. In the Air suit, this specifically concerns analysis, strategy, difficult decisions, honest communication.",
@@ -2131,7 +2068,6 @@
       "name": "King of Swords",
       "sort_order": 63,
       "category": "minor-arcana-swords",
-      "level": 1,
       "sections": {
         "Archetype": "The King of Swords — sovereign, outward mastery, authority, the one who commands. In the element of Air (intellect, truth, conflict, clarity), this figure embodies head over heart, discipline, truth. A card of head-over-heart decision, discipline and truth that reflects the Air element characteristics of the swords suit.",
         "Professional": "Full authority and competence. Leadership from experience. The responsibility to wield power wisely and for others' benefit. In the Air suit, this specifically concerns analysis, strategy, difficult decisions, honest communication.",
@@ -2162,7 +2098,6 @@
       "name": "Ace of Pentacles",
       "sort_order": 64,
       "category": "minor-arcana-pentacles",
-      "level": 1,
       "sections": {
         "Archetype": "The seed, pure potential, the gift offered of Earth. A card of opportunity, prosperity and new venture that reflects the Earth element characteristics of the pentacles suit. Keywords: opportunity, prosperity, new venture.",
         "Professional": "A new opportunity arrives — raw and unformed. This is the spark before the plan, the offer before the negotiation. Accept it before your mind talks you out of it. In the Earth suit (career building, financial planning, skill mastery, long-term investment), this energy manifests as: opportunity, prosperity, new venture.",
@@ -2193,7 +2128,6 @@
       "name": "Two of Pentacles",
       "sort_order": 65,
       "category": "minor-arcana-pentacles",
-      "level": 1,
       "sections": {
         "Archetype": "The duality, balance, choice, partnership of Earth. A card of balancing decisions, priorities and adapting to change that reflects the Earth element characteristics of the pentacles suit. Keywords: balancing decisions, priorities, adapting to change.",
         "Professional": "A decision between two paths. Partnerships and negotiations. The need to weigh options carefully before committing resources. In the Earth suit (career building, financial planning, skill mastery, long-term investment), this energy manifests as: balancing decisions, priorities, adapting to change.",
@@ -2224,7 +2158,6 @@
       "name": "Three of Pentacles",
       "sort_order": 66,
       "category": "minor-arcana-pentacles",
-      "level": 1,
       "sections": {
         "Archetype": "The creation, expression, initial fruition, collaboration of Earth. A card of teamwork, collaboration and building that reflects the Earth element characteristics of the pentacles suit. Keywords: teamwork, collaboration, building.",
         "Professional": "First results from collaboration. Creative output becomes visible. Teamwork produces something none could make alone. In the Earth suit (career building, financial planning, skill mastery, long-term investment), this energy manifests as: teamwork, collaboration, building.",
@@ -2255,7 +2188,6 @@
       "name": "Four of Pentacles",
       "sort_order": 67,
       "category": "minor-arcana-pentacles",
-      "level": 1,
       "sections": {
         "Archetype": "The structure, stability, foundation, consolidation of Earth. A card of conservation, frugality and security that reflects the Earth element characteristics of the pentacles suit. Keywords: conservation, frugality, security.",
         "Professional": "Building solid foundations. Establishing systems and routines. The work isn't exciting, but it's essential. Structure enables future growth. In the Earth suit (career building, financial planning, skill mastery, long-term investment), this energy manifests as: conservation, frugality, security.",
@@ -2286,7 +2218,6 @@
       "name": "Five of Pentacles",
       "sort_order": 68,
       "category": "minor-arcana-pentacles",
-      "level": 1,
       "sections": {
         "Archetype": "The disruption, conflict, change, crisis as teacher of Earth. A card of need, poverty and insecurity – representing hard times and the importance of seeking support when struggling. Keywords: need, poverty, insecurity.",
         "Professional": "Disruption and challenge. Plans are tested. Loss may precede necessary change. The question isn't whether difficulty comes, but what you learn from it. In the Earth suit (career building, financial planning, skill mastery, long-term investment), this energy manifests as: need, poverty, insecurity.",
@@ -2317,7 +2248,6 @@
       "name": "Six of Pentacles",
       "sort_order": 69,
       "category": "minor-arcana-pentacles",
-      "level": 1,
       "sections": {
         "Archetype": "The harmony, reciprocity, generosity, equilibrium restored of Earth. A card of charity, generosity and sharing that reflects the Earth element characteristics of the pentacles suit. Keywords: charity, generosity, sharing.",
         "Professional": "Generosity and fair exchange. Giving and receiving in balance. Success shared with others. Mentorship and earned reward. In the Earth suit (career building, financial planning, skill mastery, long-term investment), this energy manifests as: charity, generosity, sharing.",
@@ -2348,7 +2278,6 @@
       "name": "Seven of Pentacles",
       "sort_order": 70,
       "category": "minor-arcana-pentacles",
-      "level": 1,
       "sections": {
         "Archetype": "The reflection, assessment, inner work, perseverance of Earth. A card of hard work, perseverance and diligence that reflects the Earth element characteristics of the pentacles suit. Keywords: hard work, perseverance, diligence.",
         "Professional": "Strategic patience. Assessing progress before the next move. Not everything yields to effort — some things require faith and waiting. In the Earth suit (career building, financial planning, skill mastery, long-term investment), this energy manifests as: hard work, perseverance, diligence.",
@@ -2379,7 +2308,6 @@
       "name": "Eight of Pentacles",
       "sort_order": 71,
       "category": "minor-arcana-pentacles",
-      "level": 1,
       "sections": {
         "Archetype": "The mastery, movement, power, acceleration of Earth. A card of apprenticeship, passion and high standards that reflects the Earth element characteristics of the pentacles suit. Keywords: apprenticeship, passion, high standards.",
         "Professional": "Rapid development. Skills coming together. Mastery through repetition and dedication. Things are moving fast — stay focused. In the Earth suit (career building, financial planning, skill mastery, long-term investment), this energy manifests as: apprenticeship, passion, high standards.",
@@ -2410,7 +2338,6 @@
       "name": "Nine of Pentacles",
       "sort_order": 72,
       "category": "minor-arcana-pentacles",
-      "level": 1,
       "sections": {
         "Archetype": "The culmination, near-completion, wisdom earned, solitude of Earth. A card of fruits of labor, rewards and luxury – symbolizing self-sufficiency and enjoying the outcomes of your efforts. Keywords: fruits of labor, rewards, luxury.",
         "Professional": "Near the summit. Most of the work is done. A time for final refinement rather than new initiatives. The wisdom of experience. In the Earth suit (career building, financial planning, skill mastery, long-term investment), this energy manifests as: fruits of labor, rewards, luxury.",
@@ -2441,7 +2368,6 @@
       "name": "Ten of Pentacles",
       "sort_order": 73,
       "category": "minor-arcana-pentacles",
-      "level": 1,
       "sections": {
         "Archetype": "The completion, legacy, fullness, the cycle turning of Earth. A card of legacy, culmination and inheritance – representing long-term stability, family and the success of a cycle. Keywords: legacy, culmination, inheritance.",
         "Professional": "A cycle complete. Legacy and inheritance — what you've built will outlast the effort. But completion also means a new beginning approaches. In the Earth suit (career building, financial planning, skill mastery, long-term investment), this energy manifests as: legacy, culmination, inheritance.",
@@ -2472,7 +2398,6 @@
       "name": "Page of Pentacles",
       "sort_order": 74,
       "category": "minor-arcana-pentacles",
-      "level": 1,
       "sections": {
         "Archetype": "The Page of Pentacles — student, messenger, beginner, the young explorer. In the element of Earth (material world, body, craft, abundance), this figure embodies ambition, desire, diligence. A card of ambition, desire and diligence that reflects the Earth element characteristics of the pentacles suit.",
         "Professional": "A new student or apprentice energy. Fresh ideas, willingness to learn, a message arriving about opportunities. The courage to begin without mastery. In the Earth suit, this specifically concerns career building, financial planning, skill mastery, long-term investment.",
@@ -2503,7 +2428,6 @@
       "name": "Knight of Pentacles",
       "sort_order": 75,
       "category": "minor-arcana-pentacles",
-      "level": 1,
       "sections": {
         "Archetype": "The Knight of Pentacles — quester, champion, extremist, the one who charges. In the element of Earth (material world, body, craft, abundance), this figure embodies efficiency, hard work, responsibility. A card of efficiency, hard work and responsibility that reflects the Earth element characteristics of the pentacles suit.",
         "Professional": "Charging toward a goal with single-minded focus. The energy is intense and directional. Great for launching, risky for nuance. In the Earth suit, this specifically concerns career building, financial planning, skill mastery, long-term investment.",
@@ -2534,7 +2458,6 @@
       "name": "Queen of Pentacles",
       "sort_order": 76,
       "category": "minor-arcana-pentacles",
-      "level": 1,
       "sections": {
         "Archetype": "The Queen of Pentacles — nurturer, embodiment, inward mastery, the one who holds. In the element of Earth (material world, body, craft, abundance), this figure embodies practicality, creature comforts, financial security. A card of practicality, creature comforts and financial security that reflects the Earth element characteristics of the pentacles suit.",
         "Professional": "Mastery expressed through nurturing — building teams, creating culture, holding space for others' growth. Influence through presence, not force. In the Earth suit, this specifically concerns career building, financial planning, skill mastery, long-term investment.",
@@ -2565,7 +2488,6 @@
       "name": "King of Pentacles",
       "sort_order": 77,
       "category": "minor-arcana-pentacles",
-      "level": 1,
       "sections": {
         "Archetype": "The King of Pentacles — sovereign, outward mastery, authority, the one who commands. In the element of Earth (material world, body, craft, abundance), this figure embodies abundance, prosperity, security. A card of abundance, prosperity and security – symbolizing mastery of the material realm and a stable, generous provider.",
         "Professional": "Full authority and competence. Leadership from experience. The responsibility to wield power wisely and for others' benefit. In the Earth suit, this specifically concerns career building, financial planning, skill mastery, long-term investment.",
@@ -2596,8 +2518,7 @@
       "name": "The Major Arcana",
       "sort_order": 78,
       "category": "arcana-group",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "the-fool",
         "the-magician",
         "the-high-priestess",
@@ -2638,8 +2559,7 @@
       "name": "The Fool's Journey: Outer World (0–10)",
       "sort_order": 79,
       "category": "arcana-group",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "the-fool",
         "the-magician",
         "the-high-priestess",
@@ -2669,8 +2589,7 @@
       "name": "The Fool's Journey: Inner World (11–21)",
       "sort_order": 80,
       "category": "arcana-group",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "justice",
         "the-hanged-man",
         "death",
@@ -2701,8 +2620,7 @@
       "name": "The Suit of Wands",
       "sort_order": 81,
       "category": "suit-group",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "ace-of-wands",
         "two-of-wands",
         "three-of-wands",
@@ -2737,8 +2655,7 @@
       "name": "The Suit of Cups",
       "sort_order": 82,
       "category": "suit-group",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "ace-of-cups",
         "two-of-cups",
         "three-of-cups",
@@ -2773,8 +2690,7 @@
       "name": "The Suit of Swords",
       "sort_order": 83,
       "category": "suit-group",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "ace-of-swords",
         "two-of-swords",
         "three-of-swords",
@@ -2809,8 +2725,7 @@
       "name": "The Suit of Pentacles",
       "sort_order": 84,
       "category": "suit-group",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "ace-of-pentacles",
         "two-of-pentacles",
         "three-of-pentacles",
@@ -2845,8 +2760,7 @@
       "name": "The Pip Cards (Ace through Ten)",
       "sort_order": 85,
       "category": "structural-group",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "ace-of-wands",
         "two-of-wands",
         "three-of-wands",
@@ -2906,8 +2820,7 @@
       "name": "The Court Cards (Page through King)",
       "sort_order": 86,
       "category": "structural-group",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "page-of-wands",
         "knight-of-wands",
         "queen-of-wands",
@@ -2943,8 +2856,7 @@
       "name": "The Archetypal Journey",
       "sort_order": 87,
       "category": "meta",
-      "level": 3,
-      "composite_of": [
+      "parts": [
         "major-arcana",
         "fools-journey-first-half",
         "fools-journey-second-half"
@@ -2967,8 +2879,7 @@
       "name": "The Four Elements in Practice",
       "sort_order": 88,
       "category": "meta",
-      "level": 3,
-      "composite_of": [
+      "parts": [
         "suit-wands",
         "suit-cups",
         "suit-swords",

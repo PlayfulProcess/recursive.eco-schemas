@@ -80,13 +80,12 @@
     },
     "alice_character_description": null
   },
-  "items": [
+  "nodes": [
     {
       "id": "wrath-golden-apple-scene-01",
       "name": "Ep1 Scene 1: The Apple That Started a War",
       "sort_order": 1,
       "category": "the-wrath",
-      "level": 1,
       "sections": {
         "Narration": "At a wedding feast on MOUNT OLYMPUS high,\nevery god was there beneath the SKY —\nexcept for ERIS, goddess of discord and STRIFE.\n(Nobody invites her. Story of her LIFE.)",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -136,7 +135,6 @@
       "name": "Ep1 Scene 2: The Apple That Started a War",
       "sort_order": 2,
       "category": "the-wrath",
-      "level": 1,
       "sections": {
         "Narration": "So she crashed the party with a GIFT:\na golden apple, rolling through the RIFT\nof dancing gods. Inscribed: \"FOR THE FAIREST.\"\nThree goddesses grabbed — the rudest, rarest",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -186,7 +184,6 @@
       "name": "Ep1 Scene 3: The Apple That Started a War",
       "sort_order": 3,
       "category": "the-wrath",
-      "level": 1,
       "sections": {
         "Narration": "fight broke out. HERA said, \"It's mine — I'm QUEEN.\"\nATHENA said, \"I'm wisest ever seen.\"\nAPHRODITE smiled. \"I'm LOVE. You know who wins.\"\nThey asked poor PARIS — a shepherd prince — \"Which SPINS\nyour heart?\" Each offered bribes: POWER, WISDOM, LOVE.\nHe chose Aphrodite. (From above,\nthe other two swore VENGEANCE.) His prize?\nThe most beautiful woman alive: HELEN's eyes.\nOne apple. One choice. One stolen BRIDE.\nA thousand ships. A ten-year WAR. All pride.\nThe universe has a terrible sense of HUMOR.\nIt can start an apocalypse with a single RUMOR.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -236,8 +233,7 @@
       "name": "Episode 1: The Apple That Started a War",
       "sort_order": 4,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "wrath-golden-apple-scene-01",
         "wrath-golden-apple-scene-02",
         "wrath-golden-apple-scene-03"
@@ -277,7 +273,6 @@
       "name": "Ep2 Scene 1: The Face That Launched a Thousand Ships",
       "sort_order": 5,
       "category": "the-wrath",
-      "level": 1,
       "sections": {
         "Narration": "HELEN was the most beautiful woman on EARTH.\nEvery king in Greece had courted her since BIRTH.\nHer father made them ALL swear an oath:\n\"Whoever she picks — you'll DEFEND them both.\"\nShe married MENELAUS, king of Sparta. FINE.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -327,7 +322,6 @@
       "name": "Ep2 Scene 2: The Face That Launched a Thousand Ships",
       "sort_order": 6,
       "category": "the-wrath",
-      "level": 1,
       "sections": {
         "Narration": "Then PARIS came to visit — Trojan, divine-\nly handsome, with Aphrodite's PROMISE ringing:\n\"Helen's yours.\" And something started SINGING\nbetween them — was it love? Was it a SPELL?",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -377,7 +371,6 @@
       "name": "Ep2 Scene 3: The Face That Launched a Thousand Ships",
       "sort_order": 7,
       "category": "the-wrath",
-      "level": 1,
       "sections": {
         "Narration": "Did Helen go willingly? WHO can tell.\nShe crossed the sea with Paris. Sparta SCREAMED.\nMenelaus called in every oath. He'd DREAMED\nof this day — the oath, the fleet, the RAGE.\nA THOUSAND ships set sail. The greatest STAGE\nfor war the world had ever KNOWN.\nAll for one woman. All for a THRONE\nof beauty. All for a face. A FACE!\nTen years of death because of GRACE\nand a promise made by gods who don't pay BILLS.\nThe ships set sail. The sea turned dark. The HILLS\nof Troy appeared. And no one going HOME\nfor a decade. All because of a COMB\nof golden hair and eyes that shone like FLAME.\nWas Helen worth it? You decide. Don't BLAME\nthe face. Blame the men who thought a woman\ncould be owned. THAT'S only human.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -427,8 +420,7 @@
       "name": "Episode 2: The Face That Launched a Thousand Ships",
       "sort_order": 8,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "wrath-paris-helen-scene-01",
         "wrath-paris-helen-scene-02",
         "wrath-paris-helen-scene-03"
@@ -468,7 +460,6 @@
       "name": "Ep3 Scene 1: The Fastest Man Alive Sits Down",
       "sort_order": 9,
       "category": "the-wrath",
-      "level": 1,
       "sections": {
         "Narration": "ACHILLES was the greatest warrior BORN.\nHis mother dipped him in the River Styx one MORN —\nmaking him invincible, head to TOE.\n(She held his HEEL. Forgot to let it GO.)",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -519,7 +510,6 @@
       "name": "Ep3 Scene 2: The Fastest Man Alive Sits Down",
       "sort_order": 10,
       "category": "the-wrath",
-      "level": 1,
       "sections": {
         "Narration": "Nine years of war and Achilles was the STAR.\nHe'd killed more Trojans than he could count by FAR.\nThen King AGAMEMNON took his prize — a girl\ncalled BRISEIS — and Achilles' world went SWIRL.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -569,7 +559,6 @@
       "name": "Ep3 Scene 3: The Fastest Man Alive Sits Down",
       "sort_order": 11,
       "category": "the-wrath",
-      "level": 1,
       "sections": {
         "Narration": "\"You took what's MINE? Then fight your own dumb WAR.\"\nHe sat in his tent. He wouldn't fight no MORE.\nThe greatest warrior SULKING by the sea\nwhile his friends died. \"DON'T come crying to me.\"\nHis mother, THETIS (sea-goddess, silver-TOED),\nwent to Zeus: \"Make the Greeks LOSE. They owed\nmy son respect.\" And Zeus said YES.\nAnd the war? Got worse. A total MESS.\nBecause the best warrior in the WORLD\nsat on a beach with his lip CURLED\nand watched his friends bleed. All for PRIDE.\nThe Iliad begins with rage. The hero CRIED\nnot for Troy, not for Greece — but for his HONOR.\nThe fastest man alive sat DOWN. And upon her\n— upon rage — the whole poem is BUILT.\nSing, O Muse, of Achilles' GUILT.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -619,8 +608,7 @@
       "name": "Episode 3: The Fastest Man Alive Sits Down",
       "sort_order": 12,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "wrath-achilles-rage-scene-01",
         "wrath-achilles-rage-scene-02",
         "wrath-achilles-rage-scene-03"
@@ -660,7 +648,6 @@
       "name": "Ep4 Scene 1: The Goodbye at the Gate",
       "sort_order": 13,
       "category": "the-wrath",
-      "level": 1,
       "sections": {
         "Narration": "HECTOR was Troy's defender — brave and TRUE.\nNot flashy like Achilles, just a man who KNEW\nhis duty. Father, husband, prince, and WALL\nbetween his city and its FALL.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -711,7 +698,6 @@
       "name": "Ep4 Scene 2: The Goodbye at the Gate",
       "sort_order": 14,
       "category": "the-wrath",
-      "level": 1,
       "sections": {
         "Narration": "At the Scaean Gate, ANDROMACHE came running —\nhis wife, with baby ASTYANAX, SUNNING\nhis tiny face. \"Don't go out there. PLEASE.\nYou'll die. I know you will. Stay HERE. At ease.\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -761,7 +747,6 @@
       "name": "Ep4 Scene 3: The Goodbye at the Gate",
       "sort_order": 15,
       "category": "the-wrath",
-      "level": 1,
       "sections": {
         "Narration": "Hector reached for his SON — and the baby screamed!\nThe helmet's horsehair PLUME, it seemed,\nwas terrifying. Hector LAUGHED — took it off —\nand kissed the boy. Then, trying not to COUGH\non tears: \"I know what's coming, love. I KNOW.\nBut if I hide while others die, the GLOW\nof Troy goes dark. I'd rather DIE in light.\"\nHe walked out. She watched. The loneliest NIGHT\nin all of literature is this SCENE:\na man who knows he'll die, choosing between\nhis baby's face and the gates of WAR.\nHe chose the gate. That's what heroes ARE for.\nNot glory. Not rage. Just: SOMEONE has to stand.\nEven when your son is in your HAND.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -811,8 +796,7 @@
       "name": "Episode 4: The Goodbye at the Gate",
       "sort_order": 16,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "wrath-hector-andromache-scene-01",
         "wrath-hector-andromache-scene-02",
         "wrath-hector-andromache-scene-03"
@@ -852,7 +836,6 @@
       "name": "Ep5 Scene 1: The Friend Who Wore the Armor",
       "sort_order": 17,
       "category": "the-wrath",
-      "level": 1,
       "sections": {
         "Narration": "PATROCLUS was Achilles' closest friend.\n(Some say more. Homer leaves a space to BEND\nyour reading any way you like.) They GREW\nup together. What one felt, the other KNEW.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -903,7 +886,6 @@
       "name": "Ep5 Scene 2: The Friend Who Wore the Armor",
       "sort_order": 18,
       "category": "the-wrath",
-      "level": 1,
       "sections": {
         "Narration": "While Achilles sulked, the Greeks were DYING.\nPatroclus couldn't take it: \"Stop this LYING\naround! If you won't fight, let ME —\nlend me your ARMOR. The Trojans will see",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -953,7 +935,6 @@
       "name": "Ep5 Scene 3: The Friend Who Wore the Armor",
       "sort_order": 19,
       "category": "the-wrath",
-      "level": 1,
       "sections": {
         "Narration": "the helmet, the shield — they'll THINK it's you.\nThey'll run!\" Achilles said, \"Fine. But don't PURSUE\nthem to the walls. Just push them BACK.\"\nPatroclus wore the armor. Led the ATTACK.\nThe Trojans fled! But Patroclus FORGOT —\nhe chased them, burning bright, burning HOT,\nall the way to Troy's walls. And APOLLO,\ngod of the sun, struck him. \"This is HOLLOW\nglory, mortal.\" Hector found him, DAZED,\nand drove his spear through. Patroclus GAZED\nat the sky and whispered: \"Hector — you won't last.\nACHILLES is coming. Coming fast.\"\nThe friend died in the armor. Achilles SCREAMED.\nA scream so loud the earth itself DREAMED\nof ending. Rage returned — but different NOW.\nNot pride-rage. GRIEF-rage. And the sacred VOW:\n\"I will kill Hector. And then I will die.\"\nLove made him fight. Love made him CRY.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1003,8 +984,7 @@
       "name": "Episode 5: The Friend Who Wore the Armor",
       "sort_order": 20,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "wrath-patroclus-scene-01",
         "wrath-patroclus-scene-02",
         "wrath-patroclus-scene-03"
@@ -1044,7 +1024,6 @@
       "name": "Ep6 Scene 1: The Chase Around the Walls",
       "sort_order": 21,
       "category": "the-wrath",
-      "level": 1,
       "sections": {
         "Narration": "ACHILLES came out blazing. New armor — forged by a GOD.\nThe sun itself seemed dimmer. The ground he TROD\nburst into flame. Every Trojan RAN.\nExcept for HECTOR. Who stood. (What a MAN.)",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1095,7 +1074,6 @@
       "name": "Ep6 Scene 2: The Chase Around the Walls",
       "sort_order": 22,
       "category": "the-wrath",
-      "level": 1,
       "sections": {
         "Narration": "But then — his courage BROKE. He ran.\nAchilles chased him — round and round the SPAN\nof Troy's walls, three times. THREE TIMES around\nthe city, like a hawk and a hare on the GROUND.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1145,7 +1123,6 @@
       "name": "Ep6 Scene 3: The Chase Around the Walls",
       "sort_order": 23,
       "category": "the-wrath",
-      "level": 1,
       "sections": {
         "Narration": "Athena, disguised as Hector's BROTHER, said:\n\"Stand and fight. I'll help.\" But when Hector FLED\nno more and turned — his 'brother' was GONE.\nGod-tricked. Alone. The moment SHONE\nwith terrible clarity: \"I am going to DIE.\"\nHe charged anyway. Under the Trojan SKY,\nAchilles found the gap — the THROAT, exposed —\nand drove his spear through. Hector's eyes CLOSED.\n\"Give my body to my father,\" Hector SAID.\n\"No,\" said Achilles. And dragged him, DEAD,\nbehind his chariot, round the walls AGAIN.\nGrief makes monsters out of MEN.\nThe greatest warrior killed the bravest MAN\nand shamed his body. That's the Iliad's PLAN:\nto show you that war has no WINNERS.\nJust saints who become SINNERS.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1195,8 +1172,7 @@
       "name": "Episode 6: The Chase Around the Walls",
       "sort_order": 24,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "wrath-achilles-hector-scene-01",
         "wrath-achilles-hector-scene-02",
         "wrath-achilles-hector-scene-03"
@@ -1236,7 +1212,6 @@
       "name": "Ep7 Scene 1: The Father Who Kissed His Son's Killer",
       "sort_order": 25,
       "category": "the-wrath",
-      "level": 1,
       "sections": {
         "Narration": "Old PRIAM, king of Troy — a broken man\nwhose son lay dead — devised a desperate PLAN.\nHe loaded up a cart with treasure: GOLD,\nrobes, goblets — everything the palace HOLD",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1287,7 +1262,6 @@
       "name": "Ep7 Scene 2: The Father Who Kissed His Son's Killer",
       "sort_order": 26,
       "category": "the-wrath",
-      "level": 1,
       "sections": {
         "Narration": "could spare. And in the dark of NIGHT,\nguided by Hermes (god of travelers, LIGHT-\nfooted), he crossed the battlefield ALONE\nto Achilles' tent. And knelt before the THRONE",
         "Direction": "[ACTION] Dynamic angle, diagonal composition. Quick cuts.",
@@ -1337,7 +1311,6 @@
       "name": "Ep7 Scene 3: The Father Who Kissed His Son's Killer",
       "sort_order": 27,
       "category": "the-wrath",
-      "level": 1,
       "sections": {
         "Narration": "of the man who killed his boy. \"Remember YOUR father,\"\nPriam whispered. \"He's old, like me. He'd RATHER\nhave you home than glory. KISS my hand —\nthe hand of a father begging. UNDERSTAND:\nI do what no king has done before —\nI KISS the hands that killed the son I adore.\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1387,7 +1360,6 @@
       "name": "Ep7 Scene 4: The Father Who Kissed His Son's Killer",
       "sort_order": 28,
       "category": "the-wrath",
-      "level": 1,
       "sections": {
         "Narration": "Achilles wept. For his own father, FAR away.\nFor Patroclus. For Hector. For the GREY\nof war that turns everything to ASH.\nHe gave the body back. No CLASH.\nJust two men — enemy and ENEMY —\ncrying together in a tent. The REMEDY\nfor rage? Not victory. COMPASSION.\nThe Iliad ends not with a battle. With a RATION\nof grace. A funeral. A pause. A BREATH.\nThe poem of war ends with tenderness, not DEATH.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1437,8 +1409,7 @@
       "name": "Episode 7: The Father Who Kissed His Son's Killer",
       "sort_order": 29,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "wrath-priam-achilles-scene-01",
         "wrath-priam-achilles-scene-02",
         "wrath-priam-achilles-scene-03",
@@ -1479,7 +1450,6 @@
       "name": "Ep8 Scene 1: Ajax the Immovable",
       "sort_order": 30,
       "category": "the-heroes",
-      "level": 1,
       "sections": {
         "Narration": "AJAX was enormous — a wall of flesh and SHIELD.\nWhen other heroes fled the battlefield, he YIELD-\ned not one inch. Not one step BACK.\nHis shield was made of SEVEN layers of ox-hide, stacked",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1530,7 +1500,6 @@
       "name": "Ep8 Scene 2: Ajax the Immovable",
       "sort_order": 31,
       "category": "the-heroes",
-      "level": 1,
       "sections": {
         "Narration": "with bronze on top — the size of a BARN door.\nWhen the Trojans charged and arrows POURED,\nAjax just stood THERE. Like a cliff. Like a MOUNTAIN.\nSoldiers sheltered behind him like a FOUNTAIN\nof safety in a desert of SPEARS.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1580,7 +1549,6 @@
       "name": "Ep8 Scene 3: Ajax the Immovable",
       "sort_order": 32,
       "category": "the-heroes",
-      "level": 1,
       "sections": {
         "Narration": "He carried Achilles' body through his TEARS\nwhen the great man fell — Ajax NEVER broke.\nBut when Odysseus won Achilles' armor (he SPOKE\nbetter — trickster words), Ajax went MAD.\nHe slaughtered sheep, thinking they were men. How SAD —\nthe strongest warrior, undone by SHAME.\nHe fell on his own sword. Not FAME\nbut grief and disgrace — his enemy was WITHIN.\nThe wall that held off armies couldn't hold off SIN.\nAjax teaches: you can be the strongest SHIELD\nbut still be broken by a wound you can't see HEALED.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1630,8 +1598,7 @@
       "name": "Episode 8: Ajax the Immovable",
       "sort_order": 33,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "hero-ajax-scene-01",
         "hero-ajax-scene-02",
         "hero-ajax-scene-03"
@@ -1671,7 +1638,6 @@
       "name": "Ep9 Scene 1: The Man Who Wounded a God",
       "sort_order": 34,
       "category": "the-heroes",
-      "level": 1,
       "sections": {
         "Narration": "DIOMEDES had a day that the GODS remember.\nAthena breathed fire into him — every EMBER\nof divine courage — and said: \"Go. FIGHT.\nBut don't attack the gods. Except TONIGHT —",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1722,7 +1688,6 @@
       "name": "Ep9 Scene 2: The Man Who Wounded a God",
       "sort_order": 35,
       "category": "the-heroes",
-      "level": 1,
       "sections": {
         "Narration": "if you see Aphrodite? Her you may HIT.\"\nDiomedes charged. His spear SPLIT\nthe Trojan lines like lightning through a TREE.\nHe fought like ten men — maybe twenty-THREE.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1772,7 +1737,6 @@
       "name": "Ep9 Scene 3: The Man Who Wounded a God",
       "sort_order": 36,
       "category": "the-heroes",
-      "level": 1,
       "sections": {
         "Narration": "Then APHRODITE tried to save her son —\nDiomedes STABBED her. A god! He'd DONE\nwhat no mortal should: drawn ichor (golden BLOOD).\nShe flew crying to Olympus in a FLOOD\nof tears. \"A MORTAL hurt me!\" Ares LAUGHED.\nBut Diomedes wasn't done with his CRAFT —\nhe stabbed ARES too. The WAR GOD screamed\nlike ten thousand soldiers. The whole field TEEMED\nwith divine fury. But Diomedes STOOD.\nOne mortal, in one afternoon, doing what gods COULD\nnot believe: fighting BACK. The ants\nbit the elephants. And for one day, the DANCE\nwent the other way. Humans on TOP.\nThe gods learned something: mortals don't always STOP.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -1822,8 +1786,7 @@
       "name": "Episode 9: The Man Who Wounded a God",
       "sort_order": 37,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "hero-diomedes-scene-01",
         "hero-diomedes-scene-02",
         "hero-diomedes-scene-03"
@@ -1863,7 +1826,6 @@
       "name": "Ep10 Scene 1: The Spy in the Horse",
       "sort_order": 38,
       "category": "the-heroes",
-      "level": 1,
       "sections": {
         "Narration": "Ten YEARS of war and Troy still stood.\nNo hero's spear, no army's BROOD\ncould crack those walls. So ODYSSEUS said:\n\"Stop hitting. Start THINKING.\" And instead",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -1913,7 +1875,6 @@
       "name": "Ep10 Scene 2: The Spy in the Horse",
       "sort_order": 39,
       "category": "the-heroes",
-      "level": 1,
       "sections": {
         "Narration": "of fighting, he BUILT — a horse. A wooden HORSE.\nEnormous. Hollow inside. Of COURSE\nyou know the rest: thirty warriors CLIMBED\ninside its belly, sweating, mimed",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -1962,7 +1923,6 @@
       "name": "Ep10 Scene 3: The Spy in the Horse",
       "sort_order": 40,
       "category": "the-heroes",
-      "level": 1,
       "sections": {
         "Narration": "in silence. The Greeks pretended to SAIL away.\nTroy dragged the horse inside. \"HOORAY!\nThe war is OVER! What a lovely GIFT!\"\nThat night, the belly of the horse went LIFT —\na door opened. Men dropped SILENTLY out.\nThey opened the gates without a SHOUT.\nThe Greek army poured in. Troy BURNED.\nTen years of war — all OVERTURNED\nby one man's brain, some wood, and STEALTH.\nOdysseus didn't fight Troy with his HEALTH\nor muscle. He fought it with a STORY:\n\"It's a gift.\" The greatest LIE in glory.\nThe trickster wins where warriors CAN'T.\nA wooden horse. A brain. A cosmic SLANT.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2011,8 +1971,7 @@
       "name": "Episode 10: The Spy in the Horse",
       "sort_order": 41,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "hero-odysseus-spy-scene-01",
         "hero-odysseus-spy-scene-02",
         "hero-odysseus-spy-scene-03"
@@ -2051,7 +2010,6 @@
       "name": "Ep11 Scene 1: The Girl Nobody Believed",
       "sort_order": 42,
       "category": "the-heroes",
-      "level": 1,
       "sections": {
         "Narration": "CASSANDRA was a princess of Troy, BRIGHT\nas dawn, with hair like ravens in the NIGHT.\nApollo loved her — offered her a GIFT:\n\"See the FUTURE.\" Cassandra felt the LIFT",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2101,7 +2059,6 @@
       "name": "Ep11 Scene 2: The Girl Nobody Believed",
       "sort_order": 43,
       "category": "the-heroes",
-      "level": 1,
       "sections": {
         "Narration": "of prophecy rush in. She saw it ALL:\nTroy burning, Hector dead, the city's FALL.\n\"Now kiss me,\" said Apollo. She said, \"NO.\"\nHis face went cold: \"You'll keep the gift. But OH —",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2151,7 +2108,6 @@
       "name": "Ep11 Scene 3: The Girl Nobody Believed",
       "sort_order": 44,
       "category": "the-heroes",
-      "level": 1,
       "sections": {
         "Narration": "no one will BELIEVE you. Not one word.\"\nFrom that day on, Cassandra screamed like a BIRD\nof doom: \"The horse is full of SOLDIERS!\"\n\"She's mad,\" they said. \"BURN the horse!\" \"She SMOLDERS\nwith crazy.\" They laughed. They dragged the horse INSIDE.\nCassandra WEPT. She'd seen the genocide\nbut couldn't stop it. Couldn't make them HEAR.\nThe cruelest punishment? Not blindness. FEAR\nisn't the worst. The worst is SEEING CLEAR\nand being called insane. Year after YEAR\nafter year. Until the flames prove you RIGHT\nand there's no one left to say: \"She SAW the light.\"",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2201,8 +2157,7 @@
       "name": "Episode 11: The Girl Nobody Believed",
       "sort_order": 45,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "hero-cassandra-scene-01",
         "hero-cassandra-scene-02",
         "hero-cassandra-scene-03"
@@ -2242,7 +2197,6 @@
       "name": "Ep12 Scene 1: The Woman Who Wove and Unwove",
       "sort_order": 46,
       "category": "the-heroes",
-      "level": 1,
       "sections": {
         "Narration": "While ODYSSEUS sailed the wine-dark sea for YEARS,\nPENELOPE held Ithaca through her TEARS.\nA hundred suitors camped inside her HALL,\neating her food, drinking her wine — the GALL!\n\"MARRY one of us! Your husband's DEAD!\"",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2293,7 +2247,6 @@
       "name": "Ep12 Scene 2: The Woman Who Wove and Unwove",
       "sort_order": 47,
       "category": "the-heroes",
-      "level": 1,
       "sections": {
         "Narration": "But Penelope had a trick inside her HEAD:\n\"I'll marry when I finish this SHROUD\nfor my father-in-law.\" She wove it, proud\nand patient — all day, thread by THREAD.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2343,7 +2296,6 @@
       "name": "Ep12 Scene 3: The Woman Who Wove and Unwove",
       "sort_order": 48,
       "category": "the-heroes",
-      "level": 1,
       "sections": {
         "Narration": "But every NIGHT, she crept out of bed\nand UNWOVE what she'd done. Three YEARS she played\nthis game — weaving by day, unraveling SHADE\nby shade at night. Until a MAID betrayed her.\n(Servants. You just can't TRADE her\nfor loyalty these days.) The suitors RAGED.\nBut Penelope? Already STAGED\nthe next trick: the bow. \"MARRY whoever\ncan string Odysseus's bow.\" (Now THAT'S clever —\nno one could. She knew. It was DESIGNED\nfor one man's hands.) The queen's MIND\nwas sharper than any sword. No WEAPON\nneeded. Just thread, time, and a secret STEP IN\nthe dance of survival. Penelope won\nnot with arrows but with PATIENCE, spun.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2393,8 +2345,7 @@
       "name": "Episode 12: The Woman Who Wove and Unwove",
       "sort_order": 49,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "hero-penelope-scene-01",
         "hero-penelope-scene-02",
         "hero-penelope-scene-03"
@@ -2434,7 +2385,6 @@
       "name": "Ep13 Scene 1: Helen in the Tower",
       "sort_order": 50,
       "category": "the-heroes",
-      "level": 1,
       "sections": {
         "Narration": "HELEN stood on Troy's walls and looked below\nat two armies killing for her. The GLOW\nof bronze, the screams, the dust — all for HER face.\nDid she feel like a prize? Or a DISGRACE?",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2485,7 +2435,6 @@
       "name": "Ep13 Scene 2: Helen in the Tower",
       "sort_order": 51,
       "category": "the-heroes",
-      "level": 1,
       "sections": {
         "Narration": "The old men of Troy saw her walk BY —\nand even they, bone-tired, whispered: \"I\ncan see why they're fighting. She looks LIKE\nthe immortal goddesses.\" But the SPIKE\nof guilt? That was Helen's private WAR.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2535,7 +2484,6 @@
       "name": "Ep13 Scene 3: Helen in the Tower",
       "sort_order": 52,
       "category": "the-heroes",
-      "level": 1,
       "sections": {
         "Narration": "\"I wish I had DIED,\" she said, \"before I wore\nthis curse of beauty.\" Paris brought her HERE —\nbut did she come by choice or FEAR?\nHomer never says. And that's the POINT:\nHelen is the riddle at the JOINT\nof the whole poem. Was she stolen? Did she RUN?\nIs she victim, villain, or just a WOMAN undone\nby forces bigger than her WILL?\nShe wove a tapestry — up on the hill —\nshowing the whole war from above, each THREAD\na death, a charge, a friendship. Helen WED\nthe story to the cloth. She was the AUTHOR\nof her own account. And that's what brought her\nmore pain than the fighting: SEEING it all.\nThe most beautiful woman. The LONELIEST in the hall.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2585,8 +2533,7 @@
       "name": "Episode 13: Helen in the Tower",
       "sort_order": 53,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "hero-helen-scene-01",
         "hero-helen-scene-02",
         "hero-helen-scene-03"
@@ -2626,7 +2573,6 @@
       "name": "Ep14 Scene 1: The Horse That Ate a City",
       "sort_order": 54,
       "category": "the-heroes",
-      "level": 1,
       "sections": {
         "Narration": "Thirty warriors in a BELLY of wood.\nStill as STATUES. Quiet as they could.\nOdysseus whispered: \"NOT a sound.\nIf they hear us, we're in the GROUND.\"",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2676,7 +2622,6 @@
       "name": "Ep14 Scene 2: The Horse That Ate a City",
       "sort_order": 55,
       "category": "the-heroes",
-      "level": 1,
       "sections": {
         "Narration": "HelEN walked around the horse — she KNEW.\nShe called out in the voices of each warrior's WIFE (it's true!):\n\"Diomedes, darling!\" \"Menelaus, DEAR!\"\nOdysseus clamped his hand over a man's MOUTH. Fear.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2725,7 +2670,6 @@
       "name": "Ep14 Scene 3: The Horse That Ate a City",
       "sort_order": 56,
       "category": "the-heroes",
-      "level": 1,
       "sections": {
         "Narration": "The HORSE stood in the square all night.\nTroy slept, drunk with victory. The FLIGHT\nof the Greek fleet was a trick — they hid BEHIND\nthe island. At midnight, the trap COMBINED:\nthe belly opened. Warriors DROPPED.\nThe gates swung wide. The celebrating STOPPED.\nFire ate Troy. Ten years of SIEGE\nundone in one night by a wooden LIEGE\nof lies. The greatest city in the WORLD\nfell not to a sword but to a horse, CURLED\nlike a gift in the marketplace. The MORAL?\nThe most dangerous thing isn't a soldier in CORAL\narmor. It's a STORY. A gift. A lie\nso beautiful you drag it inside to DIE.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2774,8 +2718,7 @@
       "name": "Episode 14: The Horse That Ate a City",
       "sort_order": 57,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "hero-wooden-horse-scene-01",
         "hero-wooden-horse-scene-02",
         "hero-wooden-horse-scene-03"
@@ -2814,7 +2757,6 @@
       "name": "Ep15 Scene 1: Zeus Weighs the Fates",
       "sort_order": 58,
       "category": "the-gods",
-      "level": 1,
       "sections": {
         "Narration": "ZEUS sat on Olympus, watching from ABOVE.\nHis wife wanted Greece to win. His heart's LOVE\n(Aphrodite) wanted Troy. His own SON\nSarpedon fought for Troy. And everyone",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -2864,7 +2806,6 @@
       "name": "Ep15 Scene 2: Zeus Weighs the Fates",
       "sort_order": 59,
       "category": "the-gods",
-      "level": 1,
       "sections": {
         "Narration": "kept ASKING him to take a side.\n\"I'm the KING of gods!\" he sighed. He tried\nto stay neutral. But when Sarpedon DIED —\nhis own blood — Zeus wanted to OVERRIDE",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -2913,7 +2854,6 @@
       "name": "Ep15 Scene 3: Zeus Weighs the Fates",
       "sort_order": 60,
       "category": "the-gods",
-      "level": 1,
       "sections": {
         "Narration": "fate itself. \"I'll SAVE him!\" Hera snapped:\n\"Don't you DARE. If you undo what fate has MAPPED,\nevery god will save their favorites TOO.\nThe whole system COLLAPSES.\" Zeus knew it was TRUE.\nHe let his son die. And from the sky\nhe wept — BLOOD-RED rain. The reason WHY\nis this: even the KING of everything\ncan't change the thread that the Fates SING.\nZeus weighs souls on golden SCALES:\nAchilles on one side, Hector's TALES\non the other. Whichever sinks is DOOMED.\nEven Zeus just watches. Even ZEUS is groomed\nby something older, deeper — FATE. The thread.\nThe universe runs on LAWS, not what's in your head.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -2962,8 +2902,7 @@
       "name": "Episode 15: Zeus Weighs the Fates",
       "sort_order": 61,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "god-zeus-scales-scene-01",
         "god-zeus-scales-scene-02",
         "god-zeus-scales-scene-03"
@@ -3002,7 +2941,6 @@
       "name": "Ep16 Scene 1: Athena and Her Favorite Mortal",
       "sort_order": 62,
       "category": "the-gods",
-      "level": 1,
       "sections": {
         "Narration": "ATHENA loved Odysseus. Not like THAT —\nshe loved his MIND. The way a cosmic cat\nloves the one mouse clever enough to PLAY.\n\"You're the only mortal,\" she'd SAY,",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3053,7 +2991,6 @@
       "name": "Ep16 Scene 2: Athena and Her Favorite Mortal",
       "sort_order": 63,
       "category": "the-gods",
-      "level": 1,
       "sections": {
         "Narration": "\"who thinks like ME.\" Grey-eyed goddess, WISE\nas the universe is wide — her DISGUISE\nchanged daily: a young girl, an old man, a BIRD.\nBut Odysseus always knew. He'd heard",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3103,7 +3040,6 @@
       "name": "Ep16 Scene 3: Athena and Her Favorite Mortal",
       "sort_order": 64,
       "category": "the-gods",
-      "level": 1,
       "sections": {
         "Narration": "her LAUGH behind whatever mask she wore.\n\"Nice try, Athena.\" She'd laugh MORE.\nShe steered him through storms, shielded his SKIN,\nwhispered plans when hope was wearing THIN.\nBut she couldn't do it FOR him — that's the RULE.\nGods can GUIDE. They can't carry the FOOL\nacross the finish line. Odysseus had to WALK\nevery mile himself. She'd talk and TALK\nbut the legs were his. The choices? HIS.\nThe goddess of wisdom knows what wisdom IS:\nnot giving answers. Giving better QUESTIONS.\nNot saving the hero. Sharpening his LESSONS.\nAthena is the voice inside your BRAIN\nthat says: think HARDER. Try again. REMAIN.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3153,8 +3089,7 @@
       "name": "Episode 16: Athena and Her Favorite Mortal",
       "sort_order": 65,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "god-athena-odysseus-scene-01",
         "god-athena-odysseus-scene-02",
         "god-athena-odysseus-scene-03"
@@ -3194,7 +3129,6 @@
       "name": "Ep17 Scene 1: Poseidon's Ten-Year Grudge",
       "sort_order": 66,
       "category": "the-gods",
-      "level": 1,
       "sections": {
         "Narration": "POSEIDON — god of the sea, earthquakes, and HORSES —\nhad one grudge that drove all his FORCES:\nOdysseus blinded his SON. The Cyclops. That ONE eye.\n\"You poke my boy, I'll make your oceans CRY.\"",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3245,7 +3179,6 @@
       "name": "Ep17 Scene 2: Poseidon's Ten-Year Grudge",
       "sort_order": 67,
       "category": "the-gods",
-      "level": 1,
       "sections": {
         "Narration": "For TEN YEARS, every time Odysseus sailed,\nPoseidon SMASHED his ship. He wailed\nthe ocean into walls. He DROWNED\nhis crewmates, spun the compass ROUND",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3295,7 +3228,6 @@
       "name": "Ep17 Scene 3: Poseidon's Ten-Year Grudge",
       "sort_order": 68,
       "category": "the-gods",
-      "level": 1,
       "sections": {
         "Narration": "and round. \"Home? You want HOME? Not today.\nNot tomorrow. Not until you PAY.\"\nOdysseus was the greatest SAILOR alive,\nbut what good is sailing when the WHOLE sea's drive\nis to destroy you? Every wave a FIST.\nEvery calm a trick. Every MIST\na maze. Poseidon didn't want him DEAD —\nthat would end the fun. He wanted DREAD.\nHe wanted Odysseus to KNOW\nthat every mile toward home would GO\nthrough him. The sea itself was ANGRY.\nAnd when the sea is angry? You get HANGRY\nfor land. For any land. For anywhere DRY.\nPoseidon's grudge: ten years of why-oh-WHY.\nDon't blind a god's kid. That's rule NUMBER one.\nNever mess with a father's SON.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3345,8 +3277,7 @@
       "name": "Episode 17: Poseidon's Ten-Year Grudge",
       "sort_order": 69,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "god-poseidon-grudge-scene-01",
         "god-poseidon-grudge-scene-02",
         "god-poseidon-grudge-scene-03"
@@ -3386,7 +3317,6 @@
       "name": "Ep18 Scene 1: The Day Love Got Stabbed",
       "sort_order": 70,
       "category": "the-gods",
-      "level": 1,
       "sections": {
         "Narration": "APHRODITE swept onto the battlefield to SAVE\nher son Aeneas — scooped him from the GRAVE\nof spears and carried him in her ARMS,\nglowing, beautiful, all divine CHARMS.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3437,7 +3367,6 @@
       "name": "Ep18 Scene 2: The Day Love Got Stabbed",
       "sort_order": 71,
       "category": "the-gods",
-      "level": 1,
       "sections": {
         "Narration": "But DIOMEDES — burning with Athena's FIRE —\ndidn't care about divine attire.\nHe stabbed her WRIST. Golden ichor FLOWED —\nnot blood but god-juice, and Aphrodite GLOWED",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3487,7 +3416,6 @@
       "name": "Ep18 Scene 3: The Day Love Got Stabbed",
       "sort_order": 72,
       "category": "the-gods",
-      "level": 1,
       "sections": {
         "Narration": "with pain. She DROPPED her son and fled.\nUp to Olympus, crying, nearly DEAD\nwith shock: \"A MORTAL stabbed me! ME!\"\nHer mother wiped the wound: \"Oh, let me SEE.\"\nAres laughed: \"Stay off the battlefield, LOVE.\"\n(He'd learn HIS lesson soon enough — a shove\nfrom Diomedes laid him flat as WELL.)\nBut here's the truth the wound would TELL:\neven LOVE can be hurt. Even BEAUTY bleeds.\nThe gentlest force in the cosmos has its NEEDS\nfor protection. Aphrodite wasn't weak —\nshe was in the WRONG PLACE. Love shouldn't SEEK\nthe battlefield. It belongs in GARDENS.\nBut sometimes love rushes in where wisdom HARDENS\nits heart, because its CHILD is in danger.\nAnd love will always risk a stranger's ANGER\nfor its children. Even gods know THAT.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3537,8 +3465,7 @@
       "name": "Episode 18: The Day Love Got Stabbed",
       "sort_order": 73,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "god-aphrodite-wounded-scene-01",
         "god-aphrodite-wounded-scene-02",
         "god-aphrodite-wounded-scene-03"
@@ -3578,7 +3505,6 @@
       "name": "Ep19 Scene 1: Hermes the Psychopomp",
       "sort_order": 74,
       "category": "the-gods",
-      "level": 1,
       "sections": {
         "Narration": "HERMES wore winged sandals, FLEW like thought,\nand specialized in things that can't be BOUGHT:\nsafe passage, messages, the space BETWEEN.\nHe was the friendliest god you've ever SEEN.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3629,7 +3555,6 @@
       "name": "Ep19 Scene 2: Hermes the Psychopomp",
       "sort_order": 75,
       "category": "the-gods",
-      "level": 1,
       "sections": {
         "Narration": "When Priam went to beg for Hector's BODY —\nan old man, alone, through enemy LOBBY\nof soldiers — Hermes walked beside him. GLOWED\njust enough to light the dangerous ROAD.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3679,7 +3604,6 @@
       "name": "Ep19 Scene 3: Hermes the Psychopomp",
       "sort_order": 76,
       "category": "the-gods",
-      "level": 1,
       "sections": {
         "Narration": "\"Don't worry, old man. I'll get you THROUGH.\"\nHe put the guards to sleep (divine KAZOO\nof magic on his staff). He led Priam SAFE\nto Achilles' tent — and vanished like a WRAITH.\nHermes doesn't fight. He doesn't JUDGE.\nHe's the god of thresholds, the cosmic FUDGE\nbetween here and there, living and DEAD.\nHe guides souls to the underworld (enough SAID).\nThe psychopomp — the guide of SOULS.\nHe walks you through the darkest HOLES\nand never asks for thanks. Just GOES.\nThe god of travelers. The one who KNOWS\nthat the journey matters more than the DESTINATION.\nHermes is the space between STATIONS.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3729,8 +3653,7 @@
       "name": "Episode 19: Hermes the Psychopomp",
       "sort_order": 77,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "god-hermes-guide-scene-01",
         "god-hermes-guide-scene-02",
         "god-hermes-guide-scene-03"
@@ -3770,7 +3693,6 @@
       "name": "Ep20 Scene 1: The Shield That Held the World",
       "sort_order": 78,
       "category": "the-gods",
-      "level": 1,
       "sections": {
         "Narration": "When Achilles needed ARMOR (Patroclus had his old),\nhis mother Thetis went to HEPHAESTUS — bold,\nlimping god of the forge, the LAME craftsman\nwho built thrones for gods. The PLAN:",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -3821,7 +3743,6 @@
       "name": "Ep20 Scene 2: The Shield That Held the World",
       "sort_order": 79,
       "category": "the-gods",
-      "level": 1,
       "sections": {
         "Narration": "new armor. But not just any SHIELD.\nHephaestus hammered something that REVEALED\nthe ENTIRE WORLD in bronze. He forged:\nTwo CITIES — one at war, one at peace (GORGED",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -3871,7 +3792,6 @@
       "name": "Ep20 Scene 3: The Shield That Held the World",
       "sort_order": 80,
       "category": "the-gods",
-      "level": 1,
       "sections": {
         "Narration": "with weddings, dancing, harvest, COURTS of law).\nSTARS: the Pleiades, Orion, the Bear's slow MAW\nturning through the sky. A VINEYARD where boys sang.\nThe OCEAN running round the rim — it RANG\nwith waves. Farmers plowing. Lions EATING.\nA dance floor like the one in Crete — feet BEATING.\nThe WHOLE world on one shield. War AND peace.\nStarlight AND bloodshed. Joy AND grief's LEASE.\nHephaestus gave Achilles the COSMOS\nto carry into battle. The LOSS\nof Patroclus made the universe respond\nwith a MIRROR: here's what you're fighting FOR, blond\nkiller. The world is beautiful. REMEMBER that\nwhen you're chasing Hector in the FLAT\ndust of Troy. You carry EVERYTHING.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -3921,8 +3841,7 @@
       "name": "Episode 20: The Shield That Held the World",
       "sort_order": 81,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "god-hephaestus-shield-scene-01",
         "god-hephaestus-shield-scene-02",
         "god-hephaestus-shield-scene-03"
@@ -3962,7 +3881,6 @@
       "name": "Ep21 Scene 1: The War God Falls",
       "sort_order": 82,
       "category": "the-gods",
-      "level": 1,
       "sections": {
         "Narration": "ARES was the god of war — and a COWARD.\n(Homer didn't like him. It showed, and HOW — heard\nby everyone on Olympus.) He FOUGHT\nfor Troy, but when Diomedes CAUGHT",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4013,7 +3931,6 @@
       "name": "Ep21 Scene 2: The War God Falls",
       "sort_order": 83,
       "category": "the-gods",
-      "level": 1,
       "sections": {
         "Narration": "him with a spear — guided by Athena's HAND —\nAres SCREAMED. Not a yell. A scream that SPANNED\nthe sound of ten thousand soldiers crying OUT.\nThe whole battlefield FROZE in doubt.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4063,7 +3980,6 @@
       "name": "Ep21 Scene 3: The War God Falls",
       "sort_order": 84,
       "category": "the-gods",
-      "level": 1,
       "sections": {
         "Narration": "He flew to Zeus, bleeding: \"DADDY! Look!\nA mortal STABBED me! The wound — it SHOOK\nmy divinity!\" Zeus looked at him and SAID:\n\"You're the most HATEFUL of my children. Go to BED.\nYou love nothing but fighting and STRIFE.\nI'd have thrown you out if you weren't my SON.\"\nOuch. Even the gods think war is NO fun.\nAres: the IDEA that war is glorious.\nBut Homer says NO — war is LABORIOUS,\nugly, screaming, and the god who loves it MOST\nis a crybaby. A fraud. A ROAST\nof every warrior who thinks fighting makes you TOUGH.\nAres screams when he's cut. That says ENOUGH.\nThe god of war is the weakest god of ALL.\nWar isn't glory. It's a BRAWL.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4113,8 +4029,7 @@
       "name": "Episode 21: The War God Falls",
       "sort_order": 85,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "god-ares-screams-scene-01",
         "god-ares-screams-scene-02",
         "god-ares-screams-scene-03"
@@ -4154,7 +4069,6 @@
       "name": "Ep22 Scene 1: The One-Eyed Giant",
       "sort_order": 86,
       "category": "the-voyage",
-      "level": 1,
       "sections": {
         "Narration": "They found a CAVE with cheese and sheep inside.\n\"Let's take some and GO,\" his men whined.\n\"No — let's wait and meet the HOST,\" said Odysseus.\n(Rule one of adventures: curiosity kills PLUS.\n)",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4205,7 +4119,6 @@
       "name": "Ep22 Scene 2: The One-Eyed Giant",
       "sort_order": 87,
       "category": "the-voyage",
-      "level": 1,
       "sections": {
         "Narration": "The CYCLOPS came — Polyphemus, ONE-eyed, tall\nas a hill. He sealed the cave with a BOULDER. Wall\nof stone. No exit. Then he grabbed two MEN\nand ate them. RAW. \"I'll eat two more at TEN.\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4255,7 +4168,6 @@
       "name": "Ep22 Scene 3: The One-Eyed Giant",
       "sort_order": 88,
       "category": "the-voyage",
-      "level": 1,
       "sections": {
         "Narration": "Odysseus THOUGHT. (That's what he does.) \"My name,\"\nhe said, \"is NOBODY.\" A trickster's game.\nHe got the Cyclops drunk on WINE.\nWhen the giant slept, they heated a PINE\nlog in the fire and drove it in his EYE.\n\"NOBODY blinded me!\" the Cyclops' cry.\nThe other Cyclopes: \"If nobody did it... GOODBYE.\"\nThey escaped under SHEEP — clinging to wool below.\nBut Odysseus, sailing off, couldn't resist: \"YO!\nMy name's ODYSSEUS! Remember THAT!\"\nPosteidon heard. And that was THAT.\nThe trickster won. But his PRIDE undid the trick.\nThe smartest man? Sometimes THICK.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4305,8 +4217,7 @@
       "name": "Episode 22: The One-Eyed Giant",
       "sort_order": 89,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "voyage-cyclops-scene-01",
         "voyage-cyclops-scene-02",
         "voyage-cyclops-scene-03"
@@ -4346,7 +4257,6 @@
       "name": "Ep23 Scene 1: The Witch Who Loved Pigs",
       "sort_order": 90,
       "category": "the-voyage",
-      "level": 1,
       "sections": {
         "Narration": "On an island lush with FLOWERS and song,\nCIRCE lived — enchantress, powerful, STRONG.\nShe offered Odysseus' men a feast: WINE, bread, cheese.\nThey ate. She waved her WAND. And by degrees —",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4397,7 +4307,6 @@
       "name": "Ep23 Scene 2: The Witch Who Loved Pigs",
       "sort_order": 91,
       "category": "the-voyage",
-      "level": 1,
       "sections": {
         "Narration": "their ears grew POINTED. Snouts appeared. They SQUEALED.\nShe'd turned them into PIGS. Their fate was sealed.\nBut Odysseus had a SECRET weapon: moly,\na magic herb from HERMES (rather jolly",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4447,7 +4356,6 @@
       "name": "Ep23 Scene 3: The Witch Who Loved Pigs",
       "sort_order": 92,
       "category": "the-voyage",
-      "level": 1,
       "sections": {
         "Narration": "of him). It blocked her SPELL. She waved the wand —\nnothing. She stared. He drew his SWORD. She CONNED\nher way to respect: \"You must be ODYSSEUS!\nNo other mortal resists! Let's call a TRUCE, yes?\"\nShe turned his men BACK. Then — surprise —\nthey stayed a YEAR. Wine, feasts, and starlit skies.\nCirce loved him. He loved her ISLAND.\nBut eventually: \"I need to go HOME. My highland,\nmy rocky Ithaca.\" She let him GO.\n\"But first — visit the DEAD. There's a man below\nwho'll tell you how.\" The witch who turned men to SWINE\nbecame his greatest GUIDE. Isn't that fine?\nThe monster becomes the TEACHER.\nEvery obstacle is a hidden PREACHER.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4497,8 +4405,7 @@
       "name": "Episode 23: The Witch Who Loved Pigs",
       "sort_order": 93,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "voyage-circe-scene-01",
         "voyage-circe-scene-02",
         "voyage-circe-scene-03"
@@ -4538,7 +4445,6 @@
       "name": "Ep24 Scene 1: The Song That Kills",
       "sort_order": 94,
       "category": "the-voyage",
-      "level": 1,
       "sections": {
         "Narration": "The SIRENS sang on rocks beside the sea —\na song so beautiful you'd steer your ship CAREFREE\ninto the jagged stone. Your boat would BREAK.\nYour body would sink. But what a way to WAKE",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4589,7 +4495,6 @@
       "name": "Ep24 Scene 2: The Song That Kills",
       "sort_order": 95,
       "category": "the-voyage",
-      "level": 1,
       "sections": {
         "Narration": "in death — still hearing that MELODY.\n\"I want to HEAR it,\" said Odysseus. \"But I'll be FREE.\"\nSo Circe's advice: WAX in every ear\nof every crewman. But for YOU, my dear —",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4639,7 +4544,6 @@
       "name": "Ep24 Scene 3: The Song That Kills",
       "sort_order": 96,
       "category": "the-voyage",
-      "level": 1,
       "sections": {
         "Narration": "\"Tie yourself to the MAST. And when you scream\nto be untied (you will — it's not a DREAM),\nyour men won't hear. They'll row RIGHT past.\"\nAnd so they did. The song came FAST:\n\"ODYSSEUS! We know the secrets of the WORLD!\nCome to us!\" He screamed. He CURLED\nagainst the ropes. He BEGGED: \"Untie me! CUT!\"\nThe sailors rowed, ears sealed SHUT.\nThe song faded. The rocks passed BY.\nOdysseus was the only man to hear that CRY\nand live. Because he CHOSE to hear it bound.\nThe only way to survive a beautiful SOUND\nthat kills is to be TIED to something stronger.\nDesire and discipline — you need them LONGER\nthan the song lasts. THAT'S the trick.\nNot avoiding temptation. Hearing it — and STICK.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4689,8 +4593,7 @@
       "name": "Episode 24: The Song That Kills",
       "sort_order": 97,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "voyage-sirens-scene-01",
         "voyage-sirens-scene-02",
         "voyage-sirens-scene-03"
@@ -4730,7 +4633,6 @@
       "name": "Ep25 Scene 1: Between the Monster and the Whirlpool",
       "sort_order": 98,
       "category": "the-voyage",
-      "level": 1,
       "sections": {
         "Narration": "Two paths. Both DEADLY. No third option SEEN.\nOn the LEFT: CHARYBDIS — a whirlpool, keen\nto swallow ships WHOLE, three times a day.\nThe ocean opened like a MOUTH. No way",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4780,7 +4682,6 @@
       "name": "Ep25 Scene 2: Between the Monster and the Whirlpool",
       "sort_order": 99,
       "category": "the-voyage",
-      "level": 1,
       "sections": {
         "Narration": "to survive if you got SUCKED inside.\nOn the RIGHT: SCYLLA — a monster who VIED\nfor the title of 'worst nightmare.' Six HEADS,\ntwelve legs, and she lived in the cliffs above BEDS",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -4829,7 +4730,6 @@
       "name": "Ep25 Scene 3: Between the Monster and the Whirlpool",
       "sort_order": 100,
       "category": "the-voyage",
-      "level": 1,
       "sections": {
         "Narration": "of sharp rock. Each head would SNATCH one man.\n\"Choose,\" said Circe. \"There IS no plan\nthat saves everyone. Charybdis kills the SHIP.\nScylla kills SIX men — but the rest can SLIP\nthrough.\" Odysseus chose Scylla. He DIDN'T tell his crew.\n(Would you? What would you DO?)\nSix men were snatched. They screamed his NAME.\nHe sailed on. Tears and SHAME.\nThe strait of 'between a rock and a hard PLACE' —\nwe still use that phrase. Every FACE\nof leadership knows this moment: the CHOICE\nwhere both options cost you. Your VOICE\nsays 'go left' but six men die EITHER way.\nLeadership isn't glory. It's choosing which PRICE to pay.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -4878,8 +4778,7 @@
       "name": "Episode 25: Between the Monster and the Whirlpool",
       "sort_order": 101,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "voyage-scylla-charybdis-scene-01",
         "voyage-scylla-charybdis-scene-02",
         "voyage-scylla-charybdis-scene-03"
@@ -4918,7 +4817,6 @@
       "name": "Ep26 Scene 1: Seven Years on Paradise Island",
       "sort_order": 102,
       "category": "the-voyage",
-      "level": 1,
       "sections": {
         "Narration": "CALYPSO was a goddess, beautiful as DAWN.\nHer island had everything: gardens, FAWN\nand deer, caves draped with grapevine, STREAMS\nof crystal water. A place of DREAMS.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -4969,7 +4867,6 @@
       "name": "Ep26 Scene 2: Seven Years on Paradise Island",
       "sort_order": 103,
       "category": "the-voyage",
-      "level": 1,
       "sections": {
         "Narration": "She offered Odysseus IMMORTALITY:\n\"Stay with me forever. REALITY\ncan't touch you here. No aging. No DEATH.\nJust us, this island, and endless BREATH.\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5019,7 +4916,6 @@
       "name": "Ep26 Scene 3: Seven Years on Paradise Island",
       "sort_order": 104,
       "category": "the-voyage",
-      "level": 1,
       "sections": {
         "Narration": "Seven YEARS he stayed. (Who wouldn't?) SEVEN.\nThe island was literally HEAVEN.\nBut every evening, Odysseus sat on the SHORE\nand wept. Staring east. Wanting MORE —\nnot more paradise. More HOME.\nRocky Ithaca. A wife who'd ROAM\nhis heart forever. A son he'd NEVER met.\nCalypso offered perfection. But the BET\nOdysseus made was: imperfection WITH love\nbeats perfection WITHOUT. The gods ABOVE\nsent Hermes: \"Let him go.\" Calypso CRIED.\n\"You gods let men love mortal women — but I'M denied\na mortal man?\" She had a point. But she set him FREE.\nBecause real love is: I release THEE.\nParadise without the people you LOVE\nis just a prison with a better ROOF above.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5069,8 +4965,7 @@
       "name": "Episode 26: Seven Years on Paradise Island",
       "sort_order": 105,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "voyage-calypso-scene-01",
         "voyage-calypso-scene-02",
         "voyage-calypso-scene-03"
@@ -5110,7 +5005,6 @@
       "name": "Ep27 Scene 1: The Land of the Dead",
       "sort_order": 106,
       "category": "the-voyage",
-      "level": 1,
       "sections": {
         "Narration": "Circe said: \"You must go DOWN.\nTo the land of the dead. The underground TOWN\nwhere shades drift like smoke.\" Odysseus SAILED\nto the world's edge — where the sun has FAILED —",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5161,7 +5055,6 @@
       "name": "Ep27 Scene 2: The Land of the Dead",
       "sort_order": 107,
       "category": "the-voyage",
-      "level": 1,
       "sections": {
         "Narration": "and dug a TRENCH. Filled it with blood\nof a black ram. The dead came in a FLOOD:\nghostly, thirsty, reaching for the BOWL.\n\"Let me drink,\" each whispered. \"Feed my SOUL.\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5211,7 +5104,6 @@
       "name": "Ep27 Scene 3: The Land of the Dead",
       "sort_order": 108,
       "category": "the-voyage",
-      "level": 1,
       "sections": {
         "Narration": "His MOTHER was there — dead while he'd been GONE.\nHe tried to hold her. His arms passed THROUGH. \"Move on,\"\nshe said. \"You can't embrace the dead, my DEAR.\"\nTIRESIAS came: the blind seer, all CLEAR:\n\"Don't eat the sun god's cattle. Row STRAIGHT.\nYour home is full of men who ATE\nyour food and courted your wife. You'll KILL them all.\"\nAchilles' ghost said: \"I'd rather CRAWL\nas a living slave than RULE down here as king.\"\nThe dead taught Odysseus ONE thing:\nlife is precious BECAUSE it ends.\nThe dead would give ANYTHING for what the living SPENDS\nwithout thinking: one more SUNRISE. One more BREATH.\nGo HOME, Odysseus. Don't waste life fearing DEATH.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5261,8 +5153,7 @@
       "name": "Episode 27: The Land of the Dead",
       "sort_order": 109,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "voyage-underworld-scene-01",
         "voyage-underworld-scene-02",
         "voyage-underworld-scene-03"
@@ -5302,7 +5193,6 @@
       "name": "Ep28 Scene 1: The People Who Forgot",
       "sort_order": 110,
       "category": "the-voyage",
-      "level": 1,
       "sections": {
         "Narration": "They landed on an island, soft and SWEET,\nwhere people sat in fields and DIDN'T eat\nnormal food — they ate the LOTUS flower.\nOne taste and you forgot. Every HOUR",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5352,7 +5242,6 @@
       "name": "Ep28 Scene 2: The People Who Forgot",
       "sort_order": 111,
       "category": "the-voyage",
-      "level": 1,
       "sections": {
         "Narration": "slid into the next like honey into MILK.\n\"Where am I?\" \"Doesn't matter.\" Smooth as SILK,\nthe forgetting came. Your name? GONE.\nYour wife? GONE. Your son? The DAWN",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5401,7 +5290,6 @@
       "name": "Ep28 Scene 3: The People Who Forgot",
       "sort_order": 112,
       "category": "the-voyage",
-      "level": 1,
       "sections": {
         "Narration": "of yesterday? Who cares? The flower TASTED\nlike peace. Like the opposite of WASTED\ntime — no time at all. Just... FLOATING.\nOdysseus' men ate. Started DOTING\non the petals. \"Let's STAY. What's the rush?\"\nOdysseus grabbed them, SCREAMING, in a crush\nof forced rescue: \"You've FORGOTTEN EVERYTHING!\"\nHe dragged them to the ship while they tried to CLING\nto the island. Bound them to their SEATS.\nSailed away. The lotus EATS\nyour memory — your PURPOSE — your reason to go HOME.\nThe most dangerous drug isn't pain. It's a POEM\nof comfort so deep you forget you have a LIFE.\nForgetting isn't peace. It's a different kind of KNIFE.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5450,8 +5338,7 @@
       "name": "Episode 28: The People Who Forgot",
       "sort_order": 113,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "voyage-lotus-eaters-scene-01",
         "voyage-lotus-eaters-scene-02",
         "voyage-lotus-eaters-scene-03"
@@ -5490,7 +5377,6 @@
       "name": "Ep29 Scene 1: The Bag of Winds",
       "sort_order": 114,
       "category": "the-voyage",
-      "level": 1,
       "sections": {
         "Narration": "AEOLUS, keeper of the winds, was KIND.\nHe trapped every BAD wind in a bag, DESIGNED\nof ox-leather, silver-corded, TIGHT.\nThe ONLY wind left free blew them toward the light",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5541,7 +5427,6 @@
       "name": "Ep29 Scene 2: The Bag of Winds",
       "sort_order": 115,
       "category": "the-voyage",
-      "level": 1,
       "sections": {
         "Narration": "of home. For NINE days Odysseus steered.\nOn the TENTH — Ithaca appeared!\nHe could SEE his island. Smoke from chimneys ROSE.\nHis heart burst. Then — exhausted — his EYELIDS closed.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5591,7 +5476,6 @@
       "name": "Ep29 Scene 3: The Bag of Winds",
       "sort_order": 116,
       "category": "the-voyage",
-      "level": 1,
       "sections": {
         "Narration": "His men looked at the bag: \"What's in THERE?\nGold? Treasure? That's not FAIR —\nhe's keeping it all!\" They UNTIED it.\nEvery wind in the world CRIED — bit\nand tore and HOWLED. The ship was blown\nall the way BACK to Aeolus' throne.\n\"Help us AGAIN?\" \"No. You're CURSED.\nThe gods hate you. Leave. You're the WORST.\"\nTen days of perfect sailing — RUINED\nby one nap and suspicious HUMANS.\nSo close to home. So CLOSE. And then —\nback to the beginning. Start AGAIN.\nThe cruelest moment in the Odyssey:\nseeing home and losing it. CATASTROPHE.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5641,8 +5525,7 @@
       "name": "Episode 29: The Bag of Winds",
       "sort_order": 117,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "voyage-aeolus-winds-scene-01",
         "voyage-aeolus-winds-scene-02",
         "voyage-aeolus-winds-scene-03"
@@ -5682,7 +5565,6 @@
       "name": "Ep30 Scene 1: The Beggar King",
       "sort_order": 118,
       "category": "the-homecoming",
-      "level": 1,
       "sections": {
         "Narration": "Twenty YEARS gone. Odysseus washed up on Ithaca's SHORE,\nnaked, salt-crusted, barely alive. No MORE\nthe king — just a castaway. But ATHENA came:\n\"Not yet. You can't walk in and claim your NAME.\"",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5733,7 +5615,6 @@
       "name": "Ep30 Scene 2: The Beggar King",
       "sort_order": 119,
       "category": "the-homecoming",
-      "level": 1,
       "sections": {
         "Narration": "She disguised him as an OLD man — bent, grey,\nwrapped in rags. \"Go slowly. SURVEY\nthe situation. A hundred suitors FEAST\nin your hall. They'll KILL you — or at LEAST",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5783,7 +5664,6 @@
       "name": "Ep30 Scene 3: The Beggar King",
       "sort_order": 120,
       "category": "the-homecoming",
-      "level": 1,
       "sections": {
         "Narration": "try.\" So the king of Ithaca BEGGED at his own door.\nHis servants KICKED him. Suitors threw food on the FLOOR\nand laughed: \"Get out, old man!\" His OWN house.\nHe sat there, quiet as a MOUSE,\nwatching everything — who was loyal, who had TURNED.\nThe swineherd EUMAEUS treated him well (he'd EARNED\na friend). His son TELEMACHUS — a stranger to his FACE —\nmet him in the hut. \"Father?\" \"This PLACE\nis full of enemies. We plan in SECRET.\"\nTwenty years of war and sea — and his FLEET-\nest weapon was patience. The king as BEGGAR.\nThe trickster's final form: LESS, not bigger.\nPower dressed as poverty. A crown of RAGS.\nThe greatest return starts with empty BAGS.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -5833,8 +5713,7 @@
       "name": "Episode 30: The Beggar King",
       "sort_order": 121,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "home-disguise-scene-01",
         "home-disguise-scene-02",
         "home-disguise-scene-03"
@@ -5874,7 +5753,6 @@
       "name": "Ep31 Scene 1: The Dog Who Waited",
       "sort_order": 122,
       "category": "the-homecoming",
-      "level": 1,
       "sections": {
         "Narration": "Outside the palace, on a pile of DUNG,\nlay ARGOS — old and flea-bit, barely CLUNG\nto life. Twenty years ago, this DOG\nwas the fastest hound — could chase a STAG through fog.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -5925,7 +5803,6 @@
       "name": "Ep31 Scene 2: The Dog Who Waited",
       "sort_order": 123,
       "category": "the-homecoming",
-      "level": 1,
       "sections": {
         "Narration": "Now he lay on manure, too weak to RISE.\nThe suitors had neglected him. Flies\nbuzzed around his matted COAT.\nOdysseus — disguised — walked past. A LUMP rose in his throat.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -5975,7 +5852,6 @@
       "name": "Ep31 Scene 3: The Dog Who Waited",
       "sort_order": 124,
       "category": "the-homecoming",
-      "level": 1,
       "sections": {
         "Narration": "Argos LIFTED his head. His TAIL — just once —\nwagged. He knew. Despite the stunts\nof Athena's magic, despite the RAGS,\nArgos knew his master. No TAGS\nneeded. No voice. No scent through twenty YEARS\nof separation. Just — recognition. TEARS\nran down Odysseus' face. He couldn't STOP\nto pet him (the disguise would DROP).\nHe walked past. And Argos? He closed his EYES.\nTwenty years of waiting. One wag. GOODBYES.\nHe died right there. His purpose DONE.\nThe most loyal creature under the SUN\nwaited twenty years for one more LOOK\nat his master's face. Then closed the BOOK.\nFour lines in Homer. The saddest FOUR\nin all of literature. Nothing MORE.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6025,8 +5901,7 @@
       "name": "Episode 31: The Dog Who Waited",
       "sort_order": 125,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "home-argos-scene-01",
         "home-argos-scene-02",
         "home-argos-scene-03"
@@ -6066,7 +5941,6 @@
       "name": "Ep32 Scene 1: The Nurse and the Scar",
       "sort_order": 126,
       "category": "the-homecoming",
-      "level": 1,
       "sections": {
         "Narration": "Old EURYCLEIA had nursed Odysseus as a BABY.\nShe washed the beggar's feet — and then, well, MAYBE\nyou can guess: her fingers found a SCAR.\nA boar had gored him once, near and FAR",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6117,7 +5991,6 @@
       "name": "Ep32 Scene 2: The Nurse and the Scar",
       "sort_order": 127,
       "category": "the-homecoming",
-      "level": 1,
       "sections": {
         "Narration": "up his thigh. She'd know that scar ANYWHERE.\nHer hands froze. She looked UP. Her stare\nmet his eyes. \"My child! It's YOU —\"\nHe grabbed her throat. Not hard. But TRUE.\n\"SILENCE. If you tell, we're dead. EVERY one.\"",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6167,7 +6040,6 @@
       "name": "Ep32 Scene 3: The Nurse and the Scar",
       "sort_order": 128,
       "category": "the-homecoming",
-      "level": 1,
       "sections": {
         "Narration": "She nodded. Tears streaming. Her SON —\nnot by blood, but by the deeper BOND\nof having held him as an infant, FOND\nand crying, at her breast. She'd KNOWN.\nNot by face, not by bone, but by a GROWN-\nover wound. The body remembers what the mind FORGETS.\nThe scar told the truth through Athena's NETS\nof disguise. Love reads the body's MAP.\nTwenty years, a war, a sea — one SCAR\nand a pair of old hands that remember WHO you are.\nIdentity isn't your face. It's your WOUNDS.\nThe things that hurt you are your NAME's cocoons.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6217,8 +6089,7 @@
       "name": "Episode 32: The Nurse and the Scar",
       "sort_order": 129,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "home-eurycleia-scene-01",
         "home-eurycleia-scene-02",
         "home-eurycleia-scene-03"
@@ -6258,7 +6129,6 @@
       "name": "Ep33 Scene 1: The Bow Only One Man Could String",
       "sort_order": 130,
       "category": "the-homecoming",
-      "level": 1,
       "sections": {
         "Narration": "PENELOPE announced: \"I'll marry the man\nwho can STRING Odysseus's bow. That's the plan.\"\nThe suitors laughed. \"Easy!\" Each one TRIED.\nThe bow wouldn't bend. Their muscles CRIED",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6308,7 +6178,6 @@
       "name": "Ep33 Scene 2: The Bow Only One Man Could String",
       "sort_order": 131,
       "category": "the-homecoming",
-      "level": 1,
       "sections": {
         "Narration": "with effort. One by one they FAILED.\n\"This bow is broken!\" \"It's NAILED\nshut!\" \"Grease it!\" Nothing worked. The WOOD\nresisted every hand. It STOOD",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6357,7 +6226,6 @@
       "name": "Ep33 Scene 3: The Bow Only One Man Could String",
       "sort_order": 132,
       "category": "the-homecoming",
-      "level": 1,
       "sections": {
         "Narration": "for one man only. The beggar in the CORNER\nsaid, \"Let me try?\" The suitors' SCORNER\nrose: \"A BEGGAR? Get him out!\"\nBut Telemachus: \"Let him.\" No shout.\nThe old man's hands closed around the BOW.\nHe strung it — smooth and easy, SLOW\nas breathing — and plucked the string. It SANG.\nA note that RANG through the hall. That rang RANG RANG\nlike a swallow's cry. Every suitor FROZE.\nThe beggar nocked an arrow. The RAGS he chose\nto wear fell away in their MINDS.\nThey knew. Too late. The bow FINDS\nits master. The master finds his BOW.\nAnd now? The arrows start to FLOW.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6406,8 +6274,7 @@
       "name": "Episode 33: The Bow Only One Man Could String",
       "sort_order": 133,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "home-bow-scene-01",
         "home-bow-scene-02",
         "home-bow-scene-03"
@@ -6446,7 +6313,6 @@
       "name": "Ep34 Scene 1: The Arrows of the King",
       "sort_order": 134,
       "category": "the-homecoming",
-      "level": 1,
       "sections": {
         "Narration": "The first arrow went through ANTINOUS' throat\nwhile he raised a golden WINE cup. (Note:\nhe was the cruelest suitor. Poetic JUSTICE.)\nThe cup fell. Blood mixed with RED WINE. \"What IS this?\"",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6497,7 +6363,6 @@
       "name": "Ep34 Scene 2: The Arrows of the King",
       "sort_order": 135,
       "category": "the-homecoming",
-      "level": 1,
       "sections": {
         "Narration": "The suitors scrambled for WEAPONS — but Odysseus\nhad removed them all. \"HEAR me, you LITIGIOUS\nleeches! I am ODYSSEUS. I'm HOME.\nAnd you've eaten my food, drunk my wine, tried to COMB",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6547,7 +6412,6 @@
       "name": "Ep34 Scene 3: The Arrows of the King",
       "sort_order": 136,
       "category": "the-homecoming",
-      "level": 1,
       "sections": {
         "Narration": "my wife into marriage. For twenty YEARS.\"\nTelemachus fought beside him. TEARS\nand arrows. Eumaeus the loyal swineherd TOO.\nThe hall filled with blood. A hundred and TWO\nsuitors — every one. The maids who'd BETRAYED\nthe house were hanged. The price was PAID.\nIs it justice? Is it MURDER?\nHomer doesn't judge. He goes no FURTHER\nthan the facts: a king reclaimed his HOME\nwith blood. The way kings do. The POEM\ndoesn't celebrate it. Doesn't condemn.\nIt just tells you: this is what happens WHEN\nyou eat a man's food for twenty years\nand court his wife. The COST appears.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6597,8 +6461,7 @@
       "name": "Episode 34: The Arrows of the King",
       "sort_order": 137,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "home-suitors-fall-scene-01",
         "home-suitors-fall-scene-02",
         "home-suitors-fall-scene-03"
@@ -6638,7 +6501,6 @@
       "name": "Ep35 Scene 1: The Bed That Cannot Move",
       "sort_order": 138,
       "category": "the-homecoming",
-      "level": 1,
       "sections": {
         "Narration": "The suitors were dead. The hall was CLEAN.\nTelemachus said, \"Mother — come! The SCENE\nis over. Father's HOME!\" But Penelope SAT.\nStill. Silent. Testing. Like a CAT",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6689,7 +6551,6 @@
       "name": "Ep35 Scene 2: The Bed That Cannot Move",
       "sort_order": 139,
       "category": "the-homecoming",
-      "level": 1,
       "sections": {
         "Narration": "watching a bird that might be a SNAKE.\n\"If he's really Odysseus — he won't BREAK.\"\nShe said: \"Move the bed to another ROOM.\"\nOdysseus EXPLODED: \"MOVE the bed? The DOOM",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6739,7 +6600,6 @@
       "name": "Ep35 Scene 3: The Bed That Cannot Move",
       "sort_order": 140,
       "category": "the-homecoming",
-      "level": 1,
       "sections": {
         "Narration": "of whoever tries! I BUILT that bed!\nOne post is a living OLIVE tree — I wed\nthe frame around it. It CANNOT be moved\nunless someone's cut the tree!\" He PROVED\nhimself — not with a scar, not with a BOW,\nbut with a SECRET only two people know.\nPenelope smiled. Finally. At LAST.\n\"Now I know it's you.\" The twenty-year FAST\nof loneliness — broken. She fell into his ARMS.\nThe bed — rooted in a living tree — DISARMS\nevery doubt. Their marriage is ROOTED\nin the earth itself. Impossible to be LOOTED.\nThe olive tree holds the bed. The bed holds the LOVE.\nThe love holds the story. And the story holds ENOUGH\ntruth to last three thousand YEARS.\nThe bed that cannot move. The end of TEARS.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6789,8 +6649,7 @@
       "name": "Episode 35: The Bed That Cannot Move",
       "sort_order": 141,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "home-penelope-test-scene-01",
         "home-penelope-test-scene-02",
         "home-penelope-test-scene-03"
@@ -6830,7 +6689,6 @@
       "name": "Ep36 Scene 1: The Olive Tree and the Sea",
       "sort_order": 142,
       "category": "the-homecoming",
-      "level": 1,
       "sections": {
         "Narration": "The families of the dead suitors came for BLOOD.\n\"He killed our SONS!\" (Fair point. Understood.)\nAnother war? On Ithaca? After EVERYTHING?\nOdysseus lifted his spear. The same old STING.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -6881,7 +6739,6 @@
       "name": "Ep36 Scene 2: The Olive Tree and the Sea",
       "sort_order": 143,
       "category": "the-homecoming",
-      "level": 1,
       "sections": {
         "Narration": "But ATHENA — grey-eyed, patient, WISE —\ndescended from the morning skies:\n\"ENOUGH. No more blood. No more GRIEF.\"\nShe struck the ground. A blessed RELIEF",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -6931,7 +6788,6 @@
       "name": "Ep36 Scene 3: The Olive Tree and the Sea",
       "sort_order": 144,
       "category": "the-homecoming",
-      "level": 1,
       "sections": {
         "Narration": "of peace fell on everyone like RAIN.\nThe spears dropped. The cycle of PAIN\njust — stopped. For once in all of Homer's PAGES,\nthe violence ended. Not through SAGES\nor heroes — through a goddess who said: STOP.\nAnd everyone did. Like a spinning TOP\nthat finally rests. Ithaca breathed.\nOdysseus looked at Penelope. She SEETHED\nwith nothing — just love. Just quiet. Just HOME.\nThe olive tree. The bed. The POEM\nis over. The wine-dark sea is STILL.\nA man is home. He's had his FILL\nof glory, monsters, gods, and FOAM.\nThe Odyssey ends with one word: HOME.\nAnd that's enough. That's all there IS.\nThe whole adventure — ten years of THIS and that —\nwas always heading toward a CHAIR,\na fire, a wife, a son. Just THERE.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -6981,8 +6837,7 @@
       "name": "Episode 36: The Olive Tree and the Sea",
       "sort_order": 145,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "home-peace-scene-01",
         "home-peace-scene-02",
         "home-peace-scene-03"
@@ -7022,7 +6877,6 @@
       "name": "Ep37 Scene 1: The Night Troy Burned",
       "sort_order": 146,
       "category": "the-echo",
-      "level": 1,
       "sections": {
         "Narration": "At MIDNIGHT, the belly opened. Warriors DROPPED\ninto the sleeping city. The singing STOPPED.\nThe gates swung wide. The fleet returned from BEHIND\nthe island. Troy — magnificent, refined,",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -7071,7 +6925,6 @@
       "name": "Ep37 Scene 2: The Night Troy Burned",
       "sort_order": 147,
       "category": "the-echo",
-      "level": 1,
       "sections": {
         "Narration": "rich, beautiful — caught FIRE.\nTen years of war compressed into a PYRE.\nPriam was killed at his own ALTAR.\nCassandra dragged from Athena's temple (not a FALTER",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -7120,7 +6973,6 @@
       "name": "Ep37 Scene 3: The Night Troy Burned",
       "sort_order": 148,
       "category": "the-echo",
-      "level": 1,
       "sections": {
         "Narration": "in the sacrilege). Hector's baby THROWN\nfrom the walls (\"He might grow up,\" they'd SHOWN\nno mercy even to INFANTS). Helen — taken back.\nTroy burned till DAWN. The smoke was black\nas the years of siege. An entire civilization\nerased in one NIGHT. The conflagration\nate palaces, temples, gardens, HOMES.\nEverything Hector died to save — now BONES.\nThe Greeks won. But WHAT did they win?\nAshes. Guilt. A journey home through SIN\nand storm. Poseidon and Athena — BOTH enraged\nat how the victors BEHAVED — uncaged\nevery wind. The winners never made it HOME.\nTroy fell. But so did ROME's\nforerunner, and the victors scattered WIDE.\nNobody won the Trojan War. Both SIDES lost everything.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -7169,8 +7021,7 @@
       "name": "Episode 37: The Night Troy Burned",
       "sort_order": 149,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "echo-troy-burns-scene-01",
         "echo-troy-burns-scene-02",
         "echo-troy-burns-scene-03"
@@ -7209,7 +7060,6 @@
       "name": "Ep38 Scene 1: The Man Who Carried His Father",
       "sort_order": 150,
       "category": "the-echo",
-      "level": 1,
       "sections": {
         "Narration": "While Troy burned, one man didn't FIGHT.\nAENEAS grabbed his father — through the NIGHT,\nold ANCHISES on his back, and his SON\nby the hand. Three generations, on the RUN.",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -7259,7 +7109,6 @@
       "name": "Ep38 Scene 2: The Man Who Carried His Father",
       "sort_order": 151,
       "category": "the-echo",
-      "level": 1,
       "sections": {
         "Narration": "\"Leave me,\" said Anchises. \"I'm too OLD.\"\n\"I will NOT,\" Aeneas said. \"You HOLD\nthe household gods. The memories. The SEEDS\nof everything we were.\" Through the WEEDS",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -7309,7 +7158,6 @@
       "name": "Ep38 Scene 3: The Man Who Carried His Father",
       "sort_order": 152,
       "category": "the-echo",
-      "level": 1,
       "sections": {
         "Narration": "of burning streets, past screaming CROWDS,\nhe carried the past on his back. No SHROUDS\nfor the living — just movement, FORWARD,\ntoward the ships, toward the sea, toward the BORDERED\nhorizon where a new city WAITED.\n(Rome. But that's another tale, FATED\nfor Virgil to tell.) The point is THIS:\nwhile heroes fought for glory and a KISS\nof fame, Aeneas ran with his FAMILY.\nNot every hero swings a sword. CANDIDLY,\nthe bravest thing in the whole Trojan WAR\nwas a son who wouldn't leave his DAD on the floor.\nCarry your father. Carry your SON.\nThat's how civilizations are BEGUN.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -7359,8 +7207,7 @@
       "name": "Episode 38: The Man Who Carried His Father",
       "sort_order": 153,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "echo-aeneas-flees-scene-01",
         "echo-aeneas-flees-scene-02",
         "echo-aeneas-flees-scene-03"
@@ -7400,7 +7247,6 @@
       "name": "Ep39 Scene 1: The Boy Who Went Looking for His Dad",
       "sort_order": 154,
       "category": "the-echo",
-      "level": 1,
       "sections": {
         "Narration": "TELEMACHUS was born the year his dad LEFT.\nHe grew up fatherless — BEREFT\nof the man everyone talked about. \"Your father\nwas the CLEVEREST!\" (He'd rather",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -7450,7 +7296,6 @@
       "name": "Ep39 Scene 2: The Boy Who Went Looking for His Dad",
       "sort_order": 155,
       "category": "the-echo",
-      "level": 1,
       "sections": {
         "Narration": "have had a dad at HOME, thanks very much.)\nAt twenty, with his house overrun — SUCH\na mess of suitors eating everything —\nAthena came: \"Go SEARCHING, little king.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -7499,7 +7344,6 @@
       "name": "Ep39 Scene 3: The Boy Who Went Looking for His Dad",
       "sort_order": 156,
       "category": "the-echo",
-      "level": 1,
       "sections": {
         "Narration": "Ask Nestor. Ask Menelaus. FIND out\nif your father lives.\" He sailed — no CLOUT,\nno fame, just a boy on a boat with a QUESTION.\nNestor told him war stories (lengthy SESSION).\nMenelaus told him: \"Your father's ALIVE.\nCalypso holds him.\" And Telemachus — five\nwords changed his life. \"My father is ALIVE.\"\nHe sailed home. Grew a SPINE.\nMet his father in a hut. Wept. PLOTTED.\nFought beside him when the suitors KNOTTED\nthemselves into a trap. Father and SON —\nstrangers for twenty years — became ONE.\nTelemachus is the quiet HERO:\nthe boy who started from ZERO\nand went looking for his father's FACE.\nSometimes the quest isn't GLORY. Just a PLACE\nto belong. A father's hand. A name EARNED.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -7548,8 +7392,7 @@
       "name": "Episode 39: The Boy Who Went Looking for His Dad",
       "sort_order": 157,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "echo-telemachus-scene-01",
         "echo-telemachus-scene-02",
         "echo-telemachus-scene-03"
@@ -7588,7 +7431,6 @@
       "name": "Ep40 Scene 1: The Blind Man Who Saw Everything",
       "sort_order": 158,
       "category": "the-echo",
-      "level": 1,
       "sections": {
         "Narration": "TIRESIAS was blind. Had been for YEARS.\nThe gods took his eyes — but replaced them with SEERS'\nvision: he could see PAST and FUTURE,\ndeath and birth, the truth behind each SUTURE",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -7639,7 +7481,6 @@
       "name": "Ep40 Scene 2: The Blind Man Who Saw Everything",
       "sort_order": 159,
       "category": "the-echo",
-      "level": 1,
       "sections": {
         "Narration": "of reality. In the underworld, a SHADE,\nhe drank the blood Odysseus had LAID\nin the trench and spoke: \"Your path is CLEAR.\nDon't eat the sun god's cattle. Steer",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -7689,7 +7530,6 @@
       "name": "Ep40 Scene 3: The Blind Man Who Saw Everything",
       "sort_order": 160,
       "category": "the-echo",
-      "level": 1,
       "sections": {
         "Narration": "straight home. Kill the suitors. Take an OAR\ninland — walk until someone says: 'What FOR\nis that winnowing fan?' THERE plant the oar.\nSacrifice to Poseidon. And the WAR\nbetween you and the sea will end.\"\nOdysseus listened. His oldest FRIEND\n(death) had spoken through the oldest SEER.\nThe blind man saw what no eyes could HEAR:\nthat Odysseus' journey wouldn't end at HOME.\nIt would end when a man who'd never seen the FOAM\nof ocean looked at an oar and didn't KNOW\nwhat it was. Only THERE — far from the flow\nof waves — could peace be made with the SEA.\nYou make peace with your enemy where they CAN'T see you.\nThe blind see everything. The SIGHTED see nothing.\nThat's Tiresias. That's SOMETHING.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -7739,8 +7579,7 @@
       "name": "Episode 40: The Blind Man Who Saw Everything",
       "sort_order": 161,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "echo-tiresias-scene-01",
         "echo-tiresias-scene-02",
         "echo-tiresias-scene-03"
@@ -7780,7 +7619,6 @@
       "name": "Ep41 Scene 1: Why the Sea Is Wine-Dark",
       "sort_order": 162,
       "category": "the-echo",
-      "level": 1,
       "sections": {
         "Narration": "Homer called the sea \"WINE-DARK\" — not blue.\nScholars have argued for centuries: WHAT hue\ndid he mean? Were the Greeks COLOR-blind?\nDid their eyes work differently? Or did Homer's MIND",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -7830,7 +7668,6 @@
       "name": "Ep41 Scene 2: Why the Sea Is Wine-Dark",
       "sort_order": 163,
       "category": "the-echo",
-      "level": 1,
       "sections": {
         "Narration": "see something we've forgotten how to SEE?\nThe sea at sunset — deep BURGUNDY.\nThe sea in storm — black as Poseidon's MOOD.\nThe sea by moonlight — thick as BLOOD.",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -7879,7 +7716,6 @@
       "name": "Ep41 Scene 3: Why the Sea Is Wine-Dark",
       "sort_order": 164,
       "category": "the-echo",
-      "level": 1,
       "sections": {
         "Narration": "Maybe \"wine-dark\" doesn't mean a COLOR.\nMaybe it means the sea — like wine — makes you HOLLER\nand laugh and cry and LOSE your way.\nThe sea is intoxicating. Every DAY\nit changes, and every day it PULLS\nyou toward it — like a cup that's always FULL.\nWine-dark. Not blue. Because blue is a FACT\nand wine-dark is a FEELING — the impact\nof standing at the edge of the world's great DEEP\nand knowing it could KILL you in your sleep\nor carry you home. The sea is WINE:\nbeautiful, dangerous, ancient, DIVINE.\nHomer didn't describe what his EYES saw.\nHe described what his SOUL saw. Without a FLAW.\nThat's why we still read him. Three THOUSAND years.\nThe wine-dark sea. Still pouring. Still in TEARS.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -7928,8 +7764,7 @@
       "name": "Episode 41: Why the Sea Is Wine-Dark",
       "sort_order": 165,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "echo-wine-dark-sea-scene-01",
         "echo-wine-dark-sea-scene-02",
         "echo-wine-dark-sea-scene-03"
@@ -7968,7 +7803,6 @@
       "name": "Ep42 Scene 1: The Blind Poet Who Remembered",
       "sort_order": 166,
       "category": "the-echo",
-      "level": 1,
       "sections": {
         "Narration": "Nobody knows who HOMER was. A man?\nA woman? A committee? Or a PLAN\nof the Muses themselves — nine goddesses who SING\nthrough mortal mouths? Here's the THING:",
         "Direction": "[ESTABLISH] Wide shot establishing the world. Slow zoom in.",
@@ -8017,7 +7851,6 @@
       "name": "Ep42 Scene 2: The Blind Poet Who Remembered",
       "sort_order": 167,
       "category": "the-echo",
-      "level": 1,
       "sections": {
         "Narration": "he was BLIND. (Or so they say.) Like TIRESIAS.\nLike the universe prefers its SEERS TO BE — thus:\neyes shut, inner vision WIDE.\nHe sat at feasts and the whole WORLD inside",
         "Direction": "[QUIET] Overhead or side angle. Stillness. Ambient sounds only.",
@@ -8066,7 +7899,6 @@
       "name": "Ep42 Scene 3: The Blind Poet Who Remembered",
       "sort_order": 168,
       "category": "the-echo",
-      "level": 1,
       "sections": {
         "Narration": "him poured out: ACHILLES' rage, ODYSSEUS' wit,\nHELEN's face, the horse, the PIT\nof the underworld, the dog who DIED.\nEvery line memorized. Not a word DENIED\nby three thousand years. TWENTY-SEVEN thousand lines.\nThe Iliad and Odyssey — the SIGNS\nof everything humans are: brave, petty, CLEVER,\ncruel, loving, foolish, FOREVER\ntrying to get home. Homer SANG it all.\nAnd tonight, at bedtime, his words FALL\ninto your ears the same way they FELL\ninto a Greek child's ears — the same SPELL.\nThe poet doesn't die. The SONG goes on.\nGoodnight, young hero. Sleep till DAWN.\nThe wine-dark sea will WAIT for you.\nAnd Homer — blind, ancient, TRUE —\nwill sing you there and BACK again.\nThe oldest bedtime story. AMEN.",
         "Direction": "[CLOSING] Slow pull back to wide. World recedes. Fade.",
@@ -8115,8 +7947,7 @@
       "name": "Episode 42: The Blind Poet Who Remembered",
       "sort_order": 169,
       "category": "episodes",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "echo-homer-sings-scene-01",
         "echo-homer-sings-scene-02",
         "echo-homer-sings-scene-03"

@@ -37,7 +37,7 @@ const bookletGrammar = JSON.parse(readFileSync(bookletGrammarPath, 'utf8'));
 // Each illustration has: url, artist, scene, edition, chapter_number, item_id
 const illustrationsByChapter = {};
 
-for (const item of chapterBook.items) {
+for (const item of chapterBook.nodes) {
   const chNum = item.metadata?.chapter_number;
   if (!chNum) continue;
   if (!illustrationsByChapter[chNum]) illustrationsByChapter[chNum] = [];
@@ -61,7 +61,7 @@ for (const item of chapterBook.items) {
 // Each booklet chapter has sections "Page 1", "Page 2", etc.
 const pagesByChapter = {};
 
-for (const item of bookletGrammar.items) {
+for (const item of bookletGrammar.nodes) {
   const chNum = item.metadata?.source_chapter;
   if (!chNum) continue;
 
@@ -280,7 +280,7 @@ if (process.argv.includes('--apply')) {
   const newAssignments = [];
 
   for (const ch of results) {
-    const chName = bookletGrammar.items.find(i => i.metadata?.source_chapter === ch.chapter)?.name || `Chapter ${ch.chapter}`;
+    const chName = bookletGrammar.nodes.find(i => i.metadata?.source_chapter === ch.chapter)?.name || `Chapter ${ch.chapter}`;
 
     // Cover
     newAssignments.push({

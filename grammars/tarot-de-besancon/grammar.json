@@ -51,13 +51,12 @@
   ],
   "worldview": "historical",
   "is_published": false,
-  "items": [
+  "nodes": [
     {
       "id": "card-junon",
       "name": "Juno (in place of the Popess)",
       "sort_order": 0,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "juno (in place of the popess)",
         "besancon",
@@ -96,7 +95,6 @@
       "name": "Jupiter (in place of the Pope)",
       "sort_order": 1,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "jupiter (in place of the pope)",
         "besancon",
@@ -135,7 +133,6 @@
       "name": "The Emperor (Der Herrscher)",
       "sort_order": 2,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "the emperor (der herrscher)",
         "besancon",
@@ -174,7 +171,6 @@
       "name": "The Chariot",
       "sort_order": 3,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "the chariot",
         "besancon",
@@ -213,7 +209,6 @@
       "name": "Strength (La Force)",
       "sort_order": 4,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "strength (la force)",
         "besancon",
@@ -252,7 +247,6 @@
       "name": "Temperance",
       "sort_order": 5,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "temperance",
         "besancon",
@@ -291,7 +285,6 @@
       "name": "The Devil (Der Teufel)",
       "sort_order": 6,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "the devil (der teufel)",
         "besancon",
@@ -330,7 +323,6 @@
       "name": "The Tower (La Maison de Dieu)",
       "sort_order": 7,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "the tower (la maison de dieu)",
         "besancon",
@@ -369,7 +361,6 @@
       "name": "The World (Le Monde)",
       "sort_order": 8,
       "category": "trump",
-      "level": 1,
       "keywords": [
         "the world (le monde)",
         "besancon",
@@ -408,7 +399,6 @@
       "name": "Ace of Swords",
       "sort_order": 9,
       "category": "minor",
-      "level": 1,
       "keywords": [
         "ace of swords",
         "besancon",
@@ -451,7 +441,6 @@
       "name": "Two of Cups",
       "sort_order": 10,
       "category": "minor",
-      "level": 1,
       "keywords": [
         "two of cups",
         "besancon",
@@ -494,7 +483,6 @@
       "name": "Two of Batons",
       "sort_order": 11,
       "category": "minor",
-      "level": 1,
       "keywords": [
         "two of batons",
         "besancon",
@@ -537,7 +525,6 @@
       "name": "Three of Coins",
       "sort_order": 12,
       "category": "minor",
-      "level": 1,
       "keywords": [
         "three of coins",
         "besancon",
@@ -580,8 +567,7 @@
       "name": "Juno & Jupiter — The Besançon Substitution",
       "sort_order": 13,
       "category": "emergence",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "card-junon",
         "card-jupiter"
       ],
